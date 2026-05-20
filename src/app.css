@@ -3,51 +3,19 @@
    Base theme tokens live in index.css.
 ====================================================================== */
 
-/* ---- Background FX layer ----
-   CSS-drawn grid + moving lines (reliable at any devicePixelRatio, unlike the
-   Arwes canvas backgrounds). The element is portaled to <body> and fixed so it
-   always covers the full viewport at every scroll position. */
+/* ---- Background FX layer ---- */
 .bg-fx {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  height: 100dvh;
+  inset: 0;
   z-index: -1;
   overflow: hidden;
   pointer-events: none;
-  /* faint static grid: solid vertical + horizontal lines */
-  background-image:
-    repeating-linear-gradient(0deg, rgba(33, 243, 243, 0.05) 0 1px, transparent 1px 40px),
-    repeating-linear-gradient(90deg, rgba(33, 243, 243, 0.05) 0 1px, transparent 1px 40px);
 }
-/* brighter horizontal lines that slowly travel = "moving lines" */
-.bg-fx__scan {
+.bg-fx canvas {
   position: absolute;
-  left: 0;
-  top: -160px;
-  width: 100%;
-  height: calc(100% + 160px);
-  background-image: repeating-linear-gradient(
-    0deg,
-    rgba(33, 243, 243, 0.22) 0 1px,
-    transparent 1px 160px
-  );
-  animation: bgScan 6s linear infinite;
-}
-@keyframes bgScan {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(160px);
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .bg-fx__scan {
-    animation: none;
-  }
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 /* ---- App shell ---- */

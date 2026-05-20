@@ -1,18 +1,17 @@
-import { createPortal } from 'react-dom'
+import { Animator, GridLines, Dots, MovingLines } from '@arwes/react'
 
 /**
- * Fixed full-screen background, portaled into <body> so `position: fixed` is
- * always relative to the viewport. The grid + moving lines are drawn purely in
- * CSS (see `.bg-fx` in app.css): the Arwes canvas backgrounds render incorrectly
- * on displays with devicePixelRatio != 1 (e.g. Windows 125% scaling), leaving a
- * blank band, so CSS is used instead for reliable full-page coverage.
+ * Fixed full-screen Arwes sci-fi grid background (GridLines + Dots + MovingLines).
+ * Wrapped in an active Animator so MovingLines animates continuously.
  */
 export default function Background() {
-  const layer = (
+  return (
     <div className="bg-fx" aria-hidden="true">
-      <div className="bg-fx__scan" />
+      <Animator active duration={{ interval: 8 }}>
+        <GridLines lineColor="rgba(33, 243, 243, 0.05)" distance={40} />
+        <Dots color="rgba(33, 243, 243, 0.12)" distance={40} size={2} />
+        <MovingLines lineColor="rgba(33, 243, 243, 0.22)" distance={40} sets={16} />
+      </Animator>
     </div>
   )
-  if (typeof document === 'undefined') return layer
-  return createPortal(layer, document.body)
 }
