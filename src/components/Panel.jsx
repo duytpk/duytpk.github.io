@@ -1,15 +1,15 @@
 import {
-  FrameSVGCorners,
-  FrameSVGOctagon,
-  FrameSVGNefrex,
-  FrameSVGUnderline,
+  FrameCorners,
+  FrameOctagon,
+  FrameNefrex,
+  FrameUnderline,
 } from '@arwes/react'
 
 const FRAMES = {
-  corners: FrameSVGCorners,
-  octagon: FrameSVGOctagon,
-  nefrex: FrameSVGNefrex,
-  underline: FrameSVGUnderline,
+  corners: FrameCorners,
+  octagon: FrameOctagon,
+  nefrex: FrameNefrex,
+  underline: FrameUnderline,
 }
 
 /**
@@ -27,7 +27,7 @@ export default function Panel({
   style,
   children,
 }) {
-  const FrameComp = FRAMES[frame] || FrameSVGCorners
+  const FrameComp = FRAMES[frame] || FrameCorners
   return (
     <Tag className={`panel ${className}`} style={style}>
       <FrameComp className={`frame frame--${variant}`} strokeWidth={1.5} />

@@ -1,10 +1,7 @@
-import { fileURLToPath } from 'node:url'
-import { readFileSync, copyFileSync, existsSync } from 'node:fs'
+import { readFileSync, copyFileSync, existsSync, mkdirSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-
-const NEWS_SRC = fileURLToPath(new URL('./src/data/news.json', import.meta.url))
 
 /**
  * Serves `src/data/news.json` at the site root as `/news.json`.
@@ -17,16 +14,20 @@ const NEWS_SRC = fileURLToPath(new URL('./src/data/news.json', import.meta.url))
  *   resolve on GitHub Pages.
  */
 function newsAndSpaPlugin() {
+  let root = process.cwd()
   let outDir = 'dist'
+  const newsSrc = () => resolve(root, 'src/data/news.json')
+
   return {
     name: 'devsecops-news-and-spa',
     configResolved(config) {
+      root = config.root
       outDir = config.build.outDir
     },
     configureServer(server) {
       server.middlewares.use('/news.json', (_req, res) => {
         try {
-          const data = readFileSync(NEWS_SRC, 'utf8')
+          const data = readFileSync(newsSrc(), 'utf8')
           res.setHeader('Content-Type', 'application/json; charset=utf-8')
           res.setHeader('Cache-Control', 'no-store')
           res.end(data)
@@ -36,14 +37,20 @@ function newsAndSpaPlugin() {
         }
       })
     },
-    closeBundle() {
-      const root = resolve(process.cwd(), outDir)
-      if (existsSync(NEWS_SRC)) {
-        copyFileSync(NEWS_SRC, resolve(root, 'news.json'))
+    // writeBundle runs after the output files have been written to disk, so the
+    // output dir and index.html are guaranteed to exist here.
+    writeBundle(outputOptions) {
+      const dir = outputOptions.dir || resolve(root, outDir)
+      mkdirSync(dir, { recursive: true })
+
+      const src = newsSrc()
+      if (existsSync(src)) {
+        copyFileSync(src, resolve(dir, 'news.json'))
       }
-      const indexHtml = resolve(root, 'index.html')
+
+      const indexHtml = resolve(dir, 'index.html')
       if (existsSync(indexHtml)) {
-        copyFileSync(indexHtml, resolve(root, '404.html'))
+        copyFileSync(indexHtml, resolve(dir, '404.html'))
       }
     },
   }

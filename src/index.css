@@ -94,10 +94,13 @@ a {
 }
 
 /* ----------------------------------------------------------------------
-   Arwes FrameSVG colouring.
-   FrameSVG paths expose data-name="bg" | "line" | "deco". Their default
-   inline styles use currentColor, so we override with !important and add a
-   neon glow via drop-shadow on the svg element.
+   Arwes frame colouring.
+   The frame components render <rect name="bg"> + <path name="line"> elements
+   whose fill/stroke/filter read CSS custom properties:
+     --arwes-frames-bg-color, --arwes-frames-line-color,
+     --arwes-frames-bg-filter, --arwes-frames-line-filter
+   We set those per colour variant; they inherit down into the SVG. The frame
+   svg is positioned absolutely by Arwes itself (positioned=true).
 ---------------------------------------------------------------------- */
 .frame {
   position: absolute;
@@ -105,50 +108,29 @@ a {
   width: 100%;
   height: 100%;
   z-index: 0;
-}
-
-.frame [data-name='bg'] {
-  fill: var(--bg-panel) !important;
-}
-.frame [data-name='line'] {
-  stroke: var(--neon-cyan) !important;
-}
-.frame [data-name='deco'] {
-  fill: var(--neon-cyan) !important;
+  --arwes-frames-bg-color: var(--bg-panel);
+  --arwes-frames-line-color: var(--neon-cyan);
+  --arwes-frames-line-filter: drop-shadow(0 0 3px rgba(33, 243, 243, 0.7));
 }
 
 .frame--cyan {
-  filter: drop-shadow(0 0 4px rgba(33, 243, 243, 0.55));
-}
-.frame--magenta [data-name='line'] {
-  stroke: var(--neon-magenta) !important;
-}
-.frame--magenta [data-name='deco'] {
-  fill: var(--neon-magenta) !important;
+  --arwes-frames-line-color: var(--neon-cyan);
+  --arwes-frames-line-filter: drop-shadow(0 0 3px rgba(33, 243, 243, 0.7));
 }
 .frame--magenta {
-  filter: drop-shadow(0 0 4px rgba(255, 43, 214, 0.5));
-}
-.frame--green [data-name='line'] {
-  stroke: var(--neon-green) !important;
-}
-.frame--green [data-name='deco'] {
-  fill: var(--neon-green) !important;
+  --arwes-frames-line-color: var(--neon-magenta);
+  --arwes-frames-line-filter: drop-shadow(0 0 3px rgba(255, 43, 214, 0.7));
 }
 .frame--green {
-  filter: drop-shadow(0 0 4px rgba(56, 255, 158, 0.45));
-}
-.frame--amber [data-name='line'] {
-  stroke: var(--neon-amber) !important;
-}
-.frame--amber [data-name='deco'] {
-  fill: var(--neon-amber) !important;
+  --arwes-frames-line-color: var(--neon-green);
+  --arwes-frames-line-filter: drop-shadow(0 0 3px rgba(56, 255, 158, 0.65));
 }
 .frame--amber {
-  filter: drop-shadow(0 0 4px rgba(255, 182, 39, 0.45));
+  --arwes-frames-line-color: var(--neon-amber);
+  --arwes-frames-line-filter: drop-shadow(0 0 3px rgba(255, 182, 39, 0.65));
 }
-.frame--solid [data-name='bg'] {
-  fill: var(--bg-panel-solid) !important;
+.frame--solid {
+  --arwes-frames-bg-color: var(--bg-panel-solid);
 }
 
 /* Utility neon text */
