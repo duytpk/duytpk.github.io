@@ -133,7 +133,11 @@ async function main() {
   console.log(`✓ wrote ${OUT}`)
 }
 
-main().catch((err) => {
-  console.error(err)
-  process.exit(1)
-})
+main()
+  // rss-parser can leave keep-alive HTTP sockets open, which stops Node from
+  // exiting on its own and makes the CI step hang. Force a clean exit.
+  .then(() => process.exit(0))
+  .catch((err) => {
+    console.error(err)
+    process.exit(1)
+  })
