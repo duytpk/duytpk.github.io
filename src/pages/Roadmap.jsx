@@ -4,6 +4,7 @@ import Panel from '../components/Panel.jsx'
 import Scramble from '../components/Scramble.jsx'
 import { roadmap } from '../data/roadmap.js'
 import { useLocalStorageState } from '../hooks/useLocalStorageState.js'
+import ConfirmModal from '../components/ConfirmModal.jsx'
 
 const STORAGE_KEY = 'devsecops-hub:roadmap:v1'
 
@@ -11,6 +12,7 @@ export default function Roadmap() {
   const bleeps = useBleeps()
   const [done, setDone] = useLocalStorageState(STORAGE_KEY, {})
   const [active, setActive] = useState(false)
+  const [confirmOpen, setConfirmOpen] = useState(false)
 
   useEffect(() => {
     setActive(true)
@@ -29,9 +31,19 @@ export default function Roadmap() {
     play('type')
   }
 
-  const resetAll = () => {
-    if (typeof window !== 'undefined' && !window.confirm('Reset all roadmap progress?')) return
+  const askReset = () => {
+    setConfirmOpen(true)
+    play('click')
+  }
+
+  const doReset = () => {
     setDone({})
+    setConfirmOpen(false)
+    play('assemble')
+  }
+
+  const cancelReset = () => {
+    setConfirmOpen(false)
     play('click')
   }
 
@@ -58,7 +70,7 @@ export default function Roadmap() {
         <div className="track__bar" style={{ maxWidth: 360 }}>
           <span style={{ width: `${overall}%` }} />
         </div>
-        <button type="button" className="roadmap-reset" onClick={resetAll}>
+        <button type="button" className="roadmap-reset" onClick={askReset}>
           ⟲ RESET PROGRESS
         </button>
       </div>
@@ -110,6 +122,22 @@ export default function Roadmap() {
           )
         })}
       </Animator>
+
+      <ConfirmModal
+        open={confirmOpen}
+        title="RESET PROGRESS"
+        message={
+          <>
+            This will clear all <b>{completed}</b> completed task(s) across every
+            track. This action cannot be undone.
+          </>
+        }
+        confirmLabel="⟲ RESET"
+        cancelLabel="CANCEL"
+        variant="amber"
+        onConfirm={doReset}
+        onCancel={cancelReset}
+      />
     </div>
   )
 }

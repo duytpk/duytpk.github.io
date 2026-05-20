@@ -6,14 +6,21 @@
 /* ---- Background FX layer ---- */
 .bg-fx {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  /* Explicit viewport units so the canvas always measures the full screen
+     (relying on inset:0 alone left an unpainted band at the top). */
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
   z-index: -1;
   overflow: hidden;
   pointer-events: none;
 }
 .bg-fx canvas {
-  position: absolute;
-  inset: 0;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
   width: 100% !important;
   height: 100% !important;
 }
@@ -407,4 +414,92 @@
   margin: 0;
   color: var(--neon-magenta);
   text-shadow: 0 0 24px rgba(255, 43, 214, 0.5);
+}
+
+/* ---- Confirm modal (themed popup) ---- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(2, 6, 11, 0.72);
+  backdrop-filter: blur(3px);
+  animation: modal-fade 0.18s ease both;
+}
+@keyframes modal-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.modal {
+  width: min(440px, 100%);
+  animation: modal-pop 0.22s cubic-bezier(0.2, 0.9, 0.3, 1.2) both;
+}
+@keyframes modal-pop {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.modal__panel {
+  padding: 1.4rem 1.5rem 1.3rem;
+}
+.modal__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 0.6rem;
+}
+.modal__msg {
+  font-family: var(--font-ui);
+  font-size: 0.98rem;
+  color: var(--text);
+  margin: 0 0 1.3rem;
+  line-height: 1.45;
+}
+.modal__msg b {
+  color: var(--text-bright);
+}
+.modal__actions {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: flex-end;
+}
+.btn {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.5rem 1.1rem;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.btn:hover {
+  color: var(--text-bright);
+  border-color: var(--neon-cyan-dim);
+}
+.btn--danger {
+  color: var(--neon-red);
+  border-color: var(--neon-red);
+}
+.btn--danger:hover {
+  background: var(--neon-red);
+  color: #1a0205;
+  box-shadow: 0 0 14px rgba(255, 77, 94, 0.5);
 }
