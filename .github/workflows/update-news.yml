@@ -43,7 +43,9 @@ jobs:
           if git diff --quiet -- src/data/news.json; then
             echo "No news changes — nothing to commit."
           else
-            git add src/data/news.json
+            # Keep root-level news.json in sync for the static site
+            cp src/data/news.json news.json
+            git add src/data/news.json news.json
             git commit -m "chore(news): hourly auto-update [skip ci]"
             git push
             echo "pushed=true" >> "$GITHUB_OUTPUT"

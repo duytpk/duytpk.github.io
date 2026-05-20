@@ -1,18 +1,274 @@
-<!doctype html>
-<html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#04080f" />
-    <meta
-      name="description"
-      content="Personal DevSecOps Hub - bang dieu khien tin tuc cong nghe va lo trinh hoc tap theo phong cach sci-fi/cyberpunk."
-    />
-    <title>DEVSECOPS//HUB</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0e0e10" />
+  <meta name="description" content="DS_OPS // HUB — real-time CVE feed and DevSecOps dashboard." />
+  <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
+  <title>DS_OPS // HUB — CVE_FEED</title>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/cyber-neon.css" />
+
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-lowest":   "#0e0e10",
+            "surface-container-low":      "#1c1b1d",
+            "surface-container":          "#201f21",
+            "surface-container-high":     "#2a2a2c",
+            "surface-container-highest":  "#353437",
+            "surface-dim":                "#131315",
+            "surface":                    "#131315",
+            "surface-bright":             "#39393b",
+            "surface-variant":            "#353437",
+            "on-surface":                 "#e5e1e4",
+            "on-surface-variant":         "#b9cacb",
+            "outline":                    "#849495",
+            "outline-variant":            "#3a494b",
+            "primary":                    "#e1fdff",
+            "on-primary":                 "#00363a",
+            "primary-container":          "#00f2ff",
+            "on-primary-container":       "#006a71",
+            "primary-fixed":              "#74f5ff",
+            "primary-fixed-dim":          "#00dbe7",
+            "on-primary-fixed":           "#002022",
+            "on-primary-fixed-variant":   "#004f54",
+            "surface-tint":               "#00dbe7",
+            "inverse-primary":            "#00696f",
+            "secondary":                  "#ffabf3",
+            "on-secondary":               "#5b005b",
+            "secondary-container":        "#fe00fe",
+            "on-secondary-container":     "#500050",
+            "secondary-fixed":            "#ffd7f5",
+            "secondary-fixed-dim":        "#ffabf3",
+            "on-secondary-fixed":         "#380038",
+            "on-secondary-fixed-variant": "#810081",
+            "tertiary":                   "#faf6fc",
+            "on-tertiary":                "#303034",
+            "tertiary-container":         "#dddae0",
+            "on-tertiary-container":      "#605f64",
+            "error":                      "#ffb4ab",
+            "on-error":                   "#690005",
+            "error-container":            "#93000a",
+            "on-error-container":         "#ffdad6",
+            "background":                 "#131315",
+            "on-background":              "#e5e1e4",
+            "inverse-surface":            "#e5e1e4",
+            "inverse-on-surface":         "#313032",
+          },
+          spacing: {
+            "container-max": "1280px",
+            "unit":   "4px",
+            "gutter": "16px",
+            "margin": "24px",
+          },
+          fontFamily: {
+            "display-lg":  ["Sora"],
+            "headline-lg": ["Sora"],
+            "headline-md": ["Sora"],
+            "body-lg":     ["JetBrains Mono"],
+            "body-md":     ["JetBrains Mono"],
+            "label-caps":  ["JetBrains Mono"],
+          },
+          fontSize: {
+            "display-lg":  ["48px", { lineHeight: "1.1",  letterSpacing: "-0.02em", fontWeight: "800" }],
+            "headline-lg": ["32px", { lineHeight: "1.2",  letterSpacing: "0.05em",  fontWeight: "700" }],
+            "headline-md": ["24px", { lineHeight: "1.2",  fontWeight: "600" }],
+            "body-lg":     ["18px", { lineHeight: "1.6",  fontWeight: "400" }],
+            "body-md":     ["14px", { lineHeight: "1.5",  fontWeight: "400" }],
+            "label-caps":  ["12px", { lineHeight: "1.0",  letterSpacing: "0.1em",   fontWeight: "700" }],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-surface-container-lowest text-on-surface font-body-md overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+
+<!-- CRT scanline overlay -->
+<div class="scanline-overlay"></div>
+
+<!-- ── Top App Bar ──────────────────────────────────────────────────────────── -->
+<header class="fixed top-0 left-0 right-0 z-50 border-b border-outline-variant bg-surface-container-lowest">
+  <div class="flex justify-between items-center w-full px-margin h-16">
+    <!-- Brand + nav -->
+    <div class="flex items-center gap-4">
+      <span class="font-display-lg text-headline-md text-primary tracking-tighter">DS_OPS // HUB</span>
+      <nav class="hidden md:flex gap-6 font-body-md text-body-md uppercase tracking-widest ml-8">
+        <a href="index.html"   class="text-primary font-bold border-b-2 border-primary pb-1 neon-text-glow">DASHBOARD</a>
+        <a href="roadmap.html" class="text-on-surface-variant font-normal hover:text-primary transition-colors duration-150">ROADMAP</a>
+      </nav>
+    </div>
+    <!-- Right side: status + icons -->
+    <div class="flex items-center gap-gutter">
+      <div class="hidden lg:flex items-center gap-4 text-label-caps font-label-caps border-l border-outline-variant pl-gutter">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-primary-container animate-pulse shadow-[0_0_8px_#00dbe7]"></span>
+          <span class="text-primary-fixed-dim">SYS: ONLINE</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings:'FILL' 1;">security</span>
+          <span class="text-primary-fixed-dim">UPLINK: SECURE</span>
+        </div>
+        <span class="text-primary-fixed-dim" id="clock">--:--:-- UTC</span>
+      </div>
+      <div class="flex items-center gap-4 border-l border-outline-variant pl-gutter">
+        <span class="material-symbols-outlined text-primary hover:bg-primary/10 p-2 cursor-pointer transition-all">sensors</span>
+        <span class="material-symbols-outlined text-primary hover:bg-primary/10 p-2 cursor-pointer transition-all">terminal</span>
+        <span class="material-symbols-outlined text-primary hover:bg-primary/10 p-2 cursor-pointer transition-all">security</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ── Side Nav ────────────────────────────────────────────────────────────── -->
+<aside class="fixed left-0 top-16 h-[calc(100vh-64px)] w-64 bg-surface-container-low border-r border-outline-variant hidden md:flex flex-col z-40">
+  <!-- Operator profile -->
+  <div class="p-6 border-b border-outline-variant flex items-center gap-4">
+    <div class="w-10 h-10 bg-surface-container-highest border border-outline-variant flex items-center justify-center flex-shrink-0">
+      <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1;">account_circle</span>
+    </div>
+    <div>
+      <div class="font-headline-md text-body-md text-primary">OPERATOR_01</div>
+      <div class="font-label-caps text-[10px] text-on-surface-variant opacity-70">SEC_LEVEL: ALPHA</div>
+    </div>
+  </div>
+  <!-- Nav links -->
+  <nav class="flex-grow py-4">
+    <a href="#" class="flex items-center gap-gutter text-on-surface-variant px-4 py-3 opacity-70 hover:bg-surface-container-highest hover:opacity-100 transition-all duration-200">
+      <span class="material-symbols-outlined">terminal</span>
+      <span class="font-body-md">TERMINAL</span>
+    </a>
+    <a href="index.html" class="flex items-center gap-gutter bg-secondary/10 text-secondary border-l-4 border-secondary px-4 py-3 hover:bg-surface-container-highest transition-all duration-200">
+      <span class="material-symbols-outlined">rss_feed</span>
+      <span class="font-body-md">CVE_FEED</span>
+    </a>
+    <a href="#" class="flex items-center gap-gutter text-on-surface-variant px-4 py-3 opacity-70 hover:bg-surface-container-highest hover:opacity-100 transition-all duration-200">
+      <span class="material-symbols-outlined">hub</span>
+      <span class="font-body-md">NETWORK</span>
+    </a>
+    <a href="roadmap.html" class="flex items-center gap-gutter text-on-surface-variant px-4 py-3 opacity-70 hover:bg-surface-container-highest hover:opacity-100 transition-all duration-200">
+      <span class="material-symbols-outlined">route</span>
+      <span class="font-body-md">ROADMAP</span>
+    </a>
+    <a href="#" class="flex items-center gap-gutter text-on-surface-variant px-4 py-3 opacity-70 hover:bg-surface-container-highest hover:opacity-100 transition-all duration-200">
+      <span class="material-symbols-outlined">settings</span>
+      <span class="font-body-md">SETTINGS</span>
+    </a>
+  </nav>
+  <!-- Force sync + logout -->
+  <div class="p-4 border-t border-outline-variant">
+    <button id="sync-btn" type="button"
+      class="w-full border border-secondary text-secondary py-2 font-label-caps text-label-caps hover:bg-secondary hover:text-surface-container-lowest transition-all duration-200 active:scale-95 uppercase tracking-widest">
+      FORCE_SYNC
+    </button>
+  </div>
+  <div class="p-4 flex flex-col gap-2">
+    <a href="#" class="flex items-center gap-gutter text-on-surface-variant text-label-caps px-2 py-1 opacity-70 hover:text-primary transition-all">
+      <span class="material-symbols-outlined text-sm">help</span>HELP
+    </a>
+    <a href="#" class="flex items-center gap-gutter text-on-surface-variant text-label-caps px-2 py-1 opacity-70 hover:text-error transition-all">
+      <span class="material-symbols-outlined text-sm">logout</span>LOGOUT
+    </a>
+  </div>
+</aside>
+
+<!-- ── Main Content ─────────────────────────────────────────────────────────── -->
+<main class="md:ml-64 pt-20 pb-16 px-margin min-h-screen">
+  <div class="max-w-container-max mx-auto">
+
+    <!-- Section header -->
+    <div class="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
+      <div>
+        <h1 class="font-headline-lg text-headline-lg text-primary neon-text-glow uppercase tracking-tighter">
+          CVE_MONITORING // CENTRAL_FEED
+        </h1>
+        <p class="font-body-md text-on-surface-variant mt-2 flex items-center gap-2">
+          <span class="text-secondary">[QUERYING]</span>
+          <span id="status-line">Establishing uplink to RSS feeds…</span>
+          <span class="w-2 h-4 bg-primary inline-block cursor-blink"></span>
+        </p>
+      </div>
+      <!-- Last update widget -->
+      <div class="bg-surface-container p-2 border border-outline-variant flex items-center gap-4 flex-shrink-0">
+        <div class="text-right">
+          <div class="text-label-caps text-[10px] text-on-tertiary-container">LAST_UPDATE</div>
+          <div class="text-label-caps text-secondary" id="last-update-time">——</div>
+        </div>
+        <div class="w-px h-8 bg-outline-variant"></div>
+        <button id="refresh-btn" type="button" class="material-symbols-outlined text-primary hover:text-primary-container transition-colors cursor-pointer">refresh</button>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="flex gap-2 flex-wrap mb-8 border-b border-outline-variant pb-0">
+      <button data-tab="cve"    type="button" role="tab"
+        class="tab-btn px-4 py-2 font-label-caps text-label-caps uppercase tracking-widest border-b-2 transition-all duration-150 -mb-px
+               text-secondary border-secondary">
+        CVE_FEED <span id="tab-count-cve" class="opacity-60 ml-1">[0]</span>
+      </button>
+      <button data-tab="cloud"  type="button" role="tab"
+        class="tab-btn px-4 py-2 font-label-caps text-label-caps uppercase tracking-widest border-b-2 transition-all duration-150 -mb-px
+               text-on-surface-variant border-transparent hover:text-primary hover:border-primary/40">
+        CLOUD_FEED <span id="tab-count-cloud" class="opacity-60 ml-1">[0]</span>
+      </button>
+      <button data-tab="system" type="button" role="tab"
+        class="tab-btn px-4 py-2 font-label-caps text-label-caps uppercase tracking-widest border-b-2 transition-all duration-150 -mb-px
+               text-on-surface-variant border-transparent hover:text-primary hover:border-primary/40">
+        SYS_KERNEL <span id="tab-count-system" class="opacity-60 ml-1">[0]</span>
+      </button>
+    </div>
+
+    <!-- Card grid -->
+    <div id="news-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-gutter">
+      <p class="font-body-md text-on-tertiary-container col-span-full py-16 text-center">
+        // LOADING — establishing uplink…
+      </p>
+    </div>
+
+  </div>
+</main>
+
+<!-- ── Decorative binary stream (desktop only) ────────────────────────────── -->
+<div class="fixed top-1/4 right-8 pointer-events-none opacity-20 hidden xl:block z-10">
+  <div class="text-[8px] font-body-md text-primary flex flex-col gap-1 leading-none select-none">
+    <div>01001001 01001110 01010100</div>
+    <div>01000101 01001100 00100000</div>
+    <div>01010011 01000101 01000011</div>
+    <div>01010101 01010010 01000101</div>
+    <div>-------------------------</div>
+    <div class="text-secondary">SCANNING PORT: 443...</div>
+    <div class="text-secondary">SCANNING PORT: 80...</div>
+    <div class="text-secondary">SCANNING PORT: 22...</div>
+    <div class="animate-pulse">_WAITING FOR SYNC...</div>
+  </div>
+</div>
+
+<!-- ── Footer ──────────────────────────────────────────────────────────────── -->
+<footer class="fixed bottom-0 left-0 right-0 z-50 border-t border-outline-variant bg-surface-container-lowest h-8">
+  <div class="flex justify-between items-center w-full px-margin h-full">
+    <div class="flex items-center gap-4 text-label-caps text-on-tertiary-container whitespace-nowrap">
+      <span class="text-primary font-bold">© <span id="footer-year"></span> DEVSEC_CORE // SYSTEM_STABLE</span>
+      <span class="hidden sm:inline border-l border-outline-variant pl-4">LATENCY: 12ms</span>
+      <span class="hidden sm:inline border-l border-outline-variant pl-4">ENC_MODE: RSA_4096</span>
+    </div>
+    <div class="flex gap-4 font-label-caps text-label-caps text-on-tertiary-container whitespace-nowrap">
+      <a href="#" class="hover:text-primary transition-colors">SYS_LOGS</a>
+      <a href="#" class="hover:text-primary transition-colors">API_DOCS</a>
+      <a href="#" class="hover:text-primary transition-colors">STATUS_PAGE</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script src="assets/dashboard.js"></script>
+<script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+</body>
 </html>

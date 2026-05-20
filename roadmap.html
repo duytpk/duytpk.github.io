@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0e0e10" />
+  <meta name="description" content="DS_OPS // HUB — DevSecOps learning roadmap: Linux, Terraform, Kubernetes." />
+  <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
+  <title>DS_OPS // HUB — ROADMAP</title>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/cyber-neon.css" />
+
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-lowest":   "#0e0e10",
+            "surface-container-low":      "#1c1b1d",
+            "surface-container":          "#201f21",
+            "surface-container-high":     "#2a2a2c",
+            "surface-container-highest":  "#353437",
+            "surface-dim":                "#131315",
+            "surface":                    "#131315",
+            "surface-bright":             "#39393b",
+            "surface-variant":            "#353437",
+            "on-surface":                 "#e5e1e4",
+            "on-surface-variant":         "#b9cacb",
+            "outline":                    "#849495",
+            "outline-variant":            "#3a494b",
+            "primary":                    "#e1fdff",
+            "on-primary":                 "#00363a",
+            "primary-container":          "#00f2ff",
+            "on-primary-container":       "#006a71",
+            "primary-fixed":              "#74f5ff",
+            "primary-fixed-dim":          "#00dbe7",
+            "on-primary-fixed":           "#002022",
+            "on-primary-fixed-variant":   "#004f54",
+            "surface-tint":               "#00dbe7",
+            "inverse-primary":            "#00696f",
+            "secondary":                  "#ffabf3",
+            "on-secondary":               "#5b005b",
+            "secondary-container":        "#fe00fe",
+            "on-secondary-container":     "#500050",
+            "secondary-fixed":            "#ffd7f5",
+            "secondary-fixed-dim":        "#ffabf3",
+            "on-secondary-fixed":         "#380038",
+            "on-secondary-fixed-variant": "#810081",
+            "tertiary":                   "#faf6fc",
+            "on-tertiary":                "#303034",
+            "tertiary-container":         "#dddae0",
+            "on-tertiary-container":      "#605f64",
+            "error":                      "#ffb4ab",
+            "on-error":                   "#690005",
+            "error-container":            "#93000a",
+            "on-error-container":         "#ffdad6",
+            "background":                 "#131315",
+            "on-background":              "#e5e1e4",
+            "inverse-surface":            "#e5e1e4",
+            "inverse-on-surface":         "#313032",
+          },
+          spacing: {
+            "container-max": "1280px",
+            "unit":   "4px",
+            "gutter": "16px",
+            "margin": "24px",
+          },
+          fontFamily: {
+            "display-lg":  ["Sora"],
+            "headline-lg": ["Sora"],
+            "headline-md": ["Sora"],
+            "body-lg":     ["JetBrains Mono"],
+            "body-md":     ["JetBrains Mono"],
+            "label-caps":  ["JetBrains Mono"],
+          },
+          fontSize: {
+            "display-lg":  ["48px", { lineHeight: "1.1",  letterSpacing: "-0.02em", fontWeight: "800" }],
+            "headline-lg": ["32px", { lineHeight: "1.2",  letterSpacing: "0.05em",  fontWeight: "700" }],
+            "headline-md": ["24px", { lineHeight: "1.2",  fontWeight: "600" }],
+            "body-lg":     ["18px", { lineHeight: "1.6",  fontWeight: "400" }],
+            "body-md":     ["14px", { lineHeight: "1.5",  fontWeight: "400" }],
+            "label-caps":  ["12px", { lineHeight: "1.0",  letterSpacing: "0.1em",   fontWeight: "700" }],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-surface-container-lowest text-on-surface font-body-md overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+
+<div class="scanline-overlay"></div>
+
+<!-- ── Top App Bar ──────────────────────────────────────────────────────────── -->
+<header class="fixed top-0 left-0 right-0 z-50 border-b border-outline-variant bg-surface-container-lowest h-16 flex justify-between items-center px-margin">
+  <div class="flex items-center gap-4">
+    <span class="font-display-lg text-headline-md text-primary tracking-tighter">DS_OPS // HUB</span>
+  </div>
+  <nav class="hidden md:flex gap-8 font-body-md text-body-md uppercase tracking-widest">
+    <a href="index.html"   class="text-on-surface-variant font-normal hover:text-primary transition-colors duration-150">DASHBOARD</a>
+    <a href="roadmap.html" class="text-primary font-bold border-b-2 border-primary pb-1 neon-text-glow">ROADMAP</a>
+  </nav>
+  <div class="flex items-center gap-gutter">
+    <div class="hidden sm:flex items-center gap-2 px-3 py-1 border border-outline-variant bg-surface-container">
+      <span class="material-symbols-outlined text-primary text-[18px]">terminal</span>
+      <span class="font-label-caps text-label-caps text-primary">SYS_STABLE</span>
+    </div>
+    <div class="flex gap-4 text-on-surface-variant">
+      <span class="material-symbols-outlined cursor-pointer hover:text-primary transition-all">sensors</span>
+      <span class="material-symbols-outlined cursor-pointer hover:text-primary transition-all">security</span>
+    </div>
+    <span class="hidden lg:block text-primary-fixed-dim font-label-caps text-label-caps" id="clock">--:--:-- UTC</span>
+  </div>
+</header>
+
+<!-- ── Side Nav ────────────────────────────────────────────────────────────── -->
+<aside class="fixed left-0 top-16 h-[calc(100vh-64px)] w-64 border-r border-outline-variant bg-surface-container-low hidden md:flex flex-col z-40">
+  <div class="p-6 flex flex-col gap-1 border-b border-outline-variant">
+    <div class="w-12 h-12 bg-surface-container-highest border border-outline-variant flex items-center justify-center mb-2">
+      <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1;">account_circle</span>
+    </div>
+    <span class="font-headline-md text-headline-md text-primary">OPERATOR_01</span>
+    <span class="font-label-caps text-label-caps opacity-60">SEC_LEVEL: ALPHA</span>
+  </div>
+  <nav class="flex-1 py-4">
+    <a href="#" class="flex items-center gap-gutter text-on-surface-variant px-4 py-3 opacity-70 hover:bg-surface-container-highest hover:opacity-100 transition-all duration-200">
+      <span class="material-symbols-outlined">terminal</span><span class="font-body-md">TERMINAL</span>
+    </a>
+    <a href="index.html" class="flex items-center gap-gutter text-on-surface-variant px-4 py-3 opacity-70 hover:bg-surface-container-highest hover:opacity-100 transition-all duration-200">
+      <span class="material-symbols-outlined">rss_feed</span><span class="font-body-md">CVE_FEED</span>
+    </a>
+    <a href="#" class="flex items-center gap-gutter text-on-surface-variant px-4 py-3 opacity-70 hover:bg-surface-container-highest hover:opacity-100 transition-all duration-200">
+      <span class="material-symbols-outlined">hub</span><span class="font-body-md">NETWORK</span>
+    </a>
+    <a href="roadmap.html" class="flex items-center gap-gutter bg-secondary/10 text-secondary border-l-4 border-secondary px-4 py-3 hover:bg-surface-container-highest transition-all duration-200">
+      <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">route</span><span class="font-body-md">ROADMAP</span>
+    </a>
+    <a href="#" class="flex items-center gap-gutter text-on-surface-variant px-4 py-3 opacity-70 hover:bg-surface-container-highest hover:opacity-100 transition-all duration-200">
+      <span class="material-symbols-outlined">settings</span><span class="font-body-md">SETTINGS</span>
+    </a>
+  </nav>
+  <div class="p-4 flex flex-col gap-2 border-t border-outline-variant">
+    <button id="reset-btn" type="button"
+      class="w-full py-2 border border-error text-error font-label-caps text-label-caps hover:bg-error hover:text-on-error transition-all active:scale-95 uppercase tracking-widest">
+      RESET_PROGRESS
+    </button>
+    <div class="flex justify-between mt-2">
+      <span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary">help</span>
+      <span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary">logout</span>
+    </div>
+  </div>
+</aside>
+
+<!-- ── Main Content ─────────────────────────────────────────────────────────── -->
+<main class="md:ml-64 pt-24 px-margin pb-16 min-h-screen">
+  <div class="max-w-container-max mx-auto">
+
+    <!-- Page header -->
+    <header class="mb-12">
+      <div class="flex items-center gap-2 mb-2">
+        <span class="w-2 h-2 bg-primary"></span>
+        <h1 class="font-headline-lg text-headline-lg uppercase tracking-tighter">
+          Lộ trình học tập // DevSecOps
+        </h1>
+      </div>
+      <p class="font-body-md text-on-surface-variant max-w-2xl" id="overall-label">
+        Hệ thống theo dõi tiến độ đào tạo. Hoàn thành các node để mở khóa các đặc quyền hệ thống tiếp theo.
+        <span class="text-primary ml-2">— 0/21 tasks (0%)</span>
+      </p>
+    </header>
+
+    <!-- Roadmap node flow (populated by roadmap-page.js) -->
+    <div id="roadmap-container" class="relative flex flex-col items-center gap-24 py-4">
+      <p class="font-body-md text-on-tertiary-container py-16">// LOADING — reading mission data…</p>
+    </div>
+
+    <!-- Summary widgets -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mt-16" id="summary-widgets">
+      <div class="col-span-1 border border-outline-variant bg-surface-container-low p-6">
+        <div class="font-label-caps text-primary text-[10px] mb-4">SYSTEM_STATS</div>
+        <div class="flex items-end gap-2">
+          <span class="font-display-lg text-4xl text-primary" id="stats-completed">00</span>
+          <span class="font-body-md text-on-surface-variant pb-1">tasks completed</span>
+        </div>
+        <div class="mt-3 text-label-caps text-[10px] text-on-tertiary-container" id="stats-pct">0% of total</div>
+      </div>
+      <div class="col-span-1 md:col-span-2 border border-outline-variant bg-surface-container p-6 relative overflow-hidden">
+        <div class="flex justify-between items-center mb-4">
+          <div class="font-label-caps text-secondary text-[10px]">CURRENT_LOGS</div>
+          <span class="material-symbols-outlined text-secondary text-sm">analytics</span>
+        </div>
+        <div id="activity-log" class="font-body-md space-y-2 opacity-80 text-sm">
+          <div class="flex gap-4">
+            <span class="text-primary-fixed-dim font-bold">READY_</span>
+            <span class="bg-primary w-2 h-4 cursor-blink inline-block"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- ── Footer ──────────────────────────────────────────────────────────────── -->
+<footer class="md:ml-64 bg-surface-container-lowest border-t border-outline-variant h-10 flex justify-between items-center px-margin z-50">
+  <span class="font-label-caps text-label-caps text-primary">
+    © <span id="footer-year"></span> DEVSEC_CORE // SYSTEM_STABLE
+  </span>
+  <div class="flex gap-margin font-label-caps text-label-caps text-on-tertiary-container">
+    <a href="#" class="hover:text-primary transition-colors">SYS_LOGS</a>
+    <a href="#" class="hover:text-primary transition-colors">API_DOCS</a>
+    <a href="#" class="hover:text-primary transition-colors">STATUS_PAGE</a>
+  </div>
+</footer>
+
+<!-- ── Confirm Reset Modal ──────────────────────────────────────────────────── -->
+<div id="reset-modal" class="hidden fixed inset-0 z-[500] flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
+  <div class="w-full max-w-md bg-surface-container border border-error/40 p-6 shadow-[0_0_40px_rgba(255,180,171,0.12)]">
+    <div class="font-headline-md text-headline-md text-error mb-3 uppercase tracking-wider">
+      &#9888; RESET_PROGRESS
+    </div>
+    <p class="font-body-md text-on-surface-variant mb-6">
+      This will permanently erase all <strong class="text-on-surface" id="modal-count">0</strong>
+      completed task(s) across every track. This action cannot be undone.
+    </p>
+    <div class="flex gap-3 justify-end">
+      <button id="modal-cancel" type="button"
+        class="px-4 py-2 border border-outline-variant text-on-surface-variant font-label-caps text-label-caps hover:border-primary hover:text-primary transition-all uppercase tracking-widest">
+        CANCEL
+      </button>
+      <button id="modal-confirm" type="button"
+        class="px-4 py-2 border border-error text-error font-label-caps text-label-caps hover:bg-error hover:text-on-error transition-all uppercase tracking-widest">
+        CONFIRM_RESET
+      </button>
+    </div>
+  </div>
+</div>
+
+<script src="assets/app.js"></script>
+<script src="assets/roadmap-page.js"></script>
+<script>
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
+  /* clock is handled by assets/app.js via id="clock" */
+</script>
+</body>
+</html>
