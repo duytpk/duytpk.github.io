@@ -42,10 +42,17 @@ body,
 }
 
 body {
-  background:
+  /* The grid lives on the body background with fixed attachment, so it always
+     covers the full viewport at every scroll position — independent of any
+     element positioning or the Arwes canvas (which only adds dots + motion). */
+  background-color: var(--bg-deep);
+  background-image:
     radial-gradient(circle at 20% -10%, rgba(33, 243, 243, 0.08), transparent 45%),
     radial-gradient(circle at 90% 0%, rgba(255, 43, 214, 0.06), transparent 40%),
-    var(--bg-deep);
+    repeating-linear-gradient(0deg, rgba(33, 243, 243, 0.06) 0 1px, transparent 1px 44px),
+    repeating-linear-gradient(90deg, rgba(33, 243, 243, 0.06) 0 1px, transparent 1px 44px);
+  background-attachment: fixed;
+  background-repeat: no-repeat, no-repeat, repeat, repeat;
   overflow-x: hidden;
 }
 
