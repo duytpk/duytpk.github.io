@@ -45,8 +45,8 @@ const SOURCES = [
   { category: 'system', name: 'kernel.org', url: 'https://www.kernel.org/feeds/kdist.xml' },
 ]
 
-const PER_SOURCE = 6 // items taken from each feed
-const PER_CATEGORY = 15 // items kept per tab after merging
+const PER_SOURCE = 10 // items taken from each feed
+const PER_CATEGORY = 30 // items kept per tab after merging
 
 const parser = new Parser({
   timeout: 20000,
