@@ -1,0 +1,56 @@
+name: Update News Feed
+
+on:
+  schedule:
+    # Every hour, on the hour (UTC). Cron on GitHub Actions can be delayed
+    # by a few minutes under load.
+    - cron: '0 * * * *'
+  # Allow running it manually from the Actions tab.
+  workflow_dispatch:
+
+permissions:
+  contents: write # push the updated news.json
+  actions: write # dispatch the deploy workflow
+
+# Avoid overlapping runs.
+concurrency:
+  group: update-news
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch latest news (RSS -> src/data/news.json)
+        run: npm run fetch-news
+
+      - name: Commit & push if changed
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- src/data/news.json; then
+            echo "No news changes — nothing to commit."
+          else
+            git add src/data/news.json
+            git commit -m "chore(news): hourly auto-update [skip ci]"
+            git push
+            echo "pushed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Trigger Pages deploy
+        if: steps.commit.outputs.pushed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run deploy.yml --ref main
