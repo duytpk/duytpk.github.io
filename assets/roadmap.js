@@ -1,4 +1,4 @@
-/* ── Roadmap Page — node-based design ────────────────────────────────────── */
+/* ── Roadmap Page ────────────────────────────────────────────────────────── */
 
 var STORAGE_KEY = 'devsecops-hub:roadmap:v1';
 
@@ -54,8 +54,9 @@ function loadDone() {
 }
 function saveDone(d) { localStorage.setItem(STORAGE_KEY, JSON.stringify(d)); }
 
-var done = loadDone();
+var done      = loadDone();
 var activityLog = [];
+var _pulseIds   = [];
 
 /* ── Progress helpers ───────────────────────────────────────────────────────── */
 function trackProgress(track) {
@@ -159,13 +160,6 @@ function applyCbStyle(cb) {
   cb.style.cssText = cb.checked
     ? 'background:#00f2ff;border-color:#00f2ff;cursor:pointer;box-shadow:0 0 6px #00f2ff'
     : 'background:transparent;border:1px solid #3a494b;cursor:pointer';
-}
-
-/* ── Escape helper ──────────────────────────────────────────────────────────── */
-function esc(str) {
-  return String(str || '')
-    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
-    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
 /* ── Full render ────────────────────────────────────────────────────────────── */
@@ -326,11 +320,12 @@ function renderRoadmap() {
     });
   });
 
-  /* Pulse magenta nodes */
+  _pulseIds.forEach(clearInterval);
+  _pulseIds = [];
   container.querySelectorAll('.glow-magenta').forEach(function(node) {
-    setInterval(function() {
+    _pulseIds.push(setInterval(function() {
       node.classList.toggle('shadow-[0_0_30px_rgba(255,0,255,0.4)]');
-    }, 1500);
+    }, 1500));
   });
 
   updateStats();

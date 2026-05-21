@@ -8,61 +8,16 @@
   <title>DS_OPS // HUB — 404</title>
 
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="assets/tailwind-config.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/cyber-neon.css" />
-
-  <script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            "surface-container-lowest": "#0e0e10",
-            "surface-container-low":    "#1c1b1d",
-            "surface-container":        "#201f21",
-            "surface-container-highest":"#353437",
-            "on-surface":               "#e5e1e4",
-            "on-surface-variant":       "#b9cacb",
-            "outline":                  "#849495",
-            "outline-variant":          "#3a494b",
-            "primary":                  "#e1fdff",
-            "primary-fixed-dim":        "#00dbe7",
-            "secondary":                "#ffabf3",
-            "on-tertiary-container":    "#605f64",
-            "background":               "#131315",
-          },
-          spacing: { "margin": "24px", "gutter": "16px" },
-          fontFamily: {
-            "display-lg":  ["Sora"],
-            "headline-md": ["Sora"],
-            "body-md":     ["JetBrains Mono"],
-            "label-caps":  ["JetBrains Mono"],
-          },
-          fontSize: {
-            "headline-md": ["24px", { lineHeight: "1.2", fontWeight: "600" }],
-            "body-md":     ["14px", { lineHeight: "1.5", fontWeight: "400" }],
-            "label-caps":  ["12px", { lineHeight: "1.0", letterSpacing: "0.1em", fontWeight: "700" }],
-          },
-        },
-      },
-    };
-  </script>
 </head>
 <body class="bg-surface-container-lowest text-on-surface font-body-md overflow-x-hidden">
 
 <div class="scanline-overlay"></div>
 
-<!-- TopBar -->
-<header class="fixed top-0 left-0 right-0 z-50 border-b border-outline-variant bg-surface-container-lowest h-16 flex justify-between items-center px-margin">
-  <div class="flex items-center gap-4">
-    <span class="font-display-lg text-headline-md text-primary tracking-tighter">DS_OPS // HUB</span>
-  </div>
-  <nav class="hidden md:flex gap-8 font-body-md text-body-md uppercase tracking-widest">
-    <a href="index.html"   class="text-on-surface-variant hover:text-primary transition-colors">DASHBOARD</a>
-    <a href="roadmap.html" class="text-on-surface-variant hover:text-primary transition-colors">ROADMAP</a>
-  </nav>
-</header>
+<script src="assets/topbar.js"></script>
 
 <!-- SideNav -->
 <aside class="fixed left-0 top-16 h-[calc(100vh-64px)] w-64 border-r border-outline-variant bg-surface-container-low hidden md:flex flex-col z-40">
@@ -101,16 +56,7 @@
   </div>
 </main>
 
-<!-- Footer -->
-<footer class="fixed bottom-0 left-0 right-0 z-50 border-t border-outline-variant bg-surface-container-lowest h-8">
-  <div class="flex justify-between items-center w-full px-margin h-full">
-    <span class="font-label-caps text-label-caps text-primary">
-      © <span id="footer-year"></span> DEVSEC_CORE // SYSTEM_STABLE
-    </span>
-  </div>
-</footer>
-
 <script src="assets/app.js"></script>
-<script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+<script src="assets/footer.js"></script>
 </body>
 </html>
