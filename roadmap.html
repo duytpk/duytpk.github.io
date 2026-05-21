@@ -95,94 +95,82 @@
 <div class="scanline-overlay"></div>
 
 <!-- ── Top App Bar ──────────────────────────────────────────────────────────── -->
-<header class="fixed top-0 left-0 right-0 z-50 border-b border-outline-variant bg-surface-container-lowest h-16 flex justify-between items-center px-margin">
-  <div class="flex items-center gap-4">
-    <span class="font-display-lg text-headline-md text-primary tracking-tighter">DS_OPS // HUB</span>
-  </div>
-  <nav class="hidden md:flex gap-8 font-body-md text-body-md uppercase tracking-widest">
-    <a href="index.html"   class="text-on-surface-variant font-normal hover:text-primary transition-colors duration-150">DASHBOARD</a>
-    <a href="roadmap.html" class="text-primary font-bold border-b-2 border-primary pb-1 neon-text-glow">ROADMAP</a>
-  </nav>
-  <div class="flex items-center gap-gutter">
-    <div class="hidden sm:flex items-center gap-2 px-3 py-1 border border-outline-variant bg-surface-container">
-      <span class="material-symbols-outlined text-primary text-[18px]">terminal</span>
-      <span class="font-label-caps text-label-caps text-primary">SYS_STABLE</span>
+<header class="fixed top-0 left-0 right-0 z-50 border-b border-outline-variant bg-surface-container-lowest/90 backdrop-blur-md h-16 flex items-center px-margin">
+  <div class="w-full grid grid-cols-3 items-center h-full">
+
+    <!-- Logo -->
+    <div class="flex items-center justify-start">
+      <span class="font-display-lg text-headline-md text-primary tracking-tighter neon-text-cyan">DS_OPS // HUB</span>
     </div>
-    <div class="flex gap-4 text-on-surface-variant">
-      <span class="material-symbols-outlined cursor-pointer hover:text-primary transition-all">sensors</span>
-      <span class="material-symbols-outlined cursor-pointer hover:text-primary transition-all">security</span>
+
+    <!-- Navigation (centered) -->
+    <nav class="hidden md:flex justify-center gap-8 font-body-md text-body-md uppercase tracking-[0.2em]">
+      <a href="index.html"
+         class="text-on-surface-variant font-normal hover:text-primary transition-colors duration-150 cursor-pointer active:scale-95">
+        DASHBOARD
+      </a>
+      <a href="roadmap.html"
+         class="text-primary font-bold border-b-2 border-primary pb-1 active-nav-glow animate-glitch hover-glitch relative">
+        ROADMAP
+      </a>
+    </nav>
+
+    <!-- Status + actions -->
+    <div class="flex items-center justify-end gap-gutter">
+      <div class="hidden sm:flex items-center gap-4 px-3 py-1.5 border border-outline-variant bg-surface-container">
+        <div class="flex items-center gap-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-primary-container shadow-[0_0_8px_#00f2ff] animate-pulse"></span>
+          <span class="font-label-caps text-[10px] text-primary tracking-widest">SYS: ONLINE</span>
+        </div>
+        <div class="w-px h-3.5 bg-outline-variant"></div>
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary text-[16px]" style="font-variation-settings:'wght' 300">link</span>
+          <span class="font-label-caps text-[10px] text-primary tracking-widest">UPLINK: SECURE</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-3 ml-2">
+        <span class="font-label-caps text-[10px] text-primary-fixed-dim hidden lg:block" id="clock">--:--:-- UTC</span>
+        <span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-all text-[20px]">sensors</span>
+        <button id="reset-btn" type="button"
+          class="hidden sm:block border border-error/60 text-error py-1 px-2 font-label-caps text-[10px] hover:bg-error hover:text-on-error transition-all duration-200 active:scale-95 uppercase tracking-widest">
+          RESET_PROGRESS
+        </button>
+      </div>
     </div>
-    <span class="hidden lg:block text-primary-fixed-dim font-label-caps text-label-caps" id="clock">--:--:-- UTC</span>
+
   </div>
 </header>
 
-<!-- ── Side Nav ────────────────────────────────────────────────────────────── -->
-<aside class="fixed left-0 top-16 h-[calc(100vh-64px)] w-64 border-r border-outline-variant bg-surface-container-low hidden md:flex flex-col z-40">
-  <div class="p-6 flex flex-col gap-1 border-b border-outline-variant">
-    <div class="w-12 h-12 bg-surface-container-highest border border-outline-variant flex items-center justify-center mb-2">
-      <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1;">account_circle</span>
-    </div>
-    <span class="font-headline-md text-headline-md text-primary">OPERATOR_01</span>
-    <span class="font-label-caps text-label-caps opacity-60">SEC_LEVEL: ALPHA</span>
-  </div>
-  <nav class="flex-1 py-4">
-    <a href="#" class="flex items-center gap-gutter text-on-surface-variant px-4 py-3 opacity-70 hover:bg-surface-container-highest hover:opacity-100 transition-all duration-200">
-      <span class="material-symbols-outlined">terminal</span><span class="font-body-md">TERMINAL</span>
-    </a>
-    <a href="index.html" class="flex items-center gap-gutter text-on-surface-variant px-4 py-3 opacity-70 hover:bg-surface-container-highest hover:opacity-100 transition-all duration-200">
-      <span class="material-symbols-outlined">rss_feed</span><span class="font-body-md">CVE_FEED</span>
-    </a>
-    <a href="#" class="flex items-center gap-gutter text-on-surface-variant px-4 py-3 opacity-70 hover:bg-surface-container-highest hover:opacity-100 transition-all duration-200">
-      <span class="material-symbols-outlined">hub</span><span class="font-body-md">NETWORK</span>
-    </a>
-    <a href="roadmap.html" class="flex items-center gap-gutter bg-secondary/10 text-secondary border-l-4 border-secondary px-4 py-3 hover:bg-surface-container-highest transition-all duration-200">
-      <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">route</span><span class="font-body-md">ROADMAP</span>
-    </a>
-    <a href="#" class="flex items-center gap-gutter text-on-surface-variant px-4 py-3 opacity-70 hover:bg-surface-container-highest hover:opacity-100 transition-all duration-200">
-      <span class="material-symbols-outlined">settings</span><span class="font-body-md">SETTINGS</span>
-    </a>
-  </nav>
-  <div class="p-4 flex flex-col gap-2 border-t border-outline-variant">
-    <button id="reset-btn" type="button"
-      class="w-full py-2 border border-error text-error font-label-caps text-label-caps hover:bg-error hover:text-on-error transition-all active:scale-95 uppercase tracking-widest">
-      RESET_PROGRESS
-    </button>
-    <div class="flex justify-between mt-2">
-      <span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary">help</span>
-      <span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary">logout</span>
-    </div>
-  </div>
-</aside>
-
 <!-- ── Main Content ─────────────────────────────────────────────────────────── -->
-<main class="md:ml-64 pt-24 px-margin pb-16 min-h-screen">
+<main class="pt-24 px-margin pb-16 min-h-screen">
   <div class="max-w-container-max mx-auto">
 
     <!-- Page header -->
-    <header class="mb-12">
-      <div class="flex items-center gap-2 mb-2">
-        <span class="w-2 h-2 bg-primary"></span>
-        <h1 class="font-headline-lg text-headline-lg uppercase tracking-tighter">
-          Lộ trình học tập // DevSecOps
+    <header class="mb-16 text-center">
+      <div class="inline-flex items-center gap-3 mb-4">
+        <span class="w-8 h-px bg-primary-container"></span>
+        <h1 class="font-headline-lg text-headline-lg uppercase tracking-[0.2em] neon-text-cyan animate-glitch hover-glitch">
+          CyberSec // Learning Path
         </h1>
+        <span class="w-8 h-px bg-primary-container"></span>
       </div>
-      <p class="font-body-md text-on-surface-variant max-w-2xl" id="overall-label">
-        Hệ thống theo dõi tiến độ đào tạo. Hoàn thành các node để mở khóa các đặc quyền hệ thống tiếp theo.
+      <p class="font-body-md text-on-surface-variant max-w-2xl mx-auto opacity-80" id="overall-label">
+        Neural network training sequence initialized. Complete sequential modules to authorize advanced system clearance.
         <span class="text-primary ml-2">— 0/21 tasks (0%)</span>
       </p>
     </header>
 
     <!-- Roadmap node flow (populated by roadmap-page.js) -->
-    <div id="roadmap-container" class="relative flex flex-col items-center gap-24 py-4">
+    <div id="roadmap-container" class="relative flex flex-col items-center gap-32 py-4">
       <p class="font-body-md text-on-tertiary-container py-16">// LOADING — reading mission data…</p>
     </div>
 
     <!-- Summary widgets -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mt-16" id="summary-widgets">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mt-24" id="summary-widgets">
       <div class="col-span-1 border border-outline-variant bg-surface-container-low p-6">
         <div class="font-label-caps text-primary text-[10px] mb-4">SYSTEM_STATS</div>
         <div class="flex items-end gap-2">
-          <span class="font-display-lg text-4xl text-primary" id="stats-completed">00</span>
+          <span class="font-display-lg text-4xl text-primary neon-text-cyan" id="stats-completed">00</span>
           <span class="font-body-md text-on-surface-variant pb-1">tasks completed</span>
         </div>
         <div class="mt-3 text-label-caps text-[10px] text-on-tertiary-container" id="stats-pct">0% of total</div>
@@ -201,15 +189,23 @@
       </div>
     </div>
 
+    <!-- Mobile reset button -->
+    <div class="mt-8 sm:hidden">
+      <button id="reset-btn-mobile" type="button"
+        class="w-full py-2 border border-error text-error font-label-caps text-label-caps hover:bg-error hover:text-on-error transition-all active:scale-95 uppercase tracking-widest">
+        RESET_PROGRESS
+      </button>
+    </div>
+
   </div>
 </main>
 
 <!-- ── Footer ──────────────────────────────────────────────────────────────── -->
-<footer class="md:ml-64 bg-surface-container-lowest border-t border-outline-variant h-10 flex justify-between items-center px-margin z-50">
-  <span class="font-label-caps text-label-caps text-primary">
+<footer class="fixed bottom-0 left-0 right-0 z-50 border-t border-outline-variant bg-surface-container-lowest h-10 flex items-center justify-between px-margin">
+  <span class="font-label-caps text-[10px] text-primary tracking-widest opacity-80">
     © <span id="footer-year"></span> DEVSEC_CORE // SYSTEM_STABLE
   </span>
-  <div class="flex gap-margin font-label-caps text-label-caps text-on-tertiary-container">
+  <div class="flex gap-6 font-label-caps text-[10px] text-on-surface-variant tracking-[0.1em]">
     <a href="#" class="hover:text-primary transition-colors">SYS_LOGS</a>
     <a href="#" class="hover:text-primary transition-colors">API_DOCS</a>
     <a href="#" class="hover:text-primary transition-colors">STATUS_PAGE</a>
@@ -243,7 +239,11 @@
 <script src="assets/roadmap-page.js"></script>
 <script>
   document.getElementById('footer-year').textContent = new Date().getFullYear();
-  /* clock is handled by assets/app.js via id="clock" */
+  /* Wire mobile reset button to the same modal */
+  var mobileReset = document.getElementById('reset-btn-mobile');
+  if (mobileReset) mobileReset.addEventListener('click', function() {
+    document.getElementById('reset-btn').click();
+  });
 </script>
 </body>
 </html>

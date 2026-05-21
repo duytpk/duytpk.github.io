@@ -1,9 +1,9 @@
 /* ── CVE / News Dashboard ─────────────────────────────────────────────────── */
 
 var TABS = [
-  { key: 'cve',    label: 'CVE_FEED',    tag: 'CVE',   activeClass: 'text-secondary border-secondary' },
-  { key: 'cloud',  label: 'CLOUD_FEED',  tag: 'CLOUD', activeClass: 'text-primary   border-primary'   },
-  { key: 'system', label: 'SYS_KERNEL',  tag: 'SYS',   activeClass: 'text-primary   border-primary'   },
+  { key: 'cve',    label: 'CVE_FEED',   icon: 'security', activeClass: 'text-secondary border-secondary' },
+  { key: 'cloud',  label: 'CLOUD_FEED', icon: 'cloud',    activeClass: 'text-primary   border-primary'   },
+  { key: 'system', label: 'SYS_KERNEL', icon: 'terminal', activeClass: 'text-primary   border-primary'   },
 ];
 
 var INACTIVE_TAB_CLASS = 'text-on-surface-variant border-transparent hover:text-primary hover:border-primary/40';
@@ -59,7 +59,7 @@ function setSyncState(loading) {
 /* ── Fetch ──────────────────────────────────────────────────────────────────── */
 function loadNews() {
   setSyncState(true);
-  setStatus('Synchronising feeds…');
+  setStatus(' Synchronising feeds…');
 
   fetch('news.json?t=' + Date.now(), { cache: 'no-store' })
     .then(function(res) {
@@ -68,14 +68,14 @@ function loadNews() {
     })
     .then(function(json) {
       newsData = json;
-      setStatus(json.generator === 'seed' ? 'Seed data loaded' : 'Live RSS data · auto-refresh: 5m');
+      setStatus(json.generator === 'seed' ? ' Seed data loaded' : ' Live RSS data · auto-refresh: 5m');
       setLastUpdateTime(json.updatedAt);
       setSyncState(false);
       renderCards();
     })
     .catch(function() {
       if (!newsData) { newsData = SEED; }
-      setStatus('Offline — showing cached / seed data');
+      setStatus(' Offline — showing cached / seed data');
       setLastUpdateTime(newsData.updatedAt);
       setSyncState(false);
       renderCards();
@@ -83,13 +83,13 @@ function loadNews() {
 }
 
 /* ── Card render ────────────────────────────────────────────────────────────── */
-function cardTagHtml(tabKey, source) {
-  /* CVE tab → error-container badge; others → primary badge */
-  if (tabKey === 'cve') {
-    return '<span class="bg-error-container text-error border border-error/30 px-2 py-1 text-label-caps font-label-caps">[CVE]</span>';
-  }
-  return '<span class="bg-primary/10 text-primary border border-primary/30 px-2 py-1 text-label-caps font-label-caps">[' + esc(tabKey.toUpperCase()) + ']</span>';
-}
+
+/* Tab meta: badge label, icon, card style */
+var TAB_META = {
+  cve:    { badge: 'LIVE_THREAT', status: 'ACTIVE_THREAT', icon: 'security',  cardClass: 'glow-magenta border-secondary shadow-[0_0_20px_rgba(255,0,255,0.2)]',  textClass: 'text-secondary',  accentClass: 'neon-text-magenta' },
+  cloud:  { badge: 'CLOUD_OPS',  status: 'STABLE',        icon: 'cloud',      cardClass: 'glow-cyan border-primary-container',                                      textClass: 'text-primary',    accentClass: 'neon-text-cyan'    },
+  system: { badge: 'SYS_UPDATE', status: 'SYS_ACTIVE',    icon: 'terminal',   cardClass: 'glow-cyan border-primary-container',                                      textClass: 'text-primary',    accentClass: 'neon-text-cyan'    },
+};
 
 function renderTabCounts() {
   var feeds = (newsData && newsData.feeds) || {};
@@ -106,6 +106,7 @@ function renderCards() {
 
   var feeds = (newsData && newsData.feeds) || {};
   var items = feeds[currentTab] || [];
+  var meta  = TAB_META[currentTab] || TAB_META.cloud;
 
   if (items.length === 0) {
     grid.innerHTML = '<p class="font-body-md text-on-tertiary-container col-span-full py-16 text-center">// NO SIGNAL — feed is empty.</p>';
@@ -113,48 +114,66 @@ function renderCards() {
   }
 
   grid.innerHTML = items.map(function(item, i) {
-    var delay = i * 35;
+    var delay = i * 60;
+    /* First card in CVE tab gets special "exploited" treatment */
+    var cardMeta = meta;
+    var isFeatured = (currentTab === 'cve' && i === 0);
+    if (isFeatured) {
+      cardMeta = Object.assign({}, meta, {
+        badge: 'CRITICAL',
+        status: 'UNPATCHED',
+      });
+    }
+
     return [
-      '<div class="relative bg-surface-container-low border border-outline-variant p-6',
-      ' hover:border-primary-fixed-dim transition-all group flex flex-col h-full neon-border-glow',
-      '" style="animation: cardIn 0.3s ease both; animation-delay:' + delay + 'ms">',
+      '<article class="flex flex-col bg-surface-container border border-outline-variant ' + cardMeta.cardClass + '',
+      ' group hover:bg-surface-container-high transition-all duration-300 relative"',
+      ' style="animation: cardIn 0.35s ease both; animation-delay:' + delay + 'ms">',
 
-      /* bracket corner */
-      '<div class="bracket-corner text-primary absolute -top-px -left-px w-4 h-4"></div>',
+      /* Animated ping indicator on featured CVE card */
+      isFeatured
+        ? '<div class="absolute top-0 right-0 p-2"><div class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></div></div>'
+        : '',
 
-      /* tag + time */
-      '<div class="flex justify-between items-start mb-4">',
-        cardTagHtml(currentTab, item.source),
-        '<span class="text-label-caps text-on-tertiary-container">' + timeAgo(item.isoDate) + '</span>',
+      /* Header row: source label + icon + badge */
+      '<div class="p-5 border-b border-outline-variant/40">',
+        '<div class="font-label-caps text-[10px] ' + cardMeta.textClass + ' tracking-widest opacity-80 mb-2">' +
+          '[' + esc(currentTab.toUpperCase()) + '_FEED] // ' + esc((item.source || '').toUpperCase()) +
+        '</div>',
+        '<div class="flex justify-between items-center">',
+          '<span class="material-symbols-outlined ' + cardMeta.textClass + ' text-2xl" style="font-variation-settings:\'FILL\' 1;">' + cardMeta.icon + '</span>',
+          '<span class="px-2 py-0.5 bg-current/10 text-[9px] font-label-caps border border-current/30 ' + cardMeta.textClass + '">' + cardMeta.badge + '</span>',
+        '</div>',
       '</div>',
 
-      /* source */
-      '<div class="text-label-caps text-on-tertiary-container mb-2">SOURCE: ' + esc(item.source).toUpperCase() + '</div>',
+      /* Body: title + snippet */
+      '<div class="p-5 flex-grow">',
+        '<h3 class="font-headline-md text-[17px] mb-3 ' + cardMeta.textClass + ' ' + cardMeta.accentClass + ' leading-tight">',
+          esc(item.title),
+        '</h3>',
+        '<p class="font-body-md text-sm text-on-surface-variant leading-relaxed opacity-90 line-clamp-3">',
+          esc(item.contentSnippet || '—'),
+        '</p>',
+      '</div>',
 
-      /* title */
-      '<h3 class="font-headline-md text-headline-md text-primary-fixed-dim neon-text-glow mb-4 leading-tight">',
-        esc(item.title),
-      '</h3>',
-
-      /* snippet */
-      '<p class="font-body-md text-on-surface-variant flex-grow mb-6 line-clamp-3">',
-        esc(item.contentSnippet || '—'),
-      '</p>',
-
-      /* footer */
-      '<div class="pt-4 border-t border-outline-variant flex justify-between items-center mt-auto">',
-        '<div class="text-label-caps text-on-tertiary-container">[STATUS: ACTIVE]</div>',
+      /* Footer: link + metadata */
+      '<div class="p-5 pt-0 mt-auto">',
         '<a href="' + esc(item.link) + '" target="_blank" rel="noreferrer"',
-        '   class="flex items-center gap-2 text-secondary font-label-caps hover:translate-x-2 transition-transform">',
+        '   class="inline-flex items-center gap-2 text-[11px] font-label-caps ' + cardMeta.textClass + ' border border-current/20 bg-current/5 px-4 py-2 hover:bg-current/20 transition-all w-full justify-center group/btn">',
           'ACCESS_FEED',
-          '<span class="material-symbols-outlined text-sm">arrow_forward</span>',
+          '<span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>',
         '</a>',
+        '<div class="mt-3 flex justify-between items-center text-[9px] font-label-caps text-on-surface-variant/60 uppercase">',
+          '<span>' + timeAgo(item.isoDate) + '</span>',
+          '<span>[STATUS: ' + cardMeta.status + ']</span>',
+        '</div>',
       '</div>',
-      '</div>',
+
+      '</article>',
     ].join('');
   }).join('');
 
-  /* Glitch hover effect on titles */
+  /* Glitch hover effect on card titles */
   var glitchChars = '!@#$%^&*()_+{}[]|;:,.<>?';
   grid.querySelectorAll('h3').forEach(function(h3) {
     var original = h3.innerText;
@@ -170,6 +189,13 @@ function renderCards() {
       }, 30);
     });
   });
+
+  /* Pulse magenta cards for atmosphere */
+  grid.querySelectorAll('.glow-magenta').forEach(function(node) {
+    setInterval(function() {
+      node.classList.toggle('shadow-[0_0_30px_rgba(255,0,255,0.4)]');
+    }, 1500);
+  });
 }
 
 /* ── Tab switching ──────────────────────────────────────────────────────────── */
@@ -180,15 +206,8 @@ function switchTab(key) {
   document.querySelectorAll('.tab-btn[data-tab]').forEach(function(btn) {
     var isActive = btn.dataset.tab === key;
     var tab = TABS.find(function(t) { return t.key === btn.dataset.tab; });
-
-    /* Remove all dynamic classes first */
     btn.className = 'tab-btn px-4 py-2 font-label-caps text-label-caps uppercase tracking-widest border-b-2 transition-all duration-150 -mb-px ';
-
-    if (isActive) {
-      btn.className += tab.activeClass;
-    } else {
-      btn.className += INACTIVE_TAB_CLASS;
-    }
+    btn.className += isActive ? tab.activeClass : INACTIVE_TAB_CLASS;
   });
 
   renderCards();
@@ -196,21 +215,14 @@ function switchTab(key) {
 
 /* ── Init ───────────────────────────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', function() {
-  /* Tab buttons */
   document.querySelectorAll('.tab-btn[data-tab]').forEach(function(btn) {
     btn.addEventListener('click', function() { switchTab(btn.dataset.tab); });
   });
 
-  /* Sync / refresh buttons */
   var syncBtn    = document.getElementById('sync-btn');
   var refreshBtn = document.getElementById('refresh-btn');
   if (syncBtn)    syncBtn.addEventListener('click',    loadNews);
   if (refreshBtn) refreshBtn.addEventListener('click', loadNews);
-
-  /* Inject card-in keyframe once */
-  var style = document.createElement('style');
-  style.textContent = '@keyframes cardIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }';
-  document.head.appendChild(style);
 
   loadNews();
   setInterval(loadNews, 5 * 60 * 1000);

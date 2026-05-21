@@ -55,7 +55,7 @@ function loadDone() {
 function saveDone(d) { localStorage.setItem(STORAGE_KEY, JSON.stringify(d)); }
 
 var done = loadDone();
-var activityLog = []; // recent toggle events (session-only)
+var activityLog = [];
 
 /* ── Progress helpers ───────────────────────────────────────────────────────── */
 function trackProgress(track) {
@@ -73,7 +73,6 @@ function calcOverall() {
   return { total: total, completed: completed, pct: total ? Math.round((completed / total) * 100) : 0 };
 }
 
-/* Node state: COMPLETED | IN_PROGRESS | LOCKED */
 function nodeState(track) {
   var p = trackProgress(track);
   if (p.pct === 100) return 'COMPLETED';
@@ -101,7 +100,7 @@ function renderActivityLog() {
   }).join('') + '<div class="flex gap-4 mt-1"><span class="text-primary-fixed-dim font-bold">READY_</span><span class="bg-primary w-2 h-4 cursor-blink inline-block"></span></div>';
 }
 
-/* ── Update stats widgets ───────────────────────────────────────────────────── */
+/* ── Update stats ───────────────────────────────────────────────────────────── */
 function updateStats() {
   var o = calcOverall();
   var statsEl = document.getElementById('stats-completed');
@@ -110,7 +109,8 @@ function updateStats() {
   if (statsEl) statsEl.textContent = String(o.completed).padStart(2, '0');
   if (pctEl)   pctEl.textContent = o.pct + '% of ' + o.total + ' total tasks';
   if (labelEl) {
-    labelEl.innerHTML = 'Hệ thống theo dõi tiến độ đào tạo. Hoàn thành các node để mở khóa các đặc quyền hệ thống tiếp theo. <span class="text-primary ml-2">— ' + o.completed + '/' + o.total + ' tasks (' + o.pct + '%)</span>';
+    labelEl.innerHTML = 'Neural network training sequence initialized. Complete sequential modules to authorize advanced system clearance.' +
+      ' <span class="text-primary ml-2">— ' + o.completed + '/' + o.total + ' tasks (' + o.pct + '%)</span>';
   }
 }
 
@@ -125,9 +125,9 @@ function updateNodeBar(trackId) {
 
   var fill = document.getElementById('node-fill-' + trackId);
   var prog = document.getElementById('node-prog-' + trackId);
-  var bar  = document.getElementById('node-bar-' + trackId);
+  var bar  = document.getElementById('node-bar-'  + trackId);
   if (fill) fill.style.width = p.pct + '%';
-  if (prog) prog.textContent = 'PROGRESS: ' + p.pct + '%';
+  if (prog) prog.textContent = 'SEQUENCE_PROGRESS: ' + p.pct + '%';
   if (bar)  bar.style.display = p.tDone > 0 ? 'block' : 'none';
 }
 
@@ -148,9 +148,17 @@ function toggleTask(id, trackId) {
   if (item) item.classList.toggle('text-on-tertiary-container', !!done[id]);
   if (cb)   cb.checked = !!done[id];
 
+  applyCbStyle(cb);
   updateNodeBar(trackId);
   updateStats();
   if (task) logActivity(task.title, !!done[id]);
+}
+
+function applyCbStyle(cb) {
+  if (!cb) return;
+  cb.style.cssText = cb.checked
+    ? 'background:#00f2ff;border-color:#00f2ff;cursor:pointer;box-shadow:0 0 6px #00f2ff'
+    : 'background:transparent;border:1px solid #3a494b;cursor:pointer';
 }
 
 /* ── Escape helper ──────────────────────────────────────────────────────────── */
@@ -170,84 +178,139 @@ function renderRoadmap() {
     var state = nodeState(track);
     var isLast = idx === ROADMAP.length - 1;
 
-    /* Node appearance by state */
-    var nodeGlowClass = '';
-    var badgeHtml     = '';
-    var statusLabel   = '';
-    var iconColor     = 'text-primary';
+    /* --- Per-state appearance --- */
+    var nodeClass   = '';
+    var badgeHtml   = '';
+    var statusLabel = '';
+    var iconColor   = 'text-primary';
+    var titleColor  = 'text-primary';
 
     if (state === 'COMPLETED') {
-      nodeGlowClass = 'glow-cyan';
-      badgeHtml = '<span class="px-2 py-0.5 bg-primary/20 text-primary text-[10px] font-label-caps">COMPLETED</span>';
-      statusLabel = '<span class="text-[10px] font-label-caps text-primary opacity-50">[ ' + track.nodeId + ': STABLE ]</span>';
+      nodeClass   = 'bg-surface-container/50 border border-outline-variant glow-cyan backdrop-blur-sm';
+      badgeHtml   = '<span class="px-3 py-1 bg-primary/20 text-primary text-[10px] font-label-caps border border-primary/40">AUTH_SUCCESS</span>';
+      statusLabel = '<span class="bg-primary/10 px-2 py-0.5 border border-primary/30 text-primary">' + track.nodeId + ' // VERIFIED</span>';
+      iconColor   = 'text-primary';
+      titleColor  = 'text-primary';
+
     } else if (state === 'IN_PROGRESS') {
-      nodeGlowClass = 'glow-magenta';
-      iconColor = 'text-secondary';
-      badgeHtml = '<span class="px-2 py-0.5 bg-secondary/20 text-secondary text-[10px] font-label-caps flex items-center gap-1">' +
-        '<span class="w-1 h-1 bg-secondary rounded-full animate-ping"></span>ACTIVE_TASK</span>';
-      statusLabel = '<span class="text-[10px] font-label-caps text-secondary opacity-80 animate-pulse">[ ' + track.nodeId + ': IN_PROGRESS ]</span>';
+      nodeClass   = 'bg-surface-container border-2 border-secondary glow-magenta relative overflow-hidden shadow-[0_0_30px_rgba(255,0,255,0.2)]';
+      badgeHtml   = [
+        '<div class="flex flex-col items-end">',
+          '<span class="px-3 py-1 bg-secondary/20 text-secondary text-[10px] font-label-caps border border-secondary/40">ACTIVE_SEQUENCE</span>',
+          '<span class="text-[8px] font-label-caps text-secondary/60 mt-1 uppercase tracking-tighter">Priority: Critical</span>',
+        '</div>',
+      ].join('');
+      statusLabel = '<span class="bg-secondary/10 px-2 py-0.5 border border-secondary/30 text-secondary animate-pulse">' + track.nodeId + ' // EXECUTING...</span>';
+      iconColor   = 'text-secondary neon-text-magenta';
+      titleColor  = 'text-secondary';
+
     } else {
       /* LOCKED */
-      nodeGlowClass = '';
-      badgeHtml = '<span class="material-symbols-outlined text-on-surface-variant text-sm">lock</span>';
-      statusLabel = '<span class="text-[10px] font-label-caps text-on-surface-variant opacity-40">[ ' + track.nodeId + ': LOCKED ]</span>';
-      iconColor = 'text-on-surface-variant';
+      nodeClass   = 'bg-surface-container/30 border border-outline-variant opacity-40 hover:opacity-60 transition-opacity grayscale';
+      badgeHtml   = '<span class="material-symbols-outlined text-on-surface-variant text-xl">lock</span>';
+      statusLabel = '<span class="bg-surface-variant/50 px-2 py-0.5 border border-outline-variant/30 text-on-surface-variant/50">' + track.nodeId + ' // ENCRYPTED</span>';
+      iconColor   = 'text-on-surface-variant';
+      titleColor  = 'text-on-surface-variant/80';
     }
 
-    var lockedClass = state === 'LOCKED' ? 'opacity-50 hover:opacity-80 transition-opacity grayscale hover:grayscale-0' : '';
+    /* --- Ping dot for in-progress --- */
+    var pingDot = state === 'IN_PROGRESS'
+      ? '<div class="absolute top-0 right-0 p-2"><div class="w-1 h-1 bg-secondary rounded-full animate-ping"></div></div>'
+      : '';
 
-    /* Task list */
+    /* --- Task list --- */
     var tasksHtml = track.tasks.map(function(task) {
       var isDone = !!done[task.id];
-      return '<li class="flex items-start gap-3 py-1.5' + (isDone ? ' text-on-tertiary-container' : '') + '" id="task-' + task.id + '">' +
-        '<input type="checkbox" class="mt-0.5 flex-shrink-0 appearance-none w-3.5 h-3.5 border border-outline' +
-          (isDone ? ' bg-primary-fixed-dim border-primary-fixed-dim checked:bg-primary-fixed-dim' : ' hover:border-primary cursor-pointer') +
-          '" id="cb-' + task.id + '" data-id="' + task.id + '" data-track="' + track.id + '"' +
-          (isDone ? ' checked' : '') + ' />' +
-        '<span>' +
-          '<span class="font-body-md text-[13px]' + (isDone ? ' line-through' : '') + '">' + esc(task.title) + '</span>' +
-          '<span class="block font-label-caps text-[10px] text-on-tertiary-container opacity-70">// ' + esc(task.meta) + '</span>' +
-        '</span>' +
-      '</li>';
+      return [
+        '<li class="flex items-start gap-3 py-1.5' + (isDone ? ' text-on-tertiary-container' : '') + '" id="task-' + task.id + '">',
+          '<input type="checkbox" class="mt-0.5 flex-shrink-0 appearance-none w-3.5 h-3.5 border border-outline"',
+          ' id="cb-' + task.id + '" data-id="' + task.id + '" data-track="' + track.id + '"',
+          (isDone ? ' checked' : '') + ' />',
+          '<span>',
+            '<span class="font-body-md text-[13px]' + (isDone ? ' line-through' : '') + '">' + esc(task.title) + '</span>',
+            '<span class="block font-label-caps text-[10px] text-on-tertiary-container opacity-70">// ' + esc(task.meta) + '</span>',
+          '</span>',
+        '</li>',
+      ].join('');
     }).join('');
 
-    /* Progress bar (only shown when in progress) */
-    var progressHtml = state === 'IN_PROGRESS' ? [
-      '<div id="node-bar-' + track.id + '" class="mt-4 w-full bg-surface-container-highest h-1 relative">',
-        '<div id="node-fill-' + track.id + '" class="absolute left-0 top-0 h-full bg-secondary shadow-[0_0_8px_#ffabf3]" style="width:' + p.pct + '%"></div>',
-      '</div>',
-      '<div class="mt-2 text-[10px] font-label-caps text-secondary" id="node-prog-' + track.id + '">PROGRESS: ' + p.pct + '%</div>',
-    ].join('') : (state === 'COMPLETED' ? [
-      '<div id="node-bar-' + track.id + '" class="mt-4 w-full bg-surface-container-highest h-1 relative">',
-        '<div id="node-fill-' + track.id + '" class="absolute left-0 top-0 h-full bg-primary-fixed-dim shadow-[0_0_8px_#00dbe7]" style="width:100%"></div>',
-      '</div>',
-    ].join('') : '<div id="node-bar-' + track.id + '" style="display:none"><div id="node-fill-' + track.id + '"></div></div><span id="node-prog-' + track.id + '" class="hidden"></span>');
+    /* --- Progress bar --- */
+    var progressHtml = '';
+    if (state === 'IN_PROGRESS') {
+      progressHtml = [
+        '<div class="mt-8">',
+          '<div class="flex justify-between items-end mb-2">',
+            '<span class="text-[10px] font-label-caps text-secondary/80">SEQUENCE_PROGRESS</span>',
+            '<span class="text-[12px] font-bold font-label-caps text-secondary" id="node-prog-' + track.id + '">' + p.pct + '%</span>',
+          '</div>',
+          '<div id="node-bar-' + track.id + '" class="w-full bg-surface-container-highest h-1.5 relative overflow-hidden">',
+            '<div id="node-fill-' + track.id + '" class="absolute left-0 top-0 h-full bg-secondary shadow-[0_0_10px_#ff00ff]" style="width:' + p.pct + '%"></div>',
+            '<div class="absolute top-0 left-0 h-full w-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full" style="animation:shimmer 2s infinite"></div>',
+          '</div>',
+        '</div>',
+      ].join('');
+    } else if (state === 'COMPLETED') {
+      progressHtml = [
+        '<div id="node-bar-' + track.id + '" class="mt-4 w-full bg-surface-container-highest h-1 relative">',
+          '<div id="node-fill-' + track.id + '" class="absolute left-0 top-0 h-full bg-primary-fixed-dim shadow-[0_0_8px_#00f2ff]" style="width:100%"></div>',
+        '</div>',
+        '<div class="mt-2 flex gap-6">',
+          '<div class="flex flex-col">',
+            '<span class="text-[9px] font-label-caps text-on-surface-variant uppercase">Tasks</span>',
+            '<span class="text-[12px] font-label-caps text-primary">' + p.tDone + '/' + p.total + '</span>',
+          '</div>',
+          '<div class="flex flex-col">',
+            '<span class="text-[9px] font-label-caps text-on-surface-variant uppercase">Completion</span>',
+            '<span class="text-[12px] font-label-caps text-primary">100%</span>',
+          '</div>',
+        '</div>',
+      ].join('');
+    } else {
+      progressHtml = '<div id="node-bar-' + track.id + '" style="display:none"><div id="node-fill-' + track.id + '"></div></div><span id="node-prog-' + track.id + '" class="hidden"></span>';
+    }
 
-    /* Connector line to next node */
-    var connectorHtml = isLast ? '' : (state === 'LOCKED'
-      ? '<div class="absolute top-full left-1/2 -translate-x-1/2 w-[2px] h-24 border-l-2 border-dashed border-outline-variant"></div>'
-      : '<div class="absolute top-full left-1/2 -translate-x-1/2 w-[2px] h-24 bg-primary/30"></div>');
+    /* --- Connector line to next node --- */
+    var connectorHtml = '';
+    if (!isLast) {
+      if (state === 'LOCKED') {
+        connectorHtml = '<div class="absolute top-full left-1/2 -translate-x-1/2 w-px h-32 border-l border-dashed border-outline-variant"></div>';
+      } else if (state === 'COMPLETED') {
+        var nextState = nodeState(ROADMAP[idx + 1]);
+        var gradTo = nextState === 'IN_PROGRESS' ? 'to-secondary/50' : 'to-primary/20';
+        connectorHtml = '<div class="absolute top-full left-1/2 -translate-x-1/2 w-px h-32 bg-gradient-to-b from-primary/50 ' + gradTo + '"></div>';
+      } else {
+        connectorHtml = '<div class="absolute top-full left-1/2 -translate-x-1/2 w-px h-32 bg-gradient-to-b from-secondary/20 to-primary/20"></div>';
+      }
+    }
 
     return [
-      '<div class="relative group z-10 w-full max-w-xl">',
-        '<div class="absolute -top-6 left-0">' + statusLabel + '</div>',
-        '<div class="p-6 bg-surface-container border border-outline-variant ' + nodeGlowClass + ' ' + lockedClass + ' relative overflow-hidden">',
+      '<div class="relative group z-10 w-full max-w-lg">',
+
+        /* Status badge above node */
+        '<div class="absolute -top-8 left-0 font-label-caps text-[11px] tracking-widest opacity-70">',
+          statusLabel,
+        '</div>',
+
+        /* Node card */
+        '<div class="p-8 ' + nodeClass + '">',
+          pingDot,
 
           /* Icon + badge */
-          '<div class="flex justify-between items-start mb-4">',
-            '<span class="material-symbols-outlined ' + iconColor + ' text-3xl" style="font-variation-settings:\'FILL\' 1;">' + track.icon + '</span>',
+          '<div class="flex justify-between items-start mb-6">',
+            '<span class="material-symbols-outlined ' + iconColor + ' text-4xl" style="font-variation-settings:\'FILL\' 1;">' + track.icon + '</span>',
             badgeHtml,
           '</div>',
 
           /* Title + blurb */
-          '<h3 class="font-headline-md text-headline-md mb-2">' + esc(track.label) + '</h3>',
-          '<p class="font-body-md text-on-surface-variant mb-4">' + esc(track.blurb) + '</p>',
+          '<h3 class="font-headline-md text-headline-md mb-3 ' + titleColor + '">' + esc(track.label) + '</h3>',
+          '<p class="font-body-md text-on-surface-variant leading-relaxed">' + esc(track.blurb) + '</p>',
 
           /* Task list */
-          '<ul class="space-y-0 border-t border-outline-variant/30 pt-4">' + tasksHtml + '</ul>',
+          '<ul class="space-y-0 border-t border-outline-variant/30 pt-4 mt-4">' + tasksHtml + '</ul>',
 
           progressHtml,
         '</div>',
+
         connectorHtml,
       '</div>',
     ].join('');
@@ -255,20 +318,19 @@ function renderRoadmap() {
 
   container.innerHTML = html;
 
-  /* Attach checkbox listeners */
+  /* Attach checkbox listeners + styles */
   container.querySelectorAll('input[type=checkbox][data-id]').forEach(function(cb) {
+    applyCbStyle(cb);
     cb.addEventListener('change', function() {
       toggleTask(cb.dataset.id, cb.dataset.track);
     });
-    /* Style checked state manually since Tailwind CDN can't do :checked dynamically for custom colours */
-    cb.style.cssText = cb.checked
-      ? 'background:#00dbe7;border-color:#00dbe7;cursor:pointer'
-      : 'background:transparent;border:1px solid #3a494b;cursor:pointer';
-    cb.addEventListener('change', function() {
-      cb.style.cssText = cb.checked
-        ? 'background:#00dbe7;border-color:#00dbe7;cursor:pointer'
-        : 'background:transparent;border:1px solid #3a494b;cursor:pointer';
-    });
+  });
+
+  /* Pulse magenta nodes */
+  container.querySelectorAll('.glow-magenta').forEach(function(node) {
+    setInterval(function() {
+      node.classList.toggle('shadow-[0_0_30px_rgba(255,0,255,0.4)]');
+    }, 1500);
   });
 
   updateStats();

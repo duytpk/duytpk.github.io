@@ -1,8 +1,8 @@
 /* ============================================================
    NEON PROTOCOL — Custom CSS (Tailwind CDN handles utilities)
    This file covers only what Tailwind cannot:
-     scanline overlay · bracket corners · glow effects ·
-     scrollbar · blink cursor · material symbols variant
+     scanline overlay · glitch animation · bracket corners ·
+     glow effects · scrollbar · blink cursor · neon text
 ============================================================ */
 
 /* ---- CRT Scanline Overlay ---- */
@@ -17,27 +17,38 @@
     z-index: 200;
 }
 
+/* ---- Glitch animation ---- */
+@keyframes glitch {
+    0%   { transform: translate(0);         text-shadow: 0 0 5px #00f2ff, 0 0 10px #00f2ff; }
+    2%   { transform: translate(-2px, 1px); text-shadow: 2px 0 #ff00ff, -2px 0 #00f2ff; }
+    4%   { transform: translate(2px, -1px); text-shadow: -2px 0 #ff00ff, 2px 0 #00f2ff; }
+    6%   { transform: translate(0);         text-shadow: 0 0 5px #00f2ff, 0 0 10px #00f2ff; }
+    100% { transform: translate(0);         text-shadow: 0 0 5px #00f2ff, 0 0 10px #00f2ff; }
+}
+.animate-glitch     { animation: glitch 4s infinite linear alternate-reverse; }
+.hover-glitch:hover { animation: glitch 0.3s infinite linear; }
+
+/* ---- Neon text helpers ---- */
+.neon-text-glow        { text-shadow: 0 0 8px rgba(0, 219, 231, 0.6); }
+.neon-text-glow-magenta{ text-shadow: 0 0 8px rgba(255, 171, 243, 0.6); }
+.neon-text-cyan        { text-shadow: 0 0 5px #00f2ff, 0 0 10px #00f2ff; }
+.neon-text-magenta     { text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff; }
+.active-nav-glow       { text-shadow: 0 0 8px rgba(0, 242, 255, 0.6); }
+
 /* ---- Glow helpers ---- */
 .neon-border-glow {
     box-shadow: 0 0 5px rgba(0,219,231,0.3), inset 0 0 2px rgba(0,219,231,0.2);
 }
-.neon-text-glow {
-    text-shadow: 0 0 8px rgba(0,219,231,0.6);
-}
-.neon-text-glow-magenta {
-    text-shadow: 0 0 8px rgba(255,171,243,0.6);
-}
 .glow-cyan {
-    box-shadow: 0 0 15px rgba(0,219,231,0.4);
-    border-color: #00dbe7 !important;
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.4);
+    border-color: #00f2ff !important;
 }
 .glow-magenta {
-    box-shadow: 0 0 15px rgba(255,171,243,0.4);
-    border-color: #ffabf3 !important;
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+    border-color: #ff00ff !important;
 }
 
 /* ---- Bracket corner decoration ---- */
-/* Usage: <div class="bracket-corner text-primary absolute ..."></div> inside a relative container */
 .bracket-corner::before {
     content: '';
     position: absolute;
@@ -54,9 +65,6 @@
 }
 .cursor-blink { animation: blink 1s step-end infinite; }
 
-/* ---- Glitch hover effect (for h3 titles) ---- */
-/* Applied via JS on mouseenter */
-
 /* ---- Material Symbols icon default variant ---- */
 .material-symbols-outlined {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -69,7 +77,7 @@
 ::-webkit-scrollbar         { width: 4px; }
 ::-webkit-scrollbar-track   { background: #0e0e10; }
 ::-webkit-scrollbar-thumb   { background: #3a494b; }
-::-webkit-scrollbar-thumb:hover { background: #00dbe7; }
+::-webkit-scrollbar-thumb:hover { background: #00f2ff; }
 
 /* ---- Node connector line for roadmap ---- */
 .node-connector {
@@ -77,7 +85,7 @@
     left: 50%;
     transform: translateX(-50%);
     width: 2px;
-    background: rgba(0,219,231,0.25);
+    background: rgba(0, 242, 255, 0.3);
     top: 100%;
 }
 .node-connector--dashed {
@@ -91,10 +99,22 @@
     color: #002022;
 }
 
+/* ---- Card entry animation (injected by dashboard.js) ---- */
+@keyframes cardIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- Shimmer for progress bars ---- */
+@keyframes shimmer {
+    100% { transform: translateX(100%); }
+}
+
 /* ---- Reduce motion ---- */
 @media (prefers-reduced-motion: reduce) {
-    .scanline-overlay { display: none; }
-    .cursor-blink     { animation: none; }
-    .animate-pulse    { animation: none; }
-    .animate-ping     { animation: none; }
+    .scanline-overlay  { display: none; }
+    .cursor-blink      { animation: none; }
+    .animate-pulse     { animation: none; }
+    .animate-ping      { animation: none; }
+    .animate-glitch    { animation: none; }
 }
