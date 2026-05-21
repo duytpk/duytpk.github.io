@@ -6,9 +6,9 @@
     '    &#169; <span id="footer-year"></span> DEVSEC_CORE // SYSTEM_STABLE',
     '  </span>',
     '  <div class="flex gap-6 font-label-caps text-[10px] text-on-surface-variant tracking-[0.1em]">',
-    '    <a href="#" class="hover:text-primary transition-colors">SYS_LOGS</a>',
-    '    <a href="#" class="hover:text-primary transition-colors">API_DOCS</a>',
-    '    <a href="#" class="hover:text-primary transition-colors">STATUS_PAGE</a>',
+    '    <span class="opacity-40">SYS_LOGS</span>',
+    '    <span class="opacity-40">API_DOCS</span>',
+    '    <span class="opacity-40">STATUS_PAGE</span>',
     '  </div>',
     '</footer>',
   ].join('');

@@ -52,7 +52,7 @@ function loadDone() {
   try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; }
   catch (_) { return {}; }
 }
-function saveDone(d) { localStorage.setItem(STORAGE_KEY, JSON.stringify(d)); }
+function saveDone(d) { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(d)); } catch (_) {} }
 
 var done      = loadDone();
 var activityLog = [];

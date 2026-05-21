@@ -170,6 +170,7 @@ function switchTab(key) {
     var isActive = btn.dataset.tab === key;
     btn.className = 'tab-btn px-4 py-2 font-label-caps text-label-caps uppercase tracking-widest border-b-2 transition-all duration-150 -mb-px ';
     btn.className += isActive ? tab.activeClass : INACTIVE_TAB;
+    btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
   });
 
   renderCards();
@@ -185,5 +186,6 @@ document.addEventListener('DOMContentLoaded', function() {
   if (syncBtn) syncBtn.addEventListener('click', loadNews);
 
   loadNews();
-  setInterval(loadNews, 5 * 60 * 1000);
+  var _refreshTimer = setInterval(loadNews, 5 * 60 * 1000);
+  window.addEventListener('beforeunload', function() { clearInterval(_refreshTimer); });
 });

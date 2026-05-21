@@ -158,8 +158,29 @@ linear history. Safe to run whenever you see "Your branch and 'origin/main' have
   `404.html`. A shared partial would require a build step — not worth it for only 3 pages.
   If the number of pages grows significantly, revisit with a simple Node assembly script.
 
-- **No decorative line elements** flanking headings (`<span class="w-8 h-px ...">`). 
+- **No decorative line elements** flanking headings (`<span class="w-8 h-px ...">`).
   Removed from `index.html` header — keep headers as plain text, no side decorations.
+
+- **Footer links (SYS_LOGS, API_DOCS, STATUS_PAGE) are intentionally non-functional** —
+  rendered as `<span class="opacity-40">`, not `<a href="#">`. Do not add hrefs back until
+  real destinations exist.
+
+- **Removed CSS classes** — the following were deleted from `cyber-neon.css` as unused;
+  do not re-add unless actively needed:
+  `.neon-text-glow-magenta`, `.active-nav-glow`, `.bracket-corner`, `.node-connector`,
+  `.node-connector--dashed`
+
+## Code patterns & constraints
+
+- **setInterval must be stored and cleared.** Any `setInterval` call must assign its return
+  value to a variable and clear it on `beforeunload`. See `assets/index.js` for the pattern.
+
+- **localStorage writes must be wrapped in try/catch.** Private-mode browsers can throw on
+  `setItem`. `loadDone()` already handles this; `saveDone()` in `assets/roadmap.js` does too.
+
+- **Tab ARIA state must stay in sync.** `index.html` sets initial `aria-selected` on each
+  `role="tab"` button; `switchTab()` in `assets/index.js` updates it on every switch.
+  If you add tabs, wire both places.
 
 ---
 
