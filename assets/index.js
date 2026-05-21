@@ -78,7 +78,7 @@ function loadNews() {
     })
     .then(function(json) {
       newsData = json;
-      setStatus(json.generator === 'seed' ? ' Seed data loaded' : ' Live RSS data · auto-refresh: 5m');
+      setStatus(json.generator === 'seed' ? 'Seed data loaded' : 'Live RSS data');
       setLastUpdateTime(json.updatedAt);
       setSyncState(false);
       renderCards();
@@ -127,7 +127,6 @@ function renderCards() {
       ' group hover:bg-surface-container-high transition-all duration-300 relative"',
       ' style="animation:cardIn 0.35s ease both;animation-delay:' + (i * 60) + 'ms">',
 
-      isFeatured ? '<div class="absolute top-0 right-0 p-2"><div class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></div></div>' : '',
 
       '<div class="p-5 border-b border-outline-variant/40">',
         '<div class="font-label-caps text-[10px] ' + cardMeta.textClass + ' tracking-widest opacity-80 mb-2">',
