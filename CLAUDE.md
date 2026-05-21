@@ -137,6 +137,32 @@ Node states are derived at render time:
 
 ---
 
+## Git workflow
+
+The hourly `update-news.yml` workflow pushes a `chore(news): hourly auto-update` commit
+directly to `origin/main`. This frequently causes the local branch to **diverge** from remote.
+
+**Fix (do not use `git pull` — it creates an unnecessary merge commit):**
+```bash
+git rebase origin/main
+```
+
+This replays your local dev commits on top of the automated news commit, keeping a clean
+linear history. Safe to run whenever you see "Your branch and 'origin/main' have diverged."
+
+---
+
+## Design decisions
+
+- **`<head>` sections are intentionally duplicated** across `index.html`, `roadmap.html`,
+  `404.html`. A shared partial would require a build step — not worth it for only 3 pages.
+  If the number of pages grows significantly, revisit with a simple Node assembly script.
+
+- **No decorative line elements** flanking headings (`<span class="w-8 h-px ...">`). 
+  Removed from `index.html` header — keep headers as plain text, no side decorations.
+
+---
+
 ## Legacy React source (`src/`)
 
 The `src/` directory, `package.json`, `vite.config.js`, etc. are kept for reference
