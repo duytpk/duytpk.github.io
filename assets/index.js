@@ -111,7 +111,7 @@ function renderCards() {
   var meta  = TABS.find(function(t) { return t.key === currentTab; }) || TABS[1];
 
   if (items.length === 0) {
-    grid.innerHTML = '<p class="font-body-md text-on-tertiary-container col-span-full py-16 text-center">// NO SIGNAL — feed is empty.</p>';
+    grid.innerHTML = '<p class="font-body-md text-muted col-span-full py-16 text-center">// NO SIGNAL — feed is empty.</p>';
     return;
   }
 

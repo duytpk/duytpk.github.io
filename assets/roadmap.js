@@ -146,7 +146,7 @@ function toggleTask(id, trackId) {
   var item = document.getElementById('task-' + id);
   var cb   = document.getElementById('cb-' + id);
   if (item) item.classList.toggle('line-through', !!done[id]);
-  if (item) item.classList.toggle('text-on-tertiary-container', !!done[id]);
+  if (item) item.classList.toggle('text-muted', !!done[id]);
   if (cb)   cb.checked = !!done[id];
 
   applyCbStyle(cb);
@@ -187,7 +187,7 @@ function renderRoadmap() {
       titleColor  = 'text-primary';
 
     } else if (state === 'IN_PROGRESS') {
-      nodeClass   = 'bg-surface-container border-2 border-secondary glow-magenta relative overflow-hidden shadow-[0_0_30px_rgba(255,0,255,0.2)]';
+      nodeClass   = 'bg-surface-container border-2 border-secondary glow-magenta relative overflow-hidden shadow-[0_0_30px_rgba(255,171,243,0.2)]';
       badgeHtml   = [
         '<div class="flex flex-col items-end">',
           '<span class="px-3 py-1 bg-secondary/20 text-secondary text-[10px] font-label-caps border border-secondary/40">ACTIVE_SEQUENCE</span>',
@@ -202,7 +202,7 @@ function renderRoadmap() {
       /* LOCKED */
       nodeClass   = 'bg-surface-container/30 border border-outline-variant opacity-40 hover:opacity-60 transition-opacity grayscale';
       badgeHtml   = '<span class="material-symbols-outlined text-on-surface-variant text-xl">lock</span>';
-      statusLabel = '<span class="bg-surface-variant/50 px-2 py-0.5 border border-outline-variant/30 text-on-surface-variant/50">' + track.nodeId + ' // ENCRYPTED</span>';
+      statusLabel = '<span class="bg-surface-container-highest/50 px-2 py-0.5 border border-outline-variant/30 text-on-surface-variant/50">' + track.nodeId + ' // ENCRYPTED</span>';
       iconColor   = 'text-on-surface-variant';
       titleColor  = 'text-on-surface-variant/80';
     }
@@ -216,13 +216,13 @@ function renderRoadmap() {
     var tasksHtml = track.tasks.map(function(task) {
       var isDone = !!done[task.id];
       return [
-        '<li class="flex items-start gap-3 py-1.5' + (isDone ? ' text-on-tertiary-container' : '') + '" id="task-' + task.id + '">',
+        '<li class="flex items-start gap-3 py-1.5' + (isDone ? ' text-muted' : '') + '" id="task-' + task.id + '">',
           '<input type="checkbox" class="mt-0.5 flex-shrink-0 appearance-none w-3.5 h-3.5 border border-outline"',
           ' id="cb-' + task.id + '" data-id="' + task.id + '" data-track="' + track.id + '"',
           (isDone ? ' checked' : '') + ' />',
           '<span>',
             '<span class="font-body-md text-[13px]' + (isDone ? ' line-through' : '') + '">' + esc(task.title) + '</span>',
-            '<span class="block font-label-caps text-[10px] text-on-tertiary-container opacity-70">// ' + esc(task.meta) + '</span>',
+            '<span class="block font-label-caps text-[10px] text-muted opacity-70">// ' + esc(task.meta) + '</span>',
           '</span>',
         '</li>',
       ].join('');
@@ -238,7 +238,7 @@ function renderRoadmap() {
             '<span class="text-[12px] font-bold font-label-caps text-secondary" id="node-prog-' + track.id + '">' + p.pct + '%</span>',
           '</div>',
           '<div id="node-bar-' + track.id + '" class="w-full bg-surface-container-highest h-1.5 relative overflow-hidden">',
-            '<div id="node-fill-' + track.id + '" class="absolute left-0 top-0 h-full bg-secondary shadow-[0_0_10px_#ff00ff]" style="width:' + p.pct + '%"></div>',
+            '<div id="node-fill-' + track.id + '" class="absolute left-0 top-0 h-full bg-secondary shadow-[0_0_10px_#ffabf3]" style="width:' + p.pct + '%"></div>',
             '<div class="absolute top-0 left-0 h-full w-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full" style="animation:shimmer 2s infinite"></div>',
           '</div>',
         '</div>',
@@ -324,7 +324,7 @@ function renderRoadmap() {
   _pulseIds = [];
   container.querySelectorAll('.glow-magenta').forEach(function(node) {
     _pulseIds.push(setInterval(function() {
-      node.classList.toggle('shadow-[0_0_30px_rgba(255,0,255,0.4)]');
+      node.classList.toggle('shadow-[0_0_30px_rgba(255,171,243,0.4)]');
     }, 1500));
   });
 
