@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#0e0e10" />
   <meta name="description" content="DS_OPS // HUB — real-time CVE feed and DevSecOps dashboard." />
   <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
-  <title>DS_OPS // HUB — CVE_FEED</title>
+  <title>DuyTPK's hub</title>
 
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <script src="assets/tailwind-config.js"></script>
@@ -28,8 +28,8 @@
     <!-- Section header -->
     <header class="mb-10 text-center">
       <div class="mb-4">
-        <h1 class="font-headline-lg text-headline-lg text-primary uppercase tracking-[0.2em] neon-text-cyan animate-glitch hover-glitch">
-          CVE_MONITORING // CENTRAL_FEED
+        <h1 class="font-headline-lg text-headline-lg text-primary uppercase tracking-[0.2em] neon-text-cyan">
+          CVE MONITORING
         </h1>
       </div>
       <p class="font-body-md text-on-surface-variant max-w-2xl mx-auto opacity-80">
@@ -42,31 +42,31 @@
     <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 border-b border-outline-variant pb-0">
       <div class="flex gap-2 flex-wrap" role="tablist">
         <button data-tab="cve" type="button" role="tab" aria-selected="true"
-          class="tab-btn px-4 py-2 font-label-caps text-label-caps uppercase tracking-widest border-b-2 transition-all duration-150 -mb-px
+          class="tab-btn px-4 py-2 font-label-caps text-label-caps uppercase tracking-widest border-b-2 transition-all duration-150 -mb-px hover-glitch
                  text-secondary border-secondary">
-          CVE_FEED <span id="tab-count-cve" class="opacity-60 ml-1">[0]</span>
+          CVE <span id="tab-count-cve" class="opacity-60 ml-1">[0]</span>
         </button>
         <button data-tab="cloud" type="button" role="tab" aria-selected="false"
-          class="tab-btn px-4 py-2 font-label-caps text-label-caps uppercase tracking-widest border-b-2 transition-all duration-150 -mb-px
+          class="tab-btn px-4 py-2 font-label-caps text-label-caps uppercase tracking-widest border-b-2 transition-all duration-150 -mb-px hover-glitch
                  text-primary border-transparent hover:border-primary/40">
-          CLOUD_FEED <span id="tab-count-cloud" class="opacity-60 ml-1">[0]</span>
+          Cloud <span id="tab-count-cloud" class="opacity-60 ml-1">[0]</span>
         </button>
         <button data-tab="system" type="button" role="tab" aria-selected="false"
-          class="tab-btn px-4 py-2 font-label-caps text-label-caps uppercase tracking-widest border-b-2 transition-all duration-150 -mb-px
+          class="tab-btn px-4 py-2 font-label-caps text-label-caps uppercase tracking-widest border-b-2 transition-all duration-150 -mb-px hover-glitch
                  text-primary border-transparent hover:border-primary/40">
-          SYS_KERNEL <span id="tab-count-system" class="opacity-60 ml-1">[0]</span>
+          System kernel <span id="tab-count-system" class="opacity-60 ml-1">[0]</span>
         </button>
       </div>
       <!-- Last update widget -->
       <div class="bg-surface-container px-3 py-1.5 border border-outline-variant flex items-center gap-3 flex-shrink-0 mb-px">
         <div class="text-right">
-          <div class="text-label-caps text-[9px] text-primary">LAST_UPDATE</div>
-          <div class="text-label-caps text-[10px] text-primary" id="last-update-time">——</div>
+          <div class="text-label-caps text-[9px] text-primary">Last update</div>
+          <div class="text-label-caps text-[10px] text-secondary" id="last-update-time">——</div>
         </div>
         <div class="w-px h-6 bg-outline-variant"></div>
         <button id="sync-btn" type="button"
-          class="font-label-caps text-[10px] text-primary border border-primary/20 bg-primary/5 px-2 py-1 hover:bg-primary/20 transition-all uppercase tracking-widest">
-          SYNC
+          class="font-label-caps text-[10px] text-secondary border border-secondary/20 bg-secondary/5 px-2 py-1 hover:bg-secondary/20 hover:border-secondary hover:shadow-[0_0_10px_rgba(255,171,243,0.4)] transition-all uppercase tracking-widest">
+          Sync
         </button>
       </div>
     </div>
@@ -74,7 +74,7 @@
     <!-- Card grid (populated by index.js) -->
     <div id="news-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-gutter">
       <p class="font-body-md text-muted col-span-full py-16 text-center">
-        // LOADING — establishing uplink…
+        Loading — Establishing uplink…
       </p>
     </div>
 
