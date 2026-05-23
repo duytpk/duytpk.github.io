@@ -2,23 +2,23 @@
 
 var TABS = [
   {
-    key: 'cve', label: 'CVE_FEED', icon: 'security',
+    key: 'cve', label: 'CVE', icon: 'security',
     activeClass:  'text-secondary border-secondary hover-glitch',
-    badge: 'LIVE_THREAT', status: 'ACTIVE_THREAT',
+    badge: 'LIVE THREAT', status: 'ACTIVE THREAT',
     textClass:   'text-primary',
     accentClass: 'neon-text-cyan',
   },
   {
-    key: 'cloud', label: 'CLOUD_FEED', icon: 'cloud',
+    key: 'cloud', label: 'CLOUD', icon: 'cloud',
     activeClass:  'text-secondary border-secondary hover-glitch',
-    badge: 'CLOUD_OPS', status: 'STABLE',
+    badge: 'CLOUD', status: 'STABLE',
     textClass:   'text-primary',
     accentClass: 'neon-text-cyan',
   },
   {
-    key: 'system', label: 'SYS_KERNEL', icon: 'terminal',
+    key: 'system', label: 'SYSTEM KERNEL', icon: 'terminal',
     activeClass:  'text-secondary border-secondary hover-glitch',
-    badge: 'SYS_UPDATE', status: 'SYS_ACTIVE',
+    badge: 'SYSTEM UPDATE', status: 'SYSTEM ACTIVE',
     textClass:   'text-primary',
     accentClass: 'neon-text-cyan',
   },
@@ -27,7 +27,7 @@ var TABS = [
 var INACTIVE_TAB = 'text-primary border-transparent hover:border-primary/40 hover-glitch';
 
 /* Seed data — rendered if /news.json fetch fails (e.g. file:// protocol). */
-var SEED = {"updatedAt":"2026-05-20T14:41:22.179Z","generator":"seed","feeds":{"cve":[{"title":"Webworm Deploys EchoCreep and GraphWorm Backdoors Using Discord and MS Graph API","link":"https://thehackernews.com/2026/05/webworm-deploys-echocreep-and-graphworm.html","source":"The Hacker News","isoDate":"2026-05-20T12:51:43.000Z","contentSnippet":"Cybersecurity researchers have flagged fresh activity from a China-aligned threat actor known as Webworm in 2025, deploying custom backdoors that employ Discord and Microsoft Graph API for command-and-control communications."},{"title":"Agent AI is Coming. Are You Ready?","link":"https://thehackernews.com/2026/05/agent-ai-is-coming-are-you-ready.html","source":"The Hacker News","isoDate":"2026-05-20T11:58:00.000Z","contentSnippet":"New Industry Data Just Released Suggests Not. \"Identity dark matter\" now overshadows the visible elements 57% vs. 43%."},{"title":"GitHub Breached — Employee Device Hack Led to Exfiltration of 3,800+ Internal Repos","link":"https://thehackernews.com/2026/05/github-investigating-teampcp-claimed.html","source":"The Hacker News","isoDate":"2026-05-20T11:38:43.000Z","contentSnippet":"GitHub said it is investigating unauthorized access to its internal repositories after the threat actor TeamPCP listed the platform's source code for sale on a cybercrime forum."}],"cloud":[{"title":"Trust at every layer: How sealed images extend OS integrity from boot to runtime","link":"https://www.redhat.com/en/blog/how-sealed-images-red-hat-enterprise-linux-extend-os-integrity-boot-runtime","source":"Red Hat Blog","isoDate":"2026-05-20T00:00:00.000Z","contentSnippet":"Consider a medical device running Linux in a hospital, an ATM on a street corner, or a gateway device at the edge of a manufacturing network."},{"title":"Meet Gordon: Docker's AI Agent For Your Entire Container Workflow","link":"https://www.docker.com/blog/meet-gordon-dockers-ai-agent-for-your-entire-container-workflow/","source":"Docker Blog","isoDate":"2026-05-19T19:08:04.000Z","contentSnippet":"Gordon understands your environment, proposes fixes, and takes action across your entire Docker workflow. Now generally available."},{"title":"Red Hat Enterprise Linux 10.2 and 9.8 are here","link":"https://www.redhat.com/en/blog/rhel-102-and-98-intelligent-evolution-enterprise-linux","source":"Red Hat Blog","isoDate":"2026-05-20T00:00:00.000Z","contentSnippet":"RHEL 10.2 and 9.8 evolve the OS from a foundation to a powerful engine for critical applications, security, and innovation."}],"system":[{"title":"[$] What is to be done about MGLRU?","link":"https://lwn.net/Articles/1072866/","source":"LWN.net","isoDate":"2026-05-20T13:14:51.000Z","contentSnippet":"The addition of the multi-generational LRU (MGLRU) was meant to provide a better reclaim implementation. Discussions are ongoing."},{"title":"Security updates for Wednesday","link":"https://lwn.net/Articles/1073713/","source":"LWN.net","isoDate":"2026-05-20T13:04:17.000Z","contentSnippet":"Security updates have been issued by AlmaLinux, Debian, Fedora, and others covering kernel, libpng, nginx, ruby, and more."},{"title":"[$] The tenth OpenPGP email summit","link":"https://lwn.net/Articles/1072870/","source":"LWN.net","isoDate":"2026-05-20T11:00:15.000Z","contentSnippet":"The OpenPGP Email Summit is an annual meeting for those who work on encrypted email. The tenth installment took place in March 2026."}]}};
+var SEED = {"updatedAt":"2026-05-20T14:41:22.179Z","generator":"seed","feeds":{"cve":[{"title":"CVE-2025-29927 - Next.js Middleware Authorization Bypass via x-middleware-subrequest Header","link":"https://cvefeed.io/vuln/detail/CVE-2025-29927","source":"cvefeed.io","isoDate":"2025-03-22T10:00:00.000Z","contentSnippet":"A critical vulnerability in Next.js allows attackers to bypass middleware-based authorization checks by manipulating the x-middleware-subrequest header, potentially granting unauthorized access to protected routes.","cveScore":9.1,"cveSeverity":"CRITICAL"},{"title":"CVE-2024-3400 - PAN-OS GlobalProtect Gateway Command Injection","link":"https://cvefeed.io/vuln/detail/CVE-2024-3400","source":"cvefeed.io","isoDate":"2024-04-12T00:00:00.000Z","contentSnippet":"A command injection vulnerability in the GlobalProtect feature of Palo Alto Networks PAN-OS allows an unauthenticated attacker to execute arbitrary code with root privileges on the firewall.","cveScore":10.0,"cveSeverity":"CRITICAL"},{"title":"CVE-2024-6387 - OpenSSH regreSSHion Remote Code Execution via Signal Handler Race Condition","link":"https://cvefeed.io/vuln/detail/CVE-2024-6387","source":"cvefeed.io","isoDate":"2024-07-01T00:00:00.000Z","contentSnippet":"A race condition in the OpenSSH server (sshd) on glibc-based Linux systems allows an unauthenticated attacker to achieve remote code execution as root. Affects default configurations of sshd.","cveScore":8.1,"cveSeverity":"HIGH"}],"cloud":[{"title":"Trust at every layer: How sealed images extend OS integrity from boot to runtime","link":"https://www.redhat.com/en/blog/how-sealed-images-red-hat-enterprise-linux-extend-os-integrity-boot-runtime","source":"Red Hat Blog","isoDate":"2026-05-20T00:00:00.000Z","contentSnippet":"Consider a medical device running Linux in a hospital, an ATM on a street corner, or a gateway device at the edge of a manufacturing network."},{"title":"Meet Gordon: Docker's AI Agent For Your Entire Container Workflow","link":"https://www.docker.com/blog/meet-gordon-dockers-ai-agent-for-your-entire-container-workflow/","source":"Docker Blog","isoDate":"2026-05-19T19:08:04.000Z","contentSnippet":"Gordon understands your environment, proposes fixes, and takes action across your entire Docker workflow. Now generally available."},{"title":"Red Hat Enterprise Linux 10.2 and 9.8 are here","link":"https://www.redhat.com/en/blog/rhel-102-and-98-intelligent-evolution-enterprise-linux","source":"Red Hat Blog","isoDate":"2026-05-20T00:00:00.000Z","contentSnippet":"RHEL 10.2 and 9.8 evolve the OS from a foundation to a powerful engine for critical applications, security, and innovation."}],"system":[{"title":"[$] What is to be done about MGLRU?","link":"https://lwn.net/Articles/1072866/","source":"LWN.net","isoDate":"2026-05-20T13:14:51.000Z","contentSnippet":"The addition of the multi-generational LRU (MGLRU) was meant to provide a better reclaim implementation. Discussions are ongoing."},{"title":"Security updates for Wednesday","link":"https://lwn.net/Articles/1073713/","source":"LWN.net","isoDate":"2026-05-20T13:04:17.000Z","contentSnippet":"Security updates have been issued by AlmaLinux, Debian, Fedora, and others covering kernel, libpng, nginx, ruby, and more."},{"title":"[$] The tenth OpenPGP email summit","link":"https://lwn.net/Articles/1072870/","source":"LWN.net","isoDate":"2026-05-20T11:00:15.000Z","contentSnippet":"The OpenPGP Email Summit is an annual meeting for those who work on encrypted email. The tenth installment took place in March 2026."}]}};
 
 /* ── State ──────────────────────────────────────────────────────────────────── */
 var newsData   = null;
@@ -92,6 +92,63 @@ function loadNews() {
     });
 }
 
+/* ── CVE severity helpers ───────────────────────────────────────────────────── */
+function severityMeta(level) {
+  switch ((level || '').toUpperCase()) {
+    case 'CRITICAL': return { text: 'text-error',      border: 'border-error/50',        bg: 'bg-error/10' };
+    case 'HIGH':     return { text: 'text-orange-400', border: 'border-orange-400/50',   bg: 'bg-orange-400/10' };
+    case 'MEDIUM':   return { text: 'text-yellow-400', border: 'border-yellow-400/50',   bg: 'bg-yellow-400/10' };
+    case 'LOW':      return { text: 'text-green-400',  border: 'border-green-400/50',    bg: 'bg-green-400/10' };
+    default:         return { text: 'text-on-tertiary-container', border: 'border-outline-variant', bg: 'bg-surface-container-low' };
+  }
+}
+
+function renderCVECard(item, i) {
+  var sev   = severityMeta(item.cveSeverity);
+  var score = (item.cveScore != null && item.cveScore > 0) ? item.cveScore.toFixed(1) : '—';
+  var cardBorder = (item.cveSeverity === 'CRITICAL' || item.cveSeverity === 'HIGH')
+    ? sev.border : 'border-outline-variant';
+
+  return [
+    '<article class="flex flex-col bg-surface-container border ' + cardBorder + ' card-neon',
+    ' group hover:bg-surface-container-high transition-all duration-300 relative"',
+    ' style="animation:cardIn 0.35s ease both;animation-delay:' + (i * 60) + 'ms">',
+
+    '<div class="p-5 border-b border-outline-variant/40">',
+      '<div class="font-label-caps text-[10px] text-primary tracking-widest opacity-80 mb-2">[CVE_FEED] // CVEFEED.IO</div>',
+      '<div class="flex justify-between items-center">',
+        '<span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings:\'FILL\' 1;">security</span>',
+        '<span class="px-2 py-0.5 text-[9px] font-label-caps border ' + sev.text + ' ' + sev.border + ' ' + sev.bg + '">',
+          esc(item.cveSeverity || 'NA'),
+        '</span>',
+      '</div>',
+    '</div>',
+
+    '<div class="p-5 flex-grow flex flex-col">',
+      '<div class="mb-3">',
+        '<span class="font-label-caps text-[10px] tracking-widest ' + sev.text + '">CVSS ' + score + '</span>',
+      '</div>',
+
+      '<a href="' + esc(item.link) + '" target="_blank" rel="noreferrer" class="block mb-3 group/title">',
+        '<h3 class="font-headline-md text-[17px] text-primary neon-text-cyan leading-tight group-hover/title:opacity-80 transition-opacity">',
+          esc(item.title),
+        '</h3>',
+      '</a>',
+
+      '<p class="font-body-md text-sm text-on-surface-variant leading-relaxed opacity-90 line-clamp-3">',
+        esc(item.contentSnippet || '—'),
+      '</p>',
+
+      '<div class="mt-auto pt-4 flex justify-between items-center text-[9px] font-label-caps text-on-surface-variant/60 uppercase">',
+        '<span>' + timeAgo(item.isoDate) + '</span>',
+        '<span>' + fmtDate(item.isoDate) + '</span>',
+      '</div>',
+    '</div>',
+
+    '</article>',
+  ].join('');
+}
+
 /* ── Card render ────────────────────────────────────────────────────────────── */
 function renderTabCounts() {
   var feeds = (newsData && newsData.feeds) || {};
@@ -116,17 +173,13 @@ function renderCards() {
   }
 
   grid.innerHTML = items.map(function(item, i) {
-    var cardMeta = meta;
-    var isFeatured = (currentTab === 'cve' && i === 0);
-    if (isFeatured) {
-      cardMeta = Object.assign({}, meta, { badge: 'CRITICAL', status: 'UNPATCHED' });
-    }
+    if (currentTab === 'cve') return renderCVECard(item, i);
 
+    var cardMeta = meta;
     return [
       '<article class="flex flex-col bg-surface-container border border-outline-variant card-neon',
       ' group hover:bg-surface-container-high transition-all duration-300 relative"',
       ' style="animation:cardIn 0.35s ease both;animation-delay:' + (i * 60) + 'ms">',
-
 
       '<div class="p-5 border-b border-outline-variant/40">',
         '<div class="font-label-caps text-[10px] ' + cardMeta.textClass + ' tracking-widest opacity-80 mb-2">',

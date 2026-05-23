@@ -27,11 +27,8 @@ const CATEGORIES = ['cve', 'cloud', 'system']
 // Reputable sources per category. Add/remove freely; just keep `category` as
 // one of CATEGORIES above. Multiple entries with the same category are merged.
 const SOURCES = [
-  // ---- Vulnerabilities / CVE / security ----
-  { category: 'cve', name: 'The Hacker News', url: 'https://feeds.feedburner.com/TheHackersNews' },
-  { category: 'cve', name: 'Krebs on Security', url: 'https://krebsonsecurity.com/feed/' },
-  { category: 'cve', name: 'SANS Internet Storm Center', url: 'https://isc.sans.edu/rssfeed.xml' },
-  { category: 'cve', name: 'Dark Reading', url: 'https://www.darkreading.com/rss.xml' },
+  // ---- Vulnerabilities / CVE ----
+  { category: 'cve', name: 'cvefeed.io', url: 'https://cvefeed.io/rssfeed/latest.xml', limit: 30 },
 
   // ---- Virtualization & Cloud ----
   { category: 'cloud', name: 'Docker Blog', url: 'https://www.docker.com/blog/feed/' },
@@ -45,7 +42,7 @@ const SOURCES = [
   { category: 'system', name: 'kernel.org', url: 'https://www.kernel.org/feeds/kdist.xml' },
 ]
 
-const PER_SOURCE = 10 // items taken from each feed
+const PER_SOURCE = 10  // default items per feed (overridden by src.limit)
 const PER_CATEGORY = 30 // items kept per tab after merging
 
 const parser = new Parser({
@@ -57,6 +54,17 @@ const parser = new Parser({
     Accept: 'application/rss+xml, application/atom+xml, application/xml, text/xml;q=0.9, */*;q=0.8',
   },
 })
+
+/** Parse CVE score, severity level, and description from cvefeed.io HTML description. */
+function parseCVEFields(raw) {
+  const text = String(raw || '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ')
+  const sevMatch = text.match(/Severity\s*:\s*([\d.]+)\s*\|\s*([A-Za-z]+)/i)
+  const cveScore = sevMatch ? parseFloat(sevMatch[1]) : null
+  const cveSeverity = sevMatch ? sevMatch[2].toUpperCase() : 'NA'
+  const descMatch = text.match(/Description\s*:\s*(.+?)\s*Severity\s*:/is)
+  const snippet = descMatch ? descMatch[1].trim() : ''
+  return { cveScore, cveSeverity, contentSnippet: clean(snippet) }
+}
 
 /** Strip HTML/whitespace and clamp length. */
 function clean(value, max = 280) {
@@ -70,13 +78,20 @@ function clean(value, max = 280) {
 /** Fetch one feed and normalise its top items. */
 async function fetchFeed(src) {
   const feed = await parser.parseURL(src.url)
-  return (feed.items || []).slice(0, PER_SOURCE).map((item) => ({
-    title: clean(item.title, 200) || 'Untitled',
-    link: item.link || '#', // per-article URL — used by the clickable title
-    source: src.name,
-    isoDate: item.isoDate || item.pubDate || new Date().toISOString(),
-    contentSnippet: clean(item.contentSnippet || item.summary || item.content),
-  }))
+  return (feed.items || []).slice(0, src.limit || PER_SOURCE).map((item) => {
+    const base = {
+      title: clean(item.title, 200) || 'Untitled',
+      link: item.link || '#',
+      source: src.name,
+      isoDate: item.isoDate || item.pubDate || new Date().toISOString(),
+      contentSnippet: clean(item.contentSnippet || item.summary || item.content),
+    }
+    if (src.category === 'cve') {
+      const cveFields = parseCVEFields(item.content || item.contentSnippet || '')
+      return Object.assign(base, cveFields)
+    }
+    return base
+  })
 }
 
 /** Dedupe by link, sort newest first, cap length. */
