@@ -4,12 +4,11 @@
 
 var STORAGE_KEY  = 'devsecops-hub:roadmap:v2';
 var MAX_ACTIVITY = 5;
-var PULSE_MS     = 1500;
-var TIME_START   = 11;  // ISO string "2026-05-24T14:30:00Z" -> slice(11,19) = "14:30:00"
+var TIME_START   = 11;
 var TIME_END     = 19;
 var CLS_LABEL_SM = 'font-label-caps text-[10px]';
 
-/* Days 1-8 seeded as completed per curriculum status (Day 9 in-progress, Day 10 not started) */
+/* Days 1–8 seeded as completed per curriculum status */
 var DEFAULT_DONE = {
   'k8s-d1': true, 'k8s-d2': true, 'k8s-d3': true, 'k8s-d4': true,
   'k8s-d5': true, 'k8s-d6': true, 'k8s-d7': true, 'k8s-d8': true,
@@ -17,48 +16,42 @@ var DEFAULT_DONE = {
 
 var ROADMAP = [
   {
-    id: 'k8s', label: 'Kubernetes', icon: 'hub',
-    blurb: '10-day curriculum: architecture, workloads, networking, storage, scheduling, security, observability, Helm & Kustomize, cluster maintenance.',
-    nodeId: 'NODE_01',
+    id: 'k8s', label: 'Kubernetes', nodeId: 'NODE_01',
     tasks: [
-      { id: 'k8s-d1', title: 'Day 1: Architecture & Internals — Control Plane, etcd (RAFT), kubelet, kube-proxy, CRI/CNI/CSI',                                                    meta: 'core' },
-      { id: 'k8s-d2', title: 'Day 2: Workloads & Controllers — Init/Sidecar patterns, Liveness/Readiness/Startup probes, Deployment, StatefulSet, DaemonSet, Job & CronJob',      meta: 'core' },
-      { id: 'k8s-d3', title: 'Day 3: Networking & Connectivity — Flat network model, CNI (Calico/Cilium), Service types, Ingress & Ingress Controller, CoreDNS',                  meta: 'core' },
-      { id: 'k8s-d4', title: 'Day 4: Storage & Configuration — PV/PVC/StorageClass, Static vs Dynamic provisioning, Access modes, ConfigMap, Secret, Sealed Secrets, Vault',      meta: 'core' },
-      { id: 'k8s-d5', title: 'Day 5: Scheduling & Resource Mgmt — Requests/Limits, CPU throttling vs OOMKill, QoS classes, Node/Pod Affinity, Taints & Tolerations, Priority',   meta: 'core' },
-      { id: 'k8s-d6', title: 'Day 6: Security & Access Control — RBAC (Role/ClusterRole/Binding), ServiceAccounts, Network Policies (Zero Trust), Security Context',              meta: 'security' },
-      { id: 'k8s-d7', title: 'Day 7: Observability — Node-level logging (DaemonSet), EFK vs PLG stack, Prometheus pull model, Histogram/Counter/Gauge, kube-state-metrics',       meta: 'advanced' },
-      { id: 'k8s-d8', title: 'Day 8: Package Management — Helm v3 (no Tiller), Chart/Release lifecycle, Kustomize Base & Overlay, Helm + Kustomize post-renderer hybrid',        meta: 'advanced' },
-      { id: 'k8s-d9', title: 'Day 9: Troubleshooting & Maintenance — Cordon/Drain/Uncordon, etcd snapshot backup & restore, Cluster upgrade lifecycle (kubeadm)',                 meta: 'advanced' },
-      { id: 'k8s-d10', title: 'Day 10: Advanced Topics & Modern Ecosystem',                                                                                                         meta: 'advanced' },
+      { id: 'k8s-d1',  title: 'Day 1 — Architecture & Internals',      topics: 'Control Plane, etcd (RAFT), kubelet, kube-proxy, CRI/CNI/CSI',                                                       meta: 'core'     },
+      { id: 'k8s-d2',  title: 'Day 2 — Workloads & Controllers',       topics: 'Init/Sidecar patterns, Liveness/Readiness/Startup probes, Deployment, StatefulSet, DaemonSet, Job & CronJob',         meta: 'core'     },
+      { id: 'k8s-d3',  title: 'Day 3 — Networking & Connectivity',     topics: 'Flat network model, CNI (Calico/Cilium), Service types, Ingress & Ingress Controller, CoreDNS',                        meta: 'core'     },
+      { id: 'k8s-d4',  title: 'Day 4 — Storage & Configuration',       topics: 'PV/PVC/StorageClass, Static vs Dynamic provisioning, Access modes, ConfigMap, Secret, Sealed Secrets, Vault',          meta: 'core'     },
+      { id: 'k8s-d5',  title: 'Day 5 — Scheduling & Resource Mgmt',    topics: 'Requests/Limits, CPU throttling vs OOMKill, QoS classes, Node/Pod Affinity, Taints & Tolerations, Priority',          meta: 'core'     },
+      { id: 'k8s-d6',  title: 'Day 6 — Security & Access Control',     topics: 'RBAC (Role/ClusterRole/Binding), ServiceAccounts, Network Policies (Zero Trust), Security Context',                    meta: 'security' },
+      { id: 'k8s-d7',  title: 'Day 7 — Observability',                 topics: 'Node-level logging (DaemonSet), EFK vs PLG stack, Prometheus pull model, Histogram/Counter/Gauge, kube-state-metrics', meta: 'advanced' },
+      { id: 'k8s-d8',  title: 'Day 8 — Package Management',            topics: 'Helm v3 (no Tiller), Chart/Release lifecycle, Kustomize Base & Overlay, Helm + Kustomize post-renderer hybrid',       meta: 'advanced' },
+      { id: 'k8s-d9',  title: 'Day 9 — Troubleshooting & Maintenance', topics: 'Cordon/Drain/Uncordon, etcd snapshot backup & restore, Cluster upgrade lifecycle (kubeadm)',                           meta: 'advanced' },
+      { id: 'k8s-d10', title: 'Day 10 — Advanced Topics',              topics: 'GitOps, Service Mesh (Istio/Linkerd), eBPF, Multi-cluster federation, Modern Ecosystem',                               meta: 'advanced' },
     ],
   },
   {
-    id: 'linux', label: 'Linux System', icon: 'terminal',
-    blurb: 'Foundation: command line, permissions, processes, networking.',
-    nodeId: 'NODE_02',
+    id: 'linux', label: 'Linux System', nodeId: 'NODE_02',
     tasks: [
-      { id: 'linux-cli',       title: 'Master shell basics (bash/zsh, pipes, redirection)', meta: 'fundamentals' },
-      { id: 'linux-fs',        title: 'Filesystem hierarchy, permissions & ACLs',            meta: 'fundamentals' },
-      { id: 'linux-proc',      title: 'Processes, signals, systemd services & journald',     meta: 'core'         },
-      { id: 'linux-net',       title: 'Networking: ip, ss, iptables/nftables, DNS',          meta: 'core'         },
-      { id: 'linux-pkg',       title: 'Package mgmt & building from source',                 meta: 'core'         },
-      { id: 'linux-hardening', title: 'Hardening: users, SSH, SELinux/AppArmor, auditd',     meta: 'security'     },
-      { id: 'linux-scripting', title: 'Automation with shell scripting & cron',               meta: 'advanced'     },
+      { id: 'linux-cli',       title: 'Shell Fundamentals',       topics: 'bash/zsh, pipes, redirection, expansion, quoting',          meta: 'fundamentals' },
+      { id: 'linux-fs',        title: 'Filesystem & Permissions', topics: 'Hierarchy, chmod/chown, ACLs, hard/soft links',              meta: 'fundamentals' },
+      { id: 'linux-proc',      title: 'Processes & Services',     topics: 'Signals, ps/top, systemd units, journald',                   meta: 'core'         },
+      { id: 'linux-net',       title: 'Networking',               topics: 'ip, ss, iptables/nftables, DNS, routing',                    meta: 'core'         },
+      { id: 'linux-pkg',       title: 'Package Management',       topics: 'apt/yum, building from source, version pinning',             meta: 'core'         },
+      { id: 'linux-hardening', title: 'Hardening & Security',     topics: 'Users, SSH config, SELinux/AppArmor, auditd',               meta: 'security'     },
+      { id: 'linux-scripting', title: 'Automation & Scripting',   topics: 'Shell scripting patterns, cron, systemd timers',             meta: 'advanced'     },
     ],
   },
   {
-    id: 'terraform', label: 'Terraform / IaC', icon: 'cloud',
-    blurb: 'Infrastructure as Code: provision cloud resources declaratively.',
-    nodeId: 'NODE_03',
+    id: 'terraform', label: 'Terraform / IaC', nodeId: 'NODE_03',
     tasks: [
-      { id: 'tf-hcl',        title: 'HCL syntax, providers & resources',             meta: 'fundamentals' },
-      { id: 'tf-state',      title: 'State management & remote backends (S3 + lock)', meta: 'core'         },
-      { id: 'tf-vars',       title: 'Variables, outputs, locals & data sources',      meta: 'core'         },
-      { id: 'tf-modules',    title: 'Reusable modules & registry usage',              meta: 'core'         },
-      { id: 'tf-workspaces', title: 'Workspaces & multi-environment layouts',         meta: 'advanced'     },
-      { id: 'tf-cicd',       title: 'plan/apply in CI/CD pipelines',                  meta: 'advanced'     },
-      { id: 'tf-sec',        title: 'Policy-as-code (tfsec, OPA, Sentinel)',           meta: 'security'     },
+      { id: 'tf-hcl',        title: 'HCL Syntax & Providers',    topics: 'Resources, data sources, provider configuration',            meta: 'fundamentals' },
+      { id: 'tf-state',      title: 'State Management',          topics: 'Remote backends (S3 + DynamoDB lock), state isolation',       meta: 'core'         },
+      { id: 'tf-vars',       title: 'Variables & Outputs',       topics: 'Input vars, locals, outputs, tfvars files',                  meta: 'core'         },
+      { id: 'tf-modules',    title: 'Reusable Modules',          topics: 'Module structure, registry usage, versioning',               meta: 'core'         },
+      { id: 'tf-workspaces', title: 'Workspaces & Environments', topics: 'Workspace commands, multi-env layout patterns',              meta: 'advanced'     },
+      { id: 'tf-cicd',       title: 'CI/CD Integration',         topics: 'plan/apply in pipelines, automated drift detection',         meta: 'advanced'     },
+      { id: 'tf-sec',        title: 'Policy as Code',            topics: 'tfsec, OPA, Sentinel, compliance guardrails',                meta: 'security'     },
     ],
   },
 ];
@@ -67,10 +60,7 @@ var ROADMAP = [
 function loadDone() {
   try {
     var raw = localStorage.getItem(STORAGE_KEY);
-    if (raw === null) {
-      saveDone(DEFAULT_DONE);
-      return DEFAULT_DONE;
-    }
+    if (raw === null) { saveDone(DEFAULT_DONE); return DEFAULT_DONE; }
     var parsed = JSON.parse(raw);
     if (parsed !== null && typeof parsed === 'object' && !Array.isArray(parsed)) return parsed;
     return {};
@@ -80,7 +70,7 @@ function saveDone(d) { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(d)
 
 var done        = loadDone();
 var activityLog = [];
-var _pulseIds   = [];
+var activeTrack = 'k8s';
 
 /* ── Progress helpers ───────────────────────────────────────────────────────── */
 function trackProgress(track) {
@@ -96,13 +86,6 @@ function calcOverall() {
     completed += t.tasks.filter(function(x) { return done[x.id]; }).length;
   });
   return { total: total, completed: completed, pct: total ? Math.round((completed / total) * 100) : 0 };
-}
-
-function nodeState(track) {
-  var p = trackProgress(track);
-  if (p.pct === 100) return 'COMPLETED';
-  if (p.tDone  >  0) return 'IN_PROGRESS';
-  return 'LOCKED';
 }
 
 /* ── Activity log ───────────────────────────────────────────────────────────── */
@@ -125,26 +108,21 @@ function renderActivityLog() {
   }).join('') + '<div class="flex gap-4 mt-1"><span class="text-primary-fixed-dim font-bold">READY_</span><span class="bg-primary w-2 h-4 cursor-blink inline-block"></span></div>';
 }
 
-/* ── Track chip updater ─────────────────────────────────────────────────────── */
-function updateTrackChips() {
-  ROADMAP.forEach(function(track) {
-    var chip = document.getElementById('track-chip-' + track.id);
-    if (!chip) return;
-    var state = nodeState(track);
-    chip.classList.remove('text-primary', 'text-secondary', 'border-primary', 'border-secondary', 'border-transparent', 'opacity-50');
-    if (state === 'COMPLETED') {
-      chip.classList.add('text-primary', 'border-primary');
-    } else if (state === 'IN_PROGRESS') {
-      chip.classList.add('text-secondary', 'border-secondary');
-    } else {
-      chip.classList.add('text-primary', 'border-transparent', 'opacity-50');
-    }
+/* ── Tab button state ───────────────────────────────────────────────────────── */
+var TAB_ACTIVE   = 'tab-btn px-4 py-2 font-label-caps text-label-caps uppercase tracking-widest border-b-2 transition-all duration-150 -mb-px hover-glitch text-secondary border-secondary';
+var TAB_INACTIVE = 'tab-btn px-4 py-2 font-label-caps text-label-caps uppercase tracking-widest border-b-2 transition-all duration-150 -mb-px hover-glitch text-primary border-transparent hover:border-primary/40';
+
+function updateTabBtns() {
+  document.querySelectorAll('.tab-btn[data-track]').forEach(function(btn) {
+    var isActive = btn.dataset.track === activeTrack;
+    btn.setAttribute('aria-selected', String(isActive));
+    btn.className = isActive ? TAB_ACTIVE : TAB_INACTIVE;
   });
 }
 
 /* ── Update stats ───────────────────────────────────────────────────────────── */
 function updateStats() {
-  var o = calcOverall();
+  var o       = calcOverall();
   var statsEl = document.getElementById('stats-completed');
   var pctEl   = document.getElementById('stats-pct');
   var labelEl = document.getElementById('overall-label');
@@ -153,47 +131,94 @@ function updateStats() {
   if (pctEl)   pctEl.textContent = o.pct + '% of ' + o.total + ' total tasks';
   if (ctrlEl)  ctrlEl.textContent = o.completed + ' / ' + o.total + ' (' + o.pct + '%)';
   if (labelEl) {
-    labelEl.innerHTML = 'Neural network training sequence initialized. Complete sequential modules to authorize advanced system clearance.' +
+    labelEl.innerHTML =
+      'Neural network training sequence initialized. Complete sequential modules to authorize advanced system clearance.' +
       ' <span class="text-primary ml-2">— ' + o.completed + '/' + o.total + ' tasks (' + o.pct + '%)</span>' +
       ' <span class="inline-block w-2 h-2 rounded-full bg-secondary animate-ping align-middle ml-1"></span>';
   }
-  updateTrackChips();
 }
 
-/* ── Partial node bar update (no full re-render) ──────────────────────────── */
-function updateNodeBar(trackId) {
-  var track = ROADMAP.find(function(t) { return t.id === trackId; });
-  if (!track) return;
-  var p = trackProgress(track);
+/* ── Day card ───────────────────────────────────────────────────────────────── */
+function renderDayCard(task, trackId) {
+  var isDone = !!done[task.id];
 
-  var fill = document.getElementById('node-fill-' + trackId);
-  var prog = document.getElementById('node-prog-' + trackId);
-  var bar  = document.getElementById('node-bar-'  + trackId);
-  if (fill) fill.style.width = p.pct + '%';
-  if (prog) prog.textContent = 'SEQUENCE_PROGRESS: ' + p.pct + '%';
-  if (bar)  bar.style.display = p.tDone > 0 ? 'block' : 'none';
+  var cardCls  = isDone ? 'glow-magenta bg-surface-container' : 'card-neon bg-surface-container-low';
+  var titleCls = 'task-title font-body-md text-[14px] font-bold leading-snug ' + (isDone ? 'text-secondary neon-text-magenta' : 'text-primary neon-text-cyan');
+  var badge    = isDone
+    ? '<span class="px-2 py-0.5 bg-secondary/20 text-secondary ' + CLS_LABEL_SM + ' border border-secondary/40 tracking-widest">COMPLETED</span>'
+    : '<span class="px-2 py-0.5 text-on-tertiary-container ' + CLS_LABEL_SM + ' border border-outline-variant/50 tracking-widest">PENDING</span>';
+
+  return [
+    '<div class="p-5 border border-outline-variant ' + cardCls + (isDone ? ' opacity-80' : '') + '" id="task-' + task.id + '">',
+      '<div class="flex items-start justify-between gap-2 mb-3">',
+        '<span class="' + CLS_LABEL_SM + ' text-on-tertiary-container tracking-widest">// ' + esc(task.meta).toUpperCase() + '</span>',
+        badge,
+      '</div>',
+      '<p class="' + titleCls + ' mb-2">' + esc(task.title) + '</p>',
+      task.topics ? '<p class="font-body-md text-[11px] text-on-surface-variant/70 leading-relaxed">' + esc(task.topics) + '</p>' : '',
+      '<div class="flex items-center mt-4 pt-3 border-t border-outline-variant/30">',
+        '<label class="flex items-center gap-2 cursor-pointer select-none">',
+          '<input type="checkbox" class="appearance-none w-3.5 h-3.5 border flex-shrink-0"',
+            ' id="cb-' + task.id + '" data-id="' + task.id + '" data-track="' + trackId + '"' + (isDone ? ' checked' : '') + ' />',
+          '<span class="' + CLS_LABEL_SM + ' text-on-surface-variant tracking-widest">' + (isDone ? 'MARK_UNDONE' : 'MARK_DONE') + '</span>',
+        '</label>',
+      '</div>',
+    '</div>',
+  ].join('');
+}
+
+/* ── Track panel ────────────────────────────────────────────────────────────── */
+function renderTrackPanel(track) {
+  var p      = trackProgress(track);
+  var done100 = p.pct === 100;
+  var barCls  = done100 ? 'bg-primary-fixed-dim shadow-[0_0_8px_#00f2ff]' : 'bg-secondary shadow-[0_0_6px_rgba(255,171,243,0.5)]';
+  var pctCls  = done100 ? 'text-primary' : 'text-secondary';
+
+  var progressBar = [
+    '<div class="flex items-center justify-between mb-2">',
+      '<span class="' + CLS_LABEL_SM + ' text-on-surface-variant tracking-widest">' + p.tDone + ' / ' + p.total + ' MODULES COMPLETED</span>',
+      '<span class="' + CLS_LABEL_SM + ' ' + pctCls + '">' + p.pct + '%</span>',
+    '</div>',
+    '<div class="w-full h-px bg-outline-variant mb-6 relative overflow-hidden">',
+      '<div class="absolute left-0 top-0 h-full transition-all duration-500 ' + barCls + '" style="width:' + p.pct + '%"></div>',
+    '</div>',
+  ].join('');
+
+  var grid = '<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">' +
+    track.tasks.map(function(t) { return renderDayCard(t, track.id); }).join('') +
+    '</div>';
+
+  return progressBar + grid;
+}
+
+/* ── Render active tab ──────────────────────────────────────────────────────── */
+function renderCurrentTrack() {
+  var container = document.getElementById('roadmap-container');
+  if (!container) return;
+  var track = ROADMAP.find(function(t) { return t.id === activeTrack; });
+  if (!track) return;
+  container.innerHTML = renderTrackPanel(track);
+  container.querySelectorAll('input[type=checkbox][data-id]').forEach(function(cb) {
+    applyCbStyle(cb);
+  });
+}
+
+/* ── Switch tab ─────────────────────────────────────────────────────────────── */
+function switchTab(trackId) {
+  activeTrack = trackId;
+  updateTabBtns();
+  renderCurrentTrack();
 }
 
 /* ── Toggle task ────────────────────────────────────────────────────────────── */
-function toggleTask(id, trackId) {
+function toggleTask(id) {
   var task = null;
   ROADMAP.some(function(tr) {
     return (task = tr.tasks.find(function(t) { return t.id === id; }));
   });
-
   done[id] = !done[id];
   saveDone(done);
-
-  var item    = document.getElementById('task-' + id);
-  var cb      = document.getElementById('cb-' + id);
-  var titleEl = item ? item.querySelector('.task-title') : null;
-  if (item)    item.classList.toggle('opacity-50', !!done[id]);
-  if (titleEl) titleEl.classList.toggle('line-through', !!done[id]);
-  if (titleEl) titleEl.classList.toggle('neon-text-cyan', !done[id]);
-  if (cb)      cb.checked = !!done[id];
-
-  applyCbStyle(cb);
-  updateNodeBar(trackId);
+  renderCurrentTrack();
   updateStats();
   if (task) logActivity(task.title, !!done[id]);
 }
@@ -201,174 +226,8 @@ function toggleTask(id, trackId) {
 function applyCbStyle(cb) {
   if (!cb) return;
   cb.style.cssText = cb.checked
-    ? 'background:#00f2ff;border-color:#00f2ff;cursor:pointer;box-shadow:0 0 6px #00f2ff'
+    ? 'background:#ffabf3;border-color:#ffabf3;cursor:pointer;box-shadow:0 0 6px rgba(255,171,243,0.6)'
     : 'background:transparent;border:1px solid #3a494b;cursor:pointer';
-}
-
-/* ── Full render ────────────────────────────────────────────────────────────── */
-function renderRoadmap() {
-  var container = document.getElementById('roadmap-container');
-  if (!container) return;
-
-  var html = ROADMAP.map(function(track, idx) {
-    var p     = trackProgress(track);
-    var state = nodeState(track);
-    var isLast = idx === ROADMAP.length - 1;
-
-    /* --- Per-state appearance --- */
-    var nodeClass   = '';
-    var badgeHtml   = '';
-    var statusLabel = '';
-    var iconColor   = 'text-primary';
-    var titleColor  = 'text-primary';
-
-    if (state === 'COMPLETED') {
-      nodeClass   = 'bg-surface-container/50 border border-outline-variant glow-cyan backdrop-blur-sm';
-      badgeHtml   = '<span class="px-3 py-1 bg-primary/20 text-primary ' + CLS_LABEL_SM + ' border border-primary/40">AUTH_SUCCESS</span>';
-      statusLabel = '<span class="bg-primary/10 px-2 py-0.5 border border-primary/30 text-primary">' + track.nodeId + ' // VERIFIED</span>';
-      iconColor   = 'text-primary';
-      titleColor  = 'text-primary';
-
-    } else if (state === 'IN_PROGRESS') {
-      nodeClass   = 'bg-surface-container border-2 border-secondary glow-magenta relative overflow-hidden shadow-[0_0_30px_rgba(255,171,243,0.2)]';
-      badgeHtml   = [
-        '<div class="flex flex-col items-end">',
-          '<span class="px-3 py-1 bg-secondary/20 text-secondary ' + CLS_LABEL_SM + ' border border-secondary/40">ACTIVE_SEQUENCE</span>',
-          '<span class="text-[8px] font-label-caps text-secondary/60 mt-1 uppercase tracking-tighter">Priority: Critical</span>',
-        '</div>',
-      ].join('');
-      statusLabel = '<span class="bg-secondary/10 px-2 py-0.5 border border-secondary/30 text-secondary animate-pulse">' + track.nodeId + ' // EXECUTING...</span>';
-      iconColor   = 'text-secondary neon-text-magenta';
-      titleColor  = 'text-secondary';
-
-    } else {
-      /* LOCKED */
-      nodeClass   = 'bg-surface-container/30 border border-outline-variant opacity-40 hover:opacity-60 transition-opacity grayscale';
-      badgeHtml   = '<span class="material-symbols-outlined text-on-surface-variant text-xl">lock</span>';
-      statusLabel = '<span class="bg-surface-container-highest/50 px-2 py-0.5 border border-outline-variant/30 text-on-surface-variant/50">' + track.nodeId + ' // ENCRYPTED</span>';
-      iconColor   = 'text-on-surface-variant';
-      titleColor  = 'text-on-surface-variant/80';
-    }
-
-    /* --- Ping dot for in-progress --- */
-    var pingDot = state === 'IN_PROGRESS'
-      ? '<div class="absolute top-0 right-0 p-2"><div class="w-1 h-1 bg-secondary rounded-full animate-ping"></div></div>'
-      : '';
-
-    /* --- Task list --- */
-    var tasksHtml = track.tasks.map(function(task) {
-      var isDone = !!done[task.id];
-      return [
-        '<li class="flex items-start gap-3 px-4 py-3 bg-surface-container-lowest border border-outline-variant card-neon' + (isDone ? ' opacity-50' : '') + '" id="task-' + task.id + '">',
-          '<input type="checkbox" class="mt-0.5 flex-shrink-0 appearance-none w-3.5 h-3.5 border border-outline"',
-          ' id="cb-' + task.id + '" data-id="' + task.id + '" data-track="' + track.id + '"',
-          (isDone ? ' checked' : '') + ' />',
-          '<span>',
-            '<span class="task-title font-body-md text-[13px] text-primary' + (isDone ? ' line-through' : ' neon-text-cyan') + '">' + esc(task.title) + '</span>',
-            '<span class="block ' + CLS_LABEL_SM + ' text-on-tertiary-container tracking-widest">// ' + esc(task.meta) + '</span>',
-          '</span>',
-        '</li>',
-      ].join('');
-    }).join('');
-
-    /* --- Progress bar --- */
-    var progressHtml = '';
-    if (state === 'IN_PROGRESS') {
-      progressHtml = [
-        '<div class="mt-8">',
-          '<div class="flex justify-between items-end mb-2">',
-            '<span class="' + CLS_LABEL_SM + ' text-secondary/80">SEQUENCE_PROGRESS</span>',
-            '<span class="text-[12px] font-bold font-label-caps text-secondary" id="node-prog-' + track.id + '">' + p.pct + '%</span>',
-          '</div>',
-          '<div id="node-bar-' + track.id + '" class="w-full bg-surface-container-highest h-1.5 relative overflow-hidden">',
-            '<div id="node-fill-' + track.id + '" class="absolute left-0 top-0 h-full bg-secondary shadow-[0_0_10px_#ffabf3]" style="width:' + p.pct + '%"></div>',
-            '<div class="absolute top-0 left-0 h-full w-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full" style="animation:shimmer 2s infinite"></div>',
-          '</div>',
-        '</div>',
-      ].join('');
-    } else if (state === 'COMPLETED') {
-      progressHtml = [
-        '<div id="node-bar-' + track.id + '" class="mt-4 w-full bg-surface-container-highest h-1 relative">',
-          '<div id="node-fill-' + track.id + '" class="absolute left-0 top-0 h-full bg-primary-fixed-dim shadow-[0_0_8px_#00f2ff]" style="width:100%"></div>',
-        '</div>',
-        '<div class="mt-2 flex gap-6">',
-          '<div class="flex flex-col">',
-            '<span class="text-[9px] font-label-caps text-on-surface-variant uppercase">Tasks</span>',
-            '<span class="text-[12px] font-label-caps text-primary">' + p.tDone + '/' + p.total + '</span>',
-          '</div>',
-          '<div class="flex flex-col">',
-            '<span class="text-[9px] font-label-caps text-on-surface-variant uppercase">Completion</span>',
-            '<span class="text-[12px] font-label-caps text-primary">100%</span>',
-          '</div>',
-        '</div>',
-      ].join('');
-    } else {
-      progressHtml = '<div id="node-bar-' + track.id + '" style="display:none"><div id="node-fill-' + track.id + '"></div></div><span id="node-prog-' + track.id + '" class="hidden"></span>';
-    }
-
-    /* --- Connector line to next node --- */
-    var connectorHtml = '';
-    if (!isLast) {
-      if (state === 'LOCKED') {
-        connectorHtml = '<div class="absolute top-full left-1/2 -translate-x-1/2 w-px h-16 border-l border-dashed border-outline-variant"></div>';
-      } else if (state === 'COMPLETED') {
-        var nextState = nodeState(ROADMAP[idx + 1]);
-        var gradTo = nextState === 'IN_PROGRESS' ? 'to-secondary/50' : 'to-primary/20';
-        connectorHtml = '<div class="absolute top-full left-1/2 -translate-x-1/2 w-px h-16 bg-gradient-to-b from-primary/50 ' + gradTo + '"></div>';
-      } else {
-        connectorHtml = '<div class="absolute top-full left-1/2 -translate-x-1/2 w-px h-16 bg-gradient-to-b from-secondary/20 to-primary/20"></div>';
-      }
-    }
-
-    return [
-      '<div class="relative group z-10 w-full max-w-2xl">',
-
-        /* Status badge above node */
-        '<div class="absolute -top-8 left-0 font-label-caps text-[11px] tracking-widest opacity-70">',
-          statusLabel,
-        '</div>',
-
-        /* Node card */
-        '<div class="p-8 ' + nodeClass + '">',
-          pingDot,
-
-          /* Icon + badge */
-          '<div class="flex justify-between items-start mb-6">',
-            '<span class="material-symbols-outlined ' + iconColor + ' text-4xl" style="font-variation-settings:\'FILL\' 1;">' + track.icon + '</span>',
-            badgeHtml,
-          '</div>',
-
-          /* Title + blurb */
-          '<h3 class="font-headline-md text-headline-md mb-3 ' + titleColor + '">' + esc(track.label) + '</h3>',
-          '<p class="font-body-md text-on-surface-variant leading-relaxed">' + esc(track.blurb) + '</p>',
-
-          /* Task list */
-          '<ul class="space-y-2 border-t border-outline-variant/30 pt-4 mt-4">' + tasksHtml + '</ul>',
-
-          progressHtml,
-        '</div>',
-
-        connectorHtml,
-      '</div>',
-    ].join('');
-  }).join('');
-
-  container.innerHTML = html;
-
-  /* Apply initial checkbox styles */
-  container.querySelectorAll('input[type=checkbox][data-id]').forEach(function(cb) {
-    applyCbStyle(cb);
-  });
-
-  _pulseIds.forEach(clearInterval);
-  _pulseIds = [];
-  container.querySelectorAll('.glow-magenta').forEach(function(node) {
-    _pulseIds.push(setInterval(function() {
-      node.classList.toggle('shadow-[0_0_30px_rgba(255,171,243,0.4)]');
-    }, PULSE_MS));
-  });
-
-  updateStats();
 }
 
 /* ── Modal ──────────────────────────────────────────────────────────────────── */
@@ -377,30 +236,34 @@ function openModal() {
   if (countEl) countEl.textContent = calcOverall().completed;
   document.getElementById('reset-modal').classList.remove('hidden');
 }
-function closeModal() {
-  document.getElementById('reset-modal').classList.add('hidden');
-}
+function closeModal() { document.getElementById('reset-modal').classList.add('hidden'); }
 function doReset() {
   done = {};
   saveDone(done);
   activityLog = [];
   closeModal();
-  renderRoadmap();
+  renderCurrentTrack();
   renderActivityLog();
+  updateStats();
 }
 
 /* ── Init ───────────────────────────────────────────────────────────────────── */
-document.addEventListener('DOMContentLoaded', function() {
-  renderRoadmap();
+document.addEventListener('DOMContentLoaded', function () {
+  updateTabBtns();
+  renderCurrentTrack();
   renderActivityLog();
+  updateStats();
 
-  /* Event delegation for all checkboxes — single listener on container */
+  document.querySelectorAll('.tab-btn[data-track]').forEach(function(btn) {
+    btn.addEventListener('click', function() { switchTab(btn.dataset.track); });
+  });
+
   var container = document.getElementById('roadmap-container');
   if (container) {
     container.addEventListener('change', function(e) {
       var cb = e.target;
       if (cb.tagName === 'INPUT' && cb.type === 'checkbox' && cb.dataset.id) {
-        toggleTask(cb.dataset.id, cb.dataset.track);
+        toggleTask(cb.dataset.id);
       }
     });
   }
@@ -409,15 +272,12 @@ document.addEventListener('DOMContentLoaded', function() {
   var modalConfirm = document.getElementById('modal-confirm');
   var modalCancel  = document.getElementById('modal-cancel');
   var modalOverlay = document.getElementById('reset-modal');
-
   if (resetBtn)     resetBtn.addEventListener('click', openModal);
   if (modalConfirm) modalConfirm.addEventListener('click', doReset);
   if (modalCancel)  modalCancel.addEventListener('click', closeModal);
-  if (modalOverlay) {
-    modalOverlay.addEventListener('click', function(e) {
-      if (e.target === modalOverlay) closeModal();
-    });
-  }
+  if (modalOverlay) modalOverlay.addEventListener('click', function(e) {
+    if (e.target === modalOverlay) closeModal();
+  });
 });
 
 }());
