@@ -111,18 +111,39 @@ function renderActivityLog() {
   }).join('') + '<div class="flex gap-4 mt-1"><span class="text-primary-fixed-dim font-bold">READY_</span><span class="bg-primary w-2 h-4 cursor-blink inline-block"></span></div>';
 }
 
+/* ── Track chip updater ─────────────────────────────────────────────────────── */
+function updateTrackChips() {
+  ROADMAP.forEach(function(track) {
+    var chip = document.getElementById('track-chip-' + track.id);
+    if (!chip) return;
+    var state = nodeState(track);
+    chip.classList.remove('text-primary', 'text-secondary', 'border-primary', 'border-secondary', 'border-transparent', 'opacity-50');
+    if (state === 'COMPLETED') {
+      chip.classList.add('text-primary', 'border-primary');
+    } else if (state === 'IN_PROGRESS') {
+      chip.classList.add('text-secondary', 'border-secondary');
+    } else {
+      chip.classList.add('text-primary', 'border-transparent', 'opacity-50');
+    }
+  });
+}
+
 /* ── Update stats ───────────────────────────────────────────────────────────── */
 function updateStats() {
   var o = calcOverall();
   var statsEl = document.getElementById('stats-completed');
   var pctEl   = document.getElementById('stats-pct');
   var labelEl = document.getElementById('overall-label');
+  var ctrlEl  = document.getElementById('ctrl-progress');
   if (statsEl) statsEl.textContent = String(o.completed).padStart(2, '0');
   if (pctEl)   pctEl.textContent = o.pct + '% of ' + o.total + ' total tasks';
+  if (ctrlEl)  ctrlEl.textContent = o.completed + ' / ' + o.total + ' (' + o.pct + '%)';
   if (labelEl) {
     labelEl.innerHTML = 'Neural network training sequence initialized. Complete sequential modules to authorize advanced system clearance.' +
-      ' <span class="text-primary ml-2">— ' + o.completed + '/' + o.total + ' tasks (' + o.pct + '%)</span>';
+      ' <span class="text-primary ml-2">— ' + o.completed + '/' + o.total + ' tasks (' + o.pct + '%)</span>' +
+      ' <span class="inline-block w-2 h-2 rounded-full bg-secondary animate-ping align-middle ml-1"></span>';
   }
+  updateTrackChips();
 }
 
 /* ── Partial node bar update (no full re-render) ──────────────────────────── */
@@ -273,18 +294,18 @@ function renderRoadmap() {
     var connectorHtml = '';
     if (!isLast) {
       if (state === 'LOCKED') {
-        connectorHtml = '<div class="absolute top-full left-1/2 -translate-x-1/2 w-px h-32 border-l border-dashed border-outline-variant"></div>';
+        connectorHtml = '<div class="absolute top-full left-1/2 -translate-x-1/2 w-px h-16 border-l border-dashed border-outline-variant"></div>';
       } else if (state === 'COMPLETED') {
         var nextState = nodeState(ROADMAP[idx + 1]);
         var gradTo = nextState === 'IN_PROGRESS' ? 'to-secondary/50' : 'to-primary/20';
-        connectorHtml = '<div class="absolute top-full left-1/2 -translate-x-1/2 w-px h-32 bg-gradient-to-b from-primary/50 ' + gradTo + '"></div>';
+        connectorHtml = '<div class="absolute top-full left-1/2 -translate-x-1/2 w-px h-16 bg-gradient-to-b from-primary/50 ' + gradTo + '"></div>';
       } else {
-        connectorHtml = '<div class="absolute top-full left-1/2 -translate-x-1/2 w-px h-32 bg-gradient-to-b from-secondary/20 to-primary/20"></div>';
+        connectorHtml = '<div class="absolute top-full left-1/2 -translate-x-1/2 w-px h-16 bg-gradient-to-b from-secondary/20 to-primary/20"></div>';
       }
     }
 
     return [
-      '<div class="relative group z-10 w-full max-w-lg">',
+      '<div class="relative group z-10 w-full max-w-2xl">',
 
         /* Status badge above node */
         '<div class="absolute -top-8 left-0 font-label-caps text-[11px] tracking-widest opacity-70">',
