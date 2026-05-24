@@ -5,6 +5,22 @@
      glow effects · scrollbar · blink cursor · neon text
 ============================================================ */
 
+:root {
+  --neon-cyan:        #e1fdff;
+  --neon-magenta:     #ffabf3;
+  --neon-cyan-90:     rgba(225, 253, 255, 0.9);
+  --neon-cyan-50:     rgba(225, 253, 255, 0.5);
+  --neon-cyan-30:     rgba(225, 253, 255, 0.3);
+  --neon-cyan-20:     rgba(225, 253, 255, 0.2);
+  --neon-cyan-12:     rgba(225, 253, 255, 0.12);
+  --neon-magenta-90:  rgba(255, 171, 243, 0.9);
+  --neon-magenta-55:  rgba(255, 171, 243, 0.55);
+  --neon-magenta-45:  rgba(255, 171, 243, 0.45);
+  --neon-magenta-20:  rgba(255, 171, 243, 0.2);
+  --surface-dark:     #0e0e10;
+  --outline:          #3a494b;
+}
+
 /* ---- CRT Scanline Overlay ---- */
 .scanline-overlay {
     position: fixed;
@@ -17,45 +33,55 @@
     z-index: 200;
 }
 
+
 /* ---- Glitch animation ---- */
 @keyframes glitch {
-    0%   { transform: translate(0);         text-shadow: 0 0 6px #e1fdff, 0 0 14px rgba(225,253,255,0.5); }
-    2%   { transform: translate(-2px, 1px); text-shadow: 2px 0 #ffabf3, -2px 0 #e1fdff; }
-    4%   { transform: translate(2px, -1px); text-shadow: -2px 0 #ffabf3, 2px 0 #e1fdff; }
-    6%   { transform: translate(0);         text-shadow: 0 0 6px #e1fdff, 0 0 14px rgba(225,253,255,0.5); }
-    100% { transform: translate(0);         text-shadow: 0 0 6px #e1fdff, 0 0 14px rgba(225,253,255,0.5); }
+    0%   { transform: translate(0);         text-shadow: 0 0 6px var(--neon-cyan), 0 0 14px var(--neon-cyan-50); }
+    2%   { transform: translate(-2px, 1px); text-shadow: 2px 0 var(--neon-magenta), -2px 0 var(--neon-cyan); }
+    4%   { transform: translate(2px, -1px); text-shadow: -2px 0 var(--neon-magenta), 2px 0 var(--neon-cyan); }
+    6%   { transform: translate(0);         text-shadow: 0 0 6px var(--neon-cyan), 0 0 14px var(--neon-cyan-50); }
+    100% { transform: translate(0);         text-shadow: 0 0 6px var(--neon-cyan), 0 0 14px var(--neon-cyan-50); }
 }
 .animate-glitch     { animation: glitch 4s infinite linear alternate-reverse; }
 .hover-glitch:hover { animation: glitch 0.3s infinite linear; }
 
 /* ---- Neon text helpers ---- */
-.neon-text-glow    { text-shadow: 0 0 8px rgba(225, 253, 255, 0.6); }
-.neon-text-cyan    { text-shadow: 0 0 6px rgba(225, 253, 255, 0.9), 0 0 14px rgba(225, 253, 255, 0.5); }
-.neon-text-magenta { text-shadow: 0 0 6px rgba(255, 171, 243, 0.9), 0 0 14px rgba(255, 171, 243, 0.5); }
-.neon-title-magenta { text-shadow: 0 0 35px rgba(255, 171, 243, 0.55), 0 0 70px rgba(255, 171, 243, 0.2); }
+.neon-text-glow    { text-shadow: 0 0 8px var(--neon-cyan-90); }
+.neon-text-cyan    { text-shadow: 0 0 6px var(--neon-cyan-90), 0 0 14px var(--neon-cyan-50); }
+.neon-text-magenta { text-shadow: 0 0 6px var(--neon-magenta-90), 0 0 14px var(--neon-magenta-45); }
+.neon-title-magenta { text-shadow: 0 0 35px var(--neon-magenta-55), 0 0 70px var(--neon-magenta-20); }
 
 /* ---- Glow helpers ---- */
 .neon-border-glow {
-    box-shadow: 0 0 5px rgba(225,253,255,0.3), inset 0 0 2px rgba(225,253,255,0.2);
+    box-shadow: 0 0 5px var(--neon-cyan-30), inset 0 0 2px var(--neon-cyan-20);
 }
 .glow-cyan {
-    box-shadow: 0 0 15px rgba(225, 253, 255, 0.3);
-    border-color: #e1fdff !important;
+    box-shadow: 0 0 15px var(--neon-cyan-30);
+    border-color: var(--neon-cyan) !important;
 }
 .glow-magenta {
-    box-shadow: 0 0 20px rgba(255, 171, 243, 0.45);
-    border-color: #ffabf3 !important;
+    box-shadow: 0 0 20px var(--neon-magenta-45);
+    border-color: var(--neon-magenta) !important;
 }
 
-/* ---- News card: cyan border default, magenta on hover ---- */
+/* ---- CVE card: glow only, border controlled by severity class ---- */
+.card-glow {
+    box-shadow: 0 0 10px var(--neon-cyan-12);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.card-glow:hover {
+    box-shadow: 0 0 20px var(--neon-magenta-45);
+}
+
+/* ---- AI/feed card: cyan border default, magenta on hover ---- */
 .card-neon {
-    border-color: #e1fdff !important;
-    box-shadow: 0 0 10px rgba(225, 253, 255, 0.12);
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 10px var(--neon-cyan-12);
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 .card-neon:hover {
-    border-color: #ffabf3 !important;
-    box-shadow: 0 0 20px rgba(255, 171, 243, 0.45);
+    border-color: var(--neon-magenta);
+    box-shadow: 0 0 20px var(--neon-magenta-45);
 }
 
 /* ---- Blinking cursor ---- */
@@ -75,14 +101,16 @@
 
 /* ---- Custom Scrollbar ---- */
 ::-webkit-scrollbar         { width: 4px; }
-::-webkit-scrollbar-track   { background: #0e0e10; }
-::-webkit-scrollbar-thumb   { background: #3a494b; }
-::-webkit-scrollbar-thumb:hover { background: #e1fdff; }
+::-webkit-scrollbar-track   { background: var(--surface-dark); }
+::-webkit-scrollbar-thumb   { background: var(--outline); }
+::-webkit-scrollbar-thumb:hover { background: var(--neon-cyan); }
+/* Standard (Firefox 64+, Chrome 121+) */
+* { scrollbar-width: thin; scrollbar-color: var(--outline) var(--surface-dark); }
 
 /* ---- Text selection ---- */
 ::selection {
-    background: rgba(225, 253, 255, 0.2);
-    color: #e1fdff;
+    background: var(--neon-cyan-20);
+    color: var(--neon-cyan);
 }
 
 /* ---- Card entry animation (injected by dashboard.js) ---- */

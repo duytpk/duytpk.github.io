@@ -1,6 +1,13 @@
 /* ── Roadmap Page ────────────────────────────────────────────────────────── */
 
-var STORAGE_KEY = 'devsecops-hub:roadmap:v1';
+(function () {
+
+var STORAGE_KEY  = 'devsecops-hub:roadmap:v1';
+var MAX_ACTIVITY = 5;
+var PULSE_MS     = 1500;
+var TIME_START   = 11;  // ISO string "2026-05-24T14:30:00Z" -> slice(11,19) = "14:30:00"
+var TIME_END     = 19;
+var CLS_LABEL_SM = 'font-label-caps text-[10px]';
 
 var ROADMAP = [
   {
@@ -49,12 +56,15 @@ var ROADMAP = [
 
 /* ── State ──────────────────────────────────────────────────────────────────── */
 function loadDone() {
-  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; }
-  catch (_) { return {}; }
+  try {
+    var raw = JSON.parse(localStorage.getItem(STORAGE_KEY));
+    if (raw !== null && typeof raw === 'object' && !Array.isArray(raw)) return raw;
+    return {};
+  } catch (_) { return {}; }
 }
 function saveDone(d) { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(d)); } catch (_) {} }
 
-var done      = loadDone();
+var done        = loadDone();
 var activityLog = [];
 var _pulseIds   = [];
 
@@ -83,9 +93,9 @@ function nodeState(track) {
 
 /* ── Activity log ───────────────────────────────────────────────────────────── */
 function logActivity(taskTitle, isDone) {
-  var now = new Date().toISOString().slice(11, 19);
+  var now = new Date().toISOString().slice(TIME_START, TIME_END);
   activityLog.unshift({ time: now, msg: (isDone ? 'Completed: ' : 'Unchecked: ') + taskTitle });
-  if (activityLog.length > 5) activityLog.pop();
+  if (activityLog.length > MAX_ACTIVITY) activityLog.pop();
   renderActivityLog();
 }
 
@@ -117,10 +127,7 @@ function updateStats() {
 
 /* ── Partial node bar update (no full re-render) ──────────────────────────── */
 function updateNodeBar(trackId) {
-  var track = null;
-  for (var i = 0; i < ROADMAP.length; i++) {
-    if (ROADMAP[i].id === trackId) { track = ROADMAP[i]; break; }
-  }
+  var track = ROADMAP.find(function(t) { return t.id === trackId; });
   if (!track) return;
   var p = trackProgress(track);
 
@@ -135,11 +142,10 @@ function updateNodeBar(trackId) {
 /* ── Toggle task ────────────────────────────────────────────────────────────── */
 function toggleTask(id, trackId) {
   var task = null;
-  for (var i = 0; i < ROADMAP.length; i++) {
-    for (var j = 0; j < ROADMAP[i].tasks.length; j++) {
-      if (ROADMAP[i].tasks[j].id === id) { task = ROADMAP[i].tasks[j]; break; }
-    }
-  }
+  ROADMAP.some(function(tr) {
+    return (task = tr.tasks.find(function(t) { return t.id === id; }));
+  });
+
   done[id] = !done[id];
   saveDone(done);
 
@@ -181,7 +187,7 @@ function renderRoadmap() {
 
     if (state === 'COMPLETED') {
       nodeClass   = 'bg-surface-container/50 border border-outline-variant glow-cyan backdrop-blur-sm';
-      badgeHtml   = '<span class="px-3 py-1 bg-primary/20 text-primary text-[10px] font-label-caps border border-primary/40">AUTH_SUCCESS</span>';
+      badgeHtml   = '<span class="px-3 py-1 bg-primary/20 text-primary ' + CLS_LABEL_SM + ' border border-primary/40">AUTH_SUCCESS</span>';
       statusLabel = '<span class="bg-primary/10 px-2 py-0.5 border border-primary/30 text-primary">' + track.nodeId + ' // VERIFIED</span>';
       iconColor   = 'text-primary';
       titleColor  = 'text-primary';
@@ -190,7 +196,7 @@ function renderRoadmap() {
       nodeClass   = 'bg-surface-container border-2 border-secondary glow-magenta relative overflow-hidden shadow-[0_0_30px_rgba(255,171,243,0.2)]';
       badgeHtml   = [
         '<div class="flex flex-col items-end">',
-          '<span class="px-3 py-1 bg-secondary/20 text-secondary text-[10px] font-label-caps border border-secondary/40">ACTIVE_SEQUENCE</span>',
+          '<span class="px-3 py-1 bg-secondary/20 text-secondary ' + CLS_LABEL_SM + ' border border-secondary/40">ACTIVE_SEQUENCE</span>',
           '<span class="text-[8px] font-label-caps text-secondary/60 mt-1 uppercase tracking-tighter">Priority: Critical</span>',
         '</div>',
       ].join('');
@@ -222,7 +228,7 @@ function renderRoadmap() {
           (isDone ? ' checked' : '') + ' />',
           '<span>',
             '<span class="font-body-md text-[13px]' + (isDone ? ' line-through' : '') + '">' + esc(task.title) + '</span>',
-            '<span class="block font-label-caps text-[10px] text-muted opacity-70">// ' + esc(task.meta) + '</span>',
+            '<span class="block ' + CLS_LABEL_SM + ' text-muted opacity-70">// ' + esc(task.meta) + '</span>',
           '</span>',
         '</li>',
       ].join('');
@@ -234,7 +240,7 @@ function renderRoadmap() {
       progressHtml = [
         '<div class="mt-8">',
           '<div class="flex justify-between items-end mb-2">',
-            '<span class="text-[10px] font-label-caps text-secondary/80">SEQUENCE_PROGRESS</span>',
+            '<span class="' + CLS_LABEL_SM + ' text-secondary/80">SEQUENCE_PROGRESS</span>',
             '<span class="text-[12px] font-bold font-label-caps text-secondary" id="node-prog-' + track.id + '">' + p.pct + '%</span>',
           '</div>',
           '<div id="node-bar-' + track.id + '" class="w-full bg-surface-container-highest h-1.5 relative overflow-hidden">',
@@ -312,12 +318,9 @@ function renderRoadmap() {
 
   container.innerHTML = html;
 
-  /* Attach checkbox listeners + styles */
+  /* Apply initial checkbox styles */
   container.querySelectorAll('input[type=checkbox][data-id]').forEach(function(cb) {
     applyCbStyle(cb);
-    cb.addEventListener('change', function() {
-      toggleTask(cb.dataset.id, cb.dataset.track);
-    });
   });
 
   _pulseIds.forEach(clearInterval);
@@ -325,7 +328,7 @@ function renderRoadmap() {
   container.querySelectorAll('.glow-magenta').forEach(function(node) {
     _pulseIds.push(setInterval(function() {
       node.classList.toggle('shadow-[0_0_30px_rgba(255,171,243,0.4)]');
-    }, 1500));
+    }, PULSE_MS));
   });
 
   updateStats();
@@ -354,6 +357,17 @@ document.addEventListener('DOMContentLoaded', function() {
   renderRoadmap();
   renderActivityLog();
 
+  /* Event delegation for all checkboxes — single listener on container */
+  var container = document.getElementById('roadmap-container');
+  if (container) {
+    container.addEventListener('change', function(e) {
+      var cb = e.target;
+      if (cb.tagName === 'INPUT' && cb.type === 'checkbox' && cb.dataset.id) {
+        toggleTask(cb.dataset.id, cb.dataset.track);
+      }
+    });
+  }
+
   var resetBtn     = document.getElementById('reset-btn');
   var modalConfirm = document.getElementById('modal-confirm');
   var modalCancel  = document.getElementById('modal-cancel');
@@ -368,3 +382,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
+}());

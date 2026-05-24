@@ -53,19 +53,38 @@ const parser = new Parser({
   },
 })
 
+const SNIPPET_MAX_CHARS = 280
+const TITLE_MAX_CHARS   = 200
+
 /** Parse CVE score, severity level, and description from cvefeed.io HTML description. */
 function parseCVEFields(raw) {
   const text = String(raw || '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ')
-  const sevMatch = text.match(/Severity\s*:\s*([\d.]+)\s*\|\s*([A-Za-z]+)/i)
-  const cveScore = sevMatch ? parseFloat(sevMatch[1]) : null
-  const cveSeverity = sevMatch ? sevMatch[2].toUpperCase() : 'NA'
+
+  // Primary pattern: "Severity : 9.8 | CRITICAL"
+  let sevMatch = text.match(/Severity\s*:\s*([\d.]+)\s*\|\s*([A-Za-z]+)/i)
+  // Fallback: "CVSS Score: 7.5 HIGH" or "CVSS: 7.5 (HIGH)"
+  if (!sevMatch) sevMatch = text.match(/CVSS(?:\s+Score)?\s*:?\s*([\d.]+)\s*[\(|,\s]+([A-Za-z]+)/i)
+
+  let cveScore    = sevMatch ? parseFloat(sevMatch[1]) : null
+  let cveSeverity = sevMatch ? sevMatch[2].toUpperCase() : null
+
+  // If regex found a score but no level, derive from CVSS thresholds
+  if (!cveSeverity && cveScore != null) {
+    if (cveScore >= 9.0)      cveSeverity = 'CRITICAL'
+    else if (cveScore >= 7.0) cveSeverity = 'HIGH'
+    else if (cveScore >= 4.0) cveSeverity = 'MEDIUM'
+    else                      cveSeverity = 'LOW'
+  }
+
+  if (!sevMatch) console.log('[DEBUG parseCVE] no match, sample:', text.slice(0, 300))
+
   const descMatch = text.match(/Description\s*:\s*(.+?)\s*Severity\s*:/is)
   const snippet = descMatch ? descMatch[1].trim() : ''
-  return { cveScore, cveSeverity, contentSnippet: clean(snippet) }
+  return { cveScore, cveSeverity: cveSeverity || 'NA', contentSnippet: clean(snippet) }
 }
 
 /** Strip HTML/whitespace and clamp length. */
-function clean(value, max = 280) {
+function clean(value, max = SNIPPET_MAX_CHARS) {
   return String(value || '')
     .replace(/<[^>]*>/g, '')
     .replace(/\s+/g, ' ')
@@ -78,10 +97,10 @@ async function fetchFeed(src) {
   const feed = await parser.parseURL(src.url)
   return (feed.items || []).slice(0, src.limit || 10).map((item) => {
     const base = {
-      title: clean(item.title, 200) || 'Untitled',
+      title: clean(item.title, TITLE_MAX_CHARS) || 'Untitled',
       link: item.link || '#',
       source: src.name,
-      isoDate: item.isoDate || item.pubDate || new Date().toISOString(),
+      isoDate: item.isoDate || item.pubDate || null,
       contentSnippet: clean(item.contentSnippet || item.summary || item.content),
     }
     if (src.category === 'cve') {
@@ -102,7 +121,11 @@ function mergeItems(items, limit) {
     seen.add(key)
     unique.push(it)
   }
-  unique.sort((a, b) => new Date(b.isoDate) - new Date(a.isoDate))
+  unique.sort((a, b) => {
+    if (!a.isoDate) return 1
+    if (!b.isoDate) return -1
+    return new Date(b.isoDate) - new Date(a.isoDate)
+  })
   return unique.slice(0, limit)
 }
 

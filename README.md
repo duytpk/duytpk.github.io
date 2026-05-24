@@ -1,104 +1,242 @@
-# Personal DevSecOps Hub
+# Neon Protocol DevSecOps Hub
 
-A personal learning + tech-news hub with a **sci-fi / cyberpunk lab-terminal**
-aesthetic, built with **Vite + React + [@arwes/react](https://arwes.dev)** and
-deployed to GitHub Pages (custom domain: **duytpk.me**).
+A personal cyberpunk/hacker-aesthetic static site deployed at **[duytpk.me](https://duytpk.me)** with two pages:
 
-## Features
+- **CVE Dashboard** — real-time security news aggregator (CVE feed + AI tech feed), auto-refreshes every 5 minutes.
+- **Learning Roadmap** — Linux / Terraform / Kubernetes progress tracker with persistent checkbox state.
 
-- **News Dashboard** (`/`) — glowing Arwes frames split into tabs:
-  _Vulnerabilities / CVE_, _Virtualization & Cloud_, _System / Kernel_. Data is
-  loaded from `src/data/news.json`, refetched client-side every 5 minutes, and
-  shows a **Last updated** timestamp.
-- **Learning Roadmap** (`/roadmap`) — timeline of tasks for **Linux**,
-  **Terraform** and **Kubernetes** with checkboxes whose completion state is
-  saved in **localStorage**.
-- Cyberpunk styling: neon glow frames, animated grid background, decipher
-  "typewriter" text, CRT scanlines and click **bleep** sounds (Arwes Bleeps).
-- **Automated hourly news updates** via GitHub Actions + `rss-parser`.
+> **Zero-dependency static HTML.** No npm, no build step, no node_modules needed to run it locally.
+> Open `index.html` in a browser, or `python3 -m http.server` from the repo root.
+
+---
 
 ## Tech stack
 
-| Concern    | Choice                                            |
-| ---------- | ------------------------------------------------- |
-| Build      | Vite 6                                            |
-| UI         | React 18 + `@arwes/react` (sci-fi UI primitives)  |
-| Routing    | `react-router-dom` v6 (`BrowserRouter`)           |
-| Automation | Node script + `rss-parser`                        |
-| CI/CD      | GitHub Actions → GitHub Pages                     |
+| Concern    | Choice                                                          |
+| ---------- | --------------------------------------------------------------- |
+| Pages      | Plain HTML5 (`index.html`, `roadmap.html`, `404.html`)         |
+| Styles     | Tailwind CSS CDN + `assets/cyber-neon.css`                     |
+| Logic      | Vanilla JS (IIFE-wrapped, no bundler)                           |
+| Icons      | Google Material Symbols (CDN)                                   |
+| Fonts      | Sora (headings) + JetBrains Mono (labels/data) via Google Fonts |
+| Feed sync  | Node 20 + `rss-parser` (CI only, not shipped to browser)       |
+| CI/CD      | GitHub Actions → GitHub Pages (no build step)                  |
+| Domain     | `duytpk.me` via `public/CNAME`                                 |
 
-> React is pinned to **18.x** because `@arwes/react` declares React 18 as a peer
-> dependency.
+---
 
-## Local development
+## File layout
 
-Requires Node.js 20+.
+```
+(repo root)
+  index.html            # CVE Dashboard page
+  roadmap.html          # Learning Roadmap page
+  404.html              # Not Found page
+  news.json             # Live feed served at /news.json; updated hourly by CI
+
+assets/
+  cyber-neon.css        # Custom CSS: CSS variables, scanline, glow, scrollbar, animations
+  tailwind-config.js    # Shared Tailwind theme (colors, fonts, spacing) — loaded by each HTML
+  app.js                # Shared: UTC clock, nav highlight, glitch scramble
+  topbar.js             # Shared: injects top navigation bar
+  footer.js             # Shared: injects footer
+  index.js              # CVE Dashboard logic: fetch, render cards, tab switch, sort/filter
+  roadmap.js            # Roadmap logic: localStorage state, node render, progress, modal
+
+public/
+  favicon.svg
+  CNAME                 # duytpk.me
+  sounds/               # (legacy, unused)
+
+src/
+  data/
+    news.json           # Authoritative feed source; CI writes here first, then copies to root
+  ...                   # Legacy React source — not used by the static site
+
+scripts/
+  fetch-news.js         # RSS aggregator → overwrites src/data/news.json
+
+.github/workflows/
+  deploy.yml            # Assembles _site/ → deploys to GitHub Pages
+  update-news.yml       # Hourly: fetch RSS → commit → trigger deploy
+```
+
+---
+
+## How data flows
+
+```
+scripts/fetch-news.js
+  └─ writes src/data/news.json
+       └─ update-news.yml copies → root news.json → commits & pushes
+            └─ triggers deploy.yml
+                  └─ cp src/data/news.json _site/news.json → deployed
+
+Browser: fetch('news.json') every 5 min
+```
+
+- To add/remove RSS sources, edit the `SOURCES` array in `scripts/fetch-news.js`.
+  Each entry needs `{ category, name, url, limit }`. Categories: `cve` | `ai`.
+- CVE items have two extra fields: `cveScore` (float or `null`) and `cveSeverity`
+  (`CRITICAL` / `HIGH` / `MEDIUM` / `LOW` / `NA`), extracted by `parseCVEFields()`.
+- Items without a publish date get `isoDate: null` and sort to the bottom of the feed.
+
+---
+
+## Design system — Neon Protocol
+
+### Color tokens (Tailwind + CSS custom properties)
+
+| CSS variable / Tailwind token | Hex       | Usage                              |
+| ----------------------------- | --------- | ---------------------------------- |
+| `--neon-cyan` / `primary`     | `#e1fdff` | Main text, nav links, glow         |
+| `--neon-magenta` / `secondary`| `#ffabf3` | Active nav, hover accents, magenta |
+| `surface-container-lowest`    | `#0e0e10` | Body background                    |
+| `surface-container-low`       | `#1c1b1d` | Card backgrounds                   |
+| `surface-container`           | `#201f21` | Panel fills                        |
+| `outline-variant` / `--outline`| `#3a494b`| Borders, dividers                  |
+| `on-tertiary-container`       | `#605f64` | Muted labels, metadata             |
+| `error`                       | `#ffb4ab` | Error states, reset button         |
+
+CSS custom properties (defined in `cyber-neon.css :root`) cover neon colors and their
+alpha variants (`--neon-cyan-50`, `--neon-magenta-45`, etc.) — use these in custom CSS
+instead of hardcoding hex values.
+
+### Typography
+
+- **Headings/brand**: `font-display-lg` / `font-headline-md` → Sora
+- **Labels/data**: `font-body-md` / `font-label-caps` → JetBrains Mono (monospace)
+- All-caps labels use `tracking-widest uppercase`.
+
+### Card classes
+
+| Class        | Use case                  | Border behavior                     |
+| ------------ | ------------------------- | ----------------------------------- |
+| `.card-glow` | CVE cards                 | No forced border — Tailwind severity class controls it |
+| `.card-neon` | AI/feed cards             | Cyan border default, magenta on hover |
+
+### Glow helpers
+
+- `.glow-cyan` — cyan box-shadow + forced cyan border (roadmap COMPLETED nodes)
+- `.glow-magenta` — magenta box-shadow + forced magenta border (roadmap IN_PROGRESS nodes)
+- `.neon-text-cyan` / `.neon-text-magenta` — text-shadow glows
+- `.animate-glitch` / `.hover-glitch` — glitch keyframe animation
+
+---
+
+## CVE severity coloring
+
+`severityMeta(level)` in `assets/index.js` returns Tailwind classes per severity:
+
+| Severity   | Text class         | Border class            |
+| ---------- | ------------------ | ----------------------- |
+| CRITICAL   | `text-error`       | `border-error/50`       |
+| HIGH       | `text-orange-400`  | `border-orange-400/50`  |
+| MEDIUM     | `text-yellow-400`  | `border-yellow-400/50`  |
+| LOW        | `text-green-400`   | `border-green-400/50`   |
+| NA         | `text-on-tertiary-container` | `border-outline-variant` |
+
+CRITICAL/HIGH cards render with the colored border; MEDIUM/LOW/NA use `border-outline-variant`.
+
+---
+
+## Roadmap
+
+Tasks are stored in `localStorage` under key `devsecops-hub:roadmap:v1` as
+`{ taskId: boolean }`. Task IDs are defined in `assets/roadmap.js` in the `ROADMAP`
+array — **do not rename them** or saved progress will be lost.
+
+Node states (derived at render time):
+
+- **COMPLETED** — all tasks done → cyan glow (`glow-cyan`)
+- **IN_PROGRESS** — some tasks done → magenta glow (`glow-magenta`) + progress bar
+- **LOCKED** — no tasks done → grayscale + reduced opacity
+
+---
+
+## Code patterns
+
+**IIFE wrappers** — every page-specific JS file wraps all code in `(function () { ... }())` to
+avoid polluting `window`. `window.esc` (from `app.js`) is the only intentional global.
+
+**setInterval** — must be stored and cleared on `beforeunload`. See `assets/index.js`.
+
+**localStorage writes** — always wrapped in `try/catch` (`saveDone()` in `roadmap.js`).
+`loadDone()` also validates the parsed value is a plain object before using it.
+
+**Event delegation** — roadmap checkboxes use a single `change` listener on
+`#roadmap-container` instead of one listener per checkbox.
+
+**CVE parsing fallback chain** — `parseCVEFields()` in `fetch-news.js` tries three
+patterns to extract CVSS score/severity; if all fail it derives severity from the numeric
+score using CVSS thresholds, and logs a debug sample to stdout so CI can diagnose format
+changes.
+
+**Tab ARIA state** — `index.html` sets initial `aria-selected` on each `role="tab"` button;
+`switchTab()` in `assets/index.js` updates it on every switch. Wire both places when adding tabs.
+
+---
+
+## Local dev
+
+No build step needed for the front-end:
 
 ```bash
-npm install        # install dependencies (creates node_modules)
-npm run dev        # start the dev server (http://localhost:5173)
-npm run build      # production build into dist/
-npm run preview    # preview the production build
-npm run fetch-news # run the RSS aggregator -> src/data/news.json
+# Just open in browser (or serve locally):
+python3 -m http.server
+# → http://localhost:8000
 ```
 
-## Project structure
+To refresh the news feed locally:
 
-```
-src/
-  arwesConfig.js          # Arwes animation timings + bleep sound settings
-  App.jsx                 # providers + routes
-  components/
-    AppShell.jsx          # header, nav, status line, background, footer
-    Background.jsx        # animated Arwes grid background
-    Panel.jsx             # glowing FrameSVG panel
-    Scramble.jsx          # decipher/typewriter text
-  pages/
-    Dashboard.jsx         # news dashboard with tabs + auto-refresh
-    Roadmap.jsx           # learning roadmap with localStorage progress
-    NotFound.jsx
-  hooks/
-    useNews.js            # fetch + interval refresh of news.json
-    useLocalStorageState.js
-  data/
-    news.json             # generated news feed (also served at /news.json)
-    roadmap.js            # roadmap tracks + tasks
-public/
-  sounds/                 # click / type / assemble bleeps (wav)
-  CNAME, .nojekyll
-scripts/
-  fetch-news.js           # standalone RSS aggregator
-.github/workflows/
-  deploy.yml              # build + deploy to GitHub Pages
-  update-news.yml         # hourly cron: refresh news.json + trigger deploy
+```bash
+npm install                    # one-time: installs rss-parser
+npm run fetch-news             # writes src/data/news.json
+cp src/data/news.json news.json
 ```
 
-`news.json` lives in `src/data/`. A small Vite plugin (`vite.config.js`) serves
-it at `/news.json` during dev (read fresh from disk on every request) and copies
-it into the build output for production, so the dashboard can refetch it
-client-side without a rebuild.
+---
 
-## Automation — how the hourly update works
+## CI/CD
 
-`.github/workflows/update-news.yml` runs **every hour** (cron `0 * * * *`):
+### `update-news.yml` (hourly)
 
-1. `npm run fetch-news` pulls the latest items from the configured RSS feeds and
-   overwrites `src/data/news.json`.
-2. If the file changed, it is committed and pushed by `github-actions[bot]`.
-3. The workflow then dispatches `deploy.yml` to rebuild and redeploy the site.
+1. `npm run fetch-news` — fetches all RSS sources, writes `src/data/news.json`
+2. If file changed: `cp src/data/news.json news.json` → commit both → push
+3. Dispatches `deploy.yml`
 
-Edit the `SOURCES` array in [`scripts/fetch-news.js`](scripts/fetch-news.js) to
-change the feeds. The defaults are samples:
+### `deploy.yml` (on push to main or manual dispatch)
 
-- **CVE / security** — The Hacker News
-- **Virtualization & Cloud** — Docker Blog
-- **System / Kernel** — Phoronix
+1. Assembles `_site/`:
+   - `cp *.html _site/` (all HTML pages at root, automatically includes new pages)
+   - `cp -r assets _site/`
+   - `cp src/data/news.json _site/news.json`
+   - `cp -r public _site/`
+2. Uploads `_site/` as Pages artifact → deploys
 
-## One-time GitHub setup
+One-time setup: **Settings → Pages → Source = GitHub Actions**. No extra secrets needed.
 
-1. Push this repo to `github.com/duytpk/duytpk.github.io`.
-2. In **Settings → Pages**, set **Source = GitHub Actions**.
-3. Keep the custom domain `duytpk.me` (the `CNAME` file is included in the
-   build via `public/CNAME`).
-4. `deploy.yml` and `update-news.yml` use the built-in `GITHUB_TOKEN`; no extra
-   secrets are required.
+---
+
+## Git workflow
+
+The hourly workflow pushes directly to `main`, causing frequent divergence.
+
+```bash
+# Do NOT use git pull (creates merge commits)
+git rebase origin/main
+```
+
+---
+
+## Design decisions
+
+- **`<head>` duplicated across HTML files** — intentional; a shared partial requires a
+  build step not worth adding for 3 pages.
+- **Footer links non-functional** — rendered as `<span class="opacity-40">`, no `href`.
+  Do not add hrefs until real destinations exist.
+- **No `!important` on `.card-neon`** — `cyber-neon.css` loads after Tailwind CDN, so
+  cascade order alone wins. `.glow-cyan` and `.glow-magenta` keep `!important` because
+  they need to override inline Tailwind border utilities on dynamically-classed nodes.
+- **Removed CSS classes** (do not re-add unless needed): `.neon-text-glow-magenta`,
+  `.active-nav-glow`, `.bracket-corner`, `.node-connector`, `.node-connector--dashed`

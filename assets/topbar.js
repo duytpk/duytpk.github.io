@@ -1,6 +1,6 @@
 /* ── Shared Top App Bar — logo left · nav centered ── */
 (function () {
-  var page = location.pathname.split('/').pop().replace('.html', '') || 'index';
+  var page = location.pathname.replace(/\.html$/, '').replace(/\/$/, '').split('/').pop() || 'index';
 
   var ACTIVE   = 'text-primary font-bold border-b-2 border-primary pb-1 neon-text-cyan hover-glitch';
   var INACTIVE = 'text-primary opacity-60 hover:opacity-100 transition-opacity duration-150 cursor-pointer active:scale-95 hover-glitch';
