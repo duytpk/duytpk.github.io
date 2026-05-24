@@ -111,30 +111,32 @@ function renderCVECard(item, i) {
 
   return [
     '<article class="flex flex-col bg-surface-container border ' + cardBorder + ' card-neon',
-    ' group hover:bg-surface-container-high transition-all duration-300 relative p-5"',
+    ' group hover:bg-surface-container-high transition-all duration-300 relative"',
     ' style="animation:cardIn 0.35s ease both;animation-delay:' + (i * 60) + 'ms">',
 
-    '<a href="' + esc(item.link) + '" target="_blank" rel="noreferrer" class="block mb-4 group/title">',
-      '<h3 class="font-headline-md text-[17px] text-primary neon-text-cyan leading-tight group-hover/title:opacity-80 transition-opacity">',
-        esc(item.title),
-      '</h3>',
-    '</a>',
-
-    '<div class="flex items-center gap-2 mb-4">',
-      '<span class="px-2 py-0.5 text-[11px] font-label-caps font-bold ' + sev.text + ' ' + sev.bg + '">',
-        'CVSS ' + score,
-      '</span>',
+    '<div class="px-5 py-3 flex justify-between items-center">',
+      '<span class="font-label-caps text-[11px] font-bold ' + sev.text + '">CVSS ' + score + '</span>',
       '<span class="px-2 py-0.5 text-[11px] font-label-caps font-bold ' + sev.text + ' ' + sev.bg + '">',
         esc(item.cveSeverity || 'NA'),
       '</span>',
     '</div>',
 
-    '<p class="font-label-caps text-[10px] text-on-tertiary-container tracking-widest uppercase mb-2">Description</p>',
-    '<p class="font-body-md text-sm text-on-surface-variant leading-relaxed opacity-90 line-clamp-4 flex-grow">',
-      esc(item.contentSnippet || '—'),
-    '</p>',
+    '<div class="border-t border-outline-variant/50"></div>',
 
-    '<div class="pt-4 flex justify-between items-center text-[9px] font-label-caps text-on-surface-variant/60 uppercase">',
+    '<div class="px-5 py-4 flex-grow flex flex-col gap-3">',
+      '<a href="' + esc(item.link) + '" target="_blank" rel="noreferrer" class="block group/title">',
+        '<h3 class="font-headline-md text-[17px] text-primary neon-text-cyan leading-tight group-hover/title:opacity-80 transition-opacity">',
+          esc(item.title),
+        '</h3>',
+      '</a>',
+      '<p class="font-body-md text-sm text-on-surface-variant leading-relaxed opacity-90 line-clamp-4">',
+        esc(item.contentSnippet || '—'),
+      '</p>',
+    '</div>',
+
+    '<div class="border-t border-outline-variant/50"></div>',
+
+    '<div class="px-5 py-3 flex justify-between items-center text-[9px] font-label-caps text-on-surface-variant/60 uppercase">',
       '<span>' + timeAgo(item.isoDate) + '</span>',
       '<span>' + fmtDate(item.isoDate) + '</span>',
     '</div>',

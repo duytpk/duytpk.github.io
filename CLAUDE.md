@@ -45,8 +45,8 @@ Deployed to **GitHub Pages** (Actions source) on the custom domain **duytpk.me**
 assets/
   cyber-neon.css        # Minimal custom CSS: scanline, bracket-corner, glow, scrollbar
   app.js                # Common shell: live UTC clock, nav highlight, scramble effect
-  dashboard.js          # CVE dashboard: fetch news.json, render cards, tab switch, auto-refresh
-  roadmap-page.js       # Roadmap: localStorage state, node render, progress, reset modal
+  index.js              # CVE dashboard: fetch news.json, render cards, tab switch, auto-refresh
+  roadmap.js            # Roadmap: localStorage state, node render, progress, reset modal
 
 public/
   favicon.svg
@@ -106,9 +106,21 @@ Design tokens live in the **Tailwind config block** at the top of each HTML file
 - `update-news.yml` copies `src/data/news.json → news.json` (root) before committing.
 - `deploy.yml` also runs `cp src/data/news.json _site/news.json` when assembling the site.
 - To change RSS sources, edit the `SOURCES` array in `scripts/fetch-news.js`. Each
-  entry's `category` must be `cve` / `cloud` / `system`.
+  entry's `category` must be `cve` / `cloud` / `system`. Each entry supports an optional
+  `limit` field to override the default `PER_SOURCE` item count.
 - The fetch script forces `process.exit(0)` at the end — keep this; `rss-parser` leaves
   keep-alive sockets open which would hang CI.
+
+### CVE feed specifics
+
+- The `cve` category uses a **single source**: `https://cvefeed.io/rssfeed/latest.xml` with `limit: 30`.
+- CVE items carry two extra fields beyond the standard schema:
+  - `cveScore` — CVSS score as a float (e.g. `9.8`), or `null` if not yet scored.
+  - `cveSeverity` — severity string: `CRITICAL` / `HIGH` / `MEDIUM` / `LOW` / `NA`.
+- These are extracted by `parseCVEFields()` in `fetch-news.js`, which parses the
+  `Severity: <score> | <level>` and `Description : <text>` patterns from the feed's
+  HTML-encoded `<description>` field. The `contentSnippet` for CVE items is replaced
+  with the clean description text (not the full HTML dump).
 
 ---
 
@@ -169,6 +181,15 @@ linear history. Safe to run whenever you see "Your branch and 'origin/main' have
   do not re-add unless actively needed:
   `.neon-text-glow-magenta`, `.active-nav-glow`, `.bracket-corner`, `.node-connector`,
   `.node-connector--dashed`
+
+- **CVE cards have a different layout from CLOUD/SYSTEM cards.** The CVE tab uses
+  `renderCVECard()` in `assets/index.js` — no header section, no source label, no icon.
+  Layout top-to-bottom: clickable title → CVSS + severity badges → "Description" label +
+  description text → footer (time ago | date). Severity badge colors: CRITICAL = `text-error`,
+  HIGH = `text-orange-400`, MEDIUM = `text-yellow-400`, LOW = `text-green-400`, NA = `text-on-tertiary-container`.
+  Card border is colored for CRITICAL/HIGH items (matching severity color), standard
+  `border-outline-variant` for all others. The `severityMeta(level)` helper in `assets/index.js`
+  returns `{ text, border, bg }` Tailwind classes for a given severity level.
 
 ## Code patterns & constraints
 
