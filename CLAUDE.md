@@ -8,9 +8,9 @@ Guidance for working in this repository.
 
 1. **CVE Dashboard** (`index.html`) — tech-news aggregator with tabs **CVE** and **AI**.
    Fetches `news.json` at runtime, auto-refreshes every 5 min.
-2. **Learning Roadmap** (`roadmap.html`) — Linux / Terraform / Kubernetes node-based
-   progress flow. Node states (COMPLETED/IN_PROGRESS/LOCKED) are derived from task
-   checkboxes saved in `localStorage`.
+2. **Learning Roadmap** (`roadmap.html`) — Linux / Terraform / Kubernetes 3-level
+   horizontal tree, tab-switched per track. Leaf checkbox state is saved in `localStorage`;
+   completion propagates up: leaf group → day → root node.
 
 Deployed to **GitHub Pages** (Actions source) on the custom domain **duytpk.me**.
 
@@ -49,7 +49,7 @@ assets/
   topbar.js             # Injects shared top navigation bar
   footer.js             # Injects shared footer
   index.js              # CVE dashboard: fetch news.json, render cards, tab switch, sort/filter
-  roadmap.js            # Roadmap: localStorage state, node render, progress, reset modal
+  roadmap.js            # Roadmap: localStorage state, 3-level tree render, tab switching, reset modal
 
 public/
   favicon.svg
@@ -117,8 +117,8 @@ Do NOT use `.card-neon` on CVE cards — it would override severity-based border
 
 ### Glow helpers
 
-- `.glow-cyan` — cyan box-shadow + `border-color: var(--neon-cyan) !important` (roadmap COMPLETED)
-- `.glow-magenta` — magenta box-shadow + `border-color: var(--neon-magenta) !important` (roadmap IN_PROGRESS)
+- `.glow-cyan` — cyan box-shadow + `border-color: var(--neon-cyan) !important`
+- `.glow-magenta` — magenta box-shadow + `border-color: var(--neon-magenta) !important` (roadmap completed state at all levels)
 - `.neon-text-cyan` / `.neon-text-magenta` / `.neon-text-glow` — text-shadow glows
 - `.animate-glitch` — continuous glitch animation; `.hover-glitch` — on hover only
 - **Scanline**: `<div class="scanline-overlay"></div>` as first child of `<body>`
@@ -187,18 +187,57 @@ border-color, allowing Tailwind utility classes to take effect). MEDIUM/LOW/NA u
 
 ## Roadmap logic
 
-Tasks are stored in `localStorage` under key `devsecops-hub:roadmap:v1` as a flat
-`{ taskId: boolean }` object. Task IDs are defined inline in `assets/roadmap.js`
-in the `ROADMAP` array — **do not rename them** or saved progress will be lost.
+### Data structure
 
-`loadDone()` validates the parsed value is a plain object (not array, not null) before
-using it — this guards against corrupted or migrated localStorage data.
+The `ROADMAP` array has three tracks (`k8s`, `linux`, `terraform`). Each track has `tasks`
+(days or modules). Each task has `children` — an array of leaf groups (e.g. DOCUMENTS,
+EXERCISES). Each group has `items` — the actual leaf checkboxes.
 
-Node states are derived at render time:
+```
+ROADMAP[track] → tasks[day] → children[group] → items[leaf]
+```
 
-- **COMPLETED**: all tasks in track done → cyan glow (`glow-cyan`)
-- **IN_PROGRESS**: some tasks done → magenta glow (`glow-magenta`) + progress bar
-- **LOCKED**: no tasks done → grayscale + opacity-40
+Leaf IDs follow the pattern `<track>-<day>-<d|e><n>` (e.g. `k8s-d1-d1`, `k8s-d1-e3`).
+**Do not rename IDs** — saved progress is keyed by ID.
+
+### Storage
+
+Key: `devsecops-hub:roadmap:v3` (flat `{ leafId: boolean }` object).
+
+On first load (`raw === null`), `DEFAULT_DONE` seeds K8s Days 1–8 (48 leaf items) as done.
+`loadDone()` validates the parsed value is a plain object before using it.
+`saveDone()` and `loadDone()` both wrap in try/catch for private-mode browsers.
+
+### Completion propagation (derived at render time)
+
+- **Leaf group** (`isGroupDone`): all items in group done → `glow-magenta` border, magenta label
+- **Day node** (`isDayDone`): all groups done → `glow-magenta` border, magenta title
+- **Root node**: all days done → `glow-magenta` border, magenta icon+label
+- Incomplete state at all levels uses `card-neon` (cyan border)
+
+### Tab switching
+
+`activeTrack` holds the current track ID (`'k8s'` on load). `switchTab(trackId)` updates
+`activeTrack`, calls `updateTabBtns()` (updates `aria-selected` and CSS classes), and
+`renderCurrentTrack()` which replaces `#roadmap-container` innerHTML entirely.
+
+### Tree rendering functions
+
+| Function | Responsibility |
+|---|---|
+| `renderLeafItem(item, trackId)` | Single checkbox + label row |
+| `renderChildGroup(grp, trackId, isFirstGrp, isLastGrp)` | Group box with spine connector |
+| `renderDayRow(day, trackId, totalDays, idx)` | Day box + horizontal connectors + children column |
+| `renderTrackPanel(track)` | Root box + root→days connector + all day rows |
+
+Spine connectors use `position: absolute w-px bg-outline-variant` divs. `isFirst`/`isLast`
+flags control `top-1/2 / top-0` and `bottom-1/2 / bottom-0` so adjacent row segments join
+seamlessly. Rows use `py-3` padding (no `gap-*`) to avoid gaps between spine segments.
+
+### Event delegation
+
+Single `change` listener on `#roadmap-container`. `toggleTask(id)` searches the 3-level
+ROADMAP structure to find the leaf, flips `done[id]`, saves, re-renders, and logs activity.
 
 ---
 
@@ -228,7 +267,7 @@ git rebase origin/main
 
 - **Event delegation for checkboxes.** `assets/roadmap.js` attaches a single `change` listener
   on `#roadmap-container` instead of one per checkbox. Do not add per-checkbox listeners in
-  `renderRoadmap()` — use the delegated handler.
+  `renderCurrentTrack()` / `renderTrackPanel()` — use the delegated handler.
 
 - **`bar.querySelector` instead of `document.getElementById`** for elements created inside
   `renderSortBar()` / `renderFilterBar()`. Scoped queries are safer when attaching event
@@ -242,9 +281,9 @@ git rebase origin/main
   private helpers (inside the IIFE) shared between `renderCVECard()` and `renderFeedCard()`.
   Keep the separator — CVE cards use `.card-glow`, feed cards use `.card-neon`.
 
-- **Tab ARIA state must stay in sync.** `index.html` sets initial `aria-selected` on each
-  `role="tab"` button; `switchTab()` in `assets/index.js` updates it on every switch.
-  If you add tabs, wire both places.
+- **Tab ARIA state must stay in sync.** Both pages set initial `aria-selected` on each
+  `role="tab"` button in HTML; `switchTab()` in `assets/index.js` and `updateTabBtns()` in
+  `assets/roadmap.js` update it on every switch. If you add tabs, wire both places.
 
 - **CSS `!important` rationale.** `.glow-cyan` and `.glow-magenta` need `!important` on
   `border-color` to override Tailwind's border utilities (equal specificity, same cascade
