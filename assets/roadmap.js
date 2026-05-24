@@ -2,18 +2,41 @@
 
 (function () {
 
-var STORAGE_KEY  = 'devsecops-hub:roadmap:v1';
+var STORAGE_KEY  = 'devsecops-hub:roadmap:v2';
 var MAX_ACTIVITY = 5;
 var PULSE_MS     = 1500;
 var TIME_START   = 11;  // ISO string "2026-05-24T14:30:00Z" -> slice(11,19) = "14:30:00"
 var TIME_END     = 19;
 var CLS_LABEL_SM = 'font-label-caps text-[10px]';
 
+/* Days 1-8 seeded as completed per curriculum status (Day 9 in-progress, Day 10 not started) */
+var DEFAULT_DONE = {
+  'k8s-d1': true, 'k8s-d2': true, 'k8s-d3': true, 'k8s-d4': true,
+  'k8s-d5': true, 'k8s-d6': true, 'k8s-d7': true, 'k8s-d8': true,
+};
+
 var ROADMAP = [
+  {
+    id: 'k8s', label: 'Kubernetes', icon: 'hub',
+    blurb: '10-day curriculum: architecture, workloads, networking, storage, scheduling, security, observability, Helm & Kustomize, cluster maintenance.',
+    nodeId: 'NODE_01',
+    tasks: [
+      { id: 'k8s-d1', title: 'Day 1: Architecture & Internals — Control Plane, etcd (RAFT), kubelet, kube-proxy, CRI/CNI/CSI',                                                    meta: 'core' },
+      { id: 'k8s-d2', title: 'Day 2: Workloads & Controllers — Init/Sidecar patterns, Liveness/Readiness/Startup probes, Deployment, StatefulSet, DaemonSet, Job & CronJob',      meta: 'core' },
+      { id: 'k8s-d3', title: 'Day 3: Networking & Connectivity — Flat network model, CNI (Calico/Cilium), Service types, Ingress & Ingress Controller, CoreDNS',                  meta: 'core' },
+      { id: 'k8s-d4', title: 'Day 4: Storage & Configuration — PV/PVC/StorageClass, Static vs Dynamic provisioning, Access modes, ConfigMap, Secret, Sealed Secrets, Vault',      meta: 'core' },
+      { id: 'k8s-d5', title: 'Day 5: Scheduling & Resource Mgmt — Requests/Limits, CPU throttling vs OOMKill, QoS classes, Node/Pod Affinity, Taints & Tolerations, Priority',   meta: 'core' },
+      { id: 'k8s-d6', title: 'Day 6: Security & Access Control — RBAC (Role/ClusterRole/Binding), ServiceAccounts, Network Policies (Zero Trust), Security Context',              meta: 'security' },
+      { id: 'k8s-d7', title: 'Day 7: Observability — Node-level logging (DaemonSet), EFK vs PLG stack, Prometheus pull model, Histogram/Counter/Gauge, kube-state-metrics',       meta: 'advanced' },
+      { id: 'k8s-d8', title: 'Day 8: Package Management — Helm v3 (no Tiller), Chart/Release lifecycle, Kustomize Base & Overlay, Helm + Kustomize post-renderer hybrid',        meta: 'advanced' },
+      { id: 'k8s-d9', title: 'Day 9: Troubleshooting & Maintenance — Cordon/Drain/Uncordon, etcd snapshot backup & restore, Cluster upgrade lifecycle (kubeadm)',                 meta: 'advanced' },
+      { id: 'k8s-d10', title: 'Day 10: Advanced Topics & Modern Ecosystem',                                                                                                         meta: 'advanced' },
+    ],
+  },
   {
     id: 'linux', label: 'Linux System', icon: 'terminal',
     blurb: 'Foundation: command line, permissions, processes, networking.',
-    nodeId: 'NODE_01',
+    nodeId: 'NODE_02',
     tasks: [
       { id: 'linux-cli',       title: 'Master shell basics (bash/zsh, pipes, redirection)', meta: 'fundamentals' },
       { id: 'linux-fs',        title: 'Filesystem hierarchy, permissions & ACLs',            meta: 'fundamentals' },
@@ -27,7 +50,7 @@ var ROADMAP = [
   {
     id: 'terraform', label: 'Terraform / IaC', icon: 'cloud',
     blurb: 'Infrastructure as Code: provision cloud resources declaratively.',
-    nodeId: 'NODE_02',
+    nodeId: 'NODE_03',
     tasks: [
       { id: 'tf-hcl',        title: 'HCL syntax, providers & resources',             meta: 'fundamentals' },
       { id: 'tf-state',      title: 'State management & remote backends (S3 + lock)', meta: 'core'         },
@@ -38,27 +61,18 @@ var ROADMAP = [
       { id: 'tf-sec',        title: 'Policy-as-code (tfsec, OPA, Sentinel)',           meta: 'security'     },
     ],
   },
-  {
-    id: 'k8s', label: 'Kubernetes', icon: 'hub',
-    blurb: 'Container orchestration at scale: workloads, networking, security.',
-    nodeId: 'NODE_03',
-    tasks: [
-      { id: 'k8s-core',          title: 'Pods, ReplicaSets, Deployments & Services',     meta: 'fundamentals' },
-      { id: 'k8s-config',        title: 'ConfigMaps, Secrets & environment config',       meta: 'core'         },
-      { id: 'k8s-storage',       title: 'Volumes, PV/PVC & StatefulSets',                 meta: 'core'         },
-      { id: 'k8s-net',           title: 'Ingress, NetworkPolicies & service mesh basics',  meta: 'core'         },
-      { id: 'k8s-helm',          title: 'Packaging with Helm & Kustomize',                meta: 'advanced'     },
-      { id: 'k8s-rbac',          title: 'RBAC, ServiceAccounts & Pod Security Standards', meta: 'security'     },
-      { id: 'k8s-observability', title: 'Observability: metrics, logs, tracing',          meta: 'advanced'     },
-    ],
-  },
 ];
 
 /* ── State ──────────────────────────────────────────────────────────────────── */
 function loadDone() {
   try {
-    var raw = JSON.parse(localStorage.getItem(STORAGE_KEY));
-    if (raw !== null && typeof raw === 'object' && !Array.isArray(raw)) return raw;
+    var raw = localStorage.getItem(STORAGE_KEY);
+    if (raw === null) {
+      saveDone(DEFAULT_DONE);
+      return DEFAULT_DONE;
+    }
+    var parsed = JSON.parse(raw);
+    if (parsed !== null && typeof parsed === 'object' && !Array.isArray(parsed)) return parsed;
     return {};
   } catch (_) { return {}; }
 }
@@ -170,11 +184,13 @@ function toggleTask(id, trackId) {
   done[id] = !done[id];
   saveDone(done);
 
-  var item = document.getElementById('task-' + id);
-  var cb   = document.getElementById('cb-' + id);
-  if (item) item.classList.toggle('line-through', !!done[id]);
-  if (item) item.classList.toggle('text-muted', !!done[id]);
-  if (cb)   cb.checked = !!done[id];
+  var item    = document.getElementById('task-' + id);
+  var cb      = document.getElementById('cb-' + id);
+  var titleEl = item ? item.querySelector('.task-title') : null;
+  if (item)    item.classList.toggle('opacity-50', !!done[id]);
+  if (titleEl) titleEl.classList.toggle('line-through', !!done[id]);
+  if (titleEl) titleEl.classList.toggle('neon-text-cyan', !done[id]);
+  if (cb)      cb.checked = !!done[id];
 
   applyCbStyle(cb);
   updateNodeBar(trackId);
@@ -243,13 +259,13 @@ function renderRoadmap() {
     var tasksHtml = track.tasks.map(function(task) {
       var isDone = !!done[task.id];
       return [
-        '<li class="flex items-start gap-3 py-1.5' + (isDone ? ' text-muted' : '') + '" id="task-' + task.id + '">',
+        '<li class="flex items-start gap-3 px-4 py-3 bg-surface-container-lowest border border-outline-variant card-neon' + (isDone ? ' opacity-50' : '') + '" id="task-' + task.id + '">',
           '<input type="checkbox" class="mt-0.5 flex-shrink-0 appearance-none w-3.5 h-3.5 border border-outline"',
           ' id="cb-' + task.id + '" data-id="' + task.id + '" data-track="' + track.id + '"',
           (isDone ? ' checked' : '') + ' />',
           '<span>',
-            '<span class="font-body-md text-[13px]' + (isDone ? ' line-through' : '') + '">' + esc(task.title) + '</span>',
-            '<span class="block ' + CLS_LABEL_SM + ' text-muted opacity-70">// ' + esc(task.meta) + '</span>',
+            '<span class="task-title font-body-md text-[13px] text-primary' + (isDone ? ' line-through' : ' neon-text-cyan') + '">' + esc(task.title) + '</span>',
+            '<span class="block ' + CLS_LABEL_SM + ' text-on-tertiary-container tracking-widest">// ' + esc(task.meta) + '</span>',
           '</span>',
         '</li>',
       ].join('');
@@ -327,7 +343,7 @@ function renderRoadmap() {
           '<p class="font-body-md text-on-surface-variant leading-relaxed">' + esc(track.blurb) + '</p>',
 
           /* Task list */
-          '<ul class="space-y-0 border-t border-outline-variant/30 pt-4 mt-4">' + tasksHtml + '</ul>',
+          '<ul class="space-y-2 border-t border-outline-variant/30 pt-4 mt-4">' + tasksHtml + '</ul>',
 
           progressHtml,
         '</div>',
