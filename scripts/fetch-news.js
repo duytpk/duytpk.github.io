@@ -22,7 +22,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const OUT = resolve(__dirname, '../src/data/news.json')
 
 // Tab order in the dashboard. Each key must match a tab in src/pages/Dashboard.jsx.
-const CATEGORIES = ['cve', 'ai', 'system']
+const CATEGORIES = ['cve', 'ai']
 
 // Reputable sources per category. Add/remove freely; just keep `category` as
 // one of CATEGORIES above. Multiple entries with the same category are merged.
@@ -36,12 +36,12 @@ const SOURCES = [
   { category: 'ai', name: 'MarkTechPost', url: 'https://www.marktechpost.com/feed/', limit: 20 },
   { category: 'ai', name: "Simon Willison's Weblog", url: 'https://simonwillison.net/atom/entries/', limit: 20 },
 
-  // ---- System / Kernel / Linux ----
-  { category: 'system', name: 'LWN.net', url: 'https://lwn.net/headlines/newrss' },
 ]
 
-const PER_SOURCE = 10  // default items per feed (overridden by src.limit)
-const PER_CATEGORY = 30 // items kept per tab after merging
+const CAT_LIMIT = SOURCES.reduce((acc, src) => {
+  acc[src.category] = (acc[src.category] || 0) + (src.limit || 10)
+  return acc
+}, {})
 
 const parser = new Parser({
   timeout: 20000,
@@ -76,7 +76,7 @@ function clean(value, max = 280) {
 /** Fetch one feed and normalise its top items. */
 async function fetchFeed(src) {
   const feed = await parser.parseURL(src.url)
-  return (feed.items || []).slice(0, src.limit || PER_SOURCE).map((item) => {
+  return (feed.items || []).slice(0, src.limit || 10).map((item) => {
     const base = {
       title: clean(item.title, 200) || 'Untitled',
       link: item.link || '#',
@@ -133,7 +133,7 @@ async function main() {
 
   const feeds = {}
   for (const cat of CATEGORIES) {
-    const merged = mergeItems(collected[cat], PER_CATEGORY)
+    const merged = mergeItems(collected[cat], CAT_LIMIT[cat] ?? 10)
     // If a whole category failed, keep what we had rather than emptying the tab.
     feeds[cat] = merged.length ? merged : previous.feeds?.[cat] || []
     console.log(`→ ${cat}: ${feeds[cat].length} items`)

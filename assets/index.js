@@ -15,26 +15,20 @@ var TABS = [
     textClass:   'text-primary',
     accentClass: 'neon-text-cyan',
   },
-  {
-    key: 'system', label: 'SYSTEM KERNEL', icon: 'terminal',
-    activeClass:  'text-secondary border-secondary hover-glitch',
-    badge: 'SYSTEM UPDATE', status: 'SYSTEM ACTIVE',
-    textClass:   'text-primary',
-    accentClass: 'neon-text-cyan',
-  },
 ];
 
 var INACTIVE_TAB = 'text-primary border-transparent hover:border-primary/40 hover-glitch';
 
 /* Seed data — rendered if /news.json fetch fails (e.g. file:// protocol). */
-var SEED = {"updatedAt":"2026-05-20T14:41:22.179Z","generator":"seed","feeds":{"cve":[{"title":"CVE-2025-29927 - Next.js Middleware Authorization Bypass via x-middleware-subrequest Header","link":"https://cvefeed.io/vuln/detail/CVE-2025-29927","source":"cvefeed.io","isoDate":"2025-03-22T10:00:00.000Z","contentSnippet":"A critical vulnerability in Next.js allows attackers to bypass middleware-based authorization checks by manipulating the x-middleware-subrequest header, potentially granting unauthorized access to protected routes.","cveScore":9.1,"cveSeverity":"CRITICAL"},{"title":"CVE-2024-3400 - PAN-OS GlobalProtect Gateway Command Injection","link":"https://cvefeed.io/vuln/detail/CVE-2024-3400","source":"cvefeed.io","isoDate":"2024-04-12T00:00:00.000Z","contentSnippet":"A command injection vulnerability in the GlobalProtect feature of Palo Alto Networks PAN-OS allows an unauthenticated attacker to execute arbitrary code with root privileges on the firewall.","cveScore":10.0,"cveSeverity":"CRITICAL"},{"title":"CVE-2024-6387 - OpenSSH regreSSHion Remote Code Execution via Signal Handler Race Condition","link":"https://cvefeed.io/vuln/detail/CVE-2024-6387","source":"cvefeed.io","isoDate":"2024-07-01T00:00:00.000Z","contentSnippet":"A race condition in the OpenSSH server (sshd) on glibc-based Linux systems allows an unauthenticated attacker to achieve remote code execution as root. Affects default configurations of sshd.","cveScore":8.1,"cveSeverity":"HIGH"}],"ai":[{"title":"Gemini 2.5 Pro Preview: Our most intelligent model","link":"https://blog.google/technology/ai/gemini-2-5-pro-preview/","source":"Google AI Blog","isoDate":"2026-05-14T00:00:00.000Z","contentSnippet":"Gemini 2.5 Pro Preview delivers state-of-the-art performance on coding, math, and science benchmarks, with a 1M token context window."},{"title":"Amazon Bedrock now supports cross-region inference","link":"https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-cross-region-inference/","source":"AWS Machine Learning Blog","isoDate":"2026-05-13T00:00:00.000Z","contentSnippet":"Cross-region inference lets you route model requests to the AWS region with available capacity, improving resilience and throughput."},{"title":"Llama 3 is now available in Amazon SageMaker JumpStart","link":"https://aws.amazon.com/blogs/machine-learning/llama-3-sagemaker-jumpstart/","source":"AWS Machine Learning Blog","isoDate":"2026-05-12T00:00:00.000Z","contentSnippet":"Meta's Llama 3 models are now available for one-click deployment via SageMaker JumpStart, enabling fine-tuning and inference at scale."}],"system":[{"title":"[$] What is to be done about MGLRU?","link":"https://lwn.net/Articles/1072866/","source":"LWN.net","isoDate":"2026-05-20T13:14:51.000Z","contentSnippet":"The addition of the multi-generational LRU (MGLRU) was meant to provide a better reclaim implementation. Discussions are ongoing."},{"title":"Security updates for Wednesday","link":"https://lwn.net/Articles/1073713/","source":"LWN.net","isoDate":"2026-05-20T13:04:17.000Z","contentSnippet":"Security updates have been issued by AlmaLinux, Debian, Fedora, and others covering kernel, libpng, nginx, ruby, and more."},{"title":"[$] The tenth OpenPGP email summit","link":"https://lwn.net/Articles/1072870/","source":"LWN.net","isoDate":"2026-05-20T11:00:15.000Z","contentSnippet":"The OpenPGP Email Summit is an annual meeting for those who work on encrypted email. The tenth installment took place in March 2026."}]}};
+var SEED = {"updatedAt":"2026-05-20T14:41:22.179Z","generator":"seed","feeds":{"cve":[{"title":"CVE-2025-29927 - Next.js Middleware Authorization Bypass via x-middleware-subrequest Header","link":"https://cvefeed.io/vuln/detail/CVE-2025-29927","source":"cvefeed.io","isoDate":"2025-03-22T10:00:00.000Z","contentSnippet":"A critical vulnerability in Next.js allows attackers to bypass middleware-based authorization checks by manipulating the x-middleware-subrequest header, potentially granting unauthorized access to protected routes.","cveScore":9.1,"cveSeverity":"CRITICAL"},{"title":"CVE-2024-3400 - PAN-OS GlobalProtect Gateway Command Injection","link":"https://cvefeed.io/vuln/detail/CVE-2024-3400","source":"cvefeed.io","isoDate":"2024-04-12T00:00:00.000Z","contentSnippet":"A command injection vulnerability in the GlobalProtect feature of Palo Alto Networks PAN-OS allows an unauthenticated attacker to execute arbitrary code with root privileges on the firewall.","cveScore":10.0,"cveSeverity":"CRITICAL"},{"title":"CVE-2024-6387 - OpenSSH regreSSHion Remote Code Execution via Signal Handler Race Condition","link":"https://cvefeed.io/vuln/detail/CVE-2024-6387","source":"cvefeed.io","isoDate":"2024-07-01T00:00:00.000Z","contentSnippet":"A race condition in the OpenSSH server (sshd) on glibc-based Linux systems allows an unauthenticated attacker to achieve remote code execution as root. Affects default configurations of sshd.","cveScore":8.1,"cveSeverity":"HIGH"}],"ai":[{"title":"Gemini 2.5 Pro Preview: Our most intelligent model","link":"https://blog.google/technology/ai/gemini-2-5-pro-preview/","source":"Google AI Blog","isoDate":"2026-05-14T00:00:00.000Z","contentSnippet":"Gemini 2.5 Pro Preview delivers state-of-the-art performance on coding, math, and science benchmarks, with a 1M token context window."},{"title":"Amazon Bedrock now supports cross-region inference","link":"https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-cross-region-inference/","source":"AWS Machine Learning Blog","isoDate":"2026-05-13T00:00:00.000Z","contentSnippet":"Cross-region inference lets you route model requests to the AWS region with available capacity, improving resilience and throughput."},{"title":"Llama 3 is now available in Amazon SageMaker JumpStart","link":"https://aws.amazon.com/blogs/machine-learning/llama-3-sagemaker-jumpstart/","source":"AWS Machine Learning Blog","isoDate":"2026-05-12T00:00:00.000Z","contentSnippet":"Meta's Llama 3 models are now available for one-click deployment via SageMaker JumpStart, enabling fine-tuning and inference at scale."}]}};
 
 /* ── State ──────────────────────────────────────────────────────────────────── */
 var newsData   = null;
 var currentTab = 'cve';
-var cveSortBy  = 'date'; // 'date' | 'score' | 'severity'
+var cveSortBy      = 'date'; // 'date' | 'score'
+var aiFilterSource = 'all';
 
-var SEV_RANK = { CRITICAL: 4, HIGH: 3, MEDIUM: 2, LOW: 1, NA: 0 };
+
 
 /* ── Helpers ────────────────────────────────────────────────────────────────── */
 function fmtDate(iso) {
@@ -153,10 +147,6 @@ function sortCVEItems(items) {
   var copy = items.slice();
   if (cveSortBy === 'score') {
     copy.sort(function(a, b) { return (b.cveScore || 0) - (a.cveScore || 0); });
-  } else if (cveSortBy === 'severity') {
-    copy.sort(function(a, b) {
-      return (SEV_RANK[b.cveSeverity] || 0) - (SEV_RANK[a.cveSeverity] || 0);
-    });
   } else {
     copy.sort(function(a, b) { return new Date(b.isoDate) - new Date(a.isoDate); });
   }
@@ -166,26 +156,17 @@ function sortCVEItems(items) {
 function renderSortBar() {
   var bar = document.getElementById('cve-sort-bar');
   if (!bar) return;
-  var opts = [
-    { key: 'date',     label: 'DATE' },
-    { key: 'score',    label: 'CVSS SCORE' },
-    { key: 'severity', label: 'SEVERITY' },
-  ];
-  var active  = 'font-label-caps text-[10px] px-3 py-1 border text-secondary border-secondary bg-secondary/10 tracking-widest uppercase transition-all duration-150';
-  var inactive = 'font-label-caps text-[10px] px-3 py-1 border text-on-tertiary-container border-outline-variant hover:text-primary hover:border-primary/40 tracking-widest uppercase transition-all duration-150';
-  bar.className = 'mb-4 flex items-center gap-2';
+  bar.className = 'mb-4 flex items-center justify-end gap-2';
   bar.innerHTML =
-    '<span class="font-label-caps text-[9px] text-on-tertiary-container tracking-widest mr-1">SORT_BY:</span>' +
-    opts.map(function(o) {
-      return '<button data-sort="' + o.key + '" class="' + (cveSortBy === o.key ? active : inactive) + '">' + o.label + '</button>';
-    }).join('');
+    '<label for="cve-sort-select" class="font-label-caps text-[9px] text-on-tertiary-container tracking-widest">SORT_BY:</label>' +
+    '<select id="cve-sort-select" class="font-label-caps text-[10px] text-primary bg-surface-container border border-outline-variant px-2 py-1 tracking-widest uppercase hover:border-primary/60 focus:outline-none focus:border-secondary focus:text-secondary transition-all duration-150 cursor-pointer">' +
+    '<option value="date"' + (cveSortBy === 'date'  ? ' selected' : '') + '>DATE</option>' +
+    '<option value="score"' + (cveSortBy === 'score' ? ' selected' : '') + '>CVSS SCORE</option>' +
+    '</select>';
 
-  bar.querySelectorAll('[data-sort]').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      cveSortBy = btn.dataset.sort;
-      renderSortBar();
-      renderCards();
-    });
+  document.getElementById('cve-sort-select').addEventListener('change', function() {
+    cveSortBy = this.value;
+    renderCards();
   });
 }
 
@@ -198,16 +179,76 @@ function renderTabCounts() {
   });
 }
 
+function renderFeedCard(item, i, meta) {
+  return [
+    '<article class="flex flex-col bg-surface-container border border-outline-variant card-neon',
+    ' group hover:bg-surface-container-high transition-all duration-300 relative"',
+    ' style="animation:cardIn 0.35s ease both;animation-delay:' + (i * 60) + 'ms">',
+
+    '<div class="px-5 py-3 flex justify-between items-center">',
+      '<span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings:\'FILL\' 1;">' + meta.icon + '</span>',
+      '<span class="font-label-caps text-[10px] text-on-tertiary-container tracking-widest truncate max-w-[60%] text-right">' + esc(item.source || '') + '</span>',
+    '</div>',
+    '<div class="border-t border-outline-variant/50"></div>',
+
+    '<div class="px-5 py-4 flex-grow flex flex-col gap-3">',
+      '<a href="' + esc(item.link) + '" target="_blank" rel="noreferrer" class="block group/title">',
+        '<h3 class="font-headline-md text-[17px] text-primary neon-text-cyan leading-tight group-hover/title:opacity-80 transition-opacity">' + esc(item.title) + '</h3>',
+      '</a>',
+      '<p class="font-body-md text-sm text-on-surface-variant leading-relaxed opacity-90 line-clamp-4">' + esc(item.contentSnippet || '—') + '</p>',
+    '</div>',
+
+    '<div class="border-t border-outline-variant/50"></div>',
+    '<div class="px-5 py-3 flex justify-between items-center text-[9px] font-label-caps text-on-surface-variant/60 uppercase">',
+      '<span>' + timeAgo(item.isoDate) + '</span>',
+      '<span>' + fmtDate(item.isoDate) + '</span>',
+    '</div>',
+
+    '</article>',
+  ].join('');
+}
+
+function filterAIItems(items) {
+  if (aiFilterSource === 'all') return items;
+  return items.filter(function(item) { return item.source === aiFilterSource; });
+}
+
+function renderFilterBar() {
+  var bar = document.getElementById('ai-filter-bar');
+  if (!bar) return;
+  var feeds = (newsData && newsData.feeds) || {};
+  var sources = ['all'];
+  (feeds['ai'] || []).forEach(function(item) {
+    if (item.source && sources.indexOf(item.source) === -1) sources.push(item.source);
+  });
+  var selectClass = 'font-label-caps text-[10px] text-primary bg-surface-container border border-outline-variant px-2 py-1 tracking-widest uppercase hover:border-primary/60 focus:outline-none focus:border-secondary focus:text-secondary transition-all duration-150 cursor-pointer';
+  bar.className = 'mb-4 flex items-center justify-end gap-2';
+  bar.innerHTML =
+    '<label for="ai-filter-select" class="font-label-caps text-[9px] text-on-tertiary-container tracking-widest">SOURCE:</label>' +
+    '<select id="ai-filter-select" class="' + selectClass + '">' +
+    sources.map(function(s) {
+      return '<option value="' + esc(s) + '"' + (aiFilterSource === s ? ' selected' : '') + '>' + esc(s === 'all' ? 'ALL' : s) + '</option>';
+    }).join('') +
+    '</select>';
+  document.getElementById('ai-filter-select').addEventListener('change', function() {
+    aiFilterSource = this.value;
+    renderCards();
+  });
+}
+
 function renderCards() {
   var grid = document.getElementById('news-grid');
   if (!grid) return;
   renderTabCounts();
 
-  var sortBar = document.getElementById('cve-sort-bar');
+  var sortBar   = document.getElementById('cve-sort-bar');
+  var filterBar = document.getElementById('ai-filter-bar');
   if (currentTab === 'cve') {
     renderSortBar();
-  } else if (sortBar) {
-    sortBar.className = 'hidden';
+    if (filterBar) filterBar.className = 'hidden';
+  } else {
+    if (sortBar) sortBar.className = 'hidden';
+    renderFilterBar();
   }
 
   var feeds = (newsData && newsData.feeds) || {};
@@ -219,43 +260,10 @@ function renderCards() {
     return;
   }
 
-  var displayItems = (currentTab === 'cve') ? sortCVEItems(items) : items;
+  var displayItems = (currentTab === 'cve') ? sortCVEItems(items) : filterAIItems(items);
   grid.innerHTML = displayItems.map(function(item, i) {
     if (currentTab === 'cve') return renderCVECard(item, i);
-    var cardMeta = meta;
-    return [
-      '<article class="flex flex-col bg-surface-container border border-outline-variant card-neon',
-      ' group hover:bg-surface-container-high transition-all duration-300 relative"',
-      ' style="animation:cardIn 0.35s ease both;animation-delay:' + (i * 60) + 'ms">',
-
-      '<div class="p-5 border-b border-outline-variant/40">',
-        '<div class="font-label-caps text-[10px] ' + cardMeta.textClass + ' tracking-widest opacity-80 mb-2">',
-          '[' + esc(currentTab.toUpperCase()) + '_FEED] // ' + esc((item.source || '').toUpperCase()),
-        '</div>',
-        '<div class="flex justify-between items-center">',
-          '<span class="material-symbols-outlined ' + cardMeta.textClass + ' text-2xl" style="font-variation-settings:\'FILL\' 1;">' + cardMeta.icon + '</span>',
-          '<span class="px-2 py-0.5 bg-current/10 text-[9px] font-label-caps border border-current/30 ' + cardMeta.textClass + '">' + cardMeta.badge + '</span>',
-        '</div>',
-      '</div>',
-
-      '<div class="p-5 flex-grow flex flex-col">',
-        '<a href="' + esc(item.link) + '" target="_blank" rel="noreferrer"',
-        '   class="block mb-3 group/title">',
-          '<h3 class="font-headline-md text-[17px] ' + cardMeta.textClass + ' ' + cardMeta.accentClass + ' leading-tight group-hover/title:opacity-80 transition-opacity">',
-            esc(item.title),
-          '</h3>',
-        '</a>',
-        '<p class="font-body-md text-sm text-on-surface-variant leading-relaxed opacity-90 line-clamp-3">',
-          esc(item.contentSnippet || '—'),
-        '</p>',
-        '<div class="mt-auto pt-4 flex justify-between items-center text-[9px] font-label-caps text-on-surface-variant/60 uppercase">',
-          '<span>' + timeAgo(item.isoDate) + '</span>',
-          '<span>[STATUS: ' + cardMeta.status + ']</span>',
-        '</div>',
-      '</div>',
-
-      '</article>',
-    ].join('');
+    return renderFeedCard(item, i, meta);
   }).join('');
 
 }
