@@ -9,9 +9,9 @@ var TABS = [
     accentClass: 'neon-text-cyan',
   },
   {
-    key: 'cloud', label: 'CLOUD', icon: 'cloud',
+    key: 'ai', label: 'AI', icon: 'smart_toy',
     activeClass:  'text-secondary border-secondary hover-glitch',
-    badge: 'CLOUD', status: 'STABLE',
+    badge: 'AI UPDATE', status: 'STABLE',
     textClass:   'text-primary',
     accentClass: 'neon-text-cyan',
   },
@@ -27,11 +27,14 @@ var TABS = [
 var INACTIVE_TAB = 'text-primary border-transparent hover:border-primary/40 hover-glitch';
 
 /* Seed data — rendered if /news.json fetch fails (e.g. file:// protocol). */
-var SEED = {"updatedAt":"2026-05-20T14:41:22.179Z","generator":"seed","feeds":{"cve":[{"title":"CVE-2025-29927 - Next.js Middleware Authorization Bypass via x-middleware-subrequest Header","link":"https://cvefeed.io/vuln/detail/CVE-2025-29927","source":"cvefeed.io","isoDate":"2025-03-22T10:00:00.000Z","contentSnippet":"A critical vulnerability in Next.js allows attackers to bypass middleware-based authorization checks by manipulating the x-middleware-subrequest header, potentially granting unauthorized access to protected routes.","cveScore":9.1,"cveSeverity":"CRITICAL"},{"title":"CVE-2024-3400 - PAN-OS GlobalProtect Gateway Command Injection","link":"https://cvefeed.io/vuln/detail/CVE-2024-3400","source":"cvefeed.io","isoDate":"2024-04-12T00:00:00.000Z","contentSnippet":"A command injection vulnerability in the GlobalProtect feature of Palo Alto Networks PAN-OS allows an unauthenticated attacker to execute arbitrary code with root privileges on the firewall.","cveScore":10.0,"cveSeverity":"CRITICAL"},{"title":"CVE-2024-6387 - OpenSSH regreSSHion Remote Code Execution via Signal Handler Race Condition","link":"https://cvefeed.io/vuln/detail/CVE-2024-6387","source":"cvefeed.io","isoDate":"2024-07-01T00:00:00.000Z","contentSnippet":"A race condition in the OpenSSH server (sshd) on glibc-based Linux systems allows an unauthenticated attacker to achieve remote code execution as root. Affects default configurations of sshd.","cveScore":8.1,"cveSeverity":"HIGH"}],"cloud":[{"title":"Trust at every layer: How sealed images extend OS integrity from boot to runtime","link":"https://www.redhat.com/en/blog/how-sealed-images-red-hat-enterprise-linux-extend-os-integrity-boot-runtime","source":"Red Hat Blog","isoDate":"2026-05-20T00:00:00.000Z","contentSnippet":"Consider a medical device running Linux in a hospital, an ATM on a street corner, or a gateway device at the edge of a manufacturing network."},{"title":"Meet Gordon: Docker's AI Agent For Your Entire Container Workflow","link":"https://www.docker.com/blog/meet-gordon-dockers-ai-agent-for-your-entire-container-workflow/","source":"Docker Blog","isoDate":"2026-05-19T19:08:04.000Z","contentSnippet":"Gordon understands your environment, proposes fixes, and takes action across your entire Docker workflow. Now generally available."},{"title":"Red Hat Enterprise Linux 10.2 and 9.8 are here","link":"https://www.redhat.com/en/blog/rhel-102-and-98-intelligent-evolution-enterprise-linux","source":"Red Hat Blog","isoDate":"2026-05-20T00:00:00.000Z","contentSnippet":"RHEL 10.2 and 9.8 evolve the OS from a foundation to a powerful engine for critical applications, security, and innovation."}],"system":[{"title":"[$] What is to be done about MGLRU?","link":"https://lwn.net/Articles/1072866/","source":"LWN.net","isoDate":"2026-05-20T13:14:51.000Z","contentSnippet":"The addition of the multi-generational LRU (MGLRU) was meant to provide a better reclaim implementation. Discussions are ongoing."},{"title":"Security updates for Wednesday","link":"https://lwn.net/Articles/1073713/","source":"LWN.net","isoDate":"2026-05-20T13:04:17.000Z","contentSnippet":"Security updates have been issued by AlmaLinux, Debian, Fedora, and others covering kernel, libpng, nginx, ruby, and more."},{"title":"[$] The tenth OpenPGP email summit","link":"https://lwn.net/Articles/1072870/","source":"LWN.net","isoDate":"2026-05-20T11:00:15.000Z","contentSnippet":"The OpenPGP Email Summit is an annual meeting for those who work on encrypted email. The tenth installment took place in March 2026."}]}};
+var SEED = {"updatedAt":"2026-05-20T14:41:22.179Z","generator":"seed","feeds":{"cve":[{"title":"CVE-2025-29927 - Next.js Middleware Authorization Bypass via x-middleware-subrequest Header","link":"https://cvefeed.io/vuln/detail/CVE-2025-29927","source":"cvefeed.io","isoDate":"2025-03-22T10:00:00.000Z","contentSnippet":"A critical vulnerability in Next.js allows attackers to bypass middleware-based authorization checks by manipulating the x-middleware-subrequest header, potentially granting unauthorized access to protected routes.","cveScore":9.1,"cveSeverity":"CRITICAL"},{"title":"CVE-2024-3400 - PAN-OS GlobalProtect Gateway Command Injection","link":"https://cvefeed.io/vuln/detail/CVE-2024-3400","source":"cvefeed.io","isoDate":"2024-04-12T00:00:00.000Z","contentSnippet":"A command injection vulnerability in the GlobalProtect feature of Palo Alto Networks PAN-OS allows an unauthenticated attacker to execute arbitrary code with root privileges on the firewall.","cveScore":10.0,"cveSeverity":"CRITICAL"},{"title":"CVE-2024-6387 - OpenSSH regreSSHion Remote Code Execution via Signal Handler Race Condition","link":"https://cvefeed.io/vuln/detail/CVE-2024-6387","source":"cvefeed.io","isoDate":"2024-07-01T00:00:00.000Z","contentSnippet":"A race condition in the OpenSSH server (sshd) on glibc-based Linux systems allows an unauthenticated attacker to achieve remote code execution as root. Affects default configurations of sshd.","cveScore":8.1,"cveSeverity":"HIGH"}],"ai":[{"title":"Gemini 2.5 Pro Preview: Our most intelligent model","link":"https://blog.google/technology/ai/gemini-2-5-pro-preview/","source":"Google AI Blog","isoDate":"2026-05-14T00:00:00.000Z","contentSnippet":"Gemini 2.5 Pro Preview delivers state-of-the-art performance on coding, math, and science benchmarks, with a 1M token context window."},{"title":"Amazon Bedrock now supports cross-region inference","link":"https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-cross-region-inference/","source":"AWS Machine Learning Blog","isoDate":"2026-05-13T00:00:00.000Z","contentSnippet":"Cross-region inference lets you route model requests to the AWS region with available capacity, improving resilience and throughput."},{"title":"Llama 3 is now available in Amazon SageMaker JumpStart","link":"https://aws.amazon.com/blogs/machine-learning/llama-3-sagemaker-jumpstart/","source":"AWS Machine Learning Blog","isoDate":"2026-05-12T00:00:00.000Z","contentSnippet":"Meta's Llama 3 models are now available for one-click deployment via SageMaker JumpStart, enabling fine-tuning and inference at scale."}],"system":[{"title":"[$] What is to be done about MGLRU?","link":"https://lwn.net/Articles/1072866/","source":"LWN.net","isoDate":"2026-05-20T13:14:51.000Z","contentSnippet":"The addition of the multi-generational LRU (MGLRU) was meant to provide a better reclaim implementation. Discussions are ongoing."},{"title":"Security updates for Wednesday","link":"https://lwn.net/Articles/1073713/","source":"LWN.net","isoDate":"2026-05-20T13:04:17.000Z","contentSnippet":"Security updates have been issued by AlmaLinux, Debian, Fedora, and others covering kernel, libpng, nginx, ruby, and more."},{"title":"[$] The tenth OpenPGP email summit","link":"https://lwn.net/Articles/1072870/","source":"LWN.net","isoDate":"2026-05-20T11:00:15.000Z","contentSnippet":"The OpenPGP Email Summit is an annual meeting for those who work on encrypted email. The tenth installment took place in March 2026."}]}};
 
 /* ── State ──────────────────────────────────────────────────────────────────── */
 var newsData   = null;
 var currentTab = 'cve';
+var cveSortBy  = 'date'; // 'date' | 'score' | 'severity'
+
+var SEV_RANK = { CRITICAL: 4, HIGH: 3, MEDIUM: 2, LOW: 1, NA: 0 };
 
 /* ── Helpers ────────────────────────────────────────────────────────────────── */
 function fmtDate(iso) {
@@ -145,6 +148,47 @@ function renderCVECard(item, i) {
   ].join('');
 }
 
+/* ── CVE sort ───────────────────────────────────────────────────────────────── */
+function sortCVEItems(items) {
+  var copy = items.slice();
+  if (cveSortBy === 'score') {
+    copy.sort(function(a, b) { return (b.cveScore || 0) - (a.cveScore || 0); });
+  } else if (cveSortBy === 'severity') {
+    copy.sort(function(a, b) {
+      return (SEV_RANK[b.cveSeverity] || 0) - (SEV_RANK[a.cveSeverity] || 0);
+    });
+  } else {
+    copy.sort(function(a, b) { return new Date(b.isoDate) - new Date(a.isoDate); });
+  }
+  return copy;
+}
+
+function renderSortBar() {
+  var bar = document.getElementById('cve-sort-bar');
+  if (!bar) return;
+  var opts = [
+    { key: 'date',     label: 'DATE' },
+    { key: 'score',    label: 'CVSS SCORE' },
+    { key: 'severity', label: 'SEVERITY' },
+  ];
+  var active  = 'font-label-caps text-[10px] px-3 py-1 border text-secondary border-secondary bg-secondary/10 tracking-widest uppercase transition-all duration-150';
+  var inactive = 'font-label-caps text-[10px] px-3 py-1 border text-on-tertiary-container border-outline-variant hover:text-primary hover:border-primary/40 tracking-widest uppercase transition-all duration-150';
+  bar.className = 'mb-4 flex items-center gap-2';
+  bar.innerHTML =
+    '<span class="font-label-caps text-[9px] text-on-tertiary-container tracking-widest mr-1">SORT_BY:</span>' +
+    opts.map(function(o) {
+      return '<button data-sort="' + o.key + '" class="' + (cveSortBy === o.key ? active : inactive) + '">' + o.label + '</button>';
+    }).join('');
+
+  bar.querySelectorAll('[data-sort]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      cveSortBy = btn.dataset.sort;
+      renderSortBar();
+      renderCards();
+    });
+  });
+}
+
 /* ── Card render ────────────────────────────────────────────────────────────── */
 function renderTabCounts() {
   var feeds = (newsData && newsData.feeds) || {};
@@ -159,6 +203,13 @@ function renderCards() {
   if (!grid) return;
   renderTabCounts();
 
+  var sortBar = document.getElementById('cve-sort-bar');
+  if (currentTab === 'cve') {
+    renderSortBar();
+  } else if (sortBar) {
+    sortBar.className = 'hidden';
+  }
+
   var feeds = (newsData && newsData.feeds) || {};
   var items = feeds[currentTab] || [];
   var meta  = TABS.find(function(t) { return t.key === currentTab; }) || TABS[1];
@@ -168,9 +219,9 @@ function renderCards() {
     return;
   }
 
-  grid.innerHTML = items.map(function(item, i) {
+  var displayItems = (currentTab === 'cve') ? sortCVEItems(items) : items;
+  grid.innerHTML = displayItems.map(function(item, i) {
     if (currentTab === 'cve') return renderCVECard(item, i);
-
     var cardMeta = meta;
     return [
       '<article class="flex flex-col bg-surface-container border border-outline-variant card-neon',

@@ -22,24 +22,22 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const OUT = resolve(__dirname, '../src/data/news.json')
 
 // Tab order in the dashboard. Each key must match a tab in src/pages/Dashboard.jsx.
-const CATEGORIES = ['cve', 'cloud', 'system']
+const CATEGORIES = ['cve', 'ai', 'system']
 
 // Reputable sources per category. Add/remove freely; just keep `category` as
 // one of CATEGORIES above. Multiple entries with the same category are merged.
 const SOURCES = [
-  // ---- Vulnerabilities / CVE ----
-  { category: 'cve', name: 'cvefeed.io', url: 'https://cvefeed.io/rssfeed/latest.xml', limit: 30 },
+  // ---- CVE ----
+  { category: 'cve', name: 'cvefeed.io', url: 'https://cvefeed.io/rssfeed/latest.xml', limit: 50 },
 
-  // ---- Virtualization & Cloud ----
-  { category: 'cloud', name: 'Docker Blog', url: 'https://www.docker.com/blog/feed/' },
-  { category: 'cloud', name: 'Kubernetes Blog', url: 'https://kubernetes.io/feed.xml' },
-  { category: 'cloud', name: 'AWS News', url: 'https://aws.amazon.com/blogs/aws/feed/' },
-  { category: 'cloud', name: 'Red Hat Blog', url: 'https://www.redhat.com/en/rss/blog' },
+  // ---- AI ----
+  { category: 'ai', name: 'Google AI Blog', url: 'https://blog.google/technology/ai/rss/', limit: 20 },
+  { category: 'ai', name: 'AWS Machine Learning Blog', url: 'https://aws.amazon.com/blogs/machine-learning/feed/', limit: 20 },
+  { category: 'ai', name: 'MarkTechPost', url: 'https://www.marktechpost.com/feed/', limit: 20 },
+  { category: 'ai', name: "Simon Willison's Weblog", url: 'https://simonwillison.net/atom/entries/', limit: 20 },
 
   // ---- System / Kernel / Linux ----
   { category: 'system', name: 'LWN.net', url: 'https://lwn.net/headlines/newrss' },
-  { category: 'system', name: "It's FOSS", url: 'https://itsfoss.com/feed/' },
-  { category: 'system', name: 'kernel.org', url: 'https://www.kernel.org/feeds/kdist.xml' },
 ]
 
 const PER_SOURCE = 10  // default items per feed (overridden by src.limit)
