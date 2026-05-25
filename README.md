@@ -168,7 +168,7 @@ avoid polluting `window`. `window.esc` (from `app.js`) is the only intentional g
 `#roadmap-container` instead of one listener per checkbox.
 
 **CVE parsing fallback chain** — `parseCVEFields()` in `fetch-news.js` tries three
-patterns to extract CVSS score/severity; if all fail it derives severity from the numeric
+patterns to extract CVSS severity; if all fail it derives severity from the numeric
 score using CVSS thresholds, and logs a debug sample to stdout so CI can diagnose format
 changes.
 

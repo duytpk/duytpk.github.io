@@ -62,7 +62,7 @@ function parseCVEFields(raw) {
 
   // Primary pattern: "Severity : 9.8 | CRITICAL"
   let sevMatch = text.match(/Severity\s*:\s*([\d.]+)\s*\|\s*([A-Za-z]+)/i)
-  // Fallback: "CVSS Score: 7.5 HIGH" or "CVSS: 7.5 (HIGH)"
+  // Fallback: "CVSS: 7.5 HIGH" or "CVSS: 7.5 (HIGH)"
   if (!sevMatch) sevMatch = text.match(/CVSS(?:\s+Score)?\s*:?\s*([\d.]+)\s*[\(|,\s]+([A-Za-z]+)/i)
 
   let cveScore    = sevMatch ? parseFloat(sevMatch[1]) : null

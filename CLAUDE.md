@@ -146,7 +146,7 @@ Do NOT use `.card-neon` on CVE cards — it would override severity-based border
 
 - The `cve` category uses a **single source**: `https://cvefeed.io/rssfeed/latest.xml` with `limit: 50`.
 - CVE items carry two extra fields beyond the standard schema:
-  - `cveScore` — CVSS score as a float (e.g. `9.8`), or `null` if not yet scored.
+  - `cveScore` — CVSS as a float (e.g. `9.8`), or `null` if not yet scored.
   - `cveSeverity` — severity string: `CRITICAL` / `HIGH` / `MEDIUM` / `LOW` / `NA`.
 - `parseCVEFields()` in `fetch-news.js` uses a primary regex + fallback pattern + CVSS threshold
   derivation to extract these fields. If none match, it logs a debug sample to stdout so CI can

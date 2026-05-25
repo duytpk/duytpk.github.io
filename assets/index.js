@@ -246,10 +246,10 @@ function renderSortBar() {
   if (!bar) return;
   bar.className = 'mb-4 flex items-center justify-end gap-2';
   bar.innerHTML =
-    '<label for="cve-sort-select" class="font-label-caps text-[9px] text-on-tertiary-container tracking-widest">SORT_BY:</label>' +
+    '<label for="cve-sort-select" class="font-label-caps text-[9px] text-on-tertiary-container tracking-widest">Sort by:</label>' +
     '<select id="cve-sort-select" class="' + SELECT_CLS + '">' +
-    '<option value="date"'  + (cveSortBy === 'date'  ? ' selected' : '') + '>DATE</option>' +
-    '<option value="score"' + (cveSortBy === 'score' ? ' selected' : '') + '>CVSS SCORE</option>' +
+    '<option value="date"'  + (cveSortBy === 'date'  ? ' selected' : '') + '>Date</option>' +
+    '<option value="score"' + (cveSortBy === 'score' ? ' selected' : '') + '>CVSS</option>' +
     '</select>';
 
   var sel = bar.querySelector('#cve-sort-select');
