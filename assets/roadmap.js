@@ -2,147 +2,81 @@
 
 (function () {
 
-var STORAGE_KEY  = 'devsecops-hub:roadmap:v3';
+var STORAGE_KEY  = 'devsecops-hub:roadmap:v4';
 var MAX_ACTIVITY = 5;
 var TIME_START   = 11;
 var TIME_END     = 19;
 var CLS_LABEL_SM = 'font-label-caps text-[10px]';
 
-/* Leaf IDs for K8s Days 1–8 seeded as completed */
+/* Chapter IDs for K8s Days 1–8 seeded as completed */
 var DEFAULT_DONE = {
-  'k8s-d1-d1':true,'k8s-d1-d2':true,'k8s-d1-d3':true,'k8s-d1-e1':true,'k8s-d1-e2':true,'k8s-d1-e3':true,
-  'k8s-d2-d1':true,'k8s-d2-d2':true,'k8s-d2-d3':true,'k8s-d2-e1':true,'k8s-d2-e2':true,'k8s-d2-e3':true,
-  'k8s-d3-d1':true,'k8s-d3-d2':true,'k8s-d3-d3':true,'k8s-d3-e1':true,'k8s-d3-e2':true,'k8s-d3-e3':true,
-  'k8s-d4-d1':true,'k8s-d4-d2':true,'k8s-d4-d3':true,'k8s-d4-e1':true,'k8s-d4-e2':true,'k8s-d4-e3':true,
-  'k8s-d5-d1':true,'k8s-d5-d2':true,'k8s-d5-d3':true,'k8s-d5-e1':true,'k8s-d5-e2':true,'k8s-d5-e3':true,
-  'k8s-d6-d1':true,'k8s-d6-d2':true,'k8s-d6-d3':true,'k8s-d6-e1':true,'k8s-d6-e2':true,'k8s-d6-e3':true,
-  'k8s-d7-d1':true,'k8s-d7-d2':true,'k8s-d7-d3':true,'k8s-d7-e1':true,'k8s-d7-e2':true,'k8s-d7-e3':true,
-  'k8s-d8-d1':true,'k8s-d8-d2':true,'k8s-d8-d3':true,'k8s-d8-e1':true,'k8s-d8-e2':true,'k8s-d8-e3':true,
+  'k8s-d1-p1':true,'k8s-d1-p2':true,'k8s-d1-p3':true,
+  'k8s-d2-p1':true,'k8s-d2-p2':true,'k8s-d2-p3':true,'k8s-d2-p4':true,
+  'k8s-d3-p1':true,'k8s-d3-p2':true,'k8s-d3-p3':true,'k8s-d3-p4':true,
+  'k8s-d4-p1':true,'k8s-d4-p2':true,'k8s-d4-p3':true,'k8s-d4-p4':true,
+  'k8s-d5-p1':true,'k8s-d5-p2':true,'k8s-d5-p3':true,
+  'k8s-d6-p1':true,'k8s-d6-p2':true,'k8s-d6-p3':true,'k8s-d6-p4':true,
+  'k8s-d7-p1':true,'k8s-d7-p2':true,'k8s-d7-p3':true,'k8s-d7-p4':true,
+  'k8s-d8-p1':true,'k8s-d8-p2':true,'k8s-d8-p3':true,'k8s-d8-p4':true,
 };
 
 var ROADMAP = [
   {
     id: 'k8s', label: 'Kubernetes', icon: 'hub',
     tasks: [
-      { id:'k8s-d1',  title:'Day 1',  subtitle:'Architecture & Internals', children:[
-        { label:'DOCUMENTS', items:[
-          {id:'k8s-d1-d1', label:'Control Plane & etcd (RAFT)'},
-          {id:'k8s-d1-d2', label:'kubelet, kube-proxy, node agents'},
-          {id:'k8s-d1-d3', label:'CRI / CNI / CSI interfaces'},
-        ]},
-        { label:'EXERCISES', items:[
-          {id:'k8s-d1-e1', label:'Deploy a kind cluster'},
-          {id:'k8s-d1-e2', label:'Inspect etcd via etcdctl'},
-          {id:'k8s-d1-e3', label:'Trace a Pod through the API server'},
-        ]},
+      { id:'k8s-d1',  title:'Day 1',  subtitle:'Architecture & Internals', chapters:[
+        {id:'k8s-d1-p1', label:'Kubernetes Architecture Deep Dive'},
+        {id:'k8s-d1-p2', label:'Request Flow — Anatomy of kubectl apply'},
+        {id:'k8s-d1-p3', label:'Advanced Troubleshooting Scenarios'},
       ]},
-      { id:'k8s-d2',  title:'Day 2',  subtitle:'Workloads & Controllers', children:[
-        { label:'DOCUMENTS', items:[
-          {id:'k8s-d2-d1', label:'Pod lifecycle & Init/Sidecar patterns'},
-          {id:'k8s-d2-d2', label:'Deployment & ReplicaSet mechanics'},
-          {id:'k8s-d2-d3', label:'StatefulSet, DaemonSet, Job & CronJob'},
-        ]},
-        { label:'EXERCISES', items:[
-          {id:'k8s-d2-e1', label:'Rolling update & rollback'},
-          {id:'k8s-d2-e2', label:'StatefulSet + headless Service'},
-          {id:'k8s-d2-e3', label:'Configure Liveness/Readiness probes'},
-        ]},
+      { id:'k8s-d2',  title:'Day 2',  subtitle:'Workloads & Controllers', chapters:[
+        {id:'k8s-d2-p1', label:'Pod Architecture & Container Design Patterns'},
+        {id:'k8s-d2-p2', label:'Workload Controllers (Orchestration Layer)'},
+        {id:'k8s-d2-p3', label:'Rolling Update Flow & Operational Mechanics'},
+        {id:'k8s-d2-p4', label:'Advanced Troubleshooting Scenarios'},
       ]},
-      { id:'k8s-d3',  title:'Day 3',  subtitle:'Networking & Connectivity', children:[
-        { label:'DOCUMENTS', items:[
-          {id:'k8s-d3-d1', label:'Flat network model & CNI deep dive'},
-          {id:'k8s-d3-d2', label:'Service types: ClusterIP, NodePort, LB'},
-          {id:'k8s-d3-d3', label:'Ingress controllers & CoreDNS'},
-        ]},
-        { label:'EXERCISES', items:[
-          {id:'k8s-d3-e1', label:'Deploy Calico/Cilium CNI'},
-          {id:'k8s-d3-e2', label:'Expose app via Ingress + TLS'},
-          {id:'k8s-d3-e3', label:'Diagnose DNS resolution issues'},
-        ]},
+      { id:'k8s-d3',  title:'Day 3',  subtitle:'Networking & Connectivity', chapters:[
+        {id:'k8s-d3-p1', label:'Networking & Connectivity — The Nervous System'},
+        {id:'k8s-d3-p2', label:'Operational Flow — Packet Journey'},
+        {id:'k8s-d3-p3', label:'Scenario-Based Analysis'},
+        {id:'k8s-d3-p4', label:'Professional Troubleshooting Workflow (SOP)'},
       ]},
-      { id:'k8s-d4',  title:'Day 4',  subtitle:'Storage & Configuration', children:[
-        { label:'DOCUMENTS', items:[
-          {id:'k8s-d4-d1', label:'PV / PVC / StorageClass lifecycle'},
-          {id:'k8s-d4-d2', label:'ConfigMap & Secret management'},
-          {id:'k8s-d4-d3', label:'Sealed Secrets & Vault integration'},
-        ]},
-        { label:'EXERCISES', items:[
-          {id:'k8s-d4-e1', label:'StatefulSet with dynamic PVC'},
-          {id:'k8s-d4-e2', label:'Mount secrets as env & volume'},
-          {id:'k8s-d4-e3', label:'Set up a StorageClass'},
-        ]},
+      { id:'k8s-d4',  title:'Day 4',  subtitle:'Storage & Configuration', chapters:[
+        {id:'k8s-d4-p1', label:'Storage Fundamentals'},
+        {id:'k8s-d4-p2', label:'Volume Lifecycle Management'},
+        {id:'k8s-d4-p3', label:'Configuration Management (ConfigMap & Secret)'},
+        {id:'k8s-d4-p4', label:'Advanced Troubleshooting Scenarios'},
       ]},
-      { id:'k8s-d5',  title:'Day 5',  subtitle:'Scheduling & Resource Mgmt', children:[
-        { label:'DOCUMENTS', items:[
-          {id:'k8s-d5-d1', label:'Requests, Limits & QoS classes'},
-          {id:'k8s-d5-d2', label:'Node/Pod Affinity & Anti-Affinity'},
-          {id:'k8s-d5-d3', label:'Taints, Tolerations & PriorityClass'},
-        ]},
-        { label:'EXERCISES', items:[
-          {id:'k8s-d5-e1', label:'LimitRange & ResourceQuota lab'},
-          {id:'k8s-d5-e2', label:'Schedule pods with affinity rules'},
-          {id:'k8s-d5-e3', label:'Taint nodes & apply tolerations'},
-        ]},
+      { id:'k8s-d5',  title:'Day 5',  subtitle:'Scheduling & Resource Mgmt', chapters:[
+        {id:'k8s-d5-p1', label:'Resource Management Fundamentals'},
+        {id:'k8s-d5-p2', label:'Advanced Scheduling Strategies'},
+        {id:'k8s-d5-p3', label:'Scenario-Based Troubleshooting'},
       ]},
-      { id:'k8s-d6',  title:'Day 6',  subtitle:'Security & Access Control', children:[
-        { label:'DOCUMENTS', items:[
-          {id:'k8s-d6-d1', label:'RBAC: Roles, ClusterRoles, Bindings'},
-          {id:'k8s-d6-d2', label:'ServiceAccounts & token projection'},
-          {id:'k8s-d6-d3', label:'Network Policies & Security Context'},
-        ]},
-        { label:'EXERCISES', items:[
-          {id:'k8s-d6-e1', label:'Create RBAC role for a namespace'},
-          {id:'k8s-d6-e2', label:'Apply Zero Trust Network Policy'},
-          {id:'k8s-d6-e3', label:'Configure Pod Security Context'},
-        ]},
+      { id:'k8s-d6',  title:'Day 6',  subtitle:'Security & Access Control', chapters:[
+        {id:'k8s-d6-p1', label:'RBAC — Role-Based Access Control'},
+        {id:'k8s-d6-p2', label:'Network Policies (Traffic Control)'},
+        {id:'k8s-d6-p3', label:'Security Context'},
+        {id:'k8s-d6-p4', label:'Troubleshooting Case Studies'},
       ]},
-      { id:'k8s-d7',  title:'Day 7',  subtitle:'Observability', children:[
-        { label:'DOCUMENTS', items:[
-          {id:'k8s-d7-d1', label:'Logging architecture & EFK/PLG stacks'},
-          {id:'k8s-d7-d2', label:'Prometheus pull model & metric types'},
-          {id:'k8s-d7-d3', label:'kube-state-metrics & Grafana dashboards'},
-        ]},
-        { label:'EXERCISES', items:[
-          {id:'k8s-d7-e1', label:'Deploy Prometheus + Grafana stack'},
-          {id:'k8s-d7-e2', label:'Set up alerts with Alertmanager'},
-          {id:'k8s-d7-e3', label:'Stream logs with Loki'},
-        ]},
+      { id:'k8s-d7',  title:'Day 7',  subtitle:'Observability', chapters:[
+        {id:'k8s-d7-p1', label:'Centralized Logging Architecture'},
+        {id:'k8s-d7-p2', label:'Monitoring with Prometheus Stack'},
+        {id:'k8s-d7-p3', label:'Metrics Collection Architecture in K8s'},
+        {id:'k8s-d7-p4', label:'Troubleshooting Observability'},
       ]},
-      { id:'k8s-d8',  title:'Day 8',  subtitle:'Package Management', children:[
-        { label:'DOCUMENTS', items:[
-          {id:'k8s-d8-d1', label:'Helm v3 architecture & chart structure'},
-          {id:'k8s-d8-d2', label:'Chart lifecycle & values management'},
-          {id:'k8s-d8-d3', label:'Kustomize Base/Overlay patterns'},
-        ]},
-        { label:'EXERCISES', items:[
-          {id:'k8s-d8-e1', label:'Author and install a Helm chart'},
-          {id:'k8s-d8-e2', label:'Kustomize multi-env overlay'},
-          {id:'k8s-d8-e3', label:'Helm + Kustomize post-renderer'},
-        ]},
+      { id:'k8s-d8',  title:'Day 8',  subtitle:'Package Management', chapters:[
+        {id:'k8s-d8-p1', label:'Helm Deep Dive (Architecture & Lifecycle)'},
+        {id:'k8s-d8-p2', label:'Kustomize Fundamentals (Overlay & Mutation)'},
+        {id:'k8s-d8-p3', label:'Helm vs. Kustomize & Hybrid Model'},
+        {id:'k8s-d8-p4', label:'Troubleshooting Challenge'},
       ]},
-      { id:'k8s-d9',  title:'Day 9',  subtitle:'Troubleshooting & Maintenance', children:[
-        { label:'DOCUMENTS', items:[
-          {id:'k8s-d9-d1', label:'Debugging commands & node inspection'},
-          {id:'k8s-d9-d2', label:'etcd backup & restore procedures'},
-          {id:'k8s-d9-d3', label:'Cluster upgrade with kubeadm'},
-        ]},
-        { label:'EXERCISES', items:[
-          {id:'k8s-d9-e1', label:'Cordon, drain & uncordon a node'},
-          {id:'k8s-d9-e2', label:'etcd snapshot backup & restore'},
-          {id:'k8s-d9-e3', label:'Perform a kubeadm cluster upgrade'},
-        ]},
+      { id:'k8s-d9',  title:'Day 9',  subtitle:'Troubleshooting & Maintenance', chapters:[
+        {id:'k8s-d9-p1', label:'Advanced Debugging Capabilities'},
+        {id:'k8s-d9-p2', label:'Node Maintenance Operations'},
+        {id:'k8s-d9-p3', label:'Etcd Disaster Recovery (DR)'},
       ]},
-      { id:'k8s-d10', title:'Day 10', subtitle:'Advanced Topics', children:[
-        { label:'DOCUMENTS', items:[
-          {id:'k8s-d10-d1', label:'GitOps with ArgoCD & Flux'},
-          {id:'k8s-d10-d2', label:'Service Mesh: Istio / Linkerd'},
-          {id:'k8s-d10-d3', label:'eBPF fundamentals & multi-cluster'},
-        ]},
-        { label:'EXERCISES', items:[
-          {id:'k8s-d10-e1', label:'Deploy ArgoCD & sync a Helm chart'},
-          {id:'k8s-d10-e2', label:'Istio sidecar injection & mTLS'},
-          {id:'k8s-d10-e3', label:'Multi-cluster with Cilium Cluster Mesh'},
-        ]},
+      { id:'k8s-d10', title:'Day 10', subtitle:'Advanced Topics', chapters:[
+        {id:'k8s-d10-p1', label:'GitOps, Service Mesh & eBPF (Coming Soon)'},
       ]},
     ],
   },
@@ -346,9 +280,13 @@ var activeTrack = 'k8s';
 function getLeaves(track) {
   var out = [];
   track.tasks.forEach(function(day) {
-    day.children.forEach(function(grp) {
-      grp.items.forEach(function(it) { out.push(it); });
-    });
+    if (day.chapters) {
+      day.chapters.forEach(function(ch) { out.push(ch); });
+    } else {
+      day.children.forEach(function(grp) {
+        grp.items.forEach(function(it) { out.push(it); });
+      });
+    }
   });
   return out;
 }
@@ -426,6 +364,87 @@ function updateStats() {
       ' <span class="text-primary ml-2">— ' + o.completed + '/' + o.total + ' tasks (' + o.pct + '%)</span>' +
       ' <span class="inline-block w-2 h-2 rounded-full bg-secondary animate-ping align-middle ml-1"></span>';
   }
+}
+
+/* ── K8s card grid rendering ────────────────────────────────────────────────── */
+
+function renderK8sChapter(ch, trackId) {
+  var iDone = !!done[ch.id];
+  return [
+    '<label class="flex items-start gap-2 py-0.5 cursor-pointer group/leaf">',
+      '<input type="checkbox" class="appearance-none w-3 h-3 border flex-shrink-0 mt-0.5"',
+        ' id="cb-' + ch.id + '" data-id="' + ch.id + '" data-track="' + trackId + '"' + (iDone ? ' checked' : '') + ' />',
+      '<span class="font-body-md text-[12px] leading-tight ' + (iDone ? 'line-through opacity-40' : 'text-on-surface-variant group-hover/leaf:text-primary transition-colors') + '">' + esc(ch.label) + '</span>',
+    '</label>',
+  ].join('');
+}
+
+function renderDayCard(day, trackId, idx) {
+  var total  = day.chapters.length;
+  var nDone  = day.chapters.filter(function(ch) { return !!done[ch.id]; }).length;
+  var pct    = total ? Math.round((nDone / total) * 100) : 0;
+  var allDone = nDone === total;
+  var anyDone = nDone > 0;
+  var cardBorder   = allDone ? 'glow-magenta border-secondary/50' : (anyDone ? 'card-neon' : 'border-outline-variant');
+  var titleColor   = allDone ? 'text-secondary neon-text-magenta' : 'text-primary neon-text-cyan';
+  var subColor     = allDone ? 'text-secondary/60' : 'text-on-tertiary-container';
+  var progressBar  = allDone ? 'bg-secondary' : 'bg-primary-fixed-dim';
+
+  var chapters = day.chapters.map(function(ch) { return renderK8sChapter(ch, trackId); }).join('');
+
+  return [
+    '<article class="flex flex-col bg-surface-container border ' + cardBorder + ' group hover:bg-surface-container-high transition-all duration-300 relative"',
+      ' style="animation:cardIn 0.35s ease both;animation-delay:' + (idx * 60) + 'ms">',
+      '<div class="px-5 py-3 flex justify-between items-center">',
+        '<span class="font-headline-md text-[15px] font-bold ' + titleColor + '">' + esc(day.title) + '</span>',
+        '<span class="font-label-caps text-[10px] text-on-tertiary-container">' + nDone + '/' + total + '</span>',
+      '</div>',
+      '<div class="border-t border-outline-variant/50"></div>',
+      '<div class="px-5 pt-3 pb-0">',
+        '<span class="font-label-caps text-[10px] ' + subColor + ' tracking-widest uppercase">' + esc(day.subtitle) + '</span>',
+      '</div>',
+      '<div class="px-5 py-3 flex-grow flex flex-col gap-1.5">',
+        chapters,
+      '</div>',
+      '<div class="border-t border-outline-variant/50"></div>',
+      '<div class="px-5 py-3">',
+        '<div class="w-full h-0.5 bg-outline-variant/50 overflow-hidden">',
+          '<div class="h-0.5 ' + progressBar + ' transition-all duration-500" style="width:' + pct + '%"></div>',
+        '</div>',
+        '<div class="font-label-caps text-[9px] text-on-surface-variant/60 uppercase mt-1.5">' + pct + '% complete</div>',
+      '</div>',
+    '</article>',
+  ].join('');
+}
+
+function renderK8sPanel(track) {
+  var leaves  = getLeaves(track);
+  var nDone   = leaves.filter(function(x) { return !!done[x.id]; }).length;
+  var pct     = leaves.length ? Math.round((nDone / leaves.length) * 100) : 0;
+  var allDone = nDone === leaves.length;
+  var headerBorder = allDone ? 'glow-magenta' : 'card-neon';
+  var headerColor  = allDone ? 'text-secondary neon-text-magenta' : 'text-primary neon-text-cyan';
+
+  var cards = track.tasks.map(function(day, i) {
+    return renderDayCard(day, track.id, i);
+  }).join('');
+
+  return [
+    '<div class="mb-6 p-5 border border-outline-variant bg-surface-container-low ' + headerBorder + ' flex items-center gap-4">',
+      '<span class="material-symbols-outlined text-4xl text-primary-fixed-dim flex-shrink-0" style="font-variation-settings:\'FILL\' 1">hub</span>',
+      '<div class="flex-grow">',
+        '<h2 class="font-headline-md ' + headerColor + ' uppercase tracking-widest">Kubernetes</h2>',
+        '<p class="font-body-md text-on-surface-variant text-[12px] mt-1 opacity-80">Container orchestration platform — manage clusters, pods, networking, storage, and security at scale.</p>',
+      '</div>',
+      '<div class="text-right flex-shrink-0">',
+        '<div class="font-label-caps text-[10px] text-on-tertiary-container">' + nDone + '/' + leaves.length + ' chapters</div>',
+        '<div class="font-label-caps text-[12px] text-primary-fixed-dim">' + pct + '% complete</div>',
+      '</div>',
+    '</div>',
+    '<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-gutter">',
+      cards,
+    '</div>',
+  ].join('');
 }
 
 /* ── Tree rendering ─────────────────────────────────────────────────────────── */
@@ -531,7 +550,7 @@ function renderCurrentTrack() {
   if (!container) return;
   var track = ROADMAP.find(function(t) { return t.id === activeTrack; });
   if (!track) return;
-  container.innerHTML = renderTrackPanel(track);
+  container.innerHTML = track.id === 'k8s' ? renderK8sPanel(track) : renderTrackPanel(track);
   container.querySelectorAll('input[type=checkbox][data-id]').forEach(function(cb) {
     applyCbStyle(cb);
   });
@@ -549,6 +568,9 @@ function toggleTask(id) {
   var found = null;
   ROADMAP.some(function(tr) {
     return tr.tasks.some(function(day) {
+      if (day.chapters) {
+        return (found = day.chapters.find(function(ch) { return ch.id === id; }));
+      }
       return day.children.some(function(grp) {
         return (found = grp.items.find(function(it) { return it.id === id; }));
       });
