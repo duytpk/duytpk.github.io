@@ -6,14 +6,14 @@ var TABS = [
   {
     key: 'cve', label: 'CVE', icon: 'security',
     activeClass:  'text-secondary border-secondary hover-glitch',
-    badge: 'LIVE THREAT', status: 'ACTIVE THREAT',
+    badge: 'Live threat', status: 'Active threat',
     textClass:   'text-primary',
     accentClass: 'neon-text-cyan',
   },
   {
     key: 'ai', label: 'AI', icon: 'smart_toy',
     activeClass:  'text-secondary border-secondary hover-glitch',
-    badge: 'AI UPDATE', status: 'STABLE',
+    badge: 'AI update', status: 'Stable',
     textClass:   'text-primary',
     accentClass: 'neon-text-cyan',
   },
@@ -29,7 +29,7 @@ var REFRESH_MS    = 5 * 60 * 1000;
 var CARD_DELAY_MS = 60;
 
 /* Shared select class for sort/filter dropdowns */
-var SELECT_CLS = 'font-label-caps text-[10px] text-primary bg-surface-container border border-outline-variant px-2 py-1 tracking-widest uppercase hover:border-primary/60 focus:outline-none focus:border-secondary focus:text-secondary transition-all duration-150 cursor-pointer';
+var SELECT_CLS = 'font-label-caps text-[10px] text-primary bg-surface-container border border-outline-variant px-2 py-1 tracking-widest hover:border-primary/60 focus:outline-none focus:border-secondary focus:text-secondary transition-all duration-150 cursor-pointer';
 
 /* Seed data — rendered if /news.json fetch fails (e.g. file:// protocol). */
 var SEED = {
@@ -266,10 +266,10 @@ function renderFilterBar() {
   });
   bar.className = 'mb-4 flex items-center justify-end gap-2';
   bar.innerHTML =
-    '<label for="ai-filter-select" class="font-label-caps text-[9px] text-on-tertiary-container tracking-widest">SOURCE:</label>' +
+    '<label for="ai-filter-select" class="font-label-caps text-[9px] text-on-tertiary-container tracking-widest">Source:</label>' +
     '<select id="ai-filter-select" class="' + SELECT_CLS + '">' +
     sources.map(function(s) {
-      return '<option value="' + esc(s) + '"' + (aiFilterSource === s ? ' selected' : '') + '>' + esc(s === 'all' ? 'ALL' : s) + '</option>';
+      return '<option value="' + esc(s) + '"' + (aiFilterSource === s ? ' selected' : '') + '>' + esc(s === 'all' ? 'All' : s) + '</option>';
     }).join('') +
     '</select>';
 

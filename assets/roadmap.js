@@ -328,12 +328,12 @@ function renderActivityLog() {
   var el = document.getElementById('activity-log');
   if (!el) return;
   if (activityLog.length === 0) {
-    el.innerHTML = '<div class="flex gap-4"><span class="text-primary-fixed-dim font-bold">READY_</span><span class="bg-primary w-2 h-4 cursor-blink inline-block"></span></div>';
+    el.innerHTML = '<div class="flex gap-4"><span class="text-primary-fixed-dim font-bold">Ready_</span><span class="bg-primary w-2 h-4 cursor-blink inline-block"></span></div>';
     return;
   }
   el.innerHTML = activityLog.map(function(e) {
     return '<div class="flex gap-4"><span class="text-secondary">[' + e.time + ']</span><span>' + esc(e.msg) + '</span></div>';
-  }).join('') + '<div class="flex gap-4 mt-1"><span class="text-primary-fixed-dim font-bold">READY_</span><span class="bg-primary w-2 h-4 cursor-blink inline-block"></span></div>';
+  }).join('') + '<div class="flex gap-4 mt-1"><span class="text-primary-fixed-dim font-bold">Ready_</span><span class="bg-primary w-2 h-4 cursor-blink inline-block"></span></div>';
 }
 
 /* ── Tab button state ───────────────────────────────────────────────────────── */
