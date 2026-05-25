@@ -25,50 +25,50 @@ var ROADMAP = [
     id: 'k8s', label: 'Kubernetes', icon: 'hub',
     tasks: [
       { id:'k8s-d1',  title:'Day 1',  subtitle:'Architecture & Internals', notionUrl:'https://standing-base-a86.notion.site/Day-1-Architecture-Internals-2e6d10056cc9803ba66bfa7921dc086f', chapters:[
-        {id:'k8s-d1-p1', label:'Kubernetes Architecture Deep Dive'},
-        {id:'k8s-d1-p2', label:'Request Flow — Anatomy of kubectl apply'},
-        {id:'k8s-d1-p3', label:'Advanced Troubleshooting Scenarios'},
+        {id:'k8s-d1-p1', label:'Kubernetes architecture deep dive'},
+        {id:'k8s-d1-p2', label:'Request flow — Anatomy of kubectl apply'},
+        {id:'k8s-d1-p3', label:'Advanced troubleshooting scenarios'},
       ]},
       { id:'k8s-d2',  title:'Day 2',  subtitle:'Workloads & Controllers', notionUrl:'https://standing-base-a86.notion.site/Day-2-Workloads-Controllers-2e6d10056cc9804690f8da067150f7a3', chapters:[
-        {id:'k8s-d2-p1', label:'Pod Architecture & Container Design Patterns'},
-        {id:'k8s-d2-p2', label:'Workload Controllers (Orchestration Layer)'},
-        {id:'k8s-d2-p3', label:'Rolling Update Flow & Operational Mechanics'},
-        {id:'k8s-d2-p4', label:'Advanced Troubleshooting Scenarios'},
+        {id:'k8s-d2-p1', label:'Pod architecture & Container design patterns'},
+        {id:'k8s-d2-p2', label:'Workload controllers (Orchestration layer)'},
+        {id:'k8s-d2-p3', label:'Rolling update flow & Operational mechanics'},
+        {id:'k8s-d2-p4', label:'Advanced troubleshooting scenarios'},
       ]},
       { id:'k8s-d3',  title:'Day 3',  subtitle:'Networking & Connectivity', notionUrl:'https://standing-base-a86.notion.site/Day-3-Networking-Connectivity-2e6d10056cc980aeb047f7ee722a41bc', chapters:[
-        {id:'k8s-d3-p1', label:'Networking & Connectivity — The Nervous System'},
-        {id:'k8s-d3-p2', label:'Operational Flow — Packet Journey'},
-        {id:'k8s-d3-p3', label:'Scenario-Based Analysis'},
-        {id:'k8s-d3-p4', label:'Professional Troubleshooting Workflow (SOP)'},
+        {id:'k8s-d3-p1', label:'Networking & Connectivity — The nervous system'},
+        {id:'k8s-d3-p2', label:'Operational flow — Packet journey'},
+        {id:'k8s-d3-p3', label:'Scenario-based analysis'},
+        {id:'k8s-d3-p4', label:'Advanced troubleshooting scenarios'},
       ]},
       { id:'k8s-d4',  title:'Day 4',  subtitle:'Storage & Configuration', notionUrl:'https://standing-base-a86.notion.site/Day-4-Storage-Configuration-2e6d10056cc980df9ca8c16e2e360c26', chapters:[
-        {id:'k8s-d4-p1', label:'Storage Fundamentals'},
-        {id:'k8s-d4-p2', label:'Volume Lifecycle Management'},
-        {id:'k8s-d4-p3', label:'Configuration Management (ConfigMap & Secret)'},
-        {id:'k8s-d4-p4', label:'Advanced Troubleshooting Scenarios'},
+        {id:'k8s-d4-p1', label:'Storage fundamentals'},
+        {id:'k8s-d4-p2', label:'Volume lifecycle management'},
+        {id:'k8s-d4-p3', label:'Configuration management (Configmap & Secret)'},
+        {id:'k8s-d4-p4', label:'Advanced troubleshooting scenarios'},
       ]},
       { id:'k8s-d5',  title:'Day 5',  subtitle:'Scheduling & Resource Mgmt', notionUrl:'https://standing-base-a86.notion.site/Day-5-Scheduling-Resource-Management-2e6d10056cc980d4bbb7c6021989917d', chapters:[
-        {id:'k8s-d5-p1', label:'Resource Management Fundamentals'},
-        {id:'k8s-d5-p2', label:'Advanced Scheduling Strategies'},
-        {id:'k8s-d5-p3', label:'Scenario-Based Troubleshooting'},
+        {id:'k8s-d5-p1', label:'Resource management fundamentals'},
+        {id:'k8s-d5-p2', label:'Advanced scheduling strategies'},
+        {id:'k8s-d5-p3', label:'Advanced troubleshooting scenarios'},
       ]},
       { id:'k8s-d6',  title:'Day 6',  subtitle:'Security & Access Control', notionUrl:'https://standing-base-a86.notion.site/Day-6-Security-Access-Control-2e7d10056cc980c488c1d7d7fb3c20cb', chapters:[
         {id:'k8s-d6-p1', label:'RBAC — Role-Based Access Control'},
         {id:'k8s-d6-p2', label:'Network Policies (Traffic Control)'},
         {id:'k8s-d6-p3', label:'Security Context'},
-        {id:'k8s-d6-p4', label:'Troubleshooting Case Studies'},
+        {id:'k8s-d6-p4', label:'Advanced troubleshooting scenarios'},
       ]},
       { id:'k8s-d7',  title:'Day 7',  subtitle:'Observability', notionUrl:'https://standing-base-a86.notion.site/Day-7-Observability-Monitor-and-Logging-2e6d10056cc9801c8e51d07c014f6f8d', chapters:[
         {id:'k8s-d7-p1', label:'Centralized Logging Architecture'},
         {id:'k8s-d7-p2', label:'Monitoring with Prometheus Stack'},
         {id:'k8s-d7-p3', label:'Metrics Collection Architecture in K8s'},
-        {id:'k8s-d7-p4', label:'Troubleshooting Observability'},
+        {id:'k8s-d7-p4', label:'Advanced troubleshooting scenarios'},
       ]},
       { id:'k8s-d8',  title:'Day 8',  subtitle:'Package Management', notionUrl:'https://standing-base-a86.notion.site/Day-8-Package-Management-Templating-2e6d10056cc98042b566c1aea0d6e7de', chapters:[
         {id:'k8s-d8-p1', label:'Helm Deep Dive (Architecture & Lifecycle)'},
         {id:'k8s-d8-p2', label:'Kustomize Fundamentals (Overlay & Mutation)'},
         {id:'k8s-d8-p3', label:'Helm vs. Kustomize & Hybrid Model'},
-        {id:'k8s-d8-p4', label:'Troubleshooting Challenge'},
+        {id:'k8s-d8-p4', label:'Advanced troubleshooting scenarios'},
       ]},
       { id:'k8s-d9',  title:'Day 9',  subtitle:'Troubleshooting & Maintenance', notionUrl:'https://standing-base-a86.notion.site/Day-9-Troubleshooting-Cluster-Maintenance-2e7d10056cc9805fa971c2ad05c222d2', chapters:[
         {id:'k8s-d9-p1', label:'Advanced Debugging Capabilities'},
@@ -488,99 +488,124 @@ function renderK8sPanel(track) {
   ].join('');
 }
 
-/* ── Tree rendering ─────────────────────────────────────────────────────────── */
+/* ── Module card rendering (Linux / Terraform) ──────────────────────────────── */
 
-var LINE = 'bg-outline-variant';
-
-function renderLeafItem(item, trackId) {
+function renderModuleItem(item, trackId) {
   var iDone = !!done[item.id];
   return [
     '<label class="flex items-start gap-2 py-0.5 cursor-pointer group/leaf">',
       '<input type="checkbox" class="appearance-none w-3 h-3 border flex-shrink-0 mt-0.5"',
         ' id="cb-' + item.id + '" data-id="' + item.id + '" data-track="' + trackId + '"' + (iDone ? ' checked' : '') + ' />',
-      '<span class="font-body-md text-[11px] leading-tight ' + (iDone ? 'line-through opacity-40' : 'text-on-surface-variant group-hover/leaf:text-primary transition-colors') + '">' + esc(item.label) + '</span>',
+      '<span class="font-body-md text-[12px] leading-tight ' + (iDone ? 'line-through opacity-40' : 'text-on-surface-variant group-hover/leaf:text-primary transition-colors') + '">' + esc(item.label) + '</span>',
     '</label>',
   ].join('');
 }
 
-function renderChildGroup(grp, trackId, isFirstGrp, isLastGrp) {
-  var gDone   = isGroupDone(grp);
-  var gBorder = gDone ? 'glow-magenta' : 'card-neon';
-  var gLblCls = gDone ? 'text-secondary' : 'text-on-tertiary-container';
-  var spineTop = isFirstGrp ? 'top-1/2' : 'top-0';
-  var spineBot = isLastGrp  ? 'bottom-1/2' : 'bottom-0';
+function renderModuleCard(day, trackId, idx) {
+  var allItems = [];
+  day.children.forEach(function(grp) { grp.items.forEach(function(it) { allItems.push(it); }); });
+  var total   = allItems.length;
+  var nDone   = allItems.filter(function(it) { return !!done[it.id]; }).length;
+  var pct     = total ? Math.round((nDone / total) * 100) : 0;
+  var allDone = nDone === total;
+  var anyDone = nDone > 0;
+  var cardBorder  = allDone ? 'glow-magenta border-secondary/50' : (anyDone ? 'card-neon' : 'border-outline-variant');
+  var titleColor  = allDone ? 'text-secondary neon-text-magenta' : 'text-primary neon-text-cyan';
+  var progressBar = allDone ? 'bg-secondary' : 'bg-primary-fixed-dim';
 
-  var items = grp.items.map(function(it) { return renderLeafItem(it, trackId); }).join('');
-
-  return [
-    '<div class="relative flex items-center py-1">',
-      '<div class="absolute left-0 ' + spineTop + ' ' + spineBot + ' w-px ' + LINE + '"></div>',
-      '<div class="w-4 h-px ' + LINE + ' flex-shrink-0"></div>',
-      '<div class="p-3 border border-outline-variant ' + gBorder + ' min-w-[200px]">',
-        '<div class="' + CLS_LABEL_SM + ' ' + gLblCls + ' mb-2 tracking-widest">' + esc(grp.label) + '</div>',
-        items,
-      '</div>',
-    '</div>',
-  ].join('');
-}
-
-function renderDayRow(day, trackId, totalDays, idx) {
-  var dayDone   = isDayDone(day);
-  var dayBorder = dayDone ? 'glow-magenta' : 'card-neon';
-  var dayColor  = dayDone ? 'text-secondary neon-text-magenta' : 'text-primary neon-text-cyan';
-  var subColor  = dayDone ? 'text-secondary/60' : 'text-on-tertiary-container';
-  var isFirst = idx === 0;
-  var isLast  = idx === totalDays - 1;
-  var spineTop = isFirst ? 'top-1/2' : 'top-0';
-  var spineBot = isLast  ? 'bottom-1/2' : 'bottom-0';
-  var spineDiv = (totalDays > 1)
-    ? '<div class="absolute left-0 ' + spineTop + ' ' + spineBot + ' w-px ' + LINE + '"></div>'
-    : '';
-
-  var children = day.children.map(function(grp, gi) {
-    return renderChildGroup(grp, trackId, gi === 0, gi === day.children.length - 1);
+  var groups = day.children.map(function(grp, gi) {
+    var gDone   = isGroupDone(grp);
+    var gLblCls = gDone ? 'text-secondary' : 'text-on-tertiary-container';
+    var sep     = gi > 0 ? '<div class="border-t border-outline-variant/30 my-1.5"></div>' : '';
+    var items   = grp.items.map(function(it) { return renderModuleItem(it, trackId); }).join('');
+    return sep + '<div class="' + CLS_LABEL_SM + ' ' + gLblCls + ' mb-1 tracking-widest">' + esc(grp.label) + '</div>' + items;
   }).join('');
 
   return [
-    '<div class="relative flex items-center py-3" id="day-row-' + day.id + '">',
-      spineDiv,
-      '<div class="w-8 h-px ' + LINE + ' flex-shrink-0"></div>',
-      '<div class="p-3 border border-outline-variant ' + dayBorder + ' flex-shrink-0 min-w-[120px]" id="day-node-' + day.id + '">',
-        '<div class="font-body-md text-[13px] font-bold ' + dayColor + '">' + esc(day.title) + '</div>',
-        '<div class="' + CLS_LABEL_SM + ' ' + subColor + ' mt-0.5 tracking-wide">' + esc(day.subtitle) + '</div>',
+    '<article class="flex flex-col bg-surface-container border h-[300px] overflow-hidden ' + cardBorder + ' group hover:bg-surface-container-high transition-all duration-300 relative"',
+      ' style="animation:cardIn 0.35s ease both;animation-delay:' + (idx * 60) + 'ms">',
+      '<div class="px-5 py-3 flex justify-between items-center">',
+        '<span class="font-headline-md text-[15px] font-bold ' + titleColor + '">' + esc(day.title) + ' — ' + esc(day.subtitle) + '</span>',
+        '<span class="font-label-caps text-[10px] text-on-tertiary-container">' + nDone + '/' + total + '</span>',
       '</div>',
-      '<div class="w-8 h-px ' + LINE + ' flex-shrink-0"></div>',
-      '<div class="flex flex-col">',
-        children,
+      '<div class="border-t border-outline-variant/50"></div>',
+      '<div class="px-5 py-3 flex-grow flex flex-col overflow-hidden">',
+        groups,
       '</div>',
-    '</div>',
+      '<div class="border-t border-outline-variant/50"></div>',
+      '<div class="px-5 py-3">',
+        '<div class="w-full h-0.5 bg-outline-variant/50 overflow-hidden">',
+          '<div class="h-0.5 ' + progressBar + ' transition-all duration-500" style="width:' + pct + '%"></div>',
+        '</div>',
+        '<div class="font-label-caps text-[9px] text-on-surface-variant/60 uppercase mt-1.5">' + pct + '% complete</div>',
+      '</div>',
+    '</article>',
   ].join('');
 }
 
-function renderTrackPanel(track) {
-  var allDone    = track.tasks.every(function(d) { return isDayDone(d); });
+function renderModulePanel(track) {
+  var leaves  = getLeaves(track);
+  var nDone   = leaves.filter(function(x) { return !!done[x.id]; }).length;
+  var pct     = leaves.length ? Math.round((nDone / leaves.length) * 100) : 0;
+  var allDone = nDone === leaves.length;
   var rootBorder = allDone ? 'glow-magenta' : 'card-neon';
   var rootColor  = allDone ? 'text-secondary neon-text-magenta' : 'text-primary neon-text-cyan';
+  var nl  = 'background:var(--neon-cyan);box-shadow:0 0 8px var(--neon-cyan),0 0 20px var(--neon-cyan-20)';
+  var nlm = 'background:var(--neon-magenta);box-shadow:0 0 8px var(--neon-magenta),0 0 20px var(--neon-magenta-20)';
 
-  var dayRows = track.tasks.map(function(day, i) {
-    return renderDayRow(day, track.id, track.tasks.length, i);
+  /* Layout constants — keep in sync with h-[300px] cards and gap-3 (12px) */
+  var CARD_H = 300;
+  var GAP    = 12;
+  var N      = track.tasks.length;
+  var COL_H  = N * CARD_H + (N - 1) * GAP;
+  var HALF   = CARD_H / 2;
+  var STRIDE = CARD_H + GAP;
+  var ROOT_Y = COL_H / 2;
+
+  var branches = track.tasks.map(function(day, i) {
+    var dayDone = isDayDone(day);
+    return '<div class="absolute h-px" style="left:50%;right:0;top:' + (HALF + i * STRIDE) + 'px;' + (dayDone ? nlm : nl) + '"></div>';
   }).join('');
 
+  var cards = track.tasks.map(function(day, i) {
+    return renderModuleCard(day, track.id, i);
+  }).join('');
+
+  var DESC = {
+    linux:     'Core Linux skills — shell, filesystem, processes, networking, packages, hardening, and automation.',
+    terraform: 'Infrastructure as Code — HCL syntax, state management, modules, workspaces, CI/CD, and policy as code.',
+  };
+
   return [
-    '<div class="flex items-stretch overflow-x-auto">',
-      /* Root node box */
-      '<div class="self-stretch flex items-center flex-shrink-0">',
-        '<div class="p-5 border border-outline-variant self-stretch flex flex-col items-center justify-center gap-3 ' + rootBorder + '" style="min-width:90px">',
-          '<span class="material-symbols-outlined text-3xl ' + rootColor + '" style="font-variation-settings:\'FILL\' 1">' + esc(track.icon) + '</span>',
-          '<span class="font-body-md text-[12px] font-bold ' + rootColor + '">' + esc(track.label).toUpperCase() + '</span>',
+    '<div class="grid" style="grid-template-columns:420px 1fr 420px;gap:0;align-items:start">',
+
+      /* ── Col 1: root card — vertically centered in column ── */
+      '<div class="flex items-center" style="height:' + COL_H + 'px">',
+        '<div class="w-full h-[240px] flex flex-col border p-4 bg-surface-container-low ' + rootBorder + '"',
+            ' style="animation:cardIn 0.35s ease both">',
+          '<span class="material-symbols-outlined text-3xl text-primary-fixed-dim mb-3"',
+              ' style="font-variation-settings:\'FILL\' 1">' + esc(track.icon) + '</span>',
+          '<h2 class="font-headline-md ' + rootColor + ' uppercase tracking-widest mb-2">' + esc(track.label) + '</h2>',
+          '<p class="font-body-md text-on-surface-variant text-[11px] opacity-80 mb-4">' + (DESC[track.id] || '') + '</p>',
+          '<div class="mt-auto">',
+            '<div class="font-label-caps text-[10px] text-on-tertiary-container">' + nDone + '/' + leaves.length + ' tasks</div>',
+            '<div class="font-label-caps text-[12px] text-primary-fixed-dim">' + pct + '% complete</div>',
+          '</div>',
         '</div>',
       '</div>',
-      /* Root → days spine connector */
-      '<div class="self-center w-8 h-px ' + LINE + ' flex-shrink-0"></div>',
-      /* Days column */
-      '<div class="flex flex-col relative">',
-        dayRows,
+
+      /* ── Col 2: connector — trunk + vertical spine + per-module branches ── */
+      '<div class="relative" style="height:' + COL_H + 'px">',
+        '<div class="absolute left-0 h-px" style="right:50%;top:' + ROOT_Y + 'px;' + (allDone ? nlm : nl) + '"></div>',
+        '<div class="absolute w-px" style="left:50%;top:' + HALF + 'px;bottom:' + HALF + 'px;' + (allDone ? nlm : nl) + '"></div>',
+        branches,
       '</div>',
+
+      /* ── Col 3: module cards ── */
+      '<div class="flex flex-col gap-3">',
+        cards,
+      '</div>',
+
     '</div>',
   ].join('');
 }
@@ -591,7 +616,7 @@ function renderCurrentTrack() {
   if (!container) return;
   var track = ROADMAP.find(function(t) { return t.id === activeTrack; });
   if (!track) return;
-  container.innerHTML = track.id === 'k8s' ? renderK8sPanel(track) : renderTrackPanel(track);
+  container.innerHTML = track.id === 'k8s' ? renderK8sPanel(track) : renderModulePanel(track);
   container.querySelectorAll('input[type=checkbox][data-id]').forEach(function(cb) {
     applyCbStyle(cb);
   });
