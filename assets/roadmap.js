@@ -24,58 +24,58 @@ var ROADMAP = [
   {
     id: 'k8s', label: 'Kubernetes', icon: 'hub',
     tasks: [
-      { id:'k8s-d1',  title:'Day 1',  subtitle:'Architecture & Internals', chapters:[
+      { id:'k8s-d1',  title:'Day 1',  subtitle:'Architecture & Internals', notionUrl:'https://standing-base-a86.notion.site/Day-1-Architecture-Internals-2e6d10056cc9803ba66bfa7921dc086f', chapters:[
         {id:'k8s-d1-p1', label:'Kubernetes Architecture Deep Dive'},
         {id:'k8s-d1-p2', label:'Request Flow — Anatomy of kubectl apply'},
         {id:'k8s-d1-p3', label:'Advanced Troubleshooting Scenarios'},
       ]},
-      { id:'k8s-d2',  title:'Day 2',  subtitle:'Workloads & Controllers', chapters:[
+      { id:'k8s-d2',  title:'Day 2',  subtitle:'Workloads & Controllers', notionUrl:'https://standing-base-a86.notion.site/Day-2-Workloads-Controllers-2e6d10056cc9804690f8da067150f7a3', chapters:[
         {id:'k8s-d2-p1', label:'Pod Architecture & Container Design Patterns'},
         {id:'k8s-d2-p2', label:'Workload Controllers (Orchestration Layer)'},
         {id:'k8s-d2-p3', label:'Rolling Update Flow & Operational Mechanics'},
         {id:'k8s-d2-p4', label:'Advanced Troubleshooting Scenarios'},
       ]},
-      { id:'k8s-d3',  title:'Day 3',  subtitle:'Networking & Connectivity', chapters:[
+      { id:'k8s-d3',  title:'Day 3',  subtitle:'Networking & Connectivity', notionUrl:'https://standing-base-a86.notion.site/Day-3-Networking-Connectivity-2e6d10056cc980aeb047f7ee722a41bc', chapters:[
         {id:'k8s-d3-p1', label:'Networking & Connectivity — The Nervous System'},
         {id:'k8s-d3-p2', label:'Operational Flow — Packet Journey'},
         {id:'k8s-d3-p3', label:'Scenario-Based Analysis'},
         {id:'k8s-d3-p4', label:'Professional Troubleshooting Workflow (SOP)'},
       ]},
-      { id:'k8s-d4',  title:'Day 4',  subtitle:'Storage & Configuration', chapters:[
+      { id:'k8s-d4',  title:'Day 4',  subtitle:'Storage & Configuration', notionUrl:'https://standing-base-a86.notion.site/Day-4-Storage-Configuration-2e6d10056cc980df9ca8c16e2e360c26', chapters:[
         {id:'k8s-d4-p1', label:'Storage Fundamentals'},
         {id:'k8s-d4-p2', label:'Volume Lifecycle Management'},
         {id:'k8s-d4-p3', label:'Configuration Management (ConfigMap & Secret)'},
         {id:'k8s-d4-p4', label:'Advanced Troubleshooting Scenarios'},
       ]},
-      { id:'k8s-d5',  title:'Day 5',  subtitle:'Scheduling & Resource Mgmt', chapters:[
+      { id:'k8s-d5',  title:'Day 5',  subtitle:'Scheduling & Resource Mgmt', notionUrl:'https://standing-base-a86.notion.site/Day-5-Scheduling-Resource-Management-2e6d10056cc980d4bbb7c6021989917d', chapters:[
         {id:'k8s-d5-p1', label:'Resource Management Fundamentals'},
         {id:'k8s-d5-p2', label:'Advanced Scheduling Strategies'},
         {id:'k8s-d5-p3', label:'Scenario-Based Troubleshooting'},
       ]},
-      { id:'k8s-d6',  title:'Day 6',  subtitle:'Security & Access Control', chapters:[
+      { id:'k8s-d6',  title:'Day 6',  subtitle:'Security & Access Control', notionUrl:'https://standing-base-a86.notion.site/Day-6-Security-Access-Control-2e7d10056cc980c488c1d7d7fb3c20cb', chapters:[
         {id:'k8s-d6-p1', label:'RBAC — Role-Based Access Control'},
         {id:'k8s-d6-p2', label:'Network Policies (Traffic Control)'},
         {id:'k8s-d6-p3', label:'Security Context'},
         {id:'k8s-d6-p4', label:'Troubleshooting Case Studies'},
       ]},
-      { id:'k8s-d7',  title:'Day 7',  subtitle:'Observability', chapters:[
+      { id:'k8s-d7',  title:'Day 7',  subtitle:'Observability', notionUrl:'https://standing-base-a86.notion.site/Day-7-Observability-Monitor-and-Logging-2e6d10056cc9801c8e51d07c014f6f8d', chapters:[
         {id:'k8s-d7-p1', label:'Centralized Logging Architecture'},
         {id:'k8s-d7-p2', label:'Monitoring with Prometheus Stack'},
         {id:'k8s-d7-p3', label:'Metrics Collection Architecture in K8s'},
         {id:'k8s-d7-p4', label:'Troubleshooting Observability'},
       ]},
-      { id:'k8s-d8',  title:'Day 8',  subtitle:'Package Management', chapters:[
+      { id:'k8s-d8',  title:'Day 8',  subtitle:'Package Management', notionUrl:'https://standing-base-a86.notion.site/Day-8-Package-Management-Templating-2e6d10056cc98042b566c1aea0d6e7de', chapters:[
         {id:'k8s-d8-p1', label:'Helm Deep Dive (Architecture & Lifecycle)'},
         {id:'k8s-d8-p2', label:'Kustomize Fundamentals (Overlay & Mutation)'},
         {id:'k8s-d8-p3', label:'Helm vs. Kustomize & Hybrid Model'},
         {id:'k8s-d8-p4', label:'Troubleshooting Challenge'},
       ]},
-      { id:'k8s-d9',  title:'Day 9',  subtitle:'Troubleshooting & Maintenance', chapters:[
+      { id:'k8s-d9',  title:'Day 9',  subtitle:'Troubleshooting & Maintenance', notionUrl:'https://standing-base-a86.notion.site/Day-9-Troubleshooting-Cluster-Maintenance-2e7d10056cc9805fa971c2ad05c222d2', chapters:[
         {id:'k8s-d9-p1', label:'Advanced Debugging Capabilities'},
         {id:'k8s-d9-p2', label:'Node Maintenance Operations'},
         {id:'k8s-d9-p3', label:'Etcd Disaster Recovery (DR)'},
       ]},
-      { id:'k8s-d10', title:'Day 10', subtitle:'Advanced Topics', chapters:[
+      { id:'k8s-d10', title:'Day 10', subtitle:'Advanced Topics', notionUrl:'https://standing-base-a86.notion.site/Day-10-Advanced-Topics-Modern-Ecosystem-2e7d10056cc980848eadd7f8328f756f', chapters:[
         {id:'k8s-d10-p1', label:'GitOps, Service Mesh & eBPF (Coming Soon)'},
       ]},
     ],
@@ -389,14 +389,19 @@ function renderDayCard(day, trackId, idx) {
   var titleColor   = allDone ? 'text-secondary neon-text-magenta' : 'text-primary neon-text-cyan';
   var subColor     = allDone ? 'text-secondary/60' : 'text-on-tertiary-container';
   var progressBar  = allDone ? 'bg-secondary' : 'bg-primary-fixed-dim';
+  var titleEl      = day.notionUrl
+    ? '<a href="' + esc(day.notionUrl) + '" target="_blank" rel="noopener noreferrer"'
+      + ' class="font-headline-md text-[15px] font-bold ' + titleColor + ' hover:underline hover:opacity-80">'
+      + esc(day.title) + '</a>'
+    : '<span class="font-headline-md text-[15px] font-bold ' + titleColor + '">' + esc(day.title) + '</span>';
 
   var chapters = day.chapters.map(function(ch) { return renderK8sChapter(ch, trackId); }).join('');
 
   return [
-    '<article class="flex flex-col bg-surface-container border ' + cardBorder + ' group hover:bg-surface-container-high transition-all duration-300 relative"',
+    '<article class="flex flex-col bg-surface-container border h-[240px] overflow-hidden ' + cardBorder + ' group hover:bg-surface-container-high transition-all duration-300 relative"',
       ' style="animation:cardIn 0.35s ease both;animation-delay:' + (idx * 60) + 'ms">',
       '<div class="px-5 py-3 flex justify-between items-center">',
-        '<span class="font-headline-md text-[15px] font-bold ' + titleColor + '">' + esc(day.title) + '</span>',
+        titleEl,
         '<span class="font-label-caps text-[10px] text-on-tertiary-container">' + nDone + '/' + total + '</span>',
       '</div>',
       '<div class="border-t border-outline-variant/50"></div>',
@@ -422,27 +427,64 @@ function renderK8sPanel(track) {
   var nDone   = leaves.filter(function(x) { return !!done[x.id]; }).length;
   var pct     = leaves.length ? Math.round((nDone / leaves.length) * 100) : 0;
   var allDone = nDone === leaves.length;
-  var headerBorder = allDone ? 'glow-magenta' : 'card-neon';
-  var headerColor  = allDone ? 'text-secondary neon-text-magenta' : 'text-primary neon-text-cyan';
+  var rootBorder  = allDone ? 'glow-magenta' : 'card-neon';
+  var rootColor   = allDone ? 'text-secondary neon-text-magenta' : 'text-primary neon-text-cyan';
+  var nl          = 'background:var(--neon-cyan);box-shadow:0 0 8px var(--neon-cyan),0 0 20px var(--neon-cyan-20)';
 
+  /* Layout constants — keep in sync with h-[240px] cards and gap-3 (12px) */
+  var CARD_H = 240;
+  var GAP    = 12;
+  var N      = track.tasks.length;
+  var COL_H  = N * CARD_H + (N - 1) * GAP;   /* total day-column height */
+  var HALF   = CARD_H / 2;                    /* 120px — half-card */
+  var STRIDE = CARD_H + GAP;                  /* 252px — center-to-center */
+  var ROOT_Y = COL_H / 2;                     /* K8s root center y */
+
+  /* Branches in connector col: spine midpoint → each day card left edge */
+  var branches = track.tasks.map(function(_, i) {
+    return '<div class="absolute h-px" style="left:50%;right:0;top:' + (HALF + i * STRIDE) + 'px;' + nl + '"></div>';
+  }).join('');
+
+  /* Day cards rendered directly in flex-col (no row wrapper) */
   var cards = track.tasks.map(function(day, i) {
     return renderDayCard(day, track.id, i);
   }).join('');
 
   return [
-    '<div class="mb-6 p-5 border border-outline-variant bg-surface-container-low ' + headerBorder + ' flex items-center gap-4">',
-      '<span class="material-symbols-outlined text-4xl text-primary-fixed-dim flex-shrink-0" style="font-variation-settings:\'FILL\' 1">hub</span>',
-      '<div class="flex-grow">',
-        '<h2 class="font-headline-md ' + headerColor + ' uppercase tracking-widest">Kubernetes</h2>',
-        '<p class="font-body-md text-on-surface-variant text-[12px] mt-1 opacity-80">Container orchestration platform — manage clusters, pods, networking, storage, and security at scale.</p>',
+    /* 3-column grid: [K8s root | connector | day cards] — col 1 & 3 equal width */
+    '<div class="grid" style="grid-template-columns:1fr 5rem 1fr;gap:0;align-items:start">',
+
+      /* ── Col 1: K8s root — same 1fr width as day cards, vertically centered ── */
+      '<div class="flex items-center" style="height:' + COL_H + 'px">',
+        '<div class="w-full h-[240px] flex flex-col border p-4 bg-surface-container-low ' + rootBorder + '"',
+            ' style="animation:cardIn 0.35s ease both">',
+          '<span class="material-symbols-outlined text-3xl text-primary-fixed-dim mb-3"',
+              ' style="font-variation-settings:\'FILL\' 1">hub</span>',
+          '<h2 class="font-headline-md ' + rootColor + ' uppercase tracking-widest mb-2">Kubernetes</h2>',
+          '<p class="font-body-md text-on-surface-variant text-[11px] opacity-80 mb-4">',
+            'Container orchestration platform — manage clusters, pods, networking, storage, and security at scale.',
+          '</p>',
+          '<div class="mt-auto">',
+            '<div class="font-label-caps text-[10px] text-on-tertiary-container">' + nDone + '/' + leaves.length + ' chapters</div>',
+            '<div class="font-label-caps text-[12px] text-primary-fixed-dim">' + pct + '% complete</div>',
+          '</div>',
+        '</div>',
       '</div>',
-      '<div class="text-right flex-shrink-0">',
-        '<div class="font-label-caps text-[10px] text-on-tertiary-container">' + nDone + '/' + leaves.length + ' chapters</div>',
-        '<div class="font-label-caps text-[12px] text-primary-fixed-dim">' + pct + '% complete</div>',
+
+      /* ── Col 2: Connector — trunk + vertical spine + per-day branches ── */
+      '<div class="relative" style="height:' + COL_H + 'px">',
+        /* Trunk: K8s root right-edge → spine, at K8s vertical center */
+        '<div class="absolute left-0 h-px" style="right:50%;top:' + ROOT_Y + 'px;' + nl + '"></div>',
+        /* Spine: first-day center → last-day center */
+        '<div class="absolute w-px" style="left:50%;top:' + HALF + 'px;bottom:' + HALF + 'px;' + nl + '"></div>',
+        branches,
       '</div>',
-    '</div>',
-    '<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-gutter">',
-      cards,
+
+      /* ── Col 3: Day cards — 1fr, same width as K8s root ── */
+      '<div class="flex flex-col gap-3">',
+        cards,
+      '</div>',
+
     '</div>',
   ].join('');
 }
