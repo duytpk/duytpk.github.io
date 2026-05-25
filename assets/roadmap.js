@@ -361,8 +361,7 @@ function updateStats() {
   if (labelEl) {
     labelEl.innerHTML =
       'Neural network training sequence initialized. Complete sequential modules to authorize advanced system clearance.' +
-      ' <span class="text-primary ml-2">— ' + o.completed + '/' + o.total + ' tasks (' + o.pct + '%)</span>' +
-      ' <span class="inline-block w-2 h-2 rounded-full bg-secondary animate-ping align-middle ml-1"></span>';
+      ' <span class="text-primary ml-2">— ' + o.completed + '/' + o.total + ' tasks (' + o.pct + '%)</span>';
   }
 }
 
