@@ -389,11 +389,12 @@ function renderDayCard(day, trackId, idx) {
   var titleColor   = allDone ? 'text-secondary neon-text-magenta' : 'text-primary neon-text-cyan';
   var subColor     = allDone ? 'text-secondary/60' : 'text-on-tertiary-container';
   var progressBar  = allDone ? 'bg-secondary' : 'bg-primary-fixed-dim';
-  var titleEl      = day.notionUrl
+  var fullTitle = esc(day.title) + ' — ' + esc(day.subtitle);
+  var titleEl   = day.notionUrl
     ? '<a href="' + esc(day.notionUrl) + '" target="_blank" rel="noopener noreferrer"'
       + ' class="font-headline-md text-[15px] font-bold ' + titleColor + ' hover:underline hover:opacity-80">'
-      + esc(day.title) + '</a>'
-    : '<span class="font-headline-md text-[15px] font-bold ' + titleColor + '">' + esc(day.title) + '</span>';
+      + fullTitle + '</a>'
+    : '<span class="font-headline-md text-[15px] font-bold ' + titleColor + '">' + fullTitle + '</span>';
 
   var chapters = day.chapters.map(function(ch) { return renderK8sChapter(ch, trackId); }).join('');
 
@@ -405,9 +406,6 @@ function renderDayCard(day, trackId, idx) {
         '<span class="font-label-caps text-[10px] text-on-tertiary-container">' + nDone + '/' + total + '</span>',
       '</div>',
       '<div class="border-t border-outline-variant/50"></div>',
-      '<div class="px-5 pt-3 pb-0">',
-        '<span class="font-label-caps text-[10px] ' + subColor + ' tracking-widest uppercase">' + esc(day.subtitle) + '</span>',
-      '</div>',
       '<div class="px-5 py-3 flex-grow flex flex-col gap-1.5">',
         chapters,
       '</div>',
