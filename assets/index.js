@@ -29,7 +29,7 @@ var REFRESH_MS    = 5 * 60 * 1000;
 var CARD_DELAY_MS = 60;
 
 /* Shared select class for sort/filter dropdowns */
-var SELECT_CLS = 'font-label-caps text-[10px] text-primary bg-surface-container border border-outline-variant px-2 py-1 tracking-widest hover:border-primary/60 focus:outline-none focus:border-secondary focus:text-secondary transition-all duration-150 cursor-pointer';
+var SELECT_CLS = 'appearance-none font-label-caps text-[10px] text-primary bg-surface-container border border-outline-variant pl-2 pr-8 py-1 min-w-[140px] tracking-widest hover:border-primary/60 focus:outline-none focus:border-secondary focus:text-secondary transition-all duration-150 cursor-pointer';
 
 /* Seed data — rendered if /news.json fetch fails (e.g. file:// protocol). */
 var SEED = {
@@ -246,11 +246,14 @@ function renderSortBar() {
   if (!bar) return;
   bar.className = 'mb-4 flex items-center justify-end gap-2';
   bar.innerHTML =
-    '<label for="cve-sort-select" class="font-label-caps text-[9px] text-on-tertiary-container tracking-widest">Sort by:</label>' +
+    '<label for="cve-sort-select" class="font-label-caps text-[9px] text-on-tertiary-container tracking-widest">Sort:</label>' +
+    '<div class="relative">' +
     '<select id="cve-sort-select" class="' + SELECT_CLS + '">' +
     '<option value="date"'  + (cveSortBy === 'date'  ? ' selected' : '') + '>Date</option>' +
-    '<option value="score"' + (cveSortBy === 'score' ? ' selected' : '') + '>CVSS</option>' +
-    '</select>';
+    '<option value="score"' + (cveSortBy === 'score' ? ' selected' : '') + '>CVSS Score</option>' +
+    '</select>' +
+    '<span class="material-symbols-outlined pointer-events-none absolute right-1.5 top-1/2 -translate-y-1/2 text-primary select-none" style="font-size:14px">expand_more</span>' +
+    '</div>';
 
   var sel = bar.querySelector('#cve-sort-select');
   if (sel) sel.addEventListener('change', function() { cveSortBy = this.value; renderCards(); });
@@ -267,11 +270,14 @@ function renderFilterBar() {
   bar.className = 'mb-4 flex items-center justify-end gap-2';
   bar.innerHTML =
     '<label for="ai-filter-select" class="font-label-caps text-[9px] text-on-tertiary-container tracking-widest">Source:</label>' +
+    '<div class="relative">' +
     '<select id="ai-filter-select" class="' + SELECT_CLS + '">' +
     sources.map(function(s) {
       return '<option value="' + esc(s) + '"' + (aiFilterSource === s ? ' selected' : '') + '>' + esc(s === 'all' ? 'All' : s) + '</option>';
     }).join('') +
-    '</select>';
+    '</select>' +
+    '<span class="material-symbols-outlined pointer-events-none absolute right-1.5 top-1/2 -translate-y-1/2 text-primary select-none" style="font-size:14px">expand_more</span>' +
+    '</div>';
 
   var sel = bar.querySelector('#ai-filter-select');
   if (sel) sel.addEventListener('change', function() { aiFilterSource = this.value; renderCards(); });
