@@ -8,9 +8,11 @@ Guidance for working in this repository.
 
 1. **CVE Dashboard** (`index.html`) — tech-news aggregator with tabs **CVE** and **AI**.
    Fetches `news.json` at runtime, auto-refreshes every 5 min.
-2. **Learning Roadmap** (`roadmap.html`) — Linux / Terraform / Kubernetes 3-level
-   horizontal tree, tab-switched per track. Leaf checkbox state is saved in `localStorage`;
-   completion propagates up: leaf group → day → root node.
+2. **Learning Roadmap** (`roadmap.html`) — tab-switched per track. Leaf checkbox state is
+   saved in `localStorage`; completion propagates up to root.
+   - **K8s**: 2-level vertical tree — root box (left) → 10 Day cards (right) with neon
+     cyan/magenta connector lines. Day cards link to Notion pages.
+   - **Linux / Terraform**: 3-level horizontal tree — root → day rows → leaf groups.
 
 Deployed to **GitHub Pages** (Actions source) on the custom domain **duytpk.me**.
 
@@ -202,7 +204,7 @@ Leaf IDs follow the pattern `<track>-<day>-<d|e><n>` (e.g. `k8s-d1-d1`, `k8s-d1-
 
 ### Storage
 
-Key: `devsecops-hub:roadmap:v3` (flat `{ leafId: boolean }` object).
+Key: `devsecops-hub:roadmap:v4` (flat `{ leafId: boolean }` object).
 
 On first load (`raw === null`), `DEFAULT_DONE` seeds K8s Days 1–8 (48 leaf items) as done.
 `loadDone()` validates the parsed value is a plain object before using it.
@@ -223,6 +225,21 @@ On first load (`raw === null`), `DEFAULT_DONE` seeds K8s Days 1–8 (48 leaf ite
 
 ### Tree rendering functions
 
+**K8s tab** (2-level vertical tree):
+
+| Function | Responsibility |
+|---|---|
+| `renderK8sPanel(track)` | 3-col CSS grid: root box \| connector column \| day cards column |
+| `renderDayCard(day, trackId, idx)` | Day card — h-[240px], title links to Notion, chapter checkboxes, progress bar |
+| `renderK8sChapter(ch, trackId)` | Single chapter checkbox + label row |
+
+Connector column uses absolute-positioned neon lines: horizontal trunk (root → spine),
+vertical spine (center-of-first-card → center-of-last-card), horizontal branch per day.
+Lines are cyan (`--neon-cyan`) normally; magenta (`--neon-magenta`) when the day/all-days
+are complete. Grid template: `420px 1fr 420px`.
+
+**Linux / Terraform tabs** (3-level horizontal tree):
+
 | Function | Responsibility |
 |---|---|
 | `renderLeafItem(item, trackId)` | Single checkbox + label row |
@@ -236,8 +253,9 @@ seamlessly. Rows use `py-3` padding (no `gap-*`) to avoid gaps between spine seg
 
 ### Event delegation
 
-Single `change` listener on `#roadmap-container`. `toggleTask(id)` searches the 3-level
-ROADMAP structure to find the leaf, flips `done[id]`, saves, re-renders, and logs activity.
+Single `change` listener on `#roadmap-container`. `toggleTask(id)` searches the ROADMAP
+structure to find the leaf (K8s: 2-level track→chapters; Linux/Terraform: 3-level
+track→children→items), flips `done[id]`, saves, re-renders, and logs activity.
 
 ---
 
@@ -273,6 +291,12 @@ git rebase origin/main
   `renderSortBar()` / `renderFilterBar()`. Scoped queries are safer when attaching event
   listeners to freshly-injected HTML.
 
+- **Sort/filter select pattern.** Both `renderSortBar` and `renderFilterBar` use the same
+  `SELECT_CLS` string (no `uppercase`, `appearance-none`, `min-w-[140px]`, `pl-2 pr-8`).
+  Each select is wrapped in `<div class="relative">` with a Material Symbol `expand_more`
+  icon positioned absolute-right as the visible dropdown arrow. Do not use the browser's
+  native arrow (the forms plugin renders it in dark gray, invisible on dark backgrounds).
+
 - **Named constants for magic numbers.** In `assets/index.js`: `MS_HOUR`, `MS_DAY`, `MS_WEEK`,
   `REFRESH_MS`, `CARD_DELAY_MS`. In `assets/roadmap.js`: `MAX_ACTIVITY`, `PULSE_MS`,
   `TIME_START/END`, `CLS_LABEL_SM`. Use these; do not inline raw numbers.
@@ -300,10 +324,6 @@ git rebase origin/main
 
 - **No decorative line elements** flanking headings (`<span class="w-8 h-px ...">`).
   Keep headers as plain text, no side decorations.
-
-- **Footer links (SYS_LOGS, API_DOCS, STATUS_PAGE) are intentionally non-functional** —
-  rendered as `<span class="opacity-40">`, not `<a href="#">`. Do not add hrefs back until
-  real destinations exist.
 
 - **CVE cards use `.card-glow` not `.card-neon`.** This is intentional: `.card-neon` forces
   a cyan border-color which would override the severity-based border on CRITICAL/HIGH items.
