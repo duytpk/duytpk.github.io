@@ -201,7 +201,7 @@ function renderCVECard(item, i) {
     ? sev.border : 'border-outline-variant';
 
   return [
-    '<article class="flex flex-col bg-surface-container border ' + cardBorder + ' card-glow',
+    '<article class="flex flex-col bg-surface-container border ' + cardBorder + ' card-neon',
     ' group hover:bg-surface-container-high transition-all duration-300 relative"',
     ' style="animation:cardIn 0.35s ease both;animation-delay:' + (i * CARD_DELAY_MS) + 'ms">',
 
@@ -223,7 +223,7 @@ function renderCVECard(item, i) {
 
 function renderFeedCard(item, i, meta) {
   return [
-    '<article class="flex flex-col bg-surface-container border border-outline-variant card-neon',
+    '<article class="flex flex-col bg-surface-container border border-primary card-neon',
     ' group hover:bg-surface-container-high transition-all duration-300 relative"',
     ' style="animation:cardIn 0.35s ease both;animation-delay:' + (i * CARD_DELAY_MS) + 'ms">',
 

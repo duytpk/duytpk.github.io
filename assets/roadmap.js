@@ -429,7 +429,8 @@ function renderK8sPanel(track) {
   var allDone = nDone === leaves.length;
   var rootBorder  = allDone ? 'glow-magenta' : 'card-neon';
   var rootColor   = allDone ? 'text-secondary neon-text-magenta' : 'text-primary neon-text-cyan';
-  var nl          = 'background:var(--neon-cyan);box-shadow:0 0 8px var(--neon-cyan),0 0 20px var(--neon-cyan-20)';
+  var nl  = 'background:var(--neon-cyan);box-shadow:0 0 8px var(--neon-cyan),0 0 20px var(--neon-cyan-20)';
+  var nlm = 'background:var(--neon-magenta);box-shadow:0 0 8px var(--neon-magenta),0 0 20px var(--neon-magenta-20)';
 
   /* Layout constants — keep in sync with h-[240px] cards and gap-3 (12px) */
   var CARD_H = 240;
@@ -440,9 +441,10 @@ function renderK8sPanel(track) {
   var STRIDE = CARD_H + GAP;                  /* 252px — center-to-center */
   var ROOT_Y = COL_H / 2;                     /* K8s root center y */
 
-  /* Branches in connector col: spine midpoint → each day card left edge */
-  var branches = track.tasks.map(function(_, i) {
-    return '<div class="absolute h-px" style="left:50%;right:0;top:' + (HALF + i * STRIDE) + 'px;' + nl + '"></div>';
+  /* Branches: cyan normally, magenta when every chapter in that day is done */
+  var branches = track.tasks.map(function(day, i) {
+    var dayDone = day.chapters.every(function(ch) { return !!done[ch.id]; });
+    return '<div class="absolute h-px" style="left:50%;right:0;top:' + (HALF + i * STRIDE) + 'px;' + (dayDone ? nlm : nl) + '"></div>';
   }).join('');
 
   /* Day cards rendered directly in flex-col (no row wrapper) */
@@ -451,8 +453,8 @@ function renderK8sPanel(track) {
   }).join('');
 
   return [
-    /* 3-column grid: [K8s root | connector | day cards] — col 1 & 3 equal width */
-    '<div class="grid" style="grid-template-columns:1fr 5rem 1fr;gap:0;align-items:start">',
+    /* 3-column grid: [K8s root | connector | day cards] — all ~CVE-card width */
+    '<div class="grid" style="grid-template-columns:420px 1fr 420px;gap:0;align-items:start">',
 
       /* ── Col 1: K8s root — same 1fr width as day cards, vertically centered ── */
       '<div class="flex items-center" style="height:' + COL_H + 'px">',
@@ -474,9 +476,9 @@ function renderK8sPanel(track) {
       /* ── Col 2: Connector — trunk + vertical spine + per-day branches ── */
       '<div class="relative" style="height:' + COL_H + 'px">',
         /* Trunk: K8s root right-edge → spine, at K8s vertical center */
-        '<div class="absolute left-0 h-px" style="right:50%;top:' + ROOT_Y + 'px;' + nl + '"></div>',
+        '<div class="absolute left-0 h-px" style="right:50%;top:' + ROOT_Y + 'px;' + (allDone ? nlm : nl) + '"></div>',
         /* Spine: first-day center → last-day center */
-        '<div class="absolute w-px" style="left:50%;top:' + HALF + 'px;bottom:' + HALF + 'px;' + nl + '"></div>',
+        '<div class="absolute w-px" style="left:50%;top:' + HALF + 'px;bottom:' + HALF + 'px;' + (allDone ? nlm : nl) + '"></div>',
         branches,
       '</div>',
 
