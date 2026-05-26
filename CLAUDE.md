@@ -56,7 +56,7 @@ assets/
 public/
   favicon.svg
   CNAME                 # duytpk.me
-  sounds/               # (legacy, unused by static site)
+  .nojekyll             # disables Jekyll processing on GitHub Pages
 
 src/                    # Legacy React source — kept for reference, NOT used by the static site
   data/
@@ -199,14 +199,17 @@ EXERCISES). Each group has `items` — the actual leaf checkboxes.
 ROADMAP[track] → tasks[day] → children[group] → items[leaf]
 ```
 
-Leaf IDs follow the pattern `<track>-<day>-<d|e><n>` (e.g. `k8s-d1-d1`, `k8s-d1-e3`).
+Leaf ID patterns differ by track:
+- **K8s**: `k8s-<day>-p<n>` (e.g. `k8s-d1-p1`, `k8s-d2-p3`) — chapters use `p` prefix.
+- **Linux / Terraform**: `<track>-<module>-d<n>` (documents) and `<track>-<module>-e<n>` (exercises).
+
 **Do not rename IDs** — saved progress is keyed by ID.
 
 ### Storage
 
 Key: `devsecops-hub:roadmap:v4` (flat `{ leafId: boolean }` object).
 
-On first load (`raw === null`), `DEFAULT_DONE` seeds K8s Days 1–8 (48 leaf items) as done.
+On first load (`raw === null`), `DEFAULT_DONE` seeds K8s Days 1–8 (30 leaf items) as done.
 `loadDone()` validates the parsed value is a plain object before using it.
 `saveDone()` and `loadDone()` both wrap in try/catch for private-mode browsers.
 
@@ -292,14 +295,14 @@ git rebase origin/main
   listeners to freshly-injected HTML.
 
 - **Sort/filter select pattern.** Both `renderSortBar` and `renderFilterBar` use the same
-  `SELECT_CLS` string (no `uppercase`, `appearance-none`, `min-w-[140px]`, `pl-2 pr-8`).
+  `SELECT_CLS` string (includes `appearance-none`, `min-w-[140px]`, `pl-2 pr-8`; no `uppercase`).
   Each select is wrapped in `<div class="relative">` with a Material Symbol `expand_more`
   icon positioned absolute-right as the visible dropdown arrow. Do not use the browser's
   native arrow (the forms plugin renders it in dark gray, invisible on dark backgrounds).
 
 - **Named constants for magic numbers.** In `assets/index.js`: `MS_HOUR`, `MS_DAY`, `MS_WEEK`,
-  `REFRESH_MS`, `CARD_DELAY_MS`. In `assets/roadmap.js`: `MAX_ACTIVITY`, `PULSE_MS`,
-  `TIME_START/END`, `CLS_LABEL_SM`. Use these; do not inline raw numbers.
+  `REFRESH_MS`, `CARD_DELAY_MS`. In `assets/roadmap.js`: `MAX_ACTIVITY`,
+  `TIME_START`, `TIME_END`, `CLS_LABEL_SM`. Use these; do not inline raw numbers.
 
 - **Shared card helpers.** In `assets/index.js`, `_cardBody(item)` and `_cardFooter(item)` are
   private helpers (inside the IIFE) shared between `renderCVECard()` and `renderFeedCard()`.
