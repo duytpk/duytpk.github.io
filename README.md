@@ -46,7 +46,7 @@ assets/
 public/
   favicon.svg
   CNAME                 # duytpk.me
-  sounds/               # (legacy, unused)
+  .nojekyll             # disables Jekyll processing on GitHub Pages
 
 src/
   data/
@@ -87,10 +87,11 @@ Browser: fetch('news.json') every 5 min
 
 ### Color tokens (Tailwind + CSS custom properties)
 
-| CSS variable / Tailwind token | Hex       | Usage                              |
-| ----------------------------- | --------- | ---------------------------------- |
-| `--neon-cyan` / `primary`     | `#e1fdff` | Main text, nav links, glow         |
-| `--neon-magenta` / `secondary`| `#ffabf3` | Active nav, hover accents, magenta |
+| CSS variable / Tailwind token      | Hex       | Usage                              |
+| ---------------------------------- | --------- | ---------------------------------- |
+| `--neon-cyan` / `primary`          | `#e1fdff` | Main text, nav links               |
+| `primary-fixed-dim`                | `#00dbe7` | Neon cyan accent, glow             |
+| `--neon-magenta` / `secondary`     | `#ffabf3` | Active nav, hover accents, magenta |
 | `surface-container-lowest`    | `#0e0e10` | Body background                    |
 | `surface-container-low`       | `#1c1b1d` | Card backgrounds                   |
 | `surface-container`           | `#201f21` | Panel fills                        |
@@ -142,15 +143,15 @@ CRITICAL/HIGH cards render with the colored border; MEDIUM/LOW/NA use `border-ou
 
 ## Roadmap
 
-Tasks are stored in `localStorage` under key `devsecops-hub:roadmap:v1` as
+Tasks are stored in `localStorage` under key `devsecops-hub:roadmap:v4` as
 `{ taskId: boolean }`. Task IDs are defined in `assets/roadmap.js` in the `ROADMAP`
 array — **do not rename them** or saved progress will be lost.
 
 Node states (derived at render time):
 
-- **COMPLETED** — all tasks done → cyan glow (`glow-cyan`)
-- **IN_PROGRESS** — some tasks done → magenta glow (`glow-magenta`) + progress bar
-- **LOCKED** — no tasks done → grayscale + reduced opacity
+- **DONE** — all tasks in group/day done → magenta glow (`glow-magenta`)
+- **PARTIAL** — some tasks done → cyan border (`card-neon`)
+- **UNTOUCHED** — no tasks done → plain border (`border-outline-variant`)
 
 ---
 
