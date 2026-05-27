@@ -52,7 +52,7 @@ const CAT_LIMIT = SOURCES.reduce((acc, src) => {
 
 // Categories with a rolling cache: new items are merged with previously stored ones,
 // keeping the N most recent. Oldest items are evicted only when the cap is reached.
-const ROLLING_MAX = { cve: 50, ai: 60, virtualization: 50, hardware: 50 }
+const ROLLING_MAX = { ai: 60, virtualization: 50, hardware: 50 }
 
 const parser = new Parser({
   timeout: 20000,
