@@ -17,6 +17,13 @@ var TABS = [
     textClass:   'text-primary',
     accentClass: 'neon-text-cyan',
   },
+  {
+    key: 'virtualization', label: 'VIRT', icon: 'dns',
+    activeClass:  'text-secondary border-secondary hover-glitch',
+    badge: 'Virt update', status: 'Stable',
+    textClass:   'text-primary',
+    accentClass: 'neon-text-cyan',
+  },
 ];
 
 var INACTIVE_TAB = 'text-primary border-transparent hover:border-primary/40 hover-glitch';
@@ -88,14 +95,38 @@ var SEED = {
         contentSnippet: "Meta's Llama 3 models are now available for one-click deployment via SageMaker JumpStart, enabling fine-tuning and inference at scale.",
       },
     ],
+    virtualization: [
+      {
+        title: 'VMware vSphere 8 Update 3: What\'s New and Improved',
+        link: 'https://www.virtualizationhowto.com/',
+        source: 'Virtualization HowTo',
+        isoDate: '2026-05-20T00:00:00.000Z',
+        contentSnippet: 'VMware vSphere 8 Update 3 introduces new lifecycle management features, improved DRS algorithms, and enhanced security hardening options for enterprise environments.',
+      },
+      {
+        title: 'Proxmox VE 8.2 Released: New Features Overview',
+        link: 'https://www.virtualizationhowto.com/',
+        source: 'Virtualization HowTo',
+        isoDate: '2026-05-18T00:00:00.000Z',
+        contentSnippet: 'Proxmox VE 8.2 ships with kernel 6.8, improved SDN integration, and updated Ceph Reef support, making it an even stronger open-source alternative.',
+      },
+      {
+        title: 'Kubernetes on VMware: Best Practices for Tanzu Deployment',
+        link: 'https://www.virtualizationhowto.com/',
+        source: 'Virtualization HowTo',
+        isoDate: '2026-05-15T00:00:00.000Z',
+        contentSnippet: 'Step-by-step guide to deploying VMware Tanzu Kubernetes Grid on vSphere, covering namespace isolation, storage policies, and workload cluster lifecycle.',
+      },
+    ],
   },
 };
 
 /* ── State ──────────────────────────────────────────────────────────────────── */
-var newsData       = null;
-var currentTab     = 'cve';
-var cveSortBy      = 'date';   // 'date' | 'score'
-var aiFilterSource = 'all';
+var newsData        = null;
+var currentTab      = 'cve';
+var cveSortBy       = 'date';   // 'date' | 'score'
+var aiFilterSource  = 'all';
+var virtFilterSource = 'all';
 
 /* ── Helpers ────────────────────────────────────────────────────────────────── */
 function fmtDate(iso) {
@@ -283,6 +314,30 @@ function renderFilterBar() {
   if (sel) sel.addEventListener('change', function() { aiFilterSource = this.value; renderCards(); });
 }
 
+function renderVirtFilterBar() {
+  var bar = document.getElementById('virt-filter-bar');
+  if (!bar) return;
+  var feeds = (newsData && newsData.feeds) || {};
+  var sources = ['all'];
+  (feeds['virtualization'] || []).forEach(function(item) {
+    if (item.source && sources.indexOf(item.source) === -1) sources.push(item.source);
+  });
+  bar.className = 'mb-4 flex items-center justify-end gap-2';
+  bar.innerHTML =
+    '<label for="virt-filter-select" class="font-label-caps text-[9px] text-on-tertiary-container tracking-widest">Source:</label>' +
+    '<div class="relative">' +
+    '<select id="virt-filter-select" class="' + SELECT_CLS + '">' +
+    sources.map(function(s) {
+      return '<option value="' + esc(s) + '"' + (virtFilterSource === s ? ' selected' : '') + '>' + esc(s === 'all' ? 'All' : s) + '</option>';
+    }).join('') +
+    '</select>' +
+    '<span class="material-symbols-outlined pointer-events-none absolute right-1.5 top-1/2 -translate-y-1/2 text-primary select-none" style="font-size:14px">expand_more</span>' +
+    '</div>';
+
+  var sel = bar.querySelector('#virt-filter-select');
+  if (sel) sel.addEventListener('change', function() { virtFilterSource = this.value; renderCards(); });
+}
+
 /* ── Card render ────────────────────────────────────────────────────────────── */
 function renderTabCounts() {
   var feeds = (newsData && newsData.feeds) || {};
@@ -307,19 +362,32 @@ function filterAIItems(items) {
   return items.filter(function(item) { return item.source === aiFilterSource; });
 }
 
+function filterVirtItems(items) {
+  if (virtFilterSource === 'all') return items;
+  return items.filter(function(item) { return item.source === virtFilterSource; });
+}
+
 function renderCards() {
   var grid = document.getElementById('news-grid');
   if (!grid) return;
   renderTabCounts();
 
-  var sortBar   = document.getElementById('cve-sort-bar');
-  var filterBar = document.getElementById('ai-filter-bar');
+  var sortBar      = document.getElementById('cve-sort-bar');
+  var filterBar    = document.getElementById('ai-filter-bar');
+  var virtFilterBar = document.getElementById('virt-filter-bar');
+
   if (currentTab === 'cve') {
     renderSortBar();
-    if (filterBar) filterBar.className = 'hidden';
-  } else {
-    if (sortBar) sortBar.className = 'hidden';
+    if (filterBar)     filterBar.className     = 'hidden';
+    if (virtFilterBar) virtFilterBar.className = 'hidden';
+  } else if (currentTab === 'ai') {
+    if (sortBar)       sortBar.className       = 'hidden';
+    if (virtFilterBar) virtFilterBar.className = 'hidden';
     renderFilterBar();
+  } else {
+    if (sortBar)    sortBar.className    = 'hidden';
+    if (filterBar)  filterBar.className  = 'hidden';
+    renderVirtFilterBar();
   }
 
   var feeds = (newsData && newsData.feeds) || {};
@@ -331,7 +399,11 @@ function renderCards() {
     return;
   }
 
-  var displayItems = (currentTab === 'cve') ? sortCVEItems(items) : filterAIItems(items);
+  var displayItems;
+  if (currentTab === 'cve')             displayItems = sortCVEItems(items);
+  else if (currentTab === 'ai')         displayItems = filterAIItems(items);
+  else                                  displayItems = filterVirtItems(items);
+
   grid.innerHTML = displayItems.map(function(item, i) {
     if (currentTab === 'cve') return renderCVECard(item, i);
     return renderFeedCard(item, i, meta);

@@ -22,7 +22,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const OUT = resolve(__dirname, '../src/data/news.json')
 
 // Tab order in the dashboard. Each key must match a tab in src/pages/Dashboard.jsx.
-const CATEGORIES = ['cve', 'ai']
+const CATEGORIES = ['cve', 'ai', 'virtualization']
 
 // Reputable sources per category. Add/remove freely; just keep `category` as
 // one of CATEGORIES above. Multiple entries with the same category are merged.
@@ -35,6 +35,9 @@ const SOURCES = [
   { category: 'ai', name: 'AWS Machine Learning Blog', url: 'https://aws.amazon.com/blogs/machine-learning/feed/', limit: 20 },
   { category: 'ai', name: 'MarkTechPost', url: 'https://www.marktechpost.com/feed/', limit: 20 },
   { category: 'ai', name: "Simon Willison's Weblog", url: 'https://simonwillison.net/atom/entries/', limit: 20 },
+
+  // ---- Virtualization ----
+  { category: 'virtualization', name: 'Virtualization HowTo', url: 'https://www.virtualizationhowto.com/feed/', limit: 30 },
 
 ]
 
