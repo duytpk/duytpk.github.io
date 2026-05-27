@@ -22,7 +22,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const OUT = resolve(__dirname, '../src/data/news.json')
 
 // Tab order in the dashboard. Each key must match a tab in src/pages/Dashboard.jsx.
-const CATEGORIES = ['cve', 'ai', 'virtualization']
+const CATEGORIES = ['cve', 'ai', 'virtualization', 'hardware']
 
 // Reputable sources per category. Add/remove freely; just keep `category` as
 // one of CATEGORIES above. Multiple entries with the same category are merged.
@@ -31,16 +31,17 @@ const SOURCES = [
   { category: 'cve', name: 'cvefeed.io', url: 'https://cvefeed.io/rssfeed/latest.xml', limit: 50 },
 
   // ---- AI ----
-  { category: 'ai', name: 'Google AI Blog', url: 'https://blog.google/technology/ai/rss/', limit: 20 },
-  { category: 'ai', name: 'AWS Machine Learning Blog', url: 'https://aws.amazon.com/blogs/machine-learning/feed/', limit: 20 },
-  { category: 'ai', name: 'MarkTechPost', url: 'https://www.marktechpost.com/feed/', limit: 20 },
-  { category: 'ai', name: "Simon Willison's Weblog", url: 'https://simonwillison.net/atom/entries/', limit: 20 },
+  { category: 'ai', name: 'Google AI Blog', url: 'https://blog.google/technology/ai/rss/', limit: 15 },
+  { category: 'ai', name: 'AWS Machine Learning Blog', url: 'https://aws.amazon.com/blogs/machine-learning/feed/', limit: 15 },
+  { category: 'ai', name: 'MarkTechPost', url: 'https://www.marktechpost.com/feed/', limit: 15 },
+  { category: 'ai', name: "Simon Willison's Weblog", url: 'https://simonwillison.net/atom/entries/', limit: 15 },
 
   // ---- Virtualization ----
   { category: 'virtualization', name: 'Virtualization HowTo', url: 'https://www.virtualizationhowto.com/feed/', limit: 10 },
-  { category: 'virtualization', name: 'Yellow Bricks',        url: 'https://www.yellow-bricks.com/feed/',              limit: 10 },
-  { category: 'virtualization', name: 'Frank Denneman',       url: 'https://frankdenneman.nl/feed/',                   limit: 10 },
-  { category: 'virtualization', name: 'William Lam',          url: 'https://williamlam.com/feed',                      limit: 10 },
+  { category: 'virtualization', name: 'Yellow Bricks',        url: 'https://www.yellow-bricks.com/feed/',      limit: 10 },
+
+  // ---- Hardware ----
+  { category: 'hardware', name: 'ServeTheHome', url: 'https://www.servethehome.com/feed/', limit: 10 },
 
 ]
 
@@ -48,6 +49,10 @@ const CAT_LIMIT = SOURCES.reduce((acc, src) => {
   acc[src.category] = (acc[src.category] || 0) + (src.limit || 10)
   return acc
 }, {})
+
+// Categories with a rolling cache: new items are merged with previously stored ones,
+// keeping the N most recent. Oldest items are evicted only when the cap is reached.
+const ROLLING_MAX = { cve: 50, ai: 60, virtualization: 50, hardware: 50 }
 
 const parser = new Parser({
   timeout: 20000,
@@ -162,10 +167,16 @@ async function main() {
 
   const feeds = {}
   for (const cat of CATEGORIES) {
-    const merged = mergeItems(collected[cat], CAT_LIMIT[cat] ?? 10)
+    const rollingMax = ROLLING_MAX[cat]
+    const pool = rollingMax
+      ? [...collected[cat], ...(previous.feeds?.[cat] || [])]  // merge with history
+      : collected[cat]
+    const limit  = rollingMax ?? (CAT_LIMIT[cat] ?? 10)
+    const merged = mergeItems(pool, limit)
     // If a whole category failed, keep what we had rather than emptying the tab.
     feeds[cat] = merged.length ? merged : previous.feeds?.[cat] || []
-    console.log(`→ ${cat}: ${feeds[cat].length} items`)
+    const cacheNote = rollingMax ? ` (rolling, max ${rollingMax})` : ''
+    console.log(`→ ${cat}: ${feeds[cat].length} items${cacheNote}`)
   }
 
   const output = { updatedAt: new Date().toISOString(), generator: 'rss', feeds }

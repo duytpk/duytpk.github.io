@@ -24,6 +24,13 @@ var TABS = [
     textClass:   'text-primary',
     accentClass: 'neon-text-cyan',
   },
+  {
+    key: 'hardware', label: 'HW', icon: 'memory',
+    activeClass:  'text-secondary border-secondary hover-glitch',
+    badge: 'Hardware update', status: 'Stable',
+    textClass:   'text-primary',
+    accentClass: 'neon-text-cyan',
+  },
 ];
 
 var INACTIVE_TAB = 'text-primary border-transparent hover:border-primary/40 hover-glitch';
@@ -95,6 +102,29 @@ var SEED = {
         contentSnippet: "Meta's Llama 3 models are now available for one-click deployment via SageMaker JumpStart, enabling fine-tuning and inference at scale.",
       },
     ],
+    hardware: [
+      {
+        title: 'Intel Xeon 6 P-core vs E-core: Which Should You Choose?',
+        link: 'https://www.servethehome.com/',
+        source: 'ServeTheHome',
+        isoDate: '2026-05-20T00:00:00.000Z',
+        contentSnippet: 'A deep dive into Intel Xeon 6 P-core and E-core SKUs, comparing performance, power efficiency, and workload suitability for homelab and enterprise deployments.',
+      },
+      {
+        title: 'AMD EPYC 9654 Review: 96 Cores of Server Dominance',
+        link: 'https://www.servethehome.com/',
+        source: 'ServeTheHome',
+        isoDate: '2026-05-18T00:00:00.000Z',
+        contentSnippet: 'The AMD EPYC 9654 brings 96 Zen 4 cores to the server platform. We benchmark it across compute, memory bandwidth, and virtualization workloads.',
+      },
+      {
+        title: 'NVIDIA ConnectX-7 25GbE NIC Review',
+        link: 'https://www.servethehome.com/',
+        source: 'ServeTheHome',
+        isoDate: '2026-05-15T00:00:00.000Z',
+        contentSnippet: 'NVIDIA ConnectX-7 offers 25GbE with RDMA and SR-IOV support. We test latency, throughput, and CPU offload across Linux and Windows environments.',
+      },
+    ],
     virtualization: [
       {
         title: 'VMware vSphere 8 Update 3: What\'s New and Improved',
@@ -127,6 +157,7 @@ var currentTab      = 'cve';
 var cveSortBy       = 'date';   // 'date' | 'score'
 var aiFilterSource  = 'all';
 var virtFilterSource = 'all';
+var hwFilterSource   = 'all';
 
 /* ── Helpers ────────────────────────────────────────────────────────────────── */
 function fmtDate(iso) {
@@ -338,6 +369,30 @@ function renderVirtFilterBar() {
   if (sel) sel.addEventListener('change', function() { virtFilterSource = this.value; renderCards(); });
 }
 
+function renderHwFilterBar() {
+  var bar = document.getElementById('hw-filter-bar');
+  if (!bar) return;
+  var feeds = (newsData && newsData.feeds) || {};
+  var sources = ['all'];
+  (feeds['hardware'] || []).forEach(function(item) {
+    if (item.source && sources.indexOf(item.source) === -1) sources.push(item.source);
+  });
+  bar.className = 'mb-4 flex items-center justify-end gap-2';
+  bar.innerHTML =
+    '<label for="hw-filter-select" class="font-label-caps text-[9px] text-on-tertiary-container tracking-widest">Source:</label>' +
+    '<div class="relative">' +
+    '<select id="hw-filter-select" class="' + SELECT_CLS + '">' +
+    sources.map(function(s) {
+      return '<option value="' + esc(s) + '"' + (hwFilterSource === s ? ' selected' : '') + '>' + esc(s === 'all' ? 'All' : s) + '</option>';
+    }).join('') +
+    '</select>' +
+    '<span class="material-symbols-outlined pointer-events-none absolute right-1.5 top-1/2 -translate-y-1/2 text-primary select-none" style="font-size:14px">expand_more</span>' +
+    '</div>';
+
+  var sel = bar.querySelector('#hw-filter-select');
+  if (sel) sel.addEventListener('change', function() { hwFilterSource = this.value; renderCards(); });
+}
+
 /* ── Card render ────────────────────────────────────────────────────────────── */
 function renderTabCounts() {
   var feeds = (newsData && newsData.feeds) || {};
@@ -367,27 +422,41 @@ function filterVirtItems(items) {
   return items.filter(function(item) { return item.source === virtFilterSource; });
 }
 
+function filterHwItems(items) {
+  if (hwFilterSource === 'all') return items;
+  return items.filter(function(item) { return item.source === hwFilterSource; });
+}
+
 function renderCards() {
   var grid = document.getElementById('news-grid');
   if (!grid) return;
   renderTabCounts();
 
-  var sortBar      = document.getElementById('cve-sort-bar');
-  var filterBar    = document.getElementById('ai-filter-bar');
+  var sortBar       = document.getElementById('cve-sort-bar');
+  var filterBar     = document.getElementById('ai-filter-bar');
   var virtFilterBar = document.getElementById('virt-filter-bar');
+  var hwFilterBar   = document.getElementById('hw-filter-bar');
+
+  var allBars = [filterBar, virtFilterBar, hwFilterBar];
+  function hideBars(except) {
+    allBars.forEach(function(b) { if (b && b !== except) b.className = 'hidden'; });
+  }
 
   if (currentTab === 'cve') {
     renderSortBar();
-    if (filterBar)     filterBar.className     = 'hidden';
-    if (virtFilterBar) virtFilterBar.className = 'hidden';
+    hideBars(null);
   } else if (currentTab === 'ai') {
-    if (sortBar)       sortBar.className       = 'hidden';
-    if (virtFilterBar) virtFilterBar.className = 'hidden';
+    if (sortBar) sortBar.className = 'hidden';
+    hideBars(filterBar);
     renderFilterBar();
-  } else {
-    if (sortBar)    sortBar.className    = 'hidden';
-    if (filterBar)  filterBar.className  = 'hidden';
+  } else if (currentTab === 'virtualization') {
+    if (sortBar) sortBar.className = 'hidden';
+    hideBars(virtFilterBar);
     renderVirtFilterBar();
+  } else {
+    if (sortBar) sortBar.className = 'hidden';
+    hideBars(hwFilterBar);
+    renderHwFilterBar();
   }
 
   var feeds = (newsData && newsData.feeds) || {};
@@ -400,9 +469,10 @@ function renderCards() {
   }
 
   var displayItems;
-  if (currentTab === 'cve')             displayItems = sortCVEItems(items);
-  else if (currentTab === 'ai')         displayItems = filterAIItems(items);
-  else                                  displayItems = filterVirtItems(items);
+  if (currentTab === 'cve')               displayItems = sortCVEItems(items);
+  else if (currentTab === 'ai')           displayItems = filterAIItems(items);
+  else if (currentTab === 'virtualization') displayItems = filterVirtItems(items);
+  else                                    displayItems = filterHwItems(items);
 
   grid.innerHTML = displayItems.map(function(item, i) {
     if (currentTab === 'cve') return renderCVECard(item, i);
