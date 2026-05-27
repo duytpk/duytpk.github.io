@@ -37,7 +37,10 @@ const SOURCES = [
   { category: 'ai', name: "Simon Willison's Weblog", url: 'https://simonwillison.net/atom/entries/', limit: 20 },
 
   // ---- Virtualization ----
-  { category: 'virtualization', name: 'Virtualization HowTo', url: 'https://www.virtualizationhowto.com/feed/?posts_per_page=30', limit: 30 },
+  { category: 'virtualization', name: 'Virtualization HowTo', url: 'https://www.virtualizationhowto.com/feed/', limit: 10 },
+  { category: 'virtualization', name: 'Yellow Bricks',        url: 'https://www.yellow-bricks.com/feed/',              limit: 10 },
+  { category: 'virtualization', name: 'Frank Denneman',       url: 'https://frankdenneman.nl/feed/',                   limit: 10 },
+  { category: 'virtualization', name: 'William Lam',          url: 'https://williamlam.com/feed',                      limit: 10 },
 
 ]
 
