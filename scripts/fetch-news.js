@@ -37,7 +37,7 @@ const SOURCES = [
   { category: 'ai', name: "Simon Willison's Weblog", url: 'https://simonwillison.net/atom/entries/', limit: 20 },
 
   // ---- Virtualization ----
-  { category: 'virtualization', name: 'Virtualization HowTo', url: 'https://www.virtualizationhowto.com/feed/', limit: 30 },
+  { category: 'virtualization', name: 'Virtualization HowTo', url: 'https://www.virtualizationhowto.com/feed/?posts_per_page=30', limit: 30 },
 
 ]
 
