@@ -1,235 +1,249 @@
 {
-  "updatedAt": "2026-05-27T20:03:30.871Z",
+  "updatedAt": "2026-05-27T22:26:24.179Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
-        "title": "CVE-2026-5509 - Arbitrary Command Injection via Browser Developer Console in TP-Link Archer BE450 and BE7200",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-5509",
+        "title": "CVE-2026-47270 - pam_usb: strtok() race condition in multi-threaded PAM hosts can corrupt deny_remote result",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47270",
         "source": "cvefeed.io",
-        "isoDate": "2026-05-27T18:16:29.000Z",
-        "contentSnippet": "An authenticated command injection vulnerability exists in the Archer BE450 v1 and BE7200 v1 router that allows an administrator to execute arbitrary system commands through the web management interface. After successfully authenticating to the admin interface, an attacker can le",
-        "cveScore": 8.5,
+        "isoDate": "2026-05-27T21:16:18.000Z",
+        "contentSnippet": "pam_usb provides hardware authentication for Linux using ordinary removable media. Prior to 0.9.0, pam_usb is a PAM module loaded into the host process (sudo, login, GDM, GNOME Shell). Display managers such as GDM run multiple concurrent authentication threads. Three functions us",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-47269 - pam_usb: deny_remote feature incorrectly classifies IPv4-mapped IPv6 remote connections as local",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47269",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-27T21:16:18.000Z",
+        "contentSnippet": "pam_usb provides hardware authentication for Linux using ordinary removable media. Prior to 0.9.0, pam_usb's deny_remote feature checks utmpx ut_addr_v6 to detect whether an authentication request originates from a remote session. The outer guard was if (utent->ut_addr_v6[0] != 0",
+        "cveScore": 7.4,
         "cveSeverity": "HIGH"
       },
       {
-        "title": "CVE-2026-4392 - TeamSpeak 3 Server clientek Handshake assertion",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-4392",
+        "title": "CVE-2026-45137 - Anchor: Program is not properly validated",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45137",
         "source": "cvefeed.io",
-        "isoDate": "2026-05-27T18:16:28.000Z",
-        "contentSnippet": "A vulnerability was detected in TeamSpeak 3 Server up to 3.13.7. This issue affects some unknown processing of the component clientek Handshake Handler. Performing a manipulation of the argument proof results in reachable assertion. Remote exploitation of the attack is possible. ",
-        "cveScore": 6.9,
+        "isoDate": "2026-05-27T21:16:18.000Z",
+        "contentSnippet": "Anchor is a framework providing several convenient developer tools for writing Solana programs. From 1.0.0 to before 1.0.2, an logic error causes anchor programs to accept any program id when requiring the system program id, causing false assumptions resulting in potential arbitr",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-45136 - claude-code-cache-fix: Local code execution via Python triple-quote injection in tools/quota-statusline.sh",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45136",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-27T21:16:18.000Z",
+        "contentSnippet": "claude-code-cache-fix is a cache optimization proxy for Claude Code. From 3.5.0 to before 3.5.2, tools/quota-statusline.sh (introduced in v3.5.0) interpolates Claude Code's hook stdin payload directly into a Python triple-quoted string literal. A ''' byte sequence in any user-con",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-44713 - pam_usb: Command injection via $TMUX environment variable leads to RCE as root",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44713",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-27T21:16:18.000Z",
+        "contentSnippet": "pam_usb provides hardware authentication for Linux using ordinary removable media. Prior to 0.8.7, src/tmux.c reads the user's $TMUX environment variable, splits it on commas, and interpolates the socket-path component directly into a shell command passed to popen(). Because the ",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-44712 - pam_usb: Shell injection via device UUID and username in pamusb-conf and pamusb-agent",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44712",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-27T21:16:18.000Z",
+        "contentSnippet": "pam_usb provides hardware authentication for Linux using ordinary removable media. Prior to 0.8.7, a crafted UUID such as $(id>/tmp/rce) in the config causes root RCE when pamusb-conf --reset-pads is run. A USB device with a crafted filesystem UUID (some controllers allow this) c",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-44711 - pam_usb: Symlink attacks on pad directory and pad files enable authentication bypass and root file corruption",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44711",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-27T21:16:18.000Z",
+        "contentSnippet": "pam_usb provides hardware authentication for Linux using ordinary removable media. Prior to 0.8.7, symlink attacks on pad directory and pad files enable authentication bypass and root file corruption. This vulnerability is fixed in 0.8.7.",
+        "cveScore": 7.9,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-44710 - pam_usb: NULL pointer dereference from UDisks device fields causes PAM crash and login denial-of-service",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44710",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-27T21:16:17.000Z",
+        "contentSnippet": "pam_usb provides hardware authentication for Linux using ordinary removable media. Prior to 0.8.7, src/device.c passed the return values of udisks_drive_get_serial(), udisks_drive_get_vendor(), and udisks_drive_get_model() directly to strcmp() without NULL checks. The GIO/UDisks ",
+        "cveScore": 4.6,
         "cveSeverity": "MEDIUM"
       },
       {
-        "title": "CVE-2026-4391 - TeamSpeak 3 Server ECC Key heap-based overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-4391",
+        "title": "CVE-2026-44709 - pam_usb: PINENTRY_FALLBACK_APP environment variable allows arbitrary command execution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44709",
         "source": "cvefeed.io",
-        "isoDate": "2026-05-27T18:16:28.000Z",
-        "contentSnippet": "A security vulnerability has been detected in TeamSpeak 3 Server up to 3.13.7. This vulnerability affects unknown code of the component ECC Key Parser. Such manipulation leads to heap-based buffer overflow. The attack may be launched remotely. Upgrading to version 3.13.8 is able ",
-        "cveScore": 6.9,
+        "isoDate": "2026-05-27T21:16:17.000Z",
+        "contentSnippet": "pam_usb provides hardware authentication for Linux using ordinary removable media. Prior to 0.8.7, pamusb-pinentry reads the PINENTRY_FALLBACK_APP environment variable and executes it directly without any validation. Any process that can set environment variables before pamusb-pi",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-44660 - UltraJSON: Memory Leak in ujson.dump() on Write Failure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44660",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-27T21:16:17.000Z",
+        "contentSnippet": "UltraJSON is a fast JSON encoder and decoder written in pure C with bindings for Python 3.7+. Prior to 5.12.1, when ujson.dump() writes to a file-like object and the write operation raises an exception, the serialized JSON string object is not decremented, leaking memory. Each fa",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-21785 - HCL BigFix Remote Control Server WebUI is affected by a misconfigured Content Security Policy",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-21785",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-27T21:16:17.000Z",
+        "contentSnippet": "A misconfigured Content Security Policy (CSP) in HCL BigFix Remote Control Server WebUI (versions 10.1.0.0442 and earlier) fails to define directives without fallbacks, allowing attackers to bypass intended security restrictions and load unauthorized resources.",
+        "cveScore": 4,
         "cveSeverity": "MEDIUM"
       },
       {
-        "title": "CVE-2026-4390 - TeamSpeak 3 Server Connection State Management process_resend_queue use after free",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-4390",
+        "title": "CVE-2026-45152 - uniget: Command Injection in tool.Check Leading to Arbitrary Code Execution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45152",
         "source": "cvefeed.io",
-        "isoDate": "2026-05-27T18:16:28.000Z",
-        "contentSnippet": "A weakness has been identified in TeamSpeak 3 Server up to 3.13.7. This affects the function process_resend_queue of the component Connection State Management. This manipulation causes use after free. The attack may be initiated remotely. Upgrading to version 3.13.8 is able to mi",
+        "isoDate": "2026-05-27T21:05:00.000Z",
+        "contentSnippet": "uniget is a universal installer and updater for (container) tools. Prior to 0.27.1, a command injection vulnerability exists in uniget due to unsafe execution of the check field from metadata files using /bin/bash -c. Because the check field is loaded directly from untrusted JSON",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-44720 - OpenLearnX: Critical Authentication Bypass via JWT Signature Verification Disabled Leading to Account Takeover",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44720",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-27T21:02:29.000Z",
+        "contentSnippet": "OpenLearnX is an open-source, decentralized learning and assessment platform. Prior to 2.0.4, a critical authentication vulnerability was identified in OpenLearnX that could allow unauthorized access to user accounts under specific conditions. This vulnerability is fixed in 2.0.4",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-45083 - Goobi viewer: Unauthenticated Solr Streaming Expression Proxy",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45083",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-27T21:00:52.000Z",
+        "contentSnippet": "The Goobi viewer is a web application that allows digitised material to be displayed in a web browser. From 4.8.0 to before 26.04.1, the Goobi viewer REST endpoint POST /api/v1/index/stream accepted an arbitrary Solr streaming expression from unauthenticated network clients and f",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-9208 - Tanium addressed an unauthorized code execution vulnerability in Connect.",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9208",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-27T20:59:43.000Z",
+        "contentSnippet": "Tanium addressed an unauthorized code execution vulnerability in Connect.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-44247 - Volcano: Webhook server vulnerable to OOM due to unbounded HTTP request body size",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44247",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-27T20:56:47.000Z",
+        "contentSnippet": "Volcano is a Kubernetes-native batch scheduling system. Prior to v1.14.2, v1.13.3, and v1.12.4, the Volcano webhook server does not enforce a size limit on incoming HTTP request bodies. Any in-cluster pod that can reach the webhook endpoint may send an arbitrarily large request b",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-9759 - NULL Pointer Dereference in Wireshark",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9759",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-27T20:16:46.000Z",
+        "contentSnippet": "ROHC protocol dissector crash in Wireshark 4.6.0 to 4.6.5 and 4.4.0 to 4.4.15 allows denial of service",
         "cveScore": 5.5,
         "cveSeverity": "MEDIUM"
       },
       {
-        "title": "CVE-2026-48153 - Budibase: SSRF via OAuth2 token endpoint URL reaches internal hosts and cloud metadata",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48153",
+        "title": "CVE-2026-8364 - Gladinet Triofox Missing Authentication for Critical Functions",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8364",
         "source": "cvefeed.io",
-        "isoDate": "2026-05-27T18:16:27.000Z",
-        "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.39.0, fetchToken in the OAuth2 SDK makes a POST to a builder-supplied URL with plain node-fetch, skipping the blacklist.isBlacklisted check that every other outbound fetch path in the codebase uses. The Joi schema for the O",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
+        "isoDate": "2026-05-27T20:16:43.000Z",
+        "contentSnippet": "Gladinet Triofox Cloud Server Agent Access Service (GladServerAgentService.exe) listens on TCP port 7878 and processes remote HTTP messages with URL paths starting with /resources, /status, /sysinfo, /woshome, /Settings, /schedule, or /DavCache.",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
       },
       {
-        "title": "CVE-2026-48152 - Budibase: Basic app users can exfiltrate stored REST datasource auth by rewriting datasource base URL",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48152",
+        "title": "CVE-2026-8363 - Gladinet Triofox Stack-based Buffer Overflow in WOSDeviceDropFolder.dll",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8363",
         "source": "cvefeed.io",
-        "isoDate": "2026-05-27T18:16:27.000Z",
-        "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.39.0, the single-datasource GET and PUT routes are guarded by generic TABLE READ, not by Builder/Admin permission or datasource-specific ownership/resource checks. The built-in Basic app user role maps to the WRITE permissi",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
+        "isoDate": "2026-05-27T20:16:43.000Z",
+        "contentSnippet": "A stack-based buffer overflow condition exists in WOSDeviceDropFolder.dll when processing a long URL path starting with /resources:",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
       },
       {
-        "title": "CVE-2026-48151 - Budibase: Webhook schema endpoint authorization bypass allows unauthenticated mutation of webhook and automation schema",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48151",
+        "title": "CVE-2026-8362 - Gladinet Triofox Stack-based Buffer Overflow in WOSDefaultHttpModule.dll",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8362",
         "source": "cvefeed.io",
-        "isoDate": "2026-05-27T18:16:27.000Z",
-        "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.39.0, the webhook schema-building endpoint is registered under builderRoutes, but the generic authorization middleware skips authorization for all paths matching /api/webhooks/schema. As a result, an unauthenticated caller ",
+        "isoDate": "2026-05-27T20:16:42.000Z",
+        "contentSnippet": "A stack-based buffer overflow condition exists in WOSDefaultHttpModule.dll when processing a long URL path starting with /woshome",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-8361 - Gladinet Triofox Path Traversal in WOSDefaultHttpModule.dll",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8361",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-27T20:16:42.000Z",
+        "contentSnippet": "A path traversal vulnerability exists in WOSDefaultHttpModule.dll when processing a URL path starting with /woshome",
         "cveScore": 7.5,
         "cveSeverity": "HIGH"
       },
       {
-        "title": "CVE-2026-48150 - Budibase: Workspace-scoped builder escalates to global admin via /api/public/v1/roles/assign",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48150",
+        "title": "CVE-2026-8360 - Gladinet Triofox Unchecked Return Value to NULL Pointer Dereference DOS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8360",
         "source": "cvefeed.io",
-        "isoDate": "2026-05-27T18:16:27.000Z",
-        "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.39.0, /api/public/v1/roles/assign is guarded by the builderOrAdmin middleware, which passes any user who is a builder for the app id in the x-budibase-app-id header. That check admits both global builders and workspace-scop",
-        "cveScore": 9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-48149 - Budibase: Stored XSS in Text component: BASIC users execute JS in admin session via MarkdownViewer innerHTML + CDN+srcdoc CSP bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48149",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-27T18:16:27.000Z",
-        "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.39.0, the Budibase Text component renders markdown by assigning marked.parse(markdown) straight to innerHTML with no sanitizer (packages/bbui/src/Markdown/MarkdownViewer.svelte:22). Any column a builder binds to a Text comp",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-48148 - Budibase: Unvalidated VectorDB Host Parameter Enables SSRF",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48148",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-27T18:16:27.000Z",
-        "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.35.3, the VectorDB configuration endpoint in Budibase accepts a host parameter that undergoes no validation against internal IP ranges, reserved hostnames, or URL schemes. Any authenticated user with builder-level access ca",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-48147 - Budibase: Unanchored Regex in `matchers.ts` Allows CSRF Bypass via Query String Injection in Budibase Worker",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48147",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-27T18:16:27.000Z",
-        "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.35.4, the buildMatcherRegex() / matches() functions in packages/backend-core/src/middleware/matchers.ts route patterns are compiled into unanchored regular expressions and tested against ctx.request.url, which includes the ",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-48146 - Budibase: SSRF via OAuth2 Config Validation — Missing fetchWithBlacklist Protection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48146",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-27T18:16:26.000Z",
-        "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.39.0, the OAuth2 token fetch function in packages/server/src/sdk/workspace/oauth2/utils.ts uses raw fetch(config.url) with no SSRF protection. The safe wrapper fetchWithBlacklist() exists in the same codebase and is used in",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-48128 - Budibase: SSRF via User-Controlled queryId in Automation Execute Query Step",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48128",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-27T18:16:26.000Z",
-        "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.39.0, the executeQuery automation step in Budibase accepts a queryId from automation step inputs and passes it directly to the query execution controller without additional validation. When combined with a REST datasource c",
-        "cveScore": 5.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-46427 - Budibase: Snowflake private key returned unmasked from datasource API to BASIC users",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46427",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-27T18:16:26.000Z",
-        "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.38.3, removeSecrets at packages/server/src/sdk/workspace/datasources/datasources.ts masks only datasource config fields whose schema type is DatasourceFieldType.PASSWORD. The Snowflake integration types its privateKey field",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-46426 - Budibase: Unrestricted Upload of File with Dangerous Type",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46426",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-27T18:16:26.000Z",
-        "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.38.2, the file upload endpoint POST /api/attachments/process does not enforce active-content restrictions for authenticated users. The checks for dangerous file extensions are conditionally wrapped inside if (isPublicUser) ",
-        "cveScore": 7.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-46425 - Budibase: SCIM endpoints lack role-based authorization, BASIC users CRUD tenant users",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46425",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-27T18:16:26.000Z",
-        "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.38.2, packages/worker/src/api/routes/global/scim.ts attaches only two middlewares to the SCIM router: requireSCIM (checks the Enterprise feature flag and SCIM config) and doInScimContext (sets the SCIM request context). The",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-46424 - Budibase: Missing Cache Invalidation on Public API Role Unassignment Allows Revoked Users to Retain Privileges for Up to 1 Hour",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46424",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-27T18:16:26.000Z",
-        "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.38.2, the public API role unassignment endpoint (POST /api/public/v1/roles/unassign) updates user documents in CouchDB but does not invalidate the corresponding Redis user cache entries. Because the authentication middlewar",
-        "cveScore": 4.2,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-45719 - Budibase: CouchDB Reduce Injection via Unsanitized Calculation Parameter in V1 Views API",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45719",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-27T18:16:26.000Z",
-        "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.38.1, the V1 Views API (POST /api/views) accepts a calculation parameter from the request body that is interpolated directly into a CouchDB reduce function definition without validation. Although an internal SCHEMA_MAP obje",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-45718 - Budibase: Row Action Trigger Bypasses View Row Filter Security Boundary Allowing Action on Out-of-Scope Rows",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45718",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-27T18:16:25.000Z",
-        "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.38.1, the row action trigger endpoint (POST /api/tables/:sourceId/actions/:actionId/trigger) fails to validate that the user-supplied rowId is within the scope of the view's row filters. A user with access to a filtered vie",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-45717 - Budibase: `PUT /api/datasources/:datasourceId` is protected only by `TABLE/READ` permission instead of builder access, allowing any authenticated app user to overwrite datasource conn",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45717",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-27T18:16:25.000Z",
-        "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.38.1, Budibase exposes a REST API for datasource management. The route PUT /api/datasources/:datasourceId is registered in the authorizedRoutes group with TABLE/READ permission. This is the same authorization level as the r",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-45716 - Budibase: Builder-to-Admin Privilege Escalation via onboardUsers Endpoint Without SMTP Configuration",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45716",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-27T18:16:25.000Z",
-        "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.38.1, the POST /api/global/users/onboard endpoint is protected by workspaceBuilderOrAdmin middleware, allowing any user with builder permissions to access it. When SMTP email is not configured (the default for self-hosted B",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-45715 - Budibase: SSRF Bypass via HTTP Redirect in REST Datasource Integration",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45715",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-27T18:16:25.000Z",
-        "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.38.1, the REST datasource integration (packages/server/src/integrations/rest.ts) follows HTTP redirects without re-checking the IP blacklist, allowing an authenticated Builder to access internal services (cloud metadata, da",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-45548 - Budibase: SSRF in AI Extract File Automation Step via Missing IP Blacklist Validation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45548",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-27T18:16:25.000Z",
-        "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.34.8, the processUrlFile function in packages/server/src/automations/steps/ai/extract.ts uses fetch(fileUrl) directly without the IP blacklist validation that is consistently applied to all other automation steps. This allo",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-45090 - Dalfox: Unauthenticated Remote DoS via Closed-Channel Write in `ParameterAnalysis` (server mode)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45090",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-27T18:16:25.000Z",
-        "contentSnippet": "Dalfox is a powerful open-source XSS scanner and utility focused on automation. Prior to 2.13.0, ParameterAnalysis in pkg/scanning/parameterAnalysis.go runs two sequential worker stages that both write to the same results channel. The channel is correctly closed after the first s",
+        "isoDate": "2026-05-27T20:16:42.000Z",
+        "contentSnippet": "Function calls to WOSCommonUtil.dll!WOSSysInfoGetDeviceInterface() in various DLLs (i.e., WOSProfileMgrModule.dll, WOSWebDavModule.dll) can return a NULL pointer (i.e., when no user is logged into the Triofox Server Agent Management Console). The returned NULL pointer is not chec",
         "cveScore": 7.5,
         "cveSeverity": "HIGH"
       },
       {
-        "title": "CVE-2026-45089 - Dalfox: Unauthenticated Arbitrary File Create/Append via `output` Option in Dalfox Server Mode",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45089",
+        "title": "CVE-2026-8359 - Gladinet Triofox WOSHttpStatusModule.dll NULL Function Pointer Call DoS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8359",
         "source": "cvefeed.io",
-        "isoDate": "2026-05-27T18:16:24.000Z",
-        "contentSnippet": "Dalfox is a powerful open-source XSS scanner and utility focused on automation. Prior to 2.13.0, when dalfox is run in REST API server mode, the output, output-all, and debug fields in model.Options are JSON-tagged and deserialized directly from the attacker's request body, then ",
-        "cveScore": 8.2,
+        "isoDate": "2026-05-27T20:16:42.000Z",
+        "contentSnippet": "When processing a request with a URL path starting with /status or /sysinfo, WOSHttpStatusModule.dll is to be loaded to handle such URL patterns. The WOSBin_LoadHttpModule function in the dll would be called to set up a \"module\" object for that module. However, WOSHttpStatusModul",
+        "cveScore": 7.5,
         "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-49009 - Northern.tech Mender Server Directory Traversal Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49009",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-27T20:16:41.000Z",
+        "contentSnippet": "Northern.tech Mender Server v4.1.0, v4.0.1 and below, and fixed in v4.1.1 and v4.0.2 allows Directory Traversal.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-48792 - pam_usb: pusb_has_virtual_input_device() silently discards EACCES, disabling remote desktop detection under non-root execution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48792",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-27T20:16:41.000Z",
+        "contentSnippet": "pam_usb provides hardware authentication for Linux using ordinary removable media. Prior to 0.9.1, src/evdev.c silently ignores EACCES errors when opening /dev/input/event* nodes, causing pusb_has_virtual_input_device() to return 0 (no virtual devices found) even when every open(",
+        "cveScore": 4.4,
+        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
+      {
+        "title": "Process financial documents using Amazon Bedrock Data Automation",
+        "link": "https://aws.amazon.com/blogs/machine-learning/process-financial-documents-using-amazon-bedrock-data-automation/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-05-27T21:28:53.000Z",
+        "contentSnippet": "In this post, we explore how Amazon Bedrock Data Automation can accurately extract information from four common types of financial documents: bank statements, W-2 forms, 1099-B tax forms, and vendor contracts. We highlight the complexity in the documents, detail the custom extrac"
+      },
+      {
+        "title": "Building AI agents for business support using Amazon Bedrock AgentCore",
+        "link": "https://aws.amazon.com/blogs/machine-learning/building-ai-agents-for-business-support-using-amazon-bedrock-agentcore/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-05-27T20:06:34.000Z",
+        "contentSnippet": "In this post, we share how the AWS Generative AI Innovation Center (GenAIIC) collaborated with Works Human Intelligence (WHI) to build two AI agents using Amazon Bedrock AgentCore. We discuss the challenges encountered and the solutions that reduced costs by up to 97% while impro"
+      },
       {
         "title": "From data overload to actionable insights: How Verizon Connect scaled agentic AI to 100,000 users",
         "link": "https://aws.amazon.com/blogs/machine-learning/from-data-overload-to-actionable-insights-how-verizon-connect-scaled-agentic-ai-to-100000-users/",
@@ -635,20 +649,6 @@
         "source": "Google AI Blog",
         "isoDate": "2026-05-05T16:00:00.000Z",
         "contentSnippet": "Google is partnering with XPRIZE and Range Media Partners on the $3.5 million Future Vision film competition."
-      },
-      {
-        "title": "The latest AI news we announced in April 2026",
-        "link": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-april-2026/",
-        "source": "Google AI Blog",
-        "isoDate": "2026-05-04T17:00:00.000Z",
-        "contentSnippet": "Here are Google’s latest AI updates from April 2026"
-      },
-      {
-        "title": "Reduce friction and latency for long-running jobs with Webhooks in Gemini API",
-        "link": "https://blog.google/innovation-and-ai/technology/developers-tools/event-driven-webhooks/",
-        "source": "Google AI Blog",
-        "isoDate": "2026-05-04T15:30:00.000Z",
-        "contentSnippet": "Event-Driven Webhooks are a push-based notification system that eliminates the need for inefficient polling."
       }
     ],
     "virtualization": [
