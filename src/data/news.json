@@ -1,235 +1,270 @@
 {
-  "updatedAt": "2026-05-28T02:32:45.073Z",
+  "updatedAt": "2026-05-28T17:58:12.778Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
-        "title": "CVE-2026-8915 - Samsung Escargot Out-of-Bounds Write Buffer Overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8915",
+        "title": "CVE-2026-9098 - CVE-2026-9098",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9098",
         "source": "cvefeed.io",
-        "isoDate": "2026-05-28T00:16:43.000Z",
-        "contentSnippet": "Out-of-bounds write vulnerability in Samsung Open Source Escargot allows Overflow Buffers. This issue affects Escargot: 36f5fb58366a67b713c02f6fd985e924fcc09e31.",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
+        "isoDate": "2026-05-28T17:16:34.000Z",
+        "contentSnippet": "In Casdoor versions 2.362.0 and earlier, the SAML callback handler in controllers/auth.go accepts any well-formed SAMLResponse sent to /api/acs without verifying that it corresponds to an AuthnRequest previously issued by Casdoor. Additionally, if an administrator disables or del",
+        "cveScore": 0,
+        "cveSeverity": "NA"
       },
       {
-        "title": "CVE-2026-4888 - Everest Forms – Contact Form, Payment Form, Quiz, Survey & Custom Form Builder <= 3.4.7 - Missing Authorization to Authenticated (Subscriber+) Email Sending",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-4888",
+        "title": "CVE-2026-9097 - CVE-2026-9097",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9097",
         "source": "cvefeed.io",
-        "isoDate": "2026-05-28T00:16:43.000Z",
-        "contentSnippet": "The Everest Forms – Contact Form, Payment Form, Quiz, Survey & Custom Form Builder plugin for WordPress is vulnerable to unauthorized email sending due to a missing capability check on the send_test_email() function in all versions up to, and including, 3.4.7. This makes it possi",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
+        "isoDate": "2026-05-28T17:16:34.000Z",
+        "contentSnippet": "Casdoor versions 2.362.0 and earlier do not verify that a JWT used for token exchange is still active. The GetTokenExchangeToken() function in object/token_oauth.go validates the JWT signature and parses its claims, but never queries the Token table to verify whether the subject ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
       },
       {
-        "title": "CVE-2026-9739 - Google Chrome SSE DNS Rebinding",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9739",
+        "title": "CVE-2026-9096 - CVE-2026-9096",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9096",
         "source": "cvefeed.io",
-        "isoDate": "2026-05-27T23:16:48.000Z",
-        "contentSnippet": "Vulnerable to DNS rebinding attacks when using SSE (http://b/499408790). During the beta phase, we implemented `allowed-origins` and `allowed-hosts` flags to align with MCP security guidelines. However, the hardcoded `Access-Control-Allow-Origin: *` header in the SSE initializati",
-        "cveScore": 9.4,
-        "cveSeverity": "CRITICAL"
+        "isoDate": "2026-05-28T17:16:34.000Z",
+        "contentSnippet": "Casdoor versions 2.362.0 and earlier do not enforce SAML assertion time bounds. The gosaml2 library reports all time-validation results, including NotOnOrAfter and NotBefore, in the assertionInfo.WarningInfo field. However, ParseSamlResponse() never reads this field, meaning that",
+        "cveScore": 0,
+        "cveSeverity": "NA"
       },
       {
-        "title": "CVE-2026-46544 - Microsoft UFO reuses client-supplied WebSocket session IDs and replays stale task results to new authenticated requesters",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46544",
+        "title": "CVE-2026-9095 - CVE-2026-9095",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9095",
         "source": "cvefeed.io",
-        "isoDate": "2026-05-27T23:16:48.000Z",
-        "contentSnippet": "Microsoft UFO open-source framework for intelligent automation across devices and platforms. In 3.0.1-4-ge2626659, Microsoft UFO accepts client-supplied session_id values in WebSocket task messages and reuses an existing in-memory session object if that session_id already exists.",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
+        "isoDate": "2026-05-28T17:16:34.000Z",
+        "contentSnippet": "Casdoor versions 2.362.0 and earlier map SAML assertions to user sessions without replay protection. The ParseSamlResponse() function in object/saml_sp.go calls sp.RetrieveAssertionInfo() and immediately maps the result to a user session. There is no assertion ID cache, OneTimeUs",
+        "cveScore": 0,
+        "cveSeverity": "NA"
       },
       {
-        "title": "CVE-2026-46538 - Microsoft UFO accepts cross-device TASK_END messages by session_id only, allowing peer task-result injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46538",
+        "title": "CVE-2026-9094 - CVE-2026-9094",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9094",
         "source": "cvefeed.io",
-        "isoDate": "2026-05-27T23:16:48.000Z",
-        "contentSnippet": "Microsoft UFO open-source framework for intelligent automation across devices and platforms. In 3.0.1-4-ge2626659, Microsoft UFO's constellation client tracks pending task responses by session_id only and does not verify that a TASK_END message came from the device that originall",
-        "cveScore": 5.9,
-        "cveSeverity": "MEDIUM"
+        "isoDate": "2026-05-28T17:16:34.000Z",
+        "contentSnippet": "Casdoor versions 2.362.0 and earlier contain a vulnerability enabling cross-organization token exchange. The GetTokenExchangeToken function in object/token_oauth.go validates JWT signatures but does not verify that the token's user belongs to the same organization as the target a",
+        "cveScore": 0,
+        "cveSeverity": "NA"
       },
       {
-        "title": "CVE-2026-46416 - Microsoft UFO shared WebSocket handler state causes cross-client response hijacking",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46416",
+        "title": "CVE-2026-9093 - CVE-2026-9093",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9093",
         "source": "cvefeed.io",
-        "isoDate": "2026-05-27T23:16:47.000Z",
-        "contentSnippet": "Microsoft UFO open-source framework for intelligent automation across devices and platforms. In 3.0.1-4-ge2626659, Microsoft UFO creates one shared UFOWebSocketHandler instance and reuses it for multiple authenticated WebSocket connections. The handler stores per-connection proto",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
+        "isoDate": "2026-05-28T17:16:34.000Z",
+        "contentSnippet": "In Casdoor versions 2.362.0 and earlier, the SAML service provider implementation does not validate the AudienceRestriction element in SAML assertions. The buildSp function in object/saml_sp.go never sets AudienceURI on the gosaml2 SAMLServiceProvider struct and never inspects Wa",
+        "cveScore": 0,
+        "cveSeverity": "NA"
       },
       {
-        "title": "CVE-2026-46414 - Microsoft UFO WebSocket role spoofing allows authenticated peer task hijacking",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46414",
+        "title": "CVE-2026-9092 - CVE-2026-9092",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9092",
         "source": "cvefeed.io",
-        "isoDate": "2026-05-27T23:16:47.000Z",
-        "contentSnippet": "Microsoft UFO open-source framework for intelligent automation across devices and platforms. In 3.0.1-4-ge2626659, Microsoft UFO's WebSocket control plane trusts client-supplied identity and role fields in task messages. A client connection can register as a normal device, but la",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
+        "isoDate": "2026-05-28T17:16:34.000Z",
+        "contentSnippet": "Casdoor versions 2.362.0 and earlier contain a vulnerability involving unverified email binding that may enable account takeover. The getExistUserByBindingRule function matches users by email without checking the email_verified claim from upstream providers; the idp.UserInfo stru",
+        "cveScore": 0,
+        "cveSeverity": "NA"
       },
       {
-        "title": "CVE-2026-46402 - Microsoft UFO uses untrusted task_name in log paths, allowing authenticated path traversal and log file creation outside the logs directory",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46402",
+        "title": "CVE-2026-9091 - CVE-2026-9091",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9091",
         "source": "cvefeed.io",
-        "isoDate": "2026-05-27T23:16:47.000Z",
-        "contentSnippet": "Microsoft UFO open-source framework for intelligent automation across devices and platforms. In 3.0.1-4-ge2626659, Microsoft UFO uses the user-controlled task_name value directly when constructing session log paths. An authenticated client can supply path traversal sequences in t",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
+        "isoDate": "2026-05-28T17:16:33.000Z",
+        "contentSnippet": "Casdoor versions 2.362.0 and earlier contain a logic flaw in the social‑login binding flow that allows users to bypass configured MFA requirements. The binding‑rule code path in controllers/auth.go calls HandleLoggedIn directly without invoking checkMfaEnable. Any user authentica",
+        "cveScore": 0,
+        "cveSeverity": "NA"
       },
       {
-        "title": "CVE-2026-45322 - OS Command Injection in Microsoft UFO Shell Action Replay via Stored Session JSON",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45322",
+        "title": "CVE-2026-9090 - CVE-2026-9090",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9090",
         "source": "cvefeed.io",
-        "isoDate": "2026-05-27T23:16:47.000Z",
-        "contentSnippet": "Microsoft UFO open-source framework for intelligent automation across devices and platforms. Microsoft UFO tagged releases up to and including v3.0.0 contain an OS command injection vulnerability in the shell action replay path. In affected releases, ShellReceiver.run_shell() pas",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
+        "isoDate": "2026-05-28T17:16:33.000Z",
+        "contentSnippet": "Casdoor versions 2.362.0 and earlier contain a vulnerability that allows an attacker to bypass authentication by supplying an arbitrary signing certificate. The buildSpCertificateStore function extracts the X.509 certificate directly from the incoming SAMLResponse instead of usin",
+        "cveScore": 0,
+        "cveSeverity": "NA"
       },
       {
-        "title": "CVE-2026-9208 - Tanium addressed an unauthorized code execution vulnerability in Connect.",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9208",
+        "title": "CVE-2026-8697 - Improper Authentication Rate Limiting on TP-Link's Archer C64",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8697",
         "source": "cvefeed.io",
-        "isoDate": "2026-05-27T22:16:37.000Z",
-        "contentSnippet": "Tanium addressed an unauthorized code execution vulnerability in Connect.",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-45152 - uniget: Command Injection in tool.Check Leading to Arbitrary Code Execution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45152",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-27T22:16:36.000Z",
-        "contentSnippet": "uniget is a universal installer and updater for (container) tools. Prior to 0.27.1, a command injection vulnerability exists in uniget due to unsafe execution of the check field from metadata files using /bin/bash -c. Because the check field is loaded directly from untrusted JSON",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-45083 - Goobi viewer: Unauthenticated Solr Streaming Expression Proxy",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45083",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-27T22:16:36.000Z",
-        "contentSnippet": "The Goobi viewer is a web application that allows digitised material to be displayed in a web browser. From 4.8.0 to before 26.04.1, the Goobi viewer REST endpoint POST /api/v1/index/stream accepted an arbitrary Solr streaming expression from unauthenticated network clients and f",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-44720 - OpenLearnX: Critical Authentication Bypass via JWT Signature Verification Disabled Leading to Account Takeover",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44720",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-27T22:16:36.000Z",
-        "contentSnippet": "OpenLearnX is an open-source, decentralized learning and assessment platform. Prior to 2.0.4, a critical authentication vulnerability was identified in OpenLearnX that could allow unauthorized access to user accounts under specific conditions. This vulnerability is fixed in 2.0.4",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-44247 - Volcano: Webhook server vulnerable to OOM due to unbounded HTTP request body size",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44247",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-27T22:16:35.000Z",
-        "contentSnippet": "Volcano is a Kubernetes-native batch scheduling system. Prior to v1.14.2, v1.13.3, and v1.12.4, the Volcano webhook server does not enforce a size limit on incoming HTTP request bodies. Any in-cluster pod that can reach the webhook endpoint may send an arbitrarily large request b",
-        "cveScore": 6.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-47270 - pam_usb: strtok() race condition in multi-threaded PAM hosts can corrupt deny_remote result",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47270",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-27T21:16:18.000Z",
-        "contentSnippet": "pam_usb provides hardware authentication for Linux using ordinary removable media. Prior to 0.9.0, pam_usb is a PAM module loaded into the host process (sudo, login, GDM, GNOME Shell). Display managers such as GDM run multiple concurrent authentication threads. Three functions us",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-47269 - pam_usb: deny_remote feature incorrectly classifies IPv4-mapped IPv6 remote connections as local",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47269",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-27T21:16:18.000Z",
-        "contentSnippet": "pam_usb provides hardware authentication for Linux using ordinary removable media. Prior to 0.9.0, pam_usb's deny_remote feature checks utmpx ut_addr_v6 to detect whether an authentication request originates from a remote session. The outer guard was if (utent->ut_addr_v6[0] != 0",
-        "cveScore": 7.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-45137 - Anchor: Program is not properly validated",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45137",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-27T21:16:18.000Z",
-        "contentSnippet": "Anchor is a framework providing several convenient developer tools for writing Solana programs. From 1.0.0 to before 1.0.2, an logic error causes anchor programs to accept any program id when requiring the system program id, causing false assumptions resulting in potential arbitr",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-45136 - claude-code-cache-fix: Local code execution via Python triple-quote injection in tools/quota-statusline.sh",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45136",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-27T21:16:18.000Z",
-        "contentSnippet": "claude-code-cache-fix is a cache optimization proxy for Claude Code. From 3.5.0 to before 3.5.2, tools/quota-statusline.sh (introduced in v3.5.0) interpolates Claude Code's hook stdin payload directly into a Python triple-quoted string literal. A ''' byte sequence in any user-con",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-44713 - pam_usb: Command injection via $TMUX environment variable leads to RCE as root",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44713",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-27T21:16:18.000Z",
-        "contentSnippet": "pam_usb provides hardware authentication for Linux using ordinary removable media. Prior to 0.8.7, src/tmux.c reads the user's $TMUX environment variable, splits it on commas, and interpolates the socket-path component directly into a shell command passed to popen(). Because the ",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-44712 - pam_usb: Shell injection via device UUID and username in pamusb-conf and pamusb-agent",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44712",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-27T21:16:18.000Z",
-        "contentSnippet": "pam_usb provides hardware authentication for Linux using ordinary removable media. Prior to 0.8.7, a crafted UUID such as $(id>/tmp/rce) in the config causes root RCE when pamusb-conf --reset-pads is run. A USB device with a crafted filesystem UUID (some controllers allow this) c",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-44711 - pam_usb: Symlink attacks on pad directory and pad files enable authentication bypass and root file corruption",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44711",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-27T21:16:18.000Z",
-        "contentSnippet": "pam_usb provides hardware authentication for Linux using ordinary removable media. Prior to 0.8.7, symlink attacks on pad directory and pad files enable authentication bypass and root file corruption. This vulnerability is fixed in 0.8.7.",
-        "cveScore": 7.9,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-44710 - pam_usb: NULL pointer dereference from UDisks device fields causes PAM crash and login denial-of-service",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44710",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-27T21:16:17.000Z",
-        "contentSnippet": "pam_usb provides hardware authentication for Linux using ordinary removable media. Prior to 0.8.7, src/device.c passed the return values of udisks_drive_get_serial(), udisks_drive_get_vendor(), and udisks_drive_get_model() directly to strcmp() without NULL checks. The GIO/UDisks ",
-        "cveScore": 4.6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-44709 - pam_usb: PINENTRY_FALLBACK_APP environment variable allows arbitrary command execution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44709",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-27T21:16:17.000Z",
-        "contentSnippet": "pam_usb provides hardware authentication for Linux using ordinary removable media. Prior to 0.8.7, pamusb-pinentry reads the PINENTRY_FALLBACK_APP environment variable and executes it directly without any validation. Any process that can set environment variables before pamusb-pi",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-44660 - UltraJSON: Memory Leak in ujson.dump() on Write Failure",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44660",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-27T21:16:17.000Z",
-        "contentSnippet": "UltraJSON is a fast JSON encoder and decoder written in pure C with bindings for Python 3.7+. Prior to 5.12.1, when ujson.dump() writes to a file-like object and the write operation raises an exception, the serialized JSON string object is not decremented, leaking memory. Each fa",
+        "isoDate": "2026-05-28T17:16:33.000Z",
+        "contentSnippet": "Due to improper enforcement of authentication rate-limiting on a debug SSH service in Archer C64 v1, the SSH service allows unlimited authentication attempts and uses the same credentials as the web interface. This enables an attacker to brute-force valid credentials via SSH. Suc",
         "cveScore": 8.7,
         "cveSeverity": "HIGH"
       },
       {
-        "title": "CVE-2026-21785 - HCL BigFix Remote Control Server WebUI is affected by a misconfigured Content Security Policy",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-21785",
+        "title": "CVE-2026-6720 - Calicoctl leaks cluster credentials to stderr when verbose logging is enabled",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6720",
         "source": "cvefeed.io",
-        "isoDate": "2026-05-27T21:16:17.000Z",
-        "contentSnippet": "A misconfigured Content Security Policy (CSP) in HCL BigFix Remote Control Server WebUI (versions 10.1.0.0442 and earlier) fails to define directives without fallbacks, allowing attackers to bypass intended security restrictions and load unauthorized resources.",
-        "cveScore": 4,
+        "isoDate": "2026-05-28T17:16:33.000Z",
+        "contentSnippet": "When calicoctl is invoked with --log-level=info or --log-level=debug, the client prints the full contents of its loaded connection-configuration struct to stderr in a single log line. The struct embeds every credential calicoctl uses to talk to the cluster — inline kubeconfig (wi",
+        "cveScore": 7.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-47676 - Hono: app.mount() strips mount prefix using undecoded path, causing incorrect routing for percent-encoded paths",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47676",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-28T17:16:32.000Z",
+        "contentSnippet": "Hono is a Web application framework that provides support for any JavaScript runtime. Prior to 4.12.21, app.mount() strips the mount prefix from the incoming request path using the raw URL pathname, while route matching is performed against the percent-decoded path. This inconsis",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-47675 - Hono: Cookie helper does not sanitize sameSite and priority, allowing Set-Cookie injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47675",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-28T17:16:32.000Z",
+        "contentSnippet": "Hono is a Web application framework that provides support for any JavaScript runtime. Prior to 4.12.21, the serialize() function in hono/cookie validates domain and path options against characters that corrupt Set-Cookie header syntax (;, \\r, \\n), but does not apply the same vali",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-47674 - Hono: IP Restriction bypasses static deny rules for non-canonical IPv6",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47674",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-28T17:16:32.000Z",
+        "contentSnippet": "Hono is a Web application framework that provides support for any JavaScript runtime. Prior to 4.12.21, the ip-restriction middleware (hono/ip-restriction) compares incoming IP addresses against configured deny and allow rules using string equality after partial normalization. No",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-47673 - Hono: JWT middleware accepts any Authorization scheme, not only Bearer",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47673",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-28T17:16:32.000Z",
+        "contentSnippet": "Hono is a Web application framework that provides support for any JavaScript runtime. Prior to 4.12.21, the jwt and jwk middlewares do not verify that the Authorization header value uses theBearer scheme. Any two-part header value — regardless of the scheme name in the first posi",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-45292 - opentelemetry-java: Unbounded Memory Allocation in W3C Baggage Propagation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45292",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-28T17:16:32.000Z",
+        "contentSnippet": "opentelemetry-java is the Java implementation of the OpenTelemetry API for recording telemetry, and SDK for managing telemetry recorded by the API. Prior to 1.62.0, a vulnerability affects the baggage propagation implementation in opentelemetry-api and opentelemetry-extension-tra",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-45261 - GitButler: Link injection via forge integration enables arbitrary script execution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45261",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-28T17:16:31.000Z",
+        "contentSnippet": "GitButler is a modern Git-based version control interface for AI-powered workflows. Prior to 0.19.7, a emote code execution vulnerability exists in the Tauri-based GitButler desktop application. An attacker can inject a malicious link in a pull request body, which if clicked by t",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-45078 - Synapse CPU starvation (Denial of Service)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45078",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-28T17:16:31.000Z",
+        "contentSnippet": "Synapse is an open source Matrix homeserver implementation. Prior to 1.152.1, local authenticated users can cause Synapse to starve other requests of CPU and lead to other requests failing, causing other users to be denied service. This vulnerability is fixed in 1.152.1.",
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-45076 - Synapse pagination denial of service",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45076",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-28T17:16:31.000Z",
+        "contentSnippet": "Synapse is an open source Matrix homeserver implementation. Prior to 1.152.1, in federated rooms, malicious homeservers can craft room events in such a way that prevents Synapse from providing full history to paginating clients. Clients could therefore fail to display room histor",
+        "cveScore": 5.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-44543 - Local Path Provisioner: HelperPod Template Injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44543",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-28T17:16:30.000Z",
+        "contentSnippet": "Local Path Provisioner provides a way for the Kubernetes users to utilize the local storage in each node. Prior to 0.0.36, a malicious user with permission to edit the local-path-config ConfigMap in the local-path-storage namespace can manipulate the helperPod.yaml template used ",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-44477 - CloudNativePG: Metrics exporter allows privilege escalation to PostgreSQL superuser and OS RCE",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44477",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-28T17:16:30.000Z",
+        "contentSnippet": "CloudNativePG is a platform designed to manage PostgreSQL databases within Kubernetes environments. Prior to 1.29.1 and 1.28.3, the CloudNativePG metrics exporter opens its PostgreSQL connection as the postgres superuser via the pod-local Unix socket, then demotes the session wit",
+        "cveScore": 9.4,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-44466 - Zed: Allowlist Bypass via Bash Arithmetic Expansion in Terminal Tool Permissions",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44466",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-28T17:16:30.000Z",
+        "contentSnippet": "Zed is a code editor. Prior to 0.229.0, Zed's terminal tool permission system can be bypassed via bash arithmetic expansion $((...)), allowing execution of arbitrary commands nested inside an allowlisted command like echo. This vulnerability is fixed in 0.229.0.",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-44465 - Zed: Zed IDE Arbitrary Code Execution via untrusted repository with poisoned .git/config",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44465",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-28T17:16:30.000Z",
+        "contentSnippet": "Zed is a code editor. Prior to 0.227.1, Zed IDE executes arbitrary commands when opening a folder with a malicious .git/config file that abuses the core.fsmonitor Git configuration option. This allows an attacker to achieve Remote Code Execution (RCE) when a victim open a folder ",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-44463 - Zed: Allowlist Bypass via Environment Variable Injection in Terminal Tool Permissions",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44463",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-28T17:16:29.000Z",
+        "contentSnippet": "Zed is a code editor. Prior to 0.229.0, Zed's terminal tool permission system can be bypassed by prepending environment variable assignments to allowlisted commands, hijacking program behavior (e.g., PAGER) to execute arbitrary code. This vulnerability is fixed in 0.229.0.",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-44462 - Zed: Allowlist Bypass via Bash Variable Expansion Chain in Terminal Tool Permissions",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44462",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-28T17:16:29.000Z",
+        "contentSnippet": "Zed is a code editor. Prior to 0.229.0, Zed's terminal tool permission system can be bypassed via bash variable expansion chaining (${var@P}), allowing arbitrary command execution under an allowlisted command prefix. This vulnerability is fixed in 0.229.0.",
+        "cveScore": 6.4,
         "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
+      {
+        "title": "Claude Opus 4.8 is now available on AWS",
+        "link": "https://aws.amazon.com/blogs/machine-learning/claude-opus-4-8-is-now-available-on-aws/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-05-28T17:51:32.000Z",
+        "contentSnippet": "This post covers Opus 4.8's improvements and practical guidance for AI engineers integrating the model into agentic systems and production inference workloads on Amazon Bedrock."
+      },
+      {
+        "title": "Automate AML alert triage with Amazon Quick and Snowflake Cortex AI",
+        "link": "https://aws.amazon.com/blogs/machine-learning/automate-aml-alert-triage-with-amazon-quick-and-snowflake-cortex-ai/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-05-28T16:41:07.000Z",
+        "contentSnippet": "This post demonstrates that integration in action by automating one of the most labor-intensive workflows in financial services: anti-money laundering (AML) alert triage. You will build a triage workflow using Amazon Quick Flows and Snowflake Cortex, connected through the Amazon "
+      },
+      {
+        "title": "Catch up on 12 major I/O 2026 moments",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/io-2026-keynote-moment-videos/",
+        "source": "Google AI Blog",
+        "isoDate": "2026-05-28T15:00:00.000Z",
+        "contentSnippet": "Here are 12 of the biggest Google I/O 2026 keynote moments, including news about Gemini Omni, Gemini 3.5 Flash and more."
+      },
+      {
+        "title": "Perplexity AI Open-Sources Unigram Tokenizer That Achieves 5x Lower p50 Latency Than Hugging Face tokenizers Crate",
+        "link": "https://www.marktechpost.com/2026/05/28/perplexity-ai-open-sources-unigram-tokenizer-that-achieves-5x-lower-p50-latency-than-hugging-face-tokenizers-crate/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-05-28T09:08:20.000Z",
+        "contentSnippet": "Perplexity AI open-sources a rewritten Unigram tokenizer that reduces reranker latency and cuts production CPU utilization by 5-6x. The post Perplexity AI Open-Sources Unigram Tokenizer That Achieves 5x Lower p50 Latency Than Hugging Face tokenizers Crate appeared first on MarkTe"
+      },
+      {
+        "title": "A Coding Guide to Implement a pgvector-Powered Semantic, Hybrid, Sparse, and Quantized Vector Search System",
+        "link": "https://www.marktechpost.com/2026/05/28/a-coding-guide-to-implement-a-pgvector-powered-semantic-hybrid-sparse-and-quantized-vector-search-system/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-05-28T08:07:09.000Z",
+        "contentSnippet": "In this tutorial, we build a complete pgvector playground inside Google Colab and explore how PostgreSQL can work as a powerful vector database for modern AI applications. We start by installing PostgreSQL, compiling the pgvector extension, connecting through Psycopg, and registe"
+      },
       {
         "title": "Sakana AI Proposes DiffusionBlocks: a Block-wise Training Framework That Converts Residual Networks into Independently Trainable Denoising Modules",
         "link": "https://www.marktechpost.com/2026/05/27/sakana-ai-proposes-diffusionblocks-a-block-wise-training-framework-that-converts-residual-networks-into-independently-trainable-denoising-modules/",
@@ -614,44 +649,16 @@
         "source": "Google AI Blog",
         "isoDate": "2026-05-11T06:00:00.000Z",
         "contentSnippet": "This week, the new, AI-powered Google Finance is launching across Europe, with full local language support. This reimagined experience offers a suite of powerful capabil…"
-      },
-      {
-        "title": "See what happens when creative legends use AI to make ads for small businesses.",
-        "link": "https://blog.google/company-news/inside-google/company-announcements/the-small-brief/",
-        "source": "Google AI Blog",
-        "isoDate": "2026-05-08T15:00:00.000Z",
-        "contentSnippet": "Today we're launching The Small Brief, an initiative bringing together three ad industry icons to champion a local businesses they love. Their mission is to build breakt…"
-      },
-      {
-        "title": "Notes on the xAI/Anthropic data center deal",
-        "link": "https://simonwillison.net/2026/May/7/xai-anthropic/#atom-entries",
-        "source": "Simon Willison's Weblog",
-        "isoDate": "2026-05-07T17:09:28.000Z",
-        "contentSnippet": "There weren't a lot of big new announcements from Anthropic at yesterday's Code w/ Claude event, but the biggest by far was the deal they've struck with SpaceX/xAI to use \"all of the capacity of their Colossus data center\". As I mentioned in my live blog of the keynote, that's th"
-      },
-      {
-        "title": "5 gardening tips you can try right in Search",
-        "link": "https://blog.google/products-and-platforms/products/search/gardening-tips/",
-        "source": "Google AI Blog",
-        "isoDate": "2026-05-06T16:00:00.000Z",
-        "contentSnippet": "We’ve rounded up the top ways you can use Google’s AI Mode, Search Live and Shopping to help your plants thrive."
-      },
-      {
-        "title": "Live blog: Code w/ Claude 2026",
-        "link": "https://simonwillison.net/2026/May/6/code-w-claude-2026/#atom-entries",
-        "source": "Simon Willison's Weblog",
-        "isoDate": "2026-05-06T15:58:27.000Z",
-        "contentSnippet": "I'm at Anthropic's Code w/ Claude event today. Here's my live blog of the morning keynote sessions.You are only seeing the long-form articles from my blog. Subscribe to /atom/everything/ to get all of my posts, or take a look at my other subscription options."
-      },
-      {
-        "title": "Vibe coding and agentic engineering are getting closer than I'd like",
-        "link": "https://simonwillison.net/2026/May/6/vibe-coding-and-agentic-engineering/#atom-entries",
-        "source": "Simon Willison's Weblog",
-        "isoDate": "2026-05-06T14:24:08.000Z",
-        "contentSnippet": "I recently talked with Joseph Ruscio about AI coding tools for Heavybit's High Leverage podcast: Ep. #9, The AI Coding Paradigm Shift with Simon Willison. Here are some of my highlights, including my disturbing realization that vibe coding and agentic engineering have started to "
       }
     ],
     "virtualization": [
+      {
+        "title": "I thought my Technitium DNS cluster was fixed. These settings were the real problem",
+        "link": "https://www.virtualizationhowto.com/2026/05/i-thought-my-technitium-dns-cluster-was-fixed-these-settings-were-the-real-problem/",
+        "source": "Virtualization HowTo",
+        "isoDate": "2026-05-28T12:22:37.000Z",
+        "contentSnippet": "When you run a home lab long enough, you eventually hit one of those troubleshooting sessions that turns into a full-on detective story. You start out convinced the issue is… The post I thought my Technitium DNS cluster was fixed. These settings were the real problem appeared fir"
+      },
       {
         "title": "I Tried Termius for My Home Lab and Replaced My SSH Client",
         "link": "https://www.virtualizationhowto.com/2026/05/i-tried-termius-for-my-home-lab-and-replaced-my-ssh-client/",
