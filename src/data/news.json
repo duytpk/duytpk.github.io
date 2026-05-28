@@ -1,235 +1,242 @@
 {
-  "updatedAt": "2026-05-28T17:58:12.778Z",
+  "updatedAt": "2026-05-28T20:23:57.417Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
-        "title": "CVE-2026-9098 - CVE-2026-9098",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9098",
+        "title": "CVE-2026-42401 - Improper Neutralization of Input During Web Page Generation in Kibana Leading to Stored HTML Injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-42401",
         "source": "cvefeed.io",
-        "isoDate": "2026-05-28T17:16:34.000Z",
-        "contentSnippet": "In Casdoor versions 2.362.0 and earlier, the SAML callback handler in controllers/auth.go accepts any well-formed SAMLResponse sent to /api/acs without verifying that it corresponds to an AuthnRequest previously issued by Casdoor. Additionally, if an administrator disables or del",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "isoDate": "2026-05-28T19:40:21.000Z",
+        "contentSnippet": "Improper Neutralization of Input During Web Page Generation (CWE-79) in Kibana can lead to stored HTML injection. A user with write access to an Elasticsearch index could persist crafted markup which, when subsequently rendered through an affected Kibana view by another user, was",
+        "cveScore": 4.1,
+        "cveSeverity": "MEDIUM"
       },
       {
-        "title": "CVE-2026-9097 - CVE-2026-9097",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9097",
+        "title": "CVE-2026-33463 - Operation on a Resource after Expiration or Termination in Kibana Leading to Unauthorized File Access",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-33463",
         "source": "cvefeed.io",
-        "isoDate": "2026-05-28T17:16:34.000Z",
-        "contentSnippet": "Casdoor versions 2.362.0 and earlier do not verify that a JWT used for token exchange is still active. The GetTokenExchangeToken() function in object/token_oauth.go validates the JWT signature and parses its claims, but never queries the Token table to verify whether the subject ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "isoDate": "2026-05-28T19:37:38.000Z",
+        "contentSnippet": "Operation on a Resource after Expiration or Termination (CWE-672) in Kibana can lead to unauthorized information disclosure. A logic error in how expiration timestamps were validated allowed a time-bounded access token to remain usable beyond its intended validity window, enablin",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
       },
       {
-        "title": "CVE-2026-9096 - CVE-2026-9096",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9096",
+        "title": "CVE-2026-33464 - Uncontrolled Resource Consumption in Kibana Leading to Denial of Service",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-33464",
         "source": "cvefeed.io",
-        "isoDate": "2026-05-28T17:16:34.000Z",
-        "contentSnippet": "Casdoor versions 2.362.0 and earlier do not enforce SAML assertion time bounds. The gosaml2 library reports all time-validation results, including NotOnOrAfter and NotBefore, in the assertionInfo.WarningInfo field. However, ParseSamlResponse() never reads this field, meaning that",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "isoDate": "2026-05-28T19:35:31.000Z",
+        "contentSnippet": "Uncontrolled Resource Consumption (CWE-400) in Kibana can lead to a denial of service via Excessive Allocation (CAPEC-130). An authenticated user holding a low-privileged role can submit a specially crafted, oversized payload to an internal Kibana API, causing the Kibana process ",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
       },
       {
-        "title": "CVE-2026-9095 - CVE-2026-9095",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9095",
+        "title": "CVE-2026-33462 - Path Traversal in Kibana Leading to Unauthorized Deletion of User Accounts",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-33462",
         "source": "cvefeed.io",
-        "isoDate": "2026-05-28T17:16:34.000Z",
-        "contentSnippet": "Casdoor versions 2.362.0 and earlier map SAML assertions to user sessions without replay protection. The ParseSamlResponse() function in object/saml_sp.go calls sp.RetrieveAssertionInfo() and immediately maps the result to a user session. There is no assertion ID cache, OneTimeUs",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "isoDate": "2026-05-28T19:33:38.000Z",
+        "contentSnippet": "A path traversal vulnerability was identified in Kibana's dashboard management functionality. An authenticated user with limited permissions could create a dashboard with a specially crafted identifier. When an administrator subsequently attempts to delete this dashboard through ",
+        "cveScore": 4.6,
+        "cveSeverity": "MEDIUM"
       },
       {
-        "title": "CVE-2026-9094 - CVE-2026-9094",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9094",
+        "title": "CVE-2026-32847 - DeepCode 1.2.0 Path Traversal via SPA Catch-All Route in main.py",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-32847",
         "source": "cvefeed.io",
-        "isoDate": "2026-05-28T17:16:34.000Z",
-        "contentSnippet": "Casdoor versions 2.362.0 and earlier contain a vulnerability enabling cross-organization token exchange. The GetTokenExchangeToken function in object/token_oauth.go validates JWT signatures but does not verify that the token's user belongs to the same organization as the target a",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-9093 - CVE-2026-9093",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9093",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-28T17:16:34.000Z",
-        "contentSnippet": "In Casdoor versions 2.362.0 and earlier, the SAML service provider implementation does not validate the AudienceRestriction element in SAML assertions. The buildSp function in object/saml_sp.go never sets AudienceURI on the gosaml2 SAMLServiceProvider struct and never inspects Wa",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-9092 - CVE-2026-9092",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9092",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-28T17:16:34.000Z",
-        "contentSnippet": "Casdoor versions 2.362.0 and earlier contain a vulnerability involving unverified email binding that may enable account takeover. The getExistUserByBindingRule function matches users by email without checking the email_verified claim from upstream providers; the idp.UserInfo stru",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-9091 - CVE-2026-9091",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9091",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-28T17:16:33.000Z",
-        "contentSnippet": "Casdoor versions 2.362.0 and earlier contain a logic flaw in the social‑login binding flow that allows users to bypass configured MFA requirements. The binding‑rule code path in controllers/auth.go calls HandleLoggedIn directly without invoking checkMfaEnable. Any user authentica",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-9090 - CVE-2026-9090",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9090",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-28T17:16:33.000Z",
-        "contentSnippet": "Casdoor versions 2.362.0 and earlier contain a vulnerability that allows an attacker to bypass authentication by supplying an arbitrary signing certificate. The buildSpCertificateStore function extracts the X.509 certificate directly from the incoming SAMLResponse instead of usin",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-8697 - Improper Authentication Rate Limiting on TP-Link's Archer C64",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8697",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-28T17:16:33.000Z",
-        "contentSnippet": "Due to improper enforcement of authentication rate-limiting on a debug SSH service in Archer C64 v1, the SSH service allows unlimited authentication attempts and uses the same credentials as the web interface. This enables an attacker to brute-force valid credentials via SSH. Suc",
+        "isoDate": "2026-05-28T19:32:13.000Z",
+        "contentSnippet": "DeepCode through commit c991dc2 contains a path traversal vulnerability in the SPA catch-all route in new_ui/backend/main.py that allows unauthenticated attackers to read arbitrary files by supplying percent-encoded path segments to the GET /{full_path:path} endpoint. Attackers c",
         "cveScore": 8.7,
         "cveSeverity": "HIGH"
       },
       {
-        "title": "CVE-2026-6720 - Calicoctl leaks cluster credentials to stderr when verbose logging is enabled",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6720",
+        "title": "CVE-2026-33590 - Insecure default permissions in Portainer CE",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-33590",
         "source": "cvefeed.io",
-        "isoDate": "2026-05-28T17:16:33.000Z",
-        "contentSnippet": "When calicoctl is invoked with --log-level=info or --log-level=debug, the client prints the full contents of its loaded connection-configuration struct to stderr in a single log line. The struct embeds every credential calicoctl uses to talk to the cluster — inline kubeconfig (wi",
-        "cveScore": 7.2,
+        "isoDate": "2026-05-28T19:30:06.000Z",
+        "contentSnippet": "Insecure default settings of Portainer CE grant regular (non-admin) users privileges that allow host filesystem access and host-level code execution. An authenticated non-administrative user with endpoint access can exploit these settings to read host files or obtain root equival",
+        "cveScore": 8.5,
         "cveSeverity": "HIGH"
       },
       {
-        "title": "CVE-2026-47676 - Hono: app.mount() strips mount prefix using undecoded path, causing incorrect routing for percent-encoded paths",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47676",
+        "title": "CVE-2026-4944 - Hardcoded trust_remote_code=True in vllm-project/vllm Bypasses User Security Control",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-4944",
         "source": "cvefeed.io",
-        "isoDate": "2026-05-28T17:16:32.000Z",
-        "contentSnippet": "Hono is a Web application framework that provides support for any JavaScript runtime. Prior to 4.12.21, app.mount() strips the mount prefix from the incoming request path using the raw URL pathname, while route matching is performed against the percent-decoded path. This inconsis",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-47675 - Hono: Cookie helper does not sanitize sameSite and priority, allowing Set-Cookie injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47675",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-28T17:16:32.000Z",
-        "contentSnippet": "Hono is a Web application framework that provides support for any JavaScript runtime. Prior to 4.12.21, the serialize() function in hono/cookie validates domain and path options against characters that corrupt Set-Cookie header syntax (;, \\r, \\n), but does not apply the same vali",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-47674 - Hono: IP Restriction bypasses static deny rules for non-canonical IPv6",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47674",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-28T17:16:32.000Z",
-        "contentSnippet": "Hono is a Web application framework that provides support for any JavaScript runtime. Prior to 4.12.21, the ip-restriction middleware (hono/ip-restriction) compares incoming IP addresses against configured deny and allow rules using string equality after partial normalization. No",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-47673 - Hono: JWT middleware accepts any Authorization scheme, not only Bearer",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47673",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-28T17:16:32.000Z",
-        "contentSnippet": "Hono is a Web application framework that provides support for any JavaScript runtime. Prior to 4.12.21, the jwt and jwk middlewares do not verify that the Authorization header value uses theBearer scheme. Any two-part header value — regardless of the scheme name in the first posi",
-        "cveScore": 4.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-45292 - opentelemetry-java: Unbounded Memory Allocation in W3C Baggage Propagation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45292",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-28T17:16:32.000Z",
-        "contentSnippet": "opentelemetry-java is the Java implementation of the OpenTelemetry API for recording telemetry, and SDK for managing telemetry recorded by the API. Prior to 1.62.0, a vulnerability affects the baggage propagation implementation in opentelemetry-api and opentelemetry-extension-tra",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-45261 - GitButler: Link injection via forge integration enables arbitrary script execution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45261",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-28T17:16:31.000Z",
-        "contentSnippet": "GitButler is a modern Git-based version control interface for AI-powered workflows. Prior to 0.19.7, a emote code execution vulnerability exists in the Tauri-based GitButler desktop application. An attacker can inject a malicious link in a pull request body, which if clicked by t",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-45078 - Synapse CPU starvation (Denial of Service)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45078",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-28T17:16:31.000Z",
-        "contentSnippet": "Synapse is an open source Matrix homeserver implementation. Prior to 1.152.1, local authenticated users can cause Synapse to starve other requests of CPU and lead to other requests failing, causing other users to be denied service. This vulnerability is fixed in 1.152.1.",
-        "cveScore": 6.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-45076 - Synapse pagination denial of service",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45076",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-28T17:16:31.000Z",
-        "contentSnippet": "Synapse is an open source Matrix homeserver implementation. Prior to 1.152.1, in federated rooms, malicious homeservers can craft room events in such a way that prevents Synapse from providing full history to paginating clients. Clients could therefore fail to display room histor",
-        "cveScore": 5.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-44543 - Local Path Provisioner: HelperPod Template Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44543",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-28T17:16:30.000Z",
-        "contentSnippet": "Local Path Provisioner provides a way for the Kubernetes users to utilize the local storage in each node. Prior to 0.0.36, a malicious user with permission to edit the local-path-config ConfigMap in the local-path-storage namespace can manipulate the helperPod.yaml template used ",
-        "cveScore": 8.7,
+        "isoDate": "2026-05-28T19:16:42.000Z",
+        "contentSnippet": "vllm-project/vllm version 0.14.1 contains a vulnerability where the `trust_remote_code=True` parameter is hardcoded in two model implementation files (`vllm/model_executor/models/nemotron_vl.py` and `vllm/model_executor/models/kimi_k25.py`). This bypasses the user's explicit `--t",
+        "cveScore": 8.8,
         "cveSeverity": "HIGH"
       },
       {
-        "title": "CVE-2026-44477 - CloudNativePG: Metrics exporter allows privilege escalation to PostgreSQL superuser and OS RCE",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44477",
+        "title": "CVE-2026-47337 - NULL pointer dereference in Ubuntu Linux AppArmor IPv4/IPv6 socket mediation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47337",
         "source": "cvefeed.io",
-        "isoDate": "2026-05-28T17:16:30.000Z",
-        "contentSnippet": "CloudNativePG is a platform designed to manage PostgreSQL databases within Kubernetes environments. Prior to 1.29.1 and 1.28.3, the CloudNativePG metrics exporter opens its PostgreSQL connection as the postgres superuser via the pod-local Unix socket, then demotes the session wit",
-        "cveScore": 9.4,
-        "cveSeverity": "CRITICAL"
+        "isoDate": "2026-05-28T19:16:42.000Z",
+        "contentSnippet": "Ubuntu Linux 6.8, 6.17 and 7.0 contain SAUCE patches with a possible NULL pointer dereference in the handling of AF_INET/AF_INET6 socket mediation. The bug can be triggered by an unprivileged local user. This can lead to a kernel oops.",
+        "cveScore": 3.3,
+        "cveSeverity": "LOW"
       },
       {
-        "title": "CVE-2026-44466 - Zed: Allowlist Bypass via Bash Arithmetic Expansion in Terminal Tool Permissions",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44466",
+        "title": "CVE-2026-47336 - Use of uninitialized value in Ubuntu Linux AppArmor IPv4/IPv6 socket mediation rules",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47336",
         "source": "cvefeed.io",
-        "isoDate": "2026-05-28T17:16:30.000Z",
-        "contentSnippet": "Zed is a code editor. Prior to 0.229.0, Zed's terminal tool permission system can be bypassed via bash arithmetic expansion $((...)), allowing execution of arbitrary commands nested inside an allowlisted command like echo. This vulnerability is fixed in 0.229.0.",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
+        "isoDate": "2026-05-28T19:16:42.000Z",
+        "contentSnippet": "Ubuntu Linux 6.8 contains SAUCE patches with a possible use of an uninitialized variable in AppArmor AF_INET/AF_INET6 socket mediation code. The bug can be triggered by an unprivileged local user and could result in incorrect fine-grained mediation of network sockets.",
+        "cveScore": 3.3,
+        "cveSeverity": "LOW"
       },
       {
-        "title": "CVE-2026-44465 - Zed: Zed IDE Arbitrary Code Execution via untrusted repository with poisoned .git/config",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44465",
+        "title": "CVE-2026-47335 - NULL pointer dereference in Ubuntu Linux AppArmor notification handling",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47335",
         "source": "cvefeed.io",
-        "isoDate": "2026-05-28T17:16:30.000Z",
-        "contentSnippet": "Zed is a code editor. Prior to 0.227.1, Zed IDE executes arbitrary commands when opening a folder with a malicious .git/config file that abuses the core.fsmonitor Git configuration option. This allows an attacker to achieve Remote Code Execution (RCE) when a victim open a folder ",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-44463 - Zed: Allowlist Bypass via Environment Variable Injection in Terminal Tool Permissions",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44463",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-28T17:16:29.000Z",
-        "contentSnippet": "Zed is a code editor. Prior to 0.229.0, Zed's terminal tool permission system can be bypassed by prepending environment variable assignments to allowlisted commands, hijacking program behavior (e.g., PAGER) to execute arbitrary code. This vulnerability is fixed in 0.229.0.",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-44462 - Zed: Allowlist Bypass via Bash Variable Expansion Chain in Terminal Tool Permissions",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44462",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-28T17:16:29.000Z",
-        "contentSnippet": "Zed is a code editor. Prior to 0.229.0, Zed's terminal tool permission system can be bypassed via bash variable expansion chaining (${var@P}), allowing arbitrary command execution under an allowlisted command prefix. This vulnerability is fixed in 0.229.0.",
-        "cveScore": 6.4,
+        "isoDate": "2026-05-28T19:16:42.000Z",
+        "contentSnippet": "Ubuntu Linux 6.8 contains SAUCE patches with a possible NULL pointer dereference in the handling of AppArmor notifications. The bug can be triggered by an unprivileged local user. This can lead to a kernel panic.",
+        "cveScore": 5.5,
         "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-47334 - Deadlock or kernel panic in Ubuntu Linux AppArmor notification handling",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47334",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-28T19:16:42.000Z",
+        "contentSnippet": "Ubuntu Linux 6.8, 6.17 and 7.0 contain AppArmor SAUCE patches which incorrectly sleep while holding a spinlock in notification handling code. The bug can be triggered by an unprivileged local user and can result in kernel panic or deadlock.",
+        "cveScore": 5.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-47333 - Out-of-bounds read in Ubuntu Linux AppArmor notification handling",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47333",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-28T19:16:42.000Z",
+        "contentSnippet": "Ubuntu Linux 6.8, 6.17 and 7.0 contain AppArmor SAUCE patches which can potentially incorrectly compute the size of an internal buffer, leading to a heap memory out-of-bounds read in notification handling code. The bug can be triggered by an unprivileged local user and can result",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-47332 - Out-of-bounds read in Ubuntu Linux AppArmor notification handling",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47332",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-28T19:16:41.000Z",
+        "contentSnippet": "Ubuntu Linux 6.8, 6.17 and 7.0 contain AppArmor SAUCE patches which incorrectly validate the size of an internal structure, leading to an out-of-bounds read in notification handling code. The bug can be triggered by an unprivileged local user and can result in information disclos",
+        "cveScore": 5.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-47331 - Use-after-free in Ubuntu Linux AppArmor notification handling",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47331",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-28T19:16:41.000Z",
+        "contentSnippet": "Ubuntu Linux 6.8 contains AppArmor SAUCE patches which fail to acquire a lock when modifying a linked list. An unprivileged local user could trigger the race condition that can lead to a use-after-free (UAF) and, theoretically, arbitrary code execution.",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-47330 - Use of uninitialized value in Ubuntu Linux AppArmor notification handling",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47330",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-28T19:16:41.000Z",
+        "contentSnippet": "Ubuntu Linux 6.8, 7.17 and 7.0 contain AppArmor SAUCE patches which can, under certain circumstances, use an uninitialized variable in notification handling code. The bug can be triggered by an unprivileged local user and can result in the incorrect caching of AppArmor notificati",
+        "cveScore": 3.3,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-47329 - Incorrect validation of field size in Ubuntu Linux AppArmor notification responses",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47329",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-28T19:16:41.000Z",
+        "contentSnippet": "Ubuntu Linux 6.8, 6.17 and 7.0 contain SAUCE patches which fail to validate invalid sizes of the name field in AppAmor notification responses. The bug can be triggered by an unprivileged local user and could result in handling of crafted responses.",
+        "cveScore": 3.3,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-47328 - Invalid pointer deallocation in Ubuntu Linux AppArmor notification handling",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47328",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-28T19:16:40.000Z",
+        "contentSnippet": "Ubuntu Linux 6.8, 6.17 and 7.0 contain AppArmor SAUCE patches which incorrectly attempt to free a pointer which was not previously kmalloc()d, while at the same time leaking allocated memory. The bug can be triggered by an unprivileged local user and can result in the corruption ",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-47327 - NULL pointer dereference in Ubuntu Linux AppArmor notification handling",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47327",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-28T19:16:40.000Z",
+        "contentSnippet": "Ubuntu Linux 6.8, 6.17 and 7.0 contain SAUCE patches with a possible NULL pointer dereference in the handling of AppArmor notifications. The bug can be triggered by an unprivileged local user. This can lead to a kernel oops.",
+        "cveScore": 3.3,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-47326 - Memory leak in Ubuntu Linux AppArmor large notification response allocation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47326",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-28T19:16:40.000Z",
+        "contentSnippet": "Ubuntu Linux 6.8, 6.17 and 7.0 contain SAUCE patches with a memory leak in the handling of big responses to AppArmor notifications. The bug can be triggered by an unprivileged local user. The memory leak could lead to resource exhaustion.",
+        "cveScore": 5.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-47136 - RustFS: Unauthenticated RustFS console license endpoint exposes license metadata",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47136",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-28T19:16:39.000Z",
+        "contentSnippet": "RustFS is a distributed object storage system built in Rust. Prior to 1.0.0-beta.2, the RustFS console endpoint GET /rustfs/console/license returns parsed license metadata without requiring authentication. The endpoint is registered on the console listener and returns JSON contai",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-46685 - RustFS: Reflective CORS with credentials on S3 listener; unauthenticated license metadata endpoint on console",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46685",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-28T19:16:39.000Z",
+        "contentSnippet": "RustFS is a distributed object storage system built in Rust. Prior to 1.0.0-beta.2, when RUSTFS_CORS_ALLOWED_ORIGINS is unset, the RustFS S3 listener's ConditionalCorsLayer reflects any request Origin value back as Access-Control-Allow-Origin and also sets Access-Control-Allow-Cr",
+        "cveScore": 6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-46526 - Local Deep Research: SSRF bypass in `safe_get`",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46526",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-28T19:16:39.000Z",
+        "contentSnippet": "Local Deep Research is an AI-powered research assistant for deep, iterative research. Prior to 1.6.10, the URL checking logic in local-deep-research has a logical flaw that could be bypassed by attackers, leading to SSRF attacks. The current project uses validate_url to validate ",
+        "cveScore": 5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-46509 - deepobj: Improperly Controlled Modification of Object Prototype Attributes ('Prototype Pollution')",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46509",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-28T19:16:39.000Z",
+        "contentSnippet": "deepobj provides get, set, delete deep objects in javascript. Prior to 1.0.3, prototype pollution is possible when property paths contain __proto__/constructor/prototype. The property path must not be exposed as user input. This vulnerability is fixed in 1.0.3.",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-45332 - Automad Broken Access Control: unauthenticated exposure of administrator bcrypt password hashes and TOTP secrets via public API endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45332",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-28T19:16:39.000Z",
+        "contentSnippet": "Automad is a flat-file content management system and template engine. From 2.0.0-alpha.1 to 2.0.0-beta.27, a Broken Access Control vulnerability allows an unauthenticated attacker to retrieve the bcrypt password hash of every administrator account with a single POST request. The ",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-45044 - RustFS: Authentication bypass in /profile/cpu and /profile/memory allows unauthenticated access to profiling handlers",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45044",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-28T19:16:38.000Z",
+        "contentSnippet": "RustFS is a distributed object storage system built in Rust. Prior to 1.0.0-beta.2, the admin router explicitly whitelists /profile/cpu and /profile/memory from the authentication layer, allowing any unauthenticated HTTP client to invoke profiling handlers without credentials. On",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
+      {
+        "title": "Build a test suite that grows with your agent with dataset management in Amazon Bedrock AgentCore",
+        "link": "https://aws.amazon.com/blogs/machine-learning/build-a-test-suite-that-grows-with-your-agent-with-dataset-management-in-amazon-bedrock-agentcore/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-05-28T18:10:47.000Z",
+        "contentSnippet": "Agent evaluation is most powerful when you combine fast-moving online signals with stable offline baselines. To understand whether your agent is truly improving over time, you need a fixed benchmark alongside your changing real-world traffic. Managing test cases for evaluation ba"
+      },
       {
         "title": "Claude Opus 4.8 is now available on AWS",
         "link": "https://aws.amazon.com/blogs/machine-learning/claude-opus-4-8-is-now-available-on-aws/",
@@ -642,13 +649,6 @@
         "source": "Simon Willison's Weblog",
         "isoDate": "2026-05-19T01:09:44.000Z",
         "contentSnippet": "I put together these annotated slides from my five minute lightning talk at PyCon US 2026, using the latest iteration of my annotated presentation tool. # I presented this lightning talk at PyCon US 2026, attempting to summarize the last six months of developments in LLMs in five"
-      },
-      {
-        "title": "The new AI-powered Google Finance is expanding to Europe.",
-        "link": "https://blog.google/products-and-platforms/products/search/ai-powered-google-finance-in-europe/",
-        "source": "Google AI Blog",
-        "isoDate": "2026-05-11T06:00:00.000Z",
-        "contentSnippet": "This week, the new, AI-powered Google Finance is launching across Europe, with full local language support. This reimagined experience offers a suite of powerful capabil…"
       }
     ],
     "virtualization": [
