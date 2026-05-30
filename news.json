@@ -1,8 +1,35 @@
 {
-  "updatedAt": "2026-05-30T13:07:31.100Z",
+  "updatedAt": "2026-05-30T15:00:10.612Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-10119 - TRENDnet TEW-432BRP formSetMACFilter stack-based overflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10119",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-30T13:30:09.000Z",
+        "contentSnippet": "A security vulnerability has been detected in TRENDnet TEW-432BRP 3.10B20. Impacted is the function formSetMACFilter of the file /goform/formSetMACFilter. The manipulation of the argument filter_name leads to stack-based buffer overflow. Remote exploitation of the attack is possi",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-46242 - eventpoll: fix ep_remove struct eventpoll / struct file UAF",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46242",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-30T13:16:21.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: eventpoll: fix ep_remove struct eventpoll / struct file UAF ep_remove() (via ep_remove_file()) cleared file->f_ep under file->f_lock but then kept using @file inside the critical section (is_file_epoll(), hlist_d",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-10117 - Open5GS nghttp2-server.c ogs_pool_id_calloc denial of service",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10117",
+        "source": "cvefeed.io",
+        "isoDate": "2026-05-30T13:16:20.000Z",
+        "contentSnippet": "A weakness has been identified in Open5GS up to 2.7.7. This issue affects the function ogs_pool_id_calloc in the library /lib/sbi/nghttp2-server.c. Executing a manipulation can lead to denial of service. The attack may be launched remotely. The exploit has been made available to ",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
       {
         "title": "CVE-2026-10116 - Open5GS ue-authentications Endpoint ogs-timer.c ogs_sbi_xact_add denial of service",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-10116",
@@ -199,33 +226,6 @@
         "isoDate": "2026-05-29T20:16:28.000Z",
         "contentSnippet": "cpp-httplib is a C++11 single-file header-only cross platform HTTP/HTTPS library. Prior to 0.44.0, When the server has called Server::set_trusted_proxies() with a non-empty trusted-proxy list, an attacker can send an HTTP request that includes an X-Forwarded-For header whose valu",
         "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-46385 - iskorotkov/avro: CPU Exhaustion in Avro Decoder",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46385",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-29T20:16:27.000Z",
-        "contentSnippet": "iskorotkov/avro is a fast Go Avro codec. Prior to 2.33.0, the Avro array and map decoders looped over an attacker-controlled block-count value without checking the underlying reader's error state inside the loop body. Reader.ReadBlockHeader returns the count as a Go int, which is",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-46384 - iskorotkov/avro: Integer Overflow in Avro Decoder",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46384",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-29T20:16:27.000Z",
-        "contentSnippet": "iskorotkov/avro is a fast Go Avro codec. Prior to 2.33.0, several Avro decoder paths read attacker-controlled 64-bit values from the wire format and either narrowed them to platform-sized int before bounds-checking, or summed them with overflow-prone signed-int arithmetic. On 32-",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-45700 - Heap-buffer-overflow write in planar bitmap decoder",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45700",
-        "source": "cvefeed.io",
-        "isoDate": "2026-05-29T20:16:27.000Z",
-        "contentSnippet": "FreeRDP is a free implementation of the Remote Desktop Protocol. Prior to 3.26.0, FreeRDP's planar bitmap decoder has an out-of-bounds heap write when decoding RLE planar data. In libfreerdp/codec/planar.c, freerdp_bitmap_decompress_planar() validates the X destination coordinate",
-        "cveScore": 7.7,
         "cveSeverity": "HIGH"
       }
     ],
