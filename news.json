@@ -1,41 +1,176 @@
 {
-  "updatedAt": "2026-06-04T19:14:40.100Z",
+  "updatedAt": "2026-06-04T21:25:57.017Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
+        "title": "CVE-2026-48480 - netty-incubator-codec-ohttp OHttpVersionChunkDraft's Missing Final-Chunk Enforcement Leads to Undetected Stream Truncation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48480",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-04T19:16:30.000Z",
+        "contentSnippet": "The netty incubator codec.bhttp is a java language binary http parser. Prior to version 0.0.22.FInal, the codec-ohttp implementation of draft-ietf-ohai-chunked-ohttp does not verify that a cryptographically-signed final chunk was received before the outer HTTP body terminates. An",
+        "cveScore": 6.6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-41237 - Froxlor has an incomplete fix for CVE-2026-30932",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-41237",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-04T19:16:29.000Z",
+        "contentSnippet": "Froxlor is open source server administration software. In version 2.3.6 and earlier, the LOC record regex uses `\\s+` which matches newlines (allowing embedded newlines to pass), TLSA `matchingType=0` has no upper bound on hex data length, and all validators return raw input witho",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-41236 - Froxlor has privilege escalation in SSH key synchronization via symlinked `authorized_keys` path",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-41236",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-04T19:16:29.000Z",
+        "contentSnippet": "Froxlor is open source server administration software. Version 2.3.6 contains a symlink-following flaw in the root-owned SSH key synchronization path used for customer FTP users. The provisioning code appends public keys to `~/.ssh/authorized_keys` under a customer-controlled hom",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-41235 - Froxlor has an authorization bypass in FTP shell assignment via missing server-side `available_shells` enforcement",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-41235",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-04T19:16:29.000Z",
+        "contentSnippet": "Froxlor is open source server administration software. Version 2.3.6 lets administrators configure `system.available_shells` as the approved shell list that customers may assign to FTP users. However, the server-side FTP account handlers do not enforce that whitelist when process",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-41234 - Froxlor: BIND Zone File Injection via TXT Record Content",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-41234",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-04T19:16:28.000Z",
+        "contentSnippet": "Froxlor is open source server administration software. Prior to version 2.3.7, the `DomainZones.add` API endpoint does not sanitize newline characters in TXT record content. An authenticated customer with DNS editing enabled can inject newlines into TXT record values, which break",
+        "cveScore": 7.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-40898 - quic-go: HTTP/3 QPACK Trailer Expansion Memory Exhaustion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-40898",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-04T19:16:28.000Z",
+        "contentSnippet": "quic-go is an implementation of the QUIC protocol in Go. Prior to version 0.59.1, an attacker can cause excessive memory allocation in quic-go's HTTP/3 client and server implementations by sending a QPACK-encoded HEADERS frame that decodes into a large trailer field section with ",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-36499 - Open vSwitch DoS via Resource Exhaustion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-36499",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-04T19:16:28.000Z",
+        "contentSnippet": "A missing upper-bound check in the udpif_set_threads() function of Open vSwitch v3.6.90 allows an attacker with OVSDB write access to request an excessive number of handler or revalidation threads. This can cause a denial of service (DoS) via resource exhaustion.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2025-71316 - SQLite sqldiff remote code execution via argument injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-71316",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-04T19:16:27.000Z",
+        "contentSnippet": "SQLite 'sqldiff.exe' does not securely handle the way the Microsoft Windows C runtime converts Unicode characters to ANSI codepages. An attacker could use the '-L' option to load an arbitrary DLL with a crafted command line argument string that results in command line file argume",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2025-65640 - Arket Globe Document Intelligence Cross-Site Scripting",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-65640",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-04T19:16:25.000Z",
+        "contentSnippet": "Cross Site Scripting (XSS) vulnerability in the \"Task in Progress / Recent\" page in Arket Globe Document Intelligence 5.0.0.559 due to improper sanitization of user input in text fields when creating a new document. Specifically, when an authenticated attacker submits data contai",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-50292 - libinput: Arbitrary Root Code Execution via Device Group udev Property Injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50292",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-04T18:16:32.000Z",
+        "contentSnippet": "In libinput before 1.30.4 and 1.31.x before 1.31.3, libinput-device-group unescaped phys output can inject udev properties leading to arbitrary root code execution",
+        "cveScore": 7.4,
+        "cveSeverity": "HIGH"
+      },
+      {
         "title": "CVE-2026-48040 - netty-incubator-codec-ohttp's Incorrect Native Pointer Derivation in Pooled Direct ByteBuf Fallback Leads to Out-of-Bounds Native Memory Access",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-48040",
         "source": "cvefeed.io",
-        "isoDate": "2026-06-04T17:33:55.000Z",
+        "isoDate": "2026-06-04T18:16:31.000Z",
         "contentSnippet": "The netty incubator codec.bhttp is a java language binary http parser. The library implements Oblivious HTTP (RFC 9458) using BoringSSL's HPKE C library via JNI. When deriving native memory addresses for cryptographic operations versions prior to 0.0.22.Final provide a fallback p",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-41207 - netty-incubator-codec-ohttp's HPKEContext operations may produce empty byte[] on failures",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-41207",
         "source": "cvefeed.io",
-        "isoDate": "2026-06-04T17:22:35.000Z",
+        "isoDate": "2026-06-04T18:16:30.000Z",
         "contentSnippet": "The netty incubator codec.bhttp is a java language binary http parser. Prior to version 0.0.21.Final, HKDF_expand returns non-NULL on failure. The byte[] is filled with zeros and has no way to distinguish success from failure. Since this output is used as HKDF key material for th",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-25551 - Seagull Software BarTender Deserialization Privilege Escalation via .NET Remoting Service",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-25551",
         "source": "cvefeed.io",
-        "isoDate": "2026-06-04T17:20:09.000Z",
+        "isoDate": "2026-06-04T18:16:28.000Z",
         "contentSnippet": "Seagull Software BarTender 2021 R1 through 12.0.1 contains an insecure deserialization vulnerability that allows low-privileged local users to escalate privileges. The DataServiceSingleton .NET Remoting endpoint is bound to localhost on TCP port 7375 via BtSystem.Service.exe, lim",
-        "cveScore": 8.5,
+        "cveScore": 7.8,
         "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-25550 - Seagull Software BarTender Unauthenticated RCE via .NET Remoting Service",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-25550",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-04T18:16:28.000Z",
+        "contentSnippet": "Seagull Software BarTender 2010, 2016, and 2019 contain an unauthenticated remote code execution vulnerability in the .NET Remoting service exposed on TCP port 7375 via BtSystem.Service.exe. The service registers an unauthenticated singleton endpoint — BarTenderSystem for BarTend",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
       },
       {
         "title": "CVE-2026-10880 - Unauthenticated SQL Injection in Osnexus Quantastor",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-10880",
         "source": "cvefeed.io",
-        "isoDate": "2026-06-04T17:19:33.000Z",
+        "isoDate": "2026-06-04T18:16:28.000Z",
         "contentSnippet": "OSNexus QuantaStor SDS Manager is vulnerable to SQL injection in the login endpoint. The username field is not properly sanitized before being incorporated into a SQL query, allowing an unauthenticated remote attacker to bypass authentication and log in as an administrator withou",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-10796 - nvm executes commands from a malicious Node.js mirror's version strings",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10796",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-04T18:16:28.000Z",
+        "contentSnippet": "nvm (Node Version Manager) through 0.40.4 executes arbitrary commands from version strings supplied by the configured Node.js/io.js mirror. Commands such as `nvm install` read the available versions from the mirror's index.tab and use the selected version, without sanitization, t",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2025-69755 - Neterbit NW-431F Router at_command.asp Sensitive Information Disclosure and Remote Code Execution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-69755",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-04T18:16:28.000Z",
+        "contentSnippet": "An issue in Neterbit NW-431F Router vNW-431F-20241014-IR03 allows a remote attacker to obtain sensitive information and execute arbitrary code via a crafted command to the at_command.asp interface",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2025-67448 - Neterbit Stored Cross-Site Scripting in SMS Module",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-67448",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-04T18:16:27.000Z",
+        "contentSnippet": "The SMS module in Neterbit NW-431F Router 20241014-IR03 and before is vulnerable to stored XSS. The application does not properly sanitize user input in SMS messages before storing and displaying them. An attacker can send an SMS containing a malicious XSS payload, which will be ",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2025-67447 - Neterbit Router OS Command Injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-67447",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-04T18:16:27.000Z",
+        "contentSnippet": "The network diagnosis (ping) module in Neterbit NW-431F Router 20241014-IR03 and before is vulnerable to OS command injection. The application does not properly sanitize user input in the IP address field before passing it to the system's ping command. An attacker can inject arbi",
         "cveScore": 9.8,
         "cveSeverity": "CRITICAL"
       },
@@ -54,8 +189,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-04T17:16:33.000Z",
         "contentSnippet": "Deserialization of Untrusted Data in the Java replace-resolve path in Apache Fory fory-core Java SDK before 1.1.0 on Java/JVM platforms allows a remote attacker to bypass class registration, TypeChecker, and DisallowedList checks and invoke classpath-present readResolve/readExter",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 9.1,
+        "cveSeverity": "CRITICAL"
       },
       {
         "title": "CVE-2026-49942 - Net::CIDR::Set versions through 0.20 for Perl did not validate network masks",
@@ -63,8 +198,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-04T17:16:33.000Z",
         "contentSnippet": "Net::CIDR::Set versions through 0.20 for Perl did not validate network masks. The mask portion of a network mask could contain Unicode digits such as the Arabic-Indic One (U+0661), or non-digits, which were ignored. This could allow network masks to accept larger networks. Leadin",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 7.3,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-49941 - Net::CIDR::Set versions through 0.20 for Perl did not validate IP addresses",
@@ -72,8 +207,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-04T17:16:33.000Z",
         "contentSnippet": "Net::CIDR::Set versions through 0.20 for Perl did not validate IP addresses. The add method called the _encode method to parse addresses. If the addresses did not look like netmasks or network ranges, then they were assumed to single IP addresses and passed back to itself as a 32",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-49940 - Net::CIDR::Set versions through 0.20 for Perl accept non-ASCII IP addresses and netmasks",
@@ -81,8 +216,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-04T17:16:33.000Z",
         "contentSnippet": "Net::CIDR::Set versions through 0.20 for Perl accept non-ASCII IP addresses and netmasks. Unicode digits such as the Arabic-Indic One (U+0661) were accepted but not properly parsed as numbers. This could allow network masks to accept larger networks.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-46741 - Etsy::StatsD versions through 1.002002 for Perl allow metric injections",
@@ -90,143 +225,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-04T17:16:32.000Z",
         "contentSnippet": "Etsy::StatsD versions through 1.002002 for Perl allow metric injections. The metric names and values are not checked for newlines, colons or pipes. Metrics generated from untrusted sources could inject additional statsd metrics. Note that the git repository contains an unreleased",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-46739 - Net::Statsd versions before 0.13 for Perl allow metric injections",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46739",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-04T17:16:32.000Z",
-        "contentSnippet": "Net::Statsd versions before 0.13 for Perl allow metric injections. The metric names are not checked for newlines, colons or pipes. Metrics generated from untrusted sources could inject additional statsd metrics. The update_stats (used for updating counters) and gauge methods do n",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2025-67446 - Neterbit NW-431F Router Authentication Bypass via Predictable Cookie",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-67446",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-04T17:16:30.000Z",
-        "contentSnippet": "Improper Authentication (Authentication Bypass) exists in Neterbit NW-431F Router 20241014-IR03 and before. The router uses a weak/predictable cookie value for authentication. By modifying the cookie value (e.g., setting it to \"admin\"), an attacker can bypass the authentication s",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-25550 - Seagull Software BarTender Unauthenticated RCE via .NET Remoting Service",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-25550",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-04T17:13:13.000Z",
-        "contentSnippet": "Seagull Software BarTender 2010, 2016, and 2019 contain an unauthenticated remote code execution vulnerability in the .NET Remoting service exposed on TCP port 7375 via BtSystem.Service.exe. The service registers an unauthenticated singleton endpoint — BarTenderSystem for BarTend",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-10796 - nvm executes commands from a malicious Node.js mirror's version strings",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10796",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-04T17:02:23.000Z",
-        "contentSnippet": "nvm (Node Version Manager) through 0.40.4 executes arbitrary commands from version strings supplied by the configured Node.js/io.js mirror. Commands such as `nvm install` read the available versions from the mirror's index.tab and use the selected version, without sanitization, t",
         "cveScore": 7.5,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-50292 - libinput: Arbitrary Root Code Execution via Device Group udev Property Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50292",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-04T16:41:36.000Z",
-        "contentSnippet": "In libinput before 1.30.4 and 1.31.x before 1.31.3, libinput-device-group unescaped phys output can inject udev properties leading to arbitrary root code execution",
-        "cveScore": 7.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-7774 - tarfile.data_filter path traversal bypass allows writing outside the extraction directory",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-7774",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-04T16:16:42.000Z",
-        "contentSnippet": "tarfile.data_filter could be bypassed using crafted link entries, including symlinks with empty or directory-like names, to redirect later archive members outside the intended extraction directory. This allowed a malicious tar archive to cause tarfile.extractall() to write files ",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-5228 - Improper Access Control in Kurt Software Studio's WriteUp Mobile App",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-5228",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-04T16:16:39.000Z",
-        "contentSnippet": "Improper Access Control, Missing Authorization vulnerability in Kurt Software Studio WriteUp Mobile App allows Accessing Functionality Not Properly Constrained by ACLs. This issue affects WriteUp Mobile App: from 1.3.0 through 04062026.",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-45287 - OpenTelemetry-Go's Schema ParseFile leaks file descriptors on each parse",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45287",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-04T16:16:38.000Z",
-        "contentSnippet": "OpenTelemetry-Go is the Go implementation of OpenTelemetry. Prior to version 0.0.17, `go.opentelemetry.io/otel/schema/v1.0` and `go.opentelemetry.io/otel/schema/v1.1` leaks one file descriptor on each successful `ParseFile` call. `ParseFile` opens the schema file and passes it to",
-        "cveScore": 2.1,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-44393 - OpenStack Oslo.messaging RabbitMQ TLS Man-in-the-Middle Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44393",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-04T16:16:38.000Z",
-        "contentSnippet": "An issue was discovered in OpenStack oslo.messaging 1.0.0 through 17.3.0. The oslo.messaging RabbitMQ driver does not perform TLS hostname verification when connecting to the message broker. When ssl_ca_file is configured, the driver enables certificate chain validation but does ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-43986 - Tautulli vulnerable to unauthenticated SSRF in /image/ via attacker-seeded image hash replay",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-43986",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-04T16:16:38.000Z",
-        "contentSnippet": "Tautulli is a Python based monitoring and tracking tool for Plex Media Server. Versions prior to 2.17.1 expose a public `/image/ ` route that resolves attacker-controlled entries from `image_hash_lookup` and replays them through the same server-side image fetch logic used by auth",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-43985 - Taultulli has CSRF in /configUpdate via missing anti-CSRF and method restriction that allows admin credential takeover",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-43985",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-04T16:16:38.000Z",
-        "contentSnippet": "Tautulli is a Python based monitoring and tracking tool for Plex Media Server. Versions prior to 2.17.1 expose `configUpdate` as a state-changing administrator endpoint, but the route does not enforce `POST` and does not use any anti-CSRF token. In the default form and JWT-based ",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-43984 - Tautulli has stored XSS in logFile via guest-controlled log_js_errors input",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-43984",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-04T16:16:37.000Z",
-        "contentSnippet": "Tautulli is a Python based monitoring and tracking tool for Plex Media Server. Versions prior to 2.17.1 expose `log_js_errors` to any authenticated user, including guest users when guest access is enabled. The endpoint writes attacker-controlled strings directly into the main app",
-        "cveScore": 8.9,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-41178 - OpenTelemetry-Go's baggage parsing no longer caps raw header length",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-41178",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-04T16:16:37.000Z",
-        "contentSnippet": "OpenTelemetry-Go is the Go implementation of OpenTelemetry. Versions 1.41.0 and 1.43.0 removed raw-length rejection and it causes `Parse` to process arbitrarily large/invalid baggage headers and log errors, enabling DoS via oversized inputs. Versions 1.42.0 and 1.44.0 fix the iss",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-40930 - LIBPNG: Chunk smuggling in push-mode APNG parser via unconsumed chunk body",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-40930",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-04T16:16:36.000Z",
-        "contentSnippet": "LIBPNG is a reference library for use in applications that process PNG (Portable Network Graphics) raster image files. In version 1.8.0, three inter-frame chunk discard paths in the push-mode APNG parser clear the chunk-header flag without consuming the chunk body and CRC, allowi",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-38570 - bacnet_stack Out-of-bounds Read",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-38570",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-04T16:16:35.000Z",
-        "contentSnippet": "bacnet_stack 1.3.1 contains an Out-of-bounds Read in bacnet_tag_number_decode which allows attackers to cause a denial of service.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       }
     ],
     "ai": [
