@@ -1,235 +1,242 @@
 {
-  "updatedAt": "2026-06-09T16:27:07.534Z",
+  "updatedAt": "2026-06-09T19:12:40.046Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
-        "title": "CVE-2026-49762 - Unbounded integer parsing in the Version module enables CPU and memory exhaustion denial of service",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49762",
+        "title": "CVE-2026-50636 - LimeSurvey RemoteControl invite_participants/remind_participants SQL Injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50636",
         "source": "cvefeed.io",
-        "isoDate": "2026-06-09T14:04:07.000Z",
-        "contentSnippet": "Uncontrolled Resource Consumption vulnerability in the Elixir standard library's Version module allows an attacker who controls a version string to cause a denial of service through CPU and memory exhaustion. The version parser converts numeric version components (major, minor, p",
-        "cveScore": 5.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-47901 - Iframe escape by plugins in Logseq",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47901",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-09T13:23:46.000Z",
-        "contentSnippet": "Logseq is vulnerable to a sandbox escape flaw where plugins running in sandboxed iframes can inject arbitrary HTML attributes, such as event handlers, into their container element in the host DOM. Due to a disabled Content Security Policy (CSP), this allows a malicious plugin to ",
-        "cveScore": 4.6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-47900 - Stored XSS via Unsanitized Plugin Metadata in Logseq",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47900",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-09T13:23:45.000Z",
-        "contentSnippet": "Logseq is vulnerable to a stored cross-site scripting (XSS). A malicious plugin can include a JavaScript payload in the \"name\" field of its \"package.json\" file, which is rendered using \"innerHTML\" without proper sanitization, allowing the execution of arbitrary code in the privil",
-        "cveScore": 4.6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-47899 - Arbitrary File Read, Write, Rename, and Delete in Logseq",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47899",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-09T13:23:44.000Z",
-        "contentSnippet": "The Electron preload script in Logseq exposes an API method that allows the renderer process to invoke IPC handlers without proper path validation. An attacker with JavaScript execution in the renderer (e.g. via XSS or a malicious plugin), can read, write, or delete arbitrary fil",
-        "cveScore": 8.7,
+        "isoDate": "2026-06-09T18:17:10.000Z",
+        "contentSnippet": "The RemoteControl API methods invite_participants and remind_participants pass a caller-supplied token-ID array into TokenDynamic::findUninvited(), which concatenates the values directly into a tid IN ('...') SQL clause without parameterization or input validation. A remote, auth",
+        "cveScore": 8.8,
         "cveSeverity": "HIGH"
       },
       {
-        "title": "CVE-2026-9279 - Shell command injection in Logseq",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9279",
+        "title": "CVE-2026-50635 - LimeSurvey Password Reset Host Header Injection Discloses Reset Token",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50635",
         "source": "cvefeed.io",
-        "isoDate": "2026-06-09T13:23:41.000Z",
-        "contentSnippet": "Logseq exposes an IPC handler that allows the renderer process to execute shell commands. While an allowlist restricts the command name (e.g. `git`, `pandoc`, `grep`), the argument string is concatenated with the command and passed to `child_process.spawn` with the `shell: true` ",
-        "cveScore": 8.7,
+        "isoDate": "2026-06-09T18:17:10.000Z",
+        "contentSnippet": "LimeSurvey constructs account password-reset links from the client-supplied HTTP Host header without validating it. The optional allowedHosts allowlist that would constrain this is undefined in the default (and documented) configuration, so LSHttpRequest::checkIsAllowedHost() res",
+        "cveScore": 8.8,
         "cveSeverity": "HIGH"
       },
       {
-        "title": "CVE-2026-46324 - netfilter: nf_tables: use list_del_rcu for netlink hooks",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46324",
+        "title": "CVE-2026-50512 - Microsoft PC Manager Elevation of Privilege Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50512",
         "source": "cvefeed.io",
-        "isoDate": "2026-06-09T13:16:37.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: netfilter: nf_tables: use list_del_rcu for netlink hooks nft_netdev_unregister_hooks and __nft_unregister_flowtable_net_hooks need to use list_del_rcu(), this list can be walked by concurrent dumpers. Add a new h",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-46323 - net: gro: don't merge zcopy skbs",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46323",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-09T13:16:37.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: net: gro: don't merge zcopy skbs skb_gro_receive() can currently copy frags between the source and GRO skb, without checking the zerocopy status, and in particular the SKBFL_MANAGED_FRAG_REFS flag. When SKBFL_MAN",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-46322 - tun: free page on build_skb failure in tun_xdp_one()",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46322",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-09T13:16:37.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: tun: free page on build_skb failure in tun_xdp_one() When build_skb() fails in tun_xdp_one(), the function sets ret to -ENOMEM and jumps to the out label, which returns without freeing the page that vhost_net_bui",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-46321 - tun: free page on short-frame rejection in tun_xdp_one()",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46321",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-09T13:16:37.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: tun: free page on short-frame rejection in tun_xdp_one() tun_xdp_one() returns -EINVAL on a frame shorter than ETH_HLEN without freeing the page that vhost_net_build_xdp() allocated for it. tun_sendmsg() discards",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-46320 - tap: free page on error paths in tap_get_user_xdp()",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46320",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-09T13:16:37.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: tap: free page on error paths in tap_get_user_xdp() tap_get_user_xdp() rejects a frame shorter than ETH_HLEN with -EINVAL, and returns -ENOMEM when build_skb() fails. Both paths jump to the err label without free",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-46319 - net/sched: act_ct: Only release RCU read lock after ct_ft",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46319",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-09T13:16:37.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: net/sched: act_ct: Only release RCU read lock after ct_ft When looking up a flow table in act_ct in tcf_ct_flow_table_get(), rhashtable_lookup_fast() internally opens and closes an RCU read critical section befor",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-46318 - Revert \"mm/hugetlbfs: update hugetlbfs to use mmap_prepare\"",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46318",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-09T13:16:37.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: Revert \"mm/hugetlbfs: update hugetlbfs to use mmap_prepare\" This reverts commit ea52cb24cd3f (\"mm/hugetlbfs: update hugetlbfs to use mmap_prepare\") with conflict resolution to account for changes in commit ea52cb",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-46317 - KVM: arm64: Reassign nested_mmus array behind mmu_lock",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46317",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-09T13:16:37.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: KVM: arm64: Reassign nested_mmus array behind mmu_lock kvm->arch.nested_mmus[] is walked under kvm->mmu_lock, including from the MMU notifier path (kvm_unmap_gfn_range() -> kvm_nested_s2_unmap()), which can run a",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-46316 - KVM: arm64: vgic-its: Drop the translation cache reference only for the erased entry",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46316",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-09T13:16:36.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: KVM: arm64: vgic-its: Drop the translation cache reference only for the erased entry vgic_its_invalidate_cache() walks the per-ITS translation cache with xa_for_each() and drops the cache's reference on each entr",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-2638 - X-VPN macOS website versions - Local Privilege Escalation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-2638",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-09T13:16:35.000Z",
-        "contentSnippet": "A vulnerability in the quarantine and restore workflow of the X-VPN macOS website versions 77.0 through 77.5 allow a local attacker to leverage a race condition and symlink manipulation to achieve privileged file corruption.",
-        "cveScore": 7.3,
+        "isoDate": "2026-06-09T18:17:09.000Z",
+        "contentSnippet": "Missing authentication for critical function in Microsoft PC Manager allows an authorized attacker to elevate privileges locally.",
+        "cveScore": 7.8,
         "cveSeverity": "HIGH"
       },
       {
-        "title": "CVE-2026-11764 - Data exposed without proper permission",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11764",
+        "title": "CVE-2026-50511 - Microsoft PC Manager Elevation of Privilege Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50511",
         "source": "cvefeed.io",
-        "isoDate": "2026-06-09T13:16:35.000Z",
-        "contentSnippet": "When creating an export of all reusable media, the secrets of connected gift cards were included in the export even if the user creating the export does not have permission to view gift cards. This is inconsistent with the UI and API where only the first letters of the gift card ",
-        "cveScore": 3.6,
-        "cveSeverity": "LOW"
+        "isoDate": "2026-06-09T18:17:06.000Z",
+        "contentSnippet": "Improper link resolution before file access ('link following') in Microsoft PC Manager allows an authorized attacker to elevate privileges locally.",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
       },
       {
-        "title": "CVE-2017-20251 - WordPress Insert PHP Plugin 4.7.0 PHP Code Injection via REST API",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2017-20251",
+        "title": "CVE-2026-48293 - InDesign Desktop | Out-of-bounds Write (CWE-787)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48293",
         "source": "cvefeed.io",
-        "isoDate": "2026-06-09T13:16:35.000Z",
-        "contentSnippet": "WordPress Insert PHP plugin versions before 3.3.1 contain a PHP code injection vulnerability that allows unauthenticated attackers to execute arbitrary PHP code by injecting malicious shortcodes through the WordPress REST API. Attackers can send POST requests to the wp-json/wp/v2",
-        "cveScore": 9.8,
+        "isoDate": "2026-06-09T18:17:03.000Z",
+        "contentSnippet": "InDesign Desktop versions 21.3, 20.5.3 and earlier are affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious fi",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-44275 - Dell/Alienware Purchased Apps Improper Link Resolution Before File Access Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44275",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-09T18:16:49.000Z",
+        "contentSnippet": "Dell/Alienware Purchased Apps, versions prior to 1.1.32.0, contain an Improper Link Resolution Before File Access ('Link Following') vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Arbitrary File Write",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-41116 - Dell Inventory Collector Client Improper Link Resolution Before File Access",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-41116",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-09T18:16:44.000Z",
+        "contentSnippet": "Dell Inventory Collector Client, versions prior to 13.8.0, contain an Improper Link Resolution Before File Access ('Link Following') vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Arbitrary File Write.",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-34708 - InCopy | Stack-based Buffer Overflow (CWE-121)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34708",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-09T18:16:43.000Z",
+        "contentSnippet": "InCopy versions 21.3, 20.5.3 and earlier are affected by a Stack-based Buffer Overflow vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-34707 - InCopy | Heap-based Buffer Overflow (CWE-122)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34707",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-09T18:16:43.000Z",
+        "contentSnippet": "InCopy versions 21.3, 20.5.3 and earlier are affected by a Heap-based Buffer Overflow vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-34706 - InCopy | Out-of-bounds Write (CWE-787)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34706",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-09T18:16:43.000Z",
+        "contentSnippet": "InCopy versions 21.3, 20.5.3 and earlier are affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-34705 - InDesign Desktop | Out-of-bounds Read (CWE-125)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34705",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-09T18:16:42.000Z",
+        "contentSnippet": "InDesign Desktop versions 21.3, 20.5.3 and earlier are affected by an out-of-bounds read vulnerability that could lead to disclosure of sensitive memory. An attacker could leverage this vulnerability to disclose sensitive information. Exploitation of this issue requires user inte",
+        "cveScore": 5.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-34704 - InDesign Desktop | NULL Pointer Dereference (CWE-476)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34704",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-09T18:16:42.000Z",
+        "contentSnippet": "InDesign Desktop versions 21.3, 20.5.3 and earlier are affected by a NULL Pointer Dereference vulnerability that could result in an application denial-of-service. An attacker could exploit this vulnerability to crash the application, leading to a denial-of-service condition. Expl",
+        "cveScore": 5.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-34703 - InDesign Desktop | NULL Pointer Dereference (CWE-476)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34703",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-09T18:16:42.000Z",
+        "contentSnippet": "InDesign Desktop versions 21.3, 20.5.3 and earlier are affected by a NULL Pointer Dereference vulnerability that could result in an application denial-of-service. An attacker could exploit this vulnerability to crash the application, leading to a denial-of-service condition. Expl",
+        "cveScore": 5.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-34702 - InDesign Desktop | Stack-based Buffer Overflow (CWE-121)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34702",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-09T18:16:42.000Z",
+        "contentSnippet": "InDesign Desktop versions 21.3, 20.5.3 and earlier are affected by a Stack-based Buffer Overflow vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malic",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-34701 - InDesign Desktop | Heap-based Buffer Overflow (CWE-122)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34701",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-09T18:16:41.000Z",
+        "contentSnippet": "InDesign Desktop versions 21.3, 20.5.3 and earlier are affected by a Heap-based Buffer Overflow vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malici",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-34700 - InDesign Desktop | Out-of-bounds Write (CWE-787)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34700",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-09T18:16:41.000Z",
+        "contentSnippet": "InDesign Desktop versions 21.3, 20.5.3 and earlier are affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious fi",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-34699 - InDesign Desktop | Heap-based Buffer Overflow (CWE-122)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34699",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-09T18:16:41.000Z",
+        "contentSnippet": "InDesign Desktop versions 21.3, 20.5.3 and earlier are affected by a Heap-based Buffer Overflow vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malici",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-34698 - InDesign Desktop | Heap-based Buffer Overflow (CWE-122)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34698",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-09T18:16:41.000Z",
+        "contentSnippet": "InDesign Desktop versions 21.3, 20.5.3 and earlier are affected by a Heap-based Buffer Overflow vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malici",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-34697 - InDesign Desktop | Stack-based Buffer Overflow (CWE-121)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34697",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-09T18:16:40.000Z",
+        "contentSnippet": "InDesign Desktop versions 21.3, 20.5.3 and earlier are affected by a Stack-based Buffer Overflow vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malic",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-34696 - InDesign Desktop | Use After Free (CWE-416)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34696",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-09T18:16:40.000Z",
+        "contentSnippet": "InDesign Desktop versions 21.3, 20.5.3 and earlier are affected by a Use After Free vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-34695 - InDesign Desktop | Stack-based Buffer Overflow (CWE-121)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34695",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-09T18:16:40.000Z",
+        "contentSnippet": "InDesign Desktop versions 21.3, 20.5.3 and earlier are affected by a Stack-based Buffer Overflow vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malic",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-34694 - Adobe Experience Manager Forms JEE | Cross-site Scripting (Stored XSS) (CWE-79)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34694",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-09T18:16:40.000Z",
+        "contentSnippet": "Adobe Experience Manager Forms JEE versions LTS SP1, 6.5.24.0 and earlier are affected by a stored Cross-Site Scripting (XSS) vulnerability that could be abused by a high-privileged attacker to inject malicious scripts into vulnerable form fields. Malicious JavaScript may be exec",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-34693 - Adobe Experience Manager Forms JEE | Cross-site Scripting (Reflected XSS) (CWE-79)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34693",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-09T18:16:39.000Z",
+        "contentSnippet": "Adobe Experience Manager Forms JEE versions LTS SP1, 6.5.24.0 and earlier are affected by a reflected Cross-Site Scripting (XSS) vulnerability. An attacker could exploit this vulnerability to inject malicious scripts into a web page, potentially gaining elevated access or control",
+        "cveScore": 8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-34691 - Adobe Experience Manager Forms JEE | Cross-site Scripting (Stored XSS) (CWE-79)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34691",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-09T18:16:38.000Z",
+        "contentSnippet": "Adobe Experience Manager Forms JEE versions LTS SP1, 6.5.24.0 and earlier are affected by a stored Cross-Site Scripting (XSS) vulnerability that could be abused by an attacker to inject malicious scripts into vulnerable form fields. Malicious JavaScript may be executed in a victi",
+        "cveScore": 9.3,
         "cveSeverity": "CRITICAL"
       },
       {
-        "title": "CVE-2017-20250 - WordPress Plugin Mac Photo Gallery 3.0 Arbitrary File Download",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2017-20250",
+        "title": "CVE-2026-28237 - AMD uProf Resource Exhaustion Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-28237",
         "source": "cvefeed.io",
-        "isoDate": "2026-06-09T13:16:34.000Z",
-        "contentSnippet": "Mac Photo Gallery 3.0 contains a path traversal vulnerability that allows unauthenticated attackers to download arbitrary files by manipulating the albid parameter. Attackers can send requests to macdownload.php with directory traversal sequences to access sensitive files like wp",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2017-20249 - WordPress Plugin Apptha Slider Gallery 1.0 SQL Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2017-20249",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-09T13:16:34.000Z",
-        "contentSnippet": "Apptha Slider Gallery 1.0 contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the albid parameter. Attackers can send GET requests with crafted SQL payloads in the albid parameter to ex",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2017-20248 - WordPress Plugin Apptha Slider Gallery 1.0 Path Traversal File Download",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2017-20248",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-09T13:16:34.000Z",
-        "contentSnippet": "Apptha Slider Gallery 1.0 contains a path traversal vulnerability that allows unauthenticated attackers to download arbitrary files by manipulating the imgname parameter. Attackers can send requests to asgallDownload.php with directory traversal sequences ../ to access sensitive ",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2017-20247 - WordPress Plugin PICA Photo Gallery 1.0 SQL Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2017-20247",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-09T13:16:34.000Z",
-        "contentSnippet": "WordPress Plugin PICA Photo Gallery 1.0 contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the aid parameter. Attackers can send GET requests with crafted SQL payloads in the aid param",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2017-20246 - KittyCatfish 2.2 Plugin for WordPress SQL Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2017-20246",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-09T13:16:34.000Z",
-        "contentSnippet": "KittyCatfish 2.2 plugin for WordPress contains an SQL injection vulnerability that allows unauthenticated attackers to read database contents by exploiting an unescaped GET parameter. Attackers can inject SQL code through the 'kc_ad' parameter in base.css.php or kittycatfish.php ",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2017-20245 - Wow Viral Signups 2.1 WordPress Plugin SQL Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2017-20245",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-09T13:16:34.000Z",
-        "contentSnippet": "Wow Viral Signups 2.1 WordPress plugin contains an SQL injection vulnerability that allows unauthenticated attackers to extract database information by exploiting the unescaped 'idsignup' POST parameter. Attackers can send crafted requests to the admin-ajax.php endpoint with mali",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2017-20244 - Wow Forms WordPress Plugin 2.1 SQL Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2017-20244",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-09T13:16:34.000Z",
-        "contentSnippet": "Wow Forms WordPress Plugin version 2.1 contains an SQL injection vulnerability that allows unauthenticated attackers to read arbitrary database information by exploiting an unescaped POST parameter. Attackers can inject SQL code through the 'mwpformid' parameter in requests to th",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2017-20243 - WordPress Car Park Booking Plugin SQL Injection via space_id",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2017-20243",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-09T13:16:33.000Z",
-        "contentSnippet": "WordPress Car Park Booking Plugin version 13 October 17 contains a time-based SQL injection vulnerability that allows unauthenticated attackers to manipulate database queries by injecting SQL code through the space_id parameter. Attackers can send GET requests to the booking-page",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
+        "isoDate": "2026-06-09T18:16:37.000Z",
+        "contentSnippet": "Unrestricted resource allocation in AMD uProf may be exploitable to consume excessive system resources, potentially leading to a loss of availability.",
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
+      {
+        "title": "Hands-free first notice of loss: Using Strands Agents and Amazon Bedrock AgentCore Browser Tool for intelligent claims intake",
+        "link": "https://aws.amazon.com/blogs/machine-learning/hands-free-first-notice-of-loss-using-strands-agents-and-amazon-bedrock-agentcore-browser-tool-for-intelligent-claims-intake/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-06-09T16:43:28.000Z",
+        "contentSnippet": "In this post, we demonstrate how a hands-free FNOL intake system combines agents built with the Strands Agents SDK for domain reasoning with Amazon Bedrock AgentCore Browser Tool for live portal interaction. This approach preserves human expertise while removing repetitive screen"
+      },
       {
         "title": "Build an agentic incident triage assistant with Amazon Quick and New Relic",
         "link": "https://aws.amazon.com/blogs/machine-learning/build-an-agentic-incident-triage-assistant-with-amazon-quick-and-new-relic/",
@@ -642,13 +649,6 @@
         "source": "MarkTechPost",
         "isoDate": "2026-06-01T16:53:07.000Z",
         "contentSnippet": "The open-source project adds local persistent memory to Hermes Agent through six layers, gated retrieval, and a wiki. The post Meet Memory OS: A 6-Layer Open-Source Memory Stack Built on Top of Hermes Agent appeared first on MarkTechPost."
-      },
-      {
-        "title": "AgentOps: Operationalize agentic AI at scale with Amazon Bedrock AgentCore",
-        "link": "https://aws.amazon.com/blogs/machine-learning/agentops-operationalize-agentic-ai-at-scale-with-amazon-bedrock-agentcore/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-06-01T16:12:18.000Z",
-        "contentSnippet": "When you build agentic AI solutions, you face unique operational challenges. Agents make unpredictable decisions, costs spiral unexpectedly, and debugging non-deterministic failures seems impossible. Agentic AI applications don't just execute predetermined workflows. They reason,"
       }
     ],
     "virtualization": [
@@ -892,6 +892,13 @@
       }
     ],
     "hardware": [
+      {
+        "title": "Minisforum S5 All-Flash NAS Shown Based on Intel’s Wildcat Lake Platform",
+        "link": "https://www.servethehome.com/minisforum-s5-all-flash-nas-shown-based-on-intels-wildcat-lake-platform/",
+        "source": "ServeTheHome",
+        "isoDate": "2026-06-09T16:30:19.000Z",
+        "contentSnippet": "At Computex 2026 Minisforum was showing off their upcoming S5 NAS, a mid-range all-flash NAS. With 5 M.2 SSD slots and 10GbE networking, the fanless NAS punches up The post Minisforum S5 All-Flash NAS Shown Based on Intel’s Wildcat Lake Platform appeared first on ServeTheHome."
+      },
       {
         "title": "ServeTheHome Turns 17 The Places You Will Go",
         "link": "https://www.servethehome.com/servethehome-turns-17-the-places-you-will-go/",
