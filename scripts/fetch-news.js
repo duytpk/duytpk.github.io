@@ -31,17 +31,21 @@ const SOURCES = [
   { category: 'cve', name: 'cvefeed.io', url: 'https://cvefeed.io/rssfeed/latest.xml', limit: 50 },
 
   // ---- AI ----
-  { category: 'ai', name: 'Google AI Blog', url: 'https://blog.google/technology/ai/rss/', limit: 15 },
-  { category: 'ai', name: 'AWS Machine Learning Blog', url: 'https://aws.amazon.com/blogs/machine-learning/feed/', limit: 15 },
-  { category: 'ai', name: 'MarkTechPost', url: 'https://www.marktechpost.com/feed/', limit: 15 },
-  { category: 'ai', name: "Simon Willison's Weblog", url: 'https://simonwillison.net/atom/entries/', limit: 15 },
+  { category: 'ai', name: 'Google AI Blog', url: 'https://blog.google/technology/ai/rss/', limit: 10 },
+  { category: 'ai', name: 'AWS Machine Learning Blog', url: 'https://aws.amazon.com/blogs/machine-learning/feed/', limit: 10 },
+  { category: 'ai', name: 'MarkTechPost', url: 'https://www.marktechpost.com/feed/', limit: 10 },
+  { category: 'ai', name: "Simon Willison's Weblog", url: 'https://simonwillison.net/atom/entries/', limit: 10 },
 
   // ---- Virtualization ----
   { category: 'virtualization', name: 'Virtualization HowTo', url: 'https://www.virtualizationhowto.com/feed/', limit: 10 },
   { category: 'virtualization', name: 'Yellow Bricks',        url: 'https://www.yellow-bricks.com/feed/',      limit: 10 },
+  { category: 'virtualization', name: 'Vladan.fr',            url: 'https://www.vladan.fr/feed/',               limit: 10 },
+  { category: 'virtualization', name: 'Cormac Hogan',         url: 'https://www.cormachogan.com/feed/',         limit: 10 },
 
   // ---- Hardware ----
-  { category: 'hardware', name: 'ServeTheHome', url: 'https://www.servethehome.com/feed/', limit: 10 },
+  { category: 'hardware', name: 'ServeTheHome',   url: 'https://www.servethehome.com/feed/',      limit: 10 },
+  { category: 'hardware', name: "Tom's Hardware",  url: 'https://www.tomshardware.com/feeds.xml',  limit: 10 },
+  { category: 'hardware', name: 'StorageReview',   url: 'https://www.storagereview.com/feed',      limit: 10 },
 
 ]
 
@@ -52,7 +56,7 @@ const CAT_LIMIT = SOURCES.reduce((acc, src) => {
 
 // Categories with a rolling cache: new items are merged with previously stored ones,
 // keeping the N most recent. Oldest items are evicted only when the cap is reached.
-const ROLLING_MAX = { ai: 60, virtualization: 50, hardware: 50 }
+const ROLLING_MAX = { cve: 100, ai: 100, virtualization: 100, hardware: 100 }
 
 const parser = new Parser({
   timeout: 20000,
