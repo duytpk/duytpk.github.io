@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0e0e10" />
+  <meta name="description" content="FIFA World Cup 2026 — Live scores, groups, schedule & teams." />
+  <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
+  <title>World Cup 2026 | DuyTPK's hub</title>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="assets/tailwind-config.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/cyber-neon.css" />
+</head>
+<body class="bg-surface-container-lowest text-on-surface font-body-md overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+
+<div class="scanline-overlay"></div>
+<script src="assets/topbar.js"></script>
+
+<main class="pt-24 px-margin pb-16 min-h-screen">
+  <div class="max-w-container-max mx-auto">
+
+    <!-- Section header -->
+    <header class="mb-10 text-center">
+      <div class="mb-4">
+        <h1 class="font-headline-lg text-headline-lg text-primary uppercase tracking-[0.2em] neon-text-cyan">
+          FIFA WORLD CUP 2026
+        </h1>
+      </div>
+      <p class="font-body-md text-on-surface-variant max-w-2xl mx-auto opacity-80">
+        June 11 – July 19, 2026 &nbsp;·&nbsp; USA · Canada · Mexico &nbsp;·&nbsp; 48 teams · 104 matches
+        <span class="inline-block w-2 h-2 rounded-full bg-secondary animate-ping align-middle ml-1"></span>
+      </p>
+    </header>
+
+    <!-- Tabs -->
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 border-b border-outline-variant pb-0">
+      <div class="flex gap-2 flex-wrap" role="tablist">
+        <button data-tab="schedule" type="button" role="tab" aria-selected="true"
+          class="tab-btn px-4 py-2 font-label-caps text-label-caps uppercase tracking-widest border-b-2 transition-all duration-150 -mb-px hover-glitch
+                 text-secondary border-secondary">
+          SCHEDULE
+        </button>
+        <button data-tab="groups" type="button" role="tab" aria-selected="false"
+          class="tab-btn px-4 py-2 font-label-caps text-label-caps uppercase tracking-widest border-b-2 transition-all duration-150 -mb-px hover-glitch
+                 text-primary border-transparent hover:border-primary/40">
+          GROUPS
+        </button>
+        <button data-tab="teams" type="button" role="tab" aria-selected="false"
+          class="tab-btn px-4 py-2 font-label-caps text-label-caps uppercase tracking-widest border-b-2 transition-all duration-150 -mb-px hover-glitch
+                 text-primary border-transparent hover:border-primary/40">
+          TEAMS
+        </button>
+        <button data-tab="info" type="button" role="tab" aria-selected="false"
+          class="tab-btn px-4 py-2 font-label-caps text-label-caps uppercase tracking-widest border-b-2 transition-all duration-150 -mb-px hover-glitch
+                 text-primary border-transparent hover:border-primary/40">
+          INFO
+        </button>
+      </div>
+
+      <!-- Live badge + refresh -->
+      <div class="bg-surface-container px-3 py-1.5 border border-outline-variant flex items-center gap-3 flex-shrink-0 mb-px">
+        <div class="text-right">
+          <div class="text-label-caps text-[9px] text-primary uppercase tracking-widest">LIVE DATA</div>
+          <div class="text-label-caps text-[10px] text-primary" id="wc-update-time">——</div>
+        </div>
+        <div class="w-px h-6 bg-outline-variant"></div>
+        <button id="wc-refresh-btn" type="button"
+          class="font-label-caps text-[10px] text-primary border border-primary/20 bg-primary/5 px-2 py-1
+                 hover:bg-secondary/10 hover:border-secondary hover:text-secondary hover:shadow-[0_0_20px_rgba(255,171,243,0.45)]
+                 transition-all duration-300 uppercase tracking-widest">
+          Refresh
+        </button>
+      </div>
+    </div>
+
+    <!-- Tab panes -->
+    <div id="tab-schedule" class="tab-pane"></div>
+    <div id="tab-groups"   class="tab-pane hidden"></div>
+    <div id="tab-teams"    class="tab-pane hidden"></div>
+    <div id="tab-info"     class="tab-pane hidden"></div>
+
+  </div>
+</main>
+
+<script src="assets/app.js"></script>
+<script src="assets/worldcup.js"></script>
+<script src="assets/footer.js"></script>
+</body>
+</html>
