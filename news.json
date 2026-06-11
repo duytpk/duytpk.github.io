@@ -1,13 +1,184 @@
 {
-  "updatedAt": "2026-06-11T05:23:06.179Z",
+  "updatedAt": "2026-06-11T10:09:41.448Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
+        "title": "CVE-2026-53901 - Cerebrate before v1.37 allows mass assignment of record identifiers during object creation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53901",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-11T07:31:37.000Z",
+        "contentSnippet": "Cerebrate before version 1.37 contains a mass-assignment vulnerability in the generic CRUD add path. The add() handler attempted to remove an attacker-supplied id from $params before normalizing the request through __massageInput(). Because the normalized $input could still conta",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-41856 - Spring GraphQL Annotation Detection Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-41856",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-11T07:16:28.000Z",
+        "contentSnippet": "The Spring GraphQL annotation detection mechanism for @Controller data fetchers may not correctly resolve annotations on methods within type hierarchies. This can be an issue if such annotations are used for authorization decisions. When all conditions are met, security annotatio",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-41700 - Cross-Site WebSocket Hijacking in Spring for GraphQL",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-41700",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-11T07:16:28.000Z",
+        "contentSnippet": "Spring for GraphQL applications that have enabled the WebSocket transport are vulnerable to Cross-Site WebSocket Hijacking. An attacker can trick an authenticated user into visiting a malicious page, allowing the attacker to execute arbitrary GraphQL operations with the victim's ",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-41699 - Unsafe Deserialization in Spring GraphQL",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-41699",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-11T07:16:28.000Z",
+        "contentSnippet": "Spring for GraphQL applications are vulnerable to Unsafe Deserialization when processing paginated GraphQL queries. An attacker can craft a malicious GraphQL request that can lead to Remote Code Execution when the application exposes a paginated (Connection) field and the classpa",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-41001 - Predictable Temp Directory in Artemis Auto-configuration",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-41001",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-11T07:16:28.000Z",
+        "contentSnippet": "Spring Boot's ArtemisEmbeddedConfigurationFactory uses a fixed, static path for the embedded Artemis message broker's data directory when no explicit path is configured. A local attacker on the same host can pre-create this predictable directory or place a symlink before the appl",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-41000 - WSS4J validation does not use configured replay cache",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-41000",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-11T07:16:28.000Z",
+        "contentSnippet": "Wss4jSecurityInterceptor did not consistently wire Apache WSS4J ReplayCache instances into RequestData for validation-time checks. As a result, protections against replay of UsernameToken nonces and creation timestamps, Timestamp elements, and certain SAML one-time-use semantics ",
+        "cveScore": 3.7,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-40999 - Spring WS SSRF via unvalidated WS-Addressing reply destinations",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-40999",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-11T07:16:27.000Z",
+        "contentSnippet": "When WS-Addressing is used with non-anonymous ReplyTo or FaultTo addresses, Spring WS may initiate outbound connections through configured WebServiceMessageSender instances to destinations taken directly from request headers without verifying that those destinations are safe to c",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-40998 - Jaxp13 XPath XXE via StreamSource and SAXSource",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-40998",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-11T07:16:27.000Z",
+        "contentSnippet": "Jaxp13XPathTemplate evaluated XPath expressions for StreamSource and SAXSource inputs using a code path that parsed attacker-controlled XML with the JDK's default DocumentBuilderFactory behavior instead of Spring's hardened parser configuration. Applications that evaluate XPath a",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-40997 - SOAP security faults leak Spring Security account state",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-40997",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-11T07:16:27.000Z",
+        "contentSnippet": "Several Spring WS integration paths with Spring Security could surface detailed account state (for example locked or disabled user semantics) to remote SOAP clients through exception messages or callback outcomes, instead of failing with generic authentication errors. That behavi",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-40996 - Inbound WS-Security allows RSA PKCS#1 v1.5 key transport by default",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-40996",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-11T07:16:27.000Z",
+        "contentSnippet": "Wss4jSecurityInterceptor defaulted allowRSA15KeyTransportAlgorithm to true, overriding Apache WSS4J's safer default for validation RequestData. Inbound WS-Security decryption could therefore accept RSA PKCS#1 v1.5 (rsa-1_5) encrypted key material unless operators explicitly recon",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-40995 - X.509 authentication bypasses Spring Security account checks",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-40995",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-11T07:16:27.000Z",
+        "contentSnippet": "X509AuthenticationProvider could issue a fully authenticated X509AuthenticationToken when a presented certificate mapped to UserDetails, without applying Spring Security's standard account lifecycle checks (disabled, locked, expired, or credentials-expired accounts). Affected ver",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-40994 - Wss4jSecurityInterceptor disables WS-I BSP validation by default",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-40994",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-11T07:16:27.000Z",
+        "contentSnippet": "Wss4jSecurityInterceptor initialized its BSP (WS-I Basic Security Profile) compliance flag so that inbound validation disabled WSS4J BSP enforcement on RequestData. Services that validate WS-Security on the network could therefore accept messages that violate BSP rules, weakening",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-40992 - Mail Auto-Configuration Does Not Enable SSL Hostname Verification",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-40992",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-11T07:16:27.000Z",
+        "contentSnippet": "Spring Boot's Mail auto-configuration does not enable hostname verification. Applications that set the relevant JavaMail property, such as spring.mail.properties.mail.smtp.ssl.checkserveridentity=true, are not affected. Affected versions: Spring Boot 4.0.0 through 4.0.6; 3.5.0 th",
+        "cveScore": 5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-40987 - Remote-file synchronizer in Spring Integration writes server-supplied filename under localDirectory without canonicalization",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-40987",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-11T07:16:27.000Z",
+        "contentSnippet": "A malicious or compromised FTP/SFTP/SMB server can write arbitrary files anywhere on the client filesystem (outside the configured local-directory) with attacker-controlled content. Affected versions: Spring Integration 7.0.0 through 7.0.4; 6.5.0 through 6.5.8; 6.4.0 through 6.4.",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-40986 - Spring Web Flow JS RemotingHandler renders non-HTML Response as HTML",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-40986",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-11T07:16:26.000Z",
+        "contentSnippet": "Spring Web Flow's JavaScript RemotingHandler renders the body of an error response as HTML even when the response is not \"text/html\", which can result in a scripting attack in the user's browser if the error response from the server contains error details with input reflected fro",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-10795 - UpdraftPlus: WP Backup & Migration Plugin <= 1.26.4 - Unauthenticated Authentication Bypass via UpdraftCentral udrpc",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10795",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-11T07:16:26.000Z",
+        "contentSnippet": "The UpdraftPlus: WP Backup & Migration Plugin plugin for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 1.26.4 via the UpdraftPlus_Remote_Communications_V2::wp_loaded function. This is due to insufficient validation of the remote communicat",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2023-40200 - WordPress WP Logo Showcase Responsive Slider and Carousel plugin <= 3.6 - Broken Access Control vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2023-40200",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-11T07:11:29.000Z",
+        "contentSnippet": "Authorization bypass through User-Controlled key vulnerability in Essential Plugin WP Logo Showcase Responsive Slider and Carousel allows Exploiting Incorrectly Configured Access Control Security Levels. This issue affects WP Logo Showcase Responsive Slider and Carousel: from n/a",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2024-32110 - WordPress Event Manager and Tickets Selling Plugin for WooCommerce plugin <= 4.1.2 - Cross Site Request Forgery (CSRF) vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2024-32110",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-11T07:05:50.000Z",
+        "contentSnippet": "Cross-Site request forgery (CSRF) vulnerability in Magepeople inc. WpEvently allows Cross Site Request Forgery. This issue affects WpEvently: from n/a through 4.1.2.",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2023-33999 - WordPress WP Mail Log plugin <= 1.0.2 - Reflected Cross Site Scripting (XSS) vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2023-33999",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-11T07:03:46.000Z",
+        "contentSnippet": "Improper neutralization of input during web page generation ('cross-site scripting') vulnerability in WPVibes WP Mail Log allows DOM-Based XSS. This issue affects WP Mail Log: from n/a through 1.0.2.",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
         "title": "CVE-2026-40985 - Data Binding Vulnerability in Spring Web Flow with Unified EL Parser",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-40985",
         "source": "cvefeed.io",
-        "isoDate": "2026-06-11T05:02:53.000Z",
+        "isoDate": "2026-06-11T05:16:33.000Z",
         "contentSnippet": "Applications that configure the WebFlowELExpressionParser are vulnerable to the use of malicious Unified EL expressions. Affected versions: Spring Web Flow 4.0.0; 3.0.0 through 3.0.1; 2.5.0 through 2.5.1.",
         "cveScore": 6.4,
         "cveSeverity": "MEDIUM"
@@ -56,180 +227,23 @@
         "contentSnippet": "ImageMagick is free and open-source software used for editing and manipulating digital images. Prior to versions 6.9.13-50 and 7.1.2-25, when passing incorrect arguments in the distort operation a null pointer deference will occur. This issue has been patched in versions 6.9.13-5",
         "cveScore": 4.3,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-53462 - ImageMagick: Use-After-Free when allocation in CheckPrimitiveExtent fails",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53462",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-10T23:16:50.000Z",
-        "contentSnippet": "ImageMagick is free and open-source software used for editing and manipulating digital images. Prior to versions 6.9.13-50 and 7.1.2-25, when an allocation fails in CheckPrimitiveExtent this can result in a heap-use-after-free and result in a crash. This issue has been patched in",
-        "cveScore": 5.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-53461 - ImageMagick: Out-of-bounds write in ICON decoder due to incorrect loop",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53461",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-10T23:16:50.000Z",
-        "contentSnippet": "ImageMagick is free and open-source software used for editing and manipulating digital images. Prior to versions 6.9.13-50 and 7.1.2-25, an incorrect loop in the ICON decoder can result in an out of bounds heap write resulting in a crash. This issue has been patched in versions 6",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-53460 - ImageMagick: Policy Bypass can trigger out-of-Memory condition",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53460",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-10T23:16:50.000Z",
-        "contentSnippet": "ImageMagick is free and open-source software used for editing and manipulating digital images. Prior to versions 6.9.13-50 and 7.1.2-25, a missing check for maximum memory request in AcquireAlignedMemory could trigger an out-of-Memory condition. This issue has been patched in ver",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-52726 - Dulwich's submodule path traversal in porcelain.submodule_update / porcelain.clone(recurse_submodules=True) yields RCE via attacker-dropped .git/hooks payload",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52726",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-10T23:16:50.000Z",
-        "contentSnippet": "Dulwich is a pure-Python implementation of the Git file formats and protocols. Starting in version 0.23.2 and prior to version 1.2.5, `dulwich.porcelain.submodule_update`, and by extension `porcelain.clone(..., recurse_submodules=True)`, materializes attacker-controlled submodule",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-50223 - Apache OFBiz: DataResource Low-Privileged Authenticated FreeMarker Template Injection Leads to Remote Code Execution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50223",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-10T23:16:49.000Z",
-        "contentSnippet": "Improper Control of Generation of Code ('Code Injection') vulnerability in Apache OFBiz allows a low-privileged authenticated user with Content/DataResource editing privileges to perform template injection attacks that could lead to Remote Code Execution. This issue affects Apach",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-49219 - ImageMagick: Policy Bypass can read disallowed files",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49219",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-10T23:16:49.000Z",
-        "contentSnippet": "ImageMagick is free and open-source software used for editing and manipulating digital images. Prior to versions 6.9.13-48 and 7.1.2-24, an incorrect parsing of the filename can result in a policy bypass and read files disallowed by a security policy using a symlink. This issue h",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-49218 - ImageMagick: Policy Bypass in DCM decoder could result in image with invalid dimensions",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49218",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-10T23:16:49.000Z",
-        "contentSnippet": "ImageMagick is free and open-source software used for editing and manipulating digital images. Prior to versions 6.9.13-48 and 7.1.2-24, a missing check in the DCM decoder could result in an image with invalid dimensions and that could cause crashes in other operation. This issue",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-48994 - ImageMagick: Heap Buffer Over-Write in MAT decoder on 32-bit systems",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48994",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-10T23:16:49.000Z",
-        "contentSnippet": "ImageMagick is free and open-source software used for editing and manipulating digital images. Prior to versions 6.9.13-48 and 7.1.2-24, a missing check of a return value could lead to a heap buffer over-write in the MAT decoder on 32-bit systems. This issue has been patched in v",
-        "cveScore": 5.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-48734 - ImageMagick: Stack Overflow in MVG decoder",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48734",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-10T23:16:49.000Z",
-        "contentSnippet": "ImageMagick is free and open-source software used for editing and manipulating digital images. Prior to versions 6.9.13-49 and 7.1.2-24, a crafted MVG file could result in a stack overflow due to a missing depth or visited-set check. This issue has been patched in versions 6.9.13",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-48733 - ImageMagick: Infinite Loop in subimage-search with crafted image",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48733",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-10T23:16:49.000Z",
-        "contentSnippet": "ImageMagick is free and open-source software used for editing and manipulating digital images. Prior to versions 6.9.13-49 and 7.1.2-24, an infinite loop in the subimage-search operation can happen when using a crafted image. This issue has been patched in versions 6.9.13-49 and ",
-        "cveScore": 4.7,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-48724 - ImageMagick: Heap Buffer Underwrite in Floyd-Steinberg depth dithering",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48724",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-10T23:16:48.000Z",
-        "contentSnippet": "ImageMagick is free and open-source software used for editing and manipulating digital images. Prior to version 7.1.2-24, when using an image with mask the Floyd-Steinberg dithering method it will cause a negative heap buffer over-write. This issue has been patched in version 7.1",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-47734 - Dulwich has unbounded memory allocation in receive-pack from crafted thin packs",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47734",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-10T23:16:48.000Z",
-        "contentSnippet": "Dulwich is a pure-Python implementation of the Git file formats and protocols. Starting in version 0.1.0 and prior to version 1.2.5, a client with push access could push a tiny crafted thin pack (~174 bytes) whose delta header declares a huge dest_size. When dulwich ingested it v",
-        "cveScore": 5.7,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-47712 - Dulwich doesn't sanitize commit subjects in `porcelain.format_patch`",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47712",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-10T23:16:48.000Z",
-        "contentSnippet": "Dulwich is a pure-Python implementation of the Git file formats and protocols. Starting in version 0.24.0 and prior to version 1.2.5, dulwich.porcelain.format_patch(outdir=...) derives each patch filename from the commit's subject line. Prior to this fix, get_summary only replace",
-        "cveScore": 3.3,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-47342 - Apache OFBiz: Privilege Escalation via updateOrRemove Authorization Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47342",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-10T23:16:48.000Z",
-        "contentSnippet": "A privilege escalation vulnerability in Apache OFBiz allows a low-privileged authenticated user to obtain higher privileges This issue affects Apache OFBiz: before 24.09.07. Users are recommended to upgrade to version 24.09.07, which fixes the issue.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-47213 - BoxLite: Timeout Bypass Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47213",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-10T23:16:48.000Z",
-        "contentSnippet": "Boxlite is a sandbox service that allows users to create lightweight virtual machines (Boxes) and launch OCI containers within them to run untrusted code. In versions 0.8.2 and prior, Boxlite allows users to configure a timeout for services running inside the virtual machine. Whe",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-47166 - ImageMagick: Heap Buffer Over-Read in distributed pixel cache server",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47166",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-10T23:16:48.000Z",
-        "contentSnippet": "ImageMagick is free and open-source software used for editing and manipulating digital images. Prior to versions 6.9.13-48 and 7.1.2-23, an attacker who can connect to a magick -distribute-cache service can cause a heap buffer over-read in the server process. This issue has been ",
-        "cveScore": 5.7,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-47165 - ImageMagick: Information Disclosure in distributed pixel cache server because it is not using a challenge–response authentication model",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47165",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-10T23:16:48.000Z",
-        "contentSnippet": "ImageMagick is free and open-source software used for editing and manipulating digital images. Prior to versions 6.9.13-48 and 7.1.2-23, the distributed pixel cache was originally designed to operate without a challenge–response authentication model. This has been changed in vers",
-        "cveScore": 4.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-46703 - BoxLite: Path Traversal Vulnerability in boxlite Leads to Arbitrary File Write on the Host",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46703",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-10T23:16:47.000Z",
-        "contentSnippet": "Boxlite is a sandbox service that allows users to create lightweight virtual machines (Boxes) and launch OCI containers within them to run untrusted code. Prior to version 0.9.0, Boxlite allows users to specify the OCI image used by containers in the sandbox. However, when proces",
-        "cveScore": 9.6,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-46695 - BoxLite: Permission Bypass in boxlite Allows Modification of Read-Only Files",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46695",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-10T23:16:47.000Z",
-        "contentSnippet": "Boxlite is a sandbox service that allows users to create lightweight virtual machines (Boxes) and launch OCI containers within them to run untrusted code. Prior to version 0.9.0, Boxlite does not restrict the kernel capabilities available inside the container, malicious code can ",
-        "cveScore": 10,
-        "cveSeverity": "CRITICAL"
       }
     ],
     "ai": [
+      {
+        "title": "Nous Research Ships Hermes Agent Profile Builder: Identity, Model, Skills, and MCP Servers in One Dashboard Flow",
+        "link": "https://www.marktechpost.com/2026/06/11/nous-research-ships-hermes-agent-profile-builder-identity-model-skills-and-mcp-servers-in-one-dashboard-flow/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-06-11T09:53:52.000Z",
+        "contentSnippet": "The Hermes Agent dashboard now builds complete agent profiles in one flow, replacing multi-step CLI setup for users. The post Nous Research Ships Hermes Agent Profile Builder: Identity, Model, Skills, and MCP Servers in One Dashboard Flow appeared first on MarkTechPost."
+      },
+      {
+        "title": "Meet ‘North Mini Code’: Cohere’s 30B Open-Weight Mixture-of-Experts Model With 3B Active Parameters for Agentic Coding",
+        "link": "https://www.marktechpost.com/2026/06/11/meet-north-mini-code-coheres-30b-open-weight-mixture-of-experts-model-with-3b-active-parameters-for-agentic-coding/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-06-11T08:33:27.000Z",
+        "contentSnippet": "Cohere's first developer coding model is a 30B mixture-of-experts running on a single H100 with 256K context length. The post Meet ‘North Mini Code’: Cohere’s 30B Open-Weight Mixture-of-Experts Model With 3B Active Parameters for Agentic Coding appeared first on MarkTechPost."
+      },
       {
         "title": "How frontier teams are reinventing AI-native development",
         "link": "https://aws.amazon.com/blogs/machine-learning/how-frontier-teams-are-reinventing-ai-native-development/",
@@ -635,20 +649,6 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-06-02T17:31:11.000Z",
         "contentSnippet": "In this post, we'll walk through implementing object detection with Amazon Nova 2 Lite. You'll learn how to deploy an object detection application using Amazon Bedrock, AWS Lambda, and Amazon API Gateway. You'll also learn how to craft effective prompts, process structured JSON o"
-      },
-      {
-        "title": "How Baz improved its AI Agent Code Review accuracy using Amazon Bedrock AgentCore",
-        "link": "https://aws.amazon.com/blogs/machine-learning/how-baz-improved-its-ai-agent-code-review-accuracy-using-amazon-bedrock-agentcore/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-06-02T15:45:11.000Z",
-        "contentSnippet": "This post walks through how Baz built their Spec Review agent using Amazon Bedrock and Amazon Bedrock AgentCore. We'll cover the architecture decisions, implementation details, and the business outcomes they achieved by leveraging these AWS services to automate their code review "
-      },
-      {
-        "title": "Alibaba’s Qwen Team Launches Qwen3.7-Plus, Adding Vision, Deep Reasoning, Tool Invocation, and Autonomous Iteration on the Bailian Platform",
-        "link": "https://www.marktechpost.com/2026/06/02/alibabas-qwen-team-launches-qwen3-7-plus-adding-vision-deep-reasoning-tool-invocation-and-autonomous-iteration-on-the-bailian-platform/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-06-02T09:07:48.000Z",
-        "contentSnippet": "Qwen3.7-Plus is Alibaba's multimodal agent model on Bailian, understanding images and video while adding self-programming and tool invocation. The post Alibaba’s Qwen Team Launches Qwen3.7-Plus, Adding Vision, Deep Reasoning, Tool Invocation, and Autonomous Iteration on the Baili"
       }
     ],
     "virtualization": [
