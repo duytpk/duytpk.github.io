@@ -1,8 +1,62 @@
 {
-  "updatedAt": "2026-06-13T02:37:54.799Z",
+  "updatedAt": "2026-06-13T06:52:42.687Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-9848 - WP Ticket <= 6.0.4 - Unauthenticated SQL Injection via WordPress Search 's' Parameter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9848",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-13T03:16:22.000Z",
+        "contentSnippet": "The WP Ticket plugin for WordPress is vulnerable to SQL Injection via the WordPress search query parameter (`s`) in versions up to, and including, 6.0.4 The plugin hooks WordPress's `posts_request` filter with `wp_ticket_com_posts_request()`, which calls `emd_author_search_result",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-54231 - Abrt: unsanitized systemd journal content written to dump directory files enables content injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54231",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-13T03:16:21.000Z",
+        "contentSnippet": "A content injection vulnerability was found in the ABRT post-create event handler scripts in libreport. The event script queries the systemd journal for log entries matching the crashed process and writes the results to files in the dump directory without sanitizing embedded cont",
+        "cveScore": 5.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-54230 - Abrt: event handler scripts follow symlinks when writing output files, allowing arbitrary file overwrites",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54230",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-13T03:16:21.000Z",
+        "contentSnippet": "A symlink following vulnerability was found in the ABRT post-create event handler scripts in libreport. Event scripts write output files using shell redirections without the O_NOFOLLOW flag. If the target file is replaced with a symlink, the shell process running as root follows ",
+        "cveScore": 7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-54229 - Abrt: chownproblemdir succeeds during active post-create event processing due to inadequate locking",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54229",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-13T03:16:21.000Z",
+        "contentSnippet": "A race condition was found in the abrt-dbus D-Bus service's ChownProblemDir method. ChownProblemDir opens the dump directory with DD_OPEN_READONLY and calls dd_chown to change ownership of all files to the caller's uid, succeeding even while post-create event handlers hold a writ",
+        "cveScore": 7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-54228 - Abrt: toctou race condition in abrt-dbus setelement allows arbitrary file writes to dump directories",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54228",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-13T03:16:21.000Z",
+        "contentSnippet": "A time-of-check time-of-use (TOCTOU) race condition was found in the abrt-dbus D-Bus service's SetElement method. Between dump directory creation and post-create event execution, any local user can call SetElement to write arbitrary text files into the root-owned dump directory, ",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-12089 - WS Optimize – All-in-One Speed Booster & Cache Tools <= 3.3.19 - Authenticated (Editor+) Arbitrary File Read",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12089",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-13T03:16:19.000Z",
+        "contentSnippet": "The LWS Optimize – All-in-One Speed Booster & Cache Tools plugin for WordPress is vulnerable to Arbitrary File Read in versions up to, and including, 3.3.19. This is due to the combine_current_css() function trusting values harvested from page HTML and converting same-site URLs t",
+        "cveScore": 4.9,
+        "cveSeverity": "MEDIUM"
+      },
       {
         "title": "CVE-2026-11443 - Allegra downloadAttachment Cross-Site Scripting Authentication Bypass Vulnerability",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-11443",
@@ -848,60 +902,6 @@
         "contentSnippet": "The Aqara Cloud Developer Portal (developer.aqara.com) issued a developer token to any email address supplied by the attacker. This is an instance of \"CWE-306: Missing Authentication for Critical Function\" with an estimated CVSS of CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N (6.",
         "cveScore": 6.5,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-50026 - Frappe: Lack of permissions checks in 'relink' and 'set_email_password' endpoints",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50026",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-12T16:16:31.000Z",
-        "contentSnippet": "Frappe is a full-stack web application framework. Prior to versions 15.107.0 and 16.17.0, a lack of permission checks in these endpoints allowed unauthorized access to resources. This issue has been patched in versions 15.107.0 and 16.17.0.",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-50020 - Netty's HttpObjectDecoder skips arbitrary initial control characters when only initial CRLF characters are permitted",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50020",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-12T16:16:31.000Z",
-        "contentSnippet": "Netty is a network application framework for development of protocol servers and clients. Prior to versions 4.1.135.Final and 4.2.15.Final, before reading the first request-line, `HttpObjectDecoder` skips every byte for which `Character.isISOControl(b)` is `true` (0x00–0x1F and 0",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-50011 - Netty has unbounded pre-allocation in RedisArrayAggregator from RESP array length",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50011",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-12T16:16:31.000Z",
-        "contentSnippet": "Netty is a network application framework for development of protocol servers and clients. Prior to versions 4.1.135.Final and 4.2.15.Final, RedisArrayAggregator pre-allocates ArrayList with initial capacity equal to the RESP array element count declared in an array header. That c",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-50010 - Netty's wrapping plain trust manager silently disables hostname verification",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50010",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-12T16:16:31.000Z",
-        "contentSnippet": "Netty is a network application framework for development of protocol servers and clients. Prior to versions 4.1.135.Final and 4.2.15.Final, SimpleTrustManagerFactory.engineGetTrustManagers() and related paths wrap any user-supplied plain X509TrustManager in X509TrustManagerWrappe",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-50009 - Netty QUIC stateless reset token material exposed through header-visible connection IDs",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50009",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-12T16:16:31.000Z",
-        "contentSnippet": "Netty is a network application framework for development of protocol servers and clients. Prior to version 4.2.15.Final, Netty QUIC exposes the stateless reset token on the network path when using the default HMAC-based connection-ID and stateless-reset-token generators. The rese",
-        "cveScore": 4.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-48748 - Netty HTTP/3 QPACK Blocked Streams Memory Exhaustion",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48748",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-12T16:16:30.000Z",
-        "contentSnippet": "Netty is a network application framework for development of protocol servers and clients. Prior to version 4.2.15.Final, a memory exhaustion vulnerability in the Netty HTTP/3 codec allows the creation of an infinite number of blocked streams, which can cause OOM error. Version 4.",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
