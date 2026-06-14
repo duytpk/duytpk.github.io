@@ -1,8 +1,44 @@
 {
-  "updatedAt": "2026-06-14T19:12:30.835Z",
+  "updatedAt": "2026-06-14T21:02:01.832Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-54413 - DriftRegion UDS Integer Underflow Out-of-Bounds Read",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54413",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-14T18:17:20.000Z",
+        "contentSnippet": "driftregion iso14229 through 0.9.0 contains an integer underflow and downstream out-of-bounds read in the Handle_0x27_SecurityAccess() function in iso14229.c that allows a remote unauthenticated attacker to crash a UDS server and potentially read memory past the receive buffer by",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-54412 - MQTT-C Heap Out-of-Bounds Read and Integer Underflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54412",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-14T18:17:20.000Z",
+        "contentSnippet": "LiamBindle MQTT-C through version 1.1.6 contains a heap-based out-of-bounds read and integer underflow in the mqtt_unpack_publish_response() function in src/mqtt.c that allows a remote unauthenticated attacker controlling an MQTT broker - or able to inject MQTT traffic into an un",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-54411 - Linux-PAM pam_userdb Plaintext Password Recovery Timing Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54411",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-14T18:17:20.000Z",
+        "contentSnippet": "Linux-PAM through 1.7.2 contains an observable timing discrepancy (CWE-208) in the pam_userdb module's plaintext-password comparison path in modules/pam_userdb/pam_userdb.c that allows a local or network-adjacent attacker able to repeatedly drive authentication through a calling ",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-54410 - nanoMODBUS TCP Server Off-by-One Buffer Overflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54410",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-14T18:17:20.000Z",
+        "contentSnippet": "nanoMODBUS through v1.23.0 contains an off-by-one buffer overflow in the recv_msg_header() function of the Modbus/TCP server that allows remote unauthenticated attackers to write one attacker-controlled byte past the end of the 260-byte receive buffer by sending a crafted MBAP fr",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-11527 - Config::IniFiles versions before 3.001000 for Perl allow OS command injection and file overwrite via a 2-arg open() of the -file argument in _make_filehandle",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-11527",
@@ -866,45 +902,16 @@
         "contentSnippet": "Typesense is a fast, typo-tolerant search engine. Prior to versions 29.1 and 30.2, there is an unauthenticated denial-of-service vulnerability in the /multi_search endpoint. A specially crafted request can trigger an unhandled exception during request processing, causing the serv",
         "cveScore": 8.7,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-44173 - MariaDB: FILE privilege was not checked for subqueries in the FROM clause",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44173",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-12T18:16:34.000Z",
-        "contentSnippet": "MariaDB server is a community developed fork of MySQL server. From versions 10.6.1 to before 10.6.26, 10.11.1 to before 10.11.17, 11.4.1 to before 11.4.11, 11.8.1 to before 11.8.7, and 12.3.1, MariaDB allowed SELECT ... INTO OUTFILE and SELECT ... INTO DUMPFILE without verifying ",
-        "cveScore": 5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-44172 - MariaDB: mysql_real_escape_string() incorrectly handled big5",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44172",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-12T18:16:34.000Z",
-        "contentSnippet": "MariaDB server is a community developed fork of MySQL server. In versions 3.3.18 and 3.4.8, an application that was taking non-validated user input, escaping it with mysql_real_escape_string() and sending it to the database using text protocol and big5 character set was vulnerabl",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-44171 - MariaDB: path traversal in mbstream",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44171",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-12T18:16:33.000Z",
-        "contentSnippet": "MariaDB server is a community developed fork of MySQL server. From versions 10.6.1 to before 10.6.26, 10.11.1 to before 10.11.17, 11.4.1 to before 11.4.11, 11.8.1 to before 11.8.7, and 12.3.1, mbstream did not check for /../ in the path when unpacking the archive. A proper backup",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-44170 - MariaDB: Argument injection in CONNECT REST Xcurl on Windows via unsanitized URL",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44170",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-12T18:16:33.000Z",
-        "contentSnippet": "MariaDB server is a community developed fork of MySQL server. From versions 10.6.1 to before 10.6.26, 10.11.1 to before 10.11.17, 11.4.1 to before 11.4.11, 11.8.1 to before 11.8.7, and 12.3.1, MariaDB on WIndows with installed CONNECT engine and enabled REST support interpolated ",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
+      {
+        "title": "A Coding Hands-On on FineWeb for Streaming, Filtering, Deduplication, Tokenization, and Large-Scale Web Corpus Analytics",
+        "link": "https://www.marktechpost.com/2026/06/14/a-coding-hands-on-on-fineweb-for-streaming-filtering-deduplication-tokenization-and-large-scale-web-corpus-analytics/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-06-14T20:45:32.000Z",
+        "contentSnippet": "In this tutorial, we explore the FineWeb dataset through an advanced hands-on workflow. We stream a manageable sample of the dataset without downloading the full multi-terabyte corpus, inspect its schema and metadata, and analyze key fields such as URL, language, language score, "
+      },
       {
         "title": "Databricks Open-Sources Omnigent: A Meta-Harness That Composes, Governs, and Shares AI Agents Across Claude Code, Codex, and Pi",
         "link": "https://www.marktechpost.com/2026/06/13/databricks-open-sources-omnigent-a-meta-harness-that-composes-governs-and-shares-ai-agents-across-claude-code-codex-and-pi/",
