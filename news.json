@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-06-15T14:59:02.389Z",
+  "updatedAt": "2026-06-15T19:04:56.752Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-47777 - Mastodon has a consent-check bypass in its remote Collections",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47777",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-15T16:54:44.000Z",
+        "contentSnippet": "Mastodon is a free, open-source social network server based on ActivityPub. In versions there is a missing condition in the check if remote accounts consented to be featured in a remote Collection could lead to attackers bypassing the check and faking consent. An attacker could f",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49294 - Valhalla has reflected XSS via unsanitized JSONP callback parameter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49294",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-15T16:28:04.000Z",
+        "contentSnippet": "Valhalla is an open source routing engine and accompanying libraries for use with OpenStreetMap data. Versions 3.6.3 and prior are vulnerable to reflected cross-site scripting (XSS) due to improper neutralization of input in the JSONP callback parameter. When a request specifies ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-8358 - Heap buffer overflow in spreadsheet tracked-changes import",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8358",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-15T16:24:03.000Z",
+        "contentSnippet": "LibreOffice Calc can import tracked changes from a spreadsheet document. A heap buffer overflow existed when a document reused the same change identifier for two different kinds of change. The importer then treated one change object as a different, larger type and wrote past the ",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-8357 - Heap buffer overflow in Calc formula compilation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8357",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-15T16:23:37.000Z",
+        "contentSnippet": "LibreOffice Calc compiles cell formulas when opening a spreadsheet. A heap buffer overflow existed when compiling a very long formula made up of many opening tokens. The array that tracks nesting depth was allocated one element too small for that worst case, so such a formula wro",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-8356 - Stack buffer overflow in PPT presentation import",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8356",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-15T16:23:06.000Z",
+        "contentSnippet": "LibreOffice can import presentations in the legacy binary PPT format. A stack buffer overflow existed when importing a colour-replacement record. Two fixed-size colour tables were filled from the file, but the write position was not reset between the two passes over the record, s",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-6047 - Heap buffer overflow in OOXML text box element import",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6047",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-15T16:22:37.000Z",
+        "contentSnippet": "LibreOffice can import documents in the OOXML format (DOCX). A heap buffer overflow existed when replaying deferred parser events for a text box element. A handler object was assumed to be of one type and written to at that type's field layout, but it could be a smaller object, s",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-6045 - Heap buffer overflow in EMF+ gradient brush import",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6045",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-15T16:22:16.000Z",
+        "contentSnippet": "LibreOffice can import EMF+ graphics, which may be embedded in documents. A heap buffer overflow existed when importing an EMF+ gradient brush. The number of gradient blend points was read from the file and used to compute an allocation size, but that multiplication could overflo",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-6040 - Heap use-after-free in ODF number-format blank-width parsing",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6040",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-15T16:21:53.000Z",
+        "contentSnippet": "A heap use-after-free existed when importing the blank-width characters of an ODF number format. A position value read from the document was not checked against the length of the format-code string, so a malformed number format could be processed against memory outside that strin",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-6039 - Heap buffer overflow in DXF polyline import",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6039",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-15T16:21:16.000Z",
+        "contentSnippet": "LibreOffice can import drawings in the DXF format used by CAD software. A heap buffer overflow existed when importing a DXF polyline. The point count taken from the file was truncated to a 16-bit value when the point buffer was sized, while the full count was used to fill it, so ",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-20262 - Cisco Catalyst SD-WAN Manager Arbitrary File Write Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-20262",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-15T16:21:09.000Z",
+        "contentSnippet": "A vulnerability in the web UI of Cisco Catalyst SD-WAN Manager, formerly SD-WAN vManage, could allow an authenticated, remote attacker to create a file or overwrite any file on the filesystem of an affected system. This vulnerability exists because the affected software does not ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-9863 - Core Privileged Access Manager (BoKS) upgrade tooling command injection vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9863",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-15T16:16:35.000Z",
+        "contentSnippet": "Fortra BoKS Manager contains an OS command injection vulnerability in the client upgrade and patch tooling for legacy tar-based client installations. A malicious or compromised legacy tar-installed client selected for upgrade or patching may be able to cause commands to be execut",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-9862 - Core Privileged Access Manager (BoKS) autoregistration service command injection vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9862",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-15T16:16:35.000Z",
+        "contentSnippet": "Fortra's Core Privileged Access Manager (BoKS) contains an OS command injection vulnerability in the boks_autoregisterd service. A remote attacker with network access to the service may be able to cause commands to be executed with the privileges of the service during the autoreg",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-9595 - webpack-dev-server vulnerable to HMR WebSocket interception via permissive user proxies",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9595",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-15T16:16:35.000Z",
+        "contentSnippet": "Impact: When a user-configured proxy on webpack-dev-server has a broad context (e.g. /) and ws: true, it also intercepts the dev server's own HMR WebSocket and forwards it to the proxy target. This leaks the browser's cookies and Origin header to the backend, bypasses the dev ser",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-8683 - Overly long URLs crash the Mattermost Desktop App",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8683",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-15T16:16:34.000Z",
+        "contentSnippet": "Mattermost Desktop App versions",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-5038 - multer vulnerable to Denial of Service via incomplete cleanup of aborted uploads",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-5038",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-15T16:16:34.000Z",
+        "contentSnippet": "Impact: multer versions 2.0.0-alpha.1 through 2.1.1 and 3.0.0-alpha.1 are vulnerable to a Denial of Service when using diskStorage. Aborted or malformed multipart uploads leave orphaned partial files on disk because the Readable.pipe() call does not propagate the stream destroy s",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-10634 - Use-after-free in Zephyr native TCP net_tcp_foreach() due to dropping tcp_lock during the callback",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10634",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-15T16:16:32.000Z",
+        "contentSnippet": "Zephyr's native TCP stack iterates the global connection list in net_tcp_foreach() (subsys/net/ip/tcp.c) using the SYS_SLIST_FOR_EACH_CONTAINER_SAFE macro, which caches a pointer to the next list node. Prior to this fix the function released tcp_lock while invoking the per-connec",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2025-15659 - WordPress Elizaibots plugin <= 1.0.2 - Cross Site Scripting (XSS) vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-15659",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-15T16:16:32.000Z",
+        "contentSnippet": "Contributor Cross Site Scripting (XSS) in Elizaibots",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2025-15658 - WordPress WP Emmet plugin <= 0.3.4 - Cross Site Scripting (XSS) vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-15658",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-15T16:16:31.000Z",
+        "contentSnippet": "Administrator Cross Site Scripting (XSS) in WP Emmet",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-6517 - Mattermost Desktop App fails to restrict the allow list of domains which NTLM credentials are passed",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6517",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-15T14:16:37.000Z",
+        "contentSnippet": "Mattermost Desktop App versions",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-5242 - Code Injection in Mia Technologies' Pizzy Library",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-5242",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-15T14:16:37.000Z",
+        "contentSnippet": "Improper neutralization of formula elements in a CSV file vulnerability in MIA Technology Inc. Pizzy Library allows Code Injection. This issue affects Pizzy Library: from 1.0.0.26250 before 1.3.9.26250.",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-5233 - Missing Rate Limiting in Mia Technologies' Pizzy Library",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-5233",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-15T14:16:37.000Z",
+        "contentSnippet": "Improper Control of Interaction Frequency vulnerability in MIA Technology Inc. Pizzy Library allows Flooding. This issue affects Pizzy Library: from 1.0.0.26250 before 1.3.9.26250.",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-5230 - Improper Access Control in Mia Technologies' Pizzy Library",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-5230",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-15T14:16:37.000Z",
+        "contentSnippet": "Improper Access Control, Missing Authorization vulnerability in MIA Technology Inc. Pizzy Library allows Exploiting Incorrectly Configured Access Control Security Levels. This issue affects Pizzy Library: from 1.0.0.26250 before 1.3.9.26250.",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-5079 - multer vulnerable to Denial of Service via deeply nested field names",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-5079",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-15T14:16:37.000Z",
+        "contentSnippet": "Impact: multer versions 1.0.0 through 2.1.1 and 3.0.0-alpha.1 are vulnerable to a Denial of Service via deeply nested field names in multipart form data. The append-field dependency parses bracket notation in field names with no limit on nesting depth, allowing an attacker to for",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-52704 - WordPress WooCommerce PDF Invoice Builder plugin <= 2.0.8 - Remote Code Execution (RCE) vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52704",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-15T14:16:36.000Z",
+        "contentSnippet": "Improper Control of Generation of Code ('Code Injection') vulnerability in Edgar Rojas WooCommerce PDF Invoice Builder allows Remote Code Inclusion. This issue affects WooCommerce PDF Invoice Builder: from n/a through 2.0.8.",
+        "cveScore": 10,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-49111 - WordPress Masteriyo - LMS plugin <= 2.2.0 - Privilege Escalation vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49111",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-15T14:16:35.000Z",
+        "contentSnippet": "Incorrect Privilege Assignment vulnerability in ThemeGrill Masteriyo - LMS allows Privilege Escalation. This issue affects Masteriyo - LMS: from n/a through 2.2.0.",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-5482 - Remote Code Execution via Unrestricted File Upload in Responsive FileManager",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-5482",
@@ -677,234 +902,23 @@
         "contentSnippet": "The Store Locator WordPress plugin before 1.6.9 does not validate a parameter before using it in a file path, allowing high-privileged users such as administrators to read arbitrary `.php` files from the server, including configuration files that contain database credentials and ",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-9061 - Agile Store Locator < 1.6.9 - Admin+ Stored XSS via logo_name",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9061",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-13T07:16:14.000Z",
-        "contentSnippet": "The Store Locator WordPress plugin before 1.6.9 does not sanitize and escape store logo metadata before storing it and outputting it on the Store Locator WordPress plugin before 1.6.9 admin page, allowing high-privileged users such as administrators to perform Stored Cross-Site S",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-11769 - Operator - Namespaced User Path Traversal",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11769",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-13T06:16:14.000Z",
-        "contentSnippet": "We have released version 5.24.0 of the Grafana Operator. This patch includes a CRITICAL severity security fix for a path traversal/privilege escalation vulnerability in the Grafana Operator. ### Summary The Grafana Operator supports loading dashboards & library panels using the j",
-        "cveScore": 6.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-9848 - WP Ticket <= 6.0.4 - Unauthenticated SQL Injection via WordPress Search 's' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9848",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-13T03:16:22.000Z",
-        "contentSnippet": "The WP Ticket plugin for WordPress is vulnerable to SQL Injection via the WordPress search query parameter (`s`) in versions up to, and including, 6.0.4 The plugin hooks WordPress's `posts_request` filter with `wp_ticket_com_posts_request()`, which calls `emd_author_search_result",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-54231 - Abrt: unsanitized systemd journal content written to dump directory files enables content injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54231",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-13T03:16:21.000Z",
-        "contentSnippet": "A content injection vulnerability was found in the ABRT post-create event handler scripts in libreport. The event script queries the systemd journal for log entries matching the crashed process and writes the results to files in the dump directory without sanitizing embedded cont",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-54230 - Abrt: event handler scripts follow symlinks when writing output files, allowing arbitrary file overwrites",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54230",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-13T03:16:21.000Z",
-        "contentSnippet": "A symlink following vulnerability was found in the ABRT post-create event handler scripts in libreport. Event scripts write output files using shell redirections without the O_NOFOLLOW flag. If the target file is replaced with a symlink, the shell process running as root follows ",
-        "cveScore": 7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-54229 - Abrt: chownproblemdir succeeds during active post-create event processing due to inadequate locking",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54229",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-13T03:16:21.000Z",
-        "contentSnippet": "A race condition was found in the abrt-dbus D-Bus service's ChownProblemDir method. ChownProblemDir opens the dump directory with DD_OPEN_READONLY and calls dd_chown to change ownership of all files to the caller's uid, succeeding even while post-create event handlers hold a writ",
-        "cveScore": 7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-54228 - Abrt: toctou race condition in abrt-dbus setelement allows arbitrary file writes to dump directories",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54228",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-13T03:16:21.000Z",
-        "contentSnippet": "A time-of-check time-of-use (TOCTOU) race condition was found in the abrt-dbus D-Bus service's SetElement method. Between dump directory creation and post-create event execution, any local user can call SetElement to write arbitrary text files into the root-owned dump directory, ",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-12089 - WS Optimize – All-in-One Speed Booster & Cache Tools <= 3.3.19 - Authenticated (Editor+) Arbitrary File Read",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12089",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-13T03:16:19.000Z",
-        "contentSnippet": "The LWS Optimize – All-in-One Speed Booster & Cache Tools plugin for WordPress is vulnerable to Arbitrary File Read in versions up to, and including, 3.3.19. This is due to the combine_current_css() function trusting values harvested from page HTML and converting same-site URLs t",
-        "cveScore": 4.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-11443 - Allegra downloadAttachment Cross-Site Scripting Authentication Bypass Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11443",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-13T00:16:24.000Z",
-        "contentSnippet": "Allegra downloadAttachment Cross-Site Scripting Authentication Bypass Vulnerability. This vulnerability allows remote attackers to execute arbitrary script on affected installations of Allegra. User interaction is required to exploit this vulnerability in that the target must vis",
-        "cveScore": 4.6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-11442 - Allegra exportReport Directory Traversal Information Disclosure Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11442",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-13T00:16:23.000Z",
-        "contentSnippet": "Allegra exportReport Directory Traversal Information Disclosure Vulnerability. This vulnerability allows remote attackers to disclose sensitive information on affected installations of Allegra. Authentication is required to exploit this vulnerability. The specific flaw exists wit",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-6676 - Avira antivirus engine heap buffer OOB write when scanning a malformed POSIX tar archive",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6676",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-12T23:16:45.000Z",
-        "contentSnippet": "Heap buffer out-of-bounds write vulnerability in Avira Antivirus engine when scanning a malformed POSIX tar archive may allow Local Execution of Code or Denial-of-Service of the antivirus engine process. This issue affects Avira Antivirus on Windows, macOS, and Linux for engine b",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-12068 - Avira Password Manager credential disclosure via cross-origin autofill in Firefox",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12068",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-12T23:16:33.000Z",
-        "contentSnippet": "Information disclosure vulnerability in Avira Password Manager when used with Mozilla Firefox may allow a remote attacker operating a cross-origin iframe to obtain credentials autofilled for the parent web page via incorrect autofill field selection. This issue affects Avira Pass",
-        "cveScore": 7.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2025-9033 - Avira antivirus engine heap buffer OOB read when scanning a malformed PDF file (variant 3)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-9033",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-12T23:16:31.000Z",
-        "contentSnippet": "Heap buffer out-of-bounds read vulnerability in Avira Antivirus engine when scanning a malformed PDF file may allow Local Execution of Code or Denial-of-Service of the antivirus engine process. This issue affects Avira Antivirus on Windows, macOS, and Linux for engine builds befo",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2025-9032 - Avira antivirus engine heap buffer OOB read when scanning a malformed PE file",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-9032",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-12T23:16:30.000Z",
-        "contentSnippet": "Heap buffer out-of-bounds read vulnerability in Avira Antivirus engine when scanning a malformed Windows PE file may allow Local Execution of Code or Denial-of-Service of the antivirus engine process. This issue affects Avira Antivirus on Windows, macOS, and Linux for engine buil",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2025-14098 - Avira antivirus engine heap buffer OOB write when scanning a malformed MS-DOS executable file",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-14098",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-12T23:16:27.000Z",
-        "contentSnippet": "Heap buffer out-of-bounds write vulnerability due to integer overflow in Avira Antivirus engine when scanning a malformed MS-DOS executable file may allow Local Execution of Code or Denial-of-Service of the antivirus engine process. This issue affects Avira Antivirus on Windows, ",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-54398 - MISP object edit authorization bypass allows unauthorized sharing group assignment",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54398",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-12T22:16:56.000Z",
-        "contentSnippet": "An authorization flaw in MISP’s object add/edit handling allowed an authenticated user with object editing permissions to assign a MISP object, or attributes contained within an object, to a sharing group that the user was not authorized to use or view. When editing objects, the ",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-54095 - Rejected reason: CVE ** REJECT ** DO NOT USE THIS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54095",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-12T22:16:56.000Z",
-        "contentSnippet": "Rejected reason: CVE ** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: CVE-2025-53826. Reason: This candidate is a duplicate of CVE-2025-53826. Notes: All CVE users should reference CVE-2025-53826 instead of this candidate",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-53868 - Capgo < 12.128.2 - Denial of Service via Unverified Email Account Registration and Deletion",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53868",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-12T22:16:56.000Z",
-        "contentSnippet": "Capgo before 12.128.2 contains a denial of service vulnerability allowing attackers to register accounts using arbitrary email addresses without verification, then initiate deletion to lock emails in pending deletion state. Attackers can permanently lock legitimate users out of t",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-53867 - Capgo < 12.128.2 - Orphaned File Retention via Profile Image Replacement",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53867",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-12T22:16:56.000Z",
-        "contentSnippet": "Capgo before 12.128.2 fails to delete previously uploaded profile images from backend storage when users replace or remove them. Attackers can access orphaned image files through previously generated URLs, allowing unauthorized retrieval of user-uploaded content.",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-53839 - OpenClaw < 2026.5.7 - Hostname Prefix Matching Bypass in Trusted Retry Endpoint Validation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53839",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-12T22:16:55.000Z",
-        "contentSnippet": "OpenClaw before 2026.5.7 contains a hostname validation vulnerability in retry endpoint checks that allows matching hostname prefixes instead of exact hostnames. Attackers can exploit this by crafting a hostname prefix resembling a trusted host to send authentication material to ",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-53838 - OpenClaw < 2026.5.27 - Node Pairing State Mutation via Reconnection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53838",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-12T22:16:55.000Z",
-        "contentSnippet": "OpenClaw before 2026.5.27 contains a state mutation vulnerability in node pairing reconnection that allows paired nodes to confuse approval scope decisions. Attackers can exploit reconnection logic to restore or present broader node authority than intended, potentially bypassing ",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-53837 - OpenClaw < 2026.5.6 - Missing Channel Type Validation in Mattermost Event Handlers",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53837",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-12T22:16:55.000Z",
-        "contentSnippet": "OpenClaw before 2026.5.6 contains an improper access control vulnerability in Mattermost event handlers that fails to validate channel type metadata. Attackers can bypass intended DM policy decisions by sending crafted Mattermost events missing channel type information to process",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-53836 - OpenClaw < 2026.5.12 - Allowlist Bypass via PowerShell Encoded-Command Aliases",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53836",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-12T22:16:55.000Z",
-        "contentSnippet": "OpenClaw before 2026.5.12 contains an allowlist bypass vulnerability in PowerShell encoded-command handling that allows attackers to execute encoded commands using abbreviated flag aliases not recognized by the allowlist parser. Remote authenticated operators can bypass execution",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-53835 - OpenClaw < 2026.5.6 - Config-Write Enforcement Bypass in Feishu Dynamic-Agent Bindings",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53835",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-12T22:16:55.000Z",
-        "contentSnippet": "OpenClaw before 2026.5.6 contains a configuration enforcement bypass vulnerability in Feishu dynamic-agent bindings that allows authenticated senders to create or update bindings without honoring configured config-write controls. Attackers can exploit this by leveraging the dynam",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-53834 - OpenClaw < 2026.4.27 - Authorization Bypass in QQBot Pre-dispatch Slash Commands",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53834",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-12T22:16:55.000Z",
-        "contentSnippet": "OpenClaw before 2026.4.27 contains an authorization bypass vulnerability in QQBot pre-dispatch slash commands that allows authenticated senders to skip allowFrom policy checks. Attackers can invoke slash commands before configured access control policies are applied, potentially ",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
+      {
+        "title": "AI Agent Failure Detection and Root Cause Analysis with Strands Evals",
+        "link": "https://aws.amazon.com/blogs/machine-learning/ai-agent-failure-detection-and-root-cause-analysis-with-strands-evals/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-06-15T18:07:59.000Z",
+        "contentSnippet": "In this post, we walk you through calling the detector functions to diagnose real agent failures. You learn how to interpret their structured output: categorized failures with confidence scores, causal chains linking root causes to downstream symptoms, and fix recommendations spe"
+      },
+      {
+        "title": "We’re strengthening our presence in Alabama through new investments and community support.",
+        "link": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/alabama-investment-june-2026/",
+        "source": "Google AI Blog",
+        "isoDate": "2026-06-15T15:00:00.000Z",
+        "contentSnippet": "Google has announced a $1.5 billion investment for 2026 and 2027 to expand its data center campus in Jackson County, Alabama. Operating since 2019 on a repurposed former…"
+      },
       {
         "title": "Build context-rich research agents with Deep Agents and Bedrock AgentCore",
         "link": "https://aws.amazon.com/blogs/machine-learning/build-context-rich-research-agents-with-deep-agents-and-bedrock-agentcore/",
@@ -1590,20 +1604,6 @@
         "source": "Google AI Blog",
         "isoDate": "2026-05-20T20:40:00.000Z",
         "contentSnippet": "We’re helping build the state’s next-generation workforce and investing in energy programs."
-      },
-      {
-        "title": "100 things we announced at I/O 2026",
-        "link": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/",
-        "source": "Google AI Blog",
-        "isoDate": "2026-05-20T19:30:00.000Z",
-        "contentSnippet": "We've been busy! Here’s a rundown of the top announcements, launches and demos at I/O 2026."
-      },
-      {
-        "title": "Gemini 3.5 Flash: more expensive, but Google plan to use it for everything",
-        "link": "https://simonwillison.net/2026/May/19/gemini-35-flash/#atom-entries",
-        "source": "Simon Willison's Weblog",
-        "isoDate": "2026-05-19T22:40:25.000Z",
-        "contentSnippet": "Today at Google I/O, Google released Gemini 3.5 Flash. This one skipped the -preview modifier and went straight to general availability, and Google appear to be using it for a whole lot of their key products: 3.5 Flash is available today to billions of people globally: For everyo"
       }
     ],
     "virtualization": [
@@ -1952,6 +1952,34 @@
       }
     ],
     "hardware": [
+      {
+        "title": "AMD takes over MEXT to 'address growing memory constraints' in the data center — memory tiering technology enables flash to appear as DRAM to applications",
+        "link": "https://www.tomshardware.com/pc-components/cpus/amd-takes-over-mext-to-address-growing-memory-constraints-in-the-data-center-memory-tiering-technology-enables-flash-to-appear-as-dram-to-applications",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-15T19:00:47.000Z",
+        "contentSnippet": "AMD acquires MEXT to get Predictive Memory Engine that offloads infrequently accessed data from DRAM to NAND storage."
+      },
+      {
+        "title": "HPE Unifies HPE and Juniper Partner Programs Under Partner Ready Vantage",
+        "link": "https://www.storagereview.com/news/hpe-unifies-hpe-and-juniper-partner-programs-under-partner-ready-vantage",
+        "source": "StorageReview",
+        "isoDate": "2026-06-15T18:30:43.000Z",
+        "contentSnippet": "At HPE Discover 2026 in Las Vegas, HPE announced plans to consolidate its HPE and Juniper Networks partner programs into a single global framework under HPE Partner Ready Vantage. Effective November 1, 2026, partners will operate under a single program structure spanning networki"
+      },
+      {
+        "title": "Multiple small Tennessee counties pass temporary data center bans — Nashville also passed near-unanimous moratorium on first reading",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/multiple-small-tennessee-counties-pass-temporary-data-center-bans-nashville-also-passed-near-unanimous-moratorium-on-first-reading",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-15T18:06:33.000Z",
+        "contentSnippet": "Two jurisdictions in Tennessee just passed a data center moratorium as three more a set to vote on bills that delay these projects. These temporary bans have gained widespread support, especially in rural regions where developers are increasingly looking to for building their mas"
+      },
+      {
+        "title": "Marvell details vision of optically-interconnected data centers spanning across thousands of kilometers — new interconnects sampling later this year would allow CSPs to pool resources based on workloa",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/marvell-details-vision-of-optically-interconnected-data-centers-spanning-across-thousands-of-kilometers-new-interconnects-sampling-later-this-year-would-allow-csps-to-pool-resources-based-on-workload",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-15T16:49:39.000Z",
+        "contentSnippet": "Marvell shares its vision for optically connected data centers, connecting devices across hundreds of kilometers, and the company already has hardware to build them."
+      },
       {
         "title": "China's supreme court bans Infineon from selling GaN power chips in China — market-leader Innoscience secures major victory in multi-region patent war",
         "link": "https://www.tomshardware.com/tech-industry/chinas-top-court-bars-infineon-from-selling-gan-power-chips-in-china",
@@ -2623,34 +2651,6 @@
         "source": "ServeTheHome",
         "isoDate": "2026-05-30T17:00:09.000Z",
         "contentSnippet": "In our ASUS XA NB3I-E12 review, we see what makes this massive NVIDIA Blackwell Ultra platform with over 6.4Tbps of networking different The post ASUS XA NB3I-E12 Review A Massive 8x NVIDIA B300 GPU Server appeared first on ServeTheHome."
-      },
-      {
-        "title": "Installing Out-of-the-Box Ubuntu LTS on Xsight Labs E1 64-Core Arm 800G DPU",
-        "link": "https://www.servethehome.com/installing-out-of-the-box-ubuntu-lts-on-xsight-labs-e1-64-core-arm-800g-dpu/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-05-29T14:33:19.000Z",
-        "contentSnippet": "We take the Xsight Labs E1 64-core Arm Neoverse N2 DPU with 800Gbps of networking and PCIe Gen5 and install vanilla Ubuntu on it The post Installing Out-of-the-Box Ubuntu LTS on Xsight Labs E1 64-Core Arm 800G DPU appeared first on ServeTheHome."
-      },
-      {
-        "title": "Silicon Motion’s SM2524XT is a New PCIe Gen5 DRAM-less SSD Controller for AI PCs",
-        "link": "https://www.servethehome.com/silicon-motions-sm2524xt-is-a-new-pcie-gen5-dram-less-ssd-controller-for-ai-pcs/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-05-28T23:42:43.000Z",
-        "contentSnippet": "The new Silicon Motion SM2524XT is a quad core Arm SSD controller for newer faster DRAM-less PCIe Gen5 SSDs The post Silicon Motion’s SM2524XT is a New PCIe Gen5 DRAM-less SSD Controller for AI PCs appeared first on ServeTheHome."
-      },
-      {
-        "title": "Quick Look JOYJOM Stackable PC Test Bench Cheap But Cheap",
-        "link": "https://www.servethehome.com/quick-look-joyjom-stackable-pc-test-bench-cheap-but-cheap/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-05-27T23:00:49.000Z",
-        "contentSnippet": "We take a quick look at the JOYJOM stackable PC test bench as an alternative to running motherboards bare on a desk for testing The post Quick Look JOYJOM Stackable PC Test Bench Cheap But Cheap appeared first on ServeTheHome."
-      },
-      {
-        "title": "ZimaCube 2 Pro Review An Unexpected 10GbE NAS with Thunderbolt and PCIe Slots",
-        "link": "https://www.servethehome.com/zimacube-2-pro-review-intel-marvell-asmedia/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-05-26T19:00:45.000Z",
-        "contentSnippet": "We review the ZimaCube 2 Pro NAS and see how this box combines an unexpected processor with 10GbE and many 3.5\" and M.2 SSD drive bays The post ZimaCube 2 Pro Review An Unexpected 10GbE NAS with Thunderbolt and PCIe Slots appeared first on ServeTheHome."
       }
     ]
   }
