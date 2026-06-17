@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-06-17T17:46:48.823Z",
+  "updatedAt": "2026-06-17T20:02:53.355Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-55198 - Hermes WebUI < 0.51.443 - Cross-Profile Session Data Exfiltration via Session Export Endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55198",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-17T17:59:25.000Z",
+        "contentSnippet": "Hermes WebUI before 0.51.443 contains an authorization bypass vulnerability in the session export endpoint that allows authenticated users to access sessions from other profiles. The _handle_session_export handler in api/routes.py fails to verify active-profile ownership before s",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-55197 - Hermes WebUI < 0.51.443 - Broken Access Control in /api/session Endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55197",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-17T17:59:10.000Z",
+        "contentSnippet": "Hermes WebUI before 0.51.443 contains a broken access control vulnerability in the /api/session endpoint that allows authenticated users to disclose cross-profile session transcripts. Attackers can bypass profile boundary checks by directly querying session IDs belonging to other",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-55196 - Hermes WebUI < 0.51.409 - Unauthenticated Passkey Registration via Authentication Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55196",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-17T17:58:56.000Z",
+        "contentSnippet": "Hermes WebUI before 0.51.409 contains an authentication bypass vulnerability in passkey registration endpoints that allows unauthenticated remote attackers to register arbitrary passkeys. When HERMES_WEBUI_PASSKEY=1 is enabled with no existing credentials, POST /api/auth/passkey/",
+        "cveScore": 9.1,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-53871 - Hermes WebUI < 0.51.368 - Profile-Scoped Authorization Bypass via Forged hermes_profile Cookie",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53871",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-17T17:58:29.000Z",
+        "contentSnippet": "Hermes WebUI before 0.51.368 contains an authorization bypass vulnerability in the get_profile_cookie() function that accepts unauthenticated profile names from the hermes_profile cookie. An authenticated attacker can forge the hermes_profile cookie value to bypass profile-scoped",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-53870 - Hermes Agent < 0.16.0 - Sensitive File Permission Vulnerability in Store Files",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53870",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-17T17:57:58.000Z",
+        "contentSnippet": "Hermes Agent before 0.16.0 creates response_store.db and webhook_subscriptions.json with world-readable permissions (mode 0o644), exposing conversation history and HMAC secrets to local users. Attackers with local filesystem access can read these files directly to obtain sensitiv",
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-53869 - Hermes Agent < 0.16.0 - DNS Rebinding Bypass via WebSocket Endpoints",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53869",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-17T17:57:30.000Z",
+        "contentSnippet": "Hermes Agent before 0.16.0 contains a DNS rebinding vulnerability in WebSocket endpoints that allows remote attackers to bypass Host and Origin validation. FastAPI HTTP middleware does not execute for WebSocket upgrade requests on /api/pty, /api/ws, /api/pub, and /api/events endp",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-48818 - Starlette: SSRF and NTLM credential theft via UNC paths in StaticFiles on Windows",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48818",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-17T17:50:12.000Z",
+        "contentSnippet": "Starlette is a lightweight ASGI framework/toolkit. In versions 1.0.1 and earlier, StaticFiles on Windows is vulnerable to SSRF. An UNC path such as \\\\attacker.com\\share can cause os.path.realpath to initiate an outbound SMB connection before the path is rejected, exposing the ser",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-11525 - undici vulnerable to Set-Cookie SameSite attribute downgrade via permissive substring matching",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11525",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-17T17:31:03.000Z",
+        "contentSnippet": "Impact: When undici parses a Set-Cookie header, it accepts any SameSite attribute value that contains Strict, Lax, or None as a substring, rather than the case-insensitive exact match specified by RFC 6265. Non-spec values are silently mapped to one of the three standard tokens. ",
+        "cveScore": 3.7,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-2674 - Out-of-bounds Write vulnerability in RTI Connext Professional (Queueing Service,Core Libraries,Persistence Service) allows Overflow Buffers.",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-2674",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-17T17:25:29.000Z",
+        "contentSnippet": "Out-of-bounds Write, Out-of-bounds Write, Out-of-bounds Write vulnerability in RTI Connext Professional (Queueing Service,Core Libraries,Persistence Service) allows Overflow Buffers, Overflow Buffers, Overflow Buffers.This issue affects Connext Professional: from 7.4.0 before 7.7",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-30803 - Integer Underflow (Wrap or Wraparound) vulnerability in RTI Connext Micro (Core Libraries) allows Overread Buffers.",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-30803",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-17T17:21:11.000Z",
+        "contentSnippet": "Integer Underflow (Wrap or Wraparound) vulnerability in RTI Connext Micro (Core Libraries) allows Overread Buffers.This issue affects Connext Micro: from 4.0.0 before 4.3.0.",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-30802 - Out-of-bounds Read vulnerability in RTI Connext Micro (Core Libraries) allows Overread Buffers.",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-30802",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-17T17:20:55.000Z",
+        "contentSnippet": "Out-of-bounds Read vulnerability in RTI Connext Micro (Core Libraries) allows Overread Buffers.This issue affects Connext Micro: from 4.0.0 before 4.3.0.",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-30799 - Missing Authentication for Critical Function vulnerability in RTI Connext Professional (Security Plugins) allows Identity Spoofing.",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-30799",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-17T17:20:36.000Z",
+        "contentSnippet": "Missing Authentication for Critical Function vulnerability in RTI Connext Professional (Security Plugins) allows Identity Spoofing.This issue affects Connext Professional: from 7.4.0 before 7.7.0, from 7.0.0 before 7.3.*, from 6.1.0 before 6.1.*, from 6.0.0 before 6.0.*, from 5.3",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-7300 - Buffer Copy without Checking Size of Input ('Classic Buffer Overflow') vulnerability in RTI Connext Professional (Web Integration Service) allows Filter Failure through Buffer Overflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-7300",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-17T17:20:19.000Z",
+        "contentSnippet": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow') vulnerability in RTI Connext Professional (Web Integration Service) allows Filter Failure through Buffer Overflow.This issue affects Connext Professional: from 7.4.0 before 7.*, from 7.0.0 before 7.3.1.3, from",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-3894 - Out-of-bounds Read vulnerability in RTI Connext Professional (Core Libraries) allows Overread Buffers.",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-3894",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-17T17:19:25.000Z",
+        "contentSnippet": "Out-of-bounds Read vulnerability in RTI Connext Professional (Core Libraries) allows Overread Buffers.This issue affects Connext Professional: from 7.4.0 before 7.7.0, from 7.0.0 before 7.3.1.3, from 6.1.0 before 6.1.*, from 6.0.0 before 6.0.*, from 5.3.0 before 5.3.*, from 5.0.0",
+        "cveScore": 9.2,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-2675 - Missing Authentication for Critical Function vulnerability in RTI Connext Professional (Security Plugins) allows Fake the Source of Data.",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-2675",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-17T17:19:04.000Z",
+        "contentSnippet": "Missing Authentication for Critical Function vulnerability in RTI Connext Professional (Security Plugins) allows Fake the Source of Data.This issue affects Connext Professional: from 7.4.0 before 7.7.0, from 7.0.0 before 7.3.1.3, from 6.1.0 before 6.1.*, from 6.0.0 before 6.0.*, ",
+        "cveScore": 6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-2467 - Heap-based Buffer Overflow vulnerability in RTI Connext Professional (Core Libraries) allows Overflow Variables and Tags.",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-2467",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-17T17:17:04.000Z",
+        "contentSnippet": "Heap-based Buffer Overflow vulnerability in RTI Connext Professional (Core Libraries) allows Overflow Variables and Tags.This issue affects Connext Professional: from 7.4.0 before 7.7.0, from 7.0.0 before 7.3.1.3, from 6.1.0 before 6.1.*, from 6.0.0 before 6.0.*, from 5.3.0 befor",
+        "cveScore": 9.2,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-6733 - undici vulnerable to HTTP response queue poisoning via keep-alive socket reuse",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6733",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-17T17:14:50.000Z",
+        "contentSnippet": "Impact: Undici's HTTP/1.1 client is vulnerable to response queue poisoning on reused keep-alive sockets. An attacker-controlled upstream server can inject an unsolicited HTTP/1.1 response onto an idle socket after a request completes. When the client dispatches the next request o",
+        "cveScore": 3.7,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-20266 - OS Command Injection in the btool Configuration Helper in Splunk AI Toolkit",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-20266",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-17T17:07:24.000Z",
+        "contentSnippet": "In Splunk AI Toolkit versions below 5.7.4, a user who holds the \"admin\" Splunk role could execute arbitrary OS commands on the host running the Splunk Enterprise instance. The vulnerability is possible because of an unsafe shell execution pattern in the btool configuration helper",
+        "cveScore": 9.1,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-20265 - Insecure Default Domain Allowlist in Splunk AI Toolkit",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-20265",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-17T17:07:19.000Z",
+        "contentSnippet": "In Splunk AI Toolkit versions below 5.7.4, a low-privileged user that does not hold the \"admin\" or \"power\" Splunk roles could cause the Splunk AI Toolkit to make outbound requests over HTTP to a server that an attacker controls, which could allow for data exfiltration. The vulner",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-9678 - undici vulnerable to cross-user information disclosure via shared cache whitespace bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9678",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-17T17:04:09.000Z",
+        "contentSnippet": "Impact: Undici's cache interceptor incorrectly classifies some responses as cacheable when the upstream Cache-Control header uses whitespace-padded qualified private or no-cache field names such as private=\" authorization\" or no-cache=\"\\tauthorization\". The parser preserves the s",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-47774 - Envoy vulnerable to HTTP/2 memory exhaustion via cookie header size bypass and HPACK amplification",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47774",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-17T16:58:36.000Z",
+        "contentSnippet": "Envoy is an open source edge and service proxy designed for cloud-native applications. Prior to versions 1.35.11, 1.36.7, 1.37.3, and 1.38.1, a vulnerability in Envoy's HTTP/2 downstream request processing allows an unauthenticated remote client to trigger excessive memory consum",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-9679 - undici vulnerable to HTTP header injection via Set-Cookie percent-decoding",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9679",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-17T16:56:18.000Z",
+        "contentSnippet": "Impact: undici's cookie parser in parseSetCookie percent-decodes cookie values via qsUnescape, turning encoded sequences like %0D%0A, %00, %3B, and %3D into their literal byte equivalents. RFC 6265 §5.4 does not specify any decoding and browsers do not decode either. Applications",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-9697 - undici vulnerable to TLS certificate validation bypass via dropped requestTls in SOCKS5 ProxyAgent",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9697",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-17T16:46:42.000Z",
+        "contentSnippet": "Impact: undici's ProxyAgent silently drops the requestTls option when configured with a SOCKS5 proxy URI (socks5:// or socks://). The target HTTPS connection through the SOCKS5 tunnel falls back to Node's default trust store, ignoring user-configured ca, cert, key, rejectUnauthor",
+        "cveScore": 7.4,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-53805 - NVIDIA SIL GEN3C Unauthenticated RCE via Pickle Deserialization in Inference API",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53805",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-17T16:44:05.000Z",
+        "contentSnippet": "NVIDIA Spatial Intelligence Lab's (SIL) GEN3C contains an unauthenticated remote code execution vulnerability in the inference API server where the /request-inference and /seed-model endpoints deserialize raw HTTP request bodies using Python's pickle.loads() without authenticatio",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-48591 - Stored XSS via unescaped HTML attribute values in earmark",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48591",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-17T16:42:37.000Z",
+        "contentSnippet": "Improper Neutralization of Script in Attributes in a Web Page vulnerability in pragdave earmark allows stored cross-site scripting via unescaped HTML attribute values. 'Elixir.Earmark.Transform':_make_att1/2 in lib/earmark/transform.ex splices attribute values verbatim between tw",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
       {
         "title": "CVE-2026-9675 - undici WebSocket client vulnerable to denial of service via cumulative fragment bypass",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-9675",
@@ -675,231 +900,6 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-17T05:53:44.000Z",
         "contentSnippet": "In overrideConfig of CarrierConfigLoader.java, there is a possible way to bypass UID check due to a permissions bypass. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2025-15642 - Netskope Client Service Insufficient Access Controls",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-15642",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-17T01:48:39.000Z",
-        "contentSnippet": "Netskope is notified about a potential gap in its Netskoped Client for Windows systems where a malicious insider with admin privileges can lead to bypassing the NSClient Tamper Protections due to weak Discretionary Access Control List (DACLs) on the service object and related reg",
-        "cveScore": 6.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-50203 - Apache Airflow SFTP provider: Path traversal in SFTPHook.retrieve_directory allows local file write outside the destination directory via malicious server-supplied directory-entry nam",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50203",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-17T01:47:49.000Z",
-        "contentSnippet": "A path traversal in the SFTP provider (`SFTPHook.retrieve_directory` / `SFTPOperator(operation=get)`) let a malicious or compromised remote SFTP server write files outside the configured local destination directory via crafted directory-entry names. No Airflow account is required",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-12469 - Google Chrome GPU Uninitialized Use Information Leak",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12469",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-17T01:38:27.000Z",
-        "contentSnippet": "Uninitialized Use in GPU in Google Chrome on Android prior to 149.0.7827.155 allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-12468 - Google Chrome Updater Sandbox Escape",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12468",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-17T01:38:26.000Z",
-        "contentSnippet": "Race in Updater in Google Chrome on Mac prior to 149.0.7827.155 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-12467 - Google Chrome Use-After-Free Sandbox Escape",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12467",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-17T01:38:26.000Z",
-        "contentSnippet": "Use after free in Extensions in Google Chrome prior to 149.0.7827.155 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-12466 - Google Chrome Heap Buffer Overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12466",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-17T01:38:25.000Z",
-        "contentSnippet": "Heap buffer overflow in WebRTC in Google Chrome on Windows prior to 149.0.7827.155 allowed a remote attacker to execute arbitrary code via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-12465 - Google Chrome Sandbox Escape",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12465",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-17T01:38:25.000Z",
-        "contentSnippet": "Object lifecycle issue in Metrics in Google Chrome prior to 149.0.7827.155 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-12464 - Google Chrome Use After Free Sandbox Escape",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12464",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-17T01:38:24.000Z",
-        "contentSnippet": "Use after free in Browser in Google Chrome prior to 149.0.7827.155 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-12463 - Google Chrome UXSS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12463",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-17T01:38:24.000Z",
-        "contentSnippet": "Inappropriate implementation in Views in Google Chrome on Linux prior to 149.0.7827.155 allowed a remote attacker who had compromised the renderer process to inject arbitrary scripts or HTML (UXSS) via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-12462 - Google Chrome Use-After-Free in Media",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12462",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-17T01:38:23.000Z",
-        "contentSnippet": "Use after free in Media in Google Chrome prior to 149.0.7827.155 allowed a remote attacker who had compromised the renderer process to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-12461 - Google Chrome Out-of-Bounds Read Information Disclosure",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12461",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-17T01:38:22.000Z",
-        "contentSnippet": "Out of bounds read in WebRTC in Google Chrome on Windows prior to 149.0.7827.155 allowed a remote attacker to obtain potentially sensitive information from process memory via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-12460 - Google Chrome File System Access Policy Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12460",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-17T01:38:22.000Z",
-        "contentSnippet": "Insufficient policy enforcement in File System Access in Google Chrome prior to 149.0.7827.155 allowed a remote attacker who had compromised the renderer process to bypass site isolation via a crafted PDF file. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-12459 - Google Chrome UXSS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12459",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-17T01:38:21.000Z",
-        "contentSnippet": "Inappropriate implementation in Serial in Google Chrome prior to 149.0.7827.155 allowed a remote attacker to inject arbitrary scripts or HTML (UXSS) via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-12458 - Google Chrome Password Leak Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12458",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-17T01:38:21.000Z",
-        "contentSnippet": "Inappropriate implementation in Passwords in Google Chrome prior to 149.0.7827.155 allowed a remote attacker who convinced a user to engage in specific UI gestures to leak cross-origin data via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-12457 - Google Chrome Improper Extension Implementation Site Isolation Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12457",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-17T01:38:20.000Z",
-        "contentSnippet": "Inappropriate implementation in Extensions in Google Chrome prior to 149.0.7827.155 allowed a remote attacker who had compromised the renderer process to bypass site isolation via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-12456 - Google Chrome Extension Same Origin Policy Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12456",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-17T01:38:19.000Z",
-        "contentSnippet": "Inappropriate implementation in Extensions in Google Chrome prior to 149.0.7827.155 allowed an attacker who convinced a user to install a malicious extension to bypass same origin policy via a crafted Chrome Extension. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-12455 - Google Chrome Use After Free",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12455",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-17T01:38:19.000Z",
-        "contentSnippet": "Use after free in Tab Strip in Google Chrome prior to 149.0.7827.155 allowed a remote attacker who convinced a user to engage in specific UI gestures to potentially exploit heap corruption via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-12454 - Google Chrome Sandbox Escape via Race Condition",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12454",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-17T01:38:18.000Z",
-        "contentSnippet": "Race in Safe Browsing in Google Chrome on Mac prior to 149.0.7827.155 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-12453 - Google Chrome Same Origin Policy Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12453",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-17T01:38:18.000Z",
-        "contentSnippet": "Insufficient validation of untrusted input in Input in Google Chrome prior to 149.0.7827.155 allowed a remote attacker who had compromised the renderer process to bypass same origin policy via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-12452 - Google Chrome Use-After-Free",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12452",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-17T01:38:17.000Z",
-        "contentSnippet": "Use after free in Downloads in Google Chrome on Android prior to 149.0.7827.155 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-12451 - Google Chrome Use-after-free Sandbox Escape",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12451",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-17T01:38:17.000Z",
-        "contentSnippet": "Use after free in DigitalCredentials in Google Chrome prior to 149.0.7827.155 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-12450 - Google Chrome Media Information Disclosure",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12450",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-17T01:38:16.000Z",
-        "contentSnippet": "Inappropriate implementation in Media in Google Chrome prior to 149.0.7827.155 allowed a remote attacker to obtain potentially sensitive information from process memory via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-12449 - Google Chrome Chromoting Use-After-Free Privilege Escalation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12449",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-17T01:38:15.000Z",
-        "contentSnippet": "Use after free in Chromoting in Google Chrome on Windows prior to 149.0.7827.155 allowed a local attacker to perform OS-level privilege escalation via a malicious file. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-12448 - Google Chrome Android WebView Privilege Escalation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12448",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-17T01:38:15.000Z",
-        "contentSnippet": "Inappropriate implementation in WebView in Google Chrome on Android prior to 149.0.7827.155 allowed a remote attacker to perform privilege escalation via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-12447 - Google Chrome heap buffer overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12447",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-17T01:38:14.000Z",
-        "contentSnippet": "Heap buffer overflow in WebRTC in Google Chrome prior to 149.0.7827.155 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security",
         "cveScore": 0,
         "cveSeverity": "NA"
       }
