@@ -1,8 +1,98 @@
 {
-  "updatedAt": "2026-06-18T23:47:48.890Z",
+  "updatedAt": "2026-06-19T03:33:03.825Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-40624 - AVer PTC cameras Files or Directories Accessible to External Parties",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-40624",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-18T23:54:51.000Z",
+        "contentSnippet": "Improper input validation in AVer PTC500S, PTC115, PTC500+, and PTC115+ cameras may allow a remote, unauthenticated attacker to achieve arbitrary code execution via a specially crafted web request.",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-50034 - Apollo Pharmacy Blood Glucose Monitoring System APG-01 BT Cleartext Transmission of Sensitive Information",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50034",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-18T23:47:13.000Z",
+        "contentSnippet": "An attacker within BLE communication range can passively intercept wireless traffic and obtain sensitive health-related information, including glucose measurement values.",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-52866 - Apollo Pharmacy Blood Glucose Monitoring System APG-01 BT Missing Authorization",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52866",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-18T23:45:34.000Z",
+        "contentSnippet": "An attacker within BLE communication range can monopolize the device's only available BLE connection slot, preventing legitimate users or applications from establishing a connection.",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-12049 - pgAdmin 4: Open redirect in multi-factor authentication flow via unvalidated 'next' parameter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12049",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-18T23:37:43.000Z",
+        "contentSnippet": "Open redirect in pgAdmin 4's multi-factor authentication flow. The MFA validate and register endpoints honoured the user-supplied 'next' query/form parameter without confirming the target pointed back inside pgAdmin, so an authenticated victim who clicked /mfa/validate?next= -- a",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-12048 - pgAdmin 4: Stored XSS via untrusted error and plan-node text rendered through html-react-parser",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12048",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-18T23:37:41.000Z",
+        "contentSnippet": "Stored cross-site scripting in pgAdmin 4's error-rendering and plan-node-rendering paths. Text returned by a PostgreSQL server (ErrorResponse messages, including object names quoted back inside relation-does-not-exist errors and inside EXPLAIN Recheck Cond / Exact Heap Blocks fie",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-12047 - pgAdmin 4: HTML injection in cloud verify_credentials / deploy endpoints via unsanitised SDK exception text",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12047",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-18T23:37:39.000Z",
+        "contentSnippet": "HTML injection in pgAdmin 4's cloud deployment module. The verify_credentials, deploy, regions, and update-server endpoints under /rds/, /azure/, /google/, and the top-level /cloud/ blueprint propagated AWS / Azure / Google SDK exception text — and the related file-resolution and",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-12046 - pgAdmin 4: Unauthenticated pickle deserialization in SQL Editor close / update_connection routes enables remote code execution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12046",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-18T23:37:37.000Z",
+        "contentSnippet": "Two state-mutating endpoints in pgAdmin 4's SQL Editor blueprint -- DELETE /sqleditor/close/ and POST /sqleditor/initialize/sqleditor/update_connection/ / / -- were the only routes in the module missing the @pga_login_required decorator. Both reach a pickle.loads sink on session[",
+        "cveScore": 9.5,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-12045 - pgAdmin 4: AI Assistant read-only transaction bypass allows unauthorised writes and remote code execution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12045",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-18T23:37:35.000Z",
+        "contentSnippet": "Read-only transaction bypass in the pgAdmin 4 AI Assistant allows an attacker who can influence database content that the assistant reads to execute arbitrary SQL with the privileges of the pgAdmin user's database role. The AI Assistant's execute_sql_query tool runs LLM-generated",
+        "cveScore": 9.4,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-12050 - pgAdmin 4: SQL injection in named restore point endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12050",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-18T23:37:19.000Z",
+        "contentSnippet": "SQL injection in pgAdmin 4's named restore point endpoint (POST /browser/server/restore_point/{gid}/{sid}). The user-supplied 'value' field was interpolated directly into the SQL string with str.format() instead of being passed as a bound parameter, allowing an authenticated pgAd",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-12044 - pgAdmin 4: SQL injection in COMMENT ON ... IS '' rendering across dialog templates",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12044",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-18T23:37:16.000Z",
+        "contentSnippet": "SQL injection in pgAdmin 4 across every dialog template that renders ``COMMENT ON ... IS ' '`` for a user-supplied description field. The Jinja templates for Domains (and their constraints), Foreign Tables, Languages, and Event Triggers, plus the Views OID-lookup query, interpola",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-10746",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-10746",
@@ -126,8 +216,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-18T21:12:34.000Z",
         "contentSnippet": "phpMyFAQ is an open source FAQ web application. Versions prior to 4.1.4 have Missing Authorization in the API CategoryController. CVE-2026-24421 addressed this in the BackupController by adding: $this->userHasPermission(PermissionType::BACKUP). The same fix was not applied to 4 o",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-54017 - Open WebUI: Path traversal / SSRF in terminal server proxy via encoded path traversal",
@@ -135,8 +225,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-18T21:09:07.000Z",
         "contentSnippet": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.6, the terminal-server reverse proxy in `backend/open_webui/routers/terminals.py` does not fully confine the user-controlled `path` segment before forwarding it to an a",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 7.7,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-22674 - Hashgraph Guardian Stored XSS via branding companyName field",
@@ -812,99 +902,16 @@
         "contentSnippet": "Local privilege escalation by loading DLLs from a shared temporary directory in ANSSI’s DFIR-ORC, versions 10.2.7 and prior. An attacker with prior access to the system, can place a malicious DLL in C:\\Windows\\Temp and wait for the application to be executed. Because DFIR-ORC is ",
         "cveScore": 7.3,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-40457 - Reflected XSS in LMS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-40457",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-18T10:58:53.000Z",
-        "contentSnippet": "A Reflected Cross-Site Scripting (XSS) vulnerability exists in LMS (LAN Management System) before commit 9c5651b in the \"dbrecover.php\" and \"netremap.php\" modules where unsanitized GET parameters are directly embedded into HTML output. This allows an attacker to inject arbitrary ",
-        "cveScore": 2.1,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-40456 - OS Command Injection in LMS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-40456",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-18T10:58:51.000Z",
-        "contentSnippet": "An OS Command Injection vulnerability exists in LMS (LAN Management System) before commit 9fcb4de due to an IP address parameter being passed to the \"exec()\" function without proper validation, allowing attackers to execute arbitrary operating system commands.",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-40455 - SQL Injection in LMS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-40455",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-18T10:58:50.000Z",
-        "contentSnippet": "An SQL Injection vulnerability exists in LMS (LAN Management System) before commit 4cb30a7 within the \"tarifflist.php\" module due to insufficient sanitization of the POST \"tg[]\" parameter. The application directly concatenates user-supplied array values into an SQL query using \"i",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-56009 - WordPress Bricksable for Bricks Builder plugin <= 1.6.83 - Cross Site Scripting (XSS) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56009",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-18T10:43:11.000Z",
-        "contentSnippet": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Bricksable for Bricks Builder allows Stored XSS. This issue affects Bricksable for Bricks Builder: from n/a through 1.6.83.",
-        "cveScore": 5.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-54419 - PIAF-HMS multiple unauthenticated SQL injection vulnerabilities via mysql_query",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54419",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-18T10:21:47.000Z",
-        "contentSnippet": "claudiopizzillo PIAF-HMS (PBX-In-A-Flash Hotel Management System; no released versions, latest commit 389d2633441b65ced1c104212cd62be2bfca21e5) contains multiple unauthenticated SQL injection vulnerabilities. The application has no authentication mechanism and passes user-supplie",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-44942 - libzypp .repo files can have an optional path which can lead to path traversal attacks",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44942",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-18T09:57:12.000Z",
-        "contentSnippet": "A path traversal in handling the \"path\" component of .repo files processed by libzypp before 17.38.13 in the 17.x series, or before 16.22.19 could be used by attackers to fill directories on the system outside of the zypp cache with content.",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-56007 - WordPress Ocean Product Sharing plugin <= 2.2.2 - Cross Site Scripting (XSS) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56007",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-18T09:44:29.000Z",
-        "contentSnippet": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in OceanWP Ocean Product Sharing allows Stored XSS. This issue affects Ocean Product Sharing: from n/a through 2.2.2.",
-        "cveScore": 5.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-8024 - Deserialization vulnerability in ibaPDA and ibaDatCoordinator",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8024",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-18T09:43:14.000Z",
-        "contentSnippet": "A remote, unauthenticated attacker may exploit a deserialization of untrusted data vulnerability in ibaPDA or ibaDatCoordinator to gain full access to the affected systems.",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-8811 - Path traversal in PDF generation module",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8811",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-18T09:05:46.000Z",
-        "contentSnippet": "SEPPmail versions before 15.0.5 allow improper handling of attachment filenames during encrypted PDF generation. An attacker can exploit this to create new files outside the intended directory, potentially placing files in web-accessible locations.",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-50643 - Out‑of‑Bounds Read in 8cc",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50643",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-18T08:58:01.000Z",
-        "contentSnippet": "8cc is vulnerable to an Out‑of‑Bounds Read due to improper handling of #line directives and GNU linemarkers. The compiler accepts attacker-controlled filename and line number metadata and later uses it without validation when accessing source line arrays. By supplying invalid or ",
-        "cveScore": 5.1,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
+      {
+        "title": "Datasette Apps: Host custom HTML applications inside Datasette",
+        "link": "https://simonwillison.net/2026/Jun/18/datasette-apps/#atom-entries",
+        "source": "Simon Willison's Weblog",
+        "isoDate": "2026-06-18T23:58:38.000Z",
+        "contentSnippet": "Today we launched a new plugin for Datasette, datasette-apps, with this launch announcement post on the Datasette project blog. That post has the what, but I'm going to expand on that a little bit here to provide the why. The TL;DR Datasette Apps are self-contained HTML+JavaScrip"
+      },
       {
         "title": "Monitor and debug generative AI inference with SageMaker detailed metrics and Insights dashboard on CloudWatch",
         "link": "https://aws.amazon.com/blogs/machine-learning/monitor-and-debug-generative-ai-inference-with-sagemaker-detailed-metrics-and-insights-dashboard-on-cloudwatch/",
@@ -1597,13 +1604,6 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-06-04T16:59:08.000Z",
         "contentSnippet": "Deploy NVIDIA Nemotron 3 Ultra on Amazon SageMaker JumpStart. Get 5x faster inference and 30% lower cost for agentic AI workloads with this frontier reasoning model."
-      },
-      {
-        "title": "Miso Labs Releases MisoTTS: An 8B Emotive Text-to-Speech Model with Open Weights",
-        "link": "https://www.marktechpost.com/2026/06/04/miso-labs-releases-misotts-an-8b-emotive-text-to-speech-model-with-open-weights/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-06-04T08:11:05.000Z",
-        "contentSnippet": "Miso Labs has released MisoTTS, an open-weights 8B text-to-speech model. It uses residual vector quantization (RVQ) to scale its sonic range without scaling parameters, and conditions on both text and audio context to respond to speaker tone. The architecture pairs a 7.7B backbon"
       }
     ],
     "virtualization": [
