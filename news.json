@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-06-19T17:53:15.454Z",
+  "updatedAt": "2026-06-19T19:28:00.631Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-49340 - gonic has arbitrary file write in createPlaylist: any authenticated user can write playlist M3U content to attacker-controlled path on the host",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49340",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-19T19:11:20.000Z",
+        "contentSnippet": "gonic is a music streaming server / free-software subsonic server API implementation. Prior to version 0.21.0, a logic error in `ServeCreateOrUpdatePlaylist` allows any authenticated Subsonic user (including non-admin) to write playlist M3U content to an attacker-controlled absol",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49338 - Subsonic API: any authenticated user can delete or read any other user's playlist (IDOR)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49338",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-19T19:08:34.000Z",
+        "contentSnippet": "gonic is a music streaming server / free-software subsonic server API implementation. Prior to version 0.21.0, the Subsonic API endpoints `/rest/deletePlaylist.view` and `/rest/getPlaylist.view` perform no per-resource authorization. Once authenticated as any user (admin or not),",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-27878 - Tempo TraceQL query with exemplar hint could result in unbounded memory usage",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-27878",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-19T19:02:27.000Z",
+        "contentSnippet": "A TraceQL query in Grafana Tempo with a large exemplars hint value can cause the Tempo instance to allocate an excessive amount of memory, resulting in an out-of-memory crash. This could allow an authenticated user to trigger a denial of service against the Tempo service.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-12726 - Awx: automation-controller: awx: github webhook second-order ssrf via unvalidated statuses_url exfiltrates pat credential",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12726",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-19T18:49:55.000Z",
+        "contentSnippet": "A flaw was found in the AWX GitHub webhook integration. When processing GitHub pull_request webhooks, the controller stores the pull_request.statuses_url value from the webhook payload without validating that it points to a trusted GitHub API endpoint. If a job template is config",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-9375 - Decompression Bomb Bypass via Negative max_length in Streaming API in urllib3",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9375",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-19T18:45:10.000Z",
+        "contentSnippet": "urllib3 version 2.6.3 is vulnerable to a decompression bomb bypass in its streaming API (`preload_content=False`) when using Brotli support. The issue arises due to three independent code paths in `response.py` that bypass the `max_length` protection introduced in version 2.6.0 t",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-12238 - WP Go Maps <= 10.1.01 - Unauthenticated Arbitrary Record Creation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12238",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-19T18:32:05.000Z",
+        "contentSnippet": "The WP Go Maps – Most Popular Map Plugin plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 10.1.01. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for unauthent",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49339 - Path traversal in getPlaylist/deletePlaylist bypasses ownership check: any authenticated user can read or delete any other user's playlist",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49339",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-19T18:23:20.000Z",
+        "contentSnippet": "gonic is a music streaming server / free-software subsonic server API implementation. The maintainer's fix in commit `6dd71e6a3c966867ef8c900d359a7df75789f410` added an ownership check based on `playlist.UserID`. However, `playlist.UserID` is derived from the *first path segment*",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49336 - @microsoft/kiota-http-fetchlibrary: Bearer token and Cookie leak across origin on redirect due to case-mismatched scrub in fetchRequestAdapter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49336",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-19T18:19:03.000Z",
+        "contentSnippet": "@microsoft/kiota-http-fetchlibrary provides TypeScript libraries for Kiota-generated API clients. In versions 1.0.0-preview.97 through 1.0.0-preview.101, `@microsoft/kiota-http-fetchlibrary`'s `RedirectHandler` is documented as stripping `Authorization` and `Cookie` from cross-or",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49293 - CPU exhaustion via O(n^2) BigInt construction on radix-prefixed integer literals",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49293",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-19T18:14:20.000Z",
+        "contentSnippet": "js-toml is a TOML parser for JavaScript, fully compliant with the TOML 1.0.0 Spec. Versions up to and including 1.1.0 parse hexadecimal / octal / binary integer literals via a hand-written `parseBigInt` loop that multiplies a `BigInt` accumulator by the radix once per input digit",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49288 - Statamic CMS missing authorization on Control Panel fieldtype endpoints allows disclosure of restricted resources",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49288",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-19T18:11:53.000Z",
+        "contentSnippet": "Statamic is a Laravel and Git powered content management system (CMS). Prior to 5.73.23 and 6.20.0, an authenticated Control Panel user could view metadata and content for resources they don't have permission to view, including entries, assets, users, roles, groups, and other con",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49291 - mcp-memory-service: OAuth read-only clients can write and delete memories through MCP tools/call",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49291",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-19T17:59:48.000Z",
+        "contentSnippet": "mcp-memory-service is a semantic memory layer for AI applications. Prior to version 10.65.3, the HTTP MCP JSON-RPC endpoint at `/mcp` requires only OAuth `read` scope for all requests, then dispatches `tools/call` directly to handlers that include mutating tools. A read-only OAut",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2023-54357 - Joomla com_booking 2.4.9 Information Disclosure via Account Enumeration",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2023-54357",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-19T17:52:06.000Z",
+        "contentSnippet": "Joomla com_booking component 2.4.9 contains an information disclosure vulnerability that allows unauthenticated attackers to enumerate user accounts by exploiting the getUserData function in the customer controller. Attackers can send GET requests to index.php with option=com_boo",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2019-25762 - Joomla! Component JoomProject 1.1.3.2 Information Disclosure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2019-25762",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-19T17:48:44.000Z",
+        "contentSnippet": "Joomla! Component JoomProject 1.1.3.2 contains an information disclosure vulnerability that allows unauthenticated attackers to access sensitive user data by exploiting the projects endpoint. Attackers can send requests to index.php with option=com_jpprojects&view=projects&tmpl=c",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2019-25761 - Joomla! Component JoomCRM 1.1.1 SQL Injection via deal_id",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2019-25761",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-19T17:45:23.000Z",
+        "contentSnippet": "Joomla! Component JoomCRM 1.1.1 contains an SQL injection vulnerability that allows authenticated attackers to execute arbitrary SQL queries by injecting malicious code through the deal_id parameter. Attackers can send GET requests to index.php with option=com_joomcrm&view=contac",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2019-25760 - Joomla! Component Easy Shop 1.2.3 Local File Inclusion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2019-25760",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-19T17:42:01.000Z",
+        "contentSnippet": "Joomla! Component Easy Shop 1.2.3 contains a local file inclusion vulnerability that allows unauthenticated attackers to read arbitrary files by supplying base64-encoded file paths. Attackers can send GET requests to index.php with the option parameter set to com_easyshop, task s",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2019-25759 - Joomla! Component vBizz 1.0.7 SQL Injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2019-25759",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-19T17:38:39.000Z",
+        "contentSnippet": "Joomla! Component vBizz 1.0.7 contains an SQL injection vulnerability that allows authenticated attackers to execute arbitrary SQL queries by injecting malicious code through the payid parameter. Attackers can submit POST requests to the employee management interface with crafted",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-49287 - Statamic CMS vulnerable to unsafe method invocation via collection sorting allows data destruction",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49287",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-19T17:36:23.000Z",
+        "contentSnippet": "Statamic is a Laravel and Git powered content management system (CMS). Prior to 5.73.23 and 6.20.0, the fix for CVE-2026-41175 was incomplete. It addressed the issue in the query builder, but the same protection was not applied to in-memory collection sorting. Manipulating sort p",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2019-25758 - Joomla! Component vBizz 1.0.7 Remote Code Execution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2019-25758",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-19T17:35:17.000Z",
+        "contentSnippet": "Joomla! Component vBizz 1.0.7 contains an unrestricted file upload vulnerability that allows authenticated attackers to upload arbitrary PHP files by submitting malicious files through the profile_pic parameter. Attackers can upload PHP files via POST requests to the employee vie",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2019-25757 - Joomla vWishlist 1.0.1 SQL Injection via vproductid Parameter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2019-25757",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-19T17:31:56.000Z",
+        "contentSnippet": "Joomla vWishlist 1.0.1 contains an SQL injection vulnerability that allows authenticated attackers to execute arbitrary SQL queries by injecting malicious code through the vproductid and userid parameters. Attackers can send POST requests to the component with crafted SQL payload",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-49290 - Slopsmith has path traversal in archive extractors that allows arbitrary file write → potential RCE",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49290",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-19T17:31:05.000Z",
+        "contentSnippet": "Slopsmith is a self-contained web application for browsing, playing, and practicing Rocksmith 2014 Custom DLC (CDLC). Prior to 0.2.9-alpha.5, a path-traversal vulnerability in Slopsmith's archive extractors allows an attacker to write arbitrary files outside the extraction direct",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2019-25756 - Joomla! Component vAccount 2.0.2 SQL Injection via vaccount-dashboard",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2019-25756",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-19T17:28:34.000Z",
+        "contentSnippet": "Joomla! Component vAccount 2.0.2 contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the vid parameter. Attackers can send GET requests to the vaccount-dashboard/expense endpoint with c",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2019-25755 - Joomla vReview 1.9.11 SQL Injection via editReview",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2019-25755",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-19T17:25:11.000Z",
+        "contentSnippet": "Joomla Component vReview 1.9.11 contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the cmId parameter. Attackers can send POST requests to the editReview task endpoint with URL-encoded",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2019-25754 - Joomla vRestaurant 1.9.4 SQL Injection via menu-listing-layout",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2019-25754",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-19T17:21:50.000Z",
+        "contentSnippet": "Joomla Component vRestaurant 1.9.4 contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the keysearch parameter. Attackers can send POST requests to the menu-listing-layout endpoint with",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2019-25753 - Joomla! Component VMap 1.9.6 SQL Injection via loadmarker",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2019-25753",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-19T17:18:28.000Z",
+        "contentSnippet": "Joomla! Component VMap 1.9.6 contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code into the latlngbound parameter. Attackers can send GET requests to index.php with the option=com_vmap&task=loadm",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-49271 - libheif: Wrapped icef compressed-unit range check causes out-of-bounds read in uncompressed HEIF decoder",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49271",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-19T17:16:20.000Z",
+        "contentSnippet": "libheif is a HEIF and AVIF file format decoder and encoder. Prior to version 1.22.1, the uncompressed HEIF decoder validates explicit icef compressed-unit offsets using unit_offset + unit_size. Because the addition can wrap, a crafted HEIF file can pass the range check and then c",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2019-25748 - Joomla JHotelReservation 6.0.7 SQL Injection via search-hotels",
         "link": "https://cvefeed.io/vuln/detail/CVE-2019-25748",
@@ -677,231 +902,6 @@
         "contentSnippet": "A vulnerability has been identified in armeria-xds versions 1.38.0 through 1.39.0, where DataSourceStream in the xDS module can resolve control-plane-supplied filenames and environment variables without restriction, allowing a compromised or semi-trusted xDS control plane to read",
         "cveScore": 5.9,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-10779 - Classified Listing <= 5.4.2 - Missing Authorization to Authenticated (Subscriber+) Feature Modification via Multiple AJAX Handlers ('listingId'/'id' Parameters)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10779",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-19T03:41:58.000Z",
-        "contentSnippet": "The Classified Listing – Classified ads & Business Directory plugin for WordPress is vulnerable to Missing Authorization in all versions up to, and including, 5.4.2. This is due to a missing capability/ownership check on the gallery_image_update_as_feature AJAX handler (action: r",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-56132 - Expat Heap-Based Buffer Overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56132",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-19T03:00:42.000Z",
-        "contentSnippet": "In libexpat before 2.8.2, there is a heap-based buffer overflow in doProlog in xmlparse.c because scaffold backing array reallocation is mishandled when there is data-structure sharing across parsers.",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-56131 - Expat XML_ResumeParser Use-After-Free Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56131",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-19T02:56:36.000Z",
-        "contentSnippet": "libexpat before 2.8.2 lacks handler call depth tracking for calls to XML_ResumeParser from within handlers in cases of a policy violation. Thus, a use-after-free can occur (similar to the CVE-2026-50219 situation).",
-        "cveScore": 4.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-8806 - Denial-of-service (DoS) vulnerability in MELSEC iQ-F Series FX5-ENET/IP Ethernet module",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8806",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-19T02:31:04.000Z",
-        "contentSnippet": "Expected Behavior Violation vulnerability in Mitsubishi Electric MELSEC iQ-F Series FX5-ENET/IP Ethernet Module FX5-ENET/IP all versions allows a remote attacker to cause a denial-of-service (DoS) condition in the affected product by continuously sending a large number of communi",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-11775 - User Admin Simplifier <= 3.0.0 - Cross-Site Request Forgery",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11775",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-19T02:29:39.000Z",
-        "contentSnippet": "The User Admin Simplifier plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 3.0.0. This is due to missing or incorrect nonce validation on the useradminsimplifier_options_page function. This makes it possible for unauthenticate",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-8805 - Denial-of-service (DoS) vulnerability in MELSEC iQ-F Series EtherNet/IP module",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8805",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-19T02:26:57.000Z",
-        "contentSnippet": "Integer Overflow or Wraparound vulnerability in the EtherNet/IP function of Mitsubishi Electric MELSEC iQ-F Series FX5-EIP EtherNet/IP module FX5-EIP versions 1.000 and prior allows a remote attacker to cause a denial-of-service (DoS) condition in the affected product by rapidly ",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-40624 - AVer PTC cameras Files or Directories Accessible to External Parties",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-40624",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-18T23:54:51.000Z",
-        "contentSnippet": "Improper input validation in AVer PTC500S, PTC115, PTC500+, and PTC115+ cameras may allow a remote, unauthenticated attacker to achieve arbitrary code execution via a specially crafted web request.",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-50034 - Apollo Pharmacy Blood Glucose Monitoring System APG-01 BT Cleartext Transmission of Sensitive Information",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50034",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-18T23:47:13.000Z",
-        "contentSnippet": "An attacker within BLE communication range can passively intercept wireless traffic and obtain sensitive health-related information, including glucose measurement values.",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-52866 - Apollo Pharmacy Blood Glucose Monitoring System APG-01 BT Missing Authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52866",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-18T23:45:34.000Z",
-        "contentSnippet": "An attacker within BLE communication range can monopolize the device's only available BLE connection slot, preventing legitimate users or applications from establishing a connection.",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-12049 - pgAdmin 4: Open redirect in multi-factor authentication flow via unvalidated 'next' parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12049",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-18T23:37:43.000Z",
-        "contentSnippet": "Open redirect in pgAdmin 4's multi-factor authentication flow. The MFA validate and register endpoints honoured the user-supplied 'next' query/form parameter without confirming the target pointed back inside pgAdmin, so an authenticated victim who clicked /mfa/validate?next= -- a",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-12048 - pgAdmin 4: Stored XSS via untrusted error and plan-node text rendered through html-react-parser",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12048",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-18T23:37:41.000Z",
-        "contentSnippet": "Stored cross-site scripting in pgAdmin 4's error-rendering and plan-node-rendering paths. Text returned by a PostgreSQL server (ErrorResponse messages, including object names quoted back inside relation-does-not-exist errors and inside EXPLAIN Recheck Cond / Exact Heap Blocks fie",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-12047 - pgAdmin 4: HTML injection in cloud verify_credentials / deploy endpoints via unsanitised SDK exception text",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12047",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-18T23:37:39.000Z",
-        "contentSnippet": "HTML injection in pgAdmin 4's cloud deployment module. The verify_credentials, deploy, regions, and update-server endpoints under /rds/, /azure/, /google/, and the top-level /cloud/ blueprint propagated AWS / Azure / Google SDK exception text — and the related file-resolution and",
-        "cveScore": 4.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-12046 - pgAdmin 4: Unauthenticated pickle deserialization in SQL Editor close / update_connection routes enables remote code execution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12046",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-18T23:37:37.000Z",
-        "contentSnippet": "Two state-mutating endpoints in pgAdmin 4's SQL Editor blueprint -- DELETE /sqleditor/close/ and POST /sqleditor/initialize/sqleditor/update_connection/ / / -- were the only routes in the module missing the @pga_login_required decorator. Both reach a pickle.loads sink on session[",
-        "cveScore": 9.5,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-12045 - pgAdmin 4: AI Assistant read-only transaction bypass allows unauthorised writes and remote code execution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12045",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-18T23:37:35.000Z",
-        "contentSnippet": "Read-only transaction bypass in the pgAdmin 4 AI Assistant allows an attacker who can influence database content that the assistant reads to execute arbitrary SQL with the privileges of the pgAdmin user's database role. The AI Assistant's execute_sql_query tool runs LLM-generated",
-        "cveScore": 9.4,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-12050 - pgAdmin 4: SQL injection in named restore point endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12050",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-18T23:37:19.000Z",
-        "contentSnippet": "SQL injection in pgAdmin 4's named restore point endpoint (POST /browser/server/restore_point/{gid}/{sid}). The user-supplied 'value' field was interpolated directly into the SQL string with str.format() instead of being passed as a bound parameter, allowing an authenticated pgAd",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-12044 - pgAdmin 4: SQL injection in COMMENT ON ... IS '' rendering across dialog templates",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12044",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-18T23:37:16.000Z",
-        "contentSnippet": "SQL injection in pgAdmin 4 across every dialog template that renders ``COMMENT ON ... IS ' '`` for a user-supplied description field. The Jinja templates for Domains (and their constraints), Foreign Tables, Languages, and Event Triggers, plus the Views OID-lookup query, interpola",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-10746",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10746",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-18T22:19:56.000Z",
-        "contentSnippet": "None",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-6716",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6716",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-18T22:19:56.000Z",
-        "contentSnippet": "None",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-56078 - PraisonAI - Arbitrary File Read and Write via Path Traversal in MultiAgentMonitor",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56078",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-18T22:12:25.000Z",
-        "contentSnippet": "PraisonAI before 1.5.115 contains a path traversal vulnerability in MultiAgentMonitor that fails to sanitize agent IDs when building file paths. Attackers can include traversal sequences like ../ in agent IDs to read, write, or overwrite arbitrary files, enabling sensitive disclo",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-56077 - PraisonAI - Information Disclosure via Shared MultiAgentLedger State",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56077",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-18T22:12:24.000Z",
-        "contentSnippet": "PraisonAI before 1.5.115 contains an information disclosure vulnerability in the MultiAgentLedger component that allows attackers to access sensitive data by registering agents with duplicate IDs. Attackers can exploit the lack of agent ID uniqueness enforcement to share ledger i",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-56076 - PraisonAI - Cross-Origin Agent Execution via Hardcoded Wildcard CORS and Missing Authentication on AGUI Endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56076",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-18T22:12:24.000Z",
-        "contentSnippet": "PraisonAI before 1.5.128 contains a cross-origin agent execution vulnerability in the AGUI endpoint that allows remote attackers to trigger arbitrary agent execution. The POST /agui endpoint lacks authentication and hardcodes Access-Control-Allow-Origin: * headers, combined with ",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-56075 - PraisonAI - Arbitrary Shell Command Execution via Hardcoded Approval Mode Override",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56075",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-18T22:12:23.000Z",
-        "contentSnippet": "PraisonAI before 4.5.128 contains an arbitrary shell command execution vulnerability where the UI modules hardcode approval_mode to auto, overriding administrator configuration from PRAISON_APPROVAL_MODE environment variable. Authenticated attackers can instruct the LLM agent to ",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-56074 - PraisonAI - Tool Approval Cache Bypass via Coarse-Grained Caching",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56074",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-18T22:12:22.000Z",
-        "contentSnippet": "PraisonAI before 1.5.128 caches tool approval decisions by tool name only, not by invocation arguments, allowing subsequent execute_command calls to bypass approval prompts. Attackers can exploit this by obtaining initial approval for a benign command, then silently exfiltrate AP",
-        "cveScore": 6.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-47647 - Dynamics 365 Elevation of Privilege Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47647",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-18T21:42:40.000Z",
-        "contentSnippet": "None",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-54130 - M365 Copilot Information Disclosure Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54130",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-18T21:42:39.000Z",
-        "contentSnippet": "None",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
       }
     ],
     "ai": [
@@ -2065,6 +2065,13 @@
     ],
     "hardware": [
       {
+        "title": "Your 15-inch daily driver is now $250 off — Dell 15 laptop with hexa-core CPU, 8GB RAM dips to $349",
+        "link": "https://www.tomshardware.com/laptops/your-15-inch-daily-driver-is-now-usd250-off-dell-15-laptop-with-hexa-core-cpu-8gb-ram-dips-to-usd349",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-19T18:00:00.000Z",
+        "contentSnippet": "The Dell 15 laptop has just come down from its regular price of $599.99 to $349.99."
+      },
+      {
         "title": "The Best Thunderbolt and USB-C Docks in 2026: Up to 140W power delivery, 10 GbE, and even internal M.2 SSD slots",
         "link": "https://www.tomshardware.com/peripherals/docking-stations-hubs/the-best-thunderbolt-and-usb-c-docks-for-laptops",
         "source": "Tom's Hardware",
@@ -2756,13 +2763,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-06-14T14:25:00.000Z",
         "contentSnippet": "Amazon says that it uses 2.5 billion gallons of water annually for data center cooling but compares it to the 3.3 trillion gallons of water used for watering lawns and gardens in the U.S. every year."
-      },
-      {
-        "title": "Computer History Museum recalls ‘astonishing’ retro haul recovered from abandoned German warehouse — over 2,000 artifacts spanning the 1930s to 1980s required seven tractor-trailers after a WWII bomb ",
-        "link": "https://www.tomshardware.com/tech-industry/computer-history-museum-recalls-astonishing-retro-haul-recovered-from-abandoned-german-warehouse-over-2-000-artifacts-spanning-the-1930s-to-1980s-required-seven-tractor-trailers-after-a-wwii-bomb-scare",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-14T14:00:00.000Z",
-        "contentSnippet": "The Computer History Museum recalls one of its biggest ever retro treasure troves. This ‘astonishing’ haul was rescued from an abandoned warehouse in the town of Castrop-Rauxel, Germany."
       }
     ]
   }
