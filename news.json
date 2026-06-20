@@ -1,16 +1,79 @@
 {
-  "updatedAt": "2026-06-20T19:12:31.405Z",
+  "updatedAt": "2026-06-20T21:06:51.944Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-56347 - AVideo TopMenu Plugin - Stored Cross-Site Scripting via Unescaped Menu Item Fields",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56347",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-20T18:27:13.000Z",
+        "contentSnippet": "AVideo TopMenu plugin through version 26.0 contains a stored cross-site scripting vulnerability in menu item rendering due to missing output encoding of icon classes, URLs, and text labels. Attackers can inject malicious JavaScript through unescaped menu item fields that execute ",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-56346 - AVideo - Unauthenticated PGP Message Decryption via decryptMessage.json.php Endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56346",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-20T18:27:12.000Z",
+        "contentSnippet": "AVideo through version 25.0 contains an authentication bypass vulnerability in the decryptMessage.json.php endpoint that allows unauthenticated users to decrypt PGP messages. Remote attackers can submit private keys, ciphertext, and passphrases to perform server-side decryption w",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-56345 - AVideo - Arbitrary User Session Hijacking via Meet Plugin uploadRecordedVideo Endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56345",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-20T18:27:12.000Z",
+        "contentSnippet": "AVideo through 29.0 contains an authorization bypass vulnerability in the Meet plugin's uploadRecordedVideo.json.php endpoint that derives the target users_id from the uploaded filename without verification. An attacker with knowledge of the Meet shared secret can craft a malicio",
+        "cveScore": 9.2,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-56342 - AVideo - Server-Side Request Forgery in Live/test.php via statsURL Parameter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56342",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-20T18:27:11.000Z",
+        "contentSnippet": "AVideo through version 27.0 contains a server-side request forgery vulnerability in plugin/Live/test.php that allows authenticated administrators to read arbitrary URLs via the statsURL parameter, which lacks isSSRFSafeURL() validation and accepts requests to private IP ranges an",
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-56341 - AVideo - Unauthenticated Access to Payment Log DataTables Endpoints via list.json.php",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56341",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-20T18:27:10.000Z",
+        "contentSnippet": "AVideo through version 26.0 contains multiple unauthenticated list.json.php endpoints in payment plugins lacking authorization checks, exposing PayPal tokens, Authorize.Net webhooks, and Bitcoin transaction records. Unauthenticated attackers can retrieve all payment transaction d",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-56340 - vLLM - Denial of Service via Unvalidated Multimodal Embeddings",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56340",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-20T18:27:10.000Z",
+        "contentSnippet": "vLLM versions >= 0.10.2 and",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2025-71379 - vllm - Regular Expression Denial of Service in Multiple Components",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-71379",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-20T18:27:09.000Z",
+        "contentSnippet": "vLLM versions >= 0.6.3 and",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
       {
         "title": "CVE-2026-5366 - Git Argument Injection in prefecthq/prefect",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-5366",
         "source": "cvefeed.io",
         "isoDate": "2026-06-20T16:43:37.000Z",
         "contentSnippet": "Prefect version 3.6.23 is vulnerable to remote code execution due to improper handling of user-controlled input in the `GitRepository` storage class. The `commit_sha` parameter, which is passed to git commands, lacks validation and does not include a `--` separator to distinguish",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
       },
       {
         "title": "CVE-2026-56332 - Capgo - Open Redirect via confirmation_url Parameter",
@@ -837,69 +900,6 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-19T16:58:18.000Z",
         "contentSnippet": "Joomla! Component jCart for OpenCart 2.0 contains an SQL injection vulnerability that allows unauthenticated attackers to manipulate database queries by injecting SQL code through the product_id parameter. Attackers can send GET requests to index.php with the option=com_jcart&rou",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2017-20281 - Joomla! Component Extra Search 2.2.8 SQL Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2017-20281",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-19T16:54:56.000Z",
-        "contentSnippet": "Joomla! Component Extra Search 2.2.8 contains an SQL injection vulnerability that allows unauthenticated attackers to manipulate database queries by injecting SQL code through the establename parameter. Attackers can send GET requests to index.php with the option=com_extrasearch ",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2017-20280 - Joomla Component Myportfolio 3.0.2 SQL Injection via pid Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2017-20280",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-19T16:51:34.000Z",
-        "contentSnippet": "Joomla Component Myportfolio 3.0.2 contains an SQL injection vulnerability that allows unauthenticated attackers to manipulate database queries by injecting SQL code through the pid parameter. Attackers can send GET requests to index.php with malicious pid values in the task=proj",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2017-20279 - Joomla Payage 2.05 SQL Injection via aid Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2017-20279",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-19T16:48:12.000Z",
-        "contentSnippet": "Joomla Payage 2.05 contains an SQL injection vulnerability that allows unauthenticated attackers to manipulate database queries by injecting SQL code through the aid parameter. Attackers can send GET requests to index.php with malicious aid values in the make_payment task to extr",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2017-20278 - Joomla JoomRecipe 1.0.3 SQL Injection via category parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2017-20278",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-19T16:44:50.000Z",
-        "contentSnippet": "Joomla Component JoomRecipe 1.0.3 contains an SQL injection vulnerability that allows unauthenticated attackers to manipulate database queries by injecting SQL code through the category parameter. Attackers can send GET requests to the all-recipes endpoint with malicious SQL payl",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2017-20277 - Joomla JoomRecipe 1.0.4 Component Blind SQL Injection via search_author",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2017-20277",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-19T16:41:29.000Z",
-        "contentSnippet": "Joomla JoomRecipe 1.0.4 component contains a blind SQL injection vulnerability in the search_author parameter on the search results page. Attackers can inject SQL code through POST requests to the search endpoint to extract database information using boolean-based blind SQL injec",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2017-20276 - Joomla! Component SIMGenealogy 2.1.5 SQL Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2017-20276",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-19T16:38:07.000Z",
-        "contentSnippet": "Joomla! Component SIMGenealogy 2.1.5 contains an SQL injection vulnerability that allows unauthenticated attackers to manipulate database queries by injecting SQL code through the type parameter. Attackers can send GET requests to index.php with the option=com_simgenealogy, view=",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2017-20275 - Joomla! Component PHP-Bridge 1.2.3 SQL Injection via id Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2017-20275",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-19T16:34:45.000Z",
-        "contentSnippet": "Joomla! Component PHP-Bridge 1.2.3 contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the id parameter. Attackers can send GET requests to index.php with option=com_phpbridge&view=phpv",
         "cveScore": 8.8,
         "cveSeverity": "HIGH"
       }
@@ -2072,6 +2072,13 @@
     ],
     "hardware": [
       {
+        "title": "Minisforum’s Upcoming MS-03 SFF PC Brings More of a Good Thing",
+        "link": "https://www.servethehome.com/minisforums-upcoming-ms-03-sff-pc-brings-more-of-a-good-thing/",
+        "source": "ServeTheHome",
+        "isoDate": "2026-06-20T20:04:44.000Z",
+        "contentSnippet": "At Computex 2026 Minisforum was showing off their upcoming MS-03 mini-PC, the successor to their popular MS-01 and aiming to bring more of a good thing with Intel's new Panther Lake platform The post Minisforum’s Upcoming MS-03 SFF PC Brings More of a Good Thing appeared first on"
+      },
+      {
         "title": "Get AMD's flagship Ryzen 7 9800X3D with 32GB of DDR5 memory and an MSI B850 Wi-Fi 7 motherboard at a discount — Micro Center bundles are now available on Amazon",
         "link": "https://www.tomshardware.com/pc-components/get-amds-flagship-ryzen-7-9800x3d-with-32gb-of-ddr5-memory-and-an-msi-b850-wi-fi-7-motherboard-at-a-discount-micro-center-bundles-are-now-available-on-amazon",
         "source": "Tom's Hardware",
@@ -2763,13 +2770,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-06-16T10:17:13.000Z",
         "contentSnippet": "Get 43% off this excellent Asus ROG Strix OLED monitor."
-      },
-      {
-        "title": "Tensordyne Napier AI Processor Announced with Logarithmic Math",
-        "link": "https://www.servethehome.com/tensordyne-napier-ai-processor-announced-with-logarithmic-math/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-06-16T00:00:08.000Z",
-        "contentSnippet": "Tensordyne Napier is a new AI accelerator targeting the math behind AI inference and its own 72 accelerator architecture The post Tensordyne Napier AI Processor Announced with Logarithmic Math appeared first on ServeTheHome."
       }
     ]
   }
