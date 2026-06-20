@@ -1,8 +1,53 @@
 {
-  "updatedAt": "2026-06-19T22:45:55.010Z",
+  "updatedAt": "2026-06-20T00:02:23.024Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-56082 - Supabase - Unauthenticated Cross-Tenant Billing Log Tampering via public.record_build_time RPC",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56082",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-19T21:39:21.000Z",
+        "contentSnippet": "Capgo (Cap-go/capgo) before 12.128.2 contains an improper access control vulnerability in the SECURITY DEFINER PostgREST RPC function public.record_build_time, which is granted to the anon role and callable with only the public Supabase publishable (sb_publishable_*) anon key. An",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-56081 - Cap-go - Account Lockout via 2FA Misconfiguration on Unverified Email",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56081",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-19T21:39:20.000Z",
+        "contentSnippet": "Cap-go before 12.128.2 contains an authentication logic flaw that lets an attacker register and control an account bound to a victim's email address before that email is verified. By enabling two-factor authentication on the pre-registered account, the attacker gains control over",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-56080 - Cap-go - Authentication Logic Flaw in Enforce Password Policy",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56080",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-19T21:39:20.000Z",
+        "contentSnippet": "Capgo before 12.128.2 contains a flaw in the Enforce Password Policy feature: after a Super Admin enables the policy and successfully changes their password to a compliant one, the backend does not update the password-compliance state. As a result, the backend continues to treat ",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-56079 - Capgo - Cross-Tenant Authorization Bypass via PostgREST Webhook Access",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56079",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-19T21:39:19.000Z",
+        "contentSnippet": "Capgo before 12.128.2 contains a cross-tenant authorization bypass vulnerability in PostgREST endpoints that allows org-scoped read API keys to access other tenants' webhook secrets and delivery logs. Attackers can query the webhooks and webhook_deliveries endpoints to exfiltrate",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-56073 - Cap-go - OTP Bypass via Response Manipulation in Email Verification",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56073",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-19T21:39:18.000Z",
+        "contentSnippet": "Cap-go before 12.128.2 contains an authentication bypass vulnerability in OTP verification that allows attackers to bypass email verification by modifying server responses. Attackers can intercept OTP verification requests and manipulate HTTP responses to falsely mark verificatio",
+        "cveScore": 9.4,
+        "cveSeverity": "CRITICAL"
+      },
       {
         "title": "CVE-2026-47645 - Microsoft 365 Copilot's Business Chat Elevation of Privilege Vulnerability",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-47645",
@@ -72,8 +117,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-19T20:26:39.000Z",
         "contentSnippet": "Quarkus is a Java framework for building cloud-native applications. Prior to versions 3.37.0, 3.36.3, 3.33.2.1, 3.33.3, 3.27.4.1, 3.27.5, and 3.20.6.2, Quarkus HTTP path-based authorization policies can be bypassed using encoded semicolons (%3B) to smuggle matrix parameters past ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-48794 - Authelia has an Edge Case Access Control Rule Mismatch",
@@ -81,8 +126,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-19T20:23:03.000Z",
         "contentSnippet": "Authelia is an open-source authentication and authorization server providing two-factor authentication and single sign-on (SSO) for applications via a web portal. In versions 4.36.0 through 4.39.19, due to lack of canonicalization of domains in very specific edge cases, an access",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 1.3,
+        "cveSeverity": "LOW"
       },
       {
         "title": "CVE-2026-47203 - Authelia Missing Username Canonicalization in Basic Auth (LDAP)",
@@ -90,8 +135,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-19T20:19:47.000Z",
         "contentSnippet": "Authelia is an open-source authentication and authorization server providing two-factor authentication and single sign-on (SSO) for applications via a web portal. In versions 4.38.0 through 4.39.19, when a user authenticates via Basic Auth (i.e via the `Authorization` header with",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 2.9,
+        "cveSeverity": "LOW"
       },
       {
         "title": "CVE-2026-48129 - Kestra task inputFiles accepts traversal filenames for worker file writes",
@@ -99,8 +144,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-19T20:16:24.000Z",
         "contentSnippet": "Kestra is an open-source, event-driven orchestration platform. Prior to versions 1.3.19, 1.2.19, 1.1.19, and 1.0.43, Kestra task `inputFiles` writes rendered file names directly under the task working directory. When a flow forwards untrusted execution or webhook data into an `in",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-49346 - libde265 has a heap buffer overflow in de265_image_get_buffer via SPS dimension integer overflow",
@@ -108,8 +153,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-19T20:12:14.000Z",
         "contentSnippet": "libde265 is an open source implementation of the h.265 video codec. Prior to version 1.1.0, a crafted H.265 bitstream with large SPS dimensions and 16-bit bit depth causes a signed integer overflow in `de265_image_get_buffer()` (`libde265/image.cc:128`). The overflow wraps the pl",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-49295 - libde265 has an out-of-bounds write in process_reference_picture_set via predicted short-term RPS",
@@ -117,8 +162,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-19T20:09:22.000Z",
         "contentSnippet": "libde265 is an open source implementation of the h.265 video codec. Prior to version 1.0.20, a crafted H.265 bitstream can cause an out-of-bounds array write in `decoder_context::process_reference_picture_set()` (`libde265/decctx.cc:1376`). The root cause is a missing aggregate b",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-49337 - libde265 has an unbounded memory leak via orphaned slice headers in `read_slice_NAL`",
@@ -126,8 +171,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-19T19:53:18.000Z",
         "contentSnippet": "libde265 is an open source implementation of the h.265 video codec. Prior to version 1.0.20, a crafted sequence of H.265 NAL units causes `decoder_context::read_slice_NAL()` (`libde265/decctx.cc:481`) to attach slice headers to a finished picture object that has no active image u",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-48787 - gin-vue-admin vulnerable to RCE",
@@ -135,8 +180,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-19T19:46:41.000Z",
         "contentSnippet": "gin-vue-admin is an AI-assisted basic development platform. In version 2.9.1, an authenticated attacker with access to the code-generation feature and MCP management interface can exploit this vulnerability by injecting attacker-controlled Go source code through POST /autoCode/ad",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 7.4,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-48089 - DevGuard has improper authorization on public assets",
@@ -144,8 +189,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-19T19:38:04.000Z",
         "contentSnippet": "DevGuard provides vulnerability management for the full software supply chain. Prior to 1.4.2, on a DevGuard API instance with one or more public assets, any authenticated user — including users from a different organization with no membership or role in the affected org/project ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-48774 - ProxySQL MCP run_sql_readonly executes side-effecting MySQL multi-statements despite read-only contract",
@@ -153,8 +198,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-19T19:34:39.000Z",
         "contentSnippet": "ProxySQL is a proxy for MySQL and its forks, as well as PostgreSQL. In versions 3.0.0 through 3.0.8, ProxySQL's GenAI/MCP `run_sql_readonly` tool violates its documented read-only contract for MySQL targets. The tool validates only the full input string with a substring blacklist",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-48772 - ProxySQL: PROXY-Protocol-v1 UNKNOWN parses spoofed source IP, bypassing mysql_query_rules.client_addr ACL",
@@ -162,8 +207,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-19T19:28:46.000Z",
         "contentSnippet": "ProxySQL is a proxy for MySQL and its forks, as well as PostgreSQL. In versions 2.0.0 through 3.0.8, the ProxySQL MySQL frontend accepts the `PROXY UNKNOWN \\r\\n` PP1 frame as a well-formed PROXY protocol header. The HAProxy PROXY protocol v1 specification says that when the proto",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 10,
+        "cveSeverity": "CRITICAL"
       },
       {
         "title": "CVE-2026-48773 - ProxySQL pre-auth heap overflow in MySQL and PostgreSQL first-packet handling",
@@ -171,8 +216,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-19T19:27:12.000Z",
         "contentSnippet": "ProxySQL is a proxy for MySQL and its forks, as well as PostgreSQL. Versions 2.0.18 through 3.0.8 have a pre-authentication heap memory corruption vulnerability in the MySQL and PostgreSQL protocol first-read paths. A remote unauthenticated client can declare an oversized first p",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
       },
       {
         "title": "CVE-2026-49345 - Mercator CVE Configuration Vulnerable to Server-Side Request Forgery (SSRF)",
@@ -180,8 +225,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-19T19:23:22.000Z",
         "contentSnippet": "Mercator is an open source web application that enables mapping of the information system. Prior to version 2025.05.19, a Server-Side Request Forgery (SSRF) vulnerability exists in Mercator's CVE configuration panel (`/admin/config/parameters`). The `testProvider()` method in `Co",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-49344 - Mercator has a Personal Identifiable Information Leak from Query Executor feature",
@@ -857,54 +902,23 @@
         "contentSnippet": "Comodo Chromodo Browser 52.15.25.664 contains an unquoted service path vulnerability in the ChromodoUpdater service that runs with SYSTEM privileges. A local attacker can insert a malicious executable in the service path and execute arbitrary code with elevated privileges upon se",
         "cveScore": 8.5,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2016-20087 - Fortitude HTTP 1.0.4.0 Unquoted Service Path Elevation of Privilege",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2016-20087",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-19T14:16:42.000Z",
-        "contentSnippet": "Fortitude HTTP 1.0.4.0 contains an unquoted service path vulnerability that allows local users to execute arbitrary code with elevated privileges by exploiting the service binary path. Attackers can insert malicious executables in the system root path that execute with SYSTEM pri",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2016-20086 - Vembu StoreGrid 4.0 Unquoted Service Path Privilege Escalation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2016-20086",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-19T14:16:41.000Z",
-        "contentSnippet": "Vembu StoreGrid 4.0 contains an unquoted service path vulnerability in the RemoteBackup and RemoteBackup_webServer services that allows local attackers to escalate privileges. Attackers can place a malicious executable in the unquoted path and restart the service to execute code ",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2016-20085 - Realtek High Definition Audio Driver 6.0.1.6730 Privilege Escalation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2016-20085",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-19T14:16:41.000Z",
-        "contentSnippet": "Realtek High Definition Audio Driver 6.0.1.6730 contains an unquoted service path vulnerability that allows local attackers to escalate privileges by placing a malicious executable in the service path. Attackers can insert an executable file in the unquoted path and restart the s",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-41156 - GPU DDK - kernelfw CCB contains SYNC_PRIMITIVE_BLOCK firmware address without holding reference",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-41156",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-19T09:28:53.000Z",
-        "contentSnippet": "Software installed and run as a non-privileged user may conduct improper GPU system calls to cause mismanagement of resources creating a write use after free scenario. A shared resource (memory page) managed by a CPU thread of control (driver) and accessed by a GPU thread of cont",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-34192 - GPU DDK - _MMU_AllocLevel error recovery paths leave dangling page table entries",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34192",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-19T09:23:33.000Z",
-        "contentSnippet": "Software installed and run as a non-privileged user may conduct improper GPU system calls to cause an error path leading to UAF of GPU page tables. The vulnerability allows physical memory allocated for MMU page tables to be used after being freed. This was caused by an error pat",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       }
     ],
     "ai": [
+      {
+        "title": "NVIDIA AI Introduce SpatialClaw: A Training-Free Agent That Treats Code as the Action Interface for Spatial Reasoning",
+        "link": "https://www.marktechpost.com/2026/06/19/nvidia-ai-introduce-spatialclaw-a-training-free-agent-that-treats-code-as-the-action-interface-for-spatial-reasoning/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-06-19T22:51:59.000Z",
+        "contentSnippet": "SpatialClaw is a training-free agent that writes Python in a persistent kernel, composing perception tools for 3D spatial reasoning The post NVIDIA AI Introduce SpatialClaw: A Training-Free Agent That Treats Code as the Action Interface for Spatial Reasoning appeared first on Mar"
+      },
+      {
+        "title": "VibeThinker-3B: A 3B Dense Reasoning Model Built on Qwen2.5-Coder-3B With the Spectrum-to-Signal Post-Training Pipeline",
+        "link": "https://www.marktechpost.com/2026/06/19/vibethinker-3b-a-3b-dense-reasoning-model-built-on-qwen2-5-coder-3b-with-the-spectrum-to-signal-post-training-pipeline/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-06-19T22:06:31.000Z",
+        "contentSnippet": "VibeThinker-3B, a 3B MIT-licensed reasoning model matching DeepSeek V3.2 and Kimi K2.5 on verifiable benchmarks. The post VibeThinker-3B: A 3B Dense Reasoning Model Built on Qwen2.5-Coder-3B With the Spectrum-to-Signal Post-Training Pipeline appeared first on MarkTechPost."
+      },
       {
         "title": "Introducing Web Search on Amazon Bedrock AgentCore",
         "link": "https://aws.amazon.com/blogs/machine-learning/introducing-web-search-on-amazon-bedrock-agentcore/",
@@ -1590,20 +1604,6 @@
         "source": "Google AI Blog",
         "isoDate": "2026-06-05T14:45:00.000Z",
         "contentSnippet": "Here are Google’s latest AI updates from May 2026"
-      },
-      {
-        "title": "NVIDIA AI Releases Dynamo Snapshot: A CRIU-Based Fast Startup System for AI Inference on Kubernetes",
-        "link": "https://www.marktechpost.com/2026/06/05/nvidia-ai-releases-dynamo-snapshot-a-criu-based-fast-startup-system-for-ai-inference-on-kubernetes/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-06-05T10:23:12.000Z",
-        "contentSnippet": "NVIDIA Dynamo Snapshot checkpoints and restores vLLM inference workers on Kubernetes using CRIU and cuda-checkpoint tools. The post NVIDIA AI Releases Dynamo Snapshot: A CRIU-Based Fast Startup System for AI Inference on Kubernetes appeared first on MarkTechPost."
-      },
-      {
-        "title": "Perplexity AI Introduces Hybrid Local-Server Inference Orchestrator for Personal Computer: Automatic On-Device and Cloud Task Routing",
-        "link": "https://www.marktechpost.com/2026/06/05/perplexity-ai-introduces-hybrid-local-server-inference-orchestrator-for-personal-computer-automatic-on-device-and-cloud-task-routing/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-06-05T09:44:39.000Z",
-        "contentSnippet": "Perplexity AI announces a hybrid local-server inference orchestrator for Personal Computer, automatically routing AI tasks between on-device and cloud models. The post Perplexity AI Introduces Hybrid Local-Server Inference Orchestrator for Personal Computer: Automatic On-Device a"
       }
     ],
     "virtualization": [
