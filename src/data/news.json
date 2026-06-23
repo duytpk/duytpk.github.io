@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-06-22T23:13:56.375Z",
+  "updatedAt": "2026-06-23T02:31:05.632Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-10658 - Bluetooth Host ISO RX Missing SDU Header Length Validation in bt_iso_recv() Leads to DoS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10658",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-22T23:58:47.000Z",
+        "contentSnippet": "A missing length validation in the Zephyr Bluetooth Host ISO receive path can be triggered by malformed HCI ISO data. In bt_iso_recv() (subsys/bluetooth/host/iso.c), when processing PB=START/SINGLE fragments, the code pulls a TS SDU header (8 bytes, ts=1) or a non-TS SDU header (",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-10651 - Bluetooth Classic SDP parser truncation bug in bt_sdp_parse_attribute() leads to reachable assertion and possible out-of-bounds read",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10651",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-22T23:54:36.000Z",
+        "contentSnippet": "A malformed Bluetooth Classic SDP attribute can trigger a reachable assertion in Zephyr's SDP parser. In subsys/bluetooth/host/classic/sdp.c, bt_sdp_parse_attribute() accepts an input buffer once it contains the 1-byte attribute type and 2-byte attribute id, but then unconditiona",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-10645 - fs: ext2: Missing structural validation of directory entries can cause out-of-bounds read and zero-progress directory traversal",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10645",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-22T23:48:11.000Z",
+        "contentSnippet": "Zephyr's ext2 directory-entry parser does not fully validate on-disk directory entry structure before copying the entry name and advancing traversal state. In ext2_fetch_direntry() (subsys/fs/ext2/ext2_diskops.c), the code only checks de_name_len",
+        "cveScore": 4.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-47155 - vLLM: Artifact Pin Decay in vLLM allows pinned deployments to load unpinned code, weights, and processors",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47155",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-22T22:20:10.000Z",
+        "contentSnippet": "vLLM is an inference and serving engine for large language models (LLMs). Prior to 0.22.0, vLLM's revision pinning controls do not consistently apply to all artifacts loaded for a model. A deployment that supplies --revision or --code-revision can still load dynamic code, GGUF fi",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-41523 - vLLM: Security Check Bypass via assert Statement in Activation Function Loading Allows Arbitrary Code Execution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-41523",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-22T22:18:14.000Z",
+        "contentSnippet": "vLLM is an inference and serving engine for large language models (LLMs). Prior to 0.22.0, an assert-based security check in vLLM's activation function loading allows any unauthenticated attacker to achieve arbitrary code execution on the server by publishing a malicious HuggingF",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-54232 - vLLM: Dependency Confusion Vulnerability in vLLM Dockerfile",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54232",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-22T22:16:43.000Z",
+        "contentSnippet": "vLLM is an inference and serving engine for large language models (LLMs). Prior to 0.22.1, the vLLM Dockerfile is vulnerable to a dependency confusion attack through the flashinfer-jit-cache package. The package is installed from a custom index (flashinfer.ai/whl/) using --extra-",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-54233 - vLLM: OOM Denial of Service via Audio Decompression Bomb",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54233",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-22T22:10:45.000Z",
+        "contentSnippet": "vLLM is an inference and serving engine for large language models (LLMs). Prior to 0.23.1rc0, vLLM's /v1/audio/transcriptions endpoint limits compressed upload size but not decoded PCM output. A 25MB OPUS file expands to ~14.9GB of float32 PCM at decode time. This vulnerability i",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-54236 - vLLM: incomplete CVE-2026-22778 fix leaks PIL repr addresses via Anthropic router",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54236",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-22T22:09:15.000Z",
+        "contentSnippet": "vLLM is an inference and serving engine for large language models (LLMs). Prior to 0.23.1rc0, the fix for CVE-2026-22778, which introduced a sanitize_message helper that strips object-repr memory addresses from error messages before they reach the client, is incomplete: several r",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-54235 - vLLM: temperature=NaN and temperature=Infinity bypass validation and propagate to GPU kernels",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54235",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-22T21:59:02.000Z",
+        "contentSnippet": "vLLM is an inference and serving engine for large language models (LLMs). Prior to 0.23.1rc0, ll temperature validation gates use comparison operators ( ), which silently evaluate to False for NaN and for positive Infinity in Python's IEEE 754 float semantics. Both values pass ev",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-48746 - vLLM: OpenAI auth bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48746",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-22T21:57:28.000Z",
+        "contentSnippet": "vLLM is an inference and serving engine for large language models (LLMs). From 0.3.0 until 0.22.0, a vulnerability in ASGI web servers and starlette's trust on those web servers enables an authentication bypass of the OpenAI API AuthenticationMiddleware. It allows to use the API ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53923 - vLLM GGUF Kernels: int64_t to int truncation of tensor dimensions causes GPU buffer overflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53923",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-22T21:55:42.000Z",
+        "contentSnippet": "vLLM is an inference and serving engine for large language models (LLMs). From 0.5.5 until 0.23.1rc0, integer truncation of tensor dimensions in vLLM's GGUF dequantize kernels (csrc/quantization/gguf/gguf_kernel.cu) causes partial tensor processing. The output tensor is allocated",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-55409 - Filament: Disabled RichEditor field state can be used for XSS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55409",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-22T21:47:51.000Z",
+        "contentSnippet": "Filament is a collection of full-stack components for accelerated Laravel development. From 3.0.0 until 3.3.53, a disabled RichEditor field rendered its raw state without sanitizing HTML. Where the data stored in this field's state isn't sanitized already when the form state was ",
+        "cveScore": 7.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-48067 - Filament: Inconsistent scope enforcement for AttachAction and AssociateAction Select fields",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48067",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-22T21:46:27.000Z",
+        "contentSnippet": "Filament is a collection of full-stack components for accelerated Laravel development. From filament/actions 4.0.0 until 4.11.4 and 5.6.4 and from filament/tables 3.0.0 until 3.3.51, the recordSelectOptionsQuery() method may be used to scope the options available in the Select fi",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-48167 - Filament: Unvalidated ImageColumn and ImageEntry values can be used for XSS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48167",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-22T21:43:42.000Z",
+        "contentSnippet": "Filament is a collection of full-stack components for accelerated Laravel development. From 4.0.0 until 4.11.5 and 5.6.5, the ImageColumn and ImageEntry components render raw database values without escaping HTML. Where the data passed to these components isn't validated, an atta",
+        "cveScore": 6.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-48500 - Filament: Unauthenticated temporary file upload on auth pages",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48500",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-22T21:41:17.000Z",
+        "contentSnippet": "Filament is a collection of full-stack components for accelerated Laravel development. From 3.0.0 until 3.3.52, 4.11.5, and 5.6.5, any schema can contain a file upload form field, so Filament applies Livewire's WithFileUploads trait to the Livewire component the schema is embedde",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-48166 - Filament: Timing-based user enumeration on login page",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48166",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-22T21:40:01.000Z",
+        "contentSnippet": "Filament is a collection of full-stack components for accelerated Laravel development. From 4.0.0 until 4.11.5 and 5.6.5, the login page has an observable timing discrepancy that allows unauthenticated attackers to enumerate registered email addresses. The impact is limited to di",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-48505 - Filament: Multi-factor authentication (app) recovery codes can still be used multiple times via concurrent submission",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48505",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-22T21:39:26.000Z",
+        "contentSnippet": "Filament is a collection of full-stack components for accelerated Laravel development. From 4.0.0 until 4.11.5 and 5.6.5, a flaw in the handling of recovery codes for app-based multi-factor authentication allows the same recovery code to be reused via concurrent submission. This ",
+        "cveScore": 7.4,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-44889 - WebOb: Location header normalization during redirect leads to open redirect",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44889",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-22T21:30:11.000Z",
+        "contentSnippet": "WebOb provides objects for HTTP requests and responses. Prior to 1.8.10, the normalization of the HTTP Location header during a redirect is vulnerable to an open redirect: WebOb joins the redirect target to the request URI using Python's urljoin, and since Python 3.10 the underly",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-48109 - MessagePack-CSharp: LZ4 decompression may fail with AccessViolationException after dereferencing memory from bad input",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48109",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-22T21:19:54.000Z",
+        "contentSnippet": "MessagePack for C# is a MessagePack serializer for C#. Prior to 2.5.301 and 3.1.7, A vulnerability exists in the optional LZ4 decompression path used by MessagePack compression modes Lz4Block and Lz4BlockArray. The decoder implementation is based on a deprecated fast-decompressio",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-48502 - MessagePack-CSharp: Denial of service vulnerabilities can swamp the CPU or crash the process with stack and heap overflows",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48502",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-22T21:18:29.000Z",
+        "contentSnippet": "MessagePack for C# is a MessagePack serializer for C#. Prior to 2.5.301 and 3.1.7, MessagePackReader.ReadDateTime() can allocate stack memory based on an attacker-controlled MessagePack extension length. In the slow path for timestamp extension parsing, the computed tokenSize inc",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-48506 - MessagePack-CSharp: MessagePackReader.Skip can recurse without enforcing maximum object graph depth",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48506",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-22T21:17:35.000Z",
+        "contentSnippet": "MessagePack for C# is a MessagePack serializer for C#. Prior to 2.5.301 and 3.1.7, MessagePackReader.TrySkip() recursively descends into nested arrays and maps without incrementing the reader depth or calling the configured depth checks. This bypasses MessagePackSecurity.MaximumO",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-48509 - MessagePack-CSharp: ASP.NET Core MessagePackInputFormatter defaults to TrustedData for HTTP request bodies",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48509",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-22T21:16:50.000Z",
+        "contentSnippet": "MessagePack for C# is a MessagePack serializer for C#. Prior to 2.5.301 and 3.1.7, the parameterless MessagePackInputFormatter() constructor uses default serializer options, which resolve to MessagePackSerializerOptions.Standard with MessagePackSecurity.TrustedData. The formatter",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-48510 - MessagePack-CSharp: LZ4 decompression allocates from unbounded declared output lengths",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48510",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-22T21:16:04.000Z",
+        "contentSnippet": "MessagePack for C# is a MessagePack serializer for C#. Prior to 2.5.301 and 3.1.7, when MessagePack-CSharp decompresses Lz4Block or Lz4BlockArray payloads, it reads declared uncompressed lengths from the wire and allocates output buffers based on those lengths before validating t",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-48511 - MessagePack-CSharp: ExpandoObject formatter can perform quadratic insertion work on untrusted maps",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48511",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-22T21:14:54.000Z",
+        "contentSnippet": "MessagePack for C# is a MessagePack serializer for C#. Prior to 2.5.301 and 3.1.7, ExpandoObjectFormatter.Deserialize populates System.Dynamic.ExpandoObject by calling IDictionary .Add for each map entry. ExpandoObject internally maintains member names in array-like structures, s",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-48512 - MessagePack-CSharp: JSON conversion APIs can recurse without consistent depth enforcement",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48512",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-22T21:14:20.000Z",
+        "contentSnippet": "MessagePack for C# is a MessagePack serializer for C#. Prior to 2.5.301 and 3.1.7, MessagePack-CSharp's JSON conversion helpers contain multiple recursion paths that do not consistently enforce a depth limit. These paths are in the JSON conversion component rather than normal typ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2026-49468 - LiteLLM: Authentication Bypass via Host Header Injection",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-49468",
@@ -677,234 +902,16 @@
         "contentSnippet": "The Transbank Webpay WordPress plugin before 1.14.0 does not sanitize and escape logs to be displayed, allowing unauthenticated users to perform Stored XSS attacks against logged in administrator",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-4259 - Ultimate WooCommerce Auction Pro <= 2.4.5 - Reflected XSS via uwa_manage_auctions",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-4259",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T06:00:01.000Z",
-        "contentSnippet": "The ultimate-woocommerce-auction-pro WordPress plugin through 2.4.5 does not sanitise and escape a parameter before outputting it back in the page, leading to a Reflected Cross-Site Scripting which could be used against high privilege users such as admin",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-4110 - Ultimate WooCommerce Auction Pro <= 2.4.5 - Reflected XSS via uwa_auctions_bids_list",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-4110",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T06:00:01.000Z",
-        "contentSnippet": "The ultimate-woocommerce-auction-pro WordPress plugin through 2.4.5 does not sanitise and escape a parameter before outputting it back in the page, leading to a Reflected Cross-Site Scripting which could be used against high privilege users such as admin",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-10530 - Pie Register < 3.8.4.10 - Unauthenticated Email Verification Bypass via Predictable Token",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10530",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T06:00:01.000Z",
-        "contentSnippet": "The Pie Register WordPress plugin before 3.8.4.10 does not use sufficiently random values when generating its account verification tokens, allowing unauthenticated attackers to predict a valid token and activate an account without access to the associated email inbox.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-6645 - Insecure Search Path Vulnerability in PaperCut Print Deploy Client for Windows",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6645",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T03:24:06.000Z",
-        "contentSnippet": "An insecure process execution vulnerability exists in the pc-printer-updater.exe component of the PaperCut Print Deploy Client for Windows. The application, which typically operates with high-level system privileges, attempts to perform an internal validation check by invoking a ",
-        "cveScore": 7.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-11748 - CentralDogma-Server-Auth-Shiro LDAP Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11748",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T02:37:35.000Z",
-        "contentSnippet": "A vulnerability has been identified in centraldogma-server-auth-shiro versions prior to 0.84.0, where the SearchFirstActiveDirectoryRealm substitutes the login username into an LDAP search filter without neutralizing LDAP filter metacharacters, allowing an unauthenticated attacke",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-11746 - CentralDogma Replication Secret Weakness",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11746",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T02:35:51.000Z",
-        "contentSnippet": "A vulnerability has been identified in centraldogma-server versions prior to 0.84.0, where enabling ZooKeeper replication without setting replication.secret causes the server to silently fall back to a hard-coded, publicly known secret. This default credential authenticates the e",
-        "cveScore": 9.4,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-11745 - CentralDogma Git Mirror SSH Host Key Verification Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11745",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T02:33:08.000Z",
-        "contentSnippet": "A vulnerability has been identified in centraldogma-server-mirror-git versions prior to 0.84.0, where the Git mirror SSH client does not verify remote host keys for git+ssh:// connections, allowing an on-path attacker to perform man-in-the-middle attacks and compromise mirrored r",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-8918 - ASUS Armoury Crate Local Privilege Escalation via Arbitrary Memory Corruption",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8918",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T02:00:12.000Z",
-        "contentSnippet": "A permissive list of allowed inputs in ASUS Armoury Crate allows a local administrator to perform arbitrary memory read/write operations or cause a system crash (BSOD) by bypassing the validation mechanism.Refer to the ' Security Update for Armoury Crate App ' section on the ASUS",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-12823 - Browserbase Autobrowse Trace Artifact default permission",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12823",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-21T23:45:08.000Z",
-        "contentSnippet": "A security flaw has been discovered in Browserbase up to 20260526. This impacts an unknown function of the component Autobrowse Trace Artifact Handler. The manipulation results in incorrect default permissions. The attack requires a local approach. The exploit has been released t",
-        "cveScore": 3.3,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-12822 - langflow-ai langflow Bundle URL Loader code injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12822",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-21T23:30:09.000Z",
-        "contentSnippet": "A vulnerability was identified in langflow-ai langflow up to 1.9.3. This affects an unknown function of the component Bundle URL Loader. The manipulation leads to code injection. The attack needs to be performed locally. The vendor was contacted early about this disclosure but di",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-12821 - FlowiseAI Flowise S3 Document Loader S3.ts path traversal",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12821",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-21T23:15:08.000Z",
-        "contentSnippet": "A vulnerability was determined in FlowiseAI Flowise up to 3.1.2. The impacted element is an unknown function of the file packages/components/nodes/documentloaders/S3/S3.ts of the component S3 Document Loader. Executing a manipulation can lead to path traversal. It is possible to ",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-12815 - coollabsio coolify Image Name os command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12815",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-21T23:00:10.000Z",
-        "contentSnippet": "A vulnerability has been found in coollabsio coolify 4.0.0. Impacted is an unknown function of the component Image Name Handler. Such manipulation leads to os command injection. The attack may be performed from remote. The vendor was contacted early about this disclosure but did ",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-12814 - Comfast CF-WR631AX V3 API Endpoint mbox-config system os command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12814",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-21T22:45:08.000Z",
-        "contentSnippet": "A flaw has been found in Comfast CF-WR631AX V3 up to 2.7.0.8. This issue affects the function system of the file /cgi-bin/mbox-config?section=ping_config of the component API Endpoint. This manipulation of the argument destination causes os command injection. The attack is possib",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-12845",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12845",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-21T22:32:33.000Z",
-        "contentSnippet": "None",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-12813 - activepieces File URL file.ts handleUrlFile server-side request forgery",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12813",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-21T22:30:09.000Z",
-        "contentSnippet": "A vulnerability was detected in activepieces up to 0.83.0. This vulnerability affects the function handleUrlFile in the library packages/server/engine/src/lib/variables/processors/file.ts of the component File URL Handler. The manipulation results in server-side request forgery. ",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-12812 - Radware Cyber Controller HTML Report Generation HTML injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12812",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-21T22:15:08.000Z",
-        "contentSnippet": "A security vulnerability has been detected in Radware Cyber Controller up to 10.11.0. This affects an unknown part of the component HTML Report Generation. The manipulation leads to HTML injection. Remote exploitation of the attack is possible. The exploit has been disclosed publ",
-        "cveScore": 4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-12811 - kortix-ai suna Auth Endpoint page.tsx router.push cross site scripting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12811",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-21T22:00:10.000Z",
-        "contentSnippet": "A weakness has been identified in kortix-ai suna up to 0.8.38. Affected by this issue is the function router.replace/router.push of the file apps/frontend/src/app/auth/page.tsx of the component Auth Endpoint. Executing a manipulation of the argument returnURL can lead to cross si",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-12810 - Edimax BR-6478AC V2 POST Request mp command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12810",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-21T21:45:07.000Z",
-        "contentSnippet": "A security flaw has been discovered in Edimax BR-6478AC V2 1.23. Affected by this vulnerability is the function mp of the file /goform/mp of the component POST Request Handler. Performing a manipulation of the argument command results in command injection. The attack may be initi",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-12809 - Edimax BR-6478AC V2 POST Request wiz_5in1_redirect command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12809",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-21T21:30:08.000Z",
-        "contentSnippet": "A vulnerability was identified in Edimax BR-6478AC V2 1.23. Affected is the function wiz_5in1_redirect of the file /goform/wiz_5in1_redirect of the component POST Request Handler. Such manipulation of the argument newpass leads to command injection. The attack can be launched rem",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-12808 - Edimax BR-6478AC V2 POST Request stainfo command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12808",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-21T20:45:08.000Z",
-        "contentSnippet": "A vulnerability was determined in Edimax BR-6478AC V2 1.23. This impacts the function stainfo of the file /goform/stainfo of the component POST Request Handler. This manipulation of the argument interface causes command injection. The attack can be initiated remotely. The exploit",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-12807 - Edimax BR-6478AC V2 POST Request setWAN command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12807",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-21T19:45:07.000Z",
-        "contentSnippet": "A vulnerability was found in Edimax BR-6478AC V2 1.23. This affects the function setWAN of the file /goform/setWAN of the component POST Request Handler. The manipulation of the argument pppUserName/pptpUserName/L2TPUserName results in command injection. It is possible to launch ",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-12806 - Edimax BR-6478AC V2 POST Request formWlSiteSurvey buffer overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12806",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-21T19:30:08.000Z",
-        "contentSnippet": "A vulnerability has been found in Edimax BR-6478AC V2 1.23. The impacted element is the function formWlSiteSurvey of the file /goform/formWlSiteSurvey of the component POST Request Handler. The manipulation of the argument selSSID leads to buffer overflow. It is possible to initi",
-        "cveScore": 9,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-12805 - OFFIS DCMTK ofxml.cc parseFile heap-based overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12805",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-21T19:15:07.000Z",
-        "contentSnippet": "A flaw has been found in OFFIS DCMTK up to 3.7.0. The affected element is the function XMLNode::parseFile in the library ofstd/libsrc/ofxml.cc. Executing a manipulation can lead to heap-based buffer overflow. The attack may be performed from remote. The exploit has been published",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-12804 - lemonldap-ng SAML Common Domain Cookie Endpoint CDC.pm redirect",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12804",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-21T18:30:07.000Z",
-        "contentSnippet": "A vulnerability was detected in lemonldap-ng up to 2.23.0. Impacted is an unknown function in the library lemonldap-ng-portal/lib/Lemonldap/NG/Portal/CDC.pm of the component SAML Common Domain Cookie Endpoint. Performing a manipulation of the argument url results in open redirect",
-        "cveScore": 5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-56412 - Expat Use-After-Free Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56412",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-21T15:58:59.000Z",
-        "contentSnippet": "libexpat before 2.8.2 does not consider XML_TOK_DATA_CHARS in doCdataSection and thus lacks handler call depth tracking for various calls from within handlers in cases of a policy violation. Thus, a use-after-free can occur. NOTE: this issue exists because of an incomplete fix fo",
-        "cveScore": 4.9,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
+      {
+        "title": "Porting the Moebius 0.2B image inpainting model to run in the browser with Claude Code",
+        "link": "https://simonwillison.net/2026/Jun/22/porting-moebius/#atom-entries",
+        "source": "Simon Willison's Weblog",
+        "isoDate": "2026-06-22T23:43:51.000Z",
+        "contentSnippet": "This morning on Hacker News I saw Moebius: 0.2B Lightweight Image Inpainting Framework with 10B-Level Performance, describing a small but effective inpainting model - a model where you can mark regions of an image to remove and the model imagines what should fill the space. The r"
+      },
       {
         "title": "xAI Launches /goal in Grok Build, Adding Long-Running Autonomous Execution With Built-In Verification for Multi-Step Coding Tasks",
         "link": "https://www.marktechpost.com/2026/06/22/xai-launches-goal-in-grok-build-adding-long-running-autonomous-execution-with-built-in-verification-for-multi-step-coding-tasks/",
@@ -1597,13 +1604,6 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-06-08T16:14:14.000Z",
         "contentSnippet": "This blog has previously discussed FHE for ML inference in the post Enable fully homomorphic encryption with Amazon SageMaker endpoints for secure, real-time inferencing, but this post goes a little further. That previous post showed how to implement FHE-based inference 'from scr"
-      },
-      {
-        "title": "Amazon Quick ARNs: Cross-account migration and namespace permissions",
-        "link": "https://aws.amazon.com/blogs/machine-learning/amazon-quick-arns-cross-account-migration-and-namespace-permissions/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-06-08T16:07:29.000Z",
-        "contentSnippet": "In this post, we cover the structure of Amazon Quick ARNs and provide a practical mental model for working with them. By the end, you can look at an ARN and immediately understand what it means for your migration strategy, diagnose permission issues faster, and design multi-tenan"
       }
     ],
     "virtualization": [
