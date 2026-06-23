@@ -1,8 +1,53 @@
 {
-  "updatedAt": "2026-06-23T02:31:05.632Z",
+  "updatedAt": "2026-06-23T06:41:29.638Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-12866 - expr-eval Code Execution via toJSFunction",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12866",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T05:00:00.000Z",
+        "contentSnippet": "All versions of the package expr-eval are vulnerable to Code Execution via the toJSFunction() API. An attacker can execute arbitrary JavaScript by supplying crafted expressions that are compiled into native code using new Function(). Because user-controlled expressions are transf",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-55654 - Openssh: heap out-of-bounds read in red hat enterprise linux versions of openssh gssapi indicator cleanup due to missing null sentinel termination",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55654",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T03:37:00.000Z",
+        "contentSnippet": "A flaw was found in OpenSSH. This vulnerability, a heap out-of-bounds read, occurs during the cleanup of GSSAPI (Generic Security Service Application Programming Interface) indicators when a trailing NULL termination is missing in the auth-indicators array. A remote attacker, und",
+        "cveScore": 3.7,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-55655 - Openssh: local mitm of x11 forwarding via abstract unix socket pre-binding in red hat enterprise linux openssh client versions",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55655",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T03:36:25.000Z",
+        "contentSnippet": "A flaw was found in OpenSSH. A local unprivileged attacker on a Linux client host can hijack client-side X11 forwarding connections. This is possible by pre-binding the preferred abstract X socket name when X11 forwarding is enabled and a local UNIX-domain X socket is used. A suc",
+        "cveScore": 5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-55653 - Openssh: double free in red hat enterprise linux versions of openssh dh-gex client path during fips known-group validation leads to client-side denial of service",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55653",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T03:36:22.000Z",
+        "contentSnippet": "A flaw was found in OpenSSH. A malicious SSH server can exploit a double free vulnerability in the Diffie-Hellman Group Exchange (DH-GEX) client path. This occurs during FIPS (Federal Information Processing Standards) mode known-group validation when the client processes attacker",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-11833 - FAST/TOOLS CI Server Information Disclosure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11833",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T00:53:43.000Z",
+        "contentSnippet": "Overview: A vulnerability has been found in FAST/TOOLS and CI Server. The web server may return a response containing the CI Server setting information. This information could be exploited by an attacker for other attacks. The affected products and versions are as follows: FAST/T",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-10658 - Bluetooth Host ISO RX Missing SDU Header Length Validation in bt_iso_recv() Leads to DoS",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-10658",
@@ -36,8 +81,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-22T22:20:10.000Z",
         "contentSnippet": "vLLM is an inference and serving engine for large language models (LLMs). Prior to 0.22.0, vLLM's revision pinning controls do not consistently apply to all artifacts loaded for a model. A deployment that supplies --revision or --code-revision can still load dynamic code, GGUF fi",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-41523 - vLLM: Security Check Bypass via assert Statement in Activation Function Loading Allows Arbitrary Code Execution",
@@ -45,8 +90,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-22T22:18:14.000Z",
         "contentSnippet": "vLLM is an inference and serving engine for large language models (LLMs). Prior to 0.22.0, an assert-based security check in vLLM's activation function loading allows any unauthenticated attacker to achieve arbitrary code execution on the server by publishing a malicious HuggingF",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-54232 - vLLM: Dependency Confusion Vulnerability in vLLM Dockerfile",
@@ -54,8 +99,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-22T22:16:43.000Z",
         "contentSnippet": "vLLM is an inference and serving engine for large language models (LLMs). Prior to 0.22.1, the vLLM Dockerfile is vulnerable to a dependency confusion attack through the flashinfer-jit-cache package. The package is installed from a custom index (flashinfer.ai/whl/) using --extra-",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-54233 - vLLM: OOM Denial of Service via Audio Decompression Bomb",
@@ -63,8 +108,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-22T22:10:45.000Z",
         "contentSnippet": "vLLM is an inference and serving engine for large language models (LLMs). Prior to 0.23.1rc0, vLLM's /v1/audio/transcriptions endpoint limits compressed upload size but not decoded PCM output. A 25MB OPUS file expands to ~14.9GB of float32 PCM at decode time. This vulnerability i",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-54236 - vLLM: incomplete CVE-2026-22778 fix leaks PIL repr addresses via Anthropic router",
@@ -72,8 +117,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-22T22:09:15.000Z",
         "contentSnippet": "vLLM is an inference and serving engine for large language models (LLMs). Prior to 0.23.1rc0, the fix for CVE-2026-22778, which introduced a sanitize_message helper that strips object-repr memory addresses from error messages before they reach the client, is incomplete: several r",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-54235 - vLLM: temperature=NaN and temperature=Infinity bypass validation and propagate to GPU kernels",
@@ -81,8 +126,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-22T21:59:02.000Z",
         "contentSnippet": "vLLM is an inference and serving engine for large language models (LLMs). Prior to 0.23.1rc0, ll temperature validation gates use comparison operators ( ), which silently evaluate to False for NaN and for positive Infinity in Python's IEEE 754 float semantics. Both values pass ev",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-48746 - vLLM: OpenAI auth bypass",
@@ -90,8 +135,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-22T21:57:28.000Z",
         "contentSnippet": "vLLM is an inference and serving engine for large language models (LLMs). From 0.3.0 until 0.22.0, a vulnerability in ASGI web servers and starlette's trust on those web servers enables an authentication bypass of the OpenAI API AuthenticationMiddleware. It allows to use the API ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 9.1,
+        "cveSeverity": "CRITICAL"
       },
       {
         "title": "CVE-2026-53923 - vLLM GGUF Kernels: int64_t to int truncation of tensor dimensions causes GPU buffer overflow",
@@ -99,8 +144,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-22T21:55:42.000Z",
         "contentSnippet": "vLLM is an inference and serving engine for large language models (LLMs). From 0.5.5 until 0.23.1rc0, integer truncation of tensor dimensions in vLLM's GGUF dequantize kernels (csrc/quantization/gguf/gguf_kernel.cu) causes partial tensor processing. The output tensor is allocated",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-55409 - Filament: Disabled RichEditor field state can be used for XSS",
@@ -180,8 +225,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-22T21:18:29.000Z",
         "contentSnippet": "MessagePack for C# is a MessagePack serializer for C#. Prior to 2.5.301 and 3.1.7, MessagePackReader.ReadDateTime() can allocate stack memory based on an attacker-controlled MessagePack extension length. In the slow path for timestamp extension parsing, the computed tokenSize inc",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-48506 - MessagePack-CSharp: MessagePackReader.Skip can recurse without enforcing maximum object graph depth",
@@ -857,54 +902,16 @@
         "contentSnippet": "Improper escaping of database table names in the CaptureChangeMySQL Processor included with Apache NiFi 1.2.0 through 2.9.0 allows for injecting SQL commands using crafted naming. Manual quoted boundaries added in Apache NiFi 1.8.0 narrowed the scope of potential injection option",
         "cveScore": 5.2,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-54665 - Apache NiFi: Missing Validation for Proxy Host Headers",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54665",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T07:34:13.000Z",
-        "contentSnippet": "Apache NiFi 0.0.1 through 2.9.0 support building qualified URLs from one of several HTTP request headers that provide an alternative to the standard Host header without validating the values provided. Apache NiFi 1.6.0 introduced a configurable application property to restrict va",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2025-66336 - Apache Doris MCP Server: SQL injection leading the authentication bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-66336",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T06:55:17.000Z",
-        "contentSnippet": "Apache Doris MCP Server contains a SQL injection vulnerability in a metadata query path. A user-controlled database name is directly interpolated into a SQL query, and the query is executed without passing the caller's authorization context. This may allow an authenticated attack",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-8157 - Vitepos < 3.4.2 - Outlet Manager+ Privilege Escalation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8157",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T06:00:02.000Z",
-        "contentSnippet": "The Vitepos WordPress plugin before 3.4.2 does not properly restrict the roles that can be assigned when creating new users via one of its REST API endpoints, allowing authenticated users with a custom Vitepos WordPress plugin before 3.4.2 role to escalate privileges to administr",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-7859 - Motors Car Dealership & Classified Listings < 1.4.110 - Unauthenticated Post-Meta Write via stm_ajax_add_a_car_media",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-7859",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T06:00:02.000Z",
-        "contentSnippet": "The Motors WordPress plugin before 1.4.110 does not have proper authorisation and CSRF checks on one of its AJAX actions, allowing unauthenticated attackers to modify arbitrary post metadata, such as the gallery, featured image and, on WooCommerce sites, product prices.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-6858 - Transbank Webpay < 1.14.0 - Unauthenticated Stored XSS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6858",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T06:00:02.000Z",
-        "contentSnippet": "The Transbank Webpay WordPress plugin before 1.14.0 does not sanitize and escape logs to be displayed, allowing unauthenticated users to perform Stored XSS attacks against logged in administrator",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       }
     ],
     "ai": [
+      {
+        "title": "GLM-5.2 OpenAI-Compatible API: A Hands-On Guide to Reasoning Effort, Function Calling, and Long-Context Retrieval",
+        "link": "https://www.marktechpost.com/2026/06/22/glm-5-2-openai-compatible-api-a-hands-on-guide-to-reasoning-effort-function-calling-and-long-context-retrieval/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-06-23T06:35:05.000Z",
+        "contentSnippet": "We build a practical GLM-5.2 workflow using its hosted, OpenAI-compatible API instead of running the model locally. We set up multiple providers, load the API key securely, and create a reusable chat wrapper. We then test thinking-effort control, streamed reasoning, function call"
+      },
       {
         "title": "Porting the Moebius 0.2B image inpainting model to run in the browser with Claude Code",
         "link": "https://simonwillison.net/2026/Jun/22/porting-moebius/#atom-entries",
@@ -1597,13 +1604,6 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-06-08T16:31:17.000Z",
         "contentSnippet": "In this post, we introduce mathematical optimization, explain how it fits within the broader AI landscape, and showcase real-world success stories where the Innovation Center has partnered with customers to deliver concrete results."
-      },
-      {
-        "title": "End-to-end encrypted ML inference with Amazon SageMaker AI and FHE",
-        "link": "https://aws.amazon.com/blogs/machine-learning/end-to-end-encrypted-ml-inference-with-amazon-sagemaker-ai-and-fhe/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-06-08T16:14:14.000Z",
-        "contentSnippet": "This blog has previously discussed FHE for ML inference in the post Enable fully homomorphic encryption with Amazon SageMaker endpoints for secure, real-time inferencing, but this post goes a little further. That previous post showed how to implement FHE-based inference 'from scr"
       }
     ],
     "virtualization": [
