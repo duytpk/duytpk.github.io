@@ -1,8 +1,224 @@
 {
-  "updatedAt": "2026-06-23T19:04:41.729Z",
+  "updatedAt": "2026-06-23T21:25:32.445Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-55249 - @rtk-ai/rtk-rewrite: OpenClaw Rewrite Plugin Command Injection via execSync Template String",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55249",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T18:33:46.000Z",
+        "contentSnippet": "@rtk-ai/rtk-rewrite transparently rewrites shell commands executed via OpenClaw's exec tool to their RTK equivalents. In 1.0.0, the @rtk-ai/rtk-rewrite OpenClaw plugin passes attacker-controlled input directly into a shell-backed execSync() template string without shell-safe esca",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-55736 - Private action arguments can be set by user input in Ash",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55736",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T18:21:13.000Z",
+        "contentSnippet": "Improperly Controlled Modification of Dynamically-Determined Object Attributes vulnerability in ash-project ash allows a user to set the value of a private action argument that is intended to be controlled only by trusted server-side code. Action arguments declared with public?: ",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-53753 - Crawl4AI: AST Sandbox Escape via gi_frame.f_back Chain - Pre-Auth RCE in Docker API",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53753",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T18:17:18.000Z",
+        "contentSnippet": "Crawl4AI is an open-source LLM friendly web crawler & scraper. Prior to 0.8.7, the _safe_eval_expression() function in the computed fields feature uses an AST validator that only blocks attributes starting with underscore. Python generator and frame object attributes (gi_frame, f",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53754 - Crawl4AI: SSRF filter bypass in Docker server via IPv6 transition forms (NAT64 / 6to4 / unspecified / v4-mapped)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53754",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T18:16:34.000Z",
+        "contentSnippet": "Crawl4AI is an open-source LLM friendly web crawler & scraper. Prior to 0.8.8, the Docker API server's SSRF protection (validate_webhook_url / validate_url_destination in deploy/docker/utils.py) used an explicit IPv4/IPv6 CIDR blocklist that missed several address families. An at",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53755 - Crawl4AI: SSRF via proxy settings in the Docker server bypasses the crawl-URL SSRF check",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53755",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T18:15:31.000Z",
+        "contentSnippet": "Crawl4AI is an open-source LLM friendly web crawler & scraper. Prior to 0.8.9, the Docker API server applied its SSRF destination check to the crawl target URL only, not to the proxy address. An unauthenticated request could supply a proxy pointing at an internal IP and route the",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-54320 - Daytona: Cross-tenant organization takeover via invitation acceptance with an unverified email",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54320",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T18:11:19.000Z",
+        "contentSnippet": "Daytona is a secure and elastic infrastructure runtime for AI-generated code execution and agent workflows. Prior to 0.184.0, organization invitations could be accepted (and declined) by a user whose email matched the invitation but had not been verified. Daytona authenticates us",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-54321 - Daytona: Public sandbox previews remain accessible for up to one hour after being made private",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54321",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T18:10:05.000Z",
+        "contentSnippet": "Daytona is a secure and elastic infrastructure runtime for AI-generated code execution and agent workflows. From 0.101.0 until 0.184.0, sandbox previews that were switched from public to private could remain reachable without authentication for a short period after the change, du",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-54319 - Daytona: Path traversal in sandbox volume id mounts arbitrary host paths into the sandbox — cross-tenant data access and host escape",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54319",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T18:08:54.000Z",
+        "contentSnippet": "Daytona is a secure and elastic infrastructure runtime for AI-generated code execution and agent workflows. Prior to 0.186, a sandbox volume reference (volumeId, which may also be a volume name) was forwarded to the runner and used to build the host bind-mount source path without",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-54322 - Daytona: Cross-org IDOR in organization role update/delete — any org owner can rewrite or destroy another org's roles",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54322",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T18:07:59.000Z",
+        "contentSnippet": "Daytona is a secure and elastic infrastructure runtime for AI-generated code execution and agent workflows. Prior to 0.185.0, Daytona's organization role update and delete endpoints authorized the caller as an owner of the organization named in the request path, but resolved and ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-54324 - Daytona: Cross-tenant data leak in notification WebSocket gateway via unverified organizationId join",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54324",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T18:07:23.000Z",
+        "contentSnippet": "Daytona is a secure and elastic infrastructure runtime for AI-generated code execution and agent workflows. Prior to 0.185.0, a cross-tenant authorization flaw in Daytona's notification WebSocket gateway allowed any authenticated user to subscribe to another organization's realti",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-54323 - Daytona: Git credential leak via git clone with TLS verification disabled",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54323",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T18:06:21.000Z",
+        "contentSnippet": "Daytona is a secure and elastic infrastructure runtime for AI-generated code execution and agent workflows. Prior to 0.185.0, the daemon's git clone implementation disabled TLS certificate verification. When a clone request carried Git credentials, the daemon sent the HTTP Basic ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2020-9695 - Acrobat Reader | Out-of-bounds Write (CWE-787)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2020-9695",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T18:00:16.000Z",
+        "contentSnippet": "Acrobat Reader versions 2020.009.20074, 2020.001.30002, 2017.011.30171, 2015.006.30523 and earlier are affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user inter",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2020-9711 - Acrobat Reader | Out-of-bounds Read (CWE-125)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2020-9711",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T17:58:48.000Z",
+        "contentSnippet": "Acrobat Reader versions 2020.009.20074, 2020.001.30002, 2017.011.30171, 2015.006.30523 and earlier are affected by an out-of-bounds read vulnerability that could lead to disclosure of sensitive memory. An attacker could leverage this vulnerability to disclose sensitive informatio",
+        "cveScore": 5.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-45135 - Caddy: Unsafe Unicode Handling in FastCGI splitPos Allows Execution of Non-PHP Files",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45135",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T17:56:42.000Z",
+        "contentSnippet": "Caddy is an extensible server platform that uses TLS by default. From 2.7.0 until 2.11.3, the FastCGI transport's splitPos() in modules/caddyhttp/reverseproxy/fastcgi/fastcgi.go misuses golang.org/x/text/search with search.IgnoreCase when the request path contains a non-ASCII byt",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-45692 - Caddy: Remote Admin Authorization Bypass in `/config` API via Array Index Normalization",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45692",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T17:55:11.000Z",
+        "contentSnippet": "Caddy is an extensible server platform that uses TLS by default. From 2.4.0 until 2.11.3, the authorization layer and the /config traversal layer do not agree on what object the path refers to. In this case, a path authorized for one config object is accepted, but then resolves t",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52845 - Caddy: FastCGI header normalization bypass in `forward_auth copy_headers`",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52845",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T17:52:01.000Z",
+        "contentSnippet": "Caddy is an extensible server platform that uses TLS by default. Prior to 2.11.4, forward_auth copy_headers deletes the exact client-supplied identity header before copying the trusted value from the auth gateway. But when the request later goes through php_fastcgi, Caddy normali",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52844 - Caddy: Windows `file_server` path authorization bypass via encoded backslash",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52844",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T17:50:42.000Z",
+        "contentSnippet": "Caddy is an extensible server platform that uses TLS by default. Prior to 2.11.4, on Windows, Caddy path matchers treat /private\\secret.txt as outside /private/*, but file_server later resolves the same request path as private\\secret.txt on disk. An unauthenticated remote client ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52846 - Caddy: stripHTML template function bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52846",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T17:47:30.000Z",
+        "contentSnippet": "Caddy is an extensible server platform that uses TLS by default. Prior to 2.11.4, Caddy’s stripHTML template function cannot reliably remove all HTML tags from input strings. Certain malformed HTML, such as img src=x onerror=alert()>, can bypass the tag-stripping logic, potential",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2020-9713 - Acrobat Reader | Out-of-bounds Read (CWE-125)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2020-9713",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T17:47:15.000Z",
+        "contentSnippet": "Adobe Acrobat and Reader versions 2020.009.20074 and earlier, 2020.001.30002, 2017.011.30171 and earlier, and 2015.006.30523 and earlier are affected by an out-of-bounds read vulnerability that could lead to disclosure of sensitive memory. An attacker could leverage this vulnerab",
+        "cveScore": 5.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-54157 - LobeHub: Unauthenticated SSRF in `/webapi/proxy`",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54157",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T17:43:06.000Z",
+        "contentSnippet": "LobeHub is a work-and-lifestyle space to find, build, and collaborate with agent teammates that grow with you. Prior to 2.1.57, the /webapi/proxy endpoint on app.lobehub.com accepts a URL in the POST body and fetches it server-side without any authentication. An attacker can use ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-0864 - Configuration Injection via Carriage Return (\\r) in write() method",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-0864",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T17:42:01.000Z",
+        "contentSnippet": "When using the \"configparser\" module to write configuration files containing multi-line text values with carriage return characters (\\r) the resulting file could be injected with unexpected keys and values if the attacker controls the written value.",
+        "cveScore": 4.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-54318 - Home Assistant: Exported BroadcastReceiver allows local apps to spoof device location",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54318",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T17:40:28.000Z",
+        "contentSnippet": "Home Assistant is open source home automation software that puts local control and privacy first. Prior to 2026.5.3, the LocationSensorManager BroadcastReceiver is exported with no permission. Any installed app, with zero runtime permissions, can broadcast a forged Google Play Se",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-54317 - Home Assistant: Konnected alarm-panel switch state and zone topology disclosed to unauthenticated actors on the LAN",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54317",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T17:39:17.000Z",
+        "contentSnippet": "Home Assistant is open source home automation software that puts local control and privacy first. Prior to 2026.6.0, the Konnected integration registers an HTTP endpoint, KonnectedView (homeassistant/components/konnected/__init__.py), that is marked as not requiring authenticatio",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53662 - immich: One-click account takeover via XSS in login page continue redirect",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53662",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T17:36:30.000Z",
+        "contentSnippet": "immich is a high performance self-hosted photo and video management solution. From commit 4ffa26c9 until 4eb1003, a reflected cross-site scripting (XSS) vulnerability on the /auth/login page allows an attacker to fully compromise any authenticated user's account with a single lin",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2026-57062 - GnuPG gpgsm AES-GCM ICV Length Validation Bypass",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-57062",
@@ -686,225 +902,16 @@
         "contentSnippet": "vLLM is an inference and serving engine for large language models (LLMs). Prior to 0.22.0, an assert-based security check in vLLM's activation function loading allows any unauthenticated attacker to achieve arbitrary code execution on the server by publishing a malicious HuggingF",
         "cveScore": 7.5,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-54232 - vLLM: Dependency Confusion Vulnerability in vLLM Dockerfile",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54232",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T22:16:43.000Z",
-        "contentSnippet": "vLLM is an inference and serving engine for large language models (LLMs). Prior to 0.22.1, the vLLM Dockerfile is vulnerable to a dependency confusion attack through the flashinfer-jit-cache package. The package is installed from a custom index (flashinfer.ai/whl/) using --extra-",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-54233 - vLLM: OOM Denial of Service via Audio Decompression Bomb",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54233",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T22:10:45.000Z",
-        "contentSnippet": "vLLM is an inference and serving engine for large language models (LLMs). Prior to 0.23.1rc0, vLLM's /v1/audio/transcriptions endpoint limits compressed upload size but not decoded PCM output. A 25MB OPUS file expands to ~14.9GB of float32 PCM at decode time. This vulnerability i",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-54236 - vLLM: incomplete CVE-2026-22778 fix leaks PIL repr addresses via Anthropic router",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54236",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T22:09:15.000Z",
-        "contentSnippet": "vLLM is an inference and serving engine for large language models (LLMs). Prior to 0.23.1rc0, the fix for CVE-2026-22778, which introduced a sanitize_message helper that strips object-repr memory addresses from error messages before they reach the client, is incomplete: several r",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-54235 - vLLM: temperature=NaN and temperature=Infinity bypass validation and propagate to GPU kernels",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54235",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T21:59:02.000Z",
-        "contentSnippet": "vLLM is an inference and serving engine for large language models (LLMs). Prior to 0.23.1rc0, ll temperature validation gates use comparison operators ( ), which silently evaluate to False for NaN and for positive Infinity in Python's IEEE 754 float semantics. Both values pass ev",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-48746 - vLLM: OpenAI auth bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48746",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T21:57:28.000Z",
-        "contentSnippet": "vLLM is an inference and serving engine for large language models (LLMs). From 0.3.0 until 0.22.0, a vulnerability in ASGI web servers and starlette's trust on those web servers enables an authentication bypass of the OpenAI API AuthenticationMiddleware. It allows to use the API ",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-53923 - vLLM GGUF Kernels: int64_t to int truncation of tensor dimensions causes GPU buffer overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53923",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T21:55:42.000Z",
-        "contentSnippet": "vLLM is an inference and serving engine for large language models (LLMs). From 0.5.5 until 0.23.1rc0, integer truncation of tensor dimensions in vLLM's GGUF dequantize kernels (csrc/quantization/gguf/gguf_kernel.cu) causes partial tensor processing. The output tensor is allocated",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-55409 - Filament: Disabled RichEditor field state can be used for XSS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55409",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T21:47:51.000Z",
-        "contentSnippet": "Filament is a collection of full-stack components for accelerated Laravel development. From 3.0.0 until 3.3.53, a disabled RichEditor field rendered its raw state without sanitizing HTML. Where the data stored in this field's state isn't sanitized already when the form state was ",
-        "cveScore": 7.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-48067 - Filament: Inconsistent scope enforcement for AttachAction and AssociateAction Select fields",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48067",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T21:46:27.000Z",
-        "contentSnippet": "Filament is a collection of full-stack components for accelerated Laravel development. From filament/actions 4.0.0 until 4.11.4 and 5.6.4 and from filament/tables 3.0.0 until 3.3.51, the recordSelectOptionsQuery() method may be used to scope the options available in the Select fi",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-48167 - Filament: Unvalidated ImageColumn and ImageEntry values can be used for XSS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48167",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T21:43:42.000Z",
-        "contentSnippet": "Filament is a collection of full-stack components for accelerated Laravel development. From 4.0.0 until 4.11.5 and 5.6.5, the ImageColumn and ImageEntry components render raw database values without escaping HTML. Where the data passed to these components isn't validated, an atta",
-        "cveScore": 6.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-48500 - Filament: Unauthenticated temporary file upload on auth pages",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48500",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T21:41:17.000Z",
-        "contentSnippet": "Filament is a collection of full-stack components for accelerated Laravel development. From 3.0.0 until 3.3.52, 4.11.5, and 5.6.5, any schema can contain a file upload form field, so Filament applies Livewire's WithFileUploads trait to the Livewire component the schema is embedde",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-48166 - Filament: Timing-based user enumeration on login page",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48166",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T21:40:01.000Z",
-        "contentSnippet": "Filament is a collection of full-stack components for accelerated Laravel development. From 4.0.0 until 4.11.5 and 5.6.5, the login page has an observable timing discrepancy that allows unauthenticated attackers to enumerate registered email addresses. The impact is limited to di",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-48505 - Filament: Multi-factor authentication (app) recovery codes can still be used multiple times via concurrent submission",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48505",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T21:39:26.000Z",
-        "contentSnippet": "Filament is a collection of full-stack components for accelerated Laravel development. From 4.0.0 until 4.11.5 and 5.6.5, a flaw in the handling of recovery codes for app-based multi-factor authentication allows the same recovery code to be reused via concurrent submission. This ",
-        "cveScore": 7.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-44889 - WebOb: Location header normalization during redirect leads to open redirect",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44889",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T21:30:11.000Z",
-        "contentSnippet": "WebOb provides objects for HTTP requests and responses. Prior to 1.8.10, the normalization of the HTTP Location header during a redirect is vulnerable to an open redirect: WebOb joins the redirect target to the request URI using Python's urljoin, and since Python 3.10 the underly",
-        "cveScore": 6.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-48109 - MessagePack-CSharp: LZ4 decompression may fail with AccessViolationException after dereferencing memory from bad input",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48109",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T21:19:54.000Z",
-        "contentSnippet": "MessagePack for C# is a MessagePack serializer for C#. Prior to 2.5.301 and 3.1.7, A vulnerability exists in the optional LZ4 decompression path used by MessagePack compression modes Lz4Block and Lz4BlockArray. The decoder implementation is based on a deprecated fast-decompressio",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-48502 - MessagePack-CSharp: Denial of service vulnerabilities can swamp the CPU or crash the process with stack and heap overflows",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48502",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T21:18:29.000Z",
-        "contentSnippet": "MessagePack for C# is a MessagePack serializer for C#. Prior to 2.5.301 and 3.1.7, MessagePackReader.ReadDateTime() can allocate stack memory based on an attacker-controlled MessagePack extension length. In the slow path for timestamp extension parsing, the computed tokenSize inc",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-48506 - MessagePack-CSharp: MessagePackReader.Skip can recurse without enforcing maximum object graph depth",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48506",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T21:17:35.000Z",
-        "contentSnippet": "MessagePack for C# is a MessagePack serializer for C#. Prior to 2.5.301 and 3.1.7, MessagePackReader.TrySkip() recursively descends into nested arrays and maps without incrementing the reader depth or calling the configured depth checks. This bypasses MessagePackSecurity.MaximumO",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-48509 - MessagePack-CSharp: ASP.NET Core MessagePackInputFormatter defaults to TrustedData for HTTP request bodies",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48509",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T21:16:50.000Z",
-        "contentSnippet": "MessagePack for C# is a MessagePack serializer for C#. Prior to 2.5.301 and 3.1.7, the parameterless MessagePackInputFormatter() constructor uses default serializer options, which resolve to MessagePackSerializerOptions.Standard with MessagePackSecurity.TrustedData. The formatter",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-48510 - MessagePack-CSharp: LZ4 decompression allocates from unbounded declared output lengths",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48510",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T21:16:04.000Z",
-        "contentSnippet": "MessagePack for C# is a MessagePack serializer for C#. Prior to 2.5.301 and 3.1.7, when MessagePack-CSharp decompresses Lz4Block or Lz4BlockArray payloads, it reads declared uncompressed lengths from the wire and allocates output buffers based on those lengths before validating t",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-48511 - MessagePack-CSharp: ExpandoObject formatter can perform quadratic insertion work on untrusted maps",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48511",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T21:14:54.000Z",
-        "contentSnippet": "MessagePack for C# is a MessagePack serializer for C#. Prior to 2.5.301 and 3.1.7, ExpandoObjectFormatter.Deserialize populates System.Dynamic.ExpandoObject by calling IDictionary .Add for each map entry. ExpandoObject internally maintains member names in array-like structures, s",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-48512 - MessagePack-CSharp: JSON conversion APIs can recurse without consistent depth enforcement",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48512",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T21:14:20.000Z",
-        "contentSnippet": "MessagePack for C# is a MessagePack serializer for C#. Prior to 2.5.301 and 3.1.7, MessagePack-CSharp's JSON conversion helpers contain multiple recursion paths that do not consistently enforce a depth limit. These paths are in the JSON conversion component rather than normal typ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-49468 - LiteLLM: Authentication Bypass via Host Header Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49468",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T20:37:14.000Z",
-        "contentSnippet": "LiteLLM is a proxy server (AI Gateway) to call LLM APIs in OpenAI (or native) format. Prior to 1.84.0, This vulnerability is fixed in 1.84.0.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-41479 - Authlib OAuth 2.0 authorization endpoint open redirects to attacker-controlled redirect_uri on unsupported response_type",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-41479",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T20:35:13.000Z",
-        "contentSnippet": "Authlib is a Python library which builds OAuth and OpenID Connect servers. Prior to 1.6.10 and 1.7.1, Authlib's OAuth 2.0 authorization endpoint can be turned into an unauthenticated open redirect when a request uses an unsupported response_type and supplies an attacker-controlle",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-45034 - PhpSpreadsheet: File::prohibitWrappers bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45034",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T20:32:32.000Z",
-        "contentSnippet": "PhpSpreadsheet is a pure PHP library for reading and writing spreadsheet files. Prior to 1.30.5, CVE-2026-34084 was patched by the helper File::prohibitWrappers. The helper calls parse_url($filename, PHP_URL_SCHEME) and then checks is_string($scheme) && strlen($scheme) > 1 to rej",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-54651 - pypdf: Possible infinite loop when processing threads/articles in writer",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54651",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T20:28:28.000Z",
-        "contentSnippet": "pypdf is a free and open-source pure-python PDF library. Prior to 6.13.1, an attacker who uses this vulnerability can craft a PDF which leads to an infinite loop. This requires merging a file with threads/articles into a writer. This vulnerability is fixed in 6.13.1.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       }
     ],
     "ai": [
+      {
+        "title": "Datalab Releases lift: A 9B Open-Weights Vision Model That Extracts Structured JSON From PDFs Using Schemas",
+        "link": "https://www.marktechpost.com/2026/06/23/datalab-releases-lift-a-9b-open-weights-vision-model-that-extracts-structured-json-from-pdfs-using-schemas/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-06-23T19:35:33.000Z",
+        "contentSnippet": "Datalab released lift, a 9B open-weights vision model that turns PDFs and images into schema-matching JSON. It uses schema-constrained decoding for valid structure and trained abstention to return null instead of hallucinating absent fields, scoring 90.2% field accuracy on a 225-"
+      },
       {
         "title": "How to Use NVIDIA Canary-1B-v2 for ASR, Translation, and Automatic SRT Subtitle Export in Python",
         "link": "https://www.marktechpost.com/2026/06/23/how-to-use-nvidia-canary-1b-v2-for-asr-translation-and-automatic-srt-subtitle-export-in-python/",
@@ -1597,13 +1604,6 @@
         "source": "MarkTechPost",
         "isoDate": "2026-06-09T05:53:36.000Z",
         "contentSnippet": "A new Harvard and Perplexity paper uses matched-pair sessions to compare an autonomous agent with a search assistant. It finds large gains in autonomy, time, and cost, plus broader scope of work attempted. The post A New Study from Harvard and Perplexity Finds AI Agents Perform 2"
-      },
-      {
-        "title": "ClawHub Security Signals: A Coding Guide to End-to-End Security Signal Analysis and Verdict Classification on the AI Skills Dataset",
-        "link": "https://www.marktechpost.com/2026/06/08/clawhub-security-signals-a-coding-guide-to-end-to-end-security-signal-analysis-and-verdict-classification-on-the-ai-skills-dataset/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-06-08T18:57:19.000Z",
-        "contentSnippet": "In this tutorial, we explore the ClawHub Security Signals dataset to see how scanners assess AI skills. We load the data from the Hugging Face Parquet conversion and inspect verdicts, scanner outputs, and severity labels. We measure how VirusTotal, static analysis, and SkillSpect"
       }
     ],
     "virtualization": [
@@ -2106,6 +2106,27 @@
       }
     ],
     "hardware": [
+      {
+        "title": "Best Amazon Prime Day Gaming Chairs Deals 2026 — deals on Secretlab, Libernovo, Razer, and more",
+        "link": "https://www.tomshardware.com/peripherals/gaming-chairs/best-gaming-chair-deals-prime-day",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-23T20:58:06.000Z",
+        "contentSnippet": "The best deals on gaming chairs for every budget, style, and comfort level during Amazon Prime Day 2026. Upgrade your gaming chair with something high-quality and on sale, now!"
+      },
+      {
+        "title": "Acer's 4TB GM7 PCIe 4.0 SSD drops to $470 for Prime Day — 2TB and 4TB models are both on sale for up to 23% off",
+        "link": "https://www.tomshardware.com/pc-components/acers-4tb-gm7-pcie-4-0-ssd-drops-to-usd470-for-prime-day-2tb-and-4tb-models-are-both-on-sale-for-up-to-23-percent-off",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-23T20:26:05.000Z",
+        "contentSnippet": "The Acer Predator GM7 4TB is on sale for $469.99, bringing it down to its lowest prices since February."
+      },
+      {
+        "title": "Micron and Anthropic Form Strategic AI Infrastructure Partnership",
+        "link": "https://www.storagereview.com/news/micron-and-anthropic-form-strategic-ai-infrastructure-partnership",
+        "source": "StorageReview",
+        "isoDate": "2026-06-23T19:38:10.000Z",
+        "contentSnippet": "Micron has announced a strategic agreement with Anthropic focused on AI memory and storage architecture, long-term component supply, enterprise deployment of Anthropic’s Claude models within Micron, and participation in Anthropic’s Series H funding round. The partnership aligns i"
+      },
       {
         "title": "The best Prime Day soldering iron deals for hobbyists and makers right now — take advantage of these limited-time sale discounts on digital irons, premium solder, heat-proof accessories, and more",
         "link": "https://www.tomshardware.com/maker-stem/soldering-irons/the-best-prime-day-soldering-iron-deals-for-hobbyists-and-makers-right-now-take-advantage-of-these-limited-time-sale-discounts-on-digital-irons-premium-solder-heat-proof-accessories-and-more",
@@ -2784,27 +2805,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-06-19T14:20:34.000Z",
         "contentSnippet": "U.S. Commerce Secretary Lutnick expresses concerns in a conversation with ASML executives that China has an EUV lithography system as ASML denies shipping such scanners to the PRC."
-      },
-      {
-        "title": "Epic Games unveils Launcher V2 in re-attempt to topple Steam, says redesigned storefront is up to 6.5x faster — promises player profiles, user reviews, universal controller support, and much more",
-        "link": "https://www.tomshardware.com/video-games/pc-gaming/epic-games-unveils-launcher-v2-in-re-attempt-to-topple-steam-says-redesigned-storefront-is-up-to-6-5x-faster-promises-player-profiles-user-reviews-universal-controller-support-and-much-more",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-19T13:57:28.000Z",
-        "contentSnippet": "Epic Games has just shown off a new year-long roadmap for its launcher, promising to bring community-requested features and a faster overall platform in the next 12 months."
-      },
-      {
-        "title": "Post-silicon era gets closer as industry giants crack the 2D transistor scaling bottleneck with breakthrough tech — imec, ASML, and TSMC fab complementary 2D-material transistors at 50nm pitch on a 30",
-        "link": "https://www.tomshardware.com/tech-industry/semiconductors/imec-asml-and-tsmc-build-complementary-2d-material-transistors-at-50nm-pitch-on-a-300mm-wafer",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-19T13:13:07.000Z",
-        "contentSnippet": "Imec, ASML, and TSMC have integrated both n-type and p-type transistors with atomically thin 2D channels on a single 300mm wafer."
-      },
-      {
-        "title": "Best USB charger deals 2026 – from tiny single-port smartphone chargers to large multi-port laptop chargers, we've found the best deals",
-        "link": "https://www.tomshardware.com/peripherals/usb/best-usb-charger-deals",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-19T12:30:00.000Z",
-        "contentSnippet": "From small smart devices to laptop charging, we dug up some of the best deals on 30W single-port to 100W multi-port chargers."
       }
     ]
   }
