@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-06-23T16:22:56.529Z",
+  "updatedAt": "2026-06-23T19:04:41.729Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-57062 - GnuPG gpgsm AES-GCM ICV Length Validation Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57062",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T17:26:25.000Z",
+        "contentSnippet": "CMS (Cryptographic Message Syntax) parsing in gpgsm in GnuPG through 2.5.20 mishandles the CMS format for AES-GCM because aes-ICVlen is supposed to be 12 bytes but 4 bytes is accepted. NOTE: this is related to CVE-2026-34182.",
+        "cveScore": 2.9,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-55517 - Deno: Denial of service via non-ASCII bytes in WebSocket response headers",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55517",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T17:24:59.000Z",
+        "contentSnippet": "Deno is a JavaScript, TypeScript, and WebAssembly runtime. Prior to 2.7.5, a Deno program that opens a client WebSocket connection could be crashed by the remote server. While handling the WebSocket handshake response, Deno parsed the Sec-WebSocket-Protocol and Sec-WebSocket-Exte",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-44726 - Deno: TLS retry copies stale upgrade hook, risking plaintext traffic",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44726",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T17:24:02.000Z",
+        "contentSnippet": "Deno is a JavaScript, TypeScript, and WebAssembly runtime. From 2.0.0 until 2.7.8, a flaw in Deno's Node.js tls compatibility layer could cause a TLS client to transmit application data in plaintext after a connection retry. When `autoSelectFamily was enabled and the first addres",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49401 - Deno Permission Bypass via Unicode Normalization Mismatch on macOS (APFS)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49401",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T17:22:32.000Z",
+        "contentSnippet": "Deno is a JavaScript, TypeScript, and WebAssembly runtime. Prior to 2.7.14, Deno's permission system enforces filesystem and execution restrictions by comparing the requested path against the path supplied to --deny-read, --deny-write, --deny-run, or --deny-ffi. On macOS, that co",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2025-71382 - MuPDF < 1.27.0-rc1 Stack Exhaustion DoS via EPUB CSS Rendering",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-71382",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T17:21:48.000Z",
+        "contentSnippet": "MuPDF before 1.27.0-rc1 contains an uncontrolled recursion vulnerability in the EPUB CSS rendering engine that allows remote attackers to cause a denial of service by supplying a maliciously crafted EPUB file with deeply nested HTML elements and inline CSS styles. The function va",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-49402 - Deno: Command Injection via spawnSync & spawn on Windows",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49402",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T17:20:50.000Z",
+        "contentSnippet": "Deno is a JavaScript, TypeScript, and WebAssembly runtime. Prior to 2.7.10, Deno's node:child_process implementation provided an escapeShellArg() helper used when callers passed shell: true to spawn / spawnSync / exec and friends. On Windows, the helper failed to quote arguments ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49406 - Deno: BYONM module resolution allows `package.json` main path traversal to bypass `--allow-read` restrictions",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49406",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T17:19:15.000Z",
+        "contentSnippet": "Deno is a JavaScript, TypeScript, and WebAssembly runtime. Prior to 2.7.12, when Deno was run in BYONM mode (nodeModulesDir: \"manual\"), the module resolver did not validate that a package's resolved entrypoint stayed within its node_modules/ / directory. A malicious package.json ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49411 - Deno Node TCPWrap numeric hostname aliases bypass --deny-net resolved-IP deny checks",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49411",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T17:18:07.000Z",
+        "contentSnippet": "Deno is a JavaScript, TypeScript, and WebAssembly runtime. Prior to 2.8.0, the Node.js compatibility TCP path checked the permission against the original hostname string before resolution and then did not re-check after resolution. A caller could therefore pass a numeric alias of",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49983 - Deno: process.loadEnvFile() bypasses env permission checks and mutates process.env with only read access",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49983",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T17:16:17.000Z",
+        "contentSnippet": "Deno is a JavaScript, TypeScript, and WebAssembly runtime. Prior to 2.8.1, environment access is gated by the env permission. You can deny it with --deny-env, or restrict it to a specific allowlist with --allow-env=FOO,BAR. The expectation is that a program running without env pe",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49860 - Deno: WebSocket API sandbox bypass via missing post-DNS check",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49860",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T17:15:05.000Z",
+        "contentSnippet": "Deno is a JavaScript, TypeScript, and WebAssembly runtime. Prior to 2.8.1, when a WebSocket connection was opened, Deno checked the destination hostname against --deny-net rules but did not re-check the IP addresses that hostname resolved to. An attacker-controlled script could u",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49859 - Deno: `fetch()` API sandbox bypass via missing DNS resolution check",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49859",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T17:14:16.000Z",
+        "contentSnippet": "Deno is a JavaScript, TypeScript, and WebAssembly runtime. Prior to 2.8.1, when fetch() was called, Deno checked the destination hostname against --deny-net rules but did not re-check the IP addresses that hostname resolved to. An attacker-controlled script could use a specially ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49440 - Deno: Miller-Rabin Primality Test Allows Zero Rounds",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49440",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T17:13:25.000Z",
+        "contentSnippet": "Deno is a JavaScript, TypeScript, and WebAssembly runtime. Prior to 2.8.1, node:crypto.checkPrime(candidate[, options][, callback]) and crypto.checkPrimeSync(candidate[, options]) ran no Miller-Rabin rounds at all when the caller left options.checks at its default of 0. In that m",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-54257 - Electron: Buffer performs incorrect byte length calculations resulting in heap buffer under/overflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54257",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T17:08:31.000Z",
+        "contentSnippet": "Electron is a framework for writing cross-platform desktop applications using JavaScript, HTML and CSS. From 42.3.1 until 42.3.3, Buffer performs incorrect byte length calculations resulting in heap buffer under/overflow. Most apps will crash and some may perform incorrect buffer",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-54316 - Claude Code: Out-of-Band Data Exfiltration via Pre-Approved HuggingFace Domain in WebFetch",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54316",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T17:06:16.000Z",
+        "contentSnippet": "Claude Code is an agentic coding tool. From 0.2.54 until 2.1.163, because the hostname huggingface.co was pre-approved as a bare hostname for the WebFetch tool, any path on that domain—including attacker-controlled model repositories—was auto-approved without a permission prompt ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-50221 - OpenStack Swift: Server-Side Request Forgery via Internal Header Injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50221",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T17:03:32.000Z",
+        "contentSnippet": "In OpenStack Swift before 2.37.2, proxy-server does not strip internal update headers (X-Container-Host, X-Container-Device, X-Delete-At-Host, X-Delete-At-Device) from client requests before forwarding them to object-servers. An authenticated user with write access can inject the",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-54007 - Open WebUI: Cross-origin postMessage confirmation bypass via action:submit",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54007",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T16:51:27.000Z",
+        "contentSnippet": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.6, the chat message listener allows non-same-origin input:prompt and action:submit messages, so an external site can set prompt text and trigger submitPrompt() in an au",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-54006 - Open WebUI: Calendar event re-parenting allows writing events into another user's calendar",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54006",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T16:50:44.000Z",
+        "contentSnippet": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.6, POST /api/v1/calendars/events/{event_id}/update validates that the caller has write access to the calendar the event currently belongs to, but does not validate the ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-54008 - Open WebUI: Redirect-Bypass SSRF in OAuth `_process_picture_url`",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54008",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T16:50:06.000Z",
+        "contentSnippet": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.6, backend/open_webui/utils/oauth.py::_process_picture_url calls validate_url(picture_url) on the initial URL only, then invokes aiohttp.ClientSession.get(picture_url, ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-54009 - Open WebUI: Cross-user file disclosure via /api/chat/completions image_url field",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54009",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T16:49:13.000Z",
+        "contentSnippet": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.6, POST /api/chat/completions accepts an image_url.url value that, when it does NOT start with http://, https://, or data:image/, is interpreted as a file id and resolv",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-54010 - Open WebUI: Forged chat-file link allows cross-user file read and deletion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54010",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T16:48:22.000Z",
+        "contentSnippet": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.6, Open WebUI lets an authenticated user attach arbitrary file_id values to their own chat message without checking whether they own or can read those files. If the att",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-54011 - Open WebUI: Stored XSS in Mermaid Markdown Preview",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54011",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T16:47:43.000Z",
+        "contentSnippet": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.6,Open WebUI renders Mermaid blocks from Markdown files in the file preview panel and inserts the generated SVG into the DOM using innerHTML. Because Mermaid is configu",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-54012 - Open WebUI: Forged model meta.knowledge allows cross-user file read and deletion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54012",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T16:47:03.000Z",
+        "contentSnippet": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.6, Open WebUI lets a user who can create, update, or import workspace models store arbitrary meta.knowledge entries on their model without checking whether they own or ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-54013 - Open WebUI: Stored XSS to Account Takeover via Model Profile Images in Open WebUI",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54013",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T16:46:28.000Z",
+        "contentSnippet": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.6, Open WebUI patched SVG XSS in user profile images and webhook profile images but forgot to apply the same fix to model profile images. The ModelMeta class has no val",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-54014 - Open WebUI: Sibling-Prefix Path Traversal via /cache/{path} in open-webui/open-webui",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54014",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T16:45:39.000Z",
+        "contentSnippet": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.6, a path traversal vulnerability exists in open-webui's cache file serving endpoint that allows any authenticated user to read files from sibling directories outside t",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-54015 - Open WebUI: Prompt history IDOR: unbound history_id allows cross-prompt read and deletion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54015",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T16:44:57.000Z",
+        "contentSnippet": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.6, Open WebUI's prompt version-history endpoints authorize the prompt_id in the URL but then act on caller-supplied history IDs without verifying that the history row b",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2026-27604 - FOSSBilling: Improper API Role Validation (system) Enables Unauthenticated Access to Privileged Admin Functions",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-27604",
@@ -677,234 +902,23 @@
         "contentSnippet": "pypdf is a free and open-source pure-python PDF library. Prior to 6.13.1, an attacker who uses this vulnerability can craft a PDF which leads to an infinite loop. This requires merging a file with threads/articles into a writer. This vulnerability is fixed in 6.13.1.",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-49460 - pypdf: Inefficient decoding of FlateDecode PNG predictor streams",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49460",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T20:28:16.000Z",
-        "contentSnippet": "pypdf is a free and open-source pure-python PDF library. Prior to 6.12.2, an attacker who uses this vulnerability can craft a PDF which leads to long runtimes. This requires accessing a stream which uses the /FlateDecode filter with a PNG predictor. This vulnerability is fixed in",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-49461 - pypdf: Possible large memory usage for form XObjects during text extraction",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49461",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T20:27:16.000Z",
-        "contentSnippet": "pypdf is a free and open-source pure-python PDF library. Prior to 6.12.2, an attacker who uses this vulnerability can craft a PDF which leads to large memory usage. This requires extracting the text of a page which contains a form XObject with self-references. This vulnerability ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-54531 - pypdf: Possible infinite loop when processing outlines/bookmarks in writer",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54531",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T20:26:19.000Z",
-        "contentSnippet": "pypdf is a free and open-source pure-python PDF library. Prior to 6.13.0, an attacker who uses this vulnerability can craft a PDF which leads to an infinite loop. This requires merging a file with outlines into a writer. This vulnerability is fixed in 6.13.0.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-54530 - pypdf: Possible infinite loop when retrieving fonts for layout-mode text extraction",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54530",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T20:25:29.000Z",
-        "contentSnippet": "pypdf is a free and open-source pure-python PDF library. Prior to 6.13.0, an attacker who uses this vulnerability can craft a PDF which leads to an infinite loop. This requires extracting the text in layout mode. This vulnerability is fixed in 6.13.0.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-47242 - Net::IMAP: Command Injection via ID command argument",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47242",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T20:19:41.000Z",
-        "contentSnippet": "Net::IMAP implements Internet Message Access Protocol (IMAP) client functionality in Ruby. Prior to 0.6.5 and 0.5.15, when Net::IMAP#id is called with a hash argument, although the ID field value strings are correctly quoted (escaping quoted specials), they were not validated to ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-47240 - Net::IMAP: Command Injection via non-synchronizing literal in \"raw\" argument",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47240",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T20:17:15.000Z",
-        "contentSnippet": "Net::IMAP implements Internet Message Access Protocol (IMAP) client functionality in Ruby. Prior to 0.6.5 and 0.5.15, several Net::IMAP commands accept a \"raw data\" argument that is sent verbatim after validation to prevent command injection. However, if a server does not support",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-39904 - Gophish 0.12.1 Denial of Service via Office Document Upload",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-39904",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T20:11:14.000Z",
-        "contentSnippet": "Gophish through 0.12.1 contains a denial of service vulnerability that allows authenticated users with the User role to exhaust server memory by uploading a crafted Office document as an email template attachment. The ApplyTemplate() function in models/attachment.go processes Off",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-47241 - Net::IMAP: Denial of Service via incomplete raw argument validation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47241",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T20:11:04.000Z",
-        "contentSnippet": "Net::IMAP implements Internet Message Access Protocol (IMAP) client functionality in Ruby. Prior to 0.6.5 and 0.5.15, several Net::IMAP commands accept a raw string argument which is only validated to prevent CRLF injection and then sent verbatim. If this string is derived from u",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-55603 - http-proxy-middleware: multipart/form-data field injection via unescaped CRLF in `fixRequestBody`",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55603",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T20:07:05.000Z",
-        "contentSnippet": "http-proxy-middleware is node.js http-proxy middleware. From 3.0.4 until 3.0.7 and 4.1.1, fixRequestBody() is the library's documented helper for re-emitting a request body that was already consumed by a body parser. When the outgoing Content-Type is multipart/form-data, it rebui",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-55599 - phpseclib: X.509 certificate validation sends attacker-controlled outbound requests (server-side request forgery) via Authority Information Access",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55599",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T20:00:09.000Z",
-        "contentSnippet": "phpseclib is a PHP secure communications library. From 0.1.1 until 1.0.30, 2.0.55, and 3.0.54, when an application validates an untrusted X.509 certificate with phpseclib, X509::validateSignature() reads a URL out of that certificate's Authority Information Access (AIA) extension",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-44727 - Jupyter Server: Stored XSS in `NbconvertFileHandler` / `NbconvertPostHandler` via missing `sandbox` CSP",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44727",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T19:56:56.000Z",
-        "contentSnippet": "Jupyter Server is the backend for Jupyter web applications. Prior to 2.20, the nbconvert HTTP handlers in jupyter_server render user-authored notebook HTML under the Jupyter origin without a sandbox directive in their Content-Security-Policy. Combined with nbconvert.HTMLExporter'",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-10852 - IBM i is Affected By a Denial of Service in IBM WebSphere Application Server Liberty",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10852",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T19:32:28.000Z",
-        "contentSnippet": "IBM i 7.6, 7.5, 7.4, and 7.3, IBM WebSphere Application Server, and IBM WebSphere Application Server Liberty are vulnerable to denial of service in the WebSphere WebServer Plug-in component when an attacker can pass crafted requests to the web server.",
-        "cveScore": 5.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-44271 - Dell Wyse Management Suite SQL Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44271",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T19:00:51.000Z",
-        "contentSnippet": "Dell Wyse Management Suite (WMS), versions prior to WMS 2605, contain an Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to Unaut",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-48931 - Node.js HTTP Agent Request Smuggling",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48931",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T18:59:30.000Z",
-        "contentSnippet": "A flaw in Node.js HTTP Agent can cause a client to accept as valid a response that is send before the client has sent the request. This vulnerability affects all supported release lines: **Node.js 22**, **Node.js 24**, and **Node.js 26**.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-44272 - Dell Wyse Management Suite SQL Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44272",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T18:56:59.000Z",
-        "contentSnippet": "Dell Wyse Management Suite (WMS), versions prior to WMS 2605, contain an Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to Unaut",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-44273 - Dell Wyse Management Suite Default Credentials Information Disclosure",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44273",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T18:51:37.000Z",
-        "contentSnippet": "Dell Wyse Management Suite (WMS), versions prior to WMS 2605, contain a Use of Default Credentials vulnerability. A high privileged attacker with local access could potentially exploit this vulnerability, leading to Information Disclosure.",
-        "cveScore": 6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-44274 - Dell Wyse Management Suite Improper Link Resolution Before File Access",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44274",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T18:47:43.000Z",
-        "contentSnippet": "Dell Wyse Management Suite (WMS), versions prior to WMS 2605, contain an Improper Link Resolution Before File Access vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Unauthorized access.",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-53779 - WebP Server Go < 0.15.0 Path Traversal via Backslash Encoding on Windows",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53779",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T18:22:40.000Z",
-        "contentSnippet": "WebP Server Go through 0.14.4 contains a path traversal vulnerability on Windows that allows unauthenticated attackers to read files outside the configured IMG_PATH directory by sending requests with percent-encoded backslashes (%5C) that bypass the path.Clean() sanitization in h",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-53778",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53778",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T18:13:02.000Z",
-        "contentSnippet": "None",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-11834 - Unauthenticated Command Injection via DHCP Option Handling in Multiple TP-Link Routers",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11834",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T17:53:48.000Z",
-        "contentSnippet": "A command injection vulnerability has been identified in the DHCP option processing logic in multiple TP-Link router models, due to insufficient validation of externally supplied DHCP option data. An adjacent attacker may exploit this vulnerability by supplying crafted DHCP respo",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-53663 - React Router: `handleDocumentRequest` CSRF check covers `POST` only; PUT/PATCH/DELETE bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53663",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T17:39:29.000Z",
-        "contentSnippet": "React Router is a router for React. From 7.12.0 until 7.15.1, certain CSRF checks in React Router v7 Framework Mode were insufficient and run on POST requests, but were bypassed on PUT/PATCH/DELETE requests. This is a low severity vulnerability because modern browser protections ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-54299 - Astro: Host-header full-read SSRF in core prerendered error-page fetch (prerenderedErrorPageFetch default + unvalidated createRequestFromNodeRequest URL)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54299",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T17:33:53.000Z",
-        "contentSnippet": "Astro is a web framework. Prior to 6.4.6, Astro SSR apps with prerendered error pages (/404 or /500 using export const prerender = true) fetch those pages over HTTP at runtime when an error occurs. The URL for this fetch is derived from request.url, which in turn gets its origin ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-54298 - Astro: XSS via Unescaped Attribute Names in Spread Props",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54298",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T17:33:15.000Z",
-        "contentSnippet": "Astro is a web framework. Prior to 6.4.6, the spreadAttributes function in Astro's server-side rendering pipeline iterates over object keys and passes them directly to addAttribute, which interpolates the key into the HTML output without escaping. When a developer uses the spread",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-50146 - Astro: Reflected XSS via unescaped slot name",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50146",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T17:31:56.000Z",
-        "contentSnippet": "Astro is a web framework. Prior to 6.3.3, when a component uses a client:* directive, Astro inserts named slot content into a data-astro-template attribute without HTML escaping the slot name allowing an attacker to break out of the attribute context and inject arbitrary HTML, re",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-54300 - @astrojs/netlify broadens Astro image.remotePatterns in Netlify Image CDN config",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54300",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-22T17:30:49.000Z",
-        "contentSnippet": "@astrojs/netlify is an adapter that allows Astro to deploy your hybrid or server rendered site to Netlify. Prior to 7.0.13, @astrojs/netlify converts Astro image.remotePatterns into Netlify Image CDN images.remote_images regular expressions with broader semantics than Astro's can",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       }
     ],
     "ai": [
+      {
+        "title": "How to Use NVIDIA Canary-1B-v2 for ASR, Translation, and Automatic SRT Subtitle Export in Python",
+        "link": "https://www.marktechpost.com/2026/06/23/how-to-use-nvidia-canary-1b-v2-for-asr-translation-and-automatic-srt-subtitle-export-in-python/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-06-23T18:31:36.000Z",
+        "contentSnippet": "In this tutorial, we build a multilingual ASR and speech translation pipeline with NVIDIA Canary-1B-v2. We load the model on a GPU-enabled runtime, prepare audio into 16 kHz mono, and run English ASR. We then translate speech into French, German, Spanish, and Italian, and extract"
+      },
+      {
+        "title": "Build a protein research copilot with Amazon Bedrock AgentCore",
+        "link": "https://aws.amazon.com/blogs/machine-learning/build-a-protein-research-copilot-with-amazon-bedrock-agentcore/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-06-23T16:39:34.000Z",
+        "contentSnippet": "This post shows you how to build a conversational protein research assistant that combines three capabilities: Natural language query parsing to extract structured search parameters, vector similarity search over protein embeddings using a specialized language model and ai-genera"
+      },
       {
         "title": "Shared infrastructure, isolated tenants: Pool model multi-tenancy with Amazon Bedrock AgentCore",
         "link": "https://aws.amazon.com/blogs/machine-learning/shared-infrastructure-isolated-tenants-pool-model-multi-tenancy-with-amazon-bedrock-agentcore/",
@@ -1590,20 +1604,6 @@
         "source": "MarkTechPost",
         "isoDate": "2026-06-08T18:57:19.000Z",
         "contentSnippet": "In this tutorial, we explore the ClawHub Security Signals dataset to see how scanners assess AI skills. We load the data from the Hugging Face Parquet conversion and inspect verdicts, scanner outputs, and severity labels. We measure how VirusTotal, static analysis, and SkillSpect"
-      },
-      {
-        "title": "Xiaomi MiMo and TileRT Push a 1-Trillion-Parameter Model Past 1000 Tokens Per Second on Commodity GPUs",
-        "link": "https://www.marktechpost.com/2026/06/08/xiaomi-mimo-and-tilert-push-a-1-trillion-parameter-model-past-1000-tokens-per-second-on-commodity-gpus/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-06-08T16:49:04.000Z",
-        "contentSnippet": "Xiaomi's MiMo team, with TileRT, released MiMo-V2.5-Pro-UltraSpeed, a serving mode for the MiMo-V2.5-Pro model. It decodes over 1000 tokens per second on a 1-trillion-parameter model using a single 8-GPU commodity node. The post Xiaomi MiMo and TileRT Push a 1-Trillion-Parameter "
-      },
-      {
-        "title": "Unlocking AI flexibility in Europe: A guide to cross-region inference for EU data processing and model access",
-        "link": "https://aws.amazon.com/blogs/machine-learning/unlocking-ai-flexibility-in-europe-a-guide-to-cross-region-inference-for-eu-data-processing-and-model-access/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-06-08T16:40:34.000Z",
-        "contentSnippet": "With access to the latest generative AI models and high-performance accelerated compute in high global demand, AWS customers need tools to take advantage of model availability and capacity across multiple AWS Regions, while still meeting their security and privacy requirements. c"
       }
     ],
     "virtualization": [
@@ -2107,11 +2107,81 @@
     ],
     "hardware": [
       {
+        "title": "The best Prime Day soldering iron deals for hobbyists and makers right now — take advantage of these limited-time sale discounts on digital irons, premium solder, heat-proof accessories, and more",
+        "link": "https://www.tomshardware.com/maker-stem/soldering-irons/the-best-prime-day-soldering-iron-deals-for-hobbyists-and-makers-right-now-take-advantage-of-these-limited-time-sale-discounts-on-digital-irons-premium-solder-heat-proof-accessories-and-more",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-23T18:31:43.000Z",
+        "contentSnippet": "Grab a new soldiering iron or accessories during this Amazon Prime Day sales week, with the best recommendations included here."
+      },
+      {
+        "title": "HP Z8 Fury G6i Review: One Xeon, up to Four Blackwell GPUs",
+        "link": "https://www.storagereview.com/review/hp-z8-fury-g6i-review-one-xeon-up-to-four-blackwell-gpus",
+        "source": "StorageReview",
+        "isoDate": "2026-06-23T18:02:16.000Z",
+        "contentSnippet": "For most of the last decade, the high-core workstation conversation has been largely led by AMD. Threadripper PRO pushed core counts, cache, and PCIe lanes past what Intel’s Xeon-W line could offer; the prior Xeon-W flagship topped out at 60 cores, while AMD kept climbing. Intel’"
+      },
+      {
+        "title": "Best Amazon Prime Day gaming laptop PC deals 2026 — epic discounts on Dell, Alienware, MSI, ROG, and others",
+        "link": "https://www.tomshardware.com/laptops/gaming-laptops/best-gaming-laptop-deals-discount",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-23T17:19:10.000Z",
+        "contentSnippet": "Here are the best gaming laptop deals during Amazon Prime Day 2026. We're constantly updating this list with the best deals still available across all of the major retailers."
+      },
+      {
+        "title": "These are the best CPU cooler deals we found this Prime Day, up to 33% off — deals from Cooler Master, Arctic, Tryx, Corsair, and PCCooler for every budget",
+        "link": "https://www.tomshardware.com/pc-components/these-are-the-best-cpu-cooler-deals-we-found-this-prime-day-up-to-33-percent-off-deals-from-cooler-master-arctic-tryx-corsair-and-pccooler-for-every-budget",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-23T16:56:12.000Z",
+        "contentSnippet": "As Amazon's Prime Day gets started, now's your chance to snag some awesome deals on CPU coolers. We have singled out options from across the board, highlighting the best offers at each price point. Arctic's Liquid Freezer III Pro is the stand-out deal at the moment, but you can't"
+      },
+      {
+        "title": "The best Switch 2 accessories Prime Day 2026 — controllers, cameras, cases, screen protectors, and more",
+        "link": "https://www.tomshardware.com/video-games/handheld-gaming/the-best-switch-2-accessories-prime-day-2026-controllers-cameras-cases-screen-protectors-and-more",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-23T16:20:42.000Z",
+        "contentSnippet": "Upgrade your Nintendo Switch 2 with these essential accessories."
+      },
+      {
+        "title": "Grab this Creality 3D Printer tool kit for all-time low $25.49 for Prime Day — 74-piece set includes everything that you need for 3D printer maintenance and comes in a neat organizer for storage and t",
+        "link": "https://www.tomshardware.com/pc-components/grab-this-creality-3d-printer-tool-kit-for-all-time-low-usd25-49-for-prime-day-74-piece-set-includes-everything-that-you-need-for-3d-printer-maintenance-and-comes-in-a-neat-organizer-for-storage-and-transport",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-23T16:04:29.000Z",
+        "contentSnippet": "The Creality 3D Printer Tool Kit is on sale at 15% of for Prime Day 2026. This brings the price down to $25.49, helping you save some cash if you want to complete your 3D printing setup."
+      },
+      {
+        "title": "Get a 4TB Samsung 9100 Pro SSD for just $459 in blockbuster Prime Day sale — remarkable deal shaves $900 off PCIe 5.0 NVMe drive to bring it below MSRP",
+        "link": "https://www.tomshardware.com/pc-components/save-an-amazing-usd900-off-a-4tb-samsung-9100-pro-ssd-in-blockbuster-prime-day-deal-remarkable-sale-brings-pcie-5-0-nvme-drive-from-usd1-360-down-to-just-usd459",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-23T15:59:56.000Z",
+        "contentSnippet": "Samsung's 4TB 9100 Pro PCIe 5.0 NVMe SSD is on sale for a remarkable price, bringing its $1,360 MSRP down to just $460."
+      },
+      {
         "title": "AMD and IBM Advance Hybrid Quantum-Centric Supercomputing Strategy",
         "link": "https://www.storagereview.com/news/amd-and-ibm-advance-hybrid-quantum-centric-supercomputing-strategy",
         "source": "StorageReview",
         "isoDate": "2026-06-23T15:55:59.000Z",
         "contentSnippet": "As quantum computing continues its transition from research labs to practical computing environments, AMD and IBM are positioning themselves around a common vision: hybrid computing architectures that combine quantum processors, high-performance computing (HPC), and AI into a uni"
+      },
+      {
+        "title": "Save $250 on the cheapest RTX 5080 around this Prime Day — Gigabyte Gaming OC GeForce RTX 5080 at stellar pricing on Newegg",
+        "link": "https://www.tomshardware.com/pc-components/save-usd250-on-the-cheapest-rtx-5080-around-this-prime-day-gigabyte-gaming-oc-geforce-rtx-5080-at-stellar-pricing-on-newegg",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-23T15:54:30.000Z",
+        "contentSnippet": "The Gigabyte Gaming OC GeForce RTX 5080 pairs factory overclocking, triple-fan cooling, and support for DLSS 4.5 with a $250 discount, bringing one of Nvidia's fastest gaming GPUs closer to its intended price point."
+      },
+      {
+        "title": "SCUF Prime Day sale brings pro control and precision savings of up to 26% for gamers",
+        "link": "https://www.tomshardware.com/peripherals/controllers-gamepads/scuf-prime-day-sale-brings-pro-control-and-precision-savings-of-up-to-26-percent-for-gamers",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-23T15:43:24.000Z",
+        "contentSnippet": "SCUF has slashed the prices of the Envision and Valor Pro controllers by up to 26% for this Prime Day."
+      },
+      {
+        "title": "The Swiss army knife of USB DVD drives is on sale, also features a built-in M.2 SSD slot, USB hub, and SATA hard drive dock — $26 for DVD writer and hub, $39 gets an added SATA or M.2 SSD dock",
+        "link": "https://www.tomshardware.com/pc-components/storage/the-swiss-army-knife-of-usb-dvd-drives-is-on-sale-also-features-a-built-in-m-2-ssd-slot-usb-hub-and-sata-hard-drive-dock-usd26-for-dvd-writer-and-hub-usd39-gets-an-added-sata-or-m-2-ssd-dock",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-23T15:22:47.000Z",
+        "contentSnippet": "Portable DVD writers with flash media reading and SATA drive docking abilities are on sale at Amazon Prime Day 2026."
       },
       {
         "title": "VDURA Unveils Multi-Tenant Control Plane and S3 Enhancements at ISC 2026",
@@ -2126,6 +2196,13 @@
         "source": "StorageReview",
         "isoDate": "2026-06-23T15:00:10.000Z",
         "contentSnippet": "Virtuozzo has announced that Virtuozzo Storage has achieved Veeam Ready certification as an object storage backup target and is now listed in the Veeam Ready database. The certification validates interoperability and performance requirements for use with Veeam’s object storage ca"
+      },
+      {
+        "title": "Best Prime Day Gaming PC Deals 2026 — deals from Amazon, Best Buy, Newegg, Dell, Lenovo, and others",
+        "link": "https://www.tomshardware.com/desktops/gaming-pcs/best-gaming-pc-deals-prebuilts",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-23T14:56:42.000Z",
+        "contentSnippet": "We've gathered the top pre-built gaming desktop deals during Amazon Prime Day 2026. We're constantly updating this list with the best deals across all retailers."
       },
       {
         "title": "Save $447 on this 3-item combo from Newegg - just $1,082 buys a speedy, huge 4TB Samsung 9100 Pro SSD, 32GB DDR5 RAM, and an Asus TUF Gaming X870E-Plus motherboard during Prime Day sales",
@@ -2378,13 +2455,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-06-22T13:47:30.000Z",
         "contentSnippet": "There are some great 3D printer deals happening right now, and we've found the best and put them all into one page for you."
-      },
-      {
-        "title": "SCUF Prime Day sale brings pro control and precision savings of up to 26% for gamers",
-        "link": "https://www.tomshardware.com/peripherals/controllers-gamepads/scuf-prime-day-sale-brings-pro-control-and-precision-savings-of-up-to-26-percent-for-gamers",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-22T13:30:00.000Z",
-        "contentSnippet": "SCUF has slashed the prices of the Envision and Valor Pro controllers by up to 26% for this Prime Day."
       },
       {
         "title": "One of the best-looking gaming chairs of 2026 is less than half price ahead of Prime Day — Porsche-inspired Thermaltake Argent E700 is only $620, but stock is low",
@@ -2735,76 +2805,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-06-19T12:30:00.000Z",
         "contentSnippet": "From small smart devices to laptop charging, we dug up some of the best deals on 30W single-port to 100W multi-port chargers."
-      },
-      {
-        "title": "ViewSonic VX2730D-4K 27-inch 4K dual-refresh gaming monitor review: Delivering speed, color, accuracy, and pixel density",
-        "link": "https://www.tomshardware.com/monitors/gaming-monitors/viewsonic-vx2730d-4k-27-inch-4k-dual-refresh-gaming-monitor-review",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-19T12:10:00.000Z",
-        "contentSnippet": "ViewSonic’s VX2730D-4K is a stellar value. It’s a 27-inch 4K gaming monitor with 144 Hz, 288 Hz in FHD, Adaptive-Sync, wide gamut color and HDR. Accurate color and high performance deliver an excellent price/performance ratio."
-      },
-      {
-        "title": "Intel hires former SK hynix chief Seok-Hee Lee to lead Intel Foundry advanced packaging — company establishing section as 'focused business with dedicated leadership'",
-        "link": "https://www.tomshardware.com/tech-industry/intel-hires-former-sk-hynix-chief-seok-hee-lee-to-lead-intel-foundry-advanced-packaging",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-19T11:58:41.000Z",
-        "contentSnippet": "Intel has appointed Seok-Hee Lee, the former chief executive of memory maker SK hynix and battery maker SK On, as executive vice president of Intel Foundry."
-      },
-      {
-        "title": "CEO of Chinese Anthropic rival tells Elon Musk that China will have a Fable 5-class AI model before next year — it ‘won’t take that long’ says Jie Tang in response to Musk's prediction of a Q1 target",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/elon-musk-says-that-china-will-have-a-fable-5-class-ai-model-probably-q1-next-year-ceo-of-chinese-anthropic-rival-says-it-wont-take-that-long",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-19T11:38:05.000Z",
-        "contentSnippet": "Elon Musk estimated that Chinese AI firms would have an LLM with Mythos level capability by the first quarter of 2027. However, the CEO of Beijing-based Z.ai responded to the comment, saying that their company will achieve this soon, but did not give a concrete timeline."
-      },
-      {
-        "title": "Woot slashes up to 46% off these WD Black SN850P SSDs for PC and PS5 — 1TB for $189, 2TB for $299, and 4TB for $549",
-        "link": "https://www.tomshardware.com/networking/network-switches/woot-slashes-up-to-46-percent-off-these-wd-black-sn850p-ssds-for-pc-and-ps5-1tb-for-usd189-2tb-for-usd299-and-4tb-for-usd549",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-19T11:21:37.000Z",
-        "contentSnippet": "Grab a great discount on these officially licensed PlayStation 5 SSDs at Woot. The WD Black SN850P in 1TB, 2TB, and 4TB capacities is discounted up to 46% today, or until stocks run out."
-      },
-      {
-        "title": "SK Telecom named as the Korean carrier at the center of Anthropic's Mythos export controls controversy — access was revoked days before White House took Mythos and Fable 5 offline for all foreign nati",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/sk-telecom-named-as-the-korean-carrier-at-the-center-of-anthropics-mythos-export-controls",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-19T10:54:58.000Z",
-        "contentSnippet": "Wired has identified SK Telecom as the South Korean telecom company whose access to Anthropic's Claude Mythos model the White House ordered revoked over alleged ties to China."
-      },
-      {
-        "title": "16-year-old SATA II SSD survives 1 petabyte of writes — 25x more than the drive's endurance rating",
-        "link": "https://www.tomshardware.com/pc-components/ssds/16-year-old-sata-ii-ssd-survives-1-petabyte-of-writes-25x-over-the-drives-tbw-rating",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-19T10:30:00.000Z",
-        "contentSnippet": "As part of an experiment, an enthusiast has written one petabyte of data on a legacy Sandisk P4 SATA II SSD that was released 16 years ago."
-      },
-      {
-        "title": "Tesco UK supermarket chain removes 40,000 servers from VMware infrastructure — mass exodus continues due to Broadcom's aggressive subscription model",
-        "link": "https://www.tomshardware.com/desktops/servers/tesco-uk-supermarket-chain-removes-40-000-servers-from-vmware-infrastructure-mass-exodus-continues-due-to-broadcoms-aggressive-subscription-model",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-19T10:00:00.000Z",
-        "contentSnippet": "Tesco UK supermarket chain moves 40,000 servers off of VMWare infrastructure — mass exodus continues thanks to Broadcom's pricing shenanigans"
-      },
-      {
-        "title": "Save a massive $1,390 on this RTX 5080 Alienware gaming PC, now just $3,159 — enormous discount delivers top specs for 4K gameplay, including a 24-core Intel CPU, 32GB DDR5 RAM, and a 2TB SSD",
-        "link": "https://www.tomshardware.com/desktops/gaming-pcs/save-a-massive-usd1-390-on-this-rtx-5080-alienware-gaming-pc-now-just-usd3-159-enormous-discount-delivers-top-specs-for-4k-gameplay-including-a-24-core-intel-cpu-32gb-ddr5-ram-and-a-2tb-ssd",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-19T09:53:09.000Z",
-        "contentSnippet": "Don't miss this incredible deal on a high-end Alienware gaming PC with an RTX 5080, 24-core Intel Core Ultra 9 285K, 32GB of fast DDR5 RAM, and a 2TB SSD, all with a whopping $1,390 saving that brings it down to just $3,159.99."
-      },
-      {
-        "title": "US energy regulator to order grid operators to expedite AI data center applications — says projects should bring their own power or cut usage during high demand",
-        "link": "https://www.tomshardware.com/tech-industry/data-centers/us-energy-regulator-to-order-grid-operators-to-expedite-ai-data-center-applications-says-projects-should-bring-their-own-power-or-cut-usage-during-high-demand",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-19T09:45:00.000Z",
-        "contentSnippet": "The FERC says that it will order grid operators to fast-track AI data center connections that generate their own power or reduce demand during peak hours. It demands that these changes must be enacted within 90 days."
-      },
-      {
-        "title": "This is the New Intel E835 NIC Lineup from HPE Discover 2026",
-        "link": "https://www.servethehome.com/this-is-the-new-intel-e835-nic-lineup-from-hpe-discover-2026/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-06-18T19:55:39.000Z",
-        "contentSnippet": "At HPE Discover 2026, we saw the new Intel E835 cards for lower-power and lower-cost 25GbE to 200GbE networking The post This is the New Intel E835 NIC Lineup from HPE Discover 2026 appeared first on ServeTheHome."
       }
     ]
   }
