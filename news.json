@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-06-24T16:10:16.503Z",
+  "updatedAt": "2026-06-24T18:28:30.538Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-53130 - fs/omfs: reject s_sys_blocksize smaller than OMFS_DIR_START",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53130",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T16:30:57.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: fs/omfs: reject s_sys_blocksize smaller than OMFS_DIR_START omfs_fill_super() rejects oversized s_sys_blocksize values (> PAGE_SIZE), but it does not reject values smaller than OMFS_DIR_START (0x1b8 = 440). Later",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53129 - fs/mbcache: cancel shrink work before destroying the cache",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53129",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T16:30:56.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: fs/mbcache: cancel shrink work before destroying the cache mb_cache_destroy() calls shrinker_free() and then frees all cache entries and the cache itself, but it does not cancel the pending c_shrink_work work ite",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53128 - drbd: Balance RCU calls in drbd_adm_dump_devices()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53128",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T16:30:55.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: drbd: Balance RCU calls in drbd_adm_dump_devices() Make drbd_adm_dump_devices() call rcu_read_lock() before rcu_read_unlock() is called. This has been detected by the Clang thread-safety analyzer.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53127 - block: fix zones_cond memory leak on zone revalidation error paths",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53127",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T16:30:55.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: block: fix zones_cond memory leak on zone revalidation error paths When blk_revalidate_disk_zones() fails after disk_revalidate_zone_resources() has allocated args.zones_cond, the memory is leaked because no erro",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53126 - blk-cgroup: fix disk reference leak in blkcg_maybe_throttle_current()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53126",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T16:30:54.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: blk-cgroup: fix disk reference leak in blkcg_maybe_throttle_current() Add the missing put_disk() on the error path in blkcg_maybe_throttle_current(). When blkcg lookup, blkg lookup, or blkg_tryget() fails, the fu",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53125 - md: fix array_state=clear sysfs deadlock",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53125",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T16:30:53.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: md: fix array_state=clear sysfs deadlock When \"clear\" is written to array_state, md_attr_store() breaks sysfs active protection so the array can delete itself from its own sysfs store method. However, md_attr_sto",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53124 - ublk: reset per-IO canceled flag on each fetch",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53124",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T16:30:53.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: ublk: reset per-IO canceled flag on each fetch If a ublk server starts recovering devices but dies before issuing fetch commands for all IOs, cancellation of the fetch commands that were successfully issued may n",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53123 - md: wake raid456 reshape waiters before suspend",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53123",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T16:30:52.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: md: wake raid456 reshape waiters before suspend During raid456 reshape, direct IO across the reshape position can sleep in raid5_make_request() waiting for reshape progress while still holding an active_io refere",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53122 - btrfs: fix deadlock between reflink and transaction commit when using flushoncommit",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53122",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T16:30:51.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: btrfs: fix deadlock between reflink and transaction commit when using flushoncommit When using the flushoncommit mount option, we can have a deadlock between a transaction commit and a reflink operation that copi",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53121 - amd-pstate: Fix memory leak in amd_pstate_epp_cpu_init()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53121",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T16:30:51.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: amd-pstate: Fix memory leak in amd_pstate_epp_cpu_init() On failure to set the epp, the function amd_pstate_epp_cpu_init() returns with an error code without freeing the cpudata object that was allocated at the b",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53120 - PCI: use generic driver_override infrastructure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53120",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T16:30:50.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: PCI: use generic driver_override infrastructure When a driver is probed through __driver_attach(), the bus' match() callback is called without the device lock held, thus accessing the driver_override field withou",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53119 - platform/wmi: use generic driver_override infrastructure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53119",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T16:30:49.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: platform/wmi: use generic driver_override infrastructure When a driver is probed through __driver_attach(), the bus' match() callback is called without the device lock held, thus accessing the driver_override fie",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53118 - vdpa: use generic driver_override infrastructure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53118",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T16:30:49.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: vdpa: use generic driver_override infrastructure When a driver is probed through __driver_attach(), the bus' match() callback is called without the device lock held, thus accessing the driver_override field witho",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53117 - s390/cio: use generic driver_override infrastructure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53117",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T16:30:48.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: s390/cio: use generic driver_override infrastructure When a driver is probed through __driver_attach(), the bus' match() callback is called without the device lock held, thus accessing the driver_override field w",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53116 - s390/ap: use generic driver_override infrastructure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53116",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T16:30:47.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: s390/ap: use generic driver_override infrastructure When the AP masks are updated via apmask_store() or aqmask_store(), ap_bus_revise_bindings() is called after ap_attr_mutex has been released. This calls __ap_re",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53115 - bus: fsl-mc: use generic driver_override infrastructure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53115",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T16:30:47.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: bus: fsl-mc: use generic driver_override infrastructure When a driver is probed through __driver_attach(), the bus' match() callback is called without the device lock held, thus accessing the driver_override fiel",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53114 - perf/amd/ibs: Avoid calling perf_allow_kernel() from the IBS NMI handler",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53114",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T16:30:46.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: perf/amd/ibs: Avoid calling perf_allow_kernel() from the IBS NMI handler Calling perf_allow_kernel() from the NMI context is unsafe and could be fatal. Capture the permission at event-initialization time by stori",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53113 - wifi: ath11k: fix memory leaks in beacon template setup",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53113",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T16:30:46.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: wifi: ath11k: fix memory leaks in beacon template setup The functions ath11k_mac_setup_bcn_tmpl_ema() and ath11k_mac_setup_bcn_tmpl_mbssid() allocate memory for beacon templates but fail to free it when parameter",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53112 - wifi: rtlwifi: pci: fix possible use-after-free caused by unfinished irq_prepare_bcn_tasklet",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53112",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T16:30:45.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: wifi: rtlwifi: pci: fix possible use-after-free caused by unfinished irq_prepare_bcn_tasklet The irq_prepare_bcn_tasklet is initialized in rtl_pci_init() and scheduled when RTL_IMR_BCNINT interrupt is triggered b",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53111 - bpf: test_run: Fix the null pointer dereference issue in bpf_lwt_xmit_push_encap",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53111",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T16:30:44.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: bpf: test_run: Fix the null pointer dereference issue in bpf_lwt_xmit_push_encap The bpf_lwt_xmit_push_encap helper needs to access skb_dst(skb)->dev to calculate the needed headroom: err = skb_cow_head(skb, len ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53110 - s390/bpf: Zero-extend bpf prog return values and kfunc arguments",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53110",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T16:30:44.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: s390/bpf: Zero-extend bpf prog return values and kfunc arguments s390x ABI requires callers to zero-extend unsigned arguments and sign-extend signed arguments, and callees to zero-extend unsigned return values an",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53109 - powerpc/pgtable-frag: Fix bad page state in pte_frag_destroy",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53109",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T16:30:43.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: powerpc/pgtable-frag: Fix bad page state in pte_frag_destroy powerpc uses pt_frag_refcount as a reference counter for tracking it's pte and pmd page table fragments. For PTE table, in case of Hash with 64K pagesi",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53108 - powerpc/64s: Fix unmap race with PMD migration entries",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53108",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T16:30:42.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: powerpc/64s: Fix unmap race with PMD migration entries The following race is possible with migration swap entries or device-private THP entries. e.g. when move_pages is called on a PMD THP page, then there maybe ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53107 - wifi: libertas: don't kill URBs in interrupt context",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53107",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T16:30:42.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: wifi: libertas: don't kill URBs in interrupt context Serialization for the TX path was enforced by calling usb_kill_urb()/usb_kill_anchored_urbs(), to prevent transmission before a previous URB was completed. usb",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53106 - bpf: Do not allow deleting local storage in NMI",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53106",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T16:30:41.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: bpf: Do not allow deleting local storage in NMI Currently, local storage may deadlock when deferring freeing selem or local storage through kfree_rcu(), call_rcu() or call_rcu_tasks_trace() in NMI or reentrant. S",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2026-50699 - Frappe Framework 17.0.0-dev - Stored XSS in Auto Repeat dashboard schedule rendering",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-50699",
@@ -677,234 +902,37 @@
         "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: batman-adv: fix tp_meter counter underflow during shutdown batadv_tp_sender_shutdown() unconditionally decrements the \"sending\" atomic counter. If multiple paths (e.g. timeout, user cancel, and normal finish) cal",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-9539 - libslirp TCP URG OOB Read Information Leak",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9539",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T04:37:01.000Z",
-        "contentSnippet": "An out-of-bounds heap read and integer underflow in the TCP urgent data handling (sosendoob) in freedesktop.org libslirp version before v4.9.2 on hypervisor host environments (e.g., QEMU) allows a privileged guest VM attacker (root or CAP_NET_RAW) to leak gigabytes of sensitive h",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-12851 - GeoVision GV-I/O Box 4E libNetSetObj.so OS command injection vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12851",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T03:40:26.000Z",
-        "contentSnippet": "Multiple OS command injection vulnerabilities exist in the libNetSetObj.so functionality of GeoVision GV-I/O Box 4E 2.09. A specially crafted network packet can lead to command execution. An attacker can send a network request to trigger this vulnerability. `libNetSetObj.so` is a",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-12850 - GeoVision GV-I/O Box 4E libNetSetObj.so OS command injection vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12850",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T03:40:24.000Z",
-        "contentSnippet": "Multiple OS command injection vulnerabilities exist in the libNetSetObj.so functionality of GeoVision GV-I/O Box 4E 2.09. A specially crafted network packet can lead to command execution. An attacker can send a network request to trigger this vulnerability. `libNetSetObj.so` is a",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-12849 - GeoVision GV-I/O Box 4E libNetSetObj.so OS command injection vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12849",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T03:40:21.000Z",
-        "contentSnippet": "Multiple OS command injection vulnerabilities exist in the libNetSetObj.so functionality of GeoVision GV-I/O Box 4E 2.09. A specially crafted network packet can lead to command execution. An attacker can send a network request to trigger this vulnerability. `libNetSetObj.so` is a",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-12486 - GeoVision GV-I/O Box 4E libNetSetObj.so OS command injection vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12486",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T03:40:19.000Z",
-        "contentSnippet": "Multiple OS command injection vulnerabilities exist in the libNetSetObj.so functionality of GeoVision GV-I/O Box 4E 2.09. A specially crafted network packet can lead to command execution. An attacker can send a network request to trigger this vulnerability. `libNetSetObj.so` is a",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-12848 - GeoVision GV-I/O Box DVRSearch buffer overflow vulnerabilities in CMD_IP_SET command",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12848",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T03:34:30.000Z",
-        "contentSnippet": "GV-I/O Box 4E is a smart embedded device with 4 input and 4 relays output that can be controlled over Ethernet and RS-485. DVRSearch is a service running by default on the IOBox listening for UDP messages on port 10001. Any user on the network can send messages to this service an",
-        "cveScore": 10,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-12847 - GeoVision GV-I/O Box DVRSearch buffer overflow vulnerabilities in CMD_IP_SET command",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12847",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T03:34:28.000Z",
-        "contentSnippet": "GV-I/O Box 4E is a smart embedded device with 4 input and 4 relays output that can be controlled over Ethernet and RS-485. DVRSearch is a service running by default on the IOBox listening for UDP messages on port 10001. Any user on the network can send messages to this service an",
-        "cveScore": 10,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-12846 - GeoVision GV-I/O Box DVRSearch buffer overflow vulnerabilities in CMD_IP_SET command",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12846",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T03:34:25.000Z",
-        "contentSnippet": "GV-I/O Box 4E is a smart embedded device with 4 input and 4 relays output that can be controlled over Ethernet and RS-485. DVRSearch is a service running by default on the IOBox listening for UDP messages on port 10001. Any user on the network can send messages to this service an",
-        "cveScore": 10,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-12485 - GeoVision GV-I/O Box DVRSearch buffer overflow vulnerabilities in CMD_IP_SET command",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12485",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T03:34:22.000Z",
-        "contentSnippet": "GV-I/O Box 4E is a smart embedded device with 4 input and 4 relays output that can be controlled over Ethernet and RS-485. DVRSearch is a service running by default on the IOBox listening for UDP messages on port 10001. Any user on the network can send messages to this service an",
-        "cveScore": 10,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-12488 - GeoVision GV-VMS V20 GV-Cloud memory corruption vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12488",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T03:34:20.000Z",
-        "contentSnippet": "A memory corruption vulnerability exists in the GV-Cloud functionality of GeoVision GV-VMS V20 20.0.2. A specially crafted network request can lead to a denial of service. An attacker can impersonate the legitimate server to trigger this vulnerability.",
-        "cveScore": 6.2,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-3652 - ARForms <= 7.1.3 - Unauthenticated Stored Cross-Site Scripting via 'value' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-3652",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T02:29:07.000Z",
-        "contentSnippet": "The ARForms plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the `value` parameter of the `arf_save_incomplete_form_data` AJAX action in all versions up to, and including, 7.1.3 due to insufficient input sanitization and output escaping. This makes it possibl",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-11614 - Xpro Addons <= 1.7.2 - Authenticated (Author+) Stored Cross-Site Scripting via 'custom_attributes' Parameter of Multiple Widgets",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11614",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T02:29:07.000Z",
-        "contentSnippet": "The Xpro Addons — 140+ Widgets for Elementor plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'custom_attributes' parameter in all versions up to, and including, 1.7.2 due to insufficient input sanitization and output escaping. This makes it possible for ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-12681 - Google go-attestation: Integer Overflow in parseEfiSignatureList",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12681",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T00:49:13.000Z",
-        "contentSnippet": "Improper Validation of Specified Index, Position, or Offset in Input vulnerability in Google go-attestation. parseEfiSignatureList() does not advance the buffer past vendor bytes before reading entries. For hashSHA256SigGUID lists, this allows attacker-controlled vendor header by",
-        "cveScore": 8.9,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-54639 - Style Dictionary - Prototype Pollution in convertTokenData utility function",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54639",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T00:17:44.000Z",
-        "contentSnippet": "Style Dictionary, a build system for creating cross-platform styles, has a prototype pollution vulnerability starting in version 4.3.0 and prior to version 5.4.4. Impact users have: direct usage of `convertTokenData(tokens, { output: 'object' });`; indirect usage, via using Expan",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-7574 - Anthropic Claude Desktop Cowork VM Image Contents Not Validated Before Use",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-7574",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T23:54:21.000Z",
-        "contentSnippet": "Anthropic Claude Desktop Cowork VM image handling (confirmed across v1.1348.0 through v1.2278.0, including v1.1348.0, v1.1617.0, and v1.2278.0) validates only file presence and a version marker string before booting rootfs.img, but does not verify image content integrity at time-",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-5818 - MCU Firmware Update Authentication Bypass on Caliptra Core",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-5818",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T23:50:06.000Z",
-        "contentSnippet": "Incorrect check of function return value in Caliptra Core Runtime Firmware (ActivateFirmwareCmd::activate_fw modules) allows bypass of Caliptra Core's verification of the MCU FW during a hitless update. This issue affects Core Runtime Firmware: from 2.0.0 through 2.0.1, 2.1.0.",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-6458 - AES-256-GCM Authentication Tag Does Not Cover First Ciphertext Blocks When AAD Is Empty",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6458",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T23:49:44.000Z",
-        "contentSnippet": "Missing cryptographic step in Caliptra Core Firmware (aes_256_gcm_update module) results in an incorrect GCM authentication tag. When the streaming AES-256-GCM API is used with empty AAD, the hardware GHASH accumulator state is not saved after the first update call, causing the f",
-        "cveScore": 5.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-12164 - Privilege Escalation in Fortra File Integrity Monitoring (FIM)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12164",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T22:15:37.000Z",
-        "contentSnippet": "Fortra File Integrity Monitoring (FIM), formerly Tripwire Enterprise, versions prior to 9.4.0 may assign incorrect or elevated effective permissions to users created by the tetool import command while FIM is running, particularly when the import also creates or changes roles or r",
-        "cveScore": 4.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-48493 - Snipe-IT Vulnerable to Privilege Escalation for self via API Permissions Assignment",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48493",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T22:11:06.000Z",
-        "contentSnippet": "Snipe-IT is an IT asset/license management system. In versions prior to 8.6.0, a user with only users.edit can send a PATCH to /api/v1/users/{their_own_id} and grant themselves any permission except admin and superuser — for example `assets.view`, `assets.create`, `reports.view`,",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-56785 - FlatPress - Stored Cross-Site Scripting via Unescaped Comment and Contact Form Fields",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56785",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T22:09:35.000Z",
-        "contentSnippet": "FlatPress versions prior to commit 10be83c, contains a stored cross-site scripting vulnerability in comment and contact forms where name, URL, and email fields are rendered without proper output encoding in Smarty templates. Attackers can inject arbitrary HTML and JavaScript thro",
-        "cveScore": 8.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-54588 - Poweradmin has Host Header Injection in OIDC redirect_uri, SAML ACS/SLO URL, and Logout Redirect Construction.",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54588",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T22:09:27.000Z",
-        "contentSnippet": "Poweradmin is a web-based DNS administration tool for PowerDNS server. Versions prior to 4.2.4 and 4.3.3 use the attacker-controlled `HTTP_HOST` request header as the authoritative source for building callback URLs in its OIDC, SAML, and logout authentication flows without any va",
-        "cveScore": 9.6,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-47693 - Poweradmin: CSV Injection in log export endpoints allows formula execution in spreadsheet applications",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47693",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T22:07:25.000Z",
-        "contentSnippet": "Poweradmin is a web-based DNS administration tool for PowerDNS server. Versions prior to 4.2.4 and 4.3.3 are vulnerable to CSV Injection (Formula Injection) in its log export functionality. User-controlled data — specifically the username field — is written to exported CSV files ",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-12163 - Stored XSS in Fortra File Integrity Monitoring (FIM)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12163",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T22:06:04.000Z",
-        "contentSnippet": "Fortra File Integrity Monitoring (FIM), formerly Tripwire Enterprise, versions prior to 9.4.0.1 contain a stored cross-site scripting (XSS) vulnerability in the Asset View UI component. An authenticated user with sufficient privileges to create or modify affected node or database",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-11972 - tarfile opened in streaming mode mishandles EOF",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11972",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T22:02:45.000Z",
-        "contentSnippet": "When using the \"tarfile\" module with a file opened in \"streaming mode\" (mode=\"r|\") the tarfile module did not properly handle EOF, meaning an archive could be parsed in an infinite loop.",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-54518 - jackson-databind: @JsonView bypass for unwrapped creator parameters in jackson-databind",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54518",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T21:02:07.000Z",
-        "contentSnippet": "jackson-databind contains the general-purpose data-binding functionality and tree-model for Jackson Data Processor. From 2.21.0 until 2.21.4 and 3.1.4, UnwrappedPropertyHandler.processUnwrappedCreatorProperties() replays buffered JSON into creator parameters but never consults pr",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
+      {
+        "title": "Huntington Bank: Redacting sensitive data from 400M+ documents with AWS",
+        "link": "https://aws.amazon.com/blogs/machine-learning/huntington-bank-redacting-sensitive-data-from-400m-documents-with-aws/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-06-24T18:24:50.000Z",
+        "contentSnippet": "In this post, we walk through how Huntington built a scalable AWS solution to detect and redact Personally Identifiable Information (PII) and Payment Card Industry (PCI) data from over 400 million documents, reducing processing time from years to just a few months while achieving"
+      },
+      {
+        "title": "Build a healthcare appointment agent with Amazon Nova 2 Sonic",
+        "link": "https://aws.amazon.com/blogs/machine-learning/build-a-healthcare-appointment-agent-with-amazon-nova-2-sonic/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-06-24T18:20:27.000Z",
+        "contentSnippet": "In this post, you will learn how to build a voice agent that handles appointment reminder conversations using Amazon Nova 2 Sonic and Amazon Bedrock AgentCore. The agent authenticates patients by voice, manages appointments (confirm, cancel, or reschedule), collects pre-visit hea"
+      },
+      {
+        "title": "AI-powered BI with Snowflake and Amazon Quick",
+        "link": "https://aws.amazon.com/blogs/machine-learning/ai-powered-bi-with-snowflake-and-amazon-quick/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-06-24T18:19:35.000Z",
+        "contentSnippet": "In this post, you will learn how to build an end-to-end integration between Snowflake semantic views and Amazon Quick. The sample data is user review data for a media company. You start by loading movie review data from Amazon Simple Storage Service (Amazon S3) into Snowflake, de"
+      },
+      {
+        "title": "How Loka Built a Natural, Low-Latency Voice Agent with Amazon Nova 2 Sonic",
+        "link": "https://aws.amazon.com/blogs/machine-learning/how-loka-built-a-natural-low-latency-voice-agent-with-amazon-nova-2-sonic/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-06-24T16:56:24.000Z",
+        "contentSnippet": "In this post, we demonstrate the architecture and approach Loka used to solve a common frustration: robotic, slow voice assistants that cause customers to hang up, damaging brand reputation and driving up support costs."
+      },
       {
         "title": "Using Graphify and NetworkX to Map Python Codebase Structure with God Nodes, Communities, and Architecture Visualizations",
         "link": "https://www.marktechpost.com/2026/06/24/using-graphify-and-networkx-to-map-python-codebase-structure-with-god-nodes-communities-and-architecture-visualizations/",
@@ -1576,34 +1604,6 @@
         "source": "MarkTechPost",
         "isoDate": "2026-06-10T10:24:17.000Z",
         "contentSnippet": "Software development has changed. Engineers no longer type most code by hand. They describe intent, and AI agents do the work. Modern tools plan tasks, edit across files, run tests, and open pull requests. Many now ship to production with limited supervision. No single tool fits "
-      },
-      {
-        "title": "Anthropic Releases Claude Fable 5 and Claude Mythos 5: Same Underlying Model, Different Safeguards, New Mythos-Class Tier",
-        "link": "https://www.marktechpost.com/2026/06/10/anthropic-releases-claude-fable-5-and-claude-mythos-5-same-underlying-model-different-safeguards-new-mythos-class-tier/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-06-10T08:26:21.000Z",
-        "contentSnippet": "Claude Fable 5 ships generally available with classifiers; Mythos 5 stays limited, cyber safeguards lifted, through Project Glasswing. The post Anthropic Releases Claude Fable 5 and Claude Mythos 5: Same Underlying Model, Different Safeguards, New Mythos-Class Tier appeared first"
-      },
-      {
-        "title": "Building a Code Dataset Pipeline from NVIDIA Nemotron-Pretraining-Code-v3 Metadata with Streaming, Pandas, and tiktoken",
-        "link": "https://www.marktechpost.com/2026/06/09/building-a-code-dataset-pipeline-from-nvidia-nemotron-pretraining-code-v3-metadata-with-streaming-pandas-and-tiktoken/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-06-10T04:52:33.000Z",
-        "contentSnippet": "In this tutorial, we work with NVIDIA's Nemotron-Pretraining-Code-v3 dataset as a large-scale metadata index for code pretraining research. We stream the dataset instead of downloading it, inspect its schema, and build a manageable sample. We analyze languages, file extensions, r"
-      },
-      {
-        "title": "Initial impressions of Claude Fable 5",
-        "link": "https://simonwillison.net/2026/Jun/9/claude-fable-5/#atom-entries",
-        "source": "Simon Willison's Weblog",
-        "isoDate": "2026-06-09T23:59:54.000Z",
-        "contentSnippet": "I didn't have early access to today's Claude Fable 5 release, but I've spent the past ~5.5 hours putting it through its paces. My initial impressions are that this is something of a beast. It's slow, expensive and has been quite happily churning through everything I've thrown at "
-      },
-      {
-        "title": "Scale Robot Reinforcement Learning with NVIDIA Isaac Lab on Amazon SageMaker AI",
-        "link": "https://aws.amazon.com/blogs/machine-learning/scale-robot-reinforcement-learning-with-nvidia-isaac-lab-on-amazon-sagemaker-ai/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-06-09T20:07:24.000Z",
-        "contentSnippet": "In this post, we show how to train robot policies for the Unitree H1 humanoid with NVIDIA Isaac Lab on Amazon SageMaker AI across two compute options: Amazon SageMaker HyperPod and Amazon SageMaker Training Jobs."
       }
     ],
     "virtualization": [
@@ -2113,6 +2113,27 @@
       }
     ],
     "hardware": [
+      {
+        "title": "Some of the best PC speakers we've tested are on sale for Prime Day — save up to 36% on Onkyo, Edifier, and Audioengine speakers",
+        "link": "https://www.tomshardware.com/speakers/some-of-the-best-pc-speakers-weve-tested-are-on-sale-for-prime-day-save-up-to-36-percent-on-onkyo-edifier-and-audioengine-speakers",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-24T18:05:41.000Z",
+        "contentSnippet": "Some of our highest-rated PC speakers are on sale for Prime Day, including options from Audioengine, Onkyo, and Edifier."
+      },
+      {
+        "title": "US Secures Netherlands for Pax Silica Alliance in key win for strategic chip alliance — tension remains over MATCH Act restrictions",
+        "link": "https://www.tomshardware.com/tech-industry/us-secures-netherlands-for-pax-silica-alliance-in-key-win-for-strategic-chip-alliance-tension-remains-over-match-act-restrictions",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-24T17:15:00.000Z",
+        "contentSnippet": "Inside the US Pax Silica Alliance with the Netherlands."
+      },
+      {
+        "title": "China tops the list of fastest supercomputers with a CPU-only behemoth, ending US champion El Capitan's reign — 2.198 exaflops of performance without a single GPU",
+        "link": "https://www.tomshardware.com/tech-industry/supercomputers/china-tops-the-top500-with-a-cpu-only-supercomputer-ending-el-capitans-reign",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-24T16:15:10.000Z",
+        "contentSnippet": "China's LineShine supercomputer has taken the top spot on the 67th TOP500 list, posting 2.198 exaflops on the High Performance Linpack benchmark."
+      },
       {
         "title": "Pay just $149.99 for the TP-Link Archer Wi-Fi 7 router with 9.3 Gbps of bandwidth, now 40 percent off — high-powered BE550 router comes with a full complement of 2.5 Gbps LAN ports, too",
         "link": "https://www.tomshardware.com/pc-components/pay-just-usd149-99-for-the-tp-link-archer-wi-fi-7-router-with-9-3-gbps-of-bandwidth-now-40-percent-off-high-powered-be550-router-comes-with-a-full-complement-of-2-5-gbps-lan-ports-too",
@@ -2791,27 +2812,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-06-21T12:46:59.000Z",
         "contentSnippet": "GMKtec's dramatically redesigned EVO-X3 'Strix Halo' Mini PC gets Lisa Su’s signature of approval."
-      },
-      {
-        "title": "Samsung and SK hynix bonuses for chip workers flagged as a national inflation risk — Bank of Korea projects full-year inflation significantly above its 2% target",
-        "link": "https://www.tomshardware.com/tech-industry/bank-of-korea-flags-samsung-and-sk-hynix-chip-bonuses-as-a-national-inflation-risk",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-21T11:58:39.000Z",
-        "contentSnippet": "The Bank of Korea has named performance bonuses at Samsung Electronics and SK hynix as a risk to the country's inflationary stability."
-      },
-      {
-        "title": "Telehealth doctor treats patients using Razer Naga gaming mouse — 12-button MMO thumb grid simplifies medical workflow, automates medical scripting",
-        "link": "https://www.tomshardware.com/peripherals/gaming-mice/telehealth-doctor-treats-patients-using-razer-naga-gaming-mouse-12-button-mmo-thumb-grid-simplifies-medical-workflow-automates-medical-scripting",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-21T11:30:00.000Z",
-        "contentSnippet": "Dr. James Ries says that his Razer Naga V2 MMO gaming mouse helps him treat patients by keeping relevant medical responses at his fingertips."
-      },
-      {
-        "title": "Creality Falcon T1 review: Modular laser engraving",
-        "link": "https://www.tomshardware.com/maker-stem/creality-falcon-t1-review",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-21T11:10:00.000Z",
-        "contentSnippet": "The Creality Falcon T1 is a galvo laser engraver that uses swappable diode, fiber, UV, and MOPA laser modules to engrave wood, crystal, metal, and a wide range of other materials. With a base price of $2,249, the Falcon T1 offers a promising platform for an ecosystem that include"
       }
     ]
   }
