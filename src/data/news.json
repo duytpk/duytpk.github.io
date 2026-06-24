@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-06-24T06:38:15.964Z",
+  "updatedAt": "2026-06-24T10:14:58.583Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-56052 - WordPress Funnel Builder by FunnelKit plugin <= 3.15.0.5 - SQL Injection vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56052",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T07:23:45.000Z",
+        "contentSnippet": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in FunnelKit Funnel Builder by FunnelKit allows Blind SQL Injection. This issue affects Funnel Builder by FunnelKit: from n/a through 3.15.0.5.",
+        "cveScore": 7.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-52942 - netfilter: nf_log: validate MAC header was set before dumping it",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52942",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T07:14:30.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: netfilter: nf_log: validate MAC header was set before dumping it The fallback path of dump_mac_header() guards the MAC header access only with \"skb->mac_header != skb->network_header\", without checking skb_mac_he",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52941 - net/smc: avoid NULL deref of conn->lnk in smc_msg_event tracepoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52941",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T07:14:29.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: net/smc: avoid NULL deref of conn->lnk in smc_msg_event tracepoint The smc_msg_event tracepoint class, shared by smc_tx_sendmsg and smc_rx_recvmsg, unconditionally dereferences smc->conn.lnk: __string(name, smc->",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52940 - tun: zero the whole vnet header in tun_put_user()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52940",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T07:14:29.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: tun: zero the whole vnet header in tun_put_user() tun_put_user() declares an on-stack struct virtio_net_hdr_v1_hash_tunnel without zeroing it. For a non-tunnel skb, virtio_net_hdr_tnl_from_skb() only initializes ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52939 - net/rds: fix NULL deref in rds_ib_send_cqe_handler() on masked atomic completion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52939",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T07:14:28.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: net/rds: fix NULL deref in rds_ib_send_cqe_handler() on masked atomic completion rds_ib_xmit_atomic() always programs a masked atomic opcode (IB_WR_MASKED_ATOMIC_CMP_AND_SWP or IB_WR_MASKED_ATOMIC_FETCH_AND_ADD) ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52938 - bpf: Fix NULL pointer dereference in bpf_sk_storage_clone and diag paths",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52938",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T07:14:27.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: bpf: Fix NULL pointer dereference in bpf_sk_storage_clone and diag paths bpf_selem_unlink_nofail() sets SDATA(selem)->smap to NULL before removing the selem from the storage hlist. A concurrent RCU reader in bpf_",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52937 - tap: fix stack info leak in tap_ioctl() SIOCGIFHWADDR",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52937",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T07:14:27.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: tap: fix stack info leak in tap_ioctl() SIOCGIFHWADDR In the SIOCGIFHWADDR path, tap_ioctl() copies 16 bytes of an uninitialised on-stack struct sockaddr_storage to userspace via ifr_hwaddr, but netif_get_mac_add",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52936 - crypto: jitterentropy - replace long-held spinlock with mutex",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52936",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T07:14:26.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: crypto: jitterentropy - replace long-held spinlock with mutex jent_kcapi_random() serializes the shared jitterentropy state, but it currently holds a spinlock across the jent_read_entropy() call. That path perfor",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52935 - xfrm: espintcp: do not reuse an in-progress partial send",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52935",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T07:14:25.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: xfrm: espintcp: do not reuse an in-progress partial send espintcp keeps a single in-flight transmit in ctx->partial. Before building a new sk_msg, espintcp_sendmsg() first tries to flush that state through espint",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52934 - batman-adv: tvlv: reject oversized TVLV packets",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52934",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T07:14:25.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: batman-adv: tvlv: reject oversized TVLV packets batadv_tvlv_container_ogm_append() builds a TVLV packet section from the tvlv.container_list. The total size of this section is computed by batadv_tvlv_container_li",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52933 - io_uring/poll: fix signed comparison in io_poll_get_ownership()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52933",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T07:14:24.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: io_uring/poll: fix signed comparison in io_poll_get_ownership() io_poll_get_ownership() uses a signed comparison to check whether poll_refs has reached the threshold for the slowpath: if (unlikely(atomic_read(&re",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52932 - xfrm: ipcomp: Free destination pages on acomp errors",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52932",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T07:14:24.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: xfrm: ipcomp: Free destination pages on acomp errors Move the out_free_req label up by a couple of lines so that the allocated dst SG list gets freed on error as well as success.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52931 - batman-adv: tp_meter: avoid use of uninit sender vars",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52931",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T07:14:23.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: batman-adv: tp_meter: avoid use of uninit sender vars batadv_tp_recv_ack() and batadv_tp_stop() are only valid for tp_vars in the BATADV_TP_SENDER role. When called with a BATADV_TP_RECEIVER role, it proceeds to ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52930 - ipc/shm: serialize orphan cleanup with shm_nattch updates",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52930",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T07:14:22.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: ipc/shm: serialize orphan cleanup with shm_nattch updates shm_destroy_orphaned() walks the shm idr under shm_ids(ns).rwsem, but that does not serialize all fields tested by shm_may_destroy(). In particular, shm_n",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52929 - sctp: stream: fully roll back denied add-stream state",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52929",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T07:14:22.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: sctp: stream: fully roll back denied add-stream state When ADD_OUT_STREAMS is denied, SCTP only shrinks the queued chunks and then lowers outcnt. That leaves removed stream metadata behind, so a later re-add can ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52928 - af_unix: Reject SIOCATMARK on non-stream sockets",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52928",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T07:14:21.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: af_unix: Reject SIOCATMARK on non-stream sockets SIOCATMARK reports whether the receive queue is at the urgent mark for MSG_OOB. In AF_UNIX, MSG_OOB is supported only for SOCK_STREAM sockets. SOCK_DGRAM and SOCK_",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52927 - netfilter: ebtables: fix OOB read in compat_mtw_from_user",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52927",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T07:14:20.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: netfilter: ebtables: fix OOB read in compat_mtw_from_user Luxiao Xu says: The function compat_mtw_from_user() converts ebtables extensions from 32-bit user structures to kernel native structures. However, it lack",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52926 - batman-adv: clear current gateway during teardown",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52926",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T07:14:20.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: batman-adv: clear current gateway during teardown batadv_gw_node_free() removes the gateway list entries during mesh teardown, but it does not clear the currently selected gateway. This leaves stale gateway state",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52925 - vrf: Fix a potential NPD when removing a port from a VRF",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52925",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T07:14:19.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: vrf: Fix a potential NPD when removing a port from a VRF RCU readers that identified a net device as a VRF port using netif_is_l3_slave() assume that a subsequent call to netdev_master_upper_dev_get_rcu() will re",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52924 - sctp: purge outqueue on stale COOKIE-ECHO handling",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52924",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T07:14:18.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: sctp: purge outqueue on stale COOKIE-ECHO handling sctp_stream_update() is only invoked when the association is moved into COOKIE_WAIT during association setup/reconfiguration. In this path, the outbound stream s",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52923 - ipc: limit next_id allocation to the valid ID range",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52923",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T07:14:17.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: ipc: limit next_id allocation to the valid ID range The checkpoint/restore sysctl path can request the next SysV IPC id through ids->next_id. ipc_idr_alloc() currently forwards that request to idr_alloc() with an",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52922 - batman-adv: dat: handle forward allocation error",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52922",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T07:14:17.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: batman-adv: dat: handle forward allocation error batadv_dat_forward_data() calls pskb_copy_for_clone() to duplicate an skb for each DHT candidate, but does not check the return value before passing it to batadv_s",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52921 - netfilter: ipset: stop hash:* range iteration at end",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52921",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T07:14:16.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: netfilter: ipset: stop hash:* range iteration at end The following hash set variants: hash:ip,mark hash:ip,port hash:ip,port,ip hash:ip,port,net iterate IPv4 ranges with a 32-bit iterator. The iterator must stop ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52920 - netfilter: xt_policy: fix strict mode inbound policy matching",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52920",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T07:14:15.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: netfilter: xt_policy: fix strict mode inbound policy matching match_policy_in() walks sec_path entries from the last transform to the first one, but strict policy matching needs to consume info->pol[] in the same",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52919 - batman-adv: fix tp_meter counter underflow during shutdown",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52919",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T07:14:15.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: batman-adv: fix tp_meter counter underflow during shutdown batadv_tp_sender_shutdown() unconditionally decrements the \"sending\" atomic counter. If multiple paths (e.g. timeout, user cancel, and normal finish) cal",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2026-9539 - libslirp TCP URG OOB Read Information Leak",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-9539",
@@ -677,234 +902,37 @@
         "contentSnippet": "CMS (Cryptographic Message Syntax) parsing in gpgsm in GnuPG through 2.5.20 mishandles the CMS format for AES-GCM because aes-ICVlen is supposed to be 12 bytes but 4 bytes is accepted. NOTE: this is related to CVE-2026-34182.",
         "cveScore": 2.9,
         "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-55517 - Deno: Denial of service via non-ASCII bytes in WebSocket response headers",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55517",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T17:24:59.000Z",
-        "contentSnippet": "Deno is a JavaScript, TypeScript, and WebAssembly runtime. Prior to 2.7.5, a Deno program that opens a client WebSocket connection could be crashed by the remote server. While handling the WebSocket handshake response, Deno parsed the Sec-WebSocket-Protocol and Sec-WebSocket-Exte",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-44726 - Deno: TLS retry copies stale upgrade hook, risking plaintext traffic",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44726",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T17:24:02.000Z",
-        "contentSnippet": "Deno is a JavaScript, TypeScript, and WebAssembly runtime. From 2.0.0 until 2.7.8, a flaw in Deno's Node.js tls compatibility layer could cause a TLS client to transmit application data in plaintext after a connection retry. When `autoSelectFamily was enabled and the first addres",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-49401 - Deno Permission Bypass via Unicode Normalization Mismatch on macOS (APFS)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49401",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T17:22:32.000Z",
-        "contentSnippet": "Deno is a JavaScript, TypeScript, and WebAssembly runtime. Prior to 2.7.14, Deno's permission system enforces filesystem and execution restrictions by comparing the requested path against the path supplied to --deny-read, --deny-write, --deny-run, or --deny-ffi. On macOS, that co",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2025-71382 - MuPDF < 1.27.0-rc1 Stack Exhaustion DoS via EPUB CSS Rendering",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-71382",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T17:21:48.000Z",
-        "contentSnippet": "MuPDF before 1.27.0-rc1 contains an uncontrolled recursion vulnerability in the EPUB CSS rendering engine that allows remote attackers to cause a denial of service by supplying a maliciously crafted EPUB file with deeply nested HTML elements and inline CSS styles. The function va",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-49402 - Deno: Command Injection via spawnSync & spawn on Windows",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49402",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T17:20:50.000Z",
-        "contentSnippet": "Deno is a JavaScript, TypeScript, and WebAssembly runtime. Prior to 2.7.10, Deno's node:child_process implementation provided an escapeShellArg() helper used when callers passed shell: true to spawn / spawnSync / exec and friends. On Windows, the helper failed to quote arguments ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-49406 - Deno: BYONM module resolution allows `package.json` main path traversal to bypass `--allow-read` restrictions",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49406",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T17:19:15.000Z",
-        "contentSnippet": "Deno is a JavaScript, TypeScript, and WebAssembly runtime. Prior to 2.7.12, when Deno was run in BYONM mode (nodeModulesDir: \"manual\"), the module resolver did not validate that a package's resolved entrypoint stayed within its node_modules/ / directory. A malicious package.json ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-49411 - Deno Node TCPWrap numeric hostname aliases bypass --deny-net resolved-IP deny checks",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49411",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T17:18:07.000Z",
-        "contentSnippet": "Deno is a JavaScript, TypeScript, and WebAssembly runtime. Prior to 2.8.0, the Node.js compatibility TCP path checked the permission against the original hostname string before resolution and then did not re-check after resolution. A caller could therefore pass a numeric alias of",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-49983 - Deno: process.loadEnvFile() bypasses env permission checks and mutates process.env with only read access",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49983",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T17:16:17.000Z",
-        "contentSnippet": "Deno is a JavaScript, TypeScript, and WebAssembly runtime. Prior to 2.8.1, environment access is gated by the env permission. You can deny it with --deny-env, or restrict it to a specific allowlist with --allow-env=FOO,BAR. The expectation is that a program running without env pe",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-49860 - Deno: WebSocket API sandbox bypass via missing post-DNS check",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49860",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T17:15:05.000Z",
-        "contentSnippet": "Deno is a JavaScript, TypeScript, and WebAssembly runtime. Prior to 2.8.1, when a WebSocket connection was opened, Deno checked the destination hostname against --deny-net rules but did not re-check the IP addresses that hostname resolved to. An attacker-controlled script could u",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-49859 - Deno: `fetch()` API sandbox bypass via missing DNS resolution check",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49859",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T17:14:16.000Z",
-        "contentSnippet": "Deno is a JavaScript, TypeScript, and WebAssembly runtime. Prior to 2.8.1, when fetch() was called, Deno checked the destination hostname against --deny-net rules but did not re-check the IP addresses that hostname resolved to. An attacker-controlled script could use a specially ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-49440 - Deno: Miller-Rabin Primality Test Allows Zero Rounds",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49440",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T17:13:25.000Z",
-        "contentSnippet": "Deno is a JavaScript, TypeScript, and WebAssembly runtime. Prior to 2.8.1, node:crypto.checkPrime(candidate[, options][, callback]) and crypto.checkPrimeSync(candidate[, options]) ran no Miller-Rabin rounds at all when the caller left options.checks at its default of 0. In that m",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-54257 - Electron: Buffer performs incorrect byte length calculations resulting in heap buffer under/overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54257",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T17:08:31.000Z",
-        "contentSnippet": "Electron is a framework for writing cross-platform desktop applications using JavaScript, HTML and CSS. From 42.3.1 until 42.3.3, Buffer performs incorrect byte length calculations resulting in heap buffer under/overflow. Most apps will crash and some may perform incorrect buffer",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-54316 - Claude Code: Out-of-Band Data Exfiltration via Pre-Approved HuggingFace Domain in WebFetch",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54316",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T17:06:16.000Z",
-        "contentSnippet": "Claude Code is an agentic coding tool. From 0.2.54 until 2.1.163, because the hostname huggingface.co was pre-approved as a bare hostname for the WebFetch tool, any path on that domain—including attacker-controlled model repositories—was auto-approved without a permission prompt ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-50221 - OpenStack Swift: Server-Side Request Forgery via Internal Header Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50221",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T17:03:32.000Z",
-        "contentSnippet": "In OpenStack Swift before 2.37.2, proxy-server does not strip internal update headers (X-Container-Host, X-Container-Device, X-Delete-At-Host, X-Delete-At-Device) from client requests before forwarding them to object-servers. An authenticated user with write access can inject the",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-54007 - Open WebUI: Cross-origin postMessage confirmation bypass via action:submit",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54007",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T16:51:27.000Z",
-        "contentSnippet": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.6, the chat message listener allows non-same-origin input:prompt and action:submit messages, so an external site can set prompt text and trigger submitPrompt() in an au",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-54006 - Open WebUI: Calendar event re-parenting allows writing events into another user's calendar",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54006",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T16:50:44.000Z",
-        "contentSnippet": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.6, POST /api/v1/calendars/events/{event_id}/update validates that the caller has write access to the calendar the event currently belongs to, but does not validate the ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-54008 - Open WebUI: Redirect-Bypass SSRF in OAuth `_process_picture_url`",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54008",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T16:50:06.000Z",
-        "contentSnippet": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.6, backend/open_webui/utils/oauth.py::_process_picture_url calls validate_url(picture_url) on the initial URL only, then invokes aiohttp.ClientSession.get(picture_url, ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-54009 - Open WebUI: Cross-user file disclosure via /api/chat/completions image_url field",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54009",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T16:49:13.000Z",
-        "contentSnippet": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.6, POST /api/chat/completions accepts an image_url.url value that, when it does NOT start with http://, https://, or data:image/, is interpreted as a file id and resolv",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-54010 - Open WebUI: Forged chat-file link allows cross-user file read and deletion",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54010",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T16:48:22.000Z",
-        "contentSnippet": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.6, Open WebUI lets an authenticated user attach arbitrary file_id values to their own chat message without checking whether they own or can read those files. If the att",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-54011 - Open WebUI: Stored XSS in Mermaid Markdown Preview",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54011",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T16:47:43.000Z",
-        "contentSnippet": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.6,Open WebUI renders Mermaid blocks from Markdown files in the file preview panel and inserts the generated SVG into the DOM using innerHTML. Because Mermaid is configu",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-54012 - Open WebUI: Forged model meta.knowledge allows cross-user file read and deletion",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54012",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T16:47:03.000Z",
-        "contentSnippet": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.6, Open WebUI lets a user who can create, update, or import workspace models store arbitrary meta.knowledge entries on their model without checking whether they own or ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-54013 - Open WebUI: Stored XSS to Account Takeover via Model Profile Images in Open WebUI",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54013",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T16:46:28.000Z",
-        "contentSnippet": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.6, Open WebUI patched SVG XSS in user profile images and webhook profile images but forgot to apply the same fix to model profile images. The ModelMeta class has no val",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-54014 - Open WebUI: Sibling-Prefix Path Traversal via /cache/{path} in open-webui/open-webui",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54014",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T16:45:39.000Z",
-        "contentSnippet": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.6, a path traversal vulnerability exists in open-webui's cache file serving endpoint that allows any authenticated user to read files from sibling directories outside t",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-54015 - Open WebUI: Prompt history IDOR: unbound history_id allows cross-prompt read and deletion",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54015",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T16:44:57.000Z",
-        "contentSnippet": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.6, Open WebUI's prompt version-history endpoints authorize the prompt_id in the URL but then act on caller-supplied history IDs without verifying that the history row b",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-27604 - FOSSBilling: Improper API Role Validation (system) Enables Unauthenticated Access to Privileged Admin Functions",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-27604",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T14:25:20.000Z",
-        "contentSnippet": "FOSSBilling is a free, open-source billing and client management system. Starting in version 0.5.4 and prior to version 0.8.0, an authorization bypass in the API role handling allows unauthenticated access to privileged `/api/system/*` endpoints. Because `system` resolves to the ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       }
     ],
     "ai": [
+      {
+        "title": "Using Graphify and NetworkX to Map Python Codebase Structure with God Nodes, Communities, and Architecture Visualizations",
+        "link": "https://www.marktechpost.com/2026/06/24/using-graphify-and-networkx-to-map-python-codebase-structure-with-god-nodes-communities-and-architecture-visualizations/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-06-24T09:36:59.000Z",
+        "contentSnippet": "In this tutorial, we build a fully offline Graphify pipeline that turns a multi-module Python application into a knowledge graph. We install Graphify, generate a connected sample app, and extract the graph locally using tree-sitter, with no API key or LLM backend. We load graph.j"
+      },
+      {
+        "title": "Nous Research Adds /learn to Hermes Agent’s Skills System, Capturing Workflows as Slash Commands Without Hand-Writing SKILL.md",
+        "link": "https://www.marktechpost.com/2026/06/24/nous-research-adds-learn-to-hermes-agents-skills-system-capturing-workflows-as-slash-commands-without-hand-writing-skill-md/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-06-24T09:21:49.000Z",
+        "contentSnippet": "Nous Research has added /learn to the Hermes Agent Skills System. The command authors a standards-compliant SKILL.md from a local directory, a doc URL, a past conversation, or pasted notes. The live agent sources the material with its own tools, then writes the skill — no hand-wr"
+      },
+      {
+        "title": "16 Best Generative AI Coding Tools in 2026 Compared: Features, and Best Fit",
+        "link": "https://www.marktechpost.com/2026/06/24/top-generative-ai-coding-tools-of-2026/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-06-24T08:12:27.000Z",
+        "contentSnippet": "Generative AI has reshaped how software gets built. What began as line-by-line autocomplete now spans full application generation, multi-agent build pipelines, and natural-language interfaces to entire codebases. Large language models trained on code can read context, follow inte"
+      },
+      {
+        "title": "DFlash Speculative Decoding Drafts Whole Token Blocks in Parallel for Up to 15x Higher Throughput on NVIDIA Blackwell",
+        "link": "https://www.marktechpost.com/2026/06/24/dflash-speculative-decoding-drafts-whole-token-blocks-in-parallel-for-up-to-15x-higher-throughput-on-nvidia-blackwell/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-06-24T07:21:10.000Z",
+        "contentSnippet": "UC San Diego's DFlash replaces autoregressive drafting with a lightweight block diffusion model for speculative decoding. It drafts whole token blocks in a single forward pass and conditions on target hidden features through KV injection. The paper reports up to 6.08x lossless sp"
+      },
       {
         "title": "Mistral OCR 4 Brings Citation-Ready Structured Output to RAG, Agentic, and Enterprise Search Pipelines",
         "link": "https://www.marktechpost.com/2026/06/23/mistral-ocr-4/",
@@ -1576,34 +1604,6 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-06-09T20:07:24.000Z",
         "contentSnippet": "In this post, we show how to train robot policies for the Unitree H1 humanoid with NVIDIA Isaac Lab on Amazon SageMaker AI across two compute options: Amazon SageMaker HyperPod and Amazon SageMaker Training Jobs."
-      },
-      {
-        "title": "Google Releases Gemini 3.5 Live Translate, a Streaming Speech-to-Speech Audio Model Covering 70+ Languages Across Meet, Translate, and the Live API",
-        "link": "https://www.marktechpost.com/2026/06/09/google-releases-gemini-3-5-live-translate-a-streaming-speech-to-speech-audio-model-covering-70-languages-across-meet-translate-and-the-live-api/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-06-09T17:24:11.000Z",
-        "contentSnippet": "Gemini 3.5 Live Translate streams speech-to-speech translation across 70+ languages. It generates audio continuously, staying a few seconds behind the speaker. The model reaches developers via the Gemini Live API, plus Google Meet and the Translate app. The post Google Releases G"
-      },
-      {
-        "title": "Hands-free first notice of loss: Using Strands Agents and Amazon Bedrock AgentCore Browser Tool for intelligent claims intake",
-        "link": "https://aws.amazon.com/blogs/machine-learning/hands-free-first-notice-of-loss-using-strands-agents-and-amazon-bedrock-agentcore-browser-tool-for-intelligent-claims-intake/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-06-09T16:43:28.000Z",
-        "contentSnippet": "In this post, we demonstrate how a hands-free FNOL intake system combines agents built with the Strands Agents SDK for domain reasoning with Amazon Bedrock AgentCore Browser Tool for live portal interaction. This approach preserves human expertise while removing repetitive screen"
-      },
-      {
-        "title": "Build an agentic incident triage assistant with Amazon Quick and New Relic",
-        "link": "https://aws.amazon.com/blogs/machine-learning/build-an-agentic-incident-triage-assistant-with-amazon-quick-and-new-relic/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-06-09T16:10:37.000Z",
-        "contentSnippet": "This post shows engineering teams how to apply that principle to one of the most time-sensitive workflows in engineering: incident triage. You will build a custom incident triage assistant agent using Amazon Quick that orchestrates a response with the New Relic Model Context Prot"
-      },
-      {
-        "title": "NVIDIA cuTile Python Tutorial: Building Tiled GPU Kernels for Vector Addition, Matrix Addition, and Matrix Multiplication in Colab",
-        "link": "https://www.marktechpost.com/2026/06/09/nvidia-cutile-python-tutorial-building-tiled-gpu-kernels-for-vector-addition-matrix-addition-and-matrix-multiplication-in-colab/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-06-09T08:37:48.000Z",
-        "contentSnippet": "In this tutorial, we implement a hands-on workflow for NVIDIA cuTile Python, a tile-based GPU programming interface for CUDA-style kernels in Python. We prepare a Colab-friendly environment and check GPU, driver, CUDA, and cuTile availability before running kernels. We then build"
       }
     ],
     "virtualization": [
@@ -2106,6 +2106,48 @@
       }
     ],
     "hardware": [
+      {
+        "title": "Netgear rolls out stellar Prime Day deals on Wi-Fi 7 gear — up to 33% off for routers, mesh systems, and range extenders",
+        "link": "https://www.tomshardware.com/networking/routers/netgear-rolls-out-stellar-prime-day-deals-on-wi-fi-7-gear-up-to-33-percent-off-for-routers-mesh-systems-and-range-extenders",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-24T10:00:00.000Z",
+        "contentSnippet": "Netgear is loading up the discounts on Wi-Fi 7 hardware"
+      },
+      {
+        "title": "Get 32GB of Corsair DDR5 RAM for just $214 right now, thanks to these Newegg bundles — AMD and Intel gaming PC build kits massively undercut $350 market prices",
+        "link": "https://www.tomshardware.com/pc-components/get-32gb-of-corsair-ddr5-ram-for-just-usd214-right-now-thanks-to-these-newegg-bundles-amd-and-intel-gaming-pc-build-kits-massively-undercut-usd350-market-prices",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-24T09:56:06.000Z",
+        "contentSnippet": "Score 32GB DDR5 RAM from Corsair for as low as $214 in these two Newegg RAM combo deals with Gigabyte motherboards right now."
+      },
+      {
+        "title": "This expansive 49-inch OLED monitor is less than $700 in Newegg's Prime Day rival sale — 144Hz 1440p beast is $150 off",
+        "link": "https://www.tomshardware.com/pc-components/this-expansive-49-inch-oled-monitor-is-less-than-usd700-in-neweggs-prime-day-rival-sale-144hz-1440p-beast-is-usd150-off",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-24T09:35:50.000Z",
+        "contentSnippet": "This MSI MPG 491CQP is now just $699 at Newegg."
+      },
+      {
+        "title": "Meta pauses mandatory AI training program that tracked employee keystrokes after internal data leak exposed sensitive staff information company-wide — employees express frustration over poor handling ",
+        "link": "https://www.tomshardware.com/tech-industry/big-tech/meta-pauses-mandatory-ai-training-program-that-tracked-employee-keystrokes-after-internal-data-leak-exposed-sensitive-staff-information-company-wide-employees-express-frustration-over-poor-handling-of-data",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-24T09:30:00.000Z",
+        "contentSnippet": "Meta has paused an internal AI training program after employee conversations, keystrokes, transcripts, and performance-related data were reportedly exposed across the company."
+      },
+      {
+        "title": "Best Amazon Prime Day tech deals live on day two — PC hardware deals on GPUs, CPUs, SSDs, and more",
+        "link": "https://www.tomshardware.com/live/news/amazon-prime-day-2026-deals",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-24T06:51:55.000Z",
+        "contentSnippet": "Find the very best PC hardware deals during Amazon Prime Day."
+      },
+      {
+        "title": "This brilliant $11 power button gadget lets you switch your PC on from your desk with ease — perfect desk upgrade means you don't need to bend down to turn your rig on or off anymore, ships with super",
+        "link": "https://www.tomshardware.com/pc-components/this-brilliant-usd11-power-button-gadget-lets-you-switch-your-pc-on-from-your-desk-with-ease-perfect-desk-upgrade-means-you-dont-need-to-bend-down-to-turn-your-rig-on-or-off-anymore-ships-with-super-durable-mechanical-keys-and-rgb-lighting",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-24T06:51:25.000Z",
+        "contentSnippet": "Who doesn't want a statement power button on their desk for $11? Don't miss out on this ultimate desk gadget."
+      },
       {
         "title": "Arm CPUs Take Number 1 in Latest Top500 List with Chinese LineShine",
         "link": "https://www.servethehome.com/arm-cpus-take-number-1-in-latest-top500-list-with-chinese-lineshine/",
@@ -2763,48 +2805,6 @@
         "source": "ServeTheHome",
         "isoDate": "2026-06-19T22:38:10.000Z",
         "contentSnippet": "We go into what is driving agentic AI server CPU demand on both sides, running the AI agents, but also the legacy workloads The post Building a Dense Agentic AI CPU Rack Today appeared first on ServeTheHome."
-      },
-      {
-        "title": "AMD will reinstate memory encryption on Ryzen 9000 CPUs through a BIOS update in July — TSME is coming back after 'valuable community feedback'",
-        "link": "https://www.tomshardware.com/pc-components/cpus/amd-will-reinstate-memory-encryption-on-ryzen-9000-cpus-through-a-bios-update-in-july-tsme-is-coming-back-after-valuable-community-feedback",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-19T21:02:49.000Z",
-        "contentSnippet": "AMD says it will reinstate firmware memory encryption (TSME) on non-PRO Ryzen 9000 desktop CPUs through a BIOS update in July, following the feature's removal through an earlier firmware update."
-      },
-      {
-        "title": "Your 15-inch daily driver is now $250 off — Dell 15 laptop with hexa-core CPU, 8GB RAM dips to $349",
-        "link": "https://www.tomshardware.com/laptops/your-15-inch-daily-driver-is-now-usd250-off-dell-15-laptop-with-hexa-core-cpu-8gb-ram-dips-to-usd349",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-19T18:00:00.000Z",
-        "contentSnippet": "The Dell 15 laptop has just come down from its regular price of $599.99 to $349.99."
-      },
-      {
-        "title": "The Best Thunderbolt and USB-C Docks in 2026: Up to 140W power delivery, 10 GbE, and even internal M.2 SSD slots",
-        "link": "https://www.tomshardware.com/peripherals/docking-stations-hubs/the-best-thunderbolt-and-usb-c-docks-for-laptops",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-19T16:31:46.000Z",
-        "contentSnippet": "These are the best Thunderbolt and USB-C docks for expanding your laptop's port options."
-      },
-      {
-        "title": "HighPoint Rocket 1604L Review: Four Gen5 M.2 SSDs, One Slot, 55.6GB/s",
-        "link": "https://www.storagereview.com/review/highpoint-rocket-1604l-review-four-gen5-m-2-ssds-one-slot-55-6gb-s",
-        "source": "StorageReview",
-        "isoDate": "2026-06-19T16:28:30.000Z",
-        "contentSnippet": "The HighPoint Rocket 1604L is a $399 PCIe Gen5 x16 add-in card that carries four M.2 NVMe SSDs, each on a dedicated Gen5 x4 connection. In our testing with four Samsung 9100 PRO 4TB drives installed, the card sustained 55.6GB/s of 128K sequential read bandwidth and 10.1 million 4"
-      },
-      {
-        "title": "Amazon workers who testified against AI data centers say they were intimidated by the company, monitored at work — employees face possible termination for violating company policy, speaking as represe",
-        "link": "https://www.tomshardware.com/tech-industry/data-centers/amazon-workers-who-testified-against-ai-data-centers-say-they-were-intimidated-by-the-company-monitored-at-work-employees-face-possible-termination-for-violating-company-policy-speaking-as-representatives",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-19T15:55:04.000Z",
-        "contentSnippet": "The three Amazon workers claim that they've been intimidated during the Zoom meetings and were being monitored while at work."
-      },
-      {
-        "title": "CTERA Integrates with n8n to Extend Enterprise File Data to AI Workflows",
-        "link": "https://www.storagereview.com/news/ctera-integrates-with-n8n-to-extend-enterprise-file-data-to-ai-workflows",
-        "source": "StorageReview",
-        "isoDate": "2026-06-19T15:10:51.000Z",
-        "contentSnippet": "CTERA has announced a new integration with n8n, the agentic workflow automation platform, to connect enterprise file data with AI services, applications, and business processes. The integration extends the CTERA Intelligent Data Platform into the rapidly growing ecosystem of agen"
       }
     ]
   }
