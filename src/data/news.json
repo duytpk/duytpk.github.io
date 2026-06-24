@@ -1,16 +1,124 @@
 {
-  "updatedAt": "2026-06-23T23:01:24.814Z",
+  "updatedAt": "2026-06-24T02:31:57.796Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-54639 - Style Dictionary - Prototype Pollution in convertTokenData utility function",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54639",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-24T00:17:44.000Z",
+        "contentSnippet": "Style Dictionary, a build system for creating cross-platform styles, has a prototype pollution vulnerability starting in version 4.3.0 and prior to version 5.4.4. Impact users have: direct usage of `convertTokenData(tokens, { output: 'object' });`; indirect usage, via using Expan",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-7574 - Anthropic Claude Desktop Cowork VM Image Contents Not Validated Before Use",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-7574",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T23:54:21.000Z",
+        "contentSnippet": "Anthropic Claude Desktop Cowork VM image handling (confirmed across v1.1348.0 through v1.2278.0, including v1.1348.0, v1.1617.0, and v1.2278.0) validates only file presence and a version marker string before booting rootfs.img, but does not verify image content integrity at time-",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-5818 - MCU Firmware Update Authentication Bypass on Caliptra Core",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-5818",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T23:50:06.000Z",
+        "contentSnippet": "Incorrect check of function return value in Caliptra Core Runtime Firmware (ActivateFirmwareCmd::activate_fw modules) allows bypass of Caliptra Core's verification of the MCU FW during a hitless update. This issue affects Core Runtime Firmware: from 2.0.0 through 2.0.1, 2.1.0.",
+        "cveScore": 7.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-6458 - AES-256-GCM Authentication Tag Does Not Cover First Ciphertext Blocks When AAD Is Empty",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6458",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T23:49:44.000Z",
+        "contentSnippet": "Missing cryptographic step in Caliptra Core Firmware (aes_256_gcm_update module) results in an incorrect GCM authentication tag. When the streaming AES-256-GCM API is used with empty AAD, the hardware GHASH accumulator state is not saved after the first update call, causing the f",
+        "cveScore": 5.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-12164 - Privilege Escalation in Fortra File Integrity Monitoring (FIM)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12164",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T22:15:37.000Z",
+        "contentSnippet": "Fortra File Integrity Monitoring (FIM), formerly Tripwire Enterprise, versions prior to 9.4.0 may assign incorrect or elevated effective permissions to users created by the tetool import command while FIM is running, particularly when the import also creates or changes roles or r",
+        "cveScore": 4.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-48493 - Snipe-IT Vulnerable to Privilege Escalation for self via API Permissions Assignment",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48493",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T22:11:06.000Z",
+        "contentSnippet": "Snipe-IT is an IT asset/license management system. In versions prior to 8.6.0, a user with only users.edit can send a PATCH to /api/v1/users/{their_own_id} and grant themselves any permission except admin and superuser — for example `assets.view`, `assets.create`, `reports.view`,",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-56785 - FlatPress - Stored Cross-Site Scripting via Unescaped Comment and Contact Form Fields",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56785",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T22:09:35.000Z",
+        "contentSnippet": "FlatPress versions prior to commit 10be83c, contains a stored cross-site scripting vulnerability in comment and contact forms where name, URL, and email fields are rendered without proper output encoding in Smarty templates. Attackers can inject arbitrary HTML and JavaScript thro",
+        "cveScore": 8.4,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-54588 - Poweradmin has Host Header Injection in OIDC redirect_uri, SAML ACS/SLO URL, and Logout Redirect Construction.",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54588",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T22:09:27.000Z",
+        "contentSnippet": "Poweradmin is a web-based DNS administration tool for PowerDNS server. Versions prior to 4.2.4 and 4.3.3 use the attacker-controlled `HTTP_HOST` request header as the authoritative source for building callback URLs in its OIDC, SAML, and logout authentication flows without any va",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-47693 - Poweradmin: CSV Injection in log export endpoints allows formula execution in spreadsheet applications",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47693",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T22:07:25.000Z",
+        "contentSnippet": "Poweradmin is a web-based DNS administration tool for PowerDNS server. Versions prior to 4.2.4 and 4.3.3 are vulnerable to CSV Injection (Formula Injection) in its log export functionality. User-controlled data — specifically the username field — is written to exported CSV files ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-12163 - Stored XSS in Fortra File Integrity Monitoring (FIM)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12163",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T22:06:04.000Z",
+        "contentSnippet": "Fortra File Integrity Monitoring (FIM), formerly Tripwire Enterprise, versions prior to 9.4.0.1 contain a stored cross-site scripting (XSS) vulnerability in the Asset View UI component. An authenticated user with sufficient privileges to create or modify affected node or database",
+        "cveScore": 5.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-11972 - tarfile opened in streaming mode mishandles EOF",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11972",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T22:02:45.000Z",
+        "contentSnippet": "When using the \"tarfile\" module with a file opened in \"streaming mode\" (mode=\"r|\") the tarfile module did not properly handle EOF, meaning an archive could be parsed in an infinite loop.",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-54518 - jackson-databind: @JsonView bypass for unwrapped creator parameters in jackson-databind",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54518",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-23T21:02:07.000Z",
+        "contentSnippet": "jackson-databind contains the general-purpose data-binding functionality and tree-model for Jackson Data Processor. From 2.21.0 until 2.21.4 and 3.1.4, UnwrappedPropertyHandler.processUnwrappedCreatorProperties() replays buffered JSON into creator parameters but never consults pr",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
       {
         "title": "CVE-2026-50193 - jackson-databind: Deeply nested JsonNode throws StackOverflowError for toString()",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-50193",
         "source": "cvefeed.io",
         "isoDate": "2026-06-23T21:00:20.000Z",
         "contentSnippet": "jackson-databind contains the general-purpose data-binding functionality and tree-model for Jackson Data Processor. From 2.13.0 until 2.14.0, a potential Denial-of-Service exists when attacker sends deeply nested JSON if (and only if) the service reads deeply nested (1000s of lev",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-41862 - Spring Statemachine Deserialisation Vulnerability",
@@ -27,8 +135,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-23T20:56:36.000Z",
         "contentSnippet": "jackson-databind contains the general-purpose data-binding functionality and tree-model for Jackson Data Processor. From 2.10.0 until 2.18.8, 2.21.4, and 3.1.4, jackson-databind's PolymorphicTypeValidator (PTV) is the primary safety mechanism guarding polymorphic deserialization.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-56120 - OpenRemote < 1.25.0 IDOR via Bulk Alarm Deletion Endpoint",
@@ -45,8 +153,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-23T20:53:52.000Z",
         "contentSnippet": "jackson-databind contains the general-purpose data-binding functionality and tree-model for Jackson Data Processor. From 2.10.0 until 2.18.8, 2.21.4, and 3.1.4, BasicPolymorphicTypeValidator.Builder.allowIfSubTypeIsArray() allowlists any array type based only on clazz.isArray(), ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-54514 - jackson-databind: InetSocketAddress deserialization triggers eager DNS resolution (SSRF)",
@@ -54,8 +162,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-23T20:51:50.000Z",
         "contentSnippet": "jackson-databind contains the general-purpose data-binding functionality and tree-model for Jackson Data Processor. From 2.0.0 until 2.18.8, 2.21.4, and 3.1.4, JDKFromStringDeserializer constructed InetSocketAddress with new InetSocketAddress(host, port), which performs eager DNS",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-54515 - jackson-databind: Case-insensitive deserialization bypasses per-property @JsonIgnoreProperties",
@@ -63,8 +171,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-23T20:50:25.000Z",
         "contentSnippet": "jackson-databind contains the general-purpose data-binding functionality and tree-model for Jackson Data Processor. From 2.8.0 until 2.18.9, 2.21.5, and 3.1.4, in BeanDeserializerBase.createContextual(), per-property @JsonIgnoreProperties exclusions are applied by _handleByNameIn",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-54516 - jackson-databind: Renamed @JsonIgnore'd setters can deserialize via private fields",
@@ -72,8 +180,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-23T20:48:52.000Z",
         "contentSnippet": "jackson-databind contains the general-purpose data-binding functionality and tree-model for Jackson Data Processor. From 2.21.0 until 2.21.4 and 3.1.4, POJOPropertiesCollector._renameProperties() allows a property with @JsonProperty(\"renamed\") on the getter and @JsonIgnore on the",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-54517 - jackson-databind: @JsonView bypass for setterless creator properties",
@@ -81,8 +189,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-23T20:47:22.000Z",
         "contentSnippet": "jackson-databind contains the general-purpose data-binding functionality and tree-model for Jackson Data Processor. From 2.21.0 until 2.21.4 and 3.1.4, in BeanDeserializer._deserializeUsingPropertyBased, the active-view (@JsonView) filter was applied only to creator properties; t",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-46547 - NocoDB: Reflected Cross-Site Scripting via Page Leaving Redirect URL",
@@ -90,8 +198,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-23T20:42:03.000Z",
         "contentSnippet": "NocoDB is software for building databases as spreadsheets. Prior to 2026.04.1, a reflected XSS vulnerability exists in the Page Leaving Warning page. The ncRedirectUrl and ncBackUrl query parameters are used in window.location.href and tag bindings without validation, allowing ja",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-46548 - NocoDB: SSRF Protection Bypass in Notification Webhook Plugins (Slack, Discord, Mattermost, Teams)",
@@ -99,8 +207,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-23T20:41:06.000Z",
         "contentSnippet": "NocoDB is software for building databases as spreadsheets. Prior to 2026.04.1, the request-filtering-agent SSRF protection was non-functional in the four notification webhook plugins (Slack, Discord, Mattermost, Teams) because httpAgent / httpsAgent were passed as part of the req",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-46549 - NocoDB: OAuth Token Scope Not Enforced at ACL Layer Allows Scope Escalation",
@@ -108,8 +216,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-23T20:40:24.000Z",
         "contentSnippet": "NocoDB is software for building databases as spreadsheets. Prior to 2026.04.1, the OAuth token strategy attached oauth_scope and oauth_granted_resources to the request user, but the ACL middleware never consulted either. An OAuth token issued with a restricted scope (e.g. MCP-onl",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 2,
+        "cveSeverity": "LOW"
       },
       {
         "title": "CVE-2026-46550 - NocoDB: Refresh Token Cookie Set Without `Secure` and `SameSite` Flags",
@@ -117,8 +225,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-23T20:39:22.000Z",
         "contentSnippet": "NocoDB is software for building databases as spreadsheets. Prior to 2026.04.1, the refresh-token cookie was set with httpOnly: true but missing both the secure flag and the sameSite attribute. Over plain HTTP the cookie could be intercepted on the network; without sameSite, brows",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-46552 - NocoDB: Shared-base link access can invite arbitrary users as persistent base members",
@@ -793,114 +901,6 @@
         "isoDate": "2026-06-23T12:13:06.000Z",
         "contentSnippet": "Grav before 2.0.0-beta.2 contains an XML external entity injection vulnerability in SVG file upload processing that allows authenticated attackers to read arbitrary files. The application uses simplexml_load_string without disabling external entity loading, enabling attackers to ",
         "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-56379 - ImageMagick - Command Injection via SVG Decoder",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56379",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T12:13:05.000Z",
-        "contentSnippet": "ImageMagick before 7.1.2-15 and 6.9.13-40 contains a command injection vulnerability in the SVG decoder that allows attackers to inject arbitrary MVG drawing commands. Attackers can craft malicious SVG files with injected Magick Vector Graphics commands that execute during render",
-        "cveScore": 0,
-        "cveSeverity": "NONE"
-      },
-      {
-        "title": "CVE-2026-56376 - ImageMagick - Heap Use-After-Free in Meta Coder",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56376",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T12:13:04.000Z",
-        "contentSnippet": "ImageMagick before 7.1.2-15 and 6.9.13-40 contains a heap use-after-free in the meta coder: when memory allocation fails, a single byte is written to a stale pointer. Remote attackers can trigger it by processing specially crafted image files, causing a denial of service.",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-56371 - ImageMagick - Memory Leak in TXT File Processing via Texture Attribute",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56371",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T12:13:04.000Z",
-        "contentSnippet": "ImageMagick before 7.1.2-15 and 6.9.13-40 contains a memory leak in coders/txt.c when processing TXT files with texture attributes: the texture object allocated via ReadImage is not released when GetTypeMetrics fails, leaking memory each time a crafted TXT file with a texture att",
-        "cveScore": 0,
-        "cveSeverity": "NONE"
-      },
-      {
-        "title": "CVE-2026-56322 - Capgo - Information Disclosure via Unauthenticated /updates defaultChannel Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56322",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T12:13:03.000Z",
-        "contentSnippet": "Capgo before 12.128.2 contains an information disclosure vulnerability in the unauthenticated /updates endpoint that resolves the defaultChannel parameter before enforcing privacy restrictions, allowing attackers to enumerate private channels and leak version/config state. Unauth",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-56315 - picklescan - Remote Code Execution via Unblocked Standard Library Modules",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56315",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T12:13:02.000Z",
-        "contentSnippet": "picklescan before 1.0.4 fails to block at least seven Python standard library modules (including uuid, _osx_support, _aix_support, _pyrepl.pager, and imaplib) exposing eight functions that provide direct arbitrary command execution. Attackers can craft malicious pickle files impo",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-56301 - Nuxt - Arbitrary File Read via World-Connectable vite-node IPC Socket on Linux",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56301",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T12:13:02.000Z",
-        "contentSnippet": "Nuxt 4.0.0 before 4.4.7 and 3.18.0 before 3.21.7, when running the development server (nuxt dev) on Linux, binds the vite-node IPC server to an abstract-namespace Unix socket without permission restrictions, allowing local users to enumerate and connect. Unprivileged co-resident ",
-        "cveScore": 6.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-56275 - Flowise - Server-Side Request Forgery via Execute Flow Base URL",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56275",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T12:13:01.000Z",
-        "contentSnippet": "Flowise before 3.1.0 contains a server-side request forgery vulnerability in the Execute Flow node that allows attackers to bypass security validation by providing intranet addresses through the base URL field. Attackers can initiate HTTP requests to internal network addresses, a",
-        "cveScore": 6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-56274 - Flowise - Remote Code Execution via MCP Security Bypass in validateCommandFlags and validateArgsForLocalFileAccess",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56274",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T12:13:00.000Z",
-        "contentSnippet": "Flowise before 3.1.2 contains multiple OS command injection vulnerabilities in the Custom MCP Server feature due to incomplete command-flag validation and a regex bypass in local file access restrictions. An attacker with a Flowise account of any role, or API access with view/upd",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-56263 - Crawl4AI - Stored Cross-Site Scripting in Monitor Dashboard",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56263",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T12:13:00.000Z",
-        "contentSnippet": "Crawl4AI before 0.8.7 contains a stored cross-site scripting vulnerability in the monitor dashboard that renders crawl URLs and error messages via innerHTML without escaping. An attacker can submit a crafted crawl request with malicious markup that executes in an operator's brows",
-        "cveScore": 6.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-56258 - Crawl4AI - Arbitrary File Write via output_path Symlink and TOCTOU",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56258",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T12:12:59.000Z",
-        "contentSnippet": "Crawl4AI before 0.8.8 contains an arbitrary file write vulnerability in the screenshot and PDF endpoints that allows unauthenticated attackers to write files outside the intended directory via symlink and time-of-check-time-of-use (TOCTOU) attacks on the output_path parameter. Re",
-        "cveScore": 9.2,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-56248 - Capgo - Unauthenticated Denial-of-Service via audit_logs RLS Policy",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56248",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T12:12:58.000Z",
-        "contentSnippet": "Cap-go capgo (capgo-backend) before 12.128.12 contains an unauthenticated denial-of-service vulnerability arising from the audit_logs table's Row-Level Security (RLS) policy when accessed via the Supabase PostgREST API. Because the PostgreSQL query planner executes costly logic b",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-56243 - Capgo - Hashed API Key Enforcement Bypass via PostgREST/RLS Plane",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56243",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-23T12:12:57.000Z",
-        "contentSnippet": "Capgo before 12.128.2 contains a security control bypass vulnerability where the PostgREST/RLS plane accepts plaintext API keys through the capgkey header despite enforce_hashed_api_keys being enabled. Attackers can bypass org-level hashed-key enforcement by sending plaintext API",
-        "cveScore": 8.6,
         "cveSeverity": "HIGH"
       }
     ],
@@ -2177,7 +2177,7 @@
         "contentSnippet": "The Creality 3D Printer Tool Kit is on sale at 15% of for Prime Day 2026. This brings the price down to $25.49, helping you save some cash if you want to complete your 3D printing setup."
       },
       {
-        "title": "Get a 4TB Samsung 9100 Pro SSD for just $459 in blockbuster Prime Day sale — remarkable deal shaves $900 off PCIe 5.0 NVMe drive to bring it below MSRP",
+        "title": "Get a 4TB Samsung 9100 Pro SSD for just $459 in blockbuster Prime Day sale — remarkable deal shaves $900 off PCIe 5.0 NVMe drive to bring it below MSRP [Updated]",
         "link": "https://www.tomshardware.com/pc-components/save-an-amazing-usd900-off-a-4tb-samsung-9100-pro-ssd-in-blockbuster-prime-day-deal-remarkable-sale-brings-pcie-5-0-nvme-drive-from-usd1-360-down-to-just-usd459",
         "source": "Tom's Hardware",
         "isoDate": "2026-06-23T15:59:56.000Z",
