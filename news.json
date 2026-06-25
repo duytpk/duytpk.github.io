@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-06-25T14:07:12.177Z",
+  "updatedAt": "2026-06-25T17:05:02.605Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-57437 - Nokogiri: Possible Use-After-Free when directly using `NokogirI::XML::XPathContext` beyond document lifetime",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57437",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T14:34:09.000Z",
+        "contentSnippet": "Nokogiri is an open source XML and HTML library for the Ruby programming language. Prior to 1.19.4, Nokogiri::XML::XPathContext did not keep its source document alive for garbage collection. If an XPathContext outlived its document and the document was collected, evaluating an XP",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-57436 - Nokogiri: Possible Use-After-Free when setting `Document#root=` to an invalid node type",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57436",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T14:33:29.000Z",
+        "contentSnippet": "Nokogiri is an open source XML and HTML library for the Ruby programming language. Prior to 1.19.4, Nokogiri::XML::Document#root= validated only that the new root was a Nokogiri::XML::Node, allowing a DTD node to be set as the document root. The result is a heap use-after-free du",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-57435 - Nokogiri: Possible Use-After-Free when setting an attribute value via `Nokogiri::XML::Attr#value=` or `#content=`",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57435",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T14:32:49.000Z",
+        "contentSnippet": "Nokogiri is an open source XML and HTML library for the Ruby programming language. Prior to 1.19.4, Nokogiri’s CRuby native extension could leave a Ruby wrapper pointing to freed memory when replacing the value of an XML attribute. If Ruby code had already accessed an attribute c",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-57532 - Adobe Acrobat Reader PDF Ticket HTML Injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57532",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T14:32:37.000Z",
+        "contentSnippet": "Malicious HTML content contained in the layout specification of a PDF ticket or badge layout was executed when the PDF editor is opened in the browser. This could allow one backend user to inject JavaScript into the browser context of another backend user. Due to requirements of ",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-57434 - Nokogiri: Null Pointer Dereference calling methods on uninitialized wrapper classes",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57434",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T14:32:10.000Z",
+        "contentSnippet": "Nokogiri is an open source XML and HTML library for the Ruby programming language. Prior to 1.19.4, Nokogiri contains a bug when calling certain methods on allocated-but-uninitialized native wrapper classes that inherit from Nokogiri::XML::Node. This caused a NULL pointer derefer",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-57533 - Pretix HTML Injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57533",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T14:31:18.000Z",
+        "contentSnippet": "Malicious HTML content could be injected into the page pretix shows when redirection to an untrusted page occurs. Since this page has a Content-Security-Policy, this can mainly be used for phishing purposes.",
+        "cveScore": 2.1,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-57235 - Nokogiri: Possible Out-of-Bounds Read in `Nokogiri::XML::NodeSet#[]`",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57235",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T14:31:10.000Z",
+        "contentSnippet": "Nokogiri is an open source XML and HTML library for the Ruby programming language. Prior to 1.19.4, Nokogiri::XML::NodeSet#[] (and its alias #slice) checked the requested index against the node set's bounds using a 32-bit-truncated copy of the index. A large negative index could ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-57234 - Nokogiri: XML::Schema on JRuby allows network requests when NONET is set, bypassing CVE-2020-26247",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57234",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T14:30:20.000Z",
+        "contentSnippet": "Nokogiri is an open source XML and HTML library for the Ruby programming language. Prior to 1.19.4, the NONET parse option, which Nokogiri turns on by default for Nokogiri::XML::Schema (see CVE-2020-26247), was not correctly enforced on the JRuby implementation. As a result, a sc",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-57535 - Adobe Reader SSRF",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57535",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T14:29:18.000Z",
+        "contentSnippet": "Content injected to PDF rendering contexts could, in many places, include HTML content including tags. If the src attribute of these images pointed to an URL, the PDF rendering engine would download the image from that place and display it, thereby leaking information about the r",
+        "cveScore": 2.1,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-57236 - Nokogiri: Possible Use-After-Free when `Nokogiri::XML::Document#encoding=` raises an exception",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57236",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T14:29:14.000Z",
+        "contentSnippet": "Nokogiri is an open source XML and HTML library for the Ruby programming language. Prior to 1.19.4, calling Document#encoding= with an invalid encoding (e.g., a non-string, or a string containing a null byte) raises an exception, but only after freeing the document's current enco",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-13225 - Stored XSS in ticket confirmation page",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13225",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T14:26:31.000Z",
+        "contentSnippet": "Malicious HTML content could be injected into the email address of an order, which pretix showed without sanitization on the confirmation page for individual tickets in that order.",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-49319 - Alps Electric Co., Ltd. R53R0 Remote Keyless Entry System (RKES) Replay Attack",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49319",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T14:11:18.000Z",
+        "contentSnippet": "Remote Keyless Entry System (RKES), using the 433 MHz key fob bearing FCC ID CWTR53R0 manufactured by ALPS ALPINE CO., LTD., is vulnerable to a roll-back attack against its rolling-code authentication. An attacker within RF range who records two consecutive lock or unlock transmi",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-57534 - Stored XSS in pretix-pages",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57534",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T14:11:13.000Z",
+        "contentSnippet": "Malicious HTML content could be injected into the content of a page in the pretix-pages plugin.",
+        "cveScore": 2.1,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-57536 - Insufficient validation of payment status in pretix-mollie",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57536",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T14:08:37.000Z",
+        "contentSnippet": "Our payment integration with Mollie did not properly validate payment status responses. An attacker could use a successful payment status response from one payment and supply it to the system for a different payment, gaining access to multiple valid tickets with only one payment.",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-13222 - Insufficient validation of payment status in pretix-oppwa",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13222",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T14:07:03.000Z",
+        "contentSnippet": "Our payment integration with Oppwa-based payment methods did not properly validate payment status responses. An attacker could use a successful payment status response from one payment and supply it to the system for a different payment, gaining access to multiple valid tickets w",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-13223 - Insufficient validation of payment status in pretix-computop",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13223",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T14:03:54.000Z",
+        "contentSnippet": "Our payment integration with Computop-based payment methods did not properly validate payment status responses. An attacker could use a successful payment status response from one payment and supply it to the system for a different payment, gaining access to multiple valid ticket",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-13314 - Stored XSS in pretix-digital",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13314",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T13:53:07.000Z",
+        "contentSnippet": "Malicious HTML content could be injected into the content rendered by the pretix-digital plugin.",
+        "cveScore": 2,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-6432 - Improper bounds validation in EmberZNet SDK",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6432",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T13:49:37.000Z",
+        "contentSnippet": "Improper bounds validation in EmberZNet SDK versions 9.0.2 and earlier may result in crashes or dynamic memory leakage.",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-46735 - Dell Display and Peripheral Manager (DDPM Mac), ve",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46735",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T13:48:48.000Z",
+        "contentSnippet": "Dell Display and Peripheral Manager (DDPM Mac), versions prior to 2.3, contain an Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, le",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-57588 - SQL Injection in Nessus via Malicious Scan Result File Import",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57588",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T13:47:27.000Z",
+        "contentSnippet": "A SQL injection vulnerability in Nessus allows an attacker to craft a malicious scan result file that, when imported by a privileged user, injects malicious SQL into the scan results database, potentially enabling exfiltration of scan-result data.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-57587 - SQL Injection in Nessus via Reverse DNS Lookup",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57587",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T13:47:27.000Z",
+        "contentSnippet": "A SQL injection vulnerability in Nessus allows a remote, unauthenticated attacker who controls reverse DNS records for a scanned host to inject malicious SQL into the scan results database, potentially enabling exfiltration of scan-result data.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-46734 - Dell Display and Peripheral Manager (DDPM Mac), ve",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46734",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T13:43:51.000Z",
+        "contentSnippet": "Dell Display and Peripheral Manager (DDPM Mac), versions prior to 2.3, contain an Improper Certificate Validation vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Protection mechanism bypass.",
+        "cveScore": 7.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-47154 - Simple Metering GetProfileResponse interval-bounds bug in EmberZNet v9.0.2",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47154",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T13:43:10.000Z",
+        "contentSnippet": "In EmberZNet v9.0.2 and earlier, a malformed GetProfileResponse message can trigger out-of-bounds reads while iterating interval entries and terminate the process. These messages must come from a device that has already joined the network, and no information leakage back to the s",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-47153 - Level Control Step With On/Off divide-by-zero in EmberZNet v9.0.2",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47153",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T13:42:16.000Z",
+        "contentSnippet": "In EmberZNet v9.0.2 and earlier, a malformed Level Control Step command can terminate the process through a divide-by-zero fault. This command must come from a device that has already joined the network. Only devices supporting the Level Control cluster may be impacted.",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-47152 - Level Control Move divide-by-zero in EmberZNet v9.0.2",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47152",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T13:41:28.000Z",
+        "contentSnippet": "In EmberZNet v9.0.2 and earlier, a malformed Level Control Move command can terminate the process through a divide-by-zero fault. This command must come from a device that has already joined the network. Only devices supporting the Level Control cluster may be impacted.",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-33612 - ZoneToCache can poison the cache",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-33612",
@@ -677,234 +902,44 @@
         "contentSnippet": "Quest NetVault Backup NVBUDashboard SQL Injection Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Quest NetVault Backup. Although authentication is required to exploit this vulnerability, the e",
         "cveScore": 8.8,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-9785 - Quest NetVault Backup NVBULibrarySlot SQL Injection Remote Code Execution Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9785",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T23:14:57.000Z",
-        "contentSnippet": "Quest NetVault Backup NVBULibrarySlot SQL Injection Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Quest NetVault Backup. Although authentication is required to exploit this vulnerability, the",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-9784 - Quest NetVault Backup NVBULibraryPort SQL Injection Remote Code Execution Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9784",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T23:14:48.000Z",
-        "contentSnippet": "Quest NetVault Backup NVBULibraryPort SQL Injection Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Quest NetVault Backup. Although authentication is required to exploit this vulnerability, the",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-9783 - Quest NetVault Backup NVBURemovableMedia SQL Injection Remote Code Execution Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9783",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T23:14:39.000Z",
-        "contentSnippet": "Quest NetVault Backup NVBURemovableMedia SQL Injection Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Quest NetVault Backup. Although authentication is required to exploit this vulnerability, ",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-39951 - Cacti: Stored SQL Injection via graph_name_regexp in Reports feature",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-39951",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T23:14:39.000Z",
-        "contentSnippet": "Cacti is an open source performance and fault management framework. Versions 1.2.30 and prior have a Stored SQL Injection vulnerability through graph_name_regexp in the Reports feature. This issue has been fixed in version 1.2.31.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-9782 - Quest NetVault Backup NVBUDeviceDrive SQL Injection Remote Code Execution Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9782",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T23:14:30.000Z",
-        "contentSnippet": "Quest NetVault Backup NVBUDeviceDrive SQL Injection Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Quest NetVault Backup. Although authentication is required to exploit this vulnerability, the",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-9781 - Quest NetVault Backup NVBURASDevice SQL Injection Remote Code Execution Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9781",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T23:14:05.000Z",
-        "contentSnippet": "Quest NetVault Backup NVBURASDevice SQL Injection Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Quest NetVault Backup. Although authentication is required to exploit this vulnerability, the e",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-9780 - Quest NetVault Backup addclient3 Cross-Site Scripting Authentication Bypass Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9780",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T23:13:55.000Z",
-        "contentSnippet": "Quest NetVault Backup addclient3 Cross-Site Scripting Authentication Bypass Vulnerability. This vulnerability allows remote attackers to bypass authentication on affected installations of Quest NetVault Backup. User interaction is required to exploit this vulnerability in that th",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-7570 - Quest NetVault Backup NVBUDashboard SQL Injection Remote Code Execution Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-7570",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T23:13:47.000Z",
-        "contentSnippet": "Quest NetVault Backup NVBUDashboard SQL Injection Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Quest NetVault Backup. Although authentication is required to exploit this vulnerability, the e",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-39948 - Cacti has SQL Injection via rfilter parameter in RLIKE clauses",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-39948",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T23:06:39.000Z",
-        "contentSnippet": "Cacti is an open source performance and fault management framework. In versions 1.2.30 and prior, the rfilter request parameter is retrieved via the raw accessor grv() (rather than gfrv() with FILTER_VALIDATE_IS_REGEX validation) and concatenated directly into RLIKE SQL clauses i",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-39955 - Cacti has Pre-Authentication SQL Injection via unanchored FILTER_VALIDATE_REGEXP in graph_view.php",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-39955",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T22:49:13.000Z",
-        "contentSnippet": "Cacti is an open source performance and fault management framework. Versions 1.2.30 and prior have pre-authentication SQL Injection via unanchored FILTER_VALIDATE_REGEXP in graph_view.php. This issue has been fixed in version 1.2.31.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-39938 - Cacti: Unauthenticated RCE on Graph Image",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-39938",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T22:41:04.000Z",
-        "contentSnippet": "Cacti is an open source performance and fault management framework. Versions 1.2.30 and prior have unauthenticated LFI through graph_theme and rrdtool IPC serialization hardening. This issue has been resolved in version 1.2.31.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-39900 - Cacti: Reflected XSS via tab parameter in auth_profile.php JavaScript context",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-39900",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T22:37:17.000Z",
-        "contentSnippet": "Cacti is an open source performance and fault management framework. Versions 1.2.30 and prior are vulnerable to Reflected XSS via tab parameter in the auth_profile.php JavaScript context. This issue has been fixed in version 1.2.31.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-39899 - Cacti: Path Traversal via filename parameter in package_import.php",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-39899",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T22:33:14.000Z",
-        "contentSnippet": "Cacti is an open source performance and fault management framework. Versions 1.2.30 and prior are vulnerable to Path Traversal via filename parameter in package_import.php. This issue has been fixed in version 1.2.31.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2025-8106",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-8106",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T22:20:00.000Z",
-        "contentSnippet": "None",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-39897 - Cacti has a Reflected XSS Vulnerability via html_auth_footer",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-39897",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T22:00:56.000Z",
-        "contentSnippet": "Cacti is an open source performance and fault management framework. Versions 1.2.30 and below contain a Reflected XSS vulnerability in the html_auth_footer. This issue has been fixed in version 1.2.31.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-39894 - Cacti: RRDtool metric shift via LC_NUMERIC locale comma decimal formatting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-39894",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T21:55:49.000Z",
-        "contentSnippet": "Cacti is an open source performance and fault management framework. In versions 1.2.30 and below, the locale-dependent decimal formatting in rrdtool_function_update() can corrupt RRDtool metric values. The rrdtool_function_update() function checks metric values with is_numeric() ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-39893 - Cacti: Pre-authentication SQL injection via rfilter RLIKE clause in graph_view.php",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-39893",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T21:45:34.000Z",
-        "contentSnippet": "Cacti is an open source performance and fault management framework. In versions 1.2.30 and prior, the rfilter request variable was concatenated into a RLIKE SQL clause without sanitization. The endpoint does not require authentication (graph viewing supports guest access via the ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-2050 - GIMP HDR File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-2050",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T21:43:46.000Z",
-        "contentSnippet": "GIMP HDR File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of GIMP. User interaction is required to exploit this vulnerability in that the target must visit a",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-49979 - Appsmith: SSRF via `POST /api/v1/admin/send-test-email` — JavaMail Bypasses WebClient IP Filter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49979",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T21:38:50.000Z",
-        "contentSnippet": "Appsmith is a platform to build admin panels, internal tools, and dashboards. Prior to 1.99, the POST /api/v1/admin/send-test-email endpoint accepts attacker-controlled smtpHost and smtpPort values and establishes a raw JavaMail TCP connection without any IP validation. This comp",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-55454 - Appsmith: Caddy admin API exposed without authentication",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55454",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T21:38:07.000Z",
-        "contentSnippet": "Appsmith is a platform to build admin panels, internal tools, and dashboards. Prior to 2.1, the bundled Caddy reverse-proxy's admin API — which has no authentication by default — is bound on 0.0.0.0:2019 inside the container. While this listener is not directly published to the h",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-9779 - ATEN Unizon doCryptoHugeFileToFile Improper Verification of Cryptographic Signature Remote Code Execution Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9779",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T21:37:16.000Z",
-        "contentSnippet": "ATEN Unizon doCryptoHugeFileToFile Improper Verification of Cryptographic Signature Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of ATEN Unizon. Authentication is required to exploit this vulne",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-9778 - ATEN Unizon ImportDeviceList Directory Traversal Remote Code Execution Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9778",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T21:37:09.000Z",
-        "contentSnippet": "ATEN Unizon ImportDeviceList Directory Traversal Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of ATEN Unizon. Authentication is required to exploit this vulnerability. The specific flaw exists ",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-9777 - ATEN Unizon restoreDB Directory Traversal Remote Code Execution Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9777",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T21:36:58.000Z",
-        "contentSnippet": "ATEN Unizon restoreDB Directory Traversal Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of ATEN Unizon. Authentication is required to exploit this vulnerability. The specific flaw exists within ",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-9776 - ATEN Unizon writeFileToHttpServletResponse Directory Traversal Information Disclosure Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9776",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T21:36:49.000Z",
-        "contentSnippet": "ATEN Unizon writeFileToHttpServletResponse Directory Traversal Information Disclosure Vulnerability. This vulnerability allows remote attackers to disclose sensitive information on affected installations of ATEN Unizon. Authentication is not required to exploit this vulnerability",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-9775 - ATEN Unizon uploadSSL Directory Traversal Arbitrary File Deletion Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9775",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T21:36:42.000Z",
-        "contentSnippet": "ATEN Unizon uploadSSL Directory Traversal Arbitrary File Deletion Vulnerability. This vulnerability allows remote attackers to delete arbitrary files on affected installations of ATEN Unizon. Authentication is required to exploit this vulnerability. The specific flaw exists withi",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
+      {
+        "title": "Optimize model training on Amazon SageMaker AI with NVIDIA Blackwell",
+        "link": "https://aws.amazon.com/blogs/machine-learning/optimize-model-training-on-amazon-sagemaker-ai-with-nvidia-blackwell/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-06-25T16:41:47.000Z",
+        "contentSnippet": "This post shows you how to configure training jobs on Amazon SageMaker AI to get the most out of Blackwell’s architecture on AWS. You learn how to select batch sizes and sequence lengths that take advantage of Blackwell’s expanded memory, choose the right precision format for you"
+      },
+      {
+        "title": "Implementing super resolution by deploying SeedVR2 on Amazon SageMaker AI",
+        "link": "https://aws.amazon.com/blogs/machine-learning/implementing-super-resolution-by-deploying-seedvr2-on-amazon-sagemaker-ai/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-06-25T16:40:13.000Z",
+        "contentSnippet": "In this post, we demonstrate how to implement video upscaling using SeedVR2 on SageMaker AI. We cover the solution architecture, walk through the deployment steps, and show performance comparisons that highlight the quality improvements and processing efficiency you can achieve. "
+      },
+      {
+        "title": "Build self-service AWS Health analytics to find actionable health insights with AI agents powered by Amazon Bedrock",
+        "link": "https://aws.amazon.com/blogs/machine-learning/build-self-service-aws-health-analytics-to-find-actionable-health-insights-with-ai-agents-powered-by-amazon-bedrock/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-06-25T16:38:12.000Z",
+        "contentSnippet": "In this post, we show you how to build Chaplin (Customer Health and Planned Lifecycle Intelligence Nexus), an open source solution that uses AI agents exposed through the Model Context Protocol (MCP) to provide self-service health event analytics."
+      },
+      {
+        "title": "Building agentic AI applications with a modern data mesh strategy on AWS",
+        "link": "https://aws.amazon.com/blogs/machine-learning/building-agentic-ai-applications-with-a-modern-data-mesh-strategy-on-aws/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-06-25T16:35:07.000Z",
+        "contentSnippet": "This post shows how to build a governed, serverless data mesh on AWS that provides the secure, scalable data foundation production agentic AI requires."
+      },
+      {
+        "title": "Our latest Google Finance upgrades, including a new app",
+        "link": "https://blog.google/products-and-platforms/products/search/google-finance-updates-june-2026/",
+        "source": "Google AI Blog",
+        "isoDate": "2026-06-25T16:00:00.000Z",
+        "contentSnippet": "The new Google Finance is coming out of beta and launching a new Android app."
+      },
       {
         "title": "Baidu Releases Unlimited OCR, a 3B Model That Keeps the KV Cache Flat for Long-Document Parsing",
         "link": "https://www.marktechpost.com/2026/06/24/baidu-releases-unlimited-ocr-a-3b-model-that-keeps-the-kv-cache-flat-for-long-document-parsing/",
@@ -1569,41 +1604,6 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-06-11T15:11:56.000Z",
         "contentSnippet": "Blueprint instruction optimization is a BDA feature that automatically refines your extraction instructions to address this challenge directly. You provide three to ten example documents with expected values, and BDA refines your blueprint instructions to improve accuracy in minu"
-      },
-      {
-        "title": "Nous Research Ships Hermes Agent Profile Builder: Identity, Model, Skills, and MCP Servers in One Dashboard Flow",
-        "link": "https://www.marktechpost.com/2026/06/11/nous-research-ships-hermes-agent-profile-builder-identity-model-skills-and-mcp-servers-in-one-dashboard-flow/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-06-11T09:53:52.000Z",
-        "contentSnippet": "The Hermes Agent dashboard now builds complete agent profiles in one flow, replacing multi-step CLI setup for users. The post Nous Research Ships Hermes Agent Profile Builder: Identity, Model, Skills, and MCP Servers in One Dashboard Flow appeared first on MarkTechPost."
-      },
-      {
-        "title": "Meet ‘North Mini Code’: Cohere’s 30B Open-Weight Mixture-of-Experts Model With 3B Active Parameters for Agentic Coding",
-        "link": "https://www.marktechpost.com/2026/06/11/meet-north-mini-code-coheres-30b-open-weight-mixture-of-experts-model-with-3b-active-parameters-for-agentic-coding/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-06-11T08:33:27.000Z",
-        "contentSnippet": "Cohere's first developer coding model is a 30B mixture-of-experts running on a single H100 with 256K context length. The post Meet ‘North Mini Code’: Cohere’s 30B Open-Weight Mixture-of-Experts Model With 3B Active Parameters for Agentic Coding appeared first on MarkTechPost."
-      },
-      {
-        "title": "How frontier teams are reinventing AI-native development",
-        "link": "https://aws.amazon.com/blogs/machine-learning/how-frontier-teams-are-reinventing-ai-native-development/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-06-11T00:54:42.000Z",
-        "contentSnippet": "Frontier teams are not just using AI to code faster. They’re redesigning how software gets built. The result is 4.5x productivity gains, in some cases more than 10x."
-      },
-      {
-        "title": "A Coding Implementation on Microsoft SkillOpt for Instrumented Prompt Optimization, Skill Evolution Analysis, and Baseline Comparison",
-        "link": "https://www.marktechpost.com/2026/06/10/a-coding-implementation-on-microsoft-skillopt-for-instrumented-prompt-optimization-skill-evolution-analysis-and-baseline-comparison/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-06-10T22:07:13.000Z",
-        "contentSnippet": "We implement an instrumented workflow for Microsoft SkillOpt end to end. We set up the repository, connect OpenAI-compatible model access, and configure the optimizer and target models. We evaluate the original seed skill as a baseline, then run a real optimization loop with roll"
-      },
-      {
-        "title": "Google AI Releases DiffusionGemma, a 26B MoE Open Model Using Text Diffusion for Up to 4x Faster Generation",
-        "link": "https://www.marktechpost.com/2026/06/10/google-ai-releases-diffusiongemma-a-26b-moe-open-model-using-text-diffusion-for-up-to-4x-faster-generation/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-06-10T18:50:51.000Z",
-        "contentSnippet": "DiffusionGemma is Google DeepMind's experimental 26B open model using text diffusion for up to 4x faster generation on GPUs. The post Google AI Releases DiffusionGemma, a 26B MoE Open Model Using Text Diffusion for Up to 4x Faster Generation appeared first on MarkTechPost."
       }
     ],
     "virtualization": [
@@ -2120,6 +2120,90 @@
       }
     ],
     "hardware": [
+      {
+        "title": "Scalpers circle AMD's Ryzen 7 5800X3D 10th Anniversary Edition, asking for $600 or more — re-released CPU sees inconsistent inventory on release day",
+        "link": "https://www.tomshardware.com/pc-components/cpus/scalpers-circle-amds-ryzen-7-5800x3d-10th-anniversary-edition-asking-for-usd600-or-more-re-released-cpu-sees-inconsistent-inventory-on-release-day",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-25T16:58:05.000Z",
+        "contentSnippet": "Scalpers are trying to capitalize on the release of the Ryzen 7 5800X3D 10th Anniversary Edition, asking nearly double the CPU's suggested retail price."
+      },
+      {
+        "title": "Save up to 45% on SteelSeries headsets, keyboards, and mice — Arctic Nova Pro headset, Apex Pro keyboards, Aerox 5 mouse, and more, are on deep discounts right now",
+        "link": "https://www.tomshardware.com/pc-components/save-up-to-45-percent-on-steelseries-headsets-keyboards-and-mice-arctic-nova-pro-headset-apex-pro-keyboards-aerox-5-mouse-and-more-are-on-deep-discounts-right-now",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-25T16:36:11.000Z",
+        "contentSnippet": "Take advantage of these Steelseries deals - up to 45% off includes Arctis gaming headsets and GameBuds to Apex Pro keyboards and Aerox mice, now is a great time to upgrade your gaming setup"
+      },
+      {
+        "title": "Prime Day gaming monitor deals live 2026 — hot sales on the best monitors from Amazon, Newegg, Dell, Best Buy, and more",
+        "link": "https://www.tomshardware.com/live/news/prime-day-gaming-monitor-deals-live-2026",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-25T16:34:18.000Z",
+        "contentSnippet": "The best Amazon Prime Day 2026 monitor sales, live round-the-clock coverage of all the best deals."
+      },
+      {
+        "title": "AMD Ryzen 7 5800X3D re-review: Maxing out DDR4’s gaming potential",
+        "link": "https://www.tomshardware.com/pc-components/cpus/amd-ryzen-7-5800x3d-2026-cpu-review",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-25T16:25:37.000Z",
+        "contentSnippet": "AMD has re-released the Ryzen 7 5800X3D to provide some relief from high DDR5 prices, so we’re re-reviewing the CPU to see how it stacks up to current options around the same price."
+      },
+      {
+        "title": "B&H's RAM bundles blowout offers 32GB of DDR5 memory for around $250 — save on multiple bundles, including Ryzen 7 9850X3D, DDR5, and a motherboard",
+        "link": "https://www.tomshardware.com/pc-components/b-and-hs-bundles-blowout-offers-32gb-of-ddr5-memory-for-around-usd250-save-on-multiple-bundles-including-ryzen-7-9850x3d-ddr5-and-a-motherboard",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-25T16:25:00.000Z",
+        "contentSnippet": "B&H has several bundles on sale right now, offering 32GB of DDR5 memory for around $250 with a motherboard and AMD's Ryzen 7 9850X3D."
+      },
+      {
+        "title": "Riot Vanguard finally drops its controversial always-on requirement for anti-cheat — new on-demand mode requires a strict Windows 11 security stack",
+        "link": "https://www.tomshardware.com/video-games/pc-gaming/riot-vanguard-adds-an-on-demand-mode-that-stops-anti-cheat-loading-at-boot-on-secured-windows-11-pcs",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-25T16:23:48.000Z",
+        "contentSnippet": "Riot Games has announced that it plans to let players stop its Vanguard anti-cheat from loading on startup."
+      },
+      {
+        "title": "Beat Apple's price increases on new MacBooks with these stellar deals that can save you up to $500 — big sale on current-gen Pro, Air, and Neo models, avoid new price hikes with extra discounts on top",
+        "link": "https://www.tomshardware.com/laptops/macbooks/beat-apples-price-increases-on-new-macbooks-with-these-stellar-deals-that-can-save-you-up-to-usd500-big-sale-on-current-gen-pro-air-and-neo-models-avoid-new-price-hikes-with-extra-discounts-on-top",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-25T16:02:19.000Z",
+        "contentSnippet": "Apple is raising MacBook pricing by hundreds of dollars, but these sale week deals are still live, so grab a bargain while you can."
+      },
+      {
+        "title": "The AI tokenmaxxing party is crashing over spiraling costs — leaked consulting firm audio suggests no one is sure how to measure AI effectiveness",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/the-ai-tokenmaxxing-party-is-crashing-over-spiraling-costs-leaked-consulting-firm-audio-suggests-no-one-is-sure-how-to-measure-ai-effectiveness",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-25T15:27:41.000Z",
+        "contentSnippet": "A recording from a meeting at consulting firm Accenture has raised concerns over how much companies are spending on AI. As companies bullish on AI rush to take advantage of the technology, solutions to out of control token spend could see non-technical employees encouraged to sto"
+      },
+      {
+        "title": "Dell PowerEdge XE8812 Brings NVIDIA Vera Rubin NVL4 to HPC, Up to 144 GPUs Per Rack",
+        "link": "https://www.storagereview.com/news/dell-poweredge-xe8812-brings-nvidia-vera-rubin-nvl4-to-hpc-up-to-144-gpus-per-rack",
+        "source": "StorageReview",
+        "isoDate": "2026-06-25T15:15:05.000Z",
+        "contentSnippet": "Dell Technologies has introduced the PowerEdge XE8812, a new liquid-cooled server platform designed for large-scale inference and high-performance computing workloads. The system joins the Dell AI Factory with the NVIDIA portfolio. It is built around the NVIDIA Vera Rubin NVL4 ar"
+      },
+      {
+        "title": "Qualcomm Unveils Dragonfly Data Center Roadmap: C1000 CPU, AI300 Accelerator, and Modular Acquisition",
+        "link": "https://www.storagereview.com/news/qualcomm-unveils-dragonfly-data-center-roadmap-c1000-cpu-ai300-accelerator-and-modular-acquisition",
+        "source": "StorageReview",
+        "isoDate": "2026-06-25T15:02:21.000Z",
+        "contentSnippet": "Qualcomm Technologies had a full plate during its 2026 Investor Day, laying out an aggressive data center strategy built around three major announcements: the acquisition of AI software company Modular Inc., the introduction of the Dragonfly C1000 CPU and expanded inference accel"
+      },
+      {
+        "title": "ASUS beta BIOS updates restore Ryzen 9000 memory encryption ahead of AMD’s July timeline — TSME returns to select AM5 boards after silent backlash over removal",
+        "link": "https://www.tomshardware.com/pc-components/cpus/asus-beta-bios-updates-restore-ryzen-9000-memory-encryption-ahead-of-amds-july-timeline-tsme-returns-to-select-am5-boards-after-silent-backlash-over-removal",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-25T14:54:06.000Z",
+        "contentSnippet": "ASUS has released beta BIOS updates for several X870, B850, and X670 AM5 motherboards, restoring Transparent Secure Memory Encryption support for non-Pro Ryzen 9000 CPUs."
+      },
+      {
+        "title": "Want an RTX 5070 Ti? Here’s where to get one for $899 — don't pay retail and save $220 today",
+        "link": "https://www.tomshardware.com/pc-components/gpus/want-an-rtx-5070-ti-heres-where-to-get-one-for-usd899-dont-pay-retail-and-save-usd220-today",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-25T14:28:00.000Z",
+        "contentSnippet": "Newegg has the Gigabyte GeForce RTX 5070 Ti Eagle OC Ice SFF 16G graphics card up for sale for $899 after direct discounts."
+      },
       {
         "title": "RAM crisis bites Apple as unprecedented Mac and iPad price rises arrive — cheapest MacBook Pro price hiked by $400 to $1,999",
         "link": "https://www.tomshardware.com/laptops/macbooks/ram-crisis-bites-apple-as-unprecedented-mac-and-ipad-price-rises-arrive-cheapest-macbook-pro-price-hiked-by-usd400-to-usd1-999",
@@ -2735,90 +2819,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-06-22T17:44:51.000Z",
         "contentSnippet": "The TanSon Precision Electric Screwdriver 71-in-1 cordless rechargeable 3.7V portable repair tool set has been slashed from $99.99 to $49.99 for Prime Day."
-      },
-      {
-        "title": "Anthropic’s powerful Mythos AI reportedly breached ‘almost all’ NSA classified systems within a few hours during red-team test — report sheds more light on the U.S. government's sudden ban on the flag",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropics-powerful-mythos-ai-reportedly-breached-almost-all-nsa-classified-systems-within-a-few-hours-during-red-team-test-report-sheds-more-light-on-the-u-s-governments-sudden-ban-on-the-flagship-models",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-22T17:26:29.000Z",
-        "contentSnippet": "Anthropic’s Mythos AI reportedly breached nearly all NSA classified systems during a controlled red-team test, according to a quote cited by The Economist. The report adds context to the U.S. government’s sudden restriction on Anthropic’s latest models."
-      },
-      {
-        "title": "This is the Storage of Spaceborne Computer 4 Bringing AI Compute to the Moon",
-        "link": "https://www.servethehome.com/this-is-the-storage-kioxia-hpe-spaceborne-computer-4-bringing-ai-compute-to-the-moon/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-06-22T17:00:45.000Z",
-        "contentSnippet": "We found a HPE Spaceborne Computer 4 compute module bringing AI inference to the moon later this year and the storage may surprise you The post This is the Storage of Spaceborne Computer 4 Bringing AI Compute to the Moon appeared first on ServeTheHome."
-      },
-      {
-        "title": "Valve opens Steam Machine reservations — details $1,049 starting price, randomized queue to stop scalpers, and limited inventory",
-        "link": "https://www.tomshardware.com/video-games/console-gaming/valve-opens-steam-machine-reservations-details-usd1-049-starting-price-randomized-queue-to-stop-scalpers-and-limited-inventory",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-22T17:00:00.000Z",
-        "contentSnippet": "In a blog post, Valve explained its new randomized reservation systems, new tactics to stop scalpers, and why it has limited inventory."
-      },
-      {
-        "title": "Valve Steam Machine review: Couch gaming unboxed, but not always at 4K",
-        "link": "https://www.tomshardware.com/video-games/console-gaming/valve-steam-machine-review",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-22T17:00:00.000Z",
-        "contentSnippet": "Valve's Steam Machine is nice box to play PC games on your TV, and is well-designed. But you're not getting the latest hardware, despite a starting price above $1,000."
-      },
-      {
-        "title": "AMD brings official FSR 4.1 support to RX 7000 series GPUs — INT8 model now available in 300+ games, RDNA 3 APUs also getting FSR 4.1 soon",
-        "link": "https://www.tomshardware.com/pc-components/gpu-drivers/amd-brings-official-fsr-4-1-support-to-rx-7000-series-gpus-int8-model-now-available-in-300-games-rdna-3-apus-also-getting-fsr-4-1-soon",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-22T16:55:30.000Z",
-        "contentSnippet": "If you own an RX 7000 series GPU, you can update your graphics driver today and enjoy native FSR 4.1 in over 300 games thanks to INT8 fallback."
-      },
-      {
-        "title": "The secret to building a PC during the RAMpocalypse are bundles — here are some of the best ones, and why they're so popular",
-        "link": "https://www.tomshardware.com/pc-components/cpus/the-secret-to-building-a-pc-during-the-rampocalypse-are-bundles-here-are-some-of-the-best-ones-and-why-theyre-so-popular",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-22T16:38:14.000Z",
-        "contentSnippet": "PC component bundles are one of the few ways to still build a PC at a reasonable price. Here are some of the best deals, and why bundles are so popular."
-      },
-      {
-        "title": "This $1,479 Alienware gaming PC features an RTX 5070 and a Core Ultra 7 265F CPU — 4K-ready Aurora desktop is up to $850 off",
-        "link": "https://www.tomshardware.com/pc-components/this-usd1-479-alienware-gaming-pc-features-an-rtx-5070-and-a-core-ultra-7-265f-cpu-4k-ready-aurora-desktop-is-up-to-usd850-off",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-22T15:20:10.000Z",
-        "contentSnippet": "Save 36% on this Alienware Aurora R16 system when configurating it with an RTX 5070, bringing it down from its original price of $2,330 to just $1,479, and that's with a free Lego Batman game."
-      },
-      {
-        "title": "These are the best Prime Day deals I've found on tools I use to maintain my PC — from screwdrivers to air blowers, these tools will keep your PC in tip-top shape",
-        "link": "https://www.tomshardware.com/desktops/pc-building/best-pc-tool-deals",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-22T15:03:31.000Z",
-        "contentSnippet": "You really do need all of these tools to keep your electronics in good order, and luckily they are all on offer."
-      },
-      {
-        "title": "2003-era DDR2 memory prices jump up to 60% — AI-driven DRAM shortage reaches the oldest standard still in production",
-        "link": "https://www.tomshardware.com/pc-components/dram/ddr2-memory-prices-jump-up-to-60-percent",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-22T14:02:07.000Z",
-        "contentSnippet": "DDR2 contract prices rose 55% to 60% in the second quarter of the year and are projected to climb another 35% to 40% in the third."
-      },
-      {
-        "title": "Quake changed gaming forever 30 years ago today — seminal title established online multiplayer culture and made 3D graphics accelerators essential PC components",
-        "link": "https://www.tomshardware.com/video-games/pc-gaming/quake-changed-gaming-forever-30-years-ago-today-seminal-title-established-online-multiplayer-culture-and-made-3d-graphics-accelerators-essential-pc-components",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-22T13:53:11.000Z",
-        "contentSnippet": "On this day in 1996, id Software unleashed Quake on the unsuspecting public. The game’s influence is difficult to overstate, with its pioneering 3D engine inspiring the first wave of 3D accelerator PC expansion card purchases, the establishment of online multiplayer competitive c"
-      },
-      {
-        "title": "Massive 3D Printer sales bonanza kicks off with Prime Day — these are the best deals we've found so far",
-        "link": "https://www.tomshardware.com/3d-printing/massive-3d-printer-sales-bonanza-kicks-off-with-prime-day",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-22T13:47:30.000Z",
-        "contentSnippet": "There are some great 3D printer deals happening right now, and we've found the best and put them all into one page for you."
-      },
-      {
-        "title": "One of the best-looking gaming chairs of 2026 is less than half price ahead of Prime Day — Porsche-inspired Thermaltake Argent E700 is only $620, but stock is low",
-        "link": "https://www.tomshardware.com/pc-components/one-of-the-best-looking-gaming-chairs-of-2026-is-more-than-half-price-ahead-of-prime-day-porsche-inspired-thermaltake-argent-e700-is-only-usd620-but-stock-is-low",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-22T13:19:02.000Z",
-        "contentSnippet": "Made in collaboration with Studio F.A. Porsche, the Thermaltake Argent E700 combines genuine leather upholstery, polished aluminum accents, solid construction."
       }
     ]
   }
