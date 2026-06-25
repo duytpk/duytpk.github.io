@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-06-25T17:05:02.605Z",
+  "updatedAt": "2026-06-25T19:47:10.543Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-50548 - Cursor Desktop sandbox escape via agent-controlled working directory",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50548",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T18:47:56.000Z",
+        "contentSnippet": "Cursor is a code editor built for programming with AI. Prior to 3.0, Cursor runs agent terminal commands in a sandbox by default, and the sandbox grants write access to the command's working directory. A flaw was identified in how the agent could modify the working_directory para",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-50549 - Cursor Desktop sandbox escape via symlink and failed path canonicalization",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50549",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T18:47:45.000Z",
+        "contentSnippet": "Cursor is a code editor built for programming with AI. Prior to 3.0, Cursor runs agent terminal commands in a sandbox by default. Before a Write, the agent canonicalizes the target path to confirm it stays inside the workspace, but when canonicalization fails it falls back to the",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-54917 - SeaweedFS: Path traversal in the S3 and Iceberg REST gateways allows cross-bucket access",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54917",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T18:41:19.000Z",
+        "contentSnippet": "SeaweedFS is a distributed storage system for object storage (S3), file systems, and Iceberg tables. Prior to 4.30, the S3 API gateway and the Iceberg REST catalog gateway construct their routers with mux.NewRouter().SkipClean(true). With path cleaning disabled, a .. segment insi",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-4930 - DPA Countermeasures weakening on Series 3 devices",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-4930",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T18:39:26.000Z",
+        "contentSnippet": "SYMCRYPTO is the SiXG301's host side hardware engine accessed by PSA crypto library that accelerates symmetric cryptographic operations (AES encryption/decryption and hashing). DPA Countermeasures on SYMCRYPTO can be weakened (reduced entropy) by forcing certain seed values if an",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-28898 - swift-nio-http2 HTTP/2 to HTTP/1.1 Codec Control Character Header Injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-28898",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T18:36:54.000Z",
+        "contentSnippet": "swift-nio-http2's HTTP/2-to-HTTP/1.1 codec did not validate pseudo-header values for control characters before placing them into the translated HTTP/1.1 message. swift-nio-http2 1.44.1 adds validation of all pseudo-header values (:path, :authority, :scheme, :method, and :status) ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-56790 - CANBoat - Off-by-One Global Buffer Overflow in searchForPgn()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56790",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T18:14:48.000Z",
+        "contentSnippet": "CANBoat through 6.22, fixed in commit a5a22b7, contains an off-by-one global buffer overflow in the searchForPgn() function in analyzer/pgn.c that allows remote attackers to crash the application. Attackers can deliver a crafted NMEA-2000 message with an out-of-range PGN value ov",
+        "cveScore": 7.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-56789 - RTKLIB 2.4.3 - Heap Buffer Overflow and Stack Read via Oversized RINEX Epoch Satellite Count",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56789",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T18:14:05.000Z",
+        "contentSnippet": "RTKLIB through 2.4.3 contains a heap buffer overflow vulnerability in the readrnxobsb function in src/rinex.c that allows attackers to trigger memory corruption by failing to clamp satellite count values from RINEX epoch headers. Attackers can craft malicious RINEX files declarin",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-56788 - RTKLIB 2.4.3 - Out-of-bounds Read via Negative Array Index in getcodepri",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56788",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T18:13:15.000Z",
+        "contentSnippet": "RTKLIB through 2.4.3 contains an out-of-bounds read vulnerability in getcodepri function when processing unrecognized RINEX observation codes, allowing attackers to trigger denial of service. Crafted RINEX files with unknown observation types cause negative array indexing into th",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-56787 - RTKLIB 2.4.3 - Off-by-One Out-of-Bounds Read in decode_ssr3 via RTCM3 SSR Message",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56787",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T18:12:32.000Z",
+        "contentSnippet": "RTKLIB through 2.4.3 contains an off-by-one out-of-bounds read vulnerability in the decode_ssr3 function at src/rtcm3.c:1446 that allows remote attackers to trigger a global buffer overflow via crafted RTCM3 SSR messages with attacker-controlled signal mode fields. Remote attacke",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-56786 - RTKLIB 2.4.3 - Out-of-bounds Write in decode_type1033 via Crafted RTCM3 Message",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56786",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T18:11:55.000Z",
+        "contentSnippet": "RTKLIB through 2.4.3 contains an out-of-bounds write vulnerability in decode_type1033 function that fails to clamp length counters to destination buffer size, allowing up to 191-byte overflow into fixed 64-byte descriptor fields. An attacker controlling an NTRIP or serial RTCM3 c",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-56779 - MaxKB < 2.10.0 - Server-Side Request Forgery via downloadCallbackUrl and download_url Parameters",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56779",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T18:11:12.000Z",
+        "contentSnippet": "MaxKB before 2.10.0 contains a server-side request forgery vulnerability in tool creation and update endpoints that allows authenticated users to make arbitrary server requests by supplying unvalidated downloadCallbackUrl and download_url parameters. Attackers with default worksp",
+        "cveScore": 6.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-56774 - Kanboard - Cross-User Deletion of Persistent Login Sessions via Unvalidated Session ID",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56774",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T18:10:22.000Z",
+        "contentSnippet": "Kanboard through 1.2.52, fixed in commit 928c68a, UserViewController::removeSession fails to validate the session id parameter before passing it to RememberMeSessionModel::remove, allowing authenticated users to delete other users' Remember Me sessions. Attackers can enumerate se",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-56772 - NewsBlur < 14.5.0 - Insecure Direct Object Reference in Social Interactions Endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56772",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T18:08:13.000Z",
+        "contentSnippet": "NewsBlur before 14.5.0 contains a broken access control vulnerability that allows authenticated users to read private notification feeds by supplying arbitrary user_id values to the GET /social/interactions endpoint without ownership verification. Attackers can enumerate user_id ",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-56771 - NewsBlur < 14.5.0 - Server-Side Request Forgery via add_url Endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56771",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T18:07:31.000Z",
+        "contentSnippet": "NewsBlur before version 14.5.0 contains a server-side request forgery vulnerability in the add_url endpoint that allows authenticated users to make arbitrary server requests to internal networks by failing to filter private IP addresses. Attackers can exploit this to access local",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-56770 - libais 0.15 - Out-of-bounds Vector Access in VdmStream::AddLine via Invalid Sequential Message ID",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56770",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T18:06:39.000Z",
+        "contentSnippet": "libais through 0.15 VdmStream::AddLine uses an unchecked sentinel value as a vector index when processing AIS sentences with empty or out-of-range sequential message IDs. Remote attackers can crash services or vessel systems by sending crafted AIVDM sentences over VHF marine radi",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-46608 - Glances: XML-RPC Multi-Origin CORS Configuration Silently Falls Back to Wildcard (Incomplete Fix for CVE-2026-33533)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46608",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T18:05:48.000Z",
+        "contentSnippet": "Glances is an open-source system cross-platform monitoring tool. Prior to 4.5.5, the Glances XML-RPC server (glances -s) introduced a configurable CORS origin list in version 4.5.3 as a mitigation for CVE-2026-33533. However, the implementation silently falls back to Access-Contr",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-56769 - Huly Platform - Server-Side Request Forgery via /import Endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56769",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T18:05:45.000Z",
+        "contentSnippet": "Huly Platform before commit 68cbf8a contains an authenticated server-side request forgery vulnerability in the /import endpoint of front pod that allows workspace users to make arbitrary server requests. Attackers can exploit this by supplying malicious URLs to fetch internal ser",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-56768 - Seahub < 13.0.23 - Authentication Bypass in ShareLinkZipTaskView GET Method",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56768",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T18:05:06.000Z",
+        "contentSnippet": "Seahub before 13.0.23 does not enforce SHARE_LINK_LOGIN_REQUIRED on GET /api/v2.1/share-link-zip-task/, allowing unauthenticated users to bypass authentication. Attackers with a folder share-link token can call the GET endpoint to obtain a fileserver zip token and download entire",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-46607 - Glances: Insecure Pickle Deserialization in Version Cache Leads to Arbitrary Code Execution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46607",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T18:04:25.000Z",
+        "contentSnippet": "Glances is an open-source system cross-platform monitoring tool. Prior to 4.5.5, glances/outdated.py uses pickle.load() to read a version-check cache file stored at a predictable, world-accessible path (~/.cache/glances/glances-version.db or $XDG_CACHE_HOME/glances/glances-versio",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53925 - Glances: Arbitrary file write and command execution via `secure_popen` redirection and chaining operators in AMP command configuration",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53925",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T18:03:43.000Z",
+        "contentSnippet": "Glances is an open-source system cross-platform monitoring tool. From 4.0.8 until 4.5.5, the secure_popen() function in glances/secure.py interprets > (file redirection), | (pipe), and && (command chaining) operators in command strings. These operators are applied without any val",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-56767 - Maxun < 0.0.42 - Cross-Tenant IDOR in Storage and Webhook API Handlers",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56767",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T18:03:33.000Z",
+        "contentSnippet": "Maxun before 0.0.42 contains a cross-tenant insecure direct object reference vulnerability in storage and webhook API handlers that allows authenticated users to access other users' robots and OAuth tokens. Attackers can read plaintext Google and Airtable access tokens, modify, d",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-46606 - Glances: Command Injection via KVM/QEMU VM Domain Names in glances/plugins/vms/engines/virsh.py",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46606",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T18:02:14.000Z",
+        "contentSnippet": "Glances is an open-source system cross-platform monitoring tool. Prior to 4.5.5, the Glances KVM/QEMU monitoring engine (glances/plugins/vms/engines/virsh.py) passes VM domain names, read directly from virsh list --all output, into f-string command templates that are processed by",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-56766 - Hydra - Stack Buffer Overflow in NTLM Authentication Handler",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56766",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T18:01:07.000Z",
+        "contentSnippet": "Hydra through 9.7, fixed in commit 9cc84c2, contains a stack buffer overflow in NTLM authentication across SMTP, POP3, IMAP, NNTP, HTTP, HTTP-Proxy, and HTTP-Proxy-Urlenum modules when processing malicious NTLM Type-2 challenges. A malicious server can send a crafted NTLM Type-2 ",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-46611 - Glances: XML-RPC Server Missing Host Header Validation Enables DNS Rebinding Attack",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46611",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T18:00:47.000Z",
+        "contentSnippet": "Glances is an open-source system cross-platform monitoring tool. Prior to 4.5.5, the Glances XML-RPC server (glances -s, implemented in glances/server.py) does not validate the HTTP Host header, leaving it vulnerable to DNS rebinding attacks. An attacker can exploit DNS rebinding",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-12921 - Use after free in AzeoTech DAQFactory",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12921",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T17:57:54.000Z",
+        "contentSnippet": "In AzeoTech DAQFactory versions 21.1 and prior, a Use After Free vulnerability can be exploited by an attacker using specially crafted .ctl files which can result in code execution.",
+        "cveScore": 8.4,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-57437 - Nokogiri: Possible Use-After-Free when directly using `NokogirI::XML::XPathContext` beyond document lifetime",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-57437",
@@ -677,234 +902,16 @@
         "contentSnippet": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 9.3 before 18.11.6, 19.0 before 19.0.3, and 19.1 before 19.1.1 that under certain conditions could have allowed sensitive information to be written to application logs due to insufficient filtering in a CI",
         "cveScore": 4.4,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-10712 - Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') in GitLab",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10712",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T04:33:54.000Z",
-        "contentSnippet": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 18.10 before 18.11.6, 19.0 before 19.0.3, and 19.1 before 19.1.1 that under certain conditions could have allowed an unauthenticated user to execute arbitrary JavaScript in a user's browser session due to ",
-        "cveScore": 8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-11379 - Incorrect Authorization in GitLab",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11379",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T04:33:49.000Z",
-        "contentSnippet": "GitLab has remediated an issue in GitLab EE affecting all versions from 13.11 prior to 18.11.6, 19.0 prior to 19.0.3, and 19.1 prior to 19.1.1 in which incorrect authorization in DAST site profile management could allow a user with Developer role to exfiltrate DAST site profile s",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-12053 - Insertion of Sensitive Information into Log File in GitLab",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12053",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T04:33:44.000Z",
-        "contentSnippet": "GitLab has remediated an issue in GitLab EE affecting all versions from 19.1 before 19.1.1 that under certain conditions could have allowed a user to access sensitive information that had already been committed to a project, due to insufficient output filtering in Duo Workflows.",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-12635 - Reliance on Reverse DNS Resolution for a Security-Critical Action in GitLab",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12635",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T04:33:34.000Z",
-        "contentSnippet": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 8.3 before 18.11.6, 19.0 before 19.0.3, and 19.1 before 19.1.1 that under certain conditions could have allowed an authenticated user with maintainer-role permissions to make requests to internal network r",
-        "cveScore": 0,
-        "cveSeverity": "NONE"
-      },
-      {
-        "title": "CVE-2026-2508 - Gravity Forms Booking <= 2.7.1 - Authenticated (Subscriber+) Time-Based SQL Injection via 'staff_id'",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-2508",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T03:42:21.000Z",
-        "contentSnippet": "The Gravity Forms Booking plugin for WordPress is vulnerable to time-based SQL Injection via the ‘staff_id’ parameter in all versions up to, and including, 2.7.1 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL que",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-12077 - Dokan Pro <= 5.0.4 - Unauthenticated SQL Injection via 'latitude' and 'longitude' Parameters",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12077",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T03:42:21.000Z",
-        "contentSnippet": "The Dokan Pro plugin for WordPress is vulnerable to time-based SQL Injection via the via 'latitude' and 'longitude' parameters in all versions up to, and including, 5.0.4 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existin",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-12079 - Dokan Pro <= 5.0.4 - Authenticated (Subscriber+) SQL Injection via 'orderby' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12079",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T03:42:20.000Z",
-        "contentSnippet": "The Dokan Pro plugin for WordPress is vulnerable to time-based SQL Injection via the ’orderby’ parameter in all versions up to, and including, 5.0.4 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This make",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-10833 - Gutenberg Essential Blocks - Page Builder for Gutenberg Blocks & Patterns <= 6.1.4 - Authenticated (Contributor+) Stored Cross-Site Scripting via 'configurablePrefix' Block Attribute",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10833",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T03:42:20.000Z",
-        "contentSnippet": "The Gutenberg Essential Blocks – Page Builder for Gutenberg Blocks & Patterns plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'configurablePrefix' Block Attribute in all versions up to, and including, 6.1.4 due to insufficient input sanitization and outp",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-8658 - OS Command Injection in Rapid7 InsightConnect Tcpdump Plugin",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8658",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T01:56:51.000Z",
-        "contentSnippet": "OS Command Injection vulnerability in Rapid7 InsightConnect Tcpdump Plugin on Linux allows authenticated attackers to execute arbitrary OS commands via the options or filter parameters due to insufficient input sanitization in shell command construction.",
-        "cveScore": 6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-8662 - Path Traversal in Rapid7 InsightConnect Compression Plugin",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8662",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T01:51:33.000Z",
-        "contentSnippet": "Path Traversal vulnerability in the create_archive function of Rapid7 InsightConnect Compression Plugin on Linux allows authenticated attackers to write to unintended file paths via crafted filename input. The impact is limited to file corruption as content cannot be controlled b",
-        "cveScore": 3.3,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-8666 - OS Command Injection in Rapid7 InsightConnect Traceroute Plugin",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8666",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T01:35:49.000Z",
-        "contentSnippet": "OS Command Injection vulnerability in the traceroute action of Rapid7 InsightConnect Traceroute Plugin on Linux allows remote attackers to execute arbitrary OS commands via the host, port, max_ttl, count, or time_out request parameters due to insufficient input validation when co",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-8592 - OS Command Injection in Rapid7 InsightConnect AWK Plugin",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8592",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T01:32:22.000Z",
-        "contentSnippet": "OS Command Injection vulnerability in the process_string action of Rapid7 InsightConnect AWK Plugin on Linux allows remote attackers to execute arbitrary OS commands via the text or expression parameters due to unsafe shell command construction in the processing pipeline.",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-8664 - OS Command Injection in Rapid7 InsightConnect Finger Plugin",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8664",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T01:28:14.000Z",
-        "contentSnippet": "OS Command Injection vulnerability in Rapid7 InsightConnect Finger Plugin on Linux allows authenticated attackers to execute arbitrary OS commands via the user or host parameters due to insufficient input validation in shell command construction.",
-        "cveScore": 6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-8665 - OS Command Injection in Rapid7 InsightConnect Translate Plugin",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8665",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T01:12:00.000Z",
-        "contentSnippet": "OS Command Injection vulnerability in the TR action of Rapid7 InsightConnect Translate Plugin on Linux allows remote attackers to execute arbitrary OS commands via the text or expression parameters due to insufficient input sanitization in shell command construction.",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-8660 - OS Command Injection in Rapid7 InsightConnect Ping Plugin",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8660",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T00:52:34.000Z",
-        "contentSnippet": "OS Command Injection vulnerability in the ping action of Rapid7 InsightConnect Ping Plugin on Linux allows remote attackers to execute arbitrary OS commands via the host parameter due to insufficient input validation when constructing shell commands.",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57589 - OpenBSD Use-After-Free Privilege Escalation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57589",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T00:33:04.000Z",
-        "contentSnippet": "sys/kern/sysv_sem.c in OpenBSD through 7.9 has a use-after-free allowing local privilege escalation to root. This is a context switch use-after-free after tsleep in sys_semget().",
-        "cveScore": 7.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-9153 - Arbitrary File Read in Rapid7 InsightConnect Sed Plugin",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9153",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T00:33:02.000Z",
-        "contentSnippet": "Arbitrary File Read vulnerability in Rapid7 InsightConnect Sed Plugin on Linux allows authenticated attackers to read arbitrary files via the expression parameter due to insufficient input validation.",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-9154 - Arbitrary File Write in Rapid7 InsightConnect Sed Plugin",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9154",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T00:29:29.000Z",
-        "contentSnippet": "Arbitrary File Write vulnerability in Rapid7 InsightConnect Sed Plugin on Linux allows authenticated attackers to write attacker-controlled content to arbitrary file paths via the expression parameter.",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-9155 - OS Command Injection in Rapid7 InsightConnect Sed Plugin via expression parameter.",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9155",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T00:25:22.000Z",
-        "contentSnippet": "OS Command Injection vulnerability in Rapid7 InsightConnect Sed Plugin on Linux allows authenticated attackers to execute arbitrary OS commands via the expression parameter due to insufficient input validation.",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-8659 - OS Command Injection in Rapid7 InsightConnect SQLmap Plugin",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8659",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T00:07:16.000Z",
-        "contentSnippet": "OS Command Injection vulnerability in Rapid7 InsightConnect SQLmap Plugin on Linux allows authenticated attackers to execute arbitrary OS commands via the api_host or api_port parameters during connection configuration due to insufficient input validation.",
-        "cveScore": 6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-8663 - OS Command Injection in Rapid7 InsightConnect RPM Plugin",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8663",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T23:56:50.000Z",
-        "contentSnippet": "OS Command Injection vulnerability in Rapid7 InsightConnect RPM Plugin on Linux allows authenticated attackers to execute arbitrary OS commands via the repo, key, or name parameters due to insufficient input sanitization in shell command construction.",
-        "cveScore": 6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-40079 - Cacti: Command Injection via escape_command() no-op in RRDtool execution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-40079",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T23:26:40.000Z",
-        "contentSnippet": "Cacti is an open source performance and fault management framework. Versions 1.2.30 and prior are vulnerable to Command Injection due to lack of sanitization in the escape_command() function. The escape_command() function at lib/rrd.php is a no-op: it returns $command unchanged. ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-7569 - Quest NetVault Backup viewclient Cross-Site Scripting Authentication Bypass Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-7569",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T23:15:40.000Z",
-        "contentSnippet": "Quest NetVault Backup viewclient Cross-Site Scripting Authentication Bypass Vulnerability. This vulnerability allows remote attackers to bypass authentication on affected installations of Quest NetVault Backup. User interaction is required to exploit this vulnerability in that th",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-9787 - Quest NetVault Backup NVBULogDaemon Command Injection Remote Code Execution Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9787",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T23:15:19.000Z",
-        "contentSnippet": "Quest NetVault Backup NVBULogDaemon Command Injection Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Quest NetVault Backup. Although authentication is required to exploit this vulnerability, t",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-9786 - Quest NetVault Backup NVBUDashboard SQL Injection Remote Code Execution Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9786",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T23:15:05.000Z",
-        "contentSnippet": "Quest NetVault Backup NVBUDashboard SQL Injection Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Quest NetVault Backup. Although authentication is required to exploit this vulnerability, the e",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
+      {
+        "title": "Retrofit, don’t rebuild: Agentic overlays for transforming legacy enterprise services",
+        "link": "https://aws.amazon.com/blogs/machine-learning/retrofit-dont-rebuild-agentic-overlays-for-transforming-legacy-enterprise-services/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-06-25T17:55:10.000Z",
+        "contentSnippet": "In this technical collaboration between AWS and the authors, we present a pragmatic solution: agentic overlays. Agentic overlays are thin wrapper layers that transform traditional REST-based services into agents capable of participating in A2A interactions. They also expose REST "
+      },
       {
         "title": "Optimize model training on Amazon SageMaker AI with NVIDIA Blackwell",
         "link": "https://aws.amazon.com/blogs/machine-learning/optimize-model-training-on-amazon-sagemaker-ai-with-nvidia-blackwell/",
@@ -1597,13 +1604,6 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-06-11T15:36:31.000Z",
         "contentSnippet": "Today, we’re excited to announce two new capabilities that make Quick Sight dashboards even more expressive and business-aligned: sparklines and custom sort for controls. In this post, we walk through both features, what they are, when to use them, and how to configure them, with"
-      },
-      {
-        "title": "Optimize blueprint extraction accuracy in Amazon Bedrock Data Automation",
-        "link": "https://aws.amazon.com/blogs/machine-learning/optimize-blueprint-extraction-accuracy-in-amazon-bedrock-data-automation/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-06-11T15:11:56.000Z",
-        "contentSnippet": "Blueprint instruction optimization is a BDA feature that automatically refines your extraction instructions to address this challenge directly. You provide three to ten example documents with expected values, and BDA refines your blueprint instructions to improve accuracy in minu"
       }
     ],
     "virtualization": [
@@ -2120,6 +2120,20 @@
       }
     ],
     "hardware": [
+      {
+        "title": "Microsoft increases Xbox Series console prices for the third time in two years, kills off 2TB model — $100-$150 upswings on every model",
+        "link": "https://www.tomshardware.com/video-games/xbox/microsoft-increases-xbox-series-console-prices-for-the-third-time-in-two-years-kills-off-2tb-model-usd100-usd150-upswings-on-every-model",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-25T18:29:56.000Z",
+        "contentSnippet": "Microsoft increases Xbox Series console prices for the third time in two years — $100-$150 upswings on every model except the now-dead 2 TB version"
+      },
+      {
+        "title": "Epic boss Tim Sweeney blasts Steam for putting AI tags on games — says move is ‘irresponsible of Valve’",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/epic-boss-tim-sweeney-blasts-steam-for-putting-ai-tags-on-games-says-move-is-irresponsible-of-valve",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-25T17:05:41.000Z",
+        "contentSnippet": "The Epic executive said in an interview after unveiling Unreal Engine 6 that AI tools help make developers far more productive. Putting the AI tag on games discourage their use, especially as titles with this label gets fewer reviews and tend to have more negative reviews, as wel"
+      },
       {
         "title": "Scalpers circle AMD's Ryzen 7 5800X3D 10th Anniversary Edition, asking for $600 or more — re-released CPU sees inconsistent inventory on release day",
         "link": "https://www.tomshardware.com/pc-components/cpus/scalpers-circle-amds-ryzen-7-5800x3d-10th-anniversary-edition-asking-for-usd600-or-more-re-released-cpu-sees-inconsistent-inventory-on-release-day",
@@ -2805,20 +2819,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-06-22T18:12:44.000Z",
         "contentSnippet": "The MSI Cyborg 15 is $1,089 at Walmart during Amazon Prime Day."
-      },
-      {
-        "title": "Valve engineers talk Steam Machine, pricing, and the benefits of massive heatsinks — explain why Valve hardware needs to be a 'self-sustained program'",
-        "link": "https://www.tomshardware.com/video-games/console-gaming/valve-engineers-talk-steam-machine-pricing-and-the-benefits-of-massive-heatsinks-explain-why-valve-hardware-needs-to-be-a-self-sustained-program",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-22T18:00:00.000Z",
-        "contentSnippet": "We talked to Valve engineers Pierre-Loup Griffais and Yazan Aldehayyat ahead of the Steam Machine's launch to learn more about its pricing, engineering, and how the company is handling availability."
-      },
-      {
-        "title": "Get a half-price precision electric screwdriver set for PC builders and DIYers — ultimate Prime Day 71-in-1 set slashed to under $50",
-        "link": "https://www.tomshardware.com/desktops/pc-building/get-a-half-price-precision-electric-screwdriver-set-for-pc-builders-and-diyers-ultimate-prime-day-71-in-1-set-slashed-to-under-usd50",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-22T17:44:51.000Z",
-        "contentSnippet": "The TanSon Precision Electric Screwdriver 71-in-1 cordless rechargeable 3.7V portable repair tool set has been slashed from $99.99 to $49.99 for Prime Day."
       }
     ]
   }
