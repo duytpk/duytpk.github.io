@@ -1,8 +1,80 @@
 {
-  "updatedAt": "2026-06-25T11:33:24.012Z",
+  "updatedAt": "2026-06-25T14:07:12.177Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-33612 - ZoneToCache can poison the cache",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-33612",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T12:58:27.000Z",
+        "contentSnippet": "A malicious authoritative server can send a crafted zone via the ZoneToCache function that leads to cache poisoning.",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-42004 - EDNS options smuggling",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-42004",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T12:24:20.000Z",
+        "contentSnippet": "An attacker can send a crafted EDNS OPT record that will be ignored by DNSdist’s filtering rules, but will be rewritten as a valid OPT record when EDNS Client Subnet is inserted, causing the backend to see the EDNS option(s) that DNSdist did not filter.",
+        "cveScore": 3.7,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-40211 - Denial of service via crafted DoH3 queries",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-40211",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T12:23:55.000Z",
+        "contentSnippet": "An attacker can send crafted DNS over HTTP/3 queries, triggering an exception that prevents some buffer from being freed right away. The buffer will be freed at the end of the QUIC connection, but on some setups it might be possible to open enough concurrent DoH3 streams to trigg",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-40210 - Out-of-bounds read in SetMacAddrAction",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-40210",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T12:23:31.000Z",
+        "contentSnippet": "An out-of-bounds read might happen when SetMacAddrAction is used, potentially resulting in uninitialized memory being sent over the network or a crash.",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-40209 - Denial of service via IXFR queries",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-40209",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T12:23:05.000Z",
+        "contentSnippet": "An attacker might be able to cause outgoing TCP connections to backend to be stuck until a timeout occurs instead of being released immediately, by sending IXFR queries. This could be used to cause a denial of service if there is a limit to the number of concurrent connections to",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-40208 - Denial of service via DoH3 queries",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-40208",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T12:22:42.000Z",
+        "contentSnippet": "An attacker might be able to delay the processing of DoH3 queries by sending DoH3 GET queries with an invalid DATA frame.",
+        "cveScore": 3.7,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-40011 - Prometheus denial of service via crafted DNS queries",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-40011",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T12:22:19.000Z",
+        "contentSnippet": "An attacker sending a large number of crafted DNS queries might be able to trigger a dynamic block being inserted with a value causing invalid output to be produced in the prometheus endpoint. The prometheus endpoint will then be rejected by the scraper until the dynamic block ex",
+        "cveScore": 3.7,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-42005 - Insufficient input validation of internal web server",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-42005",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T11:57:16.000Z",
+        "contentSnippet": "An attacker can send a web request that causes unlimited memory allocation in the internal web server, leading to a denial of service. The internal web server is disabled by default.",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
       {
         "title": "CVE-2026-56091 - Apache Shiro: Authentication bypass in Guice-Web integration",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-56091",
@@ -830,78 +902,6 @@
         "contentSnippet": "ATEN Unizon uploadSSL Directory Traversal Arbitrary File Deletion Vulnerability. This vulnerability allows remote attackers to delete arbitrary files on affected installations of ATEN Unizon. Authentication is required to exploit this vulnerability. The specific flaw exists withi",
         "cveScore": 5.5,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-9774 - ATEN Unizon updateLicense Directory Traversal Arbitrary File Deletion Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9774",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T21:36:35.000Z",
-        "contentSnippet": "ATEN Unizon updateLicense Directory Traversal Arbitrary File Deletion Vulnerability. This vulnerability allows remote attackers to delete arbitrary files on affected installations of ATEN Unizon. Authentication is required to exploit this vulnerability. The specific flaw exists w",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-55455 - Appsmith: SSRF in REST API / GraphQL datasource plugins via insufficient host denylist",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55455",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T21:36:21.000Z",
-        "contentSnippet": "Appsmith is a platform to build admin panels, internal tools, and dashboards. Prior to 2.1, the outbound HTTP host filter applied by WebClientUtils (used by the REST API and GraphQL datasource plugins) validates hosts against an exact-match string denylist. The comprehensive addr",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-10043 - MosaicML Composer Deserialization of Untrusted Data Remote Code Execution Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10043",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T21:36:05.000Z",
-        "contentSnippet": "MosaicML Composer Deserialization of Untrusted Data Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of MosaicML Composer. User interaction is required to exploit this vulnerability in that the tar",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-9773 - Unraid Web Server ToggleState Command Injection Remote Code Execution Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9773",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T21:35:35.000Z",
-        "contentSnippet": "Unraid Web Server ToggleState Command Injection Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Unraid. Authentication is required to exploit this vulnerability. The specific flaw exists within",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-9772 - Unraid Web Server FileUpload Command Injection Remote Code Execution Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9772",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T21:35:27.000Z",
-        "contentSnippet": "Unraid Web Server FileUpload Command Injection Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Unraid. Authentication is required to exploit this vulnerability. The specific flaw exists within ",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-50189 - Appsmith: RCE via Supervisord XML-RPC Admin Interface Exposed via /supervisor Caddy Route",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50189",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T21:35:00.000Z",
-        "contentSnippet": "Appsmith is a platform to build admin panels, internal tools, and dashboards. Prior to 2.1, Appsmith's bundled supervisord exposes an XML-RPC interface on port 9001, reachable from outside the container via a Caddy reverse-proxy route at /supervisor/* on the public ingress. Combi",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-10642 - Unbounded TX busy-loop DoS in Zephyr PL011 UART driver under CTS hardware flow control",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10642",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T21:32:05.000Z",
-        "contentSnippet": "The Zephyr PL011 UART driver (drivers/serial/uart_pl011.c) contains an unbounded software loop in pl011_irq_tx_enable() that repeatedly invokes the interrupt-driven application callback while the TX interrupt mask bit (PL011_IMSC_TXIM) is set, to work around the controller's leve",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-53765 - chrome-devtools-mcp: daemon.pid write follows symlinks in /tmp fallback runtime directory",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53765",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T21:30:42.000Z",
-        "contentSnippet": "Chrome DevTools for agents (chrome-devtools-mcp) lets your coding agent control and inspect a live Chrome browser. From 0.20.0 until 1.1.0, The chrome-devtools-mcp daemon writes its PID file with fs.writeFileSync() to a deterministic runtime path. On typical macOS environments, a",
-        "cveScore": 6.1,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
@@ -1608,6 +1608,13 @@
     ],
     "virtualization": [
       {
+        "title": "The Biggest Home Lab Trend I’m Watching for 2027",
+        "link": "https://www.virtualizationhowto.com/2026/06/the-biggest-home-lab-trend-im-watching-for-2027/",
+        "source": "Virtualization HowTo",
+        "isoDate": "2026-06-25T12:23:53.000Z",
+        "contentSnippet": "The home lab world has changed dramatically over the last few years and it continues to change. Not long ago, most of us were building traditional virtualization stacks, a handful… The post The Biggest Home Lab Trend I’m Watching for 2027 appeared first on Virtualization Howto."
+      },
+      {
         "title": "Why Quadlets Finally Made Podman Click for Me in the Home Lab",
         "link": "https://www.virtualizationhowto.com/2026/06/why-quadlets-finally-made-podman-click-for-me-in-the-home-lab/",
         "source": "Virtualization HowTo",
@@ -2113,6 +2120,48 @@
       }
     ],
     "hardware": [
+      {
+        "title": "RAM crisis bites Apple as unprecedented Mac and iPad price rises arrive — cheapest MacBook Pro price hiked by $400 to $1,999",
+        "link": "https://www.tomshardware.com/laptops/macbooks/ram-crisis-bites-apple-as-unprecedented-mac-and-ipad-price-rises-arrive-cheapest-macbook-pro-price-hiked-by-usd400-to-usd1-999",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-25T13:59:58.000Z",
+        "contentSnippet": "Apple has made the unprecedented decision to hike the prices of all its current computers and tablets with some entry-level model prices up as much as $500."
+      },
+      {
+        "title": "Anthropic claims that China's Alibaba used 25,000 fake accounts and 28.8 million exchanges to illicitly 'distill' its Claude model — violations occurred from April to June 2026",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropic-claims-that-chinas-alibaba-illicitly-distilled-its-models-from-april-to-june-2026-says-effort-involved-25-000-fake-accounts-and-28-8-million-exchanges-on-claude",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-25T13:26:04.000Z",
+        "contentSnippet": "AI tech giant Alibaba, often considered as the Amazon of China, is being accused by Anthropic for using Claude to train its AI models. The American AI startup claimed that it traced over 25,000 accounts to operators that were affiliated with Alibaba and Alibaba Qwen."
+      },
+      {
+        "title": "Today only, you can snag a 37-inch 4K Samsung monitor for just $249 – B&H offers up a big productivity screen for 50% off in a one-day deal",
+        "link": "https://www.tomshardware.com/pc-components/today-only-you-can-snag-a-37-inch-4k-samsung-monitor-for-just-usd249-b-and-h-offers-up-a-big-productivity-screen-for-50-percent-off-in-a-one-day-deal",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-25T12:48:33.000Z",
+        "contentSnippet": "B&H is selling a 37-inch 4K Samsung monitor for half off, or just $249, today only."
+      },
+      {
+        "title": "Qualcomm plans China-specific data center chips — new Dragonfly lineup will include nerfed AI accelerators that comply with export thresholds",
+        "link": "https://www.tomshardware.com/tech-industry/qualcomm-plans-china-specific-data-center-chips-built-to-clear-us-export-limits",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-25T12:45:22.000Z",
+        "contentSnippet": "Qualcomm has announced that it will bring all four of its Dragonfly data center product lines to China."
+      },
+      {
+        "title": "HyperX Cloud Stinger 3 Wireless Headset Review: 80 hours and under $100",
+        "link": "https://www.tomshardware.com/peripherals/gaming-headsets/hyperx-cloud-stinger-3-wireless-review",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-25T12:10:00.000Z",
+        "contentSnippet": "The HyperX Cloud Stinger 3 Wireless is an over-ear wireless gaming headset with 50mm dynamic drivers, a flip-to-mute boom mic, and up to 80 hours of battery life — all for under $100."
+      },
+      {
+        "title": "Micron inks long-term supply agreements worth $100 billion — says it has no idea when RAM crisis will end",
+        "link": "https://www.tomshardware.com/pc-components/dram/micron-inks-long-term-supply-agreements-worth-usd100-billion-says-it-has-no-idea-when-ram-crisis-will-end",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-25T12:09:58.000Z",
+        "contentSnippet": "Micron has signed 16 LTAs with various customers to supply DRAM and NAND worth $100 billion."
+      },
       {
         "title": "Steam Machines will only come with one 16GB stick of RAM — company may change this to two 8GB sticks in the future, but the first batch of consoles is limited to single-channel memory",
         "link": "https://www.tomshardware.com/video-games/console-gaming/steam-machines-will-only-come-with-one-16gb-stick-of-ram-company-may-change-this-to-two-8gb-sticks-in-the-future-but-the-first-batch-of-consoles-is-limited-to-single-channel-memory",
@@ -2770,48 +2819,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-06-22T13:19:02.000Z",
         "contentSnippet": "Made in collaboration with Studio F.A. Porsche, the Thermaltake Argent E700 combines genuine leather upholstery, polished aluminum accents, solid construction."
-      },
-      {
-        "title": "Anycubic Kobra 4 Combo 3D printer review: Evolution, not revolution",
-        "link": "https://www.tomshardware.com/3d-printing/anycubic-kobra-4-combo-3d-printer-review",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-22T11:10:00.000Z",
-        "contentSnippet": "The Kobra 4 Combo is a nice evolution of the Kobra 3 without any revolutionary changes."
-      },
-      {
-        "title": "Ludicrous $999 Steam game lasts just 10 minutes — ‘Congratulations On Your Purchase’ is pure conspicuous consumption with its golden ticket Steam Achievement",
-        "link": "https://www.tomshardware.com/video-games/pc-gaming/ludicrous-usd999-steam-game-lasts-just-10-minutes-congratulations-on-your-purchase-is-pure-conspicuous-consumption-with-its-golden-ticket-steam-achievement",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-22T10:56:12.000Z",
-        "contentSnippet": "'Congratulations On Your Purchase' recently appeared on PC digital marketplaces priced at $999. Its main claim to fame is that it is proudly 'the most expensive game on Steam.' Buyers get a golden ticket Steam Achievement."
-      },
-      {
-        "title": "Get a 4TB SSD for $399 this Prime Day — 9.7 cents per GB is as good as it gets thanks to the AI pricing crisis",
-        "link": "https://www.tomshardware.com/pc-components/ssds/get-a-4tb-ssd-for-usd399-this-prime-day-9-7-cents-per-gb-is-as-good-as-it-gets-thanks-to-the-ai-pricing-crisis",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-22T10:53:18.000Z",
-        "contentSnippet": "Get a 4TB SSD for $399 ahead of Prime Day, the cheapest one you can buy."
-      },
-      {
-        "title": "Save hundreds during this storage pricing hellscape by turning an SSD or hard drive you aren’t using into a useful external drive for as little as $8 – put an old drive to good use as external storage",
-        "link": "https://www.tomshardware.com/pc-components/storage/save-hundreds-during-this-storage-pricing-hellscape-by-turning-an-ssd-or-hard-drive-you-arent-using-into-a-useful-external-drive-for-as-little-as-usd8-put-an-old-drive-to-good-use-as-external-storage",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-22T10:28:34.000Z",
-        "contentSnippet": "Good storage deals are sadly dead, but an affordable enclosure can bring an old drive back to useful life."
-      },
-      {
-        "title": "M3 MacBook Air plunges to $799 in early Amazon Prime Day sale — 38% discount blows the MacBook Neo out of the water",
-        "link": "https://www.tomshardware.com/laptops/macbooks/m3-macbook-air-plunges-to-usd799-in-early-amazon-prime-day-sale-38-percent-discount-blows-the-macbook-neo-out-of-the-water",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-22T09:24:45.000Z",
-        "contentSnippet": "The M3 MacBook Air from 2024 is now just $799 at Amazon."
-      },
-      {
-        "title": "Powerhouse AMD Ryzen 7 9800X3D hits record-low price at Amazon UK, now just £339.99 — get one of our favourite gaming CPUs with its game-changing AMD 3D V-cache technology",
-        "link": "https://www.tomshardware.com/pc-components/cpus/powerhouse-amd-ryzen-7-9800x3d-hits-record-low-price-at-amazon-uk-now-just-gbp339-99-get-one-of-our-favourite-gaming-cpus-with-its-game-changing-amd-3d-v-cache-technology",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-22T08:00:05.000Z",
-        "contentSnippet": "The AMD Ryzen 7 9800X3D has hit a record low Amazon UK price of £339.99, making it a must-buy option for any gaming PC build or upgrade."
       }
     ]
   }
