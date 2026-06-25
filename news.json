@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-06-25T08:21:43.932Z",
+  "updatedAt": "2026-06-25T11:33:24.012Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-56091 - Apache Shiro: Authentication bypass in Guice-Web integration",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56091",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T08:45:19.000Z",
+        "contentSnippet": "When using Apache Shiro with the shiro-guice module in a web servlet context, a specially crafted HTTP request may cause an authentication bypass. This vulnerability is similar to https://www.cve.org/CVERecord?id=CVE-2020-1957 https://www.cve.org/CVERecord , except that it affect",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-56130 - Apache Shiro: Remember-me cookie isn't checked for expiry on the server",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56130",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T08:44:30.000Z",
+        "contentSnippet": "\"Remember me\" cookie age is not verified on the server. This potentially allows an attacker to intercept a valid cookie and reuse it indefinitely, even after the configured expiration time has passed. This issue affects all Apache Shiro versions from 1.2.4 through 2.x, and 3.0.0-",
+        "cveScore": 2,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-53277 - KVM: arm64: Take the SRCU lock for page table walks in fault injection and AT emulation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53277",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T08:40:00.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: KVM: arm64: Take the SRCU lock for page table walks in fault injection and AT emulation walk_s1() and kvm_walk_nested_s2() expect to be called while holding kvm->srcu to guard against memslot changes. While this ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53276 - Bluetooth: ISO: Fix a use-after-free of the hci_conn pointer",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53276",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T08:39:59.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: Bluetooth: ISO: Fix a use-after-free of the hci_conn pointer In iso_sock_rebind_bc(), the bis pointer is cached, then the socket lock is dropped: bis = iso_pi(sk)->conn->hcon; /* Release the socket before lookups",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53275 - ipv6: mcast: Fix use-after-free when processing MLD queries",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53275",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T08:39:59.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: ipv6: mcast: Fix use-after-free when processing MLD queries When processing an MLD query, a pointer to the multicast group address is retrieved when initially parsing the packet. This pointer is later dereference",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53274 - net/smc: fix sleep-inside-lock in __smc_setsockopt() causing local DoS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53274",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T08:39:58.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: net/smc: fix sleep-inside-lock in __smc_setsockopt() causing local DoS A logic flaw in __smc_setsockopt() allows a local unprivileged user to cause a Denial of Service (DoS) by holding the socket lock indefinitel",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53273 - tee: optee: prevent use-after-free when the client exits before the supplicant",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53273",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T08:39:57.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: tee: optee: prevent use-after-free when the client exits before the supplicant Commit 70b0d6b0a199 (\"tee: optee: Fix supplicant wait loop\") made the client wait as killable so it can be interrupted during shutdow",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53272 - erofs: fix use-after-free on sbi->sync_decompress",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53272",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T08:39:57.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: erofs: fix use-after-free on sbi->sync_decompress z_erofs_decompress_kickoff() can race with filesystem unmount, causing a use-after-free on sbi->sync_decompress. When I/O completes, z_erofs_endio() calls z_erofs",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53271 - ksmbd: fix NULL-deref of opinfo->conn in oplock/lease break notifiers",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53271",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T08:39:56.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: ksmbd: fix NULL-deref of opinfo->conn in oplock/lease break notifiers smb2_oplock_break_noti() and smb2_lease_break_noti() read opinfo->conn into a local with neither READ_ONCE() nor a NULL check. Both run from o",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53270 - ipvs: clear the svc scheduler ptr early on edit",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53270",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T08:39:55.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: ipvs: clear the svc scheduler ptr early on edit ip_vs_edit_service() while unbinding the old scheduler clears the svc->scheduler ptr after the scheduler module initiates RCU callbacks. This can cause packets to u",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53269 - netfilter: synproxy: add mutex to guard hook reference counting",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53269",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T08:39:55.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: netfilter: synproxy: add mutex to guard hook reference counting As the synproxy infrastructure register netfilter hooks on-demand when a user adds the first iptables target or nftables expression, if done concurr",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53268 - netfilter: conntrack_irc: fix possible out-of-bounds read",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53268",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T08:39:54.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: netfilter: conntrack_irc: fix possible out-of-bounds read When parsing fails after we've matched the command string we should bail out instead of trying to match a different command. This helper should be depreca",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53267 - netfilter: nft_ct: bail out on template ct in get eval",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53267",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T08:39:53.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: netfilter: nft_ct: bail out on template ct in get eval I noticed this issue while looking at a historic syzbot report [1]. A rule like the one below is enough to trigger the bug: table ip t { chain pre { type fil",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53266 - netfilter: bridge: make ebt_snat ARP rewrite writable",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53266",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T08:39:53.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: netfilter: bridge: make ebt_snat ARP rewrite writable The ebtables SNAT target keeps the Ethernet source address rewrite behind skb_ensure_writable(skb, 0). This is intentional: at the bridge ebtables hooks the E",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53265 - dm cache policy smq: check allocation under invalidate lock",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53265",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T08:39:52.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: dm cache policy smq: check allocation under invalidate lock commit 2d1f7b65f5de (\"dm cache policy smq: fix missing locks in invalidating cache blocks\") added mq->lock around the destructive part of smq_invalidate",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53264 - net/sched: act_api: use RCU with deferred freeing for action lifecycle",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53264",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T08:39:51.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: net/sched: act_api: use RCU with deferred freeing for action lifecycle When NEWTFILTER and DELFILTER are run concurrently it is possible to create a race with an associated action. Let's illustrate with CPU0 runn",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53263 - 6lowpan: fix off-by-one in multicast context address compression",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53263",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T08:39:51.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: 6lowpan: fix off-by-one in multicast context address compression The second memcpy in lowpan_iphc_mcast_ctx_addr_compress() uses &data[1] as destination and &ipaddr->s6_addr[11] as source, but both should be offs",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53262 - l2tp: pppol2tp: hold reference to session in pppol2tp_ioctl()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53262",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T08:39:50.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: l2tp: pppol2tp: hold reference to session in pppol2tp_ioctl() pppol2tp_ioctl() read sock->sk->sk_user_data directly without any locks or reference counting. If a controllable sleep was induced during copy_from_us",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53261 - devlink: Release nested relation on devlink free",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53261",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T08:39:49.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: devlink: Release nested relation on devlink free devlink relation state is normally released from devl_unregister(), which calls devlink_rel_put(). This misses devlink instances that get a nested relation before ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53260 - tcp: Add preempt_{disable,enable}_nested() in reqsk_queue_hash_req().",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53260",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T08:39:49.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: tcp: Add preempt_{disable,enable}_nested() in reqsk_queue_hash_req(). syzbot reported a weird reqsk->rsk_refcnt underflow in __inet_csk_reqsk_queue_drop(). The captured reqsk_put() in __inet_csk_reqsk_queue_drop(",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53259 - ipv6: anycast: insert aca into global hash under idev->lock",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53259",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T08:39:48.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: ipv6: anycast: insert aca into global hash under idev->lock syzbot reported a splat [1]: a slab-use-after-free in ipv6_chk_acast_addr(), which walks the global inet6_acaddr_lst[] hash under RCU and dereferences a",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53258 - wifi: fix leak if split 6 GHz scanning fails",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53258",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T08:39:47.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: wifi: fix leak if split 6 GHz scanning fails rdev->int_scan_req is leaked if cfg80211_scan() fails. Note that it's supposed to be released at ___cfg80211_scan_done() but this doesn't happen as rdev->scan_req is N",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53257 - wifi: cfg80211: enforce HE/EHT cap/oper consistency",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53257",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T08:39:47.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: wifi: cfg80211: enforce HE/EHT cap/oper consistency Xiang Mei reports that mac80211 could crash if eht_cap is set but eht_oper isn't. Rather than fixing that for the individual user(s), enforce that both HE/EHT h",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53256 - Bluetooth: RFCOMM: hold listener socket in rfcomm_connect_ind()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53256",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T08:39:46.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: Bluetooth: RFCOMM: hold listener socket in rfcomm_connect_ind() rfcomm_get_sock_by_channel() scans rfcomm_sk_list under the list lock, but returns the selected listener after dropping that lock without taking a r",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53255 - Bluetooth: MGMT: validate advertising TLV before type checks",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53255",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-25T08:39:45.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: Bluetooth: MGMT: validate advertising TLV before type checks tlv_data_is_valid() reads each advertising data field length from data[i], then inspects data[i + 1] for managed EIR types before checking that the cur",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2026-9702 - InPost PL < 1.9.1 - Unauthenticated WooCommerce Order Parcel-Locker Hijacking",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-9702",
@@ -677,234 +902,16 @@
         "contentSnippet": "Chrome DevTools for agents (chrome-devtools-mcp) lets your coding agent control and inspect a live Chrome browser. From 0.20.0 until 1.1.0, The chrome-devtools-mcp daemon writes its PID file with fs.writeFileSync() to a deterministic runtime path. On typical macOS environments, a",
         "cveScore": 6.1,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-49278 - Rocket.Chat: Livechat Visitor Profile Disclosure Leaks Bearer Token and Enables Visitor Impersonation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49278",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T21:05:33.000Z",
-        "contentSnippet": "Rocket.Chat is an open-source, secure, fully customizable communications platform. Prior to 8.5.0, 8.4.2, 8.3.4, 8.2.4, 8.1.5, 8.0.6, 7.13.8, and 7.10.12, in the visitors.info endpoint, https://developer.rocket.chat/apidocs/get-visitor-information-by-id-1, token is returned in th",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-49277 - Rocket.Chat: OAuth access and refresh tokens remain valid after account deactivation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49277",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T21:04:09.000Z",
-        "contentSnippet": "Rocket.Chat is an open-source, secure, fully customizable communications platform. Prior to 8.5.0, 8.4.2, 8.3.4, 8.2.4, 8.1.5, 8.0.6, 7.13.8, and 7.10.12, Rocket.Chat does not revoke OAuth bearer or refresh tokens when a user is deactivated. A deactivated user can continue using ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-45757 - Rocket.Chat: users.deactivateIdle` deactivates accounts without revoking existing login tokens",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45757",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T21:01:56.000Z",
-        "contentSnippet": "Rocket.Chat is an open-source, secure, fully customizable communications platform. Prior to 8.5.0, 8.4.2, 8.3.4, 8.2.4, 8.1.5, 8.0.6, 7.13.8, and 7.10.12, Rocket.Chat allows users deactivated through users.deactivateIdle to keep using already-issued login tokens. A user that an a",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-33543 - FOSSBilling: Authentication bypass allows unauthenticated administrator creation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-33543",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T21:01:16.000Z",
-        "contentSnippet": "FOSSBilling is a free, open-source billing and client management system. Versions 0.7.2 and prior expose a guest API endpoint, /api/guest/staff/create, intended for initial administrator bootstrap. Due to a flawed admin-existence check, the endpoint remains usable after an admini",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-46423 - Rocket.Chat: SAML signature validation skipped when IdP certificate field is empty",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46423",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T20:58:57.000Z",
-        "contentSnippet": "Rocket.Chat is an open-source, secure, fully customizable communications platform. Prior to 8.5.0, 8.4.1, 8.3.3, 8.2.3, 8.1.4, 8.0.5, 7.13.7, and 7.10.11, Rocket.Chat's SAML service provider implementation silently skips both SAML Response and Assertion signature validation when ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-45689 - Rocket.Chat: Pre-Auth NoSQL Injection in OAuth2 Token Endpoint leading to Arbitrary User ATO",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45689",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T20:57:32.000Z",
-        "contentSnippet": "Rocket.Chat is an open-source, secure, fully customizable communications platform. Prior to 8.5.0, 8.4.1, 8.3.3, 8.2.3, 8.1.4, 8.0.5, 7.13.7, and 7.10.11, an unauthenticated network attacker obtains a valid Rocket.Chat OAuth access token for an arbitrary user by sending a single ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-45688 - Rocket.Chat: Pre-Auth NoSQL Injection in CAS Login Handler leading to Arbitrary CAS/SAML User Session Hijack",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45688",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T20:56:44.000Z",
-        "contentSnippet": "Rocket.Chat is an open-source, secure, fully customizable communications platform. Prior to 8.5.0, 8.4.1, 8.3.3, 8.2.3, 8.1.4, 8.0.5, 7.13.7, and 7.10.11, Rocket.Chat's CAS login handler forwards the client-supplied options.cas.credentialToken value straight into a MongoDB findOn",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-45687 - Rocket.Chat: Authenticated Arbitrary Data Export Theft via Mass Assignment in sendFileMessage",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45687",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T20:55:25.000Z",
-        "contentSnippet": "Rocket.Chat is an open-source, secure, fully customizable communications platform. Prior to 8.5.0, 8.4.1, 8.3.3, 8.2.3, 8.1.4, 8.0.5, 7.13.7, and 7.10.11, Rocket.Chat's sendFileMessage DDP method passes the entire attacker-supplied file object into Uploads.updateFileComplete, whi",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-45677 - Rocket.Chat: Lack of SAML Signature Check During Logout Could Lead To DoS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45677",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T20:54:13.000Z",
-        "contentSnippet": "Rocket.Chat is an open-source, secure, fully customizable communications platform. Prior to 8.5.0, 8.4.1, 8.3.3, 8.2.3, 8.1.4, 8.0.5, 7.13.7, and 7.10.11, Rocket.Chat's SAML integration does not verify the signature on inbound LogoutRequest messages. An unauthenticated remote att",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-33235 - AutoGPT: Denial of Service (DoS) via Resource Exhaustion in text templating features",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-33235",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T20:52:00.000Z",
-        "contentSnippet": "AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. In versions prior to 0.6.52, the Fill Text Template block is vulnerable to a Denial of Service (DoS) attack. While the backend implements a SandboxedEnvironm",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-47733 - Rocket.Chat: Missing URL protocol sanitization in ImageElement allows javascript: URLs in markdown images",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47733",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T20:51:29.000Z",
-        "contentSnippet": "Rocket.Chat is an open-source, secure, fully customizable communications platform. Prior to 8.5.0, the ImageElement component in packages/gazzodown renders user-controlled src values directly into and attributes without protocol sanitization. Unlike the analogous LinkSpan compone",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-32315 - motionEye: World-Readable Configuration File Exposes Admin Password Hash",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-32315",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T20:45:34.000Z",
-        "contentSnippet": "motionEye (mEye) is an online interface for motion software, a video surveillance program with motion detection. Versions prior to 0.44.0 create the configuration file /etc/motioneye/motion.conf with 644 permissions (-rw-r--r--), making it readable by any local user on the system",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-13208 - Kubevirt: virt-handler-rhel9: kubevirt: virt-handler notify server trusts vmi identity from unauthenticated grpc request body",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13208",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T20:39:00.000Z",
-        "contentSnippet": "A flaw was found in KubeVirt's virt-handler domain notify server. The gRPC handlers for HandleDomainEvent and HandleK8SEvent derive the VMI identity (namespace/name) solely from the request body without validating it against the connection's origin. Each virt-launcher pod connect",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-13201 - Kubevirt: virt-handler-rhel9: kubevirt: safepath openatnofollow symlink following via /proc/self/fd allows host file metadata modification",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13201",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T20:39:00.000Z",
-        "contentSnippet": "A flaw was found in KubeVirt's safepath package. The OpenAtNoFollow function uses O_PATH|O_NOFOLLOW to obtain a file descriptor to a path leaf, but downstream helpers operate via /proc/self/fd/N using link-following syscalls. When the leaf is a symlink, the kernel dereferences it",
-        "cveScore": 5.2,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-52797 - Gogs: Overwriting critical files results in a denial of service",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52797",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T20:35:09.000Z",
-        "contentSnippet": "Gogs is an open source self-hosted Git service. Prior to 0.14.0, as an authorized user, an intruder can dictate the value which is passed to the git diff command which, together with bypassing the filtering of the passed value, allows the user to bypass the target directory and w",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-52813 - Gogs: Path Traversal in organization name results in RCE through Git hooks",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52813",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T20:33:42.000Z",
-        "contentSnippet": "Gogs is an open source self-hosted Git service. Prior to 0.14.3, organization names containing path traversal sequences (../) are accepted by Gogs, and repositories under them are written to paths following these path traversals. This allows storing/retrieving data for repositori",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-52812 - Gogs: LFS dedupe path leaks private repo content across tenants",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52812",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T20:32:51.000Z",
-        "contentSnippet": "Gogs is an open source self-hosted Git service. Prior to 0.14.3, Git LFS storage is content-addressed by OID alone ( / / / ) but per-repo authorization lives in the lfs_object table keyed (repo_id, oid). serveUpload skips re-uploading when the OID file already exists on disk and ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-52811 - Gogs: UploadRepoFiles writes outside repo working tree via committed parent sym",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52811",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T20:31:38.000Z",
-        "contentSnippet": "Gogs is an open source self-hosted Git service. Prior to 0.14.3, (*Repository).UploadRepoFiles checks for symlinks only on the leaf of the upload target (osx.IsSymlink(targetPath)). The siblings UpdateRepoFile, DeleteRepoFile, and GetDiffPreview use hasSymlinkInPath, which lstats",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-52810 - Gogs: Write to readonly repositories using receive-pack + service=git-upload-pack confusion",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52810",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T20:30:41.000Z",
-        "contentSnippet": "Gogs is an open source self-hosted Git service. Prior to 0.14.3, Git smart HTTP authorizes POST …/git-receive-pack using the client-supplied service query string (so ?service=git-upload-pack is evaluated as read access) while routing still runs git receive-pack, allowing push whe",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-11998 - AngularJS XSS via SCE resource URL sanitization bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11998",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T20:29:37.000Z",
-        "contentSnippet": "A flaw in AngularJS' Strict Contextual Escaping (SCE) logic allows bypassing certain SCE policies for resource URLs and can lead to arbitrary JavaScript execution within the context of the victim's browser session. SCE's purpose is to ensure that only trusted or safe values are u",
-        "cveScore": 7.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-52809 - Gogs: Password-reset tokens use account-activation lifetime, ignoring RESET_PASSWORD_CODE_LIVES",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52809",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T20:29:29.000Z",
-        "contentSnippet": "Gogs is an open source self-hosted Git service. Prior to 0.14.3, password-reset tokens are generated using conf.Auth.ActivateCodeLives (the account-activation lifetime), not conf.Auth.ResetPasswordCodeLives. The token lifetime is baked into the token itself at generation time and",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-31978 - motionEye: Arbitrary File Read via Path Traversal in Picture/Movie Preview Endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-31978",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T20:28:24.000Z",
-        "contentSnippet": "motionEye (mEye) is an online interface for motion software, which is a video surveillance program with motion detection. Versions prior to 0.44.0 are vulnerable to path traversal in the picture and movie API endpoints, suhc as /picture/{id}/preview/{filename}. Neither the API ha",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-52808 - Gogs: Write-level collaborators can mutate admin-only repository settings via API",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52808",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T20:27:41.000Z",
-        "contentSnippet": "Gogs is an open source self-hosted Git service. Prior to 0.14.3, three API endpoints — PATCH /api/v1/repos/:owner/:repo/issue-tracker, PATCH /api/v1/repos/:owner/:repo/wiki, and POST /api/v1/repos/:owner/:repo/mirror-sync — are gated by reqRepoWriter() rather than reqRepoAdmin().",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-52816 - Gogs: Unauthenticated Jupyter Notebook (ipynb) Sanitizer allows arbitrary data: URIs leading to XSS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52816",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T20:26:34.000Z",
-        "contentSnippet": "Gogs is an open source self-hosted Git service. Prior to 0.14.3, the Jupyter Notebook (ipynb) sanitizer endpoint at POST /-/api/sanitize_ipynb allows arbitrary data: URIs without proper restrictions, potentially leading to Cross-Site Scripting (XSS). The endpoint uses bluemonday.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-52807 - Gogs: DOM-based XSS via Milestone Name on New Issue Page",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52807",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-24T20:25:49.000Z",
-        "contentSnippet": "Gogs is an open source self-hosted Git service. Prior to 0.14.3, in new_form.tmpl, milestone names are rendered with Go's default auto-escaping ({{.Name}}), which converts",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       }
     ],
     "ai": [
+      {
+        "title": "Baidu Releases Unlimited OCR, a 3B Model That Keeps the KV Cache Flat for Long-Document Parsing",
+        "link": "https://www.marktechpost.com/2026/06/24/baidu-releases-unlimited-ocr-a-3b-model-that-keeps-the-kv-cache-flat-for-long-document-parsing/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-06-25T05:39:53.000Z",
+        "contentSnippet": "Baidu open-sourced Unlimited OCR, a 3B-parameter MoE model that parses dozens of document pages in a single forward pass. Its Reference Sliding Window Attention (R-SWA) holds the KV cache constant, so memory and latency stay flat as output grows. It scores 93.23 on OmniDocBench v"
+      },
       {
         "title": "Gradium Launches stt-translate and s2s-translate, Real-Time Speech Translation Models Beating gpt-realtime-translate on Accuracy and Latency",
         "link": "https://www.marktechpost.com/2026/06/24/gradium-launches-stt-translate-and-s2s-translate-real-time-speech-translation-models-beating-gpt-realtime-translate-on-accuracy-and-latency/",
@@ -1597,13 +1604,6 @@
         "source": "MarkTechPost",
         "isoDate": "2026-06-10T18:50:51.000Z",
         "contentSnippet": "DiffusionGemma is Google DeepMind's experimental 26B open model using text diffusion for up to 4x faster generation on GPUs. The post Google AI Releases DiffusionGemma, a 26B MoE Open Model Using Text Diffusion for Up to 4x Faster Generation appeared first on MarkTechPost."
-      },
-      {
-        "title": "Stop hand-tuning kernels: How Neuron Agentic Development accelerates AWS Trainium optimizations",
-        "link": "https://aws.amazon.com/blogs/machine-learning/stop-hand-tuning-kernels-how-neuron-agentic-development-accelerates-aws-trainium-optimizations/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-06-10T15:26:45.000Z",
-        "contentSnippet": "Today, we’re announcing the Neuron Agentic Development capabilities: a collection of AI agents and skills that make this possible for developers building on AWS Trainium and AWS Inferentia. In this post, we explain how the Neuron Agentic Development capabilities accelerate the ke"
       }
     ],
     "virtualization": [
@@ -2113,6 +2113,34 @@
       }
     ],
     "hardware": [
+      {
+        "title": "Steam Machines will only come with one 16GB stick of RAM — company may change this to two 8GB sticks in the future, but the first batch of consoles is limited to single-channel memory",
+        "link": "https://www.tomshardware.com/video-games/console-gaming/steam-machines-will-only-come-with-one-16gb-stick-of-ram-company-may-change-this-to-two-8gb-sticks-in-the-future-but-the-first-batch-of-consoles-is-limited-to-single-channel-memory",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-25T10:33:57.000Z",
+        "contentSnippet": "Valve confirmed to Gamers Nexus that the first batch of Steam Machines will only have one 16GB RAM stick. This would have a negative effect on the console's performance, but the company likely did this to keep its price as low as possible, or because it's the only available optio"
+      },
+      {
+        "title": "IBM Outlines Sub-1nm Nanostack Transistor Technology: Building the Next Gen By Going Up",
+        "link": "https://www.servethehome.com/ibm-outlines-sub-1nm-nanostack-transistor-technology/",
+        "source": "ServeTheHome",
+        "isoDate": "2026-06-25T10:00:36.000Z",
+        "contentSnippet": "Today IBM is unveiling their nanostack transistor architecture. Meant to drive chip construction in the sub-1nm era in the 2030s, nanostack aims for building better and smaller chips by building them taller via wafer stacking The post IBM Outlines Sub-1nm Nanostack Transistor Tec"
+      },
+      {
+        "title": "Qualcomm reveals HBC near-memory AI architecture, AI250 and AI350 accelerators — touts 6x higher bandwidth-per-watt compared to HBM, 200x capacity compared to on-chip SRAM",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/qualcomm-reveals-hbc-near-memory-ai-architecture-ai250-and-ai350-accelerators-touts-6x-higher-bandwidth-per-watt-compared-to-hbm-200x-capacity-compared-to-on-chip-sram",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-25T10:00:00.000Z",
+        "contentSnippet": "Qualcomm unveils HBC near-memory AI architecture, claims it has broken the memory wall."
+      },
+      {
+        "title": "Back in stock! Corsair's tiny touchscreen discount returns during Prime Week — Xeneon Edge 14.5-inch LCD touchscreen hits $199.99 agian",
+        "link": "https://www.tomshardware.com/pc-components/back-in-stock-corsairs-tiny-touchscreen-discount-returns-during-prime-week-xeneon-edge-14-5-inch-lcd-touchscreen-hits-usd199-99-agian",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-25T08:45:55.000Z",
+        "contentSnippet": "Get 20% off the Corsair Xeneon Edge 14.5-inch LCD Touchscreen."
+      },
       {
         "title": "Best Amazon Prime Day tech deals live on day three — PC hardware deals on GPUs, CPUs, SSDs, and more",
         "link": "https://www.tomshardware.com/live/news/amazon-prime-day-2026-best-deals",
@@ -2784,34 +2812,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-06-22T08:00:05.000Z",
         "contentSnippet": "The AMD Ryzen 7 9800X3D has hit a record low Amazon UK price of £339.99, making it a must-buy option for any gaming PC build or upgrade."
-      },
-      {
-        "title": "Nintendo Switch 2 is $399 at Woot for new customers, $419 for returning customers with code — save up to $100 on gaming handheld while stocks last",
-        "link": "https://www.tomshardware.com/video-games/handheld-gaming/nintendo-switch-2-is-usd399-at-woot-for-new-customers-usd419-for-returning-customers-with-code-save-up-to-usd100-on-gaming-handheld-while-stocks-last",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-22T07:42:42.000Z",
-        "contentSnippet": "Get a brand new Nintendo Switch 2 for less."
-      },
-      {
-        "title": "Best Amazon Prime Day tech deals live — PC hardware deals on SSDs, RAM, GPUs, CPUs, gaming laptops, and more",
-        "link": "https://www.tomshardware.com/live/news/amazon-prime-day-2026",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-22T06:11:33.000Z",
-        "contentSnippet": "Find the very best PC hardware deals during Amazon Prime Day."
-      },
-      {
-        "title": "MiTAC Computex 2026 Booth Tour: Diamond Cooling, 52U Racks, and More",
-        "link": "https://www.servethehome.com/mitac-computex-2026-booth-tour/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-06-22T00:59:59.000Z",
-        "contentSnippet": "While wandering the Computex 2026 showfloor, we visited MiTAC's booth. The prolific server vendor had numerous products on display, including racks of GPU systems, storage, and even diamond cooled servers The post MiTAC Computex 2026 Booth Tour: Diamond Cooling, 52U Racks, and Mo"
-      },
-      {
-        "title": "Cooler Master NR2 Pro mini-ITX system packing an RTX 5080 is $400 off in Newegg deal — grab a compact yet powerful liquid cooled gaming PC for $2,799.99",
-        "link": "https://www.tomshardware.com/pc-components/cooler-master-nr2-pro-mini-itx-system-packing-an-rtx-5080-is-usd400-off-in-newegg-deal-grab-a-compact-yet-powerful-liquid-cooled-gaming-pc-for-usd2-799-99",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-21T16:47:16.000Z",
-        "contentSnippet": "The Cooler Master NR2 Pro combines a Gigabyte RTX 5080, Intel Core Ultra 7 265F, 2TB Gen 4.0 SSD, and the NR200P Max chassis into a compact gaming machine that can tackle 4K titles with ease."
       }
     ]
   }
