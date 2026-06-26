@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-06-26T16:08:34.773Z",
+  "updatedAt": "2026-06-26T18:24:38.088Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-33646 - mise: Arbitrary Code Execution via Tera Templates in .tool-versions Files (Trust Bypass)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-33646",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T16:51:44.000Z",
+        "contentSnippet": "mise manages dev tools like node, python, cmake, and terraform. Prior to 2026.3.10, mise processes .tool-versions files through the Tera template engine during parsing, with the exec() function registered, enabling arbitrary command execution. Unlike .mise.toml files, .tool-versi",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-55441 - mise: Arbitrary command execution via task-include files in an untrusted, config-less repository",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55441",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T16:48:23.000Z",
+        "contentSnippet": "mise manages dev tools like node, python, cmake, and terraform. Prior to 2026.6.4, mise's trust feature gates config files (mise.toml, .tool-versions) through trust_check, but task-include files are loaded on a path that never reaches it. When a directory has a task-include dir (",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-54557 - mise HTTP backend uses raw version path for install symlink destination",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54557",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T16:47:29.000Z",
+        "contentSnippet": "mise manages dev tools like node, python, cmake, and terraform. Prior to 2026.6.1, the mise HTTP backend builds its install symlink destination from the raw resolved version string for non-latest versions. Normal tool install paths use the sanitized version pathname, but the HTTP",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-55448 - mise: Local credential_command executes untrusted config",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55448",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T16:46:17.000Z",
+        "contentSnippet": "mise manages dev tools like node, python, cmake, and terraform. From 2026.3.15 until 2026.6.4, mise loads github.credential_command from local project config before any trust decision, then executes that value with sh -c when resolving a GitHub token. An attacker who can place a ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-56876 - extract-zip unvalidated symlink path traversal",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56876",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T16:44:29.000Z",
+        "contentSnippet": "extract-zip does not validate symlink targets when extracting zip archives. When processing a malicious zip file containing a symlink with a relative path like '../../../../etc/passwd', extract-zip will extract the symlink without validation, allowing it to point outside the extr",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-54341 - Dragonfly: RESTORE operations may crash the server",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54341",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T16:42:15.000Z",
+        "contentSnippet": "Dragonfly is an in-memory data store built for modern application workloads. Prior to 1.39.0, a crafted RESTORE payload triggers an out-of-bounds read in DragonflyDB's listpack collection loaders, crashing the entire server process (SIGSEGV). Because DragonflyDB requires no authe",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-47206 - Dragonfly: RESP Protocol Injection via Lua redis.error_reply() in EvalSerializer",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47206",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T16:39:27.000Z",
+        "contentSnippet": "Dragonfly is an in-memory data store built for modern application workloads. Prior to 1.39.9, Dragonfly has a RESP Protocol Injection via Lua redis.error_reply() in EvalSerializer. An authenticated user can inject arbitrary RESP messages into the connection's response stream, pot",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-48529 - GitHub MCP Server: Lockdown mode singleton in HTTP server causes cross-user GraphQL client confusion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48529",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T16:33:32.000Z",
+        "contentSnippet": "GitHub MCP Server is GitHub's official MCP Server. From 0.22.0 until 1.1.2, when running in HTTP mode with --lockdown-mode enabled, the RepoAccessCache is implemented as a process-global singleton initialized with the first authenticated user's GraphQL client. All subsequent requ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-55686 - Podman: WORKDIR symlink traversal vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55686",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T16:30:41.000Z",
+        "contentSnippet": "Podman is a tool for managing OCI containers and pods. From 3.0.0 until 5.7.1, running a malicious container image where the WORKDIR path contains a symlink can create a directory or modify ownership on the host filesystem. Modified ownership is less likely to happen as that requ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-57231 - Podman: Malformed Image can trick podman run into leaking host environment variables into the container",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57231",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T16:29:02.000Z",
+        "contentSnippet": "Podman is a tool for managing OCI containers and pods. From 1.8.1 until 5.8.4, a container image that contains a environment variable with just a key and no value can trick podman into passing that variable from the host into the container. This is made worse by the fact that usi",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-54636 - Dokku: OS Command Injection via app.json managed Cron",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54636",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T16:23:58.000Z",
+        "contentSnippet": "Dokku is a docker-powered PaaS. Prior to 0.38.7, the cron plugin utilizes commands in the app.json file to manage system cron running as the Dokku user. An app.json cron command utilizing special shell characters - including, but not limited to, > or ; - can break out of the Dock",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-28385 - SSRF via image import from URL allows internal network probing by authenticated users",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-28385",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T16:23:56.000Z",
+        "contentSnippet": "In Canonical LXD versions 4.12 through 6.9, a Server-Side Request Forgery (SSRF) vulnerability in the image import functionality allows authenticated users with the can_create_images entitlement to interact with internal network infrastructure via the /images endpoint. When impor",
+        "cveScore": 5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-45405 - Dokku: Arbitrary File Write via Tar Symlink Traversal in git:from-archive and certs:add",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45405",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T16:23:05.000Z",
+        "contentSnippet": "Dokku is a docker-powered PaaS. Prior to 0.38.2, the git:from-archive and certs:add commands extract user-supplied tar/zip archives into temporary directories without sanitizing member paths or preventing symlink traversal. GNU tar creates symlinks during extraction and follows t",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-45406 - Dokku: Host RCE via Maliciously Named OpenResty Include Files Injected Through eval",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45406",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T16:22:17.000Z",
+        "contentSnippet": "Dokku is a docker-powered PaaS. Prior to 0.38.2, the openresty-vhosts plugin copies files from an app's openresty/http-includes/ git repository directory to the host and then interpolates their filenames, unescaped, into a single-quoted shell string that is later parsed by eval. ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-45407 - Dokku: Git Credentials in .netrc Stored World-Readable Due to Premature touch",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45407",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T16:21:25.000Z",
+        "contentSnippet": "Dokku is a docker-powered PaaS. Prior to 0.38.2, the git:auth command creates $DOKKU_ROOT/.netrc using bash's touch command, which applies the default umask of 0644. This pre-creation defeats the netrc binary's built-in 0600 permission setting, leaving git credentials readable by",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-45408 - Dokku: OS Command Injection via App Name in Git Pre-Receive Hook",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45408",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T16:19:56.000Z",
+        "contentSnippet": "Dokku is a docker-powered PaaS. Prior to 0.38.2, the app name validation regex (^[a-z0-9][^/:_A-Z]*$) permits shell metacharacters. When an authenticated user pushes to a git remote with a crafted app name, the name is embedded unquoted into a bash pre-receive hook script via an ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-55677 - Echo: Encoded slash (%2F) bypasses route-level protection and exposes static files",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55677",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T16:15:55.000Z",
+        "contentSnippet": "Echo is a Go web framework. Prior to 4.15.3 and 5.2.0, Echo's router and static file handler disagree on URL path decoding. The router matches routes using the raw encoded path (preserving %2F as-is), while StaticDirectoryHandler unescapes %2F to / before resolving filesystem pat",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2025-32394 - AutoGPT: There is a DoS vulnerability in AITextSummarizerBlock",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-32394",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T16:11:20.000Z",
+        "contentSnippet": "AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. Prior to 0.6.32, there is a DoS vulnerability in AITextSummarizerBlock. Malicious users can amplify their input. For example, if a malicious user inputs 10K ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-11779 - PayloadCMS 3.84.1 - Authenticated account lockout bypass through default unlock access",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11779",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T16:09:43.000Z",
+        "contentSnippet": "An Improper Authorization vulnerability exists in PayloadCMS version 3.84.1 due to insufficient access control on the account unlock operation.",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2025-32423 - AutoGPT: There is a DoS vulnerability in ExtractTextInformationBlock",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-32423",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T16:09:06.000Z",
+        "contentSnippet": "AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. Prior to 0.6.32, there is a DoS vulnerability in ExtractTextInformationBlock. Malicious users can amplify their input. For example, if a malicious user input",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-56663 - AutoGPT: SSRF-to-RCE Chain in `SendWebRequestBlock` via IP validation bypass and internal `pg-meta` access",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56663",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T16:04:54.000Z",
+        "contentSnippet": "AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. Prior to 0.6.52, an authenticated user can bypass the SSRF / private-IP protections in SendWebRequestBlock and reach internal network services. _is_ip_blocke",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-56823 - AutoGPT: IDOR in Webhook Ping Endpoint Allows Enumeration and Cross-User Ping Triggering",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56823",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T16:02:59.000Z",
+        "contentSnippet": "AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. Prior to , the `POST /api/integrations/webhooks/{webhook_id}/ping` endpoint fetches the target webhook by primary key alone without verifying that the webhoo",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-13434 - Virt-controller-rhel9: kubevirt: kubevirt: multus default-network annotation injection via unvalidated tenant networkname when externalnetresourceinjection is enabled",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13434",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T16:00:43.000Z",
+        "contentSnippet": "A flaw was found in KubeVirt's network annotation generator. When a tenant creates a VirtualMachineInstance with a Multus network configuration, the supplied networkName value is written verbatim into the launcher pod's v1.multus-cni.io/default-network annotation without format v",
+        "cveScore": 4.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-57518 - Pagekit CMS 1.0.18 Privilege Escalation via UserApiController",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57518",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T15:58:20.000Z",
+        "contentSnippet": "Pagekit CMS 1.0.18 contains a privilege escalation vulnerability that allows authenticated users with the 'user: manage users' permission to escalate privileges by assigning arbitrary custom roles to themselves due to missing authorization checks in UserApiController::saveAction(",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2023-20572 - ASP Hash MAC Brute-Force Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2023-20572",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T15:53:38.000Z",
+        "contentSnippet": "An observable timing discrepancy in the ASP could allow a privileged attacker to perform a brute-force attack against the hash message authentication code, allowing the input of an arbitrary message, potentially leading to a loss of data integrity.",
+        "cveScore": 5.6,
+        "cveSeverity": "MEDIUM"
+      },
       {
         "title": "CVE-2026-13426 - Client4 fails to validate path parameters",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-13426",
@@ -675,231 +900,6 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-25T21:46:00.000Z",
         "contentSnippet": "vtk vtk-dicom vtkDICOMItem::NewDataElement heap-based buffer overflow vulnerability",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2025-71340 - picklescan - Remote Code Execution via idlelib.pyshell.ModifiedInterpreter.runcode",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-71340",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T21:41:08.000Z",
-        "contentSnippet": "picklescan through 0.0.26 fails to detect malicious pickle files that invoke idlelib.pyshell.ModifiedInterpreter.runcode in __reduce__ methods. Attackers can embed undetected code in pickle files that executes arbitrary commands when the file is loaded via pickle.load(), enabling",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2025-71338 - Flowise - Arbitrary File Write to Remote Code Execution via document-store API",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-71338",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T21:41:07.000Z",
-        "contentSnippet": "Flowise contains a path traversal vulnerability in the /api/v1/document-store/loader/process endpoint that allows unauthenticated attackers to write arbitrary files to the filesystem. Attackers can exploit unsanitized fileName parameters with ../ sequences to overwrite critical f",
-        "cveScore": 10,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2025-71336 - Flowise - Unsandboxed Remote Code Execution via Custom MCP",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-71336",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T21:41:06.000Z",
-        "contentSnippet": "Flowise before 3.0.6 (affected versions 2.2.7-patch.1 and earlier) contains an unsandboxed remote code execution vulnerability in the Custom MCP feature, which is designed to execute OS commands such as launching local MCP servers. Because Flowise's authentication and authorizati",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2025-71335 - Flowise - Session Invalidation Failure After Password Change",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-71335",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T21:41:06.000Z",
-        "contentSnippet": "Flowise before 3.0.10 (affected versions 3.0.7 and earlier) fails to invalidate existing sessions and session tokens after a user changes their password. An attacker who already holds an active session, for example via a stolen session token or a device left logged in, remains au",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2025-71334 - Flowise - Arbitrary File Access via Missing Chat Flow ID Validation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-71334",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T21:41:05.000Z",
-        "contentSnippet": "Flowise before 3.0.6 (affected versions 2.2.8 and earlier) contains an arbitrary file access vulnerability due to missing validation that the chatflowId and chatId parameters are UUIDs or numbers in file handling operations. By supplying a path-traversal value (e.g., '../../../..",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2025-71333 - Flowise - Arbitrary File Upload via Unauthenticated /api/v1/attachments Endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-71333",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T21:41:04.000Z",
-        "contentSnippet": "Flowise through 2.2.4 contains an unauthenticated arbitrary file upload vulnerability in the /api/v1/attachments endpoint when storageType is set to local. Attackers can exploit path traversal in the chatId and chatflowId parameters to upload malicious files to arbitrary director",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2025-71328 - Flowise - Unverified Password Change via Account Settings",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-71328",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T21:41:04.000Z",
-        "contentSnippet": "Flowise before 3.0.10 contains an unverified password change vulnerability. An authenticated user can change their account password through the account settings (Security) section without supplying the current password or any additional verification, as the application does not e",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2025-71327 - Flowise - Authentication Bypass via Unprotected Registration Endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-71327",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T21:41:03.000Z",
-        "contentSnippet": "Flowise contains an authentication bypass vulnerability in the unprotected /api/v1/account/register endpoint that allows unauthenticated attackers to create user accounts. Remote attackers can exploit this endpoint to register arbitrary accounts and authenticate to the system, ga",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2025-71324 - Flowise - Arbitrary File Read via chatId Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-71324",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T21:41:02.000Z",
-        "contentSnippet": "Flowise before 3.0.6 contains an arbitrary file read vulnerability in the chatId parameter of the /api/v1/get-upload-file and /api/v1/openai-assistants-file/download endpoints. The chatId value is not validated and is passed to streamStorageFile(), where a fallback file-lookup pa",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2021-47987 - Parse Server - Arbitrary Code Execution via Malicious Version Tags",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2021-47987",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T21:41:02.000Z",
-        "contentSnippet": "Parse Server before 4.10.0 was affected by a supply chain incident in which incorrect version tags were pushed to the official repository pointing to an unreviewed personal fork of a contributor with write access. No releases were published with these tags; a project was exposed ",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2021-47986 - Parse Server - Unreviewed Code Execution via Malicious Version Tags",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2021-47986",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T21:41:01.000Z",
-        "contentSnippet": "Parse Server before 4.10.0 contains a supply chain vulnerability where incorrect version tags were pushed to the repository linking to unreviewed code in a personal fork. Attackers could exploit this by specifying affected version tags in dependency declarations to execute unrevi",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2020-37256 - Grav - Cross-Site Scripting in Admin Plugin Page Editor",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2020-37256",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T21:41:00.000Z",
-        "contentSnippet": "Grav before 1.6.30 contains a cross-site scripting vulnerability in the Admin plugin page editor default security configuration. Privileged users with page editing capabilities can inject malicious scripts to execute arbitrary code and install malicious plugins for system access.",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-7511 - PKCS7_verify signer confusion allows forged signatures to be accepted",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-7511",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T21:32:29.000Z",
-        "contentSnippet": "PKCS7_verify signer confusion allows forged signatures, where the signer associated with a signature is not correctly bound, permitting a forged signature to be accepted.",
-        "cveScore": 5.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-7532 - iPAddress name constraints not enforced when WOLFSSL_IP_ALT_NAME is undefined",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-7532",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T21:31:11.000Z",
-        "contentSnippet": "iPAddress name constraints bypass when WOLFSSL_IP_ALT_NAME is not defined. IP address name constraints are not enforced in that configuration, allowing a certificate to bypass an issuing CA's IP address constraints.",
-        "cveScore": 5.7,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-8720 - HMAC-BLAKE2 final discards message when key length exceeds block size",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8720",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T21:18:29.000Z",
-        "contentSnippet": "wc_Blake2bHmacFinal and wc_Blake2sHmacFinal discard the message when the key length exceeds the block size, producing a MAC that is independent of the input. When the supplied key is longer than the BLAKE2 block size the key-hashing branch reinitialized the running hash state, di",
-        "cveScore": 5.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-10098 - OCSP CertID serial-number length-confusion in wolfSSL_OCSP_resp_find_status",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10098",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T21:16:45.000Z",
-        "contentSnippet": "OCSP CertID serial-number length-confusion in wolfSSL_OCSP_resp_find_status allows a same-issuer SingleResponse whose serial is a prefix of the target serial to be reported as the revocation status of a different certificate. The lookup compared serial-number bytes without first ",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-12992 - Apicurio/apicurio-registry: apicurio-registry: ssrf via wsdl4j import dereference in wsdl full validation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12992",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T21:16:11.000Z",
-        "contentSnippet": "A flaw was found in Apicurio Registry. The WSDLReaderAccessor creates a wsdl4j WSDLReader without disabling the javax.wsdl.importDocuments feature. When the VALIDITY rule is set to FULL, an attacker with Developer-role access can upload a WSDL document containing attacker-control",
-        "cveScore": 7.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-11703 - Missing SNI/ALPN binding on stateful (session-ID) TLS session resumption",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11703",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T21:15:20.000Z",
-        "contentSnippet": "Missing SNI/ALPN binding on stateful (session-ID) resumption, which previously skipped the binding check performed for ticket-based resumption. A cached session could be resumed under a different SNI/ALPN than originally negotiated and, where client-authentication policy differs ",
-        "cveScore": 6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-55962 - TLS 1.3 post-handshake authentication: server accepts Finished without client Certificate/CertificateVerify",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55962",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T21:12:38.000Z",
-        "contentSnippet": "TLS 1.3 post-handshake authentication (PHA) issue where a server could accept a client's Finished message without the client having sent a Certificate and CertificateVerify. The post-handshake-auth exemption that allows an empty/absent peer certificate was only intended for the i",
-        "cveScore": 6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-12975 - Apicurio/apicurio-registry: apicurio-registry: unhardened saxparser in content-type detection leads to blind xxe / ssrf / billion-laughs dos",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12975",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T21:12:31.000Z",
-        "contentSnippet": "A flaw was found in Apicurio Registry. The ContentTypeUtil.isParsableXml() method creates a SAXParserFactory without enabling secure processing features or disabling external entity resolution. An attacker with artifact-write permission (or unauthenticated when the registry runs ",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-50548 - Cursor Desktop sandbox escape via agent-controlled working directory",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50548",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T18:47:56.000Z",
-        "contentSnippet": "Cursor is a code editor built for programming with AI. Prior to 3.0, Cursor runs agent terminal commands in a sandbox by default, and the sandbox grants write access to the command's working directory. A flaw was identified in how the agent could modify the working_directory para",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-50549 - Cursor Desktop sandbox escape via symlink and failed path canonicalization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50549",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T18:47:45.000Z",
-        "contentSnippet": "Cursor is a code editor built for programming with AI. Prior to 3.0, Cursor runs agent terminal commands in a sandbox by default. Before a Write, the agent canonicalizes the target path to confirm it stays inside the workspace, but when canonicalization fails it falls back to the",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-54917 - SeaweedFS: Path traversal in the S3 and Iceberg REST gateways allows cross-bucket access",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54917",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T18:41:19.000Z",
-        "contentSnippet": "SeaweedFS is a distributed storage system for object storage (S3), file systems, and Iceberg tables. Prior to 4.30, the S3 API gateway and the Iceberg REST catalog gateway construct their routers with mux.NewRouter().SkipClean(true). With path cleaning disabled, a .. segment insi",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-4930 - DPA Countermeasures weakening on Series 3 devices",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-4930",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T18:39:26.000Z",
-        "contentSnippet": "SYMCRYPTO is the SiXG301's host side hardware engine accessed by PSA crypto library that accelerates symmetric cryptographic operations (AES encryption/decryption and hashing). DPA Countermeasures on SYMCRYPTO can be weakened (reduced entropy) by forcing certain seed values if an",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-28898 - swift-nio-http2 HTTP/2 to HTTP/1.1 Codec Control Character Header Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-28898",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-25T18:36:54.000Z",
-        "contentSnippet": "swift-nio-http2's HTTP/2-to-HTTP/1.1 codec did not validate pseudo-header values for control characters before placing them into the translated HTTP/1.1 message. swift-nio-http2 1.44.1 adds validation of all pseudo-header values (:path, :authority, :scheme, :method, and :status) ",
         "cveScore": 0,
         "cveSeverity": "NA"
       }
@@ -2135,6 +2135,62 @@
     ],
     "hardware": [
       {
+        "title": "This is what Tom's Hardware readers clicked the most during Prime Day — Portable displays, DVD burners, the Nintendo Switch 2, and two decent SSD deals, among others",
+        "link": "https://www.tomshardware.com/pc-components/this-is-what-toms-hardware-readers-clicked-the-most-during-prime-day-portable-displays-dvd-burners-the-nintendo-switch-2-and-two-decent-ssd-deals-among-others",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-26T18:11:41.000Z",
+        "contentSnippet": "Here are the products our readers clicked on the most during this Prime Week, from optical drives and small touchscreens to the Nintendo Switch 2, and the two name-brand SSDs that were actually on sale."
+      },
+      {
+        "title": "Save $250 on this AMD AM5 bundle, get Samsung 990 Pro SSD for basically free — grab the AMD Ryzen 5 9600X, Gigabyte B850 Aorus Elite motherboard, and 990 Pro 1TB SSD for 36% off",
+        "link": "https://www.tomshardware.com/pc-components/save-usd250-on-this-amd-am5-bundle-get-samsung-990-pro-ssd-for-basically-free-grab-the-amd-ryzen-5-9600x-gigabyte-b850-aorus-elite-motherboard-and-990-pro-1tb-ssd-for-36-percent-off",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-26T17:57:34.000Z",
+        "contentSnippet": "Save nearly $250 on three essential PC components with this Newegg bundle featuring AMD's Ryzen 5 9600X, a Gigabyte B850 motherboard, and Samsung's flagship PCIe 4.0 SSD."
+      },
+      {
+        "title": "Sony WH-1000XM5 active noise-canceling headphones for an all-time low $198 at Amazon — audiophile-grade audio and ANC for an affordable price",
+        "link": "https://www.tomshardware.com/pc-components/sony-wh-1000xm5-active-noise-canceling-headphones-for-an-all-time-low-usd198-at-amazon-audiophile-grade-audio-and-anc-for-an-affordable-price",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-26T17:23:28.000Z",
+        "contentSnippet": "Sony WH-1000XM5 active noise-cancelling headphones for just $198 at Amazon — audiophile-grade audio and ANC for an affordable price"
+      },
+      {
+        "title": "Meta Quest 3S drops to pre-RAMpocalypse prices for a Prime Day — wireless VR headset goes on sale for a limited time, get 15% off and save more than $50 if you get it right now",
+        "link": "https://www.tomshardware.com/pc-components/meta-quest-3s-drops-to-pre-rampocalypse-prices-for-a-prime-day-wireless-vr-headset-goes-on-sale-for-a-limited-time-get-15-percent-off-and-save-more-than-usd50-if-you-get-it-right-now",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-26T17:23:04.000Z",
+        "contentSnippet": "The Meta Quest 3S is one sale at $296.79, saving you $53.20 from its original price of $349.99, making it more affordable than its pre-memory chip shortage price of $300."
+      },
+      {
+        "title": "The Logitech G29 racing wheel and pedal set with real force feedback is on a deep 40% discount for Prime Day — get a racing sim setup for just $180",
+        "link": "https://www.tomshardware.com/pc-components/the-logitech-g29-racing-wheel-and-pedal-set-with-real-force-feedback-is-on-a-deep-40-percent-discount-for-prime-day-get-a-racing-sim-setup-for-just-usd180",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-26T16:48:43.000Z",
+        "contentSnippet": "The Logitech G29 is on a deep discount of 40% for Prime Day, marking its lowest price in half a decade at the retailer."
+      },
+      {
+        "title": "Asus' ROG Zephyrus G16 with an RTX 5070 & 240Hz OLED display is on sale for just $1,575 — Save $575 on an excellent gaming laptop with a 16-core flagship CPU & top-tier build quality",
+        "link": "https://www.tomshardware.com/pc-components/asus-rog-zephyrus-g16-gaming-laptop-with-an-rtx-5070-and-240hz-oled-display-is-on-sale-for-usd757-off-save-on-an-excellent-laptop-with-a-16-core-flagship-cpu-and-top-tier-build-quality",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-26T16:28:47.000Z",
+        "contentSnippet": "Best Buy is slashing almost $600 off a fantastic gaming laptop that basically has no compromises. It delivers solid performance across a wide variety of workloads and rocks a stunning 16-inch 240Hz OLED that can make anything look good. Asus has put 16GB of RAM and a 1TB PCIe 4.0"
+      },
+      {
+        "title": "Onsemi buying cash-strapped Synaptics in $7 billion all-stock deal — smart power meets edge AI hardware",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/onsemi-buying-cash-strapped-synaptics-in-usd7-billion-all-stock-deal-smart-power-meets-edge-ai-hardware",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-26T16:07:40.000Z",
+        "contentSnippet": "Onsemi and Synaptics to merge in a bid to build comprehensive platforms for robotics, physical AI applications."
+      },
+      {
+        "title": "The Ryzen 7 5800X3D is tough to find, but these Prime Day CPUs with DDR5 are cheaper — offset the cost of a DDR5 upgrade with a CPU discount",
+        "link": "https://www.tomshardware.com/pc-components/the-ryzen-7-5800x3d-is-sold-out-but-these-prime-day-cpus-with-ddr5-are-cheaper-offset-the-cost-of-a-ddr5-upgrade-with-a-cpu-discount",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-26T15:54:29.000Z",
+        "contentSnippet": "AMD's re-released Ryzen 7 5800X3D sold out almost immediately when it launched, but if you're tired of waiting, you can easily upgrade to a DDR5 platform with these Prime Day CPUs deals, all of which are cheaper than the 5800X3D's recommended $350 MSRP."
+      },
+      {
         "title": "Supermicro Adds NVIDIA Vera Rubin NVL4 DCBBS Blueprint for Converged HPC and AI",
         "link": "https://www.storagereview.com/news/supermicro-adds-nvidia-vera-rubin-nvl4-dcbbs-blueprint-for-converged-hpc-and-ai",
         "source": "StorageReview",
@@ -2777,62 +2833,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-06-23T16:20:42.000Z",
         "contentSnippet": "Upgrade your Nintendo Switch 2 with these essential accessories."
-      },
-      {
-        "title": "Grab this Creality 3D Printer tool kit for all-time low $25.49 for Prime Day — 74-piece set includes everything that you need for 3D printer maintenance and comes in a neat organizer for storage and t",
-        "link": "https://www.tomshardware.com/pc-components/grab-this-creality-3d-printer-tool-kit-for-all-time-low-usd25-49-for-prime-day-74-piece-set-includes-everything-that-you-need-for-3d-printer-maintenance-and-comes-in-a-neat-organizer-for-storage-and-transport",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-23T16:04:29.000Z",
-        "contentSnippet": "The Creality 3D Printer Tool Kit is on sale at 15% of for Prime Day 2026. This brings the price down to $25.49, helping you save some cash if you want to complete your 3D printing setup."
-      },
-      {
-        "title": "Get a 4TB Samsung 9100 Pro SSD for just $459 in blockbuster Prime Day sale — remarkable deal shaves $900 off PCIe 5.0 NVMe drive to bring it below MSRP [Updated]",
-        "link": "https://www.tomshardware.com/pc-components/save-an-amazing-usd900-off-a-4tb-samsung-9100-pro-ssd-in-blockbuster-prime-day-deal-remarkable-sale-brings-pcie-5-0-nvme-drive-from-usd1-360-down-to-just-usd459",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-23T15:59:56.000Z",
-        "contentSnippet": "Samsung's 4TB 9100 Pro PCIe 5.0 NVMe SSD is on sale for a remarkable price, bringing its $1,360 MSRP down to just $460."
-      },
-      {
-        "title": "AMD and IBM Advance Hybrid Quantum-Centric Supercomputing Strategy",
-        "link": "https://www.storagereview.com/news/amd-and-ibm-advance-hybrid-quantum-centric-supercomputing-strategy",
-        "source": "StorageReview",
-        "isoDate": "2026-06-23T15:55:59.000Z",
-        "contentSnippet": "As quantum computing continues its transition from research labs to practical computing environments, AMD and IBM are positioning themselves around a common vision: hybrid computing architectures that combine quantum processors, high-performance computing (HPC), and AI into a uni"
-      },
-      {
-        "title": "Save $250 on the cheapest RTX 5080 around this Prime Day — Gigabyte Gaming OC GeForce RTX 5080 at stellar pricing on Newegg",
-        "link": "https://www.tomshardware.com/pc-components/save-usd250-on-the-cheapest-rtx-5080-around-this-prime-day-gigabyte-gaming-oc-geforce-rtx-5080-at-stellar-pricing-on-newegg",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-23T15:54:30.000Z",
-        "contentSnippet": "The Gigabyte Gaming OC GeForce RTX 5080 pairs factory overclocking, triple-fan cooling, and support for DLSS 4.5 with a $250 discount, bringing one of Nvidia's fastest gaming GPUs closer to its intended price point."
-      },
-      {
-        "title": "SCUF Prime Day sale brings pro control and precision savings of up to 26% for gamers",
-        "link": "https://www.tomshardware.com/peripherals/controllers-gamepads/scuf-prime-day-sale-brings-pro-control-and-precision-savings-of-up-to-26-percent-for-gamers",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-23T15:43:24.000Z",
-        "contentSnippet": "SCUF has slashed the prices of the Envision and Valor Pro controllers by up to 26% for this Prime Day."
-      },
-      {
-        "title": "The Swiss army knife of USB DVD drives is on sale, also features a built-in M.2 SSD slot, USB hub, and SATA hard drive dock — $26 for DVD writer and hub, $39 gets an added SATA or M.2 SSD dock",
-        "link": "https://www.tomshardware.com/pc-components/storage/the-swiss-army-knife-of-usb-dvd-drives-is-on-sale-also-features-a-built-in-m-2-ssd-slot-usb-hub-and-sata-hard-drive-dock-usd26-for-dvd-writer-and-hub-usd39-gets-an-added-sata-or-m-2-ssd-dock",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-23T15:22:47.000Z",
-        "contentSnippet": "Portable DVD writers with flash media reading and SATA drive docking abilities are on sale at Amazon Prime Day 2026."
-      },
-      {
-        "title": "VDURA Unveils Multi-Tenant Control Plane and S3 Enhancements at ISC 2026",
-        "link": "https://www.storagereview.com/news/vdura-unveils-multi-tenant-control-plane-and-s3-enhancements-at-isc-2026",
-        "source": "StorageReview",
-        "isoDate": "2026-06-23T15:16:03.000Z",
-        "contentSnippet": "At ISC High Performance 2026 in Hamburg, VDURA is showcasing three major platform updates designed to improve storage operations and data pipeline performance for AI and HPC environments. The company unveiled a next-generation multi-tenant control plane, enhanced S3 performance c"
-      },
-      {
-        "title": "Virtuozzo Storage Achieves Veeam Ready Certification for Object Storage Backups",
-        "link": "https://www.storagereview.com/news/virtuozzo-storage-achieves-veeam-ready-certification-for-object-storage-backups",
-        "source": "StorageReview",
-        "isoDate": "2026-06-23T15:00:10.000Z",
-        "contentSnippet": "Virtuozzo has announced that Virtuozzo Storage has achieved Veeam Ready certification as an object storage backup target and is now listed in the Veeam Ready database. The certification validates interoperability and performance requirements for use with Veeam’s object storage ca"
       }
     ]
   }
