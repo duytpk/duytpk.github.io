@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-06-26T20:28:22.745Z",
+  "updatedAt": "2026-06-26T22:04:37.117Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-49869 - Kestra: Unauthenticated Remote Code Execution via Authentication Bypass in `AuthenticationFilter`",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49869",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T20:58:19.000Z",
+        "contentSnippet": "Kestra is an open-source, event-driven orchestration platform. Prior to 1.0.45 and 1.3.21, AuthenticationFilter in Kestra OSS uses request.getPath().endsWith(\"/configs\") to whitelist the public configuration endpoint from Basic Auth. Because the check is a suffix match rather tha",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-45807 - Kestra: Path traversal via URL-encoded \"%2E%2E\" in execution and namespace file endpoints allows arbitrary file read",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45807",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T20:57:13.000Z",
+        "contentSnippet": "Kestra is an open-source, event-driven orchestration platform. Prior to 1.0.43 and 1.3.19, several Kestra API endpoints accept a kestra:// URI from the client and pass it through StorageInterface.parentTraversalGuard before reading the underlying file from the local storage backe",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49984 - Kestra: Path traversal in `LocalStorage` allows any authenticated user to read arbitrary server files via the execution file-download API (`\\..\\` bypasses the `..` guard)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49984",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T20:55:44.000Z",
+        "contentSnippet": "Kestra is an open-source, event-driven orchestration platform. Prior to 1.0.45 and 1.3.23, the local internal-storage backend validates user-supplied paths for .. traversal before it converts Windows-style backslashes to forward slashes. An attacker can therefore smuggle a traver",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53576 - Kestra: Unauthenticated RCE via /configs path-suffix auth-filter bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53576",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T20:54:08.000Z",
+        "contentSnippet": "Kestra is an open-source, event-driven orchestration platform. Prior to 1.0.45 and 1.3.21, the authentication filter for the REST API (@Filter(\"/api/v1/**\")) treats any request whose path ends in /configs as the public instance-config endpoint and forwards it without a credential",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53577 - Kestra: Cross-Execution File Read via Preview Endpoint (IDOR)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53577",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T20:52:04.000Z",
+        "contentSnippet": "Kestra is an open-source, event-driven orchestration platform. Prior to 1.0.45 and 1.3.21, the previewFileFromExecution endpoint (GET /api/v1/{tenant}/executions/{executionId}/file/preview) contains an access control bypass that allows any authenticated user to read output files ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-55069 - Kestra BasicAuth Password Stored as SHA-512 Enables Offline Brute-Force Attack",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55069",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T20:50:09.000Z",
+        "contentSnippet": "Kestra is an open-source, event-driven orchestration platform. Prior to 1.3.24, this vulnerability exists in the BasicAuth authentication component of the Kestra OSS workflow orchestration platform. An attacker who gains read access to the PostgreSQL database can exploit SHA-512'",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-54351 - Budibase: Mass Assignment in Webhook Trigger Allows Cross-Workspace Automation Execution via appId Override",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54351",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T20:45:35.000Z",
+        "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.39.9, the webhook trigger endpoint in Budibase is publicly accessible and passes the full HTTP request body into automation execution parameters. A mass assignment vulnerability in externalTrigger() allows an attacker to ov",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-54353 - Budibase: Potential SSRF DNS rebinding bypass in outbound fetch validation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54353",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T20:44:52.000Z",
+        "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.39.9, authenticated users with automation permissions can bypass Budibase's SSRF blacklist through DNS rebinding. The outbound fetch flow validates a hostname against the blacklist before the request is sent, but the actual",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-54350 - Budibase: Anonymous NoSQL operator injection via published-app query templates",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54350",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T20:44:00.000Z",
+        "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.39.12, an unauthenticated visitor of any published Budibase app reads every document of the backing MongoDB, CouchDB, Elasticsearch, DynamoDB-PartiQL, or REST-with-JSON-body collection and, where the builder has published a",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-50137 - Budibase: POST /api/attachments/:datasourceId/url is unauthenticated and lets anonymous callers mint S3 PUT pre-signed URLs using stored datasource IAM credentials",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50137",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T20:41:03.000Z",
+        "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.39.0, an anonymous attacker who knows or can enumerate a workspace id (app_...) and an S3-source datasource id (ds_...) can call this endpoint with no auth and obtain a 15-minute pre-signed PUT URL minted on the victim's IA",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2024-23581 - HCL Traveler for Microsoft Outlook (HTMO) is susceptible to an application modification vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2024-23581",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T20:39:48.000Z",
+        "contentSnippet": "The HCL Traveler for Microsoft Outlook libraries are being flagged as potentially malicious software or an unrecognized application.",
+        "cveScore": 6.7,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-50136 - Budibase: Unauthenticated S3 signed upload URL generation allows arbitrary writes with stored datasource credentials",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50136",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T20:36:54.000Z",
+        "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.39.3, the application server exposes an unauthenticated endpoint that generates S3 PutObject presigned URLs using credentials stored in a workspace datasource. The route is protected only by the recaptcha middleware and doe",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-50132 - Budibase: Chat Identity Link Hijacking via Missing Consent & CSRF — Account Impersonation in Budibase",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50132",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T20:34:30.000Z",
+        "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.39.0, `GET /api/chat-links/:instance/:token/handoff` is a public endpoint (no auth required) that performs a permanent, state-changing operation: it binds an external chat identity (Slack/Discord/MS Teams) to an authenticat",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-54352 - Budibase: Arbitrary file read by workspace-builder via PWA-zip symlink upload",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54352",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T20:32:51.000Z",
+        "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.39.9, `POST /api/pwa/process-zip` at packages/server/src/api/routes/static.ts:24 accepts a builder-uploaded .zip, extracts it with extract-zip@2.0.1 into a temp directory, then for each entry listed in icons.json validates ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-46604 - Panic decoding image with out-of-bounds strip offset in x/image/tiff in golang.org/x/image",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46604",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T20:22:46.000Z",
+        "contentSnippet": "The TIFF decoder can panic when decoding an invalid image with an out-of-bounds strip offset.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-48770 - Notepad++ WM_COPYDATA COPYDATA_FULL_CMDLINE local DoS crash",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48770",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T20:22:17.000Z",
+        "contentSnippet": "Notepad++ is a free and open-source source code editor. Prior to 8.9.6.1, a local process in the same interactive Windows session can send a malformed WM_COPYDATA message to Notepad++ using the COPYDATA_FULL_CMDLINE path. The handler appears to process COPYDATASTRUCT.lpData as an",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-48778 - Notepad++: Arbitrary Code Execution via config.xml commandLineInterpreter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48778",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T20:21:17.000Z",
+        "contentSnippet": "Notepad++ is a free and open-source source code editor. Prior to 8.9.6.1, the tag in config.xml is read by NppXml::value() (Parameters.cpp:6430) and stored in _nppGUI._commandLineInterpreter without any validation, whitelist, or digital signature check. When the user triggers IDM",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52885 - Notepad++ TOCTOU: HMAC Checks Disk, Executes from Memory",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52885",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T20:19:04.000Z",
+        "contentSnippet": "Notepad++ is a free and open-source source code editor. Prior to 8.9.6.4, NppCommands.cpp checks the HMAC of the on-disk shortcuts.xml at the moment a user command fires (Time-of-Check). However, the command payload is taken from the in-memory _userCommands vector, which is popul",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-46710 - Notepad++: Privilege Escalation in the Installer via Uncontrolled Executable Search Path",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46710",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T20:16:16.000Z",
+        "contentSnippet": "Notepad++ is a free and open-source source code editor. From 8.9.4 until 8.9.6, Notepad++ contains a local privilege escalation vulnerability in the installer. During installation, the installer invokes powershell.exe without using an absolute path after setting the working direc",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-48800 - Notepad++: Arbitrary Code Execution via shortcuts.xml UserCommand Injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48800",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T20:12:43.000Z",
+        "contentSnippet": "Notepad++ is a free and open-source source code editor. Prior to 8.9.6.1, the tag text content inside in shortcuts.xml is read by NppXml::value(aNode) (Parameters.cpp:3658) in the feedUserCmds() function and stored in UserCommand._cmd without any validation. When the user clicks ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52884 - Notepad++: CVE-2026-48800 Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52884",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T20:11:40.000Z",
+        "contentSnippet": "Notepad++ is a free and open-source source code editor. In v8.9.6.1, isInTrustedDirectory() does NOT canonicalize the path before checking. It uses a prefix-based check (PathIsPrefix() or equivalent) that matches paths starting with trusted directory strings. A path traversal usi",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-55188 - RustFS: ListRemoteTargetHandler authorization bypass leaks replication target credentials",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55188",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T20:03:52.000Z",
+        "contentSnippet": "RustFS is a distributed object storage system built in Rust. From 1.0.0-alpha.1 until 1.0.0-beta.9, RustFS contains an authorization bypass in the bucket replication admin API. The ListRemoteTargetHandler handler for listing remote replication targets only checks whether request ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49991 - RustFS Snowball Auto-Extract: Path Traversal allows cross-bucket object injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49991",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T20:01:29.000Z",
+        "contentSnippet": "RustFS is a distributed object storage system built in Rust. In 1.0.0-beta.4, authenticated users with only PutObject permission on their own bucket can exploit a path traversal vulnerability in the Snowball auto-extract feature to write arbitrary objects into other users' bucket",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-55189 - RustFS: FTP frontend skips IAM authorization on object reads",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55189",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T19:59:13.000Z",
+        "contentSnippet": "RustFS is a distributed object storage system built in Rust. From 1.0.0-alpha.1 until 1.0.0-beta.9, when the FTP frontend is enabled, the FTP read and probe handlers dispatch directly to the storage backend without ever calling the IAM authorization function that the FTP write/li",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-55838 - RustFS: Missing admin authorization on /rustfs/admin/v3/metrics allows any authenticated user to read server metrics",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55838",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T19:57:46.000Z",
+        "contentSnippet": "RustFS is a distributed object storage system built in Rust. In 1.0.0-beta.7 and earlier, the real-time metrics endpoint at /rustfs/admin/v3/metrics is accessible to any valid IAM user regardless of their assigned policy. Every other admin handler in the codebase calls validate_a",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2026-52780 - OpenProject: Cache store poisoning leads to Remote Code Execution (RCE)",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-52780",
@@ -677,234 +902,23 @@
         "contentSnippet": "The User Registration & Membership – Free & Paid Memberships, Subscriptions, Content Restriction, User Profile, Custom User Registration & Login Builder plugin for WordPress is vulnerable to unauthorized modification of data due to missing validation checks in the confirm_payment",
         "cveScore": 6.5,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-2053 - Unauthenticated Server-Side Request Forgery via WS-Addressing in WSO2 API Manager",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-2053",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T07:26:15.000Z",
-        "contentSnippet": "The WSO2 API Manager's message flow component, when processing WS-Addressing headers, does not sufficiently validate or restrict user-controlled input within these headers. This omission allows an attacker to manipulate WS-Addressing headers to specify arbitrary destinations for ",
-        "cveScore": 8.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57881 - GV-LPC2011/LPC2211 - unauthorized stack-based buffer overflow vulnerability (vlsvr)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57881",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T07:17:45.000Z",
-        "contentSnippet": "An unauthenticated stack-based buffer overflow vulnerability exists in vlsvr in GeoVision GV-LPC2011 and GV-LPC2211 V1.12 and earlier. The vulnerability is caused by insufficient length validation when processing remote login data. A remote attacker may exploit this vulnerability",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-57880 - GV-LPC2011/LPC2211 - unauthorized buffer overflow via RTSP Digest username (ssvr)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57880",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T07:17:39.000Z",
-        "contentSnippet": "An unauthenticated stack-based buffer overflow vulnerability exists in ssvr in GeoVision GV-LPC2011 and GV-LPC2211 V1.12 and earlier. The vulnerability is caused by insufficient bounds checking when parsing RTSP Digest authentication fields. A remote attacker may exploit this vul",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-57879 - GV-LPC2011/LPC2211 - unauthorized buffer overflow via AuthMode/AuthValue path (ssvr)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57879",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T07:17:34.000Z",
-        "contentSnippet": "An unauthenticated stack-based buffer overflow vulnerability exists in ssvr in GeoVision GV-LPC2011 and GV-LPC2211 V1.12 and earlier. The vulnerability is caused by insufficient bounds checking when processing RTSP custom authentication data. A remote attacker may exploit this vu",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-57878 - GV-LPC2011/LPC2211 - unauthorized buffer overflow vulnerability (thttpd)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57878",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T07:17:29.000Z",
-        "contentSnippet": "An unauthenticated stack-based buffer overflow vulnerability exists in thttpd in GeoVision GV-LPC2011 and GV-LPC2211 V1.12 and earlier. The vulnerability is caused by insufficient bounds checking when processing web request parameters in a specific request path. A remote attacker",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-57877 - GV-LPC2011/LPC2211 - unauthorized format string vulnerability (vlsvr)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57877",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T07:17:24.000Z",
-        "contentSnippet": "An unauthenticated format string vulnerability exists in vlsvr in GeoVision GV-LPC2011 and GV-LPC2211 V1.12 and earlier. The vulnerability is caused by improper handling of externally controlled input during log message formatting in the login processing path. A remote attacker m",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57876 - GV-LPC2011/LPC2211 - unauthorized out-of-bounds writing vulnerability (onvif.cgi)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57876",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T07:17:19.000Z",
-        "contentSnippet": "An unauthenticated out-of-bounds write vulnerability exists in onvif.cgi in GeoVision GV-LPC2011 and GV-LPC2211 V1.12 and earlier. The vulnerability is caused by insufficient bounds checking when processing HTTP request body data. A remote attacker may exploit this vulnerability ",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57875 - GV-LPC2011/LPC2211 - unauthorized null pointer dereference vulnerability in packet parsing",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57875",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T07:17:14.000Z",
-        "contentSnippet": "An unauthenticated NULL pointer dereference vulnerability exists in the HTTP request parsing logic of multiple CGI components in GeoVision GV-LPC2011 and GV-LPC2211 V1.12 and earlier. The vulnerability is caused by improper validation of required HTTP request metadata before it i",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57874 - GV-LPC2011/LPC2211 - unauthorized buffer overflow vulnerability (IEEE8021x_upload.cgi)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57874",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T07:17:09.000Z",
-        "contentSnippet": "An unauthenticated buffer overflow vulnerability exists in IEEE8021x_upload.cgi in GeoVision GV-LPC2011 and GV-LPC2211 V1.12 and earlier. The vulnerability is caused by insufficient bounds checking when parsing filename values in multipart upload data. A remote attacker may explo",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57873 - GV-LPC2011/LPC2211 - unauthorized null pointer dereference vulnerability (IEEE8021x_upload.cgi)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57873",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T07:17:07.000Z",
-        "contentSnippet": "An unauthenticated NULL pointer dereference vulnerability exists in IEEE8021x_upload.cgi in GeoVision GV-LPC2011 and GV-LPC2211 V1.12 and earlier. The vulnerability is caused by improper validation of multipart upload headers when processing certificate-related upload fields. A r",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57872 - GV-LPC2011/LPC2211 - unauthorized directory traversal vulnerability (get_fcont.cgi)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57872",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T07:17:05.000Z",
-        "contentSnippet": "An unauthenticated directory traversal vulnerability exists in get_fcont.cgi in GeoVision GV-LPC2011 and GV-LPC2211 V1.12 and earlier. The vulnerability is caused by insufficient validation of user-supplied file path input before the requested file is accessed by the CGI componen",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-49486 - Apache Airflow FTP provider: FTP Provider does not protect FTPS data channel (missing PROT_P)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49486",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T07:05:39.000Z",
-        "contentSnippet": "The Apache Airflow FTP provider's `FTPSHook.get_conn()` created an `ftplib.FTP_TLS` connection but never called `prot_p()`, so although the control channel was TLS-protected the data channel was transmitted in cleartext. Any deployment using `FTPSHook` or `FTPSFileTransmitOperato",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-8380 - Frontend File Manager Plugin <= 23.6 - Author+ Arbitrary Post Deletion",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8380",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T06:00:02.000Z",
-        "contentSnippet": "The Frontend File Manager Plugin WordPress plugin through 23.6 does not properly verify ownership of every targeted post before permanent deletion, allowing authenticated users with author-level access and above to permanently delete arbitrary posts and pages. When the Frontend F",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-10835 - SALESmanago & Leadoo < 3.11.3 - Subscriber+ SQL Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10835",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T06:00:02.000Z",
-        "contentSnippet": "The SALESmanago & Leadoo WordPress plugin before 3.11.3 does not properly sanitise and escape a parameter passed to one of its AJAX actions before using it in a SQL statement, and fails to enforce authorisation on that action, allowing authenticated users with minimal permissions",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-10823 - YMC Smart Filter < 3.11.3 - Unauthenticated Private/Draft Post Disclosure",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10823",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T06:00:02.000Z",
-        "contentSnippet": "The YMC Filter WordPress plugin before 3.11.3 does not properly authorize access to one of its REST API endpoints and does not validate a user-supplied query parameter, allowing unauthenticated attackers to retrieve the titles and content of private, draft, and other non-public p",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2025-10268 - Printcart Web to Print Product Designer for WooCommerce <= 2.4.8 - Unauthenticated Folder Content Disclosure via Path Traversal",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-10268",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T06:00:02.000Z",
-        "contentSnippet": "The Printcart Web to Print Product Designer for WooCommerce WordPress plugin through 2.4.8 is vulnerable to path traversal which makes it possible for the attacker to retrieve the directory listing for arbitrary directories on the server.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-8797 - An access control deficiency vulnerability exists",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8797",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T04:14:19.000Z",
-        "contentSnippet": "An access control deficiency vulnerability exists in ExpressUpdate Agent for Windows. If a malicious user gains access to the product, arbitrary code could be executed with SYSTEM privileges.",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-8661 - Server-Side Cross-Site Scripting and SSRF in Rapid7 InsightConnect Markdown to PDF Plugin",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8661",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T01:59:58.000Z",
-        "contentSnippet": "Server-Side Cross-Site Scripting and Server-Side Request Forgery vulnerability in the markdown_to_pdf action of Rapid7 InsightConnect Markdown Plugin version 3.1.4 and earlier on Linux allows remote attackers to execute JavaScript server-side and make arbitrary outbound HTTP requ",
-        "cveScore": 4.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-13226 - Groundhogg <= 4.5.4 - Authenticated (Custom+) SQL Injection via 'after' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13226",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T01:27:45.000Z",
-        "contentSnippet": "The Groundhogg — CRM, Newsletters, and Marketing Automation plugin for WordPress is vulnerable to generic SQL Injection via the 'after' parameter in all versions up to, and including, 4.5.4 due to insufficient escaping on the user supplied parameter and lack of sufficient prepara",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-48930 - Node.js TLS Hostname Handling Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48930",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T01:14:37.000Z",
-        "contentSnippet": "A flaw in Node.js TLS hostname handling can cause Embedded-nul hostnames can lead to silent authority rebinding due to c-string truncation in resolver bindings. This vulnerability affects all supported release lines: **Node.js 22**, **Node.js 24**, and **Node.js 26**.",
-        "cveScore": 5.6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-48928 - Node.js Hostname Mismatch Trust Policy Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48928",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T01:14:36.000Z",
-        "contentSnippet": "A inconsistency in Node.js hostname matching can cause a trust-policy bypass in multi-context mTLS setups. This vulnerability affects all supported release lines: **Node.js 22**, **Node.js 24**, and **Node.js 26**.",
-        "cveScore": 4.2,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-48934 - Node.js TLS Host Verification Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48934",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T01:14:36.000Z",
-        "contentSnippet": "A flaw in Node.js TLS host verification can cause an attacker to bypass certification validation. This vulnerability affects all supported release lines: **Node.js 22**, **Node.js 24**, and **Node.js 26**.",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-48936 - Node.js: Insufficient Permissions Check Leading to Unauthorized Socket Server Creation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48936",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T01:14:36.000Z",
-        "contentSnippet": "A flaw in Node.js Permission API can cause a local server to be started (via a Unix domain socket), even without the `--allow-net` permission. This vulnerability affects one supported release line: **Node.js 26**.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-48618 - Node.js TLS Hostname Normalization Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48618",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T01:14:36.000Z",
-        "contentSnippet": "A flaw in Node.js TLS hostname handling can cause Node.js unicode dot separator handling can lead to tls wildcard-depth authentication bypass due to resolver and verifier hostname normalization mismat. This can lead to confidentiality impact or bypass of the intended security bou",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-48933 - Node.js WebCrypto Denial of Service",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48933",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T01:14:36.000Z",
-        "contentSnippet": "A flaw in Node.js WebCrypto implementation can crash the process if the input of `subtle.encrypt()` is a multiple of 2GiB. This vulnerability affects all supported release lines: **Node.js 22**, **Node.js 24**, and **Node.js 26**.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       }
     ],
     "ai": [
+      {
+        "title": "Perplexity Launches Computer for Counsel: A Multi-Model Agentic Layer for Legal Workflows",
+        "link": "https://www.marktechpost.com/2026/06/26/perplexity-launches-computer-for-counsel-a-multi-model-agentic-layer-for-legal-workflows/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-06-26T19:31:21.000Z",
+        "contentSnippet": "Perplexity's Computer for Counsel extends Perplexity Computer to legal teams. It routes 20+ models across Midpage, MCP connectors, and Microsoft 365, with cited outputs lawyers can verify. The post Perplexity Launches Computer for Counsel: A Multi-Model Agentic Layer for Legal Wo"
+      },
+      {
+        "title": "OpenAI Previews GPT-5.6 With Sol, Terra, and Luna: Tiered Models, New Reasoning Modes, Limited Access",
+        "link": "https://www.marktechpost.com/2026/06/26/openai-previews-gpt-5-6-with-sol-terra-and-luna-tiered-models-new-reasoning-modes-limited-access/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-06-26T19:18:58.000Z",
+        "contentSnippet": "OpenAI's GPT-5.6 family adds tiered models with max and ultra reasoning. Here is what early-level engineers should know. The post OpenAI Previews GPT-5.6 With Sol, Terra, and Luna: Tiered Models, New Reasoning Modes, Limited Access appeared first on MarkTechPost."
+      },
       {
         "title": "Build interactive PDF text extraction from Amazon S3",
         "link": "https://aws.amazon.com/blogs/machine-learning/build-interactive-pdf-text-extraction-from-amazon-s3/",
@@ -1590,20 +1604,6 @@
         "source": "MarkTechPost",
         "isoDate": "2026-06-12T08:06:26.000Z",
         "contentSnippet": "Zyphra has released Zamba2-VL, a family of open vision-language models at 1.2B, 2.7B, and 7B parameters. The models use a hybrid Mamba2 state-space and Transformer backbone, shipping under Apache 2.0. They stay competitive with comparable Transformer VLMs while cutting time-to-fi"
-      },
-      {
-        "title": "A Coding Implementation on MONAI for End-to-End 3D Spleen Segmentation Using UNet on Medical CT Volumes",
-        "link": "https://www.marktechpost.com/2026/06/12/a-coding-implementation-on-monai-for-end-to-end-3d-spleen-segmentation-using-unet-on-medical-ct-volumes/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-06-12T07:10:00.000Z",
-        "contentSnippet": "In this tutorial, we build an end-to-end 3D medical image segmentation pipeline using MONAI to segment the spleen on the Medical Segmentation Decathlon Task09 dataset. We work with volumetric CT scans, apply medical imaging transformations such as orientation alignment, voxel-spa"
-      },
-      {
-        "title": "Claude Fable is relentlessly proactive",
-        "link": "https://simonwillison.net/2026/Jun/11/fable-is-relentlessly-proactive/#atom-entries",
-        "source": "Simon Willison's Weblog",
-        "isoDate": "2026-06-11T23:35:17.000Z",
-        "contentSnippet": "After two days of experience with Claude Fable 5 I think the best way to describe it is relentlessly proactive. It knows a whole lot of tricks and it will deploy pretty much any of them to get to its goal. I'll illustrate this with an example. I was hacking on Datasette Agent tod"
       }
     ],
     "virtualization": [
