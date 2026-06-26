@@ -1,16 +1,61 @@
 {
-  "updatedAt": "2026-06-26T22:04:37.117Z",
+  "updatedAt": "2026-06-26T23:57:06.433Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-56414 - H.VIEW HV-500S6 IP Camera Unrestricted Upload of File with Dangerous Type",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56414",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T23:00:39.000Z",
+        "contentSnippet": "A vulnerability exists in H.View IP cameras certificate-related upload interfaces allow authenticated users to store arbitrary file content to fixed, persistent filesystem locations without validating file type, structure, or size. This design omission enables the placement of un",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-55975 - H.VIEW HV-500S6 IP Camera OS Command Injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55975",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T22:58:52.000Z",
+        "contentSnippet": "A vulnerability exists in H.View IP cameras that could allow an authenticated user to supply unsanitized XML fields to the device's certificate generation interface, which are incorporated into a backend certificate creation command without proper input validation. This may allow",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-31928 - Daktronics Controller Firmware Use of Hard-coded Credentials",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-31928",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T22:52:51.000Z",
+        "contentSnippet": "The DMP-5000 devices are shipped with a default administrative web account with weak authentication controls, which are not required to be changed during initial configuration or operation. Using these accounts provides full system access.",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-33560 - Daktronics Controller Firmware Unrestricted Upload of File with Dangerous Type",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-33560",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T22:48:56.000Z",
+        "contentSnippet": "The DMP-5000 file service exposes authenticated arbitrary file upload functionality. There are exposed endpoints which allows authenticated users to upload files of any type without validation. No file extension filtering or content inspection is enforced which allows executable ",
+        "cveScore": 8.4,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-28701 - Daktronics Controller Firmware Path Traversal",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-28701",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-26T22:40:03.000Z",
+        "contentSnippet": "Various versions of Daktronics Controller Firmware could allow authenticated and unauthenticated remote users to escape the intended directory and enumerate arbitrary file system paths.",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
       {
         "title": "CVE-2026-49869 - Kestra: Unauthenticated Remote Code Execution via Authentication Bypass in `AuthenticationFilter`",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-49869",
         "source": "cvefeed.io",
         "isoDate": "2026-06-26T20:58:19.000Z",
         "contentSnippet": "Kestra is an open-source, event-driven orchestration platform. Prior to 1.0.45 and 1.3.21, AuthenticationFilter in Kestra OSS uses request.getPath().endsWith(\"/configs\") to whitelist the public configuration endpoint from Basic Auth. Because the check is a suffix match rather tha",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 10,
+        "cveSeverity": "CRITICAL"
       },
       {
         "title": "CVE-2026-45807 - Kestra: Path traversal via URL-encoded \"%2E%2E\" in execution and namespace file endpoints allows arbitrary file read",
@@ -18,8 +63,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-26T20:57:13.000Z",
         "contentSnippet": "Kestra is an open-source, event-driven orchestration platform. Prior to 1.0.43 and 1.3.19, several Kestra API endpoints accept a kestra:// URI from the client and pass it through StorageInterface.parentTraversalGuard before reading the underlying file from the local storage backe",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 7.7,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-49984 - Kestra: Path traversal in `LocalStorage` allows any authenticated user to read arbitrary server files via the execution file-download API (`\\..\\` bypasses the `..` guard)",
@@ -27,8 +72,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-26T20:55:44.000Z",
         "contentSnippet": "Kestra is an open-source, event-driven orchestration platform. Prior to 1.0.45 and 1.3.23, the local internal-storage backend validates user-supplied paths for .. traversal before it converts Windows-style backslashes to forward slashes. An attacker can therefore smuggle a traver",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 7.7,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-53576 - Kestra: Unauthenticated RCE via /configs path-suffix auth-filter bypass",
@@ -36,8 +81,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-26T20:54:08.000Z",
         "contentSnippet": "Kestra is an open-source, event-driven orchestration platform. Prior to 1.0.45 and 1.3.21, the authentication filter for the REST API (@Filter(\"/api/v1/**\")) treats any request whose path ends in /configs as the public instance-config endpoint and forwards it without a credential",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 10,
+        "cveSeverity": "CRITICAL"
       },
       {
         "title": "CVE-2026-53577 - Kestra: Cross-Execution File Read via Preview Endpoint (IDOR)",
@@ -45,8 +90,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-26T20:52:04.000Z",
         "contentSnippet": "Kestra is an open-source, event-driven orchestration platform. Prior to 1.0.45 and 1.3.21, the previewFileFromExecution endpoint (GET /api/v1/{tenant}/executions/{executionId}/file/preview) contains an access control bypass that allows any authenticated user to read output files ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-55069 - Kestra BasicAuth Password Stored as SHA-512 Enables Offline Brute-Force Attack",
@@ -54,8 +99,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-26T20:50:09.000Z",
         "contentSnippet": "Kestra is an open-source, event-driven orchestration platform. Prior to 1.3.24, this vulnerability exists in the BasicAuth authentication component of the Kestra OSS workflow orchestration platform. An attacker who gains read access to the PostgreSQL database can exploit SHA-512'",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-54351 - Budibase: Mass Assignment in Webhook Trigger Allows Cross-Workspace Automation Execution via appId Override",
@@ -63,8 +108,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-26T20:45:35.000Z",
         "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.39.9, the webhook trigger endpoint in Budibase is publicly accessible and passes the full HTTP request body into automation execution parameters. A mass assignment vulnerability in externalTrigger() allows an attacker to ov",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-54353 - Budibase: Potential SSRF DNS rebinding bypass in outbound fetch validation",
@@ -72,8 +117,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-26T20:44:52.000Z",
         "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.39.9, authenticated users with automation permissions can bypass Budibase's SSRF blacklist through DNS rebinding. The outbound fetch flow validates a hostname against the blacklist before the request is sent, but the actual",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-54350 - Budibase: Anonymous NoSQL operator injection via published-app query templates",
@@ -81,8 +126,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-26T20:44:00.000Z",
         "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.39.12, an unauthenticated visitor of any published Budibase app reads every document of the backing MongoDB, CouchDB, Elasticsearch, DynamoDB-PartiQL, or REST-with-JSON-body collection and, where the builder has published a",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 10,
+        "cveSeverity": "CRITICAL"
       },
       {
         "title": "CVE-2026-50137 - Budibase: POST /api/attachments/:datasourceId/url is unauthenticated and lets anonymous callers mint S3 PUT pre-signed URLs using stored datasource IAM credentials",
@@ -90,8 +135,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-26T20:41:03.000Z",
         "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.39.0, an anonymous attacker who knows or can enumerate a workspace id (app_...) and an S3-source datasource id (ds_...) can call this endpoint with no auth and obtain a 15-minute pre-signed PUT URL minted on the victim's IA",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2024-23581 - HCL Traveler for Microsoft Outlook (HTMO) is susceptible to an application modification vulnerability",
@@ -108,8 +153,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-26T20:36:54.000Z",
         "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.39.3, the application server exposes an unauthenticated endpoint that generates S3 PutObject presigned URLs using credentials stored in a workspace datasource. The route is protected only by the recaptcha middleware and doe",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 7.4,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-50132 - Budibase: Chat Identity Link Hijacking via Missing Consent & CSRF — Account Impersonation in Budibase",
@@ -117,8 +162,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-26T20:34:30.000Z",
         "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.39.0, `GET /api/chat-links/:instance/:token/handoff` is a public endpoint (no auth required) that performs a permanent, state-changing operation: it binds an external chat identity (Slack/Discord/MS Teams) to an authenticat",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 7.3,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-54352 - Budibase: Arbitrary file read by workspace-builder via PWA-zip symlink upload",
@@ -126,8 +171,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-26T20:32:51.000Z",
         "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.39.9, `POST /api/pwa/process-zip` at packages/server/src/api/routes/static.ts:24 accepts a builder-uploaded .zip, extracts it with extract-zip@2.0.1 into a temp directory, then for each entry listed in icons.json validates ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 9.6,
+        "cveSeverity": "CRITICAL"
       },
       {
         "title": "CVE-2026-46604 - Panic decoding image with out-of-bounds strip offset in x/image/tiff in golang.org/x/image",
@@ -144,8 +189,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-26T20:22:17.000Z",
         "contentSnippet": "Notepad++ is a free and open-source source code editor. Prior to 8.9.6.1, a local process in the same interactive Windows session can send a malformed WM_COPYDATA message to Notepad++ using the COPYDATA_FULL_CMDLINE path. The handler appears to process COPYDATASTRUCT.lpData as an",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 5,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-48778 - Notepad++: Arbitrary Code Execution via config.xml commandLineInterpreter",
@@ -153,8 +198,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-26T20:21:17.000Z",
         "contentSnippet": "Notepad++ is a free and open-source source code editor. Prior to 8.9.6.1, the tag in config.xml is read by NppXml::value() (Parameters.cpp:6430) and stored in _nppGUI._commandLineInterpreter without any validation, whitelist, or digital signature check. When the user triggers IDM",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-52885 - Notepad++ TOCTOU: HMAC Checks Disk, Executes from Memory",
@@ -162,8 +207,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-26T20:19:04.000Z",
         "contentSnippet": "Notepad++ is a free and open-source source code editor. Prior to 8.9.6.4, NppCommands.cpp checks the HMAC of the on-disk shortcuts.xml at the moment a user command fires (Time-of-Check). However, the command payload is taken from the in-memory _userCommands vector, which is popul",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-46710 - Notepad++: Privilege Escalation in the Installer via Uncontrolled Executable Search Path",
@@ -171,8 +216,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-26T20:16:16.000Z",
         "contentSnippet": "Notepad++ is a free and open-source source code editor. From 8.9.4 until 8.9.6, Notepad++ contains a local privilege escalation vulnerability in the installer. During installation, the installer invokes powershell.exe without using an absolute path after setting the working direc",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-48800 - Notepad++: Arbitrary Code Execution via shortcuts.xml UserCommand Injection",
@@ -180,8 +225,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-26T20:12:43.000Z",
         "contentSnippet": "Notepad++ is a free and open-source source code editor. Prior to 8.9.6.1, the tag text content inside in shortcuts.xml is read by NppXml::value(aNode) (Parameters.cpp:3658) in the feedUserCmds() function and stored in UserCommand._cmd without any validation. When the user clicks ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-52884 - Notepad++: CVE-2026-48800 Bypass",
@@ -857,51 +902,6 @@
         "contentSnippet": "Johnson & Johnson Audit Tracking Management System (ATMS) before 2026-04-21 allows viewing of meeting minutes and transcripts.",
         "cveScore": 7.5,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57912 - Johnson & Johnson Campus Recruiting before 2025-10",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57912",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T10:04:37.000Z",
-        "contentSnippet": "Johnson & Johnson Campus Recruiting before 2025-10-31 allows viewing of data provided by recruited students, and notes entered about students by interviewers.",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-6658 - Cross-site Scripting (XSS) in jupyter/nbconvert",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6658",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T09:40:30.000Z",
-        "contentSnippet": "A vulnerability in jupyter/nbconvert versions ` tag. This vulnerability impacts any server using nbconvert to render notebooks as HTML, allowing attackers to execute arbitrary JavaScript in the context of users viewing the HTML export.",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-11702 - Bytes::Random::Secure::Tiny versions through 1.011 for Perl share internal state across forked processes",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11702",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T08:13:56.000Z",
-        "contentSnippet": "Bytes::Random::Secure::Tiny versions through 1.011 for Perl share internal state across forked processes. When an object is initialised before forking, then the internal state for the PRNG is shared across processes and identical random streams will be produced. Secrets generated",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-11625 - Bytes::Random::Secure versions through 0.29 for Perl share internal state across forked processes",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11625",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T08:07:30.000Z",
-        "contentSnippet": "Bytes::Random::Secure versions through 0.29 for Perl share internal state across forked processes. When an object is initialised before forking, or when the functional interface is used, then the internal state for the PRNG is shared across processes and identical random streams ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-1869 - User Registration & Membership <= 5.2.0 - Missing Authorization to Unauthenticated Payment Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-1869",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T07:54:20.000Z",
-        "contentSnippet": "The User Registration & Membership – Free & Paid Memberships, Subscriptions, Content Restriction, User Profile, Custom User Registration & Login Builder plugin for WordPress is vulnerable to unauthorized modification of data due to missing validation checks in the confirm_payment",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
