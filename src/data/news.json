@@ -1,16 +1,79 @@
 {
-  "updatedAt": "2026-06-27T09:24:13.190Z",
+  "updatedAt": "2026-06-27T11:22:00.135Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-49416 - Integer overflow in vt(4) CONS_HISTORY ioctl",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49416",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-27T09:25:12.000Z",
+        "contentSnippet": "The CONS_HISTORY ioctl handler did not adequately validate the requested history size. A large value caused an integer overflow in the buffer size calculation, resulting in a heap allocation smaller than expected. Subsequent initialization of the buffer wrote beyond the end of th",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49414 - ASLR bypass for setuid executables via procctl(2)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49414",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-27T09:22:23.000Z",
+        "contentSnippet": "The ELF image activator cleared per-process ASLR preference flags for setuid binaries after the code that computes the PIE base address, rather than before. As a result, a user-requested ASLR disable was still in effect at the point where the base address was chosen. An unprivile",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49413 - Flaw in Linuxulator execution of setugid binaries",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49413",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-27T09:08:23.000Z",
+        "contentSnippet": "The Linuxulator determined whether a binary was set-user-ID or set-group-ID by checking the P_SUGID process flag. During execve(2), this flag is not yet set at the point where the auxiliary vector is constructed, so AT_SECURE was incorrectly set to zero for set-user-ID and set-gr",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49412 - Use-after-free bug in the IPV6_MSFILTER socket option handler",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49412",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-27T09:02:55.000Z",
+        "contentSnippet": "The kernel handler for IPV6_MSFILTER dropped a serializing lock in order to copy the source-filter list from userspace, then reacquired the lock. During this window another thread could free the multicast filter structure, leaving the handler with a stale pointer to freed memory.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-45259 - sigqueue(2) missing capability mode restriction",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45259",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-27T08:59:17.000Z",
+        "contentSnippet": "sigqueue(2) was marked as permitted in capability mode with the introduction of Capsicum in 2011, but the implementation of kern_sigqueue did not include a capability mode check restricting signal delivery to the calling process's own PID. A process in capability mode can use sig",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-45258 - Multiple vulnerabilities in the sound(4) mmap path",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45258",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-27T08:50:56.000Z",
+        "contentSnippet": "dsp_mmap_single() validated the requested mapping by checking the sum of the user-supplied offset and length against the buffer size. This addition could overflow, so that a large offset and length wrapped around and passed the check. The offset was then narrowed from 64 to 32 bi",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49417 - Multiple vulnerabilities in the sound(4) mmap path",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49417",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-27T08:48:30.000Z",
+        "contentSnippet": "Second, the audio buffer backing a mapping could be freed when the device was closed even though the mapping remained valid. The freed memory could then be reused elsewhere while still accessible through the stale mapping. The /dev/dsp device nodes are world-accessible by default",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2026-12399 - Gutenverse <= 3.8.0 - Authenticated (Editor+) Stored Cross-Site Scripting via 'fonts[].font.font.value' Parameter",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-12399",
         "source": "cvefeed.io",
         "isoDate": "2026-06-27T06:50:59.000Z",
         "contentSnippet": "The Gutenverse – WordPress Blocks, Page Builder & Site Editor plugin for WordPress is vulnerable to Stored Cross-Site Scripting via admin settings in all versions up to, and including, 3.8.0 due to insufficient input sanitization and output escaping. This makes it possible for au",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 4.4,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-3462 - Frisbii Pay <= 1.8.9 - Missing Authorization to Authenticated (Subscriber+) Payment Token Modification",
@@ -18,8 +81,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-27T06:50:59.000Z",
         "contentSnippet": "The Frisbii Pay plugin for WordPress is vulnerable to unauthorized modification of data due to missing capability checks on the 'upload_csv' and 'process_batch' functions in all versions up to, and including, 1.8.9. This makes it possible for authenticated attackers, with Subscri",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-12432 - Stripe Payment Forms by WP Full Pay <= 8.4.3 - Missing Authorization to Unauthenticated Payment Record Manipulation via 'paymentIntentId' Parameter",
@@ -27,8 +90,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-27T06:50:59.000Z",
         "contentSnippet": "The WP Full Stripe Free plugin for WordPress is vulnerable to Missing Authorization in versions up to, and including, 8.4.3 via the wpfs_update_failed_payment_status AJAX action. The handler is registered through both wp_ajax_ and wp_ajax_nopriv_ hooks and the underlying update_f",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-11597 - Surbma | Infusionsoft Shortcode <= 2.0.1 - Authenticated (Contributor+) Stored Cross-Site Scripting via Shortcode Attributes",
@@ -36,8 +99,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-27T06:50:58.000Z",
         "contentSnippet": "The Surbma | Infusionsoft Shortcode plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'infusionsoft-form' shortcode in versions up to, and including, 2.0.1. This is due to insufficient input sanitization and output escaping on user-supplied 'account' and '",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 6.4,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-13295 - Page Builder by SiteOrigin <= 2.34.3 - Authenticated (Contributor+) Stored Cross-Site Scripting via panels_data Parameter",
@@ -45,8 +108,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-27T06:50:58.000Z",
         "contentSnippet": "The Page Builder by SiteOrigin plugin for WordPress is vulnerable to Stored Cross-Site Scripting via panels_data Parameter in all versions up to, and including, 2.34.3 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 6.4,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-12471 - Spexo <= 2.0.11 - Missing Authorization to Authenticated (Subscriber+) Limited Plugin Activation",
@@ -54,8 +117,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-27T06:50:57.000Z",
         "contentSnippet": "The Spexo theme for WordPress is vulnerable to unauthorized access due to a missing capability check on the activate_plugin function in all versions up to, and including, 2.0.11. This makes it possible for authenticated attackers, with Subscriber-level access and above, to activa",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-11773 - Masteriyo LMS <= 2.2.1 - Missing Authorization to Authenticated (Student+) Arbitrary Course Announcement Modification",
@@ -63,8 +126,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-27T06:50:57.000Z",
         "contentSnippet": "The Masteriyo LMS – LMS Course Builder, Quizzes & Certificates plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 2.2.1. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it po",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-9233 - Quiz and Survey Master (QSM) <= 11.1.4 - Missing Authorization to Authenticated (Contributor+) Arbitrary Modification via qsm_insert_quiz_template AJAX Action",
@@ -72,8 +135,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-27T06:50:57.000Z",
         "contentSnippet": "The Quiz and Survey Master (QSM) – Easy Quiz and Survey Maker plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 11.1.4. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it po",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-11364 - Product Specifications for Woocommerce <= 0.8.9 - Missing Authorization to Authenticated (Subscriber+) Arbitrary Attribute/Group Creation, Modification, and Deletion via 'dwps_modify_",
@@ -81,8 +144,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-27T06:50:56.000Z",
         "contentSnippet": "The Product Specifications for WooCommerce plugin for WordPress is vulnerable to unauthorized modification, creation, and deletion of data in versions up to and including 0.8.9. This is due to a missing capability check and missing nonce verification in the __invoke() methods of ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-11783 - Dokan: AI Powered WooCommerce Multivendor Marketplace Solution <= 5.0.4 - Authenticated (Custom+) Stored Cross-Site Scripting via Product SKU",
@@ -90,8 +153,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-27T06:50:56.000Z",
         "contentSnippet": "The Dokan: AI Powered WooCommerce Multivendor Marketplace Solution – Build Your Own Amazon, eBay, Etsy plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Product SKU in all versions up to, and including, 5.0.4 due to insufficient input sanitization and output e",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 6.4,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-9242 - RegistrationMagic <= 6.0.8.6 - Authenticated (Subscriber+) Authentication Bypass via Forged PayPal IPN Request",
@@ -99,8 +162,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-27T06:50:56.000Z",
         "contentSnippet": "The RegistrationMagic – Custom Registration Forms, User Registration, Payment, and User Login plugin for WordPress is vulnerable to Authentication Bypass via Insufficient Verification of Data Authenticity in all versions up to and including 6.0.8.6. This is due to the PayPal IPN ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-11987 - Dokan: AI Powered WooCommerce Multivendor Marketplace Solution <= 5.0.4 - Authenticated (Subscriber+) Insecure Direct Object Reference to Information Disclosure via 'id' Parameter",
@@ -108,8 +171,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-27T06:50:55.000Z",
         "contentSnippet": "The Dokan: AI Powered WooCommerce Multivendor Marketplace Solution – Build Your Own Amazon, eBay, Etsy plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 5.0.4 via the 'id' parameter due to missing validation on a user con",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-9677 - Shariff for WordPress <= 1.0.11 - Admin+ Stored Cross-Site Scripting",
@@ -135,8 +198,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-27T05:33:44.000Z",
         "contentSnippet": "The NEX-Forms – Ultimate Forms Plugin for WordPress plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 9.2.2. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-13245 - MaxButtons <= 9.8.5 - Reflected Cross-Site Scripting via 'view' Parameter",
@@ -144,8 +207,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-27T05:33:43.000Z",
         "contentSnippet": "The MaxButtons – Create buttons plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the 'view' parameter in all versions up to, and including, 9.8.5 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attacke",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-12415 - Invoice Generator <= 1.0.0 - Unauthenticated Privilege Escalation via Account Takeover via 'user_id' Parameter",
@@ -839,72 +902,16 @@
         "contentSnippet": "Dokku is a docker-powered PaaS. Prior to 0.38.2, the git:auth command creates $DOKKU_ROOT/.netrc using bash's touch command, which applies the default umask of 0644. This pre-creation defeats the netrc binary's built-in 0600 permission setting, leaving git credentials readable by",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-45408 - Dokku: OS Command Injection via App Name in Git Pre-Receive Hook",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45408",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T16:19:56.000Z",
-        "contentSnippet": "Dokku is a docker-powered PaaS. Prior to 0.38.2, the app name validation regex (^[a-z0-9][^/:_A-Z]*$) permits shell metacharacters. When an authenticated user pushes to a git remote with a crafted app name, the name is embedded unquoted into a bash pre-receive hook script via an ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-55677 - Echo: Encoded slash (%2F) bypasses route-level protection and exposes static files",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55677",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T16:15:55.000Z",
-        "contentSnippet": "Echo is a Go web framework. Prior to 4.15.3 and 5.2.0, Echo's router and static file handler disagree on URL path decoding. The router matches routes using the raw encoded path (preserving %2F as-is), while StaticDirectoryHandler unescapes %2F to / before resolving filesystem pat",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2025-32394 - AutoGPT: There is a DoS vulnerability in AITextSummarizerBlock",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-32394",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T16:11:20.000Z",
-        "contentSnippet": "AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. Prior to 0.6.32, there is a DoS vulnerability in AITextSummarizerBlock. Malicious users can amplify their input. For example, if a malicious user inputs 10K ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-11779 - PayloadCMS 3.84.1 - Authenticated account lockout bypass through default unlock access",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11779",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T16:09:43.000Z",
-        "contentSnippet": "An Improper Authorization vulnerability exists in PayloadCMS version 3.84.1 due to insufficient access control on the account unlock operation.",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2025-32423 - AutoGPT: There is a DoS vulnerability in ExtractTextInformationBlock",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-32423",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T16:09:06.000Z",
-        "contentSnippet": "AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. Prior to 0.6.32, there is a DoS vulnerability in ExtractTextInformationBlock. Malicious users can amplify their input. For example, if a malicious user input",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-56663 - AutoGPT: SSRF-to-RCE Chain in `SendWebRequestBlock` via IP validation bypass and internal `pg-meta` access",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56663",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T16:04:54.000Z",
-        "contentSnippet": "AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. Prior to 0.6.52, an authenticated user can bypass the SSRF / private-IP protections in SendWebRequestBlock and reach internal network services. _is_ip_blocke",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-56823 - AutoGPT: IDOR in Webhook Ping Endpoint Allows Enumeration and Cross-User Ping Triggering",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56823",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T16:02:59.000Z",
-        "contentSnippet": "AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. Prior to , the `POST /api/integrations/webhooks/{webhook_id}/ping` endpoint fetches the target webhook by primary key alone without verifying that the webhoo",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       }
     ],
     "ai": [
+      {
+        "title": "Meta’s Astryx Brings a CLI and MCP Server to an Open-Source React Design System Agents Can Read",
+        "link": "https://www.marktechpost.com/2026/06/27/metas-astryx-brings-a-cli-and-mcp-server-to-an-open-source-react-design-system-agents-can-read/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-06-27T08:38:26.000Z",
+        "contentSnippet": "Meta released Astryx, an open-source React design system built on StyleX. It pairs a CSS-variable theme cascade with a CLI and MCP server, so both engineers and AI agents build using the same API. The project is in Beta, MIT-licensed, and grew inside Meta over eight years. The po"
+      },
       {
         "title": "Building Supervised Fine-Tuning Data from NVIDIA Open-SWE-Traces: Trajectory Parsing, Patch Analysis, Token Budgets, and Tool-Use Metrics",
         "link": "https://www.marktechpost.com/2026/06/26/building-supervised-fine-tuning-data-from-nvidia-open-swe-traces-trajectory-parsing-patch-analysis-token-budgets-and-tool-use-metrics/",
@@ -1597,13 +1604,6 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-06-12T14:43:11.000Z",
         "contentSnippet": "This post outlines the development of a cost-effective and scalable intelligent document processing pipeline on AWS, powered by Amazon Bedrock and its features. BDA is a managed service within Amazon Bedrock that automates the extraction of insights from documents. We demonstrate"
-      },
-      {
-        "title": "Built from the inside out: How AWS Professional Services became a frontier team first",
-        "link": "https://aws.amazon.com/blogs/machine-learning/built-from-the-inside-out-how-aws-professional-services-became-a-frontier-team-first/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-06-12T13:00:10.000Z",
-        "contentSnippet": "AWS Professional Services (AWS ProServe) compressed engagement timelines from months to days, not by adding artificial intelligence (AI) tools to an existing process, but by fundamentally rebuilding how we deliver from the inside out. In this post, we share how AWS ProServe becam"
       }
     ],
     "virtualization": [
@@ -2134,6 +2134,27 @@
       }
     ],
     "hardware": [
+      {
+        "title": "Modded Steam Controller can automatically charge itself like a robot vacuum — enthusiast creates GitHub program that uses the vibration motor to walk it back to its docking station",
+        "link": "https://www.tomshardware.com/peripherals/controllers-gamepads/modded-steam-controller-can-automatically-charge-itself-like-a-robot-vacuum-enthusiast-creates-github-program-that-uses-the-vibration-motor-to-walk-it-back-to-its-docking-station",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-27T11:00:00.000Z",
+        "contentSnippet": "Ray Foss built this program that uses computer vision to let your Steam Controller slide back towards its charging puck by just using its built-in haptic motors. You can also try it for yourself by visiting the web app and using a webcam so it can see your controller and charging"
+      },
+      {
+        "title": "Commodore drops Callback flip phone by $100 by defaulting to recycled memory chips and unbundling the earphones — Callback 8020 drops to $399 as skyrocketing memory prices punish smartphone buyers",
+        "link": "https://www.tomshardware.com/phones/commodore-drops-callback-flip-ohine-to-399-by-defaulting-to-recycled-memory-chips",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-27T10:30:00.000Z",
+        "contentSnippet": "Commodore has slashed the starting price of its Callback 8020 flip phone to $399, down from $499."
+      },
+      {
+        "title": "RAM crisis provokes enthusiast to try Windows 11 on DDR1-era hardware — other key vintage components included the Core 2 Q6600 and ATI Radeon HD 4650 AGP",
+        "link": "https://www.tomshardware.com/software/windows/ram-crisis-provokes-enthusiast-to-try-windows-11-on-ddr1-era-hardware-other-key-vintage-components-included-the-core-2-q6600-and-ati-radeon-hd-4650-agp",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-27T10:00:00.000Z",
+        "contentSnippet": "Enthusiast demos Microsoft’s newest OS running 'completely stable' on a Core 2 Quad Q6600, using a DDR1 motherboard, supported by an ATi Radeon HD 4650 AGP graphics card."
+      },
       {
         "title": "Liquid-Cooling a TE Connectivity 800V DC Busbar and More from the Wiwynn Booth",
         "link": "https://www.servethehome.com/liquid-cooling-a-te-connectivity-800v-dc-busbar-and-more-from-the-wiwynn-booth/",
@@ -2812,27 +2833,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-06-23T20:58:06.000Z",
         "contentSnippet": "The best deals on gaming chairs for every budget, style, and comfort level during Amazon Prime Day 2026. Upgrade your gaming chair with something high-quality and on sale, now!"
-      },
-      {
-        "title": "Acer's 4TB GM7 PCIe 4.0 SSD drops to $470 for Prime Day — 2TB and 4TB models are both on sale for up to 23% off",
-        "link": "https://www.tomshardware.com/pc-components/acers-4tb-gm7-pcie-4-0-ssd-drops-to-usd470-for-prime-day-2tb-and-4tb-models-are-both-on-sale-for-up-to-23-percent-off",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-23T20:26:05.000Z",
-        "contentSnippet": "The Acer Predator GM7 4TB is on sale for $469.99, bringing it down to its lowest prices since February."
-      },
-      {
-        "title": "Micron and Anthropic Form Strategic AI Infrastructure Partnership",
-        "link": "https://www.storagereview.com/news/micron-and-anthropic-form-strategic-ai-infrastructure-partnership",
-        "source": "StorageReview",
-        "isoDate": "2026-06-23T19:38:10.000Z",
-        "contentSnippet": "Micron has announced a strategic agreement with Anthropic focused on AI memory and storage architecture, long-term component supply, enterprise deployment of Anthropic’s Claude models within Micron, and participation in Anthropic’s Series H funding round. The partnership aligns i"
-      },
-      {
-        "title": "The best Prime Day soldering iron deals for hobbyists and makers right now — take advantage of these limited-time sale discounts on digital irons, premium solder, heat-proof accessories, and more",
-        "link": "https://www.tomshardware.com/maker-stem/soldering-irons/the-best-prime-day-soldering-iron-deals-for-hobbyists-and-makers-right-now-take-advantage-of-these-limited-time-sale-discounts-on-digital-irons-premium-solder-heat-proof-accessories-and-more",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-23T18:31:43.000Z",
-        "contentSnippet": "Grab a new soldiering iron or accessories during this Amazon Prime Day sales week, with the best recommendations included here."
       }
     ]
   }
