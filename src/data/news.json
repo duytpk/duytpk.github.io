@@ -1,8 +1,53 @@
 {
-  "updatedAt": "2026-06-28T05:11:43.739Z",
+  "updatedAt": "2026-06-28T08:41:57.135Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-13483 - arc53 DocsGPT Credential Storage encryption.py encrypt_credentials data authenticity",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13483",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-28T05:45:08.000Z",
+        "contentSnippet": "A flaw has been found in arc53 DocsGPT up to 0.18.0. The affected element is the function encrypt_credentials of the file application/security/encryption.py of the component Credential Storage. This manipulation causes insufficient verification of data authenticity. It is possibl",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-13482 - skypilot-org skypilot User ID server.py username.encode weak hash",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13482",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-28T04:30:10.000Z",
+        "contentSnippet": "A vulnerability was detected in skypilot-org skypilot up to 0.12.0. Impacted is the function username.encode of the file sky/users/server.py of the component User ID Handler. The manipulation results in use of weak hash. The attack may be performed from remote. This attack is cha",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-10593 - Remotely triggerable NULL-pointer dereference in Bluetooth LE Audio BAP unicast client QoS-state handling",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10593",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-28T04:28:22.000Z",
+        "contentSnippet": "The Zephyr Bluetooth LE Audio Basic Audio Profile (BAP) unicast client mishandles peer-supplied ASE state notifications. In unicast_client_ep_qos_state() (subsys/bluetooth/audio/bap_unicast_client.c), the handler writes attacker-controlled QoS fields (interval, framing, phy, sdu,",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-10646 - Use-after-return in `zsock_getaddrinfo()` when a timed-out DNS query is retried without cancellation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10646",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-28T04:04:11.000Z",
+        "contentSnippet": "Zephyr's BSD-sockets getaddrinfo() implementation (subsys/net/lib/sockets/getaddrinfo.c) passes a pointer to a stack-allocated state object (struct getaddrinfo_state ai_state) as the user_data of an asynchronous DNS resolver query. The socket layer waits on a semaphore with a tim",
+        "cveScore": 7.4,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-10644 - Out-of-bounds write in Microchip SERCOM-G1 (PIC32CM-JH) async UART RX with 1-byte buffer",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10644",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-28T04:02:47.000Z",
+        "contentSnippet": "The Microchip SERCOM-G1 UART driver (drivers/serial/uart_mchp_sercom_g1.c), used by the PIC32CM-JH SoC family, contains an out-of-bounds write in its asynchronous (DMA) receive path. When uart_rx_enable() is invoked with a one-byte receive buffer (len == 1) and CONFIG_UART_MCHP_A",
+        "cveScore": 4.2,
+        "cveSeverity": "MEDIUM"
+      },
       {
         "title": "CVE-2026-58058 - Nmap - Integer Underflow in IPv6 Extension Header Parsing",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-58058",
@@ -99,8 +144,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-27T23:28:36.000Z",
         "contentSnippet": "The Frontend File Manager Plugin plugin for WordPress is vulnerable to Authenticated Arbitrary File Deletion in versions up to and including 23.6. This is due to a case-sensitive bypass of the wpfm_dir_path parameter sanitization in the wpfm_file_meta_update AJAX handler, where s",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-10643 - Out-of-bounds heap write in Zephyr `recvmsg()` ancillary-data path (`insert_pktinfo` undersizes the control-buffer capacity check)",
@@ -857,54 +902,16 @@
         "contentSnippet": "Envoy is an open source edge and service proxy designed for cloud-native applications. Prior to 1.35.11, 1.36.7, 1.37.3, and 1.38.1, destructor of JSON Object results in stack overflow when deeply O(100K) nested objects are present. This vulnerability is fixed in 1.35.11, 1.36.7,",
         "cveScore": 7.5,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-47778 - Envoy: Embedded NUL in TLS DNS SAN Truncation in the Default TLS Certificate Validator. (Auth Bypass)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47778",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T17:27:57.000Z",
-        "contentSnippet": "Envoy is an open source edge and service proxy designed for cloud-native applications. Prior to 1.35.11, 1.36.7, 1.37.3, and 1.38.1, a structural flaw was identified in DefaultCertValidator::verifySubjectAltName where the extracted DNS SAN string is cast to a C-style string using",
-        "cveScore": 4.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-47775 - Envoy OAuth2 Filter: Padding Oracle via AES-256-CBC Cookie Decryption",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47775",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T17:23:51.000Z",
-        "contentSnippet": "Envoy is an open source edge and service proxy designed for cloud-native applications. Prior to 1.35.11, 1.36.7, 1.37.3, and 1.38.1, the OAuth2 HTTP filter's encrypt()/decrypt() functions use AES-256-CBC without an authentication tag (no HMAC, no AEAD). The /callback endpoint ret",
-        "cveScore": 6.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-33646 - mise: Arbitrary Code Execution via Tera Templates in .tool-versions Files (Trust Bypass)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-33646",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T16:51:44.000Z",
-        "contentSnippet": "mise manages dev tools like node, python, cmake, and terraform. Prior to 2026.3.10, mise processes .tool-versions files through the Tera template engine during parsing, with the exec() function registered, enabling arbitrary command execution. Unlike .mise.toml files, .tool-versi",
-        "cveScore": 9.6,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-55441 - mise: Arbitrary command execution via task-include files in an untrusted, config-less repository",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55441",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T16:48:23.000Z",
-        "contentSnippet": "mise manages dev tools like node, python, cmake, and terraform. Prior to 2026.6.4, mise's trust feature gates config files (mise.toml, .tool-versions) through trust_check, but task-include files are loaded on a path that never reaches it. When a directory has a task-include dir (",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-54557 - mise HTTP backend uses raw version path for install symlink destination",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54557",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T16:47:29.000Z",
-        "contentSnippet": "mise manages dev tools like node, python, cmake, and terraform. Prior to 2026.6.1, the mise HTTP backend builds its install symlink destination from the raw resolved version string for non-latest versions. Normal tool install paths use the sanitized version pathname, but the HTTP",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       }
     ],
     "ai": [
+      {
+        "title": "Building a Stable Fable 5 Traces Workflow in Colab: Parsing Tool Calls, Auditing Data, and Training Baselines",
+        "link": "https://www.marktechpost.com/2026/06/28/building-a-stable-fable-5-traces-workflow-in-colab-parsing-tool-calls-auditing-data-and-training-baselines/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-06-28T07:02:54.000Z",
+        "contentSnippet": "In this tutorial, we build a stable workflow around the Fable 5 Traces dataset from Hugging Face. We avoid fragile dependencies and manually parse the merged JSONL file to keep Colab reliable. We inspect repository files, normalize tool calls, audit structure, redact secrets, and"
+      },
       {
         "title": "Liquid AI Ships LFM2.5-230M with llama.cpp, MLX, vLLM, SGLang, and ONNX Support for On-Device Inference",
         "link": "https://www.marktechpost.com/2026/06/27/liquid-ai-ships-lfm2-5-230m-with-llama-cpp-mlx-vllm-sglang-and-onnx-support-for-on-device-inference/",
@@ -1597,13 +1604,6 @@
         "source": "MarkTechPost",
         "isoDate": "2026-06-12T21:04:11.000Z",
         "contentSnippet": "We look at Gemini-SQL2, the text-to-SQL capability Google Research announced on June 12, 2026. Powered by Gemini 3.1 Pro, it posted 80.04% execution accuracy on the BIRD single-model leaderboard. We explain what the score measures, how the leaderboard stacks up, and what Google h"
-      },
-      {
-        "title": "Building Supercharger: How Rocket Close optimized title operations with agentic AI",
-        "link": "https://aws.amazon.com/blogs/machine-learning/building-supercharger-how-rocket-close-optimized-title-operations-with-agentic-ai/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-06-12T20:43:56.000Z",
-        "contentSnippet": "In this post, we explore how Rocket Close built a solution using Strands Agents, large language models (LLMs), Amazon Bedrock, Amazon Bedrock Knowledge Bases, and Model Context Protocol (MCP) tools. We cover solution features, the rationale for the technology stack, lessons learn"
       }
     ],
     "virtualization": [
