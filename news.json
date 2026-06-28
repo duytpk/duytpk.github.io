@@ -1,8 +1,17 @@
 {
-  "updatedAt": "2026-06-27T22:58:37.669Z",
+  "updatedAt": "2026-06-28T00:03:42.551Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-10643 - Out-of-bounds heap write in Zephyr `recvmsg()` ancillary-data path (`insert_pktinfo` undersizes the control-buffer capacity check)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10643",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-27T22:59:22.000Z",
+        "contentSnippet": "Zephyr's IP socket recvmsg() implementation (subsys/net/lib/sockets/sockets_inet.c, insert_pktinfo()) validated the user-supplied ancillary (msg_control) buffer using only the payload length (msg-msg_controllen",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-49416 - Integer overflow in vt(4) CONS_HISTORY ioctl",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-49416",
@@ -891,15 +900,6 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-26T16:22:17.000Z",
         "contentSnippet": "Dokku is a docker-powered PaaS. Prior to 0.38.2, the openresty-vhosts plugin copies files from an app's openresty/http-includes/ git repository directory to the host and then interpolates their filenames, unescaped, into a single-quoted shell string that is later parsed by eval. ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-45407 - Dokku: Git Credentials in .netrc Stored World-Readable Due to Premature touch",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45407",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T16:21:25.000Z",
-        "contentSnippet": "Dokku is a docker-powered PaaS. Prior to 0.38.2, the git:auth command creates $DOKKU_ROOT/.netrc using bash's touch command, which applies the default umask of 0644. This pre-creation defeats the netrc binary's built-in 0600 permission setting, leaving git credentials readable by",
         "cveScore": 0,
         "cveSeverity": "NA"
       }
