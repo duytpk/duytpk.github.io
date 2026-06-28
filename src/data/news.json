@@ -1,8 +1,107 @@
 {
-  "updatedAt": "2026-06-28T00:03:42.551Z",
+  "updatedAt": "2026-06-28T05:11:43.739Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-58058 - Nmap - Integer Underflow in IPv6 Extension Header Parsing",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58058",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-28T01:32:59.000Z",
+        "contentSnippet": "Nmap through 7.99 does not keep the IPv6 extension-header walk within the captured packet in ipv6_get_data_primitive (libnetutil/netutil.cc), so the pointer advances past the buffer and the remaining-length computation underflows to a large value. A scanned target or on-path atta",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-58057 - Flowise - Custom MCP Environment Variable Denylist Bypass via Case Sensitivity",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58057",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-28T01:32:58.000Z",
+        "contentSnippet": "Flowise before 3.1.3 validates Custom MCP stdio environment variables against a denylist using a case-sensitive comparison, so on Windows, where environment names are case-insensitive, supplying 'node_options' bypasses the NODE_OPTIONS denylist entry. An authenticated user who ca",
+        "cveScore": 5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-58056 - RustDesk - FileTransfer Session Authorization Scope Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58056",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-28T01:32:57.000Z",
+        "contentSnippet": "RustDesk gates incoming control messages on per-capability flags rather than on the session's authorized connection type, and a file-transfer session does not clear those flags. A peer holding only a valid FileTransfer authorization can inject keyboard and mouse input and reach t",
+        "cveScore": 7.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-58055 - nghttp2 nghttpx - HTTP Request/Response Smuggling via Upgrade Request with Content-Length",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58055",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-28T01:32:57.000Z",
+        "contentSnippet": "nghttp2's nghttpx proxy through 1.69.0 forwards an HTTP/1.1 Upgrade request that also carries a Content-Length header and body onto reusable keep-alive backend connections, re-adding the Upgrade and Connection headers while passing Content-Length verbatim. A backend that resolves",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-58054 - MyBB - Privilege Escalation from Limited ACP User Management to Administrator",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58054",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-28T01:32:56.000Z",
+        "contentSnippet": "MyBB 1.8.40 does not restrict which usergroup a limited Admin Control Panel user may assign when creating or editing users; the user module offers the Administrators group (gid 4) and its datahandler's verify_usergroup() unconditionally returns true. An admin holding only the del",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-58053 - Gitea act_runner - Container Hardening Bypass via Workflow Container Options",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58053",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-28T01:32:55.000Z",
+        "contentSnippet": "Gitea act_runner with the Docker backend (through act 0.262.0) passes a workflow's container.options string to the Docker job container's HostConfig and, when configured with privileged: false, forces only the Privileged flag off while merging options such as --pid=host, --cap-ad",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-58052 - 7-Zip - Mark-of-the-Web Bypass via RAR5 Alternate Data Stream Name Collision",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58052",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-28T01:32:54.000Z",
+        "contentSnippet": "7-Zip for Windows through 26.02 fails to preserve the Mark-of-the-Web when extracting a crafted RAR5 archive, because its guard that suppresses an archive-supplied Zone.Identifier stream matches the exact name 'Zone.Identifier' while a RAR5 STM record named ':Zone.Identifier:$DAT",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-58051 - libssh2 - Free of Uninitialized Pointer in publickey List Cleanup",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58051",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-28T01:32:54.000Z",
+        "contentSnippet": "libssh2 through 1.11.1 grows its publickey list with SSH2_REALLOC but does not zero-initialize new entries before parsing populates them, so a parse failure reaching the cleanup path leaves libssh2_publickey_list_free operating on an uninitialized entry. A malicious SSH server of",
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-58050 - libssh2 - Integer Overflow in publickey Subsystem Attribute Allocation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58050",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-28T01:32:53.000Z",
+        "contentSnippet": "libssh2 through 1.11.1 reads an attacker-controlled 32-bit attribute count from a publickey-subsystem response and uses it in the allocation num_attrs * sizeof(libssh2_publickey_attribute) without bounds checking, so on 32-bit platforms the multiplication overflows to an undersiz",
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-58049 - FFmpeg - Out-of-Bounds Write in RASC Decoder decode_dlta()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58049",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-28T01:32:52.000Z",
+        "contentSnippet": "FFmpeg's RASC video decoder (decode_dlta in libavcodec/rasc.c) performs 32-bit reads and writes at the row cursor before the NEXT_LINE row-boundary check and validates the DLTA region in pixel rather than byte units, so a DLTA run on a PAL8 frame can access several bytes past the",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-8095 - Frontend File Manager Plugin <= 23.6 - Authenticated (Subscriber+) Arbitrary File Deletion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8095",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-27T23:28:36.000Z",
+        "contentSnippet": "The Frontend File Manager Plugin plugin for WordPress is vulnerable to Authenticated Arbitrary File Deletion in versions up to and including 23.6. This is due to a case-sensitive bypass of the wpfm_dir_path parameter sanitization in the wpfm_file_meta_update AJAX handler, where s",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2026-10643 - Out-of-bounds heap write in Zephyr `recvmsg()` ancillary-data path (`insert_pktinfo` undersizes the control-buffer capacity check)",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-10643",
@@ -803,108 +902,16 @@
         "contentSnippet": "mise manages dev tools like node, python, cmake, and terraform. Prior to 2026.6.1, the mise HTTP backend builds its install symlink destination from the raw resolved version string for non-latest versions. Normal tool install paths use the sanitized version pathname, but the HTTP",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-55448 - mise: Local credential_command executes untrusted config",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55448",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T16:46:17.000Z",
-        "contentSnippet": "mise manages dev tools like node, python, cmake, and terraform. From 2026.3.15 until 2026.6.4, mise loads github.credential_command from local project config before any trust decision, then executes that value with sh -c when resolving a GitHub token. An attacker who can place a ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-56876 - extract-zip unvalidated symlink path traversal",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56876",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T16:44:29.000Z",
-        "contentSnippet": "extract-zip does not validate symlink targets when extracting zip archives. When processing a malicious zip file containing a symlink with a relative path like '../../../../etc/passwd', extract-zip will extract the symlink without validation, allowing it to point outside the extr",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-54341 - Dragonfly: RESTORE operations may crash the server",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54341",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T16:42:15.000Z",
-        "contentSnippet": "Dragonfly is an in-memory data store built for modern application workloads. Prior to 1.39.0, a crafted RESTORE payload triggers an out-of-bounds read in DragonflyDB's listpack collection loaders, crashing the entire server process (SIGSEGV). Because DragonflyDB requires no authe",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-47206 - Dragonfly: RESP Protocol Injection via Lua redis.error_reply() in EvalSerializer",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47206",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T16:39:27.000Z",
-        "contentSnippet": "Dragonfly is an in-memory data store built for modern application workloads. Prior to 1.39.9, Dragonfly has a RESP Protocol Injection via Lua redis.error_reply() in EvalSerializer. An authenticated user can inject arbitrary RESP messages into the connection's response stream, pot",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-48529 - GitHub MCP Server: Lockdown mode singleton in HTTP server causes cross-user GraphQL client confusion",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48529",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T16:33:32.000Z",
-        "contentSnippet": "GitHub MCP Server is GitHub's official MCP Server. From 0.22.0 until 1.1.2, when running in HTTP mode with --lockdown-mode enabled, the RepoAccessCache is implemented as a process-global singleton initialized with the first authenticated user's GraphQL client. All subsequent requ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-55686 - Podman: WORKDIR symlink traversal vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55686",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T16:30:41.000Z",
-        "contentSnippet": "Podman is a tool for managing OCI containers and pods. From 3.0.0 until 5.7.1, running a malicious container image where the WORKDIR path contains a symlink can create a directory or modify ownership on the host filesystem. Modified ownership is less likely to happen as that requ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-57231 - Podman: Malformed Image can trick podman run into leaking host environment variables into the container",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57231",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T16:29:02.000Z",
-        "contentSnippet": "Podman is a tool for managing OCI containers and pods. From 1.8.1 until 5.8.4, a container image that contains a environment variable with just a key and no value can trick podman into passing that variable from the host into the container. This is made worse by the fact that usi",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-54636 - Dokku: OS Command Injection via app.json managed Cron",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54636",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T16:23:58.000Z",
-        "contentSnippet": "Dokku is a docker-powered PaaS. Prior to 0.38.7, the cron plugin utilizes commands in the app.json file to manage system cron running as the Dokku user. An app.json cron command utilizing special shell characters - including, but not limited to, > or ; - can break out of the Dock",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-28385 - SSRF via image import from URL allows internal network probing by authenticated users",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-28385",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T16:23:56.000Z",
-        "contentSnippet": "In Canonical LXD versions 4.12 through 6.9, a Server-Side Request Forgery (SSRF) vulnerability in the image import functionality allows authenticated users with the can_create_images entitlement to interact with internal network infrastructure via the /images endpoint. When impor",
-        "cveScore": 5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-45405 - Dokku: Arbitrary File Write via Tar Symlink Traversal in git:from-archive and certs:add",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45405",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T16:23:05.000Z",
-        "contentSnippet": "Dokku is a docker-powered PaaS. Prior to 0.38.2, the git:from-archive and certs:add commands extract user-supplied tar/zip archives into temporary directories without sanitizing member paths or preventing symlink traversal. GNU tar creates symlinks during extraction and follows t",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-45406 - Dokku: Host RCE via Maliciously Named OpenResty Include Files Injected Through eval",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45406",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-26T16:22:17.000Z",
-        "contentSnippet": "Dokku is a docker-powered PaaS. Prior to 0.38.2, the openresty-vhosts plugin copies files from an app's openresty/http-includes/ git repository directory to the host and then interpolates their filenames, unescaped, into a single-quoted shell string that is later parsed by eval. ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       }
     ],
     "ai": [
+      {
+        "title": "Liquid AI Ships LFM2.5-230M with llama.cpp, MLX, vLLM, SGLang, and ONNX Support for On-Device Inference",
+        "link": "https://www.marktechpost.com/2026/06/27/liquid-ai-ships-lfm2-5-230m-with-llama-cpp-mlx-vllm-sglang-and-onnx-support-for-on-device-inference/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-06-28T04:58:20.000Z",
+        "contentSnippet": "Liquid AI released LFM2.5-230M, its smallest model yet. The 230M-parameter, open-weight model runs on-device at 213 tok/s on a Galaxy S25 Ultra and 42 on a Raspberry Pi 5. Built on the LFM2 architecture, it targets tool use and data extraction, beating larger models like Qwen3.5-"
+      },
       {
         "title": "DeepSeek Releases DSpark, a Speculative Decoding Framework That Accelerates DeepSeek-V4 Per-User Generation 60–85% Over MTP-1",
         "link": "https://www.marktechpost.com/2026/06/27/deepseek-releases-dspark-a-speculative-decoding-framework-that-accelerates-deepseek-v4-per-user-generation-60-85-over-mtp-1/",
@@ -1597,13 +1604,6 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-06-12T20:43:56.000Z",
         "contentSnippet": "In this post, we explore how Rocket Close built a solution using Strands Agents, large language models (LLMs), Amazon Bedrock, Amazon Bedrock Knowledge Bases, and Model Context Protocol (MCP) tools. We cover solution features, the rationale for the technology stack, lessons learn"
-      },
-      {
-        "title": "Build a meeting prep and follow-up assistant with Amazon Quick and Cisco Webex MCP servers",
-        "link": "https://aws.amazon.com/blogs/machine-learning/build-a-meeting-prep-and-follow-up-assistant-with-amazon-quick-and-cisco-webex-mcp-servers/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-06-12T14:49:40.000Z",
-        "contentSnippet": "This post shows how to build a custom meeting prep and follow-up assistant using Amazon Quick and Cisco Webex MCP servers. From a single prompt, the agent finds an upcoming Webex meeting, reviews prior meeting summaries and transcripts, and pulls related Vidcast highlights and tr"
       }
     ],
     "virtualization": [
