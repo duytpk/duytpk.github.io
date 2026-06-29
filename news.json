@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-06-29T17:29:24.499Z",
+  "updatedAt": "2026-06-29T19:45:39.295Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-13008",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13008",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-29T19:28:12.000Z",
+        "contentSnippet": "None",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53426 - Atom-table exhaustion denial-of-service via JSON parse_document in MDEx",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53426",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-29T19:11:32.000Z",
+        "contentSnippet": "Allocation of Resources Without Limits or Throttling vulnerability in leandrocp MDEx allows Excessive Allocation. MDEx.parse_document/2 accepts a {:json, json} source. In lib/mdex.ex, the private json_to_node/1 function passes the attacker-controlled node_type value to Module.con",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-54889 - Unsanitized URL schemes in MDEx Quill Delta output allow javascript: injection (XSS)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54889",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-29T19:10:49.000Z",
+        "contentSnippet": "Improper Neutralization of Input During Web Page Generation (XSS) vulnerability in leandrocp mdex allows cross-site scripting via unsanitized URL schemes in Quill Delta output. 'Elixir.MDEx':to_delta/2 converts Markdown into a Quill Delta. 'Elixir.MDEx.DeltaConverter':default_con",
+        "cveScore": 5.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-54888 - Uncontrolled recursion over deeply nested Markdown crashes the BEAM in mdex",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54888",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-29T19:10:38.000Z",
+        "contentSnippet": "Uncontrolled Recursion vulnerability in leandrocp mdex allows denial of service via deeply nested Markdown input. mdex converts between an Elixir %MDEx.Document{} struct and Comrak's internal AST using two mutually recursive Rust functions, ex_document_to_comrak_ast and comrak_as",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-53429 - Unbounded native memory leak in mdex escaped-tag rendering enables unauthenticated denial of service",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53429",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-29T19:07:16.000Z",
+        "contentSnippet": "Missing Release of Memory after Effective Lifetime vulnerability in leandrocp mdex and mdex_native allows an attacker who controls a rendered document to cause a denial of service through unbounded native memory exhaustion. The native rendering code permanently leaks memory when ",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-53428 - Unbounded memory allocation in highlight_lines range expansion in mdex",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53428",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-29T18:52:36.000Z",
+        "contentSnippet": "Memory Allocation with Excessive Size Value vulnerability in leandrocp mdex allows an unauthenticated attacker to cause a denial of service through unbounded memory allocation. comrak_nif::lumis_adapter::LumisAdapter::parse_highlight_lines in native/comrak_nif/src/lumis_adapter.r",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-53427 - Cross-site scripting in MDEx via unescaped highlight_lines_class code-fence attribute",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53427",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-29T18:50:17.000Z",
+        "contentSnippet": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in leandrocp MDEx allows stored or reflected cross-site scripting via attacker-controlled Markdown. When syntax highlighting and full info-string forwarding (render: [full_info_stri",
+        "cveScore": 2.3,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-13757 - P11-kit: stack exhaustion via unbounded recursion in rpc attribute parsing",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13757",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-29T18:44:24.000Z",
+        "contentSnippet": "A flaw was found in p11-kit. The RPC message attribute parsing functions p11_rpc_message_get_attribute() and p11_rpc_message_get_attribute_array_value() form a mutually-recursive call chain with no recursion depth limit when processing nested CKA_WRAP_TEMPLATE, CKA_UNWRAP_TEMPLAT",
+        "cveScore": 6.2,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-58000 - luci-proto-openvpn - Command Injection via cl_meta Parameter in generateKey",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58000",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-29T18:16:04.000Z",
+        "contentSnippet": "luci-proto-openvpn through 0.11.1, fixed in commit e4ff45e, contains a command injection vulnerability in the generateKey ubus method where the cl_meta parameter is interpolated into a shell command without proper escaping or quoting. An authenticated LuCI user with OpenVPN proto",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-57999 - luci-app-tailscale-community - Command Injection via tailscale.do_login RPC",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57999",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-29T18:16:04.000Z",
+        "contentSnippet": "luci-app-tailscale-community contains a command injection vulnerability in the tailscale.do_login RPC method that allows authenticated users to execute arbitrary commands as root. The vulnerability exists because user-controlled loginserver and loginserver_authkey parameters are ",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-11720 - Path Traversal in googleapis/mcp-toolbox HTTP Tool URL Builder",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11720",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-29T17:51:30.000Z",
+        "contentSnippet": "A path traversal vulnerability exists in the HTTP tool URL builder of googleapis/mcp-toolbox. When constructing downstream API requests, the URL builder substitutes user-controlled pathParams into the configured tool path and parses the resulting string as a relative URL. While i",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-57960 - Hi.Events 1.9.0 - Unauthenticated Attendee PII Exposure via Check-in List short_id",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57960",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-29T17:24:27.000Z",
+        "contentSnippet": "Hi.Events through 1.9.0 public check-in list endpoints use short_id as sole access control, allowing unauthenticated access to retrieve full attendee lists including emails and personal information. Attackers with knowledge of the short_id can call GET /api/public/check-in-lists/",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-57959 - Hi.Events 1.9.0 - Promo Code Max-Usage Bypass via Asynchronous Job Race Condition",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57959",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-29T17:24:03.000Z",
+        "contentSnippet": "Hi.Events through 1.9.0 contains a promo code validation vulnerability where reservation validates usage count before asynchronous UpdateEventStatisticsJob increments it, allowing attackers to redeem limited promo codes unlimited times. Attackers can sequentially reserve multiple",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-57958 - Mixpost 2.6.0 - Reflected XSS via OAuth Callback Error Parameter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57958",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-29T17:23:38.000Z",
+        "contentSnippet": "Mixpost through 2.6.0 contains a reflected cross-site scripting vulnerability that allows unauthenticated attackers to execute arbitrary JavaScript in authenticated users' browsers by crafting malicious OAuth callback URLs with unsanitized error query parameters. Attackers can ex",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-57957 - Papermark 0.22.0 - CORS Misconfiguration in Viewer Upload Endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57957",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-29T17:23:10.000Z",
+        "contentSnippet": "Papermark through 0.22.0 contains a cross-origin resource sharing (CORS) misconfiguration vulnerability that allows unauthenticated remote attackers to perform credentialed cross-origin requests by exploiting the TUS-based viewer upload endpoint reflecting arbitrary request Origi",
+        "cveScore": 4.7,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-57956 - SigNoz 0.130.1 - Cross-Organization Insecure Direct Object Reference in Alert Rules",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57956",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-29T17:22:45.000Z",
+        "contentSnippet": "SigNoz through 0.130.1 contains a broken access control vulnerability that allows authenticated users to access other organizations' alert rules by supplying a target rule UUID, as the alert rule store predicates fail to filter by organization ID. Attackers can read, edit, and de",
+        "cveScore": 6.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-57955 - SigNoz 0.130.1 - SQL Injection in Alert History Endpoints via Rule ID Parameter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57955",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-29T17:22:22.000Z",
+        "contentSnippet": "SigNoz through 0.130.1 contains a SQL injection vulnerability that allows authenticated attackers to execute arbitrary ClickHouse queries by injecting URL-encoded quotes into the rule ID path parameter of the alert-history endpoints. Attackers can manipulate the unsanitized rule ",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-57954 - Elide 7.1.17 - Permission Bypass in Sort Expression Validation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57954",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-29T17:21:55.000Z",
+        "contentSnippet": "Elide through 7.1.17 fails to enforce @ReadPermission on client-supplied sort expressions in SortingImpl.getValidSortingRules, allowing attackers to sort collections by forbidden fields. Attackers can infer hidden field values through row ordering analysis, leaking relative field",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-57953 - Mythic < 3.4.0.60 - Unauthorized Automation Workflow Modification via eventing_import_automatic_webhook Endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57953",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-29T17:21:31.000Z",
+        "contentSnippet": "Mythic before 3.4.0.60 contains an authorization bypass vulnerability that allows authenticated spectator-role users to perform unauthorized write operations by accessing the eventing_import_automatic_webhook endpoint registered under spectator-permitted middleware. Attackers wit",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-57952 - Mythic < 3.4.0.60 - Unauthorized C2 Profile Configuration Access via Unverified Payload UUID",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57952",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-29T17:21:03.000Z",
+        "contentSnippet": "Mythic before 3.4.0.60 contains an authorization bypass vulnerability in four REST endpoints (c2profile_config_check_webhook, c2profile_redirect_rules_webhook, c2profile_get_ioc_webhook, c2profile_sample_message_webhook) that fail to verify payload ownership. An operator in one o",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-57951 - Mythic < 3.4.0.60 - Broken Permission Filter in payload_build_step Table",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57951",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-29T17:20:36.000Z",
+        "contentSnippet": "Mythic before 3.4.0.60 contains a broken hasura permission filter on the payload_build_step table with an always-satisfied _or condition that bypasses operation-scoped access controls. Authenticated operators and spectators can query payload_build_step to read step_stdout, step_s",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-57950 - ruoyi-vue-pro - Incorrect Permission Namespace in ErpSaleOrderController",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57950",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-29T17:20:07.000Z",
+        "contentSnippet": "ruoyi-vue-pro through 2026.05, fixed in commit 5d1fd70 contains a broken access control vulnerability in ErpSaleOrderController that allows attackers with erp:sale-out permissions to gain unauthorized access to sale order operations by exploiting an incorrect permission namespace",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-57949 - ruoyi-vue-pro - Missing Authorization in CRM Follow-up Record GET Endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57949",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-29T17:19:39.000Z",
+        "contentSnippet": "ruoyi-vue-pro through 2026.05, fixed in commit c779a47, contains a missing authorization vulnerability in the CRM module's GET /admin-api/crm/follow-up-record/get endpoint that allows authenticated users to read any follow-up record by iterating sequential numeric IDs. Attackers ",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-57948 - Pinpoint - Insecure Session Cookie Attributes in pinpointJwt",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57948",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-29T17:19:11.000Z",
+        "contentSnippet": "Pinpoint through version 3.1.0 contains an insecure session management vulnerability that allows attackers to access the pinpointJwt session cookie due to missing HttpOnly and Secure attributes, enabling JavaScript access via document.cookie and cleartext transmission over HTTP. ",
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-57947 - Pinpoint - Server-Side Request Forgery via Alarm Webhook Registration",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57947",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-29T17:18:50.000Z",
+        "contentSnippet": "Pinpoint through 3.1.0 contains a server-side request forgery vulnerability in the webhook registration endpoint that allows authenticated users to register internal URLs due to missing SSRF protection. Attackers can trigger alarm threshold breaches to force the server to issue P",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-13750 - Snowflake CLI Sensitive Credential Exposure Through Debug Logging",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-13750",
@@ -677,234 +902,37 @@
         "contentSnippet": "A vulnerability was determined in itsourcecode Hospital Management System 1.0. Affected is an unknown function of the file /appointmentapproval.php of the component Appointment Handler. This manipulation of the argument editid causes sql injection. The attack is possible to be ca",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-13519 - Tenda JD12L NatStaticSetting fromNatStaticSetting stack-based overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13519",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T00:30:10.000Z",
-        "contentSnippet": "A vulnerability was found in Tenda JD12L 16.03.53.23. This impacts the function fromNatStaticSetting of the file /goform/NatStaticSetting. The manipulation of the argument page results in stack-based buffer overflow. The attack can be executed remotely. The exploit has been made ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-13518 - Tenda JD12L addressNat fromAddressNat stack-based overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13518",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T00:15:08.000Z",
-        "contentSnippet": "A vulnerability has been found in Tenda JD12L 16.03.53.23. This affects the function fromAddressNat of the file /goform/addressNat. The manipulation of the argument page leads to stack-based buffer overflow. Remote exploitation of the attack is possible. The exploit has been disc",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-13517 - Tenda JD12L WifiBasicSet formWifiBasicSet stack-based overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13517",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T00:00:11.000Z",
-        "contentSnippet": "A flaw has been found in Tenda JD12L 16.03.53.23. The impacted element is the function formWifiBasicSet of the file /goform/WifiBasicSet. Executing a manipulation of the argument security_5g can lead to stack-based buffer overflow. The attack may be launched remotely. The exploit",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-13516 - Tenda JD12L WifiGuestSet fromSetWifiGusetBasic stack-based overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13516",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-28T23:45:09.000Z",
-        "contentSnippet": "A vulnerability was detected in Tenda JD12L 16.03.53.23. The affected element is the function fromSetWifiGusetBasic of the file /goform/WifiGuestSet. Performing a manipulation of the argument shareSpeed results in stack-based buffer overflow. The attack may be initiated remotely.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-13515 - Tenda JD12L SetPptpServerCfg formSetPPTPServer stack-based overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13515",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-28T23:30:10.000Z",
-        "contentSnippet": "A security vulnerability has been detected in Tenda JD12L 16.03.53.23. Impacted is the function formSetPPTPServer of the file /goform/SetPptpServerCfg. Such manipulation of the argument startIp leads to stack-based buffer overflow. The attack can be launched remotely. The exploit",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-13514 - Chess Play and Learn App com.chess AndroidManifest.xml backup",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13514",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-28T23:15:11.000Z",
-        "contentSnippet": "A weakness has been identified in Chess Play and Learn App up to 4.9.42 on Android. This issue affects some unknown processing of the file AndroidManifest.xml of the component com.chess. This manipulation causes exposure of backup file to an unauthorized control sphere. It is fea",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-13513 - MyScale MyScaleDB SegmentId.h getCacheKey data authenticity",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13513",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-28T23:00:16.000Z",
-        "contentSnippet": "A security flaw has been discovered in MyScale MyScaleDB up to 1.8.0. This vulnerability affects the function SegmentId::getCacheKey in the library src/VectorIndex/Common/SegmentId.h. The manipulation results in insufficient verification of data authenticity. It is possible to la",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-13512 - Databend Tenant client_session_manager.rs state_key authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13512",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-28T22:45:10.000Z",
-        "contentSnippet": "A vulnerability was identified in Databend up to 1.2.881 on HTTP. This affects the function ClientSessionManager::state_key of the file src/query/service/src/servers/http/v1/session/client_session_manager.rs of the component Tenant Handler. The manipulation leads to authorization",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-13511 - VoltAgent Memory REST API memory.handlers.ts handleGetMemoryConversation improper authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13511",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-28T22:30:11.000Z",
-        "contentSnippet": "A vulnerability was determined in VoltAgent up to 2.1.17. Affected by this issue is the function handleGetMemoryConversation of the file packages/server-core/src/handlers/memory.handlers.ts of the component Memory REST API. Executing a manipulation of the argument conversationId ",
-        "cveScore": 3.1,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-13510 - SimStudioAI sim Password Protection deployment.ts weak hash",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13510",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-28T22:15:11.000Z",
-        "contentSnippet": "A vulnerability was found in SimStudioAI sim up to 0.6.92. Affected by this vulnerability is an unknown functionality in the library apps/sim/lib/core/security/deployment.ts of the component Password Protection Handler. Performing a manipulation results in use of weak hash. The a",
-        "cveScore": 3.7,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-13509 - RAGapp Knowledge File files.py FileHandler.remove_file path traversal",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13509",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-28T22:00:11.000Z",
-        "contentSnippet": "A vulnerability has been found in RAGapp up to 0.1.5. Affected is the function FileHandler.upload_file/FileHandler.remove_file of the file src/ragapp/backend/controllers/files.py of the component Knowledge File Handler. Such manipulation leads to path traversal. The attack can be",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-13508 - khoj-ai khoj Conversation Sharing api_chat.py authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13508",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-28T21:45:10.000Z",
-        "contentSnippet": "A flaw has been found in khoj-ai khoj up to 2.0.0-beta.28. This impacts an unknown function of the file src/khoj/routers/api_chat.py of the component Conversation Sharing Handler. This manipulation of the argument conversation.agent causes incorrect authorization. Remote exploita",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-13507 - volcengine OpenViking Local VectorDB Primary-key Label str_to_uint64.py str_to_uint64 data authenticity",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13507",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-28T21:30:09.000Z",
-        "contentSnippet": "A vulnerability was detected in volcengine OpenViking up to 0.3.21. This affects the function str_to_uint64 of the file openviking/storage/vectordb/utils/str_to_uint64.py of the component Local VectorDB Primary-key Label Handler. The manipulation of the argument ID results in ins",
-        "cveScore": 5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-49048 - Joomla Extension - joomcoder.com - Unauthenticated SQL Injection in JoomCCK extension for Joomla < 6.4.1",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49048",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-28T18:37:13.000Z",
-        "contentSnippet": "The Joomla extension JoomCCK exposes a front-end controller task, that builds two SQL statements by directly concatenating a user-supplied request parameter into the query string without escaping or parameterisation.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-13504 - code-projects Project Management System Mail Compose mail.php cross site scripting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13504",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-28T15:30:08.000Z",
-        "contentSnippet": "A vulnerability has been found in code-projects Project Management System 1.0. This vulnerability affects unknown code of the file /mail.php of the component Mail Compose Page. Such manipulation leads to cross site scripting. The attack may be performed from remote. The exploit h",
-        "cveScore": 4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-13503 - antlr ANTLR4 tokenVocab Grammar Option TokenVocabParser.java getImportedVocabFile path traversal",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13503",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-28T15:15:07.000Z",
-        "contentSnippet": "A vulnerability was detected in antlr ANTLR4 up to 4.13.2. Affected by this issue is the function getImportedVocabFile of the file tool/src/org/antlr/v4/parse/TokenVocabParser.java of the component tokenVocab Grammar Option Handler. The manipulation results in path traversal. The",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-13502 - antlr ANTLR4 Maven Plugin GrammarDependencies.java ObjectInputStream.readObject toctou",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13502",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-28T14:45:07.000Z",
-        "contentSnippet": "A flaw has been found in antlr ANTLR4 up to 4.13.2. This affects the function ObjectInputStream.readObject of the file antlr4-maven-plugin/src/main/java/org/antlr/mojo/antlr4/GrammarDependencies.java of the component Maven Plugin. This manipulation causes time-of-check time-of-us",
-        "cveScore": 4.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-13501 - antlr ANTLR4 gofmt GoTarget.java GoTarget command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13501",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-28T14:30:08.000Z",
-        "contentSnippet": "A security vulnerability has been detected in antlr ANTLR4 up to 4.13.2. Affected by this vulnerability is the function GoTarget of the file tool/src/org/antlr/v4/codegen/target/GoTarget.java of the component gofmt. The manipulation leads to command injection. The attack can only",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-13500 - antlr ANTLR4 Grammar Action Block OutputFile.java code injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13500",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-28T14:15:07.000Z",
-        "contentSnippet": "A weakness has been identified in antlr ANTLR4 up to 4.13.2. Affected is an unknown function of the file tool/src/org/antlr/v4/codegen/model/OutputFile.java of the component Grammar Action Block Handler. Executing a manipulation can lead to code injection. The attack may be launc",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-13499 - yashpokharna2555 restaurent-management-system Registration login_register.php cross site scripting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13499",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-28T13:15:08.000Z",
-        "contentSnippet": "A security flaw has been discovered in yashpokharna2555 restaurent-management-system. This impacts an unknown function of the file login_register.php of the component Registration Handler. Performing a manipulation of the argument Username results in cross site scripting. The att",
-        "cveScore": 5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-13498 - yashpokharna2555 restaurent-management-system POST Parameter forgotpassword.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13498",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-28T13:00:08.000Z",
-        "contentSnippet": "A vulnerability was identified in yashpokharna2555 restaurent-management-system. This affects an unknown function of the file /forgotpassword.php of the component POST Parameter Handler. Such manipulation of the argument email leads to sql injection. The attack can be launched re",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-13497 - itsourcecode Hospital Management System appointment.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13497",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-28T12:45:08.000Z",
-        "contentSnippet": "A vulnerability was determined in itsourcecode Hospital Management System 1.0. The impacted element is an unknown function of the file /appointment.php. This manipulation of the argument editid causes sql injection. The attack can be initiated remotely. The exploit has been publi",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-13496 - itsourcecode Hospital Management System ajaxmedicine.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13496",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-28T12:30:09.000Z",
-        "contentSnippet": "A vulnerability was found in itsourcecode Hospital Management System 1.0. The affected element is an unknown function of the file /ajaxmedicine.php. The manipulation of the argument medicineid results in sql injection. It is possible to launch the attack remotely. The exploit has",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-13495 - itsourcecode Hospital Management System adminprofile.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13495",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-28T12:15:08.000Z",
-        "contentSnippet": "A vulnerability has been found in itsourcecode Hospital Management System 1.0. Impacted is an unknown function of the file /adminprofile.php. The manipulation of the argument loginid leads to sql injection. It is possible to initiate the attack remotely. The exploit has been disc",
-        "cveScore": 5.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-13493 - AIDC-AI ComfyUI-Copilot Workflow Checkpoint Restore conversation_api.py resource injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13493",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-28T12:00:09.000Z",
-        "contentSnippet": "A flaw has been found in AIDC-AI ComfyUI-Copilot up to 2.0.28. This issue affects some unknown processing of the file backend/controller/conversation_api.py of the component Workflow Checkpoint Restore Handler. Executing a manipulation can lead to improper control of resource ide",
-        "cveScore": 3.1,
-        "cveSeverity": "LOW"
       }
     ],
     "ai": [
+      {
+        "title": "Implement a backup strategy for Amazon Quick Sight BI assets",
+        "link": "https://aws.amazon.com/blogs/machine-learning/implement-a-backup-strategy-for-amazon-quick-sight-bi-assets/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-06-29T18:15:14.000Z",
+        "contentSnippet": "In this post, we cover best practices for implementing an effective backup strategy for BI assets in Quick Sight. We start by covering the options for selecting the assets to include in your backup, then explain the high-level APIs available for that purpose, and finalize with sa"
+      },
+      {
+        "title": "Pair Nova 2 Lite with Claude for cost-optimized document processing",
+        "link": "https://aws.amazon.com/blogs/machine-learning/pair-nova-2-lite-with-claude-for-cost-optimized-document-processing/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-06-29T17:52:33.000Z",
+        "contentSnippet": "In this post, we show how pairing Amazon Nova 2 Lite with Anthropic’s Claude Sonnet 4.6 delivers an efficient solution for digitizing scanned documents at scale. We built a two-model pipeline on Amazon Bedrock for digitizing scanned yearbook pages. Amazon Nova 2 Lite handles nati"
+      },
+      {
+        "title": "Multi-tenant LLM analytics with row-level security: How we built a secure agent on AWS",
+        "link": "https://aws.amazon.com/blogs/machine-learning/multi-tenant-llm-analytics-with-row-level-security-how-we-built-a-secure-agent-on-aws/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-06-29T17:39:29.000Z",
+        "contentSnippet": "In this post, we show you how PAR built a production-ready multi-tenant LLM analytics system that enforces row-level security through a three-layer architecture: cryptographic request signing with AWS SigV4, semantic validation on Amazon Bedrock, and programmatic data isolation v"
+      },
+      {
+        "title": "Build an agentic AI healthcare claims pipeline with Amazon Bedrock and AWS HealthLake",
+        "link": "https://aws.amazon.com/blogs/machine-learning/build-an-agentic-ai-healthcare-claims-pipeline-with-amazon-bedrock-and-aws-healthlake/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-06-29T17:36:34.000Z",
+        "contentSnippet": "In this post, we show you how to build an automated claims processing pipeline using two key Amazon Bedrock capabilities: Amazon Bedrock Data Automation for intelligent document extraction from healthcare claim forms, and Amazon Bedrock AgentCore for hosting an AI agent that vali"
+      },
       {
         "title": "Debugging production agents with Amazon Bedrock AgentCore Observability",
         "link": "https://aws.amazon.com/blogs/machine-learning/debugging-production-agents-with-amazon-bedrock-agentcore-observability/",
@@ -1576,34 +1604,6 @@
         "source": "MarkTechPost",
         "isoDate": "2026-06-15T01:04:53.000Z",
         "contentSnippet": "Claude Code is a layered agentic coding tool, not a single chat prompt. This guide breaks down 25 features, from CLAUDE.md, skills, subagents, and hooks to MCP and Auto Mode. It includes a comparison table, working code examples, real use cases, and an interactive demo you can tr"
-      },
-      {
-        "title": "A Coding Hands-On on FineWeb for Streaming, Filtering, Deduplication, Tokenization, and Large-Scale Web Corpus Analytics",
-        "link": "https://www.marktechpost.com/2026/06/14/a-coding-hands-on-on-fineweb-for-streaming-filtering-deduplication-tokenization-and-large-scale-web-corpus-analytics/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-06-14T20:45:32.000Z",
-        "contentSnippet": "In this tutorial, we explore the FineWeb dataset through an advanced hands-on workflow. We stream a manageable sample of the dataset without downloading the full multi-terabyte corpus, inspect its schema and metadata, and analyze key fields such as URL, language, language score, "
-      },
-      {
-        "title": "Databricks Open-Sources Omnigent: A Meta-Harness That Composes, Governs, and Shares AI Agents Across Claude Code, Codex, and Pi",
-        "link": "https://www.marktechpost.com/2026/06/13/databricks-open-sources-omnigent-a-meta-harness-that-composes-governs-and-shares-ai-agents-across-claude-code-codex-and-pi/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-06-14T05:01:39.000Z",
-        "contentSnippet": "Databricks has open-sourced Omnigent, a meta-harness that sits above coding agents like Claude Code, Codex, and Pi. It adds composition, contextual policies, and live session sharing under one interface, on terminal, web, desktop, and mobile. The Apache 2.0 project is in alpha. T"
-      },
-      {
-        "title": "Publishing WASM wheels to PyPI for use with Pyodide",
-        "link": "https://simonwillison.net/2026/Jun/13/publishing-wasm-wheels/#atom-entries",
-        "source": "Simon Willison's Weblog",
-        "isoDate": "2026-06-13T23:55:18.000Z",
-        "contentSnippet": "The Pyodide 314.0 release announcement (via Hacker News) includes news I've been looking forward to for a long time: You can now publish Python packages built for Pyodide (or any Python runtime compatible with the PyEmscripten platform defined in PEP 783) directly to PyPI and ins"
-      },
-      {
-        "title": "How to Build a QwenPaw Agent Workspace with Custom Skills, Model Providers, Console Access, and Streaming API Testing",
-        "link": "https://www.marktechpost.com/2026/06/13/how-to-build-a-qwenpaw-agent-workspace-with-custom-skills-model-providers-console-access-and-streaming-api-testing/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-06-13T17:27:22.000Z",
-        "contentSnippet": "In this tutorial, we implement a QwenPaw workflow that provides a practical environment for building and testing an agent-powered assistant. We install and initialize QwenPaw, configure its working directory, set up authentication, connect optional model providers via Colab secre"
       }
     ],
     "virtualization": [
@@ -2148,6 +2148,27 @@
       }
     ],
     "hardware": [
+      {
+        "title": "CUDA emulator for AMD GPUs Zluda loses funding with v6 release — embattled project goes back to hobby status but now includes 32-bit PhysX support",
+        "link": "https://www.tomshardware.com/pc-components/gpu-drivers/cuda-emulator-for-amd-gpus-zluda-loses-funding-with-v6-release-embattled-project-goes-back-to-hobby-status-but-now-includes-32-bit-physx-support",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-29T18:29:21.000Z",
+        "contentSnippet": "Zluda is back to a hobby, as the open-source project has lost commercial funding with version 6 but added early 32-bit PhysX support."
+      },
+      {
+        "title": "AMD EPYC 8005 Sorano Completely Changes AMD SP6",
+        "link": "https://www.servethehome.com/amd-epyc-8005-sorano-completely-changes-amd-sp6/",
+        "source": "ServeTheHome",
+        "isoDate": "2026-06-29T18:24:15.000Z",
+        "contentSnippet": "We take a look at the AMD EPYC 8005 \"Sorano\" and see one of the biggest generational upheavals in server CPUs we have seen since 2019 The post AMD EPYC 8005 Sorano Completely Changes AMD SP6 appeared first on ServeTheHome."
+      },
+      {
+        "title": "JetCool Brings SmartPlate Direct-to-Chip Cooling to the Dell PowerEdge XE7745",
+        "link": "https://www.storagereview.com/news/jetcool-brings-smartplate-direct-to-chip-cooling-to-the-dell-poweredge-xe7745",
+        "source": "StorageReview",
+        "isoDate": "2026-06-29T17:37:31.000Z",
+        "contentSnippet": "JetCool has introduced a liquid-cooled version of the Dell PowerEdge XE7745, combining the server, direct-to-chip liquid cooling, rack infrastructure, deployment services, lifecycle support, and unified warranty coverage into a single integrated offering. The solution is delivere"
+      },
       {
         "title": "Valve threatens legal action against Dbrand over its unsanctioned Portal 2-inspired Companion Cube — edgy accessories manufacturer kills product after asking for licensing deal, admits it didn't have ",
         "link": "https://www.tomshardware.com/desktops/gaming-pcs/valve-threatens-legal-action-against-dbrand-over-its-unsanctioned-portal-2-inspired-companion-cube-edgy-accessories-manufacturer-kills-product-after-asking-for-licensing-deal-admits-it-didnt-have-the-right-to-make-it",
@@ -2826,27 +2847,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-06-24T18:05:41.000Z",
         "contentSnippet": "Some of our highest-rated PC speakers are on sale for Prime Day, including options from Audioengine, Onkyo, and Edifier."
-      },
-      {
-        "title": "US Secures Netherlands for Pax Silica Alliance in key win for strategic chip alliance — tension remains over MATCH Act restrictions",
-        "link": "https://www.tomshardware.com/tech-industry/us-secures-netherlands-for-pax-silica-alliance-in-key-win-for-strategic-chip-alliance-tension-remains-over-match-act-restrictions",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-24T17:15:00.000Z",
-        "contentSnippet": "Inside the US Pax Silica Alliance with the Netherlands."
-      },
-      {
-        "title": "China tops the list of fastest supercomputers with a CPU-only behemoth, ending US champion El Capitan's reign — 2.198 exaflops of performance without a single GPU",
-        "link": "https://www.tomshardware.com/tech-industry/supercomputers/china-tops-the-top500-with-a-cpu-only-supercomputer-ending-el-capitans-reign",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-24T16:15:10.000Z",
-        "contentSnippet": "China's LineShine supercomputer has taken the top spot on the 67th TOP500 list, posting 2.198 exaflops on the High Performance Linpack benchmark."
-      },
-      {
-        "title": "Pay just $149.99 for the TP-Link Archer Wi-Fi 7 router with 9.3 Gbps of bandwidth, now 40 percent off — high-powered BE550 router comes with a full complement of 2.5 Gbps LAN ports, too",
-        "link": "https://www.tomshardware.com/pc-components/pay-just-usd149-99-for-the-tp-link-archer-wi-fi-7-router-with-9-3-gbps-of-bandwidth-now-40-percent-off-high-powered-be550-router-comes-with-a-full-complement-of-2-5-gbps-lan-ports-too",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-24T16:02:32.000Z",
-        "contentSnippet": "Pay just $149.99 for the TP-Link Archer BE550 Wi-Fi 7 router with 9.3 Gbps of combined bandwidth — high-powered router comes with a full complement of 2.5 Gbps LAN ports, too"
       }
     ]
   }
