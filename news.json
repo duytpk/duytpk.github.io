@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-29T19:45:39.295Z",
+  "updatedAt": "2026-06-29T21:18:19.221Z",
   "generator": "rss",
   "feeds": {
     "cve": [
@@ -108,8 +108,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-29T17:24:27.000Z",
         "contentSnippet": "Hi.Events through 1.9.0 public check-in list endpoints use short_id as sole access control, allowing unauthenticated access to retrieve full attendee lists including emails and personal information. Attackers with knowledge of the short_id can call GET /api/public/check-in-lists/",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-57959 - Hi.Events 1.9.0 - Promo Code Max-Usage Bypass via Asynchronous Job Race Condition",
@@ -117,8 +117,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-29T17:24:03.000Z",
         "contentSnippet": "Hi.Events through 1.9.0 contains a promo code validation vulnerability where reservation validates usage count before asynchronous UpdateEventStatisticsJob increments it, allowing attackers to redeem limited promo codes unlimited times. Attackers can sequentially reserve multiple",
-        "cveScore": 5.9,
-        "cveSeverity": "MEDIUM"
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-57958 - Mixpost 2.6.0 - Reflected XSS via OAuth Callback Error Parameter",
@@ -162,7 +162,7 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-29T17:21:55.000Z",
         "contentSnippet": "Elide through 7.1.17 fails to enforce @ReadPermission on client-supplied sort expressions in SortingImpl.getValidSortingRules, allowing attackers to sort collections by forbidden fields. Attackers can infer hidden field values through row ordering analysis, leaking relative field",
-        "cveScore": 4.3,
+        "cveScore": 5.3,
         "cveSeverity": "MEDIUM"
       },
       {
@@ -180,7 +180,7 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-29T17:21:03.000Z",
         "contentSnippet": "Mythic before 3.4.0.60 contains an authorization bypass vulnerability in four REST endpoints (c2profile_config_check_webhook, c2profile_redirect_rules_webhook, c2profile_get_ioc_webhook, c2profile_sample_message_webhook) that fail to verify payload ownership. An operator in one o",
-        "cveScore": 5.3,
+        "cveScore": 6,
         "cveSeverity": "MEDIUM"
       },
       {
@@ -189,8 +189,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-29T17:20:36.000Z",
         "contentSnippet": "Mythic before 3.4.0.60 contains a broken hasura permission filter on the payload_build_step table with an always-satisfied _or condition that bypasses operation-scoped access controls. Authenticated operators and spectators can query payload_build_step to read step_stdout, step_s",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-57950 - ruoyi-vue-pro - Incorrect Permission Namespace in ErpSaleOrderController",
@@ -198,7 +198,7 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-29T17:20:07.000Z",
         "contentSnippet": "ruoyi-vue-pro through 2026.05, fixed in commit 5d1fd70 contains a broken access control vulnerability in ErpSaleOrderController that allows attackers with erp:sale-out permissions to gain unauthorized access to sale order operations by exploiting an incorrect permission namespace",
-        "cveScore": 8.1,
+        "cveScore": 8.6,
         "cveSeverity": "HIGH"
       },
       {
@@ -207,8 +207,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-29T17:19:39.000Z",
         "contentSnippet": "ruoyi-vue-pro through 2026.05, fixed in commit c779a47, contains a missing authorization vulnerability in the CRM module's GET /admin-api/crm/follow-up-record/get endpoint that allows authenticated users to read any follow-up record by iterating sequential numeric IDs. Attackers ",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-57948 - Pinpoint - Insecure Session Cookie Attributes in pinpointJwt",
@@ -216,8 +216,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-29T17:19:11.000Z",
         "contentSnippet": "Pinpoint through version 3.1.0 contains an insecure session management vulnerability that allows attackers to access the pinpointJwt session cookie due to missing HttpOnly and Secure attributes, enabling JavaScript access via document.cookie and cleartext transmission over HTTP. ",
-        "cveScore": 6.8,
-        "cveSeverity": "MEDIUM"
+        "cveScore": 7.6,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-57947 - Pinpoint - Server-Side Request Forgery via Alarm Webhook Registration",
@@ -226,6 +226,51 @@
         "isoDate": "2026-06-29T17:18:50.000Z",
         "contentSnippet": "Pinpoint through 3.1.0 contains a server-side request forgery vulnerability in the webhook registration endpoint that allows authenticated users to register internal URLs due to missing SSRF protection. Attackers can trigger alarm threshold breaches to force the server to issue P",
         "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-57946 - Invidious - Private Playlist Disclosure via Unauthenticated RSS Feed Endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57946",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-29T17:18:27.000Z",
+        "contentSnippet": "Invidious before version 2.20260626.0 contains a broken access control vulnerability that allows unauthenticated attackers to retrieve private playlist contents by accessing the RSS feed playlist endpoint without authentication. Attackers can supply a playlist ID to the feed endp",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-57945 - PhotoPrism - Unauthorized User Profile Modification via PUT /api/v1/users/{uid} Endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57945",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-29T17:18:05.000Z",
+        "contentSnippet": "PhotoPrism before 260601-a7d098548 contains a broken access control vulnerability that allows authenticated non-admin users to modify other users' profile information by sending requests to arbitrary user endpoints. Attackers can exploit the missing session-to-user identifier val",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-57943 - LibrePhotos < 1.0.0 - Insecure Direct Object Reference in SetPhotosShared Endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57943",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-29T17:17:32.000Z",
+        "contentSnippet": "LibrePhotos before 1.0.0 contains a broken object level authorization vulnerability in the SetPhotosShared endpoint that allows authenticated users to grant themselves access to other users' private photos by bypassing ownership validation. Attackers can manipulate shared_to rela",
+        "cveScore": 6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-57942 - LibreTranslate - IP Spoofing via X-Forwarded-For Header",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57942",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-29T17:17:09.000Z",
+        "contentSnippet": "LibreTranslate through 1.9.7, fixed in commit 397fd22, contains an IP spoofing vulnerability in the get_remote_address() function that allows unauthenticated attackers to spoof client IP addresses by injecting arbitrary values into the X-Forwarded-For header without trusted proxy",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-56783 - Parseable < 2.9.2 - Cleartext Credential Exposure in Notification Target API",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56783",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-29T17:16:42.000Z",
+        "contentSnippet": "Parseable before 2.9.2 contains an information disclosure vulnerability in the notification-target API endpoints that returns webhook tokens and basic-auth credentials in cleartext due to commented-out secret-masking functionality. Any authenticated user with the GetAlert action,",
+        "cveScore": 7.1,
         "cveSeverity": "HIGH"
       },
       {
@@ -857,54 +902,16 @@
         "contentSnippet": "A vulnerability was detected in CodeAstro Human Resource Management System 1.0. This issue affects the function emselectByCode of the file application/models/Employee_model.php of the component Update_Earn_Leave Endpoint. The manipulation of the argument emid results in sql injec",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-13524 - CherryHQ cherry-studio MCP OAuth Local Callback Server callback.ts improper authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13524",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T01:45:08.000Z",
-        "contentSnippet": "A security vulnerability has been detected in CherryHQ cherry-studio up to 1.9.6. This vulnerability affects unknown code of the file src/main/services/mcp/oauth/callback.ts of the component MCP OAuth Local Callback Server. The manipulation of the argument code leads to improper ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-13523 - GPAC ISOBMFF base_encoding.c data amplification",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13523",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T01:30:08.000Z",
-        "contentSnippet": "A weakness has been identified in GPAC up to 26.02.0. This affects an unknown part of the file src/utils/base_encoding.c of the component ISOBMFF Parser. Executing a manipulation can lead to highly compressed data. The attack needs to be launched locally. The exploit has been mad",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-13522 - Investintech SlimPDFReader PDF File SlimPDFReader.exe TeighaDo+0x25cde0 out-of-bounds",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13522",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T01:15:07.000Z",
-        "contentSnippet": "A security flaw has been discovered in Investintech SlimPDFReader up to 2.0.14. Affected by this issue is the function SlimPDFReader!Investintech::PCV::TeighaDo+0x25cde0 of the file SlimPDFReader.exe of the component PDF File Handler. Performing a manipulation results in out-of-b",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-13521 - SourceCodester Class and Exam Timetabling System preview5.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13521",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T01:00:10.000Z",
-        "contentSnippet": "A vulnerability was identified in SourceCodester Class and Exam Timetabling System 1.0/5.php. Affected by this vulnerability is an unknown functionality of the file /preview5.php. Such manipulation of the argument course_year_section leads to sql injection. The attack may be perf",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-13520 - itsourcecode Hospital Management System Appointment appointmentapproval.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13520",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T00:45:10.000Z",
-        "contentSnippet": "A vulnerability was determined in itsourcecode Hospital Management System 1.0. Affected is an unknown function of the file /appointmentapproval.php of the component Appointment Handler. This manipulation of the argument editid causes sql injection. The attack is possible to be ca",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       }
     ],
     "ai": [
+      {
+        "title": "NVIDIA BioNeMo Agent Toolkit Turns Biomolecular Models Into Callable Skills for AI Agents in Drug Discovery",
+        "link": "https://www.marktechpost.com/2026/06/29/nvidia-bionemo-agent-toolkit-turns-biomolecular-models-into-callable-skills-for-ai-agents-in-drug-discovery/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-06-29T19:06:47.000Z",
+        "contentSnippet": "NVIDIA's open-source BioNeMo Agent Toolkit turns biomolecular models like OpenFold3, DiffDock, and GenMol into documented, callable skills for AI agents. Each skill describes a model's purpose, inputs, artifacts, and failure modes, so an agent can select, run, and interpret it. I"
+      },
       {
         "title": "Implement a backup strategy for Amazon Quick Sight BI assets",
         "link": "https://aws.amazon.com/blogs/machine-learning/implement-a-backup-strategy-for-amazon-quick-sight-bi-assets/",
@@ -1597,13 +1604,6 @@
         "source": "MarkTechPost",
         "isoDate": "2026-06-15T06:10:23.000Z",
         "contentSnippet": "Z.ai launched GLM-5.2 on June 13, 2026, across every GLM Coding Plan tier. The headline is a usable 1-million-token context window plus High and Max effort levels. It drops into Claude Code, Cline, and OpenClaw through an Anthropic-compatible endpoint. No benchmarks shipped at la"
-      },
-      {
-        "title": "Claude Code Guide 2026: 25 Features with Examples + Demo",
-        "link": "https://www.marktechpost.com/2026/06/14/claude-code-guide-2026-25-features-with-examples-demo/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-06-15T01:04:53.000Z",
-        "contentSnippet": "Claude Code is a layered agentic coding tool, not a single chat prompt. This guide breaks down 25 features, from CLAUDE.md, skills, subagents, and hooks to MCP and Auto Mode. It includes a comparison table, working code examples, real use cases, and an interactive demo you can tr"
       }
     ],
     "virtualization": [
@@ -2148,6 +2148,20 @@
       }
     ],
     "hardware": [
+      {
+        "title": "AMD EXPO ULL RAM drops at jaw-dropping $1,099 despite promises of it being 'effectively the same price' — DDR5-6000 C26 32GB kit sports 80% ULL tax",
+        "link": "https://www.tomshardware.com/pc-components/ram/amd-expo-ull-ram-drops-at-jaw-dropping-usd1-099-despite-promises-of-it-being-effectively-the-same-price-ddr5-6000-c26-32gb-kit-sports-80-percent-ull-tax",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-29T20:16:12.000Z",
+        "contentSnippet": "Newegg has started selling G.Skill’s Trident Z5 NeoX memory kits featuring AMD ULL technology, and the prices are already high."
+      },
+      {
+        "title": "Tassient Aipex Review: AI Remote Remediation, Management, and Monitoring",
+        "link": "https://www.storagereview.com/review/tassient-aipex-review-ai-remote-remediation-management-and-monitoring",
+        "source": "StorageReview",
+        "isoDate": "2026-06-29T19:48:29.000Z",
+        "contentSnippet": "Most RMM (remote monitoring and management) platforms are very good at telling you something broke, but not much help with actually fixing it. Aipex, a clean-sheet, AI-first product from Tassient, is built to do both. Ask it in plain English why a machine crashed, and it will rea"
+      },
       {
         "title": "CUDA emulator for AMD GPUs Zluda loses funding with v6 release — embattled project goes back to hobby status but now includes 32-bit PhysX support",
         "link": "https://www.tomshardware.com/pc-components/gpu-drivers/cuda-emulator-for-amd-gpus-zluda-loses-funding-with-v6-release-embattled-project-goes-back-to-hobby-status-but-now-includes-32-bit-physx-support",
@@ -2833,20 +2847,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-06-24T18:50:56.000Z",
         "contentSnippet": "Broadcom and OpenAI reveal their Jalapeño custom-built inference ASIC that allegedly beats existing leading-edge in terms of performance-per-watt."
-      },
-      {
-        "title": "You can still build a great $1000 budget gaming PC with Amazon Prime Day parts — 32GB of RAM and RTX 5060 Ti power beats out the Steam Machine and cheap prebuilts",
-        "link": "https://www.tomshardware.com/desktops/pc-building/you-can-still-build-a-great-usd1000-budget-gaming-pc-with-amazon-prime-day-parts-32gb-of-ram-and-rtx-5060-ti-power-beats-out-the-steam-machine-and-cheap-prebuilts",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-24T18:38:02.000Z",
-        "contentSnippet": "We built a $1000 budget gaming PC using parts on sale at Amazon (and, of course, some rivals) during the 2026 Prime Day event."
-      },
-      {
-        "title": "Some of the best PC speakers we've tested are on sale for Prime Day — save up to 36% on Onkyo, Edifier, and Audioengine speakers",
-        "link": "https://www.tomshardware.com/speakers/some-of-the-best-pc-speakers-weve-tested-are-on-sale-for-prime-day-save-up-to-36-percent-on-onkyo-edifier-and-audioengine-speakers",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-24T18:05:41.000Z",
-        "contentSnippet": "Some of our highest-rated PC speakers are on sale for Prime Day, including options from Audioengine, Onkyo, and Edifier."
       }
     ]
   }
