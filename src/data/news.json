@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-06-30T16:17:42.395Z",
+  "updatedAt": "2026-06-30T18:30:08.831Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-10655 - Use-after-free race in SNTP async client when closing the socket while the socket service is still polling it",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10655",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T16:33:54.000Z",
+        "contentSnippet": "The asynchronous SNTP client in Zephyr (subsys/net/lib/sntp/sntp.c, sntp_close_async) closed the UDP socket file descriptor directly from the calling thread immediately after detaching it from the network socket service, without synchronizing with the socket-service poll thread. ",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-10654 - RFCOMM session-disconnect race leaks session/L2CAP and denies further RFCOMM service in Zephyr Bluetooth Classic",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10654",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T16:29:12.000Z",
+        "contentSnippet": "A race condition in the Zephyr Bluetooth Classic RFCOMM host stack (subsys/bluetooth/host/classic/rfcomm.c) mishandles a simultaneous bidirectional session disconnect. When the local device has initiated a session teardown (state BT_RFCOMM_STATE_DISCONNECTING, DISC sent, RTX time",
+        "cveScore": 3.1,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-8864 - HP Fan Control App – Potential Escalation of Privilege",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8864",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T16:21:10.000Z",
+        "contentSnippet": "The HP Fan Control App might allow local escalation of privileges. An updated version of HP Fan Control App has been released to mitigate this potential vulnerability.",
+        "cveScore": 7.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-10653 - Non-atomic `net_buf` reference counts cause double-free / free-list corruption under concurrent unref",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10653",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T16:20:16.000Z",
+        "contentSnippet": "The Zephyr net_buf library (lib/net_buf/buf.c) manipulated both of its reference counts -- the per-header buf->ref and the per-data-block ref_count at the start of each variable/heap data allocation -- with plain non-atomic C operators (buf->ref++, if (--buf->ref > 0), if (--(*re",
+        "cveScore": 6.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-9263 - Out-of-bounds read in Bluetooth Controller ISOAL framed RX reassembly leaks adjacent memory into host HCI ISO packets",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9263",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T16:01:34.000Z",
+        "contentSnippet": "The Zephyr Bluetooth controller ISO Adaptation Layer (subsys/bluetooth/controller/ll_sw/isoal.c) fails to validate the length field of a framed ISO PDU start segment. Per the Bluetooth specification a start segment (sc=0) always carries a 3-byte time_offset, so its segment-header",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-49451 - Microsoft.OpenAPI: Circular schema references may terminate OpenAPI parsing",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49451",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T16:01:00.000Z",
+        "contentSnippet": "The OpenAPI.NET SDK contains a useful object model for OpenAPI documents in .NET along with common serializers to extract raw OpenAPI JSON and YAML documents from the model. From 2.0.0-preview11 until 2.7.5 and 3.5.4, a small OpenAPI document containing a circular schema referenc",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-58377 - JeecgBoot 3.9.2 - Missing Authorization on OpenAPI Credential Management Endpoints Exposes Access/Secret Keys",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58377",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T15:59:35.000Z",
+        "contentSnippet": "JeecgBoot through 3.9.2 contains a broken access control vulnerability that allows authenticated low-privilege users to perform full create, read, update, and delete operations on OpenAPI credentials by accessing the OpenApiAuthController and OpenApiPermissionController endpoints",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-58376 - Dolibarr - SQL Injection via sqlfilters Parameter in Multiple REST API List Endpoints",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58376",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T15:59:10.000Z",
+        "contentSnippet": "Dolibarr through 23.0.3, fixed in commit 14db36e, contains a sql injection vulnerability that allows authenticated API users to exfiltrate arbitrary database contents by supplying malicious values to the sqlfilters query parameter in the setup dictionary and multicurrencies REST ",
+        "cveScore": 7.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-58375 - JimuReport 2.5.0 - Unauthenticated Report Export via /jmreport/auto/export",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58375",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T15:58:47.000Z",
+        "contentSnippet": "JimuReport through 2.5.0 exposes the POST /jmreport/auto/export endpoint without authentication: the handler is annotated @JimuNoLoginRequired, so JimuReportTokenInterceptor skips all authentication and authorization, and the export service streams the rendered report for any sup",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-58373 - CVAT < 2.69.0 - Missing Authorization on Quality Reports parent_id Filter Leaks Cross-Organization Report Existence",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58373",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T15:58:22.000Z",
+        "contentSnippet": "CVAT before 2.69.0 contains an improper authorization vulnerability in QualityReportViewSet.get_queryset that allows authenticated attackers to enumerate quality report identifiers belonging to other organizations by exploiting a missing check_object_permissions call on the paren",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-58372 - SeaweedFS < 4.34 - Cross-Bucket Object Deletion via DeleteObjects Request-Body Keys",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58372",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T15:57:59.000Z",
+        "contentSnippet": "SeaweedFS before 4.34 contains a path traversal vulnerability in the S3 gateway DeleteMultipleObjectsHandler that allows authenticated S3 principals with write access to a single bucket to delete arbitrary objects in other tenants' buckets by supplying object keys containing ../ ",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-58371 - SeaweedFS < 4.30 - Cross-Origin Information Disclosure via Unvalidated JSONP callback Parameter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58371",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T15:57:36.000Z",
+        "contentSnippet": "SeaweedFS before 4.30 reflects the callback query parameter verbatim into responses served with Content-Type application/javascript in the shared writeJson helper (weed/server/common.go), with no callback-name validation, no X-Content-Type-Options: nosniff header, and no CORS all",
+        "cveScore": 3.1,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-58370 - Woodpecker < 3.15.0 - GitLab Approval Gate Bypass via Spoofable Commit Author Name",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58370",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T15:57:09.000Z",
+        "contentSnippet": "Woodpecker before 3.15.0 matches the ApprovalAllowedUsers bypass list against pipeline.Author. For the GitLab forge driver, pipeline.Author is populated from the git commit author name (commit.author.name) carried in the webhook payload, which is attacker-controlled and not verif",
+        "cveScore": 9.2,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-58369 - Woodpecker < 3.15.0 - Unauthenticated NULL Pointer Dereference in /api/orgs/lookup Enables Log-Flooding Denial of Service",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58369",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T15:56:45.000Z",
+        "contentSnippet": "Woodpecker before 3.15.0 registers the /api/orgs/lookup/*org_full_name endpoint without authentication middleware, and the LookupOrg handler unconditionally dereferences the session user (user.ForgeID, via ForgeFromUser) when selecting the forge to query. For an unauthenticated r",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-58176 - RuoYi-Vue-Plus - Missing Authorization on Workflow Task Management Endpoints",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58176",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T15:56:17.000Z",
+        "contentSnippet": "RuoYi-Vue-Plus through 5.6.2, fixed in commit 88d03d9, exposes workflow task management endpoints under /workflow/task (FlwTaskController) without any permission check: the controller declares no class-level or method-level authorization annotation, so the endpoints are gated onl",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-58174 - Hermes WebUI < 0.51.521 - Cross-Profile Authorization Bypass via Unset Session Profile on Import",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58174",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T15:55:54.000Z",
+        "contentSnippet": "Hermes WebUI before 0.51.521 validates the workspace of an imported session under the active named profile but constructs the Session object without setting its profile in the /api/session/import handler, so the imported session is persisted with a null profile. Because a null pr",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-58173 - Vibe-Trading < 0.1.10 - Path Traversal via Persistent Memory Type",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58173",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T15:55:29.000Z",
+        "contentSnippet": "Vibe-Trading before 0.1.10 contains a path traversal vulnerability that allows attackers to write files outside the intended memory root directory by supplying a malicious memory_type value containing path traversal sequences through the remember tool. Attackers can manipulate th",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-58172 - Ocelot - IP Allow/Block List Bypass for WebSocket Upgrade Requests",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58172",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T15:54:59.000Z",
+        "contentSnippet": "Ocelot through 24.1.0, fixed in commit f156fd4, contains a security control bypass vulnerability that allows denied clients to circumvent IP-based access restrictions by sending WebSocket upgrade requests. The WebSocket upgrade pipeline branch configured via MapWhen in OcelotPipe",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-58171 - Vibe-Trading < 0.1.10 - Path Traversal via Swarm Run Identifier",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58171",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T15:54:34.000Z",
+        "contentSnippet": "Vibe-Trading before 0.1.10 constructs the swarm run directory by joining a caller-supplied run identifier onto the runs base directory without validation in run_dir (agent/src/swarm/store.py). A crafted run identifier supplied through the MCP swarm tools causes the application to",
+        "cveScore": 4.2,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-58170 - Vibe-Trading < 0.1.10 - Path Traversal in Proposal Identifier Allows Forging Live Trading Mandates",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58170",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T15:53:21.000Z",
+        "contentSnippet": "Vibe-Trading before 0.1.10 builds the proposal file path by joining a caller-supplied proposal identifier onto the broker proposals directory without sanitization (agent/src/live/mandate/commit.py). A proposal identifier containing path traversal sequences causes the application ",
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-58169 - Vibe-Trading < 0.1.10 - Loopback Trust and Missing Host Validation Enable DNS-Rebinding Authentication Bypass and Remote Code Execution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58169",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T15:52:52.000Z",
+        "contentSnippet": "Vibe-Trading before 0.1.10's local API server trusts the TCP peer address to bypass the API_AUTH_KEY bearer-token check for loopback clients and performs no Host header validation, while binding to 0.0.0.0 with credentialed CORS by default. A DNS-rebinding web page can therefore ",
+        "cveScore": 7.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-58168 - DeepTutor < 1.4.10 - Insecure Default Grants Unrestricted MCP Tool Access to Non-Admin Users",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58168",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T15:52:22.000Z",
+        "contentSnippet": "DeepTutor before version 1.4.10 contains an authorization bypass vulnerability that allows low-privilege users to invoke unrestricted MCP tools due to the allowed_mcp_tools function returning None instead of a denied result when mcp_tools is omitted from a user's grant in deeptut",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-58167 - Nightingale < 9.0.0-beta.2 - Datasource Credential Disclosure to Low-Privilege Users",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58167",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T15:51:55.000Z",
+        "contentSnippet": "Nightingale (n9e) before 9.0.0-beta.2 exposes full datasource configurations, including plaintext database passwords, HTTP bearer tokens, HTTP basic-auth passwords, and mTLS client keys, to any authenticated low-privilege (Standard role) user through POST /api/n9e/datasource/list",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-58166 - OpenBMB ChatDev - Unauthenticated Path Traversal in Upload Handler Allows Arbitrary File Write and Delete",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58166",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T15:51:20.000Z",
+        "contentSnippet": "OpenBMB ChatDev through 2.2.0, fixed in commit 4fd4da6, contains a path traversal vulnerability that allows unauthenticated remote attackers to write or delete arbitrary files by supplying a malicious multipart filename in the file upload endpoint. Attackers can send a crafted fi",
+        "cveScore": 9.1,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-10652 - Out-of-bounds read in Zephyr DNS resolver TXT/SRV record parsing (unvalidated `rdlength`)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10652",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T15:50:46.000Z",
+        "contentSnippet": "Zephyr's DNS resolver (subsys/net/lib/dns) parses resource records from DNS responses in dns_unpack_answer(), which validated only the fixed RR header (type, class, TTL, rdlength) and accepted any attacker-declared rdlength, including one extending past the end of the received da",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
       {
         "title": "CVE-2026-4360 - Tarfile.extract() doesn't fully respect filter parameter",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-4360",
@@ -677,234 +902,58 @@
         "contentSnippet": "Missing Critical Step in Authentication vulnerability in Apache Tomcat when the JNDIRealm was configured to authenticate binds using GSSAPI allowed attackers to authenticate without provided the correct password. This issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.4, fr",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-55956 - Apache Tomcat: Security constraints for default servlet ignored method",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55956",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T20:46:02.000Z",
-        "contentSnippet": "Improper Authorization vulnerability in Apache Tomcat leads to security constraints specified for the default servlet ignoring any method or method omission configured as part of the constraint. This issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.22, from 10.1.0-M1 thro",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-55955 - Apache Tomcat: EncryptInterceptor not protected against replay attacks",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55955",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T20:44:39.000Z",
-        "contentSnippet": "Improper Authentication vulnerability in Apache Tomcat allowed a replay attack against the EncryptionInterceptor in the cluster component. This issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.22, from 10.1.0-M1 through 10.1.55, from 9.0.13 through 9.0.18, from 8.5.38 thr",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-55276 - Apache Tomcat: Logged effective web.xml is incomplete",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55276",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T20:42:23.000Z",
-        "contentSnippet": "Always-Incorrect Control Flow Implementation vulnerability in Apache Tomcat meant that special roles and empty authorisation constraints were not included when the effective web.xml was logged. This issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.22, from 10.1.0-M1 throu",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-13758 - CryptX versions before 0.088_001 for Perl compare AEAD authentication tags in non-constant time in the streaming decrypt_done path",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13758",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T20:42:14.000Z",
-        "contentSnippet": "CryptX versions before 0.088_001 for Perl compare AEAD authentication tags in non-constant time in the streaming decrypt_done path. The decrypt_done($tag) form compares it against the computed tag with memNE (memcmp() != 0), which short-circuits on the first differing byte, so it",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-53434 - Apache Tomcat: Invalid CRL configuration doesn't trigger failure for FFM Connector",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53434",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T20:41:06.000Z",
-        "contentSnippet": "Detection of Error Condition Without Action vulnerability in Apache Tomcat when configuring CRLs for a FFM based connector. This issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.22, from 10.1.0-M7 through 10.1.55, from 9.0.83 through 9.0.118. Users are recommended to upgr",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-53404 - Apache Tomcat: Bad ornext processing in RewriteValve",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53404",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T20:39:45.000Z",
-        "contentSnippet": "Always-Incorrect Control Flow Implementation vulnerability in Apache Tomcat's rewrite valve meant that if the first condition in an OR chain matched, subsequent non-OR conditions were skipped. This issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.22, from 10.1.0-M1 throug",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-50229 - Apache Tomcat: XSS in number guess example",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50229",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T20:36:24.000Z",
-        "contentSnippet": "Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) vulnerability in the number guess example for Apache Tomcat. This issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.22, from 10.1.0-M1 through 10.1.55, from 9.0.0.M1 through 9.0.118, from 8.5.0 t",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-34594 - Coolify: Authenticated Remote Code Execution via Command Injection in Destination Network Management",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34594",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T20:21:59.000Z",
-        "contentSnippet": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. Prior to 4.0.0-beta.471, an authenticated command injection vulnerability in the Destination Network Management functionality allows users with destination management permissions t",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-34597 - Coolify: Authenticated Host RCE",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34597",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T20:18:37.000Z",
-        "contentSnippet": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. Prior to 4.0.0-beta.470, a critical Authenticated Host Remote Code Execution (RCE) vulnerability was discovered in Coolify. The flaw resides in the handling of user-defined build p",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-41896 - Coolify: Unauthenticated Deployment Trigger via Webhook HMAC Bypass with Null Secret",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-41896",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T20:16:50.000Z",
-        "contentSnippet": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. Prior to 4.0.0-beta.474, the HMAC key is the application's manual_webhook_secret_github field, which is used by Coolify's webhook endpoints to validate incoming requests, is nullab",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57498 - Coolify Cross-Team IDOR: Livewire Components Accept Unscoped server_id and destination_uuid — Deploy to Other Teams' Servers",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57498",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T20:12:07.000Z",
-        "contentSnippet": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. Prior to 4.0.0-beta.474, Coolify's API controllers consistently validate server ownership with Server::whereTeamId($teamId) before any operation. However, multiple Livewire web UI ",
-        "cveScore": 9.6,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-13763 - HTTP/2 Stream Parser Confusion Body-Inspection Bypass in AWS Application Load Balancer with AWS WAF",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13763",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T20:03:57.000Z",
-        "contentSnippet": "Inconsistent interpretation of HTTP/2 requests in AWS Application Load Balancer with AWS WAF enabled might allow remote actors to bypass AWS WAF managed rule body inspection via crafted HTTP/2 requests that fragment the request body across frames so that only a partial body is in",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-13762 - HTTP/2 Stream Parser Confusion Body-Inspection Bypass in Amazon CloudFront with AWS WAF",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13762",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T20:03:06.000Z",
-        "contentSnippet": "Inconsistent interpretation of HTTP/2 requests in Amazon CloudFront with AWS WAF enabled might allow remote actors to bypass AWS WAF managed rule body inspection via crafted HTTP/2 requests that fragment the request body across frames so that only a partial body is inspected. Thi",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-43700 - Safari Cross-Origin Information Disclosure",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-43700",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T19:43:13.000Z",
-        "contentSnippet": "A cross-origin issue was addressed with improved tracking of security origins. This issue is fixed in Safari 26.5.2, iOS 26.5.2 and iPadOS 26.5.2, macOS Tahoe 26.5.2. Processing maliciously crafted web content may disclose sensitive user information.",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-43716 - Apple Safari Memory Corruption Crash",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-43716",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T19:43:13.000Z",
-        "contentSnippet": "The issue was addressed with improved memory handling. This issue is fixed in Safari 26.5.2, iOS 26.5.2 and iPadOS 26.5.2, macOS Tahoe 26.5.2. Processing maliciously crafted web content may lead to an unexpected Safari crash.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-43720 - Safari Use-After-Free",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-43720",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T19:43:12.000Z",
-        "contentSnippet": "A use-after-free issue was addressed with improved memory management. This issue is fixed in Safari 26.5.2, iOS 26.5.2 and iPadOS 26.5.2, macOS Tahoe 26.5.2. Processing maliciously crafted web content may lead to an unexpected Safari crash.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-39868 - Apple Kernel Memory Corruption",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-39868",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T19:43:11.000Z",
-        "contentSnippet": "This issue was addressed with improved input validation. This issue is fixed in iOS 26.5.2 and iPadOS 26.5.2, macOS Tahoe 26.5.2. An app may be able to cause unexpected system termination or corrupt kernel memory.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-43721 - Safari Clipboard Hijacking Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-43721",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T19:43:10.000Z",
-        "contentSnippet": "This issue was addressed through improved state management. This issue is fixed in Safari 26.5.2, iOS 26.5.2 and iPadOS 26.5.2, macOS Tahoe 26.5.2. A malicious website may be able to silently hijack clipboard data.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-39872 - Apple Safari Use-After-Free",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-39872",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T19:43:09.000Z",
-        "contentSnippet": "The issue was addressed with improved memory handling. This issue is fixed in Safari 26.5.2, iOS 26.5.2 and iPadOS 26.5.2, macOS Tahoe 26.5.2. Processing maliciously crafted web content may lead to an unexpected process crash.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-43717 - Apple Safari Use-After-Free Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-43717",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T19:43:08.000Z",
-        "contentSnippet": "A use-after-free issue was addressed with improved memory management. This issue is fixed in Safari 26.5.2, iOS 26.5.2 and iPadOS 26.5.2, macOS Tahoe 26.5.2. Processing maliciously crafted web content may lead to an unexpected Safari crash.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-43740 - Safari Information Disclosure",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-43740",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T19:43:07.000Z",
-        "contentSnippet": "The issue was addressed with improved memory handling. This issue is fixed in Safari 26.5.2, iOS 26.5.2 and iPadOS 26.5.2, macOS Tahoe 26.5.2. Processing maliciously crafted web content may result in the disclosure of process memory.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-43701 - Apple Safari Sandbox Escape",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-43701",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T19:43:06.000Z",
-        "contentSnippet": "The issue was addressed with improved checks. This issue is fixed in Safari 26.5.2, iOS 26.5.2 and iPadOS 26.5.2, macOS Tahoe 26.5.2. A malicious website may be able to process restricted web content outside the sandbox.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-43663 - Safari Out-of-Bounds Read",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-43663",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T19:43:05.000Z",
-        "contentSnippet": "The issue was addressed with improved memory handling. This issue is fixed in Safari 26.5.2, iOS 26.5.2 and iPadOS 26.5.2, macOS Tahoe 26.5.2. Processing maliciously crafted web content may lead to an unexpected process crash.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-43726 - Safari Use-After-Free",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-43726",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T19:43:05.000Z",
-        "contentSnippet": "A use-after-free issue was addressed with improved memory management. This issue is fixed in Safari 26.5.2, iOS 26.5.2 and iPadOS 26.5.2, macOS Tahoe 26.5.2. Processing maliciously crafted web content may lead to an unexpected process crash.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-13008",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13008",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T19:28:12.000Z",
-        "contentSnippet": "None",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       }
     ],
     "ai": [
+      {
+        "title": "Have your agent record video demos of its work with shot-scraper video",
+        "link": "https://simonwillison.net/2026/Jun/30/shot-scraper-video/#atom-entries",
+        "source": "Simon Willison's Weblog",
+        "isoDate": "2026-06-30T16:54:26.000Z",
+        "contentSnippet": "shot-scraper video is a new command introduced in today's shot-scraper 1.10 release which accepts a storyboard.yml file defining a routine to run against a web application and uses Playwright to record a video of that routine. I've written before about the importance of having co"
+      },
+      {
+        "title": "Build generative UI for AI agents on Amazon Bedrock AgentCore with the AG-UI protocol",
+        "link": "https://aws.amazon.com/blogs/machine-learning/build-generative-ui-for-ai-agents-on-amazon-bedrock-agentcore-with-the-ag-ui-protocol/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-06-30T16:46:17.000Z",
+        "contentSnippet": "This post walks through how AG-UI integrates into the Fullstack AgentCore Solution Template (FAST) to build interactive agent frontends on Amazon Bedrock AgentCore. We then show how CopilotKit extends this with generative UI, shared state, and human-in-the-loop interactions, all "
+      },
+      {
+        "title": "Simplify multi-account access to Amazon Bedrock models with managed entitlements",
+        "link": "https://aws.amazon.com/blogs/machine-learning/simplify-multi-account-access-to-amazon-bedrock-models-with-managed-entitlements/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-06-30T16:42:49.000Z",
+        "contentSnippet": "In this post, we show you how to use managed entitlements for Amazon Bedrock to subscribe once from a central account and distribute model access across your organization. This approach removes the need for AWS Marketplace permissions in workload accounts."
+      },
+      {
+        "title": "Implementing resilience patterns with Amazon Bedrock and LLM gateway",
+        "link": "https://aws.amazon.com/blogs/machine-learning/implementing-resilience-patterns-with-amazon-bedrock-and-llm-gateway/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-06-30T16:40:47.000Z",
+        "contentSnippet": "In this post, you will learn five practical patterns for building resilient generative AI applications on AWS, progressing from native Amazon Bedrock features to multi-model orchestration using an LLM gateway. These patterns address real-world challenges such as quota exhaustion "
+      },
+      {
+        "title": "How Outpost VFX Uses AWS to Accelerate AI Model Training for Visual Effects",
+        "link": "https://aws.amazon.com/blogs/machine-learning/how-outpost-vfx-uses-aws-to-accelerate-ai-model-training-for-visual-effects/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-06-30T16:37:09.000Z",
+        "contentSnippet": "In this post, we explore how Outpost VFX achieved 8x faster training speeds using AWS infrastructure to transform their face replacement workflow, the technical architecture they implemented to overcome single-GPU limitations, and the measurable results achieved through AWS multi"
+      },
+      {
+        "title": "Building bilingual NER for cargo logistics with Amazon Bedrock",
+        "link": "https://aws.amazon.com/blogs/machine-learning/building-bilingual-ner-for-cargo-logistics-with-amazon-bedrock/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-06-30T16:33:46.000Z",
+        "contentSnippet": "In this post, we share the technical approach using token-based distillation, lessons learned, and deployment architecture. If you face similar bilingual NER challenges, you can benefit from IBS Software’s experience with the Amazon Bedrock knowledge distillation capabilities."
+      },
+      {
+        "title": "Fine-tune Amazon Nova models for accurate email data extraction",
+        "link": "https://aws.amazon.com/blogs/machine-learning/fine-tune-amazon-nova-models-for-accurate-email-data-extraction/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-06-30T16:26:48.000Z",
+        "contentSnippet": "In this post, you'll learn how fine-tuning Amazon Nova models using Amazon SageMaker AI addresses these specific issues by teaching the models to recognize your exact data patterns, distinguish between similar fields, and process information more efficiently—achieving up to 94.77"
+      },
       {
         "title": "Unlocking Britain’s next era of productivity: Building a nation of AI trailblazers",
         "link": "https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/unlocking-britains-next-era-of-productivity-building-a-nation-of-ai-trailblazers/",
@@ -1555,55 +1604,6 @@
         "source": "MarkTechPost",
         "isoDate": "2026-06-16T16:51:19.000Z",
         "contentSnippet": "We break down Qwen-RobotSuite, the Qwen team's three new embodied AI models. We cover RobotManip, a Vision-Language-Action model built on Qwen3.5-4B for manipulation. We cover RobotWorld, a language-conditioned video world model with a 60-layer MMDiT. We cover RobotNav, a navigat"
-      },
-      {
-        "title": "Hermes Agent Adds Asynchronous Subagents, So Delegated Work No Longer Blocks the Parent Chat",
-        "link": "https://www.marktechpost.com/2026/06/16/hermes-agent-adds-asynchronous-subagents-so-delegated-work-no-longer-blocks-the-parent-chat/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-06-16T09:21:12.000Z",
-        "contentSnippet": "We look at Hermes Agent's new asynchronous subagents from Nous Research. The delegate tool can now spawn background agents that no longer block the parent chat. We walk through the async_delegation toolset tracked in issue #5586, covering how to spawn, check, steer, and collect t"
-      },
-      {
-        "title": "Meet Atoms: A Vibe Coding Tool That Uses AI Agents to Build, Deploy, and Market Your App (No Code)",
-        "link": "https://www.marktechpost.com/2026/06/16/meet-atoms-a-vibe-coding-tool-that-uses-ai-agents-to-build-deploy-and-market-your-app-no-code/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-06-16T08:50:17.000Z",
-        "contentSnippet": "The concept of vibe coding is interesting; you don’t need to be a developer or software engineer to build your own applications. You can describe your idea to an AI in plain language, and it will build, edit, and refine your applications so you don’t have to write code line by li"
-      },
-      {
-        "title": "Google Cloud Introduces Open Knowledge Format (OKF): A Vendor-Neutral Markdown Spec for Giving AI Agents Curated Context",
-        "link": "https://www.marktechpost.com/2026/06/16/google-cloud-introduces-open-knowledge-format-okf-a-vendor-neutral-markdown-spec-for-giving-ai-agents-curated-context/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-06-16T08:18:58.000Z",
-        "contentSnippet": "We break down Google Cloud's new Open Knowledge Format (OKF), an open spec that formalizes the LLM-wiki pattern. We explain how a bundle works: a directory of markdown files with YAML frontmatter, where each concept needs only a type field. We cover the three design principles, t"
-      },
-      {
-        "title": "How to Build a Parsing Pipeline with Docling Parse for Layout-Aware Document Intelligence",
-        "link": "https://www.marktechpost.com/2026/06/16/how-to-build-a-parsing-pipeline-with-docling-parse-for-layout-aware-document-intelligence/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-06-16T07:20:08.000Z",
-        "contentSnippet": "In this tutorial, we build a workflow that uses Docling Parse to analyze PDF documents at a detailed structural level. We prepare a stable Python environment, handle common Colab dependency issues, and generate a custom multi-page PDF with text, columns, table-like content, vecto"
-      },
-      {
-        "title": "Sakana AI Commercializes AB-MCTS in Sakana Marlin, an Enterprise Agent Generating Up to 100-Page Research Reports With Slides",
-        "link": "https://www.marktechpost.com/2026/06/15/sakana-ai-marlin/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-06-15T22:32:50.000Z",
-        "contentSnippet": "Sakana AI's first commercial product runs autonomously for up to eight hours per task. It returns multi-page reports and slides, built on AB-MCTS and AI Scientist workflows. The post Sakana AI Commercializes AB-MCTS in Sakana Marlin, an Enterprise Agent Generating Up to 100-Page "
-      },
-      {
-        "title": "Introducing Gemma 4 models on Amazon Bedrock",
-        "link": "https://aws.amazon.com/blogs/machine-learning/introducing-gemma-4-models-on-amazon-bedrock/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-06-15T20:24:15.000Z",
-        "contentSnippet": "Today, we are announcing the availability of the Gemma 4 family on Amazon Bedrock. Built by Google DeepMind and released under the Apache 2.0 license, Gemma 4 is a family of open-weight models designed with a focus on intelligence-per-parameter across a broad range of deployment "
-      },
-      {
-        "title": "AI Agent Failure Detection and Root Cause Analysis with Strands Evals",
-        "link": "https://aws.amazon.com/blogs/machine-learning/ai-agent-failure-detection-and-root-cause-analysis-with-strands-evals/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-06-15T18:07:59.000Z",
-        "contentSnippet": "In this post, we walk you through calling the detector functions to diagnose real agent failures. You learn how to interpret their structured output: categorized failures with confidence scores, causal chains linking root causes to downstream symptoms, and fix recommendations spe"
       }
     ],
     "virtualization": [
@@ -2155,6 +2155,27 @@
       }
     ],
     "hardware": [
+      {
+        "title": "AMD confirms low-power CPU cores in Linux kernel patch — Zen 6 chips could follow in Intel's footsteps with new core type for background tasks",
+        "link": "https://www.tomshardware.com/pc-components/cpus/amd-confirms-low-power-cpu-cores-in-linux-kernel-patch-zen-6-chips-could-follow-in-intels-footsteps-with-new-core-type-for-background-tasks",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-30T16:50:50.000Z",
+        "contentSnippet": "AMD confirms plans to incorporate low-power CPU cores into next-generation heterogeneous CPUs to lower power consumption and improve energy efficiency."
+      },
+      {
+        "title": "Microsoft's flagship Windows PC lineup will drop reportedly drop budget options — firm prunes Surface Go and Surface Laptop Go",
+        "link": "https://www.tomshardware.com/laptops/microsofts-flagship-windows-pc-lineup-will-drop-reportedly-drop-budget-options-firm-prunes-surface-go-and-surface-laptop-go",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-30T16:41:31.000Z",
+        "contentSnippet": "Microsoft is further pruning its Surface line, with the Surface Laptop Go 3 and Surface Go 4 going out of stock without clear follow-ups."
+      },
+      {
+        "title": "Windows Defender 'BlueHammer' vulnerability now exploited as part of malware campaigns — CISA issues warning despite patch release on April 14",
+        "link": "https://www.tomshardware.com/tech-industry/cyber-security/windows-defender-bluehammer-vulnerability-now-exploited-as-part-of-malware-campaigns-cisa-issues-warning-despite-patch-release-on-april-14",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-30T16:20:59.000Z",
+        "contentSnippet": "Windows Defender \"BlueHammer\" vulnerability now exploited as part of malware campaigns — event demonstrates lack of security awareness despite existence of patches"
+      },
       {
         "title": "AMD Versal Premium Gen 2 MoP: 32GB In-Package LPDDR5X, 288GB/s, 60% Less Board Area",
         "link": "https://www.storagereview.com/news/amd-versal-premium-gen-2-mop-32gb-in-package-lpddr5x-288gb-s-60-less-board-area",
@@ -2833,27 +2854,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-06-25T14:28:00.000Z",
         "contentSnippet": "Newegg has the Gigabyte GeForce RTX 5070 Ti Eagle OC Ice SFF 16G graphics card up for sale for $899 after direct discounts."
-      },
-      {
-        "title": "RAM crisis bites Apple as unprecedented Mac and iPad price rises arrive — cheapest MacBook Pro price hiked by $400 to $1,999",
-        "link": "https://www.tomshardware.com/laptops/macbooks/ram-crisis-bites-apple-as-unprecedented-mac-and-ipad-price-rises-arrive-cheapest-macbook-pro-price-hiked-by-usd400-to-usd1-999",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-25T13:59:58.000Z",
-        "contentSnippet": "Apple has made the unprecedented decision to hike the prices of all its current computers and tablets with some entry-level model prices up as much as $500."
-      },
-      {
-        "title": "Anthropic claims that China's Alibaba used 25,000 fake accounts and 28.8 million exchanges to illicitly 'distill' its Claude model — violations occurred from April to June 2026",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropic-claims-that-chinas-alibaba-illicitly-distilled-its-models-from-april-to-june-2026-says-effort-involved-25-000-fake-accounts-and-28-8-million-exchanges-on-claude",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-25T13:26:04.000Z",
-        "contentSnippet": "AI tech giant Alibaba, often considered as the Amazon of China, is being accused by Anthropic for using Claude to train its AI models. The American AI startup claimed that it traced over 25,000 accounts to operators that were affiliated with Alibaba and Alibaba Qwen."
-      },
-      {
-        "title": "Today only, you can snag a 37-inch 4K Samsung monitor for just $249 – B&H offers up a big productivity screen for 50% off in a one-day deal",
-        "link": "https://www.tomshardware.com/pc-components/today-only-you-can-snag-a-37-inch-4k-samsung-monitor-for-just-usd249-b-and-h-offers-up-a-big-productivity-screen-for-50-percent-off-in-a-one-day-deal",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-25T12:48:33.000Z",
-        "contentSnippet": "B&H is selling a 37-inch 4K Samsung monitor for half off, or just $249, today only."
       }
     ]
   }
