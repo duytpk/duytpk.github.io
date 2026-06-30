@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-06-30T13:04:59.864Z",
+  "updatedAt": "2026-06-30T16:17:42.395Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-4360 - Tarfile.extract() doesn't fully respect filter parameter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-4360",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T14:45:35.000Z",
+        "contentSnippet": "In the Tarfile.extract() function, the filter parameter is not passed properly when extracting hardlinks. An affected system that extracts content from untrusted tar files could end up writing files with an unexpected uid/gid despite the user passing filter='data' to the extract(",
+        "cveScore": 2,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-44949 - Unauthenticated namespace creation and RBAC injection via rancher-webhook FleetWorkspace mutating webhook",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44949",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T14:41:34.000Z",
+        "contentSnippet": "A Rancher FleetWorkspace admission path allowed side effects to occur in the Rancher webhook handler for versions 0.7.0 up to 0.7.10, 0.8.0 up to 0.8.7, 0.9.0 up to 0.9.6 and 0.10.0 up to 0.10.7. An unauthenticated attacker with network access to the in-cluster rancher-webhook se",
+        "cveScore": 7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-27957 - Coolify: Authenticated RCE via command injection in CA certificate management feature",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-27957",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T14:39:06.000Z",
+        "contentSnippet": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. Prior to 4.0.0-beta.464, an authenticated command injection vulnerability in the CA Certificate management feature allows any authenticated user to execute arbitrary commands as th",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-27956 - Coolify: Cross-team application domain enumeration via domains_by_server endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-27956",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T14:38:15.000Z",
+        "contentSnippet": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. Prior to 4.0.0-beta.464, `GET /api/v1/servers/{server_uuid}/domains?uuid={app_uuid}` bypasses team scoping when the optional uuid query parameter is provided. Any authenticated API",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-27955 - Coolify: Command Injection via Single-Quote Breakout in `executeInDocker()`",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-27955",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T14:36:41.000Z",
+        "contentSnippet": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. Prior to 4.0.0-beta.464, the executeInDocker() helper wraps commands in bash -c '{$command}' without escaping single quotes. User-controlled docker_compose_custom_build_command and",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-27883 - Coolify: IDOR in Deployment API - Cross-Team Deployment Information Disclosure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-27883",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T14:32:25.000Z",
+        "contentSnippet": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. Prior to 4.0.0-beta.464, the `GET /api/v1/deployments/{uuid}` endpoint allows any authenticated user to access deployment details belonging to any team, bypassing team-based author",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-48192 - Mendix Studio Pro Arbitrary Code Execution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48192",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T14:30:59.000Z",
+        "contentSnippet": "A vulnerability has been identified in Mendix Studio Pro 10.11 (All versions), Mendix Studio Pro 10.12 (All versions), Mendix Studio Pro 10.13 (All versions), Mendix Studio Pro 10.14 (All versions), Mendix Studio Pro 10.15 (All versions), Mendix Studio Pro 10.16 (All versions), M",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-27881 - Coolify: Cross-team deployment information disclosure via GET /api/v1/deployments/{uuid} (IDOR)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-27881",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T14:28:38.000Z",
+        "contentSnippet": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. Prior to 4.0.0-beta.464, `GET /api/v1/deployments/{uuid}` in DeployController.php retrieves deployment details without validating that the deployment belongs to the authenticated u",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-27882 - Coolify: Timing Attack in GitLab Webhook Token Validation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-27882",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T14:26:44.000Z",
+        "contentSnippet": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. Prior to 4.0.0-beta.461, the GitLab webhook endpoint uses a non-constant-time string comparison operator (!==) to validate the webhook secret token. This implementation is vulnerab",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-44947 - Stale PSA ClusterRoleBinding Persists After RoleTemplate Downgrade in Rancher",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44947",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T14:21:01.000Z",
+        "contentSnippet": "A missing clean-up in the legacy Project Role Template Binding (PRTB) reconciler in Rancher versions 2.13.0 up to 2.13.7 and 2.14.0 up to 2.14.3 allowed users to retain unauthorized Pod Security Admission (PSA) permissions after an administrator removes those permissions from a R",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-14178 - openGauss存在非法内存访问导致DoS漏洞",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14178",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T13:56:16.000Z",
+        "contentSnippet": "openGauss 在处理带 NLS 参数的 to_timestamp 调用时，to_timestamp_with_fmt_nls() 会将 nls_fmt_str 保存到 u_sess->parser_cxt.nls_fmt_str。在 seqscan + sort 执行路径下，该字符串原本被分配在 SeqScan 的表达式上下文中；当 SeqScan 完成后，该内存上下文会被 reset，但后续结果输出阶段 timestamp_out() 仍会通过 CheckNlsFormat() 访问 u_sess->parser_cxt.nls_fmt_str，",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-35098 - Improper Restriction of Excessive Authentication Attempts in KTM System e-BOK",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-35098",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T13:37:57.000Z",
+        "contentSnippet": "KTM System e-BOK does not implement any limit or timeout on consecutive login attempts, allowing an attacker to perform unlimited authentication requests. This lack of rate‑limiting enables efficient brute‑force attacks against user accounts. When combined with vulnerability CVE-",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-35097 - Weak Password Requirements in KTM System e-BOK",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-35097",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T13:37:57.000Z",
+        "contentSnippet": "KTM System e-BOK enforces a maximum password length of six numeric digits and does not permit the use of any alphabetic, special, or extended characters. This issue was fixed in the patch published in June 2026.",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-35096 - Cross-Site Request Forgery (CSRF) in KTM System e-BOK",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-35096",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T13:37:56.000Z",
+        "contentSnippet": "KTM System e-BOK is vulnerable to Cross‑Site Request Forgery (CSRF) in both the email-change and password-change functionalities. An attacker can craft a malicious website that, when visited by an authenticated user, automatically sends a forged POST request to the application. T",
+        "cveScore": 5.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-35095 - Session fixation in KTM System e-BOK",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-35095",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T13:37:55.000Z",
+        "contentSnippet": "KTM System e-BOK allows the session identifier to be set by the client prior to authentication. If a cookie with a valid name is set, its value remains unchanged after successful login. This behaviour enables an attacker to fix a session ID for a victim and later hijack the authe",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2025-53648 - Apache Gravitino: SQL misconfiguration can access or truncate files",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-53648",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T13:36:00.000Z",
+        "contentSnippet": "SQL misconfiguration in the Gravitino UI, in versions 1.0.0 and below, can allow a malicious user to read or truncate files. Users are recommended to upgrade to version 1.0.0, which fixes this issue.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-14241 - Memory safety bugs fixed in Firefox 152.0.4",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14241",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T13:32:01.000Z",
+        "contentSnippet": "Memory safety bugs present in Firefox 152.0.3. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. This vulnerability was fixed in Firefox 152.0.4.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-13474 - Denial of service via malformed HTTP/2 requests",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13474",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T13:03:40.000Z",
+        "contentSnippet": "Denial of service via malformed HTTP/2 requests in NetScaler ADC and NetScaler Gateway if HTTP/2 is enabled in HTTP Profile and associated with the virtual server (of type LB, CS, VPN) or the service configured on NetScaler",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-58016 - Glib: integer underflow in gio/gdbusintrospection.c via \"g_dbus_node_info_new_for_xml\"",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58016",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T13:02:45.000Z",
+        "contentSnippet": "A flaw was found in GLib. A state confusion issue exists in g_dbus_node_info_new_for_xml() in the gio/gdbusintrospection.c file when processing malformed D-Bus introspection XML, specifically with a element nested within other elements like , , or . This issue can cause an unsign",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-58015 - Glib: path traversal in glib/gio/gdbusauthmechanismsha1.c via keyring_lookup_entry and mechanism_client_data_receive",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58015",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T13:02:45.000Z",
+        "contentSnippet": "A flaw was found in GLib. The D-Bus client-side implementation of the DBUS_COOKIE_SHA1 SASL authentication mechanism does not validate the cookie_context parameter received from the server. A malicious D-Bus server can supply a cookie_context containing path traversal sequences, ",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-10817 - Insufficient input validation leading to memory overread",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10817",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T12:58:38.000Z",
+        "contentSnippet": "Insufficient input validation leading to memory overread in NetScaler ADC and NetScaler Gateway if the TCP TimeStamp is enabled in TCP Profile and is associated with the virtual server (of type LB, CS, VPN) or the service configured on NetScaler",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-58014 - Glib: off-by-one error in glib/gkeyfile.c via \"g_key_file_get_locale_string_list\"",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58014",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T12:57:35.000Z",
+        "contentSnippet": "A flaw was found in GLib. An off-by-one error can occur in the g_key_file_get_locale_string_list function in the gkeyfile.c file when loading a key file with an empty value. This flaw can cause an out-of-bounds access of 1 byte or a denial of service when the out-of-bounds access",
+        "cveScore": 7.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-58013 - Glib: buffer over-read in glib/giochannel.c via \"g_io_channel_read_line_backend\"",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58013",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T12:57:34.000Z",
+        "contentSnippet": "A flaw was found in GLib. A buffer over-read can occur in g_io_channel_read_line_backend() in the giochannel.c file when a custom line terminator with a length greater than one is set, causing memcmp to read past the GString buffer. This vulnerability can cause a minor informatio",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-58012 - Glib: buffer over-read in g_regex_replace() via glib/gregex.c:string_append() and g_utf8_next_char()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58012",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T12:57:21.000Z",
+        "contentSnippet": "A flaw was found in GLib. A buffer over-read can occur in the g_regex_replace function when used with the `G_REGEX_RAW` compile flag and case-change replacement escapes because the string_append function processes matched substrings using UTF-8 functions that assume valid UTF-8 i",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-58011 - Glib: out-of-bounds read in glib/gdatetime.c:g_date_time_get_ymd via invalid gdatetime",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58011",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T12:57:15.000Z",
+        "contentSnippet": "A flaw was found in GLib. An out-of-bounds read of only 2 bytes can occur in the g_date_time_get_ymd function in the glib/gdatetime.c file when an invalid GDateTime object produced by the g_date_time_add_full function is processed. This flaw can corrupt the date output and potent",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
       {
         "title": "CVE-2026-49434 - Apache ActiveMQ Broker, Apache ActiveMQ, Apache ActiveMQ All: LdapNetworkConnector instantiates denied transports and a remote-properties broker",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-49434",
@@ -677,231 +902,6 @@
         "contentSnippet": "None",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-53426 - Atom-table exhaustion denial-of-service via JSON parse_document in MDEx",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53426",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T19:11:32.000Z",
-        "contentSnippet": "Allocation of Resources Without Limits or Throttling vulnerability in leandrocp MDEx allows Excessive Allocation. MDEx.parse_document/2 accepts a {:json, json} source. In lib/mdex.ex, the private json_to_node/1 function passes the attacker-controlled node_type value to Module.con",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-54889 - Unsanitized URL schemes in MDEx Quill Delta output allow javascript: injection (XSS)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54889",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T19:10:49.000Z",
-        "contentSnippet": "Improper Neutralization of Input During Web Page Generation (XSS) vulnerability in leandrocp mdex allows cross-site scripting via unsanitized URL schemes in Quill Delta output. 'Elixir.MDEx':to_delta/2 converts Markdown into a Quill Delta. 'Elixir.MDEx.DeltaConverter':default_con",
-        "cveScore": 5.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-54888 - Uncontrolled recursion over deeply nested Markdown crashes the BEAM in mdex",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54888",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T19:10:38.000Z",
-        "contentSnippet": "Uncontrolled Recursion vulnerability in leandrocp mdex allows denial of service via deeply nested Markdown input. mdex converts between an Elixir %MDEx.Document{} struct and Comrak's internal AST using two mutually recursive Rust functions, ex_document_to_comrak_ast and comrak_as",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-53429 - Unbounded native memory leak in mdex escaped-tag rendering enables unauthenticated denial of service",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53429",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T19:07:16.000Z",
-        "contentSnippet": "Missing Release of Memory after Effective Lifetime vulnerability in leandrocp mdex and mdex_native allows an attacker who controls a rendered document to cause a denial of service through unbounded native memory exhaustion. The native rendering code permanently leaks memory when ",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-53428 - Unbounded memory allocation in highlight_lines range expansion in mdex",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53428",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T18:52:36.000Z",
-        "contentSnippet": "Memory Allocation with Excessive Size Value vulnerability in leandrocp mdex allows an unauthenticated attacker to cause a denial of service through unbounded memory allocation. comrak_nif::lumis_adapter::LumisAdapter::parse_highlight_lines in native/comrak_nif/src/lumis_adapter.r",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-53427 - Cross-site scripting in MDEx via unescaped highlight_lines_class code-fence attribute",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53427",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T18:50:17.000Z",
-        "contentSnippet": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in leandrocp MDEx allows stored or reflected cross-site scripting via attacker-controlled Markdown. When syntax highlighting and full info-string forwarding (render: [full_info_stri",
-        "cveScore": 2.3,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-13757 - P11-kit: stack exhaustion via unbounded recursion in rpc attribute parsing",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13757",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T18:44:24.000Z",
-        "contentSnippet": "A flaw was found in p11-kit. The RPC message attribute parsing functions p11_rpc_message_get_attribute() and p11_rpc_message_get_attribute_array_value() form a mutually-recursive call chain with no recursion depth limit when processing nested CKA_WRAP_TEMPLATE, CKA_UNWRAP_TEMPLAT",
-        "cveScore": 6.2,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-58000 - luci-proto-openvpn - Command Injection via cl_meta Parameter in generateKey",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58000",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T18:16:04.000Z",
-        "contentSnippet": "luci-proto-openvpn through 0.11.1, fixed in commit e4ff45e, contains a command injection vulnerability in the generateKey ubus method where the cl_meta parameter is interpolated into a shell command without proper escaping or quoting. An authenticated LuCI user with OpenVPN proto",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57999 - luci-app-tailscale-community - Command Injection via tailscale.do_login RPC",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57999",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T18:16:04.000Z",
-        "contentSnippet": "luci-app-tailscale-community contains a command injection vulnerability in the tailscale.do_login RPC method that allows authenticated users to execute arbitrary commands as root. The vulnerability exists because user-controlled loginserver and loginserver_authkey parameters are ",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-11720 - Path Traversal in googleapis/mcp-toolbox HTTP Tool URL Builder",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11720",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T17:51:30.000Z",
-        "contentSnippet": "A path traversal vulnerability exists in the HTTP tool URL builder of googleapis/mcp-toolbox. When constructing downstream API requests, the URL builder substitutes user-controlled pathParams into the configured tool path and parses the resulting string as a relative URL. While i",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-57960 - Hi.Events 1.9.0 - Unauthenticated Attendee PII Exposure via Check-in List short_id",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57960",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T17:24:27.000Z",
-        "contentSnippet": "Hi.Events through 1.9.0 public check-in list endpoints use short_id as sole access control, allowing unauthenticated access to retrieve full attendee lists including emails and personal information. Attackers with knowledge of the short_id can call GET /api/public/check-in-lists/",
-        "cveScore": 8.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57959 - Hi.Events 1.9.0 - Promo Code Max-Usage Bypass via Asynchronous Job Race Condition",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57959",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T17:24:03.000Z",
-        "contentSnippet": "Hi.Events through 1.9.0 contains a promo code validation vulnerability where reservation validates usage count before asynchronous UpdateEventStatisticsJob increments it, allowing attackers to redeem limited promo codes unlimited times. Attackers can sequentially reserve multiple",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57958 - Mixpost 2.6.0 - Reflected XSS via OAuth Callback Error Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57958",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T17:23:38.000Z",
-        "contentSnippet": "Mixpost through 2.6.0 contains a reflected cross-site scripting vulnerability that allows unauthenticated attackers to execute arbitrary JavaScript in authenticated users' browsers by crafting malicious OAuth callback URLs with unsanitized error query parameters. Attackers can ex",
-        "cveScore": 6.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-57957 - Papermark 0.22.0 - CORS Misconfiguration in Viewer Upload Endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57957",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T17:23:10.000Z",
-        "contentSnippet": "Papermark through 0.22.0 contains a cross-origin resource sharing (CORS) misconfiguration vulnerability that allows unauthenticated remote attackers to perform credentialed cross-origin requests by exploiting the TUS-based viewer upload endpoint reflecting arbitrary request Origi",
-        "cveScore": 4.7,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-57956 - SigNoz 0.130.1 - Cross-Organization Insecure Direct Object Reference in Alert Rules",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57956",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T17:22:45.000Z",
-        "contentSnippet": "SigNoz through 0.130.1 contains a broken access control vulnerability that allows authenticated users to access other organizations' alert rules by supplying a target rule UUID, as the alert rule store predicates fail to filter by organization ID. Attackers can read, edit, and de",
-        "cveScore": 6.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-57955 - SigNoz 0.130.1 - SQL Injection in Alert History Endpoints via Rule ID Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57955",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T17:22:22.000Z",
-        "contentSnippet": "SigNoz through 0.130.1 contains a SQL injection vulnerability that allows authenticated attackers to execute arbitrary ClickHouse queries by injecting URL-encoded quotes into the rule ID path parameter of the alert-history endpoints. Attackers can manipulate the unsanitized rule ",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57954 - Elide 7.1.17 - Permission Bypass in Sort Expression Validation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57954",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T17:21:55.000Z",
-        "contentSnippet": "Elide through 7.1.17 fails to enforce @ReadPermission on client-supplied sort expressions in SortingImpl.getValidSortingRules, allowing attackers to sort collections by forbidden fields. Attackers can infer hidden field values through row ordering analysis, leaking relative field",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-57953 - Mythic < 3.4.0.60 - Unauthorized Automation Workflow Modification via eventing_import_automatic_webhook Endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57953",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T17:21:31.000Z",
-        "contentSnippet": "Mythic before 3.4.0.60 contains an authorization bypass vulnerability that allows authenticated spectator-role users to perform unauthorized write operations by accessing the eventing_import_automatic_webhook endpoint registered under spectator-permitted middleware. Attackers wit",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-57952 - Mythic < 3.4.0.60 - Unauthorized C2 Profile Configuration Access via Unverified Payload UUID",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57952",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T17:21:03.000Z",
-        "contentSnippet": "Mythic before 3.4.0.60 contains an authorization bypass vulnerability in four REST endpoints (c2profile_config_check_webhook, c2profile_redirect_rules_webhook, c2profile_get_ioc_webhook, c2profile_sample_message_webhook) that fail to verify payload ownership. An operator in one o",
-        "cveScore": 6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-57951 - Mythic < 3.4.0.60 - Broken Permission Filter in payload_build_step Table",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57951",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T17:20:36.000Z",
-        "contentSnippet": "Mythic before 3.4.0.60 contains a broken hasura permission filter on the payload_build_step table with an always-satisfied _or condition that bypasses operation-scoped access controls. Authenticated operators and spectators can query payload_build_step to read step_stdout, step_s",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57950 - ruoyi-vue-pro - Incorrect Permission Namespace in ErpSaleOrderController",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57950",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T17:20:07.000Z",
-        "contentSnippet": "ruoyi-vue-pro through 2026.05, fixed in commit 5d1fd70 contains a broken access control vulnerability in ErpSaleOrderController that allows attackers with erp:sale-out permissions to gain unauthorized access to sale order operations by exploiting an incorrect permission namespace",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57949 - ruoyi-vue-pro - Missing Authorization in CRM Follow-up Record GET Endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57949",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T17:19:39.000Z",
-        "contentSnippet": "ruoyi-vue-pro through 2026.05, fixed in commit c779a47, contains a missing authorization vulnerability in the CRM module's GET /admin-api/crm/follow-up-record/get endpoint that allows authenticated users to read any follow-up record by iterating sequential numeric IDs. Attackers ",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57948 - Pinpoint - Insecure Session Cookie Attributes in pinpointJwt",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57948",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T17:19:11.000Z",
-        "contentSnippet": "Pinpoint through version 3.1.0 contains an insecure session management vulnerability that allows attackers to access the pinpointJwt session cookie due to missing HttpOnly and Secure attributes, enabling JavaScript access via document.cookie and cleartext transmission over HTTP. ",
-        "cveScore": 7.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57947 - Pinpoint - Server-Side Request Forgery via Alarm Webhook Registration",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57947",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T17:18:50.000Z",
-        "contentSnippet": "Pinpoint through 3.1.0 contains a server-side request forgery vulnerability in the webhook registration endpoint that allows authenticated users to register internal URLs due to missing SSRF protection. Attackers can trigger alarm threshold breaches to force the server to issue P",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57946 - Invidious - Private Playlist Disclosure via Unauthenticated RSS Feed Endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57946",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T17:18:27.000Z",
-        "contentSnippet": "Invidious before version 2.20260626.0 contains a broken access control vulnerability that allows unauthenticated attackers to retrieve private playlist contents by accessing the RSS feed playlist endpoint without authentication. Attackers can supply a playlist ID to the feed endp",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
@@ -2156,6 +2156,27 @@
     ],
     "hardware": [
       {
+        "title": "AMD Versal Premium Gen 2 MoP: 32GB In-Package LPDDR5X, 288GB/s, 60% Less Board Area",
+        "link": "https://www.storagereview.com/news/amd-versal-premium-gen-2-mop-32gb-in-package-lpddr5x-288gb-s-60-less-board-area",
+        "source": "StorageReview",
+        "isoDate": "2026-06-30T15:53:48.000Z",
+        "contentSnippet": "AMD has introduced the Versal Premium Gen 2 Memory-on-Package (MoP) adaptive SoCs, adding integrated LPDDR5X memory directly into the device package to increase bandwidth while reducing board complexity and footprint. The new devices target applications that require high memory t"
+      },
+      {
+        "title": "AMD Pivots From HBM to LPDDR5X For New Versal Premium Gen 2 Memory on Package Chips",
+        "link": "https://www.servethehome.com/amd-pivots-from-hbm-to-lpddr5x-for-new-versal-premium-gen-2-memory-on-package-chips/",
+        "source": "ServeTheHome",
+        "isoDate": "2026-06-30T14:00:10.000Z",
+        "contentSnippet": "With HBM in short supply, AMD's next-generation of adaptive SoCs will be switching from HBM to LPDDR5X memory. The Versal Premium Gen 2 Memory on Package chips target the same compact form factor, but with a 15+ year projected lifecycle The post AMD Pivots From HBM to LPDDR5X For"
+      },
+      {
+        "title": "Meta releases version two of its brain-computer interface that can turn thoughts into keypresses — non-invasive magnetoencephalography scanner can measure changes in brain activity",
+        "link": "https://www.tomshardware.com/peripherals/wearable-tech/meta-releases-version-two-of-its-brain-computer-interface-that-can-turn-thoughts-into-keypresses-non-invasive-magnetoencephalography-scanner-can-measure-changes-in-brain-activity",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-06-30T13:34:35.000Z",
+        "contentSnippet": "Meta just released the second version of its Brain2Qwerty non-invasive BCI, showing promising improvements that could lead to clinical trials. This system aims to build an interface that does not require invasive surgery, allowing patients to control a computer using their mind w"
+      },
+      {
         "title": "Nvidia reportedly cancels quad-die Rubin Ultra GPU in favor of dual-GPU design, report claims — complex design purportedly scrapped over 'manufacturing execution concerns'",
         "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-reportedly-cancels-quad-die-rubin-ultra-gpu-in-favor-of-dual-gpu-design-report-claims-complex-design-purportedly-scrapped-over-manufacturing-execution-concerns",
         "source": "Tom's Hardware",
@@ -2833,27 +2854,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-06-25T12:48:33.000Z",
         "contentSnippet": "B&H is selling a 37-inch 4K Samsung monitor for half off, or just $249, today only."
-      },
-      {
-        "title": "Qualcomm plans China-specific data center chips — new Dragonfly lineup will include nerfed AI accelerators that comply with export thresholds",
-        "link": "https://www.tomshardware.com/tech-industry/qualcomm-plans-china-specific-data-center-chips-built-to-clear-us-export-limits",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-25T12:45:22.000Z",
-        "contentSnippet": "Qualcomm has announced that it will bring all four of its Dragonfly data center product lines to China."
-      },
-      {
-        "title": "HyperX Cloud Stinger 3 Wireless Headset Review: 80 hours and under $100",
-        "link": "https://www.tomshardware.com/peripherals/gaming-headsets/hyperx-cloud-stinger-3-wireless-review",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-25T12:10:00.000Z",
-        "contentSnippet": "The HyperX Cloud Stinger 3 Wireless is an over-ear wireless gaming headset with 50mm dynamic drivers, a flip-to-mute boom mic, and up to 80 hours of battery life — all for under $100."
-      },
-      {
-        "title": "Micron inks long-term supply agreements worth $100 billion — says it has no idea when RAM crisis will end",
-        "link": "https://www.tomshardware.com/pc-components/dram/micron-inks-long-term-supply-agreements-worth-usd100-billion-says-it-has-no-idea-when-ram-crisis-will-end",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-25T12:09:58.000Z",
-        "contentSnippet": "Micron has signed 16 LTAs with various customers to supply DRAM and NAND worth $100 billion."
       }
     ]
   }
