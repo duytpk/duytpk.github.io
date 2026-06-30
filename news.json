@@ -1,16 +1,52 @@
 {
-  "updatedAt": "2026-06-29T23:55:59.746Z",
+  "updatedAt": "2026-06-30T02:47:31.185Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-12243 - Path Traversal via Percent-Encoding in nltk.data.find() and nltk.data.load()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12243",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-30T00:14:35.000Z",
+        "contentSnippet": "NLTK version 3.9.4 is vulnerable to a path traversal attack due to an incomplete fix for GitHub Issue #3504. The `_UNSAFE_NO_PROTOCOL_RE` regex in `nltk/data.py` checks for literal `../` sequences but fails to account for percent-encoded traversal sequences such as `..%2f`. The `",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-10648 - NULL-pointer dereference in MCUmgr serial/console SMP transport on buffer-pool exhaustion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10648",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-29T22:51:27.000Z",
+        "contentSnippet": "mcumgr_serial_process_frag() in subsys/mgmt/mcumgr/transport/src/serial_util.c calls net_buf_reset() on the result of smp_packet_alloc() before checking it for NULL. smp_packet_alloc() uses net_buf_alloc(K_NO_WAIT) against the shared MCUmgr packet pool (CONFIG_MCUMGR_TRANSPORT_NE",
+        "cveScore": 6.2,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-8023 - Path traversal in Zephyr HTTP server static-filesystem resource handler allows unauthenticated remote arbitrary file read",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8023",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-29T22:15:22.000Z",
+        "contentSnippet": "Zephyr's HTTP server (subsys/net/lib/http) provides a static-filesystem resource type (HTTP_RESOURCE_TYPE_STATIC_FS, available when CONFIG_FILE_SYSTEM is enabled) that serves files from a configured root directory. Before this fix, both the HTTP/1 and HTTP/2 front-ends placed the",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-7656 - Broken IPv6 Neighbor Discovery input validation allows spoofed RA/NS/NA acceptance in Zephyr net stack",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-7656",
+        "source": "cvefeed.io",
+        "isoDate": "2026-06-29T22:09:10.000Z",
+        "contentSnippet": "The IPv6 Neighbor Discovery handlers in subsys/net/ip/ipv6_nbr.c (handle_ra_input, handle_ns_input, handle_na_input) used an incorrect boolean expression that combined the RFC 4861 validity checks with the ICMPv6 code check using the wrong operator precedence: the form was '((len",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-34592 - Coolify: Cross-Team IDOR via Unscoped Server and Project Lookups Exposes SSH Keys and Infrastructure",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-34592",
         "source": "cvefeed.io",
         "isoDate": "2026-06-29T21:47:23.000Z",
         "contentSnippet": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. Prior to 4.0.0-beta.471, Coolify server and project lookups are not scoped to the current team, allowing any authenticated user to access servers and projects belonging to other te",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 7.7,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-10647 - Deadlock denial of service in USB CDC-NCM device class on TX enqueue failure",
@@ -27,7 +63,7 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-29T21:16:35.000Z",
         "contentSnippet": "Strapi users-permissions plugin fails to restrict JWT algorithms when plugin::users-permissions.jwt.algorithm is not explicitly configured, allowing acceptance of HS384 and HS512 tokens alongside HS256. Attackers possessing the jwtSecret can mint tokens with non-standard HMAC var",
-        "cveScore": 6.3,
+        "cveScore": 4.8,
         "cveSeverity": "MEDIUM"
       },
       {
@@ -108,8 +144,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-29T20:21:59.000Z",
         "contentSnippet": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. Prior to 4.0.0-beta.471, an authenticated command injection vulnerability in the Destination Network Management functionality allows users with destination management permissions t",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-34597 - Coolify: Authenticated Host RCE",
@@ -117,8 +153,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-29T20:18:37.000Z",
         "contentSnippet": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. Prior to 4.0.0-beta.470, a critical Authenticated Host Remote Code Execution (RCE) vulnerability was discovered in Coolify. The flaw resides in the handling of user-defined build p",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-41896 - Coolify: Unauthenticated Deployment Trigger via Webhook HMAC Bypass with Null Secret",
@@ -126,8 +162,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-29T20:16:50.000Z",
         "contentSnippet": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. Prior to 4.0.0-beta.474, the HMAC key is the application's manual_webhook_secret_github field, which is used by Coolify's webhook endpoints to validate incoming requests, is nullab",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-57498 - Coolify Cross-Team IDOR: Livewire Components Accept Unscoped server_id and destination_uuid — Deploy to Other Teams' Servers",
@@ -135,8 +171,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-06-29T20:12:07.000Z",
         "contentSnippet": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. Prior to 4.0.0-beta.474, Coolify's API controllers consistently validate server ownership with Server::whereTeamId($teamId) before any operation. However, multiple Livewire web UI ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 9.6,
+        "cveSeverity": "CRITICAL"
       },
       {
         "title": "CVE-2026-13763 - HTTP/2 Stream Parser Confusion Body-Inspection Bypass in AWS Application Load Balancer with AWS WAF",
@@ -866,42 +902,6 @@
         "contentSnippet": "A vulnerability was determined in itsourcecode Online Hotel Management System 1.0. This affects an unknown part of the file /admin/mod_users/controller.php?action=edit of the component POST Request Handler. This manipulation of the argument Name causes cross site scripting. The a",
         "cveScore": 5,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-13555 - itsourcecode Online Hotel Management System controller.php add sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13555",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T09:30:09.000Z",
-        "contentSnippet": "A vulnerability was found in itsourcecode Online Hotel Management System 1.0. Affected by this issue is some unknown functionality of the file /admin/mod_users/controller.php?action=add. The manipulation of the argument Name results in sql injection. The attack can be launched re",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-13601 - Yelp: yelp-xsl: overly permissive content security policy in yelp allows host file disclosure from flatpak applications",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13601",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T09:20:40.000Z",
-        "contentSnippet": "A flaw was found in Yelp due to an overly permissive Content Security Policy (CSP) implementation provided by yelp-xsl. A malicious Flatpak application can open crafted help content through the OpenURI portal. By embedding an untrusted CSS stylesheet within a structured SVG docum",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-13554 - itsourcecode Online Hotel Management System POST Request controller.php add cross site scripting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13554",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T09:15:07.000Z",
-        "contentSnippet": "A vulnerability has been found in itsourcecode Online Hotel Management System 1.0. Affected by this vulnerability is an unknown functionality of the file /admin/mod_amenities/controller.php?action=add of the component POST Request Handler. The manipulation of the argument Name le",
-        "cveScore": 5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-13553 - itsourcecode Online Hotel Management System controller.php add unrestricted upload",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13553",
-        "source": "cvefeed.io",
-        "isoDate": "2026-06-29T09:00:11.000Z",
-        "contentSnippet": "A flaw has been found in itsourcecode Online Hotel Management System 1.0. Affected is an unknown function of the file /admin/mod_amenities/controller.php?action=add. Executing a manipulation of the argument image can lead to unrestricted upload. It is possible to launch the attac",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
