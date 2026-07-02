@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-02T20:56:35.641Z",
+  "updatedAt": "2026-07-02T22:03:20.680Z",
   "generator": "rss",
   "feeds": {
     "cve": [
@@ -155,6 +155,24 @@
         "contentSnippet": "A relative path traversal in the \"keyhint\" option in repomd.xml parsing of libzypp before 17.38.12 can be used by attackers able to supply a malicious repository to inject or overwrite files in the target system as root.",
         "cveScore": 8.4,
         "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-53358 - Bluetooth: L2CAP: use chan timer to close channels in cleanup_listen()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53358",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-02T15:17:03.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: Bluetooth: L2CAP: use chan timer to close channels in cleanup_listen() l2cap_chan_close() removes the channel from conn->chan_l, which must be done under conn->lock. cleanup_listen() runs under the parent sk_lock",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53357 - Bluetooth: fix UAF in l2cap_sock_cleanup_listen() vs l2cap_conn_del()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53357",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-02T15:17:03.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: Bluetooth: fix UAF in l2cap_sock_cleanup_listen() vs l2cap_conn_del() bt_accept_dequeue() unlinks a not-yet-accepted child from the parent accept queue and release_sock()s it before returning, so the returned sk ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
       },
       {
         "title": "CVE-2026-58455 - Dockwatch 0.6.567 Unauthenticated OS Command Injection via ajax/compose.php",
@@ -884,24 +902,6 @@
         "contentSnippet": "Craft CMS is a content management system (CMS). In versions 5.9.0 and above prior to 5.10.0, control panel users with the ability to edit entries can execute unsandboxed Twig code via the HTTP Referrer header, potentially leading to authenticated RCE. The issue happens when a use",
         "cveScore": 8.7,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-55792 - Craft CMS: Sensitive File Disclosure / Server-Side File Read",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55792",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-01T23:20:28.000Z",
-        "contentSnippet": "Craft CMS is a content management system (CMS). In versions starting from 4.0.0-RC1 and prior to 4.18.0, and 5.0.0-RC1 and above, prior to 5.10.0, the dataUrl() Twig function is included in Craft’s Twig sandbox allowlist, allowing any control panel user granted the utility:system",
-        "cveScore": 6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-55791 - Craft CMS: Blind SSRF and Arbitrary JavaScript Injection via Host Header Poisoning in actionResourceJs",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55791",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-01T23:13:58.000Z",
-        "contentSnippet": "Craft CMS is a content management system (CMS). Versions 4.0.0-RC1 and above, prior to 4.18.0 and 5.0.0-RC1, and above, prior to 5.10.0, are vulnerable to Server-Side Request Forgery (SSRF) and Arbitrary JavaScript Injection through the /actions/app/resource-js endpoint. By explo",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
