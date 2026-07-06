@@ -1,16 +1,79 @@
 {
-  "updatedAt": "2026-07-06T12:38:32.032Z",
+  "updatedAt": "2026-07-06T16:13:19.839Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
+        "title": "CVE-2026-13698 - OpenVPN Memory Leak Denial of Service",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13698",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-06T14:13:49.000Z",
+        "contentSnippet": "A memory leak in OpenVPN version 2.5.0 through 2.5.11, 2.6.0 through 2.6.20 and 2.7_alpha1 through 2.7.4 allows remote attackers with a valid tls-crypt-v2 client key to potentially cause a denial of service",
+        "cveScore": 6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-54893 - Email-derived URL path injection in the Swoosh Microsoft Graph adapter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54893",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-06T14:04:16.000Z",
+        "contentSnippet": "URL path injection in the Microsoft Graph adapter of Swoosh. Swoosh.Adapters.MsGraph builds its Microsoft Graph API request URL by interpolating the sender's email address into the URL path (/users/{from}/sendMail) without percent-encoding or validation. In applications that deri",
+        "cveScore": 2.1,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-58380 - Gimp: gimp: stack buffer overflow in pnmscanner_gettoken()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58380",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-06T13:58:43.000Z",
+        "contentSnippet": "A flaw was found in GIMP's PNM file format parser. When parsing a specially crafted PNM file, the pnmscanner_gettoken() function writes a null terminator one byte past the end of a stack-allocated buffer due to an off-by-one error in the loop boundary check. This could lead to me",
+        "cveScore": 7.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-13708 - Imager::File::JPEG versions before 1.003 for Perl leak heap memory when reading a JPEG with repeated APP13 markers in i_readjpeg_wiol",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13708",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-06T13:16:32.000Z",
+        "contentSnippet": "Imager::File::JPEG versions before 1.003 for Perl leak heap memory when reading a JPEG with repeated APP13 markers in i_readjpeg_wiol. i_readjpeg_wiol walks the marker list libjpeg returns and, for each APP13 marker, allocates a new buffer with *iptc_itext = mymalloc(...) and ove",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-13705 - Imager versions before 1.032 for Perl have a heap out-of-bounds read in the bundled Imager::File::SGI reader via a 16-bit RLE literal run in read_rgb_16_rle",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13705",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-06T13:16:32.000Z",
+        "contentSnippet": "Imager versions before 1.032 for Perl have a heap out-of-bounds read in the bundled Imager::File::SGI reader via a 16-bit RLE literal run in read_rgb_16_rle. read_rgb_16_rle guards each literal run with if (count > data_left), but count is a pixel count while every 16-bit sample ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-7185 - Unauthorized access to files in T-Systems products",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-7185",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-06T13:10:09.000Z",
+        "contentSnippet": "A validation vulnerability has been identified in certain web features related to file management or upload in several products of the TAO 2.0 suite. This vulnerability could allow an attacker capable of interacting with the affected feature to attempt to access file system resou",
+        "cveScore": 6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
         "title": "CVE-2025-15668 - GPAC MP4Box box_code_base.c sgpd_del_entry heap-based overflow",
         "link": "https://cvefeed.io/vuln/detail/CVE-2025-15668",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-06T11:45:07.000Z",
+        "isoDate": "2026-07-06T12:16:39.000Z",
         "contentSnippet": "A vulnerability was identified in GPAC up to b40ce70f5. This issue affects the function sgpd_del_entry of the file src/isomedia/box_code_base.c of the component MP4Box. Such manipulation of the argument data leads to heap-based buffer overflow. Local access is required to approac",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 3.3,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2025-15667 - GPAC MP4Box avc_ext.c gf_isom_nalu_sample_rewrite double free",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-15667",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-06T12:16:38.000Z",
+        "contentSnippet": "A vulnerability was determined in GPAC up to 2.5-DEV. This vulnerability affects the function gf_isom_nalu_sample_rewrite of the file src/isomedia/avc_ext.c of the component MP4Box. This manipulation of the argument nalu_out_bs causes double free. It is possible to launch the att",
+        "cveScore": 3.3,
+        "cveSeverity": "LOW"
       },
       {
         "title": "CVE-2026-6901 - Untrusted Search Path",
@@ -128,15 +191,6 @@
         "contentSnippet": "The software accepts user-supplied input via a URL parameter without adequate output encoding before reflecting it back to the user's browser. This condition allows an attacker to inject malicious script content into pages served by the application. By leveraging this weakness, a",
         "cveScore": 6.1,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2025-15667 - GPAC MP4Box avc_ext.c gf_isom_nalu_sample_rewrite double free",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-15667",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T11:15:08.000Z",
-        "contentSnippet": "A vulnerability was determined in GPAC up to 2.5-DEV. This vulnerability affects the function gf_isom_nalu_sample_rewrite of the file src/isomedia/avc_ext.c of the component MP4Box. This manipulation of the argument nalu_out_bs causes double free. It is possible to launch the att",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       },
       {
         "title": "CVE-2026-9165 - Stackrox: stackrox: unbounded graphql query depth allows authenticated denial of service",
@@ -848,60 +902,6 @@
         "contentSnippet": "A flaw has been found in SourceCodester Class and Exam Timetabling System 1.0. Impacted is an unknown function of the file /edit_product.php. This manipulation of the argument ID causes sql injection. Remote exploitation of the attack is possible. The exploit has been published a",
         "cveScore": 7.5,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-14733 - SourceCodester Class and Exam Timetabling System edit_coursea.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14733",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-05T09:16:28.000Z",
-        "contentSnippet": "A vulnerability was detected in SourceCodester Class and Exam Timetabling System 1.0. This issue affects some unknown processing of the file /edit_coursea.php. The manipulation of the argument ID results in sql injection. The attack may be launched remotely. The exploit is now pu",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-14732 - SourceCodester Class and Exam Timetabling System edit_exam.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14732",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-05T09:16:28.000Z",
-        "contentSnippet": "A security vulnerability has been detected in SourceCodester Class and Exam Timetabling System 1.0. This vulnerability affects unknown code of the file /edit_exam.php. The manipulation of the argument ID leads to sql injection. The attack may be initiated remotely. The exploit ha",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-14731 - itsourcecode Hospital Management System patientreport.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14731",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-05T09:16:28.000Z",
-        "contentSnippet": "A weakness has been identified in itsourcecode Hospital Management System 1.0. This affects an unknown part of the file /patientreport.php. Executing a manipulation of the argument editid can lead to sql injection. The attack can be launched remotely. The exploit has been made av",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-14730 - itsourcecode Hospital Management System patientprofile.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14730",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-05T09:16:27.000Z",
-        "contentSnippet": "A security flaw has been discovered in itsourcecode Hospital Management System 1.0. Affected by this issue is some unknown functionality of the file /patientprofile.php. Performing a manipulation of the argument patientname results in sql injection. The attack can be initiated re",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-14725 - SourceCodester Online Boat Reservation System session expiration",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14725",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-05T08:16:27.000Z",
-        "contentSnippet": "A vulnerability was identified in SourceCodester Online Boat Reservation System 1.0. Affected by this vulnerability is an unknown functionality. Such manipulation leads to session expiration. It is possible to launch the attack remotely. The exploit is publicly available and migh",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-14723 - AD-Security AD_Miner Cache analyse_cache.py request_a deserialization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14723",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-05T08:16:26.000Z",
-        "contentSnippet": "A vulnerability was determined in AD-Security AD_Miner 1.9.0. Affected is the function request_a of the file ad_miner/scripts/analyse_cache.py of the component Cache Handler. This manipulation of the argument sys.argv[1] causes deserialization. The attack can only be executed loc",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
@@ -2205,6 +2205,76 @@
     ],
     "hardware": [
       {
+        "title": "SK hynix Pours KRW 100 Trillion ($65B USD) Into Cheongju as AI Pushes NAND Demand Past Supply",
+        "link": "https://www.storagereview.com/news/sk-hynix-pours-krw-100-trillion-65b-usd-into-cheongju-as-ai-pushes-nand-demand-past-supply",
+        "source": "StorageReview",
+        "isoDate": "2026-07-06T16:06:01.000Z",
+        "contentSnippet": "SK hynix has announced plans to invest KRW 100 trillion (about US$65 billion at the current exchange rate) in Cheongju, South Korea, to expand its NAND flash manufacturing and advanced packaging capacity to meet rising AI-driven memory demand. The announcement was made by Preside"
+      },
+      {
+        "title": "Microsoft 'resets' Xbox by cutting 3,200 jobs this year, divesting five game studios — firm cites 'margins that are 3-10x lower than comparable platform and publishing businesses'",
+        "link": "https://www.tomshardware.com/video-games/xbox/microsoft-resets-xbox-by-cutting-3-200-jobs-this-year-divesting-five-game-studios-firm-cites-margins-that-are-3-10x-lower-than-comparable-platform-and-publishing-businesses",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-07-06T15:39:52.000Z",
+        "contentSnippet": "Xbox CEO Asha Sharma announced that Microsoft's gaming division will cut 3,200 jobs throughout FY27 and is spinning out studios but not canceling any games."
+      },
+      {
+        "title": "Working prototype of open-source printer that promises user-repairability and no subscriptions appears in first video — DRM-free 'Open Printer' inkjet still has no announced price, ship date, or print",
+        "link": "https://www.tomshardware.com/peripherals/printers/raspberry-pi-powered-open-source-printer-earns-design-award-nomination-but-still-has-no-price-nine-months-after-reveal",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-07-06T15:30:17.000Z",
+        "contentSnippet": "Open Tools, a Paris-based startup, has announced that its Open Printer has been nominated for two French Design Awards."
+      },
+      {
+        "title": "AMD Ryzen AI Halo Developer System Review AMD Goes for Local AI",
+        "link": "https://www.servethehome.com/amd-ryzen-ai-halo-developer-system-review-amd-goes-for-local-ai/",
+        "source": "ServeTheHome",
+        "isoDate": "2026-07-06T15:00:20.000Z",
+        "contentSnippet": "We test the AMD Ryzen AI Halo developer system and see how AMD is putting its spin on a 128GB local AI dev box The post AMD Ryzen AI Halo Developer System Review AMD Goes for Local AI appeared first on ServeTheHome."
+      },
+      {
+        "title": "AMD Ryzen AI Halo review: AMD builds a DGX Spark of its own",
+        "link": "https://www.tomshardware.com/pc-components/gpus/embargo-mon-july-6-8am-pt-1100-edt-amd-ryzen-ai-halo-review",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-07-06T15:00:15.000Z",
+        "contentSnippet": "The Ryzen AI Halo is a turn-key AMD local AI box that’s backed up with first-party software support, handy utilities, and plenty of documentation for local AI explorers. But the performance and application compatibility of the Ryzen AI Max+ 395 (aka Strix Halo) SoC still trails N"
+      },
+      {
+        "title": "AMD Ryzen AI Halo Review: A Dual-OS, 200B-Parameter Desktop Takes On the DGX Spark",
+        "link": "https://www.storagereview.com/review/amd-ryzen-ai-halo-review-a-dual-os-200b-parameter-desktop-takes-on-the-dgx-spark",
+        "source": "StorageReview",
+        "isoDate": "2026-07-06T14:59:10.000Z",
+        "contentSnippet": "AMD silicon arguably got here first: Strix Halo mini PCs and laptops were shipping with 128GB of unified memory well before NVIDIA entered the picture. But the local-AI desktop as a category is one NVIDIA effectively created when it put a Grace Blackwell superchip in a one-liter "
+      },
+      {
+        "title": "You can now use your Sony headphones as a free real-time head tracker for race and flight simulators on PC, several hundred games already supported — enthusiast creates open-source app that translates",
+        "link": "https://www.tomshardware.com/video-games/pc-gaming/you-can-now-use-your-sony-headphones-as-a-real-time-head-tracker-for-race-and-flight-simulators-on-pc-several-hundred-games-already-supported-enthusiast-creates-open-source-app-that-translates-live-sensor-data-into-in-game-camera-controls",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-07-06T14:36:21.000Z",
+        "contentSnippet": "A new open-source app called Sony Head Tracker, developed by Nicholas Slattery, reads raw sensor data from Sony headphones and earbuds and converts them into something OpenTrack can understand. From there, it can be used for head tracking in over 200 PC games."
+      },
+      {
+        "title": "Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — Analyst firm SemiAnalysis says PCB midplane problems led to the delay",
+        "link": "https://www.tomshardware.com/pc-components/gpus/nvidias-kyber-rack-for-rubin-ultra-slips-to-2028",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-07-06T13:33:34.000Z",
+        "contentSnippet": "Nvidia reportedly won't ship its Kyber NVL144 rack until 2028, a delay of more than 12 months."
+      },
+      {
+        "title": "Nvidia and Intel tout homegrown American chip supply chain prowess as country bolsters local production, but gaps remain — crucial Blackwell packaging steps remain offshore as projects grow in scope a",
+        "link": "https://www.tomshardware.com/tech-industry/nvidia-and-intel-tout-chips-built-in-america-but-every-arizona-made-blackwell-die-is-still-packaged-in-taiwan",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-07-06T12:51:09.000Z",
+        "contentSnippet": "America's AI supply chain now starts and ends in the U.S., while its most valuable middle steps remain entirely offshore until at least 2028."
+      },
+      {
+        "title": "Electric drone breaks world air speed record at 434 mph, designed for anti-aircraft interceptor roles — German firm convincingly smashed the official 409 mph record, hopes to get stamp of approval fro",
+        "link": "https://www.tomshardware.com/tech-industry/drones/electric-drone-breaks-world-air-speed-record-at-434-mph-designed-for-anti-aircraft-interceptor-roles-german-firm-convincingly-smashed-the-official-409-mph-record-hopes-to-get-stamp-of-approval-from-guinness-soon",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-07-06T12:39:54.000Z",
+        "contentSnippet": "Quantum Systems Group reckons it has broken the flight speed record for an electric drone. During internal testing last month the Munich-based firm recorded its Apex Recordhunter drone hitting a top speed of 434 mph in straight and level flight."
+      },
+      {
         "title": "China’s Huawei to enter South Korean AI chip market with new Atlas SuperPods, clusters pack 8,192 Ascend 950 accelerators per deployment — reportedly challenges Nvidia dominance with 'tripled inferenc",
         "link": "https://www.tomshardware.com/tech-industry/semiconductors/chinas-huawei-to-enter-south-korean-ai-chip-market-with-new-atlas-superpods-clusters-pack-8-192-ascend-950-accelerators-per-deployment-reportedly-challenges-nvidia-dominance-with-tripled-inference-performance-of-h20-at-one-quarter-the-cost",
         "source": "Tom's Hardware",
@@ -2833,76 +2903,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-07-01T13:50:06.000Z",
         "contentSnippet": "SpaceXAI is trying to win residents living close to the Colossus 1 and 2 data centers by giving them discounted internet access. However, critics say that this is just a PR stunt to help win the community, even as it battles two lawsuits based on air and noise pollution complaint"
-      },
-      {
-        "title": "Anthropic restores Claude Fable 5 as US lifts export controls — single filter now blocks prompt that could identify software vulnerabilities and write code to exploit them",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropic-restores-claude-fable-5-as-us-lifts-export-controls",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-01T11:30:51.000Z",
-        "contentSnippet": "Anthropic has restored global access to Claude Fable 5, a day after the U.S. Department of Commerce withdrew the export controls."
-      },
-      {
-        "title": "Grab a massive $464 saving on a two-year NordVPN subscription with three extra months free — 69% saving unlocks this privacy-first VPN service with scam protection, password manager, 1TB cloud storage",
-        "link": "https://www.tomshardware.com/software/vpn/grab-a-massive-usd464-saving-on-a-two-year-nordvpn-subscription-with-three-extra-months-free-69-percent-saving-unlocks-this-privacy-first-vpn-service-with-scam-protection-password-manager-1tb-cloud-storage-ad-blocking-and-more",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-01T11:12:36.000Z",
-        "contentSnippet": "A big sale on NordVPN's top Prime package means you can save over $464 on a 2-year sub with three additional months thrown in for free."
-      },
-      {
-        "title": "The bifurcated laptop landscape of Computex 2026 – MacBook Neo competitors with 8GB of RAM, and expensive Nvidia laptops promising an agentic-focused future of Windows on Arm",
-        "link": "https://www.tomshardware.com/laptops/the-bifurcated-laptop-landscape-of-computex-2026-macbook-neo-competitors-with-8gb-of-ram-and-expensive-nvidia-laptops-promising-an-agentic-focused-future-of-windows-on-arm",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-01T11:00:00.000Z",
-        "contentSnippet": "With no new GPUs or major mobile CPU platform launches surrounding the show, the laptop announcements at Computex this year fell into two disparate categories, appealing to users with very different budgets."
-      },
-      {
-        "title": "Philippine town closes all 'Pisonet' computer rental shops in wake of school shooting — incident blamed on violent video games, shops closed 'for the safety of the youth'",
-        "link": "https://www.tomshardware.com/video-games/philippine-town-closes-all-pisonet-computer-rental-shops-in-wake-of-school-shooting-incident-blamed-on-violent-video-games-shops-closed-for-the-safety-of-the-youth",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-01T10:48:28.000Z",
-        "contentSnippet": "A town in northern Philippines closed down all computer rental shops, with the mayor saying that these establishments distracted students from their studies and led to abuse and other dangers. The move came a little over a week after many people have started blaming a deadly scho"
-      },
-      {
-        "title": "Virginia county asks all employees, including schools, to conserve power due to AI-driven electricity price hikes — state's 400-plus data centers steadily increasing demand, grid expansion, and pricin",
-        "link": "https://www.tomshardware.com/tech-industry/data-centers/virginia-county-asks-all-employees-including-schools-to-save-power-due-to-ai-driven-electricity-price-hikes-states-400-plus-data-centers-steadily-increasing-demand-grid-expansion-and-pricing",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-01T10:30:00.000Z",
-        "contentSnippet": "Virginia county asks all employees including schools to save power, due to AI-driven power requirements— state's 400-plus datacenters steadily increasing demand, grid expansion, and pricing"
-      },
-      {
-        "title": "New PC purchases see sharpest drop in nearly three years as memory and storage prices bite — shipments fall by 7%, analysts forecast 14% contraction that will hit budget laptops hard",
-        "link": "https://www.tomshardware.com/tech-industry/new-pc-purchases-see-sharpest-drop-in-nearly-three-years-as-memory-and-storage-prices-bite-shipments-fall-by-7-percent-analysts-forecast-14-percent-contraction-that-will-hit-budget-laptops-hard",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-01T10:02:16.000Z",
-        "contentSnippet": "A research firm says that PC deliveries for the first quarter of 2026 fell by 7%, with the entire industry expected to ship 14.4% less units for the entire year."
-      },
-      {
-        "title": "AI researchers trick chatbots into sharing how to make cocaine as long as they believe a user is wearing a green shirt — 'CoT Forgery' exploit spurs LLMs to divulge forbidden info by faking trusted ch",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-models-handed-over-a-cocaine-recipe-after-being-told-the-user-was-wearing-a-green-shirt",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-01T10:00:00.000Z",
-        "contentSnippet": "Tagged partitions of a LLM's input sequence are meant to provide security through trusted roles, but it turns out that models judge whether inputs sound like they belong in certain tags rather than literally interpreting them, making them vulnerable to prompt injection."
-      },
-      {
-        "title": "Private and community servers for Minecraft and COD are illegal and amount to piracy, ESA tells California Senate — Stop Killing Games-backed bill fails to pass committee",
-        "link": "https://www.tomshardware.com/video-games/pc-gaming/esa-tells-california-lawmakers-that-private-game-servers-are-piracy",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-01T09:30:00.000Z",
-        "contentSnippet": "The Entertainment Software Association, in its infinite wisdom, has told a California Senate committee that private and community servers are illegal and amount to piracy."
-      },
-      {
-        "title": "xTool says its 01 Omni Printer can ‘print it all’ — firm steps into the world of UV printing for output on 'all surfaces' at up to 5mm thick",
-        "link": "https://www.tomshardware.com/maker-stem/xtool-says-its-01-omni-printer-can-print-it-all-firm-steps-into-the-world-of-uv-printing-for-output-on-all-surfaces-at-up-to-5mm-thick",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-06-30T19:45:55.000Z",
-        "contentSnippet": "xTool launched its 01 Omni Printer today at a special event in Berlin. The digital-to-physical tool firm claims this device is the “world’s first 4-in-1 printer,” and said it was ready for makers to “print it all.”"
-      },
-      {
-        "title": "Scality and OVHcloud Build a Sovereign AI Storage Stack on OPCP and Bare Metal",
-        "link": "https://www.storagereview.com/news/scality-and-ovhcloud-build-a-sovereign-ai-storage-stack-on-opcp-and-bare-metal",
-        "source": "StorageReview",
-        "isoDate": "2026-06-30T19:34:45.000Z",
-        "contentSnippet": "Scality and OVHcloud have expanded their technology partnership with a joint storage platform aimed at organizations requiring sovereign infrastructure for AI and mission-critical data. The combined solution is designed to keep sensitive data under customer control while supporti"
       }
     ]
   }
