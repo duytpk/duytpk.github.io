@@ -1,43 +1,115 @@
 {
-  "updatedAt": "2026-07-07T00:00:26.790Z",
+  "updatedAt": "2026-07-07T04:43:35.732Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
+        "title": "CVE-2026-11328 - Exclusive Addons for Elementor <= 2.7.9.8 - Authenticated (Contributor+) Stored Cross-Site Scripting via Post Title",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11328",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-07T02:16:28.000Z",
+        "contentSnippet": "The Exclusive Addons for Elementor plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the post title parameter in all versions up to, and including, 2.7.9.8 due to insufficient input sanitization and output escaping. This makes it possible for authenticated att",
+        "cveScore": 6.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-53648 - FOSSBilling: Downloadable product files can be overwritten through filename collisions",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53648",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-07T00:16:34.000Z",
+        "contentSnippet": "FOSSBilling is a free, open-source billing and client management system. Prior to version 0.8.1, downloadable product files are stored using a deterministic filename-derived path. When an administrator uploads a file for a downloadable product, FOSSBilling stores the file as `md5",
+        "cveScore": 5.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-53647 - FOSSBilling vulnerable to unauthenticated API key configuration disclosure via guest Serviceapikey get_info endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53647",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-07T00:16:34.000Z",
+        "contentSnippet": "FOSSBilling is a free, open-source billing and client management system. In versions 0.5.3 through 0.7.2, the Guest `serviceapikey/get_info` API endpoint is accessible without authentication. Any caller with a valid API key can retrieve all custom configuration parameters (`custo",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-13356 - Interrupted navigation could allow address bar origin spoofing in Firefox for iOS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13356",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-07T00:16:34.000Z",
+        "contentSnippet": "A malicious webpage could interrupt a pending navigation by enqueuing a synchronous JavaScript dialog, causing the browser UI to display the destination origin in the address bar while continuing to render attacker-controlled content. This vulnerability was fixed in Firefox for i",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2024-56141 - Minosoft has IV equal to key",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2024-56141",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-07T00:16:33.000Z",
+        "contentSnippet": "Minosoft is an open-source, multi-version Minecraft Java Edition client written in Kotlin. Starting in commit f1ae30e2b046a490026a8413b075685deb795122, the CryptManager encryption routine ( CryptManager.kt ) initializes its AES cipher using an initialization vector (IV) that is s",
+        "cveScore": 5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-53646 - FOSSBilling: Client password reset token reuse allows persistent account takeover",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53646",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-06T23:16:56.000Z",
+        "contentSnippet": "FOSSBilling is a free, open-source billing and client management system. In versions 0.5.6 through 0.7.2, when a `ClientPasswordReset` record already exists for a client (from a previous unexpired reset request), subsequent calls to the `reset_password` guest API endpoint reuse t",
+        "cveScore": 7.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-53645 - FOSSBilling's missing self-edit prevention in staff permission management allows persistent privilege escalation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53645",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-06T23:16:56.000Z",
+        "contentSnippet": "FOSSBilling is a free, open-source billing and client management system. Versions prior to 0.8.0 allow a low-privileged staff account to grant arbitrary module permissions to itself through the admin API, resulting in persistent privilege escalation. A staff user that only has `s",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-53644 - FOSSBilling's missing order-state validation allows clients to read and reset API key secrets for non-active orders",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53644",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-06T23:16:56.000Z",
+        "contentSnippet": "FOSSBilling is a free, open-source billing and client management system. Versions 0.5.3 through 0.7.2 allow authenticated clients to both read and reset API key service secrets for orders that are no longer in an `active` state (e.g., `suspended`, `canceled`). The root cause is m",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
         "title": "CVE-2026-53643 - FOSSBilling allows low-privileged staff accounts to perform unauthorized actions via admin API endpoints",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-53643",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-06T22:49:50.000Z",
+        "isoDate": "2026-07-06T23:16:56.000Z",
         "contentSnippet": "FOSSBilling is a free, open-source billing and client management system. Versions prior to 0.8.0 allow low-privileged staff accounts to perform unauthorized actions via admin API endpoints. The root cause is a combination of the `can_always_access` module flag (which grants all s",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-53642 - FOSSBilling: Unverified clients can access client-area pages when email confirmation is required",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-53642",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-06T22:45:51.000Z",
+        "isoDate": "2026-07-06T23:16:56.000Z",
         "contentSnippet": "FOSSBilling is a free, open-source billing and client management system. In versions 0.5.6 through 0.7.2, when the \"Require Email Confirmation\" setting is enabled, a logged-in client with an unverified email address (`email_approved = 0`) can access all client-area pages (e.g. `/",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-53641 - FOSSBilling has stored XSS in client email views via unescaped content in JavaScript template literal",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-53641",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-06T22:36:38.000Z",
+        "isoDate": "2026-07-06T23:16:55.000Z",
         "contentSnippet": "FOSSBilling is a free, open-source billing and client management system. Versions 0.6.0 through 0.7.2 have a stored cross-site scripting (XSS) vulnerability in the client-facing email history views of FOSSBilling. Email HTML content (`content_html`) is rendered into a JavaScript ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-53640 - FOSSBilling missing authorization checks on read-only admin API endpoints expose sensitive staff, client, and redirect data",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-53640",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-06T22:30:48.000Z",
+        "isoDate": "2026-07-06T23:16:55.000Z",
         "contentSnippet": "FOSSBilling is a free, open-source billing and client management system. Prior to version 0.8.0, low-privileged staff accounts may read sensitive data via admin API endpoints that lack permission checks. While sibling write endpoints correctly enforce fine-grained permissions, th",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 2.3,
+        "cveSeverity": "LOW"
       },
       {
         "title": "CVE-2026-59710 - showdown - Stored XSS via Unescaped Table Header ID Attribute Injection",
@@ -830,81 +902,23 @@
         "contentSnippet": "URL path injection in the Microsoft Graph adapter of Swoosh. Swoosh.Adapters.MsGraph builds its Microsoft Graph API request URL by interpolating the sender's email address into the URL path (/users/{from}/sendMail) without percent-encoding or validation. In applications that deri",
         "cveScore": 2.1,
         "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-13708 - Imager::File::JPEG versions before 1.003 for Perl leak heap memory when reading a JPEG with repeated APP13 markers in i_readjpeg_wiol",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13708",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T13:16:32.000Z",
-        "contentSnippet": "Imager::File::JPEG versions before 1.003 for Perl leak heap memory when reading a JPEG with repeated APP13 markers in i_readjpeg_wiol. i_readjpeg_wiol walks the marker list libjpeg returns and, for each APP13 marker, allocates a new buffer with *iptc_itext = mymalloc(...) and ove",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-13705 - Imager versions before 1.032 for Perl have a heap out-of-bounds read in the bundled Imager::File::SGI reader via a 16-bit RLE literal run in read_rgb_16_rle",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13705",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T13:16:32.000Z",
-        "contentSnippet": "Imager versions before 1.032 for Perl have a heap out-of-bounds read in the bundled Imager::File::SGI reader via a 16-bit RLE literal run in read_rgb_16_rle. read_rgb_16_rle guards each literal run with if (count > data_left), but count is a pixel count while every 16-bit sample ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2025-15668 - GPAC MP4Box box_code_base.c sgpd_del_entry heap-based overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-15668",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T12:16:39.000Z",
-        "contentSnippet": "A vulnerability was identified in GPAC up to b40ce70f5. This issue affects the function sgpd_del_entry of the file src/isomedia/box_code_base.c of the component MP4Box. Such manipulation of the argument data leads to heap-based buffer overflow. Local access is required to approac",
-        "cveScore": 3.3,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2025-15667 - GPAC MP4Box avc_ext.c gf_isom_nalu_sample_rewrite double free",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-15667",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T12:16:38.000Z",
-        "contentSnippet": "A vulnerability was determined in GPAC up to 2.5-DEV. This vulnerability affects the function gf_isom_nalu_sample_rewrite of the file src/isomedia/avc_ext.c of the component MP4Box. This manipulation of the argument nalu_out_bs causes double free. It is possible to launch the att",
-        "cveScore": 3.3,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-6901 - Untrusted Search Path",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6901",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T11:16:31.000Z",
-        "contentSnippet": "Untrusted Search Path vulnerability in B&R Industrial Automation GmbH APROL. This issue affects APROL: before R 4.4-01P5.",
-        "cveScore": 8.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-6900 - Improper Certificate Validation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6900",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T11:16:31.000Z",
-        "contentSnippet": "Improper certificate validation vulnerability in B&R Industrial Automation GmbH APROL. This issue affects APROL: before R 4.4-01P5.",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-58226 - Unauthenticated denial-of-service via unbounded HPACK integer decoding in hpax",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58226",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T11:16:31.000Z",
-        "contentSnippet": "Inefficient Algorithmic Complexity vulnerability in elixir-mint hpax allows unauthenticated denial-of-service via unbounded HPACK integer decoding. hpax decodes HPACK variable-length integers with no upper bound on the decoded value or the number of continuation octets. 'Elixir.H",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-56810 - mint buffers an entire chunked response chunk in memory in Mint.HTTP1.decode_body/5",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56810",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T11:16:30.000Z",
-        "contentSnippet": "Allocation of Resources Without Limits or Throttling vulnerability in elixir-mint mint (Mint.HTTP1 module) allows a denial of service via an oversized chunked transfer-encoded response. This vulnerability is associated with program files lib/mint/http1.ex and program routines 'El",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
+      {
+        "title": "OpenAI Releases GPT-Realtime-2.1 and GPT-Realtime-2.1-mini for Low-Latency Voice Agents in the API",
+        "link": "https://www.marktechpost.com/2026/07/06/openai-gpt-realtime-2-1-mini-reasoning-realtime-api/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-07-07T04:35:09.000Z",
+        "contentSnippet": "OpenAI added two Realtime models to its API. GPT-Realtime-2.1-mini is a mini reasoning model for voice, priced like the earlier gpt-realtime-mini. OpenAI also cut p95 latency by at least 25% through improved caching. Here is what changed, how pricing compares, and how to connect "
+      },
+      {
+        "title": "Building a Scaffold-Split Random Forest QSAR Co-Scientist for EGFR Inhibitor Discovery Using ChEMBL, RDKit, SHAP, and BRICS",
+        "link": "https://www.marktechpost.com/2026/07/06/building-a-scaffold-split-random-forest-qsar-co-scientist-for-egfr-inhibitor-discovery-using-chembl-rdkit-shap-and-brics/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-07-07T01:43:28.000Z",
+        "contentSnippet": "In this tutorial, we build an autonomous AI co-scientist for EGFR C797S inhibitor discovery. We resolve the target through ChEMBL and UniProt, then mine IC50 records into a clean pIC50 dataset. We use RDKit to standardize molecules, compute Morgan fingerprints, and train a scaffo"
+      },
       {
         "title": "From Hugging Face to Amazon SageMaker Studio in one click",
         "link": "https://aws.amazon.com/blogs/machine-learning/from-hugging-face-to-amazon-sagemaker-studio-in-one-click-2/",
@@ -1590,20 +1604,6 @@
         "source": "MarkTechPost",
         "isoDate": "2026-06-23T19:35:33.000Z",
         "contentSnippet": "Datalab released lift, a 9B open-weights vision model that turns PDFs and images into schema-matching JSON. It uses schema-constrained decoding for valid structure and trained abstention to return null instead of hallucinating absent fields, scoring 90.2% field accuracy on a 225-"
-      },
-      {
-        "title": "How to Use NVIDIA Canary-1B-v2 for ASR, Translation, and Automatic SRT Subtitle Export in Python",
-        "link": "https://www.marktechpost.com/2026/06/23/how-to-use-nvidia-canary-1b-v2-for-asr-translation-and-automatic-srt-subtitle-export-in-python/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-06-23T18:31:36.000Z",
-        "contentSnippet": "In this tutorial, we build a multilingual ASR and speech translation pipeline with NVIDIA Canary-1B-v2. We load the model on a GPU-enabled runtime, prepare audio into 16 kHz mono, and run English ASR. We then translate speech into French, German, Spanish, and Italian, and extract"
-      },
-      {
-        "title": "Build a protein research copilot with Amazon Bedrock AgentCore",
-        "link": "https://aws.amazon.com/blogs/machine-learning/build-a-protein-research-copilot-with-amazon-bedrock-agentcore/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-06-23T16:39:34.000Z",
-        "contentSnippet": "This post shows you how to build a conversational protein research assistant that combines three capabilities: Natural language query parsing to extract structured search parameters, vector similarity search over protein embeddings using a specialized language model and ai-genera"
       }
     ],
     "virtualization": [
