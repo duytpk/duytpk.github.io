@@ -1,41 +1,158 @@
 {
-  "updatedAt": "2026-07-06T22:07:13.160Z",
+  "updatedAt": "2026-07-07T00:00:26.790Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
+        "title": "CVE-2026-53643 - FOSSBilling allows low-privileged staff accounts to perform unauthorized actions via admin API endpoints",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53643",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-06T22:49:50.000Z",
+        "contentSnippet": "FOSSBilling is a free, open-source billing and client management system. Versions prior to 0.8.0 allow low-privileged staff accounts to perform unauthorized actions via admin API endpoints. The root cause is a combination of the `can_always_access` module flag (which grants all s",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53642 - FOSSBilling: Unverified clients can access client-area pages when email confirmation is required",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53642",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-06T22:45:51.000Z",
+        "contentSnippet": "FOSSBilling is a free, open-source billing and client management system. In versions 0.5.6 through 0.7.2, when the \"Require Email Confirmation\" setting is enabled, a logged-in client with an unverified email address (`email_approved = 0`) can access all client-area pages (e.g. `/",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53641 - FOSSBilling has stored XSS in client email views via unescaped content in JavaScript template literal",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53641",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-06T22:36:38.000Z",
+        "contentSnippet": "FOSSBilling is a free, open-source billing and client management system. Versions 0.6.0 through 0.7.2 have a stored cross-site scripting (XSS) vulnerability in the client-facing email history views of FOSSBilling. Email HTML content (`content_html`) is rendered into a JavaScript ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53640 - FOSSBilling missing authorization checks on read-only admin API endpoints expose sensitive staff, client, and redirect data",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53640",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-06T22:30:48.000Z",
+        "contentSnippet": "FOSSBilling is a free, open-source billing and client management system. Prior to version 0.8.0, low-privileged staff accounts may read sensitive data via admin API endpoints that lack permission checks. While sibling write endpoints correctly enforce fine-grained permissions, th",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-59710 - showdown - Stored XSS via Unescaped Table Header ID Attribute Injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59710",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-06T22:16:50.000Z",
+        "contentSnippet": "showdown contains a stored cross-site scripting vulnerability in the parseHeaders function of src/subParsers/makehtml/tables.js that fails to properly escape table header ID attributes. Attackers can inject arbitrary HTML and script-executing SVG elements through double-quote cha",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-43928 - FOSSBilling: Payment amount not validated in PayPalEmail adapter allows invoice underpayment",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-43928",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-06T22:16:50.000Z",
+        "contentSnippet": "FOSSBilling is a free, open-source billing and client management system. Prior to version 0.8.0, the PayPalEmail payment adapter accepts PayPal IPN callbacks and credits the IPN-supplied amount (`mc_gross`) to the client's balance without validating it against the invoice total. ",
+        "cveScore": 2.3,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-43927 - FOSSBilling has race condition in cart checkout that bypasses promo code usage limits",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-43927",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-06T22:16:50.000Z",
+        "contentSnippet": "FOSSBilling is a free, open-source billing and client management system. Prior to version 0.8.0, a race condition in the cart checkout flow allows an authenticated client to apply a promo code beyond its configured maximum uses. By sending concurrent checkout requests before any ",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-43925 - FOSSBilling: Mass assignment of group_id in guest client registration allows unauthorized promo code use",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-43925",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-06T22:16:49.000Z",
+        "contentSnippet": "FOSSBilling is a free, open-source billing and client management system. Prior to version 0.8.0, an unauthenticated mass assignment vulnerability in the client self-registration endpoint allows any visitor to assign themselves to an arbitrary client group during sign-up. Because ",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
         "title": "CVE-2026-43921 - FOSSBilling vulnerable to arbitrary PHP code injection via unescaped config serialization",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-43921",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-06T21:38:49.000Z",
+        "isoDate": "2026-07-06T22:16:49.000Z",
         "contentSnippet": "FOSSBilling is a free, open-source billing and client management system. Versions 0.6.10 through 0.7.2 have a PHP code injection vulnerability in FOSSBilling's `Config::prettyPrintArrayToPHP()` method. When configuration values are updated, string values are written into `config.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 8.9,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-43918 - Suspended or inactive FOSSBilling accounts can retain or regain access through existing sessions, API tokens, and password reset flows",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-43918",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-06T22:16:49.000Z",
+        "contentSnippet": "FOSSBilling is a free, open-source billing and client management system. Prior to version 0.8.0, when a client or staff/admin account is suspended or marked inactive, existing authenticated sessions are not invalidated. The session identity loaders in src/di.php (loggedin_client ",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-42204 - Coolify: Authenticated RCE via SHELL_SAFE_COMMAND_PATTERN regression → host root",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-42204",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-06T22:16:49.000Z",
+        "contentSnippet": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. From 4.0.0-beta.471 through 4.0.0-beta.473, a regression in SHELL_SAFE_COMMAND_PATTERN allowed ampersands in custom Docker Compose build, start, and pre/post-deployment command fie",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-42153 - Coolify: PostgreSQL Healthcheck Command Injection Allows Root Code Execution in Container",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-42153",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-06T21:30:44.000Z",
+        "isoDate": "2026-07-06T22:16:49.000Z",
         "contentSnippet": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. Prior to 4.0.0-beta.474, PostgreSQL healthcheck command generation used attacker-controlled database settings (postgres_user and postgres_db) in shell-form commands, allowing an au",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-42148 - Coolify: Command Injection via Unescaped Version String in Docker Build",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-42148",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-06T22:16:49.000Z",
+        "contentSnippet": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. Prior to 4.0.0-beta.474, the buildHelperImage method in app/Livewire/Settings/Index.php constructs a Docker build command using the dev_helper_version field without shell escaping,",
+        "cveScore": 3.8,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-41899 - Coolify unauthenticated feedback endpoint allows Discord webhook abuse",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-41899",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-06T22:16:49.000Z",
+        "contentSnippet": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. Prior to 4.0.0-beta.474, POST /api/feedback has no authentication, no rate limiting, and no input validation, allowing arbitrary content to be forwarded directly to a Discord webho",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-38979 - Ajenti Clickjacking Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-38979",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-06T22:16:49.000Z",
+        "contentSnippet": "ajenti through v2.2.13 has a clickjacking weakness in the browser-facing login and administrative UI. In ajenti-core/aj/http.py, the core HTTP response path initializes an empty header list, forwards handler-added headers verbatim, and finalizes responses through WSGI start_respo",
         "cveScore": 0,
         "cveSeverity": "NA"
       },
       {
-        "title": "CVE-2026-34167 - Coolify: Cross-tenant activity log disclosure via unlocked Livewire property in ActivityMonitor",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34167",
+        "title": "CVE-2026-38976 - mruby/c NULL Pointer Dereference",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-38976",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-06T21:28:24.000Z",
-        "contentSnippet": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. Prior to 4.0.0-beta.471, the ActivityMonitor Livewire component exposes a public $activityId property without Livewire's #[Locked] attribute. It loads activities via Activity::find",
+        "isoDate": "2026-07-06T22:16:48.000Z",
+        "contentSnippet": "mrubyc through 3.4.1 was found to contain a NULL pointer dereference in src/vm.c in op_super() / OP_SUPER due to a missing runtime guard for top-level super.",
         "cveScore": 0,
         "cveSeverity": "NA"
       },
       {
-        "title": "CVE-2026-34049 - Coolify: Command Injection via unsanitized MongoDB collection names in database backup",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34049",
+        "title": "CVE-2026-38973 - mruby/c Out-of-Bounds Read",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-38973",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-06T21:22:46.000Z",
-        "contentSnippet": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. From 4.0.0-beta.451 through 4.0.0-beta.470, database backup handling for MongoDB collection names did not fully validate shell metacharacters, allowing a highly privileged attacker",
+        "isoDate": "2026-07-06T22:16:48.000Z",
+        "contentSnippet": "mrubyc through release3.4.1 was found to contain an out-of-bounds read in builtin missing-method lookup inside mrbc_find_method().",
         "cveScore": 0,
         "cveSeverity": "NA"
       },
@@ -43,28 +160,55 @@
         "title": "CVE-2026-34599 - Coolify: Authenticated Remote Code Execution in GetLogs Livewire Component",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-34599",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-06T21:20:56.000Z",
+        "isoDate": "2026-07-06T22:16:48.000Z",
         "contentSnippet": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. Prior to 4.0.0-beta.471, there is an authenticated command injection vulnerability in the GetLogs Livewire component which allows users with team membership (lowest privilege membe",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
       },
       {
-        "title": "CVE-2026-43918 - Suspended or inactive FOSSBilling accounts can retain or regain access through existing sessions, API tokens, and password reset flows",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-43918",
+        "title": "CVE-2026-34167 - Coolify: Cross-tenant activity log disclosure via unlocked Livewire property in ActivityMonitor",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34167",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-06T21:18:31.000Z",
-        "contentSnippet": "FOSSBilling is a free, open-source billing and client management system. Prior to version 0.8.0, when a client or staff/admin account is suspended or marked inactive, existing authenticated sessions are not invalidated. The session identity loaders in src/di.php (loggedin_client ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "isoDate": "2026-07-06T22:16:48.000Z",
+        "contentSnippet": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. Prior to 4.0.0-beta.471, the ActivityMonitor Livewire component exposes a public $activityId property without Livewire's #[Locked] attribute. It loads activities via Activity::find",
+        "cveScore": 5,
+        "cveSeverity": "MEDIUM"
       },
       {
-        "title": "CVE-2026-42204 - Coolify: Authenticated RCE via SHELL_SAFE_COMMAND_PATTERN regression → host root",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-42204",
+        "title": "CVE-2026-34153 - Coolify LocalFileVolume fs_path command injection enables RCE",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34153",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-06T21:17:16.000Z",
-        "contentSnippet": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. From 4.0.0-beta.471 through 4.0.0-beta.473, a regression in SHELL_SAFE_COMMAND_PATTERN allowed ampersands in custom Docker Compose build, start, and pre/post-deployment command fie",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "isoDate": "2026-07-06T22:16:48.000Z",
+        "contentSnippet": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. Prior to 4.0.0-beta.471, LocalFileVolume::saveStorageOnServer builds shell commands using unescaped fs_path and parent_dir values before validation, and submitFileStorage does not ",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-34050 - Coolify Settings/Updates Livewire component missing instance administrator authorization",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34050",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-06T22:16:48.000Z",
+        "contentSnippet": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. Prior to 4.0.0-beta.471, the Settings/Updates Livewire component does not check isInstanceAdmin in its mount method, allowing non-admin users to access the Updates settings page an",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-34049 - Coolify: Command Injection via unsanitized MongoDB collection names in database backup",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34049",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-06T22:16:48.000Z",
+        "contentSnippet": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. From 4.0.0-beta.451 through 4.0.0-beta.470, database backup handling for MongoDB collection names did not fully validate shell metacharacters, allowing a highly privileged attacker",
+        "cveScore": 3.3,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-32718 - Coolify read-scoped API tokens can perform state-changing validation operations",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-32718",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-06T22:16:47.000Z",
+        "contentSnippet": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. Prior to 4.0.0-beta.466, mutating API validation endpoints are guarded by read ability, allowing read-scoped API tokens to perform state-changing operations such as validating clou",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-59713 - Leantime - OIDC Login CSRF via Unconditional State Verification Stub",
@@ -758,153 +902,23 @@
         "contentSnippet": "Allocation of Resources Without Limits or Throttling vulnerability in elixir-mint mint (Mint.HTTP1 module) allows a denial of service via an oversized chunked transfer-encoded response. This vulnerability is associated with program files lib/mint/http1.ex and program routines 'El",
         "cveScore": 8.7,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-4249 - Denial of Service via Malicious JSON Payloads in Throttling Events in Multiple WSO2 Products Causing Persistent Service Disruption",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-4249",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T11:16:30.000Z",
-        "contentSnippet": "The throttling event handling mechanism in multiple WSO2 products accepts user-supplied JSON payloads without sufficient validation of their structure and content. This allows an unauthenticated remote attacker to inject malicious JSON data that can lead to a persistent denial of",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-49297 - Apache Airflow Google provider: Path traversal via GCS object names → local/SFTP filesystem (GCSToSFTPOperator + GCSTimeSpanFileTransformOperator)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49297",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T11:16:30.000Z",
-        "contentSnippet": "Apache Airflow's Google provider operators `GCSToSFTPOperator` and `GCSTimeSpanFileTransformOperator` joined GCS object names returned by the bucket listing API directly to a destination filesystem path without normalisation or containment check. A user with write access to the s",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-49042 - Apache Camel: langchain4j-tools: filter tool argument headers against declared parameters",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49042",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T11:16:29.000Z",
-        "contentSnippet": "Improper Input Validation vulnerability in Apache Camel. This issue affects Apache Camel: from 4.8.0 through 4.18.2, from 4.19.0 through 4.20.0. Users are recommended to upgrade to version 4.18.3, 4.21.0, which fixes the issue.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-46588 - Apache Camel: CouchDB: Non-Camel-prefixed Exchange headers bypass HeaderFilterStrategy allowing operation override from untrusted input",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46588",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T11:16:28.000Z",
-        "contentSnippet": "Improper Input Validation vulnerability in Apache Camel. This issue affects Apache Camel: through 4.14.7, from 4.15.0 through 4.18.2, from 4.19.0 through 4.20.0. Users are recommended to upgrade to version 4.14.8, 4.18.3, 4.21.0, which fixes the issue.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-46587 - Apache Camel: Couchbase: Non-Camel-prefixed Exchange headers bypass HeaderFilterStrategy allowing operation override from untrusted input",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46587",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T11:16:28.000Z",
-        "contentSnippet": "Improper Input Validation vulnerability in Apache Camel. This issue affects Apache Camel: through 4.14.7, from 4.15.0 through 4.18.2, from 4.19.0 through 4.20.0. Users are recommended to upgrade to version 4.14.8, 4.18.3, 4.21.0, which fixes the issue.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-44937 - SUSE Rancher Fleet had an Unauthenticated Webhook: Regex Injection via Unsanitized Repository URL Components",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44937",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T11:16:27.000Z",
-        "contentSnippet": "Potential forgery of webhook requests when using a unauthenticated webhook in SUSE Rancher Fleet 0.15 before 0.15.2, 0.14 before 0.14.6, 0.13 before 0.13.11 and 0.12 before 0.12.5 could be used by remote attackers to cause a denial of service or a downgrade attack on other reposi",
-        "cveScore": 8.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-44936 - Rancher Fleet SSRF in Bundle Reader via Unvalidated Helm Repository URL in fleet.yaml",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44936",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T11:16:27.000Z",
-        "contentSnippet": "Missing filtering when the helmRepoURLRegex field isn't set on a GitRepo resource in SUSE Rancher Fleet's bundle reader in 0.15 before 0.15.2, 0.14 before 0.14.6, 0.13 before 0.13.11 and 0.12 before 0.12.15 forwards Helm authentication credentials (BasicAuth) to any URL specified",
-        "cveScore": 5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-12686 - Incorrect authorisation in Adiss’s Biloop",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12686",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T11:16:26.000Z",
-        "contentSnippet": "An authenticated user could manipulate a company ID parameter in a POST request to the backend to gain unauthorised access to other companies hosted within the same subdomain environment. The application does not adequately verify whether the requested company ID belongs to the a",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2025-8591 - Reflected Cross-Site Scripting via URL Parameter in Multiple WSO2 Products Enables UI Modification",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-8591",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T11:16:25.000Z",
-        "contentSnippet": "The software accepts user-supplied input via a URL parameter without adequate output encoding before reflecting it back to the user's browser. This condition allows an attacker to inject malicious script content into pages served by the application. By leveraging this weakness, a",
-        "cveScore": 6.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-9165 - Stackrox: stackrox: unbounded graphql query depth allows authenticated denial of service",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9165",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T09:16:39.000Z",
-        "contentSnippet": "A flaw was found in Red Hat Advanced Cluster Security for Kubernetes (RHACS). Central does not limit the depth of GraphQL queries served on the authenticated GraphQL API. An authenticated user with a valid API token can send deeply nested queries that cause excessive resource con",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-56140 - Apache Camel AWS2 SNS: An inbound Camel-namespace filter was added to Sns2HeaderFilterStrategy to align it with sibling components",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56140",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T09:16:39.000Z",
-        "contentSnippet": "Improper Input Validation vulnerability in Apache Camel AWS SNS component. The camel-aws2-sns component filters Camel headers through a component-specific HeaderFilterStrategy, Sns2HeaderFilterStrategy. Like the sibling Sqs2HeaderFilterStrategy, it originally configured only an o",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-56139 - Apache Camel Undertow: The muteException consumer option defaulted to false, so a processing error returned the full Java stack trace in the HTTP response body, disclosing sensitive i",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56139",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T09:16:39.000Z",
-        "contentSnippet": "Generation of Error Message Containing Sensitive Information vulnerability in Apache Camel Undertow Component. The camel-undertow HTTP server consumer exposes a muteException option that controls what is returned to the client when a route processing error occurs. This option def",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-55994 - Apache Camel Iggy: The inbound consumer maps externally-supplied Iggy message user-headers into the Exchange without a HeaderFilterStrategy, allowing injection of Camel control header",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55994",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T09:16:39.000Z",
-        "contentSnippet": "Improper Input Validation, Exposure of Sensitive Information to an Unauthorized Actor, Server-Side Request Forgery (SSRF) vulnerability in Apache Camel in Iggy component. The camel-iggy consumer mapped the user-headers of inbound Iggy messages into the Camel Exchange header map w",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-55993 - Apache Camel Atmosphere Websocket: The inbound consumer maps externally-supplied WebSocket query parameters into the Exchange without a HeaderFilterStrategy, allowing injection of Cam",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55993",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T09:16:38.000Z",
-        "contentSnippet": "Improper Input Validation, Exposure of Sensitive Information to an Unauthorized Actor, Server-Side Request Forgery (SSRF) vulnerability in Apache Camel in Atmosphere Websocket Component. The camel-atmosphere-websocket consumer mapped inbound WebSocket query parameters into the Ca",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-53913 - Apache Camel Keycloak: KeycloakSecurityPolicy verifies the bearer access token only inside its role and permission checks, so in the default configuration the token is never verified ",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53913",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T09:16:38.000Z",
-        "contentSnippet": "Improper Authentication, Missing Authentication for Critical Function, Not Failing Securely ('Failing Open') vulnerability in Apache Camel Keycloak Component. The KeycloakSecurityPolicy of camel-keycloak guards a route by running KeycloakSecurityProcessor.beforeProcess(), which p",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-49365 - Apache Camel: Camel-Netty-HTTP: The muteException consumer option defaulted to false, so a processing error returned the full Java stack trace in the HTTP response body, disclosing se",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49365",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T09:16:38.000Z",
-        "contentSnippet": "Generation of Error Message Containing Sensitive Information vulnerability in Apache Camel Netty HTTP component. The camel-netty-http HTTP server consumer exposes a muteException option that controls what is returned to the client when a route processing error occurs. This option",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       }
     ],
     "ai": [
+      {
+        "title": "From Hugging Face to Amazon SageMaker Studio in one click",
+        "link": "https://aws.amazon.com/blogs/machine-learning/from-hugging-face-to-amazon-sagemaker-studio-in-one-click-2/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-07-06T22:35:55.000Z",
+        "contentSnippet": "Today, we’re excited to announce a deep-link integration between Hugging Face and Amazon SageMaker AI. Developers can now go from model discovery to hands-on experimentation in SageMaker Studio with a single selection."
+      },
+      {
+        "title": "Teaching models to forget: Selective unlearning with Amazon Nova",
+        "link": "https://aws.amazon.com/blogs/machine-learning/teaching-models-to-forget-selective-unlearning-with-amazon-nova/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-07-06T22:23:45.000Z",
+        "contentSnippet": "In this post, we introduce Reverse Direct Preference Optimization (rDPO), the novel unlearning technique behind Amazon Nova Customizable Content Moderation Settings (CCMS), and show how it reduces over-deflection while preserving model quality. We also provide pointers for custom"
+      },
       {
         "title": "Run MiniMax models on Amazon Bedrock",
         "link": "https://aws.amazon.com/blogs/machine-learning/run-minimax-models-on-amazon-bedrock/",
@@ -1590,20 +1604,6 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-06-23T16:39:34.000Z",
         "contentSnippet": "This post shows you how to build a conversational protein research assistant that combines three capabilities: Natural language query parsing to extract structured search parameters, vector similarity search over protein embeddings using a specialized language model and ai-genera"
-      },
-      {
-        "title": "Shared infrastructure, isolated tenants: Pool model multi-tenancy with Amazon Bedrock AgentCore",
-        "link": "https://aws.amazon.com/blogs/machine-learning/shared-infrastructure-isolated-tenants-pool-model-multi-tenancy-with-amazon-bedrock-agentcore/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-06-23T15:43:59.000Z",
-        "contentSnippet": "In this post, you will learn patterns for implementing production-ready multi-tenant systems using Amazon Bedrock AgentCore. You will see these patterns demonstrated through healthcare AI agents that serve multiple clinics and hospitals."
-      },
-      {
-        "title": "Prime Intellect Releases prime-rl 0.6.0 to Train Trillion-Parameter MoE Models on Agentic RL Workloads",
-        "link": "https://www.marktechpost.com/2026/06/23/prime-intellect-releases-prime-rl-0-6-0-to-train-trillion-parameter-moe-models-on-agentic-rl-workloads/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-06-23T07:20:44.000Z",
-        "contentSnippet": "Prime Intellect has released prime-rl 0.6.0, an open framework for asynchronous reinforcement learning on trillion-parameter Mixture-of-Experts models. It trained GLM-5 on SWE tasks at up to 131k sequence length, with sub-5-minute step times and 256 rollouts, on 28 H200 nodes. Th"
       }
     ],
     "virtualization": [
@@ -2275,7 +2275,7 @@
         "contentSnippet": "A new open-source app called Sony Head Tracker, developed by Nicholas Slattery, reads raw sensor data from Sony headphones and earbuds and converts them into something OpenTrack can understand. From there, it can be used for head tracking in over 200 PC games."
       },
       {
-        "title": "Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — Analyst firm SemiAnalysis says PCB midplane problems led to the delay",
+        "title": "Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — Analyst firm SemiAnalysis says PCB midplane problems led to the delay [Updated]",
         "link": "https://www.tomshardware.com/pc-components/gpus/nvidias-kyber-rack-for-rubin-ultra-slips-to-2028",
         "source": "Tom's Hardware",
         "isoDate": "2026-07-06T13:33:34.000Z",
