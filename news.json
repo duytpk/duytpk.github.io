@@ -1,13 +1,139 @@
 {
-  "updatedAt": "2026-07-07T08:15:46.970Z",
+  "updatedAt": "2026-07-07T11:39:11.650Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
+        "title": "CVE-2026-11340 - Authorization Bypass in HAVELSAN's Open Source Project Liman MYS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11340",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-07T11:01:33.000Z",
+        "contentSnippet": "Missing Authorization vulnerability in HAVELSAN Inc. Liman MYS allows Accessing Functionality Not Properly Constrained by ACLs. This issue affects Liman MYS: before release.Master.1107.",
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-49487 - Apache Airflow: Task-instance API exposes secrets in deferred trigger kwargs",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49487",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-07T10:16:41.000Z",
+        "contentSnippet": "In Apache Airflow before 3.3.0, the REST API task-instance detail and list endpoints returned a deferred task's trigger kwargs without masking. When a deferred operator passed a secret (for example a provider API key) into its trigger, any authenticated user with DAG-scoped task-",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49296 - Apache Airflow: Per-DAG read bypass discloses co-located DAGs' source via GET /api/v2/dagSources/{dag_id}",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49296",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-07T10:16:41.000Z",
+        "contentSnippet": "Before apache-airflow 3.3.0, a user authorized to read one Dag could disclose the source of other Dags co-located in the same source file. `GET /api/v2/dagSources/{dag_id}` — and the equivalent Dag-source view in the UI — returned the entire source file without redacting Dags the",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-48892 - Apache Airflow: Config API leaks per-key secrets backend kwargs - masker bypass on synthetic options",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48892",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-07T10:16:41.000Z",
+        "contentSnippet": "The Config API in Apache Airflow surfaced per-key secrets-backend overrides (environment variables like `AIRFLOW__SECRETS__BACKEND_KWARG__SECRET_ID` and `AIRFLOW__WORKERS__SECRETS_BACKEND_KWARG__SECRET_ID`) as synthetic config options whose option names were not in `sensitive_con",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-48891 - Apache Airflow: /ui/dependencies scheduling graph leaks unreadable Dag identifiers via trigger/sensor dep.source/dep.target",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48891",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-07T10:16:41.000Z",
+        "contentSnippet": "A bug in Apache Airflow's `/ui/dependencies` scheduling graph endpoint applied the caller's readable-Dag filter to the top-level serialized Dag key but still emitted referenced Dag IDs through the `dep.source` and `dep.target` fields of trigger / sensor dependency entries. An aut",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-48828 - Apache Airflow: Bulk JSON Variables bypass should_hide_value_for_key - redact() called without the key",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48828",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-07T10:16:41.000Z",
+        "contentSnippet": "The Bulk Variables API in Apache Airflow called the redactor without passing the variable's key, so the key-based `should_hide_value_for_key` check (which triggers on secret-suffixed key names like `*_password` / `*_token` / `*_secret`) could not fire for JSON-decodable variable ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-33264 - Apache Airflow: DAG author RCE on webserver via unrestricted import_string() in BaseSerialization.deserialize()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-33264",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-07T10:16:40.000Z",
+        "contentSnippet": "A bug in `BaseSerialization.deserialize()` allowed unrestricted `import_string()` of attacker-controlled class paths when the Scheduler / API Server loaded a serialized DAG: a DAG author could embed a malicious trigger into a DAG to gain remote code execution on the API Server / ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-14868 - Weak encryption mechanism for User directory",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14868",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-07T10:16:40.000Z",
+        "contentSnippet": "The encryption algorithm used to protect the configuration of user accounts, stored in the built-in user directory of PcVue projects, all versions prior to 17.0.0, is not strong enough for the level of protection required. A local attacker could alter the existing configuration a",
+        "cveScore": 8.4,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-14867 - Insecure password storage in User directory",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14867",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-07T10:16:40.000Z",
+        "contentSnippet": "Credentials of built-in users are insecurely stored in the User directory of PcVue projects, all versions prior to 17.0.0. A local attacker could retrieve users’ credentials. Active Directory accounts are not affected by this vulnerability.",
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-14476 - Sssd: sssd: gpo cache path traversal via unsanitized gpcfilesyspath allows kerberos authentication bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14476",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-07T10:16:39.000Z",
+        "contentSnippet": "A path traversal flaw was found in SSSD's AD GPO provider. The ad_gpo_extract_smb_components() function does not sanitize .. sequences in the gPCFileSysPath LDAP attribute, allowing an attacker with AD GPO management access to write files outside the GPO cache directory as root. ",
+        "cveScore": 8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-14474 - Sssd: sssd: sudo ldap provider searches entire directory tree for sudorole objects by default, enabling privilege escalation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14474",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-07T10:16:39.000Z",
+        "contentSnippet": "A flaw was found in SSSD's LDAP sudo provider. When the ldap_sudo_search_base option is not explicitly configured, SSSD searches the entire LDAP directory tree for sudoRole objects. An authenticated attacker with write access to any subtree can inject a sudoRole object granting r",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-11610 - 389-ds-base: 389-ds-base: heap buffer overflow in sasl_io_recv() via padded sasl unbind",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11610",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-07T10:16:39.000Z",
+        "contentSnippet": "A heap buffer overflow flaw was found in the SASL I/O layer of 389 Directory Server (389-ds-base). After a successful SASL bind with integrity protection (SSF > 0), an authenticated attacker can send a specially crafted oversized LDAP UNBIND packet that is copied into a 512-byte ",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-58384 - Gimp: gimp: integer overflow in read_rle_channel()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58384",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-07T09:16:30.000Z",
+        "contentSnippet": "A flaw was found in GIMP's PSD parser. An integer overflow in read_RLE_channel() can cause an undersized heap allocation for the RLE row-length table, after which subsequent per-row writes corrupt heap memory. This could lead to memory corruption, potentially resulting in denial ",
+        "cveScore": 7.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-13199 - Insufficient Entropy in Raspberry Pi 5 and Compute Module 5",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13199",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-07T09:16:29.000Z",
+        "contentSnippet": "EEPROM firmware on Raspberry Pi 5 and Compute Module 5 devices produced non-random KASLR and RNG seed values. This resulted in consistent kernel addresses across boots and devices, potentially making it easier to exploit other vulnerabilities. Additionally, the low-quality RNG se",
+        "cveScore": 5.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
         "title": "CVE-2026-8377 - Improper Authorization in Armiya Technologies' Access Control System",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-8377",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-07T07:25:06.000Z",
+        "isoDate": "2026-07-07T08:16:26.000Z",
         "contentSnippet": "Missing Authorization vulnerability in Armiya Information Technologies Ltd. Co. Access Control System (GKS) allows Collect Data from Common Resource Locations. This issue affects Access Control System (GKS): before Version 2.",
         "cveScore": 8.2,
         "cveSeverity": "HIGH"
@@ -16,7 +142,7 @@
         "title": "CVE-2026-8309 - Reflected XSS in Armiya Technologies' Access Control System",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-8309",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-07T07:08:28.000Z",
+        "isoDate": "2026-07-07T08:16:26.000Z",
         "contentSnippet": "Improper neutralization of input during web page generation ('cross-site scripting') vulnerability in Armiya Information Technologies Ltd. Co. Access Control System (GKS) allows Reflected XSS. This issue affects Access Control System (GKS): before Version 2.",
         "cveScore": 5.4,
         "cveSeverity": "MEDIUM"
@@ -25,7 +151,7 @@
         "title": "CVE-2026-8306 - Stored XSS in Armiya Technologies' Access Control System",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-8306",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-07T07:02:09.000Z",
+        "isoDate": "2026-07-07T08:16:25.000Z",
         "contentSnippet": "Improper neutralization of input during web page generation ('cross-site scripting') vulnerability in Armiya Information Technologies Ltd. Co. Access Control System (GKS) allows Stored XSS. This issue affects Access Control System (GKS): before Version 2.",
         "cveScore": 6.1,
         "cveSeverity": "MEDIUM"
@@ -34,7 +160,7 @@
         "title": "CVE-2026-7380 - HTML Injection in Armiya Technologies' Access Control System",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-7380",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-07T06:57:31.000Z",
+        "isoDate": "2026-07-07T08:16:25.000Z",
         "contentSnippet": "Improper neutralization of Script-Related HTML tags in a web page (basic XSS) vulnerability in Armiya Information Technologies Ltd. Co. Access Control System (GKS) allows XSS Targeting HTML Attributes. This issue affects Access Control System (GKS): before Version 2.",
         "cveScore": 6.1,
         "cveSeverity": "MEDIUM"
@@ -43,7 +169,7 @@
         "title": "CVE-2026-5799 - IDOR in Idvlabs' Ontime",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-5799",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-07T06:49:02.000Z",
+        "isoDate": "2026-07-07T08:16:25.000Z",
         "contentSnippet": "Authorization bypass through User-Controlled key vulnerability in Idvlabs Software and Consulting Services Inc. Ontime allows Exploitation of Trusted Identifiers. This issue affects Ontime: through 04052026.",
         "cveScore": 7.5,
         "cveSeverity": "HIGH"
@@ -52,7 +178,7 @@
         "title": "CVE-2026-5730 - IDOR in Idvlabs' Ontime",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-5730",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-07T06:45:41.000Z",
+        "isoDate": "2026-07-07T08:16:25.000Z",
         "contentSnippet": "Authorization bypass through User-Controlled key vulnerability in Idvlabs Software and Consulting Services Inc. Ontime allows Exploitation of Trusted Identifiers. This issue affects Ontime: through 04052026.",
         "cveScore": 7.5,
         "cveSeverity": "HIGH"
@@ -776,132 +902,6 @@
         "contentSnippet": "Improper enforcement of a mandatory multi-factor authentication policy in Devolutions Server 2026.2.9.0 allows an attacker with valid user credentials to bypass the MFA Required policy and authenticate without completing multi-factor authentication. The problem occurs when DVLS e",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-58402 - Hugo default code block renderer XSS via unescaped code-fence language",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58402",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T19:19:58.000Z",
-        "contentSnippet": "Hugo is a static site generator. From 0.60.0 until 0.163.3, Hugo's default code-block renderer wrote the Markdown code-fence language or info-string into the code class=\"language-…\" data-lang=\"…\" wrapper without HTML escaping. A fence info-string containing a quote and a script p",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-9182 - Unvalidated File Upload vulnerability in ArcGIS Server.",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9182",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T19:17:09.000Z",
-        "contentSnippet": "ArcGIS Server contains an unrestricted file upload vulnerability. An unauthenticated attacker could exploit this issue by uploading a crafted file to the affected endpoint. Successful exploitation could allow arbitrary file upload.",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-9181 - Directory Traversal in ArcGIS Server",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9181",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T19:17:09.000Z",
-        "contentSnippet": "ArcGIS Server contains a directory traversal vulnerability. An unauthenticated attacker could exploit this issue by sending crafted path parameters. Successful exploitation could allow access to sensitive files on the system. This issue impacts all versions of ArcGIS Server 12.0 ",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-55798 - Pillow: WindowsViewer.get_command() OS command injection via unescaped shell path",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55798",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T19:17:08.000Z",
-        "contentSnippet": "Pillow is a Python imaging library. Prior to 12.3.0, WindowsViewer.get_command() constructed a cmd.exe shell command by directly embedding a file path into an f-string without escaping and passed the result to subprocess.Popen(..., shell=True), allowing shell metacharacters in th",
-        "cveScore": 4.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-55380 - Pillow GdImageFile decompression bomb protection bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55380",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T19:17:08.000Z",
-        "contentSnippet": "Pillow is a Python imaging library. Prior to 12.3.0, PIL/GdImageFile.py GdImageFile._open() read image dimensions from the GD 2.x header and stored them in self._size without calling Image._decompression_bomb_check(), allowing a crafted .gd file to trigger excessive C-heap alloca",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-55379 - Pillow BdfFontFile`: `Image.new()` called without `_decompression_bomb_check()` — bomb protection bypass via font loading",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55379",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T19:17:08.000Z",
-        "contentSnippet": "Pillow is a Python imaging library. Prior to 12.3.0, PIL/BdfFontFile.py bdf_char() read the BBX width and height field from a BDF font file and passed attacker-controlled dimensions to Image.new() without calling Image._decompression_bomb_check(), bypassing Pillow's documented de",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-54291 - Silent channel-binding authentication downgrade via unsupported certificate algorithms",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54291",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T19:17:08.000Z",
-        "contentSnippet": "pgjdbc is an open source postgresql JDBC Driver. In releases 42.7.4 through 42.7.11, channelBinding=require connections can be silently downgraded from SCRAM-SHA-256-PLUS with channel binding to plain SCRAM-SHA-256 without it, losing the man-in-the-middle protection the setting i",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-54060 - Pillow: `FontFile.compile()`: `Image.new()` called without `_decompression_bomb_check()`",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54060",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T19:17:08.000Z",
-        "contentSnippet": "Pillow is a Python imaging library. Prior to 12.3.0, PIL/FontFile.py FontFile.compile() assembled per-glyph images into a combined bitmap with Image.new(\"1\", (xsize, ysize)) without calling Image._decompression_bomb_check(), allowing a font to trigger excessive allocation during ",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-54059 - Pillow: PcfFontFile._load_bitmaps()`: `Image.frombytes()` called without `_decompression_bomb_check()` — bomb protection bypass via PCF font loading",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54059",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T19:17:08.000Z",
-        "contentSnippet": "Pillow is a Python imaging library. Prior to 12.3.0, PIL/PcfFontFile.py _load_bitmaps() read glyph dimensions from the PCF METRICS section and passed them directly to Image.frombytes() without calling Image._decompression_bomb_check(), allowing crafted PCF font data to cause exce",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-11405 - Hidden backdoor authentication mechanism in multiple versions of Tenda firmware allows admin access to web management interface",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11405",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T19:17:07.000Z",
-        "contentSnippet": "The web server binary /bin/httpd contains a hidden backdoor authentication mechanism in the login() function at 004c88b8. - The function contains a normal authentication path using MD5/hash-based password verification (prod_encode64/PasswordToMd5/check_rand_key). - After normal a",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-13753 - CVE-2026-13753",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13753",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T19:16:55.000Z",
-        "contentSnippet": "A missing authorization vulnerability exists in the embedded webserver of HP Deskjet 2800 Series Printers running firmware version",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-58404 - Hugo security.http.urls deny rules bypassed by alternate IPv4 encodings",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58404",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T19:16:15.000Z",
-        "contentSnippet": "Hugo is a static site generator. From v0.162.0 through v0.163.0, the default security.http.urls policy denies requests to loopback, internal, and cloud-metadata IPv4 literals, but the deny rule only matched dotted-decimal notation, so alternate IPv4 encodings of the same addresse",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-41514 - OP-TEE: RSA-OAEP padding oracle in Hisilicon HPRE driver enables plaintext recovery",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-41514",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T19:06:36.000Z",
-        "contentSnippet": "OP-TEE is a Trusted Execution Environment (TEE) designed as companion to a non-secure Linux kernel running on Arm; Cortex-A cores using the TrustZone technology. Starting in version 4.5.0 and prior to version 4.11.0, the RSA-OAEP decryption implementation in the Hisilicon HPRE cr",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-48614 - Plesk XML API Improper Authorization Privilege Escalation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48614",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-06T18:16:46.000Z",
-        "contentSnippet": "An improper authorization vulnerability in the Plesk XML API allows an authenticated user to inject arbitrary configuration directives, resulting in arbitrary file write as root and full privilege escalation on the underlying server.",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
       }
     ],
     "ai": [
@@ -2205,6 +2205,41 @@
     ],
     "hardware": [
       {
+        "title": "Kioxia and Sandisk sample world's densest 3D NAND — new 332-Layer beats Samsung’s 400-Layer NAND",
+        "link": "https://www.tomshardware.com/pc-components/ssds/kioxia-and-sandisk-sample-worlds-densest-3d-nand-new-332-layer-beats-samsungs-400-layer-nand",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-07-07T11:10:00.000Z",
+        "contentSnippet": "Kioxia, Sandisk begin to sample BiCS10 3D NAND: 332 active layers and over 29 Gb/mm2 areal capacity."
+      },
+      {
+        "title": "Unix copyright code infringement lawsuit is back from the dead — IBM still under fire from Xinuos over 2003-era bytes",
+        "link": "https://www.tomshardware.com/software/linux/unix-copyright-code-infringement-lawsuit-is-back-from-the-dead-ibm-still-under-fire-from-xinuos-about-2003-era-bytes",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-07-07T10:45:00.000Z",
+        "contentSnippet": "Unix copyright code infringement back from the dead — IBM is still under fire from Xinuos about 2003-era bytes, with a hearing as recent as June 22."
+      },
+      {
+        "title": "Modder builds 8,192-core GPU at home out of RISC-V microcontrollers — full \"graphics card\" draws over 2,000 watts of power, requires a 3D printer to program",
+        "link": "https://www.tomshardware.com/maker-stem/modder-creates-8-192-core-gpu-at-home-out-of-risc-v-microcontrollers-full-graphics-card-will-draw-over-2-000-watts-of-power-requires-a-3d-printer-to-program",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-07-07T10:20:00.000Z",
+        "contentSnippet": "Well-known engineer Matthias Balwierz (aka Bitluni) designed and created an 8,192-core RISC-V GPU at home."
+      },
+      {
+        "title": "Intel patent reveals new XBM memory architecture that ditches HBM's costly silicon interposer — backend-transistor DRAM stack uses UCIe links and built-in repair to ease AI's memory bottleneck",
+        "link": "https://www.tomshardware.com/tech-industry/semiconductors/intel-patent-reveals-new-xbm-memory-architecture-that-ditches-hbms-costly-silicon-interposer-backend-transistor-dram-stack-uses-ucie-links-and-built-in-repair-to-ease-ais-memory-bottleneck",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-07-07T10:00:00.000Z",
+        "contentSnippet": "Intel’s XBM patent proposes an HBM alternative that uses backend-transistor DRAM, UCIe chiplet links, and repair logic to reduce packaging costs and complexity."
+      },
+      {
+        "title": "Samsung chip division's single-year profits beat its past 40 years of profits, combined, due to increased memory and storage prices — Samsung passes Nvidia to become most profitable company in the wor",
+        "link": "https://www.tomshardware.com/tech-industry/samsungs-chip-division-expects-to-out-earn-its-entire-40-year-history-in-2026",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-07-07T09:30:00.000Z",
+        "contentSnippet": "Brokerage consensus puts Samsung's full-year 2026 operating profit near 300 trillion won."
+      },
+      {
         "title": "Canonical LXD 6.9 Adds Dell PowerStore Driver and Fibre Channel Support",
         "link": "https://www.storagereview.com/news/canonical-lxd-6-9-adds-dell-powerstore-driver-and-fibre-channel-support",
         "source": "StorageReview",
@@ -2868,41 +2903,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-07-02T10:00:00.000Z",
         "contentSnippet": "Google is testing a reCAPTCHA check that switches on a user's camera and asks them to wave or hold up an open palm."
-      },
-      {
-        "title": "Elon Musk categorically denies SpaceX is making an AI device with proprietary OS — says rumors of a handheld thinner than an iPhone are 'utterly false'",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/elon-musk-categorically-denies-spacex-is-making-an-ai-device-with-proprietary-os-says-rumors-of-a-handheld-thinner-than-an-iphone-are-utterly-false",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-02T09:48:09.000Z",
-        "contentSnippet": "SpaceX is reportedly working on a handheld device that runs a proprietary operating system and features advanced AI capabilities from xAI, but Elon Musk denies existence of the product."
-      },
-      {
-        "title": "32GB Corsair Vengeance DDR5 is $359 in this Woot sale — the lowest standalone RAM price in months, thanks to $80 discount",
-        "link": "https://www.tomshardware.com/pc-components/32gb-corsair-vengeance-ddr5-is-usd314-in-this-woot-sale-the-lowest-standalone-ram-price-in-months-thanks-to-usd125-discount",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-02T09:45:08.000Z",
-        "contentSnippet": "Get Corsair Vengeance DDR5 for just $314 at Woot."
-      },
-      {
-        "title": "Xbox reportedly testing a way to digitize physical games in the wake of PlayStation killing game discs — feature said to go back to Xbox One-era games",
-        "link": "https://www.tomshardware.com/video-games/console-gaming/xbox-reportedly-testing-a-way-to-digitize-physical-games-in-the-wake-of-playstation-killing-game-discs-feature-said-to-go-back-to-xbox-one-era-games",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-01T19:19:25.000Z",
-        "contentSnippet": "Microsoft is reportedly testing a feature to digitize physical games going back to the Xbox One with digital copies tied to the owner of the physical disc."
-      },
-      {
-        "title": "This is a Thing KYY X90G “Quad” Portable Monitor Review",
-        "link": "https://www.servethehome.com/this-is-a-thing-kyy-x90g-quad-portable-monitor-review/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-07-01T18:15:06.000Z",
-        "contentSnippet": "Apparenty taking three 15.6\" IPS monitors with you to surround your laptop is a big productivity boost as we found in our KYY X90G review The post This is a Thing KYY X90G “Quad” Portable Monitor Review appeared first on ServeTheHome."
-      },
-      {
-        "title": "Tesla hires 17-year Intel veteran responsible for billion-dollar fab startups — Gary Jiang likely chosen to oversee fab efforts for Terafab's licensing of 14A",
-        "link": "https://www.tomshardware.com/tech-industry/semiconductors/tesla-hires-17-year-intel-veteran-responsible-for-billion-dollar-fab-startups-gary-jiang-likely-chosen-to-oversee-fab-efforts-for-terafabs-licensing-of-14a",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-01T14:07:26.000Z",
-        "contentSnippet": "Tesla hires an Intel veteran, who most recently was responsible for installing advanced tools at Intel's Arizona fab that is now ramping production of chips using 18A fabrication process."
       }
     ]
   }
