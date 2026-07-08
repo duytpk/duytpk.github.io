@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-07-08T17:21:11.515Z",
+  "updatedAt": "2026-07-08T19:10:19.318Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-59937 - pypdf: Possible long runtimes for repeated malformed cross-reference entries",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59937",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-08T17:25:34.000Z",
+        "contentSnippet": "pypdf is a free and open-source pure-python PDF library. Prior to 6.14.0, an attacker can craft a PDF with repeated malformed cross-reference streams that cause pypdf to spend long runtimes recovering broken cross-reference table entries. This issue is fixed in version 6.14.0.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-59938 - pypdf: Possible large memory usage for wrong image dimensions",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59938",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-08T17:24:29.000Z",
+        "contentSnippet": "pypdf is a free and open-source pure-python PDF library. Prior to 6.14.0, an attacker can craft a PDF with declared image size values that are much too large compared to the actual data, causing large memory usage in pypdf image parsing. This issue is fixed in version 6.14.0.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-60102 - Horde VFS < 3.0.1 OS Command Injection via Horde_Vfs_Smb Driver",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-60102",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-08T17:17:28.000Z",
+        "contentSnippet": "Horde Virtual File System (VFS) API before 3.0.1 contains an OS command injection vulnerability in the Horde_Vfs_Smb driver where the _escapeShellCommand() method fails to sanitize command substitution sequences, allowing authenticated attackers to inject arbitrary shell commands",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-59930 - Mistune toc / TableOfContents directive: heading IDs use predictable `toc_N` numbering with no slugification, allowing collision with attacker-controlled `id=\"toc_N\"` content",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59930",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-08T17:17:28.000Z",
+        "contentSnippet": "Mistune is a Python Markdown parser with renderers and plugins. Prior to 3.3.0, the toc plugin and TableOfContents directive generate heading IDs as predictable toc_N values without slugifying the heading text, allowing attacker-controlled id=\"toc_N\" content to collide with gener",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-59929 - Mistune renderers/html.safe_url: HARMFUL_PROTOCOLS list misses legacy and chained schemes that historically chain to `javascript:` execution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59929",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-08T17:17:28.000Z",
+        "contentSnippet": "Mistune is a Python Markdown parser with renderers and plugins. Prior to 3.3.0, the safe_url filter in src/mistune/renderers/html.py blocks only javascript:, vbscript:, file:, and data: schemes, allowing legacy or chained schemes such as feed:, view-source:, jar:, livescript:, mo",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-59928 - Mistune block_parser: quadratic-time parsing on long lists of repeated reference-link definitions",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59928",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-08T17:17:28.000Z",
+        "contentSnippet": "Mistune is a Python Markdown parser with renderers and plugins. Prior to 3.3.0, a Markdown document containing many repeated or distinct reference-link definitions causes quadratic work in src/mistune/block_parser.py and the ref_links environment dictionary handling, allowing den",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-59927 - Mistune directives/include: mutual `.. include::` recursion crashes the renderer with `RecursionError`, denial of service via two attacker-controlled markdown files",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59927",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-08T17:17:28.000Z",
+        "contentSnippet": "Mistune is a Python Markdown parser with renderers and plugins. Prior to 3.3.0, the Include directive in src/mistune/directives/include.py detects only direct self-includes and not indirect cycles, allowing two markdown files that include each other to trigger unbounded recursion",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-59926 - Mistune: XSS via unescaped class option in Admonition directive",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59926",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-08T17:17:28.000Z",
+        "contentSnippet": "Mistune is a Python Markdown parser with renderers and plugins. Prior to 3.2.1, render_admonition() in src/mistune/directives/admonition.py concatenates the Admonition directive :class: option into the HTML class attribute without escaping, allowing attribute injection and cross-",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-59925 - inline_parser: quadratic-time parsing on long runs of `**x**` and `***x***` emphasis pairs",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59925",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-08T17:17:28.000Z",
+        "contentSnippet": "Mistune is a Python Markdown parser with renderers and plugins. Prior to 3.3.0, long sequences of well-formed double-asterisk or triple-asterisk emphasis pairs around a character cause quadratic work in src/mistune/inline_parser.py because the parser scans forward for matching cl",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-59924 - Mistune: Arbitrary File Read via Include directive path traversal",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59924",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-08T17:17:28.000Z",
+        "contentSnippet": "Mistune is a Python Markdown parser with renderers and plugins. Prior to 3.3.0, Include.parse() joins and normalizes user-supplied include paths without verifying that the result remains within the intended markdown directory, allowing crafted include paths to access files outsid",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-59923 - Mistune: XSS via percent-encoded javascript URI bypass in safe_url()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59923",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-08T17:17:27.000Z",
+        "contentSnippet": "Mistune is a Python Markdown parser with renderers and plugins. Prior to 3.3.0, HTMLRenderer.safe_url() does not block percent-encoded javascript URIs, allowing attacker-supplied Markdown links or images to bypass URL protections and execute script in rendered HTML. This issue is",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-59922 - Mistune plugins/formatting: quadratic-time parsing on long runs of `~~x~~`, `==x==`, and `^^x^^` markers (strikethrough / mark / insert)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59922",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-08T17:17:27.000Z",
+        "contentSnippet": "Mistune is a Python Markdown parser with renderers and plugins. Prior to 3.3.0, a run of closed tilde, equals-sign, or caret marker pairs around a character causes quadratic work in src/mistune/plugins/formatting.py when the strikethrough, mark, or insert plugin scans for matchin",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-59897 - Hono: API Gateway v1 adapter can drop a distinct repeated request header value during de-duplication",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59897",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-08T17:17:27.000Z",
+        "contentSnippet": "Hono is a Web application framework that provides support for any JavaScript runtime. From 4.3.3 before 4.12.27, the AWS API Gateway v1 adapter can drop a distinct repeated request header value because it de-duplicates values using a substring comparison instead of an exact match",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-59896 - hono/jsx does not isolate context per request, leading to cross-request data disclosure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59896",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-08T17:17:27.000Z",
+        "contentSnippet": "Hono is a Web application framework that provides support for any JavaScript runtime. From 4.11.8 before 4.12.27, hono/jsx did not isolate context values per request during server-side rendering, allowing createContext, useContext, jsxRenderer, or useRequestContext data from a di",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-59895 - Hono: Server-Side XSS via JSX Escaping Bypass in cx() Utility",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59895",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-08T17:17:27.000Z",
+        "contentSnippet": "Hono is a Web application framework that provides support for any JavaScript runtime. From 4.0.0 before 4.12.27, cx() in hono/css composes class names from plain strings but marks the result as already escaped without HTML-escaping the input, allowing untrusted className values u",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-59892 - OpenTelemetry JavaScript: Denial of service in `JaegerPropagator` via unhandled exception on a malformed header",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59892",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-08T17:17:27.000Z",
+        "contentSnippet": "OpenTelemetry JavaScript is the OpenTelemetry JavaScript client. Prior to 2.9.0, @opentelemetry/propagator-jaeger decodes incoming uber-trace-id and uberctx-* HTTP header values with decodeURIComponent() without handling decode errors, allowing an unauthenticated remote attacker ",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-59890 - setuptools: MANIFEST.in exclusion bypass in sdist via Unicode normalization collision (NFC/NFD) on macOS APFS/HFS+",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59890",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-08T17:17:27.000Z",
+        "contentSnippet": "setuptools is a package that allows users to download, build, install, upgrade, and uninstall Python packages. Prior to 83.0.0, FileList applied MANIFEST.in exclude, global-exclude, recursive-exclude, and prune directives by matching compiled glob patterns against on-disk file na",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-59887 - linkify-it: Quadratic-complexity DoS via the `mailto:` validator scan-loop on attacker text",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59887",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-08T17:17:26.000Z",
+        "contentSnippet": "linkify-it is a links recognition library with full Unicode support. Prior to 5.0.2, the mailto: schema validator used by .test() and .match() can be invoked at every mailto: occurrence and scan the remaining input through src_email_name in lib/re.mjs, causing O(n^2) CPU consumpt",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-59883 - Guzzle: Cookie Disclosure and Injection via IP-Address Domains",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59883",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-08T17:17:26.000Z",
+        "contentSnippet": "Guzzle is an extensible PHP HTTP client. Prior to 7.12.3, CookieJar did not restrict cookies scoped to IP-address or bare-numeric Domain values to the exact host that set them, because SetCookie::matchesDomain() applied ordinary suffix matching to domains such as 192.168.0.1, [::",
+        "cveScore": 4.7,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-59882 - guzzlehttp/psr7: Host Confusion via Weak URI Host Validation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59882",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-08T17:17:26.000Z",
+        "contentSnippet": "guzzlehttp/psr7 is a PSR-7 HTTP message library implementation in PHP. Prior to 2.12.3, Uri::assertValidHost() does not reject URI host components containing authority delimiters, embedded ports, or malformed IPv6 brackets, allowing Uri::getHost() to disagree with the URI authori",
+        "cveScore": 4.2,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-59879 - Immutable.js `List` 32-bit trie overflow → unrecoverable DoS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59879",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-08T17:17:26.000Z",
+        "contentSnippet": "Immutable.js provides many Persistent Immutable data structures. Prior to 4.3.9 and 5.1.8, List#set, List#setSize, List#setIn, List#updateIn, and the functional set, setIn, and updateIn mishandle an index or size in the range 2 ** 30 to 2 ** 31 in setListBounds in src/List.js, ca",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-59731 - Astro 6.4.7 Authorization Bypass via Decode Iteration Limit and Rewrite Path Canonicalization Mismatch",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59731",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-08T17:17:25.000Z",
+        "contentSnippet": "Astro is a web framework for content-driven websites. Version 6.4.7 performs authorization decisions on a partially decoded pathname after reaching the iterative URL decoder limit, while later rewrite route matching performs an additional decodeURI() operation and can resolve the",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-59261 - OpenClaw < 2026.5.28 - Credential Override via Workspace Dotenv Files",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59261",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-08T17:17:25.000Z",
+        "contentSnippet": "OpenClaw before 2026.5.28 contains a credential exposure vulnerability where workspace dotenv files can override provider credentials. Attackers with lower-trust access to configured input paths can expose sensitive data and credentials that should remain within trusted boundarie",
+        "cveScore": 8.4,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-42505 - Invoking Encrypted Client Hello privacy leak in crypto/tls",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-42505",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-08T17:17:21.000Z",
+        "contentSnippet": "Handshakes which used Encrypted Client Hello could be de-anonymized by a passive network observer due to a disclosure of pre-shared key identities in the unencrypted client hello.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-39822 - Root escape via symlink plus trailing slash in os",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-39822",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-08T17:17:21.000Z",
+        "contentSnippet": "On Unix systems, opening a file in an os.Root improperly follows symlinks to locations outside of the Root when the final path component of the a path is a symbolic link and the path ends in /. For example, 'root.Open(\"symlink/\")' will open \"symlink\" even when \"symlink\" is a symb",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2026-59880 - Immutable.js: Hash-collision algorithmic complexity denial of service in Immutable.Map/Set",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-59880",
@@ -677,234 +902,23 @@
         "contentSnippet": "When the application opens a PDF file and JavaScript deletes the PDF fields, the subsequent logic still uses the old field pointers, resulting in invalid pointer references and causing the application to crash.",
         "cveScore": 7.8,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57239 - Foxit PDF Editor/Reader Local Privilege Escalation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57239",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-08T09:16:31.000Z",
-        "contentSnippet": "The user-controllable executable files will be directly executed by high-privilege processes, allowing low-privilege users to have the opportunity to elevate their privileges to NT AUTHORITY\\SYSTEM.",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57238 - Foxit PDF Editor/Reader Annotation Use-After-Free Remote Code Execution Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57238",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-08T09:16:31.000Z",
-        "contentSnippet": "After the application opened the PDF, JavaScript deleted the form field object. Subsequently, it attempted to access the invalid object, which caused the application to crash.",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57237 - Foxit PDF Editor/Reader Annotation Use-After-Free Remote Code Execution Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57237",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-08T09:16:31.000Z",
-        "contentSnippet": "When the application opens a PDF and JavaScript modifies the properties of form fields, it causes the state of the underlying objects referenced by the program to become invalid. Eventually, it reads an illegal memory address, which leads to the crash of the application.",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-9695 - Improper Authentication vulnerability affecting DELMIA Apriso from Release 2020 through Release 2026",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9695",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-08T07:16:46.000Z",
-        "contentSnippet": "An Improper Authentication vulnerability affecting DELMIA Apriso from Release 2020 through Release 2026 could allow an attacker to gain privileged access to the server.",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-12378 - BookingPress <= 1.1.28 - Unauthenticated PHP Object Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12378",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-08T07:16:46.000Z",
-        "contentSnippet": "The Appointment Booking Calendar Plugin and Scheduling Plugin WordPress plugin through 1.1.28 does not validate data before passing it to a PHP deserialization function, allowing unauthenticated attackers to inject arbitrary PHP objects; where a suitable gadget chain is present o",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-9731 - Wp Js Detect <= 1.0.9 - Cross-Site Request Forgery to Plugin Settings Update",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9731",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-08T06:16:23.000Z",
-        "contentSnippet": "The Wp Js Detect plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 1.0.9. This is due to missing or incorrect nonce validation on the plugin_settings function. This makes it possible for unauthenticated attackers to update the ",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-9700 - Eventer <= 4.4.2 - Unauthenticated SQL Injection via 'code' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9700",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-08T06:16:23.000Z",
-        "contentSnippet": "The Eventer plugin for WordPress is vulnerable to time-based SQL Injection via the ‘code’ parameter in all versions up to, and including, 4.4.2 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it ",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57895 - Pupsman Insecure File Permissions Arbitrary Code Execution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57895",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-08T06:16:22.000Z",
-        "contentSnippet": "Incorrect default permissions issue exists in Pupsman versions prior to 3.9.0. An attacker can place a malicious executable in the installation folder, which results in arbitrary code execution with SYSTEM privilege",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-56437 - Pupsman DLL Hijacking Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56437",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-08T06:16:22.000Z",
-        "contentSnippet": "Uncontrolled search path element issue exists in Pupsman versions prior to 3.9.0. If a crafted DLL file is placed in the same folder as the affected installer and the installer is executed, arbitrary code may be executed with SYSTEM privilege.",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-14500 - Bulk Order Update for WooCommerce <= 1.6 - Unauthenticated Arbitrary File Read via 'csv_url' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14500",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-08T06:16:22.000Z",
-        "contentSnippet": "The Bulk Order Update for WooCommerce plugin for WordPress is vulnerable to Arbitrary File Read in versions up to, and including, 1.6. This is due to the bouw_fetch_csv_data() AJAX handler being registered on the wp_ajax_nopriv_ hook with no capability or nonce check, and passing",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-14495 - DoLogin Security <= 4.3 - Unauthenticated Authentication Bypass via Insufficient Randomness via 'dologin' Parameter Weak PRNG Token",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14495",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-08T06:16:22.000Z",
-        "contentSnippet": "The DoLogin Security plugin for WordPress is vulnerable to Authentication Bypass via Insufficient Randomness in all versions up to, and including, 4.3. The vulnerability exists because `dologin\\s::rrand()` seeds the Mersenne Twister with `mt_srand((double) microtime() * 1000000)`",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-14489 - WHMCS Bridge <= 6.9 - Unauthenticated Arbitrary File Upload via 'ccce' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14489",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-08T06:16:22.000Z",
-        "contentSnippet": "The WHMCS Bridge plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the connect() function in all versions up to, and including, 6.9. This makes it possible for authenticated attackers, with Custom-level access and above, to upload",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-12153 - WP Learn Manager <= 1.1.8 - Missing Authorization to Unauthenticated Arbitrary Plugin Installation and Activation via jslearnmanager_ajax AJAX Action",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12153",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-08T06:16:22.000Z",
-        "contentSnippet": "The WP Learn Manager plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 1.1.8. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for unauthenticated attackers to in",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-12097 - User Management <= 1.2 - Missing Authorization to Unauthenticated Plugin Settings Modification",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12097",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-08T06:16:22.000Z",
-        "contentSnippet": "The User Management plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 1.2. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for unauthenticated attackers to modif",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-12041 - Chatra Live Chat + ChatBot + Cart Saver <= 1.0.12 - Authenticated (Administrator+) Stored Cross-Site Scripting via 'chatra-code' Setting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12041",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-08T06:16:21.000Z",
-        "contentSnippet": "The Chatra Live Chat + ChatBot + Cart Saver plugin for WordPress is vulnerable to Stored Cross-Site Scripting via admin settings in all versions up to, and including, 1.0.12 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attac",
-        "cveScore": 4.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-11798 - Social Share, Social Login and Social Comments Plugin <= 7.14.5 - Reflected Cross-Site Scripting via 'heateor_mastodon_share' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11798",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-08T06:16:21.000Z",
-        "contentSnippet": "The Social Share, Social Login and Social Comments Plugin – Super Socializer plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the 'heateor_mastodon_share' parameter in all versions up to, and including, 7.14.5 due to insufficient input sanitization and out",
-        "cveScore": 6.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-10570 - Sympl Repeater for ACF and Elementor <= 2.3 - Authenticated (Author+) Stored Cross-Site Scripting via ACF Repeater Field Values",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10570",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-08T06:16:20.000Z",
-        "contentSnippet": "The Sympl Repeater for ACF and Elementor plugin for WordPress is vulnerable to Stored Cross-Site Scripting via ACF repeater field values in all versions up to, and including, 2.3. This is due to insufficient input sanitization and output escaping in the symp_arfe_replace_content(",
-        "cveScore": 6.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-9842 - Backstage <= 1.4.2 - Unauthenticated Privilege Escalation via Permissive Demo Role Capabilities",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9842",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-08T05:16:29.000Z",
-        "contentSnippet": "The Backstage - Customizer Demo Access plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 1.4.2. This is due to the plugin assigning the `manage_options` capability to the `backstage_customizer_user` demo role, which is more permissiv",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-9701 - Eventer <= 4.4.2 - Insecure Password Reset Mechanism to Unauthenticated Privilege Escalation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9701",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-08T05:16:28.000Z",
-        "contentSnippet": "The Eventer plugin for WordPress is vulnerable to an insecure password reset mechanism in all versions up to, and including, 4.4.2. The plugin stores a plaintext copy of the password reset key in the `eventer_verification_code` user meta field when a user requests a password rese",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-14487 - Simple Coherent Form <= 2.4.13 - Unauthenticated Arbitrary File Deletion via 'id' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14487",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-08T05:16:26.000Z",
-        "contentSnippet": "The Simple Coherent Form plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the removeUploadDir function in all versions up to, and including, 2.4.13. This makes it possible for unauthenticated attackers to delete arbitrary f",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-14482 - 多说社会化评论框 <= 1.2 - Unauthenticated Privilege Escalation via api.php 'option'/'value' Parameters",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14482",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-08T05:16:26.000Z",
-        "contentSnippet": "The 多说社会化评论框 plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 1.2. The vulnerability exists due to a missing capability and nonce check on a directly web-accessible API endpoint, combined with a trivially forgeable HMAC-SHA1 signatu",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-14244 - Jssor Slider by jssor.com <= 3.1.24 - Unauthenticated Arbitrary File Read via 'url' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14244",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-08T05:16:26.000Z",
-        "contentSnippet": "The Jssor Slider by jssor.com plugin for WordPress is vulnerable to Directory Traversal in all versions up to, and including, 3.1.24 via the 'url' parameter parameter. This makes it possible for unauthenticated attackers to read the contents of arbitrary files on the server, whic",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-14158 - Widget Logic Visual <= 1.52 - Authenticated (Subscriber+) Remote Code Execution via 'nwlv[cod-tag]' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14158",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-08T05:16:26.000Z",
-        "contentSnippet": "The Widget Logic Visual plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 1.52 via the widget_logic_visual_check_visibility function. This is due to missing capability check and nonce verification on the widget-logic-update-conditio",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-60002 - OpenSSH Client Use-After-Free Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-60002",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-08T01:16:29.000Z",
-        "contentSnippet": "ssh in OpenSSH before 10.4 can have a use-after-free when a server changes its host key during a key re-exchange. (This outcome occurs only on the client side.)",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-60001 - OpenSSH Authentication Delay Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-60001",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-08T01:16:29.000Z",
-        "contentSnippet": "sshd in OpenSSH before 10.4 does not always honor the minimum authentication delay.",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
+      {
+        "title": "Google AI Studio Adds ‘Import from GitHub’ to Build Mode, Turning an Existing Repo Into an Editable, Deployable App",
+        "link": "https://www.marktechpost.com/2026/07/08/google-ai-studio-adds-import-from-github-to-build-mode/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-07-08T18:41:57.000Z",
+        "contentSnippet": "Google AI Studio is rolling out Import from GitHub in Build mode. It transforms an existing repo into a runtime-compatible format. You can then iterate on it, deploy it, and more. Here is what changes for developers. The post Google AI Studio Adds ‘Import from GitHub’ to Build Mo"
+      },
+      {
+        "title": "OpenAI Releases GPT-Live and GPT-Live-1 mini: Full-Duplex Voice Models That Delegate Deeper Reasoning to GPT-5.5",
+        "link": "https://www.marktechpost.com/2026/07/08/openai-releases-gpt-live-and-gpt-live-1-mini-full-duplex-voice-models-that-delegate-deeper-reasoning-to-gpt-5-5/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-07-08T18:08:21.000Z",
+        "contentSnippet": "OpenAI released GPT-Live, a new generation of voice models now powering ChatGPT Voice. It uses a full-duplex architecture to listen and speak at once, and delegates search and reasoning to GPT-5.5. The post OpenAI Releases GPT-Live and GPT-Live-1 mini: Full-Duplex Voice Models Th"
+      },
       {
         "title": "Powering scientific discovery: BYOKG and GraphRAG for intelligent pharmaceutical research",
         "link": "https://aws.amazon.com/blogs/machine-learning/powering-scientific-discovery-byokg-and-graphrag-for-intelligent-pharmaceutical-research/",
@@ -1590,20 +1604,6 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-06-26T14:42:20.000Z",
         "contentSnippet": "In this post, we explore how Cara, built in cooperation with AWS, addresses these challenges. We walk through the technical design decisions and the AWS services that support the solution. We also share measurable outcomes Cara has delivered for enterprise brokerages."
-      },
-      {
-        "title": "Production-grade AI agents for financial compliance: Lessons from Stripe",
-        "link": "https://aws.amazon.com/blogs/machine-learning/production-grade-ai-agents-for-financial-compliance-lessons-from-stripe/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-06-26T14:38:01.000Z",
-        "contentSnippet": "In this post, you learn how Stripe built a production-grade AI agent system for financial compliance. We cover the technical architecture of Stripe’s ReAct agent framework and the infrastructure decisions behind a dedicated agent service. We also discuss the role of human oversig"
-      },
-      {
-        "title": "Meet container: Apple’s Open-Source Swift Tool for Running Linux Containers as Lightweight VMs on Apple Silicon",
-        "link": "https://www.marktechpost.com/2026/06/26/meet-container-apples-open-source-swift-tool-for-running-linux-containers-as-lightweight-vms-on-apple-silicon/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-06-26T08:48:39.000Z",
-        "contentSnippet": "Apple released container 1.0, an open-source Swift tool running Linux containers as lightweight virtual machines on Apple silicon. The post Meet container: Apple’s Open-Source Swift Tool for Running Linux Containers as Lightweight VMs on Apple Silicon appeared first on MarkTechPo"
       }
     ],
     "virtualization": [
@@ -2225,6 +2225,13 @@
       }
     ],
     "hardware": [
+      {
+        "title": "Samsung PM1763 PCIe Gen6 SSD Enters Mass Production With 28.4 GB/s Reads",
+        "link": "https://www.storagereview.com/news/samsung-pm1763-pcie-gen6-ssd-enters-mass-production-with-28-4-gb-s-reads",
+        "source": "StorageReview",
+        "isoDate": "2026-07-08T18:57:07.000Z",
+        "contentSnippet": "Samsung has started mass production of the PM1763, its first PCIe Gen6 enterprise SSD, pairing 9th-generation V-NAND with a newly developed 4nm controller. The 15.36TB flagship is rated for sequential reads up to 28,400 MB/s and writes up to 21,000 MB/s, with reads landing at 1.9"
+      },
       {
         "title": "Rapidus fab roadmap examined — first new leading-edge chipmaker in decades has one Hokkaido fab, a 2027 deadline, and 60 potential customers",
         "link": "https://www.tomshardware.com/tech-industry/semiconductors/rapidus-fab-roadmap-examined",
@@ -2917,13 +2924,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-07-03T16:26:03.000Z",
         "contentSnippet": "Turtle Beach's KP7 keypad can be used with its KB7 keyboard or as a standalone macropad. And it's nice — but pricey."
-      },
-      {
-        "title": "Intel reportedly adding two new 22-core SKUs with game-boosting cache to Nova Lake-S lineup — 125W unlocked and 65W locked part rumored to be part of single-tile Core Ultra 5 tier",
-        "link": "https://www.tomshardware.com/pc-components/cpus/intel-reportedly-adding-two-new-22-core-skus-with-game-boosting-cache-to-nova-lake-s-lineup-125w-unlocked-and-65w-locked-part-rumored-to-be-part-of-single-tile-core-ultra-5-tier",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-03T15:44:10.000Z",
-        "contentSnippet": "Intel is apparently cooking up two new 22-core Nova Lake-S SKUs with up to 144MB of bLLC. One is a locked 65W variant and one is an unlocked 125W part, and both are said to be part of the Core Ultra 5 tier."
       }
     ]
   }
