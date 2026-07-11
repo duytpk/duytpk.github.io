@@ -1,8 +1,197 @@
 {
-  "updatedAt": "2026-07-11T14:23:36.438Z",
+  "updatedAt": "2026-07-11T15:46:03.430Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-61870 - ImageMagick before 7.1.2-26 Memory Leak via VIFF Encoder",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61870",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-11T13:01:09.000Z",
+        "contentSnippet": "ImageMagick before 7.1.2-26 contains a memory leak vulnerability in the VIFF encoder when memory allocation fails. Attackers can trigger allocation failures by processing specially crafted VIFF images to exhaust available memory and cause denial of service.",
+        "cveScore": 2.9,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-61861 - ImageMagick before 7.1.2-26 Use-After-Free in FormatMagickCaption",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61861",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-11T13:01:09.000Z",
+        "contentSnippet": "ImageMagick before 7.1.2-26 contains a use-after-free vulnerability in the FormatMagickCaption method when memory allocation fails. Attackers can trigger memory allocation failures to cause a dangling pointer to reference freed memory, potentially enabling denial of service or co",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-61858 - ImageMagick before 7.1.2-26 Policy Bypass via APNG encoder",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61858",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-11T13:01:08.000Z",
+        "contentSnippet": "ImageMagick before 7.1.2-26 contains a policy bypass vulnerability in the APNG encoder and external delegates due to missing validation checks. Attackers can write files to disallowed paths by bypassing configured policy restrictions through the APNG encoding process.",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-61857 - ImageMagick before 7.1.2-26 Heap Use-After-Free via XMP",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61857",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-11T13:01:07.000Z",
+        "contentSnippet": "ImageMagick before 7.1.2-26 contains a heap use-after-free vulnerability caused by missing null check when parsing XMP profiles. Attackers can craft malicious image files with specially crafted XMP data to trigger the vulnerability and cause application crashes.",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-61465 - ImageMagick before 7.1.2-26 Memory Allocation Policy Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61465",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-11T13:01:07.000Z",
+        "contentSnippet": "ImageMagick before 7.1.2-26 and 6.9.13-51 is missing a check for the allowed memory allocation limit in matrix-backed operations such as -canny. An attacker can supply a crafted image that causes ImageMagick to allocate more memory than permitted by the configured policy, resulti",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-61454 - Grav before 2.0.4 Information Disclosure via __GRAV_CONFIG__",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61454",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-11T13:01:06.000Z",
+        "contentSnippet": "The Grav Admin2 plugin (getgrav/grav-plugin-admin2) before 2.0.4 embeds a global JavaScript variable window.__GRAV_CONFIG__ in the Admin2 SPA bootstrap page at /grav/admin (and its subroutes). This object is returned in every unauthenticated response and discloses the server URL,",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-61448 - Parse Server 9.0.0 Stored XSS via malformed Content-Type",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61448",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-11T13:01:05.000Z",
+        "contentSnippet": "Parse Server is affected by a stored cross-site scripting (XSS) vulnerability in versions >= 9.0.0,",
+        "cveScore": 2.1,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-61447 - PraisonAI before 1.6.78 Remote Code Execution via CodeAgent",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61447",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-11T13:01:05.000Z",
+        "contentSnippet": "PraisonAI before 1.6.78 contains a remote code execution vulnerability in CodeAgent._execute_python() that executes LLM-generated Python code without AST validation, import restrictions, or sandbox enforcement. Attackers can influence LLM output through prompt injection to exfilt",
+        "cveScore": 10,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-61445 - PraisonAI before 4.6.78 Arbitrary File Write and Command Execution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61445",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-11T13:01:04.000Z",
+        "contentSnippet": "PraisonAI before 4.6.78 contains arbitrary file write and command execution vulnerabilities in the AICoder component due to missing path validation and command sanitization in LLM tool calls. Attackers can inject malicious prompts through the chat interface to write files to arbi",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-61442 - PraisonAI Platform before 0.1.9 Authorization Bypass via PATCH",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61442",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-11T13:01:03.000Z",
+        "contentSnippet": "PraisonAI Platform (praisonai-platform) before 0.1.9 fails to enforce owner/admin authorization on the PATCH routes for projects, issues, and agents, which only require workspace-member role. A workspace member can modify owner-created records; for projects, a member can reassign",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-61439 - PraisonAI before 4.6.78 Prompt Injection Defense Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61439",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-11T13:01:03.000Z",
+        "contentSnippet": "PraisonAI versions before 4.6.78 contain a prompt injection defense misconfiguration where the block threshold defaults to CRITICAL severity, allowing HIGH-level threats to pass through unblocked. Attackers can submit single-vector prompt injection attacks such as instruction ove",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-61429 - PraisonAI before 1.6.78 SSRF via Crawl4AI Chromium backend",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61429",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-11T13:01:02.000Z",
+        "contentSnippet": "PraisonAI versions before 1.6.78 contain a server-side request forgery vulnerability in the Crawl4AI/Chromium backend that allows attackers to bypass SSRF validation by exploiting DNS rebinding and HTTP redirects. Attackers can craft URLs that resolve to internal services after t",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-61428 - PraisonAI AgentMail before 4.6.78 Message Injection via Webhook",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61428",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-11T13:01:01.000Z",
+        "contentSnippet": "PraisonAI AgentMail versions before 4.6.78 lack signature verification in webhook mode, allowing unauthenticated attackers to inject messages with spoofed sender addresses. Attackers can POST crafted message.received events to the webhook endpoint to inject arbitrary content into",
+        "cveScore": 7.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-61426 - PraisonAI before 1.7.3 Unauthenticated Agent Access via Insecure Defaults",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61426",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-11T13:01:01.000Z",
+        "contentSnippet": "PraisonAI before 1.7.3 contains an insecure default configuration that binds to all interfaces with no API key requirement and wildcard CORS. Unauthenticated attackers can call GET /api/agents to read agent instructions and system prompts, or POST /api/chat to invoke agents witho",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-60090 - PraisonAI before 4.6.78 SQL/CQL Injection via vector dimension",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-60090",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-11T13:01:00.000Z",
+        "contentSnippet": "PraisonAI before 4.6.78 fails to validate the caller-controlled dimension argument in the PGVector and Cassandra knowledge-store create_collection() backends. Although schema, keyspace, and collection-name identifiers are validated, the dimension value (declared as int but not en",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-60088 - PraisonAI before 4.6.78 Path Traversal via Custom Commands",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-60088",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-11T13:00:59.000Z",
+        "contentSnippet": "PraisonAI before 4.6.78 fails to validate file path references in custom command templates, allowing attackers to read files outside the workspace. Attackers can include path traversal sequences like @../outside_secret.txt or absolute paths in project command files to exfiltrate ",
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-56763 - Hono - Prototype Pollution via __proto__ Key in parseBody with dot Option",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56763",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-11T13:00:59.000Z",
+        "contentSnippet": "Hono before 4.12.7 allows __proto__ key in parseBody with dot option enabled, permitting specially crafted form field names to create objects with __proto__ properties. When parsed results are merged into regular JavaScript objects using unsafe merge patterns, attackers can explo",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-56372 - ImageMagick - Heap Buffer Overflow Read via Unrecognized Magnify Method",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56372",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-11T13:00:58.000Z",
+        "contentSnippet": "ImageMagick before 7.1.2-19 contains a heap buffer overflow vulnerability in the magnify operation that allows attackers to read out of bounds memory. An unrecognized magnify:method value triggers an out of bounds read, potentially exposing sensitive information or causing denial",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-56303 - Capgo - Unauthenticated API Key Metadata Disclosure via SECURITY DEFINER RPC Function",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56303",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-11T13:00:57.000Z",
+        "contentSnippet": "Capgo before 12.128.2 contains an information disclosure vulnerability in the find_apikey_by_value PostgreSQL function marked SECURITY DEFINER and executable by the anon role. Unauthenticated attackers can call this function via the /rest/v1/rpc/find_apikey_by_value endpoint to r",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-56296 - Cap-go - App Existence Oracle via Unauthenticated transfer_app RPC",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56296",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-11T13:00:57.000Z",
+        "contentSnippet": "Cap-go before 12.128.2 contains an information disclosure vulnerability in the public.transfer_app RPC function that returns distinct error messages for existing versus non-existing app IDs. Unauthenticated attackers can enumerate valid app IDs by observing error message differen",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-56240 - Capgo - Billing Authorization Bypass via Exhausted Usage Credits",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56240",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-11T13:00:56.000Z",
+        "contentSnippet": "Capgo before 12.128.12 contains a billing authorization bypass vulnerability in the plan_valid calculation that allows organizations with exhausted or expired usage credit grants to bypass billing gates. Attackers can exploit the divergence between the plugin hot-path plan_valid ",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
       {
         "title": "CVE-2026-57828 - Joomla Extension - phoca.cz - Authenticated file upload in RSFiles component < 6.1.3",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-57828",
@@ -711,195 +900,6 @@
         "source": "cvefeed.io",
         "isoDate": "2026-07-10T21:46:43.000Z",
         "contentSnippet": "Improper Neutralization of Input During Web Page Generation (\"Cross-site Scripting\") vulnerability in Drupal Drupal core allows Cross-Site Scripting (XSS). This issue affects Drupal core versions: from 0.0.0 to 10.5.12, from 10.6.0 to 10.6.11, from 11.2.0 to 11.2.14, from 11.3.0 ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-55807 - Drupal core - Moderately critical - Server-side request forgery - SA-CORE-2026-008",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55807",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-10T21:46:40.000Z",
-        "contentSnippet": "Server-Side Request Forgery (SSRF) vulnerability in Drupal Drupal core allows Server Side Request Forgery. This issue affects Drupal core versions: from 0.0.0 to 10.5.12, from 10.6.0 to 10.6.11, from 11.2.0 to 11.2.14, from 11.3.0 to 11.3.12, from 0.0.0 to 11.0.*, from 0.0.0 to 1",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-55806 - Drupal core - Less critical - Cache poisoning and open redirect - SA-CORE-2026-007",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55806",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-10T21:46:39.000Z",
-        "contentSnippet": "URL Redirection to Untrusted Site ('Open Redirect') vulnerability in Drupal Drupal core allows Content Spoofing. This issue affects Drupal core versions: from 0.0.0 to 10.5.12, from 10.6.0 to 10.6.11, from 11.2.0 to 11.2.14, from 11.3.0 to 11.3.12, from 0.0.0 to 11.0.*, from 0.0.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-55804 - Drupal core - Moderately critical - Gadget chain - SA-CORE-2026-006",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55804",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-10T21:46:39.000Z",
-        "contentSnippet": "Improperly Controlled Modification of Dynamically-Determined Object Attributes vulnerability in Drupal Drupal core allows Object Injection. This issue affects Drupal core versions: from 0.0.0 to 10.5.12, from 10.6.0 to 10.6.11, from 11.2.0 to 11.2.14, from 11.3.0 to 11.3.12, from",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-55803 - Drupal core - Critical - PHP object injection - SA-CORE-2026-005",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55803",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-10T21:46:38.000Z",
-        "contentSnippet": "Improperly Controlled Modification of Dynamically-Determined Object Attributes vulnerability in Drupal Drupal core allows Object Injection. This issue affects Drupal core versions: from 0.0.0 to 10.5.12, from 10.6.0 to 10.6.11, from 11.2.0 to 11.2.14, from 11.3.0 to 11.3.12, from",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-15085 - AI SEO/GEO Analyzer - Moderately critical - Cross-site Scripting - SA-CONTRIB-2026-076",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15085",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-10T21:46:35.000Z",
-        "contentSnippet": "Improper Neutralization of Input During Web Page Generation (\"Cross-site Scripting\") vulnerability in Drupal AI SEO/GEO Analyzer allows Stored XSS. This issue affects AI SEO/GEO Analyzer versions: from 0.0.0 to 1.1.3.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-15084 - UI Patterns (SDC in Drupal UI) - Moderately critical - Cross site scripting - SA-CONTRIB-2026-075",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15084",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-10T21:46:34.000Z",
-        "contentSnippet": "Improper Neutralization of Input During Web Page Generation (\"Cross-site Scripting\") vulnerability in Drupal UI Patterns (SDC in Drupal UI) allows Stored XSS. This issue affects UI Patterns (SDC in Drupal UI) versions: from 2.0.0 to 2.0.17.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-15083 - ECA: Event - Condition - Action - Less critical - Information disclosure - SA-CONTRIB-2026-074",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15083",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-10T21:46:33.000Z",
-        "contentSnippet": "Improperly Controlled Modification of Dynamically-Determined Object Attributes vulnerability in Drupal ECA: Event - Condition - Action allows Object Injection. This issue affects ECA: Event - Condition - Action versions: from 0.0.0 to 2.1.20, from 3.0.0 to 3.0.12, from 3.1.0 to 3",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-15082 - Siteimprove Analytics - Moderately critical - Cross-site Scripting - SA-CONTRIB-2026-073",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15082",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-10T21:46:22.000Z",
-        "contentSnippet": "Improper Neutralization of Input During Web Page Generation (\"Cross-site Scripting\") vulnerability in Drupal Siteimprove Analytics allows Cross-Site Scripting (XSS). This issue affects Siteimprove Analytics versions: from 0.0.0 to 2.0.1.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-15081 - Location Selector - Critical - SQL Injection - SA-CONTRIB-2026-072",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15081",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-10T21:46:21.000Z",
-        "contentSnippet": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Drupal Location Selector allows SQL Injection. This issue affects Location Selector versions: from 0.0.0 to 1.3.0.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-15080 - Ray Enterprise Translation - Moderately critical - Cross site request forgery - SA-CONTRIB-2026-071",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15080",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-10T21:46:20.000Z",
-        "contentSnippet": "Cross-Site Request Forgery (CSRF) vulnerability in Drupal Ray Enterprise Translation allows Cross Site Request Forgery. This issue affects Ray Enterprise Translation versions: from 0.0.0 to 4.0.4, from 4.1.0 to 4.1.4, from 11.0.0 to 11.0.4.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-15079 - Login Disable - Moderately critical - Access bypass - SA-CONTRIB-2026-070",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15079",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-10T21:46:19.000Z",
-        "contentSnippet": "Improper Restriction of Excessive Authentication Attempts vulnerability in Drupal Login Disable allows Brute Force. This issue affects Login Disable versions: from 0.0.0 to 2.1.4.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-13244 - Tealium iQ Tag Management - Critical - PHP object injection - SA-CONTRIB-2026-064",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13244",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-10T21:46:14.000Z",
-        "contentSnippet": "Improperly Controlled Modification of Dynamically-Determined Object Attributes vulnerability in Drupal Tealium iQ Tag Management allows Object Injection. This issue affects Tealium iQ Tag Management versions: from 0.0.0 to 2.4.0.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-13243 - Salesforce Suite - Moderately critical - Cross-site request forgery - SA-CONTRIB-2026-063",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13243",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-10T21:44:55.000Z",
-        "contentSnippet": "Cross-Site Request Forgery (CSRF) vulnerability in Drupal Salesforce Suite allows Cross Site Request Forgery. This issue affects Salesforce Suite versions: from 0.0.0 to 5.1.3.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-13242 - Geolocation Field - Critical - SQL Injection - SA-CONTRIB-2026-062",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13242",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-10T21:44:54.000Z",
-        "contentSnippet": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Drupal Geolocation Field allows SQL Injection. This issue affects Geolocation Field versions: from 0.0.0 to 3.15.0.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-13241 - Paragraphs - Moderately critical - Access bypass - SA-CONTRIB-2026-061",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13241",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-10T21:44:53.000Z",
-        "contentSnippet": "Missing Authorization vulnerability in Drupal Paragraphs allows Forceful Browsing. This issue affects Paragraphs versions: from 0.0.0 to 1.21.0.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-13240 - Paragraphs - Less critical - Access bypass - SA-CONTRIB-2026-060",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13240",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-10T21:44:53.000Z",
-        "contentSnippet": "Missing Authorization vulnerability in Drupal Paragraphs allows Forceful Browsing. This issue affects Paragraphs versions: from 0.0.0 to 1.21.0.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-13239 - WissKI - Critical - Access bypass - SA-CONTRIB-2026-059",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13239",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-10T21:44:52.000Z",
-        "contentSnippet": "Missing Authorization vulnerability in Drupal WissKI allows Forceful Browsing. This issue affects WissKI versions: from 0.0.0 to 4.2.0.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-13238 - Commerce Realex / Global Payments - Moderately critical - Access Bypass - SA-CONTRIB-2026-058",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13238",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-10T21:44:51.000Z",
-        "contentSnippet": "Incorrect Authorization vulnerability in Drupal Commerce Realex / Global Payments allows Forceful Browsing. This issue affects Commerce Realex / Global Payments versions: from 0.0.0 to 3.0.2.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-55229 - Gotenberg: SSRF via LibreOffice document processing",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55229",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-10T20:35:12.000Z",
-        "contentSnippet": "Gotenberg is a Docker-powered stateless API for PDF files. Prior to 8.34.0, Gotenberg's /forms/libreoffice/convert endpoint allows a specially crafted document to cause LibreOffice to automatically retrieve external HTTP(S) resources and local file resources during document conve",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-57807 - WordPress OAuth Single Sign On - SSO (OAuth Client) plugin <= 38.5.8 - Broken Authentication vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57807",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-10T20:35:07.000Z",
-        "contentSnippet": "Authentication Bypass Using an Alternate Path or Channel vulnerability in miniOrange Security Software Pvt Ltd. OAuth Single Sign On - SSO (OAuth Client) allows Password Recovery Exploitation. This issue affects OAuth Single Sign On - SSO (OAuth Client): from n/a through 38.5.8.",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-55405 - LangChain4j: SQL injection via metadata filters in langchain4j-mariadb and langchain4j-pgvector",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55405",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-10T20:33:40.000Z",
-        "contentSnippet": "LangChain4j is a Java library for building LLM-powered applications on the JVM. Prior to 1.2.1-beta8, 1.5.1-beta11, 1.11.8-beta19, and 1.16.3-beta26, the MariaDB and pgvector embedding stores build metadata-filter SQL by string-concatenating filter keys, and in MariaDB string val",
         "cveScore": 0,
         "cveSeverity": "NA"
       }
@@ -2247,6 +2247,34 @@
     ],
     "hardware": [
       {
+        "title": "Newegg packs Ryzen 5 9600X and 16GB DDR5 into a $520 combo — bundles also include a B650 motherboard and 240mm AIO liquid cooler",
+        "link": "https://www.tomshardware.com/pc-components/newegg-packs-ryzen-5-9600x-and-16gb-ddr5-into-a-usd520-combo-bundles-also-include-a-b650-motherboard-and-240mm-aio-liquid-cooler",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-07-11T15:29:17.000Z",
+        "contentSnippet": "Gamers looking to build a budget-friendly AM5 PC can pick up a Ryzen 5 9600X, a Gigabyte B650M motherboard, and a Corsair DDR5 memory bundle, with a free 240mm liquid cooler included."
+      },
+      {
+        "title": "Microsoft loses Brazilian court case after telling hacked Xbox user to re-purchase games — tech giant ordered to restore Xbox account with all games and pay $400 in damages",
+        "link": "https://www.tomshardware.com/video-games/xbox/brazilian-court-orders-microsoft-to-restore-a-gamers-account-and-digital-library-after-it-told-him-to-rebuy-his-games",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-07-11T14:52:11.000Z",
+        "contentSnippet": "A Brazilian gamer who lost his Microsoft account and all his digital games has won a court order requiring the company to return them."
+      },
+      {
+        "title": "Bambu Lab collabs with Insta360 for epic design contest — win thousands in 3D printers, Luna Ultra cameras, and gift cards",
+        "link": "https://www.tomshardware.com/3d-printing/bambu-lab-collabs-with-insta360-for-epic-design-contest-win-thousands-in-3d-printers-luna-ultra-cameras-and-gift-cards",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-07-11T14:31:45.000Z",
+        "contentSnippet": "Your design concept could win a next-gen camera and 3D printer."
+      },
+      {
+        "title": "AMD RX 9070 GRE collapses to $499 to save 1440p gaming — RDNA 4 price slips 9% to steal a piece of Nvidia's mid-range pie",
+        "link": "https://www.tomshardware.com/pc-components/gpus/amd-rx-9070-gre-collapses-to-usd499-to-save-1440p-gaming-rdna-4-price-slips-9-percent-to-steal-a-piece-of-nvidias-mid-range-pie",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-07-11T14:23:57.000Z",
+        "contentSnippet": "AMD's Radeon RX 9070 GRE has received its first price cut since launching outside China, making the 1440p-focused RDNA 4 graphics card a more compelling alternative to Nvidia's RTX 5060 Ti 16GB."
+      },
+      {
         "title": "SK Hynix says 2027 will be the 'worst year' for memory shortage, forecasts crunch to last until 2030 — CEO shares grim outlook on the day SK Hynix gets listed on Nasdaq",
         "link": "https://www.tomshardware.com/pc-components/dram/sk-hynix-says-2027-will-be-the-worst-year-for-memory-shortage-forecasts-crunch-to-last-until-2030-ceo-shares-grim-outlook-on-the-day-sk-hynix-gets-listed-on-nasdaq",
         "source": "Tom's Hardware",
@@ -2917,34 +2945,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-07-06T15:30:17.000Z",
         "contentSnippet": "Open Tools, a Paris-based startup, has announced that its Open Printer has been nominated for two French Design Awards."
-      },
-      {
-        "title": "AMD Ryzen AI Halo Developer System Review AMD Goes for Local AI",
-        "link": "https://www.servethehome.com/amd-ryzen-ai-halo-developer-system-review-amd-goes-for-local-ai/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-07-06T15:00:20.000Z",
-        "contentSnippet": "We test the AMD Ryzen AI Halo developer system and see how AMD is putting its spin on a 128GB local AI dev box The post AMD Ryzen AI Halo Developer System Review AMD Goes for Local AI appeared first on ServeTheHome."
-      },
-      {
-        "title": "AMD Ryzen AI Halo review: AMD builds a DGX Spark of its own",
-        "link": "https://www.tomshardware.com/pc-components/gpus/embargo-mon-july-6-8am-pt-1100-edt-amd-ryzen-ai-halo-review",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-06T15:00:15.000Z",
-        "contentSnippet": "The Ryzen AI Halo is a turn-key AMD local AI box that’s backed up with first-party software support, handy utilities, and plenty of documentation for local AI explorers. But the performance and application compatibility of the Ryzen AI Max+ 395 (aka Strix Halo) SoC still trails N"
-      },
-      {
-        "title": "AMD Ryzen AI Halo Review: A Dual-OS, 200B-Parameter Desktop Takes On the DGX Spark",
-        "link": "https://www.storagereview.com/review/amd-ryzen-ai-halo-review-a-dual-os-200b-parameter-desktop-takes-on-the-dgx-spark",
-        "source": "StorageReview",
-        "isoDate": "2026-07-06T14:59:10.000Z",
-        "contentSnippet": "AMD silicon arguably got here first: Strix Halo mini PCs and laptops were shipping with 128GB of unified memory well before NVIDIA entered the picture. But the local-AI desktop as a category is one NVIDIA effectively created when it put a Grace Blackwell superchip in a one-liter "
-      },
-      {
-        "title": "You can now use your Sony headphones as a free real-time head tracker for race and flight simulators on PC, several hundred games already supported — enthusiast creates open-source app that translates",
-        "link": "https://www.tomshardware.com/video-games/pc-gaming/you-can-now-use-your-sony-headphones-as-a-real-time-head-tracker-for-race-and-flight-simulators-on-pc-several-hundred-games-already-supported-enthusiast-creates-open-source-app-that-translates-live-sensor-data-into-in-game-camera-controls",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-06T14:36:21.000Z",
-        "contentSnippet": "A new open-source app called Sony Head Tracker, developed by Nicholas Slattery, reads raw sensor data from Sony headphones and earbuds and converts them into something OpenTrack can understand. From there, it can be used for head tracking in over 200 PC games."
       }
     ]
   }
