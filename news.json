@@ -1,14 +1,68 @@
 {
-  "updatedAt": "2026-07-12T17:53:14.857Z",
+  "updatedAt": "2026-07-12T18:53:28.362Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
+        "title": "CVE-2026-10668 - Host-triggerable control-endpoint wedge (DoS) in Nuvoton NuMaker HSUSBD UDC driver",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10668",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-12T16:16:51.000Z",
+        "contentSnippet": "The Nuvoton NuMaker HSUSBD USB device-controller driver (drivers/usb/udc/udc_numaker.c) armed the control Data IN stage unconditionally (base->CEPTXCNT = len in numaker_hsusbd_ep_trigger). Because the HSUSBD hardware cannot disarm a control Data IN already armed for a previous tr",
+        "cveScore": 2.4,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-10667 - SMP use-after-free in Zephyr `CONFIG_USERSPACE` dynamic kernel-object tracking, reachable from unprivileged user threads",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10667",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-12T16:16:50.000Z",
+        "contentSnippet": "Zephyr's dynamic kernel-object tracking (kernel/userspace/userspace.c, formerly kernel/userspace.c) maintains a doubly-linked list (obj_list) of dynamically allocated kernel objects. Iteration over this list in k_object_wordlist_foreach() was performed under lists_lock using the ",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-10666 - Stack buffer overflow in `net_ipaddr_parse()` IPv4 address-with-port parsing in `subsys/net/ip/utils.c`",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10666",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-12T16:16:50.000Z",
+        "contentSnippet": "parse_ipv4() in subsys/net/ip/utils.c (reached via net_ipaddr_parse() for strings of the form \"a.b.c.d:port\") copies the port substring into a fixed 17-byte stack buffer (char ipaddr[NET_IPV4_ADDR_LEN + 1]) using a length of str_len - end - 1, where str_len is the full, unbounded",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-10665 - Heap buffer overflow on WireGuard receive path via unbounded incoming packet length",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10665",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-12T16:16:49.000Z",
+        "contentSnippet": "In Zephyr's WireGuard subsystem (subsys/net/lib/wireguard), wg_process_data_message() in wg_crypto.c linearizes an inbound transport-data payload into a fixed pool buffer of CONFIG_WIREGUARD_BUF_LEN bytes before decryption. The call net_buf_linearize(buf->data, data_len, pkt->buf",
+        "cveScore": 7.4,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-10664 - Out-of-bounds write in nRF70 Wi-Fi driver power-save event handler (unbounded TWT flow count)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10664",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-12T16:16:49.000Z",
+        "contentSnippet": "The nRF70 Wi-Fi driver's power-save event handler nrf_wifi_event_proc_get_power_save_info() in drivers/wifi/nrf_wifi/src/wifi_mgmt.c copied TWT (Target Wake Time) flow entries from an nrf_wifi_umac_event_power_save_info event into the fixed-size twt_flows[WIFI_MAX_TWT_FLOWS] (8-e",
+        "cveScore": 5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-10663 - Use-after-free / double-free of the root USB device in the experimental USB host stack",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10663",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-12T16:16:48.000Z",
+        "contentSnippet": "In Zephyr's experimental USB host stack (CONFIG_USB_HOST_STACK), usbh_device_disconnect() (subsys/usb/host/usbh_device.c) freed the root usb_device slab object without clearing the cached pointer ctx->root. The bus removal handler dev_removed_handler() (subsys/usb/host/usbh_core.",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
         "title": "CVE-2026-58596 - Microsoft Edge (Chromium-based) Elevation of Privilege Vulnerability",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-58596",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-12T15:22:59.000Z",
-        "contentSnippet": "None",
+        "isoDate": "2026-07-12T16:16:31.000Z",
+        "contentSnippet": "Untrusted pointer dereference in Microsoft Edge (Chromium-based) allows an unauthorized attacker to elevate privileges over a network.",
         "cveScore": 8.3,
         "cveSeverity": "HIGH"
       },
@@ -848,60 +902,6 @@
         "contentSnippet": "The SureCart plugin for WordPress is vulnerable to privilege escalation via account takeover in versions up to, and including, 4.2.3. This is due to the plugin not properly validating a user's identity prior to updating their details like email during customer profile synchroniza",
         "cveScore": 8.1,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-13378 - Form Vibes <= 1.5.2 - Unauthenticated Stored Cross-Site Scripting via Contact Form 7 Form Field",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13378",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-11T06:16:08.000Z",
-        "contentSnippet": "The Form Vibes – Database Manager for Forms plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Contact Form 7 Form Field in all versions up to, and including, 1.5.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthent",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-9738 - Print, PDF, Email by PrintFriendly <= 5.5.10 - Authenticated (Administrator+) Stored Cross-Site Scripting via 'content_position_css' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9738",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-11T05:16:34.000Z",
-        "contentSnippet": "The Print, PDF, Email by PrintFriendly plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'content_position_css' parameter in all versions up to, and including, 5.5.10 due to insufficient input sanitization and output escaping. This makes it possible for au",
-        "cveScore": 4.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-7620 - Notification for Telegram <= 3.5.1 - Missing Authorization to Authenticated (Subscriber+) Cron Modification via nftb_cron_action_set AJAX Action",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-7620",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-11T05:16:34.000Z",
-        "contentSnippet": "The Notification for Telegram plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 3.5.1. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attacker",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-7559 - Affilia <= 3.3.3 - Missing Authorization to Authenticated (Subscriber+) Arbitrary Status Modification",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-7559",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-11T05:16:34.000Z",
-        "contentSnippet": "The Affilia – Affiliate Program & Referral Tracking for WordPress plugin for WordPress is vulnerable to unauthorized access in all versions up to, and including, 3.3.3. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it ",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-6804 - AI Chatbot & Workflow Automation by AIWU <= 1.4.12 - Missing Authorization to Unauthenticated Arbitrary Modification via 'publishTasks' and 'unpublishTasks' AJAX Actions",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6804",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-11T05:16:34.000Z",
-        "contentSnippet": "The AI Chatbot & Workflow Automation by AIWU plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 1.4.12. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for unauth",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-8678 - MyParcel <= 4.25.1 - Missing Authorization to Authenticated (Subscriber+) Arbitrary Order Shipment Data Disclosure and Modification via wcmp_get_shipment_options and wcmp_save_shipment",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8678",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-11T04:17:26.000Z",
-        "contentSnippet": "The MyParcel plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 4.25.1. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, with subscrib",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
