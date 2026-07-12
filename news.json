@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-12T18:53:28.362Z",
+  "updatedAt": "2026-07-12T20:02:35.084Z",
   "generator": "rss",
   "feeds": {
     "cve": [
@@ -7,7 +7,7 @@
         "title": "CVE-2026-10668 - Host-triggerable control-endpoint wedge (DoS) in Nuvoton NuMaker HSUSBD UDC driver",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-10668",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-12T16:16:51.000Z",
+        "isoDate": "2026-07-12T17:16:24.000Z",
         "contentSnippet": "The Nuvoton NuMaker HSUSBD USB device-controller driver (drivers/usb/udc/udc_numaker.c) armed the control Data IN stage unconditionally (base->CEPTXCNT = len in numaker_hsusbd_ep_trigger). Because the HSUSBD hardware cannot disarm a control Data IN already armed for a previous tr",
         "cveScore": 2.4,
         "cveSeverity": "LOW"
@@ -16,7 +16,7 @@
         "title": "CVE-2026-10667 - SMP use-after-free in Zephyr `CONFIG_USERSPACE` dynamic kernel-object tracking, reachable from unprivileged user threads",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-10667",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-12T16:16:50.000Z",
+        "isoDate": "2026-07-12T17:16:24.000Z",
         "contentSnippet": "Zephyr's dynamic kernel-object tracking (kernel/userspace/userspace.c, formerly kernel/userspace.c) maintains a doubly-linked list (obj_list) of dynamically allocated kernel objects. Iteration over this list in k_object_wordlist_foreach() was performed under lists_lock using the ",
         "cveScore": 7.8,
         "cveSeverity": "HIGH"
@@ -25,7 +25,7 @@
         "title": "CVE-2026-10666 - Stack buffer overflow in `net_ipaddr_parse()` IPv4 address-with-port parsing in `subsys/net/ip/utils.c`",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-10666",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-12T16:16:50.000Z",
+        "isoDate": "2026-07-12T17:16:24.000Z",
         "contentSnippet": "parse_ipv4() in subsys/net/ip/utils.c (reached via net_ipaddr_parse() for strings of the form \"a.b.c.d:port\") copies the port substring into a fixed 17-byte stack buffer (char ipaddr[NET_IPV4_ADDR_LEN + 1]) using a length of str_len - end - 1, where str_len is the full, unbounded",
         "cveScore": 8.1,
         "cveSeverity": "HIGH"
@@ -34,7 +34,7 @@
         "title": "CVE-2026-10665 - Heap buffer overflow on WireGuard receive path via unbounded incoming packet length",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-10665",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-12T16:16:49.000Z",
+        "isoDate": "2026-07-12T17:16:24.000Z",
         "contentSnippet": "In Zephyr's WireGuard subsystem (subsys/net/lib/wireguard), wg_process_data_message() in wg_crypto.c linearizes an inbound transport-data payload into a fixed pool buffer of CONFIG_WIREGUARD_BUF_LEN bytes before decryption. The call net_buf_linearize(buf->data, data_len, pkt->buf",
         "cveScore": 7.4,
         "cveSeverity": "HIGH"
@@ -43,7 +43,7 @@
         "title": "CVE-2026-10664 - Out-of-bounds write in nRF70 Wi-Fi driver power-save event handler (unbounded TWT flow count)",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-10664",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-12T16:16:49.000Z",
+        "isoDate": "2026-07-12T17:16:24.000Z",
         "contentSnippet": "The nRF70 Wi-Fi driver's power-save event handler nrf_wifi_event_proc_get_power_save_info() in drivers/wifi/nrf_wifi/src/wifi_mgmt.c copied TWT (Target Wake Time) flow entries from an nrf_wifi_umac_event_power_save_info event into the fixed-size twt_flows[WIFI_MAX_TWT_FLOWS] (8-e",
         "cveScore": 5,
         "cveSeverity": "MEDIUM"
@@ -52,7 +52,7 @@
         "title": "CVE-2026-10663 - Use-after-free / double-free of the root USB device in the experimental USB host stack",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-10663",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-12T16:16:48.000Z",
+        "isoDate": "2026-07-12T17:16:23.000Z",
         "contentSnippet": "In Zephyr's experimental USB host stack (CONFIG_USB_HOST_STACK), usbh_device_disconnect() (subsys/usb/host/usbh_device.c) freed the root usb_device slab object without clearing the cached pointer ctx->root. The bus removal handler dev_removed_handler() (subsys/usb/host/usbh_core.",
         "cveScore": 6.1,
         "cveSeverity": "MEDIUM"
