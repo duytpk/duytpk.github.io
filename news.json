@@ -1,8 +1,188 @@
 {
-  "updatedAt": "2026-07-13T17:08:25.954Z",
+  "updatedAt": "2026-07-13T19:14:28.098Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-6875 - Sandbox Escape in ServiceNow AI Platform",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6875",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-13T18:17:27.000Z",
+        "contentSnippet": "ServiceNow has addressed a remote code execution vulnerability that was identified in the ServiceNow AI platform. This vulnerability could enable an unauthenticated user, in certain circumstances, to execute code within the ServiceNow platform. ServiceNow addressed this vulnerabi",
+        "cveScore": 9.5,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-61505 - Rejetto HFS < 3.2.1 Limited File Disclosure via Path Traversal in lang Parameter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61505",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-13T18:16:30.000Z",
+        "contentSnippet": "Rejetto HFS 3.0.0 through 3.2.0 allows path traversal through the lang query parameter, permitting a remote unauthenticated attacker to read certain JSON files outside the shared folders. Exploitation is constrained to files matching a narrow naming and format pattern, limiting p",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-61504 - Rejetto HFS < 3.2.1 Stored XSS via File Names in Basic Web Listing",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61504",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-13T18:16:30.000Z",
+        "contentSnippet": "Rejetto HFS 3.0.0 through 3.2.0 does not escape file names in its fallback \"basic\" web listing, and this listing can be forced by any browser via the ?get=basic parameter. A user with upload permission - or an anonymous user on servers with an open upload folder - can store a fil",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-61503 - Rejetto HFS < 3.2.1 Username Enumeration via Login Response Differences",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61503",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-13T18:16:30.000Z",
+        "contentSnippet": "Rejetto HFS 3.0.0 through 3.2.0 returns observably different responses from its login endpoint depending on whether the submitted username exists. A remote unauthenticated attacker can use this to confirm valid account names, including the default admin account, facilitating pass",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-61502 - Rejetto HFS < 3.2.1 Cross-Site Request Forgery via GET Requests",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61502",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-13T18:16:30.000Z",
+        "contentSnippet": "Rejetto HFS 3.0.0 through 3.2.0 accepts state-changing API requests via the GET method and exempts GET requests from its anti-CSRF header check. A remote attacker can perform administrative actions including account creation and configuration changes leading to code execution - b",
+        "cveScore": 5.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-61501 - Rejetto HFS < 3.2.1 Stored XSS in Admin Log Viewer",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61501",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-13T18:16:30.000Z",
+        "contentSnippet": "Rejetto HFS 3.0.0 through 3.2.0 renders log entries in the administration panel as HTML without sanitization. A remote unauthenticated attacker can submit a failed login with a crafted username that is written to the error log and executes JavaScript in an administrator's browser",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-61500 - Rejetto HFS < 3.2.1 Session Forgery via Predictable Signing Key",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61500",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-13T18:16:29.000Z",
+        "contentSnippet": "Rejetto HFS 3.0.0 through 3.2.0 derives its session-cookie signing key from the non-cryptographic Math.random() generator and discloses outputs of the same generator to unauthenticated clients during login. A remote attacker can collect a small number of login responses, reconstr",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-61463 - Shiori Authenticated Privilege Escalation via PATCH /api/v1/auth/account",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61463",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-13T18:16:29.000Z",
+        "contentSnippet": "Shiori contains a privilege escalation vulnerability in the account update endpoint that allows authenticated users to modify the owner field without authorization checks. Attackers can escalate to administrator by submitting a crafted PATCH request with owner: true, then re-auth",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-61462 - mcp-gitlab Path Traversal via job_id Parameter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61462",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-13T18:16:29.000Z",
+        "contentSnippet": "mcp-gitlab contains a path traversal vulnerability in the job_id parameter of build/index.js that allows attackers to redirect GitLab API requests to arbitrary endpoints. Attackers can supply crafted job_id values like ../../../user to escape the intended path prefix and access a",
+        "cveScore": 9.2,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-60103 - Blender 3.0.0 - 5.1.2 Out-of-Bounds Read via crafted .blend SDNA block",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-60103",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-13T18:16:29.000Z",
+        "contentSnippet": "Blender 3.0.0 through 5.1.2 contains an out-of-bounds read vulnerability that allows attackers to trigger a crash or read adjacent heap memory by supplying a crafted .blend file with a malicious signed short member_index value in the SDNA block. The member_index field is used as ",
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-53365 - vsock/virtio: fix zerocopy completion for multi-skb sends",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53365",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-13T18:16:28.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: vsock/virtio: fix zerocopy completion for multi-skb sends When a large message is fragmented into multiple skbs, the zerocopy uarg is only allocated and attached to the last skb in the loop. Non-final skbs carry ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53364 - Bluetooth: hci_conn: Fix memory leak in hci_le_big_terminate()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53364",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-13T18:16:28.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: Bluetooth: hci_conn: Fix memory leak in hci_le_big_terminate() hci_le_big_terminate() allocates iso_list_data via kzalloc_obj but returns 0 without freeing it when neither pa_sync_term nor big_sync_term flags are",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49972 - Laravel-Mediable < 7.0.0 File Upload RCE via Extension Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49972",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-13T18:16:02.000Z",
+        "contentSnippet": "Laravel-Mediable before 7.0.0 contains a file upload vulnerability that allows unauthenticated attackers to achieve remote code execution by uploading a file with an embedded PHP extension disguised within a double extension such as shell.php.jpg. The PATHINFO_FILENAME extraction",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-49971 - Laravel-Mediable < 7.0.0 Stored XSS via SVG File Upload",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49971",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-13T18:13:29.000Z",
+        "contentSnippet": "Laravel-Mediable before 7.0.0 contains a stored cross-site scripting vulnerability that allows authenticated or anonymous users to execute arbitrary JavaScript by uploading unsanitized SVG files containing embedded scripts in onload event handlers, script tags, or foreignObject e",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-49970 - Laravel-Mediable < 7.0.0 Path Traversal via File::sanitizePath()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49970",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-13T18:11:36.000Z",
+        "contentSnippet": "Laravel-Mediable before 7.0.0 contains a path traversal vulnerability in the File::sanitizePath() function that allows attackers to write uploaded files to arbitrary locations by controlling the directory argument passed to MediaUploader::toDestination(). Attackers can exploit th",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-49969 - Laravel-Mediable < 7.0.0 SSRF via RemoteUrlAdapter URL Handling",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49969",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-13T18:09:31.000Z",
+        "contentSnippet": "Laravel-Mediable before 7.0.0 contains a server-side request forgery vulnerability that allows remote attackers to issue arbitrary HTTP requests from the server by supplying unvalidated caller-controlled URLs to endpoints backed by MediaUploader::fromSource(). Attackers can craft",
+        "cveScore": 7.4,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-58228 - Scheme validation bypass in Phoenix.LiveView.Utils leads to XSS via",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58228",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-13T18:04:30.000Z",
+        "contentSnippet": "Cross-site scripting vulnerability in phoenixframework phoenix_live_view allows an attacker to bypass URL scheme validation and execute JavaScript in a victim's browser session. The Phoenix.LiveView.Utils.valid_destination!/2 and Phoenix.LiveView.Utils.valid_live_navigation_desti",
+        "cveScore": 5.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-57433 - Storable versions before 3.41 for Perl have a signed integer overflow when deserializing a crafted SX_HOOK record",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57433",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-13T17:17:55.000Z",
+        "contentSnippet": "Storable versions before 3.41 for Perl have a signed integer overflow when deserializing a crafted SX_HOOK record. retrieve_hook_common reads a signed 32-bit item count from an SX_HOOK record and calls av_extend with that count plus one. A count of I32_MAX wraps the addition to a",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-57432 - Perl versions through 5.43.10 have an integer overflow in S_measure_struct leading to an out-of-bounds heap read in pack and unpack",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57432",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-13T17:17:55.000Z",
+        "contentSnippet": "Perl versions through 5.43.10 have an integer overflow in S_measure_struct leading to an out-of-bounds heap read in pack and unpack. S_measure_struct adds each item's size times its repeat count to a running total with no overflow check, so a large repeat count in a pack or unpac",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-13221 - Perl versions through 5.43.9 produce silently incorrect regular expression matches when an alternation of more than 65535 fixed string branches is compiled into a trie in Perl_study_c",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13221",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-13T17:16:48.000Z",
+        "contentSnippet": "Perl versions through 5.43.9 produce silently incorrect regular expression matches when an alternation of more than 65535 fixed string branches is compiled into a trie in Perl_study_chunk. When such branches are combined into a trie, the delta between the first branch and the sha",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2026-61692 - Rejected reason: ** REJECT ** DO NOT USE THIS CAND",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-61692",
@@ -27,33 +207,6 @@
         "source": "cvefeed.io",
         "isoDate": "2026-07-13T16:16:41.000Z",
         "contentSnippet": "The Apache Airflow Git provider runs its git-over-SSH operations with `StrictHostKeyChecking=no` by default, disabling SSH host-key verification. An attacker who can intercept the network path between an Airflow worker and the Git server can impersonate the server (man-in-the-mid",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-13221 - Perl versions through 5.43.9 produce silently incorrect regular expression matches when an alternation of more than 65535 fixed string branches is compiled into a trie in Perl_study_c",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13221",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T15:40:11.000Z",
-        "contentSnippet": "Perl versions through 5.43.9 produce silently incorrect regular expression matches when an alternation of more than 65535 fixed string branches is compiled into a trie in Perl_study_chunk. When such branches are combined into a trie, the delta between the first branch and the sha",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-57432 - Perl versions through 5.43.10 have an integer overflow in S_measure_struct leading to an out-of-bounds heap read in pack and unpack",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57432",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T15:38:20.000Z",
-        "contentSnippet": "Perl versions through 5.43.10 have an integer overflow in S_measure_struct leading to an out-of-bounds heap read in pack and unpack. S_measure_struct adds each item's size times its repeat count to a running total with no overflow check, so a large repeat count in a pack or unpac",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-57433 - Storable versions before 3.41 for Perl have a signed integer overflow when deserializing a crafted SX_HOOK record",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57433",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T15:37:04.000Z",
-        "contentSnippet": "Storable versions before 3.41 for Perl have a signed integer overflow when deserializing a crafted SX_HOOK record. retrieve_hook_common reads a signed 32-bit item count from an SX_HOOK record and calls av_extend with that count plus one. A count of I32_MAX wraps the addition to a",
         "cveScore": 0,
         "cveSeverity": "NA"
       },
@@ -749,162 +902,37 @@
         "contentSnippet": "A security vulnerability has been detected in alioshr memory-bank-mcp up to 0.2.1/3.1. This affects an unknown part of the file list-project-files-validation-factory.ts. Such manipulation of the argument projectName leads to path traversal. Local access is required to approach th",
         "cveScore": 3.3,
         "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-15523 - CodeAstro Simple Online Leave Management System dashboard.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15523",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T03:16:16.000Z",
-        "contentSnippet": "A weakness has been identified in CodeAstro Simple Online Leave Management System 1.0. Affected by this issue is some unknown functionality of the file /SimpleOnlineLeave/admin/dashboard.php. This manipulation of the argument Name causes sql injection. The attack can be initiated",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-15522 - tugcantopaloglu godot-mcp run_project index.js validatePath path traversal",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15522",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T03:16:16.000Z",
-        "contentSnippet": "A security flaw has been discovered in tugcantopaloglu godot-mcp 2.0.0. Affected by this vulnerability is the function validatePath of the file build/index.js of the component run_project. The manipulation of the argument projectPath results in path traversal. Attacking locally i",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-15521 - makafeli n8n-workflow-builder update_node_from_file server.cjs path traversal",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15521",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T02:16:10.000Z",
-        "contentSnippet": "A vulnerability was identified in makafeli n8n-workflow-builder up to 0.11.0. Affected is an unknown function of the file build/server.cjs of the component update_node_from_file. The manipulation of the argument filePath leads to path traversal. An attack has to be approached loc",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-15520 - GNU LibreDWG R2004 Section Decompression decode.c decompress_R2004_section heap-based overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15520",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T02:16:10.000Z",
-        "contentSnippet": "A vulnerability was determined in GNU LibreDWG 0.13.4-154-g0b573035. This impacts the function decompress_R2004_section of the file src/decode.c of the component R2004 Section Decompression. Executing a manipulation can lead to heap-based buffer overflow. The attack requires loca",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-15519 - usestrix PyPI system_prompt.jinja inclusion of functionality from untrusted control sphere",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15519",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T02:16:09.000Z",
-        "contentSnippet": "A vulnerability was found in usestrix strix up to 1.0.2. This affects an unknown function of the file system_prompt.jinja of the component PyPI Handler. Performing a manipulation results in inclusion of functionality from untrusted control sphere. The attack is possible to be car",
-        "cveScore": 5.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-15551 - Samsung rlottie: Numeric truncation in gray_hline() leads to heap-based buffer overflow when rendering a crafted Lottie animation at native canvas size",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15551",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T01:17:05.000Z",
-        "contentSnippet": "Integer overflow or wraparound vulnerability in Samsung Open Source rlottie allows Overflow Buffers. This issue affects .",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-15518 - AREA 17 Twill CMS Media Library Insert FileLibraryController.php storeFile unrestricted upload",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15518",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T01:17:05.000Z",
-        "contentSnippet": "A vulnerability has been found in AREA 17 Twill CMS up to 3.6.0. The impacted element is the function FileLibraryController::storeFile of the file src/Http/Controllers/Admin/FileLibraryController.php of the component Media Library Insert Page. Such manipulation of the argument qq",
-        "cveScore": 5.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-15517 - Jinher OA PlanGiveOut.aspx sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15517",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T01:17:04.000Z",
-        "contentSnippet": "A flaw has been found in Jinher OA 1.0. The affected element is an unknown function of the file /C6/JHSoft.Web.PlanSummarize/PlanGiveOut.aspx. This manipulation of the argument httpOID causes sql injection. Remote exploitation of the attack is possible. The exploit has been publi",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-15516 - MacCMS Pro Installation Index.php step5 authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15516",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T01:17:04.000Z",
-        "contentSnippet": "A vulnerability was detected in MacCMS Pro up to 2022.1000.3005. Impacted is the function step5 of the file application/install/controller/Index.php of the component Installation Module. The manipulation results in authorization bypass. The attack may be launched remotely. The at",
-        "cveScore": 5.6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-15515 - Tencent PC Manager QMUDisk Driver qmudisk64.sys uncontrolled search path",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15515",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T01:17:04.000Z",
-        "contentSnippet": "A security vulnerability has been detected in Tencent PC Manager 18.1.30242.301. This issue affects some unknown processing in the library qmudisk64.sys of the component QMUDisk Driver. The manipulation leads to uncontrolled search path. The attack must be carried out locally. Th",
-        "cveScore": 7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-15514 - Metasoft 美特软件 MetaCRM PHPRPC Remote Call rpc.jsp RPCService.query sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15514",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T00:16:47.000Z",
-        "contentSnippet": "A weakness has been identified in Metasoft 美特软件 MetaCRM up to 6.4.0 Beta06. This vulnerability affects the function RPCService.query of the file /customizemt/xkq/rpc.jsp of the component PHPRPC Remote Call Interface. Executing a manipulation of the argument phprpc_args can lead t",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-15513 - Wavlink WL-NU516U1 adm.cgi wlink_uci_set_value os command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15513",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T00:16:47.000Z",
-        "contentSnippet": "A security flaw has been discovered in Wavlink WL-NU516U1 260515. This affects the function wlink_uci_set_value of the file /cgi-bin/adm.cgi. Performing a manipulation of the argument lan_ip results in os command injection. The attack can be initiated remotely. The exploit has be",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-15512 - pig-mesh Pig pig-codegen GeneratorServiceImpl.java code injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15512",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T00:16:47.000Z",
-        "contentSnippet": "A vulnerability was identified in pig-mesh Pig up to 3.9.2. Affected by this issue is some unknown functionality of the file \\pig-master\\pig-visual\\pig-codegen\\src\\main\\java\\com\\pig4cloud\\pig\\codegen\\service\\impl\\GeneratorServiceImpl.java of the component pig-codegen. Such manipu",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-15511 - Comfast CF-WR631AX V3 FastCGI Backend webmgnt system_wl_upload_pic_file os command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15511",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-12T23:16:38.000Z",
-        "contentSnippet": "A vulnerability was determined in Comfast CF-WR631AX V3 up to 2.7.0.8. Affected by this vulnerability is the function system_wl_upload_pic_file of the file /usr/bin/webmgnt of the component FastCGI Backend. This manipulation of the argument filename causes os command injection. I",
-        "cveScore": 10,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-15510 - Leantime API saveSetting improper authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15510",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-12T23:16:37.000Z",
-        "contentSnippet": "A vulnerability was found in Leantime up to 3.8.0. Affected is the function Setting::saveSetting of the component API. The manipulation results in improper authorization. The attack may be performed from remote. The exploit has been made public and could be used. The vendor was c",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-15509 - Leantime JSON-RPC Endpoint addUser improper authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15509",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-12T23:16:37.000Z",
-        "contentSnippet": "A vulnerability has been found in Leantime up to 3.8.0. This impacts the function editUser/addUser of the component JSON-RPC Endpoint. The manipulation of the argument role leads to improper authorization. The attack is possible to be carried out remotely. The exploit has been di",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-15508 - Helicone ai-gateway AWS Metadata Service service.rs build_target_url server-side request forgery",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15508",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-12T23:16:36.000Z",
-        "contentSnippet": "A flaw has been found in Helicone ai-gateway up to 0.2.0-beta.30. This affects the function build_target_url of the file ai-gateway/src/dispatcher/service.rs of the component AWS Metadata Service. Executing a manipulation of the argument extracted_path_and_query can lead to serve",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
+      {
+        "title": "Building a VideoAgent-Style Multi-Agent System: Intent Parsing, Graph Planning, and Tool Routing for Video Editing Tasks",
+        "link": "https://www.marktechpost.com/2026/07/13/building-a-videoagent-style-multi-agent-system-intent-parsing-graph-planning-and-tool-routing-for-video-editing-tasks/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-07-13T18:30:30.000Z",
+        "contentSnippet": "In this tutorial, we reconstruct the VideoAgent workflow as a runnable, API-key-free multi-agent pipeline. We build an intent parser, an agent library, a tool router, a graph planner, and a textual-gradient optimizer that repairs the execution graph. We wire these planning compon"
+      },
+      {
+        "title": "When your brain works differently, AI isn’t a luxury—it’s accessibility",
+        "link": "https://aws.amazon.com/blogs/machine-learning/when-your-brain-works-differently-ai-isnt-a-luxury-its-accessibility/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-07-13T17:50:16.000Z",
+        "contentSnippet": "In this post, I share how AI serves as an accessibility tool for neurodivergent professionals. The system is built on Amazon Quick on your desktop, an AI-powered desktop and web assistant that compensates for executive function gaps every day."
+      },
+      {
+        "title": "Building an agentic AI solution at Bluesight with Amazon Bedrock",
+        "link": "https://aws.amazon.com/blogs/machine-learning/building-an-agentic-ai-solution-at-bluesight-with-amazon-bedrock/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-07-13T17:34:38.000Z",
+        "contentSnippet": "In this post, we describe how Bluesight used two AWS engagements and Amazon Bedrock AgentCore to evolve from a single-product AI prototype to Prism, a unified agentic AI solution spanning six healthcare compliance products. Prism Assistant for ControlCheck launched in May 2026 an"
+      },
+      {
+        "title": "Implement on-behalf-of token exchange for multi-tenant agents with Amazon Bedrock AgentCore Gateway",
+        "link": "https://aws.amazon.com/blogs/machine-learning/implement-on-behalf-of-token-exchange-for-multi-tenant-agents-with-amazon-bedrock-agentcore-gateway/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-07-13T17:27:40.000Z",
+        "contentSnippet": "Building multi-tenant agents with Amazon Bedrock AgentCore and Apply fine-grained access control with Bedrock AgentCore Gateway interceptors establish the conceptual foundation for on-behalf-of (OBO) token exchange in agentic systems. This post is the implementation guide. It wal"
+      },
       {
         "title": "Launching UI for generative AI inference recommendations in Amazon SageMaker AI",
         "link": "https://aws.amazon.com/blogs/machine-learning/launching-ui-for-generative-ai-inference-recommendations-in-amazon-sagemaker-ai/",
@@ -1576,34 +1604,6 @@
         "source": "MarkTechPost",
         "isoDate": "2026-07-01T07:48:59.000Z",
         "contentSnippet": "Google Research has released TabFM, a foundation model for tabular data. It performs zero-shot classification and regression through in-context learning. Predictions come from a single forward pass, with no per-dataset training, hyperparameter tuning, or feature engineering. The "
-      },
-      {
-        "title": "CUP (Common Useful Python): Building Reliable Python Workflows with Baidu’s Utility Toolkit",
-        "link": "https://www.marktechpost.com/2026/06/30/cup-common-useful-python-building-reliable-python-workflows-with-baidus-utility-toolkit/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-07-01T06:03:21.000Z",
-        "contentSnippet": "In this tutorial, we explore CUP, Baidu's Common Useful Python library, as a practical utility toolkit for stronger Python workflows. We install it in a Colab-friendly environment and walk its subsystems step by step. We cover logging, decorators, nested configuration, caching, I"
-      },
-      {
-        "title": "Safely Releasing Frontier Models to Customers",
-        "link": "https://aws.amazon.com/blogs/machine-learning/safely-releasing-frontier-models-to-customers/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-07-01T03:13:19.000Z",
-        "contentSnippet": "It’s our goal for AWS to be the most secure place to run any workload, and in support of that we’ve been deeply investing in security across our services since AWS's inception more than two decades ago. Our AI services like Amazon Bedrock are built on this foundation and with the"
-      },
-      {
-        "title": "Linq’s iMessage Apps Bring Payments, Tickets, Flights, and Games Into the iMessage Bubble Through the imessage_app Part",
-        "link": "https://www.marktechpost.com/2026/06/30/linqs-imessage-apps/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-06-30T22:17:56.000Z",
-        "contentSnippet": "Linq launches iMessage Apps: interactive imessage_app cards that run payments, tickets, flights, and games inside the iMessage thread for agents. The post Linq’s iMessage Apps Bring Payments, Tickets, Flights, and Games Into the iMessage Bubble Through the imessage_app Part appea"
-      },
-      {
-        "title": "Anthropic Claude Sonnet 5 vs Sonnet 4.6 vs Opus 4.8: Agentic Coding Benchmarks, API Pricing, and Cost-Performance Tradeoffs Compared",
-        "link": "https://www.marktechpost.com/2026/06/30/anthropic-claude-sonnet-5-vs-sonnet-4-6-vs-opus-4-8-agentic-coding-benchmarks-api-pricing-and-cost-performance-tradeoffs-compared/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-06-30T21:37:40.000Z",
-        "contentSnippet": "Anthropic's Claude Sonnet 5 narrows the gap to Opus 4.8 on agentic coding, at cheaper Sonnet token pricing. The post Anthropic Claude Sonnet 5 vs Sonnet 4.6 vs Opus 4.8: Agentic Coding Benchmarks, API Pricing, and Cost-Performance Tradeoffs Compared appeared first on MarkTechPost"
       }
     ],
     "virtualization": [
@@ -2253,6 +2253,41 @@
       }
     ],
     "hardware": [
+      {
+        "title": "Podcast #150: HPE Alletra Storage MP B10000: Meeting Cyber Attacks Head-On",
+        "link": "https://www.storagereview.com/podcast/podcast-150-hpe-alletra-storage-mp-b10000-meeting-cyber-attacks-head-on",
+        "source": "StorageReview",
+        "isoDate": "2026-07-13T18:53:38.000Z",
+        "contentSnippet": "Brian connected with HPE’s Dan Gardner to follow up on HPE Discover and go into more detail on the HPE Alletra Storage MP B10000. Dan is the Senior Technical Marketing Engineer at Hewlett Packard Enterprise and considers himself a security nerd. Dan joined HP in 2017 in hardware "
+      },
+      {
+        "title": "Amazon Prime members can get this Asus RTX 5060 for just $2 above MSRP — upgrade to Blackwell gaming power for less than the cost of an RTX 3060",
+        "link": "https://www.tomshardware.com/pc-components/gpus/amazon-prime-members-can-get-this-asus-rtx-5060-for-just-usd2-above-msrp-upgrade-to-blackwell-gaming-power-for-less-than-the-cost-of-an-rtx-3060",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-07-13T18:53:10.000Z",
+        "contentSnippet": "Amazon is giving some Prime customers a deep discount on Asus's Prime RTX 5060 8GB OC, bringing its price to just $2 above MSRP and beating the Prime Day deals we saw on these cards."
+      },
+      {
+        "title": "Tesla's AI5 with 2nm-class node tapes out at Samsung Foundry — production starts soon, months after TSMC tape out",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/teslas-ai5-with-2nm-class-node-tapes-out-at-samsung-foundry-production-starts-soon-months-after-tsmc-tape-out",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-07-13T17:59:55.000Z",
+        "contentSnippet": "Samsung Foundry soon to join TSMC in production of Tesla's AI5 processor, a LinkedIn post reveals."
+      },
+      {
+        "title": "Upcoming MSI Afterburner update adds heatmap to V/F curve editor to show your GPU's boosting behavior — new feature shoots for better overclocks with more data",
+        "link": "https://www.tomshardware.com/pc-components/gpus/upcoming-msi-afterburner-update-adds-heatmap-to-v-f-curve-editor-to-show-your-gpus-boosting-behavior-new-feature-shoots-for-better-overclocks-with-more-data",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-07-13T17:39:47.000Z",
+        "contentSnippet": "MSI Afterburner is soon getting a new heatmap in its V/F curve editor that shows the GPU's boosting behavior in real workloads."
+      },
+      {
+        "title": "Micron commits $500 million to GlobalWafers' Texas wafer plant as it raises U.S. spending to $250 billion — memory maker aims to manufacture 40% of DRAM in the US by 2035",
+        "link": "https://www.tomshardware.com/tech-industry/semiconductors/micron-commits-500-million-to-globalwafers-texas-wafer-plant-as-it-raises-us-spending-to-250-billion",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-07-13T17:09:27.000Z",
+        "contentSnippet": "Running until 2035, the $250 billion spending target is attached to a goal of making 40% of Micron's DRAM in the U.S. by the mid-2030s."
+      },
       {
         "title": "DDN and Nebul Validate KV Cache Acceleration for NVIDIA-Based AI Factories",
         "link": "https://www.storagereview.com/news/ddn-and-nebul-validate-kv-cache-acceleration-for-nvidia-based-ai-factories",
@@ -2917,41 +2952,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-07-08T11:00:00.000Z",
         "contentSnippet": "Nvidia lifts the veil a little bit more on its Vera CPU and reveals a single-thread performance monster — company claims a 1.8x uplift versus x86 competition in agentic workloads and 1.5x in coding."
-      },
-      {
-        "title": "Arrest and extradition of Scattered Spider hacker shines light on how Windows telemetry GDIDs can identify and track users — Microsoft device identifier is just one digital fingerprint in a software w",
-        "link": "https://www.tomshardware.com/tech-industry/cyber-security/arrest-and-extradition-of-scattered-spider-hacker-shines-light-on-how-windows-telemetry-gdids-can-identify-users-microsoft-device-identifier-is-just-one-digital-fingerprint-in-a-software-world-rife-with-them",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-08T10:30:00.000Z",
-        "contentSnippet": "While the use of Windows' GDID to catch Scattered Spider hacking group member Peter Stokes is unusual, that device identifier is only one bit of telemetry that can be used to fingerprint a user across the wider Internet these days."
-      },
-      {
-        "title": "Space Force gets first mobile high-powered electromagnetic beam weapon to cripple enemy satellites — plans to deploy 32 ‘Meadowlands’ units to detect, deny, disrupt, and degrade hostile space assets",
-        "link": "https://www.tomshardware.com/tech-industry/space/space-force-gets-first-mobile-high-powered-electromagnetic-beam-weapon-to-cripple-enemy-satellites-plans-to-deploy-32-meadowlands-units-to-detect-deny-disrupt-and-degrade-hostile-space-assets",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-08T10:00:00.000Z",
-        "contentSnippet": "Space Force has announced that the first high-energy 'Meadowlands' electronic warfare system has been delivered for operational duty."
-      },
-      {
-        "title": "Unannounced Nvidia RTX 50 Super GPUs appear in Seasonic PSU calculator — unreleased graphics cards shown with 10-17% higher TGP over original models",
-        "link": "https://www.tomshardware.com/pc-components/gpus/unannounced-nvidia-rtx-50-super-gpus-appear-in-seasonic-psu-calculator-unreleased-graphics-cards-shown-with-10-17-percent-higher-tgp-over-original-models",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-07T21:34:05.000Z",
-        "contentSnippet": "Total graphics power figures for Nvidia's unanounced, unreleased RTX 50 Super-series graphics cards have appeared in Seasonic's PSU capacity calculator, revealing potentially higher TGPs of those products."
-      },
-      {
-        "title": "South Korea's $880 billion chip and AI plan faces big power and water challenges — a single megacluster requires a quarter of Seoul's total power demand",
-        "link": "https://www.tomshardware.com/tech-industry/power-and-water-lag-the-fabs-in-south-koreas-880-billion-chip-and-ai-plan",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-07T17:27:41.000Z",
-        "contentSnippet": "The ₩1,350 trillion total combines a $520 billion semiconductor program with AI data center and robotics spending, mostly made up of corporate capex."
-      },
-      {
-        "title": "Ubiquiti UniFi E7 and E7 Campus Review: 10-Stream WiFi 7 With 10GbE From $499",
-        "link": "https://www.storagereview.com/review/ubiquiti-unifi-e7-and-e7-campus-review-10-stream-wifi-7-with-10gbe-from-499",
-        "source": "StorageReview",
-        "isoDate": "2026-07-07T17:19:24.000Z",
-        "contentSnippet": "Ubiquiti continues to expand into the enterprise wireless market with the introduction of the UniFi E7 and E7-Campus, two flagship WiFi 7 access points designed for high-density, high-performance deployments. Built around a 10-stream tri-band radio architecture, 10GbE connectivit"
       }
     ]
   }
