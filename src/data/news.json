@@ -1,16 +1,232 @@
 {
-  "updatedAt": "2026-07-14T22:49:26.655Z",
+  "updatedAt": "2026-07-14T23:43:23.812Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
+        "title": "CVE-2026-59733 - rclone `serve restic --private-repos` authorization bypass: `..` in the URL path lets an authenticated user read, overwrite and delete other users' repositories",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59733",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T22:17:30.000Z",
+        "contentSnippet": "Rclone is a command-line program to sync files and directories to and from different cloud storage providers. Prior to 1.74.4, rclone serve restic --private-repos enforces authorization using the routed user path segment while building the backend object key from the raw uncleane",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-59732 - rclone archive extract allows S3 destination prefix escape via crafted archive paths",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59732",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T22:17:29.000Z",
+        "contentSnippet": "Rclone is a command-line program to sync files and directories to and from different cloud storage providers. Prior to 1.74.4, rclone archive extract can write extracted files outside the user-selected destination prefix when extracting a crafted archive containing parent path co",
+        "cveScore": 5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
         "title": "CVE-2026-54684 - jadx: XAPK archive entries with absolute paths can plant drop-in plugins and achieve code execution on the next jadx run",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-54684",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-14T21:46:29.000Z",
+        "isoDate": "2026-07-14T22:17:16.000Z",
         "contentSnippet": "jadx is a Dex to Java decompiler. From 1.5.2 to 1.5.5, a malicious .xapk file can cause jadx to write attacker-controlled archive entry contents outside the intended XAPK plugin temporary unpack directory because XApkLoader resolves each entry name directly with tmpDir.resolve(fi",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-54572 - rclone: Unvalidated symlink target in local `--links` — arbitrary file write from an untrusted remote",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54572",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T22:17:16.000Z",
+        "contentSnippet": "Rclone is a command-line program to sync files and directories to and from different cloud storage providers. Prior to 1.74.4, with -l/--links, rclone serializes symlinks as .rclonelink text objects and recreates them on a local destination without validating the target, allowing",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-50130 - Pi-hole: Local privilege escalation from `pihole` user to root via `/etc/pihole/logrotate`",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50130",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T22:17:13.000Z",
+        "contentSnippet": "Pi-hole is a DNS sinkhole that protects devices from unwanted content without installing any client-side software. From 6.0 to 6.4.2, a user with code execution as the unprivileged pihole user can escalate to root by replacing /etc/pihole/logrotate. The replacement is laundered t",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-49981 - Twig: Sandbox filter, tag and function allow-list bypass when sandbox state changes between renders for a cached `Template`",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49981",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T22:17:13.000Z",
+        "contentSnippet": "Twig is a template language for PHP. Prior to 3.27.0, the per-template filter, tag, and function allow-list verdict is computed when a Template instance is constructed and can remain cached after sandbox state changes between renders, allowing a later sandboxed render to reuse a ",
+        "cveScore": 6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-48808 - Twig: Sandbox property allowlist bypass via the `column` filter under `SourcePolicyInterface`",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48808",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T22:17:05.000Z",
+        "contentSnippet": "Twig is a template language for PHP. Prior to 3.27.0, the column filter passes the active sandbox state as a boolean but does not forward the current Source to SandboxExtension::checkPropertyAllowed(), so SourcePolicyInterface decisions are lost and a template author can read pub",
+        "cveScore": 6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-48807 - Twig: Sandbox `__toString()` policy bypass via `Traversable` in `join` and `replace` filters",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48807",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T22:17:05.000Z",
+        "contentSnippet": "Twig is a template language for PHP. Prior to 3.27.0, the sandbox __toString() checks do not fully cover Traversable values passed to join and replace filters or operands evaluated by the in and not in operators, allowing contained Stringable objects to be coerced to strings with",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-48806 - Twig: Sandbox `__toString()` policy bypass via dynamic mapping keys",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48806",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T22:17:04.000Z",
+        "contentSnippet": "Twig is a template language for PHP. Prior to 3.27.0, ArrayExpression does not guard dynamic mapping keys that are coerced to strings, allowing PHP to invoke __toString() on a Stringable object used as a mapping key without calling SandboxExtension::ensureToStringAllowed(). This ",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-48805 - Twig: Sandbox state regression in deprecated internal wrappers in `src/Resources/core.php`",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48805",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T22:17:04.000Z",
+        "contentSnippet": "Twig is a template language for PHP. Prior to 3.27.0, deprecated internal wrappers in src/Resources/core.php do not forward the current sandbox state to CoreExtension::checkArrow(), arraySome(), and arrayEvery(), allowing legacy calls such as twig_array_some(), twig_array_every()",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-48357 - CAI Content Credentials | Uncontrolled Resource Consumption (CWE-400)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48357",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T22:17:02.000Z",
+        "contentSnippet": "CAI Content Credentials is affected by an Uncontrolled Resource Consumption vulnerability that could lead to application denial-of-service. An attacker could exploit this vulnerability to exhaust system resources, resulting in an application denial-of-service condition. Exploitat",
+        "cveScore": 6.2,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-48354 - CAI Content Credentials | Integer Overflow or Wraparound (CWE-190)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48354",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T22:17:02.000Z",
+        "contentSnippet": "CAI Content Credentials is affected by an Integer Overflow or Wraparound vulnerability that could result in an application denial-of-service. An attacker could exploit this vulnerability to crash the application, leading to a denial-of-service condition. Exploitation of this issu",
+        "cveScore": 6.2,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-48353 - CAI Content Credentials | Improper Input Validation (CWE-20)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48353",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T22:17:02.000Z",
+        "contentSnippet": "CAI Content Credentials is affected by an Improper Input Validation vulnerability that could lead to arbitrary file system read. An attacker could exploit this vulnerability to access sensitive files and directories outside the intended access scope. Exploitation of this issue re",
+        "cveScore": 5.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-48352 - CAI Content Credentials | Improper Input Validation (CWE-20)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48352",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T22:17:02.000Z",
+        "contentSnippet": "CAI Content Credentials is affected by an Improper Input Validation vulnerability that could result in an application denial-of-service. An attacker could exploit this vulnerability to crash the application, leading to a denial-of-service condition. Exploitation of this issue doe",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-48351 - CAI Content Credentials | Improper Input Validation (CWE-20)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48351",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T22:17:02.000Z",
+        "contentSnippet": "CAI Content Credentials is affected by an Improper Input Validation vulnerability that could result in an application denial-of-service. An attacker could exploit this vulnerability to crash the application, leading to a denial-of-service condition. Exploitation of this issue doe",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-48337 - Illustrator | Out-of-bounds Write (CWE-787)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48337",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T22:17:02.000Z",
+        "contentSnippet": "Illustrator is affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-48336 - Illustrator | Out-of-bounds Write (CWE-787)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48336",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T22:17:01.000Z",
+        "contentSnippet": "Illustrator is affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-48335 - Illustrator | Out-of-bounds Write (CWE-787)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48335",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T22:17:01.000Z",
+        "contentSnippet": "Illustrator is affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-48334 - Illustrator | Improper Input Validation (CWE-20)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48334",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T22:17:01.000Z",
+        "contentSnippet": "Illustrator is affected by an Improper Input Validation vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. Scope is changed.",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-48312 - CAI Content Credentials | Improper Input Validation (CWE-20)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48312",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T22:17:01.000Z",
+        "contentSnippet": "CAI Content Credentials is affected by an Improper Input Validation vulnerability that could result in a Security feature bypass. An attacker could leverage this vulnerability to bypass security measures and gain unauthorized write access. Exploitation of this issue does not requ",
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-48302 - CAI Content Credentials | Improper Input Validation (CWE-20)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48302",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T22:17:01.000Z",
+        "contentSnippet": "CAI Content Credentials is affected by an Improper Input Validation vulnerability that could result in an application denial-of-service. An attacker could exploit this vulnerability to crash the application, leading to a denial-of-service condition. Exploitation of this issue doe",
+        "cveScore": 6.2,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-48298 - CAI Content Credentials | Integer Underflow (Wrap or Wraparound) (CWE-191)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48298",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T22:17:01.000Z",
+        "contentSnippet": "CAI Content Credentials is affected by an Integer Underflow (Wrap or Wraparound) vulnerability that could result in an application denial-of-service. An attacker could exploit this vulnerability to crash the application, leading to a denial-of-service condition. Exploitation of t",
+        "cveScore": 6.2,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-48296 - CAI Content Credentials | Integer Underflow (Wrap or Wraparound) (CWE-191)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48296",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T22:17:01.000Z",
+        "contentSnippet": "CAI Content Credentials is affected by an Integer Underflow (Wrap or Wraparound) vulnerability that could result in an application denial-of-service. An attacker could exploit this vulnerability to crash the application, leading to a denial-of-service condition. Exploitation of t",
+        "cveScore": 6.2,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-48295 - CAI Content Credentials | Insufficiently Protected Credentials (CWE-522)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48295",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T22:17:00.000Z",
+        "contentSnippet": "CAI Content Credentials is affected by an Insufficiently Protected Credentials vulnerability that could result in disclosure of sensitive information. An attacker could leverage this vulnerability to gain unauthorized read access. Exploitation of this issue does not require user ",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-48290 - CAI Content Credentials | Server-Side Request Forgery (SSRF) (CWE-918)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48290",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T22:17:00.000Z",
+        "contentSnippet": "CAI Content Credentials is affected by a Server-Side Request Forgery (SSRF) vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to inject malicious scripts into a web page, potentially gainin",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-42447 - jadx: HTML Injection in Summary panel",
@@ -31,24 +247,6 @@
         "cveSeverity": "NA"
       },
       {
-        "title": "CVE-2026-59733 - rclone `serve restic --private-repos` authorization bypass: `..` in the URL path lets an authenticated user read, overwrite and delete other users' repositories",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59733",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-14T21:38:37.000Z",
-        "contentSnippet": "Rclone is a command-line program to sync files and directories to and from different cloud storage providers. Prior to 1.74.4, rclone serve restic --private-repos enforces authorization using the routed user path segment while building the backend object key from the raw uncleane",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-54572 - rclone: Unvalidated symlink target in local `--links` — arbitrary file write from an untrusted remote",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54572",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-14T21:37:41.000Z",
-        "contentSnippet": "Rclone is a command-line program to sync files and directories to and from different cloud storage providers. Prior to 1.74.4, with -l/--links, rclone serializes symlinks as .rclonelink text objects and recreates them on a local destination without validating the target, allowing",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
         "title": "CVE-2026-21840 - HCL BigFix Platform is affected by a user enumeration vulnerability",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-21840",
         "source": "cvefeed.io",
@@ -58,60 +256,6 @@
         "cveSeverity": "LOW"
       },
       {
-        "title": "CVE-2026-59732 - rclone archive extract allows S3 destination prefix escape via crafted archive paths",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59732",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-14T21:36:21.000Z",
-        "contentSnippet": "Rclone is a command-line program to sync files and directories to and from different cloud storage providers. Prior to 1.74.4, rclone archive extract can write extracted files outside the user-selected destination prefix when extracting a crafted archive containing parent path co",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-50130 - Pi-hole: Local privilege escalation from `pihole` user to root via `/etc/pihole/logrotate`",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50130",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-14T21:35:00.000Z",
-        "contentSnippet": "Pi-hole is a DNS sinkhole that protects devices from unwanted content without installing any client-side software. From 6.0 to 6.4.2, a user with code execution as the unprivileged pihole user can escalate to root by replacing /etc/pihole/logrotate. The replacement is laundered t",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-48295 - CAI Content Credentials | Insufficiently Protected Credentials (CWE-522)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48295",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-14T21:33:01.000Z",
-        "contentSnippet": "CAI Content Credentials is affected by an Insufficiently Protected Credentials vulnerability that could result in disclosure of sensitive information. An attacker could leverage this vulnerability to gain unauthorized read access. Exploitation of this issue does not require user ",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-48290 - CAI Content Credentials | Server-Side Request Forgery (SSRF) (CWE-918)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48290",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-14T21:33:01.000Z",
-        "contentSnippet": "CAI Content Credentials is affected by a Server-Side Request Forgery (SSRF) vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to inject malicious scripts into a web page, potentially gainin",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-48357 - CAI Content Credentials | Uncontrolled Resource Consumption (CWE-400)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48357",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-14T21:33:00.000Z",
-        "contentSnippet": "CAI Content Credentials is affected by an Uncontrolled Resource Consumption vulnerability that could lead to application denial-of-service. An attacker could exploit this vulnerability to exhaust system resources, resulting in an application denial-of-service condition. Exploitat",
-        "cveScore": 6.2,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-48296 - CAI Content Credentials | Integer Underflow (Wrap or Wraparound) (CWE-191)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48296",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-14T21:32:59.000Z",
-        "contentSnippet": "CAI Content Credentials is affected by an Integer Underflow (Wrap or Wraparound) vulnerability that could result in an application denial-of-service. An attacker could exploit this vulnerability to crash the application, leading to a denial-of-service condition. Exploitation of t",
-        "cveScore": 6.2,
-        "cveSeverity": "MEDIUM"
-      },
-      {
         "title": "CVE-2026-48287 - CAI Content Credentials | Untrusted Search Path (CWE-426)",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-48287",
         "source": "cvefeed.io",
@@ -119,69 +263,6 @@
         "contentSnippet": "CAI Content Credentials is affected by an Untrusted Search Path vulnerability that could result in arbitrary code execution in the context of the current user. Exploit depends on conditions beyond the attacker's control. Exploitation of this issue requires user interaction in tha",
         "cveScore": 7.4,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-48312 - CAI Content Credentials | Improper Input Validation (CWE-20)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48312",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-14T21:32:58.000Z",
-        "contentSnippet": "CAI Content Credentials is affected by an Improper Input Validation vulnerability that could result in a Security feature bypass. An attacker could leverage this vulnerability to bypass security measures and gain unauthorized write access. Exploitation of this issue does not requ",
-        "cveScore": 6.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-48351 - CAI Content Credentials | Improper Input Validation (CWE-20)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48351",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-14T21:32:57.000Z",
-        "contentSnippet": "CAI Content Credentials is affected by an Improper Input Validation vulnerability that could result in an application denial-of-service. An attacker could exploit this vulnerability to crash the application, leading to a denial-of-service condition. Exploitation of this issue doe",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-48302 - CAI Content Credentials | Improper Input Validation (CWE-20)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48302",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-14T21:32:56.000Z",
-        "contentSnippet": "CAI Content Credentials is affected by an Improper Input Validation vulnerability that could result in an application denial-of-service. An attacker could exploit this vulnerability to crash the application, leading to a denial-of-service condition. Exploitation of this issue doe",
-        "cveScore": 6.2,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-48354 - CAI Content Credentials | Integer Overflow or Wraparound (CWE-190)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48354",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-14T21:32:55.000Z",
-        "contentSnippet": "CAI Content Credentials is affected by an Integer Overflow or Wraparound vulnerability that could result in an application denial-of-service. An attacker could exploit this vulnerability to crash the application, leading to a denial-of-service condition. Exploitation of this issu",
-        "cveScore": 6.2,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-48298 - CAI Content Credentials | Integer Underflow (Wrap or Wraparound) (CWE-191)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48298",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-14T21:32:54.000Z",
-        "contentSnippet": "CAI Content Credentials is affected by an Integer Underflow (Wrap or Wraparound) vulnerability that could result in an application denial-of-service. An attacker could exploit this vulnerability to crash the application, leading to a denial-of-service condition. Exploitation of t",
-        "cveScore": 6.2,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-48352 - CAI Content Credentials | Improper Input Validation (CWE-20)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48352",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-14T21:32:54.000Z",
-        "contentSnippet": "CAI Content Credentials is affected by an Improper Input Validation vulnerability that could result in an application denial-of-service. An attacker could exploit this vulnerability to crash the application, leading to a denial-of-service condition. Exploitation of this issue doe",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-48353 - CAI Content Credentials | Improper Input Validation (CWE-20)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48353",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-14T21:32:53.000Z",
-        "contentSnippet": "CAI Content Credentials is affected by an Improper Input Validation vulnerability that could lead to arbitrary file system read. An attacker could exploit this vulnerability to access sensitive files and directories outside the intended access scope. Exploitation of this issue re",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-45363 - `jwt` (Ruby gem) - empty-key HMAC bypass",
@@ -198,33 +279,6 @@
         "source": "cvefeed.io",
         "isoDate": "2026-07-14T21:30:08.000Z",
         "contentSnippet": "A weakness has been identified in mastergo-design mastergo-magic-mcp up to 0.2.0. Impacted is the function z.string of the file src/tools/get-component-link.ts of the component mcp__getComponentLink. Executing a manipulation of the argument url can lead to server-side request for",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-48807 - Twig: Sandbox `__toString()` policy bypass via `Traversable` in `join` and `replace` filters",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48807",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-14T21:29:15.000Z",
-        "contentSnippet": "Twig is a template language for PHP. Prior to 3.27.0, the sandbox __toString() checks do not fully cover Traversable values passed to join and replace filters or operands evaluated by the in and not in operators, allowing contained Stringable objects to be coerced to strings with",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-48806 - Twig: Sandbox `__toString()` policy bypass via dynamic mapping keys",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48806",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-14T21:28:08.000Z",
-        "contentSnippet": "Twig is a template language for PHP. Prior to 3.27.0, ArrayExpression does not guard dynamic mapping keys that are coerced to strings, allowing PHP to invoke __toString() on a Stringable object used as a mapping key without calling SandboxExtension::ensureToStringAllowed(). This ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-48808 - Twig: Sandbox property allowlist bypass via the `column` filter under `SourcePolicyInterface`",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48808",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-14T21:27:21.000Z",
-        "contentSnippet": "Twig is a template language for PHP. Prior to 3.27.0, the column filter passes the active sandbox state as a boolean but does not forward the current Source to SandboxExtension::checkPropertyAllowed(), so SourcePolicyInterface decisions are lost and a template author can read pub",
         "cveScore": 0,
         "cveSeverity": "NA"
       },
@@ -847,60 +901,6 @@
         "isoDate": "2026-07-14T18:18:42.000Z",
         "contentSnippet": "Heap-based buffer overflow in Windows Media allows an unauthorized attacker to execute code locally.",
         "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-58541 - Microsoft DWM Core Library Elevation of Privilege Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58541",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-14T18:18:41.000Z",
-        "contentSnippet": "Access of resource using incompatible type ('type confusion') in Windows DWM allows an authorized attacker to elevate privileges locally.",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2025-12012 - CompactLogix ®, ControlLogix ®, Compact GuardLogix ® and GuardLogix ® Buffer Overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-12012",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-14T15:04:18.000Z",
-        "contentSnippet": "A denial-of-service issue exists in 5380/5480/5580 controllers. This vulnerability could potentially allow a malicious user to write invalid file data to the controller, causing the device to enter a major non-recoverable fault (MNRF).",
-        "cveScore": 9.2,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2025-12011 - CompactLogix ®, ControlLogix ®, Compact GuardLogix ® and GuardLogix ® Buffer Overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-12011",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-14T15:03:11.000Z",
-        "contentSnippet": "A denial-of-service issue exists in 5370/5570 controllers. This vulnerability could potentially allow a remote user to load an invalid project, causing the device to enter a major non-recoverable fault (MNRF).",
-        "cveScore": 9.2,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-15265 - Tenable Agent Path Traversal Leading to Remote Code Execution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15265",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-14T15:02:37.000Z",
-        "contentSnippet": "A path traversal vulnerability in Tenable Agent 11.2.0 and 11.1.3 and lower allows a privileged attacker to write arbitrary files outside the intended plugin directory, potentially leading to remote code execution.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-10714 - Rockwell Automation FactoryTalk® Services Platform FTSP - Weak Authentication via JWT Validation Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10714",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-14T15:02:09.000Z",
-        "contentSnippet": "A security issue exists within FactoryTalk® Services Platform (FTSP), allowing an attacker to bypass JWT signature validation during Okta Web Authentication. The vulnerability stems from the application not verifying that the JWT algorithm is configured for RSA, enabling an attac",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-10672 - Unterminated URI buffer causes out-of-bounds read in LwM2M firmware pull (Package URI)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10672",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-14T15:02:04.000Z",
-        "contentSnippet": "subsys/net/lib/lwm2m/lwm2m_pull_context.c copied the firmware-update Package URI into a fixed static buffer (context.uri, size CONFIG_LWM2M_SWMGMT_PACKAGE_URI_LEN, default 128) with memcpy(context.uri, uri, LWM2M_PACKAGE_URI_LEN), copying exactly the destination size with no leng",
-        "cveScore": 8.2,
         "cveSeverity": "HIGH"
       }
     ],
