@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-07-14T13:13:12.339Z",
+  "updatedAt": "2026-07-14T15:17:50.967Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2025-12012 - CompactLogix ®, ControlLogix ®, Compact GuardLogix ® and GuardLogix ® Buffer Overflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-12012",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T15:04:18.000Z",
+        "contentSnippet": "A denial-of-service issue exists in 5380/5480/5580 controllers. This vulnerability could potentially allow a malicious user to write invalid file data to the controller, causing the device to enter a major non-recoverable fault (MNRF).",
+        "cveScore": 9.2,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2025-12011 - CompactLogix ®, ControlLogix ®, Compact GuardLogix ® and GuardLogix ® Buffer Overflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-12011",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T15:03:11.000Z",
+        "contentSnippet": "A denial-of-service issue exists in 5370/5570 controllers. This vulnerability could potentially allow a remote user to load an invalid project, causing the device to enter a major non-recoverable fault (MNRF).",
+        "cveScore": 9.2,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-15265 - Tenable Agent Path Traversal Leading to Remote Code Execution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15265",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T15:02:37.000Z",
+        "contentSnippet": "A path traversal vulnerability in Tenable Agent 11.2.0 and 11.1.3 and lower allows a privileged attacker to write arbitrary files outside the intended plugin directory, potentially leading to remote code execution.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-10714 - Rockwell Automation FactoryTalk® Services Platform FTSP - Weak Authentication via JWT Validation Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10714",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T15:02:09.000Z",
+        "contentSnippet": "A security issue exists within FactoryTalk® Services Platform (FTSP), allowing an attacker to bypass JWT signature validation during Okta Web Authentication. The vulnerability stems from the application not verifying that the JWT algorithm is configured for RSA, enabling an attac",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-10672 - Unterminated URI buffer causes out-of-bounds read in LwM2M firmware pull (Package URI)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10672",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T15:02:04.000Z",
+        "contentSnippet": "subsys/net/lib/lwm2m/lwm2m_pull_context.c copied the firmware-update Package URI into a fixed static buffer (context.uri, size CONFIG_LWM2M_SWMGMT_PACKAGE_URI_LEN, default 128) with memcpy(context.uri, uri, LWM2M_PACKAGE_URI_LEN), copying exactly the destination size with no leng",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-10671 - User thread can re-initialize an in-use `k_pipe`, corrupting kernel wait queues (`CONFIG_USERSPACE`)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10671",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T15:02:03.000Z",
+        "contentSnippet": "In Zephyr's kernel pipe implementation, the userspace syscall verifier z_vrfy_k_pipe_init() in kernel/pipe.c used K_SYSCALL_OBJ() (which requires the kernel object to already be initialized) instead of K_SYSCALL_OBJ_NEVER_INIT() (which rejects an already-initialized object). As a",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-10670 - User-triggerable kernel NULL-pointer dereference (DoS) in `k_thread_name_copy()` syscall verifier",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10670",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T15:02:03.000Z",
+        "contentSnippet": "The CONFIG_USERSPACE verification handler for the k_thread_name_copy() system call (z_vrfy_k_thread_name_copy() in kernel/thread.c) calls k_object_find() on the caller-supplied thread pointer and then dereferences the returned struct k_object without checking it for NULL. k_objec",
+        "cveScore": 5.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-10669 - Xtensa MPU `arch_buffer_validate()` integer-overflow lets a user thread bypass syscall pointer validation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10669",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T15:02:02.000Z",
+        "contentSnippet": "On Xtensa SoCs built with CONFIG_XTENSA_MPU and CONFIG_USERSPACE, arch_buffer_validate() in arch/xtensa/core/mpu.c — the architecture hook that verifies a user-mode-supplied buffer is accessible to the calling user thread with the requested permission — defaulted its return value",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-9653 - 1756-EN2, 1756-EN3, and 1756-ENBT - Denial of Service via CIP Connection ID",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9653",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T15:00:06.000Z",
+        "contentSnippet": "A denial-of-service security issue exists across all the 1756-EN2, EN3, and ENBT communication module due to improper validation of CIP Implicit Connection packets. An attacker on the network can exploit this by sending crafted packets to continuously disrupt device connections, ",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-10573 - 1734 POINT I/OTM - Denial of Service via Malformed Inputs on CIP Object",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10573",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T14:54:39.000Z",
+        "contentSnippet": "A denial-of-service security issue exists in 1734 POINT I/O™ module. The security issue stems from improper handling of crafted CIP messages, which can cause the module to enter a faulted state. A restart is required to recover.",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-9140 - 1718-AENTR/1719-AENTR - Denial of Service",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9140",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T14:52:20.000Z",
+        "contentSnippet": "A denial-of-service security issue exists in the 1719-AENTR. The security issue stems from improper handling of a UDP unicast network storm, which causes the device to become overloaded and lose communication. A power cycle is required to recover.",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-52837 - Easy!Appointments has unauthenticated customer PII disclosure on booking reschedule page",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52837",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T14:48:26.000Z",
+        "contentSnippet": "Easy!Appointments is a self hosted appointment scheduler. In versions up to and including 1.5.2, the booking reschedule view at `/index.php/booking/reschedule/{appointment_hash}` (handled by `Booking::index()`) embeds the entire customer record as inline JavaScript (`const vars =",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-15696 - Tenda BE12 Pro VirtualSer fromVirtualSer stack-based overflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15696",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T14:45:11.000Z",
+        "contentSnippet": "A vulnerability has been found in Tenda BE12 Pro 16.03.66.23. The impacted element is the function fromVirtualSer of the file /goform/VirtualSer. Such manipulation of the argument page leads to stack-based buffer overflow. The attack can be launched remotely. The exploit has been",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-58479 - Sustainable Irrigation Platform 5.2.16 RCE via cli_control Plugin Command Injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58479",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T14:44:49.000Z",
+        "contentSnippet": "Sustainable Irrigation Platform (SIP) through version 5.2.16 contains a command injection vulnerability in the optional cli_control plugin that allows unauthenticated or cross-site request forgery attackers to execute arbitrary operating-system commands by storing a malicious pay",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-58478 - Sustainable Irrigation Platform 5.2.16 SSRF via Node-RED Callback URL",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58478",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T14:41:54.000Z",
+        "contentSnippet": "Sustainable Irrigation Platform (SIP) through version 5.2.16 contains a server-side request forgery (SSRF) vulnerability that allows unauthenticated attackers to make the device issue arbitrary HTTP requests by supplying a malicious callback URL when the optional Node-RED plugin ",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-58477 - Sustainable Irrigation Platform 5.2.16 Mass Assignment via HTTP Parameters",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58477",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T14:39:51.000Z",
+        "contentSnippet": "Sustainable Irrigation Platform (SIP) through version 5.2.16 contains a mass assignment vulnerability that allows unauthenticated attackers to overwrite sensitive configuration settings by supplying arbitrary parameter names in HTTP requests. Attackers can manipulate parameters c",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-60114 - Sustainable Irrigation Platform 5.2.16 Path Traversal via JSON Backup Restore",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-60114",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T14:37:27.000Z",
+        "contentSnippet": "Sustainable Irrigation Platform (SIP) through version 5.2.16 contains a path traversal vulnerability that allows attackers with access to the restore functionality to write files to arbitrary locations by uploading crafted JSON backup files with unvalidated keys used to construct",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-15695 - Tenda BE12 Pro DhcpListClient fromDhcpListClient stack-based overflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15695",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T14:30:09.000Z",
+        "contentSnippet": "A flaw has been found in Tenda BE12 Pro 16.03.66.23. The affected element is the function fromDhcpListClient of the file /goform/DhcpListClient. This manipulation of the argument page causes stack-based buffer overflow. The attack can be initiated remotely. The exploit has been p",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-14903 - Ivanti Xtraction Path Traversal Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14903",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T14:26:09.000Z",
+        "contentSnippet": "Path traversal in Ivanti Xtraction before version 2026.2.1 allows a remote authenticated attacker to read arbitrary files outside the web root.",
+        "cveScore": 7.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-58476 - Sustainable Irrigation Platform 5.2.16 CSRF via Administrative GET Requests",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58476",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T14:25:41.000Z",
+        "contentSnippet": "Sustainable Irrigation Platform (SIP) through version 5.2.16 contains a cross-site request forgery vulnerability that allows remote attackers to perform state-changing administrative actions by luring a logged-in administrator into visiting a malicious page that issues HTTP GET r",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-14902 - Ivanti Xtraction Open Redirect Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14902",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T14:23:14.000Z",
+        "contentSnippet": "An open redirect in Ivanti Xtraction before version 2026.2.1 allows a remote unauthenticated attacker to redirect users to arbitrary external URLs.",
+        "cveScore": 4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-58475 - Sustainable Irrigation Platform 5.2.16 Stored XSS via Program Name",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58475",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T14:19:19.000Z",
+        "contentSnippet": "Sustainable Irrigation Platform (SIP) through version 5.2.16 contains a stored cross-site scripting vulnerability that allows unauthenticated attackers to inject arbitrary JavaScript by supplying malicious script payloads within program names submitted via HTTP requests. Attacker",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-53566 - Out-of-bounds memory read",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53566",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T14:16:34.000Z",
+        "contentSnippet": "Out-of-bounds read vulnerability in Citrix Citrix Secure Access Client for Windows. This issue affects Citrix Secure Access Client for Windows: before 26.6.1.20.",
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-15693 - Tenda BE12 Pro SafeMacFilter fromSafeMacFilter stack-based overflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15693",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T14:16:33.000Z",
+        "contentSnippet": "A security vulnerability has been detected in Tenda BE12 Pro 16.03.66.23. This issue affects the function fromSafeMacFilter of the file /goform/SafeMacFilter. The manipulation of the argument page leads to stack-based buffer overflow. It is possible to initiate the attack remotel",
+        "cveScore": 9,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-15694 - Tenda BE12 Pro SetIpBind fromSetIpBind stack-based overflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15694",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T14:15:09.000Z",
+        "contentSnippet": "A vulnerability was detected in Tenda BE12 Pro 16.03.66.23. Impacted is the function fromSetIpBind of the file /goform/SetIpBind. The manipulation of the argument page results in stack-based buffer overflow. It is possible to launch the attack remotely. The exploit is now public ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2026-62422 - JetBrains YouTrack Authentication Bypass via Database Access",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-62422",
@@ -677,231 +902,6 @@
         "contentSnippet": "Crypt::OpenSSL::X509 versions before 2.1.3 for Perl allow denial of service via NULL pointer dereference. X509V3_EXT_d2i(ext) returns NULL when an extension's DER value fails to parse. basicC, ia5string, and auth_att dereference its result without a NULL check. keyid_data also de",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-57856 - Cockpit CMS Path Traversal via Bucket Name in Bucket File Storage API",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57856",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T23:16:46.000Z",
-        "contentSnippet": "Cockpit CMS contains a path traversal vulnerability in the Bucket file storage API (/system/buckets/api). The api() method in modules/System/Controller/Buckets.php sanitizes the bucket name with preg_replace('/[^a-zA-Z0-9-_\\\\.]/','', $bucket), which permits '..' and '../' sequenc",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57855 - Cockpit CMS Missing Authorization in Bucket File Storage API",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57855",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T23:16:46.000Z",
-        "contentSnippet": "Cockpit CMS contains a missing authorization vulnerability in the Bucket file storage API (/system/buckets/api). The api() method in modules/System/Controller/Buckets.php executes bucket commands (ls, upload, removefiles, rename, createfolder) without performing any ACL or role c",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-15607 - tanstack db Alias Path select.ts select prototype pollution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15607",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T23:16:46.000Z",
-        "contentSnippet": "A vulnerability was detected in tanstack db up to 0.6.8. Affected by this vulnerability is the function select of the file src/query/compiler/select.ts of the component Alias Path Handler. The manipulation results in improperly controlled modification of object prototype attribut",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-15605 - wandb Artifact Integrity Validation hashutil.py ArtifactManifestEntry.download weak hash",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15605",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T23:16:45.000Z",
-        "contentSnippet": "A security vulnerability has been detected in wandb 0.25.2.dev1. Affected is the function ArtifactManifestEntry.download in the library wandb/sdk/lib/hashutil.py of the component Artifact Integrity Validation. The manipulation leads to use of weak hash. The attack may be initiate",
-        "cveScore": 3.1,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-62328 - 9Router 0.4.41 - Unauthenticated Information Disclosure via API Usage Endpoints",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62328",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T22:16:52.000Z",
-        "contentSnippet": "9Router through version 0.4.41 contain an unauthenticated information disclosure vulnerability that allows remote attackers to access sensitive user data by sending requests to unprotected API endpoints. Attackers can enumerate paginated request logs and retrieve complete AI conv",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-62327 - 9Router 0.4.41 - Unauthenticated API Key Exposure via /api/usage/stats",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62327",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T22:16:52.000Z",
-        "contentSnippet": "9Router through version 0.4.41 contain an unauthenticated information disclosure vulnerability that allows remote attackers to retrieve plaintext API keys for all connected AI provider accounts by sending a single unauthenticated request to the /api/usage/stats endpoint. Attacker",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-62242 - Spring Boot Admin Server < 4.1.2 SSRF via Unauthenticated Instance Registration",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62242",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T22:16:52.000Z",
-        "contentSnippet": "Spring Boot Admin Server before 4.1.2 contains a server-side request forgery vulnerability that allows unauthenticated attackers to register instances with attacker-controlled healthUrl and managementUrl parameters without validation against private IP ranges or metadata endpoint",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-62240 - CrewAI < 1.15.1 SSRF Filter Bypass via HTTP Redirect in Scrape Tools",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62240",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T22:16:52.000Z",
-        "contentSnippet": "CrewAI before 1.15.1 contains a server-side request forgery vulnerability in the validate_url function that performs one-shot DNS resolution and blocklist checks before returning the original URL unchanged. Attackers can bypass the security filter by supplying URLs that redirect ",
-        "cveScore": 7.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-62239 - FlashAttention Symlink Attack via tarfile.extractall in hopper/setup.py",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62239",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T22:16:51.000Z",
-        "contentSnippet": "FlashAttention through 2.8.3.post1, fixed in commit 0816ef1, contains a symlink attack vulnerability in the download_and_copy() function within hopper/setup.py that extracts NVIDIA toolchain archives without validating symlinks or filtering tar members. A local attacker can pre-p",
-        "cveScore": 6.6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-62200 - OpenClaw < 2026.6.6 Authentication Bypass via Git ext transport",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62200",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T22:16:51.000Z",
-        "contentSnippet": "OpenClaw versions before 2026.6.1 contain a flaw in host exec environment filtering that could allow Git ext transport to be abused. When the affected feature is enabled and reachable, a lower-trust caller or configured input path could execute or persist actions beyond the calle",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-62199 - OpenClaw < 2026.6.6 Authentication Bypass via Environment Filtering",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62199",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T22:16:51.000Z",
-        "contentSnippet": "OpenClaw versions before 2026.6.6 contain a flaw in host exec environment filtering that can miss interpreter startup variables. When the affected feature is enabled and reachable, a lower-trust caller or configured input path can supply crafted environment variables to execute o",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-62198 - OpenClaw 2026.5.28 < 2026.6.6 Authorization Bypass via Web Search",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62198",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T22:16:51.000Z",
-        "contentSnippet": "OpenClaw versions 2026.5.28 before 2026.6.6 contain an authorization bypass vulnerability in native web search that allows lower-trust callers to perform actions requiring stronger policy checks. Attackers can exploit misconfigured input paths to bypass intended authorization con",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-62197 - OpenClaw < 2026.6.6 Policy Bypass via CDP Discovery",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62197",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T22:16:51.000Z",
-        "contentSnippet": "OpenClaw before 2026.6.6 contains a policy bypass vulnerability in browser CDP discovery that accepts blocked WebSocket URLs. Attackers with lower-trust access can reach network destinations that should have been blocked by OpenClaw policy when the affected feature is enabled.",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-62196 - OpenClaw 2026.3.22 < 2026.6.6 Authorization Bypass via WhatsApp Group IDs",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62196",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T22:16:51.000Z",
-        "contentSnippet": "OpenClaw versions 2026.3.22 before 2026.6.6 contain an authorization bypass vulnerability where WhatsApp group IDs can satisfy elevated sender allowlists. Attackers with lower-trust access can perform actions requiring stronger authorization by leveraging group ID validation in t",
-        "cveScore": 8.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-62195 - OpenClaw 2026.5.20 < 2026.6.6 Authorization Bypass via MCP loopback",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62195",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T22:16:51.000Z",
-        "contentSnippet": "OpenClaw versions 2026.5.20 before 2026.6.6 contain an authorization bypass vulnerability in the MCP loopback feature that allows lower-trust callers to execute owner-only tools. Attackers can bypass authorization checks through configured input paths to execute or persist action",
-        "cveScore": 8.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-62194 - OpenClaw 2026.5.20 < 2026.6.9 Privilege Escalation via Plugin Install",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62194",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T22:16:50.000Z",
-        "contentSnippet": "OpenClaw versions 2026.5.20 before 2026.6.9 contain a privilege escalation vulnerability in plugin install commands that allows lower-trust callers to execute or persist actions beyond their intended authorization. Attackers can exploit misconfigured input paths or enabled featur",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-62193 - OpenClaw 2026.6.5 < 2026.6.9 Authentication Bypass via Plugin Install",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62193",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T22:16:50.000Z",
-        "contentSnippet": "OpenClaw versions 2026.6.5 before 2026.6.9 contain a vulnerability in the plugin install wrappers that could skip the install policy (authorization) check. When the affected feature is enabled and reachable, a lower-trust caller or a configured input path could execute or persist",
-        "cveScore": 4.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-62192 - OpenClaw 2026.6.6 < 2026.6.9 Authorization Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62192",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T22:16:50.000Z",
-        "contentSnippet": "OpenClaw versions 2026.6.6 before 2026.6.9 contain an authorization bypass vulnerability in Discord guild actions that allows lower-trust callers to perform actions requiring stronger authorization checks. Attackers can exploit misconfigured input paths to skip cross-provider req",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-62191 - OpenClaw 2026.6.6 < 2026.6.8 Authorization Bypass via Message Mutations",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62191",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T22:16:50.000Z",
-        "contentSnippet": "OpenClaw versions 2026.6.6 before 2026.6.9 contain an authorization bypass vulnerability in message mutation handling that allows lower-trust callers to perform actions requiring stronger authorization checks. Attackers can exploit misconfigured input paths to skip requester auth",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-15598 - antv layout object.js setNestedValue prototype pollution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15598",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T22:00:11.000Z",
-        "contentSnippet": "A weakness has been identified in antv layout 2.0.0. This impacts the function setNestedValue in the library lib/util/object.js. Executing a manipulation of the argument path can lead to improperly controlled modification of object prototype attributes. The attack can be launched",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-58487 - HedgeDoc: Stored HTML injection via email local-part",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58487",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T21:59:27.000Z",
-        "contentSnippet": "HedgeDoc is an open source, real-time, collaborative, markdown notes application. Prior to version 1.11.0, due to unsafe handling of the local-part of registered email addresses, HedgeDoc was vulnerable to stored HTML Injection through its publish and slide views. An attacker cou",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-56877 - Skillable SCORM Lab Launch Improper Authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56877",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T21:51:43.000Z",
-        "contentSnippet": "The SCORM lab launch endpoint in Skillable (scorm.skillable.com) through 2026-07-13 does not validate the client-supplied userId parameter against the authenticated SCORM session token. An authenticated user can substitute arbitrary userId values to bypass per-user lab launch rat",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-15597 - SourceCodester Class and Exam Timetabling System edit_exam2.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15597",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T21:45:09.000Z",
-        "contentSnippet": "A security flaw has been discovered in SourceCodester Class and Exam Timetabling System 1.0/2.php. This affects an unknown function of the file /edit_exam2.php. Performing a manipulation of the argument ID results in sql injection. The attack can be initiated remotely. The exploi",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-58488 - HedgeDoc: Rate-limit bypass via CF-Connecting-IP header spoofing",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58488",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T21:43:14.000Z",
-        "contentSnippet": "HedgeDoc is an open source, real-time, collaborative, markdown notes application. Versions prior to 1.11.0 allowed attackers to circumvent the rate-limiting of the /login and /register routes by spoofing IP addresses. HedgeDoc instances checked for CloudFlare's cf-connecting-ip h",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-15680 - Lorex 2K Indoor Wi-Fi Security Camera CDeviceOperator Format String Remote Code Execution Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15680",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T21:32:15.000Z",
-        "contentSnippet": "Lorex 2K Indoor Wi-Fi Security Camera CDeviceOperator Format String Remote Code Execution Vulnerability. This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of Lorex 2K Indoor Wi-Fi Security Cameras. Authentication is not requi",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
@@ -2268,6 +2268,13 @@
     ],
     "hardware": [
       {
+        "title": "China claims chip exports nearly doubled to $177 billion in the first half of 2026 as memory prices surged — 96% year-on-year increase inflated by hikes",
+        "link": "https://www.tomshardware.com/tech-industry/china-claims-chip-exports-nearly-doubled-to-177-billion-in-the-first-half-of-2026",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-07-14T14:52:27.000Z",
+        "contentSnippet": "The Chinese customs administration attributed the surge to global demand for AI hardware."
+      },
+      {
         "title": "Intel invests $5.7 billion in Ireland fab — aims to boost output of Xeon 6, next-gen Xeon products built on Intel 3 process",
         "link": "https://www.tomshardware.com/pc-components/cpus/intel-invests-usd5-7-billion-in-ireland-fab-aims-to-boost-output-of-xeon-6-next-gen-xeon-products-built-on-intel-3-process",
         "source": "Tom's Hardware",
@@ -2959,13 +2966,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-07-08T14:44:59.000Z",
         "contentSnippet": "How a limited run CPU could open the right doors for Europe's first HPC processors on markets its developers barely hoped to address any time soon."
-      },
-      {
-        "title": "Power company hikes data center bills by 30%, cuts residential electricity costs by 1.3% — Oregon approves change through POWER Act, pushes developments using more than 20 Megawatts of power to pay th",
-        "link": "https://www.tomshardware.com/tech-industry/data-centers/power-company-hikes-data-center-bills-by-30-percent-cuts-residential-electricity-costs-by-1-3-percent-oregon-approves-change-through-power-act-pushes-developments-using-more-than-20-megawatts-of-power-to-pay-their-fair-share",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-08T13:56:27.000Z",
-        "contentSnippet": "Oregon approves the 29.7% price hike that Portland General Electric (PGE), the state's largest power provider, will impose on users that consume 20MW or more. This move is backed by Oregon's POWER Act, which helps ensure that data centers in PGE's coverage area pay their fair sha"
       }
     ]
   }
