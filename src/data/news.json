@@ -1,8 +1,197 @@
 {
-  "updatedAt": "2026-07-14T07:05:11.874Z",
+  "updatedAt": "2026-07-14T09:48:31.584Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2024-7708 - HTTP Server Buffer Memory Leak",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2024-7708",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T09:01:53.000Z",
+        "contentSnippet": "For requests that have a body, but reading the body may end up in reading 0 bytes, there is a buffer leak. This is particularly the case for 100-Continue, but any request where the network is slow can leak.",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-15416 - Argo-cd: argo cd unauthenticated remote code execution in repo-server via generatemanifest grpc endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15416",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T08:56:29.000Z",
+        "contentSnippet": "A flaw was identified in Argo CD, the GitOps engine used by Red Hat OpenShift GitOps, that could allow an unauthenticated attacker with network access to the Argo CD repo-server to achieve remote code execution. Under certain conditions, the attacker may then manipulate cached da",
+        "cveScore": 8.9,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-8384 - Eclipse Jetty Path Normalization Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8384",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T08:56:17.000Z",
+        "contentSnippet": "In Eclipse Jetty, an HTTP URI of this form: /public;/../admin/secret.txt results in an unresolved path of: /public/../admin/secret.txt instead of the expected: /admin/secret.txt Jetty itself is not affected, as it will not serve the secret.txt file because it will not pass the al",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-6790 - Eclipse Jetty Host Header Validation Mismatch Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6790",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T08:51:30.000Z",
+        "contentSnippet": "In Eclipse Jetty, for HTTP/1, HTTP/2 and HTTP/3 requests, there is no strict check that the request authority (host and port) matches what provided in the Host header (if present). This was not enforced in earlier HTTP RFC (for example, in RFC 2616), but it is in the latest RFC (",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-10051 - Eclipse Jetty HTTP/1.1 Header Injection Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10051",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T08:44:38.000Z",
+        "contentSnippet": "In Eclipse Jetty, a first HTTP/1.1 request with trailers causes the server to retain the trailers in subsequent requests performed over the same connection. Subsequent request that do not have trailers report the trailers of the first request. Subsequent request that do have trai",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-15183 - Input Validation Vulnerabilities in Snowflake Spark Connector",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15183",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T08:42:38.000Z",
+        "contentSnippet": "Multiple input validation vulnerabilities in the Snowflake Spark Connector (spark-snowflake) versions prior to 3.2.1 can allow attackers to exfiltrate OAuth client credentials, execute arbitrary SQL with the connector's Snowflake role, or redirect COPY operations to attacker-cont",
+        "cveScore": 9.2,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-59246 - Zero-length HTTP/2 CONTINUATION frames bypass Mint's header-block byte-size cap and exhaust client memory",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59246",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T08:37:04.000Z",
+        "contentSnippet": "Allocation of resources without limits vulnerability in elixir-mint mint allows a remote HTTP/2 server to exhaust memory on the client host and cause a denial of service. The Mint.HTTP2.handle_continuation/3 function in lib/mint/http2.ex accumulates the header-block fragment carr",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-58229 - Unbounded HTTP/1 response-header and chunked-trailer accumulation in Mint causes memory-exhaustion DoS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58229",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T08:36:54.000Z",
+        "contentSnippet": "Allocation of resources without limits vulnerability in elixir-mint mint allows a remote HTTP server to exhaust memory on the client host and cause a denial of service. The Mint.HTTP1.decode_headers/5 and Mint.HTTP1.decode_trailer_headers/4 functions in lib/mint/http1.ex accumula",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-12606 - Eclipse Grizzly HTTP Request Smuggling Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12606",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T08:28:17.000Z",
+        "contentSnippet": "Eclipse Grizzly in versions before 5.0.2, cannot properly parse the trailer section in malformed trailer header's line, which can be leveraged to perform HTTP request smuggling.",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-59084 - Apache Tomcat: EncryptInterceptor requirements not clearly documented",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59084",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T08:24:21.000Z",
+        "contentSnippet": "Insufficient Technical Documentation vulnerability in Apache Tomcat since the requirements to securely configure the EncryptInterceptor were not clearly documented. This issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.23, from 10.1.0-M1 through 10.1.56, from 9.0.13 throu",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-6851 - Improper link resolution before file access in Bitdefender Total Security via Link Following (VA-13681)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6851",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T08:16:24.000Z",
+        "contentSnippet": "An Improper link resolution before file access ('link following') vulnerability in the File Shredder module as used in Bitdefender Total Security and Internet Security on Windows allows a less-privileged local user to elevate rights by leveraging a race conditions via Symbolic Li",
+        "cveScore": 7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-59674 - LPE from suricata user to root due to chown in %post in suricata packaging",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59674",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T08:16:22.000Z",
+        "contentSnippet": "A UNIX Symbolic Link (Symlink) Following vulnerability in openSUSE Tumbleweed suricata package allows the suricata user to escalate to root. This issue affects openSUSE Tumbleweed: from ? before 8.0.5-2.1; openSUSE Tumbleweed: from ? before 8.0.5-2.1.",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-15075 - Eclipse Vert.x DefaultRedirectHandler Improper Header Propagation Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15075",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T08:15:53.000Z",
+        "contentSnippet": "In Eclipse Vert.x versions up to and including 4.5.29 (4.x branch) and 5.1.4 (5.x branch), DefaultRedirectHandler (vertx-core) propagates all request headers as-is across cross-origin HTTP 30x redirects. Only Content-Length is stripped; no origin comparison (scheme, host, port) i",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-59083 - Apache Tomcat: Incorrect URL decoding in RewriteValve may allow security control bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59083",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T08:13:04.000Z",
+        "contentSnippet": "Improper Handling of URL Encoding (Hex Encoding) vulnerability in Apache Tomcat's rewrite valve allowed security constraint bypass for some configurations. This issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.23, from 10.1.0-M1 through 10.1.56, from 9.0.0.M1 through 9.0.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-15076 - Eclipse Vert.x Improper Cookie Domain Validation Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15076",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T08:09:12.000Z",
+        "contentSnippet": "In versions up to and including 4.5.29 (4.x branch) and 5.1.4 (5.x branch), the WebClientSession component of Eclipse Vert.x Web Client does not validate that the Domain attribute of a Set-Cookie response header matches the originating server's domain, in violation of RFC 6265 se",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-9561 - Eclipse Kura IP Address Spoofing Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9561",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T07:59:20.000Z",
+        "contentSnippet": "Eclipse Kura versions prior to 5.6.2 trust the client-supplied X-Forwarded-For HTTP header as the authoritative source of the client IP address in audit log entries. The org.eclipse.kura.web2 (Web Console) and org.eclipse.kura.rest.provider (REST API) components use this header a",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-57898 - Eclipse BaSyx Java Server SDK Arbitrary File Write",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57898",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T07:51:19.000Z",
+        "contentSnippet": "In Eclipse BaSyx Java Server SDK versions 2.0.0-milestone-05 to 2.0.0-milestone-12, deployments using the MongoDB backend are vulnerable to an unauthenticated arbitrary file write through the AAS thumbnail API. The AAS thumbnail upload path accepted a client-controlled fileName r",
+        "cveScore": 9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2025-8412 - VMDP: Potential buffer overflow in the RtlQueryRegistryValues function",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-8412",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T07:42:47.000Z",
+        "contentSnippet": "A Buffer Copy without Checking Size of Input ('Classic Buffer Overflow') vulnerability in SUSE Virtual Machine Driver Pack allows an attacker with the ability to modify the registry to affect the integrity of the driver. We're not aware of a feasible way to exploit this currently",
+        "cveScore": 2,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-13699 - Databroker 0.6.1 PublishValue missing data_point panic",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13699",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T07:38:23.000Z",
+        "contentSnippet": "In Eclipse KUKSA Databroker version 0.6.1, the kuksa.val.v2.VAL/PublishValue gRPC handler fails to validate the existence of the optional data_point field in PublishValueRequest. When a request contains a valid signal_id but omits data_point, the server directly calls unwrap() on",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-15678 - code-projects Online Job Portal DetailJob.php cross site scripting",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15678",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T07:16:20.000Z",
+        "contentSnippet": "A security vulnerability has been detected in code-projects Online Job Portal 1.0. This impacts an unknown function of the file /Admin/DetailJob.php. The manipulation leads to cross site scripting. The attack is possible to be carried out remotely. The exploit has been disclosed ",
+        "cveScore": 4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-15677 - code-projects Online Job Portal JobSeekerInsert.php unrestricted upload",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15677",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-14T07:16:19.000Z",
+        "contentSnippet": "A weakness has been identified in code-projects Online Job Portal 1.0. This affects an unknown function of the file /JobSeekerInsert.php. Executing a manipulation of the argument txtFile can lead to unrestricted upload. The attack can be executed remotely. The exploit has been ma",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-15676 - code-projects Online Job Portal DeleteUser.php sql injection",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-15676",
@@ -713,198 +902,23 @@
         "contentSnippet": "ChurchCRM is an open-source church management system. Prior to version 7.4.0, a low-privileged user can bypass the /admin/export UI and exfiltrate the entire member directory. The POST /CSVCreateFile.php endpoint generates and streams a CSV containing the full Personally Identifi",
         "cveScore": 6.5,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-58407 - Rejected reason: Please submit CVE requests for ea",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58407",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T20:16:49.000Z",
-        "contentSnippet": "Rejected reason: Please submit CVE requests for each vulnerability.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-55773 - CedarJava has a policy injection vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55773",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T20:16:48.000Z",
-        "contentSnippet": "CedarJava is an open source Java implementation of the Cedar policy language, used for fine-grained authorization decisions. In versions prior to 2.3.6, 3.4.1 and 4.9.0, under certain circumstances, improper input handling could allow Cedar-expression injection via unescaped toCe",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-55771 - CedarJava has policy injection, type confusion, and incorrect equality comparison vulnerabilities",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55771",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T20:16:48.000Z",
-        "contentSnippet": "CedarJava is an open source Java implementation of the Cedar policy language, used for fine-grained authorization decisions. In versions prior to 4.9.0, the EntityIdentifier.equals() has inverted null/self branches which could lead to incorrect equality comparisons. The EntityIde",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-12536 - Avada Builder <= 3.15.5 - Authenticated (Contributor+) Stored Cross-Site Scripting via Module Title",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12536",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T20:16:42.000Z",
-        "contentSnippet": "The Avada (Fusion) Builder plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the ‘Module Title’ parameter in all versions up to, and including, 3.15.5 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attacker",
-        "cveScore": 6.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-12385 - Smart Slider 3 <= 3.5.1.37 - Missing Authorization to Authenticated (Contributor+) Sensitive Information Exposure via WP_Query Parameter Injection via 'keyword' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12385",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T20:16:42.000Z",
-        "contentSnippet": "The Smart Slider 3 plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 3.5.1.37 via the 'keyword' parameter. This makes it possible for authenticated attackers, with contributor-level access and above, to extract titles and f",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-15594 - waooAI waoowaoo Media hash.ts stablePublicIdFromStorageKey improper authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15594",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T20:15:10.000Z",
-        "contentSnippet": "A vulnerability was found in waooAI waoowaoo up to 0.4.1. Impacted is the function stablePublicIdFromStorageKey in the library src/lib/media/hash.ts of the component Media Handler. The manipulation of the argument storageKey results in improper authorization. The attack may be pe",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-58409 - ChurchCRM: Authenticated Remote Code Execution (RCE) via Malicious Plugin Upload",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58409",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T20:05:56.000Z",
-        "contentSnippet": "ChurchCRM is an open-source church management system. Prior to version 7.4.0, an authenticated administrator can achieve Remote Code Execution (RCE) on the server by installing a malicious plugin ZIP archive containing a PHP webshell. The application explicitly includes 'php' in ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-48363 - ColdFusion | Uncontrolled Search Path Element (CWE-427)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48363",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T20:03:57.000Z",
-        "contentSnippet": "ColdFusion versions 2025.9, 2023.20 and earlier are affected by an Uncontrolled Search Path Element vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a ma",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-48364 - ColdFusion | Uncontrolled Search Path Element (CWE-427)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48364",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T20:03:41.000Z",
-        "contentSnippet": "ColdFusion versions 2025.9, 2023.20 and earlier are affected by an Uncontrolled Search Path Element vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a ma",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-6875 - Sandbox Escape in ServiceNow AI Platform",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6875",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T19:17:36.000Z",
-        "contentSnippet": "ServiceNow has addressed a remote code execution vulnerability that was identified in the ServiceNow AI platform. This vulnerability could enable an unauthenticated user, in certain circumstances, to execute code within the ServiceNow platform. ServiceNow addressed this vulnerabi",
-        "cveScore": 9.5,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-58228 - Scheme validation bypass in Phoenix.LiveView.Utils leads to XSS via",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58228",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T19:17:30.000Z",
-        "contentSnippet": "Cross-site scripting vulnerability in phoenixframework phoenix_live_view allows an attacker to bypass URL scheme validation and execute JavaScript in a victim's browser session. The Phoenix.LiveView.Utils.valid_destination!/2 and Phoenix.LiveView.Utils.valid_live_navigation_desti",
-        "cveScore": 5.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-55772 - CedarJava has a type confusion vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55772",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T19:17:15.000Z",
-        "contentSnippet": "CedarJava is an open source Java implementation of the Cedar policy language, used for fine-grained authorization decisions. In versions prior to 2.3.6, 3.4.1 and 4.9.0, under certain circumstances, improper input handling could allow Record-to-Entity type confusion across the Ja",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-49972 - Laravel-Mediable < 7.0.0 File Upload RCE via Extension Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49972",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T19:17:10.000Z",
-        "contentSnippet": "Laravel-Mediable before 7.0.0 contains a file upload vulnerability that allows unauthenticated attackers to achieve remote code execution by uploading a file with an embedded PHP extension disguised within a double extension such as shell.php.jpg. The PATHINFO_FILENAME extraction",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-49971 - Laravel-Mediable < 7.0.0 Stored XSS via SVG File Upload",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49971",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T19:17:10.000Z",
-        "contentSnippet": "Laravel-Mediable before 7.0.0 contains a stored cross-site scripting vulnerability that allows authenticated or anonymous users to execute arbitrary JavaScript by uploading unsanitized SVG files containing embedded scripts in onload event handlers, script tags, or foreignObject e",
-        "cveScore": 6.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-49970 - Laravel-Mediable < 7.0.0 Path Traversal via File::sanitizePath()",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49970",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T19:17:09.000Z",
-        "contentSnippet": "Laravel-Mediable before 7.0.0 contains a path traversal vulnerability in the File::sanitizePath() function that allows attackers to write uploaded files to arbitrary locations by controlling the directory argument passed to MediaUploader::toDestination(). Attackers can exploit th",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-49969 - Laravel-Mediable < 7.0.0 SSRF via RemoteUrlAdapter URL Handling",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49969",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T19:17:09.000Z",
-        "contentSnippet": "Laravel-Mediable before 7.0.0 contains a server-side request forgery vulnerability that allows remote attackers to issue arbitrary HTTP requests from the server by supplying unvalidated caller-controlled URLs to endpoints backed by MediaUploader::fromSource(). Attackers can craft",
-        "cveScore": 7.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-26396 - OpenBMB XAgent Path Traversal Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-26396",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T19:17:03.000Z",
-        "contentSnippet": "OpenBMB XAgent v1.0.0 and before is vulnerable to path traversal in the file() function in XAgent/XAgentServer/application/routers/workspace.py. The input parameter “filename” is user-controllable and is concatenated into the file path to be read without proper validation, leadin",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-14906 - Malicious webpage titles could allow overwriting of bundled PDF resources when saving webpages as PDFs in Firefox for iOS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14906",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T19:16:46.000Z",
-        "contentSnippet": "Pages with malicious titles could potentially allow saved PDF content to overwrite PDF files or bundled content within the Firefox for iOS application sandbox. This vulnerability was fixed in Firefox for iOS 152.4.",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2025-45869 - LogicalDOC Enterprise Server-Side Request Forgery",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-45869",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T19:16:36.000Z",
-        "contentSnippet": "LogicalDOC Enterprise Version up to and before v9.1.1 is vulnerable to Server-Side Request Forgery (SSRF). An unauthenticated attacker can exploit the ShareFileCallback servlet by manipulating input parameters to trigger a server-side request to an attacker-controlled host.",
-        "cveScore": 7.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-61505 - Rejetto HFS < 3.2.1 Limited File Disclosure via Path Traversal in lang Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61505",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T18:16:30.000Z",
-        "contentSnippet": "Rejetto HFS 3.0.0 through 3.2.0 allows path traversal through the lang query parameter, permitting a remote unauthenticated attacker to read certain JSON files outside the shared folders. Exploitation is constrained to files matching a narrow naming and format pattern, limiting p",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-61504 - Rejetto HFS < 3.2.1 Stored XSS via File Names in Basic Web Listing",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61504",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-13T18:16:30.000Z",
-        "contentSnippet": "Rejetto HFS 3.0.0 through 3.2.0 does not escape file names in its fallback \"basic\" web listing, and this listing can be forced by any browser via the ?get=basic parameter. A user with upload permission - or an anonymous user on servers with an open upload folder - can store a fil",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
+      {
+        "title": "Meet Blume: An Open-Source, Zero-Config Documentation Framework That Ships AI-Ready Docs From a Markdown Folder",
+        "link": "https://www.marktechpost.com/2026/07/14/meet-blume-an-open-source-zero-config-documentation-framework-that-ships-ai-ready-docs-from-a-markdown-folder/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-07-14T08:15:29.000Z",
+        "contentSnippet": "Developer Hayden Bleasel has released Blume, an open-source, MIT-licensed documentation framework. It reads a folder of Markdown or MDX and generates a hidden Astro project, shipping static, AI-ready docs with local search, 30+ MDX components, llms.txt, and a built-in MCP server."
+      },
+      {
+        "title": "Mistral AI Releases Robostral Navigate: An 8B Model Enabling Robots to Navigate Complex Environments Using a Single RGB Camera",
+        "link": "https://www.marktechpost.com/2026/07/14/mistral-ai-releases-robostral-navigate-an-8b-model-enabling-robots-to-navigate-complex-environments-using-a-single-rgb-camera/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-07-14T07:20:38.000Z",
+        "contentSnippet": "Mistral AI introduced Robostral Navigate, an 8B embodied navigation model. It moves robots from a plain-language instruction using only a single RGB camera, with no LiDAR or depth sensors. The model reaches 76.6% success on R2R-CE validation unseen through a pointing method, pref"
+      },
       {
         "title": "Anthropic Claude Sonnet 5 vs Sonnet 4.6 vs Opus 4.8: Agentic Coding Benchmarks, API Pricing, and Cost-Performance Tradeoffs Compared",
         "link": "https://www.marktechpost.com/2026/07/13/anthropic-claude-sonnet-5-vs-sonnet-4-6-vs-opus-4-8-agentic-coding-benchmarks-api-pricing-and-cost-performance-tradeoffs-compared/",
@@ -1590,23 +1604,16 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-07-01T17:53:16.000Z",
         "contentSnippet": "In this post, you will learn how Inscribe developed an agentic AI system using Amazon Bedrock that reasons across documents the way an expert fraud analyst would. With this new agentic AI system, Inscribe now detects tampered, fabricated, and AI-generated financial documents in u"
-      },
-      {
-        "title": "Simplify model selection in Amazon Bedrock with the open source Model Profiler",
-        "link": "https://aws.amazon.com/blogs/machine-learning/simplify-model-selection-in-amazon-bedrock-with-the-open-source-model-profiler/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-07-01T17:46:54.000Z",
-        "contentSnippet": "The Amazon Bedrock Model Profiler is an open source tool that aggregates model metadata from multiple AWS APIs and external sources into a single, searchable interface. In this post, you’ll learn what the Model Profiler provides, the real-world scenarios it supports, and how to d"
-      },
-      {
-        "title": "Accelerate protein design with BoltzGen on Amazon SageMaker AI",
-        "link": "https://aws.amazon.com/blogs/machine-learning/accelerate-protein-design-with-boltzgen-on-amazon-sagemaker-ai/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-07-01T17:44:08.000Z",
-        "contentSnippet": "In this post, we demonstrate how to deploy BoltzGen on SageMaker AI and run an end-to-end protein design experiment. By the end of the walkthrough, you have a working setup that scales from quick validation runs to production batch processing. The setup offers two execution modes"
       }
     ],
     "virtualization": [
+      {
+        "title": "Veeam Bare Metal Recovery from Recovery partition",
+        "link": "https://www.vladan.fr/veeam-bare-metal-recovery-from-recovery-partition/",
+        "source": "Vladan.fr",
+        "isoDate": "2026-07-14T08:20:44.000Z",
+        "contentSnippet": "Bare metal restore with Veeam from a recovery partition is a method to avoid using USB media by installing the Veeam Recovery Media directly onto a dedicated partition on the server's internal drive. This approach allows for faster recovery times and eliminates the need to access"
+      },
       {
         "title": "This Free Backup Tool Just Added Docker Volume Backups",
         "link": "https://www.virtualizationhowto.com/2026/07/this-free-backup-tool-just-added-docker-volume-backups/",
@@ -2253,6 +2260,20 @@
       }
     ],
     "hardware": [
+      {
+        "title": "Researchers create programmable material that can steer heat and remember its state without power — breakthrough could eventually aid AI chip cooling and silicon photonics",
+        "link": "https://www.tomshardware.com/tech-industry/manufacturing/researchers-create-programmable-material-that-can-steer-heat-and-remember-its-state-without-power-breakthrough-could-eventually-aid-ai-chip-cooling-and-silicon-photonics",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-07-14T09:30:00.000Z",
+        "contentSnippet": "Researchers created a programmable thermal material that steers heat and retains its state without power, a breakthrough that could benefit AI chips, silicon photonics, and infrared devices."
+      },
+      {
+        "title": "Boutique DIY Hi-Fi solution lets you repurpose your old IDE optical drives as a standalone audio player — $190 CD-ROM Player 01 features a laser-cut enclosure and a custom PCB",
+        "link": "https://www.tomshardware.com/pc-components/enclosures/boutique-diy-hi-fi-solution-lets-you-repurpose-your-old-ide-optical-drives-as-a-standalone-audio-player-usd190-cd-rom-player-01-features-a-laser-cut-enclosure-and-a-custom-pcb",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-07-14T09:00:00.000Z",
+        "contentSnippet": "A stylish new product encourages the repurposing of old IDE optical drives as standalone audio players."
+      },
       {
         "title": "ASRock Rack Built an Edge Server Based on NVIDIA’s Thor Industrial SoC",
         "link": "https://www.servethehome.com/asrock-rack-built-an-edge-server-based-on-nvidias-thor-industrial-soc/",
@@ -2938,20 +2959,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-07-08T11:44:32.000Z",
         "contentSnippet": "This great value gaming PC from Newegg's ABS brand features a 16GB RTX 5060 Ti GPU and 32GB of DDR5-6400 RAM, giving you a rig ready for 1440p gaming."
-      },
-      {
-        "title": "Valve releases drivers, notes to make Windows work on Steam hardware, but refuses to support it — tells users it doesn’t offer support for ‘Windows on Steam Hardware,’ gaming company provides resource",
-        "link": "https://www.tomshardware.com/video-games/console-gaming/valve-releases-drivers-notes-to-make-windows-work-on-steam-hardware-but-refuses-to-support-it-tells-users-it-doesnt-offer-support-for-windows-on-steam-hardware-gaming-company-provides-resources-as-is",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-08T11:20:00.000Z",
-        "contentSnippet": "These drivers will make it easier for your Steam Deck or Steam Machine to play nicely with Windows 11. However, Valve says it does not offer customer support for 'Windows on Steam Hardware,' and instead points stuck users to the SteamOS recovery instructions."
-      },
-      {
-        "title": "8Bitdo's wireless Pro 2 gaming controller falls to all-time low price — hall-effect gamepad is 38% off, just $37.19",
-        "link": "https://www.tomshardware.com/peripherals/controllers-gamepads/8bitdos-wireless-pro-2-gaming-controller-falls-to-all-time-low-price-hall-effect-gamepad-is-38-percent-off-just-usd37-19",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-08T11:18:06.000Z",
-        "contentSnippet": "Hitting an all-time low price at Amazon, 8Bitdo's wireless Pro 2 gaming controller with hall-effect joysticks is 38% off for Prime members."
       }
     ]
   }
