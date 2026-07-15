@@ -1,16 +1,232 @@
 {
-  "updatedAt": "2026-07-15T21:50:53.460Z",
+  "updatedAt": "2026-07-15T22:51:16.047Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
+        "title": "CVE-2026-62361 - listmonk: SQL Injection in `/api/subscribers/export` bypasses table access control, leaking admin password hashes and SMTP credentials",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62361",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-15T20:56:45.000Z",
+        "contentSnippet": "listmonk is a standalone, self-hosted, newsletter and mailing list manager. Prior to 6.2.0, listmonk’s GET /api/subscribers/export endpoint injects the user-controlled query parameter into QuerySubscribersForExport in internal/core/subscribers.go without calling validateQueryTabl",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-62312 - 9Router: Authenticated RCE via Unvalidated MCP Plugin Arguments",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62312",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-15T20:53:18.000Z",
+        "contentSnippet": "9Router is an AI router & token saver. Prior to 0.5.2, 9Router allows a remote authenticated attacker to achieve arbitrary code execution on the host operating system by combining a Host header bypass of localhost-only routes with unvalidated MCP plugin args passed to child_proce",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-56678 - 9Router: Kiro region injection allows authenticated SSRF with Authorization header forwarding",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56678",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-15T20:51:33.000Z",
+        "contentSnippet": "9Router is an AI router & token saver. Prior to 0.5.6, the Kiro API-key validation endpoint POST /api/oauth/kiro/api-key builds an upstream URL using a user-controlled region value, allowing an authenticated attacker to supply a crafted region such as kiro-canary.local:8443# and ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-56679 - 9Router: Mass assignment in PATCH /api/settings allows authenticated authorization downgrade",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56679",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-15T20:50:30.000Z",
+        "contentSnippet": "9Router is an AI router & token saver. Prior to 0.5.4, the PATCH /api/settings endpoint writes the entire request body to persistent settings without a field whitelist, allowing an authenticated user to set security-critical fields such as requireLogin and disable authentication ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49353 - 9Router: Local-Only Access Gate Bypass in 9router via Host Header SpoofING",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49353",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-15T20:49:15.000Z",
+        "contentSnippet": "9Router is an AI router & token saver. In 0.4.45 and earlier, 9Router's src/dashboardGuard.js local-only access gate used Host and Origin headers in isLocalRequest() to protect /api/mcp/*, /api/tunnel/*, and /api/cli-tools/*, allowing header spoofing in reverse proxy or tunnel de",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-33684 - AVideo's Privilege AVideo: Escalation via Unguarded Permission Parameters in signUp API Allows Self-Granting Upload/Stream/Meet Permissions",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-33684",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-15T20:47:45.000Z",
+        "contentSnippet": "WWBN AVideo is an open source video platform. Prior to version 29.0, Privilege Escalation is possible through unguarded permission parameters in signUp API, which allows any user who can solve a CAPTCHA to self-grant elevated permissions during account registration. The set_api_s",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49352 - 9Router: Hardcoded Default fallback JWT Secret Allows Authentication Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49352",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-15T20:43:41.000Z",
+        "contentSnippet": "9Router is an AI router & token saver. From 0.2.21 until 0.4.44, 9Router used the hardcoded fallback JWT secret 9router-default-secret-change-me in src/app/api/auth/login/route.js, src/middleware.js, and later src/lib/auth/dashboardSession.js, allowing attackers to forge an auth_",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-46339 - 9Router: Unauthenticated Remote Code Execution via unprotected MCP custom plugin routes",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46339",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-15T20:41:06.000Z",
+        "contentSnippet": "9Router is an AI router & token saver. From 0.4.30 until 0.4.37, 9Router's src/proxy.js middleware did not protect /api/cli-tools/* and /api/mcp/*, allowing unauthenticated registration of customPlugins through src/app/api/cli-tools/cowork-settings/route.js and command execution ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-55608 - n8n-MCP: Incorrect authorization can expose default-scope workflow version backups in multi-tenant HTTP mode",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55608",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-15T20:35:29.000Z",
+        "contentSnippet": "n8n-MCP is an MCP server that provides AI assistants access to n8n node documentation, properties, and operations. Prior to 2.57.4, multi-tenant HTTP mode with ENABLE_MULTI_TENANT=true could allow an authenticated tenant to access default-scope workflow_versions backups instead o",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-54052 - n8n-MCP: Cross-tenant access to workflow version backups in multi-tenant HTTP deployments",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54052",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-15T20:34:10.000Z",
+        "contentSnippet": "n8n-MCP is an MCP server that provides AI assistants access to n8n node documentation, properties, and operations. Prior to 2.56.1, in HTTP mode with multi-tenancy enabled through ENABLE_MULTI_TENANT=true, n8n-mcp's local workflow version history backups were not isolated per ten",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-55399 - Resource exhaustion vulnerability in the Secure Access publisher",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55399",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-15T20:20:13.000Z",
+        "contentSnippet": "CVE-2026-55399 is a resource exhaustion vulnerability in the Secure Access publisher prior to 14.55. Attackers with valid credentials to the Secure Access tunnel can create a non-persistent DoS against the publisher.",
+        "cveScore": 5.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-55410 - NocoBase backup restore schema name allows command injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55410",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-15T20:19:54.000Z",
+        "contentSnippet": "NocoBase is an AI-powered no-code/low-code platform for building business applications and enterprise solutions. Prior to 2.1.19, NocoBase @nocobase/plugin-backups restored PostgreSQL backups by interpolating the database.schema value from _metadata.json into shell command string",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-56743 - Cilium may unexpectedly allow ingress traffic from the local namespace when a Kubernetes NetworkPolicy is configured with an ipBlock match",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56743",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-15T20:17:51.000Z",
+        "contentSnippet": "Cilium is a networking, observability, and security solution. From 1.19.0 to 1.19.4, standard Kubernetes NetworkPolicy specifications using CIDR-based ipBlock rules without pod or namespace selectors erroneously generate a wildcard namespace allow rule when Cilium is configured w",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-56742 - Cilium: Namespaced HTTPRoutes can redirect traffic to other namespaces",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56742",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-15T20:17:51.000Z",
+        "contentSnippet": "Cilium is a networking, observability, and security solution. Prior to 1.17.17, 1.18.11, and 1.19.5, Cilium clusters using Gateway API allow users with permissions to create or update namespaced HTTPRoutes to mirror HTTP traffic to any Service in any namespace, bypassing the Refe",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
         "title": "CVE-2026-52870 - MCP Python SDK: Experimental task handlers allow any client to access and cancel other clients' tasks",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-52870",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-15T20:07:53.000Z",
+        "isoDate": "2026-07-15T20:17:38.000Z",
         "contentSnippet": "The MCP Python SDK, called mcp on PyPI, is a Python implementation of the Model Context Protocol (MCP). From 1.23.0 until 1.27.2, default handlers installed by server.experimental.enable_tasks() for tasks/list, tasks/get, tasks/result, and tasks/cancel operate only on task identi",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 7.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-52869 - MCP Python SDK: HTTP transports serve session requests without verifying the authenticated principal",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52869",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-15T20:17:38.000Z",
+        "contentSnippet": "The MCP Python SDK, called mcp on PyPI, is a Python implementation of the Model Context Protocol (MCP). Prior to 1.27.2, the SSE and stateful Streamable HTTP transports mcp.server.sse.SseServerTransport and mcp.server.streamable_http_manager.StreamableHTTPSessionManager route req",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-50144 - ncnn: Out-of-bounds heap write in ParamDict::load_param via unchecked negative parameter id",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50144",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-15T20:17:13.000Z",
+        "contentSnippet": "ncnn is a high-performance neural network inference framework optimized for the mobile platform. In commit e54f7b1f88434e1d844ea0551b880a1cfb079ce1 and earlier, ncnn allows an out-of-bounds heap write in ncnn::ParamDict::load_param() when Net::load_param() loads a malicious .para",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-50124 - DataEase: Remote Code Execution (RCE) via Zip Protocol & File Dropper",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50124",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-15T20:17:13.000Z",
+        "contentSnippet": "DataEase is an open source data visualization and analysis tool. Prior to 2.10.23, DataEase can be exploited by uploading payload.zip through the Excel upload API /datasource/upload, creating an H2 datasource that uses the zip: protocol, and executing an SQL dataset path where Ca",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-50030 - DataEase: Arbitrary SQL execution in preview path (direct data disclosure)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50030",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-15T20:17:13.000Z",
+        "contentSnippet": "DataEase is an open source data visualization and analysis tool. Prior to 2.10.23, DataEase SQL preview exposes DatasetDataApi.previewSql/previewSqlCheck through /de2api/datasetData/previewSql, accepts PreviewSqlDTO.sql, PreviewSqlDTO.datasourceId, and PreviewSqlDTO.isCross, then",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-49867 - DataEase: Authenticated Stored XSS in DataEase Template Static Resources",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49867",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-15T20:17:12.000Z",
+        "contentSnippet": "DataEase is an open source data visualization and analysis tool. Prior to 2.10.23, DataEase template static resources let authenticated users submit TemplateManageRequest.staticResource through POST /de2api/templateManage/save or DataVisualizationServer.decompression, after which",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-49445 - Cilium: Sensitive information disclosure and cluster disruption via local Envoy admin socket access",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49445",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-15T20:17:10.000Z",
+        "contentSnippet": "Cilium is a networking, observability, and security solution. Prior to 1.17.14, 1.18.8, and 1.19.2, when Cilium L7 functionality is enabled, the embedded or standalone Envoy instance creates a world-accessible admin.sock on cluster nodes, allowing a local attacker to access Envoy",
+        "cveScore": 9.2,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-46684 - DataEase: Unauthorized Command Execution Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46684",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-15T20:17:05.000Z",
+        "contentSnippet": "DataEase is an open source data visualization and analysis tool. Prior to 2.10.23, DataEase enterprise token handling can let TokenFilter#doFilter() pass X-DE-TOKEN values to TokenUtils.validate(), which checks only token presence and length before userBOByToken(token) uses JWT.d",
+        "cveScore": 9.5,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-45738 - Argo CD: Stored XSS in application link annotations enables developer-to-admin privilege escalation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45738",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-15T20:17:05.000Z",
+        "contentSnippet": "Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. Prior to 3.2.12, 3.3.10, and 3.4.2, Argo CD users with application write access can set link.argocd.argoproj.io/* annotations whose pipe-separated values are rendered by ui/src/app/applications/components/a",
+        "cveScore": 7.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-45737 - Argo CD: Kubernetes Secret Extraction via ArgoCD ServerSideDiff via sensitive annotations",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45737",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-15T20:17:04.000Z",
+        "contentSnippet": "Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. From 3.2.0 until 3.2.12, 3.3.10, and 3.4.2, Argo CD ServerSideDiff can expose Kubernetes Secret values embedded in the kubectl.kubernetes.io/last-applied-configuration annotation because HideSecretData(targ",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-45535 - DataEase: Stored SQL Injection Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45535",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-15T20:17:04.000Z",
+        "contentSnippet": "DataEase is an open source data visualization and analysis tool. Prior to 2.10.23, DataEase SQL-type datasets store attacker-controlled SQL variable defaultValue entries such as ${var} and SqlparserUtils.handleVariableDefaultValue() inserts them with String.replace() without esca",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-33443 - Memory management error in Secure Access servers prior to 14.55",
@@ -22,24 +238,6 @@
         "cveSeverity": "HIGH"
       },
       {
-        "title": "CVE-2026-52869 - MCP Python SDK: HTTP transports serve session requests without verifying the authenticated principal",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52869",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-15T20:06:23.000Z",
-        "contentSnippet": "The MCP Python SDK, called mcp on PyPI, is a Python implementation of the Model Context Protocol (MCP). Prior to 1.27.2, the SSE and stateful Streamable HTTP transports mcp.server.sse.SseServerTransport and mcp.server.streamable_http_manager.StreamableHTTPSessionManager route req",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-50144 - ncnn: Out-of-bounds heap write in ParamDict::load_param via unchecked negative parameter id",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50144",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-15T20:04:07.000Z",
-        "contentSnippet": "ncnn is a high-performance neural network inference framework optimized for the mobile platform. In commit e54f7b1f88434e1d844ea0551b880a1cfb079ce1 and earlier, ncnn allows an out-of-bounds heap write in ncnn::ParamDict::load_param() when Net::load_param() loads a malicious .para",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
         "title": "CVE-2026-40958 - Input validation error in Secure Access clients prior to 14.55",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-40958",
         "source": "cvefeed.io",
@@ -47,15 +245,6 @@
         "contentSnippet": "CVE-2026-40958 is a input validation error in Secure Access clients prior to 14.55. Attackers with intimate knowledge of and total control over the tunnel protocol can create a non-persistent DoS against their client.",
         "cveScore": 2.3,
         "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-45737 - Argo CD: Kubernetes Secret Extraction via ArgoCD ServerSideDiff via sensitive annotations",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45737",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-15T20:00:46.000Z",
-        "contentSnippet": "Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. From 3.2.0 until 3.2.12, 3.3.10, and 3.4.2, Argo CD ServerSideDiff can expose Kubernetes Secret values embedded in the kubectl.kubernetes.io/last-applied-configuration annotation because HideSecretData(targ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       },
       {
         "title": "CVE-2026-40957 - Frameable content vulnerability in the Secure Access server login page",
@@ -76,15 +265,6 @@
         "cveSeverity": "LOW"
       },
       {
-        "title": "CVE-2026-45738 - Argo CD: Stored XSS in application link annotations enables developer-to-admin privilege escalation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45738",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-15T19:54:51.000Z",
-        "contentSnippet": "Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. Prior to 3.2.12, 3.3.10, and 3.4.2, Argo CD users with application write access can set link.argocd.argoproj.io/* annotations whose pipe-separated values are rendered by ui/src/app/applications/components/a",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
         "title": "CVE-2026-40955 - Integer underflow vulnerability in Secure Access clients",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-40955",
         "source": "cvefeed.io",
@@ -101,24 +281,6 @@
         "contentSnippet": "CVE-2026-40954 is an integer underflow vulnerability in the traffic parsing function of Secure Access clients prior to 14.55. Attackers with intimate knowledge of and total control over the tunnel protocol can create a non-persistent DoS against their client",
         "cveScore": 2.1,
         "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-49867 - DataEase: Authenticated Stored XSS in DataEase Template Static Resources",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49867",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-15T19:41:52.000Z",
-        "contentSnippet": "DataEase is an open source data visualization and analysis tool. Prior to 2.10.23, DataEase template static resources let authenticated users submit TemplateManageRequest.staticResource through POST /de2api/templateManage/save or DataVisualizationServer.decompression, after which",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-46684 - DataEase: Unauthorized Command Execution Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46684",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-15T19:41:15.000Z",
-        "contentSnippet": "DataEase is an open source data visualization and analysis tool. Prior to 2.10.23, DataEase enterprise token handling can let TokenFilter#doFilter() pass X-DE-TOKEN values to TokenUtils.validate(), which checks only token presence and length before userBOByToken(token) uses JWT.d",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       },
       {
         "title": "CVE-2026-40953 - Heap overflow in Secure Access clients",
@@ -139,29 +301,11 @@
         "cveSeverity": "NA"
       },
       {
-        "title": "CVE-2026-45535 - DataEase: Stored SQL Injection Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45535",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-15T19:39:47.000Z",
-        "contentSnippet": "DataEase is an open source data visualization and analysis tool. Prior to 2.10.23, DataEase SQL-type datasets store attacker-controlled SQL variable defaultValue entries such as ${var} and SqlparserUtils.handleVariableDefaultValue() inserts them with String.replace() without esca",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
         "title": "CVE-2026-45533 - DataEase: Path Traversal Vulnerability",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-45533",
         "source": "cvefeed.io",
         "isoDate": "2026-07-15T19:39:08.000Z",
         "contentSnippet": "DataEase is an open source data visualization and analysis tool. Prior to 2.10.23, DataEase export-center deletion can accept path traversal sequences such as ../ in the bulk delete API endpoint and pass attacker-controlled identifiers to ExportCenterManage.delete, allowing recur",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-50124 - DataEase: Remote Code Execution (RCE) via Zip Protocol & File Dropper",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50124",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-15T19:38:14.000Z",
-        "contentSnippet": "DataEase is an open source data visualization and analysis tool. Prior to 2.10.23, DataEase can be exploited by uploading payload.zip through the Excel upload API /datasource/upload, creating an H2 datasource that uses the zip: protocol, and executing an SQL dataset path where Ca",
         "cveScore": 0,
         "cveSeverity": "NA"
       },
@@ -173,15 +317,6 @@
         "contentSnippet": "CVE-2026-40952 is a privilege misconfiguration in the Secure Access installer for the Windows client and server prior to version 14.55. Attackers with local access to the client or server can use it to elevate privileges to Administrator when Secure Access is installed in a non-d",
         "cveScore": 8.5,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-50030 - DataEase: Arbitrary SQL execution in preview path (direct data disclosure)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50030",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-15T19:24:51.000Z",
-        "contentSnippet": "DataEase is an open source data visualization and analysis tool. Prior to 2.10.23, DataEase SQL preview exposes DatasetDataApi.previewSql/previewSqlCheck through /de2api/datasetData/previewSql, accepts PreviewSqlDTO.sql, PreviewSqlDTO.datasourceId, and PreviewSqlDTO.isCross, then",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       },
       {
         "title": "CVE-2026-45419 - DataEase: Arbitrary File Write Vulnerability",
@@ -767,144 +902,16 @@
         "contentSnippet": "Out-of-bounds read vulnerability in the image codec module. Impact: Successful exploitation of this vulnerability may affect service confidentiality.",
         "cveScore": 4,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-58552 - Image Codec Module Out-of-Bounds Read Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58552",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-15T13:17:28.000Z",
-        "contentSnippet": "Out-of-bounds read vulnerability in the image codec module. Impact: Successful exploitation of this vulnerability may affect service confidentiality.",
-        "cveScore": 5.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-58551 - Image Codec Module Out-of-Bounds Read Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58551",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-15T13:17:28.000Z",
-        "contentSnippet": "Out-of-bounds read vulnerability in the image codec module. Impact: Successful exploitation of this vulnerability may affect service confidentiality.",
-        "cveScore": 5.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-58550 - Image Codec Module Out-of-Bounds Read Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58550",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-15T13:17:28.000Z",
-        "contentSnippet": "Out-of-bounds read vulnerability in the image codec module. Impact: Successful exploitation of this vulnerability may affect service confidentiality.",
-        "cveScore": 4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-58549 - Image Codec Out-of-Bounds Read Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58549",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-15T13:17:27.000Z",
-        "contentSnippet": "Out-of-bounds read vulnerability in the image codec module. Impact: Successful exploitation of this vulnerability may affect service confidentiality.",
-        "cveScore": 4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-46459 - Missing Authorization in ICU Scandinavia Boomerang",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46459",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-15T13:17:22.000Z",
-        "contentSnippet": "ICU Scandinavia Boomerang is vulnerable to a missing authentication flaw in its device receiver endpoints. This allows an unauthenticated remote attacker to read full facility configurations and write unauthorized data to the sensor database. This issue has been fixed in version ",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-46458 - Credential exposure in ICU Scandinavia Boomerang",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46458",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-15T13:17:21.000Z",
-        "contentSnippet": "ICU Scandinavia Boomerang is vulnerable to an information disclosure flaw where sensitive credential files are exposed via static HTTP. This allows an unauthenticated remote attacker to retrieve plaintext service account and SMTP credentials by requesting specific XML files from ",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-15809 - Github.com/cri-o/cri-o: fix bypass for cve-2022-4318 — /etc/passwd injection via home env",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15809",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-15T13:17:03.000Z",
-        "contentSnippet": "A flaw was found in CRI-O. The fix for a previous vulnerability (CVE-2022-4318) was incorrect, allowing it to be bypassed. An attacker capable of setting environment variables on a container can inject a newline character into the HOME environment variable. This issue allows the ",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-15779 - Samba-winbind: samba: pam_winbind mkhomedir chowns critical system paths without validation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15779",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-15T13:17:03.000Z",
-        "contentSnippet": "A flaw was found in samba's pam_winbind. When mkhomedir is enabled, pam_winbind chowns the target account's home directory without validating the path is not a critical system directory such as /. On affected systems, accounts with / as their home directory (a common default for ",
-        "cveScore": 6.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-61873 - Grav before 9.1.8 Arbitrary File Write via Twig-Processed Filename",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61873",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-15T12:18:22.000Z",
-        "contentSnippet": "Grav before 9.1.8 contains an arbitrary file write vulnerability in the Form plugin's process.save.filename parameter, which is validated against path traversal before Twig processing but never re-validated after rendering. Attackers can submit form data containing path traversal",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-61872 - ImageMagick before 7.1.2-26 Memory Leak via TIFF Encoder",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61872",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-15T12:18:22.000Z",
-        "contentSnippet": "ImageMagick before 7.1.2-26 and 6.9.13-51 contains a memory leak in the TIFF encoder when an invalid tiff:tile-geometry is specified. Supplying malformed tile geometry parameters causes allocated memory not to be released, which can lead to increased memory consumption.",
-        "cveScore": 2.5,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-61871 - ImageMagick before 7.1.2-26 Memory Leak in ICON decoder",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61871",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-15T12:18:22.000Z",
-        "contentSnippet": "ImageMagick before 7.1.2-26 and 6.9.13-51 contains a memory leak in the ICON decoder that occurs when a memory allocation fails. Processing a crafted ICON file that triggers an allocation failure leaks memory, which may lead to a denial of service.",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-61869 - ImageMagick before 7.1.2-26 Memory Leak in MIFF Encoder",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61869",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-15T12:18:22.000Z",
-        "contentSnippet": "ImageMagick before 7.1.2-26 and 6.9.13-51 contains a memory leak in the MIFF encoder that occurs when a memory allocation fails during MIFF image processing, which can lead to denial of service.",
-        "cveScore": 2.9,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-61868 - ImageMagick before 7.1.2-26 Memory Leak in YUV Decoder",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61868",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-15T12:18:21.000Z",
-        "contentSnippet": "ImageMagick before 7.1.2-26 and 6.9.x before 6.9.13-51 contains a memory leak in the YUV decoder that occurs when opening of the blob fails. Repeated triggering can lead to resource exhaustion (denial of service).",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-61867 - ImageMagick before 7.1.2-26 Memory Leak in TIFF Encoder",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61867",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-15T12:18:21.000Z",
-        "contentSnippet": "ImageMagick before 7.1.2-26 contains a memory leak vulnerability in the TIFF encoder when memory allocation fails. Attackers can trigger allocation failures during TIFF image processing to cause memory exhaustion and denial of service.",
-        "cveScore": 2.9,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-61866 - ImageMagick before 7.1.2-26 Memory Leak in JNG encoder",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61866",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-15T12:18:21.000Z",
-        "contentSnippet": "ImageMagick before 7.1.2-26 contains a memory leak vulnerability in the JNG encoder when a blob cannot be opened. Attackers can trigger the memory leak by providing malformed JNG files that fail blob operations, causing resource exhaustion.",
-        "cveScore": 2.9,
-        "cveSeverity": "LOW"
       }
     ],
     "ai": [
+      {
+        "title": "Soofi Consortium Releases Soofi S 30B-A3B: An Open Hybrid Mamba-Transformer MoE Foundation Model For German And English",
+        "link": "https://www.marktechpost.com/2026/07/15/soofi-consortium-releases-soofi-s-30b-a3b-an-open-hybrid-mamba-transformer-moe-foundation-model-for-german-and-english/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-07-15T21:02:48.000Z",
+        "contentSnippet": "Soofi S 30B-A3B is an open Mamba-Transformer MoE model activating 3.2B of 31.6B parameters for German and English The post Soofi Consortium Releases Soofi S 30B-A3B: An Open Hybrid Mamba-Transformer MoE Foundation Model For German And English appeared first on MarkTechPost."
+      },
       {
         "title": "Built Technologies builds an AI-powered document intelligence solution on AWS to power agents across real estate finance",
         "link": "https://aws.amazon.com/blogs/machine-learning/built-technologies-builds-an-ai-powered-document-intelligence-solution-on-aws-to-power-agents-across-real-estate-finance/",
@@ -925,6 +932,13 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-07-15T18:08:50.000Z",
         "contentSnippet": "In this post, we present a solution designed to centralize the monitoring of SageMaker Pipelines across AWS accounts and Regions using Amazon CloudWatch custom dashboards. The accompanying GitHub repository provides a customizable AWS Cloud Development Kit (AWS CDK) example of th"
+      },
+      {
+        "title": "Building a Gin Config Controlled PyTorch Pipeline with Configurable MLP Variants, Cosine Scheduling, and Runtime Parameter Overrides",
+        "link": "https://www.marktechpost.com/2026/07/15/building-a-gin-config-controlled-pytorch-pipeline-with-configurable-mlp-variants-cosine-scheduling-and-runtime-parameter-overrides/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-07-15T18:03:38.000Z",
+        "contentSnippet": "We build a Gin Config controlled PyTorch pipeline where the training code stays fixed and the experiment variables move into .gin files. We construct a nonlinear spiral binary classification task and define a configurable MLP with scoped architectural variants. We expose the opti"
       },
       {
         "title": "Google Releases LiteRT.js: A JavaScript Binding of LiteRT That Runs .tflite Models in Browsers via WebGPU",
@@ -1590,20 +1604,6 @@
         "source": "MarkTechPost",
         "isoDate": "2026-07-03T21:25:33.000Z",
         "contentSnippet": "In this tutorial, we build an end-to-end accounts-payable extraction pipeline with lift-pdf, using synthetic invoice PDFs as controlled test documents and a structured JSON schema as the target output format. Instead of treating invoice parsing as a simple OCR task, we frame it a"
-      },
-      {
-        "title": "Meet WebBrain: An Open-Source, Local-First AI Browser Agent That Reads Pages and Automates Tasks in Chrome and Firefox",
-        "link": "https://www.marktechpost.com/2026/07/02/meet-webbrain-an-open-source-local-first-ai-browser-agent-that-reads-pages-and-automates-tasks-in-chrome-and-firefox/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-07-03T05:55:47.000Z",
-        "contentSnippet": "WebBrain is a free, MIT-licensed AI browser agent for Chrome and Firefox. It reads pages, extracts data, and automates multi-step tasks through Ask and Act modes. Run it on local models like llama.cpp or Ollama for privacy, or connect any cloud API. The post Meet WebBrain: An Ope"
-      },
-      {
-        "title": "Interfaze Ships diffusion-gemma-asr-small, an Open-Source Diffusion ASR Model Transcribing Six Languages via DiffusionGemma’s Parallel Denoising Decoder",
-        "link": "https://www.marktechpost.com/2026/07/02/interfaze-ships-diffusion-gemma-asr-small-an-open-source-diffusion-asr-model-transcribing-six-languages-via-diffusiongemmas-parallel-denoising-decoder/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-07-03T03:24:23.000Z",
-        "contentSnippet": "Interfaze open-sourced diffusion-gemma-asr-small, a multilingual ASR model that transcribes via diffusion, not autoregression. It adds audio to Google's frozen DiffusionGemma using a ~42M-parameter adapter. One adapter covers six languages, with transcription cost set by denoisin"
       }
     ],
     "virtualization": [
