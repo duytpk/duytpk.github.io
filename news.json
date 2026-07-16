@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-07-16T17:05:15.821Z",
+  "updatedAt": "2026-07-16T18:58:25.339Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-46338 - PyMdown Extensions: Regression in pymdownx.snippets reintroduces sibling-prefix path traversal bypass despite restrict_base_path",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46338",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-16T18:24:18.000Z",
+        "contentSnippet": "PyMdown Extensions is a set of extensions for the Python-Markdown markdown project. From 10.0.1 until 10.21.3, pymdownx.snippets uses a string-prefix containment check in SnippetPreprocessor.get_snippet_path() in pymdownx/snippets.py when `restrict_base_path: True`, allowing mark",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-46515 - Frogman: Multiple read-tier tools expose admin-grade data and arbitrary GraphQL execution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46515",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-16T18:17:14.000Z",
+        "contentSnippet": "Frogman provides headless PBX control through MCP and HTTP API. Prior to 1.6.3, PERM_READ access was sufficient to call fm_list_managers, fm_list_pinsets, fm_show_context, fm_get_mcp_config, fm_backup_status, fm_whos_calling, fm_run_saved_query, and fm_diagnose_trunk, exposing AM",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-46687 - Emlog Local File Inclusion (LFI)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46687",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-16T18:16:44.000Z",
+        "contentSnippet": "Emlog is an open source website building system. In 2.6.13 and earlier, the article publishing interface stores a path-traversal template parameter from api_controller.php without validation, and log_controller.php later checks file_exists and calls include View::getView($templat",
+        "cveScore": 7.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-46686 - Emlog Reflected Cross-Site Scripting",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46686",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-16T18:16:44.000Z",
+        "contentSnippet": "Emlog is an open source website building system. In 2.6.13 and earlier, the admin backend user search module's keyword parameter from admin/user.php is processed with addslashes but not HTML-escaped before being rendered into the value attribute in admin/views/user.php, allowing ",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-46341 - Apify MCP server: Domain Allowlist Bypass in fetch-apify-docs via String Prefix Matching",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46341",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-16T18:16:43.000Z",
+        "contentSnippet": "The Apify MCP server enables AI agents to extract data from websites using ready-made scrapers, crawlers, and automation tools available on the Apify Store. Prior to 0.9.21, the fetch-apify-docs tool in src/tools/common/fetch_apify_docs.ts validates allowlisted documentation doma",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-46336 - Manyfold: Authenticated Path Traversal via File Rename",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46336",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-16T18:16:43.000Z",
+        "contentSnippet": "Manyfold is an open source, self-hosted web application for managing a collection of 3d models, particularly focused on 3d printing. From 0.96.0 until 0.140.0, authenticated users can rename uploaded files with path traversal sequences because app/models/model_file.rb uses the us",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-45336 - HireFlow: Use of Hard-coded Credentials",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45336",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-16T18:16:43.000Z",
+        "contentSnippet": "HireFlow is a web-based interview management system for managing candidates, scheduling interviews, and tracking hiring progress. In 1.2 and earlier, app.py assigns a hard-coded Flask secret_key used to sign session cookies, allowing unauthenticated attackers who know the public ",
+        "cveScore": 10,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-44970 - dbt-mcp: All MCP Tool Arguments Including Raw SQL and --vars Credentials Transmitted to dbt Labs Telemetry by Default Without Redaction",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44970",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-16T18:16:43.000Z",
+        "contentSnippet": "dbt-mcp is a Model Context Protocol server for interacting with dbt. Prior to 1.17.1, DefaultUsageTracker.emit_tool_called_event() in src/dbt_mcp/tracking/tracking.py serialized every MCP tool call's complete arguments dictionary and sent it through dbtlabs_vortex.producer.log_pr",
+        "cveScore": 3.1,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-44969 - dbt-mcp: Tool Arguments Including SQL Queries and Credentials Logged in Plaintext Without Redaction When File Logging Is Enabled",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44969",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-16T18:16:43.000Z",
+        "contentSnippet": "dbt-mcp is a Model Context Protocol server for interacting with dbt. Prior to 1.17.1, DbtMCP.call_tool() in src/dbt_mcp/mcp/server.py logged the raw arguments dictionary at INFO level before each tool call and at ERROR level on exceptions, and configure_file_logging() wrote those",
+        "cveScore": 2.5,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-44968 - dbt-mcp: Argument Injection in dbt CLI Tool Wrappers via node_selection and resource_type Parameters",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44968",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-16T18:16:43.000Z",
+        "contentSnippet": "dbt-mcp is a Model Context Protocol server for interacting with dbt. Prior to 1.17.1, _run_dbt_command() in src/dbt_mcp/dbt_cli/tools.py appended unsanitized node_selection and resource_type values to the dbt subprocess argument list, allowing an MCP client to inject dbt global f",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-15945 - Keycloak-services: keycloak-services: group hierarchy search discloses hidden parent groups under fgap v2",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15945",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-16T18:16:42.000Z",
+        "contentSnippet": "A flaw was found in the group search functionality of the Keycloak server's administrative API. When Fine-Grained Admin Permissions (FGAP) v2 is enabled, a delegated administrator can bypass access restrictions to view parent groups they are not authorized to see. By searching fo",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-15737 - Sensitive content disclosure via OpenTelemetry spans in AgentCore Python SDK",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15737",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-16T18:16:42.000Z",
+        "contentSnippet": "AWS Bedrock AgentCore Python SDK is an open-source Python library that provides client tools for building AI agents on the Amazon Bedrock AgentCore platform. Unintended logging of sensitive user content in the OpenTelemetry instrumentation in AWS Bedrock AgentCore Python SDK vers",
+        "cveScore": 5.7,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2021-27137 - DD-WRT UPnP Buffer Overflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2021-27137",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-16T18:16:39.000Z",
+        "contentSnippet": "An issue was discovered in router/upnp/src/ssdp.c in DD-WRT before 45724. An unsafe strcpy in the UPnP handling functionality allows an unauthenticated remote attacker to send a request that would overflow an internal fixed buffer. Exploitation requires the DD-WRT user to enable ",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-46512 - Frogman: Dialplan template parameters interpolated into extensions_custom.conf without escaping",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46512",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-16T18:15:52.000Z",
+        "contentSnippet": "Frogman provides headless PBX control through MCP and HTTP API. Prior to 1.6.2, fm_dialplan_apply accepted template parameters including greeting, dest, url, extension, code, and file, and Tools/DialplanApply.php wrote Dialplan/Templates.php output to extensions_custom.conf while",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-46513 - Frogman: API tokens stored in plaintext",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46513",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-16T18:14:05.000Z",
+        "contentSnippet": "Frogman provides headless PBX control through MCP and HTTP API. Prior to 1.6.2, Frogman stored API tokens generated by Tools/CreateApiToken.php:33-36 as raw bin2hex(random_bytes(32)) strings in oc_api_tokens, and Frogman.class.php:78 authenticated the X-Frogman-Token header by co",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-46514 - Frogman: Plaintext passwords and secrets persisted to audit log",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46514",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-16T18:11:11.000Z",
+        "contentSnippet": "Frogman provides headless PBX control through MCP and HTTP API. Prior to 1.6.2, fm_reset_password in Tools/ResetPassword.php:48-53 returned a plaintext password and fm_add_extension in Tools/AddExtension.php:172 returned a plaintext secret; Frogman.class.php:2207-2211 used auditO",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-46353 - BigBlueButton API checksum bypass via presentationUploadExternalUrl",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46353",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-16T18:06:54.000Z",
+        "contentSnippet": "BigBlueButton is an open-source virtual classroom. Prior to 3.0.21, bbb-web checksum validation could be bypassed when a presentationUploadExternalUrl parameter was supplied to API request handling in CreateMeeting.java and ValidationService.java, allowing a user to send valid re",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-46404 - BigBlueButton: Presentation URL Security Hardening",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46404",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-16T18:04:11.000Z",
+        "contentSnippet": "BigBlueButton is an open-source virtual classroom. Prior to 3.0.23, the presentation URL validation did not properly restrict access to site local and link local addresses. The redirect following logic now pins resolved IPs. This issue is fixed in version 3.0.23.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-46351 - BigBlueButton: Insecure Randomness allows to guess user's conference session token and impersonate them",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46351",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-16T17:58:53.000Z",
+        "contentSnippet": "BigBlueButton is an open-source virtual classroom. Prior to 3.0.21, bbb-web generated conference sessionToken values with insufficiently secure randomness in bbb-common-web/src/main/java/org/bigbluebutton/api/Util.java and bigbluebutton-web/grails-app/controllers/org/bigbluebutto",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-46377 - Dasel: Index-out-of-range panic in dasel selector lexer on trailing backslash in quoted string",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46377",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-16T17:57:16.000Z",
+        "contentSnippet": "Dasel is a command-line tool and library for querying, modifying, and transforming data structures. From 3.0.0 until 3.10.1, the escape sequence handler in (*Tokenizer).parseCurRune in selector/lexer/tokenize.go increments past a trailing backslash in a quoted string such as \"\\ o",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-46378 - Dasel: Denial of service in dasel selector lexer due to infinite loop on unterminated regex literal",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46378",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-16T17:54:51.000Z",
+        "contentSnippet": "Dasel is a command-line tool and library for querying, modifying, and transforming data structures. From 3.0.0 until 3.10.1, the selector lexer matchRegexPattern closure in (*Tokenizer).parseCurRune in selector/lexer/tokenize.go loops while tokenizing an unterminated regex litera",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-9046 - Lenovo Legion Zone and App Store Local Privilege Escalation Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9046",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-16T17:16:59.000Z",
+        "contentSnippet": "A potential insecure permissions vulnerability was reported in Legion Zone and the Lenovo App Store Windows applications, distributed exclusively in the Chinese market, that when installed on a non‑system partition, could allow a local user to execute arbitrary code.",
+        "cveScore": 7.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-6511 - Lenovo Smart Connect Improper Access Control Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6511",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-16T17:16:58.000Z",
+        "contentSnippet": "During an internal security assessment, a potential improper access control vulnerability was discovered in Lenovo Smart Connect for Windows that could allow a local authenticated user to access files owned by a different user on the same system.",
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-63088 - stoatchat < 0.14.0 SSRF via DNS-based IP Blocklist Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63088",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-16T17:16:58.000Z",
+        "contentSnippet": "stoatchat before 0.14.0 contains a server-side request forgery (SSRF) vulnerability that allows unauthenticated network-accessible attackers to bypass the DNS-based IP blocklist by exploiting incomplete address validation in the url_is_blacklisted function, which inspects only th",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-63087 - Grafana OnCall 1.16.11 Unauthenticated Token Hijack via Plugin Install Endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63087",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-16T17:16:58.000Z",
+        "contentSnippet": "Grafana OnCall through 1.16.11 contains an unauthenticated access vulnerability that allows remote attackers to obtain a valid PluginAuthToken by sending a POST request to the internal plugin install endpoint using hardcoded default stack_id and org_id values present in the publi",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
       {
         "title": "CVE-2026-59863 - Kiota: Workspace-config poisoning: out-of-repo file write + generation-time SSRF",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-59863",
@@ -677,234 +902,16 @@
         "contentSnippet": "Loki queries with large limits can cause large memory allocations which can impact the availability of the service, depending on its deployment strategy.",
         "cveScore": 7.5,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-15652 - Easy Accordion <= 3.1.6 - Authenticated (Contributor+) Stored Cross-Site Scripting via 'align' Block Attribute",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15652",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-16T04:17:25.000Z",
-        "contentSnippet": "The Easy Accordion – AI-Powered FAQ & Accordion Blocks, Product FAQ plugin for WordPress is vulnerable to Stored Cross-Site Scripting via 'align' Block Attribute in all versions up to, and including, 3.1.6 due to insufficient input sanitization and output escaping. This makes it ",
-        "cveScore": 6.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-15336 - Catch Themes Demo Import <= 3.3 - Missing Authorization to Authenticated (Subscriber+) Single Plugin Installation via 'activate_plugin' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15336",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-16T04:17:22.000Z",
-        "contentSnippet": "The Catch Themes Demo Import plugin for WordPress is vulnerable to Missing Authorization in versions up to, and including, 3.3. This is due to the catch_themes_demo_import_activate_plugin() function, hooked on admin_init when the activate_plugin GET parameter is present, calling ",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-14987 - GiveWP <= 4.16.3 - Authenticated (Give Worker+) Stored Cross-Site Scripting via 'twitter_message' Sequoia Template Setting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14987",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-16T04:17:19.000Z",
-        "contentSnippet": "The GiveWP – Donation Plugin and Fundraising Platform plugin for WordPress is vulnerable to Stored Cross-Site Scripting via 'twitter_message' Sequoia Template Setting in all versions up to, and including, 4.16.3 due to insufficient input sanitization and output escaping. This mak",
-        "cveScore": 6.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-13005 - MxChat <= 3.2.10 - Authenticated (Admin+) Stored Cross-Site Scripting via 'intro_message' Setting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13005",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-16T04:17:16.000Z",
-        "contentSnippet": "The MxChat – AI Chatbot & Content Generation for WordPress plugin for WordPress is vulnerable to Stored Cross-Site Scripting via admin settings in all versions up to, and including, 3.2.10 due to insufficient input sanitization and output escaping. This makes it possible for auth",
-        "cveScore": 4.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-12941 - MultiVendorX <= 5.0.9 - Authenticated (Store Owner+) SQL Injection via 'order_by' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12941",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-16T04:17:16.000Z",
-        "contentSnippet": "The MultiVendorX – WooCommerce Multivendor Marketplace AI Powered Solutions plugin for WordPress is vulnerable to generic SQL Injection via the 'order_by' parameter in all versions up to, and including, 5.0.9 due to insufficient escaping on the user supplied parameter and lack of",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-12753 - Advance Product Search- Voice & Ajax Search for WooCommerce <= 1.4.4 - Unauthenticated SQL Injection via 's' and 'match' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12753",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-16T04:17:16.000Z",
-        "contentSnippet": "The Advance Product Search- Voice & Ajax Search for WooCommerce plugin for WordPress is vulnerable to generic SQL Injection via the 's' and 'match' parameter in all versions up to, and including, 1.4.4 due to insufficient escaping on the user supplied parameter and lack of suffic",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-12434 - List category posts <= 0.95.0 - Missing Authorization to Authenticated (Contributor+) Sensitive Information Exposure via 'post_status' Shortcode Attribute",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12434",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-16T04:17:15.000Z",
-        "contentSnippet": "The List category posts plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 0.95.0 via the sanitize_status. This makes it possible for authenticated attackers, with contributor-level access and above, to extract titles, full ",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-12409 - Landing Page Builder <= 1.5.3.6 - Cross-Site Request Forgery to ulpb_admin_data AJAX Action",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12409",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-16T04:17:14.000Z",
-        "contentSnippet": "The Landing Page Builder – Coming Soon page, Maintenance Mode, Lead Page, WordPress Landing Pages plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 1.5.3.6. This is due to missing or incorrect nonce validation on the ulpb_admin",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-48863 - Libsolv: stack-based buffer overflow in libsolv eddsa pgp signature verification allows denial of service",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48863",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-16T01:16:30.000Z",
-        "contentSnippet": "A flaw was found in libsolv. A stack-based buffer overflow vulnerability exists in the PGP verification component due to incorrect length handling when copying EdDSA 's' MPI into a stack buffer. A remote attacker could craft a malicious Ed25519 PGP signature with mismatched MPI l",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-3842 - Qemu-kvm: hyperv/syndbg: missing mapped-length guard after cpu_physical_memory_map causes host oob write",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-3842",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-16T01:16:30.000Z",
-        "contentSnippet": "A flaw was found in QEMU. This vulnerability allows a local attacker within a guest virtual machine to write data beyond its allocated memory. This occurs when cpu_physical_memory_map() returns a shorter length than expected, leading to an out-of-bounds write. Successful exploita",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-23538 - Feast: resource exhaustion via websocket endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-23538",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-16T01:16:30.000Z",
-        "contentSnippet": "A vulnerability was identified in the Feast Feature Server's `/ws/chat` endpoint that allows remote attackers to establish persistent WebSocket connections without any authentication. By opening a large number of simultaneous connections, an attacker can exhaust server resources—",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-1609 - Org.keycloak/keycloak-quarkus-server: keycloak: unauthorized access via jwt authorization grant with disabled users",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-1609",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-16T01:16:30.000Z",
-        "contentSnippet": "A flaw was found in Keycloak. When the JSON Web Token (JWT) authorization grant preview feature is enabled and a user account is disabled, Keycloak fails to validate the user’s disabled status during JWT authorization grant processing. A remote attacker with low privileges can ex",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-15909 - RafyMrX TOKO-ONLINE-ROTI add.php authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15909",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-16T01:16:29.000Z",
-        "contentSnippet": "A vulnerability has been found in RafyMrX TOKO-ONLINE-ROTI up to ddfe1cd587be0a0b5135d8b6e85cce2ec3aece99. Affected is an unknown function of the file proses/add.php. The manipulation of the argument kd_cs leads to authorization bypass. The attack is possible to be carried out re",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-15907 - H3C SecPath F1000-C8300 g=log_fw_nbc_mail_jsondata sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15907",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-16T00:16:19.000Z",
-        "contentSnippet": "A flaw has been found in H3C SecPath F1000-C8300 up to 20260522. This impacts an unknown function of the file /webui/?g=log_fw_nbc_mail_jsondata. Executing a manipulation of the argument subject can lead to sql injection. The attack can be executed remotely. The exploit has been ",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-63175 - Cross-Capture Session Data Leakage Due to Shared Mutable State in Looklyloo - PlaywrightCapture",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63175",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-15T22:17:38.000Z",
-        "contentSnippet": "PlaywrightCapture stored capture-specific configuration and runtime data as mutable class-level variables rather than instance-level variables. Consequently, multiple Capture objects running within the same Python process could share state, including HTTP headers, cookies, browse",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-62314 - Anubis: Policy bypass via client controlled X-Original-URI header",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62314",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-15T22:17:38.000Z",
-        "contentSnippet": "Anubis is a Web AI Firewall Utility that challenges users' connections in order to protect upstream resources from scraper bots. From 1.22.0 until 1.26.0-pre1, lib/policy/checker.go PathChecker.Check() trusted the client-controlled X-Original-URI header before matching r.URL.Path",
-        "cveScore": 5.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-55652 - Wekan: Header-login IP allowlist bypass via X-Forwarded-For spoofing in Wekan allows unauthenticated full account takeover (incl. admin)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55652",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-15T22:17:26.000Z",
-        "contentSnippet": "Wekan is open source kanban built with Meteor. Prior to 9.46, header-login with HEADER_LOGIN_TRUSTED_IPS uses getRequestIp() in server/lib/headerLoginAuth.js to trust the client-supplied X-Forwarded-For header before the real socket address, allowing an unauthenticated attacker t",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-55576 - MaaAssistantArknights: PR-title expression injection in release-preparation.yml",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55576",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-15T22:17:26.000Z",
-        "contentSnippet": "MaaAssistantArknights is a one-click tool for daily Arknights tasks. In the current dev-v2 workflow, .github/workflows/release-preparation.yml inlined attacker-controlled github.event.pull_request.title into a run: shell command during the pull_request opened, reopened, and ready",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-55445 - Qinglong: Incomplete fix for CVE-2026-3965: Improper Authentication",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55445",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-15T22:17:26.000Z",
-        "contentSnippet": "Qinglong is a timed task management platform supporting Python3, JavaScript, Shell, and Typescript. Prior to 2.20.1, the init guard middleware in back/loaders/express.ts checks /api/user/init but not /open/user/init, while rewrite('/open/*', '/api/$1') rewrites the whitelisted /o",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-55234 - Wekan: Broken access control: any authenticated user can move their Cards/Lists/Swimlanes into a private board they are not a member of (cross-board write via collection allow rule)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55234",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-15T22:17:25.000Z",
-        "contentSnippet": "Wekan is open source kanban built with Meteor. Prior to 9.37, Wekan DDP update allow rules in server/permissions/cards.js, server/permissions/lists.js, and server/permissions/swimlanes.js authorize against the stored source boardId and do not validate a new boardId in the update ",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-54458 - AVideo: Unauthenticated Stored DOM Cross-Site Scripting via Per-Client Metadata Broadcast in YPTSocket Plugin",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54458",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-15T22:17:19.000Z",
-        "contentSnippet": "WWBN AVideo is an open source video platform. Versions prior to 29.0 contain a stored DOM Cross-Site Scripting vulnerability in the YPTSocket plugin. Any unauthenticated remote attacker can execute arbitrary JavaScript in the authenticated origin of every administrator currently ",
-        "cveScore": 9.6,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-53447 - Wekan: `cloneBoard` Meteor method has no authorization check — any user can clone (read) any private board by ID",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53447",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-15T22:17:17.000Z",
-        "contentSnippet": "Wekan is open source kanban built with Meteor. Prior to 9.35, the Wekan cloneBoard Meteor method in models/import.js uses caller-supplied sourceBoardId to build a board export through models/exporter.js without invoking canExport() or checking source-board membership. Any authent",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-53446 - Wekan: Server-Side Request Forgery (SSRF) via webhook integration URLs",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53446",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-15T22:17:17.000Z",
-        "contentSnippet": "Wekan is open source kanban built with Meteor. Prior to 9.32, Wekan webhook integration URLs in models/integrations.js are stored from user input and later fetched by server/notifications/outgoing.js without applying the existing validateAttachmentUrl() private-network checks fro",
-        "cveScore": 6.2,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-53445 - Wekan: Authorization bypass in copyBoard DDP method allows any user to copy private boards",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53445",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-15T22:17:16.000Z",
-        "contentSnippet": "Wekan is open source kanban built with Meteor. Prior to 9.32, the Wekan copyBoard Meteor DDP method in server/publications/boards.js copies a board by caller-supplied board ID without checking this.userId, membership, or admin access. Any authenticated user can copy a private boa",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-53444 - Wekan: Missing authorization on OIDC Meteor methods allows privilege escalation to admin",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53444",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-15T22:17:16.000Z",
-        "contentSnippet": "Wekan is open source kanban built with Meteor. Prior to 9.32, Wekan OIDC-related Meteor methods in packages/wekan-oidc/oidc_server.js, server/models/org.js, and server/models/team.js are globally callable without the admin authorization checks used by their non-OIDC counterparts.",
-        "cveScore": 7.6,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
+      {
+        "title": "OpenAI Details GPT-Red: An Internal Automated Red-Teaming Model That Beat Human Red-Teamers 84% To 13% On Prompt Injection",
+        "link": "https://www.marktechpost.com/2026/07/16/openai-details-gpt-red-an-internal-automated-red-teaming-model-that-beat-human-red-teamers-84-to-13-on-prompt-injection/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-07-16T18:48:04.000Z",
+        "contentSnippet": "OpenAI trained GPT-Red, an internal-only attacker model, using self-play reinforcement learning against a population of defender LLMs. It beat human red-teamers 84% to 13% on a replicated indirect prompt injection arena, found a novel \"Fake Chain-of-Thought\" attack class, and cut"
+      },
       {
         "title": "Connect more of your apps to Search",
         "link": "https://blog.google/products-and-platforms/products/search/connected-apps/",
@@ -1597,13 +1604,6 @@
         "source": "MarkTechPost",
         "isoDate": "2026-07-05T03:02:08.000Z",
         "contentSnippet": "Most enterprise data still sits inside PDFs, scans, and slide decks. Large language models and agents cannot use that data until it becomes structured JSON. Open-source document extraction has become the standard way to do that conversion on your own hardware. Two different probl"
-      },
-      {
-        "title": "Qwen’s Former Lead on What Hybrid Thinking Got Wrong — and Why He Now Backs Agents",
-        "link": "https://www.marktechpost.com/2026/07/04/qwens-former-lead-on-what-hybrid-thinking-got-wrong-and-why-he-now-backs-agents/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-07-05T02:31:14.000Z",
-        "contentSnippet": "Junyang Lin, the former technical lead of Alibaba's Qwen, walked through the model family in a talk \"towards a generalist model / agent,\" then expanded it in an essay. We read both for practitioners: Qwen3 hybrid thinking modes and dynamic thinking budgets, where the merge fell s"
       }
     ],
     "virtualization": [
