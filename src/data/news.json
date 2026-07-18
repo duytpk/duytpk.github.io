@@ -1,8 +1,44 @@
 {
-  "updatedAt": "2026-07-18T12:55:34.194Z",
+  "updatedAt": "2026-07-18T14:17:16.961Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-9147 - uproot 5.7.4 and prior Code Injection via TStreamerInfo Metadata",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9147",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-18T13:17:06.000Z",
+        "contentSnippet": "uproot dynamically generates Python class source code from ROOT TStreamerInfo records in a file and compiles it at runtime. Some file-controlled streamer metadata fields (for example, streamer element names) are interpolated into the generated Python source without safe quoting v",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-59173 - Apache Traffic Server: DoS vulnerability in HTTP/2 via stalled flow-control conditions",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59173",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-18T13:17:06.000Z",
+        "contentSnippet": "Uncontrolled Resource Consumption vulnerability in Apache Traffic Server. This issue affects Apache Traffic Server: from 9.0.0 through 9.1.13, from 10.0.0 through 10.1.2. Users are recommended to upgrade to version 9.1.14 or 10.1.3, which fixes the issue.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-16158 - @fastify/reply-from vulnerable to cross-upstream request routing via URL cache key collision",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16158",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-18T13:17:06.000Z",
+        "contentSnippet": "Impact: @fastify/reply-from versions from 8.3.1 up to but not including 12.6.4 build the internal URL cache key by concatenating the destination and source path without a delimiter. Different destination and source pairs can therefore produce the same key while resolving to diffe",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-15631 - @fastify/http-proxy vulnerable to prefix escape via WebSocket path traversal",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15631",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-18T13:17:05.000Z",
+        "contentSnippet": "Impact: @fastify/http-proxy versions from 9.4.0 up to and including 11.5.0 fail to validate the resolved WebSocket destination path against the configured rewrite prefix. The WebSocket routing path in WebSocketProxy.findUpstream resolves the destination via the WHATWG URL constru",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-16097 - Shibby Tomato Scheduler Name sub_42537C stack-based overflow",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-16097",
@@ -866,42 +902,6 @@
         "contentSnippet": "Zeroconf is a pure Python implementation of multicast DNS service discovery. Prior to 0.149.7, DNSCache._async_add inserted every response record into cache, _expirations, _expire_heap, and service_cache without a cap, allowing unauthenticated hosts on the local link over UDP/535",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-47183 - Zeroconf: Unbounded exception-dedup state retains packet buffers via traceback frame locals, enabling LAN-local memory exhaustion",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47183",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-17T18:22:59.000Z",
-        "contentSnippet": "Zeroconf is a pure Python implementation of multicast DNS service discovery. Prior to 0.149.6, DNSIncoming._log_exception_debug and the four QuietLogger exception-dedup methods stored an unbounded _seen_logs dictionary keyed by attacker-influenced IncomingDecodeError messages, re",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-47180 - Zeroconf: Unbounded recursion in DNS compression-pointer decoder allows LAN-local denial of service",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47180",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-17T18:21:25.000Z",
-        "contentSnippet": "Zeroconf is a pure Python implementation of multicast DNS service discovery. Prior to 0.149.5, DNSIncoming._decode_labels_at_offset recurses once per DNS-name compression pointer, and a single mDNS packet carrying chained pointers can trigger a RecursionError that escapes DNSInco",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-53712 - SCRAM: Silent channel-binding authentication downgrade via unsupported certificate algorithms",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53712",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-17T18:19:11.000Z",
-        "contentSnippet": "SCRAM (Salted Challenge Response Authentication Mechanism) is part of the family of Simple Authentication and Security Layer (SASL, RFC 4422) authentication mechanisms. Prior to 3.3, a flaw in com.ongres.scram:scram-client and com.ongres.scram:scram-common allows an attacker capa",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-9762 - IBM® Data Server driver for JDBC and SQLJ is vulnerable to remote code execution when jdbc url is under user control",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9762",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-17T18:17:17.000Z",
-        "contentSnippet": "IBM Db2 11.5.0 through 11.5.9, and 12.1.0 through 12.1.4 is vulnerable to remote code execution when jdbc url is under user control.",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
@@ -1608,6 +1608,13 @@
     ],
     "virtualization": [
       {
+        "title": "The Hidden Proxmox Feature That Includes 100+ TurnKey Linux Appliances",
+        "link": "https://www.virtualizationhowto.com/2026/07/the-hidden-proxmox-feature-that-includes-100-turnkey-linux-appliances/",
+        "source": "Virtualization HowTo",
+        "isoDate": "2026-07-18T12:58:21.000Z",
+        "contentSnippet": "One of the things that I like about Proxmox is that it continues to surprise me with its capabilities and things you get out of the box. Even though i… The post The Hidden Proxmox Feature That Includes 100+ TurnKey Linux Appliances appeared first on Virtualization Howto."
+      },
+      {
         "title": "7 GitOps Tools for Docker Compose to Try This Weekend",
         "link": "https://www.virtualizationhowto.com/2026/07/7-gitops-tools-for-docker-compose-to-try-this-weekend/",
         "source": "Virtualization HowTo",
@@ -2296,6 +2303,20 @@
     ],
     "hardware": [
       {
+        "title": "Nvidia RTX 50 Super GPUs are reportedly ready, but stuck in limbo due to excessive GDDR7 pricing — 3GB GDDR7 module costs triple the price of 2GB",
+        "link": "https://www.tomshardware.com/pc-components/gpus/nvidia-rtx-50-super-gpus-are-reportedly-ready-but-stuck-in-limbo-due-to-excessive-gddr7-pricing-3gb-gddr7-module-costs-triple-the-price-of-2gb",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-07-18T13:45:42.000Z",
+        "contentSnippet": "The 3GB GDDR7 chips that the RTX 50 Super GPUs will use reportedly cost twice to thrice as much as the 2GB chips found on vanilla RTX 50-series graphics cards. This would likely push the retail price of these GPUs way beyond Nvidia's target MSRP."
+      },
+      {
+        "title": "Nvidia CEO Jensen Huang’s trademark leather jacket raises nearly $1 Million at charity auction — bidding makes $60,000 valuation look like pocket change",
+        "link": "https://www.tomshardware.com/peripherals/wearable-tech/nvidia-ceo-jensen-huangs-trademark-leather-jacket-raises-nearly-usd1-million-at-charity-auction-bidding-makes-usd60-000-valuation-look-like-pocket-change",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-07-18T13:22:12.000Z",
+        "contentSnippet": "‘The Jensen Jacket’ achieved a hammer price of $960,000 this weekend."
+      },
+      {
         "title": "Security engineer ports password cracker hashcat to Gameboy Advance — 16.8 MHz chip can perform a meager 727 hashes a second, 30 million times slower than a modern rig",
         "link": "https://www.tomshardware.com/video-games/nintendo/security-engineer-ports-password-cracker-hashcat-to-gameboy-advance-16-8-mhz-chip-can-perform-a-meager-727-hashes-a-second-30-million-times-slower-than-a-modern-rig",
         "source": "Tom's Hardware",
@@ -2980,20 +3001,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-07-13T12:05:00.000Z",
         "contentSnippet": "The Flashforge Creator 5 tool changer is basic, budget, and nearly perfect."
-      },
-      {
-        "title": "Apple's rumored M7 Ultra targets 1.5TB of memory and Blackwell-class AI performance, report claims — monster 2028 offering would depend on memory shortage easing",
-        "link": "https://www.tomshardware.com/tech-industry/semiconductors/apples-rumored-m7-ultra-targets-1-5tb-of-memory-and-blackwell-class-ai",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-13T12:02:52.000Z",
-        "contentSnippet": "Apple's planned M7 Ultra chip is being designed to support up to 1.5 TB of unified memory and to push AI performance toward the class of Nvidia's Blackwell accelerators."
-      },
-      {
-        "title": "Save $544 on a new RTX 5080-packed Cyberpower gaming PC — also features AMD's 9800X3D, 32GB of DDR5 RAM, and a 2TB SSD for $2,744",
-        "link": "https://www.tomshardware.com/desktops/gaming-pcs/save-usd544-on-a-new-rtx-5080-packed-cyberpower-gaming-pc-also-features-amds-9800x3d-32gb-of-ddr5-ram-and-a-2tb-ssd-for-usd2-744",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-13T11:18:31.000Z",
-        "contentSnippet": "Save over $544 on a new high-powered gaming rig from Cyberpower. High-end graphics and frame rates, thanks to the included RTX 5080 and Ryzen 7 9800X3D hardware inside."
       }
     ]
   }
