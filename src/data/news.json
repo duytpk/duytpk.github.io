@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-07-19T15:49:58.621Z",
+  "updatedAt": "2026-07-19T16:47:33.968Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-63874 - net: mctp: usb: fix race between urb completion and rx_retry cancellation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63874",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T15:16:54.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: net: mctp: usb: fix race between urb completion and rx_retry cancellation It's possible that sequencing between setting ->stopped and cancelling the rx_retry work (in ndo_stop) could leave us with an urb queued: ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63873 - accel/amdxdna: Fix mm_struct reference leak in aie2_populate_range()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63873",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T15:16:54.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: accel/amdxdna: Fix mm_struct reference leak in aie2_populate_range() aie2_populate_range() jumps back to the again label without calling mmput(mm), leaking a reference to the mm_struct. Add the missing mmput() be",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63872 - esp: fix page frag reference leak on skb_to_sgvec failure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63872",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T15:16:54.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: esp: fix page frag reference leak on skb_to_sgvec failure In esp_output_tail(), when esp->inplace is false, the old skb page frags are replaced with a new page from the xfrm page_frag cache. The source scatterlis",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63871 - Bluetooth: ISO: Fix data-race on iso_pi fields in hci_get_route calls",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63871",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T15:16:54.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: Bluetooth: ISO: Fix data-race on iso_pi fields in hci_get_route calls iso_connect_bis(), iso_connect_cis(), iso_listen_bis(), and iso_conn_big_sync() call hci_get_route() using iso_pi(sk)->dst, iso_pi(sk)->src, a",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63870 - ieee802154: 6lowpan: only accept IPv6 packets in lowpan_xmit()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63870",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T15:16:53.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: ieee802154: 6lowpan: only accept IPv6 packets in lowpan_xmit() The aoe driver (or similar) generates a non-IPv6 packet (e.g., ETH_P_AOE) and queues it for transmission via dev_queue_xmit() on a 6LoWPAN interface ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63869 - wifi: mac80211: limit injected antenna index in ieee80211_parse_tx_radiotap",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63869",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T15:16:53.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: wifi: mac80211: limit injected antenna index in ieee80211_parse_tx_radiotap When parsing the radiotap header of an injected frame, ieee80211_parse_tx_radiotap() uses the IEEE80211_RADIOTAP_ANTENNA value directly ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63868 - net: garp: fix unsigned integer underflow in garp_pdu_parse_attr",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63868",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T15:16:53.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: net: garp: fix unsigned integer underflow in garp_pdu_parse_attr The receive-side GARP attribute parser computes dlen with reversed operands: dlen = sizeof(*ga) - ga->len; ga->len is the on-wire attribute length ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63867 - mptcp: close TOCTOU race while computing rcv_wnd",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63867",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T15:16:53.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: mptcp: close TOCTOU race while computing rcv_wnd The MPTCP output path access locklessly the MPTCP-level ack_seq in multiple times, using possibly different values for the data_ack in the DSS option and to comput",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63866 - wifi: mt76: mt7996: Clear wcid pointer in mt7996_mac_sta_deinit_link()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63866",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T15:16:53.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: wifi: mt76: mt7996: Clear wcid pointer in mt7996_mac_sta_deinit_link() Clear WCID pointer removing the sta link in mt7996_mac_sta_deinit_link routine.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63865 - bpf: Drop task_to_inode and inet_conn_established from lsm sleepable hooks",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63865",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T15:16:53.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: bpf: Drop task_to_inode and inet_conn_established from lsm sleepable hooks bpf_lsm_task_to_inode() is called under rcu_read_lock() and bpf_lsm_inet_conn_established() is called from softirq context, so neither ho",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63864 - bpf: Propagate error from visit_tailcall_insn",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63864",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T15:16:53.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: bpf: Propagate error from visit_tailcall_insn Commit e40f5a6bf88a (\"bpf: correct stack liveness for tail calls\") added visit_tailcall_insn() but did not check its return value.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63863 - drm/gpusvm: Fix unbalanced unlock in drm_gpusvm_scan_mm()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63863",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T15:16:53.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: drm/gpusvm: Fix unbalanced unlock in drm_gpusvm_scan_mm() There is a unbalanced lock/unlock to gpusvm notifier lock: [ 931.045868] ===================================== [ 931.046509] WARNING: bad unlock balance d",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63862 - PCI: mediatek-gen3: Prevent leaking IRQ domains when IRQ not found",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63862",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T15:16:53.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: PCI: mediatek-gen3: Prevent leaking IRQ domains when IRQ not found In mtk_pcie_setup_irq(), the IRQ domains are allocated before the controller's IRQ is fetched. If the latter fails, the function directly returns",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63861 - spi: mtk-snfi: unregister ECC engine on probe failure and remove() callback",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63861",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T15:16:52.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: spi: mtk-snfi: unregister ECC engine on probe failure and remove() callback mtk_snand_probe() registers the on-host NAND ECC engine, but teardown was missing from both probe unwind and remove-time cleanup. Add a ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63860 - RDMA/core: Prefer NLA_NUL_STRING",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63860",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T15:16:52.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: RDMA/core: Prefer NLA_NUL_STRING These attributes are evaluated as c-string (passed to strcmp), but NLA_STRING doesn't check for the presence of a \\0 terminator. Either this needs to switch to nla_strcmp() and ne",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63859 - net: airoha: Add missing bits in airoha_qdma_cleanup_tx_queue()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63859",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T15:16:52.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: net: airoha: Add missing bits in airoha_qdma_cleanup_tx_queue() Similar to airoha_qdma_cleanup_rx_queue(), reset DMA TX descriptors in airoha_qdma_cleanup_tx_queue routine. Moreover, reset TX_DMA_IDX to TX_CPU_ID",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63858 - netfilter: nf_tables: add hook transactions for device deletions",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63858",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T15:16:52.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: netfilter: nf_tables: add hook transactions for device deletions Restore the flag that indicates that the hook is going away, ie. NFT_HOOK_REMOVE, but add a new transaction object to track deletion of hooks witho",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63857 - net: airoha: Do not read uninitialized fragment address in airoha_dev_xmit()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63857",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T15:16:52.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: net: airoha: Do not read uninitialized fragment address in airoha_dev_xmit() The transmit loop in airoha_dev_xmit() reads fragment address and length during its final iteration, when the loop index equals skb_shi",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63856 - drm/amdgpu/vcn: set no_user_fence for VCN v2.0 enc/dec rings",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63856",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T15:16:52.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: drm/amdgpu/vcn: set no_user_fence for VCN v2.0 enc/dec rings VCN encoder and decoder rings do not support 64-bit user fence writes, reject CS submissions with user fences. (cherry picked from commit e2b5499fca55f",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63855 - drm/amdgpu/vcn: set no_user_fence for VCN v2.5 enc/dec rings",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63855",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T15:16:52.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: drm/amdgpu/vcn: set no_user_fence for VCN v2.5 enc/dec rings VCN encoder and decoder rings do not support 64-bit user fence writes, reject CS submissions with user fences. (cherry picked from commit efc9dd5590894",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63854 - drm/amdgpu/vcn: set no_user_fence for VCN v3.0 enc/dec rings",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63854",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T15:16:52.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: drm/amdgpu/vcn: set no_user_fence for VCN v3.0 enc/dec rings VCN encoder and decoder rings do not support 64-bit user fence writes, reject CS submissions with user fences. (cherry picked from commit 663bed3c7b8b9",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63853 - drm/amdgpu/vcn: set no_user_fence for VCN v4.0 enc ring",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63853",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T15:16:52.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: drm/amdgpu/vcn: set no_user_fence for VCN v4.0 enc ring VCN encoder and decoder rings do not support 64-bit user fence writes, reject CS submissions with user fences. (cherry picked from commit fd852c048b46f9825e",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63852 - drm/amdgpu/vcn: set no_user_fence for VCN v4.0.3 enc ring",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63852",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T15:16:52.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: drm/amdgpu/vcn: set no_user_fence for VCN v4.0.3 enc ring VCN encoder and decoder rings do not support 64-bit user fence writes, reject CS submissions with user fences. (cherry picked from commit ff1a5a125c5a70c3",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63851 - drm/amdgpu/vcn: set no_user_fence for VCN v4.0.5 enc ring",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63851",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T15:16:51.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: drm/amdgpu/vcn: set no_user_fence for VCN v4.0.5 enc ring VCN encoder and decoder rings do not support 64-bit user fence writes, reject CS submissions with user fences. (cherry picked from commit 084d94ac93707bdd",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63850 - drm/amdgpu/vcn: set no_user_fence for VCN v5.0.0 enc ring",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63850",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T15:16:51.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: drm/amdgpu/vcn: set no_user_fence for VCN v5.0.0 enc ring VCN encoder and decoder rings do not support 64-bit user fence writes, reject CS submissions with user fences. (cherry picked from commit 49b1fbbb5a071197",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2026-63836 - batman-adv: tp_meter: avoid divide-by-zero for dec_cwnd",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-63836",
@@ -675,231 +900,6 @@
         "source": "cvefeed.io",
         "isoDate": "2026-07-18T22:16:43.000Z",
         "contentSnippet": "A vulnerability was determined in zhayujie CowAgent up to 2.1.1. This affects the function WebFetch.execute of the file agent/tools/web_fetch/web_fetch.py. Executing a manipulation of the argument url can lead to server-side request forgery. The attack may be performed from remot",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16156 - SourceCodester Class and Exam Timetabling System forexam.php cross site scripting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16156",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-18T22:16:43.000Z",
-        "contentSnippet": "A security flaw has been discovered in SourceCodester Class and Exam Timetabling System 1.0. This affects an unknown part of the file /forexam.php. The manipulation of the argument day results in cross site scripting. It is possible to launch the attack remotely. The exploit has ",
-        "cveScore": 4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-57857 - Flow Payment Plugin for WordPress Reflected Cross-Site Scripting via error_message Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57857",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-18T21:17:03.000Z",
-        "contentSnippet": "The Flow Payment plugin for WordPress (flow.cl) version 3.0.8 is vulnerable to reflected cross-site scripting on the WooCommerce checkout page. When the plugin handles an order cancellation, the error_message GET parameter is passed directly to wc_add_notice() in flowpayment-fl.p",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-16155 - SourceCodester Class and Exam Timetabling System schoolyr.php cross site scripting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16155",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-18T21:17:03.000Z",
-        "contentSnippet": "A vulnerability was identified in SourceCodester Class and Exam Timetabling System 1.0. Affected by this issue is some unknown functionality of the file /schoolyr.php. The manipulation of the argument sy leads to cross site scripting. It is possible to initiate the attack remotel",
-        "cveScore": 4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16154 - SourceCodester Class and Exam Timetabling System edit_room1.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16154",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-18T21:17:03.000Z",
-        "contentSnippet": "A vulnerability was determined in SourceCodester Class and Exam Timetabling System 1.0/1.php. Affected by this vulnerability is an unknown functionality of the file /edit_room1.php. Executing a manipulation of the argument ID can lead to sql injection. The attack may be performed",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-16152 - SourceCodester Class and Exam Timetabling System edit_rooma.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16152",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-18T21:17:03.000Z",
-        "contentSnippet": "A vulnerability was found in SourceCodester Class and Exam Timetabling System 1.0. Affected is an unknown function of the file /edit_rooma.php. Performing a manipulation of the argument ID results in sql injection. The attack is possible to be carried out remotely. The exploit ha",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-12228 - Stored XSS in Direct Messages via Prompt Sharing in parisneo/lollms",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12228",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-18T21:17:03.000Z",
-        "contentSnippet": "A stored cross-site scripting (XSS) vulnerability exists in the `POST /api/prompts/share` endpoint of parisneo/lollms (latest version). The endpoint stores attacker-controlled `prompt_content` into `DBDirectMessage.content` without server-side sanitization. When a victim opens th",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57848 - Stoat for Android Internal File Disclosure via Exported ShareTargetActivity URI Validation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57848",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-18T20:17:30.000Z",
-        "contentSnippet": "Stoat for Android exports the chat.stoat.activities.ShareTargetActivity component (reachable to any process on the device via the android.intent.action.SEND intent) and accepts the file to share as a URI supplied through the android.intent.extra.STREAM extra. The activity does no",
-        "cveScore": 6.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-53994 - ProFTPD mod_sftp Heap Buffer Overflow via Unsigned Integer Underflow and Size Truncation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53994",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-18T20:17:30.000Z",
-        "contentSnippet": "ProFTPD mod_sftp contains a heap-based buffer overflow reachable by an authenticated SFTP user. The fxp_packet_read() function accepts the attacker-supplied 32-bit big-endian SFTP packet length without a minimum sanity check. A value of 0 causes an unsigned subtraction elsewhere ",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-16151 - CartoDB carto-api-client filters.ts addFilter prototype pollution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16151",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-18T20:17:30.000Z",
-        "contentSnippet": "A vulnerability has been found in CartoDB carto-api-client 0.5.29. This impacts the function addFilter of the file src/filters.ts. Such manipulation of the argument column leads to improperly controlled modification of object prototype attributes. The attack can be executed remot",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16150 - RobinHerbots Inputmask Internal Deep Merge Helper extend.js extendAliases prototype pollution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16150",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-18T20:17:29.000Z",
-        "contentSnippet": "A vulnerability was found in RobinHerbots Inputmask up to 5.0.9. Affected by this issue is the function extendDefaults/extendDefinitions/extendAliases in the library lib/dependencyLibs/extend.js of the component Internal Deep Merge Helper. The manipulation results in improperly c",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16133 - LiuMengxuan04 MiniCode mcp.ts child_process.spawn command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16133",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-18T19:17:05.000Z",
-        "contentSnippet": "A flaw has been found in LiuMengxuan04 MiniCode 0.1.0. Affected by this vulnerability is the function child_process.spawn of the file mcp.ts. Executing a manipulation can lead to command injection. The attack can be launched remotely. The attack requires a high level of complexit",
-        "cveScore": 5.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16131 - itsourcecode Hospital Management System prescriptionrecord.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16131",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-18T19:17:05.000Z",
-        "contentSnippet": "A weakness has been identified in itsourcecode Hospital Management System 1.0. This affects an unknown function of the file /prescriptionrecord.php. This manipulation of the argument delid causes sql injection. It is possible to initiate the attack remotely. The exploit has been ",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16130 - nearai ironclaw write_file path_utils.rs validate_path link following",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16130",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-18T18:16:37.000Z",
-        "contentSnippet": "A vulnerability was identified in nearai ironclaw up to 0.29.1. The affected element is the function validate_path of the file src/tools/builtin/path_utils.rs of the component write_file. The manipulation leads to link following. Local access is required to approach this attack. ",
-        "cveScore": 4.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16129 - princezuda SafestClaw Built-in Web shell.py ShellAction._validate_command incomplete blacklist",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16129",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-18T17:16:39.000Z",
-        "contentSnippet": "A vulnerability has been found in princezuda SafestClaw up to 4.2.4. This vulnerability affects the function ShellAction._validate_command of the file src/safestclaw/actions/shell.py of the component Built-in Web Interface. Such manipulation leads to incomplete blacklist. An atta",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16128 - zevorn rt-claw http_request swarm.c receiver_thread server-side request forgery",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16128",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-18T17:16:38.000Z",
-        "contentSnippet": "A security flaw has been discovered in zevorn rt-claw up to 0.2.0. This impacts the function receiver_thread of the file claw/services/swarm/swarm.c of the component http_request. Performing a manipulation results in server-side request forgery. It is possible to initiate the att",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-16127 - zevorn rt-claw http_request tool_net.c claw_net_post server-side request forgery",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16127",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-18T16:17:13.000Z",
-        "contentSnippet": "A vulnerability was identified in zevorn rt-claw up to 0.2.0. This affects the function claw_net_get/claw_net_post of the file claw/tools/tool_net.c of the component http_request. Such manipulation of the argument url leads to server-side request forgery. The attack may be perfor",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-16126 - zevorn rt-claw Swarm RPC Receiver swarm.c handle_rpc_request authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16126",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-18T16:17:13.000Z",
-        "contentSnippet": "A vulnerability was determined in zevorn rt-claw up to 0.2.0. The impacted element is the function handle_rpc_request of the file claw/services/swarm/swarm.c of the component Swarm RPC Receiver. This manipulation causes incorrect authorization. The attack is possible to be carrie",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-16125 - zevorn rt-claw http_request net.c claw_net_post server-side request forgery",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16125",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-18T16:17:12.000Z",
-        "contentSnippet": "A vulnerability was found in zevorn rt-claw up to 0.2.0. The affected element is the function claw_net_get/claw_net_post of the file claw/services/tools/net.c of the component http_request. The manipulation of the argument url results in server-side request forgery. The attack ca",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-16124 - nextlevelbuilder GoClaw web_fetch web_shared.go isPrivateIP server-side request forgery",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16124",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-18T16:17:12.000Z",
-        "contentSnippet": "A security vulnerability has been detected in nextlevelbuilder GoClaw up to 3.15.0-beta.32. This affects the function CheckSSRF/isPrivateIP of the file internal/tools/web_shared.go of the component web_fetch. Such manipulation leads to server-side request forgery. The attack can ",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16123 - nextlevelbuilder GoClaw Invoke Endpoint tools_invoke.go ToolsInvokeHandler.ServeHTTP authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16123",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-18T15:17:33.000Z",
-        "contentSnippet": "A weakness has been identified in nextlevelbuilder GoClaw up to 3.13.2. Affected by this issue is the function ToolsInvokeHandler.ServeHTTP of the file internal/http/tools_invoke.go of the component Invoke Endpoint. This manipulation causes missing authorization. The attack can b",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16122 - nextlevelbuilder GoClaw exec_approval.go matchesAllowlist authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16122",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-18T15:17:33.000Z",
-        "contentSnippet": "A security flaw has been discovered in nextlevelbuilder GoClaw up to 3.13.2. Affected by this vulnerability is the function extractBin/RequestApproval/matchesAllowlist of the file internal/tools/exec_approval.go. The manipulation results in incorrect authorization. The exploit ha",
-        "cveScore": 4.7,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16121 - nextlevelbuilder GoClaw exec_approval.go isSafeBin improper authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16121",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-18T15:17:32.000Z",
-        "contentSnippet": "A vulnerability was identified in nextlevelbuilder GoClaw up to 3.13.2. Affected is the function isSafeBin of the file internal/tools/exec_approval.go. The manipulation leads to improper authorization. It is possible to initiate the attack remotely. The exploit is publicly availa",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-9323 - Insecure PRNG and Information Exposure in urwid Web Display Backend",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9323",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-18T14:17:12.000Z",
-        "contentSnippet": "The urwid web display backend (urwid/display/web.py) generates web session identifiers (urwid_id) in Screen.start() by concatenating two random.randrange(10**9) calls that use Python's Mersenne Twister PRNG, which is not cryptographically secure. Each call consumes approximately ",
-        "cveScore": 9.2,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-16120 - nextlevelbuilder GoClaw exec_approval.go extractBin name resolution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16120",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-18T14:17:11.000Z",
-        "contentSnippet": "A vulnerability was determined in nextlevelbuilder GoClaw up to 3.13.3-beta.3. This impacts the function matchesAllowlist/extractBin of the file internal/tools/exec_approval.go. Executing a manipulation can lead to incorrectly-resolved name. The attack may be performed from remot",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16119 - nextlevelbuilder GoClaw WebSocket Approval Endpoint exec_approval.go RequestApproval authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16119",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-18T14:17:11.000Z",
-        "contentSnippet": "A vulnerability was found in nextlevelbuilder GoClaw up to 3.13.2. This affects the function RequestApproval of the file internal/tools/exec_approval.go of the component WebSocket Approval Endpoint. Performing a manipulation results in incorrect authorization. The attack is possi",
         "cveScore": 6.5,
         "cveSeverity": "MEDIUM"
       }
