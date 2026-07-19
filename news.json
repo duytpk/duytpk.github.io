@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-07-19T16:47:33.968Z",
+  "updatedAt": "2026-07-19T17:51:37.958Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-64186 - iommu/amd: Remove latent out-of-bounds access in IOMMU debugfs",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64186",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T16:18:01.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: iommu/amd: Remove latent out-of-bounds access in IOMMU debugfs In iommu_mmio_write() and iommu_capability_write(), the variables dbg_mmio_offset and dbg_cap_offset are declared as int. However, they are populated",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64185 - sysfs: don't remove existing directory on update failure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64185",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T16:18:00.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: sysfs: don't remove existing directory on update failure When sysfs_update_group() is called for a named group and create_files() fails (e.g. -ENOMEM), internal_create_group() calls kernfs_remove(kn) on the group",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64184 - mm/damon/sysfs-schemes: call missing mem_cgroup_iter_break()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64184",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T16:18:00.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: mm/damon/sysfs-schemes: call missing mem_cgroup_iter_break() damon_sysfs_memcg_path_to_id() breaks mem_cgroup_iter() loop without calling mem_cgroup_iter_break(). This leaks the cgroup reference. Fix the issue by",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64183 - efi: Allocate runtime workqueue before ACPI init",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64183",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T16:18:00.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: efi: Allocate runtime workqueue before ACPI init Since commit 5894cf571e14 (\"acpi/prmt: Use EFI runtime sandbox to invoke PRM handlers\") ACPI PRM calls are delegated to a workqueue which runs in a kernel thread, ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64182 - drivers/base/memory: fix memory block reference leak in poison accounting",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64182",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T16:18:00.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: drivers/base/memory: fix memory block reference leak in poison accounting memblk_nr_poison_inc() and memblk_nr_poison_sub() look up a memory block via find_memory_block_by_id(), which acquires a reference to the ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64181 - mm: fix __vm_normal_page() to handle missing support for pmd_special()/pud_special()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64181",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T16:18:00.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: mm: fix __vm_normal_page() to handle missing support for pmd_special()/pud_special() On x86 32-bit with THP enabled, zap_huge_pmd() is seen to generate a \"WARNING: mm/memory.c:735 at __vm_normal_page+0x6a/0x7d\", ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64180 - mm/memory_hotplug: fix memory block reference leak on remove",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64180",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T16:18:00.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: mm/memory_hotplug: fix memory block reference leak on remove Patch series \"mm: Fix memory block leaks and locking\", v2. This series fixes two memory block device reference leaks and one locking issue around the p",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64179 - net: wwan: iosm: fix potential memory leaks in ipc_imem_init()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64179",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T16:18:00.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: net: wwan: iosm: fix potential memory leaks in ipc_imem_init() The memory allocated in ipc_protocol_init() is not freed on the error paths that follow in ipc_imem_init(). Fix that by calling the corresponding rel",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64178 - Bluetooth: bnep: Fix UAF read of dev->name",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64178",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T16:18:00.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: Bluetooth: bnep: Fix UAF read of dev->name bnep_add_connection() needs to keep holding the bnep_session_sem while reading dev->name (just like bnep_get_connlist() does); otherwise the bnep_session() thread can co",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64177 - phonet/pep: disable BH around forwarded sk_receive_skb()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64177",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T16:17:59.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: phonet/pep: disable BH around forwarded sk_receive_skb() The networking receive path is usually run from softirq context, but protocols that take the socket lock may have packets stored in the backlog and process",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64176 - wifi: iwlwifi: mvm: fix driver-set TX rates on old devices",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64176",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T16:17:59.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: wifi: iwlwifi: mvm: fix driver-set TX rates on old devices On old devices such as 7265D, rates are still encoded in version 1 format, which doesn't use the CCK/OFDM rate index (0-3/0-7) but rather their PLCP valu",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64175 - wifi: iwlwifi: mld: stop TX during firmware restart",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64175",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T16:17:59.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: wifi: iwlwifi: mld: stop TX during firmware restart When iwlwifi firmware crashes (e.g., NMI_INTERRUPT_UNKNOWN on Intel BE201/Wi-Fi 7), iwl_mld_nic_error() sets mld->fw_status.in_hw_restart to true. However, iwl_",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64174 - wifi: cfg80211: advance loop vars in cfg80211_merge_profile()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64174",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T16:17:59.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: wifi: cfg80211: advance loop vars in cfg80211_merge_profile() cfg80211_merge_profile() reassembles a Multi-BSSID non-transmitted BSS profile that has been split across multiple consecutive MBSSID elements. Its wh",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64173 - tracing: Do not call map->ops->elt_free() if elt_alloc() fails",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64173",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T16:17:59.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: tracing: Do not call map->ops->elt_free() if elt_alloc() fails In paths where tracing_map_elt_alloc() failed to allocate objects, the map->ops->elt_alloc() call was never successful. In this case, map->ops->elt_f",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64172 - KVM: SVM: Disable AVIC IPI virtualization on Hygon Family 18h (erratum #1235)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64172",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T16:17:59.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: KVM: SVM: Disable AVIC IPI virtualization on Hygon Family 18h (erratum #1235) Hygon Family 18h CPUs are derived from AMD Family 17h (Zen1) silicon and share the same erratum #1235: hardware may read a stale IsRun",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64171 - i2c: tegra: fix pm_runtime leak on mutex_lock failure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64171",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T16:17:59.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: i2c: tegra: fix pm_runtime leak on mutex_lock failure If tegra_i2c_mutex_lock() fails, the function returns without calling pm_runtime_put(), leaking the runtime PM reference acquired by the preceding pm_runtime_",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64170 - spi: qup: fix error pointer deref after DMA setup failure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64170",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T16:17:59.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: spi: qup: fix error pointer deref after DMA setup failure The driver falls back to PIO mode if DMA setup fails during probe. Make sure to the clear the DMA channel pointers on setup failure to avoid dereferencing",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64169 - spi: ep93xx: fix error pointer deref after DMA setup failure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64169",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T16:17:59.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: spi: ep93xx: fix error pointer deref after DMA setup failure The driver falls back to PIO mode if DMA setup fails during probe. Make sure to the clear the DMA channel pointers on setup failure to avoid dereferenc",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64168 - spi: sprd: fix error pointer deref after DMA setup failure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64168",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T16:17:58.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: spi: sprd: fix error pointer deref after DMA setup failure The driver falls back to PIO mode if DMA setup fails during probe. Make sure to check the dma.enabled flag before trying to release the DMA channels also",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64167 - kho: skip KHO for crash kernel",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64167",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T16:17:58.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: kho: skip KHO for crash kernel kho_fill_kimage() unconditionally populates the kimage with KHO metadata for every kexec image type. When the image is a crash kernel, this can be problematic as the crash kernel ca",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64166 - firmware: arm_ffa: Check for NULL FF-A ID table while driver registration",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64166",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T16:17:58.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: firmware: arm_ffa: Check for NULL FF-A ID table while driver registration The bus match callback assumes that every FF-A driver provides an id_table and dereferences it unconditionally. Enforce that contract at r",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64165 - ARM: integrator: Fix early initialization",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64165",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T16:17:58.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: ARM: integrator: Fix early initialization Starting with commit bdb249fce9ad4 (\"ARM: integrator: read counter using syscon/regmap\"), intcp_init_early calls syscon_regmap_lookup_by_compatible which in turn calls of",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64164 - btrfs: tracepoints: fix sleep while in atomic context in btrfs_sync_file()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64164",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T16:17:58.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: btrfs: tracepoints: fix sleep while in atomic context in btrfs_sync_file() The trace event btrfs_sync_file() is called in an atomic context (all trace events are) and its call to dput(), which is needed due to th",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64163 - test_kprobes: clear kprobes between test runs",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64163",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T16:17:58.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: test_kprobes: clear kprobes between test runs Running the kprobes sanity tests twice makes all tests fail and eventually crashes the kernel. [root@martin-riscv-1 ~]# echo 1 > /sys/kernel/debug/kunit/kprobes_test/",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64162 - idpf: fix read_dev_clk_lock spinlock init in idpf_ptp_init()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64162",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-19T16:17:58.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: idpf: fix read_dev_clk_lock spinlock init in idpf_ptp_init() In idpf_ptp_init(), read_dev_clk_lock is initialized after ptp_schedule_worker() had already been called (and after idpf_ptp_settime64() could reach th",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2026-63874 - net: mctp: usb: fix race between urb completion and rx_retry cancellation",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-63874",
@@ -677,231 +902,6 @@
         "contentSnippet": "A vulnerability was detected in hunvreus devpush up to 0.4.6. Affected by this issue is the function reset_storage of the file app/workers/tasks/storage.py of the component Storage Reset Failure Handler. The manipulation results in improper check or handling of exceptional condit",
         "cveScore": 2.6,
         "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-16217 - guohongze adminset Delivery Deployment Endpoint deli.py authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16217",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-19T06:17:09.000Z",
-        "contentSnippet": "A security vulnerability has been detected in guohongze adminset up to 0.61. Affected by this vulnerability is an unknown functionality of the file delivery/deli.py of the component Delivery Deployment Endpoint. The manipulation of the argument project_id leads to authorization b",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16216 - geex-arts django-jet OAuth cross-site request forgery",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16216",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-19T06:17:09.000Z",
-        "contentSnippet": "A weakness has been identified in geex-arts django-jet up to 1.0.8. Affected is an unknown function of the component OAuth Handler. Executing a manipulation can lead to cross-site request forgery. The attack may be performed from remote. The exploit has been made available to the",
-        "cveScore": 5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16215 - geex-arts django-jet OAuth Credential Revoke authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16215",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-19T05:16:38.000Z",
-        "contentSnippet": "A security flaw has been discovered in geex-arts django-jet up to 1.0.8. This impacts an unknown function of the component OAuth Credential Revoke Handler. Performing a manipulation results in missing authorization. The attack is possible to be carried out remotely. The exploit h",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16214 - geex-arts django-jet Dashboard views.py authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16214",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-19T05:16:38.000Z",
-        "contentSnippet": "A vulnerability was identified in geex-arts django-jet up to 1.0.8. This affects an unknown function of the file jet/dashboard/views.py of the component Dashboard Module. Such manipulation leads to authorization bypass. The attack can be executed remotely. The exploit is publicly",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16213 - Fantomas42 django-blog-zinnia Protected Entry Password entry_protection.py cleartext storage",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16213",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-19T05:16:38.000Z",
-        "contentSnippet": "A security flaw has been discovered in Fantomas42 django-blog-zinnia up to 0.20. Affected by this vulnerability is an unknown functionality of the file zinnia/views/mixins/entry_protection.py of the component Protected Entry Password Handler. The manipulation results in cleartext",
-        "cveScore": 4.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16212 - awesto django-shop Purchase Stock inventory.py race condition",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16212",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-19T05:16:37.000Z",
-        "contentSnippet": "A vulnerability was identified in awesto django-shop up to 1.2.4. Affected is an unknown function of the file shop/models/inventory.py of the component Purchase Stock Handler. The manipulation leads to race condition. The attack is possible to be carried out remotely. The attack ",
-        "cveScore": 4.2,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16211 - allegro Hostname Allocation assets.py AssetLastHostname.increment_hostname race condition",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16211",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-19T04:17:05.000Z",
-        "contentSnippet": "A vulnerability was determined in allegro up to bcf65b994ef29fb3fc2e10b660e6288723d5209e. This impacts the function AssetLastHostname.increment_hostname of the file src/ralph/assets/models/assets.py of the component Hostname Allocation Handler. Executing a manipulation of the arg",
-        "cveScore": 2.6,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-16210 - newpanjing simpleui AjaxAdmin AJAX Endpoint admin.py self.get_action missing authentication",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16210",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-19T04:17:04.000Z",
-        "contentSnippet": "A vulnerability was found in newpanjing simpleui 2026.01.13. This affects the function self.get_action of the file simpleui/admin.py of the component AjaxAdmin AJAX Endpoint. Performing a manipulation results in missing authentication. Remote exploitation of the attack is possibl",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-16209 - Gerapy Project Upload Endpoint views.py missing authentication",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16209",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-19T04:17:03.000Z",
-        "contentSnippet": "A vulnerability has been found in Gerapy up to 0.9.13. The impacted element is an unknown function of the file gerapy/server/core/views.py of the component Project Upload Endpoint. Such manipulation leads to missing authentication. The attack may be launched remotely. The exploit",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-16208 - django-tastypie throttle.py CacheDBThrottle race condition",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16208",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-19T04:17:03.000Z",
-        "contentSnippet": "A flaw has been found in django-tastypie up to 0.15.1. The affected element is the function CacheThrottle/CacheDBThrottle of the file tastypie/throttle.py. This manipulation causes race condition. The attack may be initiated remotely. The complexity of an attack is rather high. T",
-        "cveScore": 5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16207 - django-tastypie authentication.py ApiKeyAuthentication get request method with sensitive query strings",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16207",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-19T04:16:44.000Z",
-        "contentSnippet": "A vulnerability was detected in django-tastypie up to 0.15.1. Impacted is the function ApiKeyAuthentication of the file tastypie/authentication.py. The manipulation results in use of get request method with sensitive query strings. The attack can be launched remotely. This attack",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16206 - django-oauth django-oauth-toolkit oauth2_validators.py _load_id_token session expiration",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16206",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-19T03:16:42.000Z",
-        "contentSnippet": "A security vulnerability has been detected in django-oauth django-oauth-toolkit 3.3.0. This issue affects the function _load_id_token of the file oauth2_provider/oauth2_validators.py. The manipulation leads to session expiration. The attack can be initiated remotely. The project ",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16205 - Pluck CMS Albums albums.admin.php htmlspecialchars_decode cross site scripting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16205",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-19T03:16:42.000Z",
-        "contentSnippet": "A weakness has been identified in Pluck CMS up to 4.7.21. This vulnerability affects the function htmlspecialchars_decode of the file data/modules/albums/albums.admin.php of the component Albums Module. Executing a manipulation of the argument Info can lead to cross site scriptin",
-        "cveScore": 3.3,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-16204 - zevorn rt-claw Telegram-to-AI Tool Execution Flow script.c tool_run_script_execute code injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16204",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-19T03:16:42.000Z",
-        "contentSnippet": "A security flaw has been discovered in zevorn rt-claw up to 0.2.0. This affects the function tool_run_script_execute of the file claw/services/tools/script.c of the component Telegram-to-AI Tool Execution Flow. Performing a manipulation results in code injection. It is possible t",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-16203 - SourceCodester Class and Exam Timetabling System forCYS.php cross site scripting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16203",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-19T02:16:44.000Z",
-        "contentSnippet": "A vulnerability was identified in SourceCodester Class and Exam Timetabling System 1.0. Affected by this issue is some unknown functionality of the file /forCYS.php. Such manipulation of the argument course leads to cross site scripting. The attack may be performed from remote. T",
-        "cveScore": 4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16202 - SourceCodester Class and Exam Timetabling System CYS.php cross site scripting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16202",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-19T02:16:43.000Z",
-        "contentSnippet": "A vulnerability was determined in SourceCodester Class and Exam Timetabling System 1.0. Affected by this vulnerability is an unknown functionality of the file /CYS.php. This manipulation of the argument course causes cross site scripting. The attack is possible to be carried out ",
-        "cveScore": 4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16201 - zevorn rt-claw http_request net.c claw_net_post information disclosure",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16201",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-19T01:17:02.000Z",
-        "contentSnippet": "A vulnerability was found in zevorn rt-claw up to 0.2.0. Affected is the function claw_net_get/claw_net_post of the file claw/services/tools/net.c of the component http_request. The manipulation results in information disclosure. The attack can be executed remotely. The exploit h",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16200 - zevorn rt-claw RPC swarm.c claw_tool_invoke authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16200",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-19T01:17:01.000Z",
-        "contentSnippet": "A vulnerability has been found in zevorn rt-claw up to 0.2.0. This impacts the function claw_tool_invoke of the file claw/services/swarm/swarm.c of the component RPC Handler. The manipulation leads to incorrect authorization. Remote exploitation of the attack is possible. The exp",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-16199 - nextlevelbuilder GoClaw credentialed_exec.go ExecTool.Execute improper authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16199",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-19T00:16:40.000Z",
-        "contentSnippet": "A flaw has been found in nextlevelbuilder GoClaw up to 3.13.3-beta.3. This affects the function ExecTool.Execute of the file goclaw/internal/tools/credentialed_exec.go. Executing a manipulation can lead to improper authorization. The attack may be launched remotely. The exploit h",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16198 - Sipeed PicoClaw First Run Setup access_control.go authentication bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16198",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-19T00:16:40.000Z",
-        "contentSnippet": "A vulnerability was detected in Sipeed PicoClaw up to 0.2.9. The impacted element is an unknown function of the file web/backend/middleware/access_control.go of the component First Run Setup. Performing a manipulation of the argument allowed_cidrs results in authentication bypass",
-        "cveScore": 5.6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16197 - Sipeed PicoClaw Group Message feishu_64.go handleMessageReceive authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16197",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-18T23:17:01.000Z",
-        "contentSnippet": "A security vulnerability has been detected in Sipeed PicoClaw up to 0.2.9. The affected element is the function handleMessageReceive of the file pkg/channels/feishu/feishu_64.go of the component Group Message Handler. Such manipulation leads to missing authorization. The attack c",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16196 - Sipeed PicoClaw web_fetch web.go isPrivateOrRestrictedIP server-side request forgery",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16196",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-18T23:17:01.000Z",
-        "contentSnippet": "A weakness has been identified in Sipeed PicoClaw up to 0.2.9. Impacted is the function isPrivateOrRestrictedIP of the file pkg/tools/integration/web.go of the component web_fetch. This manipulation causes server-side request forgery. The attack can be initiated remotely. The exp",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16195 - Sipeed PicoClaw Group Message wecom.go dispatchIncoming authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16195",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-18T23:17:00.000Z",
-        "contentSnippet": "A security flaw has been discovered in Sipeed PicoClaw up to 0.2.9. This issue affects the function dispatchIncoming of the file pkg/channels/wecom/wecom.go of the component Group Message Handler. The manipulation results in incorrect authorization. It is possible to launch the a",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-10130 - QueryWeaver Authentication Bypass via Email Signup Token Issuance for Existing Accounts",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10130",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-18T23:17:00.000Z",
-        "contentSnippet": "QueryWeaver contains an authentication bypass vulnerability that allows unauthenticated attackers to obtain valid session tokens for existing accounts by submitting a signup request with a known victim email address. The signup route unconditionally creates and links a new token ",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-16194 - zhayujie CowAgent web_fetch.py WebFetch.execute server-side request forgery",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16194",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-18T22:16:43.000Z",
-        "contentSnippet": "A vulnerability was determined in zhayujie CowAgent up to 2.1.1. This affects the function WebFetch.execute of the file agent/tools/web_fetch/web_fetch.py. Executing a manipulation of the argument url can lead to server-side request forgery. The attack may be performed from remot",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
