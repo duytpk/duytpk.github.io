@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-20T22:50:10.627Z",
+  "updatedAt": "2026-07-20T23:49:20.123Z",
   "generator": "rss",
   "feeds": {
     "cve": [
@@ -227,6 +227,78 @@
         "contentSnippet": "NextCRM is open-source customer relationship management (CRM) software. Versions prior to 0.12.0 have a Broken Access Control (BAC) vulnerability in the `activateUser` and `deactivateUser` Next.js Server Actions of NextCRM. The application fails to verify if the requesting user h",
         "cveScore": 8.1,
         "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-44585 - Paymenter: Broken object level authorization via service reference manipulation on ticket creation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44585",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-20T21:16:47.000Z",
+        "contentSnippet": "Paymenter is a free and open-source webshop solution for management of hosting services. In versions prior to 1.5.0, the ticket creation endpoint accepts a user-supplied service identifier without enforcing ownership validation, allowing authenticated users to create support tick",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-44584 - Paymenter doesn't reset email verification status after email change",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44584",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-20T21:16:47.000Z",
+        "contentSnippet": "Paymenter is a free and open-source webshop solution for management of hosting services. In versions prior to 1.5.0, the email update functionality fails to invalidate the existing verification state when a user changes their email address, allowing a verified account to retain i",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-44583 - Paymenter: Blind Unauthenticated SSRF on the Paypal gateway module",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44583",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-20T21:16:47.000Z",
+        "contentSnippet": "Paymenter is a free and open-source webshop solution for management of hosting services. In versions prior to 1.5.0, the PayPal webhook endpoint /extensions/paypal/webhook processes the PAYPAL-CERT-URL HTTP header without validation, allowing attackers to control server-side HTTP",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-44509 - Rsync: Symlink races on path-based syscalls",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44509",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-20T21:16:47.000Z",
+        "contentSnippet": "Rsync is a file-copying tool that uses a delta-transfer algorithm to synchronize remote and local files. In versions prior to 3.4.3, previous bug fixes for symlink races in open() calls missed races in other path based system calls like chmod() and chown(). For rsync daemons with",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-44508 - Rsync: Integer overflow in compressed-token decoding",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44508",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-20T21:16:47.000Z",
+        "contentSnippet": "Rsync is a file-copying tool that uses a delta-transfer algorithm to synchronize remote and local files. In versions prior to 3.4.3, the receiver's compressed-token decoder accumulated a 32-bit signed counter without checking for overflow. A malicious sender can trigger an overfl",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-44507 - Rsync: hostname/ACL bypass on DNS-lookup failure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44507",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-20T21:16:46.000Z",
+        "contentSnippet": "Rsync is a file-copying tool that uses a delta-transfer algorithm to synchronize remote and local files. In versions prior to 3.4.3, when using a daemon configured with a chroot, the reverse DNS lookup of the connecting client was performed after the chroot had been entered. If t",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-13381 - VSee Clinic and API Insecure Direct Object Reference in File API Allows Unauthorized File Access and Deletion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13381",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-20T21:16:46.000Z",
+        "contentSnippet": "VSee Clinic 7.1.26 and API 1.3.0 contain an Insecure Direct Object Reference (IDOR) vulnerability in the /v1.3.0/api/files endpoint. An authenticated attacker can manipulate the 'remark' request parameter to enumerate, retrieve, and delete files belonging to other users on the ap",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-13380 - VSee Clinic and API Exposes Cleartext SFTP Credentials in Unauthenticated HTTP Responses",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13380",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-20T21:16:46.000Z",
+        "contentSnippet": "VSee Clinic 7.1.26 and VSee Clinic API 1.3.0 exposes cleartext SFTP credentials in the HTTP responses of three unauthenticated endpoints. The credentials are present in these responses only when SFTP connections have been configured within the application. No authentication is re",
+        "cveScore": 9,
+        "cveSeverity": "CRITICAL"
       },
       {
         "title": "CVE-2026-53593 - FreeScout Vulnerable to Authenticated Remote Code Execution via incomplete upload extension denylist (.pht) — bypass of CVE-2025-48471",
@@ -829,78 +901,6 @@
         "isoDate": "2026-07-20T13:16:55.000Z",
         "contentSnippet": "A security vulnerability has been detected in itsourcecode Hospital Management System 1.0. Affected by this vulnerability is an unknown functionality of the file /prescriptionorderreport.php. Such manipulation of the argument delid leads to sql injection. The attack may be launch",
         "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-12080 - Qemu-kvm: qemu-guest-agent: local privilege escalation via symlink attack in guest-ssh-add-authorized-keys",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12080",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-20T13:16:55.000Z",
-        "contentSnippet": "A flaw was found in the QEMU Guest Agent (qga). A local unprivileged user can exploit a vulnerability in the guest-ssh-add-authorized-keys command handler by manipulating symbolic links. This can occur either through a deterministic directory-symlink bypass or a Time-of-Check to ",
-        "cveScore": 7.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-64623 - Network-AI before 5.13.4 Cryptographic Signature Verification Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64623",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-20T12:19:47.000Z",
-        "contentSnippet": "Network-AI before 5.13.4 contains an improper cryptographic signature verification vulnerability in APSAdapter where the default local verifier accepts any non-empty string as valid. Unauthenticated attackers can submit forged APS delegation payloads with arbitrary scopes to bypa",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-64622 - Network-AI 5.12.2 through 5.13.3 Missing Authorization via ApprovalInbox",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64622",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-20T12:19:47.000Z",
-        "contentSnippet": "Network-AI (npm: network-ai) versions 5.12.2 through 5.13.3 fail to apply the configured authorization check (checkAuth/secret) to the ApprovalInbox GET read routes, so even when an operator configures a secret, unauthenticated actors can access sensitive approval request details",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-64621 - FreeRDP before 3.28.0 Double-Free via selectedmonitors",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64621",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-20T12:19:46.000Z",
-        "contentSnippet": "FreeRDP before 3.28.0 (affected 3.x through 3.27.1) contains a double-free vulnerability in freerdp_client_rdp_file_apply_to_settings() (client/common/file.c) when parsing the selectedmonitors field of a .rdp connection file. The MonitorIds array is allocated through the settings",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-64620 - FreeRDP before 3.28.0 Heap Buffer Overflow via crypto_rsa_common",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64620",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-20T12:19:46.000Z",
-        "contentSnippet": "FreeRDP before 3.28.0 (affected out_length, so out-of-bounds bytes are written before the bounds check. On the server side, when a client selects RDP Standard Security, the encrypted client random is decrypted into a fixed 32-byte buffer. Because the server publishes its RSA publ",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-63763 - SurrealDB before 2.5.0 Privilege Escalation via Future Fields",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63763",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-20T12:19:46.000Z",
-        "contentSnippet": "SurrealDB before 2.5.0 and before 3.0.0-beta.3 contains a confused deputy privilege escalation vulnerability. Unprivileged users (e.g., those with the database editor role) can create or modify fields containing futures, functions, or closures. Because these are executed in the c",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-63762 - SurrealDB before v2.6.1 Denial of Service via scripting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63762",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-20T12:19:46.000Z",
-        "contentSnippet": "SurrealDB before v2.6.1 (and before v3.0.0-beta.3) contains a denial of service vulnerability in its embedded JavaScript scripting engine, which is enabled via the --allow-scripting capability (disabled by default). Any user able to execute arbitrary queries — including unauthent",
-        "cveScore": 6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-63761 - SurrealDB before 3.1.0 Algorithm Downgrade via ES512",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63761",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-20T12:19:46.000Z",
-        "contentSnippet": "SurrealDB before 3.1.0 silently substitutes the ES384 algorithm when a JWT access method is configured with ALGORITHM ES512 (DEFINE ACCESS ... TYPE JWT ALGORITHM ES512), because the underlying jsonwebtoken crate (v10.x) has no ES512 variant and the mapping defaults to ES384 witho",
-        "cveScore": 5.3,
         "cveSeverity": "MEDIUM"
       }
     ],
