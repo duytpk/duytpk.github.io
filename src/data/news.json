@@ -1,13 +1,67 @@
 {
-  "updatedAt": "2026-07-21T10:58:43.590Z",
+  "updatedAt": "2026-07-21T12:23:54.532Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
+        "title": "CVE-2026-59845 - Libssh: libssh: denial of service via unchecked proxycommand fork() failure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59845",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-21T11:26:43.000Z",
+        "contentSnippet": "A flaw was found in libssh. When ProxyCommand is used, an unchecked fork() failure can be stored as process ID -1; during cleanup, signals may then be sent across the caller's accessible process tree, leading to local denial of service.",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-64606 - Apache Fory, Apache Fory: Class-registration bypass through an auto-admitted SerializedLambda capturing interface",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64606",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-21T11:16:27.000Z",
+        "contentSnippet": "Deserialization of untrusted data vulnerability that may allow class-registration checks to be bypassed during Java lambda deserialization. Only lambda capture class is affected This issue affects Apache Fory: from before 1.4.0. Users are recommended to upgrade to version 1.4.0, ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-59843 - Libssh: libssh: denial of service via zero advertised channel packet size",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59843",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-21T11:16:12.000Z",
+        "contentSnippet": "A flaw was found in libssh. A remote authenticated peer can advertise a zero maximum packet size in SSH_MSG_CHANNEL_OPEN, causing later channel writes to loop indefinitely and consume CPU, leading to denial of service.",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-59842 - Libssh: libssh: information disclosure via short gssapi curve25519 public key",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59842",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-21T11:08:30.000Z",
+        "contentSnippet": "A flaw was found in libssh. During server-side GSSAPI key exchange, a client-supplied Curve25519 public key shorter than the expected length is copied without proper length validation, leading to an out-of-bounds heap read. This could allow a remote unauthenticated attacker to di",
+        "cveScore": 3.7,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-1617 - SQLi in Turkmesh's Turkhotspot 5651 Loglama",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-1617",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-21T11:07:22.000Z",
+        "contentSnippet": "Improper neutralization of special elements used in an SQL command ('SQL injection') vulnerability in Turkmesh Communication Services Inc. Turkhotspot 5651 Loglama allows SQL Injection. This issue affects Turkhotspot 5651 Loglama: from 5.1.2 before 5.1.3.",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-60080 - Apache Fory: Rust MetaString heap use-after-free",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-60080",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-21T10:54:19.000Z",
+        "contentSnippet": "Use After Free vulnerability in the Rust deserialization logic of Apache Fory. This issue affects Apache Fory from 0.13.0 through 1.3.0. A crafted Fory payload could cause undefined behavior, process crash, or potential memory disclosure. Users are recommended to upgrade to versi",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
         "title": "CVE-2026-64609 - Apache Fory, Apache Fory: Out-of-Bounds Read via sun.misc.Unsafe in zero-copy java deserialization",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-64609",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-21T09:34:57.000Z",
+        "isoDate": "2026-07-21T10:16:25.000Z",
         "contentSnippet": "Out-of-bounds read via sun.misc.Unsafe in Apache Fory. When out-of-band zero-copy deserialization is used, readAlignedVarUint() can read beyond the bounds of the underlying buffer. Out-of-band zero-copy deserialization is an opt-in feature; applications that do not use it are not",
         "cveScore": 0,
         "cveSeverity": "NA"
@@ -16,7 +70,7 @@
         "title": "CVE-2026-64608 - Apache Fory: Heap type confusion and out-of-bounds read/write in C++ compatible-mode field-skip paths",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-64608",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-21T09:34:12.000Z",
+        "isoDate": "2026-07-21T10:16:24.000Z",
         "contentSnippet": "Heap type confusion and out-of-bounds read/write in the Apache Fory C++ implementation. When deserializing data in compatible mode, the field-skip paths do not correctly validate the declared field types against the actual data, so input with an inconsistent schema can cause type",
         "cveScore": 0,
         "cveSeverity": "NA"
@@ -25,7 +79,7 @@
         "title": "CVE-2026-62415 - Joomla Extension - joomdonation.com - Insecure default configuration Membership Pro < 4.6.2",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-62415",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-21T09:19:19.000Z",
+        "isoDate": "2026-07-21T10:16:24.000Z",
         "contentSnippet": "The Joomla extension Membership Pro prior version 4.6.2 did by default allow unauthenticated users to upload media assets.",
         "cveScore": 0,
         "cveSeverity": "NA"
@@ -848,60 +902,6 @@
         "contentSnippet": "Net::DNS versions through 1.55 for Perl allow remote execution injection via EDNS EXTENDED ERROR. Net::DNS::RR::OPT::EXTENDED_ERROR::_decompose parses the EXTRA-TEXT field of an EDNS EXTENDED-ERROR option (RFC 8914) by tokenising the raw bytes and passing the result to Perl's eva",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-63771 - Adminer < 5.4.3 Cookie Injection via X-Forwarded-Prefix Header",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63771",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-20T19:17:29.000Z",
-        "contentSnippet": "Adminer before 5.4.3 contains a cookie injection vulnerability that allows attackers to manipulate cookie attributes by injecting arbitrary values through the unsanitized X-Forwarded-Prefix HTTP header used in Set-Cookie path attributes. Attackers can exploit a misconfigured reve",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-63770 - Glance 0.8.5 IP Spoofing Authentication Brute-Force Protection Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63770",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-20T19:17:29.000Z",
-        "contentSnippet": "Glance through 0.8.5 contains an IP address spoofing vulnerability in the authentication handler that allows unauthenticated attackers to bypass brute-force lockout protections by supplying arbitrary values in the X-Forwarded-For request header when the server proxied option is e",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-63769 - Huginn 2022.08.18 SSRF via ScenarioImport fetch_url Method",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63769",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-20T19:17:29.000Z",
-        "contentSnippet": "Huginn through 2022.08.18 contains a server-side request forgery vulnerability in the fetch_url method of ScenarioImport that allows authenticated users to make arbitrary HTTP requests by submitting crafted URLs. Attackers can probe internal network services, enumerate ports via ",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-63768 - cal.diy 6.2.0 Conferencing OAuth Callback Open Redirect via Unsigned State",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63768",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-20T19:17:29.000Z",
-        "contentSnippet": "cal.diy through 6.2.0 contains an open redirect vulnerability in the conferencing OAuth callback endpoint that allows attackers to redirect users to arbitrary URLs by crafting malicious state parameters. Attackers can exploit the unsigned state parameter and onErrorReturnTo field",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-63731 - HyperDX < 2.31.0 SSRF via ClickHouse Proxy Test Endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63731",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-20T19:17:29.000Z",
-        "contentSnippet": "HyperDX before 2.31.0 contains a server-side request forgery vulnerability that allows authenticated team members to direct the server to arbitrary internal destinations by supplying a caller-controlled host parameter to the ClickHouse proxy test endpoint with no URL validation o",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-63730 - HyperDX < 2.31.0 SSRF via Webhook Test Endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63730",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-20T19:17:29.000Z",
-        "contentSnippet": "HyperDX before 2.31.0 contains a server-side request forgery vulnerability that allows authenticated team members to direct the server to make requests to arbitrary internal network destinations by supplying a caller-controlled URL to the webhook test endpoint. Attackers can bypa",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
@@ -1608,6 +1608,13 @@
     ],
     "virtualization": [
       {
+        "title": "The Proxmox LXC Settings I Never Skip Before Deployment",
+        "link": "https://www.virtualizationhowto.com/2026/07/the-proxmox-lxc-settings-i-never-skip-before-deployment/",
+        "source": "Virtualization HowTo",
+        "isoDate": "2026-07-21T12:05:28.000Z",
+        "contentSnippet": "One of the coolest things you can do with Proxmox is spin up LXC Containers (Linux Containers). These are used heavily by those who are self-hosting services in their home… The post The Proxmox LXC Settings I Never Skip Before Deployment appeared first on Virtualization Howto."
+      },
+      {
         "title": "I Connected AI to Cloudflare and It Changed How I Manage My Home Lab",
         "link": "https://www.virtualizationhowto.com/2026/07/i-connected-ai-to-cloudflare-and-it-changed-how-i-manage-my-home-lab/",
         "source": "Virtualization HowTo",
@@ -2299,16 +2306,30 @@
         "source": "Cormac Hogan",
         "isoDate": "2026-01-21T14:00:48.000Z",
         "contentSnippet": "VMware Data Service Manager 9.0.2.0 has achieved General Availability (GA) status, and is now readily accessible from the Broadcom Download Portal. You can see the full DSM 9.0.2 release notes here. In this post, I want to revisit our efforts to deliver a Microsoft SQL Server dat"
-      },
-      {
-        "title": "Velero Revisited – Manually backing up VKS clusters using Velero",
-        "link": "https://cormachogan.com/2026/01/16/velero-revisited-manually-backing-up-vks-clusters-using-velero/",
-        "source": "Cormac Hogan",
-        "isoDate": "2026-01-16T14:00:19.000Z",
-        "contentSnippet": "It’s been some time since I looked at how to use the Velero CLI to backup and restore some modern applications running in a Kubernetes cluster. However, after publishing how to use the new VKS Manager (VKSM) Data Protection (DP) earlier this week, it was mentioned that many custo"
       }
     ],
     "hardware": [
+      {
+        "title": "Save $400 on a new 14-inch MacBook Pro M5 — 48GB of RAM, a 1TB SSD, and a 16-core processor for $2,699",
+        "link": "https://www.tomshardware.com/laptops/macbooks/save-usd400-on-a-new-14-inch-macbook-pro-m5-48gb-of-ram-a-1tb-ssd-and-a-16-core-processor-for-usd2-699",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-07-21T11:28:53.000Z",
+        "contentSnippet": "Save a whopping $400 on a brand-new Apple MacBook Pro at B&H Photo. This 14-inch beast uses the latest 16-core M5 chip and 48GB of RAM."
+      },
+      {
+        "title": "1994 Sega 32X gets first-person Backrooms game with raycasting engine — retro hardware tour de force includes yellow rooms, buzzing fluorescents, endless procedurally generated levels",
+        "link": "https://www.tomshardware.com/video-games/retro-gaming/1994-sega-32x-gets-first-person-backrooms-game-with-raycasting-engine-retro-hardware-tour-de-force-includes-yellow-rooms-buzzing-fluorescents-endless-procedurally-generated-levels",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-07-21T11:27:36.000Z",
+        "contentSnippet": "Developer PaisleyBoxers has released Backrooms 32X, with the strap line 'welcome to the cutting edge of 1994.' This is a Sega 32X game set in the Backrooms, the internet phenomenon given a huge boost with the release of the psychological horror indie film earlier this year."
+      },
+      {
+        "title": "SMIC's third-gen 7nm node shows smaller metal pitch than Intel 18A, higher transistor density than TSMC N6 without EUV — analysis of N+3 shows significant advancement for Chinese semi manufacturing",
+        "link": "https://www.tomshardware.com/tech-industry/semiconductors/smics-third-gen-7nm-node-shows-smaller-metal-pitch-than-intel-18a-higher-transistor-density-than-tsmc-n6-without-euv-analysis-of-n-3-shows-significant-advancement-for-chinese-semi-manufacturing",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-07-21T11:00:00.000Z",
+        "contentSnippet": "SMIC's N+3 process technology can achieve transistor density comparable to TSMC's N6 without using EUV lithography, but it fails to deliver performance or efficiency of modern production nodes."
+      },
       {
         "title": "Google reportedly developing 'Frozen v2' chip with Gemini's architecture etched into the silicon — engineers project 6 to 10 times more tokens per watt than latest TPUs",
         "link": "https://www.tomshardware.com/tech-industry/google-reportedly-developing-frozen-v2-chip-with-geminis-architecture-etched-into-the-silicon",
@@ -2987,27 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-07-15T11:30:15.000Z",
         "contentSnippet": "This 7800X3D bundle from Newegg saves you $188 and ships with a Gigabyte motherboard and 16GB of DDR5 RAM for just $636.99 overall."
-      },
-      {
-        "title": "Best Buy has slashed $900 off this Asus 64GB 2-in-1 touchscreen gaming laptop — $2,099 RoG Flow Z13 is great for both gaming and AI use",
-        "link": "https://www.tomshardware.com/laptops/best-buy-has-slashed-usd900-off-this-asus-64gb-2-in-1-touchscreen-gaming-laptop-usd2-099-rog-flow-z13-is-great-for-both-gaming-and-ai-use",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-15T11:24:13.000Z",
-        "contentSnippet": "Gaming laptop or touchscreen tablet, you choose. Save $900 on the Asus RoG Flow Z13 at Best Buy."
-      },
-      {
-        "title": "Nvidia and Sega team up to deliver RTX Spark support for future games — partnership kicks off next year with upcoming Virtua Fighter Crossroads",
-        "link": "https://www.tomshardware.com/video-games/pc-gaming/nvidia-and-sega-team-up-to-deliver-rtx-spark-support-for-future-games-partnership-kicks-off-next-year-with-upcoming-virtua-fighter-crossroads",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-15T11:20:09.000Z",
-        "contentSnippet": "Nvidia and Sega announced today that the upcoming Virtua Fighter Crossroads will support the RTX Spark platform when the game launches in 2027. Sega is also promising Spark support in its future titles."
-      },
-      {
-        "title": "Intel's big $5 billion bet on Ireland aims to right the wrongs of the cancelled Magdeburg, Germany complex — Fab 34's proven pipeline and Intel 3 node should help the company meet insatiable HPC deman",
-        "link": "https://www.tomshardware.com/tech-industry/intel-commits-5-7-billion-to-ireland-one-year-after-cancelling-its-german-and-polish-fab-projects",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-15T11:20:00.000Z",
-        "contentSnippet": "The announcement comes just shy of a year after CEO Lip-Bu Tan cancelled Intel's planned €30 billion fab complex in Germany and a €4.6 billion assembly and test plant in Poland."
       }
     ]
   }
