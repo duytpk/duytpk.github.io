@@ -1,8 +1,53 @@
 {
-  "updatedAt": "2026-07-22T05:12:25.598Z",
+  "updatedAt": "2026-07-22T08:11:03.757Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-3821 - Supermicro SMASH service contain an Arbitrary code execution issue",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-3821",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-22T06:15:31.000Z",
+        "contentSnippet": "Supermicro (SMC) SMASH services contain an Arbitrary code execution issue in X14DBG-DAP and X14DBI. An authorized attacker can exploit SMASH’s input capability to compromise data integrity or launch a Denial-of-Service (DoS) attack against the BMC.",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-14322 - Timetics < 1.0.57 - Unauthenticated Booking Auto-Approval via Arbitrary payment_method",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14322",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-22T06:00:02.000Z",
+        "contentSnippet": "The Timetics WordPress plugin before 1.0.57 does not enforce a pending or unpaid status for new bookings created through a payment method other than its recognised gateways, allowing unauthenticated users to create fully-approved bookings for priced appointments without making an",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-12987 - Events Manager < 7.3.7 - Unauthenticated SQL Injection via PHP Object Injection in Booking Registration",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12987",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-22T06:00:02.000Z",
+        "contentSnippet": "The Events Manager WordPress plugin before 7.3.7 does not safely handle booking-registration data on sites using No-User-Account Booking Mode: a booker-supplied registration field is stored as booking meta and later deserialized without restricting allowed classes, enabling PHP o",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-12968 - Product Addons – WowAddons < 1.6.15 - Unauthenticated Stored XSS via Arbitrary SVG Upload",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12968",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-22T06:00:02.000Z",
+        "contentSnippet": "The Product Addons and Product Options With Custom Fields WordPress plugin before 1.6.15 does not restrict an unauthenticated file-upload endpoint and accepts SVG files that are stored and served inline, allowing an unauthenticated attacker to upload a malicious SVG whose embedde",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-15802 - WP Foodbakery <= 4.9 - Authenticated (Subscriber+) Arbitrary File Deletion via via delete_locations_backup_file AJAX Action",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15802",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-22T05:17:08.000Z",
+        "contentSnippet": "The WP Foodbakery plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the 'delete_locations_backup_file_callback' function in all versions up to, and including, 4.9. This makes it possible for authenticated attackers, with sub",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-56844 - Veeam Software Appliance Local Privilege Escalation",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-56844",
@@ -857,54 +902,16 @@
         "contentSnippet": "PraisonAI Platform is the platform layer for the PraisonAI multi-agent teams system. Versions prior to 0.1.4 have an Insecure Direct Object Reference. The `GET /workspaces/{workspace_id}/issues/{issue_id}/activity` endpoint is gated by `require_workspace_member(workspace_id)` and",
         "cveScore": 6.5,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-47407 - PraisonAI Platform has a cross-workspace IDOR + member-role privilege escalation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47407",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-21T17:17:09.000Z",
-        "contentSnippet": "PraisonAI Platform is the platform layer for the PraisonAI multi-agent teams system. Prior to version 0.1.4, the Platform server exposes resources under `/api/v1/workspaces/{workspace_id}/...` and protects them with a `require_workspace_member(workspace_id)` FastAPI dependency. T",
-        "cveScore": 9.4,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-47406 - praisonai-platform: Dependency endpoints accept any issue_id and dep_id without workspace ownership check, cross-workspace issue linking + read + delete IDOR",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47406",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-21T17:17:09.000Z",
-        "contentSnippet": "PraisonAI Platform is the platform layer for the PraisonAI multi-agent teams system. Versions prior to 0.1.4 have an Insecure Direct Object Reference. The dependency endpoints (`POST/GET /workspaces/{workspace_id}/issues/{issue_id}/dependencies` and `DELETE .../dependencies/{dep_",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-47405 - PraisonAI Platform missing role checks let any workspace member become owner and take over workspace membership",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47405",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-21T17:17:09.000Z",
-        "contentSnippet": "PraisonAI Platform is the platform layer for the PraisonAI multi-agent teams system. Versions prior to 0.1.4 have a broken workspace authorization check that allows any authenticated low-privilege workspace member to escalate their own role to `owner`. The issue is caused by priv",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-47399 - PraisonAI Platform workspace-scoped routes allow cross-workspace object access by global object ID",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47399",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-21T17:17:08.000Z",
-        "contentSnippet": "PraisonAI Platform is the platform layer for the PraisonAI multi-agent teams system. Prior to version 0.1.4, the workspace-scoped REST routes contain a systemic object-level authorization flaw that allows an authenticated user from one workspace to access, modify, and delete obje",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-47398 - PraisonAI: Arbitrary code execution via unguarded `spec.loader.exec_module` in `agents_generator.py` - sibling of CVE-2026-44334",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47398",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-21T17:17:08.000Z",
-        "contentSnippet": "PraisonAI is a multi-agent teams system. The v4.6.32 chokepoint refactor (which patched CVE-2026-44334 / GHSA-xcmw-grxf-wjhj) added the PRAISONAI_ALLOW_LOCAL_TOOLS env-var gate to the tool_override.py sinks. However, two additional spec.loader.exec_module call sites in praisonai/",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
+      {
+        "title": "Cisco Foundation AI Releases Antares: 350M and 1B Open-Weight Models That Localize Known Vulnerabilities Inside Real Codebases",
+        "link": "https://www.marktechpost.com/2026/07/21/cisco-foundation-ai-releases-antares-350m-and-1b-open-weight-models-that-localize-known-vulnerabilities-inside-real-codebases/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-07-22T06:27:02.000Z",
+        "contentSnippet": "Cisco Foundation AI has released Antares, a family of small language models trained to pinpoint where known vulnerabilities live inside a codebase. Antares-1B reaches 0.209 File F1 on the new Vulnerability Localization Benchmark, above GLM-5.2 at 753B parameters and Gemini 3 Pro."
+      },
       {
         "title": "Poolside Releases Laguna S 2.1, an Open-Weight Agentic Coding Model Punching Above Its Weight Class on SWE-Bench Multilingual",
         "link": "https://www.marktechpost.com/2026/07/21/poolside-releases-laguna-s-2-1/",
@@ -1597,13 +1604,6 @@
         "source": "MarkTechPost",
         "isoDate": "2026-07-08T18:08:21.000Z",
         "contentSnippet": "OpenAI released GPT-Live, a new generation of voice models now powering ChatGPT Voice. It uses a full-duplex architecture to listen and speak at once, and delegates search and reasoning to GPT-5.5. The post OpenAI Releases GPT-Live and GPT-Live-1 mini: Full-Duplex Voice Models Th"
-      },
-      {
-        "title": "Powering scientific discovery: BYOKG and GraphRAG for intelligent pharmaceutical research",
-        "link": "https://aws.amazon.com/blogs/machine-learning/powering-scientific-discovery-byokg-and-graphrag-for-intelligent-pharmaceutical-research/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-07-08T16:57:12.000Z",
-        "contentSnippet": "In this post, we explore how Graph-based Retrieval Augmented Generation (GraphRAG) is transforming scientific research by combining graph databases with generative AI. With this approach, you can accelerate discovery processes without compromising scientific integrity."
       }
     ],
     "virtualization": [
