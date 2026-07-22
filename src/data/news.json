@@ -1,13 +1,166 @@
 {
-  "updatedAt": "2026-07-22T20:07:42.730Z",
+  "updatedAt": "2026-07-22T21:58:45.205Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
+        "title": "CVE-2026-64829 - Question2Answer 1.8.8 Session Fixation via Forgot-Password Flow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64829",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-22T19:57:29.000Z",
+        "contentSnippet": "Question2Answer through 1.8.8 contains a session invalidation vulnerability that allows attackers with a previously obtained remember-me cookie to retain authenticated access by exploiting the forgot-password reset flow's failure to clear the sessioncode field in qa-include/app/u",
+        "cveScore": 9.1,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-14881 - Compass connection import allows to override OIDC browser open command (usually set through settings), allowing for arbitrary shell commands execution when connecting to cluster using",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14881",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-22T19:23:17.000Z",
+        "contentSnippet": "When importing connections in Compass it is possible to override some connection options that are otherwise can't be changed via connection form. In particular it is possible to provide a custom browser open command for OIDC auth flow that is usually can be set only globally via ",
+        "cveScore": 8.4,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-13055 - Server crash via aggregation pipeline expression with compound wildcard index specification",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13055",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-22T19:22:54.000Z",
+        "contentSnippet": "The `$_internalIndexKey` aggregation expression can be used by any authenticated user to crash a MongoDB server (mongod). The expression fails to handle compound wildcard index specifications, triggering an internal consistency check that aborts the server process. The user must ",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-13056 - A user with read access can cause a DoS by executing a specifically crafted query to consume a large amount of RAM",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13056",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-22T19:22:27.000Z",
+        "contentSnippet": "Using expressions that generate large arrays it is possible to craft a query that creates very large intermediate objects in memory, causing the server to crash with OOM error.",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-13057 - Authorization Bypass via Client-Supplied $search.mergingPipeline Leaks Unauthorized Collection Data Through $$SEARCH_META",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13057",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-22T19:22:05.000Z",
+        "contentSnippet": "An issue in the server’s Atlas Search integration allows an authenticated user to bypass per-user access controls. In sharded topologies, the $search and $searchMeta aggregation stages use internal routing that is normally populated only by the trusted router during sharded searc",
+        "cveScore": 6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-13058 - Transaction Command Insufficient Input Validation Leading to Process Termination",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13058",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-22T19:21:34.000Z",
+        "contentSnippet": "An authenticated user with basic write privileges can cause the mongod process to terminate abnormally by sending a crafted transaction command with an incomplete set of required fields. The issue stems from inconsistent validation across related transaction command parameters, r",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-13059 - Improper Validation of Client-Supplied Command Parameters Allowing Role-Based Access Control Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13059",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-22T19:21:06.000Z",
+        "contentSnippet": "An authenticated user with low privileges may be able to perform unauthorized reads and writes on data protected by role-based query-level access controls, due to insufficient validation of certain client-supplied command parameters. The issue affects find, update, delete, and ag",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-9737 - Find command with $meta sort can lead to crash",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9737",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-22T19:20:40.000Z",
+        "contentSnippet": "During query planning when reading the sort pattern in raw BSONObj form, in some places we don’t explicitly handle the meta expression case. This may lead to incorrect transformations leading to invariant failure.",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-13060 - $graphLookup Aggregation Stage Authorization Check Inconsistency Allowing Unauthorized Collection Access",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13060",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-22T19:19:58.000Z",
+        "contentSnippet": "An authenticated user with limited read privileges may be able to access documents from collections they are not authorized to read, due to an inconsistency in how the $graphLookup aggregation stage is evaluated during authorization and during execution. Affected scenarios involv",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-14899 - Off-by-one out of bounds read in MIME header parser for forwarding",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14899",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-22T19:19:42.000Z",
+        "contentSnippet": "The code to parse MIME headers for display when forwarding a message (if the setting to view all headers was enabled) had an off-by-one error, allowing a single byte to be read from the memory after the buffer for the headers, and potentially crashing Thunderbird. This vulnerabil",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-13061 - Improper Access Control Allowing Cross-User Session Metadata Disclosure in $listSessions Aggregation Stage",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13061",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-22T19:19:34.000Z",
+        "contentSnippet": "An authenticated user may be able to view session metadata belonging to other users on the system through the $listSessions aggregation stage. This information is normally restricted to users with cluster-level administrative privileges, and includes active session identifiers, a",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-13062 - MongoDB mongos Improper Validation of Internal Flags in Queryable Encryption Write Commands on Sharded Clusters",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13062",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-22T19:19:01.000Z",
+        "contentSnippet": "An authenticated user with write privileges on a Queryable Encryption-enabled collection may be able to modify internal encryption metadata fields that are intended to be server-controlled, by sending crafted write commands through the mongos router on a sharded cluster. This can",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-13063 - libmongocrypt Improper Input Validation Leading to Process Termination",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13063",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-22T19:18:26.000Z",
+        "contentSnippet": "An authenticated user with standard read/write privileges can cause the mongod process to terminate due to an out-of-memory condition by sending a crafted aggregation command. MongoDB's libmongocrypt library insufficiently validates payload-supplied values, which can result in an",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-13064 - MongoDB $jsonSchema Query Operator Excessive CPU Consumption Leading to Denial of Service",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13064",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-22T19:17:54.000Z",
+        "contentSnippet": "Certain query operations involving deeply nested $jsonSchema constructs can trigger disproportionate CPU consumption in affected MongoDB deployments, potentially leading to resource exhaustion. The resulting CPU-bound operation cannot be interrupted through standard administrativ",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-13065 - MongoDB $linearFill Window Function Improper Input Validation Leading to Process Termination",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13065",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-22T19:17:29.000Z",
+        "contentSnippet": "A user with read-only privileges is able to craft an aggregation pipeline using the $linearFill window function operator with a specific sortBy expression type to cause the mongod process to terminate abnormally, resulting in denial of service. The issue stems from insufficient v",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-13066 - Server-Side JavaScript DBPointer BSON Serialization Memory Disclosure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13066",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-22T19:17:08.000Z",
+        "contentSnippet": "Improper handling of DBPointer objects during BSON serialization in MongoDB's server-side JavaScript engine can result in internal process memory contents being included in data returned to the client. This constitutes an unintended information disclosure affecting deployments th",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-3482 - IBM Sterling B2B Integrator and IBM Sterling File Gateway Authorization Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-3482",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-22T19:17:03.000Z",
+        "contentSnippet": "IBM Sterling B2B Integrator and IBM Sterling File Gateway 6.2.0.0 through 6.2.0.5_2, 6.2.1.0 through 6.2.1.1_2, and 6.2.2.0 through 6.2.2.0_1 could allow an unauthenticated user to read sensitive information by bypassing authentication through a specially crafted HTTP request.",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
         "title": "CVE-2026-22049 - NetApp ONTAP WebAuthn Authentication Bypass Vulnerability",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-22049",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-22T18:52:14.000Z",
+        "isoDate": "2026-07-22T19:16:59.000Z",
         "contentSnippet": "ONTAP versions 9.16.1 and higher with WebAuthn multi-factor authentication (MFA) configured are susceptible to a vulnerability related to the Relying Party ID which when successfully exploited could allow an attacker with valid credentials to bypass MFA.",
         "cveScore": 8.7,
         "cveSeverity": "HIGH"
@@ -16,10 +169,64 @@
         "title": "CVE-2026-16624 - CVE-2026-16624",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-16624",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-22T18:31:20.000Z",
+        "isoDate": "2026-07-22T19:16:58.000Z",
         "contentSnippet": "Cal.com OSS ships lacks authorization on webhook teamId creation, allowing any authenticated user to create a webhook on any team via unvalidated teamId injection, then steal booking data, including fields like organizer/attendee emails and custom responses, and conditionally vid",
         "cveScore": 0,
         "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-13067 - tlsCATrusts Role Restriction Not Enforced via PROXY Protocol v2 on Unix Domain Socket",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13067",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-22T19:16:38.000Z",
+        "contentSnippet": "When PROXY protocol v2 is used on the Unix domain socket path, roles derived from X.509 client certificates may not be validated against the configured tlsCATrusts allow-list. This can result in unintended role assignments following MONGODB-X509 authentication. Affected scenarios",
+        "cveScore": 7.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-13068 - MongoDB mongos Improper Authorization Check in Cursor Termination Allowing Cross-Database Privilege Misuse",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13068",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-22T19:16:13.000Z",
+        "contentSnippet": "An authenticated user holding cursor termination privileges on one database may incorrectly be permitted to terminate active cursors on a separate database, disrupting ongoing query operations for other users. The behavior stems from an authorization check that does not correctly",
+        "cveScore": 4.2,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-13069 - Queryable Encryption FLE2 Find Payload Missing Input Validation Leading to Resource Exhaustion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13069",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-22T19:15:38.000Z",
+        "contentSnippet": "An authenticated user can cause excessive CPU consumption or out-of-memory conditions on a MongoDB server by sending a crafted Queryable Encryption find payload containing an unvalidated field used to control an internal computation loop. The resulting resource exhaustion degrade",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-13070 - Improper Validation of OCSP Response During Outbound TLS Handshake Leading to Process Termination",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13070",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-22T19:15:15.000Z",
+        "contentSnippet": "A MongoDB server initiating an outbound TLS connection may terminate abnormally when processing a malformed OCSP response from a remote peer during the TLS handshake. OCSP stapling validation is enabled by default for outgoing TLS connections. Affected scenarios require the remot",
+        "cveScore": 6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-13071 - Server-Side JavaScript Aggregation Expression Memory Safety Issue Leading to Process Termination",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13071",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-22T19:14:51.000Z",
+        "contentSnippet": "An authenticated user with read access can cause the mongod process to be terminated through certain aggregation expressions that execute server-side JavaScript. The issue involves improper memory handling during document processing.",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-13072 - MongoDB Improper Input Validation in Compute Mode External Data Processing Leading to Memory Corruption",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13072",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-22T19:14:15.000Z",
+        "contentSnippet": "When compute mode is enabled on a standalone mongod instance, insufficient validation of externally sourced BSON data during aggregation pipeline processing can result in memory corruption, potentially leading to process termination or other unintended behavior. This configuratio",
+        "cveScore": 9.2,
+        "cveSeverity": "CRITICAL"
       },
       {
         "title": "CVE-2026-65650 - Elgg Denial of Service via Avatar Image Upload",
@@ -74,15 +281,6 @@
         "contentSnippet": "Duplicati v2.3.0.1 backup software gives Authenticated Users MODIFY permissions that propagate to all subdirectories. Installing the software outside of the Program Files directory, or on a custom path, creates a LocalSystem service running from a directory that any standard loca",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-3482 - IBM Sterling B2B Integrator and IBM Sterling File Gateway Authorization Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-3482",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-22T18:06:00.000Z",
-        "contentSnippet": "IBM Sterling B2B Integrator and IBM Sterling File Gateway 6.2.0.0 through 6.2.0.5_2, 6.2.1.0 through 6.2.1.1_2, and 6.2.2.0 through 6.2.2.0_1 could allow an unauthenticated user to read sensitive information by bypassing authentication through a specially crafted HTTP request.",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-7328 - Unverified AXI Address in Subsystem Mode Commands Enables Denial of Service",
@@ -704,207 +902,16 @@
         "contentSnippet": "n8n before 1.123.64, 2.29.8, and 2.30.1 fails to enforce the \"Allowed HTTP Request Domains\" restriction on HTTP-based credentials (Header Auth, Basic Auth, Query Auth, OAuth) in the GraphQL node, unlike the HTTP Request node. An authenticated user able to create or edit workflows",
         "cveScore": 5.1,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-65595 - n8n before 2.30.1 Privilege Escalation via Token Exchange",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65595",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-22T11:21:43.000Z",
-        "contentSnippet": "n8n before 2.30.1 and 2.29.8 assigns all Public API key scopes to JWTs issued through the Token Exchange module regardless of the acting user's role. On instances where the Token Exchange feature and Public API are enabled, a low-privileged user who can obtain a valid external JW",
-        "cveScore": 8.9,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-65594 - n8n before 2.30.1 Missing OAuth Authorization Check",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65594",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-22T11:21:42.000Z",
-        "contentSnippet": "n8n before 2.29.8 and 2.30.x before 2.30.1 (affected from 2.27.0, when the OAuth 2.1 consent and token-issuance flow was introduced) does not verify that the authenticated user has access to the workflow referenced as the OAuth resource. On instances with at least one active MCP ",
-        "cveScore": 5.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-65593 - n8n before 1.123.64 SSRF via Dynamic Node Parameters",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65593",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-22T11:21:42.000Z",
-        "contentSnippet": "n8n versions before 1.123.64 contain a server-side request forgery vulnerability in the dynamic-node-parameters endpoints that lack authorization scopes. Authenticated attackers can supply absolute URLs in routing configuration to override baseURL restrictions and make the n8n se",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-65592 - n8n before 1.123.64 Stored DOM XSS via cachedResultUrl",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65592",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-22T11:21:41.000Z",
-        "contentSnippet": "n8n before 1.123.64, 2.29.8, and 2.30.1 contains a stored DOM cross-site scripting vulnerability in the Resource Locator component, which passes the workflow-persisted cachedResultUrl parameter to window.open() without scheme validation. An attacker with workflow creation/editing",
-        "cveScore": 8.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-65591 - n8n before 1.123.64 Sanitizer Bypass Remote Code Execution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65591",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-22T11:21:40.000Z",
-        "contentSnippet": "n8n contains a sanitizer bypass vulnerability in the legacy expression evaluator's computed-member handler. An authenticated user with workflow create or modify permissions can craft a malicious expression to bypass the sanitizer and achieve host-level code execution as the n8n p",
-        "cveScore": 8.9,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-65590 - n8n before 2.30.1 Shell Sandbox Bypass on Linux Windows",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65590",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-22T11:21:40.000Z",
-        "contentSnippet": "n8n before 2.29.8 and 2.30.x before 2.30.1 does not enforce shell sandbox restrictions on Linux and Windows in the @n8n/computer-use package (sandboxing was applied only on macOS). Shell commands executed by the tool run without any filesystem or network restrictions, allowing un",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-65589 - n8n before 1.123.64 Credential Exposure via LLM Node Execution Data",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65589",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-22T11:21:39.000Z",
-        "contentSnippet": "n8n versions before 1.123.64 fail to properly mask custom HTTP header credentials in LLM sub-node execution data, writing plaintext API keys and secrets to workflow execution records. Authenticated users with access to execution data can read exposed header values and credentials",
-        "cveScore": 5.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-65016 - n8n before 1.123.64 Privilege Escalation via SSO Instance-Role",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65016",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-22T11:21:38.000Z",
-        "contentSnippet": "n8n versions before 1.123.64, 2.29.8, and 2.30.1 contain a privilege escalation vulnerability in Enterprise SSO instance-role provisioning. The provisioning path maps an IdP-asserted role claim to an n8n global role but does not prevent assignment of the global:owner role (unlike",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-65015 - n8n before 2.30.1 Privilege Escalation via run_node_tool",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65015",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-22T11:21:38.000Z",
-        "contentSnippet": "n8n versions before 2.30.1 contain a privilege escalation vulnerability in the AI Agents feature where the node-execution tool lacks proper authorization checks. A Project Viewer user can escalate privileges by chatting with an agent that has node tools enabled, executing arbitra",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-65014 - n8n before 2.28.0 Authentication Bypass via test-webhook",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65014",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-22T11:21:37.000Z",
-        "contentSnippet": "n8n before 2.28.0 (and before 2.27.4 on the 2.27.x branch) registers the DELETE /${restEndpoint}/test-webhook/:id endpoint before authentication middleware is applied, allowing any unauthenticated network caller who knows a workflow ID to cancel that workflow's active test webhoo",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-2406 - IDOR in Universe Software's Online Registration and Workflow Management System",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-2406",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-22T08:51:21.000Z",
-        "contentSnippet": "Authorization bypass through User-Controlled key vulnerability in Universe Software Computer Marketing Trade and Industry Inc. Online Registration and Workflow Management System allows Exploiting Trust in Client. This issue affects Online Registration and Workflow Management Syst",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-15787 - Ultimate Addons for Elementor <= 2.9.1 - Authenticated (Contributor+) Stored Cross-Site Scripting via Navigation Menu Widget data-toggle-icon/data-close-icon Attributes",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15787",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-22T08:33:30.000Z",
-        "contentSnippet": "The Ultimate Addons for Elementor plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Navigation Menu Widget data-toggle-icon/data-close-icon Attributes in all versions up to, and including, 2.9.1 due to insufficient input sanitization and output escaping. This ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-63264 - Joomla Extension - joomshopping.com - Reflective XSS in JoomShopping < 5.9.3",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63264",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-22T08:32:25.000Z",
-        "contentSnippet": "The Joomla extension JoomShopping is vulnerable to an reflected XSS vulnerability in the product frontend controller.",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-63048 - Joomla Extension - joomlack.fr - Improper access control in Page Builder CK < 3.6.2",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63048",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-22T08:16:24.000Z",
-        "contentSnippet": "The Joomla extension Page Builder CK is vulnerable to an authenticated arbitrary file upload, leading to RCE.",
-        "cveScore": 9.4,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-63047 - Joomla Extension - joomdonation.com - Invoice data exfiltration via incorrect ACL check in Events Booking 5.0.0-5.8.1",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63047",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-22T08:16:23.000Z",
-        "contentSnippet": "The Joomla extension Events Booking prior version 5.0-5.8.1 did not properly verify that an actor is allowed to download invoice information.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-45820 - fflate Denial of Service Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45820",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-22T08:16:23.000Z",
-        "contentSnippet": "fflate through 0.8.2 is vulnerable to denial of service via an infinite loop in unzipSync(). A crafted ZIP archive with a central directory entry declaring compressed_size=0xFFFFFFFF (ZIP64 sentinel) but missing the required ZIP64 extra field tag 0x0001 causes z64e() to loop inde",
-        "cveScore": 6.6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-3821 - Supermicro SMASH service contain an Arbitrary code execution issue",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-3821",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-22T07:16:35.000Z",
-        "contentSnippet": "Supermicro (SMC) SMASH services contain an Arbitrary code execution issue in X14DBG-DAP and X14DBI. An authorized attacker can exploit SMASH’s input capability to compromise data integrity or launch a Denial-of-Service (DoS) attack against the BMC.",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-14322 - Timetics < 1.0.57 - Unauthenticated Booking Auto-Approval via Arbitrary payment_method",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14322",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-22T07:16:35.000Z",
-        "contentSnippet": "The Timetics WordPress plugin before 1.0.57 does not enforce a pending or unpaid status for new bookings created through a payment method other than its recognised gateways, allowing unauthenticated users to create fully-approved bookings for priced appointments without making an",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-12987 - Events Manager < 7.3.7 - Unauthenticated SQL Injection via PHP Object Injection in Booking Registration",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12987",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-22T07:16:35.000Z",
-        "contentSnippet": "The Events Manager WordPress plugin before 7.3.7 does not safely handle booking-registration data on sites using No-User-Account Booking Mode: a booker-supplied registration field is stored as booking meta and later deserialized without restricting allowed classes, enabling PHP o",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-12968 - Product Addons – WowAddons < 1.6.15 - Unauthenticated Stored XSS via Arbitrary SVG Upload",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12968",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-22T07:16:34.000Z",
-        "contentSnippet": "The Product Addons and Product Options With Custom Fields WordPress plugin before 1.6.15 does not restrict an unauthenticated file-upload endpoint and accepts SVG files that are stored and served inline, allowing an unauthenticated attacker to upload a malicious SVG whose embedde",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-15802 - WP Foodbakery <= 4.9 - Authenticated (Subscriber+) Arbitrary File Deletion via via delete_locations_backup_file AJAX Action",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15802",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-22T05:17:08.000Z",
-        "contentSnippet": "The WP Foodbakery plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the 'delete_locations_backup_file_callback' function in all versions up to, and including, 4.9. This makes it possible for authenticated attackers, with sub",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-56844 - Veeam Software Appliance Local Privilege Escalation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56844",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-22T01:16:26.000Z",
-        "contentSnippet": "A vulnerability in the Veeam Updater component of the Veeam Software Appliance that could allow a local user to elevate their privileges and gain root-level access to the underlying operating system.",
-        "cveScore": 8.4,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
+      {
+        "title": "Research-Grade EdgeBench Analysis: AI Agent Benchmarking, Leaderboard Analytics, Scaling Laws, and Evaluation Metrics",
+        "link": "https://www.marktechpost.com/2026/07/22/research-grade-edgebench-analysis-ai-agent-benchmarking-leaderboard-analytics-scaling-laws-and-evaluation-metrics/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-07-22T21:53:58.000Z",
+        "contentSnippet": "In this tutorial, we explore EdgeBench as a practical benchmark for evaluating advanced AI agents across diverse task categories, runtime environments, and interaction-time budgets. We begin by downloading the dataset snapshot from Hugging Face, parsing the released task specific"
+      },
       {
         "title": "AI Teammates: how monday.com runs production AI agents on Amazon Bedrock",
         "link": "https://aws.amazon.com/blogs/machine-learning/ai-teammates-how-monday-com-runs-production-ai-agents-on-amazon-bedrock/",
@@ -1597,13 +1604,6 @@
         "source": "MarkTechPost",
         "isoDate": "2026-07-08T23:54:28.000Z",
         "contentSnippet": "SpaceXAI released Grok 4.5, a Cursor-trained model for coding, agentic tasks, and knowledge work. It serves at 80 TPS, costs $2/$6 per million tokens, and ranks #1 on Harvey's Legal Agent Benchmark. The post SpaceXAI Releases Grok 4.5, a Cursor-Trained Model for Coding, Agentic T"
-      },
-      {
-        "title": "Netflix AI Team Cuts Wide-Partition Read Latency from Seconds to Milliseconds by Splitting Cassandra Partitions Per ID",
-        "link": "https://www.marktechpost.com/2026/07/08/netflix-ai-team-cuts-wide-partition-read-latency-from-seconds-to-milliseconds-by-splitting-cassandra-partitions-per-id/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-07-08T21:00:58.000Z",
-        "contentSnippet": "Netflix engineers detailed how they handle wide partitions in Apache Cassandra for the TimeSeries Abstraction. Two approaches work together: Time Slice re-partitioning tunes future partitions at the table level, while dynamic partitioning detects and splits oversized partitions p"
       }
     ],
     "virtualization": [
@@ -2310,6 +2310,20 @@
     ],
     "hardware": [
       {
+        "title": "Dell Pro 7 14 AMD Review: Ryzen AI 9 HX PRO 470 in a 2.8-Pound Business Laptop",
+        "link": "https://www.storagereview.com/review/dell-pro-7-14-amd-review-ryzen-ai-9-hx-pro-470-in-a-2-8-pound-business-laptop",
+        "source": "StorageReview",
+        "isoDate": "2026-07-22T21:13:27.000Z",
+        "contentSnippet": "Dell sent us four Pro laptops this cycle, covering two sizes, two product tiers, and both AMD and Intel platforms. The two Pro 5 models approach the business-laptop formula from different directions: the Pro 5 16 AMD uses a larger chassis, replaceable DDR5 memory, and the Ryzen A"
+      },
+      {
+        "title": "Framework nearly doubles memory pricing for 32GB, 64GB Laptop 13 Pro overnight — CEO says absorbing LPCAMM2 supplier hikes would put 'our ability to operate at real financial risk'",
+        "link": "https://www.tomshardware.com/laptops/framework-nearly-doubles-memory-pricing-for-32gb-64gb-laptop-13-pro-overnight-ceo-says-absorbing-lpcamm2-supplier-hikes-would-put-our-ability-to-operate-at-real-financial-risk",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-07-22T20:50:46.000Z",
+        "contentSnippet": "The company is making adjustments to some existing pre-orders."
+      },
+      {
         "title": "Jensen Huang argues American companies should be allowed to use Chinese AI models — Nvidia CEO says backdoors connected to China are misconceptions",
         "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/jensen-huang-argues-american-companies-should-be-allowed-to-use-chinese-ai-models-nvidia-ceo-says-backdoors-connected-to-china-are-misconceptions",
         "source": "Tom's Hardware",
@@ -2994,20 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-07-17T11:22:31.000Z",
         "contentSnippet": "Save over 31% on the price of this Newegg 7700X3D bundle. CPU, motherboard, and RAM combo is just $450 after discounts."
-      },
-      {
-        "title": "MSI MAG Z890 Tomahawk Wifi II motherboard review: Loses features from the original, but shaves a few dollars off the price",
-        "link": "https://www.tomshardware.com/pc-components/motherboards/msi-mag-z890-tomahawk-wifi-ii-motherboard-review",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-17T11:10:00.000Z",
-        "contentSnippet": "SI’s Z890 Tomahawk Wifi II trims a couple of connectivity features, but at its sub-$200 price, it’s still a reasonably equipped budget Z890 board."
-      },
-      {
-        "title": "ASML looks to increase prices of its Low-NA EUV tools beyond existing productivity-based model — company wants to capture the value of all the advantages its tools offer, not just wafer throughput imp",
-        "link": "https://www.tomshardware.com/tech-industry/semiconductors/asml-looks-to-increase-prices-of-its-low-na-euv-tools-beyond-existing-productivity-based-model-company-wants-to-capture-the-value-of-all-the-advantages-its-tools-offer-not-just-wafer-throughput-improvements",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-17T10:30:00.000Z",
-        "contentSnippet": "ASML's comments point to intentions to increase prices, though the company is expected to maintain its value-based approach to price setting. Yet, TSMC is reportedly unhappy about the potential plan."
       }
     ]
   }
