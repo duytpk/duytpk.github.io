@@ -1,33 +1,231 @@
 {
-  "updatedAt": "2026-07-23T20:52:53.740Z",
+  "updatedAt": "2026-07-23T21:58:18.049Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
-        "title": "CVE-2026-15212 - WPO365 | SEAMLESS WORDPRESS + MICROSOFT INTEGRATION (WPO365 | LOGIN) <= 43.2 - Cross-Site Request Forgery to Privilege Escalation via Plugin Settings Update",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15212",
+        "title": "CVE-2026-6924 - Weak entropy initialization in Silicon Labs Matter SiWx917 TinyCrypt path",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6924",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-23T19:45:52.000Z",
-        "contentSnippet": "The WPO365 | Login plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 43.2. This is due to the Ajax_Service::verify_ajax_request() helper gating its wp_verify_nonce() call behind the boolean option 'enable_nonce_check', which is abs",
+        "isoDate": "2026-07-23T21:05:22.000Z",
+        "contentSnippet": "A bug in the entropy initialization for SiWx917 causes the DRBG to use a predictable seed. As such, all random numbers generated in the Matter code use the same stream of numbers. This vulnerability was discovered after the impacted repository was already deprecated.",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-16002 - Out-of-bounds Read in MZ Automation lib60870",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16002",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-23T20:57:11.000Z",
+        "contentSnippet": "The affected product is vulnerable to an Out-of-bounds read, which may allow an attacker to crash the parsing process and cause a denial of service.",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-50032 - NULL Pointer Dereference in MZ Automation libIEC61850",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50032",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-23T20:53:36.000Z",
+        "contentSnippet": "A NULL pointer dereference in the MMS Write Named Variable List handler, which may allow a network adjacent attacker to crash the server by sending a WriteRequest with an empty listOfData field.",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-50103 - Improper Handling of Syntactically Invalid Structure in MZ Automation libIEC61850",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50103",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-23T20:50:42.000Z",
+        "contentSnippet": "A NULL pointer dereference in the L2 GOOSE and R-GOOSE shared parser, which may allow a network-adjacent attacker to crash a subscribing application by sending a crafted GOOSE frame containing a malformed TLV value.",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-49035 - Stack-based Buffer Overflow in MZ Automation libIEC61850",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49035",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-23T20:48:18.000Z",
+        "contentSnippet": "The affected product is vulnerable to a heap-based buffer overflow via a crafted MMS Initiate request. Remote code execution (RCE) has been demonstrated when ASLR is disabled; memory corruption or denial of service may occur in configurations where ASLR is enabled.",
+        "cveScore": 9.2,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-15981 - SAML Single Sign On <= 5.4.4 - Unauthenticated Authentication Bypass via SAMLResponse Parameter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15981",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-23T20:33:51.000Z",
+        "contentSnippet": "The SAML Single Sign On – SSO Login plugin for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 5.4.4. This is due to the mo_saml_validate_signature() function performing a loose boolean check on the raw tri-state integer returned by PHP's op",
         "cveScore": 0,
         "cveSeverity": "NA"
       },
       {
-        "title": "CVE-2026-47722 - nebula-mesh: Host advanced overrides allow YAML injection into agent config.yml",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47722",
+        "title": "CVE-2026-50039 - Stack-based Buffer Overflow in MZ Automation libIEC61850",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50039",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-23T19:19:41.000Z",
-        "contentSnippet": "nebula-mesh is a self-hosted control plane for Slack Nebula mesh virtual private network. Prior to version 0.3.2, `internal/configgen/generator.go:86,108,119` interpolates the operator-supplied `ListenHost` and `TunDevice` fields raw into a `text/template` that produces the agent",
+        "isoDate": "2026-07-23T20:32:30.000Z",
+        "contentSnippet": "The affected product is vulnerable to a stack-based buffer overflow, which may allow an attacker to cause a memory corruption via a Read Request.",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-34496 - victor Web - Priviledge Escalation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34496",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-23T20:26:31.000Z",
+        "contentSnippet": "Cwe-269 vulnerability in Johnson Controls victor Web on Windows allows capec-233. This issue affects victor Web: before 7.1.",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-47724 - nebula-mesh: API endpoints lack ownership checks, enabling cross-operator privilege escalation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47724",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-23T20:20:59.000Z",
+        "contentSnippet": "nebula-mesh is a self-hosted control plane for Slack Nebula mesh virtual private network. Prior to version 0.3.4, the `/api/v1/*` route surface trusts the bearer token alone for authorisation on most endpoints. The codebase itself admits this at `internal/api/hosts.go:384`: \"API ",
         "cveScore": 0,
         "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-21653 - CCure and Victor Application Server - Server Side Request Forgery",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-21653",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-23T20:19:32.000Z",
+        "contentSnippet": "Victor SSRF vulnerability in Johnson Controls CCure 9000 and victor application server allows Server Side Request Forgery. This issue affects CCure 9000 and victor application server: from 2.9 through 3.0.",
+        "cveScore": 7.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-47723 - nebula-mesh: Web UI and API responses lack security headers (CSP, X-Frame-Options, HSTS, etc.)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47723",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-23T20:17:26.000Z",
+        "contentSnippet": "nebula-mesh is a self-hosted control plane for Slack Nebula mesh virtual private network. Prior to version 0.3.1, none of the response paths in `internal/web/` or `internal/api/` set the standard browser-security headers. `grep` for `Content-Security-Policy`, `X-Frame-Options`, `",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-65706 - FFmpeg 3.0 - 8.1.2 vf_swaprect Out-of-Bounds Write via NV12 Frame Processing",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65706",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-23T20:17:22.000Z",
+        "contentSnippet": "FFmpeg versions 3.0 through 8.1.2 contain an out-of-bounds write vulnerability in the vf_swaprect video filter that allows attackers to corrupt heap memory by supplying a crafted NV12 video frame with odd width dimensions. The filter_frame() function reuses a temporary row buffer",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-65705 - FFmpeg 3.4 - 8.1.2 vf_floodfill Out-of-Bounds Write via filter_frame()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65705",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-23T20:17:22.000Z",
+        "contentSnippet": "FFmpeg versions 3.4 through 8.1.2 contain an out-of-bounds write vulnerability in the vf_floodfill video filter that allows attackers to corrupt heap memory by supplying a dynamically sized video stream with filtergraph reinitialization disabled via -reinit_filter 0. When config_",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-65704 - FFmpeg 8.1.2 Out-of-Bounds Write via TY Demuxer and Shorten Decoder",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65704",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-23T20:17:21.000Z",
+        "contentSnippet": "FFmpeg through 8.1.2 contains an out-of-bounds write vulnerability that allows attackers to cause heap corruption by supplying a crafted ffconcat file processed with the -safe 0 flag. The TY demuxer's demux_audio() function decrements packet size without bounds checking, producin",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-65703 - FFmpeg 2.7 - 8.1.2 Out-of-Bounds Write in TDSC Video Decoder",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65703",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-23T20:17:21.000Z",
+        "contentSnippet": "FFmpeg versions 2.7 through 8.1.2 contain an out-of-bounds write vulnerability in the TDSC video decoder that allows remote attackers to cause heap corruption by supplying a crafted AVI file that changes frame dimensions across TDSF frames. The tdsc_parse_tdsf() function fails to",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-64785 - SwiftNIO HTTP/2 Improper Input Validation HTTP Request Smuggling",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64785",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-23T20:17:21.000Z",
+        "contentSnippet": "SwiftNIO HTTP/2 was missing validation on inbound HEADERS frames that let CR, LF, NUL, SP and other control characters reach an HTTP/1.1 backend through NIOHTTP2's HTTP/2-to-HTTP/1 codec, enabling HTTP request smuggling or response splitting. This vulnerability is addressed in sw",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63359 - Appriss Insights VINE SQLI",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63359",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-23T20:17:20.000Z",
+        "contentSnippet": "The Appriss Insights (Equifax) Victim Information Notification Exchange (VINE) applications allow an unauthenticated attacker to send a specially-crafted request to bypass the login page, access other users' credentials, take over other user accounts, access sensitive PII, and du",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
       },
       {
         "title": "CVE-2026-60122 - gpsd gpsprof Code Injection via SKY.satellites used Field",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-60122",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-23T19:18:14.000Z",
+        "isoDate": "2026-07-23T20:17:09.000Z",
         "contentSnippet": "gpsd through release-3.27.5, fixed at commit 4c06658, contains a code injection vulnerability in the gpsprof utility that allows an attacker who controls GPS input data to execute arbitrary OS commands by injecting malicious content into the SKY.satellites[].used field, which is ",
         "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-48013 - Shopware: SSRF in Media External-Link Endpoint Bypasses IP Validation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48013",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-23T20:17:08.000Z",
+        "contentSnippet": "Shopware is an open commerce platform. Prior to 6.6.10.18 and 6.7.10.1, the `/api/_action/media/external-link` endpoint allows authenticated admin users to make server-side HTTP HEAD requests to arbitrary internal IP addresses. While the parallel `uploadFromURL` flow validates ta",
+        "cveScore": 4.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-48012 - Shopware SSO referer trust leading to an arbitrary redirect target",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48012",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-23T20:17:08.000Z",
+        "contentSnippet": "Shopware is an open commerce platform. Versions 6.7.3.0 through 6.7.10.0 have an open redirect in Shopware's public SSO entry point at `GET /api/oauth/sso/auth`. When the endpoint is reached without the expected SSO session state, the application falls back to the request's `Refe",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-47722 - nebula-mesh: Host advanced overrides allow YAML injection into agent config.yml",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47722",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-23T20:17:08.000Z",
+        "contentSnippet": "nebula-mesh is a self-hosted control plane for Slack Nebula mesh virtual private network. Prior to version 0.3.2, `internal/configgen/generator.go:86,108,119` interpolates the operator-supplied `ListenHost` and `TunDevice` fields raw into a `text/template` that produces the agent",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-47670 - DbGate Vulnerable to Authenticated Remote Code Execution via loadReader functionName code injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47670",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-23T20:17:08.000Z",
+        "contentSnippet": "DbGate is cross-platform database manager. Versions 7.1.8 and prior are vulnerable to authenticated Remote Code Execution (RCE). Any user with valid DbGate credentials can execute arbitrary OS commands as root by exploiting an unsanitized `functionName` parameter in the `/runners",
+        "cveScore": 9.4,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-47669 - DbGate: Zip Slip in archive/unzip allows arbitrary file write leading to RCE",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47669",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-23T20:17:08.000Z",
+        "contentSnippet": "DbGate is cross-platform database manager. In versions 7.1.8 and prior, the `unzipDirectory()` function in `packages/api/src/shell/unzipDirectory.js` (line 27) does not validate that extracted file paths stay within the output directory. A malicious ZIP with `../` entries writes ",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-25800 - quinn-proto has remote memory exhaustion from unbounded out-of-order stream reassembly",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-25800",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-23T20:17:07.000Z",
+        "contentSnippet": "Quinn is a pure-Rust, async-compatible implementation of the IETF QUIC transport protocol. Starting in version 0.1.0 and prior to version 0.11.15, the `Assembler` component that assembles unordered stream fragments into consecutive chunks of the stream incurs some overhead for no",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-15212 - WPO365 | SEAMLESS WORDPRESS + MICROSOFT INTEGRATION (WPO365 | LOGIN) <= 43.2 - Cross-Site Request Forgery to Privilege Escalation via Plugin Settings Update",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15212",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-23T20:17:07.000Z",
+        "contentSnippet": "The WPO365 | Login plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 43.2. This is due to the Ajax_Service::verify_ajax_request() helper gating its wp_verify_nonce() call behind the boolean option 'enable_nonce_check', which is abs",
+        "cveScore": 8.8,
         "cveSeverity": "HIGH"
       },
       {
@@ -67,42 +265,6 @@
         "cveSeverity": "LOW"
       },
       {
-        "title": "CVE-2026-48012 - Shopware SSO referer trust leading to an arbitrary redirect target",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48012",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T19:16:38.000Z",
-        "contentSnippet": "Shopware is an open commerce platform. Versions 6.7.3.0 through 6.7.10.0 have an open redirect in Shopware's public SSO entry point at `GET /api/oauth/sso/auth`. When the endpoint is reached without the expected SSO session state, the application falls back to the request's `Refe",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-48013 - Shopware: SSRF in Media External-Link Endpoint Bypasses IP Validation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48013",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T19:14:32.000Z",
-        "contentSnippet": "Shopware is an open commerce platform. Prior to 6.6.10.18 and 6.7.10.1, the `/api/_action/media/external-link` endpoint allows authenticated admin users to make server-side HTTP HEAD requests to arbitrary internal IP addresses. While the parallel `uploadFromURL` flow validates ta",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-47669 - DbGate: Zip Slip in archive/unzip allows arbitrary file write leading to RCE",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47669",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T19:13:15.000Z",
-        "contentSnippet": "DbGate is cross-platform database manager. In versions 7.1.8 and prior, the `unzipDirectory()` function in `packages/api/src/shell/unzipDirectory.js` (line 27) does not validate that extracted file paths stay within the output directory. A malicious ZIP with `../` entries writes ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-47670 - DbGate Vulnerable to Authenticated Remote Code Execution via loadReader functionName code injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47670",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T19:12:00.000Z",
-        "contentSnippet": "DbGate is cross-platform database manager. Versions 7.1.8 and prior are vulnerable to authenticated Remote Code Execution (RCE). Any user with valid DbGate credentials can execute arbitrary OS commands as root by exploiting an unsanitized `functionName` parameter in the `/runners",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
         "title": "CVE-2026-12353 - Rhcs: memory leak during https connection leads to denial of service",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-12353",
         "source": "cvefeed.io",
@@ -110,69 +272,6 @@
         "contentSnippet": "An unauthenticated attacker could trigger an Out of Memory condition to crash the Java process for RHCS by repeatedly sending HTTP requests to the TLS endpoint. Depending on how the RHCS server is configured, a manual intervention to restart it may prove necessary.",
         "cveScore": 5.3,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-25800 - quinn-proto has remote memory exhaustion from unbounded out-of-order stream reassembly",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-25800",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T19:09:19.000Z",
-        "contentSnippet": "Quinn is a pure-Rust, async-compatible implementation of the IETF QUIC transport protocol. Starting in version 0.1.0 and prior to version 0.11.15, the `Assembler` component that assembles unordered stream fragments into consecutive chunks of the stream incurs some overhead for no",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-65706 - FFmpeg 3.0 - 8.1.2 vf_swaprect Out-of-Bounds Write via NV12 Frame Processing",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65706",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T19:05:11.000Z",
-        "contentSnippet": "FFmpeg versions 3.0 through 8.1.2 contain an out-of-bounds write vulnerability in the vf_swaprect video filter that allows attackers to corrupt heap memory by supplying a crafted NV12 video frame with odd width dimensions. The filter_frame() function reuses a temporary row buffer",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-65705 - FFmpeg 3.4 - 8.1.2 vf_floodfill Out-of-Bounds Write via filter_frame()",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65705",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T19:00:36.000Z",
-        "contentSnippet": "FFmpeg versions 3.4 through 8.1.2 contain an out-of-bounds write vulnerability in the vf_floodfill video filter that allows attackers to corrupt heap memory by supplying a dynamically sized video stream with filtergraph reinitialization disabled via -reinit_filter 0. When config_",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-65704 - FFmpeg 8.1.2 Out-of-Bounds Write via TY Demuxer and Shorten Decoder",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65704",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T18:55:41.000Z",
-        "contentSnippet": "FFmpeg through 8.1.2 contains an out-of-bounds write vulnerability that allows attackers to cause heap corruption by supplying a crafted ffconcat file processed with the -safe 0 flag. The TY demuxer's demux_audio() function decrements packet size without bounds checking, producin",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-65703 - FFmpeg 2.7 - 8.1.2 Out-of-Bounds Write in TDSC Video Decoder",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65703",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T18:52:19.000Z",
-        "contentSnippet": "FFmpeg versions 2.7 through 8.1.2 contain an out-of-bounds write vulnerability in the TDSC video decoder that allows remote attackers to cause heap corruption by supplying a crafted AVI file that changes frame dimensions across TDSF frames. The tdsc_parse_tdsf() function fails to",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-64785 - SwiftNIO HTTP/2 Improper Input Validation HTTP Request Smuggling",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64785",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T18:50:40.000Z",
-        "contentSnippet": "SwiftNIO HTTP/2 was missing validation on inbound HEADERS frames that let CR, LF, NUL, SP and other control characters reach an HTTP/1.1 backend through NIOHTTP2's HTTP/2-to-HTTP/1 codec, enabling HTTP request smuggling or response splitting. This vulnerability is addressed in sw",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-63359 - Appriss Insights VINE SQLI",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63359",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T18:48:43.000Z",
-        "contentSnippet": "The Appriss Insights (Equifax) Victim Information Notification Exchange (VINE) applications allow an unauthenticated attacker to send a specially-crafted request to bypass the login page, access other users' credentials, take over other user accounts, access sensitive PII, and du",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       },
       {
         "title": "CVE-2026-6516 - Remote Code Execution",
@@ -802,105 +901,6 @@
         "isoDate": "2026-07-23T11:19:19.000Z",
         "contentSnippet": "Author Cross Site Scripting (XSS) in Custom links in Elementor Image Carousel",
         "cveScore": 5.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-65533 - WordPress Smart SEO Tool plugin <= 4.1.2 - Cross Site Scripting (XSS) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65533",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T11:19:19.000Z",
-        "contentSnippet": "Contributor Cross Site Scripting (XSS) in Smart SEO Tool",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-65532 - WordPress Persian Woocommerce SMS plugin <= 7.2.2 - SQL Injection vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65532",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T11:19:18.000Z",
-        "contentSnippet": "Shop manager SQL Injection in Persian Woocommerce SMS",
-        "cveScore": 7.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-65531 - WordPress Qubely plugin <= 1.8.14 - Broken Access Control vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65531",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T11:19:18.000Z",
-        "contentSnippet": "Unauthenticated Broken Access Control in Qubely",
-        "cveScore": 4.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-65530 - WordPress TemplateSpare plugin <= 4.2.2 - Broken Access Control vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65530",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T11:19:17.000Z",
-        "contentSnippet": "Subscriber Broken Access Control in TemplateSpare",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-65529 - WordPress Graphina plugin <= 3.1.12 - Broken Access Control vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65529",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T11:19:16.000Z",
-        "contentSnippet": "Unauthenticated Broken Access Control in Graphina",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-65528 - WordPress BSK PDF Manager plugin <= 3.8 - Cross Site Scripting (XSS) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65528",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T11:19:16.000Z",
-        "contentSnippet": "Contributor Cross Site Scripting (XSS) in BSK PDF Manager",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-65527 - WordPress LIQUID SPEECH BALLOON plugin <= 1.2.5 - Cross Site Scripting (XSS) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65527",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T11:19:15.000Z",
-        "contentSnippet": "Contributor Cross Site Scripting (XSS) in LIQUID SPEECH BALLOON",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-65526 - WordPress Visualizer plugin <= 4.0.6 - SQL Injection vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65526",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T11:19:14.000Z",
-        "contentSnippet": "Contributor SQL Injection in Visualizer",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-65525 - WordPress Civi Framework plugin <= 2.2.0 - Broken Access Control vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65525",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T11:19:14.000Z",
-        "contentSnippet": "Unauthenticated Broken Access Control in Civi Framework",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-65524 - WordPress Avada Custom Branding plugin <= 1.2 - Broken Access Control vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65524",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T11:19:13.000Z",
-        "contentSnippet": "Contributor Broken Access Control in Avada Custom Branding",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-65522 - WordPress Manual - Documentation, Knowledge Base & Education WordPress theme theme <= 7.5.4 - Cross Site Scripting (XSS) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65522",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T11:19:12.000Z",
-        "contentSnippet": "Contributor Cross Site Scripting (XSS) in Manual - Documentation, Knowledge Base & Education WordPress Theme",
-        "cveScore": 6.5,
         "cveSeverity": "MEDIUM"
       }
     ],
