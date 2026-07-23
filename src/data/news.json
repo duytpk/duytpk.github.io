@@ -1,25 +1,61 @@
 {
-  "updatedAt": "2026-07-23T01:59:51.501Z",
+  "updatedAt": "2026-07-23T05:29:26.077Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
+        "title": "CVE-2026-21723 - CVE-2026-21723 Record",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-21723",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-23T03:16:30.000Z",
+        "contentSnippet": "The alertmanager templates test endpoint (/api/alertmanager/grafana/config/api/v1/templates/test) can execute templates with no memory limits. Mass-executing templates in a short period causes OOM and crashes the Grafana service. The endpoint requires very low privileges and is e",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-15074 - @fastify/static vulnerable to route guard bypass via path traversal",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15074",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-23T03:01:47.000Z",
+        "contentSnippet": "@fastify/static up to and including version 10.1.0 fails to reject dot-dot path segments in request pathnames before the file-resolution stage. This is a bypass of the earlier fix for CVE-2026-6414, which only covered encoded forward slashes. Because the underlying send library n",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-7120 - @fastify/static vulnerable to Authorization Bypass via Non-Canonical URL Paths",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-7120",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-23T02:48:35.000Z",
+        "contentSnippet": "@fastify/static evaluates the allowedPath callback before normalizing dot segments and duplicate path separators in the pathname used for file resolution. Versions up to and including 10.1.1 are affected. An unauthenticated attacker can bypass allowedPath restrictions by requesti",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-16653 - boazsegev facil.io Public Folder http.c http_sendfile2 path traversal",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16653",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-23T02:16:27.000Z",
+        "contentSnippet": "A security flaw has been discovered in boazsegev facil.io up to 0.7.58. This affects the function http_sendfile2 of the file lib/facil/http/http.c of the component Public Folder Handler. Performing a manipulation results in path traversal. Remote exploitation of the attack is pos",
+        "cveScore": 5.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
         "title": "CVE-2026-16632 - boazsegev facil.io WebSocket Frame websocket_parser.h websocket_on_protocol_error input validation",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-16632",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-22T23:45:10.000Z",
+        "isoDate": "2026-07-23T00:16:28.000Z",
         "contentSnippet": "A flaw has been found in boazsegev facil.io up to 0.7.4. Affected is the function websocket_on_protocol_error in the library lib/facil/http/parsers/websocket_parser.h of the component WebSocket Frame Parser. This manipulation of the argument on_message causes improper input valid",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-16631 - publint package-manager pack.js child_process.exec os command injection",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-16631",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-22T23:30:14.000Z",
+        "isoDate": "2026-07-23T00:16:26.000Z",
         "contentSnippet": "A vulnerability was detected in publint up to 0.1.4. This impacts the function child_process.exec of the file src/node/pack.js of the component package-manager Command Handler. The manipulation results in os command injection. Attacking locally is a requirement. The exploit is no",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-61246 - Vulnerability in the Oracle Platform Security for",
@@ -866,42 +902,6 @@
         "contentSnippet": "A DNSSEC validating resolver that is under a random subdomain attack against a DNSSEC-signed zone can suffer from runaway memory usage. The attacker needs to be able to send queries faster than the resolver can perform validation. The increased memory usage can be orders of magni",
         "cveScore": 7.5,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-11605 - Unnecessary validation of DNSSEC signed records",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11605",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-22T15:16:51.000Z",
-        "contentSnippet": "The issue is a resource exhaustion vulnerability associated with DNSSEC validation. BIND always validates all RRSIG records in an answer, even if they are not strictly needed. A query to an authoritative server/zone which returns many valid but superfluous RRSIG records causes th",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-11331 - Potential wildcard CNAME RPZ policy bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11331",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-22T15:16:51.000Z",
-        "contentSnippet": "An attacker who knows (or guesses) that a resolver uses RPZ with wildcard CNAME policies can craft query names long enough to trigger a NAMETOOLONG error condition during RPZ processing. This is not handled correctly and may lead to defeating the RPZ rule. It also may lead to an ",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-10822 - Key Record using PRIVATEDNS algorithm may lead to unexpected exit",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10822",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-22T15:16:51.000Z",
-        "contentSnippet": "If BIND encounters a particular invalid data structure in a DNS record, it will accept the invalid data, and may subsequently abort and exit. BIND will first need to store a DNS record for a key (KEY, DNSKEY, etc.). That key must specify a PRIVATEDNS algorithm (253), and in the a",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-10723 - Incorrect acceptance of NSEC3 records",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10723",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-22T15:16:51.000Z",
-        "contentSnippet": "BIND may accept incorrect child-zone NSEC3 records as valid, which could allow an attacker to forge authenticated NXDOMAIN responses. This issue affects BIND 9 versions 9.18.0 through 9.18.50, 9.20.0 through 9.20.24, 9.21.0 through 9.21.23, 9.11.3-S1 through 9.18.50-S1, and 9.20.",
-        "cveScore": 6.8,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
