@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-07-24T14:46:45.778Z",
+  "updatedAt": "2026-07-24T18:12:23.408Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-66035 - libssh2 Heap Buffer Overflow via ETM Cipher Negotiation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66035",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-24T16:45:24.000Z",
+        "contentSnippet": "libssh2 through 1.11.1, fixed in commit 42e33d8, contains a pre-authentication heap buffer overflow vulnerability that allows a malicious SSH server to corrupt heap metadata in any connecting client by sending a packet with a packet_length smaller than the cipher's block size dur",
+        "cveScore": 7.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-66034 - libssh2 Heap Out-of-Bounds Read via publickey subsystem",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66034",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-24T16:42:18.000Z",
+        "contentSnippet": "libssh2 through 1.11.1, fixed in commit a13bb6c, contains a missing bounds check vulnerability that allows a malicious SSH server to trigger an arbitrary-length heap out-of-bounds read and a free of an uninitialized pointer via the publickey subsystem. In libssh2_publickey_list_f",
+        "cveScore": 7.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-66033 - libssh2 Integer Underflow DoS via AES-GCM Cipher Negotiation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66033",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-24T16:35:28.000Z",
+        "contentSnippet": "libssh2 through 1.11.1, fixed in commit a2ed82d, contains a pre-authentication integer underflow vulnerability in the ssh2_cipher_crypt() function in src/openssl.c that allows a malicious SSH server to crash any connecting client by negotiating AES-GCM ciphers during handshake. A",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-66032 - libssh2 Double-Free Heap Corruption via sftp_open()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66032",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-24T16:32:39.000Z",
+        "contentSnippet": "libssh2 through 1.11.1, fixed in commit 5e47761, contains a double-free vulnerability in the sftp_open() function in src/sftp.c that allows a malicious SSH server to corrupt the heap of any authenticated client opening an SFTP session. When a server responds to SSH_FXP_OPEN with ",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-65623 - Quadratic CPU blow-up reassembling fragmented WebSocket messages in Bandit",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65623",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-24T16:32:24.000Z",
+        "contentSnippet": "Inefficient Algorithmic Complexity vulnerability in mtrudel bandit allows unauthenticated remote denial of service via CPU exhaustion during WebSocket fragment reassembly. The size guard 'Elixir.Bandit.WebSocket.Connection':oversize_message?/2 called from handle_frame/3 in lib/ba",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-66027 - Suna < 0.9.102 Broken Access Control via Message Queue API",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66027",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-24T16:16:55.000Z",
+        "contentSnippet": "Suna before 0.9.102 contains a broken access control vulnerability in the message queue API that allows authenticated attackers to access and manipulate queue resources belonging to other users by exploiting missing ownership and account isolation checks. Attackers can read pendi",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-65693 - Microweber CMS 2.0.20 Server-Side Template Injection via Mail Templates",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65693",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-24T16:16:55.000Z",
+        "contentSnippet": "Microweber CMS through 2.0.20 contains a server-side template injection vulnerability that allows authenticated administrators to achieve arbitrary OS command execution by injecting Twig expressions into mail templates. Attackers can exploit the unsandboxed Twig environment in Tw",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-64255 - wifi: iwlwifi: mld: validate sta_mask before ffs() in BA session handlers",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64255",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-24T16:16:55.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: wifi: iwlwifi: mld: validate sta_mask before ffs() in BA session handlers Three BA session handlers use ffs(ba_data->sta_mask) - 1 to derive a station ID without checking that sta_mask is non-zero. When sta_mask ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64254 - NTB: epf: Avoid pci_iounmap() with offset when PEER_SPAD and CONFIG share BAR",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64254",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-24T16:16:55.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: NTB: epf: Avoid pci_iounmap() with offset when PEER_SPAD and CONFIG share BAR When BAR_PEER_SPAD and BAR_CONFIG share one PCI BAR, the module teardown path ends up calling pci_iounmap() on the same iomem with som",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64253 - kernel/fork: clear PF_BLOCK_TS in copy_process()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64253",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-24T16:16:55.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: kernel/fork: clear PF_BLOCK_TS in copy_process() PF_BLOCK_TS is only set in blk_time_get_ns() when current->plug is non-NULL, and blk_finish_plug() clears it via __blk_flush_plug() before NULLing the plug pointer",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64252 - MIPS: DEC: Prevent initial console buffer from landing in XKPHYS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64252",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-24T16:16:54.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: MIPS: DEC: Prevent initial console buffer from landing in XKPHYS In 64-bit configurations calling the initial console output handler from a kernel thread other than the initial one will result in a situation wher",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64251 - pwrseq: core: fix use-after-free in pwrseq_debugfs_seq_next()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64251",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-24T16:16:54.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: pwrseq: core: fix use-after-free in pwrseq_debugfs_seq_next() pwrseq_debugfs_seq_next() declares 'next' with __free(put_device), which causes put_device() to be called on the returned pointer when the variable go",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64250 - LoongArch: Report dying CPU to RCU in stop_this_cpu()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64250",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-24T16:16:54.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: LoongArch: Report dying CPU to RCU in stop_this_cpu() This is a port of MIPS commit 9f3f3bdc6d9dac1 (\"MIPS: smp: report dying CPU to RCU in stop_this_cpu()\"). smp_send_stop() parks all secondary CPUs in stop_this",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64249 - fpga: region: fix use-after-free in child_regions_with_firmware()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64249",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-24T16:16:54.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: fpga: region: fix use-after-free in child_regions_with_firmware() Move of_node_put(child_region) after the error print to avoid accessing freed memory when pr_err() references child_region. [ Yilun: Fix the Fixes",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64248 - MIPS: smp: report dying CPU to RCU in stop_this_cpu()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64248",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-24T16:16:54.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: MIPS: smp: report dying CPU to RCU in stop_this_cpu() smp_send_stop() parks all secondary CPUs in stop_this_cpu(). The function marks the CPU offline for the scheduler via set_cpu_online(false) but never informs ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64247 - KVM: x86: hyper-v: Bound the bank index when querying sparse banks",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64247",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-24T16:16:54.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: KVM: x86: hyper-v: Bound the bank index when querying sparse banks When checking if a VP ID is included in a sparse bank set, explicitly check that the ID can actually be contained in a sparse bank (the TLFS allo",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64246 - power: reset: linkstation-poweroff: fix use-after-free in the linkstation_poweroff_init()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64246",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-24T16:16:54.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: power: reset: linkstation-poweroff: fix use-after-free in the linkstation_poweroff_init() Move of_node_put(dn) after the of_match_node() call, which still needs the node pointer. The node reference is correctly r",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64245 - fbdev: modedb: fix a possible UAF in fb_find_mode()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64245",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-24T16:16:53.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: fbdev: modedb: fix a possible UAF in fb_find_mode() If mode_option is NULL, it is assigned from mode_option_buf: if (!mode_option) { fb_get_options(NULL, &mode_option_buf); mode_option = mode_option_buf; } Later,",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64244 - drivers/base/memory: set mem->altmap after successful device registration",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64244",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-24T16:16:53.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: drivers/base/memory: set mem->altmap after successful device registration If __add_memory_block() fails at xa_store() (under memory pressure for example), device_unregister() is called, which eventually triggers ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64243 - ASoC: codecs: simple-mux: Fix enum control bounds check",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64243",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-24T16:16:53.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: ASoC: codecs: simple-mux: Fix enum control bounds check simple_mux_control_put() rejects values greater than e->items, but enum control values are zero based. For the two-entry mux used by this driver, valid valu",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64242 - usb: gadget: net2280: Fix double free in probe error path",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64242",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-24T16:16:53.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: usb: gadget: net2280: Fix double free in probe error path usb_initialize_gadget() installs gadget_release() as the release callback for the embedded gadget device. The struct net2280 instance is therefore release",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64241 - gpio: rockchip: teardown bugs and resource leaks",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64241",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-24T16:16:53.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: gpio: rockchip: teardown bugs and resource leaks Address several teardown issues and resource leaks in the driver's remove path and error handling: 1. Debounce clock reference leak: The debounce clock (bank->db_c",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64240 - media: rc: igorplugusb: fix control request setup packet",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64240",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-24T16:16:53.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: media: rc: igorplugusb: fix control request setup packet Commit eac69475b01f (\"media: rc: igorplugusb: heed coherency rules\") changed the control request storage from an embedded struct to an allocated pointer so",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64239 - mm/damon/sysfs-schemes: delete tried region in regions_rmdirs()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64239",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-24T16:16:53.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: mm/damon/sysfs-schemes: delete tried region in regions_rmdirs() DAMON sysfs maintains the DAMOS tried region directory objects via a linked list. When the user requests refresh of the directories, DAMON sysfs rem",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64238 - gpio: shared: fix deadlock on shared proxy's parent removal",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64238",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-24T16:16:53.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: gpio: shared: fix deadlock on shared proxy's parent removal Commit 710abda58055 (\"gpio: shared: call gpio_chip::of_xlate() if set\") used the mutex embedded in struct gpio_shared_entry to protect the offset field ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2026-17048 - Keycloak-services: keycloak-services: vault-resolved rotated client secrets leaked via admin rest api",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-17048",
@@ -677,234 +902,30 @@
         "contentSnippet": "Deserialization of untrusted data in M365 Copilot allows an authorized attacker to execute code over a network.",
         "cveScore": 9.9,
         "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-49159 - Microsoft Graph Information Disclosure Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49159",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-24T01:16:40.000Z",
-        "contentSnippet": "Exposure of sensitive information to an unauthorized actor in Microsoft Graph allows an authorized attacker to disclose information over a network.",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-35425 - Azure API Management (APIM) Remote Code Execution Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-35425",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-24T01:16:36.000Z",
-        "contentSnippet": "Improper access control in Azure API Management (APIM) allows an authorized attacker to execute code over a network.",
-        "cveScore": 8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-50044 - Inadequate Encryption Strength in Panduit IntraVUE by Pronetiqs",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50044",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T23:16:49.000Z",
-        "contentSnippet": "Pronetiqs IntraVUE versions 3.2.1a14 and prior have an inadequate encryption strength vulnerability which could allow an attacker to steal admin credentials via weak hash or a pass-the-hash attack.",
-        "cveScore": 7.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-44955 - Exposure of Sensitive System Information to an Unauthorized Control Sphere in Panduit IntraVUE by Pronetiqs",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44955",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T23:16:49.000Z",
-        "contentSnippet": "Pronetiqs IntraVUE versions 3.2.1a14 and prior have an exposure of sensitive system information to an unauthorized control sphere vulnerability which could allow for asset discovery by unauthenticated users.",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-42933 - Unintended Proxy or Intermediary in Panduit IntraVUE by Pronetiqs",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-42933",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T23:16:48.000Z",
-        "contentSnippet": "Pronetiqs IntraVUE versions 3.2.1a14 and prior have an unintended proxy or intermediary vulnerability which could allow an attacker to use an active proxy, which would bypass OT segmentation.",
-        "cveScore": 10,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-40430 - Plaintext Storage of a Password in Panduit IntraVUE by Pronetiqs",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-40430",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T23:16:48.000Z",
-        "contentSnippet": "Pronetiqs IntraVUE Versions 3.2.1a14 and prior have a plaintext storage of a password vulnerability that could expose cleartext credentials through the API.",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-28698 - Exposure of Sensitive System Information to an Unauthorized Control Sphere in Panduit IntraVUE by Pronetiqs",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-28698",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T23:16:48.000Z",
-        "contentSnippet": "Pronetiqs IntraVUE versions 3.2.1a14 and prior have an exposure of sensitive system information to an unauthorized control sphere vulnerability which could expose the underlying host/share filesystem.",
-        "cveScore": 9.2,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-16767 - Ne-Lexa php-zip ZIP ZipFile.php extractTo path traversal",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16767",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T23:16:48.000Z",
-        "contentSnippet": "A vulnerability was detected in Ne-Lexa php-zip up to 4.0.2. This affects the function ZipFile::extractTo of the file src/ZipFile.php of the component ZIP Handler. Performing a manipulation of the argument entryName results in path traversal. It is possible to initiate the attack",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-65694 - Microweber CMS 2.0.20 Path Traversal via ServeStaticFileController",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65694",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T22:16:53.000Z",
-        "contentSnippet": "Microweber CMS through 2.0.20 contains a path traversal vulnerability in the static file controller that allows unauthenticated remote attackers to read arbitrary files by supplying directory traversal sequences in the path query parameter. Attackers can send a single unauthentic",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-65604 - Skipper Incomplete Fix for CVE-2026-50197 Policy Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65604",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T22:16:53.000Z",
-        "contentSnippet": "Skipper contains an incomplete fix for CVE-2026-50197 in which oversized request bodies bypass Open Policy Agent (OPA) deny-on-presence Rego policies. When a request body exceeds the configured maxBodyBytes limit, Skipper forwards the full payload to the upstream service while OP",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-63732 - 9router before 0.4.60 Remote Code Execution via default password",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63732",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T22:16:53.000Z",
-        "contentSnippet": "9router 0.4.59 (fixed in 0.4.60) contains a chain of vulnerabilities: a hardcoded default password (123456) that authenticates any fresh installation, a bypass of the LOCAL_ONLY network gate via a spoofed Host header, and unvalidated arguments passed to child_process.spawn() when",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-63313 - 9Router before 0.4.72 Server-Side Request Forgery via /v1/web/fetch",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63313",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T22:16:52.000Z",
-        "contentSnippet": "9Router before 0.4.72 contains a server-side request forgery (SSRF) vulnerability in the /v1/web/fetch endpoint. The endpoint accepts a user-controlled url parameter and passes it to a configured external scraping provider (Firecrawl, Jina Reader, Tavily, or Exa) to fetch content",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-16807 - Google Chrome Codecs Out-of-Bounds Write",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16807",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T22:16:52.000Z",
-        "contentSnippet": "Out of bounds write in Codecs in Google Chrome prior to 150.0.7871.186 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-16806 - Google Chrome WebMCP Use-After-Free Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16806",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T22:16:52.000Z",
-        "contentSnippet": "Use after free in WebMCP in Google Chrome prior to 150.0.7871.186 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-16805 - Google Chrome Blink Use-After-Free Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16805",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T22:16:52.000Z",
-        "contentSnippet": "Use after free in Blink in Google Chrome prior to 150.0.7871.186 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-16804 - Google Chrome Input Use-After-Free Sandbox Escape",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16804",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T22:16:52.000Z",
-        "contentSnippet": "Use after free in Input in Google Chrome prior to 150.0.7871.186 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-16765 - CodeAstro Online Classroom loginlinkadmin.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16765",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T22:16:52.000Z",
-        "contentSnippet": "A vulnerability was determined in CodeAstro Online Classroom 1.0. Affected by this issue is some unknown functionality of the file /OnlineClassroom/loginlinkadmin.php. Executing a manipulation of the argument aid can lead to sql injection. The attack can be executed remotely. The",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-16764 - OWASP DefectDojo API/Web serializers.py UserSerializer privileges management",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16764",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T22:16:52.000Z",
-        "contentSnippet": "A vulnerability was identified in OWASP DefectDojo 2.59.0. This issue affects the function UserSerializer of the file dojo/api_v2/serializers.py of the component API/Web. Such manipulation of the argument is_staff leads to improper privilege management. The attack may be performe",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16763 - localstack serverless-localstack Configuration index.js os command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16763",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T22:16:51.000Z",
-        "contentSnippet": "A vulnerability was identified in localstack serverless-localstack up to 1.4.0. The affected element is an unknown function of the file src/index.js of the component Configuration Handler. The manipulation of the argument custom.localstack.docker.compose_file leads to os command ",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2025-71389 - Cal.com before 5.9.9 Remote Code Execution via RSC",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-71389",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T22:16:51.000Z",
-        "contentSnippet": "Cal.com (calcom/cal.diy) before 5.9.9 is vulnerable to unauthenticated remote code execution because it bundles a version of Next.js whose React Server Components (RSC) request handling deserializes attacker-controlled input. A remote attacker can send a crafted RSC request to th",
-        "cveScore": 10,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2024-58355 - Cal.com through 4.7.15 Cross-Site Scripting via booking questions",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2024-58355",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T22:16:51.000Z",
-        "contentSnippet": "Cal.com (calcom/cal.diy) versions through 4.7.15 contain a stored cross-site scripting vulnerability. The single booking view (e.g., https://app.cal.com/booking/ ) renders booking-question field labels via React's dangerouslySetInnerHTML without sanitizing or escaping user input.",
-        "cveScore": 8.9,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2024-58354 - cal.com Repository Takeover via pull_request_target Workflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2024-58354",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T22:16:51.000Z",
-        "contentSnippet": "cal.com (calcom repository, later renamed cal.diy) is affected by a repository takeover vulnerability in its GitHub Actions workflows. The workflow pr.yml uses the pull_request_target trigger with the repository's default write permissions and passes them down to check-types.yml.",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2024-58353 - Cal.com through 4.7.15 Cross-Site Scripting via booking questions",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2024-58353",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T22:16:51.000Z",
-        "contentSnippet": "Cal.com (repository calcom/cal.diy) in versions ). Booking question (form field) labels are rendered via React's dangerouslySetInnerHTML without proper input sanitization or CSP, so an attacker who can create an event type with a malicious booking question label can inject arbitr",
-        "cveScore": 8.9,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-6924 - Weak entropy initialization in Silicon Labs Matter SiWx917 TinyCrypt path",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6924",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T21:17:05.000Z",
-        "contentSnippet": "A bug in the entropy initialization for SiWx917 causes the DRBG to use a predictable seed. As such, all random numbers generated in the Matter code use the same stream of numbers. This vulnerability was discovered after the impacted repository was already deprecated.",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-52439 - Beetl Remote Code Execution Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52439",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-23T21:17:05.000Z",
-        "contentSnippet": "An issue in xiandafu beetl 3.20.2 allows a remote attacker to execute arbitrary code via the type.new function and the property reflection mechanism",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       }
     ],
     "ai": [
+      {
+        "title": "Introducing Claude Opus 5 on AWS: Anthropic’s most capable Opus model",
+        "link": "https://aws.amazon.com/blogs/machine-learning/introducing-claude-opus-5-on-aws-anthropics-most-capable-opus-model/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-07-24T17:59:03.000Z",
+        "contentSnippet": "This post covers Opus 5’s improvements and practical guidance for AI engineers integrating the model into agentic systems and production inference workloads on Amazon Bedrock. See the documentation for Claude Platform on AWS."
+      },
+      {
+        "title": "Build an explainable next-best-product recommendation system for banking on AWS",
+        "link": "https://aws.amazon.com/blogs/machine-learning/build-an-explainable-next-best-product-recommendation-system-for-banking-on-aws/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-07-24T15:42:11.000Z",
+        "contentSnippet": "Learn the architecture and design decisions behind an explainable next-best-product recommendation system for banking, built with Amazon SageMaker AI and PyTorch. A multi-tower neural network with learned attention delivers accurate, per-customer recommendations while providing t"
+      },
+      {
+        "title": "Get started with OpenAI GPT-5.6 Sol, Terra, and Luna on Amazon Bedrock",
+        "link": "https://aws.amazon.com/blogs/machine-learning/get-started-with-openai-gpt-5-6-sol-terra-and-luna-on-amazon-bedrock/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-07-24T15:40:08.000Z",
+        "contentSnippet": "OpenAI GPT-5.6 Sol, Terra, and Luna are now generally available on Amazon Bedrock. Learn how to select a model, run inference through the Responses API on the bedrock-mantle endpoint, reduce cost with prompt caching, connect the OpenAI Codex coding agent, and plan for quotas and "
+      },
       {
         "title": "How to Build an End-to-End OCR Pipeline with Baidu’s Unlimited-OCR for High-Resolution Images and Multi-Page PDF Parsing",
         "link": "https://www.marktechpost.com/2026/07/23/how-to-build-an-end-to-end-ocr-pipeline-with-baidus-unlimited-ocr-for-high-resolution-images-and-multi-page-pdf-parsing/",
@@ -1583,27 +1604,6 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-07-10T15:31:12.000Z",
         "contentSnippet": "In this post we show how to build a semantic layer on AWS using Stardog’s Semantic AI Application over Amazon Aurora and Amazon Redshift, and how to run a Strands Agents agent on Amazon Bedrock AgentCore that queries the layer to answer customer 360 questions across both sources "
-      },
-      {
-        "title": "Scaling agentic workflows with native case management in Amazon Quick Automate",
-        "link": "https://aws.amazon.com/blogs/machine-learning/scaling-agentic-workflows-with-native-case-management-in-amazon-quick-automate/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-07-10T15:28:54.000Z",
-        "contentSnippet": "In this post, we show you how to combine case management with agentic automation capabilities in Quick Automate. We introduce case management and explore the lifecycle of cases in an agentic workflow from case creation through processing to resolution. We cover how to create and "
-      },
-      {
-        "title": "Deploying quantized models on Amazon SageMaker AI with Unsloth",
-        "link": "https://aws.amazon.com/blogs/machine-learning/deploying-quantized-models-on-amazon-sagemaker-ai-with-unsloth/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-07-10T15:26:05.000Z",
-        "contentSnippet": "In this post, you will learn four deployment patterns for taking models that have already been quantized with Unsloth and deploying them on AWS infrastructure. The patterns use Amazon Elastic Compute Cloud (Amazon EC2) for direct instance access, Amazon SageMaker AI inference end"
-      },
-      {
-        "title": "How KTern.AI built agentic AI for SAP on Amazon Bedrock AgentCore",
-        "link": "https://aws.amazon.com/blogs/machine-learning/how-ktern-ai-built-agentic-ai-for-sap-on-amazon-bedrock-agentcore/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-07-10T15:23:25.000Z",
-        "contentSnippet": "Evolving from a traditional software as a service (SaaS) platform into a next-generation agentic AI platform meant orchestrating multiple specialized agents across long-running enterprise programs. Each agent operates with persistent context, secure tool access, and production-gr"
       }
     ],
     "virtualization": [
@@ -2310,6 +2310,48 @@
     ],
     "hardware": [
       {
+        "title": "Intel commits to 14A mass production in 2028 as its sales rise 25% year-over-year",
+        "link": "https://www.tomshardware.com/pc-components/cpus/intel-commits-to-14a-mass-production-in-2028-as-its-sales-rise-25-percent-year-over-year",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-07-24T17:49:43.000Z",
+        "contentSnippet": "Intel posts 25% higher year-over-year sales and above-the-guidance earnings, and confirms that its 14A technology is on-track to start high volume ramp in 2028."
+      },
+      {
+        "title": "AMD’s Lux Becomes the First Genesis Mission Supercomputer, With Discovery to Follow in 2028",
+        "link": "https://www.storagereview.com/news/amds-lux-becomes-the-first-genesis-mission-supercomputer-with-discovery-to-follow-in-2028",
+        "source": "StorageReview",
+        "isoDate": "2026-07-24T16:34:09.000Z",
+        "contentSnippet": "AMD has outlined its role in two planned Oak Ridge National Laboratory supercomputing platforms, Lux and Discovery, positioned to support the U.S. Department of Energy’s Genesis Mission. The initiative brings together national laboratories, industry, academia, and other partners "
+      },
+      {
+        "title": "Geekom A9 Max 2026 review: Gorgon Point in a compact Mini PC",
+        "link": "https://www.tomshardware.com/desktops/mini-pcs/geekom-a9-max-2026-mini-pc-review",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-07-24T16:30:00.000Z",
+        "contentSnippet": "Mini PC specialist Geekom has updated its A9 Max design with AMD’s latest mobile silicon. The incremental improvements of the AMD Ryzen AI 9 HX470 are supported by a revamped Ice Blast 3.0 cooling solution with larger fan and all copper heatpipes in a sleek 0.9L chassis."
+      },
+      {
+        "title": "OpenAI's HuggingFace breach heralds an unprecedented age of AI cyber warfare — contemporary LLMs have caused massive upheaval in cybersecurity, and it's only going to get worse",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/openais-huggingface-breach-heralds-an-unprecedented-age-of-ai-cyber-warfare-contemporary-llms-have-caused-massive-upheaval-in-cybersecurity-and-its-only-going-to-get-worse",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-07-24T16:12:08.000Z",
+        "contentSnippet": "Contemporary AI bots are far too competent at cybersecurity, and humanity may have reached a tipping point where it's hard to keep up."
+      },
+      {
+        "title": "Dell 14S review: High-class design and 20+ hour battery life",
+        "link": "https://www.tomshardware.com/laptops/dell-14s-review",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-07-24T16:10:39.000Z",
+        "contentSnippet": "The Dell 14S makes good on its promise of serving as a cheaper alternative to the pricier XPS 14."
+      },
+      {
+        "title": "AMD working on new X3D V-cache mobile chip for gaming laptops, leaker claims — Ryzen 7 9800HX3D could launch with 8 cores, 16 threads, and 96MB cache",
+        "link": "https://www.tomshardware.com/pc-components/cpus/amd-working-on-new-x3d-v-cache-mobile-chip-for-gaming-laptops-leaker-claims-ryzen-7-9800hx3d-could-launch-with-8-cores-16-threads-and-96mb-cache",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-07-24T15:07:53.000Z",
+        "contentSnippet": "A fresh leak suggests AMD is preparing an 8-core, 16-thread Zen 5 mobile processor with 96MB of L3 cache, potentially bringing the desktop Ryzen 7 9800X3D experience to gaming laptops."
+      },
+      {
         "title": "Gigabyte announces support for Chinese-made CXMT memory — pushes it to 8200 MT/s on Socket AM5",
         "link": "https://www.tomshardware.com/pc-components/ddr5/gigabyte-announces-support-for-chinese-made-cxmt-memory-pushes-it-to-8200-mt-s-on-socket-am5",
         "source": "Tom's Hardware",
@@ -2966,48 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-07-20T11:06:02.000Z",
         "contentSnippet": "The first big discount on Logitech's new G Pro X2 Superstrike haptic gaming mouse. Save $54 at Amazon, and grab this high-tech mouse at its lowest-ever price."
-      },
-      {
-        "title": "MSI Slyly Shows off an Upcoming DLC AMD EPYC Venice Platform With CD182-S6091-X2 Servers and Racks",
-        "link": "https://www.servethehome.com/msi-slyly-shows-off-an-upcoming-dlc-amd-epyc-venice-platform-with-cd182-s6091-x2-servers-and-racks/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-07-19T18:00:07.000Z",
-        "contentSnippet": "AMD's EPYC Venice is coming, and OEMs are eager to show off their upcoming wares. At Computex we caught MSI's CD182-S6091-X2 (DLC), a liquid cooled dual socket 1OU2N server node The post MSI Slyly Shows off an Upcoming DLC AMD EPYC Venice Platform With CD182-S6091-X2 Servers and "
-      },
-      {
-        "title": "Creality K2 SE 3D printer price slashed by 17%, now under $250 — grab a competitive entry-level high-speed multicolor device at a bargain price",
-        "link": "https://www.tomshardware.com/pc-components/creality-k2-se-3d-printer-price-slashed-by-17-percent-now-under-usd250-grab-a-competitive-entry-level-high-speed-multicolor-device-at-a-bargain-price",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-19T15:04:07.000Z",
-        "contentSnippet": "The Creality K2 SE drops to $248.99 in this limited-time deal, making it a great option for anyone looking to start 3D printing but want to have access to some advanced features."
-      },
-      {
-        "title": "AMD's next-gen 10-core 'Medusa Point' APU shows up on Geekbench again, with its best score yet — leaked SKU outpaces every other x86 mobile chip in the single-core test",
-        "link": "https://www.tomshardware.com/pc-components/cpus/amds-next-gen-10-core-medusa-point-apu-shows-up-on-geekbench-again-with-its-best-score-yet-leaked-sku-outpaces-every-other-x86-mobile-chip-in-the-single-core-test",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-19T14:35:00.000Z",
-        "contentSnippet": "AMD's next 10-core mobile part from the Medusa Point family is looking a lot faster than its previous two Gorgon Point and Strix Point SKUs, respectively. Early leaks keep highlighting an ever-improving part that has just benched its best score yet."
-      },
-      {
-        "title": "Zilog Z80 turns 50 as an open-source replacement heads to drop-in DIP40 silicon — iconic 8-bit CPU launched in July 1976 and was discontinued in 2024",
-        "link": "https://www.tomshardware.com/tech-industry/zilog-z80-turns-50-as-open-source-replacement-heads-for-drop-in-dip40-silicon",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-19T14:12:55.000Z",
-        "contentSnippet": "The original Z80 packed 8,500 transistors on a 4μm process and typically ran at 2.5 MHz."
-      },
-      {
-        "title": "Memory chip boss admits RAM prices are 'abnormally high' — SK Group chairman considering building a semiconductor plant in the US to expand supply, calm ‘chipflation’",
-        "link": "https://www.tomshardware.com/tech-industry/policy/memory-chip-boss-admits-ram-prices-are-abnormally-high-sk-group-chairman-considering-building-a-semiconductor-plant-in-the-us-to-expand-supply-calm-chipflation",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-19T13:55:00.000Z",
-        "contentSnippet": "SK Group Chairman Chey Tae-won said that prices for memory chips are \"abnormally high\" and that the industry must take steps to increase production and reduce prices. If it fails to do that, new entrants could challenge the incumbent leaders and make the market much more competit"
-      },
-      {
-        "title": "‘Phantom Twist’ drone spins so fast that it is nearly invisible — flying device adds motion blur to the real world",
-        "link": "https://www.tomshardware.com/tech-industry/drones/phantom-twist-drone-spins-so-fast-that-it-is-nearly-invisible-flying-device-adds-motion-blur-to-the-real-world",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-19T13:27:34.000Z",
-        "contentSnippet": "Researchers from Northwestern University in Illinois have built a drone that rotates so fast it is cloaked by motion blur."
       }
     ]
   }
