@@ -1,8 +1,125 @@
 {
-  "updatedAt": "2026-07-28T23:52:53.597Z",
+  "updatedAt": "2026-07-29T01:50:21.557Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-56822 - Netty: TOCTOU in OcspServerCertificateValidator",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56822",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-28T23:17:17.000Z",
+        "contentSnippet": "Netty is an asynchronous, event-driven network application framework. Prior to versions 4.1.136.Final and 4.2.16.Final, the OcspServerCertificateValidator forwards the SslHandshakeCompletionEvent before the asynchronous OCSP validation completes. This allows the client's downstre",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-66064 - goshs has ACL Bypass & Path Traversal",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66064",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-28T23:17:10.000Z",
+        "contentSnippet": "goshs is a feature-rich single-binary file server for red teamers and developers. Prior to 2.1.5, the httpserver/handler.go sendFile handler opened files using a cleaned path but derived the authorization filename from raw req.URL.Path, so a trailing slash could bypass .goshs ACL",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-66063 - goshs has a Path Traversal issue",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66063",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-28T23:17:10.000Z",
+        "contentSnippet": "goshs is a feature-rich single-binary file server for red teamers and developers. Prior to 2.1.5, the httpserver/updown.go multipart upload handler split part.FileName() on / but did not reject .., allowing an unauthenticated upload with filename .. to create a file outside the s",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-64863 - goshs --no-delete WebDAV MOVE bypass allows file deletion/overwrite",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64863",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-28T23:17:10.000Z",
+        "contentSnippet": "goshs is a feature-rich single-binary file server for red teamers and developers. Prior to 2.1.4, the httpserver/server.go wdGuard handled WebDAV MOVE as a write-only method and did not enforce --no-delete, allowing WebDAV clients to delete or overwrite files via MOVE with Overwr",
+        "cveScore": 9.1,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-62325 - goshs SFTP authentication bypass via empty password (incomplete fix of CVE-2026-40884)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62325",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-28T23:17:10.000Z",
+        "contentSnippet": "goshs is a feature-rich single-binary file server for red teamers and developers. From 2.1.3 until 2.1.4, the sftpserver/sftpserver.go password handler used Username != \"\" && Password != \"\", so running goshs with -b 'admin:' -sftp and no -fkf left both SFTP authentication handler",
+        "cveScore": 9.1,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-59921 - Netty: CRLF Injection via Multipart Filename in Netty HttpPostRequestEncoder",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59921",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-28T23:17:09.000Z",
+        "contentSnippet": "Netty is an asynchronous, event-driven network application framework. Prior to versions 4.1.136.Final and 4.2.16.Final, HttpPostRequestEncoder constructs multipart HTTP request bodies by directly concatenating user-supplied filenames and field names into Content-Disposition MIME ",
+        "cveScore": 5.7,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-54719 - goshs: File-based .goshs ACL authorization bypass via the ?bulk zip-download route (unauthenticated read; residual of CVE-2026-40189)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54719",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-28T23:17:09.000Z",
+        "contentSnippet": "goshs is a feature-rich single-binary file server for red teamers and developers. Prior to 2.1.1, the httpserver/updown.go bulkDownload handler for ?bulk&file= ZIP downloads did not call findEffectiveACL or applyCustomAuth, allowing unauthenticated reads of files protected only b",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-54659 - Pagy I18n locale option is not validated before being used in a file path",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54659",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-28T23:17:09.000Z",
+        "contentSnippet": "Pagy is agnostic pagination in plain Ruby. From 43.0.0 until 43.5.6, Pagy::I18n.locale= in gem/lib/pagy/modules/i18n/i18n.rb stored locale values verbatim and later used them as .yml path components, allowing untrusted params[:locale] values with absolute paths or ../ sequences t",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-54658 - @hypequery/clickhouse has SQL Injection in parameter escaping that allows arbitrary SQL execution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54658",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-28T23:17:08.000Z",
+        "contentSnippet": "Hypequery is a TypeScript semantic layer for ClickHouse. Prior to 2.0.2, escapeValue() in packages/clickhouse/src/core/utils.ts did not escape backslashes before single quotes during parameter substitution, allowing attacker controlled query parameters with a trailing backslash t",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-54650 - openhole-server vulnerable to path traversal via URL-decoded request path",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54650",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-28T23:17:08.000Z",
+        "contentSnippet": "openhole exposes localhost to the internet in one command. In 0.1.1 and earlier, openhole-server in internal/server/public_proxy.go forwarded r.URL.Path instead of preserving the original request target with r.URL.EscapedPath(), allowing percent encoded dot segments %2e and separ",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-54638 - td has pre-auth denial of service via unbounded memory allocation in proto.UnencryptedMessage.Decode",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54638",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-28T23:17:08.000Z",
+        "contentSnippet": "gotd/td is a T Telegram MTProto API client in Go. Prior to 0.145.1, proto.UnencryptedMessage.Decode in proto/unencrypted_message.go read attacker controlled dataLen from an unauthenticated MTProto unencrypted packet and allocated make([]byte, dataLen) before checking the remainin",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-47219 - find-my-way is Vulnerable to DDoS with HTTP2",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47219",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-28T23:17:03.000Z",
+        "contentSnippet": "find-my-way is a framework-independent HTTP router that internally uses a Radix Tree and supports route parameters and wildcards. Versions prior to 9.7.0 are vulnerable to remotely triggerable DoS in find-my-way when it is used with Node's HTTP/2 server. The lookup() function pas",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-56821 - Netty: Out-of-date OCSP Responses Accepted by OcspServerCertificateValidator",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56821",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-28T23:07:13.000Z",
+        "contentSnippet": "Netty is an asynchronous, event-driven network application framework. Prior to versions 4.1.136.Final and 4.2.16.Final, the OcspServerCertificateValidator flags an out-of-date OCSP response but does not stop processing it, so an expired GOOD response is still reported as VALID, l",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2026-55415 - datamodel-code-generator vulnerable to code injection via `x-python-import` / `customTypePath` in generated import statements",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-55415",
@@ -110,69 +227,6 @@
         "contentSnippet": "datamodel-code-generator generates Python data models from schema definitions. Prior to 0.60.1, GraphQL Union description values in src/datamodel_code_generator/model/template/UnionTypeStatement.jinja2 and src/datamodel_code_generator/model/template/UnionTypeStatement.py312.jinja",
         "cveScore": 7.8,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-54638 - td has pre-auth denial of service via unbounded memory allocation in proto.UnencryptedMessage.Decode",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54638",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-28T22:14:53.000Z",
-        "contentSnippet": "gotd/td is a T Telegram MTProto API client in Go. Prior to 0.145.1, proto.UnencryptedMessage.Decode in proto/unencrypted_message.go read attacker controlled dataLen from an unauthenticated MTProto unencrypted packet and allocated make([]byte, dataLen) before checking the remainin",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-47219 - find-my-way is Vulnerable to DDoS with HTTP2",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47219",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-28T22:14:31.000Z",
-        "contentSnippet": "find-my-way is a framework-independent HTTP router that internally uses a Radix Tree and supports route parameters and wildcards. Versions prior to 9.7.0 are vulnerable to remotely triggerable DoS in find-my-way when it is used with Node's HTTP/2 server. The lookup() function pas",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-66064 - goshs has ACL Bypass & Path Traversal",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66064",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-28T22:12:04.000Z",
-        "contentSnippet": "goshs is a feature-rich single-binary file server for red teamers and developers. Prior to 2.1.5, the httpserver/handler.go sendFile handler opened files using a cleaned path but derived the authorization filename from raw req.URL.Path, so a trailing slash could bypass .goshs ACL",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-66063 - goshs has a Path Traversal issue",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66063",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-28T22:07:15.000Z",
-        "contentSnippet": "goshs is a feature-rich single-binary file server for red teamers and developers. Prior to 2.1.5, the httpserver/updown.go multipart upload handler split part.FileName() on / but did not reject .., allowing an unauthenticated upload with filename .. to create a file outside the s",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-64863 - goshs --no-delete WebDAV MOVE bypass allows file deletion/overwrite",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64863",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-28T22:02:15.000Z",
-        "contentSnippet": "goshs is a feature-rich single-binary file server for red teamers and developers. Prior to 2.1.4, the httpserver/server.go wdGuard handled WebDAV MOVE as a write-only method and did not enforce --no-delete, allowing WebDAV clients to delete or overwrite files via MOVE with Overwr",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-54719 - goshs: File-based .goshs ACL authorization bypass via the ?bulk zip-download route (unauthenticated read; residual of CVE-2026-40189)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54719",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-28T21:58:50.000Z",
-        "contentSnippet": "goshs is a feature-rich single-binary file server for red teamers and developers. Prior to 2.1.1, the httpserver/updown.go bulkDownload handler for ?bulk&file= ZIP downloads did not call findEffectiveACL or applyCustomAuth, allowing unauthenticated reads of files protected only b",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-62325 - goshs SFTP authentication bypass via empty password (incomplete fix of CVE-2026-40884)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62325",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-28T21:52:05.000Z",
-        "contentSnippet": "goshs is a feature-rich single-binary file server for red teamers and developers. From 2.1.3 until 2.1.4, the sftpserver/sftpserver.go password handler used Username != \"\" && Password != \"\", so running goshs with -b 'admin:' -sftp and no -fkf left both SFTP authentication handler",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       },
       {
         "title": "CVE-2026-6881 - Authenticated SQL Injection Enables Unauthorized Access to Sensitive Information in Ellucian Advance Web and Legacy Advance",
@@ -848,60 +902,6 @@
         "contentSnippet": "Unchecked unsigned integer overflow in buffer size calculation in schreibfaul1 ESP32-audioI2S 3.4.5 leads to undersized PSRAM buffer allocation. Subsequent normal audio buffer read and write operations cause heap out-of-bounds access, memory corruption, denial of service, and pot",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-51254 - schreibfaul1 ESP32-audioI2S Integer Underflow Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-51254",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-28T15:17:16.000Z",
-        "contentSnippet": "schreibfaul1 ESP32-audioI2S v3.4.5 has an integer underflow vulnerability in the MP3Decoder::GetBits() function of the MP3 decoder due to unchecked bit reading operations. The lack of validation on the nBits parameter causes the cachedBits counter to underflow to negative values,",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-51252 - schreibfaul1 ESP32-audioI2S Buffer Overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-51252",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-28T15:17:16.000Z",
-        "contentSnippet": "schreibfaul1 ESP32-audioI2S 3.4.5 has a buffer overflow vulnerability in the MP3Decoder::UnpackSFMPEG1 function due to missing input validation on attacker-controlled MP3 metadata.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-51251 - Schreibfaul1 ESP32-audioI2S Buffer Overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-51251",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-28T15:17:16.000Z",
-        "contentSnippet": "Schreibfaul1 ESP32-audioI2S 3.4.5 has a buffer overflow vulnerability in the MP3Decoder::decode() function of the MP3 decoder due to missing size validation on untrusted mainDataBegin and nSlots values.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-62828 - Microsoft Edge for Android (Chromium-based) Tampering Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62828",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-28T15:07:06.000Z",
-        "contentSnippet": "None",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-54545 - @wakaru/cli arbitrary file write during bundle unpack",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54545",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-28T14:43:45.000Z",
-        "contentSnippet": "wakaru is a JavaScript decompiler and unminifier toolkit. From 1.0.0 until 1.4.0, @wakaru/cli sanitizes bundle-controlled module filenames only once before writing extracted modules, so a crafted filename containing overlapping traversal sequences such as ....// collapses to ../ ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-67173 - Pivotick Unvalidated Node Image URLs Allow Unintended Client-Side Requests",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67173",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-28T14:16:40.000Z",
-        "contentSnippet": "Pivotick did not validate the URL scheme of node imagePath values derived from graph data before assigning them to SVG image resources. An attacker able to supply crafted graph data could set an image path to a malicious URI. When a victim rendered the affected graph, the browser",
-        "cveScore": 5.1,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
