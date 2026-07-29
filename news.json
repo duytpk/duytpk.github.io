@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-07-29T19:00:15.802Z",
+  "updatedAt": "2026-07-29T20:14:34.892Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-67429 - Flyto2 Core: Arbitrary file write via image.download (and other file-writing modules)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67429",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-29T18:50:43.000Z",
+        "contentSnippet": "Flyto2 Core is an execution kernel for automation and AI-agent workflows. Prior to 2.26.6, image.download and related file-writing modules use caller-controlled output_dir instead of validate_path_with_env_config and its FLYTO_SANDBOX_DIR confinement, allowing attacker-controlled",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-67428 - Flyto2 Core: Multiple HTTP-family modules fetch client-controlled URLs without the SSRF guard their siblings apply (SSRF to internal/metadata)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67428",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-29T18:48:42.000Z",
+        "contentSnippet": "Flyto2 Core is an execution kernel for automation and AI-agent workflows. Prior to 2.26.7, HTTP-emitting modules including src/core/modules/third_party/developer/http/requests.py, core.api.http_get, core.api.http_post, graphql.query, graphql.mutation, monitor.http_check, communic",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-67427 - Flyto2 Core: ${env.VAR} interpolation reads any env secret despite env.get being denylisted",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67427",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-29T18:45:47.000Z",
+        "contentSnippet": "Flyto2 Core is an execution kernel for automation and AI-agent workflows. Prior to 2.26.6, the workflow engine variable resolver expands ${env.VAR} for any host environment variable without an allowlist or capability policy check, allowing a workflow parameter to bypass the defau",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-67426 - Flyto2 Core: Unauthenticated flyto-verification /run: callback_url SSRF and internal runner-secret exfiltration",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67426",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-29T18:43:26.000Z",
+        "contentSnippet": "Flyto2 Core is an execution kernel for automation and AI-agent workflows. Prior to 2.26.7, the standalone flyto-verification service in src/core/verification_service.py exposes unauthenticated POST /run on 0.0.0.0:8344 and uses client-supplied callback_url for an outbound POST wi",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-16326 - consul-mcp-server vulnerable to cross-tenant credential reuse in streamable-HTTP stateless mode",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16326",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-29T18:40:08.000Z",
+        "contentSnippet": "In consul-mcp-server, versions 0.1.0 up to 0.1.3 did not properly isolate session state in stateless mode, which may allow one client's Consul authentication token to be used for subsequent requests from other clients. This vulnerability (CVE-2026-16326) is fixed in consul-mcp-se",
+        "cveScore": 10,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-67425 - Flyto2 Core: LLM/API keys leak to an attacker-controlled base_url",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67425",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-29T18:35:01.000Z",
+        "contentSnippet": "Flyto2 Core is an execution kernel for automation and AI-agent workflows. Prior to 2.26.6, llm.chat reads provider keys such as OPENAI_API_KEY and ANTHROPIC_API_KEY from the environment and sends them in the Authorization: Bearer header to caller-controlled base_url, allowing an ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-13346 - pip absolute path traversal during download from malicious package indexes",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13346",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-29T18:33:50.000Z",
+        "contentSnippet": "pip would incorrectly handle doubly-encoded package URLs from indexes allowing for files to be installed to arbitrary locations on disk even when installing wheels. This vulnerability requires downloading or installing a package from a malicious package index to succeed, maliciou",
+        "cveScore": 5.6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-16328 - consul-mcp-server vulnerable to server side request forgery leading to token exposure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16328",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-29T18:32:39.000Z",
+        "contentSnippet": "In consul-mcp-server, versions 0.1.0 up to 0.1.3 did not restrict how the Consul backend address was supplied, allowing a connected client to override the server's configured Consul address via a request header. This may allow a malicious client to redirect the server's Consul AP",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-67424 - Flyto2 Core: Guarded HTTP modules follow redirects into internal space without per-hop SSRF revalidation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67424",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-29T18:32:00.000Z",
+        "contentSnippet": "Flyto2 Core is an execution kernel for automation and AI-agent workflows. Prior to 2.26.7, the HTTP modules http.get, http.request, and http.batch in src/core/modules/atomic/http/get.py, src/core/modules/atomic/http/request.py, and src/core/modules/atomic/http/batch.py validate o",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-62995 - joserfc accepts JWT with padding, leading to JWT malleability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62995",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-29T18:27:06.000Z",
+        "contentSnippet": "joserfc is a Python library that provides an implementation of several JSON Object Signing and Encryption (JOSE) standards. in versions 1.7.1 and prior, joserfc accepts JWTs with trailing padding (==) which are not conforming to the JOSE specifications. This leads to malleability",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-12935 - Unauthenticated Remote Code Execution in TP-Link TL-WR940N RTSP Conntrack Feature",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12935",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-29T18:20:06.000Z",
+        "contentSnippet": "The TL-WR940N v6 router contains a vulnerability in its RTSP connection tracking module that can lead to a stack-based buffer overflow. The issue occurs when a LAN client initiates a connection to a malicious RTSP server controlled by an attacker. A specially crafted RTSP message",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-2482 - IBM WebSphere Application Server Liberty is affected by a cross-site request forgery",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-2482",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-29T18:19:36.000Z",
+        "contentSnippet": "IBM WebSphere Application Server - Liberty 17.0.0.3 through 26.0.0.8 is vulnerable to cross-site request forgery which could allow an attacker to execute malicious and unauthorized actions transmitted from a user that the website trusts.",
+        "cveScore": 3.1,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-66737",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66737",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-29T18:17:04.000Z",
+        "contentSnippet": "None",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-8497 - Devolutions Password Manager Improper Certificate Validation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8497",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-29T18:16:58.000Z",
+        "contentSnippet": "Improper certificate validation in the Devolutions Server connection handling in Devolutions Password Manager 2026.2.1.0 and earlier on Android, iOS, and macOS allows an adjacent-network attacker to intercept and modify sensitive information via a forged TLS certificate.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-59920 - Netty: STOMP CONNECT Frame Header Injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59920",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-29T18:16:56.000Z",
+        "contentSnippet": "Netty is an asynchronous, event-driven network application framework. In versions prior to 4.1.136.Final and 4.2.16.Final, Netty's STOMP encoder ( StompSubframeEncoder ) does not escape or validate header values in CONNECT and CONNECTED frames, so raw newline ( \\n ) characters in",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-59919 - Netty: HAProxy V1 Protocol CRLF Injection via AF_UNIX Address",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59919",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-29T18:16:56.000Z",
+        "contentSnippet": "Netty is an asynchronous, event-driven network application framework. In versions prior to 4.1.136.Final and 4.2.16.Final, Netty's HAProxy encoder ( HAProxyMessageEncoder ) writes AF_UNIX source and destination socket addresses into the HAProxy V1 text protocol without validating",
+        "cveScore": 5.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-59901 - Netty Bzip2Decoder: Infinite Loop in RLE State Machine Leads to Event-Loop Thread Hang",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59901",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-29T18:16:56.000Z",
+        "contentSnippet": "Netty is an asynchronous, event-driven network application framework. Prior to versions 4.1.136.Final and 4.2.16.Final, the `Bzip2Decoder` handler in Netty's compression codec pipeline is vulnerable to a denial-of-service attack through a malformed bzip2 stream that permanently c",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-59900 - Netty codec-http2: Lack of Host Header Deduplication in HTTP/2→HTTP/1.x Translation Leads to Request Routing Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59900",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-29T18:16:56.000Z",
+        "contentSnippet": "Netty is an asynchronous, event-driven network application framework. Prior to versions 4.1.136.Final and 4.2.16.Final, Netty's HTTP/2-to-HTTP/1.x translation layer (`Http2StreamFrameToHttpObjectCodec` and `InboundHttp2ToHttpAdapter`) fails to deduplicate or validate `Host` heade",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-59899 - Netty HttpContentEncoder: Unbounded Per-Connection Queue Growth via HTTP/1.1 Pipelining Leads to Denial of Service",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59899",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-29T18:16:56.000Z",
+        "contentSnippet": "Netty is an asynchronous, event-driven network application framework. Prior to versions 4.1.136.Final and 4.2.16.Final, `HttpContentEncoder` (the superclass of the production handler `HttpContentCompressor`) maintains a per-channel `ArrayDeque ` named `acceptEncodingQueue` that a",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-54705 - mathlive's Lack of Escaping of HTML allows for XSS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54705",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-29T18:16:54.000Z",
+        "contentSnippet": "MathLive provides web components for math display and input. Prior to 0.110.0, MathLive fails to escape text-mode content in \\text{} and \\mbox{} commands in Box.toMarkup at src/core/box.ts, in xmlEscape, scanText, and text-mode output in src/formats/atom-to-math-ml.ts, and throug",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-41939 - Care Everywhere Gateway 14.3.10 Hard-coded Credentials RCE via WildFly",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-41939",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-29T18:16:53.000Z",
+        "contentSnippet": "Care Everywhere Gateway 14.3.10 contains a hard-coded credentials vulnerability in the bundled WildFly 8.2.0.Final management interface that allows unauthenticated remote attackers to gain administrative access by using default credentials identical across all installations. Atta",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-40272 - Vulnerability in the QNX libtraceparser Impacts QNX Software Development Platform",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-40272",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-29T18:16:53.000Z",
+        "contentSnippet": "Improper Input Validation in the decode() function of the traceparser library could allow an attacker with a corrupted kernel trace event log (.kev) file, to execute arbitrary code or cause a crash in processes that use libtraceparser in QNX hosts or targets.",
+        "cveScore": 7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-18236 - Google-ADK Continuation Forgery",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18236",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-29T18:16:52.000Z",
+        "contentSnippet": "A vulnerability in the Agent Development Kit (ADK) allows for continuation forgery in tool confirmations. An attacker who is able to manipulate or inject events into the session history can execute unauthorized tools by forging a tool confirmation response. This is possible becau",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-14266 - 7-Zip XZ Decompression Heap-based Buffer Overflow Remote Code Execution Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14266",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-29T18:16:50.000Z",
+        "contentSnippet": "7-Zip XZ Decompression Heap-based Buffer Overflow Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of 7-Zip. User interaction is required to exploit this vulnerability in that the target must visit",
+        "cveScore": 7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-13723 - Develar's electron-builder allows arbitrary file overwrite",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13723",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-29T18:16:50.000Z",
+        "contentSnippet": "A vulnerability in the `zipx.Unzip` extraction routine of Develar's app-builder allows an attacker to overwrite arbitrary files on macOS APFS by exploiting a Unicode Normalization Collision combined with symlink following behavior. APFS treats certain Unicode equivalent filenames",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2026-8339 - SQL Injection in Coverity Connect SOAP API",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-8339",
@@ -677,234 +902,16 @@
         "contentSnippet": "The Fluent Forms – Customizable Contact Forms, Survey, Quiz, & Conversational Form Builder plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Name Field Nested `password` Member in all versions up to, and including, 6.2.7 due to insufficient input sanitization ",
         "cveScore": 7.2,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-9720 - Facturación Electrónica Costa Rica <= 2.0.2 - Cross-Site Request Forgery to Plugin Settings Update",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9720",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T09:16:30.000Z",
-        "contentSnippet": "The Facturación Electrónica Costa Rica plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 2.0.2. This is due to missing or incorrect nonce validation on the (global scope, included by fvcr_admin_page_html) function. This makes i",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-65325 - Apache Traffic Server: HTTP/2 multiplexed origin sessions are reused without certificate re-verification",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65325",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T09:16:30.000Z",
-        "contentSnippet": "Apache Traffic Server reuses multiplexed HTTP/2 origin connections without verifying the server certificate covers the new request hostname. This issue affects Apache Traffic Server: from 9.0.0 through 9.2.14, from 10.0.0 through 10.1.3. Users are recommended to upgrade to versio",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-65324 - Apache Traffic Server: HTTP/2 and HTTP/3 dechunking removes per-stream buffer cap, allowing memory exhaustion",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65324",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T09:16:30.000Z",
-        "contentSnippet": "Apache Traffic Server drops the per-stream buffer cap when dechunking HTTP/2 or HTTP/3 responses, letting a slow client exhaust server memory. This issue affects Apache Traffic Server: from 8.0.0 through 8.1.9, from 9.0.0 through 9.2.14, from 10.0.0 through 10.1.3. Users are reco",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-64557 - Bluetooth: L2CAP: Fix use-after-free in l2cap_sock_new_connection_cb()",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64557",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T09:16:30.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: Bluetooth: L2CAP: Fix use-after-free in l2cap_sock_new_connection_cb() l2cap_sock_new_connection_cb() returned l2cap_pi(sk)->chan after release_sock(parent). Once the parent lock is dropped the newly enqueued chi",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-64556 - perf/core: Detach event groups during remove_on_exec",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64556",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T09:16:30.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: perf/core: Detach event groups during remove_on_exec perf_event_remove_on_exec() removes events by calling perf_event_exit_event(). For top-level events, this removes the event from the context with DETACH_EXIT o",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-58156 - Apache Traffic Server: URL and port parsing errors allow access-control bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58156",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T09:16:30.000Z",
-        "contentSnippet": "Apache Traffic Server mis-parses ports in URLs and userinfo, allowing port-based access-control bypass. This issue affects Apache Traffic Server: from 8.0.0 through 8.1.9, from 9.0.0 through 9.2.14, from 10.0.0 through 10.1.3. Users are recommended to upgrade to version 9.2.15 or",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-58155 - Apache Traffic Server: Header-name length truncation enables header aliasing and request smuggling",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58155",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T09:16:29.000Z",
-        "contentSnippet": "Apache Traffic Server truncates over-long header names, allowing header aliasing, request smuggling, and policy bypass. This issue affects Apache Traffic Server: from 8.0.0 through 8.1.9, from 9.0.0 through 9.2.14, from 10.0.0 through 10.1.3. Users are recommended to upgrade to v",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-58154 - Apache Traffic Server: Memory-safety errors in MIME and header parsing",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58154",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T09:16:29.000Z",
-        "contentSnippet": "Apache Traffic Server can write out of bounds or overflow integers while parsing MIME and HTTP headers. This issue affects Apache Traffic Server: from 8.0.0 through 8.1.9, from 9.0.0 through 9.2.14, from 10.0.0 through 10.1.3. Users are recommended to upgrade to version 9.2.15 or",
-        "cveScore": 9.2,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-58153 - Apache Traffic Server: HTTP/2 to HTTP/1 conversion forwards origin trailers to clients unsafely",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58153",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T09:16:29.000Z",
-        "contentSnippet": "Apache Traffic Server forwards HTTP/2 origin trailers to HTTP/1 clients without proper chunked framing when converting HTTP/2 to HTTP/1. This issue affects Apache Traffic Server: from 10.0.0 through 10.1.3. Users are recommended to upgrade to version 9.2.15 or 10.1.4, which fix t",
-        "cveScore": 8.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-58152 - Apache Traffic Server: Integer-handling errors in HPACK/XPACK decoding corrupt memory",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58152",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T09:16:29.000Z",
-        "contentSnippet": "Apache Traffic Server mishandles integers while decoding HPACK/XPACK headers, corrupting memory. This issue affects Apache Traffic Server: from 8.0.0 through 8.1.9, from 9.0.0 through 9.2.14, from 10.0.0 through 10.1.3. Users are recommended to upgrade to version 9.2.15 or 10.1.4",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-58151 - Apache Traffic Server: Abusive HTTP/2 framing can exhaust resources and crash the server",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58151",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T09:16:29.000Z",
-        "contentSnippet": "Apache Traffic Server can be crashed or driven to resource exhaustion by abusive HTTP/2 framing and flow-control. This issue affects Apache Traffic Server: from 8.0.0 through 8.1.9, from 9.0.0 through 9.2.14, from 10.0.0 through 10.1.3. Users are recommended to upgrade to version",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-13425 - Database for CF7 <= 1.2.6 - Unauthenticated Stored Cross-Site Scripting via Array Form Field Values",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13425",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T09:16:29.000Z",
-        "contentSnippet": "The Database for CF7 plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Array Form Field Values in all versions up to, and including, 1.2.6 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to injec",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-11973 - WP-Lister Lite for eBay <= 3.8.8 - Authenticated (Administrator+) SQL Injection via 'orderby' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11973",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T09:16:29.000Z",
-        "contentSnippet": "The WP-Lister Lite for eBay plugin for WordPress is vulnerable to generic SQL Injection via the 'orderby' parameter in all versions up to, and including, 3.8.8 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query",
-        "cveScore": 4.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-50622 - Apache Atlas: Missing Authorization on Admin Endpoints",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50622",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T09:10:12.000Z",
-        "contentSnippet": "Description: Missing Authorization in Apache Atlas. A missing authorization vulnerability in Apache Atlas's admin endpoints allows any authenticated user, regardless of their assigned role, to perform administrative operations. Affect Version: This issue affects Apache Atlas: fro",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-23904 - Apache Kyuubi: Unrestricted access via Kyuubi engine-ui proxy",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-23904",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T09:07:18.000Z",
-        "contentSnippet": "Kyuubi Engine UI proxy accepts a host and port from the request path and proxies HTTP requests to that destination. A remote requester with network access to the proxy can cause the Kyuubi server to send HTTP requests to arbitrary reachable hosts, resulting in SSRF or open-proxy ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-65100 - Apache Traffic Server: HPACK encoder desynchronizes from the decoder after a failed header encode",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65100",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T09:06:17.000Z",
-        "contentSnippet": "Apache Traffic Server updates the HTTP/2 HPACK dynamic table before confirming the header block encoded successfully, so an encode failure leaves the encoder out of sync with the peer decoder and corrupts subsequent header blocks on the connection. This issue affects Apache Traff",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-58189 - Apache Traffic Server: Plugins resetting the redirect counter enable SSRF amplification",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58189",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T09:05:19.000Z",
-        "contentSnippet": "Apache Traffic Server allows redirect-limit bypass when plugins reset the retry counter, enabling SSRF amplification. This issue affects Apache Traffic Server: from 8.0.0 through 8.1.9, from 9.0.0 through 9.2.14, from 10.0.0 through 10.1.3. Users are recommended to upgrade to ver",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-58188 - Apache Traffic Server: Memory-safety and limit-bypass errors across experimental plugins",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58188",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T09:04:24.000Z",
-        "contentSnippet": "Several Apache Traffic Server experimental plugins have memory-safety and limit-bypass errors. This issue affects Apache Traffic Server: from 8.0.0 through 8.1.9, from 9.0.0 through 9.2.14, from 10.0.0 through 10.1.3. Users are recommended to upgrade to version 9.2.15 or 10.1.4, ",
-        "cveScore": 8.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-58187 - Apache Traffic Server: Multiplexer plugin chunk decoder enables a denial of service",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58187",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T09:03:22.000Z",
-        "contentSnippet": "The Apache Traffic Server multiplexer plugin overruns its chunk-decode buffer on upstream input, enabling denial of service. This issue affects Apache Traffic Server: from 8.0.0 through 8.1.9, from 9.0.0 through 9.2.14, from 10.0.0 through 10.1.3. Users are recommended to upgrade",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-58186 - Apache Traffic Server: webp_transform plugin decodes unsafely and mislabels degraded responses",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58186",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T09:01:39.000Z",
-        "contentSnippet": "The Apache Traffic Server webp_transform plugin can decode unsafely and serve mislabeled, cacheable responses. This issue affects Apache Traffic Server: from 8.0.0 through 8.1.9, from 9.0.0 through 9.2.14, from 10.0.0 through 10.1.3. Users are recommended to upgrade to version 9.",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-58185 - Apache Traffic Server: Use-after-free in the intercept plugin",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58185",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T08:57:48.000Z",
-        "contentSnippet": "The Apache Traffic Server intercept plugin has a use-after-free. This issue affects Apache Traffic Server: from 8.0.0 through 8.1.9, from 9.0.0 through 9.2.14, from 10.0.0 through 10.1.3. Users are recommended to upgrade to version 9.2.15 or 10.1.4, which fix the issue.",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-58184 - Apache Traffic Server: header_rewrite plugin cookie handling can corrupt memory",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58184",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T08:56:51.000Z",
-        "contentSnippet": "The Apache Traffic Server header_rewrite plugin can crash or corrupt memory during cookie operations and CIDR condition matching. This issue affects Apache Traffic Server: from 8.0.0 through 8.1.9, from 9.0.0 through 9.2.14, from 10.0.0 through 10.1.3. Users are recommended to up",
-        "cveScore": 8.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-58183 - Apache Traffic Server: prefetch plugin can crash on attacker-influenced input",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58183",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T08:55:52.000Z",
-        "contentSnippet": "The Apache Traffic Server prefetch plugin can crash when processing attacker-influenced input. This issue affects Apache Traffic Server: from 8.0.0 through 8.1.9, from 9.0.0 through 9.2.14, from 10.0.0 through 10.1.3. Users are recommended to upgrade to version 9.2.15 or 10.1.4, ",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-58182 - Apache Traffic Server: ts_lua plugin has initialization and resource-handling errors",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58182",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T08:54:49.000Z",
-        "contentSnippet": "The Apache Traffic Server ts_lua plugin mishandles initialization, transform context, and per-instance state. This issue affects Apache Traffic Server: from 8.0.0 through 8.1.9, from 9.0.0 through 9.2.14, from 10.0.0 through 10.1.3. Users are recommended to upgrade to version 9.2",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-58181 - Apache Traffic Server: uri_signing and url_sig plugins can exhaust the stack or crash",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58181",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T08:46:04.000Z",
-        "contentSnippet": "The Apache Traffic Server uri_signing and url_sig plugins can exhaust the stack or crash on attacker input. This issue affects Apache Traffic Server: from 8.0.0 through 8.1.9, from 9.0.0 through 9.2.14, from 10.0.0 through 10.1.3. Users are recommended to upgrade to version 9.2.1",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
+      {
+        "title": "Prompt Engineering vs Loop Engineering vs Graph Engineering: What Changes at Each Layer",
+        "link": "https://www.marktechpost.com/2026/07/29/prompt-engineering-vs-loop-engineering-vs-graph-engineering-what-changes-at-each-layer/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-07-29T19:30:35.000Z",
+        "contentSnippet": "Three terms now compete for the same line in AI engineering job descriptions. Prompt engineering is the established one. Loop engineering entered the AI vocabulary in late 2025 and dominated developer discussion through June 2026. Graph engineering followed roughly six weeks late"
+      },
       {
         "title": "Authenticate with Private Key JWT using Amazon Bedrock AgentCore Identity",
         "link": "https://aws.amazon.com/blogs/machine-learning/authenticate-with-private-key-jwt-using-amazon-bedrock-agentcore-identity/",
@@ -1597,13 +1604,6 @@
         "source": "MarkTechPost",
         "isoDate": "2026-07-15T07:36:17.000Z",
         "contentSnippet": "Google released LiteRT.js on July 9, 2026. It is a JavaScript binding of LiteRT, Google's on-device inference library. The runtime executes .tflite models directly in the browser through WebAssembly, with XNNPACK on CPU, ML Drift over WebGPU, and experimental WebNN for NPUs. Goog"
-      },
-      {
-        "title": "PrismML Releases Bonsai 27B: 1-bit and Ternary Builds of Qwen3.6-27B That Run on Laptops and Phones",
-        "link": "https://www.marktechpost.com/2026/07/14/prismml-releases-bonsai-27b-1-bit-and-ternary-builds-of-qwen3-6-27b-that-run-on-laptops-and-phones/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-07-14T22:51:34.000Z",
-        "contentSnippet": "PrismML just released Bonsai 27B. It is a low-bit representation of Qwen3.6-27B, not a new pretrain. The architecture is unchanged. Two variants ship under Apache 2.0. Ternary Bonsai 27B uses {−1, 0, +1} weights at a true 1.71 bits per weight. Its ideal size is 5.9GB. 1-bit Bonsa"
       }
     ],
     "virtualization": [
