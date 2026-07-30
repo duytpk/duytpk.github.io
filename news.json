@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-07-30T07:29:02.771Z",
+  "updatedAt": "2026-07-30T10:14:29.265Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-18353 - Unauthenticated SSRF in PIA via OIDC issuer allowlist bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18353",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-30T08:16:28.000Z",
+        "contentSnippet": "PIA's `POST /v1/upload/sbom` endpoint accepts a Bearer JWT and checks its **unverified** `iss` claim against an issuer allowlist using Python's `urlparse` before performing OIDC discovery with `requests`. Because `urlparse` and `requests`/`urllib3` parse an authority string conta",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-7849 - Command Injection in SCM (idledisconnect parameter)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-7849",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-30T07:16:59.000Z",
+        "contentSnippet": "Due to improper neutralization of special elements, an unauthenticated remote attacker is able to inject a command into the system configuration which is subsequently executed as root.",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-44108 - Firewall bypass during shutdown",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44108",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-30T07:16:59.000Z",
+        "contentSnippet": "Due to a flaw in the execution order of scripts during shutdown, the firewall is terminated prematurely during system shutdown. This creates a temporary window in which internal services may become externally accessible, potentially allowing an unauthenticated remote attacker to ",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-44107 - Exposed Reboot via Modbus",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44107",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-30T07:16:59.000Z",
+        "contentSnippet": "A reboot of the charging controller can be triggered via Modbus TCP without authentication. Therefore, when the Modbus functionality is enabled by opening the port that CharxModbusServer is listening, an unauthenticated attacker can perform a Denial-of-Service attack.",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-44106 - Local Privilege Escalation vulnerability in /etc/init.d/user-applications via customer website file",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44106",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-30T07:16:59.000Z",
+        "contentSnippet": "A privilege escalation vulnerability in the init-script for user-applications allows a low-privileged local user to execute arbitrary commands as root, resulting in full system compromise.",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-44105 - Cleartext password in logs",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44105",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-30T07:16:58.000Z",
+        "contentSnippet": "The credentials for the local user \"user-app\" may be exposed in log files, potentially enabling a low-privileged local attacker with access to the logs to authenticate via SSH as the limited user \"user-app\". Charging could be interrupted.",
+        "cveScore": 6.6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-44104 - ControllerAgent does not perform validation of firmware",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44104",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-30T07:16:58.000Z",
+        "contentSnippet": "The firmware update process for the basemodule of the charging controller only validates the CRC32 checksum without cryptographic signature verification. This allows an unauthenticated remote attacker to install a modified firmware, resulting in full system compromise.",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-44103 - JupiCore does not perform validation of firmware",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44103",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-30T07:16:58.000Z",
+        "contentSnippet": "An unauthenticated remote attacker can inject malicious firmware into the internal charging module because the JupiCore service transmits firmware updates without performing integrity or verification check. Successful exploitation may compromise the integrity of the affected devi",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-44102 - OCPP Firmware download is not properly locked",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44102",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-30T07:16:58.000Z",
+        "contentSnippet": "An unauthenticated remote attacker can trigger a firmware update download via the OCPP backend by supplying an invalid firmware file. This will cause the file to remain accessible for a short period before it is deleted due to improper locking during the cleanup process.",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-44101 - OCPP reconfiguration vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44101",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-30T07:16:58.000Z",
+        "contentSnippet": "Due to missing authentication the CHARX OCPP Agent service allows an unauthenticated remote attacker to reconfigure the backend connection. This can lead to Denial-of-Service and confidential data being disclosed to the attacker.",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-44100 - JupiCore charging point reconfiguration without auth",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44100",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-30T07:16:58.000Z",
+        "contentSnippet": "The CHARX JupiCore service allows an unauthenticated remote attacker to reconfigure charging points. This can lead to disclosure of charging point UIDs, Denial-of-Service and files tampering.",
+        "cveScore": 9.4,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-44099 - Local Privilege Escalation via pppd password injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44099",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-30T07:16:58.000Z",
+        "contentSnippet": "A privilege escalation vulnerability in the system configuration allows a low-privileged local user to execute arbitrary commands as root, resulting in full system compromise.",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-44098 - OS Command Injection in OCPP Agent via charge_box_id",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44098",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-30T07:16:57.000Z",
+        "contentSnippet": "This vulnerability allows an unauthenticated remote attacker with control over the OCPP backend via firewall-bypass to perform an OS command injection, resulting in the execution of arbitrary commands as the limited user charx-oa. Charging could be interrupted.",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-44097 - File Upload vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44097",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-30T07:16:57.000Z",
+        "contentSnippet": "A low-privileged remote attacker with \"operator\" access can upload arbitrary files via the REST endpoint intended for firmware updates, resulting in persistent storage of attacker-controlled files and potentially exhausting resources, which might lead to Denial-of-Service.",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-44096 - udhcpc Privilege Escalation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44096",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-30T07:16:57.000Z",
+        "contentSnippet": "A privilege escalation vulnerability in udhcpc allows a local user \"charx-web\" to execute arbitrary commands as root, resulting in full system compromise.",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-44095 - Local Privilege Escalation via Network scripts",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44095",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-30T07:16:57.000Z",
+        "contentSnippet": "A privilege escalation vulnerability in a script used for network configuration allows a low-privileged local user to execute arbitrary commands as root, resulting in full system compromise.",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-44094 - Fallback to second RAUC slot with default credentials",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44094",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-30T07:16:57.000Z",
+        "contentSnippet": "An unauthenticated remote attacker can enforce the system to fall back to a firmware partition with an insecure configuration including default credentials. This could allow the attacker to gain SSH access to the system as an unprivileged user \"user-app\". Charging could be interr",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-44093 - Local Privilege Escalation vulnerability in /etc/init.d/user-applications via user-application start script",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44093",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-30T07:16:57.000Z",
+        "contentSnippet": "A local privilege escalation vulnerability in the init-script for user-applications allows a low-privileged local user to execute arbitrary commands as root, resulting in full system compromise.",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-44092 - Missing input validation / stripping of CRLF characters in SystemConfigManager",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44092",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-30T07:16:57.000Z",
+        "contentSnippet": "An unauthenticated remote attacker can inject malicious input into the ModbusServer application because it does not validate the input it fetches from MQTT. This may lead to integrity and availability loss.",
+        "cveScore": 9.1,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-44091 - Creation of a new configuration by posting a malicious ID to MQTT",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44091",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-30T07:16:56.000Z",
+        "contentSnippet": "An unauthenticated remote attacker can post a malicious ID to the MQTT Broker results in the creation of a new configuration entry in the system configuration. This may lead to integrity and availability loss.",
+        "cveScore": 9.1,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-44090 - Missing authentication for MQTT Broker",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44090",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-30T07:16:56.000Z",
+        "contentSnippet": "Due to missing authentication, an unauthenticated remote attacker may access the MQTT broker, which is only protected from external access by a firewall. This may lead to the device being fully compromised.",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-13584 - Information tampering and Denial-of-service (DoS) vulnerability in CC-Link IE TSN communication protocol",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13584",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-30T07:16:56.000Z",
+        "contentSnippet": "Improper Enforcement of Message Integrity During Transmission in a Communication Channel vulnerability in Mitsubishi Electric MELSEC MX Controller MX-R model, MELSEC MX Controller MX-F model, Master/local module, CC-Link IE TSN interface board, Motion module, Motion Control Board",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-64635 - Veeam Service Provider Console Open Redirect to Account Takeover",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64635",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-30T06:25:59.000Z",
+        "contentSnippet": "Improper handling of the returnUrl parameter in the Forgot Password function of Veeam Service Provider Console allows an unauthenticated attacker to control the domain of the generated password reset link. When the targeted user clicks the link delivered by email, the reset code ",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-59328 - Cross-Site Scripting in Eclipse Spring Boot Starter Wizard Dependency Tooltips",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59328",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-30T06:25:55.000Z",
+        "contentSnippet": "Spring Tools for Eclipse renders Spring Boot starter wizard dependency tooltips in a native embedded browser (SWT Browser) with JavaScript enabled. Using untrusted and compromised Initializr endpoints for the Spring Boot starter wizard can result in arbitrary script execution ins",
+        "cveScore": 4.2,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-59327 - Cleartext Storage of Spring Boot DevTools Remote Secret in Eclipse Launch Configurations",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59327",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-30T06:25:55.000Z",
+        "contentSnippet": "Spring Tools for Eclipse stores the Spring Boot DevTools remote secret (spring.devtools.remote.secret) as a plain string attribute on the \"Spring Boot DevTools Client\" launch configuration. Eclipse persists launch configuration attributes as cleartext XML, either to workspace met",
+        "cveScore": 4.4,
+        "cveSeverity": "MEDIUM"
+      },
       {
         "title": "CVE-2026-58066 - Rocket.Chat SAML SSO XML Signature Wrapping Vulnerability",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-58066",
@@ -45,15 +270,6 @@
         "source": "cvefeed.io",
         "isoDate": "2026-07-30T06:02:50.000Z",
         "contentSnippet": "Improper neutralization in the Plesk XML-RPC API allows a remote authenticated low-privileged user to perform SQL injection and read arbitrary data from the Plesk database, leading to full compromise of the panel.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-64635 - Veeam Service Provider Console Open Redirect to Account Takeover",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64635",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-30T06:02:49.000Z",
-        "contentSnippet": "Improper handling of the returnUrl parameter in the Forgot Password function of Veeam Service Provider Console allows an unauthenticated attacker to control the domain of the generated password reset link. When the targeted user clicks the link delivered by email, the reset code ",
         "cveScore": 0,
         "cveSeverity": "NA"
       },
@@ -686,225 +902,23 @@
         "contentSnippet": "Jinher OA C6 contains an XML External Entity (XXE) injection vulnerability in the /c6/JHSoft.Web.HrmAttendance/sp_manager_getUserlist.aspx/GetXmlHttp endpoint. An unauthenticated remote attacker can send a crafted XML payload to read arbitrary files from the server via an out-of-",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-46678 - Pydantic AI: SSRF cloud-metadata blocklist bypass via IPv4-mapped IPv6 (Incomplete fix of CVE-2026-25580)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46678",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T21:17:47.000Z",
-        "contentSnippet": "Pydantic AI is a Python agent framework for building Generative AI applications. In versions 1.56.0 through 1.98.0, when an application opts a URL into force_download='allow-local' (disabling the default block on private/internal IPs), the cloud-metadata blocklist could be bypass",
-        "cveScore": 6.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16728 - undici vulnerable to downstream response desynchronization via retry interceptor",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16728",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T21:17:46.000Z",
-        "contentSnippet": "undici's retry interceptor can deliver a response whose body length does not match the Content-Length header exposed to the application after a retry or resume of a partial response. In undici before 6.28.0, from 7.0.0 up to before 7.29.0, and from 8.0.0 up to before 8.9.0, a mal",
-        "cveScore": 4.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-13309 - Autel MaxiCharger AC Elite Home NFC Stack-based Buffer Overflow Arbitrary Code Execution Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13309",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T21:17:46.000Z",
-        "contentSnippet": "Autel MaxiCharger AC Elite Home NFC Stack-based Buffer Overflow Arbitrary Code Execution Vulnerability. This vulnerability allows physically present attackers to execute arbitrary code on affected installations of Autel MaxiCharger AC Elite Home EV chargers. Authentication is not",
-        "cveScore": 6.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-13308 - Autel MaxiCharger AC Elite Home WebSockets Integer Underflow Remote Code Execution Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13308",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T21:17:46.000Z",
-        "contentSnippet": "Autel MaxiCharger AC Elite Home WebSockets Integer Underflow Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Autel MaxiCharger AC Elite Home EV chargers. Authentication is not required to explo",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-13307 - Autel MaxiCharger AC Elite Home USB Heap-based Buffer Overflow Arbitrary Code Execution Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13307",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T21:17:46.000Z",
-        "contentSnippet": "Autel MaxiCharger AC Elite Home USB Heap-based Buffer Overflow Arbitrary Code Execution Vulnerability. This vulnerability allows physically present attackers to execute arbitrary code on affected installations of Autel MaxiCharger AC Elite Home EV chargers. Authentication is not ",
-        "cveScore": 6.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-13306 - Autel MaxiCharger AC Elite Home USB Authentication Bypass Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13306",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T21:17:46.000Z",
-        "contentSnippet": "Autel MaxiCharger AC Elite Home USB Authentication Bypass Vulnerability. This vulnerability allows physically present attackers to bypass authentication on affected installations of Autel MaxiCharger AC Elite Home EV chargers. Authentication is not required to exploit this vulner",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-13305 - Autel MaxiCharger AC Elite Home Software Update Improper Verification of Cryptographic Signature Arbitrary Code Execution Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13305",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T21:17:46.000Z",
-        "contentSnippet": "Autel MaxiCharger AC Elite Home Software Update Improper Verification of Cryptographic Signature Arbitrary Code Execution Vulnerability. This vulnerability allows physically present attackers to execute arbitrary code on affected installations of Autel MaxiCharger AC Elite Home E",
-        "cveScore": 6.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2025-65340 - Kishan0725 Hospital Management System SQL Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-65340",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T21:17:45.000Z",
-        "contentSnippet": "kishan0725 Hospital Management System 4.0 is vulnerable to SQL Injection in /betweendates-detailsreports.php.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2025-65337 - Sourcecodester Fantastic Blog CMS Cross-Site Scripting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-65337",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T21:17:45.000Z",
-        "contentSnippet": "Sourcecodester Fantastic Blog CMS 1.0 is vulnerable to Cross Site Scripting (XSS) in pageEditMember.php via the address field.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-6336 - Incorrect Authorization in GitLab",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6336",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T20:17:13.000Z",
-        "contentSnippet": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 16.6 before 19.0.5, 19.1 before 19.1.3, and 19.2 before 19.2.1 that under certain conditions could have allowed an unauthorized user to view project import source information due to a missing authorization",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-6267 - Insertion of Sensitive Information Into Sent Data in GitLab",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6267",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T20:17:13.000Z",
-        "contentSnippet": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 10.1.0 before 19.0.5, 19.1 before 19.1.3, and 19.2 before 19.2.1 that under certain conditions could have allowed an authenticated user with Developer role to access unauthorized information due to insuffi",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-6102 - MSI Center NTIOLib_X64 Origin Validation Error Local Privilege Escalation Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6102",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T20:17:12.000Z",
-        "contentSnippet": "MSI Center NTIOLib_X64 Origin Validation Error Local Privilege Escalation Vulnerability. This vulnerability allows local attackers to escalate privileges on affected installations of MSI Center. An attacker must first obtain the ability to execute low-privileged code on the targe",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-67436 - Linuxfabrik monitoring-plugins: SSRF and auth-token disclosure via unvalidated @odata.id link in redfish-* plugins",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67436",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T20:17:12.000Z",
-        "contentSnippet": "Linuxfabrik monitoring-plugins provides Python monitoring plugins for Icinga, Nagios, and related monitoring systems. In 6.0.0 and earlier, the redfish-* plugins built request URLs by concatenating an operator-supplied base URL with response-supplied @odata.id links, allowing a m",
-        "cveScore": 8.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-67435 - linuxfabrik-lib: fetch() forwards credential headers across a cross-origin redirect",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67435",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T20:17:12.000Z",
-        "contentSnippet": "linuxfabrik-lib provides Python modules for database access, caching, shell execution, and API integrations. Prior to version 6.0.0, lib.url.fetch() followed cross-origin redirects while forwarding caller-supplied credential headers other than Authorization and Cookie, allowing a",
-        "cveScore": 6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-67433 - Linuxfabrik monitoring-plugins: Symlink following in logfile legacy database migration",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67433",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T20:17:12.000Z",
-        "contentSnippet": "Linuxfabrik monitoring-plugins provides Python monitoring plugins for Icinga, Nagios, and related monitoring systems. In version 6.0.0, the logfile check legacy database migration moved a predictable path from /tmp with os.rename() and allowed a local user controlling the plugin ",
-        "cveScore": 5.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-67432 - MCP Ruby SDK: Unbounded JSON-RPC request body causes uncontrolled memory allocation in StreamableHTTPTransport",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67432",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T20:17:12.000Z",
-        "contentSnippet": "MCP Ruby SDK is the official Ruby SDK for Model Context Protocol servers and clients. Prior to 0.23.0, MCP::Server::Transports::StreamableHTTPTransport in the mcp gem reads and parses an entire JSON-RPC POST body without a size limit, allowing an unauthenticated remote attacker t",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-67431 - MCP Ruby SDK: Ruby SSE Session Poisoning",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67431",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T20:17:12.000Z",
-        "contentSnippet": "MCP Ruby SDK is the official Ruby SDK for Model Context Protocol servers and clients. Prior to 0.23.0, MCP::Server::Transports::StreamableHTTPTransport in the mcp gem does not bind a session ID to a session owner, allowing an attacker with a stolen session ID to send tools/call r",
-        "cveScore": 8.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-67429 - Flyto2 Core: Arbitrary file write via image.download (and other file-writing modules)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67429",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T18:50:43.000Z",
-        "contentSnippet": "Flyto2 Core is an execution kernel for automation and AI-agent workflows. Prior to 2.26.6, image.download and related file-writing modules use caller-controlled output_dir instead of validate_path_with_env_config and its FLYTO_SANDBOX_DIR confinement, allowing attacker-controlled",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-67428 - Flyto2 Core: Multiple HTTP-family modules fetch client-controlled URLs without the SSRF guard their siblings apply (SSRF to internal/metadata)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67428",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T18:48:42.000Z",
-        "contentSnippet": "Flyto2 Core is an execution kernel for automation and AI-agent workflows. Prior to 2.26.7, HTTP-emitting modules including src/core/modules/third_party/developer/http/requests.py, core.api.http_get, core.api.http_post, graphql.query, graphql.mutation, monitor.http_check, communic",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-67427 - Flyto2 Core: ${env.VAR} interpolation reads any env secret despite env.get being denylisted",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67427",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T18:45:47.000Z",
-        "contentSnippet": "Flyto2 Core is an execution kernel for automation and AI-agent workflows. Prior to 2.26.6, the workflow engine variable resolver expands ${env.VAR} for any host environment variable without an allowlist or capability policy check, allowing a workflow parameter to bypass the defau",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-67426 - Flyto2 Core: Unauthenticated flyto-verification /run: callback_url SSRF and internal runner-secret exfiltration",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67426",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T18:43:26.000Z",
-        "contentSnippet": "Flyto2 Core is an execution kernel for automation and AI-agent workflows. Prior to 2.26.7, the standalone flyto-verification service in src/core/verification_service.py exposes unauthenticated POST /run on 0.0.0.0:8344 and uses client-supplied callback_url for an outbound POST wi",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-16326 - consul-mcp-server vulnerable to cross-tenant credential reuse in streamable-HTTP stateless mode",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16326",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T18:40:08.000Z",
-        "contentSnippet": "In consul-mcp-server, versions 0.1.0 up to 0.1.3 did not properly isolate session state in stateless mode, which may allow one client's Consul authentication token to be used for subsequent requests from other clients. This vulnerability (CVE-2026-16326) is fixed in consul-mcp-se",
-        "cveScore": 10,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-67425 - Flyto2 Core: LLM/API keys leak to an attacker-controlled base_url",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67425",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T18:35:01.000Z",
-        "contentSnippet": "Flyto2 Core is an execution kernel for automation and AI-agent workflows. Prior to 2.26.6, llm.chat reads provider keys such as OPENAI_API_KEY and ANTHROPIC_API_KEY from the environment and sends them in the Authorization: Bearer header to caller-controlled base_url, allowing an ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-13346 - pip absolute path traversal during download from malicious package indexes",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13346",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-29T18:33:50.000Z",
-        "contentSnippet": "pip would incorrectly handle doubly-encoded package URLs from indexes allowing for files to be installed to arbitrary locations on disk even when installing wheels. This vulnerability requires downloading or installing a package from a malicious package index to succeed, maliciou",
-        "cveScore": 5.6,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
+      {
+        "title": "Tencent Open-Sources AngelSpec: A Unified Training Framework for MTP and Block-Parallel Speculative Decoding on Hy3 Models",
+        "link": "https://www.marktechpost.com/2026/07/30/tencent-open-sources-angelspec-a-unified-training-framework-for-mtp-and-block-parallel-speculative-decoding-on-hy3-models/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-07-30T10:08:18.000Z",
+        "contentSnippet": "Tencent has released AngelSpec, an open-source torch-native framework for training speculative-decoding draft models across six architectures. It introduces DFly, a block-diffusion drafter with hybrid target conditioning and a hidden-correction autoregressive head, and integrates"
+      },
+      {
+        "title": "Meet Token Saver: An Open-Source MCP Extension Using Local Hybrid RAG to Cut Claude PDF Token Costs 90-99%",
+        "link": "https://www.marktechpost.com/2026/07/30/token-saver-an-open-source-mcp-extension-using-local-hybrid-rag/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-07-30T07:43:29.000Z",
+        "contentSnippet": "Marktechpost AI has released Token Saver, an open-source MCP extension for Claude Desktop that uses local Hybrid RAG to slash PDF token consumption by up to 99% while ensuring absolute document privacy. The post Meet Token Saver: An Open-Source MCP Extension Using Local Hybrid RA"
+      },
       {
         "title": "Prompt Engineering vs Loop Engineering vs Graph Engineering: What Changes at Each Layer",
         "link": "https://www.marktechpost.com/2026/07/29/prompt-engineering-vs-loop-engineering-vs-graph-engineering/",
@@ -1590,20 +1604,6 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-07-15T18:14:31.000Z",
         "contentSnippet": "Built partnered with the AWS Generative AI Innovation Center (GenAIIC), AWS Partner AND Digital, and AWS account teams to create a scalable, AI-powered document processing engine that can classify, split, extract, evaluate, and reason over complex real estate finance documents. I"
-      },
-      {
-        "title": "Agentic vision: Building visual intelligence with Amazon Bedrock and MCP servers",
-        "link": "https://aws.amazon.com/blogs/machine-learning/agentic-vision-building-visual-intelligence-with-amazon-bedrock-and-mcp-servers/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-07-15T18:11:57.000Z",
-        "contentSnippet": "In this post, we walk you through the Computer Vision MCP Server, which illustrates this approach, representing how AI systems can process visual information and make intelligent decisions through a single, standardized interface. This convergence transforms what was once a compl"
-      },
-      {
-        "title": "Monitor Amazon SageMaker Pipelines cross-account with custom Amazon CloudWatch dashboards",
-        "link": "https://aws.amazon.com/blogs/machine-learning/monitor-amazon-sagemaker-pipelines-cross-account-with-custom-amazon-cloudwatch-dashboards/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-07-15T18:08:50.000Z",
-        "contentSnippet": "In this post, we present a solution designed to centralize the monitoring of SageMaker Pipelines across AWS accounts and Regions using Amazon CloudWatch custom dashboards. The accompanying GitHub repository provides a customizable AWS Cloud Development Kit (AWS CDK) example of th"
       }
     ],
     "virtualization": [
@@ -2310,6 +2310,20 @@
     ],
     "hardware": [
       {
+        "title": "Firm that uses AI to locate ancient lost shipwrecks is hiring a literal pirate to salvage sunken treasure, paying up to $500,000 a year — AI mines 500 years of Spanish colonial records spanning 80 mil",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-company-hiring-a-literal-pirate-to-salvage-sunken-treasure-found-by-artificial-intelligence-pays-up-to-usd500k-a-year-mining-80-million-pages-of-spanish-colonial-records-to-find-undiscovered-wrecks-and-lost-cargo",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-07-30T10:00:00.000Z",
+        "contentSnippet": "AI and software research firm looking for a real-life pirate — extremely remote lob listing requires nautical and diving experience"
+      },
+      {
+        "title": "Pennsylvania town lists 43 specific demands to approve new AI data center project — developer calls local demands 'too difficult' as council slams response as 'approval by tantrum'",
+        "link": "https://www.tomshardware.com/tech-industry/data-centers/pennsylvania-town-lists-43-specific-demands-to-approve-new-data-center-project-developer-calls-local-demands-too-difficult-as-council-slams-response-as-approval-by-tantrum",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-07-30T09:30:00.000Z",
+        "contentSnippet": "One township in Pennsylvania gave a specific list of demands for a data center developer to follow if they want to build their project in the area. Instead, they retracted their initial application and sent in a second one challenging the regulations."
+      },
+      {
         "title": "Microsoft says physical discs should not have stopped working during the Xbox outage — clarifies issue with entitlement checks that failed to read licenses correctly, update on the way",
         "link": "https://www.tomshardware.com/video-games/xbox/microsoft-says-physical-discs-should-not-have-stopped-working-during-the-xbox-outage-clarifies-issue-with-entitlement-checks-that-failed-to-read-licenses-correctly-update-on-the-way",
         "source": "Tom's Hardware",
@@ -2338,11 +2352,11 @@
         "contentSnippet": "Seagate expects to begin customer qualification of its 50TB-class HAMR hard drives in late 2027 with shipments in 2028 as AI-driven storage demand keeps production largely sold out through 2028."
       },
       {
-        "title": "Nvidia employee implicated in escalating Supermicro smuggling scandal, but demand only intensifies for Nvidia hardware",
+        "title": "Nvidia employee implicated in escalating AI GPU smuggling scandal, but demand only intensifies for Nvidia hardware",
         "link": "https://www.tomshardware.com/tech-industry/nvidia-employee-implicated-in-escalating-supermicro-smuggling-scandal-but-demand-only-intensifies-for-nvidia-hardware",
         "source": "Tom's Hardware",
         "isoDate": "2026-07-29T15:10:06.000Z",
-        "contentSnippet": "An Nvidia employee has been implicated in the Supermicro smuggling scandal, with his home and desk searched. He's been detained over allegations of forgery and breach of trust. Meanwhile, Nvidia is collapsing its buyer list in order to root out potential smuggling chains."
+        "contentSnippet": "An Nvidia employee has been implicated in the AI GPU smuggling scandal, with his home and desk searched. He's been detained over allegations of forgery and breach of trust. Meanwhile, Nvidia is collapsing its buyer list in order to root out potential smuggling chains."
       },
       {
         "title": "Valve says that Steam Machine reservations won't be fulfilled until ‘the end of this year’ — company also releases CAD files for the PC console’s external shell under Creative Commons",
@@ -2994,20 +3008,6 @@
         "source": "ServeTheHome",
         "isoDate": "2026-07-24T19:02:39.000Z",
         "contentSnippet": "In our KYY K1302R portable monitor review, we see how well this relatively inexpensive travel display comapares to others we have tested The post KYY K1302R Portable Monitor Review An Inexpensive Travel Display appeared first on ServeTheHome."
-      },
-      {
-        "title": "Nvidia and 24 other companies sign open-weights letter as Washington weighs Chinese AI model ban — OpenAI, Anthropic, and Google absent from the list",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-and-24-other-companies-sign-open-weights-letter-as-washington-weighs-chinese-ai-model-ban",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-24T18:31:48.000Z",
-        "contentSnippet": "Signatories include chipmakers, server vendors, cloud operators, enterprise software firms, security companies, and venture funds"
-      },
-      {
-        "title": "Intel commits to 14A mass production in 2028 as its sales rise 25% year-over-year",
-        "link": "https://www.tomshardware.com/pc-components/cpus/intel-commits-to-14a-mass-production-in-2028-as-its-sales-rise-25-percent-year-over-year",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-24T17:49:43.000Z",
-        "contentSnippet": "Intel posts 25% higher year-over-year sales and above-the-guidance earnings, and confirms that its 14A technology is on-track to start high volume ramp in 2028."
       }
     ]
   }
