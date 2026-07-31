@@ -1,16 +1,25 @@
 {
-  "updatedAt": "2026-07-30T23:55:07.201Z",
+  "updatedAt": "2026-07-31T02:00:27.404Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-58039 - Node.js Permission Model File Write Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58039",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T01:16:31.000Z",
+        "contentSnippet": "A flaw in Node.js Permission Model enforcement allows process.report writes (and overwrites) files outside --allow-fs-write paths. This can lead to confidentiality impact or bypass of the intended security boundary under affected configurations. This vulnerability affects Node.js",
+        "cveScore": 3.3,
+        "cveSeverity": "LOW"
+      },
       {
         "title": "CVE-2026-66720 - MZ Automation libiec61850 Out-of-bounds Read",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-66720",
         "source": "cvefeed.io",
         "isoDate": "2026-07-30T23:16:53.000Z",
         "contentSnippet": "The GOOSE subscriber component improperly validates the UTC timestamp field in unauthenticated IEC 61850 GOOSE (EtherType 0x88B8) Layer-2 multicast messages. A specially crafted GOOSE frame containing an undersized timestamp field can trigger a heap out-of-bounds read during mess",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-66421 - OpenClaw Dashboard Stored XSS via lastMessage Session Field",
@@ -36,8 +45,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-07-30T23:16:53.000Z",
         "contentSnippet": "The GOOSE parser contains an off-by-one boundary-handling flaw that can be triggered by a single unauthenticated Layer-2 multicast frame on the process bus. When specific GOOSE message fields are processed, the parser advances its internal buffer position incorrectly, resulting i",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-66364 - MZ Automation libiec61850 Out-of-bounds Read",
@@ -45,8 +54,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-07-30T23:16:53.000Z",
         "contentSnippet": "The GOOSE payload parser contains a boundary handling flaw that can be triggered by a single unauthenticated Layer 2 multicast frame on the process bus. When processing specific payload fields, an attacker controlled inner element length may exceed its enclosing length, causing t",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-66360 - MZ Automation libiec61850 Out-of-bounds Read",
@@ -54,7 +63,7 @@
         "source": "cvefeed.io",
         "isoDate": "2026-07-30T23:16:53.000Z",
         "contentSnippet": "The ISO Presentation layer contains a flaw in the handling of specific parameters during normal mode negotiation. A missing length check in the processing of the encoded presentation data allows an attacker controlled field with a zero length value to trigger a bounded heap over ",
-        "cveScore": 8.7,
+        "cveScore": 7.5,
         "cveSeverity": "HIGH"
       },
       {
@@ -63,7 +72,7 @@
         "source": "cvefeed.io",
         "isoDate": "2026-07-30T23:16:52.000Z",
         "contentSnippet": "The MMS server connection handler contains a flaw in its processing of BER-encoded request data. When an MMS confirmed request PDU containing an extended BER tag is received over an established session, the decoder may advance its internal buffer incorrectly due to a missing boun",
-        "cveScore": 6.9,
+        "cveScore": 6.5,
         "cveSeverity": "MEDIUM"
       },
       {
@@ -81,8 +90,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-07-30T23:16:52.000Z",
         "contentSnippet": "The MMS BER decoder contains a flaw in decoding fixed-width BER fields (boolean/integer): an attacker-supplied length value is not validated, causing a read past the end of a heap buffer. This leads to termination of the MMS service process and a denial-of-service condition.",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-63550 - MZ Automation libiec61850 Out-of-bounds Read",
@@ -90,8 +99,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-07-30T23:16:52.000Z",
         "contentSnippet": "The MMS BER decoder contains a boundary-handling flaw in the processing of certain fields within confirmed-request messages. When a crafted BER-encoded element is received over an established MMS session (TCP port 102), the decoder may advance its internal read position incorrect",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-63362 - o6 Automation open62541 Integer Underflow",
@@ -99,8 +108,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-07-30T23:16:52.000Z",
         "contentSnippet": "An unsigned integer underflow in the PubSub signature verification path in open62541 may allow a remote attacker to cause a denial of service via a crafted UDP packet.",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-63035 - o6 Automation open62541 Use After Free",
@@ -117,7 +126,7 @@
         "source": "cvefeed.io",
         "isoDate": "2026-07-30T23:16:51.000Z",
         "contentSnippet": "A crafted IEC 60870-5-104 I-frame with a declared object count exceeding what fits in the ASDU body causes InformationObject_ParseObjectAddress to read one byte past the end of the heap-allocated message buffer.",
-        "cveScore": 6.9,
+        "cveScore": 6.5,
         "cveSeverity": "MEDIUM"
       },
       {
@@ -126,7 +135,7 @@
         "source": "cvefeed.io",
         "isoDate": "2026-07-30T23:16:51.000Z",
         "contentSnippet": "A crafted IEC 60870-5-104 I-frame with TypeID 104 (C_TS_NA_1) and an inflated object count causes TestCommand_getFromBuffer to read one byte past the end of the heap-allocated message buffer.",
-        "cveScore": 6.9,
+        "cveScore": 6.5,
         "cveSeverity": "MEDIUM"
       },
       {
@@ -135,7 +144,7 @@
         "source": "cvefeed.io",
         "isoDate": "2026-07-30T23:16:51.000Z",
         "contentSnippet": "The ACSE layer contains a flaw in the processing of AARQ PDUs during MMS connection establishment. When parsing certain fields within the calling AP title, an attacker controlled length value of zero or one may cause the parser to read past the end of a heap buffer.",
-        "cveScore": 6.9,
+        "cveScore": 6.5,
         "cveSeverity": "MEDIUM"
       },
       {
@@ -171,8 +180,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-07-30T22:16:55.000Z",
         "contentSnippet": "RapidRAW before 1.6.0 does not validate the lutPath field in preset files before passing it to File::open() in lut_processing.rs. On Windows, a UNC path in lutPath causes an outbound SMB connection to an attacker-controlled host, leaking the victim's NTLMv2 credentials. The vulne",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-63559 - o6 Automation open62541 Integer Overflow or Wraparound",
@@ -180,7 +189,7 @@
         "source": "cvefeed.io",
         "isoDate": "2026-07-30T22:16:55.000Z",
         "contentSnippet": "An integer overflow in the UA_Variant arrayDimensions product computation in open62541 may allow a remote attacker to read out-of-bounds heap memory, potentially disclosing sensitive information.",
-        "cveScore": 8.7,
+        "cveScore": 7.5,
         "cveSeverity": "HIGH"
       },
       {
@@ -207,8 +216,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-07-30T22:16:55.000Z",
         "contentSnippet": "The affected Watchfire Controller Software contains self-signed hard-coded RSA private keys and corresponding X.509 certificates used for authenticating and encrypting HTTPS/TLS connections to the controller's built-in web management interface. These keys are embedded in plaintex",
-        "cveScore": 7.6,
-        "cveSeverity": "HIGH"
+        "cveScore": 5.7,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-38709 - TOTOLINK Devices Command Injection Vulnerability",
@@ -892,15 +901,6 @@
         "isoDate": "2026-07-30T15:16:37.000Z",
         "contentSnippet": "Calico's Application Layer Policy (disabled by default), which enforces HTTP rules through Dikastes, fails to perform URL path normalization. As a result, HTTP requests using path-traversal segments, encoded slashes, or repeated slashes are not correctly evaluated by Prefix path ",
         "cveScore": 7.9,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-67349 - OpenCost < 1.121.0 Unauthenticated Helm Values Exposure and Admin Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67349",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-30T15:16:36.000Z",
-        "contentSnippet": "OpenCost before 1.121.0 fails to authenticate the GET /helmValues endpoint, exposing base64-decoded HELM_VALUES environment variable containing cloud provider credentials. Additionally, adminAuthMiddleware fails open when ADMIN_TOKEN is unset, allowing unauthenticated attackers t",
-        "cveScore": 8.7,
         "cveSeverity": "HIGH"
       }
     ],
@@ -2310,6 +2310,13 @@
     ],
     "hardware": [
       {
+        "title": "Veeam Ships Data Platform v13.1 and a $4.50/TB Vault Archive Tier for Cold Backup Data",
+        "link": "https://www.storagereview.com/news/veeam-ships-data-platform-v13-1-and-a-4-50-tb-vault-archive-tier-for-cold-backup-data",
+        "source": "StorageReview",
+        "isoDate": "2026-07-31T00:24:10.000Z",
+        "contentSnippet": "Veeam has released Data Platform v13.1 alongside Veeam Data Cloud Vault Archive, combining a broad backup and recovery update with a new managed storage tier for long-term retention. Version 13.1 expands hypervisor and enterprise application coverage, extends malware detection to"
+      },
+      {
         "title": "AMD’s Physical AI Plans Come Into Focus as Company Launches Ryzen Embedded AI X100",
         "link": "https://www.servethehome.com/amds-physical-ai-plans-come-into-focus-as-company-launches-ryzen-embedded-ai-x100/",
         "source": "ServeTheHome",
@@ -3001,13 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-07-26T14:36:50.000Z",
         "contentSnippet": "This open-source project uses 3D printing to build the core of a portable MRI machine, although it still has a lower resolution compared to multi-million-dollar full-sized machines. One tech expert suggested that an AI model be trained on high-field MRI data or the physics of the"
-      },
-      {
-        "title": "Chinese CXMT DRAM doesn't look like the budget savior many were expecting — new modules enter the market, but prices still track the big three",
-        "link": "https://www.tomshardware.com/pc-components/dram/chinese-cxmt-dram-doesnt-look-like-the-budget-savior-many-were-expecting-new-modules-enter-the-market-but-prices-still-track-the-big-three",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-26T13:25:30.000Z",
-        "contentSnippet": "Chinese retail listings indicate that CXMT-based memory modules are priced similarly to those featuring chips from the big three, despite expectations that they must be cheaper."
       }
     ]
   }
