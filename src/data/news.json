@@ -1,31 +1,211 @@
 {
-  "updatedAt": "2026-07-31T19:10:23.507Z",
+  "updatedAt": "2026-07-31T20:55:16.407Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
+        "title": "CVE-2026-53599 - Redaxo has a Mediapool isAllowedExtension bypass via multi-segment filename that leads to authenticated RCE on Apache mod_php multi-extension handlers",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53599",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T19:43:15.000Z",
+        "contentSnippet": "REDAXO is a PHP-based content management system. From 5.18.2 until 5.21.1, rex_mediapool::isAllowedExtension in redaxo/src/addons/mediapool/lib/mediapool.php lets an authenticated backend user with media[upload] permission upload a JPEG/PHP polyglot named shell.php.any.jpg, which",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-62999 - Copier: Percent-encoded dot segments in template URLs can allow trusted-prefix escape (Incomplete fix for trust-prefix bypass)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62999",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T19:41:55.000Z",
+        "contentSnippet": "Copier is a library and CLI app for rendering project templates. From 9.5.0 through 9.16.0, percent-encoded parent-directory segments or encoded path separators in a template URL can match a configured trusted repository prefix before an HTTP server or Git transport decodes the p",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53510 - Savon::Model evaluates WSDL operation names as Ruby source",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53510",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T19:38:33.000Z",
+        "contentSnippet": "Savon is a Ruby SOAP client. From 0.9.8 until 2.17.2, Savon::Model .all_operations interpolates attacker-controlled WSDL operation names into Ruby source passed to module_eval, allowing Ruby code execution in the application process. This issue is fixed in version 2.17.2.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-18394 - Incorrect authorization in Strands Agents Tools http_request proxy credential exfiltration",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18394",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T19:34:15.000Z",
+        "contentSnippet": "Incorrect authorization in the http_request tool in Strands Agents Tools before 0.8.2 might allow remote attackers to obtain credentials configured via HTTP_REQUEST_TOKEN_CONFIG by influencing the LLM to route requests through actor-controlled proxy infrastructure. To remediate t",
+        "cveScore": 7.4,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-57232 - Contao: Server-Side Request Forgery (SSRF) via Unvalidated RSS Feed URL in Feed Reader Module",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57232",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T19:17:11.000Z",
+        "contentSnippet": "Contao is an Open Source CMS. From 5.3.35 through 5.3.47 and from 5.7.0-RC1 through 5.7.8, the Feed Reader front-end module passes configured RSS feed URLs from FeedReaderController::getResponse() to feedIo->read() without scheme or private-address validation, allowing a backend ",
+        "cveScore": 3.1,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-55824 - Contao crawler leaks auth credentials to external hosts",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55824",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T19:17:11.000Z",
+        "contentSnippet": "Contao is an Open Source CMS. In versions 4.13.40 through 5.3.46 and 5.7.0-RC1 through 5.7.6, the crawler leaks auth credentials to external hosts. Contao's crawler tries to prevent confidential HTTP client options from being sent to external domains by creating a scoped client: ",
+        "cveScore": 2.6,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-53505 - Thumbor proportion filter allows unbounded post-transform resize leading to remote DoS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53505",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T19:17:10.000Z",
+        "contentSnippet": "Thumbor is an open-source photo thumbnail service by globo.com. Prior to 7.8.0, Thumbor's filters:proportion( ) filter does not enforce an upper bound on and runs in the post-transform phase. An attacker can trigger extremely large resizes (CPU/memory exhaustion) and cause denial",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-53504 - Thumbor has Regex Denial of Service (ReDoS) in `convolution` filter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53504",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T19:17:09.000Z",
+        "contentSnippet": "Thumbor is an open-source photo thumbnail service by globo.com. Prior to 7.8.0, the convolution filter regular expression performs exponential backtracking on crafted repeated numeric input, allowing a URL request to exhaust processing time. This issue is fixed in 7.8.0.",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-53503 - Thumbor convolution filter allows divide-by-zero in C extension leading to remote DoS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53503",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T19:17:09.000Z",
+        "contentSnippet": "Thumbor is an open-source photo thumbnail service by globo.com. Prior to 7.8.0, Thumbor's filters:convolution( , , ) filter passes the user-controlled value to a C extension (thumbor/ext/filters/_convolution.c) where it is used as a divisor (for % and /) without validating column",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-53502 - Thumbor has path traversal via post-validation URL decoding bypass in file_loader",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53502",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T19:17:09.000Z",
+        "contentSnippet": "Thumbor is an open-source photo thumbnail service by globo.com. Prior to 7.8.0, file_loader decodes percent-encoded path segments after its root-boundary validation, allowing traversal outside FILE_LOADER_ROOT_PATH through watermark or frame filter input. This issue is fixed in 7",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-53501 - Thumbor has HMAC validation bypass via multiple .replace() calls when removing URL signature",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53501",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T19:17:09.000Z",
+        "contentSnippet": "Thumbor is an open-source photo thumbnail service by globo.com. Prior to 7.8.0, Thumbor’s HMAC validation can be bypassed due to the use of Python’s .replace() when removing the signature from the URL before validation. Since .replace() removes all occurrences of the substring, a",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-53500 - Thumbor treats ALLOWED_SOURCES string patterns as unescaped regex, allowing hostname bypass via wildcard dot",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53500",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T19:17:09.000Z",
+        "contentSnippet": "Thumbor is an open-source photo thumbnail service by globo.com. Prior to 7.8.0, the ALLOWED_SOURCES configuration passes plain strings to re.match() without escaping dots, so a hostname differing at dot positions can match the allowlist. This issue is fixed in 7.8.0.",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-25552 - Ghost CLI < 1.30.1 IP Spoofing via X-Forwarded-For Header",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-25552",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T19:17:08.000Z",
+        "contentSnippet": "Ghost CLI before 1.30.1 contains an IP spoofing vulnerability that allows unauthenticated remote attackers to bypass rate-limiting controls by manipulating the X-Forwarded-For header through a misconfigured Nginx configuration. Attackers can append attacker-controlled values to t",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-18481 - Stored XSS in Participant URL Field leads to Account Takeover via Session Token Theft",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18481",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T19:17:08.000Z",
+        "contentSnippet": "Stored cross-site scripting in the participant URL handling in AWS Ops Wheel before PR #168 might allow an authenticated remote user to steal session tokens and escalate to full administrative control of the deployed instance via a crafted participant_url value containing a dange",
+        "cveScore": 7.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-18321 - Buffer Copy without Checking Size of Input ('Classic Buffer Overflow') in ntpsec",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18321",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T19:17:08.000Z",
+        "contentSnippet": "Buffer overflow in NTPsec's Zyfer refclock allows local attacker to crash ntpd",
+        "cveScore": 4.7,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-65841 - Jodit has cross-site scripting (XSS) via nested in SVG that bypasses clean-html sanitization",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65841",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T19:16:05.000Z",
+        "contentSnippet": "Jodit Editor is a WYSIWYG editor with a built-in file browser & image editor. Prior to 4.13.6, Jodit's clean-html denyTags filter does not normalize foreign SVG or MathML script node names, allowing a script element nested directly in SVG or MathML to remain in editor.value and e",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-62324 - Jodit has incomplete javascript: scheme normalization in sanitizeHTMLElement href check that allows link XSS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62324",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T19:08:03.000Z",
+        "contentSnippet": "Jodit Editor is a WYSIWYG editor with a built-in file browser & image editor. Prior to 4.12.31, Jodit's sanitizeHTMLElement method fails to use isDangerousUrl to normalize javascript: href values before checking the scheme, allowing case variants, control-byte prefixes, and embed",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-55825 - Contao: Possible path traversal in job download URIs",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55825",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T19:07:40.000Z",
+        "contentSnippet": "Contao is an Open Source CMS. In versions 5.7.0 through 5.7.6, an authenticated backend user who can access one job can request an attachment identifier containing ../ segments and make the job attachment download endpoint read a file from another job directory inside var/job-att",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-55100 - hashi-vault-js has a path traversal and query parameter injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55100",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T18:17:17.000Z",
+        "contentSnippet": "hashi-vault-js is a Node.js module for interacting with the HashiCorp Vault API. Prior to 0.5.2, src/Vault.js concatenates unencoded identifier values including name, username, group, role, and version into Vault request paths and query strings instead of using encodeURIComponent",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
         "title": "CVE-2026-54737 - @phun-ky/defaults-deep Has a Prototype Pollution issue via Unsafe Recursive Property Merging",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-54737",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-31T17:48:42.000Z",
+        "isoDate": "2026-07-31T18:17:17.000Z",
         "contentSnippet": "@phun-ky/defaults-deep is a library like lodash defaultsDeep with array preservation and no lodash dependency. Prior to 2.0.5, defaultsDeep() recursively merges user-supplied objects without filtering proto, constructor, and prototype, allowing properties to be written to Object.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 7.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-54729 - dssrf: any users using 1.1.1.1 DNS is impacted by SSRF",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54729",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T18:17:17.000Z",
+        "contentSnippet": "DSSRF is a Node.js library that provides a wide range of utilities and advanced SSRF defense checks. Prior to 1.0.5, is_url_safe can treat localhost as safe when DNS resolver 1.1.1.1 returns NXDOMAIN because dns.resolve4 yields no address and no dns.lookup fallback occurs, allowi",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-54725 - vault-addr annotation SSRF -- webhook makes outbound HTTP call to attacker URL during admission; vault-serviceaccount enables cluster-wide SA token theft via TokenRequest API",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-54725",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-31T17:45:09.000Z",
+        "isoDate": "2026-07-31T18:17:17.000Z",
         "contentSnippet": "vault-secrets-webhook is a Kubernetes mutating webhook that makes direct secret injection into Pods possible. Prior to 1.23.1, parseVaultConfig() in pkg/webhook/config.go accepts the vault.security.banzaicloud.io/vault-addr annotation, MutateConfigMap and MutateSecret call newVau",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 9.6,
+        "cveSeverity": "CRITICAL"
       },
       {
         "title": "CVE-2026-34497 - FMS Employee Vulnerable to HTML Injection",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-34497",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-31T17:31:05.000Z",
+        "isoDate": "2026-07-31T18:17:14.000Z",
         "contentSnippet": "Improper neutralization of Script-Related HTML tags in a web page (basic XSS) vulnerability in Johnson Controls FM Systems Employee allows Cross-Site Scripting (XSS). This issue affects FM Systems Employee: before 2025.3.1.",
         "cveScore": 4.8,
         "cveSeverity": "MEDIUM"
@@ -34,8 +214,17 @@
         "title": "CVE-2026-34495 - FMS Employee vulnerable to XSS",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-34495",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-31T17:30:52.000Z",
+        "isoDate": "2026-07-31T18:17:14.000Z",
         "contentSnippet": "Improper neutralization of input during web page generation ('cross-site scripting') vulnerability in Johnson Controls FM Systems Employee allows Stored XSS. This issue affects FM Systems Employee: before 2025.3.1.",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-34490 - XAAP Android Data Stored in Unencrypted Database",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34490",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T18:17:14.000Z",
+        "contentSnippet": "Cleartext storage of sensitive information vulnerability in Johnson Controls XAAP Application on Android allows an attacker on a jailbroken or otherwise compromised device to Retrieve Sensitive Data. This issue affects XAAP Application: before 1.53.",
         "cveScore": 4.8,
         "cveSeverity": "MEDIUM"
       },
@@ -45,15 +234,6 @@
         "source": "cvefeed.io",
         "isoDate": "2026-07-31T17:30:41.000Z",
         "contentSnippet": "Unrestricted upload of file with dangerous type vulnerability in Johnson Controls FM Systems Employee allows Using Malicious Files. This issue affects FM Systems Employee: before 2025.3.1.",
-        "cveScore": 4.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-34490 - XAAP Android Data Stored in Unencrypted Database",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34490",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T17:17:33.000Z",
-        "contentSnippet": "Cleartext storage of sensitive information vulnerability in Johnson Controls XAAP Application on Android allows an attacker on a jailbroken or otherwise compromised device to Retrieve Sensitive Data. This issue affects XAAP Application: before 1.53.",
         "cveScore": 4.8,
         "cveSeverity": "MEDIUM"
       },
@@ -119,24 +299,6 @@
         "contentSnippet": "Wings is the server control plane for Pterodactyl, a free, open-source game server management panel. Prior to 1.12.3, {{config.}} placeholders in egg configuration-file templates allow a low-privileged user to read {{config.token}}, {{config.token_id}}, and {{config.docker.regist",
         "cveScore": 9.9,
         "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-55100 - hashi-vault-js has a path traversal and query parameter injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55100",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T17:03:41.000Z",
-        "contentSnippet": "hashi-vault-js is a Node.js module for interacting with the HashiCorp Vault API. Prior to 0.5.2, src/Vault.js concatenates unencoded identifier values including name, username, group, role, and version into Vault request paths and query strings instead of using encodeURIComponent",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-54729 - dssrf: any users using 1.1.1.1 DNS is impacted by SSRF",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54729",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T16:58:56.000Z",
-        "contentSnippet": "DSSRF is a Node.js library that provides a wide range of utilities and advanced SSRF defense checks. Prior to 1.0.5, is_url_safe can treat localhost as safe when DNS resolver 1.1.1.1 returns NXDOMAIN because dns.resolve4 yields no address and no dns.lookup fallback occurs, allowi",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       },
       {
         "title": "CVE-2026-67607 - LightFTP 2.3.1 Race Condition DoS via worker_thread_cleanup",
@@ -740,171 +902,23 @@
         "contentSnippet": "The JS Help Desk WordPress plugin before 3.1.4 grants a support-agent capability to the Contributor role on activation and does not perform a capability check on a user-listing handler, allowing Contributor-level users to enumerate the email addresses of all registered WordPress ",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-14930 - JS Help Desk < 3.1.4 - Unauthenticated Arbitrary Ticket File Attachment Upload",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14930",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T07:16:26.000Z",
-        "contentSnippet": "The JS Help Desk WordPress plugin before 3.1.4 does not perform any authorization, nonce, or ownership check on a front-end request dispatcher, allowing unauthenticated users to upload files (limited to the JS Help Desk WordPress plugin before 3.1.4's inert allowed extensions) an",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-14929 - JS Help Desk < 3.1.4 - Subscriber+ Ticket Reply Modification via IDOR",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14929",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T07:16:26.000Z",
-        "contentSnippet": "The JS Help Desk WordPress plugin before 3.1.4 does not verify ownership of the targeted reply before updating it, allowing any authenticated user (Subscriber and above) to overwrite the content of any support-ticket reply on the site.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-14928 - JS Help Desk < 3.1.4 - Subscriber+ Sensitive Information Disclosure via checkAIReplyTicketsBySubject",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14928",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T07:16:26.000Z",
-        "contentSnippet": "The JS Help Desk WordPress plugin before 3.1.4 does not perform authorization or ownership checks before returning support-ticket content in a nonce-gated search handler, allowing any authenticated user (Subscriber and above) to read the subject and full message body of every oth",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-14927 - FluentCart < 1.5.3 - Unauthenticated Order PII Disclosure via Print Routes",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14927",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T07:16:26.000Z",
-        "contentSnippet": "The FluentCart A New Era of eCommerce WordPress plugin before 1.5.3 does not perform any authorization or ownership check before rendering customer order documents keyed on a sequential numeric identifier, allowing unauthenticated visitors to enumerate and disclose customer perso",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-14922 - WP Photo Album Plus < 9.2.04.003 - Subscriber+ Stored XSS via Photo Comment",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14922",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T07:16:26.000Z",
-        "contentSnippet": "WP Photo Album Plus is vulnerable to stored Cross-Site Scripting in all versions up to, and including, 9.2.03.001 through a decode-after-sanitize (double-encoding) flaw in the photo-comment pipeline. On write, `wppa_do_comment()` sanitizes the comment with `wppa_filter_html()` (w",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-14921 - Ultimate Addons for WPBakery Page Builder < 3.21.5 - Contributor+ Stored XSS via ult_buttons Shortcode",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14921",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T07:16:26.000Z",
-        "contentSnippet": "The Ultimate Addons for WPBakery Page Builder WordPress plugin before 3.21.5's shared link-rendering function, Ultimate_VC_Addons::uavc_link_init(),",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-14919 - ShopMonitor.io < 1.2.0 - Unauthenticated Administrator Account Takeover via Password-Reset Email Reroute",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14919",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T07:16:25.000Z",
-        "contentSnippet": "The ShopMonitor.io WordPress plugin before 1.2.0 does not properly restrict its email-rerouting test mode, gating it behind a trusted-source check that is satisfiable with client-supplied request headers, allowing unauthenticated attackers to redirect outgoing emails, including t",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-14862 - Support Genix Lite < 1.4.48 - Unauthenticated Ticket Attachment Download via Missing Authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14862",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T07:16:25.000Z",
-        "contentSnippet": "The Support Genix WordPress plugin before 1.4.48 does not properly authorize access to support-ticket attachment downloads, allowing unauthenticated users who obtain the stored attachment file name to download other users' private ticket attachments.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-14849 - Paid Member Subscriptions < 3.0.7 - Unauthenticated Sensitive Information Exposure via Residual Export Files",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14849",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T07:16:25.000Z",
-        "contentSnippet": "The Paid Membership Subscriptions WordPress plugin before 3.0.7 does not protect the member and payment export files it writes to a predictable location in the uploads directory, allowing unauthenticated users to download the exported member and payment data (including PII) while",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-14847 - Paid Member Subscriptions < 3.0.7 - Subscriber+ Payment Data Disclosure via IDOR",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14847",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T07:16:25.000Z",
-        "contentSnippet": "The Paid Membership Subscriptions WordPress plugin before 3.0.7 does not perform capability or nonce checks on one of its payment-related AJAX actions, allowing any authenticated user with Subscriber-level access and above to disclose the payment details of any member by enumerat",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-14845 - NewStatPress < 1.4.5 - Unauthenticated Stored XSS via Top Post Widget",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14845",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T07:16:25.000Z",
-        "contentSnippet": "The NewStatPress WordPress plugin before 1.4.5 does not sanitise and escape data derived from unauthenticated visitor requests before storing it and later outputting it in one of its widgets, which could allow unauthenticated attackers to perform Stored Cross-Site Scripting attac",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-14843 - Events Made Easy < 3.1.4 - Unauthenticated Person Data Modification via IDOR",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14843",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T07:16:25.000Z",
-        "contentSnippet": "The Events Made Easy WordPress plugin before 3.1.4 does not verify that the requester is authorized to modify the targeted record when handling an unauthenticated data-change request, relying only on a public nonce with no per-record token or ownership check, allowing unauthentic",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-14834 - Mailgun for WordPress < 2.2.1 - Unauthenticated Arbitrary Mailgun List Subscription via add_list AJAX",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14834",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T07:16:25.000Z",
-        "contentSnippet": "The Mailgun for WordPress plugin before 2.2.1 does not perform any capability or nonce check on an unauthenticated AJAX action that adds subscribers to the site owner's configured email service mailing lists, allowing unauthenticated attackers to enrol arbitrary email addresses i",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-14833 - Lightbox with PhotoSwipe < 5.9.0 - Author+ Stored XSS via data-lbwps-caption Attribute",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14833",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T07:16:25.000Z",
-        "contentSnippet": "The Lightbox with PhotoSwipe WordPress plugin before 5.9.0 does not sanitise or escape a link data attribute before rendering it into the image lightbox caption in the browser, allowing users with author-level access and above (who lack the unfiltered_html capability) to store Ja",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-14830 - FlxWoo < 3.1.1 - Unauthenticated Payment Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14830",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T07:16:25.000Z",
-        "contentSnippet": "The FlxWoo WordPress plugin before 3.1.1 does not verify with the payment processor that a checkout session was actually paid before marking the associated order as paid, allowing unauthenticated attackers to complete WooCommerce orders without paying.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-14554 - Check & Log Email < 2.0.15 - Admin+ SQL Injection via d and s Parameters",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14554",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T07:16:24.000Z",
-        "contentSnippet": "The Check & Log Email WordPress plugin before 2.0.15 does not properly sanitize and escape parameters before using them in SQL queries, allowing users with administrator privileges to perform SQL injection attacks.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-63220 - CodeIgniter: Spoofable forwarded HTTPS headers in IncomingRequest::isSecure()",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63220",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T04:17:24.000Z",
-        "contentSnippet": "CodeIgniter is a PHP full-stack web framework. In versions prior to 4.7.4, IncomingRequest::isSecure() trusted the X-Forwarded-Proto and Front-End-Https headers from any incoming request, allowing an attacker could spoof these headers and cause the application to incorrectly trea",
-        "cveScore": 4.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-62323 - Cloudreve: Unauthorized file write via WOPI view sessions whose access token secret is ignored",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62323",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T04:17:24.000Z",
-        "contentSnippet": "Cloudreve is a self-hosted file management and sharing system. Prior to 4.17.0, ViewerSessionValidation uses only the session-id prefix of a WOPI access token and does not enforce the requested viewer action, allowing a malicious or compromised WOPI viewer with a view session to ",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
+      {
+        "title": "LingBot-Map Tutorial: GPU-Aware Inference and Point Cloud Export",
+        "link": "https://www.marktechpost.com/2026/07/31/lingbot-map-tutorial-gpu-aware-inference-and-point-cloud-export/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-07-31T20:27:13.000Z",
+        "contentSnippet": "Discover how to implement a streaming 3D reconstruction pipeline using LingBot-Map. From GPU-aware configuration and preprocessing to GCTStream model inference and point cloud generation, this guide walks you through the steps to convert image or video sequences into consistent 3"
+      },
+      {
+        "title": "Announcing the Agentic Catalog Experience in Amazon Quick",
+        "link": "https://aws.amazon.com/blogs/machine-learning/announcing-the-agentic-catalog-experience-in-amazon-quick/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-07-31T19:53:04.000Z",
+        "contentSnippet": "Amazon Quick introduces the Agentic Catalog Experience, an AI-powered workflow for data curators to discover upstream catalog assets in natural language and auto-create Datasets and Topics with inherited semantics. Now in preview for AWS Glue Data Catalog and Databricks Unity Cat"
+      },
       {
         "title": "Optimizing production agents with Amazon Bedrock AgentCore Observability",
         "link": "https://aws.amazon.com/blogs/machine-learning/optimizing-production-agents-with-amazon-bedrock-agentcore-observability/",
@@ -1590,20 +1604,6 @@
         "source": "MarkTechPost",
         "isoDate": "2026-07-17T07:53:02.000Z",
         "contentSnippet": "NVIDIA released Nemotron 3 Embed on July 15 and 16, 2026. The collection has three open checkpoints: Nemotron-3-Embed-8B-BF16, Nemotron-3-Embed-1B-BF16, and Nemotron-3-Embed-1B-NVFP4. The 8B ranks #1 on RTEB at 78.46 average NDCG@10. The 1B came from ModelOpt NAS pruning plus COS"
-      },
-      {
-        "title": "Moonshot AI Releases Kimi K3: A 2.8 Trillion Parameter Open MoE Model With Kimi Delta Attention and 1M Context",
-        "link": "https://www.marktechpost.com/2026/07/16/moonshot-ai-releases-kimi-k3-a-2-8-trillion-parameter-open-moe-model-with-kimi-delta-attention-and-1m-context/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-07-16T23:47:05.000Z",
-        "contentSnippet": "Moonshot AI released Kimi K3 on July 16, 2026. It is a 2.8-trillion-parameter open MoE model built on Kimi Delta Attention and Attention Residuals, activating 16 of 896 experts. The post Moonshot AI Releases Kimi K3: A 2.8 Trillion Parameter Open MoE Model With Kimi Delta Attenti"
-      },
-      {
-        "title": "Build enterprise search for agents with Amazon Bedrock Managed Knowledge Base",
-        "link": "https://aws.amazon.com/blogs/machine-learning/build-enterprise-search-for-agents-with-amazon-bedrock-managed-knowledge-base/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-07-16T21:29:14.000Z",
-        "contentSnippet": "In this post, we walk through the three pillars that make this possible: simplified setup, smarter retrieval, and production readiness. We also show you code examples for setting up a knowledge base and retrieving from it."
       }
     ],
     "virtualization": [
@@ -2310,6 +2310,13 @@
     ],
     "hardware": [
       {
+        "title": "ScaleFlux KV Cache SSD Platform Claims 7-10+ DWPD and 200+ FDP Streams",
+        "link": "https://www.storagereview.com/news/scaleflux-kv-cache-ssd-platform-claims-7-10-dwpd-and-200-fdp-streams",
+        "source": "StorageReview",
+        "isoDate": "2026-07-31T20:43:51.000Z",
+        "contentSnippet": "ScaleFlux has introduced an AI-optimized SSD platform designed for NVIDIA CMX and other inference architectures that use SSDs as a shared KV-cache tier beyond GPU HBM and host DRAM. The platform combines high-endurance SSD hardware, Flexible Data Placement (FDP) support, and work"
+      },
+      {
         "title": "Andromeda Standardizes Storage Across 50+ GPU Providers on WEKA NeuralMesh",
         "link": "https://www.storagereview.com/news/andromeda-standardizes-storage-across-50-gpu-providers-on-weka-neuralmesh",
         "source": "StorageReview",
@@ -3001,13 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-07-28T10:00:00.000Z",
         "contentSnippet": "Daring coder gets Doom running with regular expressions at 180 seconds per frame by using one text string to the machine, engine, and video output"
-      },
-      {
-        "title": "MSI and Colorful raise Nvidia RTX 50-series prices in China by up to 59% across the entire lineup — change in distributer pricing suggests GPU price hikes are on the way",
-        "link": "https://www.tomshardware.com/pc-components/gpus/msi-and-colorful-raise-nvidia-rtx-50-series-prices-in-china-by-up-to-59-percent-across-the-entire-lineup-change-in-distributer-pricing-suggests-gpu-price-hikes-are-on-the-way",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-27T19:47:49.000Z",
-        "contentSnippet": "GPU prices seem to be on the rise once again with official distributor announcements in China hiking up the entire Blackwell lineup overnight. Compared to MSRP, we're witnessing a staggering bump of up to 75% at the top-end."
       }
     ]
   }
