@@ -1,8 +1,188 @@
 {
-  "updatedAt": "2026-07-31T02:00:27.404Z",
+  "updatedAt": "2026-07-31T05:57:17.707Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-63220 - CodeIgniter: Spoofable forwarded HTTPS headers in IncomingRequest::isSecure()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63220",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T04:17:24.000Z",
+        "contentSnippet": "CodeIgniter is a PHP full-stack web framework. In versions prior to 4.7.4, IncomingRequest::isSecure() trusted the X-Forwarded-Proto and Front-End-Https headers from any incoming request, allowing an attacker could spoof these headers and cause the application to incorrectly trea",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-62323 - Cloudreve: Unauthorized file write via WOPI view sessions whose access token secret is ignored",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62323",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T04:17:24.000Z",
+        "contentSnippet": "Cloudreve is a self-hosted file management and sharing system. Prior to 4.17.0, ViewerSessionValidation uses only the session-id prefix of a WOPI access token and does not enforce the requested viewer action, allowing a malicious or compromised WOPI viewer with a view session to ",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-55502 - Cloudreve: OAuth Admin.Read scope can update OneDrive storage policy credentials",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55502",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T04:17:23.000Z",
+        "contentSnippet": "Cloudreve is a self-hosted file management and sharing system. Prior to 4.17.0, POST /api/v4/admin/policy/oauth/signin requires only Admin.Read even though GetOauthRedirectService persists caller-supplied OneDrive secret and app_id values, allowing an OAuth token without Admin.Wr",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-55499 - Cloudreve: Broken access control in file event stream leaks activity events for unshared siblings to single-file share recipients",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55499",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T04:17:23.000Z",
+        "contentSnippet": "Cloudreve is a self-hosted file management and sharing system. Prior to 4.17.0, a single-file share event-stream subscription resolves the share root to the owner’s parent folder and subscribes to that folder topic, allowing an authenticated share recipient to receive names, path",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-55497 - Cloudreve: Server crash through image decompression/pixel bomb in thumbnail & avatar decoding (DoS)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55497",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T04:17:23.000Z",
+        "contentSnippet": "Cloudreve is a self-hosted file management and sharing system. Prior to 4.17.0, the built-in thumbnail and avatar image decoders limit compressed file size but do not limit decoded pixel dimensions, allowing an authenticated user to submit a small PNG, JPEG, or GIF that triggers ",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-55496 - Cloudreve: Inactive/banned account emails leaked via GET /api/v4/user/search because SearchActive() omits the active-status predicate",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55496",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T04:17:22.000Z",
+        "contentSnippet": "Cloudreve is a self-hosted file management and sharing system. Prior to 4.17.0, GET /api/v4/user/search calls SearchActive without adding a StatusActive predicate and serializes matches at RedactLevelUser, allowing any logged-in user to enumerate email addresses and profile metad",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-55495 - Cloudreve: Path Traversal in WOPI PUT_RELATIVE Allows Arbitrary File Creation in Owner Account",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55495",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T04:17:22.000Z",
+        "contentSnippet": "Cloudreve is a self-hosted file management and sharing system. Prior to 4.17.0, the WOPI PUT_RELATIVE handler passes X-WOPI-SuggestedTarget to URI.JoinRaw as a path rather than a filename, allowing slash and dot-dot segments to escape the source file directory and create or condi",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-43833 - Stack-based Buffer Overflow Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-43833",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T04:17:22.000Z",
+        "contentSnippet": "Successful exploitation of the vulnerability could allow an authenticated attacker to exploit a stack-based buffer overflow in the upload functionality to conduct code execution.",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-43832 - Stack-based Buffer Overflow Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-43832",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T04:17:22.000Z",
+        "contentSnippet": "Successful exploitation of the vulnerability could allow an unauthenticated attacker to exploit a stack-based buffer overflow in the Cookie parsing methods to conduct code execution when the SafeEnhancement feature is enabled.",
+        "cveScore": 9.2,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-43831 - Stack-based Buffer Overflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-43831",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T04:17:21.000Z",
+        "contentSnippet": "Successful exploitation of the vulnerability could allow an unauthenticated attacker to exploit a stack-based buffer overflow in the log message functionality to conduct code execution.",
+        "cveScore": 9.2,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-43830 - Command Injection Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-43830",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T04:17:21.000Z",
+        "contentSnippet": "Successful exploitation of the command injection vulnerability could allow an attacker to execute arbitrary commands during the firmware upgrade file verification process.",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-43829 - Stack-based Buffer Overflow Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-43829",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T04:17:20.000Z",
+        "contentSnippet": "Successful exploitation of the vulnerability could allow an unauthenticated attacker to exploit a stack-based buffer overflow in the password functionality to conduct code execution when the SafeEnhancement feature is enabled.",
+        "cveScore": 9.2,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-6890 - Use of default credentials vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6890",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T03:16:25.000Z",
+        "contentSnippet": "A use of default credentials vulnerability in the Advantech ECU-1251D allows a remote attacker to gain unauthorised access to the device via SSH using the default root account with no password, as documented in the device manual. No prompt or guidance to change these credentials ",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-6889 - Denial of service vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6889",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T03:16:25.000Z",
+        "contentSnippet": "A denial of service vulnerability in the Advantech ECU-1251D allows a network-adjacent attacker to send a DNP3 signal to the Digital Output address of the device, causing the DNP3Daemon to invoke a non-existent system file and enter an indefinite restart loop. While the device re",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-18157 - Yggdrasil-worker-package-manager: yggdrasil-worker-package-manager: remote code execution via apt argument injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18157",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T03:16:25.000Z",
+        "contentSnippet": "A flaw was found in yggdrasil-worker-package-manager. A local attacker with existing access to the system could exploit an argument injection vulnerability in the APT backend. This allows specially crafted package names, which begin with a hyphen, to be misinterpreted as command ",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-14541 - Authentication Bypass and Audience Confusion in MCP Toolbox OAuth Provider",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14541",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T03:16:24.000Z",
+        "contentSnippet": "An authentication bypass and audience confusion vulnerability exists in the Google OAuth provider component of Google mcp-toolbox version 1.4.0. When a Google authService is initialized with mcpEnabled: true but lacks an explicitly defined audience or clientId, the ValidateMCPAut",
+        "cveScore": 8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-14540 - Server-Side Request Forgery via Unrestricted HTTP Redirection in MCP Toolbox",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14540",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T02:16:29.000Z",
+        "contentSnippet": "A Server-Side Request Forgery (SSRF) vulnerability exists in the generic HTTP source and tool components of Google mcp-toolbox versions 0.3.0 through 1.4.0. While the toolbox implements baseline input sanitization for user-controlled parameters, the underlying HTTP client (intern",
+        "cveScore": 8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-14539 - Denial of Service via Unrestricted Payload Buffering in MCP Toolbox",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14539",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T02:16:28.000Z",
+        "contentSnippet": "An allocation of resources without limits vulnerability in the HTTP handler component of Google mcp-toolbox versions up to and including 1.4.0 allows an unauthenticated attacker to cause a denial of service (DoS). The /mcp endpoint handler reads incoming payloads directly into sy",
+        "cveScore": 6.6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-14538 - BigQuery Dataset Allowlist Bypass via Metadata Dry-Run in MCP Toolbox",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14538",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T02:16:28.000Z",
+        "contentSnippet": "An improper authorization and security-boundary bypass vulnerability in the bigquery-execute-sql tool component of Google mcp-toolbox versions 0.16.1 through 1.4.0 allows an authenticated attacker to bypass allowedDatasets validation checks. The toolbox relies on the BigQuery dry",
+        "cveScore": 5.7,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-14537 - Authorization Bypass in MCP Toolbox Legacy HTTP Endpoints",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14537",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T02:16:27.000Z",
+        "contentSnippet": "Incorrect Authorization in the direct HTTP API tool invocation endpoint in Google mcp-toolbox versions v1.3.0 and v1.4.0 allows an unauthenticated attacker to invoke tools protected by the scopeRequired feature via sending tool invocation requests through legacy HTTP endpoints wh",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-58039 - Node.js Permission Model File Write Bypass",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-58039",
@@ -722,186 +902,6 @@
         "contentSnippet": "SQLite 3.41 is vulnerable to use after free in the jsonArrayLengthFunc function.",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-51293 - SQLite Use-After-Free Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-51293",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-30T17:16:32.000Z",
-        "contentSnippet": "A use-after-free vulnerability exists in SQLite 3.41 when the jsonBlobAppendNode() function is invoked subsequent to sqlite3DbFree() being called on the aBlob member of the Parse structure.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-51292 - SQLite Use-After-Free Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-51292",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-30T17:16:32.000Z",
-        "contentSnippet": "sqlite 3.41 has a use-after-free vulnerability in the memory buffer processing logic. Remote attackers can exploit this flaw via specially crafted input to cause arbitrary code execution, sensitive information leakage, or service denial.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-51291 - SQLite JSON Cache Use-After-Free",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-51291",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-30T17:16:32.000Z",
-        "contentSnippet": "sqlite 3.41 is vulnerable to use after free in the json.c jsonCacheInsert function of the JSON cache management module.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-51290 - SQLite B-tree Module Use-After-Free Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-51290",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-30T17:16:32.000Z",
-        "contentSnippet": "SQLite 3.41 has a use-after-free vulnerability in the shared cache lock management logic of the btree module. The program frees a BtLock structure without removing the node from the linked list. Subsequent linked list traversal accesses the released memory, which can lead to deni",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-13379 - OpenVPN Windows Interactive Service DNS Pollution and Denial of Service",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13379",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-30T17:16:28.000Z",
-        "contentSnippet": "The Windows interactive service in OpenVPN 2.7_alpha1 through 2.7.4 allows remote attackers to cause persistent DNS state pollution or a service crash via a crafted search domain during the disconnection process",
-        "cveScore": 5.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-13117 - OpenVPN Use-After-Free Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13117",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-30T17:16:28.000Z",
-        "contentSnippet": "An incomplete guard in OpenVPN 2.6.0 through 2.6.20 and 2.7_alpha1 through 2.7.4 allows remote authenticated peers to trigger a use-after-free during TLS session promotion, potentially leading to a denial of service or memory leakage",
-        "cveScore": 6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-12996 - OpenVPN Use-After-Free Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12996",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-30T17:16:28.000Z",
-        "contentSnippet": "A use-after-free in OpenVPN 2.6.0 through 2.6.20 and 2.7_alpha1 through 2.7.4 allows remote authenticated peers to potentially cause a denial of service or leak memory via crafted packets during TLS session promotion or expiry",
-        "cveScore": 6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-12945 - Langflow is affected by exposed credentials due to multiple unauthenticated and insufficiently authorized API endpoints",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12945",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-30T17:16:28.000Z",
-        "contentSnippet": "IBM Langflow OSS 1.0.0 through 1.10.1 allows authenticated users to access and manipulate other users' build jobs through improper access control on log retrieval and unauthenticated build endpoints.",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-12940 - Langflow is affected by remote code execution due to multiple unauthenticated and insufficiently authorized API endpoints",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12940",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-30T17:16:28.000Z",
-        "contentSnippet": "IBM Langflow OSS 1.0.0 through 1.10.1 are vulnerable to unauthenticated remote code execution via environment variable injection in the MCP (Model Context Protocol) stdio launcher. The vulnerability exists in src/lfx/src/lfx/base/mcp/util.py where the DANGEROUS_ENV_VARS blocklist",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-12932 - OpenVPN Memory Leak Denial of Service",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12932",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-30T17:16:27.000Z",
-        "contentSnippet": "A memory leak in the tls-crypt-v2 client key extraction in OpenVPN 2.5.0 through 2.6.20 and 2.7_alpha1 through 2.7.4 allows remote attackers to cause a denial of service (memory exhaustion) via a flood of crafted packets",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-11885 - Power System update in Buffer Copy",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11885",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-30T17:16:27.000Z",
-        "contentSnippet": "IBM PowerVM Hypervisor FW1110.00 through FW1110.20, FW1060.00 through FW1060.71, and FW950.00 through FW950.H1 A carefully crafted OS hypervisor call can cause the PowerVM hypervisor to crash or compromise OS memory integrity.",
-        "cveScore": 8.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-11771 - OpenVPN NTLM Proxy Authentication Off-by-One Buffer Write Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11771",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-30T17:16:27.000Z",
-        "contentSnippet": "OpenVPN version 2.1.0 through 2.6.20 and 2.7_alpha1 through 2.7.4 allows attackers via an off-by-one buffer write in the NTLM proxy authentication to potentially cause a crash via a crafted NTLM response from a malicious proxy server",
-        "cveScore": 7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-12118 - IBM webMethods Integration could allow an unauthenticated remote attacker to execute arbitrary code on the system due to the deserialization of untrusted data",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12118",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-30T17:00:50.000Z",
-        "contentSnippet": "IBM webMethods Integration (on prem) 10.15, 10.11 could allow an unauthenticated remote attacker to execute arbitrary code on the system due to the deserialization of untrusted data.",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-57862 - Kanboard 1.2.52 and prior SSRF Filter Bypass via Hexadecimal IP Notation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57862",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-30T15:26:23.000Z",
-        "contentSnippet": "Kanboard 1.2.52 and prior contains a server-side request forgery vulnerability that allows authenticated users to bypass SSRF protections by supplying hexadecimal IP address notation in user-controlled URLs. Attackers can submit hexadecimal-encoded internal IP addresses through t",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-15657 - foreUP customer REST API allows authenticated users to read cleartext payment-processor merchant credentials",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15657",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-30T15:22:40.000Z",
-        "contentSnippet": "A vulnerability in the foreUP customer REST API allows any authenticated user to read cleartext payment-processor merchant credentials in the response body.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-44617 - Apache Zeppelin: LDAP filter injection in LdapRealm — incomplete fix of CVE-2024-31867",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44617",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-30T15:22:39.000Z",
-        "contentSnippet": "LDAP filter injection vulnerability in Apache Zeppelin. LdapRealm used RFC 4514 distinguished-name escaping when constructing LDAP search filters instead of RFC 4515 filter escaping, leaving special filter characters insufficiently escaped. This is an incomplete fix of CVE-2024-3",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-44616 - Apache Zeppelin: LDAP injection in ActiveDirectoryGroupRealm filter construction",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44616",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-30T15:21:21.000Z",
-        "contentSnippet": "LDAP injection vulnerability in Apache Zeppelin. ActiveDirectoryGroupRealm constructed LDAP search filters without escaping user-controlled input, allowing an authenticated attacker to inject LDAP filter syntax through the user-search endpoint and potentially expose directory inf",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-44613 - Apache Zeppelin: Cross-site request forgery in REST and WebSocket request handling",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44613",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-30T15:19:40.000Z",
-        "contentSnippet": "Cross-Site Request Forgery (CSRF) vulnerability in Apache Zeppelin. The default CORS configuration allowed cross-origin state-changing requests and accepted text/plain request bodies, allowing an attacker who lures an authenticated user to a malicious site to perform actions on t",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-15658 - foreUP customer REST API allows unauthenticated endpoint access",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15658",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-30T15:18:31.000Z",
-        "contentSnippet": "A vulnerability in the foreUP customer REST API allows any authenticated, low-privilege customer to access an endpoint that returns the records of other users without checking that the caller owns the data associated with that record.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-6540 - L7 policy bypass via unnormalized HTTP path matching",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6540",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-30T15:16:37.000Z",
-        "contentSnippet": "Calico's Application Layer Policy (disabled by default), which enforces HTTP rules through Dikastes, fails to perform URL path normalization. As a result, HTTP requests using path-traversal segments, encoded slashes, or repeated slashes are not correctly evaluated by Prefix path ",
-        "cveScore": 7.9,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
