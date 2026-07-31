@@ -1,32 +1,86 @@
 {
-  "updatedAt": "2026-07-31T20:55:16.407Z",
+  "updatedAt": "2026-07-31T21:58:25.459Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
-        "title": "CVE-2026-53599 - Redaxo has a Mediapool isAllowedExtension bypass via multi-segment filename that leads to authenticated RCE on Apache mod_php multi-extension handlers",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53599",
+        "title": "CVE-2026-65841 - Jodit has cross-site scripting (XSS) via nested in SVG that bypasses clean-html sanitization",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65841",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-31T19:43:15.000Z",
-        "contentSnippet": "REDAXO is a PHP-based content management system. From 5.18.2 until 5.21.1, rex_mediapool::isAllowedExtension in redaxo/src/addons/mediapool/lib/mediapool.php lets an authenticated backend user with media[upload] permission upload a JPEG/PHP polyglot named shell.php.any.jpg, which",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "isoDate": "2026-07-31T20:16:53.000Z",
+        "contentSnippet": "Jodit Editor is a WYSIWYG editor with a built-in file browser & image editor. Prior to 4.13.6, Jodit's clean-html denyTags filter does not normalize foreign SVG or MathML script node names, allowing a script element nested directly in SVG or MathML to remain in editor.value and e",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-62999 - Copier: Percent-encoded dot segments in template URLs can allow trusted-prefix escape (Incomplete fix for trust-prefix bypass)",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-62999",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-31T19:41:55.000Z",
+        "isoDate": "2026-07-31T20:16:53.000Z",
         "contentSnippet": "Copier is a library and CLI app for rendering project templates. From 9.5.0 through 9.16.0, percent-encoded parent-directory segments or encoded path separators in a template URL can match a configured trusted repository prefix before an HTTP server or Git transport decodes the p",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-62959 - Coturn: Pre-authentication heap memory disclosure in ACME redirect (`try_acme_redirect`)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62959",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T20:16:53.000Z",
+        "contentSnippet": "Coturn is a free open source implementation of TURN and STUN Server. From 4.5.2 through 4.14.0, when Coturn is started with --acme-redirect and exposes a plaintext-TCP listener, an unauthenticated remote client can send a single ordinary HTTP GET request and receive a 301 respons",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-62324 - Jodit has incomplete javascript: scheme normalization in sanitizeHTMLElement href check that allows link XSS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62324",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T20:16:53.000Z",
+        "contentSnippet": "Jodit Editor is a WYSIWYG editor with a built-in file browser & image editor. Prior to 4.12.31, Jodit's sanitizeHTMLElement method fails to use isDangerousUrl to normalize javascript: href values before checking the scheme, allowing case variants, control-byte prefixes, and embed",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-55825 - Contao: Possible path traversal in job download URIs",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55825",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T20:16:52.000Z",
+        "contentSnippet": "Contao is an Open Source CMS. In versions 5.7.0 through 5.7.6, an authenticated backend user who can access one job can request an attachment identifier containing ../ segments and make the job attachment download endpoint read a file from another job directory inside var/job-att",
+        "cveScore": 3.1,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-53599 - Redaxo has a Mediapool isAllowedExtension bypass via multi-segment filename that leads to authenticated RCE on Apache mod_php multi-extension handlers",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53599",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T20:16:51.000Z",
+        "contentSnippet": "REDAXO is a PHP-based content management system. From 5.18.2 until 5.21.1, rex_mediapool::isAllowedExtension in redaxo/src/addons/mediapool/lib/mediapool.php lets an authenticated backend user with media[upload] permission upload a JPEG/PHP polyglot named shell.php.any.jpg, which",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-53551 - free5GC AUSF: null byte injection in supiOrSuci causes HTTP 500 internal service failure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53551",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T20:16:51.000Z",
+        "contentSnippet": "free5GC is an open-source implementation of the 5G core network. Prior to 1.4.5, the free5GC AUSF (Authentication Server Function) does not validate the supiOrSuci field in UE authentication requests. Null bytes (\\x00) and other control characters pass through JSON parsing unchan",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-53510 - Savon::Model evaluates WSDL operation names as Ruby source",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-53510",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-31T19:38:33.000Z",
+        "isoDate": "2026-07-31T20:16:51.000Z",
         "contentSnippet": "Savon is a Ruby SOAP client. From 0.9.8 until 2.17.2, Savon::Model .all_operations interpolates attacker-controlled WSDL operation names into Ruby source passed to module_eval, allowing Ruby code execution in the application process. This issue is fixed in version 2.17.2.",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-38711 - TOTOLINK Routers Command Injection Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-38711",
+        "source": "cvefeed.io",
+        "isoDate": "2026-07-31T20:16:50.000Z",
+        "contentSnippet": "TR1200 v2.4.15, TR3000 v2.4.21, WR300 v2.4.25, WR1200 v2.4.23, WR1300 v2.4.22, WR1500 v2.3.10, WR3000 v2.4.19, WR3600 v2.3.16, and WR6500 v2.3.15 were discovered to contain a command injection vulnerability in the system.upgrade_check interface. This vulnerability allows attacker",
         "cveScore": 0,
         "cveSeverity": "NA"
       },
@@ -34,7 +88,7 @@
         "title": "CVE-2026-18394 - Incorrect authorization in Strands Agents Tools http_request proxy credential exfiltration",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-18394",
         "source": "cvefeed.io",
-        "isoDate": "2026-07-31T19:34:15.000Z",
+        "isoDate": "2026-07-31T20:16:49.000Z",
         "contentSnippet": "Incorrect authorization in the http_request tool in Strands Agents Tools before 0.8.2 might allow remote attackers to obtain credentials configured via HTTP_REQUEST_TOKEN_CONFIG by influencing the LLM to route requests through actor-controlled proxy infrastructure. To remediate t",
         "cveScore": 7.4,
         "cveSeverity": "HIGH"
@@ -137,33 +191,6 @@
         "contentSnippet": "Buffer overflow in NTPsec's Zyfer refclock allows local attacker to crash ntpd",
         "cveScore": 4.7,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-65841 - Jodit has cross-site scripting (XSS) via nested in SVG that bypasses clean-html sanitization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65841",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T19:16:05.000Z",
-        "contentSnippet": "Jodit Editor is a WYSIWYG editor with a built-in file browser & image editor. Prior to 4.13.6, Jodit's clean-html denyTags filter does not normalize foreign SVG or MathML script node names, allowing a script element nested directly in SVG or MathML to remain in editor.value and e",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-62324 - Jodit has incomplete javascript: scheme normalization in sanitizeHTMLElement href check that allows link XSS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62324",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T19:08:03.000Z",
-        "contentSnippet": "Jodit Editor is a WYSIWYG editor with a built-in file browser & image editor. Prior to 4.12.31, Jodit's sanitizeHTMLElement method fails to use isDangerousUrl to normalize javascript: href values before checking the scheme, allowing case variants, control-byte prefixes, and embed",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-55825 - Contao: Possible path traversal in job download URIs",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55825",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T19:07:40.000Z",
-        "contentSnippet": "Contao is an Open Source CMS. In versions 5.7.0 through 5.7.6, an authenticated backend user who can access one job can request an attachment identifier containing ../ segments and make the job attachment download endpoint read a file from another job directory inside var/job-att",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       },
       {
         "title": "CVE-2026-55100 - hashi-vault-js has a path traversal and query parameter injection",
@@ -875,33 +902,6 @@
         "contentSnippet": "The Product Feed Manager For WooCommerce WordPress plugin before 7.6.1 does not properly sanitise and escape product-feed custom filter rules before using them in a SQL query, allowing users with the Contributor role and above to perform SQL injection attacks.",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-15209 - JS Help Desk – AI-Powered Support & Ticketing System < 3.1.5 - Subscriber+ Cross-User Support Ticket Disclosure via IDOR",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15209",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T07:16:26.000Z",
-        "contentSnippet": "The JS Help Desk WordPress plugin before 3.1.5 does not verify that the requesting user owns the ticket being loaded: a low-privileged authenticated user can supply another user's ticket ID and read that ticket's contents, including the reporter's PII and message body.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-15048 - GeekyBot < 1.2.8 - Unauthenticated Sensitive Information Exposure via Chat History",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15048",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T07:16:26.000Z",
-        "contentSnippet": "The Geeky Bot WordPress plugin before 1.2.8 does not perform an authorization check on one of its AJAX actions, allowing unauthenticated users to retrieve chat-history session metadata including WordPress usernames, user IDs, and timestamps.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-14931 - JS Help Desk < 3.1.4 - Contributor+ User Email Disclosure",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14931",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T07:16:26.000Z",
-        "contentSnippet": "The JS Help Desk WordPress plugin before 3.1.4 grants a support-agent capability to the Contributor role on activation and does not perform a capability check on a user-listing handler, allowing Contributor-level users to enumerate the email addresses of all registered WordPress ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       }
     ],
     "ai": [
@@ -953,6 +953,13 @@
         "source": "MarkTechPost",
         "isoDate": "2026-07-31T04:44:12.000Z",
         "contentSnippet": "In this tutorial, we demonstrate how to build and execute a multi-agent workflow with Omnigent in a secure, isolated Python environment. Learn to integrate live exchange-rate data, implement hierarchical agent delegation for financial text auditing, and apply hard governance poli"
+      },
+      {
+        "title": "Deploying Kimi K3 on Amazon SageMaker HyperPod and Amazon EKS",
+        "link": "https://aws.amazon.com/blogs/machine-learning/deploying-kimi-k3-on-amazon-sagemaker-hyperpod-and-amazon-eks/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-07-30T17:22:32.000Z",
+        "contentSnippet": "This post walks through deploying Kimi K3 on AWS using two approaches: Amazon SageMaker HyperPod, and Amazon Elastic Kubernetes Service (Amazon EKS) cluster."
       },
       {
         "title": "Deploying Kimi K3 on AWS",
@@ -1597,13 +1604,6 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-07-17T16:32:06.000Z",
         "contentSnippet": "In this post, we cover a high-level view of the Smartsheet remote MCP architecture, with a focus on the AWS infrastructure behind it. This includes security, governance, scaling and deployment, and the AI-specific optimizations Smartsheet built on AWS."
-      },
-      {
-        "title": "NVIDIA AI Releases Nemotron 3 Embed: An Open Embedding Collection Whose 8B Checkpoint Ranks #1 on RTEB",
-        "link": "https://www.marktechpost.com/2026/07/17/nvidia-ai-releases-nemotron-3-embed-an-open-embedding-collection-whose-8b-checkpoint-ranks-1-on-rteb/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-07-17T07:53:02.000Z",
-        "contentSnippet": "NVIDIA released Nemotron 3 Embed on July 15 and 16, 2026. The collection has three open checkpoints: Nemotron-3-Embed-8B-BF16, Nemotron-3-Embed-1B-BF16, and Nemotron-3-Embed-1B-NVFP4. The 8B ranks #1 on RTEB at 78.46 average NDCG@10. The 1B came from ModelOpt NAS pruning plus COS"
       }
     ],
     "virtualization": [
