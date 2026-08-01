@@ -1,8 +1,53 @@
 {
-  "updatedAt": "2026-08-01T20:07:53.740Z",
+  "updatedAt": "2026-08-01T21:46:01.064Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-18556 - Unauthenticated administrative account takeover",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18556",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-01T20:16:37.000Z",
+        "contentSnippet": "Authentication bypass using an alternate path or channel vulnerability in N-able N-central allows Authentication Bypass. This issue affects N-central: through 2026.1.",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-55735 - Guardian.revoke/3 acts on unverified token claims, allowing forged-token session revocation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55735",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-01T19:16:42.000Z",
+        "contentSnippet": "Improper Verification of Cryptographic Signature in ueberauth guardian allows an unauthenticated attacker to revoke a victim's session with a forged token. Guardian.revoke/3 in lib/guardian.ex decodes the supplied token with peek/1, which performs no signature verification (it on",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-55734 - guardian atom exhaustion in Guardian.Permissions.encode_permissions!/1",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55734",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-01T19:16:42.000Z",
+        "contentSnippet": "Allocation of Resources Without Limits or Throttling vulnerability in ueberauth guardian (Guardian.Permissions module) allows a denial of service via BEAM atom-table exhaustion. This vulnerability is associated with program file lib/guardian/permissions.ex and program routines 'E",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-55733 - Atom-table exhaustion denial of service in Guardian permissions AtomEncoding via unbounded atom creation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55733",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-01T19:16:42.000Z",
+        "contentSnippet": "Allocation of Resources Without Limits or Throttling in ueberauth guardian allows denial of service via unbounded atom creation from attacker-controlled binary input. Guardian.Permissions.AtomEncoding encodes permission scopes by passing arbitrary binaries to String.to_atom/1. Wh",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-54894 - Atom-table exhaustion denial of service in Guardian via unbounded atom creation from binary keys",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54894",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-01T19:16:41.000Z",
+        "contentSnippet": "Allocation of Resources Without Limits or Throttling in ueberauth guardian allows denial of service via unbounded atom creation from attacker-influenced binary input. Guardian.Plug.Keys derives connection and session namespace keys by passing arbitrary binaries to String.to_atom/",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
       {
         "title": "CVE-2026-67355 - guzzlehttp/guzzle before 7.15.1 Host-only Cookie Scope",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-67355",
@@ -857,51 +902,6 @@
         "contentSnippet": "Jodit Editor is a WYSIWYG editor with a built-in file browser & image editor. Prior to 4.12.31, Jodit's sanitizeHTMLElement method fails to use isDangerousUrl to normalize javascript: href values before checking the scheme, allowing case variants, control-byte prefixes, and embed",
         "cveScore": 5.4,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-55825 - Contao: Possible path traversal in job download URIs",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55825",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T20:16:52.000Z",
-        "contentSnippet": "Contao is an Open Source CMS. In versions 5.7.0 through 5.7.6, an authenticated backend user who can access one job can request an attachment identifier containing ../ segments and make the job attachment download endpoint read a file from another job directory inside var/job-att",
-        "cveScore": 3.1,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-53599 - Redaxo has a Mediapool isAllowedExtension bypass via multi-segment filename that leads to authenticated RCE on Apache mod_php multi-extension handlers",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53599",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T20:16:51.000Z",
-        "contentSnippet": "REDAXO is a PHP-based content management system. From 5.18.2 until 5.21.1, rex_mediapool::isAllowedExtension in redaxo/src/addons/mediapool/lib/mediapool.php lets an authenticated backend user with media[upload] permission upload a JPEG/PHP polyglot named shell.php.any.jpg, which",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-53551 - free5GC AUSF: null byte injection in supiOrSuci causes HTTP 500 internal service failure",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53551",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T20:16:51.000Z",
-        "contentSnippet": "free5GC is an open-source implementation of the 5G core network. Prior to 1.4.5, the free5GC AUSF (Authentication Server Function) does not validate the supiOrSuci field in UE authentication requests. Null bytes (\\x00) and other control characters pass through JSON parsing unchan",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-53510 - Savon::Model evaluates WSDL operation names as Ruby source",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53510",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T20:16:51.000Z",
-        "contentSnippet": "Savon is a Ruby SOAP client. From 0.9.8 until 2.17.2, Savon::Model .all_operations interpolates attacker-controlled WSDL operation names into Ruby source passed to module_eval, allowing Ruby code execution in the application process. This issue is fixed in version 2.17.2.",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-38711 - TOTOLINK Routers Command Injection Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-38711",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T20:16:50.000Z",
-        "contentSnippet": "TR1200 v2.4.15, TR3000 v2.4.21, WR300 v2.4.25, WR1200 v2.4.23, WR1300 v2.4.22, WR1500 v2.3.10, WR3000 v2.4.19, WR3600 v2.3.16, and WR6500 v2.3.15 were discovered to contain a command injection vulnerability in the system.upgrade_check interface. This vulnerability allows attacker",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       }
     ],
     "ai": [
