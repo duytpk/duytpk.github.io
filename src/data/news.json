@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-08-01T13:00:26.577Z",
+  "updatedAt": "2026-08-01T14:52:39.184Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-67355 - guzzlehttp/guzzle before 7.15.1 Host-only Cookie Scope",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67355",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-01T13:17:06.000Z",
+        "contentSnippet": "guzzlehttp/guzzle versions before 7.15.1 fail to preserve host-only cookie scope, storing the request host in the Domain field instead of marking cookies as host-only. Attackers controlling child hosts can receive host-only cookies intended only for parent hosts, potentially disc",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-67354 - guzzlehttp/guzzle before 7.15.1 URI Fragment Disclosure via Referer",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67354",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-01T13:17:06.000Z",
+        "contentSnippet": "guzzlehttp/guzzle versions before 7.15.1 contain an information disclosure vulnerability in RedirectMiddleware. When the optional allow_redirects.referer setting is enabled, the middleware copies the URI fragment (the portion after '#') from the referring request into the generat",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-67353 - guzzlehttp/guzzle before 7.15.1 Unbounded Cookie Denial of Service",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67353",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-01T13:17:06.000Z",
+        "contentSnippet": "guzzlehttp/guzzle versions before 7.15.1 contain a denial of service vulnerability in the CookieJar that accepts unlimited Set-Cookie header fields with no size restrictions. Attackers can return many large cookies from a malicious server, causing Guzzle to store excessive data i",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-67352 - luci-app-https-dns-proxy Stored XSS via resolver_url",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67352",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-01T13:17:05.000Z",
+        "contentSnippet": "luci-app-https-dns-proxy contains a stored cross-site scripting vulnerability in the resolver_url parameter that allows authenticated users to inject active HTML. When an administrator views the HTTPS DNS Proxy status page, the resolver URL is rendered as raw HTML and executes Ja",
+        "cveScore": 7.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-67344 - ArcadeDB before 26.7.2 Authentication Bypass via ALTER TYPE",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67344",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-01T13:17:05.000Z",
+        "contentSnippet": "ArcadeDB before 26.7.2 fails to enforce the UPDATE_SCHEMA database permission on the ALTER TYPE ... CUSTOM and ALTER TYPE ... BUCKETSELECTIONSTRATEGY SQL operations, which map to setCustomValue and setBucketSelectionStrategy in LocalDocumentType. An authenticated user with only r",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-67343 - ArcadeDB before 26.7.2 Cluster Token Disclosure via GET /api/v1/server",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67343",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-01T13:17:05.000Z",
+        "contentSnippet": "ArcadeDB versions before 26.7.2 fail to properly redact the cluster token in the GET /api/v1/server endpoint, allowing authenticated users to retrieve the arcadedb.ha.clusterToken value in cleartext. Attackers can use the leaked token with X-ArcadeDB-Cluster-Token and X-ArcadeDB-",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-67342 - ArcadeDB before 26.7.2 Authorization Bypass via Database Handlers",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67342",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-01T13:17:05.000Z",
+        "contentSnippet": "ArcadeDB versions before 26.7.2 contain an authorization bypass vulnerability in HTTP handlers for time series, batch, Prometheus, and Grafana endpoints that fail to validate database access permissions. Attackers can access and modify databases they are not authorized to use by ",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-67341 - ArcadeDB before 26.7.2 Authorization Bypass via SQL DEFINE FUNCTION",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67341",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-01T13:17:05.000Z",
+        "contentSnippet": "ArcadeDB versions before 26.7.2 fail to enforce scripting authorization checks on the SQL DEFINE FUNCTION statement with LANGUAGE js. Attackers with database access can execute arbitrary JavaScript code by submitting DEFINE FUNCTION statements, bypassing security controls intende",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-67340 - ArcadeDB before 26.7.2 Remote Code Execution via Trigger Scripts",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67340",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-01T13:17:05.000Z",
+        "contentSnippet": "ArcadeDB before 26.7.2 (arcadedb-engine) allows trigger scripts to look up host classes in java.lang.* (via Java.type) because ScriptTriggerExecutor adds java.lang.* to the allowed packages. An authenticated user with UPDATE_SCHEMA permission can create a JavaScript trigger that ",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-67339 - guzzlehttp/guzzle before 7.14.2 Proxy-Authorization Header Disclosure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67339",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-01T13:17:04.000Z",
+        "contentSnippet": "guzzlehttp/guzzle versions before 7.14.2 fail to properly isolate Proxy-Authorization headers from origin servers in cURL handlers. Attackers can capture proxy credentials through origin server access logs when requests are redirected, bypassed, or sent through SOCKS proxies that",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-67338 - JupyterLab before 4.5.9 Stored XSS via Extension Manager",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67338",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-01T13:17:04.000Z",
+        "contentSnippet": "JupyterLab before 4.5.9 contains a stored cross-site scripting vulnerability in the Extension Manager that fails to validate URI protocols in package metadata URLs. Attackers can publish malicious PyPI packages with javascript: URLs in project metadata that execute arbitrary Java",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-67337 - better-auth before 1.4.9 Two-Factor Authentication Bypass via session.cookieCache",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67337",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-01T13:17:04.000Z",
+        "contentSnippet": "better-auth versions before 1.4.9 contain a two-factor authentication bypass vulnerability when session.cookieCache is enabled. Attackers with valid primary credentials can access authenticated routes without completing second-factor verification by exploiting premature session c",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-67336 - better-auth before 1.6.11 Insecure Cryptographic Defaults via oidcProvider",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67336",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-01T13:17:04.000Z",
+        "contentSnippet": "better-auth versions before 1.6.11 contain insecure cryptographic defaults in the oidcProvider and mcp plugins that advertise the none algorithm and accept plain PKCE by default. Attackers can exploit algorithm negotiation to accept unsigned tokens or intercept authorization code",
+        "cveScore": 9.4,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-67335 - better-auth before 1.6.2 OAuth State Validation Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67335",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-01T13:17:04.000Z",
+        "contentSnippet": "better-auth versions before 1.6.2 fail to validate the OAuth state parameter against the stored nonce when using cookie-backed state storage without PKCE. Attackers can forge the state parameter and supply an attacker-controlled authorization code to create authenticated sessions",
+        "cveScore": 6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-67334 - better-auth Stale Sessions Persist After User Deletion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67334",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-01T13:17:04.000Z",
+        "contentSnippet": "better-auth versions before 1.6.11 fail to delete cached sessions when removing users via admin, anonymous, or SCIM endpoints when secondaryStorage is configured and storeSessionInDatabase is false. Attackers can reuse deleted user session tokens to maintain authentication for up",
+        "cveScore": 5.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-67333 - better-auth before 1.6.13 Stored XSS via javascript redirect_uri",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67333",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-01T13:17:04.000Z",
+        "contentSnippet": "better-auth before 1.6.13 (and pre-release builds 1.7.0-beta.0 through 1.7.0-beta.3) fail to validate the scheme of redirect_uris registered via the deprecated oidc-provider plugin and the mcp plugin (which wraps the same provider). An attacker can register an OAuth client with a",
+        "cveScore": 7.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-67332 - @better-auth/oauth-provider before 1.7.0-beta.4 Authorization Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67332",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-01T13:17:03.000Z",
+        "contentSnippet": "@better-auth/oauth-provider before 1.7.0-beta.4 fails to bind access-token audience to the authorization grant, allowing clients to request tokens for unrelated resources. Attackers can complete an OAuth flow and obtain access tokens whose audience targets resource servers the au",
+        "cveScore": 6.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-67331 - better-auth SCIM 1.5.0 before 1.7.0-beta.4 Authorization Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67331",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-01T13:17:03.000Z",
+        "contentSnippet": "better-auth SCIM versions from 1.5.0 before 1.7.0-beta.4 fail to bind non-organization SCIM providers to their creator by default, allowing authenticated users to manage other users' providers. Attackers can regenerate SCIM bearer tokens, invalidate legitimate tokens, and authent",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-67330 - better-auth SCIM 1.4.0-beta.27 through 1.6.21 Account Takeover via Provider-ID Collision",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67330",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-01T13:17:03.000Z",
+        "contentSnippet": "@better-auth/scim (a better-auth plugin) versions >= 1.4.0-beta.27 through = 1.7.0-beta.0 through",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-67329 - @better-auth/stripe before 1.6.21 Authorization Bypass via Organization Subscription",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67329",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-01T13:17:03.000Z",
+        "contentSnippet": "@better-auth/stripe versions >= 1.4.11 and = 1.7.0-beta.0 and",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-67328 - @better-auth/sso before 1.6.21 Account Takeover via SSO",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67328",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-01T13:17:03.000Z",
+        "contentSnippet": "@better-auth/sso versions before 1.6.21 contain multiple authentication bypass vulnerabilities in SSO provider handling that allow attackers to sign in as arbitrary users. Attackers can exploit domain verification parsing mismatches, orphaned provider accounts, unbound SAML asser",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-67327 - better-auth before 1.6.22 Account Takeover via Magic-Link Email-OTP",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67327",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-01T13:17:03.000Z",
+        "contentSnippet": "better-auth versions >= 1.1.3 and = 1.7.0-beta.0 and",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-67326 - GitPython before 3.1.50 Newline Injection via config_writer section",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67326",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-01T13:17:03.000Z",
+        "contentSnippet": "GitPython before 3.1.50 fails to validate newline characters in the section parameter of config_writer(), allowing attackers to inject arbitrary section headers into .git/config. Attackers can inject newlines to create a forged [core] section with hooksPath pointing to attacker-c",
+        "cveScore": 7.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-67325 - GitPython before 3.1.51 Command Injection via option prefix abbreviation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67325",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-01T13:17:02.000Z",
+        "contentSnippet": "GitPython before 3.1.51 contains an incomplete command injection blocklist that fails to account for git's long-option prefix abbreviation feature. Attackers can bypass the unsafe options guard by using abbreviated option names like upload_p instead of upload_pack, which git reso",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-67324 - GitPython 3.1.50 Authentication Bypass via Joined Short Options",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67324",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-01T13:17:02.000Z",
+        "contentSnippet": "GitPython 3.1.50 fails to recognize joined short-option forms such as -u (the short form of --upload-pack= ) when enforcing its default unsafe-option gate. When an application passes attacker-influenced clone options into Repo.clone_from(..., multi_options=..., allow_unsafe_optio",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
       {
         "title": "CVE-2026-18536 - Data::Entropy versions before 0.010 for Perl read remote entropy sources over plain HTTP",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-18536",
@@ -677,231 +902,6 @@
         "contentSnippet": "TR1200 v2.4.15, TR3000 v2.4.21, WR300 v2.4.25, WR1200 v2.4.23, WR1300 v2.4.22, WR1500 v2.3.10, WR3000 v2.4.19, WR3600 v2.3.16, and WR6500 v2.3.15 were discovered to contain a command injection vulnerability in the system.upgrade_check interface. This vulnerability allows attacker",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-18394 - Incorrect authorization in Strands Agents Tools http_request proxy credential exfiltration",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18394",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T20:16:49.000Z",
-        "contentSnippet": "Incorrect authorization in the http_request tool in Strands Agents Tools before 0.8.2 might allow remote attackers to obtain credentials configured via HTTP_REQUEST_TOKEN_CONFIG by influencing the LLM to route requests through actor-controlled proxy infrastructure. To remediate t",
-        "cveScore": 7.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57232 - Contao: Server-Side Request Forgery (SSRF) via Unvalidated RSS Feed URL in Feed Reader Module",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57232",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T19:17:11.000Z",
-        "contentSnippet": "Contao is an Open Source CMS. From 5.3.35 through 5.3.47 and from 5.7.0-RC1 through 5.7.8, the Feed Reader front-end module passes configured RSS feed URLs from FeedReaderController::getResponse() to feedIo->read() without scheme or private-address validation, allowing a backend ",
-        "cveScore": 3.1,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-55824 - Contao crawler leaks auth credentials to external hosts",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55824",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T19:17:11.000Z",
-        "contentSnippet": "Contao is an Open Source CMS. In versions 4.13.40 through 5.3.46 and 5.7.0-RC1 through 5.7.6, the crawler leaks auth credentials to external hosts. Contao's crawler tries to prevent confidential HTTP client options from being sent to external domains by creating a scoped client: ",
-        "cveScore": 2.6,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-53505 - Thumbor proportion filter allows unbounded post-transform resize leading to remote DoS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53505",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T19:17:10.000Z",
-        "contentSnippet": "Thumbor is an open-source photo thumbnail service by globo.com. Prior to 7.8.0, Thumbor's filters:proportion( ) filter does not enforce an upper bound on and runs in the post-transform phase. An attacker can trigger extremely large resizes (CPU/memory exhaustion) and cause denial",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-53504 - Thumbor has Regex Denial of Service (ReDoS) in `convolution` filter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53504",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T19:17:09.000Z",
-        "contentSnippet": "Thumbor is an open-source photo thumbnail service by globo.com. Prior to 7.8.0, the convolution filter regular expression performs exponential backtracking on crafted repeated numeric input, allowing a URL request to exhaust processing time. This issue is fixed in 7.8.0.",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-53503 - Thumbor convolution filter allows divide-by-zero in C extension leading to remote DoS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53503",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T19:17:09.000Z",
-        "contentSnippet": "Thumbor is an open-source photo thumbnail service by globo.com. Prior to 7.8.0, Thumbor's filters:convolution( , , ) filter passes the user-controlled value to a C extension (thumbor/ext/filters/_convolution.c) where it is used as a divisor (for % and /) without validating column",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-53502 - Thumbor has path traversal via post-validation URL decoding bypass in file_loader",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53502",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T19:17:09.000Z",
-        "contentSnippet": "Thumbor is an open-source photo thumbnail service by globo.com. Prior to 7.8.0, file_loader decodes percent-encoded path segments after its root-boundary validation, allowing traversal outside FILE_LOADER_ROOT_PATH through watermark or frame filter input. This issue is fixed in 7",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-53501 - Thumbor has HMAC validation bypass via multiple .replace() calls when removing URL signature",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53501",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T19:17:09.000Z",
-        "contentSnippet": "Thumbor is an open-source photo thumbnail service by globo.com. Prior to 7.8.0, Thumbor’s HMAC validation can be bypassed due to the use of Python’s .replace() when removing the signature from the URL before validation. Since .replace() removes all occurrences of the substring, a",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-53500 - Thumbor treats ALLOWED_SOURCES string patterns as unescaped regex, allowing hostname bypass via wildcard dot",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53500",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T19:17:09.000Z",
-        "contentSnippet": "Thumbor is an open-source photo thumbnail service by globo.com. Prior to 7.8.0, the ALLOWED_SOURCES configuration passes plain strings to re.match() without escaping dots, so a hostname differing at dot positions can match the allowlist. This issue is fixed in 7.8.0.",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-25552 - Ghost CLI < 1.30.1 IP Spoofing via X-Forwarded-For Header",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-25552",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T19:17:08.000Z",
-        "contentSnippet": "Ghost CLI before 1.30.1 contains an IP spoofing vulnerability that allows unauthenticated remote attackers to bypass rate-limiting controls by manipulating the X-Forwarded-For header through a misconfigured Nginx configuration. Attackers can append attacker-controlled values to t",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-18481 - Stored XSS in Participant URL Field leads to Account Takeover via Session Token Theft",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18481",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T19:17:08.000Z",
-        "contentSnippet": "Stored cross-site scripting in the participant URL handling in AWS Ops Wheel before PR #168 might allow an authenticated remote user to steal session tokens and escalate to full administrative control of the deployed instance via a crafted participant_url value containing a dange",
-        "cveScore": 7.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-18321 - Buffer Copy without Checking Size of Input ('Classic Buffer Overflow') in ntpsec",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18321",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T19:17:08.000Z",
-        "contentSnippet": "Buffer overflow in NTPsec's Zyfer refclock allows local attacker to crash ntpd",
-        "cveScore": 4.7,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-55100 - hashi-vault-js has a path traversal and query parameter injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55100",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T18:17:17.000Z",
-        "contentSnippet": "hashi-vault-js is a Node.js module for interacting with the HashiCorp Vault API. Prior to 0.5.2, src/Vault.js concatenates unencoded identifier values including name, username, group, role, and version into Vault request paths and query strings instead of using encodeURIComponent",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-54737 - @phun-ky/defaults-deep Has a Prototype Pollution issue via Unsafe Recursive Property Merging",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54737",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T18:17:17.000Z",
-        "contentSnippet": "@phun-ky/defaults-deep is a library like lodash defaultsDeep with array preservation and no lodash dependency. Prior to 2.0.5, defaultsDeep() recursively merges user-supplied objects without filtering proto, constructor, and prototype, allowing properties to be written to Object.",
-        "cveScore": 7.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-54729 - dssrf: any users using 1.1.1.1 DNS is impacted by SSRF",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54729",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T18:17:17.000Z",
-        "contentSnippet": "DSSRF is a Node.js library that provides a wide range of utilities and advanced SSRF defense checks. Prior to 1.0.5, is_url_safe can treat localhost as safe when DNS resolver 1.1.1.1 returns NXDOMAIN because dns.resolve4 yields no address and no dns.lookup fallback occurs, allowi",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-54725 - vault-addr annotation SSRF -- webhook makes outbound HTTP call to attacker URL during admission; vault-serviceaccount enables cluster-wide SA token theft via TokenRequest API",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54725",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T18:17:17.000Z",
-        "contentSnippet": "vault-secrets-webhook is a Kubernetes mutating webhook that makes direct secret injection into Pods possible. Prior to 1.23.1, parseVaultConfig() in pkg/webhook/config.go accepts the vault.security.banzaicloud.io/vault-addr annotation, MutateConfigMap and MutateSecret call newVau",
-        "cveScore": 9.6,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-34497 - FMS Employee Vulnerable to HTML Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34497",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T18:17:14.000Z",
-        "contentSnippet": "Improper neutralization of Script-Related HTML tags in a web page (basic XSS) vulnerability in Johnson Controls FM Systems Employee allows Cross-Site Scripting (XSS). This issue affects FM Systems Employee: before 2025.3.1.",
-        "cveScore": 4.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-34495 - FMS Employee vulnerable to XSS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34495",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T18:17:14.000Z",
-        "contentSnippet": "Improper neutralization of input during web page generation ('cross-site scripting') vulnerability in Johnson Controls FM Systems Employee allows Stored XSS. This issue affects FM Systems Employee: before 2025.3.1.",
-        "cveScore": 4.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-34490 - XAAP Android Data Stored in Unencrypted Database",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34490",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T18:17:14.000Z",
-        "contentSnippet": "Cleartext storage of sensitive information vulnerability in Johnson Controls XAAP Application on Android allows an attacker on a jailbroken or otherwise compromised device to Retrieve Sensitive Data. This issue affects XAAP Application: before 1.53.",
-        "cveScore": 4.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-21662 - FMS Employee Allows Upload of Unrestricted Files",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-21662",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T17:30:41.000Z",
-        "contentSnippet": "Unrestricted upload of file with dangerous type vulnerability in Johnson Controls FM Systems Employee allows Using Malicious Files. This issue affects FM Systems Employee: before 2025.3.1.",
-        "cveScore": 4.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-67822 - Tenda W6-S Stack-based Buffer Overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67822",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T17:16:35.000Z",
-        "contentSnippet": "Tenda W6-S 1.0.0.4(510) contains a stack-based buffer overflow vulnerability in the /goform/wifiSSIDset endpoint. The function formwrlSSIDset uses sprintf to copy user-controlled 'GO' and 'index' parameters into a 64-byte stack buffer without length restriction, leading to stack ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-58048 - cPanel SQL Mode Improper Preservation Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58048",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T17:16:34.000Z",
-        "contentSnippet": "Improper preservation of SQL mode when renaming databases in cPanel allows execution of SQL in root context.",
-        "cveScore": 9.4,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-58047 - cPanel HTTP Request Smuggling Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58047",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T17:16:34.000Z",
-        "contentSnippet": "HTTP Smuggling in cPanel allows potential leak of credentials.",
-        "cveScore": 5.6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-54707 - OnionShare Receive mode writes uploaded files even when file uploads are disabled",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54707",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T17:16:33.000Z",
-        "contentSnippet": "OnionShare is an open source tool that lets you securely and anonymously share files, host websites, and chat with friends using the Tor network. Prior to 2.6.4, OnionShare CLI/Desktop does not enforce the Receive mode disable_files setting in cli/onionshare_cli/web/receive_mode.",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-54706 - OnionShare follows symlinks in shared directories, allowing unintended disclosure of local files",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54706",
-        "source": "cvefeed.io",
-        "isoDate": "2026-07-31T17:16:33.000Z",
-        "contentSnippet": "OnionShare is an open source tool that lets you securely and anonymously share files, host websites, and chat with friends using the Tor network. Prior to 2.6.4, OnionShare CLI/Desktop follows symbolic links in cli/onionshare_cli/web/send_base_mode.py through SendBaseModeWeb.set_",
-        "cveScore": 4.8,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
@@ -2310,6 +2310,13 @@
     ],
     "hardware": [
       {
+        "title": "Microsoft vows to make Windows 11 fly on 8GB RAM amid memory shortage — optimizations to reduce OS memory footprint have begun",
+        "link": "https://www.tomshardware.com/software/windows/microsoft-vows-to-make-windows-11-fly-on-8gb-ram-amid-memory-shortage-optimizations-to-reduce-os-memory-footprint-have-begun",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-01T14:48:26.000Z",
+        "contentSnippet": "While the company's minimum OS specifications officially say 4GB, most PC builders know that 16GB is the bare minimum for a smooth experience on Windows 11. However, the memory chip shortage and the resurgence of 8GB laptops are likely forcing Microsoft to optimize Windows."
+      },
+      {
         "title": "Anthropic's Claude hacked three real-life companies during security capabilities test — test environment with internet access and unwitting targets' lax cybersecurity practices led to bots running ram",
         "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropics-claude-hacked-three-real-life-companies-during-security-capabilities-test-test-environment-with-internet-access-and-unwitting-targets-lax-cybersecurity-practices-led-to-bots-running-rampant",
         "source": "Tom's Hardware",
@@ -3001,13 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-07-28T11:31:17.000Z",
         "contentSnippet": "Xbox CTO Scott Van Vliet said that a licensing service sitting outside Xbox, which the platform depends on, began failing late on July 26 and took roughly 16 hours to clear."
-      },
-      {
-        "title": "Google goes cash flow negative for the first time as AI data center buildout increases capex to a staggering $44.9 billion in a single quarter — CFO warns that capex will increase in 2027 as company b",
-        "link": "https://www.tomshardware.com/tech-industry/big-tech/alphabet-goes-cash-flow-negative-for-the-first-time-as-ai-capex-doubles-to-44-9-billion-in-a-single-quarter",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-28T11:12:23.000Z",
-        "contentSnippet": "On the same day, CFO Anat Ashkenazi raised full-year capex guidance to between $195 billion and $205 billion."
       }
     ]
   }
