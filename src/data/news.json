@@ -1,8 +1,35 @@
 {
-  "updatedAt": "2026-08-02T15:54:56.190Z",
+  "updatedAt": "2026-08-02T16:50:53.834Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-65321 - PyAthena 3.35.4 SQL Injection via DefaultParameterFormatter DELETE/CTAS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65321",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-02T15:16:33.000Z",
+        "contentSnippet": "PyAthena prior to 3.35.4 contains a sql injection vulnerability that allows unauthenticated attackers to inject arbitrary SQL by exploiting improper quote-escaping in DefaultParameterFormatter.format(), which routes DELETE and CTAS statements to the _escape_hive function that bac",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-10774 - PSA key-slot leak in Bluetooth Mesh subnet deletion leading to resource-exhaustion DoS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10774",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-02T15:16:33.000Z",
+        "contentSnippet": "Zephyr's Bluetooth Mesh subnet key management leaks one PSA Crypto key slot on every subnet-key teardown. In subsys/bluetooth/mesh/subnet.c, net_keys_create() imports the Private Beacon Key into a PSA key slot under CONFIG_BT_MESH_PRIV_BEACONS (enabled by default), but subnet_key",
+        "cveScore": 2.4,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-9856 - Path Traversal in huggingface/transformers",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9856",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-02T15:10:53.000Z",
+        "contentSnippet": "A vulnerability in huggingface/transformers versions",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2026-68583 - luci-app-adblock-fast before 1.2.4-4 Stored XSS via file_url.name",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-68583",
@@ -18,8 +45,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-08-02T13:16:54.000Z",
         "contentSnippet": "Vikunja versions >= 0.24.0 and",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-68581 - Vikunja 0.22.0 through 2.3.0 Authentication Bypass via Principal ID Collision",
@@ -27,7 +54,7 @@
         "source": "cvefeed.io",
         "isoDate": "2026-08-02T13:16:54.000Z",
         "contentSnippet": "Vikunja versions 0.22.0 through 2.3.0 fail to validate the principal type in API token management. Because user IDs and link-share IDs are independent numeric sequences and both resolve through a generic web.Auth.GetID() interface, a link-share JWT whose numeric ID equals a targe",
-        "cveScore": 8.6,
+        "cveScore": 8.1,
         "cveSeverity": "HIGH"
       },
       {
@@ -36,7 +63,7 @@
         "source": "cvefeed.io",
         "isoDate": "2026-08-02T13:16:53.000Z",
         "contentSnippet": "FreeRDP before 3.29.0 contains integer overflow vulnerabilities in the audio input redirection channel (audin) across ALSA, sndio, WinMM, and OpenSL ES backends that fail to validate the FramesPerPacket parameter from RDP servers. Attackers can supply a malicious FramesPerPacket ",
-        "cveScore": 7.7,
+        "cveScore": 7.5,
         "cveSeverity": "HIGH"
       },
       {
@@ -54,7 +81,7 @@
         "source": "cvefeed.io",
         "isoDate": "2026-08-02T13:16:53.000Z",
         "contentSnippet": "ArcadeDB versions before 26.7.3 fail to bind the authenticated principal in the MCP HTTP transport, causing all engine permission checks to silently pass as no-ops. Non-root MCP-allowed users can perform arbitrary database writes, DDL, schema mutations, and execute arbitrary Java",
-        "cveScore": 7.7,
+        "cveScore": 7.5,
         "cveSeverity": "HIGH"
       },
       {
@@ -63,7 +90,7 @@
         "source": "cvefeed.io",
         "isoDate": "2026-08-02T13:16:53.000Z",
         "contentSnippet": "ArcadeDB versions before 26.7.3 contain an information disclosure vulnerability in the MCP get_server_settings tool that leaks the arcadedb.ha.clusterToken in cleartext. Attackers with MCP access can retrieve the cluster token and use it with X-ArcadeDB-Cluster-Token and X-Arcade",
-        "cveScore": 7.7,
+        "cveScore": 7.5,
         "cveSeverity": "HIGH"
       },
       {
@@ -81,8 +108,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-08-02T13:16:52.000Z",
         "contentSnippet": "better-auth (npm) before 1.4.2 allows an external request to configure baseURL when it is not otherwise defined (e.g., BETTER_AUTH_URL is unset). An attacker able to make the very first request to the server after startup can poison the router's base path, causing all routes to r",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2025-71400 - better-auth passkey before 1.4.0 IDOR via delete-passkey",
@@ -99,7 +126,7 @@
         "source": "cvefeed.io",
         "isoDate": "2026-08-02T13:16:52.000Z",
         "contentSnippet": "Better Auth relies on better-call, which uses the rou3 router library. In affected versions of rou3, paths are normalized by removing empty segments, so /path, //path, and ///path resolve to the same route. In Better Auth versions prior to 1.4.5 (which bundles the fixed rou3), th",
-        "cveScore": 8.8,
+        "cveScore": 8.6,
         "cveSeverity": "HIGH"
       },
       {
@@ -874,33 +901,6 @@
         "isoDate": "2026-08-01T09:16:59.000Z",
         "contentSnippet": "The Kirki – Freeform Page Builder, Website Builder & Customizer plugin for WordPress is vulnerable to Path Traversal (Zip Slip) in all versions up to, and including, 6.0.13 via the extract_zip_file function. This makes it possible for authenticated attackers, with custom-level ac",
         "cveScore": 4.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-2916 - Jeg Kit for Elementor <= 3.1.1 - Authenticated (Contributor+) Exposure of Sensitive Information via 'JkitDashboardOption' Inline Script",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-2916",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-01T08:16:29.000Z",
-        "contentSnippet": "The Jeg Kit for Elementor plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 3.1.1 via the `enqueue_scripts()` method in `class/dashboard/class-dashboard.php`. The plugin injects a `JkitDashboardOption` JavaScript object con",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-15988 - AI Engine <= 3.6.5 - Cross-Site Request Forgery to Privilege Escalation via REQUEST_URI Substring Match",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15988",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-01T08:16:29.000Z",
-        "contentSnippet": "The AI Engine – The Chatbot, AI Framework & MCP for WordPress plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 3.6.5 This is due to missing or incorrect nonce validation on the reauth_for_authorize function. This makes it poss",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2025-14469 - Theme Editor <= 3.1 - Cross-Site Request Forgery to CSS Modification",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-14469",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-01T08:16:29.000Z",
-        "contentSnippet": "The Theme Editor plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 3.1. This is due to missing nonce validation on the ms_update AJAX action. This makes it possible for unauthenticated attackers to modify child theme CSS styles",
-        "cveScore": 4.3,
         "cveSeverity": "MEDIUM"
       }
     ],
@@ -2310,6 +2310,13 @@
     ],
     "hardware": [
       {
+        "title": "Grab this 240 Hz QD-OLED gaming monitor at just $300 — Gigabyte's 27-inch GO27Q24A is now $150 off at Newegg",
+        "link": "https://www.tomshardware.com/monitors/gaming-monitors/grab-this-240-hz-qd-oled-gaming-monitor-at-just-usd300-gigabytes-27-inch-go27q24a-is-now-usd150-off-at-newegg",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-02T16:16:41.000Z",
+        "contentSnippet": "Gigabyte's GO27Q24A delivers a 240Hz QD-OLED panel, HDMI 2.1, and esports-focused features for just $299.99"
+      },
+      {
         "title": "Errant SpaceX rocket stage set to smash into the moon at 5,400 mph, seven times the speed of sound — NASA and South Korean orbiters prepare to track 3-ton TNT impact",
         "link": "https://www.tomshardware.com/tech-industry/space/errant-spacex-rocket-stage-set-to-smash-into-the-moon-at-5-400-mph-seven-times-the-speed-of-sound-nasa-and-south-korean-orbiters-prepare-to-track-3-ton-tnt-impact",
         "source": "Tom's Hardware",
@@ -3001,13 +3008,6 @@
         "source": "StorageReview",
         "isoDate": "2026-07-28T17:32:02.000Z",
         "contentSnippet": "KIOXIA has introduced the NX1 Series, a new family of PCIe 5.0 NVMe data center SSDs built around the E1.S form factor. Capacities range from 1.92 TB to 15.36 TB, with read-intensive endurance rated at 1 DWPD, while cooling options include both air and direct liquid cooling. The "
-      },
-      {
-        "title": "An affordable OLED laptop for just $699 — Acer's Swift Go 16 AI is the perfect back-to-school deal",
-        "link": "https://www.tomshardware.com/laptops/an-affordable-oled-laptop-for-just-usd699-acers-swift-go-16-ai-back-to-school-deal",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-28T16:53:03.000Z",
-        "contentSnippet": "Get ready to head back to school with this $300 saving on Acer's excellent Swift Go 16 AI laptop with an OLED screen."
       }
     ]
   }
