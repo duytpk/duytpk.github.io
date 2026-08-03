@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-08-03T20:20:45.109Z",
+  "updatedAt": "2026-08-03T21:59:15.820Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-69198 - ip-address: a CIDR suffix on the parsed address suppresses special-use classification and can bypass SSRF and trust-boundary checks",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-69198",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-03T20:17:30.000Z",
+        "contentSnippet": "ip-address is a library for parsing and manipulating IPv4 and IPv6 addresses in JavaScript. From 10.1.1 until 10.2.2, every special-use classification method is built on isInSubnet, which short-circuits to false whenever the address's own subnet mask is shorter than the reference",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-69192 - ip-address: Address4 decodes leading-zero octets as decimal while resolvers decode them as octal, allowing SSRF and trust-boundary bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-69192",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-03T20:17:29.000Z",
+        "contentSnippet": "ip-address is a library for parsing and manipulating IPv4 and IPv6 addresses in JavaScript. Prior to 10.3.1, Address4 accepts an octet written with a leading zero and decodes it as decimal, while the WHATWG URL host parser, inet_aton, and getaddrinfo all decode a leading zero as ",
+        "cveScore": 7.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-69185 - Socket.IO: Zero-attachment Memory Exhaustion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-69185",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-03T20:17:29.000Z",
+        "contentSnippet": "Socket.IO enables bidirectional and low-latency communication for every platform. Prior to 4.2.7, 3.4.5, and 3.3.6, a specially crafted Socket.IO packet can make the server wait for a large number of binary attachments and buffer them, which can be exploited to make the server ru",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-68981 - Apache NiFi: Uncontrolled Resource Consumption through Decompression of HTTP Requests",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68981",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-03T20:17:29.000Z",
+        "contentSnippet": "Apache NiFi 1.5.0 through 2.10.0 support gzip-encoded HTTP requests for the application REST API using a Jersey encoding filter. The framework enforced a configurable maximum request size on the compressed payload rather than the decompressed output, allowing a malicious client t",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-68980 - Apache NiFi: Authorization Bypass for Parameter Context Asset Deletion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68980",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-03T20:17:29.000Z",
+        "contentSnippet": "Apache NiFi 2.0.0 through 2.10.0 support creating, reading, and deleting Assets associated with Parameter Contexts through the REST API. The framework authorizes asset deletion against the owning Parameter Context using the supplied Parameter Context Identifier and Asset Identifi",
+        "cveScore": 2.3,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-68979 - Apache NiFi: Missing Authorization for Components Referenced by Parameter Context Updates",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68979",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-03T20:17:28.000Z",
+        "contentSnippet": "Apache NiFI 1.10.0 through 2.10.0 provide a Parameter Context update REST API method that does not enforce authorization checking on components referencing Parameter values. Updating a Parameter Context can change parameter values that affect referencing components, but framework",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-67599 - ClearOS 7.9 OS Command Injection via Log Viewer filter parameter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67599",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-03T20:17:28.000Z",
+        "contentSnippet": "ClearOS 7.9 contains an OS command injection vulnerability in the Log Viewer component that allows authenticated attackers to execute arbitrary commands by submitting unsanitized input through the filter parameter, which is interpolated directly into a shell command in File.php. ",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-67598 - Emlog Pro 2.6.23 TLS Certificate Validation Disabled in ai.php",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67598",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-03T20:17:27.000Z",
+        "contentSnippet": "Emlog Pro through 2.6.23 contains a disabled TLS certificate validation vulnerability in include/service/ai.php that allows network-adjacent attackers to intercept outbound HTTPS requests to configured LLM providers by presenting arbitrary TLS certificates, as CURLOPT_SSL_VERIFYP",
+        "cveScore": 9.1,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-66296 - Reflected XSS in oaskit's default HTML error handler",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66296",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-03T20:17:25.000Z",
+        "contentSnippet": "Improper Neutralization of Input During Web Page Generation (XSS) vulnerability in lud oaskit allows reflected cross-site scripting via the default HTML error handler. Oaskit.ErrorHandler.Default.format_reason/4 and Oaskit.ErrorHandler.Default.reason_to_html/1 in lib/oaskit/error",
+        "cveScore": 5.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-62354 - Apache NiFi: Incorrect Authorization for Parameter Context Validation Requests",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62354",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-03T20:17:25.000Z",
+        "contentSnippet": "Authorization handling for Parameter Context validation requests in Apache NiFi 1.10.0 through 2.10.0 allows clients with read access to submit proposed Parameter values. The proposed values override current configuration, enabling users with read access to invoke predefined comp",
+        "cveScore": 7.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-58139 - DuckDB AWS Extension Security Policy Bypass via load_aws_credentials Procedure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58139",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-03T20:17:25.000Z",
+        "contentSnippet": "The DuckDB AWS extension for DuckDB contains a security policy bypass vulnerability that allows any database user with SQL execution permissions to extract plaintext AWS credentials by calling the load_aws_credentials function with the redact_secret parameter set to false, circum",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-48031 - Go Restful API Boilerplate: Hardcoded JWT Secret \"random\" Allows Token Forgery",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48031",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-03T20:17:24.000Z",
+        "contentSnippet": "go-base is a Go RESTful API Boilerplate template with JWT Authentication, backed by PostgreSQL. In versions prior to 2026-05-18, the JWT signing secret is hardcoded to the known string \"random\", letting any attacker who reads the public repository forge tokens for arbitrary users",
+        "cveScore": 9.1,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-47211 - Ouroboros: Remote Code Execution via Untrusted Project-Directory .env",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47211",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-03T20:17:24.000Z",
+        "contentSnippet": "Ouroboros is a local-first runtime for AI coding agents that records their actions and applies user-defined policies to constrain behavior. In versions prior to 0.39.0, if a user clones a malicious repository and runs Ouroboros commands within that directory, it can lead to arbit",
+        "cveScore": 8.4,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-18655 - Broker Credential and OAuth Token Disclosure in AWS Labs Amazon MQ MCP Server via Prompt Injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18655",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-03T20:17:17.000Z",
+        "contentSnippet": "Improper restriction of intended endpoints in the RabbitMQ broker connection tools of the Amazon MQ MCP Server (awslabs.amazon-mq-mcp-server) before 2.0.24 may allow a remote unauthenticated actor (via prompt injection) to obtain Amazon MQ for RabbitMQ broker credentials or OAuth",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-18654 - Disabled SSH host key verification in Amazon AWS CLI EMR helper commands",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18654",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-03T20:17:17.000Z",
+        "contentSnippet": "Key exchange without entity authentication in the EMR SSH helper commands in Amazon AWS CLI before 1.45.28 and AWS CLI v2 before 2.35.3 might allow man-in-the-middle attackers to intercept SSHsessions and file transfers via network positioning between the client and the EMR clust",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-18644 - danpros HTMLy Delete Username Endpoint htmly.php unlink path traversal",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18644",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-03T20:17:17.000Z",
+        "contentSnippet": "A vulnerability was identified in danpros HTMLy up to 3.1.1. Affected by this issue is the function unlink of the file /system/htmly.php of the component Delete Username Endpoint. Such manipulation of the argument File leads to path traversal. The attack can be launched remotely.",
+        "cveScore": 5.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-18641 - Sangfor Operation and Maintenance Security Management System Login Endpoint portal_login com.sbr.fort.foreignDP.DpLoginController os command injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18641",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-03T20:17:16.000Z",
+        "contentSnippet": "A vulnerability was determined in Sangfor Operation and Maintenance Security Management System up to 3.0.13. Affected by this vulnerability is the function com.sbr.fort.foreignDP.DpLoginController of the file /fort/portal_login of the component Login Endpoint. This manipulation c",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-18632 - langgenius dify Jinja2 jinja2_transformer.py jinja2.Template special elements used in a template engine",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18632",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-03T20:17:16.000Z",
+        "contentSnippet": "A security flaw has been discovered in langgenius dify up to 1.14.2. This issue affects the function jinja2.Template of the file api/core/helper/code_executor/jinja2/jinja2_transformer.py of the component Jinja2 Handler. The manipulation results in improper neutralization of spec",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-18631 - jeequan jeepay PreAuthorize SysLogController.java WebSecurityConfig authorization",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18631",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-03T20:17:16.000Z",
+        "contentSnippet": "A vulnerability was identified in jeequan jeepay up to 3.2.9. This vulnerability affects the function WebSecurityConfig of the file jeepay-manager/src/main/java/com/jeequan/jeepay/mgr/ctrl/sysuser/SysLogController.java of the component PreAuthorize Handler. The manipulation leads",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-59913 - Dell Display and Peripheral Manager Privilege Escalation Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59913",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-03T19:16:48.000Z",
+        "contentSnippet": "Dell Display and Peripheral Manager (DDPM Mac), versions prior to 2.3.0.1005, contain a Missing Authentication for Critical Function vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Elevation of privileges.",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-59912 - Dell Display and Peripheral Manager Improper Access Control Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59912",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-03T19:16:48.000Z",
+        "contentSnippet": "Dell Display and Peripheral Manager (DDPM Mac), versions prior to 2.3.0.1005, contain an Improper Access Control vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Elevation of privileges and arbitrary code executio",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-38447 - osTicket API Key Cryptographic Weakness",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-38447",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-03T19:16:46.000Z",
+        "contentSnippet": "osTicket 1.18.3 generates API keys using a predictable construction based on MD5 hashing. The use of MD5, combined with predictable inputs such as the current timestamp and client IP address, significantly reduces entropy. An attacker can approximate the key generation time and b",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-38446 - osTicket Stored Cross-Site Scripting",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-38446",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-03T19:16:46.000Z",
+        "contentSnippet": "A stored cross-site scripting (XSS) vulnerability exists in osTicket 1.18.3 due to improper sanitization of the thread entry title field. User-controlled input in the title is stored without adequate HTML escaping and later rendered in multiple staff-facing templates without prop",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-38444 - osTicket Stored Cross-Site Scripting",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-38444",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-03T19:16:46.000Z",
+        "contentSnippet": "osTicket v1.18.3 is vulnerable to Stored Cross-Site Scripting (XSS) via the email From-header display name. The value is extracted without sanitization in include/class.mailparse.php and stored raw in the poster field of ost_thread_entry. When an unauthenticated attacker sends a ",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-18616 - GL-iNet GL-MT3000 wg-server.so Native Plugin glc server.set_peer command injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18616",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-03T19:16:45.000Z",
+        "contentSnippet": "A vulnerability was identified in GL-iNet GL-MT3000 up to 4.4.5. The impacted element is the function server.set_peer of the file /cgi-bin/glc of the component wg-server.so Native Plugin. The manipulation of the argument public_key leads to command injection. Remote exploitation ",
+        "cveScore": 10,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2025-9291 - Improper Certificate Validation in TP-Link Omada Cloud Communications",
         "link": "https://cvefeed.io/vuln/detail/CVE-2025-9291",
@@ -677,234 +902,16 @@
         "contentSnippet": "A vulnerability was identified in Meesho Online Shopping App up to 20260607 on Android. Affected by this vulnerability is an unknown functionality of the component com.meesho.supply. Such manipulation of the argument user_id/phone number/email address/name leads to cleartext stor",
         "cveScore": 2.1,
         "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-14682 - Possible OOM from unbounded up-front allocation on a definite-length read",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14682",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-03T04:16:43.000Z",
-        "contentSnippet": "In Bouncy Castle for Java before 1.85, Possible OOM from unbounded up-front allocation on a definite-length read. This issue also affects Bouncy Castle for Java LTS before 2.73.12, and Bouncy Castle for Java FIPS (BC-FJA) before bc-fips 1.0.2.7 (1.0.X series), 2.0.2 (2.0.X series",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-13586 - PKCS#12 MAC and bag-decryption KDF iteration-count bound (DoS)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13586",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-03T04:16:40.000Z",
-        "contentSnippet": "In Bouncy Castle for Java before 1.85, PKCS#12 MAC and bag-decryption KDF iteration-count bound (DoS). This issue also affects Bouncy Castle for Java LTS before 2.73.12, and Bouncy Castle for Java FIPS (BC-FJA) before bc-fips 1.0.2.7 (1.0.X series), 2.0.2 (2.0.X series) and 2.1.3",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-13506 - Lazy ASN.1 sequence forcing resets nesting-depth guard",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13506",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-03T04:16:39.000Z",
-        "contentSnippet": "In Bouncy Castle for Java before 1.85, Lazy ASN.1 sequence forcing resets nesting-depth guard. This issue also affects Bouncy Castle for Java LTS before 2.73.12, and Bouncy Castle for Java FIPS (BC-FJA) before bc-fips 1.0.2.7 (1.0.X series), 2.0.2 (2.0.X series) and 2.1.3 (2.1.X ",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-12860 - RSA PKCS#1 verification skips last two hash bytes in NULL-omitted path",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12860",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-03T04:16:39.000Z",
-        "contentSnippet": "In Bouncy Castle for Java before 1.85, RSA PKCS#1 verification skips last two hash bytes in NULL-omitted path. This issue also affects Bouncy Castle for Java LTS before 2.73.12.",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-12852 - MLS wire decoder allocates attacker-declared opaque length before bounds check",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12852",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-03T04:16:39.000Z",
-        "contentSnippet": "In Bouncy Castle for Java before 1.85, MLS wire decoder allocates attacker-declared opaque length before bounds check.",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-12817 - OpenPGP AEAD decryption skips final tag on chunk-aligned data",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12817",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-03T04:16:39.000Z",
-        "contentSnippet": "In Bouncy Castle for Java before 1.85, OpenPGP AEAD decryption skips final tag on chunk-aligned data. This issue also affects Bouncy Castle for Java LTS before 2.73.12, and Bouncy Castle for Java FIPS (BC-FJA) before bcpg-fips 1.0.13 (1.0.X series), 2.0.13 (2.0.X series) and 2.1.",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-12816 - IESEngine stream-mode MAC forgery via length-dependent KDF split",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12816",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-03T04:16:39.000Z",
-        "contentSnippet": "In Bouncy Castle for Java before 1.85, IESEngine stream-mode MAC forgery via length-dependent KDF split. This issue also affects Bouncy Castle for Java LTS before 2.73.12.",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-12803 - KCCMBlockCipher MAC does not bind nonce when AAD is absent (cross-nonce AEAD forgery)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12803",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-03T04:16:39.000Z",
-        "contentSnippet": "In Bouncy Castle for Java before 1.85, KCCMBlockCipher MAC does not bind nonce when AAD is absent (cross-nonce AEAD forgery). This issue also affects Bouncy Castle for Java LTS before 2.73.12.",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-12802 - CMS AuthEnvelopedData fails to enforce tag-length on decryption",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12802",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-03T04:16:38.000Z",
-        "contentSnippet": "In Bouncy Castle for Java before 1.85, CMS AuthEnvelopedData fails to enforce tag-length on decryption. This issue also affects Bouncy Castle for Java LTS before 2.73.12, and Bouncy Castle for Java FIPS (BC-FJA) before bcpkix-fips 1.0.12 (1.0.X series), 2.0.12 (2.0.X series) and ",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-58063 - BCFKS keystore load honours unbounded KDF cost from untrusted file",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58063",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-03T03:16:45.000Z",
-        "contentSnippet": "In Bouncy Castle for Java before 1.85, BCFKS keystore load honours unbounded KDF cost from untrusted file. This issue also affects Bouncy Castle for Java LTS before 2.73.12, and Bouncy Castle for Java FIPS (BC-FJA) before bc-fips 1.0.2.7 (1.0.X series), 2.0.2 (2.0.X series) and 2",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-58062 - Stapled OCSP response accepted without binding to the checked certificate",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58062",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-03T03:16:45.000Z",
-        "contentSnippet": "In Bouncy Castle for Java before 1.85, Stapled OCSP response accepted without binding to the checked certificate. This issue also affects Bouncy Castle for Java LTS before 2.73.12, and Bouncy Castle for Java FIPS (BC-FJA) before bc-fips 2.0.2 (2.0.X series) and 2.1.3 (2.1.X serie",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-58061 - CCM-family modes write plaintext to caller buffer before tag check",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58061",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-03T03:16:45.000Z",
-        "contentSnippet": "In Bouncy Castle for Java before 1.85, CCM-family modes write plaintext to caller buffer before tag check. This issue also affects Bouncy Castle for Java LTS before 2.73.12, and Bouncy Castle for Java FIPS (BC-FJA) before bc-fips 1.0.2.7 (1.0.X series), 2.0.2 (2.0.X series) and 2",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-58060 - HSS public-key level count unbounded, enabling huge allocation on verify",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58060",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-03T03:16:45.000Z",
-        "contentSnippet": "In Bouncy Castle for Java before 1.85, HSS public-key level count unbounded, enabling huge allocation on verify. This issue also affects Bouncy Castle for Java LTS before 2.73.12, and Bouncy Castle for Java FIPS (BC-FJA) before bc-fips 2.0.2 (2.0.X series) and 2.1.3 (2.1.X series",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-58059 - Quadratic-time escaping when stringifying X.500 distinguished names",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58059",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-03T03:16:45.000Z",
-        "contentSnippet": "In Bouncy Castle for Java before 1.85, Quadratic-time escaping when stringifying X.500 distinguished names. This issue also affects Bouncy Castle for Java LTS before 2.73.12, and Bouncy Castle for Java FIPS (BC-FJA) before bc-fips 1.0.2.7 (1.0.X series), 2.0.2 (2.0.X series) and ",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-20498 - Geniezone Privilege Escalation Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-20498",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-03T03:16:45.000Z",
-        "contentSnippet": "In geniezone, there is a possible escalation of privilege due to a missing permission check. This could lead to local escalation of privilege if a malicious actor has already obtained the System privilege. User interaction is not needed for exploitation. Patch ID: ALPS10900493; I",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-20497 - Geniezone Out-of-Bounds Write Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-20497",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-03T03:16:44.000Z",
-        "contentSnippet": "In geniezone, there is a possible out of bounds write due to a missing bounds check. This could lead to local escalation of privilege if a malicious actor has already obtained the System privilege. User interaction is not needed for exploitation. Patch ID: ALPS10965550 / ALPS1139",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-20496 - Geniezone Out-of-Bounds Read Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-20496",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-03T03:16:44.000Z",
-        "contentSnippet": "In geniezone, there is a possible out of bounds read due to a missing bounds check. This could lead to local information disclosure if a malicious actor has already obtained the System privilege. User interaction is not needed for exploitation. Patch ID: ALPS11036877; Issue ID: M",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-20495 - Bluetooth Driver Permission Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-20495",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-03T03:16:44.000Z",
-        "contentSnippet": "In Bluetooth driver, there is a possible permission bypass due to a missing permission check. This could lead to local escalation of privilege with User execution privileges needed. User interaction is not needed for exploitation. Patch ID: WCNCR00488300; Issue ID: MSV-7296.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-20494 - MediaTek WiFi Out-of-Bounds Read Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-20494",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-03T03:16:44.000Z",
-        "contentSnippet": "In wifi, there is a possible out of bounds read due to a missing bounds check. This could lead to local information disclosure if a malicious actor has already obtained the System privilege. User interaction is not needed for exploitation. Patch ID: ALPS10960006 / BORA00155314, B",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-20493 - Wi-Fi Out-of-Bounds Write Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-20493",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-03T03:16:44.000Z",
-        "contentSnippet": "In wifi, there is a possible out of bounds write due to a missing bounds check. This could lead to local denial of service if a malicious actor has already obtained the System privilege. User interaction is not needed for exploitation. Patch ID: BORA00154903; Issue ID: MSV-7575.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-20492 - MediaTek Audio HAL Denial of Service Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-20492",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-03T03:16:44.000Z",
-        "contentSnippet": "In Audio HAL, there is a possible system becoming unresponsive due to a race condition. This could lead to local denial of service with User execution privileges needed. User interaction is not needed for exploitation. Patch ID: ALPS10960026 (Note: For MT6880, MT6890, MT6990, MT6",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-20491 - MediaTek med Out-of-Bounds Write Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-20491",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-03T03:16:44.000Z",
-        "contentSnippet": "In med, there is a possible out of bounds write due to an incorrect bounds check. This could lead to local denial of service with User execution privileges needed. User interaction is not needed for exploitation. Patch ID: ALPS10981478 (Note: For MT6890, MT6990, MT6988) / AUTO008",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-20490 - CCCI Out-of-Bounds Read Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-20490",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-03T03:16:44.000Z",
-        "contentSnippet": "In ccci, there is a possible out of bounds read due to a missing bounds check. This could lead to local denial of service if a malicious actor has already obtained the System privilege. User interaction is not needed for exploitation. Patch ID: ALPS10981501; Issue ID: MSV-7669.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-20489 - MediaTek Display Integer Overflow Information Disclosure",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-20489",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-03T03:16:43.000Z",
-        "contentSnippet": "In display, there is a possible information disclosure due to an integer overflow. This could lead to local information disclosure if a malicious actor has already obtained the System privilege. User interaction is not needed for exploitation. Patch ID: ALPS11004274; Issue ID: MS",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-20488 - MediaTek Display Information Disclosure Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-20488",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-03T03:16:43.000Z",
-        "contentSnippet": "In display, there is a possible information disclosure due to a missing bounds check. This could lead to local information disclosure if a malicious actor has already obtained the System privilege. User interaction is not needed for exploitation. Patch ID: ALPS11004276; Issue ID:",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       }
     ],
     "ai": [
+      {
+        "title": "How to Secure AI Agents, MCP Servers, and LLM Apps in Production",
+        "link": "https://www.marktechpost.com/2026/08/03/how-to-secure-ai-agents-mcp-servers-and-llm-apps-in-production/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-08-03T20:16:56.000Z",
+        "contentSnippet": "AI agents, MCP servers, and LLM apps break the core AppSec assumption that applications do what their code says. This guide walks through a practical see-fix-protect framework: a five-layer agentic AI attack surface map, a 12-point misconfiguration checklist, an evidence-based tr"
+      },
       {
         "title": "From weeks to minutes: How Formula 1® uses agentic AI on AWS to accelerate data operations",
         "link": "https://aws.amazon.com/blogs/machine-learning/from-weeks-to-minutes-how-formula-1-uses-agentic-ai-on-aws-to-accelerate-data-operations/",
@@ -918,6 +925,41 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-08-03T16:30:58.000Z",
         "contentSnippet": "Amazon Bedrock now supports automatic Automated Reasoning policy refinement. The refinement engine diagnoses failing tests and proposes formal-logic fixes for rule issues and language issues, and you approve every change before it takes effect. This post walks through both refine"
+      },
+      {
+        "title": "Alibaba Qwen Releases Qwen3.8-Max: A 2.4 Trillion Parameter MoE Model and the Most Capable One in the Qwen Family to Date",
+        "link": "https://www.marktechpost.com/2026/08/03/alibaba-qwen-releases-qwen3-8-max/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-08-03T08:24:16.000Z",
+        "contentSnippet": "Alibaba's Qwen team moved Qwen3.8-Max from preview to general availability, with published per-token pricing and open weights due next week. The 2.4T parameter MoE model accepts text, image and video input across a 1M-token context. No benchmark table has been published. The post"
+      },
+      {
+        "title": "Cogent AI Team Releases VR-1: A Frontier Cyber Reasoning Model That Composes and Verifies Enterprise Attack Paths",
+        "link": "https://www.marktechpost.com/2026/08/03/ogent-ai-team-releases-vr-1/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-08-03T07:28:14.000Z",
+        "contentSnippet": "Cogent AI team released Cogent VR-1, a reasoning model post-trained specifically for cybersecurity rather than picking up cyber capability as a side effect of general coding strength. It ships with two companions: IntrusionBench, a benchmark that scores agents on completed enterp"
+      },
+      {
+        "title": "Onton Releases Ontology 1: A Neurosymbolic Search Model That is 2.7x More Accurate than the World’s Best E-commerce Search Engines",
+        "link": "https://www.marktechpost.com/2026/08/02/onton-releases-ontology-1-a-neurosymbolic-search-model/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-08-03T00:49:50.000Z",
+        "contentSnippet": "Onton, a San Francisco-based search and discovery company, has released Ontology 1, a neurosymbolic model for complex, conversational, multimodal product search. On a 90-query benchmark scored by three independent LLM judges, Ontology 1 reached a mean precision@10 of 0.630, again"
+      },
+      {
+        "title": "A Tutorial on GeoAI: Designing Footprint Extraction from NAIP Imagery Using U-Net, Grounding DINO, SAM, and Mask R-CNN",
+        "link": "https://www.marktechpost.com/2026/08/02/a-tutorial-on-geoai-designing-footprint-extraction-from-naip-imagery-using-u-net-grounding-dino-sam-and-mask-r-cnn/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-08-02T21:19:48.000Z",
+        "contentSnippet": "In this tutorial, we design a complete GeoAI workflow for extracting building footprints from high-resolution NAIP aerial imagery. We begin by configuring the geospatial deep learning environment, downloading raster imagery and vector labels, and inspecting their spatial properti"
+      },
+      {
+        "title": "Thinking Machines Lab Releases Inkling-Small: A 276B Total, 12B Active Open Weights Multimodal MoE Model",
+        "link": "https://www.marktechpost.com/2026/08/02/thinking-machines-lab-releases-inkling-small-276b-open-weights-multimodal-moe-model/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-08-02T20:35:50.000Z",
+        "contentSnippet": "Inkling-Small matches Inkling at a quarter the size, and its NVFP4 checkpoint runs on one NVIDIA B300 GPU The post Thinking Machines Lab Releases Inkling-Small: A 276B Total, 12B Active Open Weights Multimodal MoE Model appeared first on MarkTechPost."
       },
       {
         "title": "NVIDIA AI Releases Molt: A PyTorch-Native Agentic Reinforcement Learning Framework",
@@ -1562,48 +1604,6 @@
         "source": "MarkTechPost",
         "isoDate": "2026-07-20T01:56:50.000Z",
         "contentSnippet": "A community developer fine-tuned OpenBMB's MiniCPM5-1B on Claude Fable 5 traces into a 1B model that runs fully local — a 657MB smallest build, 128K context, and visible reasoning. We verify every spec against the Hugging Face cards, separate what a fine-tune actually inherits fr"
-      },
-      {
-        "title": "Best Local LLMs You Can Run on a Single 24GB GPU in 2026: Qwen, Gemma, Mistral, DeepSeek Compared",
-        "link": "https://www.marktechpost.com/2026/07/19/best-local-llms-you-can-run-on-a-single-24gb-gpu-in-2026-qwen-gemma-mistral-deepseek-compared/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-07-20T01:18:46.000Z",
-        "contentSnippet": "A single 24GB GPU is the practical floor for serious local inference. This guide compares six open-weight models that fit one card at Q4_K_M. It covers Qwen3.6, Gemma 4, Mistral Small, gpt-oss-20b, and DeepSeek-R1-Distill. Each entry lists VRAM fit, licensing, and the job it does"
-      },
-      {
-        "title": "Feyn AI Releases SQRL, a Text-to-SQL Model Family That Inspects the Database Before Writing a Query",
-        "link": "https://www.marktechpost.com/2026/07/19/feyn-ai-releases-sqrl-a-text-to-sql-model-family-that-inspects-the-database-before-writing-a-query/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-07-19T22:20:23.000Z",
-        "contentSnippet": "Feyn Labs has released SQRL, a family of text-to-SQL models that inspect a database with read-only probes before committing to a query. The flagship SQRL-35B-A3B reports 70.6% execution accuracy on BIRD Dev, edging Claude Opus 4.6, and distills into self-hostable 4B and 9B checkp"
-      },
-      {
-        "title": "Alibaba Previews Qwen3.8-Max, a 2.4 Trillion-Parameter Multimodal Model, Days After Moonshot’s Kimi K3 Open-Weight Launch",
-        "link": "https://www.marktechpost.com/2026/07/19/alibaba-previews-qwen3-8-max-a-2-4-trillion-parameter-multimodal-model-days-after-moonshots-kimi-k3-open-weight-launch/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-07-19T21:42:50.000Z",
-        "contentSnippet": "Alibaba's Qwen team previewed Qwen3.8-Max-Preview, a 2.4 trillion-parameter multimodal MoE model it calls \"second only to Fable 5.\" The preview is live on Token Plan, Qoder, and QoderWork at 10% of standard pricing. What is not live: any benchmark table, model card, license, per-"
-      },
-      {
-        "title": "Perplexity AI Releases WANDR: An Open Benchmark Evaluating Research Agents That Must Search Wide And Deep",
-        "link": "https://www.marktechpost.com/2026/07/19/perplexity-ai-releases-wandr-an-open-benchmark-evaluating-research-agents-that-must-search-wide-and-deep/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-07-19T07:19:14.000Z",
-        "contentSnippet": "Perplexity's WANDR is an open benchmark and evaluation harness with 500 evidence-heavy tasks. It tests whether research agents can discover many qualifying entities and back each one with cited, re-verifiable evidence. Perplexity Search as Code leads at 0.363 soft F1 and 0.133 ha"
-      },
-      {
-        "title": "10 Open-Source No-Code AI Platforms for Building LLM Apps, RAG Systems, and AI Agents",
-        "link": "https://www.marktechpost.com/2026/07/18/10-open-source-no-code-ai-platforms-for-building-llm-apps-rag-systems-and-ai-agents/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-07-19T05:53:19.000Z",
-        "contentSnippet": "Retrieval, agents, and workflows now ship as visual and plain-English tools. This roundup covers 10 open-source no-code and low-code platforms for building LLM apps, RAG systems, and AI agents, each with its verified license, repository, and best-fit use case. The post 10 Open-So"
-      },
-      {
-        "title": "Kimi K3 vs DeepSeek V4 Pro vs GLM-5.2: Open Trillion-Scale MoE Models Compared on Benchmarks, License, and Serving Cost",
-        "link": "https://www.marktechpost.com/2026/07/18/kimi-k3-vs-deepseek-v4-pro-vs-glm-5-2-open-trillion-scale-moe-models-compared-on-benchmarks-license-and-serving-cost/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-07-19T01:41:33.000Z",
-        "contentSnippet": "Three open MoE flagships face off on measured intelligence, MIT versus Modified MIT weights, and real serving cost The post Kimi K3 vs DeepSeek V4 Pro vs GLM-5.2: Open Trillion-Scale MoE Models Compared on Benchmarks, License, and Serving Cost appeared first on MarkTechPost."
       }
     ],
     "virtualization": [
