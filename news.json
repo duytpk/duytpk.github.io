@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-08-04T19:19:46.222Z",
+  "updatedAt": "2026-08-04T21:02:33.486Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-70553 - MaxSite CMS Unauthenticated RCE via Install Endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70553",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-04T20:16:56.000Z",
+        "contentSnippet": "MaxSite CMS contains a remote code execution vulnerability that allows unauthenticated attackers to inject arbitrary PHP code into the application configuration file by submitting crafted POST requests to the install endpoint after installation is complete. Attackers can supply a",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-70552 - MaxSite CMS 109.5 Unauthenticated AJAX Dispatcher Bypass via ajax.php",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70552",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-04T20:16:55.000Z",
+        "contentSnippet": "MaxSite CMS 109.5 and earlier contains an authentication bypass vulnerability in the AJAX dispatcher that allows unauthenticated attackers to access admin-gated endpoints by supplying any X-Requested-With header and requesting a base64-encoded path resolving to any *-ajax.php fil",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-70486 - Open WebUI: Same-origin XSS to account takeover via terminal file-preview iframe hardcoding allow-same-origin",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70486",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-04T20:16:55.000Z",
+        "contentSnippet": "Open WebUI is an extensible, feature-rich, and user-friendly self-hosted AI platform. From 0.9.0 until 0.11.0, the terminal file-preview serveUrl iframe branch always granted allow-same-origin together with allow-scripts for HTML files served from the application origin. Any auth",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-70485 - Open WebUI: Any authenticated user can reach internal services and cloud metadata via NAT64-encoded URLs",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70485",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-04T20:16:55.000Z",
+        "contentSnippet": "Open WebUI is an extensible, feature-rich, and user-friendly self-hosted AI platform. From 0.9.0 until 0.11.0, Open WebUI checked whether a user-supplied URL destination was globally routable by applying ipaddress.is_global to the literal IPv6 address without examining IPv4 addre",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-70484 - Open WebUI: Users denied the image-generation permission can still generate images via chat completions",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70484",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-04T20:16:55.000Z",
+        "contentSnippet": "Open WebUI is an extensible, feature-rich, and user-friendly self-hosted AI platform. From 0.7.0 until 0.11.0, the legacy chat-completions features block trusted a client-supplied image_generation flag and did not re-check the features.image_generation permission that the direct ",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-70483 - Open WebUI: Any authenticated user can cancel another user's chat generation via the chat delete endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70483",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-04T20:16:55.000Z",
+        "contentSnippet": "Open WebUI is an extensible, feature-rich, and user-friendly self-hosted AI platform. From 0.9.6 until 0.11.0, DELETE /api/v1/chats/{id} cancelled a chat's in-flight tasks before checking whether the caller could delete that chat. Any authenticated user who knew another user's ch",
+        "cveScore": 3.1,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-70482 - Open WebUI: Account takeover via OAuth token exchange accepting tokens issued to any client",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70482",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-04T20:16:55.000Z",
+        "contentSnippet": "Open WebUI is an extensible, feature-rich, and user-friendly self-hosted AI platform. From 0.8.0 until 0.11.0, when ENABLE_OAUTH_TOKEN_EXCHANGE=True, /oauth/{provider}/token/exchange accepts a raw provider access token and validates it by calling the provider userinfo endpoint wi",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-70481 - Open WebUI: Any member with write access to a standard channel can edit or delete other members' messages",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70481",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-04T20:16:55.000Z",
+        "contentSnippet": "Open WebUI is an extensible, feature-rich, and user-friendly self-hosted AI platform. From 0.5.0 until 0.11.0, the standard channel message update and delete handlers accepted any caller holding write access on the channel without checking that the caller wrote the message. Becau",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-70480 - Open WebUI: Client-side SSRF via unrestricted external resource loading in Vega/Vega-Lite chart rendering",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70480",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-04T20:16:54.000Z",
+        "contentSnippet": "Open WebUI is an extensible, feature-rich, and user-friendly self-hosted AI platform. From 0.6.34 until 0.11.0, Open WebUI renders vega and vega-lite fenced code blocks in chat content by building a Vega view in the viewer browser without a restricted resource loader. Any user wh",
+        "cveScore": 4.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-70479 - Open WebUI: SSRF into internal services via unvalidated sub-resource requests in the Playwright web loader",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70479",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-04T20:16:54.000Z",
+        "contentSnippet": "Open WebUI is an extensible, feature-rich, and user-friendly self-hosted AI platform. From 0.9.6 until 0.11.0, with WEB_LOADER_ENGINE=playwright, the Playwright web loader validates only the top-level page request and lets sub-resource requests pass unvalidated. A page supplied b",
+        "cveScore": 7.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-70478 - Flowise: Unauthenticated OAuth2 token refresh endpoint returns access tokens — enables token theft for any connected service",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70478",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-04T20:16:54.000Z",
+        "contentSnippet": "Flowise is a drag & drop user interface to build a customized large language model flow. Prior to 3.1.3, the POST /api/v1/oauth2-credential/refresh/:credentialId endpoint is included in WHITELIST_URLS and requires no authentication. The endpoint decrypts the stored credential, se",
+        "cveScore": 9.2,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-70477 - Flowise: CSV Agent Prompt Injection Remote Code Execution Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70477",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-04T20:16:54.000Z",
+        "contentSnippet": "Flowise is a drag & drop user interface to build a customized large language model flow. Prior to 3.1.3, a prompt injection sent to a chatflow using a CSV Agent node can cause the LLM to respond with a malicious Python script that bypasses the blocklist validator and executes in ",
+        "cveScore": 9.5,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-70476 - Flowise: Broken Access Control in Stripe Subscription Endpoints Allows Cross-Tenant Billing Manipulation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70476",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-04T20:16:54.000Z",
+        "contentSnippet": "Flowise is a drag & drop user interface to build a customized large language model flow. Prior to 3.1.3, several organization billing endpoints in packages/server/src/enterprise/routes/organization.route.ts and packages/server/src/enterprise/controllers/organization.controller.ts",
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-70475 - Flowise: Missing Authorization on Execution Update Endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70475",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-04T20:16:54.000Z",
+        "contentSnippet": "Flowise is a drag & drop user interface to build a customized large language model flow. Prior to 3.1.3, the PUT /api/v1/executions/:id endpoint in packages/server/src/routes/executions/index.ts lacks the checkAnyPermission() middleware that protects other execution endpoints. An",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-48154 - GoRest: InMemorySecret2FA race condition allows process crash via concurrent map access",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48154",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-04T20:16:52.000Z",
+        "contentSnippet": "GoRest is a Golang starter kit built with the Gin framework for prototyping and developing RESTful APIs. In versions prior to 1.12.2 nMemorySecret2FA contains a race condition due to an unsynchronized package-level map used to store 2FA secrets. Multiple HTTP handlers in handler/",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-47682 - CVAT: Missing path-containment validation in multiple entry points allows arbitrary path writes",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47682",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-04T20:16:51.000Z",
+        "contentSnippet": "CVAT is an open source interactive video and image annotation tool for computer vision. In versions 1.6.0 through 2.64.0, an attacker with write access to a cloud storage that's been added to a CVAT instance, or ability to add new cloud storages, is able to overwrite arbitrary fi",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-18810 - H3C NX15 networkSetup missing authentication",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18810",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-04T20:16:51.000Z",
+        "contentSnippet": "A security vulnerability has been detected in H3C NX15 V100R017. Impacted is an unknown function of the file /api/wizard/networkSetup. Such manipulation leads to missing authentication. The attack may be performed from remote. The vendor was contacted early about this disclosure.",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-18657 - Executable Resolution from Untrusted Project Directory in Kiro CLI on Windows",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18657",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-04T20:16:50.000Z",
+        "contentSnippet": "An uncontrolled search path element in Kiro CLI before version 2.10.0 on Windows might allow a remote unauthenticated actor to execute arbitrary code via a maliciously crafted project directory containing an executable that bypasses workspace trust protections when a local user s",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-18656 - Executable Resolution from Untrusted Project Directory in Kiro IDE on Windows",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18656",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-04T20:16:50.000Z",
+        "contentSnippet": "An uncontrolled search path element in Kiro IDE before version 1.0.228 on Windows might allow a remote unauthenticated actor to execute arbitrary code via a maliciously crafted project directory containing an executable that bypasses workspace trust protections when a local user ",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-16793 - Remote Command Injection via OS Profile Password in Lenovo XClarity Orchestrator",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16793",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-04T20:16:49.000Z",
+        "contentSnippet": "An improper neutralization of special elements used in an operating system command vulnerability was reported in Lenovo XClarity Orchestrator (LXCO) 2.2.0 that could allow an authenticated attacker to execute arbitrary operating system commands as a privileged user under a specif",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-16792 - Global TLS Certificate Validation Bypass in Lenovo XClarity Orchestrator",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16792",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-04T20:16:49.000Z",
+        "contentSnippet": "An improper certificate validation vulnerability was reported in multiple Lenovo XClarity Orchestrator (LXCO) 2.2.0 microservices that could allow an adjacent network attacker to intercept sensitive communications by performing a machine-in-the-middle attack against HTTPS connect",
+        "cveScore": 7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-16791 - Predictable Temporary File Symlink Vulnerability in Lenovo XClarity Essentials OneCLI",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16791",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-04T20:16:49.000Z",
+        "contentSnippet": "A temporary file creation vulnerability in the Linux version of Lenovo XClarity Essentials OneCLI 5.5.0 and below could allow a local low-privileged attacker to overwrite or truncate arbitrary local files with program-generated data when OneCLI is executed with elevated privilege",
+        "cveScore": 3.9,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-70474 - Flowise: Cross-Workspace OAuth2 Credential Metadata Leak",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70474",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-04T19:16:54.000Z",
+        "contentSnippet": "Flowise is a drag-and-drop user interface for building customized large language model (LLM) flows. Prior to 3.1.3, Flowise has three OAuth2 credential endpoints that look up credentials by id alone with no workspaceId filter. The authorize, callback, and refresh handlers query t",
+        "cveScore": 7.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-70473 - Flowise: Information Disclosure in GET /api/v1/upsert-history returns the entire server-wide upsert history",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70473",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-04T19:16:54.000Z",
+        "contentSnippet": "Flowise is a drag-and-drop user interface for building customized large language model (LLM) flows. Prior to 3.1.3, Flowise GET /api/v1/upsert-history returns the entire server-wide upsert history instead of being scoped to the requesting user, tenant, or workspace. The response ",
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-70472 - Flowise: Cross-workspace credential IDOR in openai-assistants-vector-store",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70472",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-04T19:16:54.000Z",
+        "contentSnippet": "Flowise is a drag & drop user interface to build a customized large language model flow. Prior to 3.1.3, Flowise openai-assistants-vector-store endpoints accept a client-controlled credential parameter and load credentials by id without checking whether that credential belongs to",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-70470 - Flowise: Pyodide validator Unicode homoglyph bypass leads to RCE",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-70470",
@@ -209,15 +434,6 @@
         "contentSnippet": "Zammad 7.1.0 contains an authenticated improper authorization vulnerability in the ticket article attachment cloning endpoint.",
         "cveScore": 7.1,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-70474 - Flowise: Cross-Workspace OAuth2 Credential Metadata Leak",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70474",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-04T18:01:01.000Z",
-        "contentSnippet": "Flowise is a drag-and-drop user interface for building customized large language model (LLM) flows. Prior to 3.1.3, Flowise has three OAuth2 credential endpoints that look up credentials by id alone with no workspaceId filter. The authorize, callback, and refresh handlers query t",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       },
       {
         "title": "CVE-2026-47764 - pdm: Path traversal in wheel installation via overridden write_to_fs",
@@ -686,222 +902,6 @@
         "contentSnippet": "Use of hard-coded cryptographic key vulnerability in Bilin Software and Informatics Consultancy Inc. HUMANIST Digital Human Resources allows Read Sensitive Constants Within an Executable. This issue affects HUMANIST Digital Human Resources: from 26.0 before 26.1.",
         "cveScore": 9.1,
         "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-14465 - Session Fixation in Bilin Software's HUMANIST Digital Human Resources",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14465",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-04T10:19:32.000Z",
-        "contentSnippet": "Insufficient session expiration vulnerability in Bilin Software and Informatics Consultancy Inc. HUMANIST Digital Human Resources allows Reusing Session IDs (aka Session Replay). This issue affects HUMANIST Digital Human Resources: from 26.0 before 26.1.",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-14219 - URL Redirection in Bilin Software's HUMANIST Digital Human Resources",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14219",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-04T10:19:32.000Z",
-        "contentSnippet": "URL redirection to untrusted site ('open redirect') vulnerability in Bilin Software and Informatics Consultancy Inc. HUMANIST Digital Human Resources allows Phishing. This issue affects HUMANIST Digital Human Resources: from 26.0 before 26.1.",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-14202 - Username Enumeration via Differential Login Responses in Bilin Software's HUMANIST Digital Human Resources",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14202",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-04T10:19:32.000Z",
-        "contentSnippet": "Observable response discrepancy vulnerability in Bilin Software and Informatics Consultancy Inc. HUMANIST Digital Human Resources allows Account Footprinting. This issue affects HUMANIST Digital Human Resources: from 26.0 before 26.1.",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-14194 - Path Traversal Allows Arbitrary File Download in Bilin Software's HUMANIST Digital Human Resources",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14194",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-04T10:19:31.000Z",
-        "contentSnippet": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability in Bilin Software and Informatics Consultancy Inc. HUMANIST Digital Human Resources allows Path Traversal. This issue affects HUMANIST Digital Human Resources: from 26.0 before 26.1.",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-14192 - Stored XSS in Bilin Software's HUMANIST Digital Human Resources",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14192",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-04T10:19:31.000Z",
-        "contentSnippet": "Improper neutralization of input during web page generation ('cross-site scripting') vulnerability in Bilin Software and Informatics Consultancy Inc. HUMANIST Digital Human Resources allows Stored XSS. This issue affects HUMANIST Digital Human Resources: from 26.0 before 26.1.",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-14175 - Unrestricted File Upload in Bilin Software's HUMANIST Digital Human Resources",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14175",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-04T10:19:31.000Z",
-        "contentSnippet": "Unrestricted upload of file with dangerous type vulnerability in Bilin Software and Informatics Consultancy Inc. HUMANIST Digital Human Resources allows Upload a Web Shell to a Web Server. This issue affects HUMANIST Digital Human Resources: from 26.0 before 26.1.",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-67243 - Refirio freo2 Unrestricted File Upload Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67243",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-04T08:16:35.000Z",
-        "contentSnippet": "freo2 provided by refirio contains an unrestricted upload of file with dangerous type vulnerability. A user with the highest-level administrative privileges for the product may upload an executable file and execute arbitrary OS commands.",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-18759 - An improper authentication and path traversal vulnerability exists in ASUSTOR Backup Plan and ASUSTOR EZ Sync.",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18759",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-04T08:16:35.000Z",
-        "contentSnippet": "The background service of ABP or AES runs as NT AUTHORITY\\SYSTEM and implements a file-based inter-process communication (IPC) mechanism protected by AES encryption. Because the encryption key file is readable by standard users and protected using DPAPI. Any authenticated local u",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-18755 - GV-ASManager DLL hijacking vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18755",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-04T08:16:34.000Z",
-        "contentSnippet": "A DLL hijacking vulnerability in GeoVision GV-ASManager allows a local attacker with write access to an unsafe search directory to execute arbitrary code. By placing a crafted dynamic-link library (DLL) file into the application search path prior to the legitimate library, the ma",
-        "cveScore": 7.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-18754 - Hardcoded Cryptographic Key on GV-AS1620 Controller Firmware (GV-Cloud)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18754",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-04T08:16:34.000Z",
-        "contentSnippet": "The product firmware contains an embedded, static RSA private key utilized by the Lighttpd web server for TLS termination. Exposure of this private key allows malicious actors to breach the confidentiality and integrity of HTTPS communications, enabling traffic decryption and ser",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-18753 - Hardcoded Cryptographic Key on GV-AS1620 Controller Firmware (GV-ASManager)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18753",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-04T08:16:34.000Z",
-        "contentSnippet": "The product firmware contains an embedded, static RSA private key utilized by the Lighttpd web server for TLS termination. Exposure of this private key allows malicious actors to breach the confidentiality and integrity of HTTPS communications, enabling traffic decryption and ser",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-64565 - Input: ims-pcu - fix heap-buffer-overflow in ims_pcu_process_data()",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64565",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-04T07:16:31.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: Input: ims-pcu - fix heap-buffer-overflow in ims_pcu_process_data() The `ims_pcu_process_data()` processes incoming URB data byte by byte. However, it fails to check if the `read_pos` index exceeds IMS_PCU_BUF_SI",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-64564 - sctp: don't free the ASCONF's own transport in DEL-IP processing",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64564",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-04T07:16:31.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: sctp: don't free the ASCONF's own transport in DEL-IP processing sctp_process_asconf() caches the transport the ASCONF chunk is processed against in asconf->transport (== chunk->transport, set once in sctp_rcv())",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-64563 - rhashtable: clear stale iter->p on table restart",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64563",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-04T07:16:31.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: rhashtable: clear stale iter->p on table restart rhashtable_walk_start_check() has two restart paths when resuming a walk. When iter->walker.tbl is valid, it re-validates iter->p against the table and sets iter->",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-64562 - KVM: nVMX: Hide shadow VMCS right after VMCLEAR",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64562",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-04T07:16:31.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: KVM: nVMX: Hide shadow VMCS right after VMCLEAR free_nested() frees the shadow VMCS while vmcs01 still points to it. But because it is asynchronous with respect to loaded_vmcs_clear(), the vCPU might migrate befo",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-64561 - KVM: x86: Check for invalid/obsolete root *after* making MMU pages available",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64561",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-04T07:16:30.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: KVM: x86: Check for invalid/obsolete root *after* making MMU pages available Check for a \"stale\" page fault, i.e. for an invalid and/or obsolete root, after making MMU pages available for the shadow MMU. If recla",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-16623 - Create Block Theme < 2.10.0 - Admin+ PHP Code Injection via Pattern Save (Multisite)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16623",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-04T07:16:30.000Z",
-        "contentSnippet": "The Create Block WordPress plugin before 2.10.0 does not correctly escape user-supplied text before writing it into a generated PHP pattern file, allowing a multisite subsite administrator (who holds the capability gating this action but is denied the capability that normally gat",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-16618 - ImproveSEO <= 2.0.11 - Unauthenticated Arbitrary File Upload Leading to Remote Code Execution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16618",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-04T07:16:30.000Z",
-        "contentSnippet": "The Improve SEO WordPress plugin through 2.0.11 does not properly validate uploaded files, checking only the file content type while writing the file with the attacker-supplied extension into a publicly accessible directory, allowing unauthenticated users to upload executable PHP",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-16548 - Bit Assist < 1.8.2 - Unauthenticated Arbitrary File Upload via Response Endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16548",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-04T07:16:30.000Z",
-        "contentSnippet": "The Chat Widget: Floating Customer Support Button for 30+ Channels, Supporting SMS, Calls, and Chat WordPress plugin before 1.8.2 does not validate the type, extension, content, or size of files submitted to its public response endpoint and stores them under the uploads directory",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-16547 - REST API Log < 1.7.1 - Unauthenticated Sensitive Log Data Disclosure via Download Endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16547",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-04T07:16:30.000Z",
-        "contentSnippet": "The REST API Log WordPress plugin before 1.7.1 does not bind the token protecting its log download feature to the log entry being requested, nor does it check the capability of the requester, allowing unauthenticated users in possession of any such token to download the logged RE",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-16546 - Wired Impact Volunteer Management < 2.8.2 - Subscriber+ Arbitrary RSVP Removal via wivm_remove_rsvp",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16546",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-04T07:16:30.000Z",
-        "contentSnippet": "The Wired Impact Volunteer Management WordPress plugin before 2.8.2 does not have authorisation checks in one of its AJAX actions, and does not verify that the RSVP being removed belongs to the requesting user, allowing users with a role as low as Subscriber to remove arbitrary u",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-16536 - Simple Google Calendar Outlook Events Widget < 3.1.0 - Unauthenticated SSRF via calendar_id",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16536",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-04T07:16:30.000Z",
-        "contentSnippet": "The Simple Google Calendar Outlook Events Widget WordPress plugin before 3.1.0 does not validate a user-supplied URL before performing a server-side request, allowing unauthenticated attackers to perform Server-Side Request Forgery attacks and, in some cases, read the response of",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-16296 - Clearfy < 2.4.3 - Open Redirect via Cyrlitera 404 Handler",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16296",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-04T07:16:30.000Z",
-        "contentSnippet": "The Clearfy Cache WordPress plugin before 2.4.3 does not validate the redirect target in its Cyrlitera old-URL redirect handler, passing a decoded request URI to an unsafe redirect function, which allows unauthenticated attackers to redirect visitors to an arbitrary external URL ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-16295 - Clearfy < 2.4.3 - Subscriber+ Sensitive Information Disclosure via Factory Page-Action Dispatcher",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16295",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-04T07:16:30.000Z",
-        "contentSnippet": "The Clearfy Cache WordPress plugin before 2.4.3 does not perform a capability check in one of its admin-page dispatch paths, allowing any authenticated user such as a Subscriber to render admin-only settings pages and disclose their contents, including administrative nonces, whil",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       }
     ],
     "ai": [
@@ -2310,6 +2310,34 @@
     ],
     "hardware": [
       {
+        "title": "Lenovo ThinkPad X1 Carbon Gen 14 Review",
+        "link": "https://www.servethehome.com/lenovo-thinkpad-x1-carbon-gen-14-review/",
+        "source": "ServeTheHome",
+        "isoDate": "2026-08-04T20:00:56.000Z",
+        "contentSnippet": "The Lenovo ThinkPad X1 Carbon Gen 14 takes the long-running business notebook line into a new Intel Core Ultra generation. Our model 21V7006EUS pairs an Intel Core Ultra 7 355 with 32GB-class memory and integrated Intel graphics in a system The post Lenovo ThinkPad X1 Carbon Gen "
+      },
+      {
+        "title": "VDURA and Wasabi Pair GPU-Adjacent AI Storage With No-Egress-Fee S3 Archiving",
+        "link": "https://www.storagereview.com/news/vdura-and-wasabi-pair-gpu-adjacent-ai-storage-with-no-egress-fee-s3-archiving",
+        "source": "StorageReview",
+        "isoDate": "2026-08-04T20:00:20.000Z",
+        "contentSnippet": "VDURA and Wasabi Technologies have formed a technology alliance to connect GPU-adjacent AI data infrastructure with predictably priced, S3-compatible cloud storage. The partnership targets AI factories, neoclouds, and enterprise high-performance computing environments that need t"
+      },
+      {
+        "title": "NVIDIA SCADA Puts Storage Control on the GPU as cuFile Goes Open Source",
+        "link": "https://www.storagereview.com/news/nvidia-scada-puts-storage-control-on-the-gpu-as-cufile-goes-open-source",
+        "source": "StorageReview",
+        "isoDate": "2026-08-04T19:32:59.000Z",
+        "contentSnippet": "Historically, every storage read by a GPU has traversed the host CPU, which manages the file system, submits commands, and returns the data. This overhead is negligible for large sequential transfers but becomes a limiting factor when handling millions of 512-byte operations per "
+      },
+      {
+        "title": "Samsung Outlines 3D Memory Roadmap for AI Infrastructure at FMS 2026",
+        "link": "https://www.storagereview.com/news/samsung-outlines-3d-memory-roadmap-for-ai-infrastructure-at-fms-2026",
+        "source": "StorageReview",
+        "isoDate": "2026-08-04T19:30:31.000Z",
+        "contentSnippet": "Samsung used the Future of Memory and Storage (FMS) 2026 conference to present its latest memory and storage technologies for artificial intelligence and high-performance computing. The company highlighted developments in DRAM, NAND, enterprise storage, advanced packaging, and se"
+      },
+      {
         "title": "More GPU price hikes loom for Asia as Japanese distributor warns of new increases — CFD Sales signals 20% to 40% higher prices on Gigabyte graphics card orders starting this month",
         "link": "https://www.tomshardware.com/pc-components/gpus/more-gpu-price-hikes-loom-for-asia-as-japanese-distributor-warns-of-new-increases-cfd-sales-signals-20-percent-to-40-percent-higher-prices-on-gigabyte-graphics-card-orders-starting-this-month",
         "source": "Tom's Hardware",
@@ -2980,34 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-07-30T14:34:51.000Z",
         "contentSnippet": "Premium Nvidia GeForce RTX 5080 and RTX 5090 graphics cards are once again selling far above MSRP, with some Asus and MSI models climbing close to $5,000."
-      },
-      {
-        "title": "Examining the best options for PCIe SSDs during the RAMpocalypse — capacity trumps raw speed for most tasks",
-        "link": "https://www.tomshardware.com/pc-components/ssds/examining-the-best-options-for-pcie-ssds-during-the-rampocalypse-capacity-trumps-raw-speed-for-most-tasks",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-30T14:22:24.000Z",
-        "contentSnippet": "High SSD speeds are helpful in many applications, but should they trump the capacity of the SSD when it comes to gaming?"
-      },
-      {
-        "title": "Intel licenses Atom-class x86 cores to startup — firm reportedly sharing RTL, enabling customer to build its own custom processors based on x86 general-purpose cores",
-        "link": "https://www.tomshardware.com/pc-components/cpus/intel-licenses-atom-class-x86-cores-to-startup-firm-reportedly-sharing-rtl-enabling-customer-to-build-its-own-custom-processors-based-on-x86-general-purpose-cores",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-30T13:27:05.000Z",
-        "contentSnippet": "Intel reportedly licenses Atom-class x86 cores to a startup led by Lip-Bu Tan's co-investor and incorporated in May."
-      },
-      {
-        "title": "Foreign-made robot vacuums caught up in FCC robot ban — covers any ground robot over 4.4 pounds with a 200 kbps connection",
-        "link": "https://www.tomshardware.com/tech-industry/fcc-robot-ban-covers-any-ground-robot-over-4-4-pounds-with-a-200-kbps-connection",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-30T13:03:45.000Z",
-        "contentSnippet": "The FCC has added foreign-produced advanced robotic devices and connected power inverters to its Covered List."
-      },
-      {
-        "title": "Why you need a macro pad, even if you have a mouse with 19 buttons — from $10 mechanical numpads to multi-screen window management",
-        "link": "https://www.tomshardware.com/peripherals/why-you-need-a-macro-pad-even-if-you-have-a-mouse-with-19-buttons-from-usd10-mechanical-numpads-to-multi-screen-window-management",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-07-30T12:21:40.000Z",
-        "contentSnippet": "You don't need to be a streamer or do tons of data entry to make use of a standalone macro pad. Here are your options and why you should use them."
       }
     ]
   }
