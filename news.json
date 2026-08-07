@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-08-07T09:52:39.964Z",
+  "updatedAt": "2026-08-07T10:43:37.370Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-71560 - Apache Fory: Out-of-bounds heap read in C++ struct deserializer tagged-int fast-path",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71560",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T10:16:59.000Z",
+        "contentSnippet": "Out-of-bounds Read vulnerability in Apache Fory C++ deserialization. This issue affects Apache Fory C++ versions from 0.14.0 before 1.5.0 when deserializing structs containing tagged integer fields. A crafted input payload may trigger an out-of-bounds heap read in the tagged inte",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-71559 - Apache Fory: Uncaught panic (remote DoS) in Go meta-string decoder from untrusted metadata",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71559",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T10:16:59.000Z",
+        "contentSnippet": "Deserialization of Untrusted Data vulnerability in the Go implementation of Apache Fory allows an attacker to cause a denial of service by supplying crafted data containing malformed type metadata, which triggers an uncaught panic. This issue affects Apache Fory: from 0.16.0 befo",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-71558 - Apache Fory: Heap type confusion in C++ polymorphic smart-pointer deserialization",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71558",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T10:16:59.000Z",
+        "contentSnippet": "Heap type confusion vulnerability in Apache Fory C++ deserialization. This issue affects Apache Fory C++ versions from 0.14.0 before 1.5.0. A crafted input payload can bypass type compatibility checks during polymorphic smart-pointer deserialization, causing an object of an incom",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-54218 - TeamDavid: Weak Cryptography and Insecure Password Storage",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54218",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T10:16:59.000Z",
+        "contentSnippet": "Use of hard-coded cryptographic key vulnerability in Tobit Laboratories AG TeamDavid's Webbox. For users created locally in David, passwords are stored in various files using only obfuscation. Any user with access to the server’s file system, or who can otherwise extract files fr",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-54217 - TeamDavid: Stored XSS in web application",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54217",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T10:16:59.000Z",
+        "contentSnippet": "Tobit Laboratories AG TeamDavid's Webbox application is vulnerable to a stored XSS vulnerability. An attacker can send an email containing malicious JavaScript code. When a user accesses the email, the stored cross-site scripting is triggered. This issue affects TeamDavid through",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-54216 - TeamDavid: Reflected Cross Site Scripting (XSS) via the 'EntryInfo' parameter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54216",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T10:16:58.000Z",
+        "contentSnippet": "Tobit Laboratories AG TeamDavid's Webbox application contains a reflected cross-site scripting (XSS) vulnerability. By sending a specially crafted link including an arbitrary path, an XSS payload or the parameter “EntryInfo”, and the parameter “!templateName=entryMail”, an attack",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-54215 - TeamDavid: Open Redirect via the 'replyUrl' parameter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54215",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T10:16:58.000Z",
+        "contentSnippet": "Tobit Laboratories AG TeamDavid's Webbox contains an open redirect vulnerability via the “replyUrl” parameter. An attacker can exploit this vulnerability to craft a URL within the application that, when visited, redirects the user’s browser to an arbitrary third-party site. This ",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-54214 - TeamDavid: Header Injection through the 'cType' URL parameter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54214",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T10:16:58.000Z",
+        "contentSnippet": "Tobit Laboratories AG TeamDavid's Webbox application is vulnerable to HTTP header injection through the “cType” URL parameter, which allows arbitrary modification of the Content-Type header in HTTP responses. Because the parameter does not properly restrict control characters suc",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-54213 - TeamDavid: Denial of Service via endpoint 'internalRestart'",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54213",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T10:16:58.000Z",
+        "contentSnippet": "Tobit Laboratories AG TeamDavid's Webbox application exposes a functionality that allows the server to be shut down when a specific endpoint (/internalRestart) is accessed. This endpoint is accessible to unauthenticated users over the public Internet. Instead of “restarting”, the",
+        "cveScore": 9.2,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-54212 - TeamDavid: Buffer Overflow in JSON-parsing",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54212",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T10:16:58.000Z",
+        "contentSnippet": "Tobit Laboratories AG TeamDavid's Webbox application implements an API endpoint that is vulnerable to a buffer overflow condition. By submitting a specially crafted JSON body, such as one that is at least 8 characters long and begins with a number, an unauthenticated attacker can",
+        "cveScore": 9.5,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-54211 - TeamDavid: Buffer Overflow in multiple form data parameters",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54211",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T10:16:58.000Z",
+        "contentSnippet": "Tobit Laboratories AG TeamDavid's Webbox application’s endpoint “//serverClient_close.html” is vulnerable to a buffer overflow vulnerability in multiple form data parameters. By submitting excessively long values in these parameters, an authenticated attacker can trigger a server",
+        "cveScore": 9.5,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-54210 - TeamDavid: Buffer Overflow in file names of file upload functionalities",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54210",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T10:16:58.000Z",
+        "contentSnippet": "Tobit Laboratories AG TeamDavid's Webbox application implements various file upload functionalities that are vulnerable to a buffer overflow condition. By specifying an excessively long filename in a file upload request, an unauthenticated attacker can trigger a crash of the serv",
+        "cveScore": 9.5,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-54209 - TeamDavid: Buffer Overflow in 'editini' function",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54209",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T10:16:57.000Z",
+        "contentSnippet": "Tobit Laboratories AG TeamDavid's Webbox application handles password changes using a function triggered by including the string \"(editini)\" in the file path, writing the new password to the specified \"Archive.ini\" file. However, the application does not verify that the provided ",
+        "cveScore": 8.9,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-54208 - TeamDavid: Arbitrary File Write leading to Stored XSS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54208",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T10:16:57.000Z",
+        "contentSnippet": "Tobit Laboratories AG TeamDavid's Webbox application is vulnerable to arbitrary file write, allowing an unauthenticated attacker to create or write into existing files on the server with attacker-controlled content. This is possible because user input is written directly to files",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-54207 - TeamDavid: Server-Side Request Forgery (SSRF) via 'pathname' parameter in move archive functionality",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54207",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T10:16:57.000Z",
+        "contentSnippet": "Tobit Laboratories AG TeamDavid's Webbox 's move archive functionality (“!ArcEntryMove”) accepts an arbitrary path, which can be set to network locations using UNC paths (e.g., “\\\\Server\\Share”). The server processes these paths without validation, resulting in outbound connectio",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-54206 - TeamDavid: Server-Side Request Forgery (SSRF) via 'pathname' parameter in sending functionality",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54206",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T10:16:57.000Z",
+        "contentSnippet": "Tobit Laboratories AG TeamDavid's Webbox 's sending email, fax, SMS, etc. functionality accepts a @@INCLUDE command, which can be set to network locations using UNC paths (e.g., “\\\\Server\\Share”). The server processes these paths without validation, resulting in outbound connecti",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-54205 - TeamDavid: Server-Side Request Forgery (SSRF) via 'pathname' parameter in link storing functionality",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54205",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T10:16:57.000Z",
+        "contentSnippet": "Tobit Laboratories AG TeamDavid's Webbox 's link storing functionality (//ServerClient_celink.htm) accepts a “pathname” parameter, which can be set to network locations using UNC paths (e.g., “\\\\Server\\Share”). The server processes these paths without validation, resulting in out",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-54204 - TeamDavid: Server-Side Request Forgery (SSRF) via 'pathnameroot' parameter in search functionality",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54204",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T10:16:57.000Z",
+        "contentSnippet": "Tobit Laboratories AG TeamDavid's Webbox 's search functionality accepts a “pathnameroot” parameter, which can be set to network locations using UNC paths (e.g., “\\\\Server\\Share”). The server processes these paths without validation, resulting in outbound connection attempts to a",
+        "cveScore": 7.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-54203 - TeamDavid: Memory Leak leaking sensitive information",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54203",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T10:16:57.000Z",
+        "contentSnippet": "Memory Leak to an Unauthorized Actor vulnerability in Tobit Laboratories AG TeamDavid's Webbox allows reading of sensitive information. When accessing the URL “/.well-known/mta-sts.”, the application responds with memory. By repeatedly requesting this endpoint, an attacker can ac",
+        "cveScore": 9.2,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-54202 - TeamDavid: Path Traversal in the archive creation functionality",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54202",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T10:16:56.000Z",
+        "contentSnippet": "Tobit Laboratories AG TeamDavid's Webbox is vulnerable to a path traversal vulnerability in the archive creation functionality. Because the archive path is user-controlled and insufficiently validated, an attacker can manipulate the input to traverse directories. This allows the ",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-54201 - TeamDavid: Missing Authorization",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54201",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T10:16:56.000Z",
+        "contentSnippet": "Tobit Laboratories AG TeamDavid's Webbox does not enforce authentication or authorization checks when serving these log files. As a result, attackers can obtain sensitive error information or internal application details, potentially aiding in further attacks. This issue affects ",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-54200 - TeamDavid: Local File Inclusion via the form field 'scjob'",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54200",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T10:16:56.000Z",
+        "contentSnippet": "Tobit Laboratories AG TeamDavid's Webbox is vulnerable to a local file inclusion vulnerability in the send email, fax, SMS, etc. functionality. By specifying an '@@attach' command in the form field 'scjob', files can be attached to a message, which can then be downloaded by an au",
+        "cveScore": 8.4,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-54199 - TeamDavid: Header Injection through request body in link storing functionality",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54199",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T10:16:56.000Z",
+        "contentSnippet": "Tobit Laboratories AG TeamDavid's Webbox is vulnerable to HTTP header injection through the request body in the application's link storing functionality (//ServerClient_celink.htm), which is appended to the redirect target in the 302 HTTP response. If a line feed is added, this w",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-12071 - TeamDavid: Header Injection leading to Open Redirect via URL-encoded characters",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12071",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T10:16:56.000Z",
+        "contentSnippet": "The Webbox of TeamDavid by Tobit Laboratories AG constructs redirect URLs using user-supplied input, which is appended to the redirect target in a 302 HTTP response. By using URL-encoded characters such as “%2e” (representing a dot), an attacker can manipulate the portion of the ",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-12070 - TeamDavid: Arbitrary File Deletion via form field 'scjob'",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12070",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T10:16:55.000Z",
+        "contentSnippet": "Tobit Laboratories AG TeamDavid's Webbox is vulnerable to an arbitrary file deletion vulnerability in the send email, fax, SMS, etc. functionality. By specifying an @@COMMENTFILE command in the form field scjob, any file on the system can be deleted. This issue affects TeamDavid ",
+        "cveScore": 8.4,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-49007 - Information leakage vulnerability in ZTE F689 product",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-49007",
@@ -676,231 +901,6 @@
         "isoDate": "2026-08-06T22:18:30.000Z",
         "contentSnippet": "Mermaid is a JavaScript tool that uses Markdown-inspired text to create and modify diagrams and charts. From version 10.6.0 until 10.9.8 and 11.16.1, Mermaid XY Charts are vulnerable to an infinite loop denial of service in the setXAxisRangeData function when configuring an X-Axi",
         "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-71435 - Statamic: Stored Cross-Site Scripting in Automagic Form Notification Email Template",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71435",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-06T22:18:30.000Z",
-        "contentSnippet": "Statamic is a Laravel and Git powered content management system (CMS). Prior to 5.74.3 and 6.24.2, the default (\"automagic\") form notification email rendered user-submitted values without escaping, allowing an unauthenticated form submitter to inject HTML into the notification em",
-        "cveScore": 6.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-71434 - Statamic: Missing file upload validation on frontend forms allows uploading disallowed file types",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71434",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-06T22:18:30.000Z",
-        "contentSnippet": "Statamic is a Laravel and Git powered content management system (CMS). Prior to 5.74.3 and 6.24.2, public frontend forms did not enforce the file upload restrictions that the Control Panel enforces, so an unauthenticated visitor could upload file types an administrator had intend",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-71433 - LangGraph: Namespace prefix matching crosses segment boundaries in Postgres and SQLite stores",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71433",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-06T22:18:30.000Z",
-        "contentSnippet": "LangGraph Checkpoint Postgres and SQLite Checkpoint are the Postgres and SQLite implementations of LangGraph's checkpoint saver. Prior to 3.1.1, the langgraph-checkpoint-postgres and langgraph-checkpoint-sqlite packages persisted hierarchical namespaces as a dot joined string and",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-71430 - node-re2: String.prototype.replace(re2, template) aborts the Node process (uncatchable ToLocalChecked on empty MaybeLocal) when the result exceeds V8's max string length",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71430",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-06T22:18:29.000Z",
-        "contentSnippet": "node-re2 provides RE2 regular expression bindings for Node.js. Prior to version 1.25.1, the WrappedRE2::Replace function built its replacement result and passed it to V8 using ToLocalChecked without checking for the empty MaybeLocal that V8 returns when the resulting string or bu",
-        "cveScore": 6.2,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-71327 - Traefik: Gateway API route identity collision allows cross-namespace backend hijacking",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71327",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-06T22:18:29.000Z",
-        "contentSnippet": "Traefik is an open source HTTP reverse proxy and load balancer. From 3.0.0 until 3.6.25 and 3.7.10, Traefik's Kubernetes Gateway API provider in pkg/provider/kubernetes/gateway/httproute.go, grpcroute.go, tcproute.go, and tlsroute.go builds HTTPRoute, GRPCRoute, TCPRoute, and TLS",
-        "cveScore": 7.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-71326 - Traefik: BasicAuth singleflight key collision allows authenticated identity spoofing",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71326",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-06T22:18:29.000Z",
-        "contentSnippet": "Traefik is an open source HTTP reverse proxy and load balancer. From 3.6.11 until 3.6.25 and 3.7.10, Traefik's BasicAuth middleware in pkg/middlewares/auth/basic_auth.go deduplicates concurrent password checks with a singleflight key built from the delimiter-free concatenation of",
-        "cveScore": 2.1,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-71325 - Traefik: `allowCrossNamespace=false` bypass via `@kubernetescrd` TraefikService backendRef",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71325",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-06T22:18:29.000Z",
-        "contentSnippet": "Traefik is an open-source edge router that makes publishing services a fun and easy experience. Prior to 2.11.54, 3.6.25, and 3.7.10, cross-namespace @kubernetescrd references are not rejected for TraefikService backend references resolved by the service resolver. A tenant confin",
-        "cveScore": 4.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-64993 - Dell RVTools Collector Improper Certificate Validation Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64993",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-06T13:38:42.000Z",
-        "contentSnippet": "Dell RVTools versions prior to 4.8.1, contains an improper certificate validation vulnerability in the collector. A remote unauthenticated attacker could potentially exploit this vulnerability leading to loss of confidentiality and integrity.",
-        "cveScore": 6.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-5134 - SQLi in Loca Software's CMS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-5134",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-06T13:31:45.000Z",
-        "contentSnippet": "Improper neutralization of special elements used in an SQL command ('SQL injection') vulnerability in Loca Software Informatics Technology Ltd. Co. CMS allows SQL Injection. This issue affects CMS: through 06082026. NOTE: The vendor was contacted early about this disclosure but d",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-19041 - MissionSquad mcp-api NPM Package Version packages.ts this.packageService.installPackage command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19041",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-06T13:30:13.000Z",
-        "contentSnippet": "A vulnerability has been found in MissionSquad mcp-api up to 1.11.8. The impacted element is the function this.packageService.installPackage of the file src/controllers/packages.ts of the component NPM Package Version Handler. The manipulation leads to command injection. It is po",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-18501 - UsersWP <= 1.2.69 - Authenticated (Subscriber+) Stored Cross-Site Scripting via Badge Widget Variable Substitution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18501",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-06T13:27:13.000Z",
-        "contentSnippet": "The UsersWP – Front-end login form, User Registration, User Profile & Members Directory plugin for WP plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Badge Widget Variable Substitution in all versions up to, and including, 1.2.69 due to insufficient input sa",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-70556 - Hubzilla 11.2.1 CSRF via OAuth2 /authorize Endpoint App Registration",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70556",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-06T13:18:24.000Z",
-        "contentSnippet": "Hubzilla 11.2.1 contains a cross-site request forgery vulnerability in the OAuth2 /authorize endpoint handled by Zotlabs\\Module\\Authorize::post() that allows unauthenticated attackers to register arbitrary OAuth2 applications under an authenticated user's account by submitting a ",
-        "cveScore": 5.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-66733 - Sonic 3 A.I.R. Unbounded Memory Allocation DoS via ReceivedPacketCache",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66733",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-06T13:18:21.000Z",
-        "contentSnippet": "Sonic 3 A.I.R. before commit 2492d18 contains an unbounded memory allocation vulnerability in ReceivedPacketCache::enqueuePacket() that allows unauthenticated remote attackers to crash the server process by sending a crafted UDP packet with mUniquePacketID set to the maximum uint",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-66732 - Sonic 3 A.I.R. Missing Source Address Validation in ConnectionManager",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66732",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-06T13:18:21.000Z",
-        "contentSnippet": "Sonic 3 A.I.R. before commit 2492d18 contains a missing source address validation vulnerability in ConnectionManager where established connections are resolved by a two-byte local connection handle alone without verifying that the datagram source address matches the registered re",
-        "cveScore": 8.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-65551 - WordPress Breakdance plugin < 2.7 - Broken Access Control vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65551",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-06T13:18:21.000Z",
-        "contentSnippet": "Missing Authorization vulnerability in Soflyy Breakdance allows Exploiting Incorrectly Configured Access Control Security Levels. This issue affects Breakdance: from n/a before 2.7.",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-12605 - Eclipse GlassFish CSRF and SSRF Token Disclosure Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12605",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-06T13:18:05.000Z",
-        "contentSnippet": "In Eclipse GlassFish versions 8.0.x before 8.0.4, CSRF + SSRF in DownloadServlet ContentSources leaks the admin `gfresttoken` to attacker-controlled host if the victim is authenticated into the Admin Console -\\> full unauthenticated takeover of Eclipse GlassFish domain until the ",
-        "cveScore": 9.6,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-19039 - Kino-Kafkaesque ssh-mcp-server SSH index.ts ssh_exec command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19039",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-06T13:17:27.000Z",
-        "contentSnippet": "A vulnerability was detected in Kino-Kafkaesque ssh-mcp-server up to 8ebbbb99b26f80ff6162fe00957c6dec73fbc5a5. Impacted is the function ssh_exec of the file src/index.ts of the component SSH Command Handler. Performing a manipulation of the argument host/username results in comma",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-19038 - MonomythDevelopment la-forge-mcp screenshot_element Tool index.ts screenshotElement path traversal",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19038",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-06T13:17:27.000Z",
-        "contentSnippet": "A security vulnerability has been detected in MonomythDevelopment la-forge-mcp 1.0.0. This issue affects the function screenshotElement of the file src/index.ts of the component screenshot_element Tool. Such manipulation of the argument output_name leads to path traversal. The at",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-19037 - WonderTrader Internal Limit Order Book Cache MatchEngine.cpp update_lob behavioral workflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19037",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-06T13:17:27.000Z",
-        "contentSnippet": "A weakness has been identified in WonderTrader up to 0.9.9. This vulnerability affects the function MatchEngine::update_lob of the file src/WtBtCore/MatchEngine.cpp of the component Internal Limit Order Book Cache Handler. This manipulation causes enforcement of behavioral workfl",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-19036 - Shibby Tomato wanoptions sub_40F88C os command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19036",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-06T13:17:27.000Z",
-        "contentSnippet": "A security flaw has been discovered in Shibby Tomato 1.28.0000. This affects the function sub_40F88C of the file /tmp/ppp/wanoptions. The manipulation of the argument ppp_custom results in os command injection. The attack may be launched remotely. The exploit has been released to",
-        "cveScore": 8.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-15599 - Arbitrary Process Termination in TÜBİTAK BİLGEM's pardus-domain-joiner",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15599",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-06T13:17:24.000Z",
-        "contentSnippet": "Unverified ownership vulnerability in TÜBİTAK BİLGEM Software Technologies Research Institute pardus-domain-joiner allows Privilege Abuse. This issue affects pardus-domain-joiner: before 0.5.5.",
-        "cveScore": 3.3,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-0673 - Element Pack Addons for Elementor <= 8.3.15 - Unauthenticated SMTP Header Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-0673",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-06T13:17:21.000Z",
-        "contentSnippet": "The Element Pack Addons for Elementor plugin for WordPress is vulnerable to Email Header Injection in all versions up to, and including, 8.3.15 via the `element_pack_contact_form` AJAX action. This is due to insufficient sanitization of newline characters in user-supplied input t",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-19040 - MissionSquad mcp-api dcrClients.ts server-side request forgery",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19040",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-06T13:15:12.000Z",
-        "contentSnippet": "A flaw has been found in MissionSquad mcp-api up to 1.11.9. The affected element is an unknown function of the file src/services/dcrClients.ts. Executing a manipulation can lead to server-side request forgery. The attack may be performed from remote. Upgrading to version 1.11.10 ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-16731 - Authentication and authorization bypass via cryptographic timing side-channel attack in StationScout",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16731",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-06T13:14:25.000Z",
-        "contentSnippet": "OMICRON StationScout before version 3.05 contains a cryptographic timing side-channel vulnerability in the backend authentication mechanism that may allow an unauthenticated attacker to forge valid authentication credentials, bypass authentication and authorization, and impersona",
-        "cveScore": 8.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-16316 - Malformed IEC 61850 Sampled Values frames cause partial denial of service in StationGuard",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16316",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-06T13:14:25.000Z",
-        "contentSnippet": "OMICRON StationGuard 4.00 contains an improper input validation vulnerability in its IEC 61850 Sampled Values (SV) frame processing. A specially crafted SV frame can cause the affected process to terminate, disrupting alert processing for Sampled Values traffic. The vulnerability",
-        "cveScore": 4.3,
         "cveSeverity": "MEDIUM"
       }
     ],
@@ -2310,6 +2310,20 @@
     ],
     "hardware": [
       {
+        "title": "Anthropic co-designing custom AI inference chips to bypass costly Nvidia GPUs — Samsung reported as manufacturing partner for Claude maker",
+        "link": "https://www.tomshardware.com/tech-industry/anthropic-to-build-its-own-co-designed-custom-ai-accelerator-for-inferencing-workloads-samsung-reported-to-be-partnering-with-the-claude-ai-maker-for-manufacturing",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-07T10:30:00.000Z",
+        "contentSnippet": "Anthropic has announced its building a team to co-design custom ASIC chips for AI inferencing workloads. This will give it greater control over its compute buildout and allow it to make its AI models specifically more efficient for its designs."
+      },
+      {
+        "title": "Claude Opus 5 mistakenly deletes dev’s entire profile directory during routine backup, responds with 'Sorry, typo' — AI tool mistakes user's home directory as temporary backup, proceeds to wipe everyt",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/claude-opus-5-mistakenly-deletes-devs-entire-profile-directory-ai-tool-mistakes-users-home-directory-as-temporary-backup-proceeds-to-wipe-everything-to-undo-error",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-07T10:00:00.000Z",
+        "contentSnippet": "An AI agent got confused with file path conventions and mistakenly deleted its user's entire profile folder. Claude Opus 5 apologized to the user, who called it \"the funniest and most painful AI moment I've had.\""
+      },
+      {
         "title": "AMD to Acquire Taalas for Model Specific AI Inference Chips",
         "link": "https://www.servethehome.com/amd-to-acquire-taalas-for-model-specific-ai-inference-chips/",
         "source": "ServeTheHome",
@@ -2994,20 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-08-01T11:00:00.000Z",
         "contentSnippet": "Sony confirms that its stance has not changed on ending the production of physical game discs for titles released after January 2028."
-      },
-      {
-        "title": "97 untouched Duck Hunt and Super Mario Bros. cartridges worth thousands discovered in retro shop storage room — never-before-seen version of popular NES games include five perfect 10 PSA items",
-        "link": "https://www.tomshardware.com/video-games/retro-gaming/97-untouched-duck-hunt-and-super-mario-bros-cartridges-worth-thousands-discovered-in-retro-shop-storage-room-never-before-seen-version-of-popular-nes-games-include-five-perfect-10-psa-items",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-01T10:00:00.000Z",
-        "contentSnippet": "A retro gaming shop in Wisconsin finds a box of unopened, never-before-seen versions of Duck Hunt and Super Mario Bros. in its storage room. These items are probably worth four to five digits, and the first three carts are going up for auction starting August 12."
-      },
-      {
-        "title": "Lost one-of-a-kind Nintendo DS cartridge hits eBay for $9,100 — PokePark Fishing Contest designed to delete itself after 12 hours, game so rare it was only distributed to theme park attendees in 2005",
-        "link": "https://www.tomshardware.com/video-games/nintendo/lost-one-of-a-kind-nintendo-ds-cartridge-hits-ebay-for-usd9-100-pokepark-fishing-contest-designed-to-delete-itself-after-12-hours-game-so-rare-it-was-only-distributed-to-theme-park-attendees-in-2005",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-01T09:00:00.000Z",
-        "contentSnippet": "A Nintendo DS game that was classified as ‘lost media’ for nearly two decades is now within tantalizing reach of video gaming fans and archivists."
       }
     ]
   }
