@@ -1,8 +1,152 @@
 {
-  "updatedAt": "2026-08-07T19:45:04.209Z",
+  "updatedAt": "2026-08-07T20:31:34.345Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-66000 - Frappe: Unrestricted access to Document Follow APIs",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66000",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T18:25:11.000Z",
+        "contentSnippet": "Frappe is a full-stack web application framework. Prior to 16.23.0 and 15.112.0, Document Follow notification generation does not re-evaluate the recipient's current document permissions, allowing users whose access was revoked or reduced to continue receiving document data by em",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-66058 - Frappe: Unrestricted access to a Document Follow API",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66058",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T18:17:20.000Z",
+        "contentSnippet": "Frappe is a full-stack web application framework. Prior to 16.20.0 and 15.112.0, unrestricted access to a Document Follow API (update_follow) is possible for an authenticated user. This issue is fixed in versions 16.20.0 and 15.112.0.",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-64638 - WordPress Reflected Cross-Site Scripting Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64638",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T18:17:20.000Z",
+        "contentSnippet": "WordPress is vulnerable to a pre-auth reflected XSS vulnerability on the login screen. Via a specially crafted malicious third-party website hosted by an attacker, it is possible for this to be escalated to an RCE vulnerability with conditions outside of the attackers control. Th",
+        "cveScore": 8.9,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-64637 - Plesk XML-RPC API Privilege Escalation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64637",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T18:17:20.000Z",
+        "contentSnippet": "Improper privilege management in the XML-RPC API of Plesk before 18.0.80, allows an authenticated reseller to obtain an administrative session for the root user account.",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-64636 - Plesk SQL Injection Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64636",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T18:17:20.000Z",
+        "contentSnippet": "An SQL injection vulnerability in Plesk Obsidian up to 18.0.80 for Linux and Windows allows an authenticated user to read arbitrary data from the panel database.",
+        "cveScore": 7.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-56818 - Netty: RedisArrayAggregator max-elements failure leaves retained partial aggregate state",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56818",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T18:17:19.000Z",
+        "contentSnippet": "Netty is an asynchronous, event-driven network application framework. Prior to 4.1.136.Final and 4.2.16.Final, the RedisArrayAggregator Redis codec clears retained partial aggregate state when the maxNestedArrayDepth limit is exceeded, but it does not clear the same state when th",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-47364 - Datadog Android Information Disclosure via Firebase Crashlytics",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47364",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T18:17:17.000Z",
+        "contentSnippet": "On every successful login, the Datadog Android application calls FirebaseCrashlytics.setUserId with the signed-in user's Datadog UUID — a stable per-user identifier that is meaningful inside Datadog. This associates the Datadog user UUID with the device's Firebase installation ID",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-47363 - Datadog Android Application Improper Intent Handling and Session Injection Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47363",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T18:17:16.000Z",
+        "contentSnippet": "The launcher activity AppActivity in the Datadog Android application is declared android:exported=\"true\" with launchMode=\"singleTask\" and no permission guard. On every onCreate and onNewIntent, it invokes Intent.getUserSession(), an extension that deserializes a full UserSession ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-47362 - Datadog Android Application Sensitive Data Exposure via Unencrypted SQLite Databases",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47362",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T18:17:15.000Z",
+        "contentSnippet": "The Datadog Android application stores operationally sensitive content in plaintext SQLite databases via Room. Two databases were reviewed: LocalNotificationDatabase (table local_notifications, columns including title, message, recipient, service, tags, and on-call/incident deepl",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-47361 - Datadog Android Application Notification Denial of Service Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47361",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T18:17:15.000Z",
+        "contentSnippet": "BubbleChatActivity in the Datadog Android application is declared android:exported=\"true\" with no permission guard and accepts a SEND intent with mimeType text/plain. The activity reads a conversation_id from Intent extras and, on onDestroy, calls BubbleChatNotification.dismiss w",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-44965 - Datadog Android App Widget Unauthorized Activity Exposure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44965",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T18:17:14.000Z",
+        "contentSnippet": "Six Android App Widget configuration activities in the Datadog Android application are declared android:exported=\"true\" with no permission guard: IncidentWidgetActivity, MonitorSavedViewWidgetActivity, OnCallShiftsWidgetActivity, OnCallPagesWidgetActivity, SloWidgetActivity, and ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-44964 - Datadog Android Application Improper Activity Export Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44964",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T18:17:14.000Z",
+        "contentSnippet": "The OnCallNotificationActivity in the Datadog Android application is declared android:exported=\"true\" in AndroidManifest.xml with no permission guard. Any co-installed application on the same device can launch it with attacker-controlled Intent extras: on_call_page_content (rende",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-19229 - SourceCodester Online Clothing Store Dreamweaver Metadata Files _notes file information disclosure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19229",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T18:17:13.000Z",
+        "contentSnippet": "A vulnerability was determined in SourceCodester Online Clothing Store. Affected by this issue is some unknown functionality of the file /_notes/ of the component Dreamweaver Metadata Files. Executing a manipulation can lead to file and directory information exposure. The attack ",
+        "cveScore": 5.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-19213 - WonderTrader Pending Order TraderAdapter.h _undone_qty behavioral workflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19213",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T18:17:12.000Z",
+        "contentSnippet": "A vulnerability was identified in WonderTrader up to 0.9.9. Affected is the function _undone_qty in the library src/WtCore/TraderAdapter.h of the component Pending Order Handler. The manipulation of the argument getUndoneQty leads to enforcement of behavioral workflow. The attack",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-19082 - Imager versions from 0.45_02 before 1.034 for Perl may expose adjacent heap bytes via strlen() over-read from zero-count ASCII EXIF entries in copy_string_tags",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19082",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T18:17:11.000Z",
+        "contentSnippet": "Imager versions from 0.45_02 before 1.034 for Perl may expose adjacent heap bytes via strlen() over-read from zero-count ASCII EXIF entries in copy_string_tags. copy_string_tags() computes an ASCII EXIF tag's length as `entry->size - 1` to strip the trailing NUL. A zero-count ASC",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-19230 - SourceCodester Photo Share Website Comment Input Box ajax.php save_upload cross site scripting",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19230",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-07T18:15:09.000Z",
+        "contentSnippet": "A vulnerability was identified in SourceCodester Photo Share Website 1.0. This affects an unknown part of the file /social/ajax.php?action=save_upload of the component Comment Input Box. The manipulation of the argument content leads to cross site scripting. The attack may be ini",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2026-71557 - go-git: Malicious reference names may modify files outside the reference storage",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-71557",
@@ -758,150 +902,6 @@
         "contentSnippet": "The Ajax Search Lite WordPress plugin before 4.14.5 does not prevent the deserialization of untrusted input, allowing unauthenticated attackers to perform PHP Object Injection. When a suitable POP chain is present via another installed Ajax Search Lite WordPress plugin before 4.1",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-16041 - MStore API < 4.21.0 - Unauthenticated Product Review Creation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16041",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-07T06:16:56.000Z",
-        "contentSnippet": "The MStore API WordPress plugin before 4.21.0 does not perform authorization or purchase-ownership checks on its REST product-review creation route, allowing an unauthenticated attacker to create WooCommerce product reviews with an attacker-chosen reviewer name, email and star ra",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-16039 - MStore API < 4.21.0 - Subscriber+ Order and Customer PII Disclosure via IDOR",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16039",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-07T06:16:56.000Z",
-        "contentSnippet": "The MStore API WordPress plugin before 4.21.0 does not restrict its vendor-orders endpoint to the caller's own orders, allowing any authenticated user, including Subscribers, to read every WooCommerce order in the store together with each customer's personal information.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-16038 - MStore API < 4.21.0 - Unauthenticated Payment Bypass via Multiple Payment Gateways",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16038",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-07T06:16:55.000Z",
-        "contentSnippet": "The MStore API WordPress plugin before 4.21.0 does not verify the payment with the payment gateway before marking an order as paid on several of its payment-completion endpoints, allowing an unauthenticated attacker to mark an arbitrary order fully paid without paying and obtain ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-16030 - MStore API < 4.21.0 - Unauthenticated Account Takeover via Firebase Phone Authentication",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16030",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-07T06:16:55.000Z",
-        "contentSnippet": "The MStore API WordPress plugin before 4.21.0 does not correctly verify the cryptographic signature of the token used to authenticate its phone-based login, allowing unauthenticated attackers who know a registered user's phone number to forge a token and take over that user's acc",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-15386 - Meow Gallery < 5.5.2 - Author+ Stored XSS via Attachment Alt-Text",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15386",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-07T06:16:55.000Z",
-        "contentSnippet": "The Meow Gallery WordPress plugin before 5.5.2 does not escape an attachment's alt text before outputting it into an attribute of the link it builds for linked galleries, allowing users with the Author role or above to store a JavaScript payload that executes in the browser of an",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-15361 - Content Views < 4.5 - Subscriber+ SQL Injection via preview_request",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15361",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-07T06:16:55.000Z",
-        "contentSnippet": "The Content Views WordPress plugin before 4.5 does not perform a capability check on one of its AJAX actions and does not properly sanitise attacker-supplied data before using it in a SQL query, allowing any authenticated user, including Subscribers, to perform SQL injection atta",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-15359 - Templately < 3.7.1 - Unauthenticated Administrator Templately Cloud Connection Overwrite",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15359",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-07T06:16:55.000Z",
-        "contentSnippet": "The Templately WordPress plugin before 3.7.1 does not have an authorisation check on one of its request handlers, allowing unauthenticated attackers to overwrite the administrator's stored cloud service connection with an account under their control, disconnecting the legitimate ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-15245 - BNE Testimonials < 2.0.8.2 - Contributor+ Stored XSS via Slider Shortcode",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15245",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-07T06:16:55.000Z",
-        "contentSnippet": "The BNE Testimonials WordPress plugin before 2.0.8.2 does not properly escape a shortcode attribute for a JavaScript context before echoing it into an inline script, allowing users with the contributor role and above to inject arbitrary JavaScript that executes in the browser of ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-15215 - Subscriptions for WooCommerce < 2.0.1 - Shop Manager+ Arbitrary Plugin Installation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15215",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-07T06:16:55.000Z",
-        "contentSnippet": "The Subscriptions for WooCommerce WordPress plugin before 2.0.1 does not verify the user's capability before installing and activating a Subscriptions for WooCommerce WordPress plugin before 2.0.1 from a user-supplied slug through a nonce-protected AJAX action, allowing users wit",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-15214 - Subscriptions for WooCommerce < 2.0.1 - Subscriber+ Subscription Detail Disclosure via IDOR",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15214",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-07T06:16:55.000Z",
-        "contentSnippet": "The Subscriptions for WooCommerce WordPress plugin before 2.0.1 does not verify that the requester owns the subscription being viewed before rendering its details, allowing any authenticated customer to read another customer's subscription information (the subscribed product, sta",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-15032 - wpDiscuz < 7.6.60 - Unauthenticated Stored XSS via Image URL Conversion",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15032",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-07T06:16:55.000Z",
-        "contentSnippet": "The Comments WordPress plugin before 7.6.60 does not properly escape a user-supplied URL before outputting it inside an HTML attribute, allowing unauthenticated users to store a Cross-Site Scripting payload that executes in the browser of any user, including administrators, who v",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-14943 - Password Protected < 2.8.4 - Unauthenticated Sensitive Information Exposure via REST API",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14943",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-07T06:16:54.000Z",
-        "contentSnippet": "The Password Protected — Lock Entire Site, Pages, Posts, Categories, and Partial Content WordPress plugin before 2.8.4 does not restrict REST API access to authenticated users when a specific option is enabled, allowing unauthenticated visitors to bypass the sitewide password gat",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-14331 - Subscribe2 < 10.46 - Reflected XSS via email Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14331",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-07T06:16:54.000Z",
-        "contentSnippet": "The Subscribe2 WordPress plugin before 10.46 does not properly escape a user-supplied value before reflecting it into a public subscription form, leading to Reflected Cross-Site Scripting that executes in the browser of an unauthenticated visitor who interacts with the form throu",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-14205 - WP Events Manager < 2.2.5 - Subscriber+ Payment Bypass via 'qty' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14205",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-07T06:16:54.000Z",
-        "contentSnippet": "The WP Events Manager WordPress plugin before 2.2.5 does not validate the requested quantity when registering for a paid event and computes the price from the attacker-controlled quantity, allowing any authenticated user to create a completed booking for a paid event without maki",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-49005 - Root password hash exposure vulnerability in ZTE F689 product",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49005",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-07T05:17:02.000Z",
-        "contentSnippet": "The root password hash of the device can be obtained through unencrypted information in the firmware.",
-        "cveScore": 2.4,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-19195 - V-Secure Jingyun Antivirus Kernel Driver ZyArk.sys access control",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19195",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-07T05:17:01.000Z",
-        "contentSnippet": "A vulnerability has been found in V-Secure Jingyun Antivirus 2.4.2.39. The affected element is an unknown function in the library ZyArk.sys of the component Kernel Driver. The manipulation leads to improper access controls. The attack needs to be performed locally. The exploit ha",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
