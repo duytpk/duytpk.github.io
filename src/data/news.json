@@ -1,41 +1,230 @@
 {
-  "updatedAt": "2026-08-10T17:43:48.618Z",
+  "updatedAt": "2026-08-10T18:43:40.949Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
-        "title": "CVE-2026-71577 - Multicluster-global-hub: multicluster-global-hub: spec-topic read acl leaks bootstrap kubeconfigs to all managed hubs during migration",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71577",
+        "title": "CVE-2026-72731 - Discourse: Strip SQL comments and use non-recursive parameter interpolation in Data Explorer",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72731",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-10T16:43:20.000Z",
-        "contentSnippet": "A flaw was found in multicluster-global-hub. During a ManagedClusterMigration, the system incorrectly grants all managed hubs read access to a shared communication topic. This allows a compromised managed hub to intercept and collect sensitive bootstrap kubeconfigs, which contain",
+        "isoDate": "2026-08-10T17:17:37.000Z",
+        "contentSnippet": "Discourse is an open-source discussion platform. From 2026.1.0-latest until 2026.1.7, 2026.6.2, 2026.7.1, and 2026.8.0-latest.1, anyone able to run a parameterized Data Explorer query, including non-staff members of a group a query is shared with, could craft parameter values tha",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-72730 - Discourse: Stored XSS chat-transcript username unescaped in Rich Text Editor",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72730",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T17:17:37.000Z",
+        "contentSnippet": "Discourse is an open-source discussion platform. Prior to 2026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0, the Rich Text Editor rendered a chat-transcript username as HTML, allowing stored cross-site scripting. This issue is fixed in versions 2026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-72729 - Discourse: Stored XSS in discourse-local-dates plugin",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72729",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T17:17:37.000Z",
+        "contentSnippet": "Discourse is an open-source discussion platform. Prior to 2026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0, the discourse-local-dates plugin rendered crafted local-date format data as HTML on sites with a modified or disabled default Content Security Policy. This issue is fixed in vers",
+        "cveScore": 2,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-72728 - Discourse: Onebox iframe origin allowlist enforces URL authority boundary",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72728",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T17:17:37.000Z",
+        "contentSnippet": "Discourse is an open-source discussion platform. Prior to 2026.1.7, an authenticated user could submit specially formed URLs that bypassed the Onebox allowlist and embedded malicious content in a site. This issue is fixed in versions 2026.1.7, 2026.6.2, 2026.7.1, and 2026.8.0-lat",
         "cveScore": 6.3,
         "cveSeverity": "MEDIUM"
       },
       {
-        "title": "CVE-2026-63623 - Libvirt: information disclosure via world-readable storage volume images during clone/convert",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63623",
+        "title": "CVE-2026-72727 - Discourse: Stored XSS in the moderation review queue",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72727",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-10T16:43:19.000Z",
-        "contentSnippet": "A flaw was found in libvirt. During storage volume clone or convert operations, newly created volume images were temporarily world-readable. This was caused by the `qemu-img` utility running with overly permissive file creation settings, allowing any local user to read the full g",
-        "cveScore": 5.5,
+        "isoDate": "2026-08-10T17:17:36.000Z",
+        "contentSnippet": "Discourse is an open-source discussion platform. Prior to 026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0, a low-privileged user could place crafted content in the moderation review queue that executed stored cross-site scripting when a moderator viewed it on a site with a modified or ",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-71577 - Multicluster-global-hub: multicluster-global-hub: spec-topic read acl leaks bootstrap kubeconfigs to all managed hubs during migration",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71577",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T17:17:36.000Z",
+        "contentSnippet": "A flaw was found in multicluster-global-hub. During a ManagedClusterMigration, the system incorrectly grants all managed hubs read access to a shared communication topic. This allows a compromised managed hub to intercept and collect sensitive bootstrap kubeconfigs, which contain",
+        "cveScore": 6.3,
         "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-71576 - Multicluster-global-hub: multicluster-global-hub: manager trusts self-asserted evt.source() for leaf-hub identity in all status handlers",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-71576",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-10T16:41:53.000Z",
+        "isoDate": "2026-08-10T17:17:36.000Z",
         "contentSnippet": "A flaw was found in multicluster-global-hub. The manager component improperly validates the source identity of incoming CloudEvents on Kafka status topics. A remote attacker, after compromising a managed hub and obtaining its Kafka client certificate, can manipulate the self-asse",
         "cveScore": 8.5,
         "cveSeverity": "HIGH"
       },
       {
-        "title": "CVE-2026-72731 - Discourse: Strip SQL comments and use non-recursive parameter interpolation in Data Explorer",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72731",
+        "title": "CVE-2026-63623 - Libvirt: information disclosure via world-readable storage volume images during clone/convert",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63623",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-10T16:25:23.000Z",
-        "contentSnippet": "Discourse is an open-source discussion platform. From 2026.1.0-latest until 2026.1.7, 2026.6.2, 2026.7.1, and 2026.8.0-latest.1, anyone able to run a parameterized Data Explorer query, including non-staff members of a group a query is shared with, could craft parameter values tha",
+        "isoDate": "2026-08-10T17:17:35.000Z",
+        "contentSnippet": "A flaw was found in libvirt. During storage volume clone or convert operations, newly created volume images were temporarily world-readable. This was caused by the `qemu-img` utility running with overly permissive file creation settings, allowing any local user to read the full g",
+        "cveScore": 5.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-56619 - HCL BigFix Mobile is vulnerable to Reflected Cross-Site Scripting (Reflected XSS)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56619",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T17:17:35.000Z",
+        "contentSnippet": "HCL BigFix Mobile is vulnerable to Reflected Cross-Site Scripting (Reflected XSS) due to insufficient validation and output encoding of user-controlled input.",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-40512 - Rejected reason: This CVE ID has been rejected or",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-40512",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T17:17:34.000Z",
+        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-35028 - Rejected reason: This CVE ID has been rejected or",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-35028",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T17:17:33.000Z",
+        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-35027 - Rejected reason: This CVE ID has been rejected or",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-35027",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T17:17:33.000Z",
+        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-35026 - Rejected reason: This CVE ID has been rejected or",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-35026",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T17:17:33.000Z",
+        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-35006 - Rejected reason: This CVE ID has been rejected or",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-35006",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T17:17:33.000Z",
+        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-35005 - Rejected reason: This CVE ID has been rejected or",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-35005",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T17:17:33.000Z",
+        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-34423 - Rejected reason: This CVE ID has been rejected or",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34423",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T17:17:33.000Z",
+        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-29517 - Rejected reason: This CVE ID has been rejected or",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-29517",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T17:17:33.000Z",
+        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-29033 - Rejected reason: This CVE ID has been rejected or",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-29033",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T17:17:33.000Z",
+        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-29032 - Rejected reason: This CVE ID has been rejected or",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-29032",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T17:17:33.000Z",
+        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-29031 - Rejected reason: This CVE ID has been rejected or",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-29031",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T17:17:33.000Z",
+        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-29030 - Rejected reason: This CVE ID has been rejected or",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-29030",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T17:17:33.000Z",
+        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-29029 - Rejected reason: This CVE ID has been rejected or",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-29029",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T17:17:33.000Z",
+        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-29028 - Rejected reason: This CVE ID has been rejected or",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-29028",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T17:17:33.000Z",
+        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-29027 - Rejected reason: This CVE ID has been rejected or",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-29027",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T17:17:33.000Z",
+        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-29026 - Rejected reason: This CVE ID has been rejected or",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-29026",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T17:17:33.000Z",
+        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
         "cveScore": 0,
         "cveSeverity": "NA"
       },
@@ -164,51 +353,6 @@
         "contentSnippet": "Metacat is data repository software that helps researchers preserve, share, and discover data. Versions 2.x through 2.19.1 and all 1.x versions contain an unauthenticated path traversal in the `archiveEntryName` parameter of the `action=read` endpoint that is part of the original",
         "cveScore": 9.3,
         "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-72730 - Discourse: Stored XSS chat-transcript username unescaped in Rich Text Editor",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72730",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T16:17:04.000Z",
-        "contentSnippet": "Discourse is an open-source discussion platform. Prior to 2026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0, the Rich Text Editor rendered a chat-transcript username as HTML, allowing stored cross-site scripting. This issue is fixed in versions 2026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-72729 - Discourse: Stored XSS in discourse-local-dates plugin",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72729",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T16:15:13.000Z",
-        "contentSnippet": "Discourse is an open-source discussion platform. Prior to 2026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0, the discourse-local-dates plugin rendered crafted local-date format data as HTML on sites with a modified or disabled default Content Security Policy. This issue is fixed in vers",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-56619 - HCL BigFix Mobile is vulnerable to Reflected Cross-Site Scripting (Reflected XSS)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56619",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T16:14:47.000Z",
-        "contentSnippet": "HCL BigFix Mobile is vulnerable to Reflected Cross-Site Scripting (Reflected XSS) due to insufficient validation and output encoding of user-controlled input.",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-72728 - Discourse: Onebox iframe origin allowlist enforces URL authority boundary",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72728",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T16:13:20.000Z",
-        "contentSnippet": "Discourse is an open-source discussion platform. Prior to 2026.1.7, an authenticated user could submit specially formed URLs that bypassed the Onebox allowlist and embedded malicious content in a site. This issue is fixed in versions 2026.1.7, 2026.6.2, 2026.7.1, and 2026.8.0-lat",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-72727 - Discourse: Stored XSS in the moderation review queue",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72727",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T16:08:21.000Z",
-        "contentSnippet": "Discourse is an open-source discussion platform. Prior to 026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0, a low-privileged user could place crafted content in the moderation review queue that executed stored cross-site scripting when a moderator viewed it on a site with a modified or ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       },
       {
         "title": "CVE-2026-72761 - Webhook SSRF guard bypassed by IPv6 transition addresses (NAT64/6to4/Teredo pass is_global check) in vulnerability-lookup",
@@ -758,150 +902,6 @@
         "contentSnippet": "An improper authorization vulnerability in daptin through v0.12.34 allows unauthenticated remote attackers to read, create, update, and delete usergroup records. The permission check functions (CanRead, CanPeek, CanCreate, CanUpdate, CanDelete, CanRefer) in server/permission/perm",
         "cveScore": 9.1,
         "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-72574 - picocms Pico - Host Header Injection Enables Script Source Hijacking",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72574",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T10:40:57.000Z",
-        "contentSnippet": "A host header injection vulnerability in picocms/Pico through 2.1.4 allows an unauthenticated remote attacker to control the origin of JavaScript and CSS assets loaded by the default theme. When base_url is unset (the default), Pico::getBaseUrl() in lib/Pico.php builds the base U",
-        "cveScore": 6.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-72573 - 4xmen pm2panel - Authenticated OS Command Injection via id Query Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72573",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T10:40:54.000Z",
-        "contentSnippet": "An OS command injection vulnerability in 4xmen/pm2panel (all versions) allows an authenticated remote attacker to execute arbitrary system commands on the host. The pm2panel.js handler at line 188 passes the unsanitized req.query.id parameter directly to exec('pm2 restart ' + id)",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-72572 - o1lab xmysql - Unauthenticated Path Traversal via name Query Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72572",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T10:40:52.000Z",
-        "contentSnippet": "A path traversal vulnerability in o1lab/xmysql (all versions) allows an unauthenticated remote attacker to read and download arbitrary files from the server. The lib/xapi.js file at lines 338 and 424 uses the user-controlled req.query.name parameter in path.join(cwd, name) withou",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-72571 - mustafaakin cast-localvideo - Unauthenticated Path Traversal via dir Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72571",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T10:40:49.000Z",
-        "contentSnippet": "A path traversal vulnerability in mustafaakin/cast-localvideo (all versions) allows an unauthenticated remote attacker to read arbitrary files from the server. The app.js handler at lines 151-153 passes the user-supplied req.body.dir parameter directly to res.sendFile() without s",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-64940 - Nishishi Factory Tegalog Authentication Bypass Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64940",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T08:16:48.000Z",
-        "contentSnippet": "Tegalog -Fumy Otegaru Memo Logger- provided by Nishishi Factory contains a vulnerability due to a permissive regular expression, which may allow an attacker who can access the affected product to log in to the management console. As a result, the attacker may perform any operatio",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57279 - Cybozu Garoon Cross-Site Scripting Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57279",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T08:16:48.000Z",
-        "contentSnippet": "Cybozu Garoon contains a cross-site scripting vulnerability. If this vulnerability is exploited, an arbitrary script may be executed in the web browser of a user logged in to the product.",
-        "cveScore": 6.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-21062 - SemClipboardService Authorization Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-21062",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T08:16:48.000Z",
-        "contentSnippet": "Authorization bypass in SemClipboardService prior to SMR Aug-2026 Release 1 allows local attackers to access clipboard data.",
-        "cveScore": 4.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-21061 - Samsung Dialer Improper Input Validation Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-21061",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T08:16:48.000Z",
-        "contentSnippet": "Improper input validation in Samsung Dialer prior to SMR Aug-2026 Release 1 allows remote attackers to access SIM related functions. User interaction is required for triggering this vulnerability.",
-        "cveScore": 6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-21060 - Samsung Contacts Cross-Profile Data Access Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-21060",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T08:16:48.000Z",
-        "contentSnippet": "Improper input validation in Samsung Contacts prior to SMR Aug-2026 Release 1 allows physical attackers to access data across multiple user profiles.",
-        "cveScore": 6.7,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-21059 - Samsung Contacts Improper Component Export Arbitrary File Deletion Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-21059",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T08:16:47.000Z",
-        "contentSnippet": "Improper export of android application components in Samsung Contacts prior to SMR Aug-2026 Release 1 allows local attackers to delete file with Samsung Contacts' privilege.",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-21058 - Samsung Contacts Arbitrary File Deletion Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-21058",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T08:16:47.000Z",
-        "contentSnippet": "Improper input validation in Samsung Contacts prior to SMR Aug-2026 Release 1 allows local attackers to delete file with Samsung Contacts' privilege.",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-66411 - Ecovacs DEEBOT PRO Authentication Bypass Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66411",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T08:13:34.000Z",
-        "contentSnippet": "DEEBOT PRO M1 and DEEBOT PRO K1VAC incorrectly implement authentication algorithm in Websocket communications. An unauthenticated attacker may connect and operate the affected robot.",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-66410 - ECOVACS PRO App Improper Certificate Validation Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66410",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T08:08:54.000Z",
-        "contentSnippet": "Android and iOS apps ECOVACS PRO App improperly validate server certificates. Communication may be retrieved and/or altered.",
-        "cveScore": 4.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-66409 - ECOVACS DEEBOT Weak Wi-Fi Hotspot Password Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66409",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T08:04:05.000Z",
-        "contentSnippet": "DEEBOT PRO M1 and DEEBOT PRO K1VAC are configured with weak passwords for their Wi-Fi hotspot networks. The password may be analyzed and obtained to connect to the access point of an affected robot.",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-66408 - Ecovacs DEEBOT PRO Root Account Weak Password Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66408",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T08:01:00.000Z",
-        "contentSnippet": "The root accounts of DEEBOT PRO M1 and DEEBOT PRO K1VAC are configured with weak passwords. Physical access to an affected product may allow to obtain the password of the root account.",
-        "cveScore": 5.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-66407 - ECOVACS DEEBOT PRO WebSocket Authentication Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66407",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T08:00:43.000Z",
-        "contentSnippet": "DEEBOT PRO M1 and DEEBOT PRO K1VAC improperly implement authentication in WebSocket communication. The WebSocket private key may be retrieved through analyzing the traffic data via a man-in-the-middle attack, and communication contents may be altered.",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
@@ -2310,6 +2310,13 @@
     ],
     "hardware": [
       {
+        "title": "Xbox PC and Game Pass titles are coming to Linux through 'Xodus' — Heroic Launcher devs embark on new open-source reverse-engineering project",
+        "link": "https://www.tomshardware.com/software/linux/xbox-pc-and-game-pass-titles-are-coming-to-linux-through-xodus-heroic-launcher-devs-embark-on-new-open-source-reverse-engineering-project",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-10T18:11:48.000Z",
+        "contentSnippet": "You might be able to enjoy Xbox PC and PC Game Pass titles on Linux very soon thanks to the efforts of the Xodus team, who're emulating the entire Xbox PC stack through open-source implementations of Microsoft's proprietary components and dependencies."
+      },
+      {
         "title": "Lumilens Exits Stealth With $700M and AI Optics Already Shipping to a Hyperscaler",
         "link": "https://www.storagereview.com/news/lumilens-exits-stealth-with-700m-and-ai-optics-already-shipping-to-a-hyperscaler",
         "source": "StorageReview",
@@ -3001,13 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-08-05T13:12:34.000Z",
         "contentSnippet": "Microsoft once recommended 32GB of RAM as a future-proof \"no worries\" upgrade for gamers, but it seems that it wants you to forget that it ever gave that suggestion. That's because laptop manufacturers, including Microsoft itself, has once again started selling models with a base"
-      },
-      {
-        "title": "Score all the essentials of a great gaming PC for only $983.98 — $155 savings nets 9800X3D, 1TB Samsung 9100 SSD, 16GB of DDR5 RAM, Asus B850 motherboard, and free MSI AIO",
-        "link": "https://www.tomshardware.com/pc-components/score-all-the-essentials-of-a-great-gaming-pc-for-only-usd983-98-usd155-savings-nets-9800x3d-1tb-samsung-9100-ssd-16gb-of-ddr5-ram-asus-b850-motherboard-and-free-msi-aio",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-05T12:01:51.000Z",
-        "contentSnippet": "Save $155 on this 4-item Newegg Gaming PC Combo - $983 buys 9800X3D, Samsung's blazing fast 1TB 9100 Pro SSD, 16GB of RAM, and Asus B850 motherboard"
       }
     ]
   }
