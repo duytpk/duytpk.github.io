@@ -1,25 +1,142 @@
 {
-  "updatedAt": "2026-08-10T22:28:04.237Z",
+  "updatedAt": "2026-08-10T23:26:24.600Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
-        "title": "CVE-2026-6426 - Qemu-kvm: vhost inflight migration vmstate integer type mismatch causes out-of-bounds access",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6426",
+        "title": "CVE-2026-8718 - Out-of-bounds write in DTLS peer Connection ID getsockopt (`TLS_DTLS_PEER_CID_VALUE`) in Zephyr net sockets/TLS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8718",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-10T21:22:29.000Z",
-        "contentSnippet": "A type mismatch vulnerability was found in QEMU's vhost inflight migration VMState handling. The destination buffer size is stored as a uint64_t but read by the VMS_VBUFFER load path as a signed int32_t. On little-endian hosts, a crafted incoming migration state with bit 31 set c",
-        "cveScore": 4.4,
+        "isoDate": "2026-08-10T22:40:26.000Z",
+        "contentSnippet": "tls_opt_dtls_peer_connection_id_value_get() in subsys/net/lib/sockets/sockets_tls.c, which handles getsockopt(SOL_TLS, TLS_DTLS_PEER_CID_VALUE), passed the caller-supplied optval directly to mbedtls_ssl_get_peer_cid() without verifying the buffer was at least MBEDTLS_SSL_CID_OUT_",
+        "cveScore": 8.4,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-48161 - react18-use was vulnerable to malicious code execution via compromised commits",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48161",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T22:27:35.000Z",
+        "contentSnippet": "react18-use is a React 19 use hook shim. Between 2026-05-19 01:07:01 and 2026-05-19 15:20:43, the default branch contained malicious commits 7b79148d1495a2505f9277da295a98cf176f4496 through 7b79148d1495a2505f9277da295a98cf176f4496 that executed remote attacker-controlled code on ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2025-30241 - OS Command Injection in Web Interface in Multiple TP-Link Aginet Devices",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-30241",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T22:26:08.000Z",
+        "contentSnippet": "Certain web interface components in affected TP-Link Aginet devices do not validate and sanitize user-supplied input properly before passing it to system-level command execution functions. An authenticated adjacent attacker may inject specially crafted input to execute arbitrary ",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2025-30240 - Arbitrary File Read via Improper Symlink Handling in USB HTTPS Access Path in multiple TP-Link Aginet Devices",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-30240",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T22:25:41.000Z",
+        "contentSnippet": "The affected TP-Link Aginet devices do not properly validate symbolic links created on external USB storage devices. By placing a crafted symbolic link on supported storage media, an attacker may cause the system to resolve the link. Successful exploitation may allow unauthorized",
+        "cveScore": 5.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2025-30239 - Sensitive Data Exposure due to Hardcoded Cryptographic Keys in Multiple TP-Link Aginet Devices",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-30239",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T22:25:03.000Z",
+        "contentSnippet": "In affected TP-Link Aginet devices, use of hardcoded cryptographic keys embedded in the firmware to protect sensitive configuration data may allow an attacker who has access to device storage to recover the keys and decrypt stored data. Successful exploitation may allow access to",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2025-30238 - Privilege Escalation via Improper Authorization in User Management in multiple TP-Link Aginet Devices",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-30238",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T22:24:20.000Z",
+        "contentSnippet": "In affected TP-Link Aginet devices, insufficient authorization validation allows authenticated low-privileged users to execute higher-privileged operations. An attacker may perform administrative actions such as creating privileged accounts or modifying critical configuration set",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2025-30237 - Authentication Bypass via Broken Access Control in Web Server in Multiple TP-Link Aginet Devices",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-30237",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T22:23:41.000Z",
+        "contentSnippet": "The affected TP-Link Aginet devices contain a flaw in the web management interface where authentication checks are not consistently enforced on certain endpoints. An attacker can send specially crafted requests to bypass authentication and directly invoke privileged functionality",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-72919 - Rocket.Chat: Broken Access Control in channels.convertToTeam Allows Unauthorized Conversion of Public Channels into Teams",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72919",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T22:17:10.000Z",
+        "contentSnippet": "Rocket.Chat is an open-source, secure, fully customizable communications platform. Prior to 7.10.14, 8.0.8, 8.1.7, 8.2.7, 8.3.7, 8.4.5, 8.5.2, and 8.6.1, the channels.convertToTeam REST endpoint allows an authenticated registered user with the create-team permission to convert an",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-72918 - Rocket.Chat: Insecure implementation of websocket notifications",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72918",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T22:17:10.000Z",
+        "contentSnippet": "Rocket.Chat is an open-source, secure, fully customizable communications platform. Prior to 7.10.14, 8.0.8, 8.1.7, 8.2.7, 8.3.7, 8.4.5, 8.5.2, and 8.6.1, the stream-notify-user stream in the WebSocket protocol allows an authenticated user to write arbitrary notification bodies be",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-72917 - AnythingLLM: Password recovery accepts one recovery code twice after whitespace normalization",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72917",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T22:17:10.000Z",
+        "contentSnippet": "AnythingLLM is an application that turns pieces of content into context that any LLM can use as references during chatting. From 1.0.0 to 1.15.0, AnythingLLM's unauthenticated account-recovery flow in server/utils/PasswordRecovery/index.js uses recoverAccount() to deduplicate the",
+        "cveScore": 5.9,
         "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-72916 - Mastodon: SSRF Protection Bypass via IPv4-compatible IPv6 Addresses",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-72916",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-10T21:19:02.000Z",
+        "isoDate": "2026-08-10T22:17:10.000Z",
         "contentSnippet": "Mastodon is a free, open-source social network server based on ActivityPub. Prior to 4.4.21, 4.5.14, 4.6.4, and 4.7.0-beta.1, PrivateAddressCheck.private_address? in app/lib/private_address_check.rb normalized IPv4-mapped IPv6 addresses but did not recognize IPv4-compatible IPv6 ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-72915 - Mastodon: Personally-identifying information disclosure due to incorrect access control validation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72915",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T22:17:10.000Z",
+        "contentSnippet": "Mastodon is a free, open-source social network server based on ActivityPub. From 4.6.0-beta.1 until 4.6.4 and 4.7.0-beta.1, any logged-in local user could use the show action in app/controllers/admin/collections_controller.rb to access personally identifying information about ano",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-72914 - Mastodon: Exhausting data by an unauthenticated request to the admin retention API",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72914",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T22:17:10.000Z",
+        "contentSnippet": "Mastodon is a free, open-source social network server based on ActivityPub. Prior to 4.4.21, 4.5.14, 4.6.4, and 4.7.0-beta.1, the administrative statistics endpoints handled by Api::V1::Admin::MeasuresController and Api::V1::Admin::RetentionController checked authorization only a",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-6426 - Qemu-kvm: vhost inflight migration vmstate integer type mismatch causes out-of-bounds access",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6426",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T22:17:10.000Z",
+        "contentSnippet": "A type mismatch vulnerability was found in QEMU's vhost inflight migration VMState handling. The destination buffer size is stored as a uint64_t but read by the VMS_VBUFFER load path as a signed int32_t. On little-endian hosts, a crafted incoming migration state with bit 31 set c",
+        "cveScore": 4.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2025-32736 - PingFederate Administrative Console CSRF weaknesses",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-32736",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T22:17:08.000Z",
+        "contentSnippet": "Cross-Site Request Forgery weaknesses in the Administrative Console of PingFederate versions before version 13.1 may allow actors to perform unauthorized actions via specially-crafted links triggered by administrators with active sessions.",
+        "cveScore": 4.9,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-73035 - npm-check-updates 23.0.2 Terminal Injection via Unsanitized Escape Sequences",
@@ -785,123 +902,6 @@
         "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-34423 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34423",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T17:17:33.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-29517 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-29517",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T17:17:33.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-29033 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-29033",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T17:17:33.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-29032 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-29032",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T17:17:33.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-29031 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-29031",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T17:17:33.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-29030 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-29030",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T17:17:33.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-29029 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-29029",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T17:17:33.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-29028 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-29028",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T17:17:33.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-29027 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-29027",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T17:17:33.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-29026 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-29026",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T17:17:33.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-72726 - Discourse: Unauthorized eavesdropping on private AI bot conversations.",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72726",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T16:19:50.000Z",
-        "contentSnippet": "Discourse is an open-source discussion platform. Prior to 2026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0, an authenticated user could eavesdrop on private AI bot conversations through the AI bot reply stream. The issue is fixed in 2026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0.",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-72725 - Discourse: Stored XSS in staff action logs injects staff UI",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72725",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T16:19:49.000Z",
-        "contentSnippet": "Discourse is an open-source discussion platform. Prior to 2026.1.6, the staff action log model rendered unescaped previous and new value fields that could inject stored cross-site scripting into the staff interface. The issue is fixed in 2026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-72724 - Discourse: Private Chat Threat Message Disclosure via Chat Onebox Channel/Threat ID Mismatch",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72724",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T16:19:49.000Z",
-        "contentSnippet": "Discourse is an open-source discussion platform. Prior to 2026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0, plugins/chat/lib/chat/onebox_handler.rb resolves Chat::Thread by route thread_id independently of the route channel_id before checking whether the user can preview the selected c",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
