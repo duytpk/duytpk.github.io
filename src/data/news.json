@@ -1,23 +1,185 @@
 {
-  "updatedAt": "2026-08-10T19:48:42.459Z",
+  "updatedAt": "2026-08-10T20:32:32.242Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
+        "title": "CVE-2026-72872 - Dokploy: OS Command Injection via Bitbucket `owner`/`repository` in `git clone`",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72872",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T19:17:36.000Z",
+        "contentSnippet": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.29.13, application.saveBitbucketProvider stores bitbucketOwner and bitbucketRepository without validation and cloneBitbucketRepository in packages/server/src/utils/providers/bitbucket.ts interpolates those ",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-72871 - Dokploy: Unauthenticated Git Provider Injection via GitHub OAuth Callback",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72871",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T19:17:36.000Z",
+        "contentSnippet": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.29.13, the unauthenticated /api/providers/github/setup route in apps/dokploy/pages/api/providers/github/setup.ts trusts gh_init organizationId and userId values from the state parameter and calls createGith",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-72870 - Dokploy: Command Injection via Docker Credentials in buildRemoteDocker",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72870",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T19:17:35.000Z",
+        "contentSnippet": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.29.13, the buildRemoteDocker() function in packages/server/src/utils/providers/docker.ts interpolates the application-controlled dockerImage value directly into a docker pull shell command. An authenticated",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-72869 - Dokploy: Authenticated OS command injection in backup.restoreBackupWithLogs (databaseName) leading to host RCE",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72869",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T19:17:35.000Z",
+        "contentSnippet": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.29.13, the backup.restoreBackupWithLogs tRPC subscription passes the databaseName parameter to restore builders in packages/server/src/utils/restore/utils.ts, where PostgreSQL, MariaDB, MySQL, and MongoDB c",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-72868 - Dokploy: Member-role RCE as host root via destination.testConnection rclone shell injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72868",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T19:17:35.000Z",
+        "contentSnippet": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.29.13, apps/dokploy/server/api/routers/destination.ts interpolates the accessKey, secretAccessKey, region, endpoint, provider, and bucket fields from destination.testConnection into an rclone ls command exe",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-72867 - Dokploy: Incomplete fix of CVE-2026-45628: Command Injection via Unvalidated Branch Fields in Compose Deployment Pipeline (server-side regex missing in compose.ts)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72867",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T19:17:35.000Z",
+        "contentSnippet": "Dokploy is a free, self-hostable Platform as a Service (PaaS). From 0.29.3 until 0.29.13, the incomplete fix for CVE-2026-45628 leaves packages/server/src/db/schema/compose.ts branch fields without server-side validation, allowing a direct compose.update request to store a malici",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-72866 - WebSocket Terminal Auth Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72866",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T19:17:35.000Z",
+        "contentSnippet": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.29.13, the WebSocket handler in apps/dokploy/server/wss/terminal.ts validates a session but does not authorize access to the requested server. An authenticated user can connect to /terminal?serverId=local, ",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-72865 - Dokploy: OS Command Injection via compose `composePath`",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72865",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T19:17:35.000Z",
+        "contentSnippet": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.29.13, the compose.update operation stores an unvalidated composePath that packages/server/src/utils/builders/compose.ts and packages/server/src/services/compose.ts interpolate into docker compose -f, docke",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-72864 - Dokploy Broken Access Control on docker-container-terminal WebSocket (Member -> Root in Arbitrary Containers)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72864",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T19:17:35.000Z",
+        "contentSnippet": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.29.13, the local branch of /docker-container-terminal in apps/dokploy/server/wss/docker-container-terminal.ts authenticates with validateRequest but does not authorize the attacker-controlled containerId ag",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-72863 - Dokploy: Missing authorization in WebSocket handlers allows a low-privilege member to gain root on the Docker host",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72863",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T19:17:34.000Z",
+        "contentSnippet": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.29.13, Dokploy's WebSocket handlers (in-app terminals and log streamers) authenticate the session but never authorize it. They establish who the user is via validateRequest() and then proceed without consul",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-71969 - OP-TEE OS 4.10.0 Buffer Underwrite via RSA NOPAD Encrypt/Decrypt Operations",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71969",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T19:17:32.000Z",
+        "contentSnippet": "OP-TEE OS through 4.10.0, fixed in commit 7b8b494, contains a buffer underwrite vulnerability in the RSA NOPAD encrypt and decrypt operations within the mbedTLS software backend and SE050 hardware driver that allows a malicious Trusted Application to corrupt secure-world heap mem",
+        "cveScore": 8.4,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-71968 - OP-TEE OS 4.10.0 Use-After-Free via Trusted Application Loader TA_FLAG_CONCURRENT",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71968",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T19:17:32.000Z",
+        "contentSnippet": "OP-TEE OS through 4.10.0, fixed in commit 8794043, contains a use-after-free vulnerability in the Trusted Application loader that allows attackers with the ability to load a signed Trusted Application to corrupt secure-world kernel memory by setting the TA_FLAG_CONCURRENT flag in",
+        "cveScore": 8.4,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-71967 - OP-TEE OS 4.10.0 NULL Pointer Dereference DoS via Widevine PTA open_session",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71967",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T19:17:32.000Z",
+        "contentSnippet": "OP-TEE OS through 4.10.0, fixed in commit 0aadfc2, contains a null pointer dereference vulnerability in the Widevine pseudo-TA open_session handler that allows Normal World clients to cause a denial of service when CFG_WIDEVINE_PTA is enabled. Attackers can open a session directl",
+        "cveScore": 5.7,
+        "cveSeverity": "MEDIUM"
+      },
+      {
         "title": "CVE-2026-71964 - CyberPanel 2.4.3 Arbitrary File Read via File Manager ZIP Upload",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-71964",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-10T18:51:43.000Z",
+        "isoDate": "2026-08-10T19:17:31.000Z",
         "contentSnippet": "CyberPanel 2.4.3, fixed in commit eca0c3c, contains an arbitrary file read vulnerability in the file manager component that allows authenticated attackers to read sensitive system files by uploading a crafted ZIP archive containing symbolic links. Attackers can exploit the applic",
         "cveScore": 7.1,
         "cveSeverity": "HIGH"
       },
       {
-        "title": "CVE-2026-72872 - Dokploy: OS Command Injection via Bitbucket `owner`/`repository` in `git clone`",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72872",
+        "title": "CVE-2026-71962 - Flowise 2.2.4 - 3.1.4 Missing Authorization via openai-assistants-file/download",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71962",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-10T18:50:23.000Z",
-        "contentSnippet": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.29.13, application.saveBitbucketProvider stores bitbucketOwner and bitbucketRepository without validation and cloneBitbucketRepository in packages/server/src/utils/providers/bitbucket.ts interpolates those ",
+        "isoDate": "2026-08-10T19:17:31.000Z",
+        "contentSnippet": "Flowise versions 2.2.4 through 3.1.4 contain a missing authorization vulnerability in the POST /api/v1/openai-assistants-file/download endpoint that allows unauthenticated attackers to access private files by exploiting the endpoint's inclusion in the global authentication whitel",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-6791 - Potential stack-based buffer clash during tilde expansion in wordexp",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6791",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T19:17:30.000Z",
+        "contentSnippet": "When expanding paths that begin with a tilde (~) followed by a username, the internal parse_tilde function extracts the username to determine the user's home directory. The implementation allocates memory for this username directly on the stack using the strndupa macro. Because t",
+        "cveScore": 6.6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-6368 - wordexp with WRDE_APPEND can return or use invalid memory",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6368",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T19:17:30.000Z",
+        "contentSnippet": "Calling wordexp with WRDE_APPEND in the GNU C Library version 2.0 to version 2.43 can cause the interface to return invalid memory in the we_wordv member, which on subsequent calls to wordfree may abort the process.",
+        "cveScore": 2.1,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-68872 - Apache Airflow Amazon provider: amazon SSM / Secrets Manager backends: team-scope guard bypass resolves another team's Connection or Variable",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68872",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T19:17:30.000Z",
+        "contentSnippet": "The AWS Systems Manager Parameter Store and Secrets Manager backends in Apache Airflow's Amazon provider resolved a team-scoped Connection or Variable id through the team-agnostic lookup when the team-scoped lookup missed. In a deployment running multi-team mode with either backe",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-68871 - Apache Airflow Yandex provider: yandex Lockbox backend: team-scope guard bypass resolves another team's Connection or Variable",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68871",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T19:17:30.000Z",
+        "contentSnippet": "The Yandex Lockbox secrets backend in Apache Airflow's Yandex provider resolved a team-scoped Connection or Variable id through the team-agnostic lookup when the team-scoped lookup missed. In a deployment running multi-team mode with this backend, a caller in one team could resol",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-68870 - Apache Airflow Microsoft Azure provider: microsoft.azure Key Vault backend: team-scope guard bypass resolves another team's Connection or Variable",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68870",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T19:17:30.000Z",
+        "contentSnippet": "The Azure Key Vault secrets backend in Apache Airflow's Microsoft Azure provider resolved a team-scoped Connection or Variable id through the team-agnostic lookup when the team-scoped lookup missed. In a deployment running multi-team mode with this backend, a caller in one team c",
         "cveScore": 0,
         "cveSeverity": "NA"
       },
@@ -25,136 +187,46 @@
         "title": "CVE-2026-59091 - Gimp: gimp: multiple vulnerabilities in file format plugins via crafted image file",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-59091",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-10T18:48:36.000Z",
+        "isoDate": "2026-08-10T19:17:30.000Z",
         "contentSnippet": "A flaw was found in GIMP's file format plugins, including those for PSD and PAA files. A remote attacker could exploit these vulnerabilities by tricking a user into opening a specially crafted image file. This could lead to unexpected application behavior or other potential secur",
         "cveScore": 7.3,
         "cveSeverity": "HIGH"
       },
       {
-        "title": "CVE-2026-72871 - Dokploy: Unauthenticated Git Provider Injection via GitHub OAuth Callback",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72871",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T18:47:58.000Z",
-        "contentSnippet": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.29.13, the unauthenticated /api/providers/github/setup route in apps/dokploy/pages/api/providers/github/setup.ts trusts gh_init organizationId and userId values from the state parameter and calls createGith",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-72870 - Dokploy: Command Injection via Docker Credentials in buildRemoteDocker",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72870",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T18:45:17.000Z",
-        "contentSnippet": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.29.13, the buildRemoteDocker() function in packages/server/src/utils/providers/docker.ts interpolates the application-controlled dockerImage value directly into a docker pull shell command. An authenticated",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-6791 - Potential stack-based buffer clash during tilde expansion in wordexp",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6791",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T18:41:25.000Z",
-        "contentSnippet": "When expanding paths that begin with a tilde (~) followed by a username, the internal parse_tilde function extracts the username to determine the user's home directory. The implementation allocates memory for this username directly on the stack using the strndupa macro. Because t",
-        "cveScore": 6.6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-72869 - Dokploy: Authenticated OS command injection in backup.restoreBackupWithLogs (databaseName) leading to host RCE",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72869",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T18:40:48.000Z",
-        "contentSnippet": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.29.13, the backup.restoreBackupWithLogs tRPC subscription passes the databaseName parameter to restore builders in packages/server/src/utils/restore/utils.ts, where PostgreSQL, MariaDB, MySQL, and MongoDB c",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-6368 - wordexp with WRDE_APPEND can return or use invalid memory",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6368",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T18:40:11.000Z",
-        "contentSnippet": "Calling wordexp with WRDE_APPEND in the GNU C Library version 2.0 to version 2.43 can cause the interface to return invalid memory in the we_wordv member, which on subsequent calls to wordfree may abort the process.",
-        "cveScore": 2.1,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-72868 - Dokploy: Member-role RCE as host root via destination.testConnection rclone shell injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72868",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T18:39:08.000Z",
-        "contentSnippet": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.29.13, apps/dokploy/server/api/routers/destination.ts interpolates the accessKey, secretAccessKey, region, endpoint, provider, and bucket fields from destination.testConnection into an rclone ls command exe",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-72867 - Dokploy: Incomplete fix of CVE-2026-45628: Command Injection via Unvalidated Branch Fields in Compose Deployment Pipeline (server-side regex missing in compose.ts)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72867",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T18:36:54.000Z",
-        "contentSnippet": "Dokploy is a free, self-hostable Platform as a Service (PaaS). From 0.29.3 until 0.29.13, the incomplete fix for CVE-2026-45628 leaves packages/server/src/db/schema/compose.ts branch fields without server-side validation, allowing a direct compose.update request to store a malici",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-72866 - WebSocket Terminal Auth Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72866",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T18:34:34.000Z",
-        "contentSnippet": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.29.13, the WebSocket handler in apps/dokploy/server/wss/terminal.ts validates a session but does not authorize access to the requested server. An authenticated user can connect to /terminal?serverId=local, ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-72865 - Dokploy: OS Command Injection via compose `composePath`",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72865",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T18:33:05.000Z",
-        "contentSnippet": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.29.13, the compose.update operation stores an unvalidated composePath that packages/server/src/utils/builders/compose.ts and packages/server/src/services/compose.ts interpolate into docker compose -f, docke",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-72864 - Dokploy Broken Access Control on docker-container-terminal WebSocket (Member -> Root in Arbitrary Containers)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72864",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T18:31:24.000Z",
-        "contentSnippet": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.29.13, the local branch of /docker-container-terminal in apps/dokploy/server/wss/docker-container-terminal.ts authenticates with validateRequest but does not authorize the attacker-controlled containerId ag",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-72863 - Dokploy: Missing authorization in WebSocket handlers allows a low-privilege member to gain root on the Docker host",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72863",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T18:28:22.000Z",
-        "contentSnippet": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.29.13, Dokploy's WebSocket handlers (in-app terminals and log streamers) authenticate the session but never authorize it. They establish who the user is via validateRequest() and then proceed without consul",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-71962 - Flowise 2.2.4 - 3.1.4 Missing Authorization via openai-assistants-file/download",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71962",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T18:26:18.000Z",
-        "contentSnippet": "Flowise versions 2.2.4 through 3.1.4 contain a missing authorization vulnerability in the POST /api/v1/openai-assistants-file/download endpoint that allows unauthenticated attackers to access private files by exploiting the endpoint's inclusion in the global authentication whitel",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-68872 - Apache Airflow Amazon provider: amazon SSM / Secrets Manager backends: team-scope guard bypass resolves another team's Connection or Variable",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68872",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T18:21:19.000Z",
-        "contentSnippet": "The AWS Systems Manager Parameter Store and Secrets Manager backends in Apache Airflow's Amazon provider resolved a team-scoped Connection or Variable id through the team-agnostic lookup when the team-scoped lookup missed. In a deployment running multi-team mode with either backe",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
         "title": "CVE-2026-12339 - Authenticated Arbitrary File Write Vulnerability in multiple devices",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-12339",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-10T18:20:50.000Z",
+        "isoDate": "2026-08-10T19:17:28.000Z",
         "contentSnippet": "A Zip Slip vulnerability in the WebUI ISP Upgrade functionality allows arbitrary file write via a crafted archive containing directory traversal sequences. An authenticated administrator may overwrite arbitrary files on the system.Successful exploitation may allow arbitrary file ",
         "cveScore": 6.9,
         "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-72879 - Dokploy: Command Injection via Registry Credentials in Swarm Upload",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72879",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T19:14:52.000Z",
+        "contentSnippet": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.29.8, the getRegistryCommands() function in packages/server/src/utils/cluster/upload.ts interpolates registry.password and registry.registryUrl directly into a shell command without escaping. An authenticat",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-72878 - Dokploy: OS Command Injection in backup/restore pipeline via unescaped user-controlled shell arguments",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72878",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T19:11:39.000Z",
+        "contentSnippet": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.29.13, Dokploy's backup and restore pipeline constructs shell commands by directly interpolating user-controlled database fields into bash -c \"...\" and sh -c \"...\" strings, then executes them via child_proc",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-69112 - Hugging Face Accelerate 1.14.0 Path Traversal and DoS via weight_map",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-69112",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T19:05:41.000Z",
+        "contentSnippet": "Hugging Face Accelerate through 1.14.0 contains a path traversal vulnerability in load_checkpoint_in_model and load_checkpoint_and_dispatch functions that fail to sanitize weight_map entries from sharded checkpoint indexes. Attackers can supply relative paths with ../ sequences o",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-72900 - Metabase information exposure",
@@ -828,78 +900,6 @@
         "source": "cvefeed.io",
         "isoDate": "2026-08-10T13:20:36.000Z",
         "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: mtd: virt_concat: fix use-after-free in mtd_virt_concat_destroy() mtd_concat_destroy() frees item->concat so calling mtd_virt_concat_put_mtd_devices(item->concat) after that leads to a use-after-free. Fix it by m",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-68422 - btrfs: fix root leak if its reloc root is unexpected in merge_reloc_roots()",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68422",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T13:20:36.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: btrfs: fix root leak if its reloc root is unexpected in merge_reloc_roots() If we have an unexpected reloc_root for our root, we jump to the out label but never drop the reference we obtained for root, resulting ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-68421 - sched_ext: Don't warn on core-sched forced idle in put_prev_task_scx()",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68421",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T13:20:35.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: sched_ext: Don't warn on core-sched forced idle in put_prev_task_scx() put_prev_task_scx() warns when a runnable task drops to a lower sched_class without SCX_OPS_ENQ_LAST, on the assumption that balance_one() wo",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-68420 - xfrm: reject optional IPTFS templates in outbound policies",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68420",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T13:20:35.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: xfrm: reject optional IPTFS templates in outbound policies syzbot reported a stack-out-of-bounds read in xfrm_state_find() which flows from xfrm_tmpl_resolve_one(). Commit 3d776e31c841 (\"xfrm: Reject optional tun",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-68419 - RDMA/irdma: Prevent rereg_mr for non-mem regions",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68419",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T13:20:35.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: RDMA/irdma: Prevent rereg_mr for non-mem regions When a QP/CQ/SRQ is created, a two step process is used where the buffer is allocated in userspace and explicitly registered with the normal reg_mr mechanism prior",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-68418 - RDMA/irdma: Prevent user-triggered null deref on QP create",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68418",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T13:20:35.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: RDMA/irdma: Prevent user-triggered null deref on QP create Previously, the user QP creation path would only attempt to populate iwqp->iwpbl if the user-provided req.user_wqe_bufs field was non-zero. The problem i",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-68417 - RDMA/siw: publish QP after initialization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68417",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T13:20:35.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: RDMA/siw: publish QP after initialization siw_create_qp() currently calls siw_qp_add() before the queues, CQ pointers, state, completion, and device list entry are ready. A QPN lookup can therefore reach a QP tha",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-68416 - mtd: fix double free and WARN_ON in add_mtd_device() error paths",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68416",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T13:20:35.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: mtd: fix double free and WARN_ON in add_mtd_device() error paths When device_register() or mtd_nvmem_add() fails inside add_mtd_device() for a partition, the error handling triggers mtd_release() via put_device()",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-68415 - xfrm: clear mode callbacks after failed mode setup",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68415",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T13:20:35.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: xfrm: clear mode callbacks after failed mode setup xfrm_state_gc_task can run long after a failed IPTFS state setup. In the reproduced case, __xfrm_init_state() cached x->mode_cbs, IPTFS setup returned -ENOMEM be",
         "cveScore": 0,
         "cveSeverity": "NA"
       }
