@@ -1,14 +1,212 @@
 {
-  "updatedAt": "2026-08-10T16:43:54.874Z",
+  "updatedAt": "2026-08-10T17:43:48.618Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
-        "title": "CVE-2026-18412 - The OpenCart v4.2.0.0 extension installer contains a directory traversal vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18412",
+        "title": "CVE-2026-71577 - Multicluster-global-hub: multicluster-global-hub: spec-topic read acl leaks bootstrap kubeconfigs to all managed hubs during migration",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71577",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-10T14:50:54.000Z",
-        "contentSnippet": "OpenCart extensions are uploaded as zip files with .ocmod.zip extensions. Upon installation, the OpenCart v4.2.0.0 extension installer extracts these zip files, but does not validate that the extracted paths stay inside the intended extraction directory. An attacker can craft a m",
+        "isoDate": "2026-08-10T16:43:20.000Z",
+        "contentSnippet": "A flaw was found in multicluster-global-hub. During a ManagedClusterMigration, the system incorrectly grants all managed hubs read access to a shared communication topic. This allows a compromised managed hub to intercept and collect sensitive bootstrap kubeconfigs, which contain",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-63623 - Libvirt: information disclosure via world-readable storage volume images during clone/convert",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63623",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T16:43:19.000Z",
+        "contentSnippet": "A flaw was found in libvirt. During storage volume clone or convert operations, newly created volume images were temporarily world-readable. This was caused by the `qemu-img` utility running with overly permissive file creation settings, allowing any local user to read the full g",
+        "cveScore": 5.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-71576 - Multicluster-global-hub: multicluster-global-hub: manager trusts self-asserted evt.source() for leaf-hub identity in all status handlers",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71576",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T16:41:53.000Z",
+        "contentSnippet": "A flaw was found in multicluster-global-hub. The manager component improperly validates the source identity of incoming CloudEvents on Kafka status topics. A remote attacker, after compromising a managed hub and obtaining its Kafka client certificate, can manipulate the self-asse",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-72731 - Discourse: Strip SQL comments and use non-recursive parameter interpolation in Data Explorer",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72731",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T16:25:23.000Z",
+        "contentSnippet": "Discourse is an open-source discussion platform. From 2026.1.0-latest until 2026.1.7, 2026.6.2, 2026.7.1, and 2026.8.0-latest.1, anyone able to run a parameterized Data Explorer query, including non-staff members of a group a query is shared with, could craft parameter values tha",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-72726 - Discourse: Unauthorized eavesdropping on private AI bot conversations.",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72726",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T16:19:50.000Z",
+        "contentSnippet": "Discourse is an open-source discussion platform. Prior to 2026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0, an authenticated user could eavesdrop on private AI bot conversations through the AI bot reply stream. The issue is fixed in 2026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0.",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-72725 - Discourse: Stored XSS in staff action logs injects staff UI",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72725",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T16:19:49.000Z",
+        "contentSnippet": "Discourse is an open-source discussion platform. Prior to 2026.1.6, the staff action log model rendered unescaped previous and new value fields that could inject stored cross-site scripting into the staff interface. The issue is fixed in 2026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-72724 - Discourse: Private Chat Threat Message Disclosure via Chat Onebox Channel/Threat ID Mismatch",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72724",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T16:19:49.000Z",
+        "contentSnippet": "Discourse is an open-source discussion platform. Prior to 2026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0, plugins/chat/lib/chat/onebox_handler.rb resolves Chat::Thread by route thread_id independently of the route channel_id before checking whether the user can preview the selected c",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-72723 - Discourse: Anonymous sidebar serialization exposes descriptions of category-restricted tags",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72723",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T16:19:49.000Z",
+        "contentSnippet": "Discourse is an open-source discussion platform. Prior to 2026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0, SiteSerializer.anonymous_default_navigation_menu_tags serializes tags from SiteSetting.default_navigation_menu_tags without applying DiscourseTagging.filter_visible for the anony",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-72722 - Discourse: Duplicate lookup reveals restricted topic titles through canonicalized URLs",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72722",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T16:19:49.000Z",
+        "contentSnippet": "Discourse is an open-source discussion platform. Prior to 2026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0, TopicLink.extract_from, TopicLink.ensure_entry_for, and TopicLink.duplicate_lookup do not consistently enforce Guardian.can_see? checks when processing internal links. An authent",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-72721 - Discourse: Onebox Domain Blocklist Bypass via Case-Sensitive Comparison",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72721",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T16:19:49.000Z",
+        "contentSnippet": "Discourse is an open-source discussion platform. Prior to 2026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0, Onebox::DomainChecker.is_blocked? compares hostnames and SiteSetting.blocked_onebox_domains entries case-sensitively, allowing an attacker to bypass configured Onebox domain rest",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-72720 - Discourse: HTML injection in PrettyText.format_for_email from cooked-attribute reparsing",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72720",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T16:19:49.000Z",
+        "contentSnippet": "Discourse is an open-source discussion platform. Prior to 2026.1.7, 2026.6.2, 2026.7.1, and 2026.8.0-latest.1, Discourse has HTML injection in PrettyText.format_for_email because cooked attribute values are reparsed as markup. Crafted Vimeo iframe sources, secure-upload URLs or d",
+        "cveScore": 6.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-72719 - Chatwoot: Cross-Account Resource Transfer via `account_id` Parameter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72719",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T16:19:49.000Z",
+        "contentSnippet": "Chatwoot is a customer engagement suite. Prior to 4.9.0, Chatwoot allowed authenticated account administrators to transfer Portals, Automation Rules, Macros, and Twilio Channels to other accounts through the writable account_id parameter. This could break tenant isolation and cau",
+        "cveScore": 6.7,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-72718 - goose: Arbitrary command execution in goose CLI via `goose review` via git core.fsmonitor",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72718",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T16:19:48.000Z",
+        "contentSnippet": "goose is general-purpose AI agent that runs on your machine. Prior to 1.44.0, the `goose review` command runs the system `git` executable to gather the diff for review without stripping attacker-controlled Git configuration. A malicious repository whose `.git/config` sets [`core]",
+        "cveScore": 7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-66738 - SPIP < 4.4.18 Code Injection via Navigation Endpoint on SQLite",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66738",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T16:19:48.000Z",
+        "contentSnippet": "SPIP before 4.4.18 contains a code injection vulnerability in SQLite-backed installations. The navigation menu endpoint improperly handles array-typed user input, which bypasses input sanitization and allows the value to break out of an internal quoted string context when evaluat",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-56620 - HCL BigFix Mobile is vulnerable to information disclosure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56620",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T16:19:48.000Z",
+        "contentSnippet": "HCL BigFix Mobile is vulnerable to information disclosure due to improper handling of exceptions and verbose error reporting.",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-48158 - use-context-selector was vulnerable to malicious code execution via compromised commits",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48158",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T16:19:48.000Z",
+        "contentSnippet": "use-context-selector is a React useContextSelector hook in userland Between 2026-05-18 15:57:18 and 2026-05-19 15:24:34, the default branch contained malicious commits 9d8481a513b7b0d1c0941b220c69b25de748641b through 6f2dae054ca014068bdbbb4db96006424d674124 that executed remote a",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-48048 - XWiki Platform's Livetable results still allow reconstructing password hashes using 768 requests",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48048",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T16:19:47.000Z",
+        "contentSnippet": "XWiki Platform is a generic wiki platform. XWiki discovered that the patch for GHSA-5cf8-vrr8-8hjm was insufficient. Starting with version 6.2.1 and prior to versions 18.0.0RC1, 17.10.13, 17.4.9 and 16.10.17, with slightly modified parameters to the `LiveTableResults`, it is stil",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-47754 - unauthenticated path traversal in Metacat 2.x",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47754",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T16:19:47.000Z",
+        "contentSnippet": "Metacat is data repository software that helps researchers preserve, share, and discover data. Versions 2.x through 2.19.1 and all 1.x versions contain an unauthenticated path traversal in the `archiveEntryName` parameter of the `action=read` endpoint that is part of the original",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-72730 - Discourse: Stored XSS chat-transcript username unescaped in Rich Text Editor",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72730",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T16:17:04.000Z",
+        "contentSnippet": "Discourse is an open-source discussion platform. Prior to 2026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0, the Rich Text Editor rendered a chat-transcript username as HTML, allowing stored cross-site scripting. This issue is fixed in versions 2026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-72729 - Discourse: Stored XSS in discourse-local-dates plugin",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72729",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T16:15:13.000Z",
+        "contentSnippet": "Discourse is an open-source discussion platform. Prior to 2026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0, the discourse-local-dates plugin rendered crafted local-date format data as HTML on sites with a modified or disabled default Content Security Policy. This issue is fixed in vers",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-56619 - HCL BigFix Mobile is vulnerable to Reflected Cross-Site Scripting (Reflected XSS)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56619",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T16:14:47.000Z",
+        "contentSnippet": "HCL BigFix Mobile is vulnerable to Reflected Cross-Site Scripting (Reflected XSS) due to insufficient validation and output encoding of user-controlled input.",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-72728 - Discourse: Onebox iframe origin allowlist enforces URL authority boundary",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72728",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T16:13:20.000Z",
+        "contentSnippet": "Discourse is an open-source discussion platform. Prior to 2026.1.7, an authenticated user could submit specially formed URLs that bypassed the Onebox allowlist and embedded malicious content in a site. This issue is fixed in versions 2026.1.7, 2026.6.2, 2026.7.1, and 2026.8.0-lat",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-72727 - Discourse: Stored XSS in the moderation review queue",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72727",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T16:08:21.000Z",
+        "contentSnippet": "Discourse is an open-source discussion platform. Prior to 026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0, a low-privileged user could place crafted content in the moderation review queue that executed stored cross-site scripting when a moderator viewed it on a site with a modified or ",
         "cveScore": 0,
         "cveSeverity": "NA"
       },
@@ -16,7 +214,7 @@
         "title": "CVE-2026-72761 - Webhook SSRF guard bypassed by IPv6 transition addresses (NAT64/6to4/Teredo pass is_global check) in vulnerability-lookup",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-72761",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-10T14:33:13.000Z",
+        "isoDate": "2026-08-10T15:17:44.000Z",
         "contentSnippet": "The webhook URL validator in `website/notifications/webhooks.py` uses `ip.is_global` to reject non-public addresses after DNS resolution. IPv6 transition addresses (NAT64 `64:ff9b::/96`, 6to4 `2002::/16`, Teredo `2001:0000::/32`) are classified as globally routable by IANA, so `i",
         "cveScore": 6.9,
         "cveSeverity": "MEDIUM"
@@ -25,10 +223,19 @@
         "title": "CVE-2026-72760 - cti-transmute Following List Exposes User Email Addresses to Authenticated Users",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-72760",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-10T14:31:49.000Z",
+        "isoDate": "2026-08-10T15:17:44.000Z",
         "contentSnippet": "Affected versions of MISP cti-transmute disclose users' email addresses through the account following-list endpoint. When an authenticated user follows another account, get_following() includes the followed user's email field in the API response alongside their name, user ID, and",
         "cveScore": 5.3,
         "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-18412 - The OpenCart v4.2.0.0 extension installer contains a directory traversal vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18412",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T14:50:54.000Z",
+        "contentSnippet": "OpenCart extensions are uploaded as zip files with .ocmod.zip extensions. Upon installation, the OpenCart v4.2.0.0 extension installer extracts these zip files, but does not validate that the extracted paths stay inside the intended extraction directory. An attacker can craft a m",
+        "cveScore": 0,
+        "cveSeverity": "NA"
       },
       {
         "title": "CVE-2026-72759 - cti-transmute Conversion History Authorization Bypass Leads to Sensitive Data Disclosure After Conversion Deletion",
@@ -695,213 +902,6 @@
         "contentSnippet": "DEEBOT PRO M1 and DEEBOT PRO K1VAC improperly implement authentication in WebSocket communication. The WebSocket private key may be retrieved through analyzing the traffic data via a man-in-the-middle attack, and communication contents may be altered.",
         "cveScore": 8.1,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-66406 - Ecovacs DEEBOT Improper Certificate Validation Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66406",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T08:00:25.000Z",
-        "contentSnippet": "DEEBOT PRO M1 and DEEBOT PRO K1VAC use wget command with server certificate validation disabled. A man-in-the-middle attack may allow to obtain and/or alter communications of the affected products. As a result, arbitrary code may be executed with the administrative privilege.",
-        "cveScore": 4.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-66405 - Ecovacs DEEBOT Unauthorized Telnet Access Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66405",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T07:59:40.000Z",
-        "contentSnippet": "DEEBOT PRO M1 and DEEBOT PRO K1VAC leave the telnet servers enabled. The telnet service may be leveraged to log in to the affected products.",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-66404 - Ecovacs DEEBOT Improper Certificate Validation Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66404",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T07:59:17.000Z",
-        "contentSnippet": "DEEBOT PRO M1 and DEEBOT PRO K1VAC do not validate server certificates in MQTT communications. Operation logs and activity logs stored on the affected products may be retrieved.",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-66403 - ECOVACS DEEBOT PRO Information Disclosure Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66403",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T07:58:47.000Z",
-        "contentSnippet": "DEEBOT PRO M1 and DEEBOT PRO K1VAC leave the web server for debugging purposes enabled. The floor map and log information stored on the affected products may be retrieved.",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-21084 - SmartThings Improper Access Control Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-21084",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T07:44:23.000Z",
-        "contentSnippet": "Improper access control in SmartThings prior to version 1.8.47.24 allows local attackers to access sensitive information.",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-21083 - Samsung Smart Switch Improper Input Validation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-21083",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T07:44:12.000Z",
-        "contentSnippet": "Improper input validation in Smart Switch prior to version 3.7.72.6 allows adjacent attackers to access sensitive data.",
-        "cveScore": 6.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-21082 - Samsung Health Relative Path Traversal Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-21082",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T07:44:01.000Z",
-        "contentSnippet": "Relative path traversal in Samsung Health prior to version 7.0.0 allows local attackers to access sensitive information.",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-21081 - SamsungPassAutofill Improper Component Export Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-21081",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T07:43:49.000Z",
-        "contentSnippet": "Improper export of android application components in SamsungPassAutofill prior to version 5.2.10.x allows local attackers to access sensitive information. User interaction is required for triggering this vulnerability.",
-        "cveScore": 5.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-21080 - Samsung Smart Switch Cleartext Storage of Sensitive Information",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-21080",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T07:43:38.000Z",
-        "contentSnippet": "Cleartext storage of sensitive information in Smart Switch prior to version 3.7.72.6 allows adjacent attackers to access sensitive data.",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-21079 - Samsung Smart Switch Sensitive Data Exposure",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-21079",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T07:43:27.000Z",
-        "contentSnippet": "Missing encryption of sensitive data in Smart Switch prior to version 3.7.72.6 allows adjacent attackers to intercept transmitted data.",
-        "cveScore": 7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-21078 - Samsung Smart Switch Device Identity Spoofing Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-21078",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T07:43:16.000Z",
-        "contentSnippet": "Insufficient verification of data authenticity in Smart Switch trouble scanning mode prior to version 3.7.72.6 allows adjacent attackers to spoof device identity.",
-        "cveScore": 4.7,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-21077 - Samsung Health Incorrect Authorization Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-21077",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T07:43:05.000Z",
-        "contentSnippet": "Incorrect authorization in Samsung Health prior to version 7.0.0 allows local attackers to access sensitive information.",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-21076 - Samsung Health Incorrect Authorization Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-21076",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T07:42:54.000Z",
-        "contentSnippet": "Incorrect authorization in Samsung Health prior to version 7.0.0 allows local attackers to access sensitive information.",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-72522 - libexpat Out-of-Bounds Read and Infinite Loop",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72522",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T04:16:50.000Z",
-        "contentSnippet": "libexpat before 2.8.3 has an out-of-bounds read and resultant infinite loop because low surrogates are treated the same as high surrogates during Unicode processing in the *_toUtf16 functions.",
-        "cveScore": 6.2,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-19389 - Gstreamer: gstreamer1-plugins-ugly-free: gstreamer: integer overflow/underflow in asfdemux bounds checks leading to out-of-bounds read",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19389",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T03:16:40.000Z",
-        "contentSnippet": "Multiple integer overflow and underflow vulnerabilities were found in the GStreamer gst-plugins-ugly ASF demuxer (asfdemux) when parsing header objects from crafted ASF, WMV, or WMA files. Insufficient validation of attacker-controlled length and size values can bypass bounds che",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-19387 - Gstreamer: gstreamer1-plugins-bad-free: gstreamer: heap out-of-bounds write in adpcmdec ima/dvi adpcm decoder",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19387",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T03:16:40.000Z",
-        "contentSnippet": "A heap out-of-bounds write vulnerability was found in the GStreamer gst-plugins-bad adpcmdec element when decoding IMA/DVI ADPCM audio. Insufficient validation of the per-block sample count for multi-channel streams allows a crafted WAV file to cause writes beyond the allocated o",
-        "cveScore": 7.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-19384 - SourceCodester Simple Doctors Appointment System ajax.php set_appointment sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19384",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T03:16:40.000Z",
-        "contentSnippet": "A weakness has been identified in SourceCodester Simple Doctors Appointment System 1.0. The affected element is an unknown function of the file /admin/ajax.php?action=set_appointment. This manipulation of the argument ID causes sql injection. The attack may be initiated remotely.",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-19383 - saithink/saigroup SaiAdmin Plugin Upload Endpoint upload shell_exec unrestricted upload",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19383",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T02:16:43.000Z",
-        "contentSnippet": "A security vulnerability has been detected in saithink/saigroup SaiAdmin up to 5.0.1. This impacts the function shell_exec of the file /app/saipackage/install/upload of the component Plugin Upload Endpoint. The manipulation leads to unrestricted upload. Remote exploitation of the",
-        "cveScore": 5.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-19382 - Almico Speedfan MSR Index speedfan.sys KiSystemCall64 memory leak",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19382",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T01:16:48.000Z",
-        "contentSnippet": "A weakness has been identified in Almico Speedfan 4.52. This affects the function KiSystemCall64 in the library speedfan.sys of the component MSR Index Handler. Executing a manipulation can lead to memory leak. The attack can only be executed locally. The exploit has been made av",
-        "cveScore": 2.3,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-19381 - Kingston FURY CTRL RGB Control Software Driver NTIOLib_KSFX.sys privileges management",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19381",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T01:16:48.000Z",
-        "contentSnippet": "A security flaw has been discovered in Kingston FURY CTRL RGB Control Software 2.0.65.0. The impacted element is an unknown function in the library NTIOLib_KSFX.sys of the component Driver. Performing a manipulation results in improper privilege management. The attack needs to be",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-19380 - Mullvad wireguard.sys IOCTL AdapterState reference count",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19380",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T01:16:48.000Z",
-        "contentSnippet": "A vulnerability was identified in Mullvad wireguard.sys 0.10.1. The affected element is the function AdapterState of the component IOCTL Handler. Such manipulation leads to improper update of reference count. Local access is required to approach this attack. The exploit is public",
-        "cveScore": 2.3,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-19379 - EFM ipTIME AX8004M CGI Endpoint d.cgi popen os command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19379",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T01:16:47.000Z",
-        "contentSnippet": "A vulnerability was determined in EFM ipTIME AX8004M 15.09.0. Impacted is the function popen of the file /cgi/d.cgi of the component CGI Endpoint. This manipulation of the argument fname causes os command injection. The attack can be initiated remotely. The exploit has been publi",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-19378 - code-projects Task Management System CommentSave.php cross site scripting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19378",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T00:17:11.000Z",
-        "contentSnippet": "A vulnerability was found in code-projects Task Management System 1.0. This issue affects some unknown processing of the file /user/CommentSave.php. The manipulation of the argument comment/task_id/mineId/recId/myName/myImage results in cross site scripting. It is possible to lau",
-        "cveScore": 5,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
@@ -2310,6 +2310,27 @@
     ],
     "hardware": [
       {
+        "title": "Lumilens Exits Stealth With $700M and AI Optics Already Shipping to a Hyperscaler",
+        "link": "https://www.storagereview.com/news/lumilens-exits-stealth-with-700m-and-ai-optics-already-shipping-to-a-hyperscaler",
+        "source": "StorageReview",
+        "isoDate": "2026-08-10T17:05:24.000Z",
+        "contentSnippet": "Lumilens has emerged from stealth with a portfolio of optical interconnect products targeting two networking constraints in large AI clusters: scale-out connectivity between racks and scale-up connectivity among GPUs within a compute domain. The company said it has begun shipping"
+      },
+      {
+        "title": "GeForce RTX 50-series GPU prices spike as much as 39% as Blackwell price hikes hit the US — RTX 5070 gets a 36% hike, RTX 5060 up 27% at the median of Newegg listings",
+        "link": "https://www.tomshardware.com/pc-components/gpus/geforce-rtx-50-series-gpu-prices-spike-as-much-as-39-percent-as-blackwell-price-hikes-hit-the-us-rtx-5070-gets-a-36-percent-hike-rtx-5060-up-27-percent-at-the-median-of-newegg-listings",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-10T16:55:46.000Z",
+        "contentSnippet": "After recent news of price hikes on RTX 50-series GPUs in other regions, those same increases now appear to have come Stateside, as Newegg prices for some Blackwell cards have spiked as much as 39% compared to June 2026."
+      },
+      {
+        "title": "Nvidia reportedly testing lower memory configs of Rubin Ultra as memory shortage bites back — designs tested include as little as 192 GB and step back to HBM4",
+        "link": "https://www.tomshardware.com/pc-components/gpus/nvidia-reportedly-testing-lower-memory-configs-of-rubin-ultra-as-memory-shortage-bites-back-designs-tested-include-as-little-as-192-gb-and-step-back-to-hbm4",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-10T16:47:00.000Z",
+        "contentSnippet": "Nvidia is reportedly testing at least three Rubin Ultra configurations that pack as little as 192 GB of memory, as opposed to the 1 TB of HBM4E originally announced."
+      },
+      {
         "title": "Panduit E36G18L PDU Review A Sweet Managed and Switched by Outlet PDU",
         "link": "https://www.servethehome.com/panduit-e36g18l-pdu-review-a-sweet-managed-and-switched-by-outlet-pdu/",
         "source": "ServeTheHome",
@@ -2987,27 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-08-05T12:01:51.000Z",
         "contentSnippet": "Save $155 on this 4-item Newegg Gaming PC Combo - $983 buys 9800X3D, Samsung's blazing fast 1TB 9100 Pro SSD, 16GB of RAM, and Asus B850 motherboard"
-      },
-      {
-        "title": "US military GPS jamming exercise suspected of contributing to civilian plane crash in New Mexico — medevac flight lost signal before flying into a mountain, killing everyone onboard",
-        "link": "https://www.tomshardware.com/tech-industry/us-military-gps-jamming-exercise-suspected-of-contributing-to-civilian-plane-crash-in-new-mexico-medevac-flight-lost-signal-before-flying-into-a-mountain-killing-everyone-onboard",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-05T12:00:16.000Z",
-        "contentSnippet": "A medevac flight in New Mexico suffered from GPS interference due to activities by nearby U.S. military units. Although it didn't directly cause the plane to crash, it added to the stress and workload of the pilots, causing them to miss one crucial piece of information."
-      },
-      {
-        "title": "Elon Musk says SpaceX will exclusively use Nvidia GPUs 'because they are the best' — says optimized Vera Rubin NVL72 will be launched into space next year",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/elon-musk-says-spacex-will-exclusively-use-nvidia-gpus-because-they-are-the-best-says-optimized-vera-rubin-nvl72-will-be-launched-into-space-next-year",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-05T11:50:34.000Z",
-        "contentSnippet": "Elon Musk's SpaceX and xAI will exclusive use Nvidia AI accelerators for training and inference as companies believe Vera Rubin is the best AI compute architecture available today."
-      },
-      {
-        "title": "Huge $750 saving makes this Gigabyte OLED gaming laptop with an RTX 5070 Ti an absolute steal right now — just $1,999 for 1600p rig with 32GB DDR5, 1TB SSD, and a 24-core Intel CPU",
-        "link": "https://www.tomshardware.com/laptops/gaming-laptops/huge-usd750-saving-makes-this-gigabyte-oled-gaming-laptop-with-an-rtx-5070-ti-an-absolute-steal-right-now-just-usd1-999-for-1600p-rig-with-32gb-ddr5-1tb-ssd-and-a-24-core-intel-cpu",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-05T11:06:29.000Z",
-        "contentSnippet": "Save $750.99 on this powerhouse Gigabyte Aorus Master OLED gaming laptop with an RTX 5070 Ti and 32GB DDR5 for $1,999."
       }
     ]
   }
