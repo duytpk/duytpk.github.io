@@ -1,43 +1,232 @@
 {
-  "updatedAt": "2026-08-10T21:33:02.073Z",
+  "updatedAt": "2026-08-10T22:28:04.237Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
+        "title": "CVE-2026-6426 - Qemu-kvm: vhost inflight migration vmstate integer type mismatch causes out-of-bounds access",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6426",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T21:22:29.000Z",
+        "contentSnippet": "A type mismatch vulnerability was found in QEMU's vhost inflight migration VMState handling. The destination buffer size is stored as a uint64_t but read by the VMS_VBUFFER load path as a signed int32_t. On little-endian hosts, a crafted incoming migration state with bit 31 set c",
+        "cveScore": 4.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-72916 - Mastodon: SSRF Protection Bypass via IPv4-compatible IPv6 Addresses",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72916",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T21:19:02.000Z",
+        "contentSnippet": "Mastodon is a free, open-source social network server based on ActivityPub. Prior to 4.4.21, 4.5.14, 4.6.4, and 4.7.0-beta.1, PrivateAddressCheck.private_address? in app/lib/private_address_check.rb normalized IPv4-mapped IPv6 addresses but did not recognize IPv4-compatible IPv6 ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-73035 - npm-check-updates 23.0.2 Terminal Injection via Unsanitized Escape Sequences",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73035",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T21:17:26.000Z",
+        "contentSnippet": "npm-check-updates through 23.0.2, fixed in commit b554b84, contains a terminal escape sequence injection vulnerability that allows an attacker to embed arbitrary terminal control characters in a dependency's package.json homepage or repository URL fields. When a developer runs nc",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-73033 - Sucuri WordPress Plugin 2.7.3 Path Traversal via integrity.lib.php",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73033",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T21:17:26.000Z",
+        "contentSnippet": "Sucuri Security WordPress plugin through version 2.7.3 contains a path traversal vulnerability in the pageIntegritySubmission() method in src/integrity.lib.php that allows authenticated administrators to delete arbitrary files by supplying directory traversal sequences in the suc",
+        "cveScore": 7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-73030 - unearth 0.18.2 Path Traversal via Unnormalized Paths and Symlink Escape",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73030",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T21:17:26.000Z",
+        "contentSnippet": "unearth through 0.18.2, fixed in commit 6c78164, contains a path traversal vulnerability in the is_within_directory function that fails to normalize paths before validation, allowing ../ sequences to bypass directory containment checks. Attackers can supply malicious tar archives",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-72913 - Kitty: Command injection into the child shell via chained @kitty-echo + @kitty-ssh DCS escape sequences",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72913",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T21:17:26.000Z",
+        "contentSnippet": "Kitty is a cross-platform GPU based terminal. Prior to 0.48.2, the @kitty-echo and @kitty-ssh DCS handlers in kitty/window.py write unauthenticated data to the child shell's stdin, where handle_remote_echo accepts printable shell command characters and handle_remote_ssh calls get",
+        "cveScore": 7.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-72912 - CyberChef’s pretty-recipe parser vulnerable to client-side ReDoS / CPU exhaustion when parsing a malformed #recipe= URL",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72912",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T21:17:26.000Z",
+        "contentSnippet": "CyberChef is a web app for encryption, encoding, compression, and data analysis. Prior to 11.3.0, CyberChef's pretty-recipe parser in src/core/Utils.mjs can exhaust client-side CPU when a malformed #recipe= URL fragment containing a large number of unmatched quote characters reac",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-72911 - ERPNext: Possibility of server-side template injection due to missing validation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72911",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T21:17:25.000Z",
+        "contentSnippet": "ERPNext is a free and open source Enterprise Resource Planning tool. Prior to 15.118.0 and 16.29.0, the validate_template and render_template calls in erpnext/accounts/doctype/process_statement_of_accounts/process_statement_of_accounts.py render subject, body, and pdf_name fields",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-72910 - ERPNext: Unauthorised modification of master data due to missing validation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72910",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T21:17:25.000Z",
+        "contentSnippet": "ERPNext is a free and open source Enterprise Resource Planning tool. Prior to 15.112.0 and 16.22.0, the merge_account, pause_job_for_doc, trigger_job_for_doc, change_release_date, and update_cost_center functions across erpnext/accounts/doctype/account/account.py, erpnext/account",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-72909 - ERPNext: Broken Access Control on certain endpoints",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72909",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T21:17:25.000Z",
+        "contentSnippet": "ERPNext is a free and open source Enterprise Resource Planning tool. Prior to 15.112.0 and 16.23.0, the ReceivablePayableReport prepare_conditions path in erpnext/accounts/report/accounts_receivable/accounts_receivable.py does not apply Customer and Supplier user permissions to t",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
         "title": "CVE-2026-72908 - ERPNext: Possibility of SQL injection due to missing validation",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-72908",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-10T20:51:23.000Z",
+        "isoDate": "2026-08-10T21:17:25.000Z",
         "contentSnippet": "ERPNext is a free and open source Enterprise Resource Planning tool. Prior to 15.109.0 and 16.20.0, the get_tax_template function in erpnext/accounts/doctype/tax_rule/tax_rule.py constructs an SQL WHERE clause from request-influenced posting_date and args values, allowing an auth",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-72907 - ERPNext: Broken Access Control on certain endpoint",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-72907",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-10T20:49:26.000Z",
+        "isoDate": "2026-08-10T21:17:25.000Z",
         "contentSnippet": "ERPNext is a free and open source Enterprise Resource Planning tool. Prior to 15.111.0 and 16.22.0, the add_ac function in erpnext/accounts/utils.py accepts the ignore_permissions argument without enforcing Account create permission, allowing an authenticated limited user to crea",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-72906 - ERPNext: Unauthorised triggering of automated emails due to missing validation",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-72906",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-10T20:47:39.000Z",
+        "isoDate": "2026-08-10T21:17:25.000Z",
         "contentSnippet": "ERPNext is a free and open source Enterprise Resource Planning tool. Prior to 15.111.0 and 16.22.0, the send_auto_email function in erpnext/accounts/doctype/process_statement_of_accounts/process_statement_of_accounts.py lacks a Process Statement Of Accounts permission check, allo",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-72905 - Rejected reason: Further research determined the i",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72905",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T21:17:25.000Z",
+        "contentSnippet": "Rejected reason: Further research determined the issue is not a vulnerability.",
         "cveScore": 0,
         "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-72904 - Firecrawl: Arbitrary file read via JSON Schema $ref expansion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72904",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T21:17:25.000Z",
+        "contentSnippet": "Firecrawl turns entire websites into LLM-ready markdown or structured data. Prior to 2.11.32, a critical arbitrary file read vulnerability exists in Firecrawl's extraction functionality due to unsafe schema dereferencing of user-supplied JSON schemas in apps/api/src/lib/extract/h",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-72903 - Tabby: Windows SFTP path traversal allows a malicious server to write files outside the selected download directory",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72903",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T21:17:24.000Z",
+        "contentSnippet": "Tabby (formerly Terminus) is a highly configurable terminal emulator. Prior to 1.0.235, a malicious SFTP server can return a backslash traversal filename through entry.name. In tabby-ssh/src/session/sftp.ts, SFTPSession.readdir() and _makeFile() use POSIX path processing that pre",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-72743 - SQLBot 1.10.0 SQText Dashboard Component Stored XSS via v-html",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72743",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T21:17:24.000Z",
+        "contentSnippet": "SQLBot through 1.10.0, fixed in commit c3f40a5, contains a stored cross-site scripting vulnerability in the SQText dashboard component that renders TinyMCE output via v-html without sanitization. Attackers who can modify dashboard text widget content can inject arbitrary HTML and",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-63622 - Libvirt: swtpm privilege escalation via symlink following",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63622",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T21:17:23.000Z",
+        "contentSnippet": "A flaw was found in libvirt. A local attacker, specifically a process running as the confined `swtpm` user, could exploit a symlink-following vulnerability in the `virFileChownFiles()` function. By planting a symbolic link within the `swtpm` state directory, the attacker could tr",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-48160 - react-tracked was vulnerable to malicious code execution via compromised commits",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48160",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T21:17:23.000Z",
+        "contentSnippet": "react-tracked provides state usage tracking with Proxies. Between 2026-05-18 19:26:36 and 2026-05-19 15:22:45, the default branch contained malicious commits 6978272a7d6ca02225cb747ea69f427512e33699 through 949f1a3d6bb1ff7d1a0dec892afd773e742627e8 that executed remote attacker-co",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
       },
       {
         "title": "CVE-2026-19411 - Shim/dp.c library: null-pointer dereference in is_removable_media_path() when devicepathtostr() returns null",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-19411",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-10T20:45:52.000Z",
+        "isoDate": "2026-08-10T21:17:23.000Z",
         "contentSnippet": "A NULL pointer vulnerability has been found in the the shim application of dp.c library. A missing NULL pointer could allow attackers to perform a denial of service attack on a system that uses shim application for UEFI bootloader.",
         "cveScore": 3.9,
         "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-18982 - Odh-training-operator-rhel9: rhoai fork aggregates training job create onto native edit/admin clusterroles",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18982",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T21:17:21.000Z",
+        "contentSnippet": "A flaw was found in the RHOAI training-operator. This vulnerability allows a user with standard edit or admin roles in any Kubernetes namespace to escalate their privileges. Through the creation of training jobs, an attacker can impersonate service accounts, access the host files",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-18951 - Odh-training-operator-rhel9: [trainer v2 security] trn-02: rhoai overlay aggregates trainjobs crud into standard edit clusterrole",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18951",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T21:17:21.000Z",
+        "contentSnippet": "A flaw was found in the Red Hat OpenShift AI (RHOAI) overlay for the training operator. The RHOAI overlay incorrectly aggregates `trainjobs` management permissions into the native Kubernetes `edit ClusterRole`. This allows any user with `edit ClusterRole` permissions in a namespa",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-18950 - Odh-dashboard: odh-dashboard: confused-deputy privilege escalation via unchecked roleref in rolebinding creation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18950",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T21:17:21.000Z",
+        "contentSnippet": "A flaw was found in odh-dashboard. An authenticated user of the dashboard can exploit a vulnerability related to how RoleBindings are created. The system does not properly validate the `roleRef` field, allowing a user to specify an arbitrary role, including highly privileged ones",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-18949 - Odh-dashboard: odh-dashboard: clusterrole grants cluster-wide crud on secrets and rbac management resources",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18949",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T21:17:21.000Z",
+        "contentSnippet": "A flaw was found in odh-dashboard. This vulnerability allows an attacker, who has compromised the dashboard's Service Account (SA) token, to exploit overly broad permissions granted to the SA. This enables the attacker to escalate their privileges to cluster-administrator level, ",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-18948 - Feast: feast: unsafe dill deserialization of registry-stored udfs — rce on feature server and registry server",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18948",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T21:17:21.000Z",
+        "contentSnippet": "A flaw was found in Feast. The system improperly deserializes user-defined functions (UDFs) stored in its registry, which are serialized using the 'dill' library. This allows a remote attacker to store a malicious UDF, leading to unauthenticated arbitrary code execution on the fe",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
       },
       {
         "title": "CVE-2026-18620 - Data-sciences-pipeline: user-controlled serviceaccount for workflow pods without authorization check — confused deputy",
@@ -65,69 +254,6 @@
         "contentSnippet": "A flaw was found in the Data Science Pipelines Operator. This vulnerability allows an unauthenticated attacker to derive sensitive credentials, such as MariaDB root/user passwords and MinIO access/secret keys, if they can access the MinIO Route or MariaDB Service. The flaw occurs",
         "cveScore": 7.5,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-63622 - Libvirt: swtpm privilege escalation via symlink following",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63622",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T20:45:24.000Z",
-        "contentSnippet": "A flaw was found in libvirt. A local attacker, specifically a process running as the confined `swtpm` user, could exploit a symlink-following vulnerability in the `virFileChownFiles()` function. By planting a symbolic link within the `swtpm` state directory, the attacker could tr",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-18982 - Odh-training-operator-rhel9: rhoai fork aggregates training job create onto native edit/admin clusterroles",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18982",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T20:45:19.000Z",
-        "contentSnippet": "A flaw was found in the RHOAI training-operator. This vulnerability allows a user with standard edit or admin roles in any Kubernetes namespace to escalate their privileges. Through the creation of training jobs, an attacker can impersonate service accounts, access the host files",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-72905",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72905",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T20:45:16.000Z",
-        "contentSnippet": "None",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-18951 - Odh-training-operator-rhel9: [trainer v2 security] trn-02: rhoai overlay aggregates trainjobs crud into standard edit clusterrole",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18951",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T20:45:10.000Z",
-        "contentSnippet": "A flaw was found in the Red Hat OpenShift AI (RHOAI) overlay for the training operator. The RHOAI overlay incorrectly aggregates `trainjobs` management permissions into the native Kubernetes `edit ClusterRole`. This allows any user with `edit ClusterRole` permissions in a namespa",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-18950 - Odh-dashboard: odh-dashboard: confused-deputy privilege escalation via unchecked roleref in rolebinding creation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18950",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T20:45:05.000Z",
-        "contentSnippet": "A flaw was found in odh-dashboard. An authenticated user of the dashboard can exploit a vulnerability related to how RoleBindings are created. The system does not properly validate the `roleRef` field, allowing a user to specify an arbitrary role, including highly privileged ones",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-18949 - Odh-dashboard: odh-dashboard: clusterrole grants cluster-wide crud on secrets and rbac management resources",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18949",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T20:45:00.000Z",
-        "contentSnippet": "A flaw was found in odh-dashboard. This vulnerability allows an attacker, who has compromised the dashboard's Service Account (SA) token, to exploit overly broad permissions granted to the SA. This enables the attacker to escalate their privileges to cluster-administrator level, ",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-18948 - Feast: feast: unsafe dill deserialization of registry-stored udfs — rce on feature server and registry server",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18948",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T20:44:56.000Z",
-        "contentSnippet": "A flaw was found in Feast. The system improperly deserializes user-defined functions (UDFs) stored in its registry, which are serialized using the 'dill' library. This allows a remote attacker to store a malicious UDF, leading to unauthenticated arbitrary code execution on the fe",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
       },
       {
         "title": "CVE-2026-18947 - Feast: feast: authorization bypass in /materialize endpoints enables dos via unauthorized full re-materialization",
@@ -776,132 +902,6 @@
         "contentSnippet": "Discourse is an open-source discussion platform. Prior to 2026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0, plugins/chat/lib/chat/onebox_handler.rb resolves Chat::Thread by route thread_id independently of the route channel_id before checking whether the user can preview the selected c",
         "cveScore": 4.3,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-72723 - Discourse: Anonymous sidebar serialization exposes descriptions of category-restricted tags",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72723",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T16:19:49.000Z",
-        "contentSnippet": "Discourse is an open-source discussion platform. Prior to 2026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0, SiteSerializer.anonymous_default_navigation_menu_tags serializes tags from SiteSetting.default_navigation_menu_tags without applying DiscourseTagging.filter_visible for the anony",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-72722 - Discourse: Duplicate lookup reveals restricted topic titles through canonicalized URLs",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72722",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T16:19:49.000Z",
-        "contentSnippet": "Discourse is an open-source discussion platform. Prior to 2026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0, TopicLink.extract_from, TopicLink.ensure_entry_for, and TopicLink.duplicate_lookup do not consistently enforce Guardian.can_see? checks when processing internal links. An authent",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-72721 - Discourse: Onebox Domain Blocklist Bypass via Case-Sensitive Comparison",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72721",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T16:19:49.000Z",
-        "contentSnippet": "Discourse is an open-source discussion platform. Prior to 2026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0, Onebox::DomainChecker.is_blocked? compares hostnames and SiteSetting.blocked_onebox_domains entries case-sensitively, allowing an attacker to bypass configured Onebox domain rest",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-72720 - Discourse: HTML injection in PrettyText.format_for_email from cooked-attribute reparsing",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72720",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T16:19:49.000Z",
-        "contentSnippet": "Discourse is an open-source discussion platform. Prior to 2026.1.7, 2026.6.2, 2026.7.1, and 2026.8.0-latest.1, Discourse has HTML injection in PrettyText.format_for_email because cooked attribute values are reparsed as markup. Crafted Vimeo iframe sources, secure-upload URLs or d",
-        "cveScore": 6.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-72719 - Chatwoot: Cross-Account Resource Transfer via `account_id` Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72719",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T16:19:49.000Z",
-        "contentSnippet": "Chatwoot is a customer engagement suite. Prior to 4.9.0, Chatwoot allowed authenticated account administrators to transfer Portals, Automation Rules, Macros, and Twilio Channels to other accounts through the writable account_id parameter. This could break tenant isolation and cau",
-        "cveScore": 6.7,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-72718 - goose: Arbitrary command execution in goose CLI via `goose review` via git core.fsmonitor",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72718",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T16:19:48.000Z",
-        "contentSnippet": "goose is general-purpose AI agent that runs on your machine. Prior to 1.44.0, the `goose review` command runs the system `git` executable to gather the diff for review without stripping attacker-controlled Git configuration. A malicious repository whose `.git/config` sets [`core]",
-        "cveScore": 7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-66738 - SPIP < 4.4.18 Code Injection via Navigation Endpoint on SQLite",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66738",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T16:19:48.000Z",
-        "contentSnippet": "SPIP before 4.4.18 contains a code injection vulnerability in SQLite-backed installations. The navigation menu endpoint improperly handles array-typed user input, which bypasses input sanitization and allows the value to break out of an internal quoted string context when evaluat",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-56620 - HCL BigFix Mobile is vulnerable to information disclosure",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56620",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T16:19:48.000Z",
-        "contentSnippet": "HCL BigFix Mobile is vulnerable to information disclosure due to improper handling of exceptions and verbose error reporting.",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-48158 - use-context-selector was vulnerable to malicious code execution via compromised commits",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48158",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T16:19:48.000Z",
-        "contentSnippet": "use-context-selector is a React useContextSelector hook in userland Between 2026-05-18 15:57:18 and 2026-05-19 15:24:34, the default branch contained malicious commits 9d8481a513b7b0d1c0941b220c69b25de748641b through 6f2dae054ca014068bdbbb4db96006424d674124 that executed remote a",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-48048 - XWiki Platform's Livetable results still allow reconstructing password hashes using 768 requests",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48048",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T16:19:47.000Z",
-        "contentSnippet": "XWiki Platform is a generic wiki platform. XWiki discovered that the patch for GHSA-5cf8-vrr8-8hjm was insufficient. Starting with version 6.2.1 and prior to versions 18.0.0RC1, 17.10.13, 17.4.9 and 16.10.17, with slightly modified parameters to the `LiveTableResults`, it is stil",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-47754 - unauthenticated path traversal in Metacat 2.x",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47754",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T16:19:47.000Z",
-        "contentSnippet": "Metacat is data repository software that helps researchers preserve, share, and discover data. Versions 2.x through 2.19.1 and all 1.x versions contain an unauthenticated path traversal in the `archiveEntryName` parameter of the `action=read` endpoint that is part of the original",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-72761 - Webhook SSRF guard bypassed by IPv6 transition addresses (NAT64/6to4/Teredo pass is_global check) in vulnerability-lookup",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72761",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T15:17:44.000Z",
-        "contentSnippet": "The webhook URL validator in `website/notifications/webhooks.py` uses `ip.is_global` to reject non-public addresses after DNS resolution. IPv6 transition addresses (NAT64 `64:ff9b::/96`, 6to4 `2002::/16`, Teredo `2001:0000::/32`) are classified as globally routable by IANA, so `i",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-72760 - cti-transmute Following List Exposes User Email Addresses to Authenticated Users",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72760",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T15:17:44.000Z",
-        "contentSnippet": "Affected versions of MISP cti-transmute disclose users' email addresses through the account following-list endpoint. When an authenticated user follows another account, get_following() includes the followed user's email field in the API response alongside their name, user ID, and",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-18412 - The OpenCart v4.2.0.0 extension installer contains a directory traversal vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18412",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T14:50:54.000Z",
-        "contentSnippet": "OpenCart extensions are uploaded as zip files with .ocmod.zip extensions. Upon installation, the OpenCart v4.2.0.0 extension installer extracts these zip files, but does not validate that the extracted paths stay inside the intended extraction directory. An attacker can craft a m",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       }
     ],
     "ai": [
