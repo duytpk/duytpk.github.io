@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-08-11T22:33:06.717Z",
+  "updatedAt": "2026-08-11T23:31:32.157Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-73249 - calibre Content Server `/book-update-annotations` Missing Write Authorization Check Allows Unauthorized Annotation Modification",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73249",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T22:19:05.000Z",
+        "contentSnippet": "calibre is an e-book manager. Prior to 9.12.0, the calibre Content Server endpoint POST /book-update-annotations/{library_id}/{book_id}/{fmt} in src/calibre/srv/books.py omits needs_db_write=True, causing Router.dispatch() to skip ctx.check_for_write_access() before update_annota",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-73248 - calibre: Bypass of Python template restrictions via nested `template()` leading to RCE",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73248",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T22:19:05.000Z",
+        "contentSnippet": "calibre is an e-book manager. Prior to 9.12.0, calibre processes attacker-controlled composite_template metadata from a malicious EPUB, OPF, PDF, or similar file through program: and a nested template() call whose formatter does not inherit allow_python_templates=False, allowing ",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-73247 - Kestra: SSRF via Pebble http() function allows unauthenticated access to internal services & cloud metadata",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73247",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T22:19:05.000Z",
+        "contentSnippet": "Kestra is an open-source, event-driven orchestration platform. Prior to 2.0.0, Kestra's core/src/main/java/io/kestra/core/runners/pebble/functions/HttpFunction.java passes the user-controlled http() uri argument to URI.create() and the server-side HTTP client without restricting ",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-73246 - Kestra: Unauthenticated management `/worker` endpoint exposes live task configuration and plaintext credentials",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73246",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T22:19:05.000Z",
+        "contentSnippet": "Kestra is an open-source, event-driven orchestration platform. Prior to 2.0.0-rc6, Kestra's worker/src/main/java/io/kestra/worker/endpoint/WorkerEndpoint.java serves GET /worker without authentication and serializes the complete live Task object, which can expose commands, enviro",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-73245 - Kestra: Unauthenticated management/actuator endpoints exposed on port 8081 (/env, /loggers) bypass API basic-auth",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73245",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T22:19:05.000Z",
+        "contentSnippet": "Kestra is an open-source, event-driven orchestration platform. Prior to 2.0.0-rc6, Kestra's cli/src/main/resources/application.yml serves Micronaut management endpoints on port 8081 without authentication even when Basic Auth protects /api/v1/** on port 8080, allowing unauthentic",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-68067 - Mira Hormone Monitor, Mira Android App Weak Authentication",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68067",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T22:18:55.000Z",
+        "contentSnippet": "The login endpoint on the Mira cloud API accepts any format-valid string in the password field and returns a live active session token for the account matching the supplied email address. An attacker could use an email address to control cloud accounts and access hormone record i",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-67568 - Mira Hormone Monitor, Mira Android App Use of Hard-coded Credentials",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67568",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T22:18:54.000Z",
+        "contentSnippet": "The distributed Mira Android APK v4.5.15.4 allows an attacker read/write access to reproductive health profiles from internet connected hosts, which could result in forgery, deletion, or destruction of health information.",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-67558 - Mira Hormone Monitor, Mira Android App Authentication bypass by spoofing",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67558",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T22:18:54.000Z",
+        "contentSnippet": "The Mira Android companion app v4.5.15.4 identifies the paired Mira hormone analyzer by performing a substring match against the BLE advertisement name only, with no cryptographic peripheral authentication, MAC allowlist, or bonded-identity check. An attacker could capture live s",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-66875 - Mira Hormone Monitor, Mira Android App Missing authentication for critical function",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66875",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T22:18:54.000Z",
+        "contentSnippet": "In the Mira hormone monitor device firmware v1.7.1.47 build 01070147, a remote unauthenticated attacker within BLE range (approximately 10–30 meters) can silently rebind the device to an attacker-controlled account, extract stored hormone measurements in cleartext, cause a denial",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-66340 - Mira Hormone Monitor, Mira Android App Improper restriction of excessive authentication attempts",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66340",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T22:18:53.000Z",
+        "contentSnippet": "The Mira cloud authentication endpoints do not enforce per-account rate limiting, per-IP throttling, or account lockout after repeated failed login attempts. An attacker can use brute-force methods to obtain gain access to user accounts.",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-66098 - Mira Hormone Monitor, Mira Android App Missing authentication for critical function",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66098",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T22:18:49.000Z",
+        "contentSnippet": "The Mira hormone monitor device firmware accepts a 0x01 write from any BLE central without authentication, causing the device to reboot into bootloader mode. An attacker could cause a denial-of-service condition or disrupt ovulation tracking and fertility monitoring workflow.",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-64934 - Mira Hormone Monitor, Mira Android App Reliance on untrusted inputs in a security decision",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64934",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T22:18:41.000Z",
+        "contentSnippet": "The Mira cloud API accepts the firmware version reported by the companion app as authoritative for a given device, without independently attesting the version from the device itself. An authenticated attacker could submit arbitrary firmware version strings for their own device, a",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-5917 - libgit2 v0.27.0-v1.9.0 Shell Command Injection via ssh_libssh2 Backend",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-5917",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T22:17:37.000Z",
+        "contentSnippet": "libgit2 versions v0.27.0 through v1.9.0 built with the libssh2 SSH backend (USE_SSH=libssh2) contain a shell command injection vulnerability that allows remote attackers to execute arbitrary commands on an SSH server by supplying a repository path containing unescaped shell metac",
+        "cveScore": 9.6,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-29036 - cJSON 1.7.19 Wrong-Key Modification via JSON Pointer Escape Decoding",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-29036",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T22:17:22.000Z",
+        "contentSnippet": "cJSON versions 1.5.0 through 1.7.19 contain an incorrectly-resolved name or reference vulnerability in the decode_pointer_inplace() function within cJSON_Utils.c that allows unauthenticated attackers to cause JSON Patch operations to target wrong object keys by supplying crafted ",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-19560 - Google Chrome Blink Use After Free",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19560",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T22:17:21.000Z",
+        "contentSnippet": "Use after free in Blink in Google Chrome prior to 151.0.7922.137 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-19559 - Google Chrome HTML Use-After-Free Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19559",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T22:17:21.000Z",
+        "contentSnippet": "Use after free in HTML in Google Chrome prior to 151.0.7922.137 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-19558 - Google Chrome Extensions Use-After-Free Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19558",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T22:17:21.000Z",
+        "contentSnippet": "Use after free in Extensions in Google Chrome prior to 151.0.7922.137 allowed an attacker who convinced a user to install a malicious extension to execute arbitrary code inside a sandbox via a crafted Chrome Extension. (Chromium security",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-19557 - Google Chrome TabStrip Use-After-Free Sandbox Escape",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19557",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T22:17:21.000Z",
+        "contentSnippet": "Use after free in TabStrip in Google Chrome on Mac prior to 151.0.7922.137 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-19556 - Google Chrome V8 Use-After-Free Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19556",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T22:17:21.000Z",
+        "contentSnippet": "Use after free in V8 in Google Chrome prior to 151.0.7922.137 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-18710 - Cleartext Storage of Sensitive Information in MongoDB Driver Logging During Client Initialization",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18710",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T22:17:20.000Z",
+        "contentSnippet": "A MongoDB driver component could write sensitive configuration information, including a credential used for outbound network connectivity, to application log output in cleartext during routine client initialization. This occurs automatically as part of normal operation and requir",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-73250 - Notepad++: Install-time PowerShell command injection through installation path",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73250",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T22:04:54.000Z",
+        "contentSnippet": "Notepad++ is a free and open-source source code editor. Prior to 8.9.7, the Notepad++ Windows 11 x64 and ARM64 installer passes the attacker-influenced installation directory `$INSTDIR` from PowerEditor/installer/nppSetup.nsi into a PowerShell `-Command` string used by RegisterMS",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-71290 - Apache HttpComponents Client: TLS hostname verification silently disabled on the async transport (default config, MITM)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71290",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T21:17:51.000Z",
+        "contentSnippet": "Improper TLS hostname verification vulnerability in Apache HttpComponents Client 5.4 or newer. HostnameVerificationPolicy#BUILTIN setting has no effect when used with the async version of HttpClient. An attacker that can intercept and modify traffic between the client and the ser",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-66832 - Mira Hormone Monitor, Mira Android App Use of GET request method with sensitive query strings",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66832",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T21:17:49.000Z",
+        "contentSnippet": "When the Mira Android app opens in-app WebView content (e.g., shop redirect flows), the user's live session token is appended to the URL as a query string parameter, and a persistent user identifier is included in the WebView's User-Agent header. Both are then transmitted to thir",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-66154 - GMS Insufficient Certificate Validation Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66154",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T21:17:49.000Z",
+        "contentSnippet": "An insufficient certificate validation in a privileged communication workflow, was identified in a GMS application 9.5.1 (Build 9510.1044) and earlier versions which, under a successful MitM attack and controlled network conditions, could permit unauthorized changes.",
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-66150 - SonicWall Email Security OS Command Injection Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66150",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T21:17:49.000Z",
+        "contentSnippet": "Improper Control of Generation of Code ('Code Injection') Vulnerability in the SonicWall Email Security appliance allows an authenticated attacker with access to the SonicWall Email Security restricted CLI can inject arbitrary OS commands that execute as root via SNMP.",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-48763 - TypeBot has Arbitrary S3 Object Write in deprecated public upload endpoint via attacker-controlled filePath",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-48763",
@@ -11,15 +236,6 @@
         "contentSnippet": "TypeBot is a chatbot builder tool. Versions prior to 3.17.0 expose a deprecated public upload endpoint at `GET /api/v1/typebots/{typebotId}/blocks/{blockId}/storage/upload-url` that accepts an attacker-controlled `filePath` and returns a presigned S3 `PUT` URL for that exact key.",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-66832 - Mira Hormone Monitor, Mira Android App Use of GET request method with sensitive query strings",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66832",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T20:49:56.000Z",
-        "contentSnippet": "When the Mira Android app opens in-app WebView content (e.g., shop redirect flows), the user's live session token is appended to the URL as a query string parameter, and a persistent user identifier is included in the WebView's User-Agent header. Both are then transmitted to thir",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-19550 - Freeipa: ipa: freeipa: trust-fetch-domains uses trust-read aci to gate a privileged ad trust refresh, allowing unauthorized ldap writes",
@@ -54,15 +270,6 @@
         "source": "cvefeed.io",
         "isoDate": "2026-08-11T20:37:48.000Z",
         "contentSnippet": "TypeBot is a chatbot builder tool. Versions prior to 3.17.0 allow a low-privilege read collaborator to extract a workspace OAuth `credentialsId` from a readable bot configuration and then overwrite that credential through `handleUpdateOAuthCredentials()` by supplying an attacker-",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-71290 - Apache HttpComponents Client: TLS hostname verification silently disabled on the async transport (default config, MITM)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71290",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T20:33:56.000Z",
-        "contentSnippet": "Improper TLS hostname verification vulnerability in Apache HttpComponents Client 5.4 or newer. HostnameVerificationPolicy#BUILTIN setting has no effect when used with the async version of HttpClient. An attacker that can intercept and modify traffic between the client and the ser",
         "cveScore": 0,
         "cveSeverity": "NA"
       },
@@ -117,15 +324,6 @@
         "source": "cvefeed.io",
         "isoDate": "2026-08-11T20:24:50.000Z",
         "contentSnippet": "Malcolm is a network traffic analysis tool suite. The file-upload component (FilePond PHP backend) accepts uploads at `POST /server/php/submit.php` and stores them in a directory served by the same nginx and php-fpm instance. The allow-list that should restrict accepted file type",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-66150 - SonicWall Email Security OS Command Injection Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66150",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T20:19:34.000Z",
-        "contentSnippet": "Improper Control of Generation of Code ('Code Injection') Vulnerability in the SonicWall Email Security appliance allows an authenticated attacker with access to the SonicWall Email Security restricted CLI can inject arbitrary OS commands that execute as root via SNMP.",
         "cveScore": 0,
         "cveSeverity": "NA"
       },
@@ -704,204 +902,6 @@
         "contentSnippet": "ColdFusion is affected by a Heap-based Buffer Overflow vulnerability that could result in arbitrary code execution in the context of the current user. Exploit depends on conditions beyond the attacker's control. Exploitation of this issue does not require user interaction.",
         "cveScore": 8.1,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-34635 - ColdFusion | Use of Hard-coded Cryptographic Key (CWE-321)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34635",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T16:31:00.000Z",
-        "contentSnippet": "is affected by a Use of Hard-coded Cryptographic Key vulnerability that could result in a Security feature bypass. A low-privileged attacker could leverage this vulnerability to bypass security measures and gain unauthorized read and write access. Exploitation of this issue does ",
-        "cveScore": 8.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-48386 - ColdFusion | Use of a Broken or Risky Cryptographic Algorithm (CWE-327)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48386",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T16:30:59.000Z",
-        "contentSnippet": "ColdFusion is affected by a Use of a Broken or Risky Cryptographic Algorithm vulnerability that could lead to disclosure of sensitive memory. An attacker could leverage this vulnerability to disclose sensitive information. Exploitation of this issue does not require user interact",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-48362 - ColdFusion | Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') (CWE-78)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48362",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T16:30:58.000Z",
-        "contentSnippet": "ColdFusion is affected by an Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to execute arbitrar",
-        "cveScore": 10,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-71386 - ColdFusion | Cross-site Scripting (XSS) (CWE-79)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71386",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T16:30:57.000Z",
-        "contentSnippet": "is affected by a Cross-site Scripting (XSS) vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to execute arbitrary code. The vulnerable component is restricted to an administrative network ",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-71384 - ColdFusion | Incorrect Authorization (CWE-863)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71384",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T16:30:57.000Z",
-        "contentSnippet": "is affected by an Incorrect Authorization vulnerability that could result in a Security feature bypass. An attacker could leverage this vulnerability to bypass security measures and gain unauthorized read and write access, potentially resulting in an application denial-of-service",
-        "cveScore": 9.6,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-25652 - ColdFusion | Incorrect Authorization (CWE-863)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-25652",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T16:30:56.000Z",
-        "contentSnippet": "is affected by an Incorrect Authorization vulnerability that could result in privilege escalation. A low-privileged attacker could exploit this vulnerability to gain unauthorized read and write access. Exploitation of this issue does not require user interaction.",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-21273 - ColdFusion | Improper Input Validation (CWE-20)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-21273",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T16:30:55.000Z",
-        "contentSnippet": "is affected by an Improper Input Validation vulnerability that could result in privilege escalation. A low-privileged attacker could exploit this vulnerability to gain unauthorized read and write access. Exploitation of this issue requires user interaction in that a victim must o",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-73082 - Activepieces: Server-side request forgery in MCP tool validation endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73082",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T16:30:02.000Z",
-        "contentSnippet": "Activepieces is an open source AI workflow automation platform. Prior to 0.82.0, the POST /api/v1/projects/:projectId/mcp-server/validate-agent-mcp-tool endpoint makes an outbound HTTP or SSE request to a user-supplied serverUrl without URL validation or SSRF protection. An authe",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-39452 - Intel Transfer Learning Tool Protection Mechanism Failure Privilege Escalation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-39452",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T16:28:31.000Z",
-        "contentSnippet": "Protection mechanism failure for some Intel(R) Transfer Learning Tool before version v0.7 within Ring 3: User Applications may allow an escalation of privilege. Unprivileged software adversary with an unauthenticated user combined with a low complexity attack may enable escalatio",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2025-35987 - Intel Software Guard Extensions Data Center Attestation Primitives Denial of Service Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-35987",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T16:28:28.000Z",
-        "contentSnippet": "Omission of security-relevant information for some Intel(R) Software Guard Extensions Data Center Attestation Primitives within Ring 0: Kernel may allow a denial of service. Authorized adversary with a privileged user combined with a high complexity attack may enable data alterat",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2025-35973 - Intel Processors Privilege Escalation Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-35973",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T16:28:25.000Z",
-        "contentSnippet": "Improper handling of values for some Intel(R) Processors within Ring 0: Kernel, Hypervisor and Bare Metal OS may allow an escalation of privilege. Authorized adversary with a privileged user combined with a high complexity attack may enable escalation of privilege. This result ma",
-        "cveScore": 4.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-35502 - Intel Extension for PyTorch Deserialization of Untrusted Data Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-35502",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T16:28:22.000Z",
-        "contentSnippet": "Deserialization of untrusted data for some Intel(R) Extension for PyTorch before version 2.8.0 within Ring 3: User Applications may allow an escalation of privilege. Unprivileged software adversary with an unauthenticated user combined with a low complexity attack may enable esca",
-        "cveScore": 4.6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-34175 - Hardware-Aware-Automated-MachineLearning Uncontrolled Search Path Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34175",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T16:28:20.000Z",
-        "contentSnippet": "Uncontrolled search path for some Hardware-Aware-Automated-MachineLearning NA before version 45cd723 within Ring 3: User Applications may allow an escalation of privilege. Unprivileged software adversary with a privileged user combined with a low complexity attack may enable esca",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-73076 - Vim: Arbitrary Command Execution via Malicious `.VimballRecord` Entry Replay in `vimball.vim`",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73076",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T15:37:59.000Z",
-        "contentSnippet": "Vim is an open source, command line text editor. Prior to 9.2.0847, runtime/autoload/vimball.vim allows a crafted vimball member named .VimballRecord to overwrite the installation record with attacker-chosen commands. When vimball#RmVimball() later processes the matching record e",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2025-31114 - Fooocus webui vulnerable to Remote Code Execution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-31114",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T15:37:33.000Z",
-        "contentSnippet": "Fooocus is an image generating software. In versions 2.5.5 and prior, the Fooocus web UI is vulnerable to remote code execution due to the unsafe use of eval when processing metadata JSON. An attacker with access to the Fooocus web UI may be able to execute arbitrary code on the ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-73075 - Vim: Out-of-bounds Access in Popup Opacity Handling",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73075",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T15:36:33.000Z",
-        "contentSnippet": "Vim is an open source, command line text editor. From 9.2.0469 until 9.2.0843, popup_mark_opacity_zindex() in src/popupwin.c can use a negative w_winrow for a text-property-anchored popup with clipwindow and opacity, indexing before the screen array instead of accounting for w_po",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-73074 - Vim: Heap Buffer Overflow in Text Property Handling",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73074",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T15:35:07.000Z",
-        "contentSnippet": "Vim is an open source, command line text editor. Prior to 9.2.0841, prop_add_one() in src/textprop.c uses the proplen value from get_text_props() to increment a uint16_t property count beyond 0xffff, wrapping the count to zero and copying existing text-property records into a hea",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-19078 - Ose-oauth-server: oauth-server: open redirect vulnerability enables phishing via unvalidated parameter.",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19078",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T15:34:06.000Z",
-        "contentSnippet": "A flaw was found in the oauth-server component. This open redirect vulnerability occurs when the 'then' parameter in the grant approval handler is not properly validated. A remote attacker can craft a malicious URL that, when approved or denied by an authenticated user, redirects",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-14180 - Undertow-core: undertow:http request smuggling via oversized chunk-size bit overlap",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14180",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T15:32:00.000Z",
-        "contentSnippet": "A flaw was found in the ChunkReader component of the Undertow HTTP server, which is used by WildFly and JBoss EAP to handle chunked transfer encoding. The issue occurs because the parser uses a single internal variable to store both the remaining chunk size and state flags. By se",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-73072 - Vim: Heap Buffer Overflow when Loading a Spell File",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73072",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T15:31:35.000Z",
-        "contentSnippet": "Vim is an open source, command line text editor. Prior to 9.2.0846, set_sofo() in src/spellfile.c reuses sl_sal_first[] without resetting values left by set_sal_first(), so a crafted spell file containing an SN_SAL section before an SN_SOFO section causes under-counted mapping li",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-73071 - Vim: Use-after-free in JSON Decoding",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73071",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T15:29:30.000Z",
-        "contentSnippet": "Vim is an open source, command line text editor. From 9.2.0511 until 9.2.0844, json_decode_item() in src/json.c can retain a stale pointer after json_decode_string() invokes channel_fill() to refill and free the current buffer, causing the error path to read freed memory instead ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-6726 - An information leakage vulnerability in the TCG TPM 2.0 reference code.",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6726",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T15:24:44.000Z",
-        "contentSnippet": "An information leakage vulnerability was reported in the TCG TPM 2.0 reference code that could allow a local attacker with elevated privileges to obtain a credential from a TPM-aware CA for a falsified TPM key (such as an Attestation Key, DevID Key or TLS authentication key) and ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       }
     ],
     "ai": [
