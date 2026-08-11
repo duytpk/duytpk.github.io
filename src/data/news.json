@@ -1,33 +1,186 @@
 {
-  "updatedAt": "2026-08-11T10:42:20.756Z",
+  "updatedAt": "2026-08-11T11:38:04.889Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
-        "title": "CVE-2026-72693 - Kbd: local privilege escalation in openvt via incorrect process owner verification allowing passwordless root login",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72693",
+        "title": "CVE-2026-73161 - cti-transmute Conversion Table Allows XSS via Unescaped Cell Content During Search Highlighting",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73161",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-11T08:39:24.000Z",
-        "contentSnippet": "`openvt -u` is intended to identify the owner of the current VT and then execute `login` as that user from a privileged context. In the documented `kbrequest`/init usage, the ownership test in `authenticate_user()` relies on `stat(\"/proc/ /fd/0\")`. `stat()` on `/proc/ /fd/0` foll",
-        "cveScore": 7.8,
+        "isoDate": "2026-08-11T09:17:15.000Z",
+        "contentSnippet": "Affected versions of cti-transmute improperly handle conversion-table values passed through the search highlighting feature. The highlight() function previously returned the underlying text directly when no search query was supplied, or performed a regex replacement that inserted",
+        "cveScore": 5.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-73160 - cti-transmute Unauthenticated SSRF via Hostnames Resolving to Internal IP Addresses",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73160",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T09:17:15.000Z",
+        "contentSnippet": "Affected versions of cti-transmute contain an SSRF vulnerability in the /fetch_misp_event and /misp_search_events endpoints. The URL validation routine checked whether a supplied hostname was itself an IP literal and rejected private, loopback, link-local, or reserved IPs. Howeve",
+        "cveScore": 8.7,
         "cveSeverity": "HIGH"
       },
       {
-        "title": "CVE-2026-72694 - Mrtg: mrtg daemon symlink-following chown allows local privilege escalation via pid file path manipulation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72694",
+        "title": "CVE-2026-73159 - cti-transmute Stored XSS via Crafted Tag Icon on Admin Triage Interface",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73159",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-11T08:37:55.000Z",
-        "contentSnippet": "A flaw was found in MRTG. When the MRTG daemon is started as a root user and subsequently drops privileges, a local, low-privileged attacker can exploit a symbolic link (symlink) following vulnerability. By influencing or pre-placing a symlink in the process ID (PID) file path, t",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
+        "isoDate": "2026-08-11T09:17:14.000Z",
+        "contentSnippet": "Affected versions of cti-transmute allow a tag's icon value to be stored and later interpolated into HTML through Vue's v-html. The helper mapIcon() previously constructed an HTML string directly from the icon value: Because the icon is user-supplied, a crafted value could break ",
+        "cveScore": 5.1,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-73158 - cti-transmute Saved Graph Configuration Allows Stored Cross-Site Scripting via svgIcon",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-73158",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-11T08:31:09.000Z",
+        "isoDate": "2026-08-11T09:17:14.000Z",
         "contentSnippet": "Affected versions of cti-transmute insufficiently validate saved graph configuration data. Graph configurations can contain style properties that are later consumed by Pivotick, and Pivotick interprets svgIcon as HTML. Because saved configurations may be created by one user and l",
         "cveScore": 5.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-73157 - cti-transmute Remote MISP Event Browser Allows Cross-Site Scripting via Malicious Event Metadata",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73157",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T09:17:14.000Z",
+        "contentSnippet": "Affected versions of cti-transmute render data obtained from a remote MISP instance into the event-browser interface using HTML interpolation. Because fields such as event IDs, event information, organization names, tags, tag colors, TLP labels, distribution labels, and error/fla",
+        "cveScore": 2.3,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-72694 - Mrtg: mrtg daemon symlink-following chown allows local privilege escalation via pid file path manipulation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72694",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T09:17:14.000Z",
+        "contentSnippet": "A flaw was found in MRTG. When the MRTG daemon is started as a root user and subsequently drops privileges, a local, low-privileged attacker can exploit a symbolic link (symlink) following vulnerability. By influencing or pre-placing a symlink in the process ID (PID) file path, t",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-72693 - Kbd: local privilege escalation in openvt via incorrect process owner verification allowing passwordless root login",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72693",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T09:17:14.000Z",
+        "contentSnippet": "`openvt -u` is intended to identify the owner of the current VT and then execute `login` as that user from a privileged context. In the documented `kbrequest`/init usage, the ownership test in `authenticate_user()` relies on `stat(\"/proc/ /fd/0\")`. `stat()` on `/proc/ /fd/0` foll",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-71218 - Iperf3: unbounded peer-controlled allocation in iperf3 json_read() allows unauthenticated remote memory exhaustion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71218",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T09:17:14.000Z",
+        "contentSnippet": "A flaw was found in iperf3. A remote unauthenticated attacker can exploit a vulnerability in the `JSON_read()` function, which accepts a peer-controlled message length and allocates memory without an upper bound. This allows the attacker to trigger excessive memory consumption, l",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-71217 - Iperf3: iperf3 server accepts unbounded peer-controlled json parameters enabling remote denial of service via resource exhaustion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71217",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T09:17:14.000Z",
+        "contentSnippet": "A flaw was found in iperf3. A remote attacker can exploit this vulnerability by sending crafted control-channel JSON with oversized numeric parameters, such as `parallel` and `len`, which are not properly validated by the server. This improper input validation can lead to excessi",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-15567 - Wildfly: wildfly-iiop: wildfly-jacorb: wildfly: pre-auth denial of service on the iiop listener",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15567",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T09:17:13.000Z",
+        "contentSnippet": "A flaw was found in Wildfly. A remote unauthenticated attacker can trigger OutOfMemoryError as CSIv2Util's GSS token decoder reads an attacker-controlled length field without bounds checking and attempts to allocate a byte array of that size.",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-15565 - Undertow: undertow-websockets: undertow: pre-auth dos on websocket endpoint with @serverendpoint class with any @onmessage method",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15565",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T09:17:13.000Z",
+        "contentSnippet": "A flaw was found in Undertow. A remote attacker can cause Out of Memory on websockets endpoint without authentication on any @ServerEndpoint class that has any @OnMessage method. This allows an attacker to cause Denial of Service attack without authentication and using only a sta",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-15563 - Wildfly-iiop-openjdk: missing authentication on eap's iiop nameservice leads to mitm or dos",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15563",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T09:17:13.000Z",
+        "contentSnippet": "A flaw was found in EAP's IIOP. The listener's NameService would accept bind operations without authentication, allowing an attacker to hijack JNDI lookups and binding them to a malicious ORB, achieving MITM or DoS on further invocations.",
+        "cveScore": 7.4,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-15562 - Jboss-remoting: jboss-remoting: integer overflow in messagereader leads to pre-authentication denial of service",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15562",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T09:17:13.000Z",
+        "contentSnippet": "A flaw was found in EAP's jboss-remoting. A remote unauthenticated attacker who can reach :8080 (or :9990, or :4447) and complete an Upgrade: jboss-remoting handshake can cause OOM errors that degrade requests server-wide, leading to denial of service.",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-15561 - Undertow-core: oom via missing limits in chunked trailer in eap's undertow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15561",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T09:17:12.000Z",
+        "contentSnippet": "A flaw was found in EAP's undertow http/1.1 chunked-transfer decoder. missing limits on size and count would allow an attacker to use an unauthenticated connection to drive the JVM to an OutOfMemory error, stopping all deployments on the listener, and achieving Denial of Service.",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-15560 - Openjdk-orb: unauthed class loading via iiop in eap",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15560",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T09:17:12.000Z",
+        "contentSnippet": "when EAP runs with -secmgr, the openjdk-orb's JDKBridge honours attacker-supplied CDR codebase URLs during object unmarshalling on :3528, allowing an unauthenticated attacker to load and instantiate arbitrary classes from a remote URL in the server JVM before EJB security interce",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-15556 - Picketlink-federation: picketlink saml 2.0 auth bypass via missing assertions",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15556",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T09:17:12.000Z",
+        "contentSnippet": "A flaw was found in Picketlink's SP signature validation; a SAML response containing zero assertion elements matching the signature check can allow an attacker to forge a SAML response and auth as any principal with any roles on the protected application.",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-15555 - Jboss-marshalling-river: wildfly-clustering-infinispan-marshalling: jboss deserialization rce via unfiltered river unmarshaller",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15555",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T09:17:12.000Z",
+        "contentSnippet": "A flaw was found in JBoss marshalling. The Infinispan session replication path deserializes replicated session data via the JBoss Marshalling River unmarshaller with no class filtering — enabling RCE via deserialization gadget chains on every cluster node.",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-15554 - Undertow-core: undertow: authentication bypass via ajp ssl_cert/is_ssl forgery",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15554",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T09:17:12.000Z",
+        "contentSnippet": "the Undertow AJP listener honours forged ssl_cert and is_ssl AJP attributes without requiring any shared-secret authentication. This enables an unauthenticated attacker with direct TCP access to port 8009 to bypass CLIENT-CERT authentication by injecting a forged X.509 certificat",
+        "cveScore": 7.4,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-10579 - Picketlink-federation: auth bypass in picketlink saml unsolicited-response",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10579",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T09:17:12.000Z",
+        "contentSnippet": "A flaw was found in Picketlink Federation SAML; the unsolcited response handler would accept forged assertions with no verification or validation, permitting an unauthed attacker to authenticate as any principal in any role. This could lead to information disclosure, access to re",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-73162 - cti-transmute CSRF Allows Unauthorized Follow and Notification State Changes",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73162",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T09:13:14.000Z",
+        "contentSnippet": "Affected versions of MISP cti-transmute expose several state-changing account operations as GET requests: * /account/follow * /account/delete_notification * /account/mark_notification_read * /account/mark_all_read These endpoints require authentication, but before the fix they co",
+        "cveScore": 5.3,
         "cveSeverity": "MEDIUM"
       },
       {
@@ -71,18 +224,9 @@
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-19418",
         "source": "cvefeed.io",
         "isoDate": "2026-08-11T08:17:20.000Z",
-        "contentSnippet": "The referrer enforcement introduced with TYPO3-CORE-SA-2020-006 https://news.typo3.com/security/advisory/typo3-core-sa-2020-006 ( CVE-2020-11069 https://www.cve.org/CVERecord ) became ineffective in TYPO3 v13.0, where TYPO3 CMS started serving the backend and Install Tool applica",
+        "contentSnippet": "The referrer enforcement introduced with TYPO3-CORE-SA-2020-006 (CVE-2020-11069) became ineffective in TYPO3 v13.0, where TYPO3 CMS started serving the backend and Install Tool applications from the site's main entry script instead of the dedicated typo3/ directory. Whether a req",
         "cveScore": 7.3,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-73157 - cti-transmute Remote MISP Event Browser Allows Cross-Site Scripting via Malicious Event Metadata",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73157",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T08:06:57.000Z",
-        "contentSnippet": "Affected versions of cti-transmute render data obtained from a remote MISP instance into the event-browser interface using HTML interpolation. Because fields such as event IDs, event information, organization names, tags, tag colors, TLP labels, distribution labels, and error/fla",
-        "cveScore": 2.3,
-        "cveSeverity": "LOW"
       },
       {
         "title": "CVE-2026-19518 - Samsung rlottie Improper Validation of Specified Quantity in Input",
@@ -758,150 +902,6 @@
         "contentSnippet": "ERPNext is a free and open source Enterprise Resource Planning tool. Prior to 15.109.0 and 16.20.0, the get_tax_template function in erpnext/accounts/doctype/tax_rule/tax_rule.py constructs an SQL WHERE clause from request-influenced posting_date and args values, allowing an auth",
         "cveScore": 6.5,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-72907 - ERPNext: Broken Access Control on certain endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72907",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T21:17:25.000Z",
-        "contentSnippet": "ERPNext is a free and open source Enterprise Resource Planning tool. Prior to 15.111.0 and 16.22.0, the add_ac function in erpnext/accounts/utils.py accepts the ignore_permissions argument without enforcing Account create permission, allowing an authenticated limited user to crea",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-72906 - ERPNext: Unauthorised triggering of automated emails due to missing validation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72906",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T21:17:25.000Z",
-        "contentSnippet": "ERPNext is a free and open source Enterprise Resource Planning tool. Prior to 15.111.0 and 16.22.0, the send_auto_email function in erpnext/accounts/doctype/process_statement_of_accounts/process_statement_of_accounts.py lacks a Process Statement Of Accounts permission check, allo",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-72905 - Rejected reason: Further research determined the i",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72905",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T21:17:25.000Z",
-        "contentSnippet": "Rejected reason: Further research determined the issue is not a vulnerability.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-72904 - Firecrawl: Arbitrary file read via JSON Schema $ref expansion",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72904",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T21:17:25.000Z",
-        "contentSnippet": "Firecrawl turns entire websites into LLM-ready markdown or structured data. Prior to 2.11.32, a critical arbitrary file read vulnerability exists in Firecrawl's extraction functionality due to unsafe schema dereferencing of user-supplied JSON schemas in apps/api/src/lib/extract/h",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-72903 - Tabby: Windows SFTP path traversal allows a malicious server to write files outside the selected download directory",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72903",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T21:17:24.000Z",
-        "contentSnippet": "Tabby (formerly Terminus) is a highly configurable terminal emulator. Prior to 1.0.235, a malicious SFTP server can return a backslash traversal filename through entry.name. In tabby-ssh/src/session/sftp.ts, SFTPSession.readdir() and _makeFile() use POSIX path processing that pre",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-72743 - SQLBot 1.10.0 SQText Dashboard Component Stored XSS via v-html",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72743",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T21:17:24.000Z",
-        "contentSnippet": "SQLBot through 1.10.0, fixed in commit c3f40a5, contains a stored cross-site scripting vulnerability in the SQText dashboard component that renders TinyMCE output via v-html without sanitization. Attackers who can modify dashboard text widget content can inject arbitrary HTML and",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-63622 - Libvirt: swtpm privilege escalation via symlink following",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63622",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T21:17:23.000Z",
-        "contentSnippet": "A flaw was found in libvirt. A local attacker, specifically a process running as the confined `swtpm` user, could exploit a symlink-following vulnerability in the `virFileChownFiles()` function. By planting a symbolic link within the `swtpm` state directory, the attacker could tr",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-48160 - react-tracked was vulnerable to malicious code execution via compromised commits",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48160",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T21:17:23.000Z",
-        "contentSnippet": "react-tracked provides state usage tracking with Proxies. Between 2026-05-18 19:26:36 and 2026-05-19 15:22:45, the default branch contained malicious commits 6978272a7d6ca02225cb747ea69f427512e33699 through 949f1a3d6bb1ff7d1a0dec892afd773e742627e8 that executed remote attacker-co",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-19411 - Shim/dp.c library: null-pointer dereference in is_removable_media_path() when devicepathtostr() returns null",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19411",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T21:17:23.000Z",
-        "contentSnippet": "A NULL pointer vulnerability has been found in the the shim application of dp.c library. A missing NULL pointer could allow attackers to perform a denial of service attack on a system that uses shim application for UEFI bootloader.",
-        "cveScore": 3.9,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-18982 - Odh-training-operator-rhel9: rhoai fork aggregates training job create onto native edit/admin clusterroles",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18982",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T21:17:21.000Z",
-        "contentSnippet": "A flaw was found in the RHOAI training-operator. This vulnerability allows a user with standard edit or admin roles in any Kubernetes namespace to escalate their privileges. Through the creation of training jobs, an attacker can impersonate service accounts, access the host files",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-18951 - Odh-training-operator-rhel9: [trainer v2 security] trn-02: rhoai overlay aggregates trainjobs crud into standard edit clusterrole",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18951",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T21:17:21.000Z",
-        "contentSnippet": "A flaw was found in the Red Hat OpenShift AI (RHOAI) overlay for the training operator. The RHOAI overlay incorrectly aggregates `trainjobs` management permissions into the native Kubernetes `edit ClusterRole`. This allows any user with `edit ClusterRole` permissions in a namespa",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-18950 - Odh-dashboard: odh-dashboard: confused-deputy privilege escalation via unchecked roleref in rolebinding creation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18950",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T21:17:21.000Z",
-        "contentSnippet": "A flaw was found in odh-dashboard. An authenticated user of the dashboard can exploit a vulnerability related to how RoleBindings are created. The system does not properly validate the `roleRef` field, allowing a user to specify an arbitrary role, including highly privileged ones",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-18949 - Odh-dashboard: odh-dashboard: clusterrole grants cluster-wide crud on secrets and rbac management resources",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18949",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T21:17:21.000Z",
-        "contentSnippet": "A flaw was found in odh-dashboard. This vulnerability allows an attacker, who has compromised the dashboard's Service Account (SA) token, to exploit overly broad permissions granted to the SA. This enables the attacker to escalate their privileges to cluster-administrator level, ",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-18948 - Feast: feast: unsafe dill deserialization of registry-stored udfs — rce on feature server and registry server",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18948",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T21:17:21.000Z",
-        "contentSnippet": "A flaw was found in Feast. The system improperly deserializes user-defined functions (UDFs) stored in its registry, which are serialized using the 'dill' library. This allows a remote attacker to store a malicious UDF, leading to unauthenticated arbitrary code execution on the fe",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-18620 - Data-sciences-pipeline: user-controlled serviceaccount for workflow pods without authorization check — confused deputy",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18620",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T20:45:43.000Z",
-        "contentSnippet": "A flaw was found in Data Science Pipelines. A restricted user, or tenant, can exploit an improper authorization vulnerability in the setDefaultServiceAccount function. By specifying a more privileged ServiceAccount (SA) during a CreateRun request, an attacker can bypass authoriza",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-18618 - Ml-metdata: bundled grpc 1.46.3 (2022) with published http/2 dos cves — directly reachable on listener",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18618",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T20:45:38.000Z",
-        "contentSnippet": "A flaw was found in ml-metadata. The statically-linked gRPC stack in ml-metadata is outdated, making it vulnerable to known HTTP/2 denial of service (DoS) issues. An in-cluster attacker, with network access to the MLMD pod, could exploit these vulnerabilities by sending specially",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
@@ -2310,6 +2310,41 @@
     ],
     "hardware": [
       {
+        "title": "US lawmaker wants gov't to enforce regulation to ensure 'chipmakers conduct adequate due diligence on their customers' — House member calls for Biden-era export control to be enforced",
+        "link": "https://www.tomshardware.com/tech-industry/semiconductors/u-s-lawmaker-wants-govt-to-enforce-regulation-to-ensure-chipmakers-conduct-adequate-due-diligence-on-their-customers-house-member-calls-for-biden-era-export-control-to-be-enforced",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-11T11:20:00.000Z",
+        "contentSnippet": "Congressman John Moolenaar wants the Commerce Department's Bureau of Industry and Security to clarify whether Foundry Due Diligence Rule remains effective and continues to be enforced."
+      },
+      {
+        "title": "This $30 Hoto 25-piece electric screwdriver set is a must-buy option for PC builders and hobbyists —40% saving on portable driver with long-life 1,500 mAh battery and 25 ultra-hard bits for your next ",
+        "link": "https://www.tomshardware.com/desktops/pc-building/this-usd30-hoto-25-piece-electric-screwdriver-set-is-a-must-buy-option-for-pc-builders-and-hobbyists-40-percent-saving-on-portable-driver-with-long-life-1-500-mah-battery-and-25-ultra-hard-bits-for-your-next-project",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-11T11:09:08.000Z",
+        "contentSnippet": "Save 40% on this Hoto electric screwdriver with 25 bits, now just $29.99 for a limited time only."
+      },
+      {
+        "title": "Nvidia teams up with financial giants to create $500 billion AI infrastructure funds — six investment firms to enable access to long-term funding at attractive rates",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-teams-up-with-financial-giants-to-create-usd500-billion-ai-infrastructure-funds-six-investment-firms-to-enable-access-to-long-term-funding-at-attractive-rates",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-11T11:04:32.000Z",
+        "contentSnippet": "Nvidia to arrange financing from major financial institutions at attractive rates for customers seeking to build AI data centers."
+      },
+      {
+        "title": "Japanese authorities use new tool to identify initial torrent uploaders — anti-piracy group says it identified seeder on popular anime torrenting website without torrent swarm monitoring",
+        "link": "https://www.tomshardware.com/tech-industry/cyber-security/initial-seeder-on-popular-anime-torrenting-site-nyaa-arrested-by-japanese-authorities-anti-piracy-group-claims-it-identified-user-without-torrent-swarm-monitoring",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-11T11:00:00.000Z",
+        "contentSnippet": "Japanese authorities have taken a big step in cracking down on piracy by arresting an initial-seeder at popular anime torrenting website Nyaa."
+      },
+      {
+        "title": "Modder adds Radeon RX 9070 XT eGPU to Steam Machine, runs Crimson Desert at over 100 FPS on High — moves boot drive to USB-C port, leverages M.2 to OCuLink adaptor and eGPU dock",
+        "link": "https://www.tomshardware.com/pc-components/gpus/modder-adds-radeon-rx-9070-xt-egpu-to-steam-machine-runs-crimson-desert-at-over-100-fps-on-high-moves-boot-drive-to-usb-c-port-leverages-m-2-to-oculink-adaptor-and-egpu-dock",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-11T10:57:43.000Z",
+        "contentSnippet": "A Redditor has successfully connected a very powerful eGPU the Steam Machine via an M.2 to OCuLink adapter."
+      },
+      {
         "title": "Laser wireless charging could keep drones airborne indefinitely — improved receiver converts at 38.49% efficiency and uses nanocrystalline material for thermals",
         "link": "https://www.tomshardware.com/tech-industry/drones/wireless-ota-charging-with-lasers-could-keep-drones-airborne-indefinitely-improved-receiver-converts-at-38-49-percent-efficiency-and-uses-nanocrystalline-material-for-thermals",
         "source": "Tom's Hardware",
@@ -2973,41 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-08-06T10:30:00.000Z",
         "contentSnippet": "You can run the deGDID script on your computer to delete cached GDID keys and prevent Microsoft's servers from minting new ones in the background. The firewall you put up with this script will break certain Microsoft services and features, however, but you can always reverse it."
-      },
-      {
-        "title": "Rogue OpenAI models behind 'unprecedented cybersecurity incident' teamed up to break out of their testing environment — multiple agents left each other messages for months, communicating undetected",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/rogue-openai-models-behind-unprecedented-cybersecurity-incident-teamed-up-to-break-out-of-their-testing-environment-multiple-agents-left-each-other-messages-for-months-communicating-undetected",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-06T10:19:25.000Z",
-        "contentSnippet": "The rogue OpenAI models that broke out of their testing environment in an \"unprecedented cybersecurity incident\" recently reportedly spent months communicating with each other."
-      },
-      {
-        "title": "Kentucky family snubs $26 million offer to convert their farmland into an AI data center — 'they call us old stupid farmers, you know, but we’re not,' says landowner",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/kentucky-family-snubs-usd26-million-offer-from-ai-company-to-convert-their-farmland-into-a-data-center-they-call-us-old-stupid-farmers-you-know-but-were-not-says-landowner",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-06T10:00:00.000Z",
-        "contentSnippet": "A Northern Kentucky family has refused an anonymous AI company's $26 million offer to buy their land and transform it into a data center."
-      },
-      {
-        "title": "Etched Series C Lands $300M at $10.3B, the Highest-Valued Sequoia-Led Series C",
-        "link": "https://www.storagereview.com/news/etched-series-c-300m-10-3b-valuation-sequoia",
-        "source": "StorageReview",
-        "isoDate": "2026-08-05T18:10:21.000Z",
-        "contentSnippet": "Etched raised $300 million in a Series C funding round at a $10.3 billion valuation, announced in late July, less than a month after the company emerged from stealth. Sequoia led the round, which included participation from a16z, Jane Street, Diffusion, and SK Hynix. The company "
-      },
-      {
-        "title": "Gigantic DapuStor R6060 512TB E2 NVMe SSD Shown at FMS 2026",
-        "link": "https://www.servethehome.com/gigantic-dapustor-r6060-512tb-e2-nvme-ssd-shown-at-fms-2026/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-08-05T17:32:05.000Z",
-        "contentSnippet": "At FMS 2026, we saw the gigantic DapuStor R6060, an E2 form factor NVMe SSD that packs 512TB of capacity per drive The post Gigantic DapuStor R6060 512TB E2 NVMe SSD Shown at FMS 2026 appeared first on ServeTheHome."
-      },
-      {
-        "title": "IBM Genesis Mission Award Pairs $50M in Quantum Access With Algorithm-First AI Research",
-        "link": "https://www.storagereview.com/news/ibm-genesis-mission-award-pairs-50m-in-quantum-access-with-algorithm-first-ai-research",
-        "source": "StorageReview",
-        "isoDate": "2026-08-05T15:52:49.000Z",
-        "contentSnippet": "The U.S. Department of Energy has selected IBM for a Phase I Genesis Mission project focused on AI-assisted quantum application development. The company also plans to provide up to $50 million in access to IBM quantum systems for DOE national laboratories and their partners over "
       }
     ]
   }
