@@ -1,34 +1,88 @@
 {
-  "updatedAt": "2026-08-11T09:52:30.947Z",
+  "updatedAt": "2026-08-11T10:42:20.756Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
+        "title": "CVE-2026-72693 - Kbd: local privilege escalation in openvt via incorrect process owner verification allowing passwordless root login",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72693",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T08:39:24.000Z",
+        "contentSnippet": "`openvt -u` is intended to identify the owner of the current VT and then execute `login` as that user from a privileged context. In the documented `kbrequest`/init usage, the ownership test in `authenticate_user()` relies on `stat(\"/proc/ /fd/0\")`. `stat()` on `/proc/ /fd/0` foll",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-72694 - Mrtg: mrtg daemon symlink-following chown allows local privilege escalation via pid file path manipulation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72694",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T08:37:55.000Z",
+        "contentSnippet": "A flaw was found in MRTG. When the MRTG daemon is started as a root user and subsequently drops privileges, a local, low-privileged attacker can exploit a symbolic link (symlink) following vulnerability. By influencing or pre-placing a symlink in the process ID (PID) file path, t",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-73158 - cti-transmute Saved Graph Configuration Allows Stored Cross-Site Scripting via svgIcon",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73158",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T08:31:09.000Z",
+        "contentSnippet": "Affected versions of cti-transmute insufficiently validate saved graph configuration data. Graph configurations can contain style properties that are later consumed by Pivotick, and Pivotick interprets svgIcon as HTML. Because saved configurations may be created by one user and l",
+        "cveScore": 5.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-73156 - cti-transmute Sunburst and Treemap Tooltips Allow Cross-Site Scripting via Crafted Conversion Data",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73156",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T08:17:21.000Z",
+        "contentSnippet": "Affected versions of cti-transmute fail to HTML-escape attacker-controlled values used in ECharts Sunburst and Treemap tooltip formatters. Slice names may originate directly from STIX or MISP data, including STIX types, relationship_type, pattern prefixes, and MISP category/type ",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
         "title": "CVE-2026-73155 - cti-transmute Missing Authorization Allows Reactions to Private Comments",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-73155",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-11T07:31:49.000Z",
+        "isoDate": "2026-08-11T08:17:21.000Z",
         "contentSnippet": "Affected versions of cti-transmute allow authenticated users to add or remove emoji reactions on comments without first checking whether those users are authorized to view the target comment. The vulnerable react() handler passed an attacker-controlled comment_id directly to comm",
         "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-73140 - cti-transmute Evaluation Report Exports Expose Private Comments and Author Information",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73140",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T08:17:21.000Z",
+        "contentSnippet": "Affected versions of cti-transmute fail to apply comment-level access-control rules when generating evaluation report exports. Although normal comment retrieval filters comments according to conversion visibility, comment privacy, ownership, authorship, and administrative privile",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-19519 - Claircore: claircore: denial of service via unchecked type assertion in rpm header parser",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19519",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T08:17:20.000Z",
+        "contentSnippet": "A flaw was found in claircore's RPM package scanner. Crafted RPM header data in a container layer can cause an unchecked type assertion to panic the scanner. The panic is not recovered, causing the Clair indexer process to crash, leading to a denial of service.",
+        "cveScore": 4.3,
         "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-19418 - TYPO3 CMS - Broken Access Control in Backend and Install Tool",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-19418",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-11T07:29:37.000Z",
+        "isoDate": "2026-08-11T08:17:20.000Z",
         "contentSnippet": "The referrer enforcement introduced with TYPO3-CORE-SA-2020-006 https://news.typo3.com/security/advisory/typo3-core-sa-2020-006 ( CVE-2020-11069 https://www.cve.org/CVERecord ) became ineffective in TYPO3 v13.0, where TYPO3 CMS started serving the backend and Install Tool applica",
         "cveScore": 7.3,
         "cveSeverity": "HIGH"
       },
       {
-        "title": "CVE-2026-73140 - cti-transmute Evaluation Report Exports Expose Private Comments and Author Information",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73140",
+        "title": "CVE-2026-73157 - cti-transmute Remote MISP Event Browser Allows Cross-Site Scripting via Malicious Event Metadata",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73157",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-11T07:18:05.000Z",
-        "contentSnippet": "Affected versions of cti-transmute fail to apply comment-level access-control rules when generating evaluation report exports. Although normal comment retrieval filters comments according to conversion visibility, comment privacy, ownership, authorship, and administrative privile",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
+        "isoDate": "2026-08-11T08:06:57.000Z",
+        "contentSnippet": "Affected versions of cti-transmute render data obtained from a remote MISP instance into the event-browser interface using HTML interpolation. Because fields such as event IDs, event information, organization names, tags, tag colors, TLP labels, distribution labels, and error/fla",
+        "cveScore": 2.3,
+        "cveSeverity": "LOW"
       },
       {
         "title": "CVE-2026-19518 - Samsung rlottie Improper Validation of Specified Quantity in Input",
@@ -847,60 +901,6 @@
         "isoDate": "2026-08-10T20:45:38.000Z",
         "contentSnippet": "A flaw was found in ml-metadata. The statically-linked gRPC stack in ml-metadata is outdated, making it vulnerable to known HTTP/2 denial of service (DoS) issues. An in-cluster attacker, with network access to the MLMD pod, could exploit these vulnerabilities by sending specially",
         "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-18611 - Data-science-pipelines-operator: dspo: cryptographically weak secret generation (math/rand) for db and s3 credentials",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18611",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T20:45:35.000Z",
-        "contentSnippet": "A flaw was found in the Data Science Pipelines Operator. This vulnerability allows an unauthenticated attacker to derive sensitive credentials, such as MariaDB root/user passwords and MinIO access/secret keys, if they can access the MinIO Route or MariaDB Service. The flaw occurs",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-18947 - Feast: feast: authorization bypass in /materialize endpoints enables dos via unauthorized full re-materialization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18947",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T20:44:51.000Z",
-        "contentSnippet": "A flaw was found in Feast. An authorization bypass vulnerability exists in the /materialize and /materialize-incremental endpoints. By sending a specially crafted request that omits the feature_views field, an attacker can bypass intended permission checks. This allows an unauthe",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-18942 - Feast-operator: feast: feast apply cronjob runs user python with feature-server sa — tenant code to sa token escalation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18942",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T20:44:46.000Z",
-        "contentSnippet": "A flaw was found in the Feast operator. A malicious tenant could inject arbitrary code into their feature repository. This code would be executed by an automated process with elevated privileges, allowing the tenant to steal sensitive credentials. This could lead to a direct esca",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-18941 - Feast: feast-operator: feast: default authentication mode is no_auth — shared multi-tenant instances deployed without authentication",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18941",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T20:44:42.000Z",
-        "contentSnippet": "A flaw was found in Feast and feast-operator. The default configuration for both the Feast SDK and the feast-operator is \"no_auth,\" meaning no security manager is installed. This default allows unauthenticated and unauthorized access to feature-server, registry-server, and offlin",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-18621 - Data-sciences-pipeline: dsp: v1 argo template path accepts arbitrary workflow spec, bypassing all v2 security hardening",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18621",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T20:44:37.000Z",
-        "contentSnippet": "A flaw was found in Data Science Pipelines (DSP). An attacker with namespace editor privileges can bypass security hardening by submitting a malicious Argo Workflow through the V1 API path. This allows the API server to create pods with elevated privileges, acting as a 'confused ",
-        "cveScore": 7.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-18617 - Data-science-pipelines-operator: dspo: mysql dsn parameter injection via customextraparams enables local infile file exfiltration from operator pod",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18617",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T20:44:33.000Z",
-        "contentSnippet": "A flaw was found in the Data Science Pipelines Operator (DSPO). A namespace editor can exploit a vulnerability in the spec.database.customExtraParams field, which allows for the injection of dangerous parameters into the MySQL Data Source Name (DSN) string. By manipulating these ",
-        "cveScore": 8.8,
         "cveSeverity": "HIGH"
       }
     ],
@@ -2310,6 +2310,27 @@
     ],
     "hardware": [
       {
+        "title": "Laser wireless charging could keep drones airborne indefinitely — improved receiver converts at 38.49% efficiency and uses nanocrystalline material for thermals",
+        "link": "https://www.tomshardware.com/tech-industry/drones/wireless-ota-charging-with-lasers-could-keep-drones-airborne-indefinitely-improved-receiver-converts-at-38-49-percent-efficiency-and-uses-nanocrystalline-material-for-thermals",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-11T10:30:00.000Z",
+        "contentSnippet": "Researchers use a ground-based laser to wirelessly deliver power to drones, potentially allowing them to stay airborne without landing to recharge."
+      },
+      {
+        "title": "Walmart has slashed $600 off this RTX 5060-powered gaming laptop, now just $1,099 — get Gigabyte's 16-inch Aero X16 with 16GB of RAM and a 1TB SSD",
+        "link": "https://www.tomshardware.com/laptops/gaming-laptops/walmart-has-slashed-usd600-off-this-rtx-5060-powered-gaming-laptop-now-just-usd1-099-get-gigabytes-16-inch-aero-x16-with-16gb-of-ram-and-a-1tb-ssd",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-11T10:28:20.000Z",
+        "contentSnippet": "A gaming laptop that won't break the bank during the memory price crisis. Gigabyte's RTX 5060-powered Aero X16 has $600 slashed off the list price."
+      },
+      {
+        "title": "Gamer recruitment drive results in ‘supercharged’ hiring campaign for new Air Traffic Controllers — 94% hiring goal hit in record time with $155,000 salary potential; ‘the strongest, sharpest workforc",
+        "link": "https://www.tomshardware.com/video-games/gamer-recruitment-drive-results-in-supercharged-hiring-campaign-for-new-air-traffic-controllers-usdot-secretary-reckons-theyve-got-the-strongest-sharpest-workforce-in-aviation-history",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-11T10:00:00.000Z",
+        "contentSnippet": "The campaign to recruit video gamers into Air Traffic Control jobs has been a resounding success, according to U.S. Department of Transport head Secretary Sean P. Duffy."
+      },
+      {
         "title": "DIY modder creates 'heat engine computing device' powered by a Stirling engine, can run Tetris, Snake, and Pong — 80 MHz processor operates on just 150 milliwatts of power",
         "link": "https://www.tomshardware.com/pc-components/case-mods/diy-modder-creates-heat-engine-computing-device-powered-by-a-stirling-engine-80-mhz-esp32-can-run-tetris-snake-and-pong-on-just-150-milliwatts-of-power",
         "source": "Tom's Hardware",
@@ -2987,27 +3008,6 @@
         "source": "StorageReview",
         "isoDate": "2026-08-05T15:52:49.000Z",
         "contentSnippet": "The U.S. Department of Energy has selected IBM for a Phase I Genesis Mission project focused on AI-assisted quantum application development. The company also plans to provide up to $50 million in access to IBM quantum systems for DOE national laboratories and their partners over "
-      },
-      {
-        "title": "Marvell Bravera SC6 Doubles Gen5 Speeds as Optical Memory Reaches 32TB of Shared KV Cache",
-        "link": "https://www.storagereview.com/news/marvell-bravera-sc6-doubles-gen5-speeds-as-optical-memory-reaches-32tb-of-shared-kv-cache",
-        "source": "StorageReview",
-        "isoDate": "2026-08-05T15:35:04.000Z",
-        "contentSnippet": "Marvell used FMS 2026 to introduce new memory infrastructure technologies aimed at helping hyperscalers and cloud providers scale memory independently from compute. The portfolio spans server-level AI storage, rack-scale CXL memory expansion and pooling, and pod-level optical sha"
-      },
-      {
-        "title": "Microsoft wants the next-gen Xbox Helix to play every Xbox game ever made as it urges publishers to opt in — New report also claims Xbox 360 games coming to PC soon",
-        "link": "https://www.tomshardware.com/video-games/xbox/microsoft-wants-the-next-gen-xbox-helix-to-play-every-xbox-game-ever-made-as-it-urges-publishers-to-opt-in-new-report-also-claims-xbox-360-games-coming-to-pc-soon",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-05T14:51:31.000Z",
-        "contentSnippet": "The upcoming Xbox Helix is starting to feel more like a PC than any console before, and Microsoft's latest efforts to unite all Xbox generations under one roof, according to a new leaked memo, seem to signal that very explicitly."
-      },
-      {
-        "title": "$4,429 order for a ROG Astral RTX 5090 cancelled by Nvidia due to a 'late' price increase, with Asus blamed — marketplace buyer refunded after immediate $500 increase, with top-spec GPU now almost 2.5",
-        "link": "https://www.tomshardware.com/pc-components/gpus/usd4-429-order-for-a-rog-astral-rtx-5090-cancelled-by-nvidia-due-to-a-late-price-increase-with-asus-blamed-marketplace-buyer-refunded-after-immediate-usd500-increase-with-top-spec-gpu-now-almost-2-5x-higher-than-msrp",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-05T14:48:13.000Z",
-        "contentSnippet": "Nvidia cancelled a Redditor's Asus ROG Astral RTX 5090 BTF GPU order, originally priced at $4,429, because of a $500 price rise, with Nvidia blaming Asus for the confusion."
       }
     ]
   }
