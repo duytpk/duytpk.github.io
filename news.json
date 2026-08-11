@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-08-11T18:49:54.672Z",
+  "updatedAt": "2026-08-11T19:56:13.347Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-71474 - Insights-client-rhel9: insights-client: pull-secret bearer token written to logs on non-200 ccx response",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71474",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T19:24:56.000Z",
+        "contentSnippet": "A flaw was found in insights-client. When the application receives a non-200 response, it logs the request headers, which can include the cloud.openshift.com pull-secret token. A local user with access to pod logs on the hub could read this long-lived credential. This information",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-48813 - Flawfinder output manipulation via untrusted filenames and source text",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48813",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T19:24:53.000Z",
+        "contentSnippet": "Flawfinder is a a static analysis tool for finding vulnerabilities in C/C++ source code. Versions prior to 2.0.20 have an improper input neutralization issue leading to output manipulation, specifically, Terminal/ANSI Escape Sequence Injection and XML Injection. A malicious file ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-71468 - Acm-search-v2-api-rhel9: search-v2-api: cross-user bearer-token reuse via global federation-config cache",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71468",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T19:24:21.000Z",
+        "contentSnippet": "A flaw was found in acm-search-v2-api-rhel9. When the `getFederationConfig` function refreshes its cache, it improperly reuses a user's bearer token for all subsequent federated requests until the cache expires. This allows other authenticated users to gain unauthorized access to",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-71475 - Insights-client-rhel9: insights-client: spoke-controlled clusterid injected unencoded into insights api url path",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71475",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T19:24:18.000Z",
+        "contentSnippet": "A flaw was found in insights-client. A compromised managed cluster, referred to as a 'spoke', can inject unencoded data into the Insights API URL path. This occurs because the ClusterID, which is controlled by the spoke, is used directly in the request path without proper validat",
+        "cveScore": 5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-71845 - Insights-client: insights-client: ccx_token bearer credential logged in clear text at startup via setdefault()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71845",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T19:22:12.000Z",
+        "contentSnippet": "A flaw was found in insights-client. The setDefault() function logs the value of every environment variable it processes, including CCX_TOKEN, a bearer credential used in disconnected cluster deployments. When glog verbosity is set to level 2 or higher, the token is written in cl",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-71467 - Acm-search-v2-api-rhel9: search-v2-api: authentication bypass on /federated via upgrade: websocket header spoofing",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71467",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T19:22:05.000Z",
+        "contentSnippet": "A flaw was found in search-v2-api. The authentication middleware in the affected component unconditionally skips authentication when a request includes an `Upgrade: websocket` header. An unauthenticated attacker can exploit this by sending a specially crafted HTTP POST request to",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-73032 - PapersGPT for Zotero 0.6.1 RCE via Unsanitized LLM Response eval()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73032",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T19:19:02.000Z",
+        "contentSnippet": "PapersGPT for Zotero 0.6.1 contains a remote code execution vulnerability that allows attackers to execute arbitrary JavaScript by returning malicious code from an LLM endpoint that is passed unsanitized to window.eval() in views.ts. Attackers can exploit this through prompt inje",
+        "cveScore": 9.6,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-73228 - Django REST framework: Potential bypass of Django `DATA_UPLOAD_MAX_MEMORY_SIZE` when parsing oversized JSON and urlencoded request bodies via DRF `request.data`",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73228",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T19:18:52.000Z",
+        "contentSnippet": "Django REST framework is a toolkit for building Web APIs. Prior to 3.17.2, Django REST Framework's request.data parsing in rest_framework/request.py Request._parse() passes the underlying HttpRequest stream to JSONParser and FormParser for application/json and application/x-www-f",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-73227 - electerm's RDP clipboard file download may parse unsafe file name",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73227",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T19:18:52.000Z",
+        "contentSnippet": "electerm is an open-sourced terminal/ssh/sftp/telnet/serialport/RDP/VNC/Spice/ftp client. Prior to 3.15.120, electerm allows a malicious RDP server to write attacker-controlled content outside the selected save directory because the RDP clipboard download path in src/client/compo",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-73226 - Electerm WebSocket `upgrade-func` and `fs` handlers allow arbitrary method/function invocation due to missing method-name allowlist",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73226",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T19:18:52.000Z",
+        "contentSnippet": "electerm is an open-sourced terminal/ssh/sftp/telnet/serialport/RDP/VNC/Spice/ftp client. Prior to 3.15.186, electerm allows an authenticated WebSocket client to invoke unintended internal functions through client-controlled func values in upgrade-func in src/app/server/dispatch-",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-73225 - electerm: Path traversal in FTP/SFTP recursive folder download via unsanitized server filename",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73225",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T19:18:52.000Z",
+        "contentSnippet": "electerm is an open-sourced terminal/ssh/sftp/telnet/serialport/RDP/VNC/Spice/ftp client. Prior to 3.15.120, electerm allows a malicious FTP or SFTP server to write attacker-controlled content outside the selected download directory because recursive transfers in src/client/compo",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-73224 - Electerm check folder size function may get attacked by unsafe folder name",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73224",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T19:18:52.000Z",
+        "contentSnippet": "electerm is an open-sourced terminal/ssh/sftp/telnet/serialport/RDP/VNC/Spice/ftp client. Prior to 3.15.120, electerm allows a malicious FTP or SFTP server to execute arbitrary commands when a user downloads a crafted folder and invokes Properties and Calculate Size because calcL",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-73223 - electerm: Path traversal in editWithSystemEditor temp file path via unsanitized SFTP filename",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73223",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T19:18:51.000Z",
+        "contentSnippet": "electerm is an open-sourced terminal/ssh/sftp/telnet/serialport/RDP/VNC/Spice/ftp client. Prior to 3.15.120, electerm allows a malicious SFTP server to write attacker-controlled content outside the temporary directory because the server-controlled filename name used by editWithSy",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-73222 - Claude Code Templates: Unauthenticated OS command injection (RCE) in Claude Code Studio server (--studio)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73222",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T19:18:51.000Z",
+        "contentSnippet": "Claude Code Templates is a CLI tool for configuring and monitoring Claude Code. Prior to 1.29.4, the Claude Code Studio server launched by the --studio option in cli-tool/src/sandbox-server.js binds to all interfaces on port 3444, permits cross-origin requests, and requires no au",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-73221 - CVAT: Flawed authorization logic in endpoints related to lambda requests",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73221",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T19:18:51.000Z",
+        "contentSnippet": "CVAT is an open source interactive video and image annotation tool for computer vision. From 2.17.0 until 2.72.0, a user with the Worker role can use predictable task-based request IDs with the lambda request retrieve and destroy endpoints to view automatic annotation requests fo",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-72742 - DSPy 3.3.0b1 Local File Read via Image/Audio Output Field Parsing",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72742",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T19:18:49.000Z",
+        "contentSnippet": "DSPy 3.3.0b1 contains a file exfiltration vulnerability in the Image and Audio output field adapters that allows attackers with influence over language model outputs to read arbitrary local files by injecting a filesystem path into the url field of a parsed Image or Audio typed o",
+        "cveScore": 9.2,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-70339 - Microsoft Edge (Chromium-based) Remote Code Execution Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70339",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T19:18:44.000Z",
+        "contentSnippet": "None",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-69119 - Taubyte Tau v1.1.10 Missing Authorization via POST /projects/{id}",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-69119",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T19:18:42.000Z",
+        "contentSnippet": "Taubyte Tau v1.1.10 contains a missing authorization vulnerability in the services/auth HTTP service that allows any authenticated user to read or permanently delete another tenant's project by supplying an arbitrary project ID to the GET and DELETE /projects/{id} endpoints. The ",
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-69117 - NetBox 4.5.8 ORM Injection via WritableNestedSerializer",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-69117",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T19:18:42.000Z",
+        "contentSnippet": "NetBox 4.5.8 contains an ORM injection vulnerability that allows authenticated attackers, including those with read-only API tokens, to inject arbitrary Django ORM lookup expressions into nested object references by supplying crafted JSON dictionary keys in POST, PUT, or PATCH re",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-69115 - OpenIM Server v3.8.3 Missing Authorization on User and Group Enumeration Endpoints",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-69115",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T19:18:42.000Z",
+        "contentSnippet": "OpenIM Server v3.8.3 contains a missing authorization vulnerability that allows any authenticated user to access admin-only management API endpoints by submitting POST requests with a regular user bearer token to /user/get_users, /user/get_all_users_uid, and /group/get_groups. At",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-48804 - python-socketio: Binary attachment accumulation can cause denial of service",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48804",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T19:17:53.000Z",
+        "contentSnippet": "python-socketio is a Python implementation of the Socket.IO realtime client and server. The python-socketio server stores binary `EVENT` and `ACK` messages in memory while it waits to receive their binary attachments. Once all the attachments are received, these messages are then",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-48809 - python-engineio has possible denial of service due to maximum payload size sometimes not being enforced",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48809",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T19:17:37.000Z",
+        "contentSnippet": "python-engineio is a Python implementation of the Engine.IO realtime client and server. Versions prior to 4.13.2 have two specific configurations of the python-engineio server in which the size of incoming messages is not checked before the messages are loaded into memory. An att",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-48802 - python-engineio has unbound thread allocation that can cause denial of service",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48802",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T19:17:37.000Z",
+        "contentSnippet": "python-engineio is a Python implementation of the Engine.IO realtime client and server. Prior to version 4.13.2, an attacker can cause the creation of unnecessary background threads in the python-engineio server by exploiting the heartbeat mechanism, which launches a thread when ",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-18712 - Improper Authorization in MongoDB Queryable Encryption Maintenance Operations Allows Unauthorized Modification of Other Collections",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18712",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T19:17:29.000Z",
+        "contentSnippet": "An issue in MongoDB Server's Queryable Encryption maintenance operations could allow an authenticated user with privileges on one encrypted collection to cause unauthorized modification or destruction of data belonging to a different collection. This is due to insufficient valida",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-18711 - Use-After-Free in MongoDB Query Execution Engine Leads to Denial of Service and Potential Memory Disclosure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18711",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T19:17:26.000Z",
+        "contentSnippet": "An issue in MongoDB Server's query execution engine could allow an authenticated user with read and write privileges to cause an internal reference to be used after the underlying memory has been freed, when running certain queries against time-series collections. This could resu",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-73085 - Audiobookshelf: Refresh Token Accepted on Resource Endpoints",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-73085",
@@ -677,231 +902,6 @@
         "contentSnippet": "Craft CMS versions >= 5.0.0-RC1 before 5.10.7 and >= 4.0.0-RC1 before 4.18.3 contain a remote code execution vulnerability in the Twig sandbox mechanism. Because Craft marks the ElementInterface as safe (via the AllowedInSandbox attribute) and the sandbox allowlisting extends to ",
         "cveScore": 8.8,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-72780 - Craft CMS before 5.10.5 WebAuthn Assertion Replay via login-with-passkey",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72780",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T13:19:08.000Z",
-        "contentSnippet": "Craft CMS before 5.10.5 fails to persist updated credential counters after WebAuthn assertion validation in the passkey login endpoint. Attackers can replay captured login request bodies containing requestOptions and response to create additional authenticated sessions for victim",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-72779 - Craft CMS 5.0.0-RC1 before 5.10.6 Arbitrary File Read via SplFileObject",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72779",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T13:19:08.000Z",
-        "contentSnippet": "Craft CMS 5.0.0-RC1 before 5.10.6 and 4.0.0-RC1 before 4.18.2 contain an arbitrary file read vulnerability. The create() Twig function restricts class instantiation using a 5-entry blocklist that does not include SplFileObject, allowing an authenticated administrator (with allowA",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-72778 - Craft CMS 5.0.0-RC1 before 5.10.6 Authenticated RCE via condition.config",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72778",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T13:19:08.000Z",
-        "contentSnippet": "Craft CMS versions from 4.0.0-RC1 before 4.18.2 and from 5.0.0-RC1 before 5.10.6 contain an authenticated remote code execution vulnerability in the control panel element-search condition handling. Craft cleanses the outer request-controlled condition array via Component::cleanse",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-72775 - n8n before 1.123.67 SQL Injection via PostgresTrigger Node",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72775",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T13:19:08.000Z",
-        "contentSnippet": "n8n before 1.123.67, 2.31.5, and 2.32.1 contains a SQL injection vulnerability in the PostgresTrigger node, which interpolates user-supplied identifier parameters (channel, function, and trigger names) into SQL statements without proper escaping. An authenticated user can inject ",
-        "cveScore": 5.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-72774 - n8n before 1.123.67 Authentication Bypass via HTTP Request Node",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72774",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T13:19:07.000Z",
-        "contentSnippet": "n8n before 1.123.67, 2.31.5, and 2.32.1 contains a credential authorization bypass in the HTTP Request node. An authenticated member with edit access to a shared workflow can reference another user's credential while specifying the credential type via an expression. Because the p",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-72773 - n8n before 2.32.1 Path Traversal via computer-use search_files",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72773",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T13:19:07.000Z",
-        "contentSnippet": "n8n before 2.31.5 and 2.32.x before 2.32.1 contain a path-confinement bypass in the @n8n/computer-use file-search (search_files) tool. A crafted search pattern can bypass the base-directory confinement check and expand to locations outside the configured directory, causing the to",
-        "cveScore": 4.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-72772 - n8n before 2.32.1 Authentication Bypass via Token Exchange",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72772",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T13:19:07.000Z",
-        "contentSnippet": "n8n before 2.32.1 (and before 2.31.5) is vulnerable to account takeover via the Token Exchange Embed Login feature. When a validly-signed incoming token was matched to a local account by its email claim, the service did not verify that the email claim was verified, nor that the t",
-        "cveScore": 8.9,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-72771 - n8n before 2.32.1 Credential Restriction Bypass via AI/LLM Nodes",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72771",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T13:19:07.000Z",
-        "contentSnippet": "n8n versions before 2.32.1 fail to enforce the Allowed HTTP Request Domains allowlist in multiple AI and LLM nodes when user-supplied base or endpoint URLs are configured. Low-privileged workflow editors with use-only access to shared credentials can redirect requests to attacker",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-72770 - n8n before 1.123.67 Path Traversal via Git Node Operations",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72770",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T13:19:07.000Z",
-        "contentSnippet": "n8n versions before 1.123.67 contain a path traversal vulnerability in the Git node's fetch, pull, and push-tags operations that allows authenticated users to bypass repository-path containment checks. Attackers with workflow create/execute rights can point allowlisted remote con",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-72769 - n8n before 1.123.67 Prototype Pollution via VM Expression Engine",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72769",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T13:19:07.000Z",
-        "contentSnippet": "n8n before 1.123.67, 2.31.5, and 2.32.1 contains a prototype pollution vulnerability in the VM expression engine. An authenticated user able to create or edit a workflow expression can abuse the engine's array-element access to obtain a reference to a host built-in and pollute it",
-        "cveScore": 6.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-72768 - n8n before 2.32.1 SSRF Protection Bypass via MCP Client",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72768",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T13:19:07.000Z",
-        "contentSnippet": "n8n versions before 2.32.1 contain a server-side request forgery protection bypass vulnerability in the MCP Client node that allows authenticated users to bypass SSRF protections. Attackers can craft workflows that send requests to internal or blocked hosts without routing throug",
-        "cveScore": 6.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-72767 - n8n before 1.123.67 Remote Code Execution via Git node",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72767",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T13:19:06.000Z",
-        "contentSnippet": "n8n before 1.123.67, 2.x before 2.31.5, and 2.32.x before 2.32.1 contain a remote code execution vulnerability in the Git node. Authenticated users with rights to create and execute workflows can stage a crafted local repository that causes git to run hooks under default git secu",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-72766 - n8n before 1.123.67 Arbitrary File Read via Send Email Node",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72766",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T13:19:06.000Z",
-        "contentSnippet": "n8n before 1.123.67, 2.x before 2.31.5, and 2.32.x before 2.32.1 contain a type confusion vulnerability in the Send Email node, which does not enforce that its message fields are strings. A crafted non-string value supplied from a workflow expression into the text or HTML body fi",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-72765 - n8n before 2.32.1 Remote Code Execution via Expression Sandbox Escape",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72765",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T13:19:06.000Z",
-        "contentSnippet": "n8n before 2.31.5 and before 2.32.1 contain a sandbox escape vulnerability in expression evaluation. An authenticated user with permission to create or modify workflows can craft expressions using arrow-function bodies to bypass the expression sandbox, triggering system command e",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-72764 - n8n before 1.123.67 Module Cache Poisoning via Code Node",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72764",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T13:19:06.000Z",
-        "contentSnippet": "n8n's JavaScript task runner shared a single module cache across all users' Code-node executions. In affected versions (before 1.123.67, 2.31.5, and 2.32.1), a user able to run a Code node could poison a cached module and thereby alter other users' Code-node executions on the sam",
-        "cveScore": 5.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-72763 - n8n before 1.123.67 Credential Exfiltration via Sub-Workflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72763",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T13:19:06.000Z",
-        "contentSnippet": "n8n before 1.123.67, 2.31.5, and 2.32.1 validates credential-access only for a node's top-level credentials and not for credentials referenced inside an Execute Sub-workflow node's inline workflow JSON. A member with Editor access to a shared workflow (when workflow sharing is en",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-72762 - n8n before 1.123.67 Arbitrary File Write via Edit Image Node",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72762",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T13:19:06.000Z",
-        "contentSnippet": "n8n versions before 1.123.67, 2.31.5, and 2.32.1 contain an arbitrary file write vulnerability in the Edit Image node, which passes its output format parameter to the underlying image library without validation. An authenticated user able to run workflows can supply a crafted for",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-72750 - n8n before 1.123.67 SQL Injection via executeQuery Operation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72750",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T13:19:06.000Z",
-        "contentSnippet": "n8n before 1.123.67, 2.31.5, and 2.32.1 contains a SQL injection vulnerability in the Snowflake node's Execute Query operation, which interpolates expression values directly into the SQL string. When a workflow author embeds untrusted, externally-controlled expression data direct",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-72749 - n8n before 1.123.67 Prototype Pollution via Edit Fields",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72749",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T13:19:05.000Z",
-        "contentSnippet": "n8n before 1.123.67, 2.31.5, and 2.32.1 contains a prototype pollution vulnerability in the Edit Fields (Set) node. The node assigns output fields via a dot-notation path setter without restricting the field name, allowing an authenticated user to name a field after an inherited ",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-72748 - AVideo Unauthenticated Arbitrary File Write via aVideoEncoderChunk.json.php",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72748",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T13:19:05.000Z",
-        "contentSnippet": "AVideo contains an unauthenticated arbitrary file write vulnerability in the aVideoEncoderChunk.json.php endpoint that allows remote attackers to write up to 4 GB of arbitrary content to the server filesystem via HTTP PUT requests without authentication. Attackers can exhaust dis",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-50236 - Openshift/console: authenticated ssrf with full response reflection and path neutralization via dev console webhook helpers in openshift console",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50236",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T11:23:59.000Z",
-        "contentSnippet": "An authenticated SSRF flaw was found in the OpenShift Console Dev Console webhook helpers. User-supplied target URLs are fetched server-side without validation, with path neutralization enabling arbitrary endpoint targeting and full response reflection from the console pod's priv",
-        "cveScore": 7.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-50237 - Openshift/console: namespace tenant ssrf with egress bypass, catalog poisoning, and admin-mediated supply chain escalation via projecthelmchartrepository in openshift console",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50237",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T11:23:55.000Z",
-        "contentSnippet": "A Server-Side Request Forgery and supply chain flaw was found in the OpenShift Console Helm catalog proxy. A namespace tenant can plant a ProjectHelmChartRepository with an arbitrary URL that the console pod fetches server-side, bypassing tenant egress restrictions. Combined with",
-        "cveScore": 7.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-72610 - Koha Community Koha - Stored SQL Injection via Patron lang Field in Issue Slip Generation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72610",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T11:22:47.000Z",
-        "contentSnippet": "A stored SQL injection vulnerability in Koha through 24.11.17, 25.05.12, 25.11.06, and 26.05.01 allows authenticated staff with the borrowers => edit_borrowers permission to cause a time-based denial of service by storing a SQL payload in a patron lang field. The value is concate",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-72609 - Koha Community Koha - SQL Injection via ORDER BY Direction in acqui/parcels.pl",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72609",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T11:22:44.000Z",
-        "contentSnippet": "An SQL injection vulnerability in Koha through 24.11.17, 25.05.12, 25.11.06, and 26.05.01 allows authenticated staff with the acquisition => order_receive permission to read arbitrary database contents via the orderby request parameter in acqui/parcels.pl. The parameter is passed",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-72608 - Koha Community Koha - Stored SQL Injection via Patron Card Layout image_name",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72608",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T11:22:14.000Z",
-        "contentSnippet": "A stored SQL injection vulnerability in Koha through 24.11.17, 25.05.12, 25.11.06, and 26.05.01 allows authenticated staff with the tools => label_creator permission to execute arbitrary SQL via the image_name field of a patron card layout. The image_name value is stored verbatim",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
@@ -2310,6 +2310,13 @@
     ],
     "hardware": [
       {
+        "title": "Razer Naga V3 Pro mouse is a honed MMO weapon with 23 programmable buttons — more customizable controls and lighter weight come at the same price as its predecessor",
+        "link": "https://www.tomshardware.com/peripherals/gaming-mice/razer-naga-v3-pro-mouse-is-a-honed-mmo-weapon-with-23-programmable-buttons-more-customizable-controls-and-lighter-weight-come-at-the-same-price-as-its-predecessor",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-11T19:44:58.000Z",
+        "contentSnippet": "Razer has launched the new Naga V3 Pro, marking the latest evolution in its renowned Naga series of MMO gaming mice. The new iteration offers 23 programmable buttons for maximum control and customization."
+      },
+      {
         "title": "Minisforum N5 Max Review with AMD Ryzen AI Max+ 395",
         "link": "https://www.servethehome.com/minisforum-n5-max-review-with-amd-ryzen-ai-max-395/",
         "source": "ServeTheHome",
@@ -3001,13 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-08-06T16:11:19.000Z",
         "contentSnippet": "Services have recently popped up that will double your RTX 2080 Ti's memory to 22GB, but if you don't have a card to spare, you can now get a pre-modded 22 GB 2080 Ti for $499 from eBay."
-      },
-      {
-        "title": "Object First Q2 2026 Bookings Jump 148% in First Full Quarter Under Veeam",
-        "link": "https://www.storagereview.com/news/object-first-q2-2026-bookings-jump-148-in-first-full-quarter-under-veeam",
-        "source": "StorageReview",
-        "isoDate": "2026-08-06T15:37:37.000Z",
-        "contentSnippet": "Object First reported a 148% year-over-year increase in bookings during the second quarter of 2026, reflecting continued demand for the company’s Ootbi immutable backup appliances as organizations strengthen defenses against ransomware and other cyberattacks. Bookings in EMEA inc"
       }
     ]
   }
