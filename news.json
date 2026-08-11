@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-10T23:26:24.600Z",
+  "updatedAt": "2026-08-11T01:04:29.316Z",
   "generator": "rss",
   "feeds": {
     "cve": [
@@ -7,7 +7,7 @@
         "title": "CVE-2026-8718 - Out-of-bounds write in DTLS peer Connection ID getsockopt (`TLS_DTLS_PEER_CID_VALUE`) in Zephyr net sockets/TLS",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-8718",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-10T22:40:26.000Z",
+        "isoDate": "2026-08-10T23:16:51.000Z",
         "contentSnippet": "tls_opt_dtls_peer_connection_id_value_get() in subsys/net/lib/sockets/sockets_tls.c, which handles getsockopt(SOL_TLS, TLS_DTLS_PEER_CID_VALUE), passed the caller-supplied optval directly to mbedtls_ssl_get_peer_cid() without verifying the buffer was at least MBEDTLS_SSL_CID_OUT_",
         "cveScore": 8.4,
         "cveSeverity": "HIGH"
@@ -16,16 +16,34 @@
         "title": "CVE-2026-48161 - react18-use was vulnerable to malicious code execution via compromised commits",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-48161",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-10T22:27:35.000Z",
+        "isoDate": "2026-08-10T23:16:51.000Z",
         "contentSnippet": "react18-use is a React 19 use hook shim. Between 2026-05-19 01:07:01 and 2026-05-19 15:20:43, the default branch contained malicious commits 7b79148d1495a2505f9277da295a98cf176f4496 through 7b79148d1495a2505f9277da295a98cf176f4496 that executed remote attacker-controlled code on ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-11812 - UpdateHub: race condition on shared context causes out-of-bounds write and DoS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11812",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T23:16:51.000Z",
+        "contentSnippet": "The UpdateHub management subsystem (subsys/mgmt/updatehub/updatehub.c) drives every update operation through a single file-scope ctx structure that holds the CoAP block context, payload buffer, status code, socket, and a one-element poll-fd array fds[1]. Access to ctx was not ser",
+        "cveScore": 2.5,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-11811 - Socket file-descriptor leak in UpdateHub OTA client start_coap_client() leading to resource-exhaustion DoS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11811",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-10T23:16:50.000Z",
+        "contentSnippet": "The UpdateHub over-the-air update client's start_coap_client() in subsys/mgmt/updatehub/updatehub.c leaks the CoAP/DTLS socket descriptor on its connection-setup failure paths. The shared error: cleanup gated socket closing on a ret > 0 flag, but ret was set to -1 immediately aft",
+        "cveScore": 3.7,
+        "cveSeverity": "LOW"
       },
       {
         "title": "CVE-2025-30241 - OS Command Injection in Web Interface in Multiple TP-Link Aginet Devices",
         "link": "https://cvefeed.io/vuln/detail/CVE-2025-30241",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-10T22:26:08.000Z",
+        "isoDate": "2026-08-10T23:16:50.000Z",
         "contentSnippet": "Certain web interface components in affected TP-Link Aginet devices do not validate and sanitize user-supplied input properly before passing it to system-level command execution functions. An authenticated adjacent attacker may inject specially crafted input to execute arbitrary ",
         "cveScore": 8.6,
         "cveSeverity": "HIGH"
@@ -34,7 +52,7 @@
         "title": "CVE-2025-30240 - Arbitrary File Read via Improper Symlink Handling in USB HTTPS Access Path in multiple TP-Link Aginet Devices",
         "link": "https://cvefeed.io/vuln/detail/CVE-2025-30240",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-10T22:25:41.000Z",
+        "isoDate": "2026-08-10T23:16:50.000Z",
         "contentSnippet": "The affected TP-Link Aginet devices do not properly validate symbolic links created on external USB storage devices. By placing a crafted symbolic link on supported storage media, an attacker may cause the system to resolve the link. Successful exploitation may allow unauthorized",
         "cveScore": 5.1,
         "cveSeverity": "MEDIUM"
@@ -43,7 +61,7 @@
         "title": "CVE-2025-30239 - Sensitive Data Exposure due to Hardcoded Cryptographic Keys in Multiple TP-Link Aginet Devices",
         "link": "https://cvefeed.io/vuln/detail/CVE-2025-30239",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-10T22:25:03.000Z",
+        "isoDate": "2026-08-10T23:16:50.000Z",
         "contentSnippet": "In affected TP-Link Aginet devices, use of hardcoded cryptographic keys embedded in the firmware to protect sensitive configuration data may allow an attacker who has access to device storage to recover the keys and decrypt stored data. Successful exploitation may allow access to",
         "cveScore": 8.5,
         "cveSeverity": "HIGH"
@@ -52,7 +70,7 @@
         "title": "CVE-2025-30238 - Privilege Escalation via Improper Authorization in User Management in multiple TP-Link Aginet Devices",
         "link": "https://cvefeed.io/vuln/detail/CVE-2025-30238",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-10T22:24:20.000Z",
+        "isoDate": "2026-08-10T23:16:49.000Z",
         "contentSnippet": "In affected TP-Link Aginet devices, insufficient authorization validation allows authenticated low-privileged users to execute higher-privileged operations. An attacker may perform administrative actions such as creating privileged accounts or modifying critical configuration set",
         "cveScore": 8.6,
         "cveSeverity": "HIGH"
@@ -61,7 +79,7 @@
         "title": "CVE-2025-30237 - Authentication Bypass via Broken Access Control in Web Server in Multiple TP-Link Aginet Devices",
         "link": "https://cvefeed.io/vuln/detail/CVE-2025-30237",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-10T22:23:41.000Z",
+        "isoDate": "2026-08-10T23:16:48.000Z",
         "contentSnippet": "The affected TP-Link Aginet devices contain a flaw in the web management interface where authentication checks are not consistently enforced on certain endpoints. An attacker can send specially crafted requests to bypass authentication and directly invoke privileged functionality",
         "cveScore": 8.7,
         "cveSeverity": "HIGH"
@@ -144,7 +162,7 @@
         "source": "cvefeed.io",
         "isoDate": "2026-08-10T21:17:26.000Z",
         "contentSnippet": "npm-check-updates through 23.0.2, fixed in commit b554b84, contains a terminal escape sequence injection vulnerability that allows an attacker to embed arbitrary terminal control characters in a dependency's package.json homepage or repository URL fields. When a developer runs nc",
-        "cveScore": 5.3,
+        "cveScore": 4.3,
         "cveSeverity": "MEDIUM"
       },
       {
@@ -153,8 +171,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-08-10T21:17:26.000Z",
         "contentSnippet": "Sucuri Security WordPress plugin through version 2.7.3 contains a path traversal vulnerability in the pageIntegritySubmission() method in src/integrity.lib.php that allows authenticated administrators to delete arbitrary files by supplying directory traversal sequences in the suc",
-        "cveScore": 7,
-        "cveSeverity": "HIGH"
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-73030 - unearth 0.18.2 Path Traversal via Unnormalized Paths and Symlink Escape",
@@ -879,24 +897,6 @@
       {
         "title": "CVE-2026-35026 - Rejected reason: This CVE ID has been rejected or",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-35026",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T17:17:33.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-35006 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-35006",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-10T17:17:33.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-35005 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-35005",
         "source": "cvefeed.io",
         "isoDate": "2026-08-10T17:17:33.000Z",
         "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
