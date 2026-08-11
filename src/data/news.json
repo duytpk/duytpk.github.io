@@ -1,34 +1,232 @@
 {
-  "updatedAt": "2026-08-11T15:52:19.435Z",
+  "updatedAt": "2026-08-11T16:49:06.404Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
-        "title": "CVE-2026-18860 - Velociraptor incorrect Org deletion permissions check",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18860",
+        "title": "CVE-2026-73076 - Vim: Arbitrary Command Execution via Malicious `.VimballRecord` Entry Replay in `vimball.vim`",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73076",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-11T14:52:55.000Z",
-        "contentSnippet": "Velociraptor allows multi-tenant deployments named \"Orgs\". By default Velociraptor, uses the ROOT org, but users can create child orgs for other tenants within the same deployment. Users can have different permissions in each org. To manage Orgs, Velociraptor usually examines the",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
+        "isoDate": "2026-08-11T15:37:59.000Z",
+        "contentSnippet": "Vim is an open source, command line text editor. Prior to 9.2.0847, runtime/autoload/vimball.vim allows a crafted vimball member named .VimballRecord to overwrite the installation record with attacker-chosen commands. When vimball#RmVimball() later processes the matching record e",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2025-31114 - Fooocus webui vulnerable to Remote Code Execution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-31114",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T15:37:33.000Z",
+        "contentSnippet": "Fooocus is an image generating software. In versions 2.5.5 and prior, the Fooocus web UI is vulnerable to remote code execution due to the unsafe use of eval when processing metadata JSON. An attacker with access to the Fooocus web UI may be able to execute arbitrary code on the ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-73075 - Vim: Out-of-bounds Access in Popup Opacity Handling",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73075",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T15:36:33.000Z",
+        "contentSnippet": "Vim is an open source, command line text editor. From 9.2.0469 until 9.2.0843, popup_mark_opacity_zindex() in src/popupwin.c can use a negative w_winrow for a text-property-anchored popup with clipwindow and opacity, indexing before the screen array instead of accounting for w_po",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-73074 - Vim: Heap Buffer Overflow in Text Property Handling",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73074",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T15:35:07.000Z",
+        "contentSnippet": "Vim is an open source, command line text editor. Prior to 9.2.0841, prop_add_one() in src/textprop.c uses the proplen value from get_text_props() to increment a uint16_t property count beyond 0xffff, wrapping the count to zero and copying existing text-property records into a hea",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-19078 - Ose-oauth-server: oauth-server: open redirect vulnerability enables phishing via unvalidated parameter.",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19078",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T15:34:06.000Z",
+        "contentSnippet": "A flaw was found in the oauth-server component. This open redirect vulnerability occurs when the 'then' parameter in the grant approval handler is not properly validated. A remote attacker can craft a malicious URL that, when approved or denied by an authenticated user, redirects",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-14180 - Undertow-core: undertow:http request smuggling via oversized chunk-size bit overlap",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14180",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T15:32:00.000Z",
+        "contentSnippet": "A flaw was found in the ChunkReader component of the Undertow HTTP server, which is used by WildFly and JBoss EAP to handle chunked transfer encoding. The issue occurs because the parser uses a single internal variable to store both the remaining chunk size and state flags. By se",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-73072 - Vim: Heap Buffer Overflow when Loading a Spell File",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73072",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T15:31:35.000Z",
+        "contentSnippet": "Vim is an open source, command line text editor. Prior to 9.2.0846, set_sofo() in src/spellfile.c reuses sl_sal_first[] without resetting values left by set_sal_first(), so a crafted spell file containing an SN_SAL section before an SN_SOFO section causes under-counted mapping li",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-73071 - Vim: Use-after-free in JSON Decoding",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73071",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T15:29:30.000Z",
+        "contentSnippet": "Vim is an open source, command line text editor. From 9.2.0511 until 9.2.0844, json_decode_item() in src/json.c can retain a stale pointer after json_decode_string() invokes channel_fill() to refill and free the current buffer, causing the error path to read freed memory instead ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-6726 - An information leakage vulnerability in the TCG TPM 2.0 reference code.",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6726",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T15:24:44.000Z",
+        "contentSnippet": "An information leakage vulnerability was reported in the TCG TPM 2.0 reference code that could allow a local attacker with elevated privileges to obtain a credential from a TPM-aware CA for a falsified TPM key (such as an Attestation Key, DevID Key or TLS authentication key) and ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-6727 - CVE-2026-6727",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6727",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T15:22:18.000Z",
+        "contentSnippet": "A timing side-channel vulnerability exists in the RSA OAEP decryption implementation. A privileged local attacker with access to the TPM command interface may be able to exploit timing differences to recover information that could allow decryption of ciphertexts encrypted to TPM-",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-73070 - Vim: Stack Buffer Overflow in the Vim Socket Server",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73070",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T15:21:49.000Z",
+        "contentSnippet": "Vim is an open source, command line text editor. Prior to 9.2.0842, the socket server backend in src/socketserver.c accepts unbounded client connections in socketserver_accept(), causing descriptors to overflow fd_set structures in src/channel.c and fixed-size struct pollfd array",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-73069 - Twenty: SQL Injection in the `searchVector` Field Settings Allows Arbitrary PostgreSQL Execution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73069",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T15:18:56.000Z",
+        "contentSnippet": "Twenty is an open-source CRM (customer relationship management) platform. Prior to 2.15.0, Twenty allowed a workspace administrator with the DATA_MODEL permission to supply settings.asExpression for the system TS_VECTOR field searchVector through PATCH /rest/metadata/fields/:id o",
+        "cveScore": 0,
+        "cveSeverity": "NA"
       },
       {
         "title": "CVE-2026-73067 - Tesseract: Heap OOB read in the DAWG loader",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-73067",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-11T14:51:32.000Z",
+        "isoDate": "2026-08-11T15:17:38.000Z",
         "contentSnippet": "Tesseract is an open source OCR engine. Prior to 5.5.3, a crafted .traineddata model loaded through TessBaseAPI::Init can cause SquishedDawg::read_squished_dawg in src/dict/dawg.cpp to accept an unterminated forward-edge run, after which SquishedDawg::Load calls num_forward_edges",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 6.7,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-73066 - Tesseract: Heap out-of-bounds write in LSTM Convolve layer via crafted .traineddata",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-73066",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-11T14:49:16.000Z",
+        "isoDate": "2026-08-11T15:17:38.000Z",
         "contentSnippet": "Tesseract is an open source OCR engine. Prior to 5.5.3, a crafted .traineddata LSTM model component loaded through Tesseract's deserializer can cause an unchecked signed integer multiplication in Convolve::DeSerialize in src/lstm/convolve.cpp to wrap the convolution output-channe",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-72925 - SWC HTML minifier may allow script element breakout when minifying embedded JSON",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72925",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T15:17:38.000Z",
+        "contentSnippet": "SWC is a TypeScript / JavaScript compiler written in Rust. Prior to @swc/html 1.15.47-nightly-20260729.1 and swc_html_minifier 59.0.0, the minifyJson processing in crates/swc_html_minifier/src/lib.rs parsed and serialized attacker-controlled JSON in application/json and applicati",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-72922 - AutoGPT: Webhook provider path confusion bypasses generic webhook secret verification",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72922",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T15:17:38.000Z",
+        "contentSnippet": "AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. Prior to 0.6.70, AutoGPT's autogpt_platform/backend/backend/api/features/integrations/router.py webhook_ingress_generic route selected get_webhook_manager(pr",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-72921 - SeaweedFS: Filer JWT allowed_prefixes literal prefix match allows cross-tenant access to sibling paths",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72921",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T15:17:38.000Z",
+        "contentSnippet": "SeaweedFS is a distributed storage system. Prior to 4.24, the weed/server/filer_server_handlers.go allowed_prefixes authorization check used strings.HasPrefix on raw path strings, so a filer JWT scoped to /tenant1 also authorized sibling paths such as /tenant1234, /tenant1-old, a",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-72920 - SeaweedFS: Unauthenticated filer IAM gRPC service grants S3 administrative control",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72920",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T15:17:38.000Z",
+        "contentSnippet": "SeaweedFS is a distributed storage system. Prior to 4.24, the filer registers the SeaweedIdentityAccessManagement gRPC service without mandatory authentication when jwt.filer_signing.key is unset, allowing any client that can reach the filer gRPC port to invoke CreateUser, Create",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-47702 - TypeBot API tokens stored in plaintext",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47702",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T15:17:30.000Z",
+        "contentSnippet": "TypeBot is a chatbot builder tool. In version 3.16.1, API tokens (bearer credentials used to authenticate against the builder API) are stored in the database as cleartext strings. An attacker who gains read access to the database (e.g., via SQL injection, backup exposure, or insi",
+        "cveScore": 9.1,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-18860 - Velociraptor incorrect Org deletion permissions check",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18860",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T15:17:28.000Z",
+        "contentSnippet": "Velociraptor allows multi-tenant deployments named \"Orgs\". By default Velociraptor, uses the ROOT org, but users can create child orgs for other tenants within the same deployment. Users can have different permissions in each org. To manage Orgs, Velociraptor usually examines the",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-18636 - Velociraptor VFSGetBuffer API path deny list bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18636",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T15:17:28.000Z",
+        "contentSnippet": "The Velociraptor gRPC API has a VFSGetBuffer endpoint which allows reading files from the datastore. To prevent users from reading sensitive files or accessing other orgs, the requested path is prefix checked against a list of denied prefixes. This prefix check can be bypassed al",
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-18635 - Velociraptor query plugin allows impersonation in other orgs",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18635",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T15:17:28.000Z",
+        "contentSnippet": "Velociraptor's VQL has a query() plugin which allows running a VQL query in a different org or user context. To be able to run as a different user, the calling user needs to have the IMPERSONATE permission (usually only given to administrators). Velociraptor versions prior to 0.7",
+        "cveScore": 7.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-18129 - Ivanti Endpoint Manager Cleartext Transmission of Credentials",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18129",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T15:17:28.000Z",
+        "contentSnippet": "Cleartext transmission of sensitive information in the Core of Ivanti Endpoint Manager before version 2024 SU7 allows a remote unauthenticated attacker in a MITM position to leak credentials for external SQL connections.",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-18127 - Ivanti Endpoint Manager Path Traversal Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18127",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T15:17:28.000Z",
+        "contentSnippet": "External control of a filename in the Core of Ivanti Endpoint Manager before version 2024 SU7 allows a remote authenticated attacker full write control over an S3 bucket configured for session recording storage.",
+        "cveScore": 7.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-18125 - Ivanti Endpoint Manager Agent Out-of-Bounds Read",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18125",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-11T15:17:28.000Z",
+        "contentSnippet": "An out-of-bounds read in the Agent of Ivanti Endpoint Manager before version 2024 SU7 allows a remote unauthenticated attacker to crash an agent service.",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-17535 - Velociraptor Multiple Crashes in NTFS Parser when applied to invalid NTFS Volumes",
@@ -37,24 +235,6 @@
         "isoDate": "2026-08-11T14:47:13.000Z",
         "contentSnippet": "Velociraptor's NTFS parsing library mishandles several out of bound and memory exhaustion bugs which may be triggered by maliciously crafted NTFS images. Typically Velociraptor's NTFS parser is used on live NTFS filesystems, limiting the opportunity of attackers corrupting the fi",
         "cveScore": 6.2,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-72925 - SWC HTML minifier may allow script element breakout when minifying embedded JSON",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72925",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T14:45:12.000Z",
-        "contentSnippet": "SWC is a TypeScript / JavaScript compiler written in Rust. Prior to @swc/html 1.15.47-nightly-20260729.1 and swc_html_minifier 59.0.0, the minifyJson processing in crates/swc_html_minifier/src/lib.rs parsed and serialized attacker-controlled JSON in application/json and applicati",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-18636 - Velociraptor VFSGetBuffer API path deny list bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18636",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T14:40:12.000Z",
-        "contentSnippet": "The Velociraptor gRPC API has a VFSGetBuffer endpoint which allows reading files from the datastore. To prevent users from reading sensitive files or accessing other orgs, the requested path is prefix checked against a list of denied prefixes. This prefix check can be bypassed al",
-        "cveScore": 6.8,
         "cveSeverity": "MEDIUM"
       },
       {
@@ -722,189 +902,37 @@
         "contentSnippet": "Affected versions of cti-transmute render data obtained from a remote MISP instance into the event-browser interface using HTML interpolation. Because fields such as event IDs, event information, organization names, tags, tag colors, TLP labels, distribution labels, and error/fla",
         "cveScore": 2.3,
         "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-72694 - Mrtg: mrtg daemon symlink-following chown allows local privilege escalation via pid file path manipulation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72694",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T09:17:14.000Z",
-        "contentSnippet": "A flaw was found in MRTG. When the MRTG daemon is started as a root user and subsequently drops privileges, a local, low-privileged attacker can exploit a symbolic link (symlink) following vulnerability. By influencing or pre-placing a symlink in the process ID (PID) file path, t",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-72693 - Kbd: local privilege escalation in openvt via incorrect process owner verification allowing passwordless root login",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72693",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T09:17:14.000Z",
-        "contentSnippet": "`openvt -u` is intended to identify the owner of the current VT and then execute `login` as that user from a privileged context. In the documented `kbrequest`/init usage, the ownership test in `authenticate_user()` relies on `stat(\"/proc/ /fd/0\")`. `stat()` on `/proc/ /fd/0` foll",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-71218 - Iperf3: unbounded peer-controlled allocation in iperf3 json_read() allows unauthenticated remote memory exhaustion",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71218",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T09:17:14.000Z",
-        "contentSnippet": "A flaw was found in iperf3. A remote unauthenticated attacker can exploit a vulnerability in the `JSON_read()` function, which accepts a peer-controlled message length and allocates memory without an upper bound. This allows the attacker to trigger excessive memory consumption, l",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-71217 - Iperf3: iperf3 server accepts unbounded peer-controlled json parameters enabling remote denial of service via resource exhaustion",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71217",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T09:17:14.000Z",
-        "contentSnippet": "A flaw was found in iperf3. A remote attacker can exploit this vulnerability by sending crafted control-channel JSON with oversized numeric parameters, such as `parallel` and `len`, which are not properly validated by the server. This improper input validation can lead to excessi",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-15567 - Wildfly: wildfly-iiop: wildfly-jacorb: wildfly: pre-auth denial of service on the iiop listener",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15567",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T09:17:13.000Z",
-        "contentSnippet": "A flaw was found in Wildfly. A remote unauthenticated attacker can trigger OutOfMemoryError as CSIv2Util's GSS token decoder reads an attacker-controlled length field without bounds checking and attempts to allocate a byte array of that size.",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-15565 - Undertow: undertow-websockets: undertow: pre-auth dos on websocket endpoint with @serverendpoint class with any @onmessage method",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15565",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T09:17:13.000Z",
-        "contentSnippet": "A flaw was found in Undertow. A remote attacker can cause Out of Memory on websockets endpoint without authentication on any @ServerEndpoint class that has any @OnMessage method. This allows an attacker to cause Denial of Service attack without authentication and using only a sta",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-15563 - Wildfly-iiop-openjdk: missing authentication on eap's iiop nameservice leads to mitm or dos",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15563",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T09:17:13.000Z",
-        "contentSnippet": "A flaw was found in EAP's IIOP. The listener's NameService would accept bind operations without authentication, allowing an attacker to hijack JNDI lookups and binding them to a malicious ORB, achieving MITM or DoS on further invocations.",
-        "cveScore": 7.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-15562 - Jboss-remoting: jboss-remoting: integer overflow in messagereader leads to pre-authentication denial of service",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15562",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T09:17:13.000Z",
-        "contentSnippet": "A flaw was found in EAP's jboss-remoting. A remote unauthenticated attacker who can reach :8080 (or :9990, or :4447) and complete an Upgrade: jboss-remoting handshake can cause OOM errors that degrade requests server-wide, leading to denial of service.",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-15561 - Undertow-core: oom via missing limits in chunked trailer in eap's undertow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15561",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T09:17:12.000Z",
-        "contentSnippet": "A flaw was found in EAP's undertow http/1.1 chunked-transfer decoder. missing limits on size and count would allow an attacker to use an unauthenticated connection to drive the JVM to an OutOfMemory error, stopping all deployments on the listener, and achieving Denial of Service.",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-15560 - Openjdk-orb: unauthed class loading via iiop in eap",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15560",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T09:17:12.000Z",
-        "contentSnippet": "when EAP runs with -secmgr, the openjdk-orb's JDKBridge honours attacker-supplied CDR codebase URLs during object unmarshalling on :3528, allowing an unauthenticated attacker to load and instantiate arbitrary classes from a remote URL in the server JVM before EJB security interce",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-15556 - Picketlink-federation: picketlink saml 2.0 auth bypass via missing assertions",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15556",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T09:17:12.000Z",
-        "contentSnippet": "A flaw was found in Picketlink's SP signature validation; a SAML response containing zero assertion elements matching the signature check can allow an attacker to forge a SAML response and auth as any principal with any roles on the protected application.",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-15555 - Jboss-marshalling-river: wildfly-clustering-infinispan-marshalling: jboss deserialization rce via unfiltered river unmarshaller",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15555",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T09:17:12.000Z",
-        "contentSnippet": "A flaw was found in JBoss marshalling. The Infinispan session replication path deserializes replicated session data via the JBoss Marshalling River unmarshaller with no class filtering — enabling RCE via deserialization gadget chains on every cluster node.",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-15554 - Undertow-core: undertow: authentication bypass via ajp ssl_cert/is_ssl forgery",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15554",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T09:17:12.000Z",
-        "contentSnippet": "the Undertow AJP listener honours forged ssl_cert and is_ssl AJP attributes without requiring any shared-secret authentication. This enables an unauthenticated attacker with direct TCP access to port 8009 to bypass CLIENT-CERT authentication by injecting a forged X.509 certificat",
-        "cveScore": 7.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-10579 - Picketlink-federation: auth bypass in picketlink saml unsolicited-response",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10579",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T09:17:12.000Z",
-        "contentSnippet": "A flaw was found in Picketlink Federation SAML; the unsolcited response handler would accept forged assertions with no verification or validation, permitting an unauthed attacker to authenticate as any principal in any role. This could lead to information disclosure, access to re",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-73162 - cti-transmute CSRF Allows Unauthorized Follow and Notification State Changes",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73162",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T09:13:14.000Z",
-        "contentSnippet": "Affected versions of MISP cti-transmute expose several state-changing account operations as GET requests: * /account/follow * /account/delete_notification * /account/mark_notification_read * /account/mark_all_read These endpoints require authentication, but before the fix they co",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-73156 - cti-transmute Sunburst and Treemap Tooltips Allow Cross-Site Scripting via Crafted Conversion Data",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73156",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T08:17:21.000Z",
-        "contentSnippet": "Affected versions of cti-transmute fail to HTML-escape attacker-controlled values used in ECharts Sunburst and Treemap tooltip formatters. Slice names may originate directly from STIX or MISP data, including STIX types, relationship_type, pattern prefixes, and MISP category/type ",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-73155 - cti-transmute Missing Authorization Allows Reactions to Private Comments",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73155",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T08:17:21.000Z",
-        "contentSnippet": "Affected versions of cti-transmute allow authenticated users to add or remove emoji reactions on comments without first checking whether those users are authorized to view the target comment. The vulnerable react() handler passed an attacker-controlled comment_id directly to comm",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-73140 - cti-transmute Evaluation Report Exports Expose Private Comments and Author Information",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73140",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T08:17:21.000Z",
-        "contentSnippet": "Affected versions of cti-transmute fail to apply comment-level access-control rules when generating evaluation report exports. Although normal comment retrieval filters comments according to conversion visibility, comment privacy, ownership, authorship, and administrative privile",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-19519 - Claircore: claircore: denial of service via unchecked type assertion in rpm header parser",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19519",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T08:17:20.000Z",
-        "contentSnippet": "A flaw was found in claircore's RPM package scanner. Crafted RPM header data in a container layer can cause an unchecked type assertion to panic the scanner. The panic is not recovered, causing the Clair indexer process to crash, leading to a denial of service.",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-19418 - TYPO3 CMS - Broken Access Control in Backend and Install Tool",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19418",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T08:17:20.000Z",
-        "contentSnippet": "The referrer enforcement introduced with TYPO3-CORE-SA-2020-006 (CVE-2020-11069) became ineffective in TYPO3 v13.0, where TYPO3 CMS started serving the backend and Install Tool applications from the site's main entry script instead of the dedicated typo3/ directory. Whether a req",
-        "cveScore": 7.3,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
+      {
+        "title": "How ONESTRUCTION built the Ishigaki-IDS foundation model with AWS GenAIIC",
+        "link": "https://aws.amazon.com/blogs/machine-learning/how-onestruction-built-the-ishigaki-ids-foundation-model-with-aws-genaiic/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-08-11T16:14:33.000Z",
+        "contentSnippet": "ONESTRUCTION, with technical advisory from the AWS Generative AI Innovation Center, built Ishigaki-IDS, a foundation model specialized for construction and BIM workflows. This architectural case study shows how they combined synthetic data, a three-stage training pipeline, and ve"
+      },
+      {
+        "title": "How Pixieset achieved 35% AI feature adoption by solving the right problem with Amazon Bedrock",
+        "link": "https://aws.amazon.com/blogs/machine-learning/how-pixieset-achieved-35-ai-feature-adoption-by-solving-the-right-problem-with-amazon-bedrock/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-08-11T16:11:15.000Z",
+        "contentSnippet": "Photographers are among the most skeptical audiences for generative AI. Learn how Pixieset used Amazon Bedrock to launch an AI-generated alt text feature to millions of users in four months, reaching 35% adoption by automating the tedious image SEO work photographers avoid, witho"
+      },
+      {
+        "title": "First Orion accelerates QA automation using Amazon Nova Act",
+        "link": "https://aws.amazon.com/blogs/machine-learning/first-orion-accelerates-qa-automation-using-amazon-nova-act/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-08-11T16:09:06.000Z",
+        "contentSnippet": "Learn how First Orion, a branded communications company, shifted from brittle script-based UI testing to AI-driven QA automation with Amazon Nova Act. By describing tests in plain English instead of maintaining selector-based code, they cut QA cycle times, freed engineering capac"
+      },
+      {
+        "title": "Deploying Anthropic Claude apps gateway for AWS for enterprise workloads",
+        "link": "https://aws.amazon.com/blogs/machine-learning/deploying-anthropic-claude-apps-gateway-for-aws-for-enterprise-workloads/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-08-11T15:59:22.000Z",
+        "contentSnippet": "Claude apps gateway is a self-hosted governance layer between Claude Code and Claude Desktop and Amazon Bedrock or Claude Platform on AWS. This post presents a production reference deployment covering end-to-end architecture, enterprise deployment patterns, cost, and implementati"
+      },
       {
         "title": "Building and Validating a Quantitative Trading Strategy with OctoBot, Walk-Forward Backtesting, Parameter Optimization, and Interactive Analysis",
         "link": "https://www.marktechpost.com/2026/08/11/building-and-validating-a-quantitative-trading-strategy-with-octobot-walk-forward-backtesting-parameter-optimization-and-interactive-analysis/",
@@ -1576,34 +1604,6 @@
         "source": "MarkTechPost",
         "isoDate": "2026-07-29T09:38:42.000Z",
         "contentSnippet": "Liquid AI released two open-weight bidirectional encoders, LFM2.5-Encoder-230M and LFM2.5-Encoder-350M. Both carry an 8,192-token context and are built on the LFM2 hybrid backbone. The 350M ranks fourth of 14 models on a 17-task GLUE, SuperGLUE, and multilingual suite, behind onl"
-      },
-      {
-        "title": "Building Non-Interactive Agentic Coding Workflows with Moonshot AI’s Kimi CLI, JSONL Streaming, Testing, and Session Memory",
-        "link": "https://www.marktechpost.com/2026/07/28/building-non-interactive-agentic-coding-workflows-with-moonshot-ais-kimi-cli-jsonl-streaming-testing-and-session-memory/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-07-28T23:04:44.000Z",
-        "contentSnippet": "In this tutorial, we configure and operate Kimi CLI as a fully non-interactive AI coding agent. We install the CLI through uv with an isolated Python 3.13 environment, configure Moonshot API authentication through a TOML-based provider and model definition, and build a reusable P"
-      },
-      {
-        "title": "Fireworks AI Releases Fireworks Nexus: A Drop-In Routing and Cost-Control Layer That Moves Routine Coding Work to Open-Weight Models",
-        "link": "https://www.marktechpost.com/2026/07/28/fireworks-ai-releases-fireworks-nexus-a-drop-in-routing-and-cost-control-layer-that-moves-routine-coding-work-to-open-weight-models/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-07-28T22:45:56.000Z",
-        "contentSnippet": "Fireworks AI has released Fireworks Nexus, an AI management and routing platform aimed at engineering organizations. It connects the coding tools developers already use to a managed layer of open-weight models. The problem it targets is well documented. Forbes reported that Uber "
-      },
-      {
-        "title": "How AgentCore Gateway supports the MCP 2026-07-28 spec",
-        "link": "https://aws.amazon.com/blogs/machine-learning/how-agentcore-gateway-supports-the-mcp-2026-07-28-spec/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-07-28T19:07:09.000Z",
-        "contentSnippet": "The Model Context Protocol (MCP) published its 2026-07-28 specification, the largest revision since launch: MCP is now stateless, with a governed extensions system and hardened authorization. Learn what changed and how to enable the new version on Amazon Bedrock AgentCore Gateway"
-      },
-      {
-        "title": "Market surveillance agent with LangGraph and Strands on AgentCore",
-        "link": "https://aws.amazon.com/blogs/machine-learning/market-surveillance-agent-with-langgraph-and-strands-on-agentcore/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-07-28T17:24:54.000Z",
-        "contentSnippet": "Learn how to architect and deploy a production-ready multi-agent AI system using LangGraph for workflow orchestration and Strands for agent reasoning on Amazon Bedrock AgentCore. This post walks through a market surveillance example with state-driven orchestration, checkpoint-bas"
       }
     ],
     "virtualization": [
@@ -2310,6 +2310,20 @@
     ],
     "hardware": [
       {
+        "title": "Dell Pro Precision 5 16s Intel Review: 24 Hours of Battery in a 16-Inch Workstation",
+        "link": "https://www.storagereview.com/review/dell-pro-precision-5-16s-intel-review-24-hours-of-battery-in-a-16-inch-workstation",
+        "source": "StorageReview",
+        "isoDate": "2026-08-11T16:39:59.000Z",
+        "contentSnippet": "The Dell Pro Precision 5 16s Intel is a 16-inch mobile workstation built for users who want more screen space while keeping the system reasonably portable. Our review unit pairs the Core Ultra X9 388H with Intel Arc Pro B390 graphics, 64GB of LPCAMM2-8533 memory, and a 1TB Gen5 S"
+      },
+      {
+        "title": "SK hynix to expand production capacity in China as it mulls Solidigm IPO, report claims — second phase of fab could boost local production by 50%",
+        "link": "https://www.tomshardware.com/pc-components/ssds/sk-hynix-to-expand-production-capacity-in-china-as-it-mulls-solidigm-ipo-report-claims-second-phase-of-fab-could-boost-local-production-by-50-percent",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-11T16:39:42.000Z",
+        "contentSnippet": "As demand for high-end data center SSDs peak, SK hynix upgrades its Chinese facilities and plans Solidigm listing at NASDAQ."
+      },
+      {
         "title": "Volta Comes Out of Stealth With a $10B AI Lab Partnership and a 133MW Vera Rubin Factory in Norway",
         "link": "https://www.storagereview.com/news/volta-comes-out-of-stealth-with-a-10b-ai-lab-partnership-and-a-133mw-vera-rubin-factory-in-norway",
         "source": "StorageReview",
@@ -2994,20 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-08-06T15:32:08.000Z",
         "contentSnippet": "Virginia's public utility regulator now requires all data center projects to pay for the infrastructure needed to supply their power. This makes it one of the first states to convert the 'ratepayer protection pledge' into an actionable policy."
-      },
-      {
-        "title": "VMware vDefend Claims 75Tbps Distributed Firewall Throughput in Broadcom VCF 9.1 Update",
-        "link": "https://www.storagereview.com/news/vmware-vdefend-75tbps-distributed-firewall-vcf-9-1-update",
-        "source": "StorageReview",
-        "isoDate": "2026-08-06T15:10:22.000Z",
-        "contentSnippet": "Broadcom has issued updates for VMware vDefend and VMware Avi Load Balancer, enhancing security, performance, deployment, and automation features for VMware Cloud Foundation 9.1 environments. These updates include vDefend SSP 5.2, vDefend 9.1.1, Avi Load Balancer 32.1.4, and the "
-      },
-      {
-        "title": "$1 billion of iPhone 18 Pro chips 'on the shelves awaiting packaging' due to DRAM shortages — memory shortages reportedly put a wrinkle in Apple's launch plans",
-        "link": "https://www.tomshardware.com/pc-components/dram/usd1-billion-of-iphone-18-pro-chips-on-the-shelves-awaiting-packaging-due-to-dram-shortages-memory-shortages-reportedly-put-a-wrinkle-in-apples-launch-plans",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-06T14:52:11.000Z",
-        "contentSnippet": "Apple reportedly as $1 billion worth of iPhone 18 processor wafers awaiting packaging, which hasn't been completed due to DRAM shortages."
       }
     ]
   }
