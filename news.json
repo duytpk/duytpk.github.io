@@ -1,15 +1,69 @@
 {
-  "updatedAt": "2026-08-12T10:53:28.264Z",
+  "updatedAt": "2026-08-12T11:40:04.423Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
+        "title": "CVE-2026-68868 - Apache Airflow Google provider: google Secret Manager backend: team scope is never applied, exposing every team's Connections and Variables",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68868",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T10:27:56.000Z",
+        "contentSnippet": "The Google Cloud Secret Manager secrets backend in Apache Airflow's Google provider never applied the team scope when resolving Connections and Variables: the caller's `team_name` was accepted by the backend but dropped at the internal call boundary, so every lookup resolved agai",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-67284 - Joomla Extension - tabaoca.org - Improper ACL checks allow file operations in Cotton Cloud < 2.0.2",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67284",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T10:17:20.000Z",
+        "contentSnippet": "Joomla Extension - tabaoca.org - Improper ACL implementation allows file operations in Cotton Cloud",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-64955 - Velociraptor CSV Formula Injection in Export Pipeline",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64955",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T10:17:20.000Z",
+        "contentSnippet": "When Microsoft Excel imports a CSV file, it executes cells beginning with certain characters as formulas, giving such CSV files arbitrary execution. Velociraptor fails to sanitize such cells when exporting to CSV from various places such as the GUI, offline collector or data expo",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-64952 - Velociraptor Hunt Deletion With Insufficient Permission Check",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64952",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T10:17:20.000Z",
+        "contentSnippet": "The hunt_delete() VQL function allows deleting hunts. Velociraptor misapplied the permission check requiring only COLLECT_CLIENT (usually assigned to the \"investigator\" role) instead of the \"DELETE_RESULTS\" permission (usually only assigned to \"administrators\").",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-64951 - Velociraptor DoS triggered by Divide by Zero panic",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64951",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T10:17:20.000Z",
+        "contentSnippet": "A rogue Velociraptor client can upload a malformed sparse file such that if the GUI attempts to expand the file, a panic occurs which may crash the server process. The problem is a Divide by Zero bug in the ShouldPadFile() function.",
+        "cveScore": 3.5,
+        "cveSeverity": "LOW"
+      },
+      {
         "title": "CVE-2026-18663 - 389-ds-base: 389-ds-base: pre-authentication double-free in get_ldapmessage_controls_ext() via critical session tracking control",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-18663",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-12T09:35:26.000Z",
+        "isoDate": "2026-08-12T10:17:18.000Z",
         "contentSnippet": "A flaw was found in 389-ds-base. The get_ldapmessage_controls_ext() function frees the parsed controls array on the Session Tracking critical-control rejection path without clearing the SLAPI_REQCONTROLS pblock slot. Operation teardown then frees the same pointer again, causing a",
         "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-18652 - Velociraptor STACK Type Download Path Bypasses Denied Prefix Check",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18652",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T10:17:16.000Z",
+        "contentSnippet": "Velociraptor allows reading Stacked result sets from the GUI. Velociraptor's multi-tenant design stores sub orgs within the datastore directory. The path requested by the GUI is not correctly checked against the prefix deny list, allowing result sets to read from denied prefixes.",
+        "cveScore": 4.9,
         "cveSeverity": "MEDIUM"
       },
       {
@@ -45,7 +99,7 @@
         "source": "cvefeed.io",
         "isoDate": "2026-08-12T08:17:17.000Z",
         "contentSnippet": "POS System developed by FitSoft has a Missing Authentication vulnerability. Unauthenticated remote attackers can directly access and operate the system.",
-        "cveScore": 8.8,
+        "cveScore": 8.2,
         "cveSeverity": "HIGH"
       },
       {
@@ -846,60 +900,6 @@
         "source": "cvefeed.io",
         "isoDate": "2026-08-11T20:37:48.000Z",
         "contentSnippet": "TypeBot is a chatbot builder tool. Versions prior to 3.17.0 allow a low-privilege read collaborator to extract a workspace OAuth `credentialsId` from a readable bot configuration and then overwrite that credential through `handleUpdateOAuthCredentials()` by supplying an attacker-",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-63177 - Malcolm Vulnerable to Authorization Bypass via URI Normalization Differential in Nginx Lua RBAC",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63177",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T20:30:57.000Z",
-        "contentSnippet": "Malcolm is a network traffic analysis tool suite. Prior to version 26.07.0, role-based access control enforced in the Nginx OpenResty Lua layer evaluates the raw, unnormalized `ngx.var.request_uri`, while Nginx itself routes requests using the normalized path. An authenticated lo",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-63134 - Malcolm's Path Traversal in Archive Extraction Allows Arbitrary Directory Creation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63134",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T20:29:38.000Z",
-        "contentSnippet": "Malcolm is a network traffic analysis tool suite. Prior to version 26.07.0, `safe-extract.py` protects file extraction with libarchive's secure flags, but creates directory entries with a raw `os.makedirs(os.path.join(dest, entry.pathname))` that has no traversal protection. An u",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-15606 - Frontend Admin by DynamiApps <= 3.29.9 - Authenticated (Subscriber+) Arbitrary Password Reset via Encrypted Object Token",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15606",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T20:26:10.000Z",
-        "contentSnippet": "The Frontend Admin by DynamiApps plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 3.29.9. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated atta",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-63133 - Malcolm has Uncontrolled Resource Consumption in Archive Extraction (Inode-Exhaustion DoS)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63133",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T20:26:06.000Z",
-        "contentSnippet": "Malcolm is a network traffic analysis tool suite. Prior to version 26.07.0, `safe-extract.py` extracts uploaded archives with no limit on entry count, directory depth, total entries, or output size. A small malicious archive containing a large number of directory or file entries ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-19579 - Snipe-IT Checkout Request Cancellation IDOR",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19579",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T20:25:02.000Z",
-        "contentSnippet": "Snipe-IT before 8.6.0 contains an authorization bypass (insecure direct object reference) in the asset checkout-request cancellation endpoint. The cancel_by_admin and requestingUser values are read from user-controlled URL path segments and used without a server-side authorizatio",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-55676 - Malcolm vulnerable to RCE via unrestricted .php upload to the file-upload component",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55676",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T20:24:50.000Z",
-        "contentSnippet": "Malcolm is a network traffic analysis tool suite. The file-upload component (FilePond PHP backend) accepts uploads at `POST /server/php/submit.php` and stores them in a directory served by the same nginx and php-fpm instance. The allow-list that should restrict accepted file type",
         "cveScore": 0,
         "cveSeverity": "NA"
       }
@@ -2310,6 +2310,27 @@
     ],
     "hardware": [
       {
+        "title": "Claude will begin digitally watermarking marking AI-generated text and images — Anthropic details how it'll comply with the EU's Artificial Intelligence Act",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/claude-will-begin-digitally-watermarking-marking-ai-generated-text-and-images-anthropic-details-how-itll-comply-with-the-eus-artificial-intelligence-act",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-12T11:30:00.000Z",
+        "contentSnippet": "European users of Anthropic's Claude models can expect that future versions of those tools will begin embedding digital marks in generated text and images to identify them as the product of AI."
+      },
+      {
+        "title": "Asobi Remote Play app lets gamers stream PS4 and PS5 games on the Steam Deck, even without a console — dev breaks PlayStation Plus Premium cloud gaming support free of the PlayStation Portal",
+        "link": "https://www.tomshardware.com/video-games/playstation/asobi-remote-play-app-lets-gamers-stream-ps4-and-ps5-games-on-the-steam-deck-even-without-a-console-dev-breaks-playstation-plus-premium-cloud-gaming-support-free-of-the-playstation-portal",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-12T11:00:00.000Z",
+        "contentSnippet": "PlayStation Remote Play allows you to stream games from your PS4 or PS5 console to a variety of devices locally, but the Asobi: Remote Play service goes farther by extending the PlayStation Portal's exclusive PlayStation Plus Premium cloud game streaming support to the Steam Deck"
+      },
+      {
+        "title": "Samsung Foundry updates process roadmap to move 1.4nm node to 2029 — high-NA EUV will enable 1nm-class and smaller nodes in 2030 and beyond",
+        "link": "https://www.tomshardware.com/tech-industry/samsung-foundry-updates-process-roadmap-to-move-1-4nm-node-to-2029-high-na-euv-will-enable-1nm-class-and-smaller-nodes-in-2030-and-beyond",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-12T11:00:00.000Z",
+        "contentSnippet": "Samsung Foundry has delayed its 1.4nm-class node to 2029, making SF2 one of its longest-lasting process technologies ever. The company also aims to start using High-NA EUV for its 1nm-class process technology in 2030."
+      },
+      {
         "title": "Save over $600 on a massive 18-inch gaming laptop as it falls to a new all-time low price at Amazon — Acer's Predator Helios Neo 18 AI packs an RTX 5070 Ti and 32GB of memory",
         "link": "https://www.tomshardware.com/laptops/gaming-laptops/save-over-usd600-on-a-massive-18-inch-gaming-laptop-as-it-falls-to-a-new-all-time-low-price-at-amazon-acers-predator-helios-neo-18-ai-packs-an-rtx-5070-ti-and-32gb-of-memory",
         "source": "Tom's Hardware",
@@ -2987,27 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-08-07T13:27:12.000Z",
         "contentSnippet": "We’re pleased to introduce Bench 2.0, a ground-up rethink of our benchmarking tool that makes it the most powerful, most intuitive benchmark browser in the business. Bench 2.0 has tons of new features designed to make the data easier to understand, easier to sort through, and mor"
-      },
-      {
-        "title": "HyperX Omen Max 16 review: All bark and no bite",
-        "link": "https://www.tomshardware.com/laptops/gaming-laptops/hyperx-omen-max-16-review",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-07T12:05:00.000Z",
-        "contentSnippet": "The Omen Max 16 definitely looks like a desktop replacement gaming laptop, but its gaming performance meows instead of roars."
-      },
-      {
-        "title": "Apple revealed the first Mac Pro 20 years ago today — its Intel Xeon-powered flagship desktop took the reins from the Power Mac G5",
-        "link": "https://www.tomshardware.com/desktops/apple-revealed-the-first-mac-pro-20-years-ago-today-its-intel-xeon-powered-flagship-desktop-took-the-reins-from-the-power-mac-g5",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-07T11:58:46.000Z",
-        "contentSnippet": "20 years ago today Steve Jobs took to the Apple WWDC stage to unveil the first-ever Mac Pro desktop computer. This is when Mac workstations transitioned from PowerPC to Intel Xeon chips."
-      },
-      {
-        "title": "Nvidia sells RTX 50-series GPUs at MSRP during QuakeCon 2026 — graphics cards sold at launch prices more than a year after release are now considered an attraction",
-        "link": "https://www.tomshardware.com/pc-components/gpus/nvidia-sells-rtx-50-series-gpus-at-msrp-during-quakecon-2026-graphics-cards-sold-at-launch-prices-more-than-a-year-after-release-are-now-considered-an-attraction",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-07T11:11:49.000Z",
-        "contentSnippet": "The Nvidia booth at QuakeCon 2026 is offering Founders Edition GeForce RTX 5090, 5080, and 5070 GPUs at MSRP. Supplies are limited, though, so you should head out ASAP if you want to snag one right now."
       }
     ]
   }
