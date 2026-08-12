@@ -1,16 +1,232 @@
 {
-  "updatedAt": "2026-08-12T21:36:36.955Z",
+  "updatedAt": "2026-08-12T22:31:54.269Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
+        "title": "CVE-2026-7366 - IBM DataPower Gateway affected by HTTP request header leakage in XML-Firewall",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-7366",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T21:19:41.000Z",
+        "contentSnippet": "IBM DataPower Gateway 11.0.0.0 through 11.0.0.1 and IBM DataPower Gateway 10.5.0.0 through 10.5.0.21 and IBM DataPower Gateway 10.6.0.0 through 10.6.0.9 allows a race condition that results in improper isolation of request state when handling the built‑in X‑Client‑IP header. Unde",
+        "cveScore": 4.2,
+        "cveSeverity": "MEDIUM"
+      },
+      {
         "title": "CVE-2026-73491 - Loofah `allowed_uri?` does not detect `javascript:` URIs split by named whitespace character references",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-73491",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-12T20:59:18.000Z",
+        "isoDate": "2026-08-12T21:17:42.000Z",
         "contentSnippet": "Loofah is a general library for manipulating and transforming HTML/XML documents and fragments, built on top of Nokogiri. From 2.25.0 until 2.25.2, Loofah::HTML5::Scrub.allowed_uri? does not reject javascript: URIs whose scheme is split or prefixed with the HTML5 named whitespace",
+        "cveScore": 2.3,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-73490 - Loofah: SVG `href` attribute bypasses local-reference restriction",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73490",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T21:17:42.000Z",
+        "contentSnippet": "Loofah is a general library for manipulating and transforming HTML/XML documents and fragments, built on top of Nokogiri. Prior to 2.25.2, Loofah's HTML5 sanitizer applies its local-reference restriction only to the xlink:href attribute on SVG use and feImage elements, while brow",
+        "cveScore": 4.7,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-73430 - Russh: Pre-auth remote panic via all-zero Curve25519 peer public value (encode_mpint OOB)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73430",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T21:17:41.000Z",
+        "contentSnippet": "Russh is a Rust SSH client & server library. Prior to 0.62.4, an unauthenticated SSH client can cause a denial of service by sending SSH_MSG_KEX_ECDH_INIT with a 32-byte all-zero Q_C value. Curve25519Kex::server_dh in russh/src/kex/curve25519.rs accepts the all-zero peer public v",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-73429 - Russh: client wrong-length X25519 `clone_from_slice` panic (pre-auth DoS)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73429",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T21:17:41.000Z",
+        "contentSnippet": "Russh is a Rust SSH client & server library. Prior to 0.62.4, a malicious SSH server can crash a russh client session with a malformed KEX_ECDH_REPLY containing a server ephemeral value that is not 32 bytes long. The client-side Curve25519Kex::compute_shared_secret function in ru",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-73427 - Trix: XSS via JSON deserialization bypass in drag-and-drop (Level0InputController)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73427",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T21:17:41.000Z",
+        "contentSnippet": "Trix is a what-you-see-is-what-you-get rich text editor for everyday writing. Prior to 2.1.18, Trix is vulnerable to cross-site scripting when a crafted application/x-trix-document JSON payload is dropped into an editor using the fallback Level0InputController, such as an embedde",
+        "cveScore": 2.1,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-73425 - @astrojs/netlify generates an overly-broad Netlify Image CDN allowlist because remotePatterns.pathname metacharacters are not escaped",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73425",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T21:17:41.000Z",
+        "contentSnippet": "Astro is a web framework for content-driven websites. Prior to 8.1.2, the Astro Netlify adapter converts each image.remotePatterns entry into a regular expression written to .netlify/v1/config.json under images.remote_images for Netlify's Image CDN allowlist. In packages/integrat",
+        "cveScore": 3.7,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-73423 - Astro: composable `astro/hono` pipeline bypasses `security.checkOrigin` when `middleware()` is absent or misordered",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73423",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T21:17:41.000Z",
+        "contentSnippet": "Astro is a web framework for content-driven websites. From 7.0.0 until 7.0.6, the composable astro/hono pipeline installs security.checkOrigin only through the middleware() primitive, while actions() and pages() can dispatch to user code independently. Mounting actions() before m",
+        "cveScore": 5.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-73422 - Astro: Reflected XSS via unescaped View Transition animation properties",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73422",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T21:17:41.000Z",
+        "contentSnippet": "Astro is a web framework for content-driven websites. From 2.9.0 until 7.1.0, Astro's server-side View Transition CSS generator interpolates animation properties into an inline style element without escaping them for CSS and HTML contexts. An attacker-controlled View Transition a",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-73419 - NextAuth.js: OAuth state, nonce, and PKCE check cookies are not bound to the provider that created them",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73419",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T21:17:41.000Z",
+        "contentSnippet": "NextAuth.js provides authentication for Next.js. Prior to@auth/core 0.41.3 and next-auth 4.24.15 and 5.0.0-beta.32, Auth.js stores the OAuth/OIDC anti-CSRF checks state, nonce, and the PKCE verifier in global cookies that are not bound to the provider that created them. On callba",
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-73418 - NextAuth.js: getToken() throws an uncaught exception on malformed Bearer authorization headers",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73418",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T21:17:40.000Z",
+        "contentSnippet": "NextAuth.js provides authentication for Next.js. Prior to @auth/core 0.41.3 and next-auth 4.24.15 and 5.0.0-beta.32, the exported getToken() helper in the next-auth/jwt and @auth/core/jwt modules can throw an uncaught exception when it reads a malformed Authorization: Bearer head",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-66898 - Path traversal via unvalidated instance name in backup tarball restore enables root file write / RCE",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66898",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T21:17:39.000Z",
+        "contentSnippet": "A path traversal vulnerability in LXD allows an attacker to manipulate file system paths during backup import and restore operations. When importing or restoring a backup archive, LXD fails to validate instance and storage volume names contained within the archive metadata. An at",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-65370 - ServiceTalk HTTP Request Smuggling Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65370",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T21:17:39.000Z",
+        "contentSnippet": "ServiceTalk HTTP/1.x incorrectly handles malformed Transfer-Encoding which could result in request smuggling attacks. This vulnerability is addressed in servicetalk version 0.42.65.",
         "cveScore": 0,
         "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-64826 - rConfig < 8.2.13 Path Traversal File Read via FileDownloadController",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64826",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T21:17:39.000Z",
+        "contentSnippet": "rConfig before 8.2.13 contains a path traversal vulnerability that allows authenticated attackers to read arbitrary files by supplying unsanitized directory traversal sequences in the filename GET parameter of the download_export() method. Attackers can craft requests with ../ se",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-62421 - Rejected reason: Voluntarily withdrawn",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62421",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T21:17:39.000Z",
+        "contentSnippet": "Rejected reason: Voluntarily withdrawn",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-19654 - Rsyslog: a configuration-dependent issue in rsyslog's optional imptcp input module can allow an unauthenticated remote peer to crash rsyslogd",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19654",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T21:17:38.000Z",
+        "contentSnippet": "A unauthenticated remote peer may lead rsyslogd to crash due to a flaw in the optional imptcp module. A crafted input sequence during oversize-frame recovery can cause an invalid internal message length and terminate rsyslogd. No confidentiality or integrity impact, privilege esc",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-19503 - Insufficient OIDC endpoint validation could invoke unintended local protocol handlers",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19503",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T21:17:38.000Z",
+        "contentSnippet": "MongoDB Schema Manager and MongoDB Atlas SQL ODBC Driver do not validate the scheme of the authorization and token endpoints returned by an OIDC issuer's discovery document. A user induced to connect to an uncontrolled MongoDB deployment using MONGODB-OIDC authentication may have",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-19502 - Insufficient redaction of sensitive configuration values in diagnostic output of MongoDB SQL Schema Builder CLI",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19502",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T21:17:38.000Z",
+        "contentSnippet": "MongoDB SQL Schema Builder CLI records its startup configuration to standard output and, when file logging is enabled, to a log file on disk. Certain connection settings were written without redaction, so authentication material supplied by the operator could appear in plaintext ",
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-19130 - Provider-credential-controller: provider-credential-controller: cross-namespace credential propagation via attacker-controlled copiedfrom labels bypasses authorization",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19130",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T21:17:37.000Z",
+        "contentSnippet": "A flaw was found in the provider-credential-controller component of multicluster-engine (MCE). An attacker with specific permissions on the hub cluster, and knowledge of a prior credential value, could exploit an authorization bypass vulnerability. By manipulating `copiedFrom` la",
+        "cveScore": 5.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-19004 - MongoDB BI Connector ODBC Driver Memory-Safety Issue When Handling Stored Procedure Output Parameters",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19004",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T21:17:37.000Z",
+        "contentSnippet": "An application using the MongoDB BI Connector ODBC Driver may experience a memory-safety issue when processing output parameters from a stored procedure. Triggering this issue requires connecting to an untrusted or impersonated database server that returns crafted metadata. This ",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-19002 - Crafted database metadata may cause memory corruption in MongoDB BI Connector ODBC Driver",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19002",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T21:17:37.000Z",
+        "contentSnippet": "A missing bounds check when parsing stored procedure parameter metadata in the MongoDB BI Connector ODBC Driver can result in an out-of-bounds write in the client application process. Triggering this issue requires control over the server the driver connects to, or the ability to",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-19001 - MongoDB BI Connector ODBC driver may write outside an allocated buffer when handling oversized catalog object names",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19001",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T21:17:37.000Z",
+        "contentSnippet": "The MongoDB BI Connector ODBC Driver may write outside the bounds of a fixed-size buffer when an application supplies an unusually long catalog, schema, or object name to a metadata retrieval function. This may result in memory corruption within the calling application's process,",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-18888 - MongoDB BI Connector ODBC driver may write outside an allocated buffer when retrieving large floating point values as character data",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18888",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T21:17:37.000Z",
+        "contentSnippet": "The MongoDB BI Connector ODBC Driver converts floating point column values into text without checking that the result fits within the destination buffer. When an application reads a sufficiently large floating point value as text, the driver may write beyond the end of that buffe",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-18097 - IBM® Db2® federated server could allow a local attacker to obtain sensitive information due to the logging of plain text passwords in trace files.",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18097",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T21:17:36.000Z",
+        "contentSnippet": "IBM Db2 11.5.0 through 11.5.9, and 12.1.0 through 12.1.5 for Linux, UNIX and Windows (includes DB2 Connect Server) could allow a local attacker to obtain sensitive information due to the logging of plain text passwords in trace files.",
+        "cveScore": 5.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-18096 - IBM® Db2® could allow a local attacker to cause a denial of service due to a memory leak",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18096",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T21:17:36.000Z",
+        "contentSnippet": "IBM Db2 12.1.5 for Linux, UNIX and Windows (includes DB2 Connect Server) could allow a local attacker to cause a denial of service due to a memory leak.",
+        "cveScore": 3.3,
+        "cveSeverity": "LOW"
       },
       {
         "title": "CVE-2026-13476 - IBM Informix Wire Listener Vulnerable to Unauthenticated Remote Code Execution",
@@ -22,33 +238,6 @@
         "cveSeverity": "HIGH"
       },
       {
-        "title": "CVE-2026-73490 - Loofah: SVG `href` attribute bypasses local-reference restriction",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73490",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T20:58:12.000Z",
-        "contentSnippet": "Loofah is a general library for manipulating and transforming HTML/XML documents and fragments, built on top of Nokogiri. Prior to 2.25.2, Loofah's HTML5 sanitizer applies its local-reference restriction only to the xlink:href attribute on SVG use and feImage elements, while brow",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-73430 - Russh: Pre-auth remote panic via all-zero Curve25519 peer public value (encode_mpint OOB)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73430",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T20:55:38.000Z",
-        "contentSnippet": "Russh is a Rust SSH client & server library. Prior to 0.62.4, an unauthenticated SSH client can cause a denial of service by sending SSH_MSG_KEX_ECDH_INIT with a 32-byte all-zero Q_C value. Curve25519Kex::server_dh in russh/src/kex/curve25519.rs accepts the all-zero peer public v",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-73429 - Russh: client wrong-length X25519 `clone_from_slice` panic (pre-auth DoS)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73429",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T20:53:19.000Z",
-        "contentSnippet": "Russh is a Rust SSH client & server library. Prior to 0.62.4, a malicious SSH server can crash a russh client session with a malformed KEX_ECDH_REPLY containing a server ephemeral value that is not 32 bytes long. The client-side Curve25519Kex::compute_shared_secret function in ru",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
         "title": "CVE-2026-13367 - IBM Informix Dynamic Server Privilege Escalation Vulnerability in oninit Utility",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-13367",
         "source": "cvefeed.io",
@@ -56,15 +245,6 @@
         "contentSnippet": "IBM Informix Dynamic Server 14.10, and 15.0 contain a local privilege escalation vulnerability in the oninit setuid-root utility.",
         "cveScore": 7.8,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-73427 - Trix: XSS via JSON deserialization bypass in drag-and-drop (Level0InputController)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73427",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T20:50:17.000Z",
-        "contentSnippet": "Trix is a what-you-see-is-what-you-get rich text editor for everyday writing. Prior to 2.1.18, Trix is vulnerable to cross-site scripting when a crafted application/x-trix-document JSON payload is dropped into an editor using the fallback Level0InputController, such as an embedde",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       },
       {
         "title": "CVE-2026-10543 - IBM® Db2® is vulnerable to privilege escalation with a specially crafted query",
@@ -82,42 +262,6 @@
         "isoDate": "2026-08-12T20:49:02.000Z",
         "contentSnippet": "IBM Db2 11.5.0 through 11.5.9, and 12.1.0 through 12.1.5 is affected by an improper authorization vulnerability in the certain command, allowing a non-privileged user to bypass authority checks and modify database catalog data.",
         "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-18097 - IBM® Db2® federated server could allow a local attacker to obtain sensitive information due to the logging of plain text passwords in trace files.",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18097",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T20:48:29.000Z",
-        "contentSnippet": "IBM Db2 11.5.0 through 11.5.9, and 12.1.0 through 12.1.5 for Linux, UNIX and Windows (includes DB2 Connect Server) could allow a local attacker to obtain sensitive information due to the logging of plain text passwords in trace files.",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-18096 - IBM® Db2® could allow a local attacker to cause a denial of service due to a memory leak",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18096",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T20:47:06.000Z",
-        "contentSnippet": "IBM Db2 12.1.5 for Linux, UNIX and Windows (includes DB2 Connect Server) could allow a local attacker to cause a denial of service due to a memory leak.",
-        "cveScore": 3.3,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-19654 - Rsyslog: a configuration-dependent issue in rsyslog's optional imptcp input module can allow an unauthenticated remote peer to crash rsyslogd",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19654",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T20:46:31.000Z",
-        "contentSnippet": "A unauthenticated remote peer may lead rsyslogd to crash due to a flaw in the optional imptcp module. A crafted input sequence during oversize-frame recovery can cause an invalid internal message length and terminate rsyslogd. No confidentiality or integrity impact, privilege esc",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-19130 - Provider-credential-controller: provider-credential-controller: cross-namespace credential propagation via attacker-controlled copiedfrom labels bypasses authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19130",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T20:46:21.000Z",
-        "contentSnippet": "A flaw was found in the provider-credential-controller component of multicluster-engine (MCE). An attacker with specific permissions on the hub cluster, and knowledge of a prior credential value, could exploit an authorization bypass vulnerability. By manipulating `copiedFrom` la",
-        "cveScore": 5.8,
         "cveSeverity": "MEDIUM"
       },
       {
@@ -148,15 +292,6 @@
         "cveSeverity": "HIGH"
       },
       {
-        "title": "CVE-2026-64826 - rConfig < 8.2.13 Path Traversal File Read via FileDownloadController",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64826",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T20:44:33.000Z",
-        "contentSnippet": "rConfig before 8.2.13 contains a path traversal vulnerability that allows authenticated attackers to read arbitrary files by supplying unsanitized directory traversal sequences in the filename GET parameter of the download_export() method. Attackers can craft requests with ../ se",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
         "title": "CVE-2026-13105 - IBM i Access Client Solutions (ACS) is Affected By Multiple Vulnerabilities",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-13105",
         "source": "cvefeed.io",
@@ -166,15 +301,6 @@
         "cveSeverity": "HIGH"
       },
       {
-        "title": "CVE-2026-73425 - @astrojs/netlify generates an overly-broad Netlify Image CDN allowlist because remotePatterns.pathname metacharacters are not escaped",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73425",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T20:41:10.000Z",
-        "contentSnippet": "Astro is a web framework for content-driven websites. Prior to 8.1.2, the Astro Netlify adapter converts each image.remotePatterns entry into a regular expression written to .netlify/v1/config.json under images.remote_images for Netlify's Image CDN allowlist. In packages/integrat",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
         "title": "CVE-2026-16695 - IBM i Access Client Solutions (ACS) is Affected By Multiple Vulnerabilities",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-16695",
         "source": "cvefeed.io",
@@ -182,51 +308,6 @@
         "contentSnippet": "IBM i Access Client Solutions 1.1.2.0 through 1.1.9.13 could allow a local attacker to execute arbitrary code due to improper neutralization of special elements used in an OS command.",
         "cveScore": 7.8,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-73423 - Astro: composable `astro/hono` pipeline bypasses `security.checkOrigin` when `middleware()` is absent or misordered",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73423",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T20:35:32.000Z",
-        "contentSnippet": "Astro is a web framework for content-driven websites. From 7.0.0 until 7.0.6, the composable astro/hono pipeline installs security.checkOrigin only through the middleware() primitive, while actions() and pages() can dispatch to user code independently. Mounting actions() before m",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-19004 - MongoDB BI Connector ODBC Driver Memory-Safety Issue When Handling Stored Procedure Output Parameters",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19004",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T20:33:13.000Z",
-        "contentSnippet": "An application using the MongoDB BI Connector ODBC Driver may experience a memory-safety issue when processing output parameters from a stored procedure. Triggering this issue requires connecting to an untrusted or impersonated database server that returns crafted metadata. This ",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-73422 - Astro: Reflected XSS via unescaped View Transition animation properties",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73422",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T20:32:56.000Z",
-        "contentSnippet": "Astro is a web framework for content-driven websites. From 2.9.0 until 7.1.0, Astro's server-side View Transition CSS generator interpolates animation properties into an inline style element without escaping them for CSS and HTML contexts. An attacker-controlled View Transition a",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-18888 - MongoDB BI Connector ODBC driver may write outside an allocated buffer when retrieving large floating point values as character data",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18888",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T20:29:33.000Z",
-        "contentSnippet": "The MongoDB BI Connector ODBC Driver converts floating point column values into text without checking that the result fits within the destination buffer. When an application reads a sufficiently large floating point value as text, the driver may write beyond the end of that buffe",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-65370 - ServiceTalk HTTP Request Smuggling Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65370",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T20:27:43.000Z",
-        "contentSnippet": "ServiceTalk HTTP/1.x incorrectly handles malformed Transfer-Encoding which could result in request smuggling attacks. This vulnerability is addressed in servicetalk version 0.42.65.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       },
       {
         "title": "CVE-2026-73301 - Budibase: Missing RBAC on GET /api/global/groups allows BASIC users to enumerate all tenant groups and role mappings",
@@ -821,87 +902,6 @@
         "contentSnippet": "A party with write access to stored session data may affect JFrog Artifactory under specific conditions.",
         "cveScore": 6.6,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-66382 - Authenticated users may write files outside the intended Artifactory work directory",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66382",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T15:08:11.000Z",
-        "contentSnippet": "An authenticated user may write files outside the intended Artifactory work directory under specific conditions.",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-66381 - Repository readers may access content outside configured upstream paths",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66381",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T15:07:01.000Z",
-        "contentSnippet": "A repository reader with cache-deploy permission may access content outside a configured upstream path under specific conditions.",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-68760 - Potential remember-me authentication bypass in JFrog Artifactory",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68760",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T15:04:59.000Z",
-        "contentSnippet": "An unauthenticated user may bypass authentication under specific cache conditions.",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-66379 - Authenticated users may view private Puppet module metadata",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66379",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T15:03:03.000Z",
-        "contentSnippet": "An authenticated user may view private Puppet module metadata without repository read access.",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-66378 - Authenticated users may access private NuGet metadata",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66378",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T15:02:08.000Z",
-        "contentSnippet": "An authenticated user without repository read permission may access private NuGet metadata under specific conditions.",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-66377 - Anonymous users may access restricted Artifactory repository information",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66377",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T15:00:49.000Z",
-        "contentSnippet": "An unauthenticated user may access restricted repository information under specific conditions.",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-68755 - Bundle writers may alter trusted release information in JFrog Artifactory",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68755",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T15:00:06.000Z",
-        "contentSnippet": "A bundle writer may create misleading release promotion information under specific conditions.",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-66380 - Authenticated users may access private OCI referrer metadata",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66380",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T14:59:24.000Z",
-        "contentSnippet": "An authenticated user without repository read permission may access private OCI referrer metadata under specific conditions.",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-68754 - Publishers without delete permission can overwrite docker layer information",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68754",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T14:58:43.000Z",
-        "contentSnippet": "A repository publisher without delete permission may modify protected package content under specific conditions.",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
@@ -1110,6 +1110,13 @@
       },
       {
         "title": "Now we have a timeline of the OpenAI accidental attack against Hugging Face",
+        "link": "https://simonwillison.net/2026/Aug/7/openai-timeline/",
+        "source": "Simon Willison's Weblog",
+        "isoDate": "2026-08-07T23:55:58.000Z",
+        "contentSnippet": "OpenAI gave a last-minute presentation at the Black Hat security on Wednesday about \"the Hugging Face Incident\" (previously on this blog). The video was published yesterday. It's short and information dense and well worth watching, in particular because it provides full details o"
+      },
+      {
+        "title": "Now we have a timeline of the OpenAI accidental attack against Hugging Face",
         "link": "https://simonwillison.net/2026/Aug/7/openai-timeline/#atom-entries",
         "source": "Simon Willison's Weblog",
         "isoDate": "2026-08-07T23:55:58.000Z",
@@ -1271,6 +1278,13 @@
       },
       {
         "title": "One-shotting a Raccoon Heist game using Claude Fable 5",
+        "link": "https://simonwillison.net/2026/Aug/5/raccoon-heist/",
+        "source": "Simon Willison's Weblog",
+        "isoDate": "2026-08-05T19:42:38.000Z",
+        "contentSnippet": "Back in 2022 I tweeted screenshots of a game concept generated by GPT-3 and some concept \"art\" created using DALL-E. Today, on the fourth anniversary of that tweet, I decided to see if Claude Fable 5 (running in Claude Code for web) could build the entire game from the content of"
+      },
+      {
+        "title": "One-shotting a Raccoon Heist game using Claude Fable 5",
         "link": "https://simonwillison.net/2026/Aug/5/raccoon-heist/#atom-entries",
         "source": "Simon Willison's Weblog",
         "isoDate": "2026-08-05T19:42:38.000Z",
@@ -1317,6 +1331,13 @@
         "source": "MarkTechPost",
         "isoDate": "2026-08-05T04:43:17.000Z",
         "contentSnippet": "CopilotKit has published the Channels SDK, an MIT licensed library that runs an existing AG-UI agent inside Slack and Microsoft Teams. Version 0.5.0 ships five platform adapters and a documented runtime contract. This breakdown covers the verified deployment paths, the baseline r"
+      },
+      {
+        "title": "New release of LLM adds support for reasoning traces, OpenAI Responses, server-side tools, and smarter logging",
+        "link": "https://simonwillison.net/2026/Aug/4/new-release-of-llm/",
+        "source": "Simon Willison's Weblog",
+        "isoDate": "2026-08-04T23:58:24.000Z",
+        "contentSnippet": "I released LLM 0.32 this morning, the most significant new version of LLM since the initial launch of the project. The new version includes support for visible reasoning traces, server-side provider tools, redesigned content-addressable SQLite logs, new models, and new features e"
       },
       {
         "title": "New release of LLM adds support for reasoning traces, OpenAI Responses, server-side tools, and smarter logging",
@@ -1502,6 +1523,13 @@
       },
       {
         "title": "Stateless MCP has recaptured my interest (and inspired mcp-explorer and datasette-mcp)",
+        "link": "https://simonwillison.net/2026/Jul/31/stateless-mcp/",
+        "source": "Simon Willison's Weblog",
+        "isoDate": "2026-07-31T23:13:22.000Z",
+        "contentSnippet": "Tuesday was Stateless MCP day - the rollout of MCP 2.0, or the 2026-07-28 Model Context Protocol specification to use the more formal but less memorable name. This is the most significant change to the MCP spec since it first launched, and has also served to reignite my personal "
+      },
+      {
+        "title": "Stateless MCP has recaptured my interest (and inspired mcp-explorer and datasette-mcp)",
         "link": "https://simonwillison.net/2026/Jul/31/stateless-mcp/#atom-entries",
         "source": "Simon Willison's Weblog",
         "isoDate": "2026-07-31T23:13:22.000Z",
@@ -1576,34 +1604,6 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-07-30T17:22:32.000Z",
         "contentSnippet": "This post walks through deploying Kimi K3 on AWS using two approaches: Amazon SageMaker HyperPod, and Amazon Elastic Kubernetes Service (Amazon EKS) cluster."
-      },
-      {
-        "title": "Google DeepMind Ships Three Physical AI Models For Whole Body Control, Dexterity And Multi Robot Collaboration",
-        "link": "https://www.marktechpost.com/2026/07/30/google-deepmind-gemini-robotics-2-whole-body-control-dexterity-multi-robot-collaboration/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-07-30T17:20:50.000Z",
-        "contentSnippet": "Google DeepMind has released Gemini Robotics 2, the intelligence layer for its next generation of robots. The release ships three models: a vision-language-action model for whole body humanoid control, Gemini Robotics ER 2 for embodied reasoning and task orchestration, and an on-"
-      },
-      {
-        "title": "How Yahoo enhances search retargeting using Amazon Bedrock",
-        "link": "https://aws.amazon.com/blogs/machine-learning/how-yahoo-enhances-search-retargeting-using-amazon-bedrock/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-07-30T16:40:36.000Z",
-        "contentSnippet": "In this post, we demonstrate how Yahoo implemented Amazon Bedrock to enhance their Search Retargeting (SRT) capabilities in the Yahoo DSP ad tech suite. SRT is a core audience targeting solution that helps advertisers reach users based on their historical search behavior, bridgin"
-      },
-      {
-        "title": "Inference meta-monitoring for Amazon SageMaker AI endpoints with Amazon Quick",
-        "link": "https://aws.amazon.com/blogs/machine-learning/inference-meta-monitoring-for-amazon-sagemaker-ai-endpoints-with-amazon-quick/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-07-30T16:10:10.000Z",
-        "contentSnippet": "Learn how to build an inference meta-monitoring system for Amazon SageMaker AI endpoints using Amazon Quick. This governance layer sits above production ML inference pipelines to continuously track prediction and data quality, detect drift, integrate delayed ground truth, and sur"
-      },
-      {
-        "title": "Introducing explicit prompt caching for OpenAI GPT-5.6 models on Amazon Bedrock",
-        "link": "https://aws.amazon.com/blogs/machine-learning/introducing-explicit-prompt-caching-for-openai-gpt-5-6-models-on-amazon-bedrock/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-07-30T16:02:32.000Z",
-        "contentSnippet": "OpenAI GPT-5.6 Sol, Terra, and Luna are now generally available on Amazon Bedrock, along with explicit prompt caching that gives you precise control over which parts of your prompt are cached and reused. Learn how to get started, set up explicit caching, and migrate existing GPT "
       }
     ],
     "virtualization": [
