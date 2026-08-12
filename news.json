@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-12T19:56:42.683Z",
+  "updatedAt": "2026-08-12T20:38:11.089Z",
   "generator": "rss",
   "feeds": {
     "cve": [
@@ -10,69 +10,6 @@
         "isoDate": "2026-08-12T19:17:55.000Z",
         "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.39.25, the GET /api/global/groups endpoint in packages/worker/src/api/routes/global/groups.ts omitted auth.builderOrAdmin, allowing an authenticated BASIC role user to enumerate tenant groups, role mappings and user members",
         "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-19311 - Missing Authorization in Execute Monitor API in OpenSearch Alerting Plugin",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19311",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T19:17:31.000Z",
-        "contentSnippet": "Missing authorization in the Execute Monitor API in Amazon OpenSearch Alerting plugin might allow an authenticated remote user to read, modify, or delete arbitrary index data via a crafted inline monitor request with unintentional data source and input index parameters.",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-18952 - Missing Input Validation in Threat Intel Feed Parser in OpenSearch Security Analytics Plugin",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18952",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T19:17:31.000Z",
-        "contentSnippet": "Missing input validation in the threat intelligence feed parser in the OpenSearch Security Analytics plugin might allow an authenticated remote user to perform server-side request forgery and read local files via a crafted URL parameter to the threat intel source configuration en",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-18678 - Kong Mesh: kumactl connects to the control plane without verifying the TLS certificate when no CA is configured",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18678",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T19:17:31.000Z",
-        "contentSnippet": "When an operator adds an HTTPS control plane profile to kumactl without providing a CA certificate, kumactl disables TLS verification and sends API tokens over the unverified connection. An attacker on the network path between the operator and the control plane can intercept user",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-18677 - Kong Mesh: a dataplane token without a workload binding can claim any workload's SPIFFE identity",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18677",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T19:17:31.000Z",
-        "contentSnippet": "In Kong Mesh running in universal mode with a MeshIdentity whose SPIFFE ID path template derives from the dataplane's kuma.io/workload label, the XDS authenticator in kuma-cp validates that label only when the dataplane token is bound to a workload. Workload binding is optional, ",
-        "cveScore": 6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-18676 - Kong Mesh: default control plane config leaks the admin token cross-origin via a CORS wildcard and localhost admin",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18676",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T19:17:30.000Z",
-        "contentSnippet": "The default kuma-cp configuration in Kong Mesh reveals the admin bootstrap token and signing keys to any webpage the operator visits while the control plane is reachable from their browser. Due to a CORS misconfiguration a cross-origin fetch() from a malicious page returns the ad",
-        "cveScore": 5.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-18675 - Kong Mesh: control plane denial of service via a malformed dataplane token with a non-string JWT kid",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18675",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T19:17:30.000Z",
-        "contentSnippet": "The dataplane token validator in kuma-cp performs an unchecked Go type assertion on the JWT kid header. A token whose kid is a JSON number decodes as a float64 and triggers a runtime panic before any signature, claims, or authorization check runs. The panic terminates the entire ",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-18673 - Kong Mesh: the kuma-dp readiness service exposes the Envoy admin API without authentication",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18673",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T19:17:30.000Z",
-        "contentSnippet": "When kuma-dp is configured with the Envoy admin API on a Unix domain socket, which is the default, its readiness service on TCP port 9902 - bound to all interfaces - forwards almost the entire Envoy admin API to any caller that can reach the port, with no authentication. An attac",
-        "cveScore": 5.3,
         "cveSeverity": "MEDIUM"
       },
       {
@@ -229,10 +166,217 @@
         "cveSeverity": "MEDIUM"
       },
       {
+        "title": "CVE-2026-18678 - Kong Mesh: kumactl connects to the control plane without verifying the TLS certificate when no CA is configured",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18678",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T18:49:45.000Z",
+        "contentSnippet": "When an operator adds an HTTPS control plane profile to kumactl without providing a CA certificate, kumactl disables TLS verification and sends API tokens over the unverified connection. An attacker on the network path between the operator and the control plane can intercept user",
+        "cveScore": 5.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-18677 - Kong Mesh: a dataplane token without a workload binding can claim any workload's SPIFFE identity",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18677",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T18:47:06.000Z",
+        "contentSnippet": "In Kong Mesh running in universal mode with a MeshIdentity whose SPIFFE ID path template derives from the dataplane's kuma.io/workload label, the XDS authenticator in kuma-cp validates that label only when the dataplane token is bound to a workload. Workload binding is optional, ",
+        "cveScore": 6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-18676 - Kong Mesh: default control plane config leaks the admin token cross-origin via a CORS wildcard and localhost admin",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18676",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T18:42:38.000Z",
+        "contentSnippet": "The default kuma-cp configuration in Kong Mesh reveals the admin bootstrap token and signing keys to any webpage the operator visits while the control plane is reachable from their browser. Due to a CORS misconfiguration a cross-origin fetch() from a malicious page returns the ad",
+        "cveScore": 5.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-18952 - Missing Input Validation in Threat Intel Feed Parser in OpenSearch Security Analytics Plugin",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18952",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T18:42:38.000Z",
+        "contentSnippet": "Missing input validation in the threat intelligence feed parser in the OpenSearch Security Analytics plugin might allow an authenticated remote user to perform server-side request forgery and read local files via a crafted URL parameter to the threat intel source configuration en",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-18675 - Kong Mesh: control plane denial of service via a malformed dataplane token with a non-string JWT kid",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18675",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T18:36:17.000Z",
+        "contentSnippet": "The dataplane token validator in kuma-cp performs an unchecked Go type assertion on the JWT kid header. A token whose kid is a JSON number decodes as a float64 and triggers a runtime panic before any signature, claims, or authorization check runs. The panic terminates the entire ",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-19311 - Missing Authorization in Execute Monitor API in OpenSearch Alerting Plugin",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19311",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T18:34:02.000Z",
+        "contentSnippet": "Missing authorization in the Execute Monitor API in Amazon OpenSearch Alerting plugin might allow an authenticated remote user to read, modify, or delete arbitrary index data via a crafted inline monitor request with unintentional data source and input index parameters.",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-18673 - Kong Mesh: the kuma-dp readiness service exposes the Envoy admin API without authentication",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18673",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T18:20:33.000Z",
+        "contentSnippet": "When kuma-dp is configured with the Envoy admin API on a Unix domain socket, which is the default, its readiness service on TCP port 9902 - bound to all interfaces - forwards almost the entire Envoy admin API to any caller that can reach the port, with no authentication. An attac",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-8667 - Incorrect Authorization in GitLab",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8667",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T18:18:16.000Z",
+        "contentSnippet": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 17.6 before 19.0.6, 19.1 before 19.1.4, and 19.2 before 19.2.2 that under certain conditions could have allowed an authenticated user with developer role to modify certain package registry metadata without",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-7427 - Allocation of Resources Without Limits or Throttling in GitLab",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-7427",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T18:18:16.000Z",
+        "contentSnippet": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 18.5 before 19.0.6, 19.1 before 19.1.4, and 19.2 before 19.2.2 that under certain conditions could have allowed an unauthenticated user to cause a denial of service due to improper input validation.",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-73327 - Joomla 6.1.1 Zip Slip Path Traversal via com_joomlaupdate extract.php",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73327",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T18:18:15.000Z",
+        "contentSnippet": "Joomla 6.1.1 contains a path traversal vulnerability in the com_joomlaupdate extension that allows a Super User to be induced into extracting a crafted archive containing directory traversal sequences or absolute paths in ZIP entry filenames. Attackers can supply malicious ZIP en",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-73300 - Budibase: SQL Injection via `multipleStatements: true`",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73300",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T18:18:15.000Z",
+        "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.40.0, the MySQL integration component in Budibase is configured with multipleStatements: true, enabling execution of multiple SQL statements in a single query. Attackers can inject malicious SQL commands through user input ",
+        "cveScore": 9.6,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-73299 - Prompty: Server-Side Template Injection to Remote Code Execution in the @prompty/core Nunjucks Renderer",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73299",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T18:18:15.000Z",
+        "contentSnippet": "Prompty is a markdown file format (.prompty) for LLM prompts. Prior to 0.1.5 and 2.0.0-beta.5, the TypeScript Nunjucks renderer evaluated untrusted .prompty template bodies with unrestricted JavaScript member access. An attacker-controlled template could traverse constructor and ",
+        "cveScore": 10,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-73298 - Microsoft Container Migration Solution Accelerator: Authenticated IDOR allowing read/write/delete processes",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73298",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T18:18:15.000Z",
+        "contentSnippet": "The Microsoft Container Migration Solution Accelerator is a multi-service application that provides a multi-agent, AI-driven migration solution for moving container service configurations to Azure Kubernetes Service. In version 2.1.2 and earlier, a security vulnerability was iden",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-69106 - Potential cache poisoning in JFrog Artifactory",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-69106",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T18:18:11.000Z",
+        "contentSnippet": "A low-privileged user may poison cached artifact metadata under specific conditions, potentially causing consumers to retrieve untrusted content.",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-49467 - TOTP enrollment hijack: password gate skipped due to unawaited promise",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49467",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T18:17:30.000Z",
+        "contentSnippet": "Pingvin Share X is a secure and easy self-hosted file sharing platform. A vulnerability in versions 1.5.0 through 1.18.0 allow an attacker to bypass password verification when managing Time-based One-Time Password (TOTP) settings. The root cause is a missing `await` keyword on ca",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-44741 - Pimcore Admin Classic Bundle Vulnerable to SQL Injection in Translation Grid Date Filter via Unsanitized Property Parameter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44741",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T18:17:29.000Z",
+        "contentSnippet": "Pimcore's Admin Classic Bundle provides a Backend UI for Pimcore. Versions prior to 2.3.6 and 1.7.18 have a SQL injection vulnerability in Pimcore's translation grid date filter — the user-supplied `property` field from the filter JSON is interpolated directly into a `UNIX_TIMEST",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-42018 - Anonymous user token generation exposure in JFrog Artifactory",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-42018",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T18:17:29.000Z",
+        "contentSnippet": "JFrog Artifactory could return an internal anonymous-user token to an unauthenticated caller when anonymous access is disabled, potentially exposing sensitive resources.",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-18713 - IBM i is Affected By Multiple Vulnerabilities in Navigator for i",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18713",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T18:17:28.000Z",
+        "contentSnippet": "IBM i 7.6, 7.5, 7.4, and 7.3 s vulnerable to privilege escalation via Navigator for i. An authenticated user could elevate privileges to a root user to execute commands.",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-18669 - IBM i is Affected By A Privilege Escalation Vulnerability []",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18669",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T18:17:28.000Z",
+        "contentSnippet": "IBM i 7.6, 7.5, 7.4, and 7.3 is vulnerable to a privilege escalation as the result of a remote code execution vulnerability in the activation engine component. An authenticated attacker can execute a maliciously planted script with root authority.",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-18250 - IBM i is Affected By Multiple Vulnerabilities in Navigator for i",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18250",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T18:17:28.000Z",
+        "contentSnippet": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote authenticated attacker to obtain sensitive information and bypass security restrictions due to a race condition.",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-18244 - Missing Authorization in GitLab",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18244",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T18:17:28.000Z",
+        "contentSnippet": "GitLab has remediated an issue in GitLab EE affecting all versions from 17.7 before 19.0.6, 19.1 before 19.1.4, and 19.2 before 19.2.2 that under certain conditions could have allowed an authenticated user to view restricted configuration settings due to improper authorization ch",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-18235 - IBM i is Affected By Multiple Vulnerabilities in Navigator for i",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18235",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T18:17:28.000Z",
+        "contentSnippet": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote authenticated attacker to execute arbitrary Control Language commands due to insufficient input validation.",
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-17420 - IBM i is Affected By Multiple Vulnerabilities in SQL",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-17420",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T18:17:27.000Z",
+        "contentSnippet": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote authenticated attacker to bypass security restrictions due to improper neutralization of special elements in an SQL parameter.",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
         "title": "CVE-2026-17419 - IBM i is Affected By Multiple Vulnerabilities in SQL",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-17419",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-12T17:23:17.000Z",
+        "isoDate": "2026-08-12T18:17:26.000Z",
         "contentSnippet": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote authenticated attacker to modify SQL tables due to improper neutralization of special elements used in an SQL command.",
         "cveScore": 6.5,
         "cveSeverity": "MEDIUM"
@@ -241,7 +385,7 @@
         "title": "CVE-2026-17418 - IBM i is Affected By Multiple Vulnerabilities in SQL",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-17418",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-12T17:22:48.000Z",
+        "isoDate": "2026-08-12T18:17:26.000Z",
         "contentSnippet": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a local authenticated attacker to cause a denial of service due to improper neutralization of special elements used in an SQL command.",
         "cveScore": 8.5,
         "cveSeverity": "HIGH"
@@ -254,15 +398,6 @@
         "contentSnippet": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote authenticated attacker to obtain sensitive information due to improper limitation of a pathname to a restricted directory.",
         "cveScore": 6.5,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-18235 - IBM i is Affected By Multiple Vulnerabilities in Navigator for i",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18235",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T17:21:40.000Z",
-        "contentSnippet": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote authenticated attacker to execute arbitrary Control Language commands due to insufficient input validation.",
-        "cveScore": 8.3,
-        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-17268 - IBM i is Affected By Multiple Vulnerabilities in Navigator for i",
@@ -281,24 +416,6 @@
         "contentSnippet": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote authenticated attacker to escalate privileges due to improper authorization in the handling of high-authority threads.",
         "cveScore": 9.6,
         "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-18250 - IBM i is Affected By Multiple Vulnerabilities in Navigator for i",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18250",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T17:19:44.000Z",
-        "contentSnippet": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote authenticated attacker to obtain sensitive information and bypass security restrictions due to a race condition.",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-18713 - IBM i is Affected By Multiple Vulnerabilities in Navigator for i",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18713",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T17:19:22.000Z",
-        "contentSnippet": "IBM i 7.6, 7.5, 7.4, and 7.3 s vulnerable to privilege escalation via Navigator for i. An authenticated user could elevate privileges to a root user to execute commands.",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-16904 - IBM i is Affected By improper privilege management in Navigator for i",
@@ -785,123 +902,6 @@
         "contentSnippet": "An authorization bypass vulnerability in Vulnerability-Lookup allowed inactive or unconfirmed accounts to subscribe to Server-Sent Events (SSE) streams through the /pubsub/subscribe/ endpoint. The token_required decorator used by the Pub/Sub interface authenticated requests solel",
         "cveScore": 5.3,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-73262 - Prowler: Stored XSS in HTML reports through unescaped cloud resource tags",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73262",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T14:14:27.000Z",
-        "contentSnippet": "Prowler is a cloud security platform. Prior to 5.37.0, Prowler's HTML output formatter in prowler/lib/outputs/html/html.py inserted finding.resource_tags, assembled by unroll_dict and parse_html_string, into generated reports without HTML escaping, allowing a cloud principal who ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-49349 - regclient may leak authentication credentials to external blob stores",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49349",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T14:11:58.000Z",
-        "contentSnippet": "regclient is a Docker and OCI Registry Client in Go. Prior to version 0.11.5, credentials for a registry may be inadvertently leaked to external servers. A prerequisite for this attack is a malicious registry server, a malicious blob store, or a registry that does not restrict th",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-50561 - Yuxi has a JWT Authentication Bypass Leading to Cross-Instance Administrator Token Reuse",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50561",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T14:07:07.000Z",
-        "contentSnippet": "Yuxi is a large-model-based intelligent knowledge base and knowledge graph agent development platform. Prior to version 0.6.2, the project's authentication mechanism contains a flaw. In affected versions, the system does not sufficiently validate the identity token in the Authori",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-73374 - Stored Cross-Site Scripting (XSS) via Unescaped CNA Reference Tags in vulnerability-lookup",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73374",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T14:05:39.000Z",
-        "contentSnippet": "A stored cross-site scripting (XSS) vulnerability existed in Vulnerability-Lookup in the render_tag_badges Jinja filter used to display reference tags associated with vulnerability records. Values from containers.cna.references[].tags[] were directly interpolated into HTML badge ",
-        "cveScore": 6.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-49262 - Aimeos Pagible CMS vulnerable to Server Side Request Forgery (SSRF) via DNS rebinding in admin proxy",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49262",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T14:04:09.000Z",
-        "contentSnippet": "In the Aimeos Pagible content management system prior to version 0.10.4, the administrative proxy route (`cmsproxy`) is vulnerable to a Server-Side Request Forgery (SSRF) attack via DNS Rebinding. A Time-of-Check to Time-of-Use (TOCTOU) race condition exists between the URL valid",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-67287 - Joomla Extension - joomshaper.com - Unauthenticated comment creation in SP Page Builder < 6.8.0",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67287",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T13:59:00.000Z",
-        "contentSnippet": "Joomla Extension - joomshaper.com - Unauthenticated comment creation in SP Page Builder",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-67286 - Joomla Extension - joomshaper.com - Unauthenticated arbitrary directory creation and file write in SP Page Builder < 6.8.0",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67286",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T13:58:43.000Z",
-        "contentSnippet": "Joomla Extension - joomshaper.com - Unauthenticated arbitrary directory creation and file write in SP Page Builder",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-47234 - Admidio writes session IDs and auto-login cookie values to application logs",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47234",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T13:58:11.000Z",
-        "contentSnippet": "Admidio is an open-source user management solution. Prior to version 5.0.10, when debug logging is enabled, `Session::setCookie()` logs full cookie values and `Session::start()` logs the current session ID. In a real Admidio deployment this includes both the active session cookie",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-47233 - Admidio: Any logged-in user can delete inventory fields via `mode=field_delete` — incomplete fix of #2024",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47233",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T13:57:14.000Z",
-        "contentSnippet": "Admidio is an open-source user management solution. Version 5.0.9 added a missing `isAdministratorInventory()` gate to `case 'item_delete':` in `modules/inventory.php`. The same fix was not applied to the sibling `case 'field_delete':` handler, which destroys an entire inventory ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-71408 - Fortinet FortiOS Resource Exhaustion Denial of Service Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71408",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T13:17:25.000Z",
-        "contentSnippet": "A allocation of resources without limits or throttling vulnerability in Fortinet FortiOS 7.6.0 through 7.6.6, FortiOS 7.4 all versions, FortiOS 7.2 all versions may allow attacker to denial of service via",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-71407 - Fortinet FortiOS Stack-based Buffer Overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71407",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T13:17:25.000Z",
-        "contentSnippet": "A Stack-based Buffer Overflow vulnerability [CWE-121] vulnerability in Fortinet FortiOS 7.6.1 through 7.6.6 may allow an unauthenticated attacker who can bypass stack protection and ASLR to execute arbitrary code or commands in the context of the WAD daemon via crafted sockets, o",
-        "cveScore": 5.6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-70468 - Fortinet FortiManager Authentication Bypass Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70468",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T13:17:25.000Z",
-        "contentSnippet": "A authentication bypass using an alternate path or channel vulnerability in Fortinet FortiManager 7.6.1, FortiManager 7.4.3 through 7.4.5, FortiManager 7.2.5 through 7.2.9, FortiManager Cloud 7.6.1, FortiManager Cloud 7.4.3 through 7.4.5, FortiManager Cloud 7.2.5 through 7.2.9 ma",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-70467 - Fortinet FortiSIEM Server-Side Request Forgery Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70467",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T13:17:25.000Z",
-        "contentSnippet": "A server-side request forgery (ssrf) vulnerability in Fortinet FortiSIEM 7.5.0, FortiSIEM 7.4.0 through 7.4.2, FortiSIEM 7.3.0 through 7.3.5, FortiSIEM 7.2 all versions, FortiSIEM 7.1 all versions, FortiSIEM 7.0 all versions, FortiSIEM 6.7 all versions, FortiSIEM 6.6 all versions",
-        "cveScore": 3.8,
-        "cveSeverity": "LOW"
       }
     ],
     "ai": [
