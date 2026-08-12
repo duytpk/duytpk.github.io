@@ -1,8 +1,62 @@
 {
-  "updatedAt": "2026-08-12T03:57:00.462Z",
+  "updatedAt": "2026-08-12T05:28:13.504Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-12235 - Out-of-bounds write in Xtensa llext PLT relocation from malformed ELF (CWE-787)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12235",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T04:55:15.000Z",
+        "contentSnippet": "The Linkable Loadable Extensions (llext) subsystem mis-handles PLT/RELA relocation entries when linking a relocatable (partially-linked) ELF extension. In llext_link_plt() (subsys/llext/llext_link.c), the relocatable branch (tgt != NULL, the path used for Xtensa relocatable objec",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-12234 - TOCTOU double-fetch in `zsock_sendmsg`/`recvmsg` userspace verifiers allows kernel-heap out-of-bounds write",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12234",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T04:39:23.000Z",
+        "contentSnippet": "The userspace syscall verifiers z_vrfy_zsock_sendmsg() and z_vrfy_zsock_recvmsg() in subsys/net/lib/sockets/sockets.c snapshot the caller-supplied struct net_msghdr into a kernel-side copy with k_usermode_from_copy(), but then re-read the still-live user struct for subsequent dec",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-64954 - Velociraptor collect_client() Permissions Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64954",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T04:26:32.000Z",
+        "contentSnippet": "Velociraptor allows scheduling new collections via VQL queries in notebooks. For a user to schedule a new collection, they require the COLLECT_CLIENT permission. However, this is not enforced when the user can run a VQL query which resets the authorization provider. This allows a",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2025-15687 - Open5GS SMF Diameter Gx Credit-Control-Answer smf_gx_cca_cb denial of service",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-15687",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T04:17:38.000Z",
+        "contentSnippet": "A security flaw has been discovered in Open5GS up to 2.7.6. Impacted is the function smf_gx_cca_cb of the component SMF Diameter Gx Credit-Control-Answer Handler. The manipulation results in denial of service. The attack can be launched remotely. The exploit has been released to ",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-12233 - Uninitialized mutex in TLS trusted-credential backend causes kernel NULL-deref DoS under contention",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12233",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T03:54:38.000Z",
+        "contentSnippet": "The PSA Protected Storage credential backend (subsys/net/lib/tls_credentials/tls_credentials_trusted.c) declared its credential-store mutex as a plain zero-filled static struct k_mutex credential_lock; and never called k_mutex_init() on it. A statically zero-filled k_mutex has an",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-12232 - Out-of-bounds read via unvalidated stream_id in Intel ALH DAI get_properties",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12232",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T03:34:14.000Z",
+        "contentSnippet": "The Intel ALH digital-audio-interface driver function dai_alh_get_properties() in drivers/dai/intel/alh/alh.c used a caller-supplied int stream_id with no range validation. The value indexes the fixed-size static const uint8_t alh_handshake_map[64] array and scales a FIFO registe",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
       {
         "title": "CVE-2026-9318 - tablib versions prior to 3.10.0 Stored XSS via HTML Export Dataset Title",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-9318",
@@ -65,15 +119,6 @@
         "contentSnippet": "A vulnerability was detected in Open5GS up to 2.7.6. Affected is the function diam_log_func of the file lib/diameter/common/init.c of the component CER Handler. The manipulation results in reachable assertion. The attack can be executed remotely. The exploit is now public and may",
         "cveScore": 5.5,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2025-15687 - Open5GS SMF Diameter Gx Credit-Control-Answer smf_gx_cca_cb denial of service",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-15687",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T02:45:10.000Z",
-        "contentSnippet": "A security flaw has been discovered in Open5GS up to 2.7.6. Impacted is the function smf_gx_cca_cb of the component SMF Diameter Gx Credit-Control-Answer Handler. The manipulation results in denial of service. The attack can be launched remotely. The exploit has been released to ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       },
       {
         "title": "CVE-2026-73122 - Multicloud-operators-channel: multicloud-operators-channel: auto-generated role grants every managed-cluster agent secrets:get,list,watch in channel namespaces",
@@ -857,54 +902,16 @@
         "contentSnippet": "An issue in MongoDB Server could allow an authenticated user with a limited database-scoped role to perform an action against protected system collections that should require more specific privileges. This could result in exposure of collection metadata and, on certain deployment",
         "cveScore": 5.4,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-18690 - Improper Authorization in MongoDB Server Allows Unauthorized Actions on System Collections",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18690",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T18:47:05.000Z",
-        "contentSnippet": "An issue in MongoDB Server could allow an authenticated user with a limited database-scoped role to perform an action against protected system collections that their assigned privileges should not permit. This could result in critical system collections being dropped and recreate",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-18699 - Improper Input Validation in MongoDB Query Planner Leads to Denial of Service",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18699",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T18:46:35.000Z",
-        "contentSnippet": "An issue in MongoDB Server's query planner could allow an authenticated user with read-level privileges to cause the server process to terminate unexpectedly by submitting a specially formed query against a collection with a text index. This could result in a denial of service, a",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-18691 - Improper Authentication in MongoDB Intra-Cluster Connections Allows Credential Exposure",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18691",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T18:46:02.000Z",
-        "contentSnippet": "An issue in MongoDB Server's intra-cluster connection setup could allow a party with suitable network access to influence which authentication mechanism is used when one replica set member connects to another. Under certain conditions, this could cause the cluster's shared intern",
-        "cveScore": 9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-73227 - electerm's RDP clipboard file download may parse unsafe file name",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73227",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T18:45:21.000Z",
-        "contentSnippet": "electerm is an open-sourced terminal/ssh/sftp/telnet/serialport/RDP/VNC/Spice/ftp client. Prior to 3.15.120, electerm allows a malicious RDP server to write attacker-controlled content outside the selected save directory because the RDP clipboard download path in src/client/compo",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-73226 - Electerm WebSocket `upgrade-func` and `fs` handlers allow arbitrary method/function invocation due to missing method-name allowlist",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73226",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T18:44:01.000Z",
-        "contentSnippet": "electerm is an open-sourced terminal/ssh/sftp/telnet/serialport/RDP/VNC/Spice/ftp client. Prior to 3.15.186, electerm allows an authenticated WebSocket client to invoke unintended internal functions through client-controlled func values in upgrade-func in src/app/server/dispatch-",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       }
     ],
     "ai": [
+      {
+        "title": "Xiaomi’s MiLM Plus Releases PROVE: Perception-Aligned Object Removal Metrics RC-S and RC-T With a Real-World Video Benchmark",
+        "link": "https://www.marktechpost.com/2026/08/11/xiaomis-milm-plus-releases-prove-perception-aligned-object-removal-metrics-rc-s-and-rc-t-with-a-real-world-video-benchmark/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-08-12T05:05:52.000Z",
+        "contentSnippet": "Object removal models have improved faster than the metrics used to judge them. Diffusion erasers now reconstruct shadows, reflections and occluded structure convincingly, yet PSNR, SSIM, LPIPS, ReMOVE and CFD frequently rank their outputs the wrong way. The root cause is structu"
+      },
       {
         "title": "Accelerate cyber defense with OpenAI and AWS: Daybreak Red & Daybreak Blue now available to eligible customers on Amazon Bedrock",
         "link": "https://aws.amazon.com/blogs/machine-learning/accelerate-cyber-defense-with-openai-and-aws-daybreak-red-daybreak-blue-now-available-to-eligible-customers-on-amazon-bedrock/",
@@ -1597,13 +1604,6 @@
         "source": "MarkTechPost",
         "isoDate": "2026-07-29T19:30:35.000Z",
         "contentSnippet": "Three terms now compete for the same line in AI engineering job descriptions. Prompt engineering is the established one. Loop engineering entered the AI vocabulary in late 2025 and dominated developer discussion through June 2026. Graph engineering followed roughly six weeks late"
-      },
-      {
-        "title": "Authenticate with Private Key JWT using Amazon Bedrock AgentCore Identity",
-        "link": "https://aws.amazon.com/blogs/machine-learning/authenticate-with-private-key-jwt-using-amazon-bedrock-agentcore-identity/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-07-29T16:20:28.000Z",
-        "contentSnippet": "This post explains how Private Key JWT client authentication works in AgentCore Identity and reviews the supported grant flows. We then walk through creating an AWS KMS signing key, registering its public key with your identity provider, configuring a credential provider on the A"
       }
     ],
     "virtualization": [
