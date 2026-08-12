@@ -1,13 +1,31 @@
 {
-  "updatedAt": "2026-08-12T05:28:13.504Z",
+  "updatedAt": "2026-08-12T07:11:10.991Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
+        "title": "CVE-2026-19594 - Path Traversal and HTTP Parameter Pollution in Snowflake Python API (snowflake.core) Allow Confused-Deputy Privilege Escalation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19594",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T05:22:07.000Z",
+        "contentSnippet": "Insufficient input sanitization in Snowflake Python API (`snowflake.core`) versions prior to 1.13.0 allowed confused-deputy privilege escalation through two related weaknesses: path traversal (CWE-22) via unencoded `..` identifier path segments, and HTTP parameter pollution (CWE-",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-64954 - Velociraptor collect_client() Permissions Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64954",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T05:19:17.000Z",
+        "contentSnippet": "Velociraptor allows scheduling new collections via VQL queries in notebooks. For a user to schedule a new collection, they require the COLLECT_CLIENT permission. However, this is not enforced when the user can run a VQL query which resets the authorization provider. This allows a",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
         "title": "CVE-2026-12235 - Out-of-bounds write in Xtensa llext PLT relocation from malformed ELF (CWE-787)",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-12235",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-12T04:55:15.000Z",
+        "isoDate": "2026-08-12T05:17:42.000Z",
         "contentSnippet": "The Linkable Loadable Extensions (llext) subsystem mis-handles PLT/RELA relocation entries when linking a relocatable (partially-linked) ELF extension. In llext_link_plt() (subsys/llext/llext_link.c), the relocatable branch (tgt != NULL, the path used for Xtensa relocatable objec",
         "cveScore": 6.3,
         "cveSeverity": "MEDIUM"
@@ -16,34 +34,16 @@
         "title": "CVE-2026-12234 - TOCTOU double-fetch in `zsock_sendmsg`/`recvmsg` userspace verifiers allows kernel-heap out-of-bounds write",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-12234",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-12T04:39:23.000Z",
+        "isoDate": "2026-08-12T05:17:42.000Z",
         "contentSnippet": "The userspace syscall verifiers z_vrfy_zsock_sendmsg() and z_vrfy_zsock_recvmsg() in subsys/net/lib/sockets/sockets.c snapshot the caller-supplied struct net_msghdr into a kernel-side copy with k_usermode_from_copy(), but then re-read the still-live user struct for subsequent dec",
         "cveScore": 7.8,
         "cveSeverity": "HIGH"
       },
       {
-        "title": "CVE-2026-64954 - Velociraptor collect_client() Permissions Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64954",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T04:26:32.000Z",
-        "contentSnippet": "Velociraptor allows scheduling new collections via VQL queries in notebooks. For a user to schedule a new collection, they require the COLLECT_CLIENT permission. However, this is not enforced when the user can run a VQL query which resets the authorization provider. This allows a",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2025-15687 - Open5GS SMF Diameter Gx Credit-Control-Answer smf_gx_cca_cb denial of service",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-15687",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T04:17:38.000Z",
-        "contentSnippet": "A security flaw has been discovered in Open5GS up to 2.7.6. Impacted is the function smf_gx_cca_cb of the component SMF Diameter Gx Credit-Control-Answer Handler. The manipulation results in denial of service. The attack can be launched remotely. The exploit has been released to ",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
         "title": "CVE-2026-12233 - Uninitialized mutex in TLS trusted-credential backend causes kernel NULL-deref DoS under contention",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-12233",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-12T03:54:38.000Z",
+        "isoDate": "2026-08-12T05:17:42.000Z",
         "contentSnippet": "The PSA Protected Storage credential backend (subsys/net/lib/tls_credentials/tls_credentials_trusted.c) declared its credential-store mutex as a plain zero-filled static struct k_mutex credential_lock; and never called k_mutex_init() on it. A statically zero-filled k_mutex has an",
         "cveScore": 5.9,
         "cveSeverity": "MEDIUM"
@@ -52,9 +52,18 @@
         "title": "CVE-2026-12232 - Out-of-bounds read via unvalidated stream_id in Intel ALH DAI get_properties",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-12232",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-12T03:34:14.000Z",
+        "isoDate": "2026-08-12T05:17:41.000Z",
         "contentSnippet": "The Intel ALH digital-audio-interface driver function dai_alh_get_properties() in drivers/dai/intel/alh/alh.c used a caller-supplied int stream_id with no range validation. The value indexes the fixed-size static const uint8_t alh_handshake_map[64] array and scales a FIFO registe",
         "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2025-15687 - Open5GS SMF Diameter Gx Credit-Control-Answer smf_gx_cca_cb denial of service",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-15687",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T04:17:38.000Z",
+        "contentSnippet": "A security flaw has been discovered in Open5GS up to 2.7.6. Impacted is the function smf_gx_cca_cb of the component SMF Diameter Gx Credit-Control-Answer Handler. The manipulation results in denial of service. The attack can be launched remotely. The exploit has been released to ",
+        "cveScore": 4.3,
         "cveSeverity": "MEDIUM"
       },
       {
@@ -893,18 +902,16 @@
         "contentSnippet": "An issue in MongoDB Server could allow an authenticated user with direct network access to a shard to improperly commit or abort an in-progress prepared transaction, bypassing the intended transaction coordination process. This could result in cross-shard data inconsistency, clus",
         "cveScore": 6.4,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-18698 - Improper Authorization in MongoDB Server Allows Unauthorized Actions on System Collections via the validate Command",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18698",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T18:47:34.000Z",
-        "contentSnippet": "An issue in MongoDB Server could allow an authenticated user with a limited database-scoped role to perform an action against protected system collections that should require more specific privileges. This could result in exposure of collection metadata and, on certain deployment",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
+      {
+        "title": "NVIDIA AI Releases Nemotron 3.5 Lightning: A 30B Open MoE with 3B Active Parameters, and NeMo Switchyard Model Router",
+        "link": "https://www.marktechpost.com/2026/08/11/nvidia-ai-releases-nemotron-3-5-lightning-and-nemo-switchyard/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-08-12T06:59:40.000Z",
+        "contentSnippet": "NVIDIA's open 30B MoE targets the agent execution layer, with Switchyard routing each step to the cheapest capable model. The post NVIDIA AI Releases Nemotron 3.5 Lightning: A 30B Open MoE with 3B Active Parameters, and NeMo Switchyard Model Router appeared first on MarkTechPost."
+      },
       {
         "title": "Xiaomi’s MiLM Plus Releases PROVE: Perception-Aligned Object Removal Metrics RC-S and RC-T With a Real-World Video Benchmark",
         "link": "https://www.marktechpost.com/2026/08/11/xiaomis-milm-plus-releases-prove-perception-aligned-object-removal-metrics-rc-s-and-rc-t-with-a-real-world-video-benchmark/",
@@ -1597,13 +1604,6 @@
         "source": "MarkTechPost",
         "isoDate": "2026-07-30T05:28:39.000Z",
         "contentSnippet": "Moonshot AI has open-sourced MoonEP, an Expert Parallelism (EP) communication library for distributed Mixture-of-Experts (MoE) workloads. The team announced the release as a library built to make expert-parallel communication more efficient at scale. It ships under an MIT license"
-      },
-      {
-        "title": "Prompt Engineering vs Loop Engineering vs Graph Engineering: What Changes at Each Layer",
-        "link": "https://www.marktechpost.com/2026/07/29/prompt-engineering-vs-loop-engineering-vs-graph-engineering-what-changes-at-each-layer/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-07-29T19:30:35.000Z",
-        "contentSnippet": "Three terms now compete for the same line in AI engineering job descriptions. Prompt engineering is the established one. Loop engineering entered the AI vocabulary in late 2025 and dominated developer discussion through June 2026. Graph engineering followed roughly six weeks late"
       }
     ],
     "virtualization": [
