@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-08-12T14:15:03.334Z",
+  "updatedAt": "2026-08-12T15:52:10.328Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-67285 - Joomla Extension - joomshaper.com - Unauthenticated arbitrary local PHP file inclusion in SP Page Builder < 6.8.0",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67285",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T14:18:33.000Z",
+        "contentSnippet": "Joomla Extension - joomshaper.com - Unauthenticated arbitrary local PHP file inclusion in SP Page Builder",
+        "cveScore": 9.2,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-47232 - Admidio PKCS#12 private key export action lacks CSRF protection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47232",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T14:17:54.000Z",
+        "contentSnippet": "Admidio is an open-source user management solution. Prior to version 5.0.10, the sensitive `mode=export` action in `modules/sso/keys.php` exports a PKCS#12 bundle containing the configured private key and certificate, but the CSRF validation line is commented out. A forged cross-",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-47231 - Admidio has IDOR in `documents-files.php` `mode=move_save` that lets any folder-uploader exfiltrate files from private folders",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47231",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T14:17:54.000Z",
+        "contentSnippet": "Admidio is an open-source user management solution. Prior to version 5.0.10, `modules/documents-files.php` gates state-changing modes by checking that the actor has `hasUploadRight()` on the URL parameter `folder_uuid`. The `move_save` handler then operates on a *separate* URL pa",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-47230 - Admidio: IDOR in documents-files.php allows cross-folder file rename and description changes by unauthorized uploaders",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47230",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T14:17:54.000Z",
+        "contentSnippet": "Admidio is an open-source user management solution. Prior to version 5.0.10, `modules/documents-files.php` mode `file_rename_save` shares the same root-cause shape as the cross-folder move bug (`05-documents-cross-folder-move-idor.md`): the top-level rights check at lines 79-89 v",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-47229 - Admidio: CSRF in SSO client `enable` action toggles SAML/OIDC clients without token validation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47229",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T14:17:53.000Z",
+        "contentSnippet": "Admidio is an open-source user management solution. Prior to version 5.0.10, `modules/sso/clients.php` validates an `adm_csrf_token` on every state-changing branch except `enable`. The `enable` case loads the SAML or OIDC client by UUID, calls `$client->enable($enabled)`, and per",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-47228 - Admidio's CSRF in registration `send_login` mode resets arbitrary user passwords",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47228",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T14:17:53.000Z",
+        "contentSnippet": "Admidio is an open-source user management solution. `modules/registration.php` mode `send_login` regenerates a random password for `user_uuid_assigned`, stores its bcrypt hash in `adm_users.usr_password`, and emails the cleartext to that user. Every other state-changing mode in t",
+        "cveScore": 5.2,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-47227 - Admidio module-administrator can delete or reorder categories owned by other modules via dead authorization check in `modules/categories.php`",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47227",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T14:17:53.000Z",
+        "contentSnippet": "Admidio is an open-source user management solution. `modules/categories.php` checks that the supplied `type` parameter (`ANN`, `EVT`, `ROL`, `USF`, …) corresponds to a module the actor administers. The follow-up \"is this specific category editable by me\" check at lines 56-61 is d",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-16999 - XXE in Ministry of Justice's UYAP Document Editor",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16999",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T14:17:47.000Z",
+        "contentSnippet": "Improper restriction of XML external entity reference vulnerability in Ministry of Justice UYAP Document Editor allows Serialized Data External Linking. This issue affects UYAP Document Editor: from 4.5.17 before 5.4.17.",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2025-59327 - CryptoPro Secure Disk Improper Encryption Validation Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-59327",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T14:17:46.000Z",
+        "contentSnippet": "In CPSD CryptoPro Secure Disk for Bitlocker before v7.7.4, bootxsa.efi fails to properly validate LUKS encryption and, if encryption is present, all CryptoPro file integrity checks are skipped.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2025-59326 - CryptoPro Secure Disk for Bitlocker IMA Policy Bypass Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-59326",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T14:17:46.000Z",
+        "contentSnippet": "CPSD CryptoPro Secure Disk for Bitlocker before v7.7.4 fails to enforce IMA policy protections across temporary file systems, allowing for unsigned code to be executed from these locations.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2025-59325 - CryptoPro Secure Disk for Bitlocker Initramfs Information Disclosure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-59325",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T14:17:46.000Z",
+        "contentSnippet": "CPSD CryptoPro Secure Disk for Bitlocker before v7.7.4 fails to encrypt the initramfs contents, allowing for the offline recovery of secrets and cryptographic details.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-73405 - Authorization Bypass in SSE Pub/Sub Allows Unconfirmed Accounts to Access Stream Events in vulnerability-lookup",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73405",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T14:15:58.000Z",
+        "contentSnippet": "An authorization bypass vulnerability in Vulnerability-Lookup allowed inactive or unconfirmed accounts to subscribe to Server-Sent Events (SSE) streams through the /pubsub/subscribe/ endpoint. The token_required decorator used by the Pub/Sub interface authenticated requests solel",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-73262 - Prowler: Stored XSS in HTML reports through unescaped cloud resource tags",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73262",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T14:14:27.000Z",
+        "contentSnippet": "Prowler is a cloud security platform. Prior to 5.37.0, Prowler's HTML output formatter in prowler/lib/outputs/html/html.py inserted finding.resource_tags, assembled by unroll_dict and parse_html_string, into generated reports without HTML escaping, allowing a cloud principal who ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49349 - regclient may leak authentication credentials to external blob stores",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49349",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T14:11:58.000Z",
+        "contentSnippet": "regclient is a Docker and OCI Registry Client in Go. Prior to version 0.11.5, credentials for a registry may be inadvertently leaked to external servers. A prerequisite for this attack is a malicious registry server, a malicious blob store, or a registry that does not restrict th",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-50561 - Yuxi has a JWT Authentication Bypass Leading to Cross-Instance Administrator Token Reuse",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50561",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T14:07:07.000Z",
+        "contentSnippet": "Yuxi is a large-model-based intelligent knowledge base and knowledge graph agent development platform. Prior to version 0.6.2, the project's authentication mechanism contains a flaw. In affected versions, the system does not sufficiently validate the identity token in the Authori",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-73374 - Stored Cross-Site Scripting (XSS) via Unescaped CNA Reference Tags in vulnerability-lookup",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73374",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T14:05:39.000Z",
+        "contentSnippet": "A stored cross-site scripting (XSS) vulnerability existed in Vulnerability-Lookup in the render_tag_badges Jinja filter used to display reference tags associated with vulnerability records. Values from containers.cna.references[].tags[] were directly interpolated into HTML badge ",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-49262 - Aimeos Pagible CMS vulnerable to Server Side Request Forgery (SSRF) via DNS rebinding in admin proxy",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49262",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T14:04:09.000Z",
+        "contentSnippet": "In the Aimeos Pagible content management system prior to version 0.10.4, the administrative proxy route (`cmsproxy`) is vulnerable to a Server-Side Request Forgery (SSRF) attack via DNS Rebinding. A Time-of-Check to Time-of-Use (TOCTOU) race condition exists between the URL valid",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-67287 - Joomla Extension - joomshaper.com - Unauthenticated comment creation in SP Page Builder < 6.8.0",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67287",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T13:59:00.000Z",
+        "contentSnippet": "Joomla Extension - joomshaper.com - Unauthenticated comment creation in SP Page Builder",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-67286 - Joomla Extension - joomshaper.com - Unauthenticated arbitrary directory creation and file write in SP Page Builder < 6.8.0",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67286",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T13:58:43.000Z",
+        "contentSnippet": "Joomla Extension - joomshaper.com - Unauthenticated arbitrary directory creation and file write in SP Page Builder",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-47234 - Admidio writes session IDs and auto-login cookie values to application logs",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47234",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T13:58:11.000Z",
+        "contentSnippet": "Admidio is an open-source user management solution. Prior to version 5.0.10, when debug logging is enabled, `Session::setCookie()` logs full cookie values and `Session::start()` logs the current session ID. In a real Admidio deployment this includes both the active session cookie",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-47233 - Admidio: Any logged-in user can delete inventory fields via `mode=field_delete` — incomplete fix of #2024",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47233",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T13:57:14.000Z",
+        "contentSnippet": "Admidio is an open-source user management solution. Version 5.0.9 added a missing `isAdministratorInventory()` gate to `case 'item_delete':` in `modules/inventory.php`. The same fix was not applied to the sibling `case 'field_delete':` handler, which destroys an entire inventory ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-71408 - Fortinet FortiOS Resource Exhaustion Denial of Service Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71408",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T13:17:25.000Z",
+        "contentSnippet": "A allocation of resources without limits or throttling vulnerability in Fortinet FortiOS 7.6.0 through 7.6.6, FortiOS 7.4 all versions, FortiOS 7.2 all versions may allow attacker to denial of service via",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-71407 - Fortinet FortiOS Stack-based Buffer Overflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71407",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T13:17:25.000Z",
+        "contentSnippet": "A Stack-based Buffer Overflow vulnerability [CWE-121] vulnerability in Fortinet FortiOS 7.6.1 through 7.6.6 may allow an unauthenticated attacker who can bypass stack protection and ASLR to execute arbitrary code or commands in the context of the WAD daemon via crafted sockets, o",
+        "cveScore": 5.6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-70468 - Fortinet FortiManager Authentication Bypass Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70468",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T13:17:25.000Z",
+        "contentSnippet": "A authentication bypass using an alternate path or channel vulnerability in Fortinet FortiManager 7.6.1, FortiManager 7.4.3 through 7.4.5, FortiManager 7.2.5 through 7.2.9, FortiManager Cloud 7.6.1, FortiManager Cloud 7.4.3 through 7.4.5, FortiManager Cloud 7.2.5 through 7.2.9 ma",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-70467 - Fortinet FortiSIEM Server-Side Request Forgery Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70467",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T13:17:25.000Z",
+        "contentSnippet": "A server-side request forgery (ssrf) vulnerability in Fortinet FortiSIEM 7.5.0, FortiSIEM 7.4.0 through 7.4.2, FortiSIEM 7.3.0 through 7.3.5, FortiSIEM 7.2 all versions, FortiSIEM 7.1 all versions, FortiSIEM 7.0 all versions, FortiSIEM 6.7 all versions, FortiSIEM 6.6 all versions",
+        "cveScore": 3.8,
+        "cveSeverity": "LOW"
+      },
       {
         "title": "CVE-2026-47226 - Admidio: Authorization bypass in file_delete enables cross-folder file removal by authenticated users without delete privileges",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-47226",
@@ -49,15 +274,6 @@
         "cveSeverity": "HIGH"
       },
       {
-        "title": "CVE-2026-70468 - Fortinet FortiManager Authentication Bypass Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70468",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T12:19:04.000Z",
-        "contentSnippet": "A authentication bypass using an alternate path or channel vulnerability in Fortinet FortiManager 7.6.1, FortiManager 7.4.3 through 7.4.5, FortiManager 7.2.5 through 7.2.9, FortiManager Cloud 7.6.1, FortiManager Cloud 7.4.3 through 7.4.5, FortiManager Cloud 7.2.5 through 7.2.9 ma",
-        "cveScore": 7.3,
-        "cveSeverity": "HIGH"
-      },
-      {
         "title": "CVE-2026-26035 - Fortinet FortiWeb Improper Authentication Vulnerability",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-26035",
         "source": "cvefeed.io",
@@ -73,33 +289,6 @@
         "isoDate": "2026-08-12T12:19:02.000Z",
         "contentSnippet": "A incomplete list of disallowed inputs vulnerability in Fortinet FortiWeb 8.0.0 through 8.0.2, FortiWeb 7.6.0 through 7.6.5, FortiWeb 7.4 all versions, FortiWeb 7.2 all versions, FortiWeb 7.0 all versions may allow attacker to improper access control via",
         "cveScore": 4.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-71407 - Fortinet FortiOS Stack-based Buffer Overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71407",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T12:19:02.000Z",
-        "contentSnippet": "A Stack-based Buffer Overflow vulnerability [CWE-121] vulnerability in Fortinet FortiOS 7.6.1 through 7.6.6 may allow an unauthenticated attacker who can bypass stack protection and ASLR to execute arbitrary code or commands in the context of the WAD daemon via crafted sockets, o",
-        "cveScore": 5.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-70467 - Fortinet FortiSIEM Server-Side Request Forgery Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70467",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T12:19:02.000Z",
-        "contentSnippet": "A server-side request forgery (ssrf) vulnerability in Fortinet FortiSIEM 7.5.0, FortiSIEM 7.4.0 through 7.4.2, FortiSIEM 7.3.0 through 7.3.5, FortiSIEM 7.2 all versions, FortiSIEM 7.1 all versions, FortiSIEM 7.0 all versions, FortiSIEM 6.7 all versions, FortiSIEM 6.6 all versions",
-        "cveScore": 3.4,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-71408 - Fortinet FortiOS Resource Exhaustion Denial of Service Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71408",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T12:19:00.000Z",
-        "contentSnippet": "A allocation of resources without limits or throttling vulnerability in Fortinet FortiOS 7.6.0 through 7.6.6, FortiOS 7.4 all versions, FortiOS 7.2 all versions may allow attacker to denial of service via",
-        "cveScore": 5,
         "cveSeverity": "MEDIUM"
       },
       {
@@ -713,195 +902,6 @@
         "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: ata: sata_dwc_460ex: fix infinite loop in NCQ tag completion bit-scanning The hand-rolled bit-scanning loop in the NCQ completion path has an infinite loop bug. When tag_mask has only high bits set (e.g. 0x800000",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-68448 - ovl: check access to copy_file_range source with src mounter creds",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68448",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T01:17:07.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: ovl: check access to copy_file_range source with src mounter creds Commit 5dae222a5ff0c (\"vfs: allow copy_file_range to copy across devices\") allowed filesystems that implement the copy_file_range() f_op to decid",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-68447 - drm/amdkfd: clamp v9 CRIU control stack checkpoint copy to BO size",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68447",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T01:17:07.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: drm/amdkfd: clamp v9 CRIU control stack checkpoint copy to BO size CRIU checkpoint copies the MQD control stack using cp_hqd_cntl_stack_size from hardware without bounding it to the allocated BO region. If the HW",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2024-14044 - Open5GS Diameter Rx pcrf-rx-path.c pcrf_rx_aar_cb buffer overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2024-14044",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T01:17:06.000Z",
-        "contentSnippet": "A vulnerability was identified in Open5GS up to 2.7.1. This issue affects the function pcrf_rx_aar_cb of the file src/pcrf/pcrf-rx-path.c of the component Diameter Rx Handler. The manipulation of the argument num_of_media_component/num_of_sub leads to buffer overflow. The attack ",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-68446 - drm/vmwgfx: Validate vmw_surface_metadata::array_size",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68446",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T00:17:44.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: drm/vmwgfx: Validate vmw_surface_metadata::array_size This field comes from userspace and should be validated against specific limits depending on which Shader Model (SM) is available.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-68445 - drm/vc4: Prevent shader BO mappings from becoming writable",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68445",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T00:17:44.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: drm/vc4: Prevent shader BO mappings from becoming writable vc4_gem_object_mmap() rejects a writable mapping of a validated shader BO, but leaves VM_MAYWRITE set. Userspace can map the BO read-only and then turn i",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-68444 - firmware: arm_ffa: Fix NULL dereference in ffa_partition_info_get()",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68444",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T00:17:44.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: firmware: arm_ffa: Fix NULL dereference in ffa_partition_info_get() ffa_partition_info_get() passes uuid_str directly to uuid_parse() without a NULL check. When a caller passes NULL, uuid_parse() -> __uuid_parse(",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-68443 - hwmon: (gigabyte_waterforce) Stop device IO before calling hid_hw_stop",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68443",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T00:17:44.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: hwmon: (gigabyte_waterforce) Stop device IO before calling hid_hw_stop Calling hid_hw_stop() does not stop the device IO. This results in a race condition between hid_input_report() and the point immediately foll",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-68442 - btrfs: don't propagate EXTENT_FLAG_LOGGING to split extent maps",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68442",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T00:17:44.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: btrfs: don't propagate EXTENT_FLAG_LOGGING to split extent maps When btrfs_drop_extent_map_range() splits an extent map, the new split maps inherit the original map's flags through a local 'flags' variable. Commi",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-68441 - net/sched: Handle TC_ACT_REDIRECT from qdisc filter chains",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68441",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T00:17:44.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: net/sched: Handle TC_ACT_REDIRECT from qdisc filter chains When a TC filter attached to a qdisc filter chain returns TC_ACT_REDIRECT (ex: via an eBPF program calling bpf_redirect() or an act_bpf action), the redi",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-73250 - Notepad++: Install-time PowerShell command injection through installation path",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73250",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T23:18:10.000Z",
-        "contentSnippet": "Notepad++ is a free and open-source source code editor. Prior to 8.9.7, the Notepad++ Windows 11 x64 and ARM64 installer passes the attacker-influenced installation directory `$INSTDIR` from PowerEditor/installer/nppSetup.nsi into a PowerShell `-Command` string used by RegisterMS",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2024-14043 - Open5GS Diameter S6a mme-fd-path.c mme_s6a_subscription_data_from_avp heap-based overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2024-14043",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T23:15:14.000Z",
-        "contentSnippet": "A vulnerability was determined in Open5GS up to 2.7.1. This vulnerability affects the function mme_s6a_subscription_data_from_avp of the file src/mme/mme-fd-path.c of the component Diameter S6a Interface. Executing a manipulation of the argument msisdn_len can lead to heap-based ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-73249 - calibre Content Server `/book-update-annotations` Missing Write Authorization Check Allows Unauthorized Annotation Modification",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73249",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T22:19:05.000Z",
-        "contentSnippet": "calibre is an e-book manager. Prior to 9.12.0, the calibre Content Server endpoint POST /book-update-annotations/{library_id}/{book_id}/{fmt} in src/calibre/srv/books.py omits needs_db_write=True, causing Router.dispatch() to skip ctx.check_for_write_access() before update_annota",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-73248 - calibre: Bypass of Python template restrictions via nested `template()` leading to RCE",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73248",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T22:19:05.000Z",
-        "contentSnippet": "calibre is an e-book manager. Prior to 9.12.0, calibre processes attacker-controlled composite_template metadata from a malicious EPUB, OPF, PDF, or similar file through program: and a nested template() call whose formatter does not inherit allow_python_templates=False, allowing ",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-73247 - Kestra: SSRF via Pebble http() function allows unauthenticated access to internal services & cloud metadata",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73247",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T22:19:05.000Z",
-        "contentSnippet": "Kestra is an open-source, event-driven orchestration platform. Prior to 2.0.0, Kestra's core/src/main/java/io/kestra/core/runners/pebble/functions/HttpFunction.java passes the user-controlled http() uri argument to URI.create() and the server-side HTTP client without restricting ",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-73246 - Kestra: Unauthenticated management `/worker` endpoint exposes live task configuration and plaintext credentials",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73246",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T22:19:05.000Z",
-        "contentSnippet": "Kestra is an open-source, event-driven orchestration platform. Prior to 2.0.0-rc6, Kestra's worker/src/main/java/io/kestra/worker/endpoint/WorkerEndpoint.java serves GET /worker without authentication and serializes the complete live Task object, which can expose commands, enviro",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-73245 - Kestra: Unauthenticated management/actuator endpoints exposed on port 8081 (/env, /loggers) bypass API basic-auth",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73245",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T22:19:05.000Z",
-        "contentSnippet": "Kestra is an open-source, event-driven orchestration platform. Prior to 2.0.0-rc6, Kestra's cli/src/main/resources/application.yml serves Micronaut management endpoints on port 8081 without authentication even when Basic Auth protects /api/v1/** on port 8080, allowing unauthentic",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-68067 - Mira Hormone Monitor, Mira Android App Weak Authentication",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68067",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T22:18:55.000Z",
-        "contentSnippet": "The login endpoint on the Mira cloud API accepts any format-valid string in the password field and returns a live active session token for the account matching the supplied email address. An attacker could use an email address to control cloud accounts and access hormone record i",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-67568 - Mira Hormone Monitor, Mira Android App Use of Hard-coded Credentials",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67568",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T22:18:54.000Z",
-        "contentSnippet": "The distributed Mira Android APK v4.5.15.4 allows an attacker read/write access to reproductive health profiles from internet connected hosts, which could result in forgery, deletion, or destruction of health information.",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-67558 - Mira Hormone Monitor, Mira Android App Authentication bypass by spoofing",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67558",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T22:18:54.000Z",
-        "contentSnippet": "The Mira Android companion app v4.5.15.4 identifies the paired Mira hormone analyzer by performing a substring match against the BLE advertisement name only, with no cryptographic peripheral authentication, MAC allowlist, or bonded-identity check. An attacker could capture live s",
-        "cveScore": 7.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-66875 - Mira Hormone Monitor, Mira Android App Missing authentication for critical function",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66875",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T22:18:54.000Z",
-        "contentSnippet": "In the Mira hormone monitor device firmware v1.7.1.47 build 01070147, a remote unauthenticated attacker within BLE range (approximately 10–30 meters) can silently rebind the device to an attacker-controlled account, extract stored hormone measurements in cleartext, cause a denial",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-66340 - Mira Hormone Monitor, Mira Android App Improper restriction of excessive authentication attempts",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66340",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-11T22:18:53.000Z",
-        "contentSnippet": "The Mira cloud authentication endpoints do not enforce per-account rate limiting, per-IP throttling, or account lockout after repeated failed login attempts. An attacker can use brute-force methods to obtain gain access to user accounts.",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
@@ -2310,6 +2310,27 @@
     ],
     "hardware": [
       {
+        "title": "AI data center developers begin suing local jurisdictions behind bans and moratoriums — claims range from officials exceeding authority to violations of due process and equal protection laws",
+        "link": "https://www.tomshardware.com/tech-industry/data-centers/ai-data-center-developers-begin-suing-local-jurisdictions-behind-bans-and-moratoriums-claims-range-from-officials-exceeding-authority-to-violations-of-due-process-and-equal-protection-laws",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-12T15:46:55.000Z",
+        "contentSnippet": "Some data center developers are suing local governments for passing temporary bans and moratorium, saying that they such moves violated their rights to due process and equal protection. This move has gotten one county to reverse their decision, while others are still fighting the"
+      },
+      {
+        "title": "CoreWeave proves Nvidia's aging AI GPUs from 2020 can generate profit nine years after deployment, signs A100 contracts into 2029 — power constraints and legacy infrastructure keep old GPUs profitable",
+        "link": "https://www.tomshardware.com/tech-industry/coreweave-ceo-mike-intrator-says-it-has-signed-an-a100-contract-running-into-2029",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-12T15:41:47.000Z",
+        "contentSnippet": "CoreWeave reported $2.58 billion in quarterly revenue, up 112% year over year."
+      },
+      {
+        "title": "Suspected China-linked hackers used AI to run the first-ever end-to-end autonomous cyberattack on Taiwan's government, Israeli firm says — open-source-built tool continuously devised effective hack st",
+        "link": "https://www.tomshardware.com/tech-industry/cyber-security/suspected-china-linked-hackers-used-ai-to-run-the-first-ever-end-to-end-autonomous-cyberattack-on-taiwans-government-israeli-firm-says-open-source-built-tool-continuously-devised-effective-hack-strategies-in-real-time",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-12T14:58:54.000Z",
+        "contentSnippet": "Suspected China-linked hackers used autonomous AI agents to breach Taiwanese government systems, compromising 85 accounts and stealing 2,500+ records."
+      },
+      {
         "title": "QIDI Plus5 3D printer review: The best one yet",
         "link": "https://www.tomshardware.com/3d-printing/qidi-plus5-3d-printer-review",
         "source": "Tom's Hardware",
@@ -2987,27 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-08-08T10:00:00.000Z",
         "contentSnippet": "A modder has figured out how to send an audio stream to the Steam Controller's haptic motors in order to make them play pretty much anything. While the wireless connection over the puck is limited, audio quality over a USB cable is genuinely impressive for a device with no speake"
-      },
-      {
-        "title": "Dell Pro Precision 5 14s Intel Review: Certified Workstation Graphics Without a Discrete GPU",
-        "link": "https://www.storagereview.com/review/dell-pro-precision-5-14s-intel-review-certified-workstation-graphics-without-a-discrete-gpu",
-        "source": "StorageReview",
-        "isoDate": "2026-08-07T21:22:58.000Z",
-        "contentSnippet": "The Dell Pro Precision 5 14s is a compact mobile workstation built around Intel’s latest professional laptop platform. Our review unit combines a Series 3 Intel Core Ultra X9 388H, a 16-core Panther Lake processor with a 50 TOPS NPU, with Intel Arc Pro B390 graphics, 64GB of LPCA"
-      },
-      {
-        "title": "A 10M IOPS Kioxia GP1 SSD Shown Running at FMS 2026",
-        "link": "https://www.servethehome.com/a-10m-iops-kioxia-gp1-ssd-shown-running-at-fms-2026/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-08-07T19:00:09.000Z",
-        "contentSnippet": "At FMS 2026, we saw the Kioxia GP1 PCIe Gen6 NVMe SSD running live in the company's booth at just over 10M IOPS The post A 10M IOPS Kioxia GP1 SSD Shown Running at FMS 2026 appeared first on ServeTheHome."
-      },
-      {
-        "title": "Scientist says RAM pricing has risen to normalized 2007 levels, AI shortage undid 20 years of progress in a matter of months — memory prices had been falling exponentially for decades",
-        "link": "https://www.tomshardware.com/pc-components/ram/scientist-says-ram-pricing-has-reverted-to-normalized-2007-levels-memory-prices-have-been-falling-exponentially-for-decades-but-the-ai-shortage-undid-20-years-of-progress-in-a-matter-of-months",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-07T16:58:22.000Z",
-        "contentSnippet": "The per GB price of memory modules have gone back to 2007 levels because of AI demand. This is the first time that prices have shot up in the realm of tech, Lemire says."
       }
     ]
   }
