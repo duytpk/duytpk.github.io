@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-08-12T18:51:00.943Z",
+  "updatedAt": "2026-08-12T19:56:42.683Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-73301 - Budibase: Missing RBAC on GET /api/global/groups allows BASIC users to enumerate all tenant groups and role mappings",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73301",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T19:17:55.000Z",
+        "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.39.25, the GET /api/global/groups endpoint in packages/worker/src/api/routes/global/groups.ts omitted auth.builderOrAdmin, allowing an authenticated BASIC role user to enumerate tenant groups, role mappings and user members",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-19311 - Missing Authorization in Execute Monitor API in OpenSearch Alerting Plugin",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19311",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T19:17:31.000Z",
+        "contentSnippet": "Missing authorization in the Execute Monitor API in Amazon OpenSearch Alerting plugin might allow an authenticated remote user to read, modify, or delete arbitrary index data via a crafted inline monitor request with unintentional data source and input index parameters.",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-18952 - Missing Input Validation in Threat Intel Feed Parser in OpenSearch Security Analytics Plugin",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18952",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T19:17:31.000Z",
+        "contentSnippet": "Missing input validation in the threat intelligence feed parser in the OpenSearch Security Analytics plugin might allow an authenticated remote user to perform server-side request forgery and read local files via a crafted URL parameter to the threat intel source configuration en",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-18678 - Kong Mesh: kumactl connects to the control plane without verifying the TLS certificate when no CA is configured",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18678",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T19:17:31.000Z",
+        "contentSnippet": "When an operator adds an HTTPS control plane profile to kumactl without providing a CA certificate, kumactl disables TLS verification and sends API tokens over the unverified connection. An attacker on the network path between the operator and the control plane can intercept user",
+        "cveScore": 5.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-18677 - Kong Mesh: a dataplane token without a workload binding can claim any workload's SPIFFE identity",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18677",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T19:17:31.000Z",
+        "contentSnippet": "In Kong Mesh running in universal mode with a MeshIdentity whose SPIFFE ID path template derives from the dataplane's kuma.io/workload label, the XDS authenticator in kuma-cp validates that label only when the dataplane token is bound to a workload. Workload binding is optional, ",
+        "cveScore": 6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-18676 - Kong Mesh: default control plane config leaks the admin token cross-origin via a CORS wildcard and localhost admin",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18676",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T19:17:30.000Z",
+        "contentSnippet": "The default kuma-cp configuration in Kong Mesh reveals the admin bootstrap token and signing keys to any webpage the operator visits while the control plane is reachable from their browser. Due to a CORS misconfiguration a cross-origin fetch() from a malicious page returns the ad",
+        "cveScore": 5.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-18675 - Kong Mesh: control plane denial of service via a malformed dataplane token with a non-string JWT kid",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18675",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T19:17:30.000Z",
+        "contentSnippet": "The dataplane token validator in kuma-cp performs an unchecked Go type assertion on the JWT kid header. A token whose kid is a JSON number decodes as a float64 and triggers a runtime panic before any signature, claims, or authorization check runs. The panic terminates the entire ",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-18673 - Kong Mesh: the kuma-dp readiness service exposes the Envoy admin API without authentication",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18673",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T19:17:30.000Z",
+        "contentSnippet": "When kuma-dp is configured with the Envoy admin API on a Unix domain socket, which is the default, its readiness service on TCP port 9902 - bound to all interfaces - forwards almost the entire Envoy admin API to any caller that can reach the port, with no authentication. An attac",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-59916 - Dell Display and Peripheral Manager Improper Access Control Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59916",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T19:17:29.000Z",
+        "contentSnippet": "Dell Display and Peripheral Manager (DDPM Windows), versions prior to 2.3.0.17, contain Improper Access Control vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Elevation of Privileges and arbitrary code execution",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-63299 - Storage volume cross-project move and snapshot restore bypass project disk limits",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63299",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T19:17:07.000Z",
+        "contentSnippet": "An authorization bypass vulnerability in LXD allows an authenticated user to bypass project-level disk and volume limits. Two related code paths fail to verify resource limits during volume operations: the storagePoolVolumeTypePostMove function omits the limits.AllowVolumeCreatio",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-19657 - ScadaLTS Unauthenticated Reflected XSS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19657",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T19:14:33.000Z",
+        "contentSnippet": "ScadaLTS 2.7.8.1 reflects user-supplied input into an HTML response without sanitization. An unauthenticated attacker who lures a victim into visiting a crafted URL can execute arbitrary JavaScript in the context of the victim's browser session.",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-73326 - CamaleonCMS Missing Authorization via Plugin Administration Endpoints",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73326",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T19:13:28.000Z",
+        "contentSnippet": "CamaleonCMS contains a missing authorization vulnerability that allows any authenticated low-privileged user to access and modify plugin settings by reaching four unprotected plugin-administration endpoints without administrator-level authorization. Attackers can manipulate plugi",
+        "cveScore": 7.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-62420 - Cross-project cluster migration bypasses project restrictions via cluster notification flag",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62420",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T19:12:28.000Z",
+        "contentSnippet": "An authorization bypass vulnerability in LXD allows an authenticated attacker to bypass target project security restrictions during cross-project instance migrations. When moving an instance cross-project to a different cluster member via POST /1.0/instances/{name} with migration",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-19656 - ScadaLTS Authenticated Remote Code Execution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19656",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T19:10:11.000Z",
+        "contentSnippet": "ScadaLTS 2.7.8.1 exposes a server-side method that lacks authorization checks, allowing any authenticated user (including one holding only low-privilege, read-only permissions) to execute arbitrary operating system commands on the host. Successful exploitation results in code exe",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-73407 - Budibase: Unauthenticated REST Datasource Credential Theft via Cross-Origin Auth Leak (bypass of CVE-2026-48152))",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73407",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T19:09:55.000Z",
+        "contentSnippet": "Budibase is an open-source low-code platform. Prior to 3.40.1, RestIntegration._req in packages/server/src/integrations/rest.ts attached credentials from getAuthHeaders and defaultHeaders without requiring the final request destination to match the datasource origin. An unauthent",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-73332 - CamaleonCMS cama_contact_form Plugin Stored XSS via before_html Field",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73332",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T19:09:47.000Z",
+        "contentSnippet": "CamaleonCMS contains a stored cross-site scripting vulnerability in the cama_contact_form plugin that allows low-privileged authenticated attackers to inject arbitrary HTML by submitting unsanitized content to the before_html field through the contact form edit endpoint, which la",
+        "cveScore": 9.2,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-63300 - Cross-project instance move bypasses all project restrictions allowing host command execution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63300",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T19:09:04.000Z",
+        "contentSnippet": "An improper validation vulnerability in the instancePostMigration function in lxd/instance_post.go of LXD allows an authenticated attacker with can_create_instances permissions on a restricted project to bypass project-level security restrictions. When migrating an instance betwe",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-72809 - SiYuan before v3.7.4 Authentication Bypass via Localhost Trust",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72809",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T19:07:52.000Z",
+        "contentSnippet": "SiYuan versions",
+        "cveScore": 8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-72808 - SiYuan before v3.7.4 Information Disclosure via getFileAnnotation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72808",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T19:07:52.000Z",
+        "contentSnippet": "SiYuan versions up to and including v3.7.2 (fixed in v3.7.4) contain an information disclosure vulnerability in the /api/asset/getFileAnnotation endpoint, which returns .sya PDF-annotation file content without a publish-access check. Because the endpoint is gated only by CheckAut",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-72807 - SiYuan before v3.7.4 SQL Injection via queryBlocks template",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72807",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T19:07:51.000Z",
+        "contentSnippet": "SiYuan versions before v3.7.4 contain a second-order SQL injection vulnerability in attribute-view template columns that expose the queryBlocks function, which executes raw SQL using string substitution instead of parameterized queries. Attackers can distribute malicious SiYuan d",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-72806 - SiYuan before v3.7.4 Authentication Bypass via Attribute View",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72806",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T19:07:50.000Z",
+        "contentSnippet": "SiYuan versions before v3.7.4 contain an authentication bypass vulnerability in the FilterViewByPublishAccess filter that fails to check publish password protection when rendering attribute views and database rows. Unauthenticated readers can access password-protected document ro",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-72805 - SiYuan before v3.7.4 Information Disclosure via Block Endpoints",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72805",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T19:07:49.000Z",
+        "contentSnippet": "SiYuan versions before v3.7.4 fail to enforce publish-access checks on getBlockBreadcrumb, getRefText, and getBlockTreeInfos endpoints, allowing disclosure of protected document content and metadata. Anonymous readers or publish RoleReader accounts can retrieve document titles, a",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-72804 - SiYuan before v3.7.4 Authentication Bypass via Graph Endpoints",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72804",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T19:07:49.000Z",
+        "contentSnippet": "SiYuan versions before v3.7.4 fail to validate publish-password tier in getGraph and getLocalGraph endpoints, allowing anonymous readers to retrieve block-level content of password-protected documents. Attackers can call these endpoints without supplying a password to read protec",
+        "cveScore": 9.2,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-72803 - SiYuan before v3.7.4 Information Disclosure via getBlockAttrs",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72803",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T19:07:48.000Z",
+        "contentSnippet": "SiYuan versions before v3.7.4 fail to enforce publish-access checks in the getBlockAttrs and batchGetBlockAttrs endpoints. Attackers can retrieve block attributes including names, aliases, memos, and custom fields from protected documents by sending POST requests with block IDs.",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-72802 - SiYuan before v3.7.4 Information Disclosure via resolveAssetPath",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72802",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-12T19:07:47.000Z",
+        "contentSnippet": "SiYuan versions before v3.7.4 contain an information disclosure vulnerability in the resolveAssetPath endpoint that returns absolute filesystem paths unmodified to CheckAuth-only requests. Attackers can harvest relative asset paths from published documents and submit them to reso",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
       {
         "title": "CVE-2026-17419 - IBM i is Affected By Multiple Vulnerabilities in SQL",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-17419",
@@ -677,231 +902,6 @@
         "contentSnippet": "A server-side request forgery (ssrf) vulnerability in Fortinet FortiSIEM 7.5.0, FortiSIEM 7.4.0 through 7.4.2, FortiSIEM 7.3.0 through 7.3.5, FortiSIEM 7.2 all versions, FortiSIEM 7.1 all versions, FortiSIEM 7.0 all versions, FortiSIEM 6.7 all versions, FortiSIEM 6.6 all versions",
         "cveScore": 3.8,
         "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-47226 - Admidio: Authorization bypass in file_delete enables cross-folder file removal by authenticated users without delete privileges",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47226",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T12:51:24.000Z",
-        "contentSnippet": "Admidio is an open-source user management solution. Prior to version 5.0.10, an authenticated Admidio member with upload rights on any one folder can permanently delete files from folders where they have only view access. The authorization check at the top of `modules/documents-f",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-53996 - NetBSD hdaudio(4) Driver Privilege Bypass Use-After-Free via HDAUDIO_FGRP_SETCONFIG ioctl",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53996",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T12:42:33.000Z",
-        "contentSnippet": "NetBSD's hdaudio(4) driver in sys/dev/hdaudio/hdaudio.c contains a missing access control vulnerability that allows unprivileged local attackers to invoke the HDAUDIO_FGRP_SETCONFIG ioctl without elevated permissions by exploiting the absence of an access check on /dev/hdaudioN d",
-        "cveScore": 7.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57858 - Cal.com Cal.diy 6.2.0 Stored XSS via BookingPageTagManager Analytics Tracking ID",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57858",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T12:23:08.000Z",
-        "contentSnippet": "Cal.com Cal.diy versions 2.1.1 through 6.2.0 contain a stored cross-site scripting vulnerability in the BookingPageTagManager component that allows authenticated event owners to inject arbitrary JavaScript by supplying a malicious analytics tracking ID without sanitization. Attac",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-70560 - Ultimate POS Stored XSS via First Name Field in Leave Notifications",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70560",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T12:19:47.000Z",
-        "contentSnippet": "Ultimate POS (Stock Management & Point of Sale) contains a stored cross-site scripting vulnerability that allows low-privileged authenticated attackers to inject arbitrary HTML and script markup by setting a malicious payload in the user first-name field during account creation. ",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-70465 - Fortinet FortiClient Buffer Overflow Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70465",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T12:19:47.000Z",
-        "contentSnippet": "A buffer copy without checking size of input ('classic buffer overflow') vulnerability in Fortinet FortiClientWindows 7.4.0 through 7.4.3, FortiClientWindows 7.2.0 through 7.2.11 may allow an unauthenticated attacker in a position to alter or craft DNS responses to the targeted h",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-26035 - Fortinet FortiWeb Improper Authentication Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-26035",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T12:19:03.000Z",
-        "contentSnippet": "An Improper Authentication vulnerability [CWE-287] vulnerability in Fortinet FortiWeb 8.0.0 through 8.0.2, FortiWeb 7.6.0 through 7.6.6, FortiWeb 7.4.0 through 7.4.11, FortiWeb 7.2.0 through 7.2.12, FortiWeb 7.0.0 through 7.0.12 may allow a remote unauthenticated attacker to logi",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-70466 - Fortinet FortiWeb Improper Access Control",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70466",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T12:19:02.000Z",
-        "contentSnippet": "A incomplete list of disallowed inputs vulnerability in Fortinet FortiWeb 8.0.0 through 8.0.2, FortiWeb 7.6.0 through 7.6.5, FortiWeb 7.4 all versions, FortiWeb 7.2 all versions, FortiWeb 7.0 all versions may allow attacker to improper access control via",
-        "cveScore": 4.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-18044 - Estatik Real Estate Plugin < 4.3.4 - Unauthenticated Arbitrary-Recipient Mail Relay via Signed-Value Mismatch",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18044",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T12:17:47.000Z",
-        "contentSnippet": "The Estatik Real Estate Plugin WordPress plugin before 4.3.4 does not validate the same recipient list that it later uses to address the message sent by its property request form, allowing unauthenticated users to send emails to arbitrary recipients with arbitrary subject, body a",
-        "cveScore": 3.7,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-17008 - Quick PayPal Payments <= 5.7.50 - Unauthenticated Payment Bypass via PayPal IPN",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-17008",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T12:17:47.000Z",
-        "contentSnippet": "The Quick Paypal Payments WordPress plugin through 5.7.50 does not verify the paid amount, receiver, or payment status in its PayPal IPN handler and marks an order paid on an order-token match alone, so a buyer who pays an arbitrary small amount can have a full-price order marked",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16990 - Payment Button for PayPal <= 1.2.3.44 - Unauthenticated Payment Price Manipulation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16990",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T12:17:47.000Z",
-        "contentSnippet": "The Payment Button for PayPal WordPress plugin through 1.2.3.44 does not enforce the merchant-configured price server-side and trusts a client-supplied payment amount, allowing unauthenticated attackers to create a real PayPal order against the merchant for an arbitrary lower amo",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16747 - Kirki < 6.2.1 - Unauthenticated Arbitrary Shortcode Execution via Form Email Actions",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16747",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T12:17:47.000Z",
-        "contentSnippet": "The Kirki WordPress plugin before 6.2.1 does not properly authorise its front-end form submission REST routes and passes attacker-controlled input through shortcode execution, allowing unauthenticated users to run any shortcode registered on the site, which on a default install l",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16621 - Payment Gateway for PayPal on WooCommerce < 9.2.1 - Unauthenticated Payment Bypass via PayPal Advanced Return Handler",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16621",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T12:17:46.000Z",
-        "contentSnippet": "The Payment Gateway for PayPal on WooCommerce WordPress plugin before 9.2.1 does not verify that payment actually succeeded before completing an order in its PayPal return handler: it reads attacker-controlled parameters, performs no amount comparison and no order-ownership check",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-15213 - Welcart e-Commerce < 2.11.33 - Unauthenticated Payment Bypass via Forged Settlement Callback",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15213",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T12:17:46.000Z",
-        "contentSnippet": "The Welcart e-Commerce WordPress plugin before 2.11.33 does not verify the authenticity of its convenience-store / bank-transfer settlement callback: an unauthenticated request can flip an order from unpaid to settled purely from an order number and a status flag, with no signatu",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-15045 - Wallet System for WooCommerce < 2.7.10 - Customer+ Checkout Price Manipulation via Unvalidated Wallet Amount",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15045",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T12:17:46.000Z",
-        "contentSnippet": "The Wallet System for WooCommerce WordPress plugin before 2.7.10 does not validate a user-supplied wallet amount against the customer's actual stored balance during checkout, allowing authenticated customers to arbitrarily reduce their own order total, including down to zero, and",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-11325 - cloudflare/pages-action is deprecated — migration required by September 18th, 2026",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11325",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T12:17:44.000Z",
-        "contentSnippet": "Description Cloudflare was recently notified by external researchers of vulnerabilities in this archived repository, including a remote code execution issue in `src/index.ts` reachable from certain GitHub Actions workflow configurations. Successful exploitation may expose workflo",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-68868 - Apache Airflow Google provider: google Secret Manager backend: team scope is never applied, exposing every team's Connections and Variables",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68868",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T11:17:10.000Z",
-        "contentSnippet": "The Google Cloud Secret Manager secrets backend in Apache Airflow's Google provider never applied the team scope when resolving Connections and Variables: the caller's `team_name` was accepted by the backend but dropped at the internal call boundary, so every lookup resolved agai",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-67284 - Joomla Extension - tabaoca.org - Improper ACL checks allow file operations in Cotton Cloud < 2.0.2",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67284",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T10:17:20.000Z",
-        "contentSnippet": "Joomla Extension - tabaoca.org - Improper ACL implementation allows file operations in Cotton Cloud",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-64955 - Velociraptor CSV Formula Injection in Export Pipeline",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64955",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T10:17:20.000Z",
-        "contentSnippet": "When Microsoft Excel imports a CSV file, it executes cells beginning with certain characters as formulas, giving such CSV files arbitrary execution. Velociraptor fails to sanitize such cells when exporting to CSV from various places such as the GUI, offline collector or data expo",
-        "cveScore": 6.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-64952 - Velociraptor Hunt Deletion With Insufficient Permission Check",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64952",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T10:17:20.000Z",
-        "contentSnippet": "The hunt_delete() VQL function allows deleting hunts. Velociraptor misapplied the permission check requiring only COLLECT_CLIENT (usually assigned to the \"investigator\" role) instead of the \"DELETE_RESULTS\" permission (usually only assigned to \"administrators\").",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-64951 - Velociraptor DoS triggered by Divide by Zero panic",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64951",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T10:17:20.000Z",
-        "contentSnippet": "A rogue Velociraptor client can upload a malformed sparse file such that if the GUI attempts to expand the file, a panic occurs which may crash the server process. The problem is a Divide by Zero bug in the ShouldPadFile() function.",
-        "cveScore": 3.5,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-18663 - 389-ds-base: 389-ds-base: pre-authentication double-free in get_ldapmessage_controls_ext() via critical session tracking control",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18663",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T10:17:18.000Z",
-        "contentSnippet": "A flaw was found in 389-ds-base. The get_ldapmessage_controls_ext() function frees the parsed controls array on the Session Tracking critical-control rejection path without clearing the SLAPI_REQCONTROLS pblock slot. Operation teardown then frees the same pointer again, causing a",
-        "cveScore": 5.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-18652 - Velociraptor STACK Type Download Path Bypasses Denied Prefix Check",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18652",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T10:17:16.000Z",
-        "contentSnippet": "Velociraptor allows reading Stacked result sets from the GUI. Velociraptor's multi-tenant design stores sub orgs within the datastore directory. The path requested by the GUI is not correctly checked against the prefix deny list, allowing result sets to read from denied prefixes.",
-        "cveScore": 4.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-67283 - Joomla Extension - tabaoca.org - Improper ACL implementation allows allow file operations in Cotton Cloud < 2.0.2",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67283",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T09:17:30.000Z",
-        "contentSnippet": "Joomla Extension - tabaoca.org - Improper ACL implementation allows file operations in Cotton Cloud",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-67282 - Joomla Extension - fabrikar.com - Unauthenticated remote code execution in Fabrik < 4.6.8",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67282",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T09:17:30.000Z",
-        "contentSnippet": "Joomla Extension - fabrikar.com - Unauthenticated remote code execution in Fabrik",
-        "cveScore": 10,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-19566 - Net::CIDR::Set versions before 0.23 for Perl allow memory exhaustion and malformed set ranges via unbounded IPv6 prefix lengths",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19566",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T09:17:29.000Z",
-        "contentSnippet": "Net::CIDR::Set versions before 0.23 for Perl allow memory exhaustion and malformed set ranges via unbounded IPv6 prefix lengths. The _encode method accepts any prefix length matching `(0|[1-9][0-9]*)` and passes it to _width2bits(), which builds the mask as `'1' x ($width + 8)`, ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       }
     ],
     "ai": [
