@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-08-13T14:17:04.503Z",
+  "updatedAt": "2026-08-13T15:51:35.182Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-73558 - vLLM: Cross-User Data Leak Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73558",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-13T15:20:18.000Z",
+        "contentSnippet": "vLLM is an inference and serving engine for large language models. Prior to 0.27.0, an integer overflow in blockIdx.x * 2 * d in activation_kernels.cu can cause act_and_mul_kernel to consume another batched user's input, allowing a request processed in the same inference batch to",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-73557 - vLLM: Incomplete CVE-2025-62164 remediation can be bypassed by concurrent prompt parts",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73557",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-13T15:20:18.000Z",
+        "contentSnippet": "vLLM is an inference and serving engine for large language models. From 0.20.2rc0 until 0.26.0, safe_load_prompt_embeds in vllm/renderers/embed_utils.py uses torch.sparse.check_sparse_tensor_invariants, whose process-global save, enable, and restore state can be raced by concurre",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-73556 - vLLM: ReDoS via structured_outputs.regex in the lm-format-enforcer backend (no compile timeout) — missed sibling of CVE-2026-55574",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73556",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-13T15:20:17.000Z",
+        "contentSnippet": "vLLM is an inference and serving engine for large language models. Prior to 0.26.0, the structured_outputs.regex parameter in vllm/v1/structured_output/backend_lm_format_enforcer.py is passed to lmformatenforcer.RegexParser without compile_regex_with_timeout or validation in vali",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-73555 - vLLM: Unauthenticated Internal Path and Username Disclosure via Validation Error Messages",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73555",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-13T15:20:17.000Z",
+        "contentSnippet": "vLLM is an inference and serving engine for large language models. Prior to 0.26.0, the validation_exception_handler in vllm/entrypoints/openai/server_utils.py converts FastAPI RequestValidationError objects with str(exc), and sanitize_message in vllm/entrypoints/utils.py does no",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-73509 - OpenList: Authenticated users can rename files outside their base path via batch rename `src_name` traversal",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73509",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-13T15:20:17.000Z",
+        "contentSnippet": "OpenList a file list program that supports multiple storage. Prior to 4.2.4, the authenticated /api/fs/batch_rename handler in server/handles/fsbatch.go authorizes only the source directory produced by user.JoinPath(req.SrcDir) and validates renameObject.NewName with checkRelativ",
+        "cveScore": 7.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-73508 - Netty: Memory Leak in DNS Record Decoder via Malformed Domain Names",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73508",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-13T15:20:17.000Z",
+        "contentSnippet": "Netty is an asynchronous, event-driven network application framework. Prior to 4.1.136.Final and 4.2.16.Final, io.netty.handler.codec.dns.AbstractDnsRecord, io.netty.handler.codec.dns.DefaultDnsRecordDecoder.decodeRecord(), and io.netty.handler.codec.dns.DnsCodecUtil.decompressDo",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-73507 - Netty: Denial of Service in XmlFrameDecoder via CPU Exhaustion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73507",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-13T15:20:17.000Z",
+        "contentSnippet": "Netty is an asynchronous, event-driven network application framework. Prior to 4.1.136.Final and 4.2.16.Final, io.netty.handler.codec.xml.XmlFrameDecoder.decode() failed to preserve closing-tag parser state across invocations, so an unauthenticated remote attacker could trickle-f",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-73506 - Oh My Posh: Terminal escape sequence injection via unsanitized prompt segment data",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73506",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-13T15:20:17.000Z",
+        "contentSnippet": "Oh My Posh is the most customisable and low-latency cross platform/shell prompt renderer. Prior to 29.35.1, write(s rune) in src/terminal/writer.go emitted attacker-controlled current directory names and Git metadata, including Commit.Subject, Commit.Author.Name, Commit.Author.Em",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-73505 - Oh My Posh: Arbitrary command execution via template injection in the path segment",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73505",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-13T15:20:16.000Z",
+        "contentSnippet": "Oh My Posh is the most customisable and low-latency cross platform/shell prompt renderer. Prior to 29.35.1, the setStyle() function in src/segments/path.go passed pt.Path, which includes raw folder names, to template.Render, whose function map exposes cmd, so an attacker-controll",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-70464 - rsync 2.0.0 < 3.5.0 Connection Slot Exhaustion DoS via Handshake Stall",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70464",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-13T15:20:01.000Z",
+        "contentSnippet": "rsync daemon 2.0.0 before 3.5.0 contains a denial of service vulnerability that allows unauthenticated remote attackers to exhaust daemon connection slots by stalling the handshake process before or after module selection without triggering the I/O timeout. Attackers can open man",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-70463 - rsync 3.1.0 < 3.5.0 Authorization Bypass via auth users Directive Parsing",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70463",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-13T15:20:01.000Z",
+        "contentSnippet": "rsync 3.1.0 before 3.5.0 contains an authorization bypass in auth users directive parsing. The auth users parser uses comma-only tokenization when splitting the user list, which fails to correctly handle entries of the form @Group Name where the group name contains a space. The s",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-70462 - rsync 3.1.0 < 3.5.0 Signed Integer Overflow via MSG_IO_TIMEOUT",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70462",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-13T15:20:00.000Z",
+        "contentSnippet": "rsync 3.1.0 before 3.5.0 contains a signed integer overflow vulnerability in the I/O timeout implementation that allows attackers to permanently disable connection timeouts by injecting MSG_IO_TIMEOUT messages carrying non-positive (zero or negative) values. Attackers can craft m",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-70461 - rsync 3.2.5 < 3.5.0 Heap Out-of-Bounds Write via files-from Entry",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70461",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-13T15:20:00.000Z",
+        "contentSnippet": "rsync 3.2.5 before 3.5.0 contains a heap out-of-bounds write vulnerability that allows remote unauthenticated attackers to write one attacker-controlled byte past the end of a heap allocation by supplying a crafted files-from entry. Attackers can trigger the vulnerability against",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-70460 - rsync 2.3.3 < 3.5.0 Path Traversal via --partial-dir/--backup-dir Symlink",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70460",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-13T15:19:59.000Z",
+        "contentSnippet": "rsync 2.3.3 before 3.5.0 contains a path traversal vulnerability that allows a malicious sender to escape the module root by exploiting symlinks within the module file tree when using --partial-dir or --backup-dir options. Attackers with write access to place a symlink under the ",
+        "cveScore": 9.2,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-70459 - rsync 3.0.0 < 3.5.0 Daemon Crash via Malformed File List Entry",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70459",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-13T15:19:59.000Z",
+        "contentSnippet": "rsync 3.0.0 before 3.5.0 contains a null pointer dereference vulnerability in the daemon child process that allows remote attackers to crash the daemon by sending a file list whose first entry is a dot entry not typed as a directory. The daemon dereferences the first file list en",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-70458 - rsync 3.0.0 < 3.5.0 Out-of-Bounds Write via FLAG_HLINKED Handling",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70458",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-13T15:19:59.000Z",
+        "contentSnippet": "rsync 3.0.0 before 3.5.0 contains an out-of-bounds write vulnerability that allows attackers to corrupt memory by triggering HLINK_BUMP processing on file entries with the FLAG_HLINKED flag set while the hard-link preservation option is inactive. Attackers can exploit the missing",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-70457 - rsync 3.2.3 < 3.5.0 Out-of-Bounds Write via parse_size_arg()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70457",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-13T15:19:59.000Z",
+        "contentSnippet": "rsync 3.2.3 before 3.5.0 contains an out-of-bounds write in parse_size_arg() where the return value of snprintf() is used directly as an index into a .bss-segment array without bounds checking. When snprintf truncates the formatted size string, the return value equals the number ",
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-70456 - rsync 3.0.1 < 3.5.0 Heap Out-of-Bounds Write via read_args()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70456",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-13T15:19:59.000Z",
+        "contentSnippet": "rsync 3.0.1 before 3.5.0 contains an out-of-bounds write vulnerability in the read_args() function that allows a malicious sender to corrupt adjacent heap memory by sending a crafted argument list. When the argument count causes the argv allocation to be exactly full, the trailin",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-70455 - rsync 3.4.2 < 3.5.0 DoS via --zt Zstandard Compression Thread Exhaustion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70455",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-13T15:19:59.000Z",
+        "contentSnippet": "rsync 3.4.2 before 3.5.0 contains a denial of service vulnerability that allows a remote sender to exhaust system resources by specifying the --zt short alias for --compress-threads, which bypasses the refuse options directive's string matching on long option names. Attackers can",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-70454 - rsync < 3.5.0 TLS Certificate Validation Bypass via SSL/OpenSSL Mode",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70454",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-13T15:19:59.000Z",
+        "contentSnippet": "rsync 3.2.0 through 3.2.3 (openssl mode) and rsync-ssl through 3.4.4 (stunnel mode) contain a TLS certificate validation vulnerability that allows on-path attackers to intercept encrypted sessions by presenting self-signed or otherwise invalid certificates. Attackers can exploit ",
+        "cveScore": 8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-70453 - rsync < 3.5.0 Algorithmic Complexity DoS via hash_search()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70453",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-13T15:19:58.000Z",
+        "contentSnippet": "rsync before 3.5.0 contains an algorithmic complexity vulnerability in the hash_search() function that allows a remote attacker to cause a denial of service by delivering a carefully constructed file list. A sender can exploit the quadratic-time worst-case behavior in hash lookup",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-70452 - rsync 3.1.0 < 3.5.0 Access Control Bypass via DNS Resolution Failure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70452",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-13T15:19:58.000Z",
+        "contentSnippet": "rsync 3.1.0 before 3.5.0 contains an access control bypass vulnerability that allows remote attackers to circumvent hosts deny rules by inducing DNS resolution failures during hostname-based access control evaluation. When a DNS lookup for a hostname-based deny rule fails, the da",
+        "cveScore": 9.1,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-6387 - Lenovo System Update Local Privilege Escalation Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6387",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-13T15:19:58.000Z",
+        "contentSnippet": "A potential authentication bypass vulnerability was reported in Lenovo System Update that could allow a local authenticated user to execute arbitrary code with elevated privileges.",
+        "cveScore": 7.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-68454 - KVM: s390: pci: Fix handling of AIF enable without AISB",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68454",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-13T15:19:58.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: KVM: s390: pci: Fix handling of AIF enable without AISB When a guest seeks to register IRQs without a summary bit specified, ensure that the associated GAITE then stores 0 for the guest AISB location instead of v",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-68453 - s390/zcrypt: Fix buffer over-read in cca_cipher2protkey",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68453",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-13T15:19:58.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: s390/zcrypt: Fix buffer over-read in cca_cipher2protkey Add validation of both the actual key buffer size and token length fields in all the cca_check_sec*token() functions. Additionally check in cca_gencipherkey",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2026-73585 - Sblim-cmpi-base: insecure temporary file creation in sblim-cmpi-base provider registration scripts allows local symlink attack",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-73585",
@@ -677,234 +902,16 @@
         "contentSnippet": "An information disclosure vulnerability in the Account Protection feature of Palo Alto Networks Prisma® Browser enables a local attacker to view sensitive data.",
         "cveScore": 0.5,
         "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-0289 - Prisma Browser: Inappropriate Implementation in Account Protection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-0289",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-13T03:16:43.000Z",
-        "contentSnippet": "A security bypass vulnerability in the Account Protection feature of Palo Alto Networks Prisma® Browser enables a user to bypass intended security controls.",
-        "cveScore": 0.5,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-50544 - NortheBridge/luminalshine has Incorrect Permission Assignment for Critical Resource and Creation of Temporary File in Directory with Insecure Permissions",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50544",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-13T00:17:32.000Z",
-        "contentSnippet": "NortheBridge/luminalshine is a Sunshine-compatible game stream host for Moonlight. Prior to version 26.05.0-rc4, a latent gap exists on a default install, the file at `src/platform/windows/misc.cpp` lives at `C:\\ProgramData\\LuminalShine\\config\\apps.json` and is created by the `SY",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-49819 - UpSnap - Unauthenticated Initial-Superuser Takeover Chains to Root RCE via wake_cmd",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49819",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-13T00:17:32.000Z",
-        "contentSnippet": "UpSnap is a wake on lan web app. Versions 4.4.1 through 5.3.5 are vulnerable to a missing-authentication / privilege-escalation chain in `pb.HandlerInitSuperuser` (`backend/pb/handlers.go:249`), reachable as `POST /api/upsnap/init-superuser`. The vulnerable code lacks any authent",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-49473 - @cedar-policy/authorization-for-expressjs has an authorization bypass via query string manipulation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49473",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-13T00:17:32.000Z",
-        "contentSnippet": "@cedar-policy/authorization-for-expressjs is an open-source Express.js middleware that integrates Cedar authorization into Express applications by mapping HTTP requests to Cedar actions and evaluating authorization policies before allowing requests to proceed. Versions prior to 0",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-48791 - Sigstore Java has a vulnerability with bundle verification of integratedTime",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48791",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-13T00:17:32.000Z",
-        "contentSnippet": "sigstore-java is a sigstore java client for interacting with sigstore infrastructure. Version 2.0.0 erroneously removed verification of the integrated (Rekor entry) time) against the Fulcio certificate. Version 2.1.0 re-added this verification with enhancements that adhere to the",
-        "cveScore": 2,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-46688 - Meeting Room Booking System has an unauthenticated open redirect",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46688",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-13T00:17:32.000Z",
-        "contentSnippet": "The Meeting Room Booking System (MRBS) is a PHP-based application for booking meeting rooms. Prior to version 1.12.2, an unauthenticated request can be made to redirect the user to a query-specified location. This allows an attacker to create a specially-crafted URL to an MRBS in",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-46382 - Meeting Room Booking System has server-side request forgery in import functionality",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46382",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-13T00:17:32.000Z",
-        "contentSnippet": "The Meeting Room Booking System (MRBS) is a PHP-based application for booking meeting rooms. Prior to version 1.12.2, a user-supplied private/local URI can be made to be fetched without checks. Version 1.12.2 contains a fix. No known workarounds are available.",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-17431 - PDF::WebKit versions through 1.2 for Perl allow OS command injection via a 2-arg open() of the output path in to_pdf and of stylesheet paths in _style_tag_for",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-17431",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-13T00:17:31.000Z",
-        "contentSnippet": "PDF::WebKit versions through 1.2 for Perl allow OS command injection via a 2-arg open() of the output path in to_pdf and of stylesheet paths in _style_tag_for. to_pdf reads the generated PDF back from its path argument, and _style_tag_for reads each entry of the stylesheets list,",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-16770 - PDF::WebKit versions through 1.2 for Perl allow argument injection into wkhtmltopdf via meta tags in the source document",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16770",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-13T00:17:31.000Z",
-        "contentSnippet": "PDF::WebKit versions through 1.2 for Perl allow argument injection into wkhtmltopdf via meta tags in the source document. For an HTML string or file source, the constructor collects every element in the document head through _pdf_webkit_meta_tags and turns each one into a wkhtmlt",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-71194 - OpenStack Designate mDNS Handler Denial of Service Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71194",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T23:17:22.000Z",
-        "contentSnippet": "In OpenStack Designate before 22.0.2, the mDNS handler performs pool-blind lookups when resolving record queries and NOTIFY requests. When two zones with the same name exist across different pools, the lookup fails with a deterministic error, causing the handler to return REFUSED",
-        "cveScore": 6.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-71193 - OpenStack Designate Cross-Tenant Zone Overlap Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71193",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T23:17:22.000Z",
-        "contentSnippet": "In OpenStack Designate before 22.0.1, zone creation checks (_is_subzone, _is_superzone, and the duplicate-zone DB constraint) are scoped to the target pool only. An authenticated user can bypass these checks by scheduling a zone to a different pool via the AttributeFilter schedul",
-        "cveScore": 9.6,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-49481 - UpSnap vulnerable to Remote Code Execution via IP Field Template Injection in wake_cmd/shutdown_cmd",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49481",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T23:17:21.000Z",
-        "contentSnippet": "UpSnap is a wake on lan web app. Versions prior to 5.4.0 have an OS command injection vulnerability in the UpSnap’s device management functionality due to the presence of unsafe shell command template interpolation using the ip and the mac fields. User-controlled values can be in",
-        "cveScore": 9.6,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-47718 - FUXA provides guest and invalid-token access to protected read APIs in secure mode",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47718",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T23:17:20.000Z",
-        "contentSnippet": "FUXA is a web-based Process Visualization (SCADA/HMI/Dashboard) software. When `secureEnabled=true`, FUXA `1.3.0-2773` still allows guest and invalid-token requests to read project, alarms, and scheduler APIs. Version 1.3.1 fixes this issue.",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-47717 - FUXA's Unauthenticated Project Data Disclosure Exposes Server-Side Scripts and Device Configurations",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47717",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T23:17:20.000Z",
-        "contentSnippet": "FUXA is a web-based Process Visualization (SCADA/HMI/Dashboard) software. In fuxa-server version 1.3.0, the GET /api/project endpoint exposes sensitive project configuration data to guest-context requests even when secureEnabled is enabled. Version 1.3.1 fixes the issue.",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-15424 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15424",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T23:17:20.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-15141 - Referer Validation Bypass in TL-WR820N Web Management Interface",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15141",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T23:17:19.000Z",
-        "contentSnippet": "The web interface of the affected device relies on the HTTP referrer header as part of request validation. Requests containing empty Referer value, or omitting the Referer header entirely, may be accepted and processed due to insufficient validation logic. Successful exploitation",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-7366 - IBM DataPower Gateway affected by HTTP request header leakage in XML-Firewall",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-7366",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T22:17:17.000Z",
-        "contentSnippet": "IBM DataPower Gateway 11.0.0.0 through 11.0.0.1 and IBM DataPower Gateway 10.5.0.0 through 10.5.0.21 and IBM DataPower Gateway 10.6.0.0 through 10.6.0.9 allows a race condition that results in improper isolation of request state when handling the built‑in X‑Client‑IP header. Unde",
-        "cveScore": 4.2,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-73519 - WolfStack < 25.9.2 Hard-coded Secret Authentication Bypass via X-WolfStack-Secret",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73519",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T22:17:17.000Z",
-        "contentSnippet": "WolfStack before 25.9.2 contains a hard-coded cluster-authentication secret compiled into every build and published as a constant in src/auth/mod.rs, allowing remote unauthenticated attackers to bypass authentication by supplying this value in the X-WolfStack-Secret header to the",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-73501 - kin-openapi: ValidationHandler.Load() Fail-Open Authentication Bypass via NoopAuthenticationFunc Default",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73501",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T22:17:17.000Z",
-        "contentSnippet": "kin-openapi is a Go project for handling OpenAPI files. Prior to 0.144.0, ValidationHandler.Load() in openapi3filter/validation_handler.go silently replaces a nil AuthenticationFunc with NoopAuthenticationFunc, which returns nil without checking credentials. This substitution cau",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-73500 - etcd: `tlsListener.acceptLoop` spawns unbounded handshake goroutines with no deadline",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73500",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T22:17:17.000Z",
-        "contentSnippet": "etcd is a distributed key-value store for the data of a distributed system. Prior to versions 3.5.33, 3.6.14, and 3.7.1, a network attacker who can reach an etcd TLS listener can open many TCP connections and never send a ClientHello. In client/pkg/transport/listener_tls.go, each",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-73499 - etcd: Watch API authorization bypass via open-ended range requests",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73499",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T22:17:17.000Z",
-        "contentSnippet": "etcd is a distributed key-value store for the data of a distributed system. Prior to versions 3.5.33, 3.6.14, and 3.7.1, a user granted READ permission on a single exact key can use the Watch gRPC API with clientv3.WithFromKey() to receive watch events for every key lexicographic",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-73498 - MCP Atlassian is a Model Context Protocol (MCP): Arbitrary file read via missing path validation in confluence_upload_attachment",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73498",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T22:17:16.000Z",
-        "contentSnippet": "MCP Atlassian is a Model Context Protocol (MCP) server for Atlassian products (Confluence and Jira). Prior to 0.22.0, confluence_upload_attachment passes its client-supplied file_path directly to open(file_path, \"rb\") in src/mcp_atlassian/confluence/attachments.py through _upload",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-73495 - blaze: Chunked-body trailer fields promoted into Request.headers in blaze-server (front-end header-sanitization bypass)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73495",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T22:17:16.000Z",
-        "contentSnippet": "blaze is a Scala library for building asynchronous pipelines, with a focus on network IO. Prior to 0.23.18 and 1.0.0-M42, blaze-server can merge HTTP/1.1 chunked-body trailer fields into Request.headers. Because trailer fields are attacker-controlled, an unauthenticated remote cl",
-        "cveScore": 7.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-73493 - http4s-blaze-server: Unbounded WebSocket message aggregation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73493",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T22:17:16.000Z",
-        "contentSnippet": "Http4s (http4s-blaze-server) is a minimal, idiomatic Scala interface for HTTP services. Prior to 0.23.18 and 1.0.0-M42, http4s-blaze-server aggregates fragments of an incoming WebSocket message with no limit on total size or fragment count. A client that completes a WebSocket han",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-73492 - Loofah `allowed_uri?` does not detect `javascript:` URIs split by numeric character references without semicolons",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73492",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-12T22:17:16.000Z",
-        "contentSnippet": "Loofah is a general library for manipulating and transforming HTML/XML documents and fragments, built on top of Nokogiri. From 2.25.0 until 2.25.2, Loofah::HTML5::Scrub.allowed_uri? does not reject javascript: or vbscript: URIs whose scheme is split by semicolon-less numeric char",
-        "cveScore": 2.3,
-        "cveSeverity": "LOW"
       }
     ],
     "ai": [
+      {
+        "title": "Amazon Quick for Microsoft 365: Agentic AI where you work",
+        "link": "https://aws.amazon.com/blogs/machine-learning/amazon-quick-for-microsoft-365-agentic-ai-where-you-work/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-08-13T15:48:15.000Z",
+        "contentSnippet": "Amazon Quick is now available directly inside Microsoft Word, Excel, PowerPoint, and Outlook. These extensions bring connected data access and agentic document editing into the Microsoft 365 apps your teams already use, so you can analyze data, draft content, and reach enterprise"
+      },
       {
         "title": "Dyna Robotics Introduces Dyna-2: A World-Action Model Pre-Trained on 1 Million Hours of Human Video",
         "link": "https://www.marktechpost.com/2026/08/13/dyna-robotics-introduces-dyna-2-a-world-action-model-pre-trained-on-1-million-hours-of-human-video/",
@@ -1597,13 +1604,6 @@
         "source": "MarkTechPost",
         "isoDate": "2026-07-31T05:06:43.000Z",
         "contentSnippet": "PolyAI has introduced Dialog-RSN-1, a dialog model that perceives caller audio directly instead of reading an ASR transcript. It fuses turn-taking, speech recognition, function calling, and response generation into a single audio-native model, keeps TTS separate so the output voi"
-      },
-      {
-        "title": "Building a Policy-Governed Multi-Agent Financial Research Workflow with Omnigent",
-        "link": "https://www.marktechpost.com/2026/07/30/building-a-policy-governed-multi-agent-financial-research-workflow-with-omnigent/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-07-31T04:44:12.000Z",
-        "contentSnippet": "In this tutorial, we demonstrate how to build and execute a multi-agent workflow with Omnigent in a secure, isolated Python environment. Learn to integrate live exchange-rate data, implement hierarchical agent delegation for financial text auditing, and apply hard governance poli"
       }
     ],
     "virtualization": [
@@ -2338,7 +2338,7 @@
         "contentSnippet": "Geekom mates an Intel Meteor Lake Core Ultra 9 processor with soldered 24GB DDR5 dual-channel RAM to conjure up an attractively specified and priced mini PC for the RAMpocalypse era."
       },
       {
-        "title": "Best deals on PC setup accessories — save money on chairs, desks, monitor stands, boom arms, and more.",
+        "title": "Best deals on PC setup accessories — save money on chairs, desks, monitor stands, boom arms, and more",
         "link": "https://www.tomshardware.com/gift-guides-seasonal-sales/best-deals-on-pc-furniture-save-money-on-chairs-desks-monitor-stands-boom-arms-and-more",
         "source": "Tom's Hardware",
         "isoDate": "2026-08-13T12:30:00.000Z",
