@@ -1,8 +1,80 @@
 {
-  "updatedAt": "2026-08-15T15:12:04.569Z",
+  "updatedAt": "2026-08-15T16:14:04.854Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-19897 - mangroup dtale Login Endpoint auth.py login excessive authentication",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19897",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T15:30:08.000Z",
+        "contentSnippet": "A vulnerability has been found in mangroup dtale up to 3.22.0. This issue affects the function Login of the file dtale/auth.py of the component Login Endpoint. Such manipulation leads to improper restriction of excessive authentication attempts. The attack can be executed remotel",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-19896 - mangroup dtale Flask Session Cookie app.py build_secret_key random values",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19896",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T15:16:37.000Z",
+        "contentSnippet": "A flaw has been found in mangroup dtale up to 3.22.0. This vulnerability affects the function build_secret_key of the file dtale/app.py of the component Flask Session Cookie. This manipulation causes insufficiently random values. Remote exploitation of the attack is possible. The",
+        "cveScore": 3.7,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-19895 - opensourcepos Open Source Point of Sale Login Endpoint Filters.php index excessive authentication",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19895",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T14:17:07.000Z",
+        "contentSnippet": "A vulnerability was detected in opensourcepos Open Source Point of Sale up to 3.4.2. This affects the function Login::index of the file app/Config/Filters.php of the component Login Endpoint. The manipulation results in improper restriction of excessive authentication attempts. T",
+        "cveScore": 3.7,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-19474 - @fastify/multipart vulnerable to Denial of Service via temporary file leak on aborted upload",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19474",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T14:17:07.000Z",
+        "contentSnippet": "@fastify/multipart is a multipart form-data parser for Fastify. In versions from 3.0.0 up to but not including 10.1.1, request.saveRequestFiles() can leave completed temporary files on disk when a client disconnects while the parser is advancing between multipart parts. The itera",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-18549 - @fastify/multipart vulnerable to Denial of Service via aborted upload after fileSize limit",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18549",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T14:17:07.000Z",
+        "contentSnippet": "@fastify/multipart is a multipart form-data parser for Fastify. In versions from 5.3.0 up to but not including 10.1.1, when the busboy fileSize limit truncates a file part, the plugin clears its internal current-file reference while the underlying stream is still open. If the cli",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-18500 - @fastify/jwt vulnerable to authorization bypass via global secret overriding the per-request key",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18500",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T14:17:07.000Z",
+        "contentSnippet": "@fastify/jwt is a JSON Web Token plugin for Fastify. In versions before 10.2.2, a per-request verification key passed to request.jwtVerify({ key }) is silently overridden by the plugin's globally configured secret, because the option merge applies the global key last. Application",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-18165 - @fastify/oauth2 vulnerable to Login CSRF via plantable OAuth state cookies",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18165",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T14:17:07.000Z",
+        "contentSnippet": "@fastify/oauth2 is an OAuth 2.0 plugin for Fastify. In versions from 7.2.0 up to but not including 8.3.0, the plugin validates the OAuth state, and with PKCE the code verifier, by comparing the callback query parameter against an unprefixed, predictable cookie, with no server-sid",
+        "cveScore": 4.2,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-15689 - Dancer2::Plugin::Auth::Extensible versions through 0.713 for Perl allow password reset link poisoning via the request Host header in _default_email_password_reset and _default_welcome",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15689",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T14:17:06.000Z",
+        "contentSnippet": "Dancer2::Plugin::Auth::Extensible versions through 0.713 for Perl allow password reset link poisoning via the request Host header in _default_email_password_reset and _default_welcome_send. Both default emails emit a link of the form `$base/login/$code`, whose authority comes fro",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2026-74577 - net: mpls: initialize rtm_tos in mpls_getroute()",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-74577",
@@ -829,78 +901,6 @@
         "isoDate": "2026-08-14T21:17:18.000Z",
         "contentSnippet": "Improper neutralization of special elements used in a command ('command injection') in Microsoft PowerShell allows an authorized attacker to execute code locally.",
         "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-73680 - Cockpit CMS 2.14.0 Authenticated Command Injection via FFmpeg Filename",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73680",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T20:16:58.000Z",
-        "contentSnippet": "Cockpit CMS 2.14.0 and prior contains a command injection vulnerability in the FFmpeg integration that allows authenticated users with only the assets/upload permission to execute arbitrary commands by uploading a video file with a shell metacharacter-laden filename. The unsaniti",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-71571 - Joomla Extension - icagenda.com - Authenticated SQL injection via unescaped numeric filter in iCagenda < 2.0.0-4.0.11",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71571",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T20:16:56.000Z",
-        "contentSnippet": "Joomla Extension - icagenda.com - Authenticated SQL injection via unescaped numeric filter in iCagenda",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-67365 - Joomla Extension - icagenda.com - Unauthenticated SQL injection in iCagenda < 4.0.0-4.0.11",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67365",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T20:16:55.000Z",
-        "contentSnippet": "Joomla Extension - icagenda.com - Unauthenticated SQL injection in iCagenda",
-        "cveScore": 9.2,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-64887 - Airwall - Hardcoded Secrets",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64887",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T20:16:55.000Z",
-        "contentSnippet": "Use of hard-coded cryptographic key vulnerability in Johnson Controls Airwall allows : Cryptanalytic Attack. This issue affects Airwall: before 4.1.",
-        "cveScore": 7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-39925 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-39925",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T20:16:52.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-34492 - Airwall - Arbitrary file read",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34492",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T20:16:52.000Z",
-        "contentSnippet": "External control of file name or path vulnerability in Johnson Controls Airwall allows : File Manipulation. This issue affects Airwall: before 4.1.",
-        "cveScore": 7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-27871 - TL280",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-27871",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T20:16:52.000Z",
-        "contentSnippet": "Cwe-327 Use of a Broken or Risky Cryptographic Algorithm vulnerability in Johnson Controls TL280 allows Cryptanalytic Attack. This issue affects TL280: before 5.63.",
-        "cveScore": 2.9,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-19910 - PAX Technology Q80 Application Installer Signature Verification Bypass Remote Code Execution Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19910",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T20:16:52.000Z",
-        "contentSnippet": "PAX Technology Q80 Application Installer Signature Verification Bypass Remote Code Execution Vulnerability. This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of PAX Technology Q80. Authentication is not required to exploit th",
-        "cveScore": 7.5,
         "cveSeverity": "HIGH"
       }
     ],
@@ -2310,11 +2310,18 @@
     ],
     "hardware": [
       {
+        "title": "Peer-reviewed study of 443,000 Backblaze hard drives ranks HGST most reliable and Toshiba the least — Analysis of 1.66 million drive-years finds Seagate and Toshiba HDDs fail at roughly twice the rate",
+        "link": "https://www.tomshardware.com/pc-components/hdds/peer-reviewed-study-of-443000-backblaze-drivers-ranks-hgst-most-reliable-and-toshiba-least",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-15T15:30:10.000Z",
+        "contentSnippet": "Backblaze's quarterly reports compare whichever drives are available at the time."
+      },
+      {
         "title": "Futuristic mosquito-zapping laser now available to buy, video shows device in action — tiny device shoots down bugs like a personal air defense system, but costs $1,000",
         "link": "https://www.tomshardware.com/peripherals/futuristic-mosquito-zapping-laser-now-available-to-buy-video-shows-device-in-action-tiny-device-shoots-down-bugs-like-a-personal-air-defense-system-but-costs-usd1-000",
         "source": "Tom's Hardware",
         "isoDate": "2026-08-15T15:04:47.000Z",
-        "contentSnippet": "This anti-mosquito air defense laser system has successfully passed the crowdfunding stage and is now readily available on the market. It costs around $1,000 but it will be money-well spent if it can defend your home from mosquito-borne diseases."
+        "contentSnippet": "This anti-mosquito air defense laser system has successfully passed the crowdfunding stage and is now readily available on the market. It costs around $1,000, but it will be money well spent if it can defend your home from mosquito-borne diseases."
       },
       {
         "title": "Grab this Nvidia RTX 5070 Ti gaming PC for $2,099 before it sells out —prebuilt powerhouse includes a Core Ultra 7 265KF, 32GB RAM, 1TB SSD",
@@ -3001,13 +3008,6 @@
         "source": "StorageReview",
         "isoDate": "2026-08-11T15:21:34.000Z",
         "contentSnippet": "Volta has emerged from stealth with a vertically integrated AI infrastructure platform designed to combine capital formation, powered land, data center development, GPU compute, software, and operations under one organization. The company is targeting a financing gap in the AI in"
-      },
-      {
-        "title": "AMD highlights Ryzen 5 5500 briefly topping Amazon CPU best sellers, beating 9800X3D — $80 DDR4 CPU remains a top seller during memory crunch",
-        "link": "https://www.tomshardware.com/pc-components/cpus/amd-highlights-ryzen-5-5500-briefly-topping-amazon-cpu-best-sellers-beating-9800x3d-usd80-ddr4-cpu-remains-a-top-seller-during-memory-crunch",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-11T15:06:35.000Z",
-        "contentSnippet": "AMD's marketing director shared a screenshot of the Amazon CPU best sellers list, but the four-year-old, $80 Ryzen 5 5500 was at the top of the charts."
       }
     ]
   }
