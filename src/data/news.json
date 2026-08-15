@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-08-15T13:23:34.298Z",
+  "updatedAt": "2026-08-15T14:13:59.301Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-74577 - net: mpls: initialize rtm_tos in mpls_getroute()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74577",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T13:18:03.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: net: mpls: initialize rtm_tos in mpls_getroute() mpls_getroute() builds the RTM_NEWROUTE reply to an RTM_GETROUTE request by filling a struct rtmsg allocated from an skb whose data area is not zeroed (alloc_skb(N",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74576 - mm/slab: prevent unbounded recursion in free path with new kmalloc type",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74576",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T13:18:03.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: mm/slab: prevent unbounded recursion in free path with new kmalloc type Commit 280ea9c3154b (\"mm/slab: avoid allocating slabobj_ext array from its own slab\") avoided recursive allocation of obj_exts from kmalloc ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74575 - thunderbolt: Prevent XDomain delayed work use-after-free on disconnect",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74575",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T13:18:03.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: thunderbolt: Prevent XDomain delayed work use-after-free on disconnect tb_xdp_handle_request() runs on system_wq and queues xd->state_work via queue_delayed_work() in three request handlers: PROPERTIES_CHANGED_RE",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74574 - dmaengine: idxd: fix fdev setup failure cleanup in idxd_cdev_open()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74574",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T13:18:03.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: dmaengine: idxd: fix fdev setup failure cleanup in idxd_cdev_open() The failed_dev_add and failed_dev_name paths drop the file-device reference while wq->wq_lock is still held. If put_device(fdev) drops the last ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74573 - iommu/arm-smmu-v3-iommufd: Require exactly one Stream ID for a vDEVICE",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74573",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T13:18:02.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: iommu/arm-smmu-v3-iommufd: Require exactly one Stream ID for a vDEVICE arm_vsmmu_vsid_to_sid() maps a guest's vSID to a single physical Stream ID taken from master->streams[0], assuming a device has exactly one s",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74572 - btrfs: zoned: fix deadlock between metadata writeback and transaction commit",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74572",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T13:18:02.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: btrfs: zoned: fix deadlock between metadata writeback and transaction commit When writing out metadata extent buffers in a zoned filesystem, btree_writepages() holds fs_info->zoned_meta_io_lock across the whole w",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74571 - btrfs: skip global block reserve accounting for rescue mounts",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74571",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T13:18:02.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: btrfs: skip global block reserve accounting for rescue mounts [BUG] Mounting with rescue=ibadroots after corrupting the block group tree root triggers a NULL pointer dereference: BUG: kernel NULL pointer derefere",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74570 - ntfs: harden runlist realloc size calculations",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74570",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T13:18:02.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: ntfs: harden runlist realloc size calculations Add a shared helper to safely convert runlist element counts to byte sizes using overflow checks, and use it in both ntfs_rl_realloc() and ntfs_rl_realloc_nofail().",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74569 - netfilter: nf_conntrack_sip: widen NAT rewrite delta to s32 in sip_help_tcp()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74569",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T13:18:02.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: netfilter: nf_conntrack_sip: widen NAT rewrite delta to s32 in sip_help_tcp() sip_help_tcp() stores the size change of each NAT-rewritten SIP message in s16 diff and accumulates it in s16 tdiff, but a single mess",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74568 - KVM: arm64: vgic: Fix race between LPI release and re-registration",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74568",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T13:18:02.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: KVM: arm64: vgic: Fix race between LPI release and re-registration Fix a potential race between decrementing an LPI's reference count and evicting that structure from the LPI xarray. LPI structures are maintained",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74567 - keys: fix out-of-bounds read in keyring_get_key_chunk()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74567",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T13:18:02.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: keys: fix out-of-bounds read in keyring_get_key_chunk() For description-level chunks keyring_get_key_chunk() advances the read pointer by level * sizeof(long) past the inline prefix but only bounds-checks the pre",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74566 - keys: make keyring key-chunk byte order agree with keyring_diff_objects()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74566",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T13:18:02.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: keys: make keyring key-chunk byte order agree with keyring_diff_objects() keyring_get_key_chunk() loads description bytes into the index chunk low address first, while keyring_diff_objects() numbers the first dif",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74565 - netfilter: nf_tables: make nft_object rhltable per table",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74565",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T13:18:02.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: netfilter: nf_tables: make nft_object rhltable per table The nft_object rhltable is global, this allows for accessing objects that are being dismangled from lookup path by other existing netns. Given the nft_obj_",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74564 - netfilter: xt_hashlimit: validate hashtable supports XT_HASHLIMIT_RATE_MATCH",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74564",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T13:18:01.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: netfilter: xt_hashlimit: validate hashtable supports XT_HASHLIMIT_RATE_MATCH The XT_HASHLIMIT_RATE_MATCH flag mode changes the semantics of the dsthash_ent structure which represents an entry in the hashtable. Th",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74563 - rds: tcp: hold the RCU lock across ipv6_chk_addr() in rds_tcp_laddr_check()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74563",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T13:18:01.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: rds: tcp: hold the RCU lock across ipv6_chk_addr() in rds_tcp_laddr_check() rds_tcp_laddr_check() looks up a scoped IPv6 interface with dev_get_by_index_rcu(), drops the RCU read-side lock, and only then passes t",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74562 - nexthop: take nh->lock for f6i_list walks in replace check and notify",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74562",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T13:18:01.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: nexthop: take nh->lock for f6i_list walks in replace check and notify fib6_check_nh_list() and __nexthop_replace_notify() walk nh->f6i_list during an RTNL-serialized nexthop replace without holding nh->lock. IPv6",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74561 - nexthop: avoid unlocked f6i_list walk in nh_rt_cache_flush",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74561",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T13:18:01.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: nexthop: avoid unlocked f6i_list walk in nh_rt_cache_flush nh_rt_cache_flush() walks nh->f6i_list during an RTNL-serialized nexthop replace without holding nh->lock, racing the unlocked IPv6 route add/delete that",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74560 - xsk: fix buffer leak in xsk_drop_skb() for AF_XDP multi-buffer Tx",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74560",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T13:18:01.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: xsk: fix buffer leak in xsk_drop_skb() for AF_XDP multi-buffer Tx This patch is inspired by the check[1] from sashiko. It says when overflow happens, the address of cq to be published is invalid. Actually the sev",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74559 - xsk: drain continuation descs after overflow in xsk_build_skb()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74559",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T13:18:01.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: xsk: drain continuation descs after overflow in xsk_build_skb() Fix generic xmit path multi-buffer logic when packets are either too big (count of descriptors exceed MAX_SKB_FRAGS) or an invalid descriptor is inc",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74558 - xsk: reclaim invalid Tx descriptors in ZC batch path",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74558",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T13:18:01.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: xsk: reclaim invalid Tx descriptors in ZC batch path The zero-copy Tx batch parser stops when it encounters an invalid descriptor. If this happens after one or more continuation descriptors, the Tx consumer can b",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74557 - scsi: libiscsi: Fix stale-data leak into the SCSI sense buffer",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74557",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T13:18:01.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: scsi: libiscsi: Fix stale-data leak into the SCSI sense buffer iscsi_scsi_cmd_rsp() copies the sense data of a SCSI Response from the target-supplied data segment. The segment carries a 2-byte sense length follow",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74556 - scsi: libiscsi_tcp: Bound SCSI Response data segment to the connection buffer",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74556",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T13:18:01.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: scsi: libiscsi_tcp: Bound SCSI Response data segment to the connection buffer iscsi_tcp_hdr_dissect() receives the data segment of several PDU types into the fixed-size conn->data buffer, which is allocated for I",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74555 - scsi: libsas: Fix HA resume deadlock and hisi_sas disk-wake race",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74555",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T13:18:00.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: scsi: libsas: Fix HA resume deadlock and hisi_sas disk-wake race Commit fbefe22811c3 (\"scsi: libsas: Don't always drain event workqueue for HA resume\") introduced sas_resume_ha_no_sync() to avoid a deadlock: the ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74554 - wifi: ath12k: fix out-of-bounds clear_bit in ath12k_mac_dp_peer_cleanup()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74554",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T13:18:00.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: wifi: ath12k: fix out-of-bounds clear_bit in ath12k_mac_dp_peer_cleanup() ath12k_mac_dp_peer_cleanup() clears the ML peer ID slot on the free_ml_peer_id_map bitmap by indexing it with dp_peer->peer_id. That is wr",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74553 - hwmon: (nct6775-core) Fix number of temperature registers for NCT6116",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74553",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T13:18:00.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: hwmon: (nct6775-core) Fix number of temperature registers for NCT6116 Unlike NCT6106, NCT6116 only has three temperature registers, and with it only three temperature source and temperature source configuration r",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2026-18438 - Templately <= 3.7.1 - Authenticated (Contributor+) Arbitrary File Upload to Remote Code Execution via Gutenberg Cloud Import Attachment Filename Mismatch",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-18438",
@@ -676,231 +901,6 @@
         "isoDate": "2026-08-14T20:16:52.000Z",
         "contentSnippet": "PAX Technology Q80 Application Installer Signature Verification Bypass Remote Code Execution Vulnerability. This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of PAX Technology Q80. Authentication is not required to exploit th",
         "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-19909 - PAX Technology Q80 AIP File Parsing Link Following Remote Code Execution Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19909",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T20:16:52.000Z",
-        "contentSnippet": "PAX Technology Q80 AIP File Parsing Link Following Remote Code Execution Vulnerability. This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of PAX Technology Q80. Authentication is not required to exploit this vulnerability. Th",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-19908 - PAX Technology Q80 XCB Daemon Missing Authentication Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19908",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T20:16:52.000Z",
-        "contentSnippet": "PAX Technology Q80 XCB Daemon Missing Authentication Vulnerability. This vulnerability allows network-adjacent attackers to disclose sensitive information and modify configuration on affected installations of PAX Technology Q80. Authentication is not required to exploit this vuln",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-18554 - IBM Db2 Mirror for i is affected by multiple vulnerabilities",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18554",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T20:16:51.000Z",
-        "contentSnippet": "IBM Db2 Mirror for i 7.4, 7.5, and 7.6 could allow a remote authenticated attacker to obtain sensitive information due to improper limitation of a pathname to a restricted directory.",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-18178 - IBM Db2 Mirror for i is affected by multiple vulnerabilities",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18178",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T20:16:51.000Z",
-        "contentSnippet": "IBM Db2 Mirror for i 7.4, 7.5, and 7.6 could allow a remote authenticated attacker to delete arbitrary files due to path traversal.",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-17227 - IBM Db2 Mirror for i is affected by multiple vulnerabilities",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-17227",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T20:16:51.000Z",
-        "contentSnippet": "IBM Db2 Mirror for i 7.4, 7.5, and 7.6 could allow a remote authenticated attacker to bypass security restrictions due to improper neutralization of special elements used in an SQL command.",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-17209 - IBM Db2 Mirror for i is affected by multiple vulnerabilities",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-17209",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T20:16:51.000Z",
-        "contentSnippet": "IBM Db2 Mirror for i 7.4, 7.5, and 7.6 could allow a remote authenticated attacker to execute arbitrary scripts due to cross-site scripting.",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-17186 - IBM Db2 Mirror for i is affected by multiple vulnerabilities",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-17186",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T20:16:51.000Z",
-        "contentSnippet": "IBM Db2 Mirror for i 7.4, 7.5, and 7.6 could allow a remote attacker to execute arbitrary CL commands due to improper neutralization of special elements in a command.",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-17184 - IBM Db2 Mirror for i is affected by multiple vulnerabilities",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-17184",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T20:16:51.000Z",
-        "contentSnippet": "IBM Db2 Mirror for i 7.4, 7.5, and 7.6 could allow a remote attacker to execute arbitrary code due to external control of file name or path.",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-17182 - IBM Db2 Mirror for i is affected by multiple vulnerabilities",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-17182",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T20:16:50.000Z",
-        "contentSnippet": "IBM Db2 Mirror for i 7.4, 7.5, and 7.6 could allow a remote attacker to bypass authentication and obtain or alter sensitive information due to improper validation of request URI path segments.",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-17181 - IBM Db2 Mirror for i is affected by multiple vulnerabilities",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-17181",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T20:16:50.000Z",
-        "contentSnippet": "IBM Db2 Mirror for i 7.4, 7.5, and 7.6 could allow a remote attacker to write files to arbitrary locations due to path traversal.",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-17179 - IBM Db2 Mirror for i is affected by multiple vulnerabilities",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-17179",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T20:16:50.000Z",
-        "contentSnippet": "IBM Db2 Mirror for i 7.4, 7.5, and 7.6 could allow a remote authenticated attacker to cause a denial of service due to command injection.",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-73679 - ImpressCMS Authenticated RCE via PHP Custom Tag eval()",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73679",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T19:18:01.000Z",
-        "contentSnippet": "ImpressCMS contains an authenticated remote code execution vulnerability in the custom tag module that allows authenticated administrators to execute arbitrary PHP code by storing a malicious payload in a custom tag with PHP type enabled. The application decodes HTML-encoded cont",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-73678 - MindsDB Minds Platform v26.1.0 Unauthenticated RCE via scratchpad exec()",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73678",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T19:18:01.000Z",
-        "contentSnippet": "MindsDB Minds Platform version 26.1.0 and earlier contains an unauthenticated remote code execution vulnerability that allows unauthenticated attackers to execute arbitrary OS commands by submitting crafted prompts to the unprotected POST /api/v1/responses/ endpoint, which reache",
-        "cveScore": 10,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-50029 - js-toml has silent type confusion via falsy-primitive duplicate-key bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50029",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T19:17:18.000Z",
-        "contentSnippet": "js-toml is a TOML parser for JavaScript, Prior to version 1.1.2, the interpreter checks whether a key already exists in a parser-built container with `if (object[key])` instead of `if (key in object)`. When the prior value is a falsy primitive — `false`, `0`, `0n`, `0.0`, `-0`, o",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-50027 - mcp-memory-service: Missing Authentication on Document API Endpoints Allows Unauthenticated Memory Read/Write/Delete",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50027",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T19:17:18.000Z",
-        "contentSnippet": "mcp-memory-service is a semantic memory layer for AI applications. Prior to 10.67.1, all HTTP routes under /api/documents/* in mcp-memory-service are served without any authentication dependency, even when the server is configured with an API key (MCP_API_KEY) or OAuth. An unauth",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-49457 - QUIC has Broken TLS verification",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49457",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T19:17:18.000Z",
-        "contentSnippet": "erlang_quic is a pure Erlang QUIC implementation. Prior to version 1.4.4, the QUIC client did not authenticate the server during the TLS 1.3 handshake. The CertificateVerify signature was not checked, the certificate chain was not validated, and the hostname was not compared agai",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-45699 - Netatalk has Integer Underflow → Stack Buffer Overflow in copydir()",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45699",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T19:17:18.000Z",
-        "contentSnippet": "Netatalk is a Free and Open Source file server suite for Unix-like operating systems. In versions 3.1.19 through 4.4.2, a stack-based buffer overflow exists in the copydir() function of Netatalk's afpd daemon due to an integer underflow in the calculation of the remaining buffer ",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-19188 - Haiwell IoT Cloud HMI Gateway OS Command Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19188",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T19:17:17.000Z",
-        "contentSnippet": "A critical OS command injection vulnerability has been identified in the Haiwell IoT Cloud HMI Gateway product. The vulnerability exists in the Net Check feature accessible via the /setting endpoint. The cmdPing Socket.io event fails to properly sanitize user-supplied input befor",
-        "cveScore": 10,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-18403 - LimeSurvey Community Edition 7.0.5 - Authenticated SQL injection in CPDB",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18403",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T19:17:17.000Z",
-        "contentSnippet": "LimeSurvey Community Edition 7.0.5 contains an authenticated SQL injection vulnerability in the Central Participant Database (CPDB) workflow that copies survey participant tokens to the central participant list.",
-        "cveScore": 6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2025-7639 - AVEVA Enterprise SCADA Deserialization of Untrusted Data",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-7639",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T19:17:13.000Z",
-        "contentSnippet": "The vulnerability, if exploited, could allow an authenticated miscreant with \"DNA Authority - Operator\" privilege to tamper with serialized data, potentially resulting in code execution during deserialization under the privilege of Enterprise SCADA security group \"DNA Apps\".",
-        "cveScore": 10,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-73850 - Emlog: Arbitrary SQL Execution Vulnerability in ai.php within queryDatabase() Function",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73850",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T18:19:10.000Z",
-        "contentSnippet": "Emlog is an open source website building system. In 2.6.20 and earlier, there is a SQL injection vulnerability in the queryDatabase function in ai.php.",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-73849 - emlog allows unauthenticated reinstallation via `install.php?action=reinstall`.",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73849",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T18:19:09.000Z",
-        "contentSnippet": "Emlog is an open source website building system. In 2.6.26 and earlier, install.php accepts action=reinstall without authentication and deliberately skips the already-installed check because the guard runs only when $act != 'reinstall'. A remote attacker can submit hostname, dbus",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-73847 - Emlog: Missing CSRF protection in AI Assistant execute_tool leads to full database compromise and admin account takeover",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73847",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T18:19:09.000Z",
-        "contentSnippet": "Emlog is an open source website building system. In 2.6.26 and earlier, missing CSRF protection on the AI Assistant execute_tool action in admin/ai.php lets a remote unauthenticated attacker submit a forged cross-site request from an attacker-controlled page to a recently logged-",
-        "cveScore": 6.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-72970 - Microsoft Edge (Chromium-based) Remote Code Execution Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72970",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T18:19:09.000Z",
-        "contentSnippet": "Heap-based buffer overflow in Microsoft Edge (Chromium-based) allows an unauthorized attacker to execute code over a network.",
-        "cveScore": 8.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-63361 - LimeSurvey Community Edition 7.0.5+260623 - Reflected XSS in HTML editor popup",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63361",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T18:18:53.000Z",
-        "contentSnippet": "LimeSurvey Community Edition 7.0.5 contains an authenticated reflected cross-site scripting vulnerability in the HTML editor popup endpoint. The text and name query parameters are passed through a blacklist sanitizer and then rendered without context-appropriate output encoding.",
-        "cveScore": 8.5,
         "cveSeverity": "HIGH"
       }
     ],
@@ -2310,6 +2310,27 @@
     ],
     "hardware": [
       {
+        "title": "Best Enterprise SSDs in 2026: Lab-Tested Leaderboard",
+        "link": "https://www.storagereview.com/best/enterprise-ssds",
+        "source": "StorageReview",
+        "isoDate": "2026-08-15T13:45:45.000Z",
+        "contentSnippet": "Updated August 14, 2026: Initial publication. Ranked on our current enterprise bench (FIO, GDSIO, and DLIO); drives tested on the older suite are noted in Also Tested. Every drive ranked on this page has been through the StorageReview lab. We do not rank announced products or ven"
+      },
+      {
+        "title": "Devs blame Windows for VLC media player bug that causes 33-second delay when playing MP3 files — creators allege Microsoft Defender blocking plugin cache is to blame",
+        "link": "https://www.tomshardware.com/software/windows/vlc-media-player-bug-reportedly-causes-33-second-delay-when-playing-mp3-files-on-windows-developers-say-microsoft-defender-is-to-blame",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-15T13:30:00.000Z",
+        "contentSnippet": "VLC developers say a Windows 11 issue involving Microsoft Defender can interfere with the media player's plugin cache and cause unusually long playback delays."
+      },
+      {
+        "title": "AMD Ryzen 7 7700X3D vs Ryzen 7 7800X3D faceoff — seeing double with Zen 4 X3D",
+        "link": "https://www.tomshardware.com/pc-components/cpus/amd-ryzen-7-7700x3d-vs-ryzen-7-7800x3d-faceoff",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-15T13:25:00.000Z",
+        "contentSnippet": "AMD's Ryzen 7 7700X3D takes on the old favorite across performance, pricing, and power consumption."
+      },
+      {
         "title": "White House authorizes private companies to launch 'hack-back' cyberattacks that destroy data and systems, targeting foreign cybercrime organizations — vetted organizations can now conduct offensive c",
         "link": "https://www.tomshardware.com/tech-industry/cyber-security/white-house-authorizes-private-companies-to-hack-foreign-cybercrime-groups",
         "source": "Tom's Hardware",
@@ -2987,27 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-08-11T12:05:00.000Z",
         "contentSnippet": "DeepCool’s latest AK G2 series air coolers feature your choice of woodgrain tops or a digital display. We’ve tested both AK620 and AK400 G2 coolers with AMD’s Ryzen 9 9950X3D to benchmark their thermal efficiency."
-      },
-      {
-        "title": "FCC proposes import ban on Chinese optical transceivers — blockade targets key AI interconnects as China holds 56% global market share",
-        "link": "https://www.tomshardware.com/tech-industry/fcc-proposes-import-ban-on-chinese-optical-transceivers-blockade-targets-key-ai-interconnects-as-china-holds-56-percent-global-market-share",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-11T12:03:36.000Z",
-        "contentSnippet": "The FCC is drafting a proposal that would expand its list of equipment and services covered by the Secure Networks Act to include imports of new-model optical transceivers manufactured in China."
-      },
-      {
-        "title": "IBM and Together AI Put $240M Into a Dedicated HGX B300 Inference Cluster on IBM Cloud",
-        "link": "https://www.storagereview.com/news/ibm-and-together-ai-put-240m-into-a-dedicated-hgx-b300-inference-cluster-on-ibm-cloud",
-        "source": "StorageReview",
-        "isoDate": "2026-08-11T12:00:22.000Z",
-        "contentSnippet": "IBM has announced a multi-year, $240 million agreement with Together AI to deploy a dedicated NVIDIA HGX B300-based AI inference cluster on IBM Cloud. Together AI plans to use the environment to deliver inference services for open-source models, expanding its AI Native Cloud plat"
-      },
-      {
-        "title": "$580 million undersea cable rerouted to avoid the grave of Dobby the House Elf — company caves to fan demands to safeguard Harry Potter filming location, will instead pass by Bronze Age burial site",
-        "link": "https://www.tomshardware.com/networking/usd580-million-undersea-cable-rerouted-to-avoid-the-grave-of-dobby-the-house-elf-company-caves-to-fan-demands-to-safeguard-harry-potter-filming-location-will-instead-pass-by-bronze-age-burial-site",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-11T11:47:22.000Z",
-        "contentSnippet": "The Greenlink Connector project, which will connect the grid of Ireland and Wales, had to reroute its path after Harry Potter fans complained that it would 'desecrate' the 'grave' of beloved character Dobby. The change of plans brought the undersea cable close to a few Bronze Age"
       }
     ]
   }
