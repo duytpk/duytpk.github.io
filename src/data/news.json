@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-08-15T06:22:38.706Z",
+  "updatedAt": "2026-08-15T07:22:45.380Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-15826 - User Profile Builder <= 3.16.4 - Unauthenticated Authentication Bypass via Type Confusion to Administrator Account Takeover via 'username' Parameter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15826",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T07:16:19.000Z",
+        "contentSnippet": "The User Profile Builder plugin for WordPress is vulnerable to Authentication Bypass via Type Confusion in versions up to, and including, 3.16.4. This is due to the wppb_log_in_user() function calling absint() on the return value of wp_insert_user() before performing an is_wp_err",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-14279 - Wholesale Market <= 2.2.2 - Authenticated (Subscriber+) Privilege Escalation via 'role_required' Parameter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14279",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T07:16:19.000Z",
+        "contentSnippet": "The Wholesale Market plugin for WordPress is vulnerable to privilege escalation in versions up to, and including, 2.2.2 via the ced_wholesale_request_send AJAX action. The ced_wholesale_request_send_callback() handler only verifies a nonce (which is exposed to any authenticated u",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-74439 - iommu/vt-d: Clear Present bit before tearing down scalable-mode context entry",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74439",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T06:22:46.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: iommu/vt-d: Clear Present bit before tearing down scalable-mode context entry device_pasid_table_teardown() zeroes the 128-bit scalable-mode context entry with context_clear_entry() while the Present bit is still",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74438 - crypto: sun4i-ss - Remove insecure and unused rng_alg",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74438",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T06:22:45.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: crypto: sun4i-ss - Remove insecure and unused rng_alg Remove sun4i_ss_rng, as it is insecure and unused: - It has multiple vulnerabilities. sun4i_ss_prng_seed() is missing locking and has a buffer overflow. sun4i",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74437 - media: uvcvideo: Fix deadlock if uvc_status_stop is called from async_ctrl.work",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74437",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T06:22:45.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: media: uvcvideo: Fix deadlock if uvc_status_stop is called from async_ctrl.work If a UVC camera has an asynchronous control, uvc_status_stop may be called from async_ctrl.work: uvc_ctrl_status_event_work() uvc_ct",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74436 - rxrpc: serialize kernel accept preallocation with socket teardown",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74436",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T06:22:45.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: rxrpc: serialize kernel accept preallocation with socket teardown rxrpc_kernel_charge_accept() reads rx->backlog without any socket/backlog synchronization and passes that raw pointer into rxrpc_service_prealloc_",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74435 - rxrpc: rxrpc_verify_data ensure rx_dec_buffer alloc",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74435",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T06:22:45.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: rxrpc: rxrpc_verify_data ensure rx_dec_buffer alloc rxrpc_recvmsg_data() calls rxrpc_verify_data() whenever the rxrpc_call.rx_dec_buffer is unallocated and assumes that upon successful return that rx_dec_buffer m",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74434 - rxrpc: Don't move a peeked OOB message onto the pending queue",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74434",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T06:22:45.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: rxrpc: Don't move a peeked OOB message onto the pending queue rxrpc_recvmsg_oob() takes a received oob message off recvmsg_oobq and, if a response is needed, moves it onto the pending_oobq tree. However, only the",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74433 - rxrpc: Fix UAF in rxgk_issue_challenge()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74433",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T06:22:45.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: rxrpc: Fix UAF in rxgk_issue_challenge() Fix rxgk_issue_challenge() to free the page containing the challenge content after invoking the tracepoint as the whdr passed to the tracepoint points into the page just f",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74432 - rxrpc: Fix leak of released call in recvmsg(MSG_PEEK)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74432",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T06:22:45.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: rxrpc: Fix leak of released call in recvmsg(MSG_PEEK) Fix rxrpc_recvmsg() to also drop the ref it holds on an already-released call if MSG_PEEK is in force (the function holds a ref on the call irrespective of wh",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74431 - rxrpc: Fix potential infinite loop in rxrpc_recvmsg()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74431",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T06:22:45.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: rxrpc: Fix potential infinite loop in rxrpc_recvmsg() Fix the wait in rxrpc_recvmsg() also take check the oob queue.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74430 - rxrpc: Fix ACKALL packet handling",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74430",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T06:22:45.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: rxrpc: Fix ACKALL packet handling rxrpc_input_ackall() accepts ACKALL packets without checking whether the call is in a state that can legitimately have outstanding transmit buffers. A forged ACKALL can therefore",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74429 - rxrpc: Fix the reception of a reply packet before data transmission",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74429",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T06:22:45.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: rxrpc: Fix the reception of a reply packet before data transmission Fix rxrpc_receiving_reply() to handle the reception of an apparent reply DATA packet before rxrpc has had a chance to send any request DATA pack",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74428 - rxrpc: Fix double unlock in rxrpc_recvmsg()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74428",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T06:22:44.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: rxrpc: Fix double unlock in rxrpc_recvmsg() Fix a double unlock in rxrpc_recvmsg() when dealing with OOB messages.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74427 - afs: Fix netns teardown to cancel the preallocation charger",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74427",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T06:22:44.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: afs: Fix netns teardown to cancel the preallocation charger Fix the teardown of an afs network namespace to make sure it cancels the work item that keeps the preallocated rxrpc call/conn/peer queue charged before",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74426 - afs: fix NULL pointer dereference in afs_get_tree()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74426",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T06:22:44.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: afs: fix NULL pointer dereference in afs_get_tree() afs_alloc_sbi() uses kzalloc for memory allocation. And, if ctx->dyn_root is not null, as->cell and as->volume are null. In trace_afs_get_tree() they are derefe",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74425 - afs: handle CB.InitCallBackState3 requests without a server record",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74425",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T06:22:44.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: afs: handle CB.InitCallBackState3 requests without a server record The cache manager callback path now attaches the server record to an incoming call through the rxrpc peer's app data. That association is not gua",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74424 - fbcon: fix NULL pointer dereference for a console without vc_data",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74424",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T06:22:44.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: fbcon: fix NULL pointer dereference for a console without vc_data fbcon_new_modelist() runs when a framebuffer's modelist changes. For each console mapped to it with fb_display[i].mode set, it reads vc_cons[i].d ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74423 - accel/amdxdna: Fix leak when pinning ubuf pages",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74423",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T06:22:44.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: accel/amdxdna: Fix leak when pinning ubuf pages When pin_user_pages_fast() returns fewer pages than requested, the pages that were successfully pinned are not released, leading to a leak. Fix this by unpinning an",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74422 - drm/rockchip: inno-hdmi: Switch to drmm_kzalloc()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74422",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T06:22:44.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: drm/rockchip: inno-hdmi: Switch to drmm_kzalloc() Driver makes use of drmm_encoder_init() to initialize the encoder and automatically handle the cleanup by registering drm_encoder_cleanup() with drmm_add_action()",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74421 - drm/rockchip: dw_dp: Switch to drmm_kzalloc()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74421",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T06:22:44.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: drm/rockchip: dw_dp: Switch to drmm_kzalloc() Driver makes use of drmm_encoder_init() to initialize the encoder and automatically handle the cleanup by registering drm_encoder_cleanup() with drmm_add_action(). Ho",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74420 - drm/gpusvm: Reject VMAs with VM_IO or VM_PFNMAP when creating SVM ranges",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74420",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T06:22:44.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: drm/gpusvm: Reject VMAs with VM_IO or VM_PFNMAP when creating SVM ranges VMAs marked with VM_IO or VM_PFNMAP are not backed by struct page objects, which GPUSVM requires in order to operate correctly. In particul",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74419 - accel/amdxdna: Adjust size for copy_to_user()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74419",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T06:22:43.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: accel/amdxdna: Adjust size for copy_to_user() The amount of data returned to user space should be limited by the buffer size provided by the application. If the buffer is smaller than the data size, return only t",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74418 - dma-fence: Fix potential tracepoint null pointer dereferences",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74418",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T06:22:43.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: dma-fence: Fix potential tracepoint null pointer dereferences Trace_dma_fence_signaled, trace_dma_fence_wait_end and trace_dma_fence_destroy can all currently dereference a null fence->ops pointer after it has be",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74417 - drm/radeon: fix integer overflow in radeon_align_pitch()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74417",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-15T06:22:43.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: drm/radeon: fix integer overflow in radeon_align_pitch() radeon_align_pitch() has the same kind of overflow issue as the old amdgpu helper: both the alignment round-up add and the final 'aligned * cpp' calculatio",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2026-18387 - Groundhogg <= 4.5.14 - Authenticated (Vendor+) SQL Injection via 'tag_query' Parameter",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-18387",
@@ -677,231 +902,6 @@
         "contentSnippet": "Metacat is data repository software that helps researchers preserve, share, and discover data. Metacat versions 2.0.0 through 3.4.0 contain an unauthenticated SQL injection vulnerability in the `/cn/v1/object` and `/cn/v2/object` REST API endpoints due to unsanitized user input t",
         "cveScore": 9.8,
         "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-19847 - TOTOLINK A800R wps.so cstecgi.cgi setWiFiWpsConfig stack-based overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19847",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T18:17:24.000Z",
-        "contentSnippet": "A security flaw has been discovered in TOTOLINK A800R 4.1.2cu.5137_B20200730. Affected is the function setWiFiWpsConfig of the file /cgi-bin/cstecgi.cgi of the component wps.so. The manipulation of the argument pin results in stack-based buffer overflow. The attack can be launche",
-        "cveScore": 9,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-19846 - TOTOLINK A800R firewall.so cstecgi.cgi setUrlFilterRules stack-based overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19846",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T18:17:23.000Z",
-        "contentSnippet": "A vulnerability was identified in TOTOLINK A800R 4.1.2cu.5137_B20200730. This impacts the function setUrlFilterRules of the file /cgi-bin/cstecgi.cgi of the component firewall.so. The manipulation of the argument url leads to stack-based buffer overflow. The attack can be initiat",
-        "cveScore": 9,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-19682 - Command Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19682",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T18:17:23.000Z",
-        "contentSnippet": "A command injection vulnerability exists in Security Center where a remote, unauthenticated attacker could exploit this issue to execute arbitrary commands on the underlying operating system with the privileges of the service account.",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-19681 - Command Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19681",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T18:17:23.000Z",
-        "contentSnippet": "An authenticated command injection vulnerability exists in Security Center related to file upload processing. An attacker could exploit this issue by uploading a specially crafted file, potentially resulting in arbitrary command execution on the underlying operating system.",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-19680 - SQL Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19680",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T18:17:23.000Z",
-        "contentSnippet": "A SQL injection vulnerability exists in Security Center that could allow an attacker to access unauthorized data from the application's database.",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-19679 - Improper Input Validation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19679",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T18:17:23.000Z",
-        "contentSnippet": "An input validation vulnerability exists in Security Center's file upload handling, where insufficient sanitization of uploaded filenames could contribute to a downstream command injection issue.",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-19639 - Improper Access Control",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19639",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T18:17:23.000Z",
-        "contentSnippet": "An improper access control vulnerability exists where an authenticated non-administrative application user could potentially view settings outside of their assigned scope.",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-19636 - Insuffucient Protections Lead to Brute Force",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19636",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T18:17:22.000Z",
-        "contentSnippet": "An issue was identified in which CSRF tokens were generated using a predictable method, potentially reducing their effectiveness as a security control. This has been addressed by improving the randomness and entropy of token generation.",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-19635 - Local Privilege Escalation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19635",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T18:17:22.000Z",
-        "contentSnippet": "A local privilege escalation vulnerability exists in Security Center. An attacker with write access to a specific configuration file could achieve arbitrary code execution with elevated privileges, without requiring further user or victim interaction.",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-19631 - SQL Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19631",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T18:17:22.000Z",
-        "contentSnippet": "A SQL injection vulnerability exists in Security Center that could allow an authenticated administrator to execute arbitrary SQL queries, potentially resulting in unauthorized access to sensitive data, including credentials.",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-19629 - Privilege Escalation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19629",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T18:17:22.000Z",
-        "contentSnippet": "A privilege escalation vulnerability exists in Tenable Security Center that allows a user with \"Security Manager\" role and \"manage user\" permission on a single group to modify users belonging to other groups. This bypasses the intended access control restrictions and enables unau",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-12366 - Use-after-free freeing an armed dynamically-allocated k_timer in Zephyr userspace object disposal",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12366",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T18:17:22.000Z",
-        "contentSnippet": "Zephyr's dynamic kernel-object disposal path unref_check() in kernel/userspace/userspace.c frees an object's storage (k_free(dyn->data)) once its reference count reaches zero, after running a per-object-type cleanup. The cleanup switch handled only K_OBJ_MSGQ and K_OBJ_STACK; the",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-12365 - Use-after-free in Zephyr delayable work-queue cancellation under SMP timing race",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12365",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T18:17:21.000Z",
-        "contentSnippet": "A use-after-free exists in the Zephyr second-generation work queue (kernel/work.c) in the handling of delayable work timeouts. When a delayable work item's timeout has been dequeued and its handler work_timeout() is in flight (blocked acquiring the work-queue spinlock), a concurr",
-        "cveScore": 5.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-73846 - CKAN MCP Server: Cache-key canonicalization collision enables cache confusion / poisoning",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73846",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T17:20:36.000Z",
-        "contentSnippet": "CKAN MCP Server is a tool for querying CKAN open data portals. Prior to 0.4.112, canonicalizeParams in src/utils/cache.ts serializes request parameters with unescaped ampersand, equals-sign, and vertical-bar delimiters, allowing different logical parameter sets used by buildCache",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-73845 - CKAN MCP Server: MQA server allowlist bypass via unanchored regex (`isValidMqaServer`)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73845",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T17:20:36.000Z",
-        "contentSnippet": "CKAN MCP Server is a tool for querying CKAN open data portals. Prior to 0.4.112, the ckan_get_mqa_quality and ckan_get_mqa_quality_details tools in src/tools/quality.ts use isValidMqaServer to validate the server_url parameter with a prefix-only regular expression for dati.gov.it",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-73844 - CKAN MCP Server: Information disclosure via verbose error reflection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73844",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T17:20:36.000Z",
-        "contentSnippet": "CKAN MCP Server is a tool for querying CKAN open data portals. Prior to 0.4.112, error paths reflect raw upstream response bodies and internal exception messages back to the caller instead of a sanitized, generic message. When the server is pointed at (or redirected/SSRF'd to) a ",
-        "cveScore": 3.7,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-73107 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73107",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T17:20:32.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-49989 - CrateDB's Blob HTTP handler bypasses authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49989",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T17:18:27.000Z",
-        "contentSnippet": "CrateDB is a distributed SQL database. Prior to versions 6.2.8 and 6.3.2, any authenticated user can read or delete any blob whose SHA-1 digest they know, and can plant new blobs unconditionally, in any blob table, regardless of `GRANT`s. CrateDB has two ways to access blob stora",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-49986 - Cortex has Untrusted Project Bootstrap Code Execution via `CLAUDE_PROJECT_DIR`",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49986",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T17:18:27.000Z",
-        "contentSnippet": "The Cortex MCP server (`neuro-cortex-memory`), a cross-platform persistent memory MCP, prior to version 3.17.1 treats the `CLAUDE_PROJECT_DIR` environment variable — automatically set by Claude Code to the currently open project directory — as a trusted Cortex developer checkout.",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-49826 - Concourse login flow has an open redirect issue",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49826",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T17:18:27.000Z",
-        "contentSnippet": "Concourse is a container-based automation system written in Go. Prior to version 8.2.3, an attacker is able to craft and send a user a URL that will redirect the user from the Concourse web server to any other site. This could be used in a phishing attack to steal user's credenti",
-        "cveScore": 0,
-        "cveSeverity": "NONE"
-      },
-      {
-        "title": "CVE-2026-47766 - crun follows rootfs /dev symlink while creating default devices",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47766",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T17:18:18.000Z",
-        "contentSnippet": "crun is an open source OCI Container Runtime fully written in C. Prior to version 1.28, crun's default device setup opens the container rootfs `/dev` directory without `O_NOFOLLOW`. If an OCI bundle contains `rootfs/dev` as a symlink and the bundle configuration does not mount `/",
-        "cveScore": 5.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-47192 - kas's late signature validation may allow unnoticed repository manipulations",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47192",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T17:18:15.000Z",
-        "contentSnippet": "kas is a setup tool for bitbake based projects. Starting in version 4.8 and prior to version 5.3, kas checks out and processes repositories regarding configuration includes prior to validating signatures of those repositories. This may allow to replace on original repository with",
-        "cveScore": 2.1,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-47191 - kas checks out SHA-like git branches as valid commits",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47191",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T17:18:15.000Z",
-        "contentSnippet": "kas is a setup tool for bitbake based projects. Prior to version 5.3, when relying solely on a git commit ID (SHA-1 or SHA-256) to qualify if a checkout of a repository is equivalent to the state validated while adding its commit ID to a kas configuration, users may be tricked to",
-        "cveScore": 2.1,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-46603 - Excessive memory allocation during VP8L decoding in golang.org/x/image",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46603",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T17:18:15.000Z",
-        "contentSnippet": "VP8L decoding in golang.org/x/image/vp8l can allocate an excessive amount of memory when processing a crafted VP8L image containing many unused Huffman tree groups. This allows a remote attacker to cause a denial of service via memory exhaustion.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-46439 - compliance-trestle Vulnerable to Remote Code Execution via Recursive Server-Side Template Injection (SSTI)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46439",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-14T17:18:14.000Z",
-        "contentSnippet": "compliance-trestle is a tooling platform for managing compliance as code. Versions prior to 3.12.2 and 4.0.3 have a Server-Side Template Injection (SSTI) vulnerability exists in the `trestle author jinja` command. The command recursively evaluates rendered templates, allowing an ",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
