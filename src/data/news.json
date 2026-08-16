@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-08-16T14:14:11.240Z",
+  "updatedAt": "2026-08-16T15:12:59.685Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-74797 - OpenTofu before 1.11.4 Denial of Service via malicious zip",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74797",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-16T14:16:57.000Z",
+        "contentSnippet": "OpenTofu versions before 1.11.4 contain a denial of service vulnerability in the tofu init command when processing maliciously-crafted .zip archives for provider or module packages. Attackers can cause excessive CPU usage by controlling .zip archive content served during dependen",
+        "cveScore": 3.1,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-74796 - OpenTofu before 1.11.7 Symlink Following Path Traversal",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74796",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-16T14:16:57.000Z",
+        "contentSnippet": "OpenTofu before 1.11.7 fails to validate existing symlinks in the provider cache directory during initialization. Attackers can place a malicious symlink in a trusted working directory to cause tofu init to write provider package contents to arbitrary filesystem locations outside",
+        "cveScore": 7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-74795 - Scriban before 6.6.0 Denial of Service via Uncontrolled Recursion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74795",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-16T14:16:57.000Z",
+        "contentSnippet": "Scriban before 6.6.0 contains an uncontrolled recursion vulnerability in its recursive-descent parser. The parser does not enforce a default expression depth limit (the ExpressionDepthLimit property in ParserOptions defaults to null/disabled), so an attacker who controls template",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-74794 - Scriban before 6.6.0 Denial of Service via Infinite Recursion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74794",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-16T14:16:57.000Z",
+        "contentSnippet": "Scriban before 6.6.0 contains an infinite recursion vulnerability in object rendering when the ObjectRecursionLimit property defaults to unlimited. Attackers can supply circular reference objects to the template context, exhausting stack space and triggering an uncatchable StackO",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-74792 - Scriban before 7.0.0 Stack Overflow via nested array initializers",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74792",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-16T14:16:57.000Z",
+        "contentSnippet": "Scriban before 7.0.0 (affected versions",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-74791 - Scriban before 7.0.0 Authorization Bypass via Stale Include Cache",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74791",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-16T14:16:57.000Z",
+        "contentSnippet": "Scriban before 7.0.0 fails to clear the CachedTemplates dictionary when TemplateContext.Reset() is called, allowing cached templates to persist across reused contexts. Attackers can exploit request-dependent ITemplateLoader implementations to access previously authorized template",
+        "cveScore": 9.2,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-74790 - Scriban before 7.0.0 MemberFilter Bypass via TemplateContext Cache",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74790",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-16T14:16:57.000Z",
+        "contentSnippet": "Scriban before 7.0.0 caches TypedObjectAccessor by Type only without considering MemberFilter changes, allowing reused TemplateContext instances to expose members that should be hidden. Attackers can access filtered properties and fields by reusing a TemplateContext after tighten",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-74789 - Scriban before 7.0.0 LoopLimit Bypass via Built-in Operations",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74789",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-16T14:16:56.000Z",
+        "contentSnippet": "Scriban before 7.0.0 (affected",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-74788 - Scriban before 7.0.0 Denial of Service via string.pad_left/pad_right",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74788",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-16T14:16:56.000Z",
+        "contentSnippet": "Scriban before 7.0.0 (affected versions",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-74787 - Scriban before 7.0.0 Uncontrolled Recursion via object.to_json",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74787",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-16T14:16:56.000Z",
+        "contentSnippet": "Scriban before 7.0.0 contains an uncontrolled recursion vulnerability in the object.to_json builtin function that lacks depth limits and circular reference detection. Attackers can craft templates with self-referencing objects to trigger unbounded recursion, causing a StackOverfl",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-74786 - Scriban before 7.0.0 Denial of Service via Unbounded Template Output",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74786",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-16T14:16:56.000Z",
+        "contentSnippet": "Scriban before 7.0.0 (affected versions",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-74785 - Scriban before 7.0.0 Denial of Service via Unbounded Resource Consumption",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74785",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-16T14:16:56.000Z",
+        "contentSnippet": "Scriban before 7.0.0 contains three distinct denial-of-service vulnerabilities in expression evaluation that bypass existing safety controls through unbounded string multiplication, uncontrolled BigInteger shift operations, and LoopLimit bypass via range enumeration in builtin fu",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-74784 - Scriban before 7.2.0 Denial of Service via array.insert_at",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74784",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-16T14:16:56.000Z",
+        "contentSnippet": "Scriban before 7.2.0 contains a denial of service vulnerability in the array.insert_at function that allocates unbounded null entries without respecting LoopLimit or LimitToString constraints. Attackers can supply a large index parameter to trigger OutOfMemoryException and crash ",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-74783 - Scriban 6.6.0 through 7.2.0 Parser Recursion Denial of Service",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74783",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-16T14:16:56.000Z",
+        "contentSnippet": "Scriban versions 6.6.0 through 7.2.0 contain a non-enforcing ExpressionDepthLimit guard that fails to stop recursive descent parsing of deeply nested expressions. Attackers can supply templates with deeply nested parentheses, array initializers, object initializers, or unary oper",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-73062 - Scriban 3.0.0 through 7.2.0 Denial of Service via Array Multiplication",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73062",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-16T14:16:55.000Z",
+        "contentSnippet": "Scriban versions 3.0.0 through 7.2.0 contain a denial of service vulnerability in the array multiplication operator that allocates memory without enforcing LoopLimit or overflow-safe arithmetic checks. Attackers can supply a large integer multiplier in a template to force multi-g",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-73061 - Scriban before 7.2.2 Arbitrary Property Write via TypedObjectAccessor",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73061",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-16T14:16:55.000Z",
+        "contentSnippet": "Scriban before 7.2.2 contains an access-modifier bypass vulnerability in TypedObjectAccessor that allows template code to write CLR object properties without setter-visibility checks. Attackers can modify properties with private, internal, or init-only setters, and perform mass a",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-73060 - Scriban 3.0.0 through 7.2.5 Denial of Service via ScriptRange.Multiply",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73060",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-16T14:16:55.000Z",
+        "contentSnippet": "Scriban versions from 3.0.0 through 7.2.5 contain a denial of service vulnerability in the ScriptRange.Multiply operator that bypasses LoopLimit when the left operand is a lazy sequence. Attackers can supply templates with array multiplication on lazy sequences to execute billion",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-73059 - stoatchat before 0.15.0 Permission Bypass via message_fetch",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73059",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-16T14:16:55.000Z",
+        "contentSnippet": "stoatchat before 0.15.0 contains a permission bypass vulnerability in the message_fetch route that checks only ViewChannel permission instead of requiring ReadMessageHistory. Attackers with ViewChannel access but ReadMessageHistory denied can retrieve individual message content b",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-73058 - stoatchat before 0.15.0 SSRF via IPv6 unspecified address bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73058",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-16T14:16:55.000Z",
+        "contentSnippet": "stoatchat versions before 0.15.0 fail to block the IPv6 unspecified address (::) in the SSRF blocklist, allowing unauthenticated attackers to bypass protections via the /proxy and /embed endpoints. Attackers can craft requests using IPv6 literal syntax to access services on the l",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-73057 - stoatchat before 0.15.0 Uncapped SVG Rendering Denial of Service",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73057",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-16T14:16:55.000Z",
+        "contentSnippet": "stoatchat before 0.15.0 fails to validate SVG viewBox dimensions in the proxy endpoint, allowing attackers to cause denial of service by memory exhaustion. Attackers can host malicious SVGs with extremely large width and height values and trigger concurrent requests to exhaust av",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-73056 - SiYuan kernel before 3.7.4 Unthrottled Brute-Force via API Token",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73056",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-16T14:16:55.000Z",
+        "contentSnippet": "SiYuan kernel versions before 3.7.4 contain an improper restriction of excessive authentication attempts vulnerability in the CheckAuth() middleware. The middleware accepts the API token (Conf.Api.Token) via an Authorization header (Token/Bearer) or a ?token= query parameter, and",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-72888 - Net::OAuth versions before 0.32 for Perl allow memory exhaustion via unbounded caching of failed module loads in smart_require",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72888",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-16T14:16:54.000Z",
+        "contentSnippet": "Net::OAuth versions before 0.32 for Perl allow memory exhaustion via unbounded caching of failed module loads in smart_require. smart_require stores results in a process-global hash with no bound and no eviction, and keeps an entry for every class name it is asked about, includin",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-72887 - Net::OAuth::Client versions before 0.32 for Perl allow the service provider to silently downgrade OAuth 1.0a to OAuth 1.0 in get_request_token",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72887",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-16T14:16:54.000Z",
+        "contentSnippet": "Net::OAuth::Client versions before 0.32 for Perl allow the service provider to silently downgrade OAuth 1.0a to OAuth 1.0 in get_request_token. Passing a callback to the constructor selects OAuth 1.0a. get_request_token then revokes that choice when the request token response omi",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-19349 - Lemonldap::NG::Portal versions from 2.0.0 before 2.16.9, from 2.17.0 before 2.21.5, from 2.22.0 before 2.23.3 for Perl allow authentication bypass via an OAuth2 state parameter stored",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19349",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-16T14:16:54.000Z",
+        "contentSnippet": "Lemonldap::NG::Portal versions from 2.0.0 before 2.16.9, from 2.17.0 before 2.21.5, from 2.22.0 before 2.23.3 for Perl allow authentication bypass via an OAuth2 state parameter stored as an SSO session in the GitHub and LinkedIn backends. Before redirecting to the identity provid",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2024-58375 - OpenTofu before 1.8.3 Secret Variable Leaking via Static Evaluation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2024-58375",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-16T14:16:53.000Z",
+        "contentSnippet": "OpenTofu versions 1.8.0 through 1.8.2 do not properly restrict sensitive variables and locals when users have opted into static evaluation of module sources, versions, and backend configurations. As a result, values marked as sensitive may be exposed through these configuration e",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-74578 - crypto: algif_skcipher - force synchronous processing on trees without ctx->state",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-74578",
@@ -677,231 +902,6 @@
         "contentSnippet": "Pandora contains a path traversal vulnerability in its TAR archive extraction functionality. When processing a submitted TAR archive, the extractor passed archive member names directly to Python's tarfile.TarFile.extract() without applying an extraction filter. An attacker able t",
         "cveScore": 10,
         "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-73055 - Shescape before 2.1.15 Home Directory Disclosure via BusyBox",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73055",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-15T22:16:55.000Z",
-        "contentSnippet": "Shescape before 2.1.15 (and 3.0.0 before 3.0.2) fails to properly escape tilde (~) characters in assignment contexts on Unix systems where the shell is explicitly configured to \"sh\" or true and /bin/sh points to BusyBox. Using the escape and escapeAll APIs with untrusted input in",
-        "cveScore": 4.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-73054 - SiYuan before v3.7.4 Authentication Bypass via WebSocket",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73054",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-15T22:16:55.000Z",
-        "contentSnippet": "SiYuan versions before v3.7.4 contain an authentication bypass vulnerability in the WebSocket endpoint caused by differential parsing of query parameters between authentication exemption and session quarantine checks. Unauthenticated attackers can craft a malicious WebSocket URI ",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-73053 - SiYuan before v3.7.4 Cross-Site Scripting via unicode2Emoji",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73053",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-15T22:16:55.000Z",
-        "contentSnippet": "SiYuan versions before v3.7.4 contain a cross-site scripting vulnerability in the unicode2Emoji function that fails to sanitize codepoint branch output. Attackers can craft document icons with hex-encoded markup that executes in the renderer with Node integration enabled, achievi",
-        "cveScore": 9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-73052 - SiYuan before v3.7.4 Stored XSS via Attribute-View Field Names",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73052",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-15T22:16:55.000Z",
-        "contentSnippet": "SiYuan before v3.7.4 stores attribute-view field names without HTML escaping and interpolates them directly into option elements via innerHTML in the sort menu. Attackers can inject markup by renaming a database field to execute arbitrary JavaScript when users open the sort menu,",
-        "cveScore": 9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-73050 - SiYuan before v3.7.4 Stored XSS via select option color",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73050",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-15T22:16:54.000Z",
-        "contentSnippet": "SiYuan versions before v3.7.4 fail to validate or escape the color field in attribute-view select options, allowing stored cross-site scripting through eight unescaped render sites. Attackers can inject event-handler attributes by including quotation marks in the color value, exe",
-        "cveScore": 9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-73047 - siyuan before v3.7.4 Server-Side Template Injection via attribute-view",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73047",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-15T22:16:54.000Z",
-        "contentSnippet": "siyuan versions",
-        "cveScore": 6.2,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-73046 - SiYuan before v3.7.4 Authentication Bypass via HTTP Basic Auth",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73046",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-15T22:16:54.000Z",
-        "contentSnippet": "SiYuan before v3.7.4 improperly restricts excessive authentication attempts in the CheckAuth() middleware. The HTTP Basic Authentication branch, which guards nearly the entire /api/* surface, accepts the workspace access code (Conf.AccessAuthCode) as the Basic Auth password but n",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-73045 - SiYuan before 3.7.4 Brute-Force via authFilePublishAccess",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73045",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-15T22:16:54.000Z",
-        "contentSnippet": "SiYuan before 3.7.4 contains an improper restriction of excessive authentication attempts vulnerability in the authFilePublishAccess endpoint that allows unauthenticated attackers to brute-force per-notebook publish passwords. Attackers can submit unbounded password guesses witho",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-73044 - SiYuan before v3.7.4 Stored Cross-Site Scripting via Column Width",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73044",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-15T22:16:54.000Z",
-        "contentSnippet": "SiYuan versions before v3.7.4 fail to validate or escape table column width values, allowing stored cross-site scripting injection into style attributes. Attackers can inject malicious payloads through the setAttrViewColWidth API that break out of style attributes and inject even",
-        "cveScore": 9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-73043 - SiYuan before v3.7.4 Remote Code Execution via Template Calculation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73043",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-15T22:16:54.000Z",
-        "contentSnippet": "SiYuan versions before v3.7.4 contain a remote code execution vulnerability in the Template calculation operator, which renders user-authored Go templates and stores output verbatim without sanitization. Attackers can inject malicious HTML and JavaScript into template calculation",
-        "cveScore": 9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-73042 - SiYuan before v3.7.4 Remote Code Execution via Menu Metadata",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73042",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-15T22:16:54.000Z",
-        "contentSnippet": "SiYuan before v3.7.4 fails to properly escape database menu metadata in HTML interpolation, allowing stored values to execute script when users open group, view, or field-edit menus. Attackers can inject markup through field descriptions or names that close containing elements an",
-        "cveScore": 9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-73041 - SiYuan before v3.7.4 Remote Code Execution via PDF Annotations",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73041",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-15T22:16:53.000Z",
-        "contentSnippet": "SiYuan versions before v3.7.4 fail to validate or escape annotation fields written to disk by the setFileAnnotation endpoint. Attackers can inject malicious markup into annotation fields that execute as script in the PDF renderer with full Node.js access when a user opens an anno",
-        "cveScore": 9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-19916 - code-projects Online Food Order System edit_food_items.php cross site scripting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19916",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-15T22:16:52.000Z",
-        "contentSnippet": "A vulnerability was detected in code-projects Online Food Order System 1.0. The affected element is an unknown function of the file edit_food_items.php. Performing a manipulation of the argument dname results in cross site scripting. Remote exploitation of the attack is possible.",
-        "cveScore": 4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-19903 - A vulnerability has been found in SourceCodester O",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19903",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-15T20:11:48.000Z",
-        "contentSnippet": "A vulnerability has been found in SourceCodester Online Clothing Store 1.0. This affects an unknown part of the file /db/shopping.sql of the component SQL Database Backup. The manipulation leads to files or directories accessible. Remote exploitation of the attack is possible. Th",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-18855 - The Link Library plugin for WordPress is vulnerabl",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18855",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-15T20:11:48.000Z",
-        "contentSnippet": "The Link Library plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the ll_delete_link_fields function in all versions up to, and including, 7.9.4 This makes it possible for unauthenticated attackers to delete arbitrary files",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-19904 - A vulnerability was found in SourceCodester Online",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19904",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-15T20:11:48.000Z",
-        "contentSnippet": "A vulnerability was found in SourceCodester Online Book Store System 1.0. This vulnerability affects unknown code of the file /admin/index.php?page=site_settings of the component System Settings Module. The manipulation results in cross site scripting. The attack can be executed ",
-        "cveScore": 3.3,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-19906 - pkp pkp-lib API Key Generation APIProfileForm.php setData entropy",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19906",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-15T19:16:32.000Z",
-        "contentSnippet": "A weakness has been identified in pkp pkp-lib 3.3.0/3.4.0/3.5.0. This vulnerability affects the function setData of the file classes/user/form/APIProfileForm.php of the component API Key Generation. Executing a manipulation of the argument apiKey can lead to insufficient entropy.",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-19905 - Jinher OA attendance_out_approve.aspx sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19905",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-15T19:16:32.000Z",
-        "contentSnippet": "A weakness has been identified in Jinher OA 1.0. Impacted is an unknown function of the file /C6/JHSoft.Web.HrmAttendance/attendance_out_approve.aspx. This manipulation of the argument httpOID causes sql injection. It is possible to initiate the attack remotely. The exploit has b",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-19598 - Pods <= 3.3.9 - Unauthenticated Privilege Escalation via Authorization Bypass to Admin Methods via 'pods_admin' AJAX Router",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19598",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-15T17:25:26.000Z",
-        "contentSnippet": "The Pods – Custom Content Types and Fields plugin for WordPress is vulnerable to Privilege Escalation via Authorization Bypass in all versions up to, and including, 3.3.9. The vulnerability exists because the pods_admin AJAX router funnels every access check — including the metho",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-19900 - LB-LINK X-PRO shadow hard-coded credentials",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19900",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-15T17:16:24.000Z",
-        "contentSnippet": "A vulnerability was identified in LB-LINK X-PRO 1.0.22-20231206. The impacted element is an unknown function of the file /etc/shadow. The manipulation leads to hard-coded credentials. It is possible to initiate the attack remotely. A high degree of complexity is needed for the at",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-19899 - SourceCodester Class and Exam Timetabling System edit_teacher.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19899",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-15T17:16:23.000Z",
-        "contentSnippet": "A vulnerability was determined in SourceCodester Class and Exam Timetabling System 1.0. The affected element is an unknown function of the file /edit_teacher.php. Executing a manipulation of the argument ID can lead to sql injection. The attack may be performed from remote. The e",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-19901 - LB-LINK X-PRO easycwmp hard-coded credentials",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19901",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-15T17:15:07.000Z",
-        "contentSnippet": "A security flaw has been discovered in LB-LINK X-PRO 1.0.22-20231206. This affects an unknown function of the file /etc/config/easycwmp. The manipulation results in hard-coded credentials. It is possible to launch the attack remotely. Attacks of this nature are highly complex. Th",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-19898 - VictoriaMetrics VMAuth Authentication Endpoint main.go requestHandler excessive authentication",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19898",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-15T16:16:39.000Z",
-        "contentSnippet": "A vulnerability was found in VictoriaMetrics up to 1.146.0. Impacted is the function requestHandler of the file app/vmauth/main.go of the component VMAuth Authentication Endpoint. Performing a manipulation results in improper restriction of excessive authentication attempts. The ",
-        "cveScore": 3.7,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-19897 - mangroup dtale Login Endpoint auth.py login excessive authentication",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19897",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-15T16:16:38.000Z",
-        "contentSnippet": "A vulnerability has been found in mangroup dtale up to 3.22.0. This issue affects the function Login of the file dtale/auth.py of the component Login Endpoint. Such manipulation leads to improper restriction of excessive authentication attempts. The attack can be executed remotel",
-        "cveScore": 3.7,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-19896 - mangroup dtale Flask Session Cookie app.py build_secret_key random values",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19896",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-15T15:16:37.000Z",
-        "contentSnippet": "A flaw has been found in mangroup dtale up to 3.22.0. This vulnerability affects the function build_secret_key of the file dtale/app.py of the component Flask Session Cookie. This manipulation causes insufficiently random values. Remote exploitation of the attack is possible. The",
-        "cveScore": 3.7,
-        "cveSeverity": "LOW"
       }
     ],
     "ai": [
@@ -2310,7 +2310,21 @@
     ],
     "hardware": [
       {
-        "title": "Ukraine built a $48,000 long-range drone after covertly snapping Chinese factory photos, clone destroys Russian Tu-95 bomber — attack drone has 2,000 km range, country builds 6,000 $48,000 flying-wing",
+        "title": "Dell CEO unveils new 'Dude, you’re getting a Dell (AI server rack)' video — PC maker recycles famous PC ad campaign to tout its new AI data center products",
+        "link": "https://www.tomshardware.com/tech-industry/dude-youre-getting-a-dell-ai-server-rack-dell-recycles-famous-ad-campaign-to-appeal-to-its-new-ai-overlords",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-16T14:31:33.000Z",
+        "contentSnippet": "Dell has created a humorous AI-era update to its iconic early-2000s 'Dude, you’re getting a Dell' series of commercials."
+      },
+      {
+        "title": "Maker compresses a 2.9MB song by 1000x and prints it on paper as eight QR codes — 21KB song is two minutes long, requires a neural network for playback",
+        "link": "https://www.tomshardware.com/tech-industry/maker-compresses-a-2-9mb-song-1000-times-with-metas-ai-codec-and-prints-it-on-paper-as-eight-qr-codes",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-16T14:22:36.000Z",
+        "contentSnippet": "The open-source codec Meta released in 2022 converts a waveform into discrete tokens that a matching decoder turns back into audio."
+      },
+      {
+        "title": "Ukraine built a $48,000 long-range drone after covertly snapping Chinese factory photos, clone destroys Russian Tu-95 bomber — attack drone has 2,000 km range, country builds 6,000 flying-wing drones ",
         "link": "https://www.tomshardware.com/tech-industry/drones/ukraine-destroys-tu-95-bomber-using-48000-chinese-drone-clone",
         "source": "Tom's Hardware",
         "isoDate": "2026-08-16T13:20:00.000Z",
@@ -2994,20 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-08-12T13:37:47.000Z",
         "contentSnippet": "A new leak from Jaykihn says some Nova Lake SKUs, including mobile counterparts, will retain the cache config of their fully-enabled variants despite having reduced E-cores."
-      },
-      {
-        "title": "How optical interconnects and silicon photonics emerged as AI's next hot commodity — looming US-China summit puts photonics into the crosshairs",
-        "link": "https://www.tomshardware.com/tech-industry/photonics/how-optical-interconnects-and-silicon-photonics-emerged-as-ais-next-hot-commodity-looming-us-china-summit-puts-photonics-into-the-crosshairs",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-12T12:42:23.000Z",
-        "contentSnippet": "The U.S. wants Chinese optical transceivers out of future AI data centers, but China’s current dominance of the rapidly evolving photonics supply chain could make a ban complicated"
-      },
-      {
-        "title": "YMTC breaks into the top three NAND makers for the first time as AI servers swallow 48% of all flash — Chinese vendor has 14% share, according to research",
-        "link": "https://www.tomshardware.com/tech-industry/ymtc-breaks-into-the-top-three-nand-makers-for-the-first-time",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-12T12:35:44.000Z",
-        "contentSnippet": "Samsung led with 25%, SK hynix followed at 22%, and Micron rounded out the top five."
       }
     ]
   }
