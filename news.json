@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-08-17T12:25:41.129Z",
+  "updatedAt": "2026-08-17T13:32:51.347Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-74901 - openssl_encrypt before 1.4.0 Authentication Bypass via AES-CTR Fallback",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74901",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T11:16:45.000Z",
+        "contentSnippet": "openssl_encrypt versions before 1.4.0 contain an authentication bypass vulnerability in pqc.py where AES-GCM decryption failures trigger fallback to unauthenticated AES-CTR mode. Attackers can modify ciphertext in transit to bypass integrity verification and perform bit-flipping ",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-74900 - openssl_encrypt before 1.4.0 Weak Shared Secret via PQC Simulation Mode",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74900",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T11:16:45.000Z",
+        "contentSnippet": "openssl_encrypt versions before 1.4.0 contain a critical vulnerability in pqc.py where KEM decapsulation failures silently fall back to simulation mode, generating a deterministic shared secret from only 16 bytes of the private key and publicly available encapsulated key data. At",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-74899 - openssl_encrypt before 1.4.0 Sandbox Escape via Type Hierarchy",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74899",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T11:16:44.000Z",
+        "contentSnippet": "openssl_encrypt versions before 1.4.0 contain a sandbox escape vulnerability in IsolatedPluginExecutor that exposes Python type objects in restricted exec() builtins. Attackers can traverse the Python class hierarchy via __class__.__mro__.__subclasses__() to access system functio",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-74896 - openssl_encrypt before 1.4.0 Sandbox Escape via Dunder Attribute Traversal",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74896",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T11:16:44.000Z",
+        "contentSnippet": "openssl_encrypt versions before 1.4.0 contain a sandbox escape vulnerability in the DangerousPatternVisitor AST analyzer that fails to detect dunder attribute traversal techniques. Attackers can use __class__, __bases__, __subclasses__(), and __globals__ chains to access restrict",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-74895 - openssl_encrypt before 1.4.0 Plugin Sandbox Bypass via Process Isolation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74895",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T11:16:44.000Z",
+        "contentSnippet": "openssl_encrypt versions before 1.4.0 fail to apply sandbox restrictions in the default process isolation mode for plugin execution. Attackers can execute malicious plugins with unrestricted access to the filesystem, network, subprocess execution, and all Python modules.",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-74894 - openssl_encrypt before 1.4.0 Authentication Bypass via Bearer Token",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74894",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T11:16:44.000Z",
+        "contentSnippet": "openssl_encrypt before 1.4.0 contains an authentication bypass vulnerability in the verify_api_token function that accepts any non-empty Bearer token string without validation. Attackers can upload arbitrary public keys, enumerate all keys, and revoke keys belonging to any user b",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-74893 - openssl_encrypt before 1.4.0 JWT Token Forgery via Hardcoded Secrets",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74893",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T11:16:44.000Z",
+        "contentSnippet": "openssl_encrypt versions before 1.4.0 contain hardcoded default JWT signing secrets in config.py that pass validation checks. Attackers with access to source code can forge valid JWT tokens for any client_id to gain authenticated access to keyserver and telemetry APIs.",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-74892 - openssl_encrypt before 1.4.0 Hardcoded Secret Key",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74892",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T11:16:44.000Z",
+        "contentSnippet": "openssl_encrypt versions before 1.4.0 contain a hardcoded default secret key in the standalone telemetry server configuration that is used for API key hashing. Attackers who know this default value can predict or forge API key hashes to compromise telemetry API authentication.",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-74891 - openssl_encrypt before 1.4.0 Hardcoded Database Credentials",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74891",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T11:16:44.000Z",
+        "contentSnippet": "openssl_encrypt versions before 1.4.0 contain hardcoded database credentials in standalone server configuration files. Attackers on the same network can access PostgreSQL databases using well-known default credentials to retrieve sensitive data.",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-74890 - openssl_encrypt before 1.4.0 HMAC Authentication Bypass via Environment Variable",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74890",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T11:16:43.000Z",
+        "contentSnippet": "openssl_encrypt versions before 1.4.0 contain an authentication bypass vulnerability in CamelliaCipher that disables HMAC tag generation and verification when the PYTEST_CURRENT_TEST environment variable is set. Attackers with code execution can set this environment variable to p",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-74889 - openssl_encrypt before 1.4.0 Weak Key Derivation via HKDF",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74889",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T11:16:43.000Z",
+        "contentSnippet": "openssl_encrypt versions before 1.4.0 use HKDF with no salt and static info parameter in key normalization functions, reducing entropy extraction and determinism. Attackers can exploit predictable key derivation with identical inputs to weaken cryptographic security against multi",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-74888 - openssl_encrypt before 1.4.0 Non-Standard PBKDF2 Key Derivation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74888",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T11:16:43.000Z",
+        "contentSnippet": "openssl_encrypt versions before 1.4.0 use a non-standard PBKDF2 key derivation construction with iterations=1 per call in an outer loop, creating a KDF whose security properties have not been formally analyzed. Attackers can exploit this weakened key derivation to more efficientl",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-74887 - openssl_encrypt before 1.4.0 Insecure Random Import in PQC Module",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74887",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T11:16:43.000Z",
+        "contentSnippet": "openssl_encrypt before 1.4.0 imports Python's non-cryptographic 'random' module (Mersenne Twister PRNG) at line 15 of openssl_encrypt/modules/pqc.py. No direct calls to random.* were present in the code, so no cryptographic operation is currently affected; however, the import cre",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-74886 - openssl_encrypt before 1.4.0 Plugin Import Guard Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74886",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T11:16:43.000Z",
+        "contentSnippet": "openssl_encrypt versions before 1.4.0 contain a plugin sandbox bypass vulnerability where the PluginImportGuard blocks a different set of modules than the AST analyzer's DANGEROUS_MODULES set. Attackers can bypass AST analysis through string obfuscation or encoding to import unbl",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-74885 - openssl_encrypt before 1.4.0 Logging Bug and Race Condition",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74885",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T11:16:43.000Z",
+        "contentSnippet": "openssl_encrypt versions before 1.4.0 contain a logging bug in restore_hidden_modules() that logs module counts after clearing, always showing zero restored modules and corrupting audit trails. Additionally, a race condition exists between module hiding and import hook installati",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-74884 - openssl_encrypt before 1.4.0 Path Traversal via plugin_id",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74884",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T11:16:43.000Z",
+        "contentSnippet": "openssl_encrypt versions before 1.4.0 contain a path traversal vulnerability in the _is_safe_path method where the plugin_id parameter is not sanitized before constructing the plugin config directory path. Attackers can declare a malicious plugin_id containing path traversal sequ",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-74883 - openssl_encrypt before 1.4.0 Sandbox Bypass via pathlib and io",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74883",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T11:16:42.000Z",
+        "contentSnippet": "openssl_encrypt versions before 1.4.0 contain a sandbox bypass vulnerability where the plugin sandbox fails to restrict alternative file access methods like pathlib.Path and io.open. Attackers can import pathlib or io modules to read and write arbitrary files, completely bypassin",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-74882 - openssl_encrypt before 1.4.0 Insecure Default Configuration",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74882",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T11:16:42.000Z",
+        "contentSnippet": "openssl_encrypt versions before 1.4.0 contain an insecure default configuration that trusts the entire RFC 1918 private address space in IntegrityProxyConfig trusted_proxies. Attackers on private networks can forge client certificate headers to bypass mTLS authentication when Pro",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-74881 - openssl_encrypt before 1.4.0 CORS Misconfiguration via Wildcard Origins",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74881",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T11:16:42.000Z",
+        "contentSnippet": "openssl_encrypt versions before 1.4.0 configure CORS with allow_origins set to wildcard and allow_credentials enabled to true. Attackers can create malicious websites that make authenticated cross-origin requests to the API on behalf of any user who visits them.",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-74880 - openssl_encrypt before 1.4.0 Token Leakage via Query Parameters",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74880",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T11:16:42.000Z",
+        "contentSnippet": "openssl_encrypt versions before 1.4.0 accept refresh tokens as URL query parameters in keyserver and telemetry server routes. Attackers can extract tokens from server logs, proxy logs, browser history, and HTTP Referer headers to gain unauthorized access.",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-74879 - openssl_encrypt before 1.4.0 Information Disclosure via /ready endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74879",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T11:16:42.000Z",
+        "contentSnippet": "openssl_encrypt versions before 1.4.0 contain an information disclosure vulnerability in the /ready endpoint that returns full database exception strings to unauthenticated callers. Attackers can trigger database errors to extract sensitive information including hostnames, IP add",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-74878 - openssl_encrypt before 1.4.0 TOTP Rate Limiter Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74878",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T11:16:42.000Z",
+        "contentSnippet": "openssl_encrypt versions before 1.4.0 use an in-memory rate limiter for TOTP brute-force protection that is not shared across workers and is lost on server restart. Attackers can distribute authentication attempts across multiple server instances or retry immediately after a rest",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-74877 - openssl_encrypt before 1.4.0 Missing Ownership Verification via revoke_key",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74877",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T11:16:42.000Z",
+        "contentSnippet": "openssl_encrypt versions before 1.4.0 contain a missing ownership verification vulnerability in the revoke_key method that allows authenticated clients to revoke any other client's key. Attackers can revoke arbitrary keys by providing a valid ML-DSA signature, bypassing the inten",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-74876 - openssl_encrypt before 1.4.0 Unverified Key Bundle Encryption",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74876",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T11:16:42.000Z",
+        "contentSnippet": "openssl_encrypt versions before 1.4.0 contain a vulnerability in PublicKeyBundle.from_dict() that creates key bundles from untrusted data without verifying signatures. Attackers can call from_dict() followed by to_identity() without signature verification to encrypt data using at",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-74875 - openssl_encrypt before 1.4.0 Schema Validation Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74875",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T11:16:41.000Z",
+        "contentSnippet": "openssl_encrypt versions before 1.4.0 silently skip JSON schema validation when the jsonschema library is not installed, allowing malformed metadata to be accepted. Attackers can remove the jsonschema package or supply unknown metadata format versions to bypass all schema checks ",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
       {
         "title": "CVE-2026-74842 - Kira-Pgr PromptShopMCP Image-Toolkit-MCP-Server server.py download_image server-side request forgery",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-74842",
@@ -677,231 +902,6 @@
         "contentSnippet": "Scriban versions 6.6.0 through 7.2.0 contain a non-enforcing ExpressionDepthLimit guard that fails to stop recursive descent parsing of deeply nested expressions. Attackers can supply templates with deeply nested parentheses, array initializers, object initializers, or unary oper",
         "cveScore": 7.5,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-73062 - Scriban 3.0.0 through 7.2.0 Denial of Service via Array Multiplication",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73062",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-16T14:16:55.000Z",
-        "contentSnippet": "Scriban versions 3.0.0 through 7.2.0 contain a denial of service vulnerability in the array multiplication operator that allocates memory without enforcing LoopLimit or overflow-safe arithmetic checks. Attackers can supply a large integer multiplier in a template to force multi-g",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-73061 - Scriban before 7.2.2 Arbitrary Property Write via TypedObjectAccessor",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73061",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-16T14:16:55.000Z",
-        "contentSnippet": "Scriban before 7.2.2 contains an access-modifier bypass vulnerability in TypedObjectAccessor that allows template code to write CLR object properties without setter-visibility checks. Attackers can modify properties with private, internal, or init-only setters, and perform mass a",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-73060 - Scriban 3.0.0 through 7.2.5 Denial of Service via ScriptRange.Multiply",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73060",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-16T14:16:55.000Z",
-        "contentSnippet": "Scriban versions from 3.0.0 through 7.2.5 contain a denial of service vulnerability in the ScriptRange.Multiply operator that bypasses LoopLimit when the left operand is a lazy sequence. Attackers can supply templates with array multiplication on lazy sequences to execute billion",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-73059 - stoatchat before 0.15.0 Permission Bypass via message_fetch",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73059",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-16T14:16:55.000Z",
-        "contentSnippet": "stoatchat before 0.15.0 contains a permission bypass vulnerability in the message_fetch route that checks only ViewChannel permission instead of requiring ReadMessageHistory. Attackers with ViewChannel access but ReadMessageHistory denied can retrieve individual message content b",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-73058 - stoatchat before 0.15.0 SSRF via IPv6 unspecified address bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73058",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-16T14:16:55.000Z",
-        "contentSnippet": "stoatchat versions before 0.15.0 fail to block the IPv6 unspecified address (::) in the SSRF blocklist, allowing unauthenticated attackers to bypass protections via the /proxy and /embed endpoints. Attackers can craft requests using IPv6 literal syntax to access services on the l",
-        "cveScore": 5.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-73057 - stoatchat before 0.15.0 Uncapped SVG Rendering Denial of Service",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73057",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-16T14:16:55.000Z",
-        "contentSnippet": "stoatchat before 0.15.0 fails to validate SVG viewBox dimensions in the proxy endpoint, allowing attackers to cause denial of service by memory exhaustion. Attackers can host malicious SVGs with extremely large width and height values and trigger concurrent requests to exhaust av",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-73056 - SiYuan kernel before 3.7.4 Unthrottled Brute-Force via API Token",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73056",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-16T14:16:55.000Z",
-        "contentSnippet": "SiYuan kernel versions before 3.7.4 contain an improper restriction of excessive authentication attempts vulnerability in the CheckAuth() middleware. The middleware accepts the API token (Conf.Api.Token) via an Authorization header (Token/Bearer) or a ?token= query parameter, and",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-72888 - Net::OAuth versions before 0.32 for Perl allow memory exhaustion via unbounded caching of failed module loads in smart_require",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72888",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-16T14:16:54.000Z",
-        "contentSnippet": "Net::OAuth versions before 0.32 for Perl allow memory exhaustion via unbounded caching of failed module loads in smart_require. smart_require stores results in a process-global hash with no bound and no eviction, and keeps an entry for every class name it is asked about, includin",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-72887 - Net::OAuth::Client versions before 0.32 for Perl allow the service provider to silently downgrade OAuth 1.0a to OAuth 1.0 in get_request_token",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72887",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-16T14:16:54.000Z",
-        "contentSnippet": "Net::OAuth::Client versions before 0.32 for Perl allow the service provider to silently downgrade OAuth 1.0a to OAuth 1.0 in get_request_token. Passing a callback to the constructor selects OAuth 1.0a. get_request_token then revokes that choice when the request token response omi",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-19349 - Lemonldap::NG::Portal versions from 2.0.0 before 2.16.9, from 2.17.0 before 2.21.5, from 2.22.0 before 2.23.3 for Perl allow authentication bypass via an OAuth2 state parameter stored",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19349",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-16T14:16:54.000Z",
-        "contentSnippet": "Lemonldap::NG::Portal versions from 2.0.0 before 2.16.9, from 2.17.0 before 2.21.5, from 2.22.0 before 2.23.3 for Perl allow authentication bypass via an OAuth2 state parameter stored as an SSO session in the GitHub and LinkedIn backends. Before redirecting to the identity provid",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2024-58375 - OpenTofu before 1.8.3 Secret Variable Leaking via Static Evaluation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2024-58375",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-16T14:16:53.000Z",
-        "contentSnippet": "OpenTofu versions 1.8.0 through 1.8.2 do not properly restrict sensitive variables and locals when users have opted into static evaluation of module sources, versions, and backend configurations. As a result, values marked as sensitive may be exposed through these configuration e",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-74578 - crypto: algif_skcipher - force synchronous processing on trees without ctx->state",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74578",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-16T09:16:21.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: crypto: algif_skcipher - force synchronous processing on trees without ctx->state The AIO/async path in skcipher_recvmsg() passes the socket-wide ctx->iv directly into the skcipher request. After io_submit() the ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2024-13784 - Contact Form, Survey, Quiz & Popup Form Builder – ARForms <= 1.8.5 - Unauthenticated PHP Object Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2024-13784",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-16T09:16:19.000Z",
-        "contentSnippet": "The Contact Form, Survey, Quiz & Popup Form Builder – ARForms plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 1.8.5 via deserialization of untrusted input from form submissions. This makes it possible for unauthenticated attackers ",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-2497 - Gallery by BestWebSoft <= 4.7.9 - Authenticated (Editor+) SQL Injection via Gallery Image Order Array Keys",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-2497",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-16T07:16:31.000Z",
-        "contentSnippet": "The Gallery by BestWebSoft plugin for WordPress is vulnerable to SQL Injection via the '_gallery_order_{post_id}' parameter array keys in all versions up to, and including, 4.7.9. This is due to insufficient escaping on the user supplied parameter and lack of sufficient preparati",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-2357 - Bold Page Builder <= 5.6.8 - Authenticated (Contributor+) Stored Cross-Site Scripting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-2357",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-16T07:16:30.000Z",
-        "contentSnippet": "The Bold Page Builder plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin's 'bt_bb_shortcode' shortcode in all versions up to, and including, 5.6.8 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it p",
-        "cveScore": 6.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-18347 - Kirki <= 6.1.1 - Missing Authorization to Authenticated (Subscriber+) Sensitive Information Disclosure via 'context' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18347",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-16T07:16:30.000Z",
-        "contentSnippet": "The Kirki – Freeform Page Builder, Website Builder & Customizer plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 6.1.1. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it p",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-17608 - WP Compress <= 7.10.09 - Cross-Site Request Forgery to Arbitrary Options Deletion",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-17608",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-16T07:16:30.000Z",
-        "contentSnippet": "The WP Compress – Instant Performance & Speed Optimization plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 7.10.09. This is due to missing or incorrect nonce validation on the (top-level template code) function. This makes it",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-17604 - Kirki <= 6.1.1 - Authenticated (Editor+) Path Traversal to Arbitrary File Read via 'data' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-17604",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-16T07:16:30.000Z",
-        "contentSnippet": "The Kirki – Freeform Page Builder, Website Builder & Customizer plugin for WordPress is vulnerable to Directory Traversal in all versions up to, and including, 6.1.1 via the 'data' parameter parameter. This makes it possible for authenticated attackers, with editor-level access a",
-        "cveScore": 4.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-17087 - WP Travel Engine <= 6.8.4 - Missing Authorization to Unauthenticated Sensitive Information Disclosure via 'booking_id' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-17087",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-16T07:16:30.000Z",
-        "contentSnippet": "The WP Travel Engine – Tour Booking Plugin – Tour Operator Software plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 6.8.4. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes ",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-13424 - Online Scheduling and Appointment Booking System <= 27.7 - Unauthenticated Stored Cross-Site Scripting via bookly_speed_up_update_addons AJAX action",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13424",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-16T07:16:30.000Z",
-        "contentSnippet": "The Online Scheduling and Appointment Booking System – Bookly plugin for WordPress is vulnerable to Stored Cross-Site Scripting via bookly_speed_up_update_addons AJAX action in all versions up to, and including, 27.7 due to insufficient input sanitization and output escaping. Thi",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-12998 - Forminator Forms <= 1.55.0.2 - Insecure Direct Object Reference to Unauthenticated Sensitive Information Disclosure via 'draft' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12998",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-16T07:16:30.000Z",
-        "contentSnippet": "The Forminator Forms – Contact Form, Payment Form & Custom Form Builder plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 1.55.0.2 via the 'draft' parameter due to missing validation on a user controlled key. This makes i",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-10734 - Infility Global <= 2.15.21 - Unauthenticated Stored Cross-Site Scripting via /cf7_record Log Endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10734",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-16T07:16:30.000Z",
-        "contentSnippet": "The Infility Global plugin for WordPress is vulnerable to Stored Cross-Site Scripting via /cf7_record Log Endpoint in all versions up to, and including, 2.15.21 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inj",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-9767 - The School Management <= 5.4 - Authenticated (Custom+) SQL Injection via 'order[0][dir]' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9767",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-16T06:16:55.000Z",
-        "contentSnippet": "The The School Management – Education & Learning ERP plugin for WordPress is vulnerable to generic SQL Injection via 'order[0][dir]' Parameter in all versions up to, and including, 5.4 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation ",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-2283 - User Login History <= 2.1.7 - Authenticated (Administrator+) SQL Injection via 'blog_id' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-2283",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-16T06:16:53.000Z",
-        "contentSnippet": "The User Login History plugin for WordPress is vulnerable to SQL Injection via the 'blog_id' parameter in all versions up to, and including, 2.1.7. This is due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. Th",
-        "cveScore": 4.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-19934 - itsourcecode Hospital Management System vieworder.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19934",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-16T06:16:52.000Z",
-        "contentSnippet": "A vulnerability has been found in itsourcecode Hospital Management System 1.0. This impacts an unknown function of the file /vieworder.php. The manipulation of the argument delid leads to sql injection. The attack is possible to be carried out remotely. The exploit has been discl",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
@@ -1608,6 +1608,13 @@
     ],
     "virtualization": [
       {
+        "title": "I Got Proxmox VE 9 Working on Raspberry Pi 5 With NVMe Boot and the Onboard NIC",
+        "link": "https://www.virtualizationhowto.com/2026/08/i-got-proxmox-ve-9-working-on-raspberry-pi-5-with-nvme-boot-and-the-onboard-nic/",
+        "source": "Virtualization HowTo",
+        "isoDate": "2026-08-17T12:26:33.000Z",
+        "contentSnippet": "If you have been following my blog lately, I recently installed the announced Proxmox AR64 build on my Raspberry Pi 5 8GB in the home lab. However, with that setup,… The post I Got Proxmox VE 9 Working on Raspberry Pi 5 With NVMe Boot and the Onboard NIC appeared first on Virtual"
+      },
+      {
         "title": "#125 – Announcing the VCF Inspector Fling featuring Alan Renouf!",
         "link": "https://www.yellow-bricks.com/2026/08/17/125-announcing-the-vcf-inspector-fling-featuring-alan-renouf/",
         "source": "Yellow Bricks",
@@ -2299,16 +2306,23 @@
         "source": "Vladan.fr",
         "isoDate": "2026-05-21T16:38:18.000Z",
         "contentSnippet": "I have been blogging about virtualization, storage, and backup solutions since the late 2000s, I've seen backup strategies evolve dramatically. Physical tape libraries were once the gold standard for long-term retention and air-gapping, but they come with real pain points: high h"
-      },
-      {
-        "title": "Using SQL Server Management Pack in VCF Operations with DSM provisioned SQL Server",
-        "link": "https://cormachogan.com/2026/05/21/using-sql-server-management-pack-in-vcf-operations-with-dsm-provisioned-sql-server/",
-        "source": "Cormac Hogan",
-        "isoDate": "2026-05-21T13:00:47.000Z",
-        "contentSnippet": "Many of my recent posts have focused on the new Microsoft SQL Server data service in the 9.1 version of VMware Data Services Manager (DSM). On the back of those posts, I had a query about whether it was possible to use the Microsoft SQL Server Management Pack for VCF Operations t"
       }
     ],
     "hardware": [
+      {
+        "title": "America's largest grid wants to cut power to new data centers first during shortages — 50MW-plus data centers must bring their own electricity generation to avoid shutoffs",
+        "link": "https://www.tomshardware.com/tech-industry/data-centers/new-data-centers-on-americas-largest-grid-face-first-in-line-blackouts-unless-they-bring-their-own-power",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-17T13:11:38.000Z",
+        "contentSnippet": "PJM Interconnection has asked federal regulators to approve rules that would cut power to new data centers ahead of households during supply shortages."
+      },
+      {
+        "title": "Asus ROG Edition 20 gaming PC build – A pretty powerhouse PC that next to no one can afford",
+        "link": "https://www.tomshardware.com/desktops/pc-building/asus-rog-edition-20-gaming-pc-build-a-pretty-powerhouse-pc-that-next-to-no-one-can-afford",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-17T13:00:00.000Z",
+        "contentSnippet": "What’s it like to build a PC with some of the most expensive components on the market? Asus sent us its ROG 20th anniversary components so we could find out for ourselves."
+      },
       {
         "title": "Intel's Arc Pro B70 workstation GPU is now up to 48% more expensive than it was just a month ago — 32GB Battlemage workstation card climbs toward $2,000",
         "link": "https://www.tomshardware.com/pc-components/gpus/intels-arc-pro-b70-workstation-gpu-is-now-up-to-48-percent-more-expensive-than-it-was-just-a-month-ago-32gb-battlemage-workstation-card-climbs-toward-usd2-000",
@@ -2994,20 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-08-13T10:20:00.000Z",
         "contentSnippet": "Alabama residents left powerless to stop 50 MW Bitcoin mining facility despite county and town moratoriums thanks to the state's lack of appropriate zoning laws."
-      },
-      {
-        "title": "JSAUX FlipGo Horizon Pro dual-screen portable monitor review: Jack of all trades, master of some",
-        "link": "https://www.tomshardware.com/monitors/portable-monitors/jsaux-flipgo-horizon-pro-dual-screen-portable-monitor-review",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-13T10:05:00.000Z",
-        "contentSnippet": "The FlipGo Horizon Pro brings dual 15.6-inch displays and a built-in hub."
-      },
-      {
-        "title": "Elon Musk says xAI will increase data center capacity 7x by 2027 — targeting 10 gigawatts of compute, up to $500 billion in revenue by the end of next year",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/elon-musk-says-xai-will-increase-data-center-capacity-7x-by-2027-targeting-10-gigawatts-of-compute-up-to-usd500-billion-in-revenue-by-the-end-of-next-year",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-13T10:00:00.000Z",
-        "contentSnippet": "Elon Musk expects xAI to increase its nameplate power draw to 10 GW by late 2027, which will increase its performance by orders of magnitude what is available to AI today."
       }
     ]
   }
