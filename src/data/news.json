@@ -1,40 +1,67 @@
 {
-  "updatedAt": "2026-08-17T17:19:15.323Z",
+  "updatedAt": "2026-08-17T18:25:34.077Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
-        "title": "CVE-2026-40145 - Control protections bypass in BeyondTrust Endpoint Privilege Management (Windows deployment) support utility",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-40145",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-17T16:29:12.000Z",
-        "contentSnippet": "A vulnerability exists in the interaction between a Endpoint Privilege Management (Windows Deployment) support utility and the agent's tamper protection controls. Under certain conditions, the protections applied to the utility process may not be enforced as intended.",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-12519 - Out-of-bounds stack read and write in Zephyr WNC-M14A2A modem socket-notify parsing",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12519",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-17T16:18:53.000Z",
-        "contentSnippet": "The WNC-M14A2A LTE-M modem driver mishandles unsolicited %NOTIFYEV: events in on_cmd_socknotifyev() (drivers/modem/vendor_standalone/wncm14a2a.c). The response line is linearized into a fixed 40-byte stack buffer via net_buf_linearize(), which caps the copy at 39 bytes and return",
-        "cveScore": 5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
         "title": "CVE-2026-9771 - Missing device-pointer validation in flash_copy() syscall allows userspace privilege escalation",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-9771",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-17T16:18:52.000Z",
+        "isoDate": "2026-08-17T17:16:57.000Z",
         "contentSnippet": "The flash_copy() system call is verified by z_vrfy_flash_copy() in drivers/flash/flash_util.c. On builds with CONFIG_USERSPACE enabled, this handler is the kernel-side trust boundary for a user-mode caller. Prior to the fix it validated only the output buffer (K_SYSCALL_MEMORY_WR",
         "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-71491 - sqlparse: Quadratic O(n²) DoS in group_comments",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71491",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T17:16:48.000Z",
+        "contentSnippet": "sqlparse is a non-validating SQL parser module for Python. Prior to 0.6.0, group_comments in sqlparse/engine/grouping.py repeatedly rescans comment-only statements before the MAX_GROUPING_TOKENS guard, causing quadratic CPU consumption through sqlparse.parse() and sqlparse.format",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-68518 - Glances: Command injection bypass of action-template sanitizer via cross-field shell-operator reconstruction",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68518",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T17:16:40.000Z",
+        "contentSnippet": "Glances is an open-source system cross-platform monitoring tool. Prior to 4.5.6, _sanitize_mustache_dict() in glances/actions.py sanitizes individual Mustache values before chevron.render(), allowing adjacent unescaped Mustache variables to reconstruct shell operators that secure",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-68517 - Glances: REST API CORS Credentials Guard Uses Exact-Match Instead of Membership Test — Bypassed by Any Multi-Origin Allowlist Containing the Wildcard",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68517",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T17:16:40.000Z",
+        "contentSnippet": "Glances is an open-source system cross-platform monitoring tool. Prior to 4.5.6, the cors_origins guard in glances/outputs/glances_restful_api.py uses exact list equality instead of wildcard membership, allowing a multi-origin list containing the wildcard to retain cors_credentia",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-61666 - websocket-driver: Denial of service via malformed Host header",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61666",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T17:16:39.000Z",
+        "contentSnippet": "websocket-driver is a WebSocket protocol handler with pluggable I/O. Prior to 0.8.2, WebSocket::Driver.server() passes a malformed Host header to URI.parse in lib/websocket/http/request.rb without catching URI::InvalidURIError, allowing a remote client to crash a TCP-backed WebSo",
+        "cveScore": 8.9,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-40145 - Control protections bypass in BeyondTrust Endpoint Privilege Management (Windows deployment) support utility",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-40145",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T17:16:39.000Z",
+        "contentSnippet": "A vulnerability exists in the interaction between a Endpoint Privilege Management (Windows Deployment) support utility and the agent's tamper protection controls. Under certain conditions, the protections applied to the utility process may not be enforced as intended.",
+        "cveScore": 7.1,
         "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-12630 - 6LoWPAN IPHC uncompression out-of-bounds read on reserved destination addressing mode",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-12630",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-17T16:18:51.000Z",
+        "isoDate": "2026-08-17T17:16:39.000Z",
         "contentSnippet": "Zephyr's 6LoWPAN IP Header Compression (IPHC) uncompression code contains an out-of-bounds read in get_ihpc_inlined_size() (subsys/net/ip/6lo.c). The destination inline size is looked up in da_inline_size_table, which has 13 entries, using an index built from the M, DAC and DAM b",
         "cveScore": 4.3,
         "cveSeverity": "MEDIUM"
@@ -43,17 +70,80 @@
         "title": "CVE-2026-12629 - PL011 UART error interrupts never cleared, enabling an external-peer interrupt-storm denial of service",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-12629",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-17T16:18:50.000Z",
+        "isoDate": "2026-08-17T17:16:39.000Z",
         "contentSnippet": "The ARM PL011 UART driver in drivers/serial/uart_pl011.c fails to acknowledge receive error interrupts. On the PL011, the framing, parity, break, and overrun error interrupts (PL011_IMSC_ERROR_MASK) are cleared only by writing the interrupt-clear register UARTICR; reading the dat",
         "cveScore": 4.6,
         "cveSeverity": "MEDIUM"
       },
       {
-        "title": "CVE-2026-68518 - Glances: Command injection bypass of action-template sanitizer via cross-field shell-operator reconstruction",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68518",
+        "title": "CVE-2026-12519 - Out-of-bounds stack read and write in Zephyr WNC-M14A2A modem socket-notify parsing",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12519",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-17T16:18:29.000Z",
-        "contentSnippet": "Glances is an open-source system cross-platform monitoring tool. Prior to 4.5.6, _sanitize_mustache_dict() in glances/actions.py sanitizes individual Mustache values before chevron.render(), allowing adjacent unescaped Mustache variables to reconstruct shell operators that secure",
+        "isoDate": "2026-08-17T17:16:38.000Z",
+        "contentSnippet": "The WNC-M14A2A LTE-M modem driver mishandles unsolicited %NOTIFYEV: events in on_cmd_socknotifyev() (drivers/modem/vendor_standalone/wncm14a2a.c). The response line is linearized into a fixed 40-byte stack buffer via net_buf_linearize(), which caps the copy at 39 bytes and return",
+        "cveScore": 5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-59894 - sqlparse: Generated Python and PHP snippets allow SQL string breakout through unescaped backslashes",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59894",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T17:14:22.000Z",
+        "contentSnippet": "sqlparse is a non-validating SQL parser module for Python. Prior to 0.6.0, sqlparse/filters/output.py fails to escape existing backslashes before quotes in sqlparse.format output_format='python' and output_format='php' and the corresponding sqlformat -l modes, allowing crafted SQ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74253 - Joomla Extension - regularlabs.com - Unauthenticated RCE through unverified reflected user input in Sourcerer < 14.0.0",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74253",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T17:12:55.000Z",
+        "contentSnippet": "Joomla Extension - regularlabs.com - Unauthenticated RCE through unverified reflected user input in Sourcerer",
+        "cveScore": 10,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-73424 - Astro: Unauthenticated path override in the @astrojs/vercel ISR function",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73424",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T17:11:59.000Z",
+        "contentSnippet": "Astro is a web framework for content-driven websites. From 10.0.3 until 11.0.3, the Astro Vercel adapter in packages/integrations/vercel/src/serverless/entrypoint.ts accepts x_astro_path for the public /_isr function based only on the x-vercel-isr header, allowing unauthenticated",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-68519 - Glances: `--disable-config-exec` does not cover on-alert action commands (incomplete fix of CVE-2026-53925)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68519",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T17:10:25.000Z",
+        "contentSnippet": "Glances is an open-source system cross-platform monitoring tool. Prior to 4.5.6, GlancesActions.run() in glances/actions.py ignores --disable-config-exec for on-alert action commands and invokes secure_popen() with shell operators enabled, allowing configured redirection, command",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-74254 - Joomla Extension - joomlack.fr - SQL injection in Page Builder CK < 3.6.5",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74254",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T17:10:04.000Z",
+        "contentSnippet": "Joomla Extension - joomlack.fr - SQL injection in Page Builder CK",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-62982 - Glances: Incomplete fix of CVE-2026-32608: action-template sanitizer is bypassed by nested stat values (process 'cmdline') → OS command injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62982",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T17:07:49.000Z",
+        "contentSnippet": "Glances is an open-source system cross-platform monitoring tool. From 4.5.2 until 4.5.6, _sanitize_mustache_dict() in glances/actions.py skips nested list and dictionary strings such as process cmdline values, allowing pipe characters to survive chevron.render() and be executed b",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-68520 - Glances: as_dict_secure() Value-Level Bypass Leaks Credentials in URL Values via /api/4/config",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68520",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-17T17:06:06.000Z",
+        "contentSnippet": "Glances is an open-source system cross-platform monitoring tool. Prior to 4.5.6, as_dict_secure() in glances/config.py checks only option names and exposes public_username and credentials embedded in public_api values through unauthenticated GET /api/4/config and GET /api/4/confi",
         "cveScore": 0,
         "cveSeverity": "NA"
       },
@@ -812,99 +902,23 @@
         "contentSnippet": "openssl_encrypt versions before 1.4.0 silently skip JSON schema validation when the jsonschema library is not installed, allowing malformed metadata to be accepted. Attackers can remove the jsonschema package or supply unknown metadata format versions to bypass all schema checks ",
         "cveScore": 9.8,
         "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-74842 - Kira-Pgr PromptShopMCP Image-Toolkit-MCP-Server server.py download_image server-side request forgery",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74842",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-17T10:30:11.000Z",
-        "contentSnippet": "A vulnerability was found in Kira-Pgr PromptShopMCP up to 5bc0cd17358e19a5415d11a531088170d7b81452. Affected is the function download_image of the file server.py of the component Image-Toolkit-MCP-Server. Performing a manipulation of the argument image_url results in server-side ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-74845 - 2100 Technology｜Official Document Management System - Arbitrary File Upload",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74845",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-17T10:16:42.000Z",
-        "contentSnippet": "Official Document Management System developed by 2100 Technology has an Arbitrary File Upload vulnerability, allowing authenticated remote attackers to upload and execute web shell backdoors, thereby enabling arbitrary code execution on the server.",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-58561 - Image Codec Module Null Pointer Dereference",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58561",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-17T09:17:31.000Z",
-        "contentSnippet": "Null pointer dereference issue in the image codec module. Impact: Successful exploitation of this vulnerability may affect availability.",
-        "cveScore": 4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-58560 - Image Codec Null Pointer Dereference",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58560",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-17T09:17:31.000Z",
-        "contentSnippet": "Null pointer dereference issue in the image codec module. Impact: Successful exploitation of this vulnerability may affect availability.",
-        "cveScore": 4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-49308 - Clipboard Module Permission Control Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49308",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-17T09:17:31.000Z",
-        "contentSnippet": "Permission control vulnerability in the clipboard module. Impact: Successful exploitation of this vulnerability may affect service confidentiality.",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-49307 - Multi-mode Input Module Access Control Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49307",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-17T09:17:30.000Z",
-        "contentSnippet": "Permission control vulnerability in the multi-mode input module. Impact: Successful exploitation of this vulnerability may affect service confidentiality.",
-        "cveScore": 6.2,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-49306 - Linux Kernel Time and Time Zone Module Use-After-Free Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49306",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-17T09:17:30.000Z",
-        "contentSnippet": "UAF vulnerability in the time and time zone module. Impact: Successful exploitation of this vulnerability may affect availability.",
-        "cveScore": 3.3,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-49305 - Wi-Fi Enhancement Module Improper Authorization Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49305",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-17T09:17:30.000Z",
-        "contentSnippet": "Permission control vulnerability in the Wi-Fi enhancement module. Impact: Successful exploitation of this vulnerability may affect availability.",
-        "cveScore": 6.2,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-49304 - Device Key Management Module Improper Authorization Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49304",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-17T09:17:30.000Z",
-        "contentSnippet": "Permission control vulnerability in the device key management module. Impact: Successful exploitation of this vulnerability may affect availability.",
-        "cveScore": 6.2,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-49303 - Notification Module Improper Authorization Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49303",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-17T09:17:30.000Z",
-        "contentSnippet": "Permission control vulnerability in the notification module. Impact: Successful exploitation of this vulnerability may affect availability.",
-        "cveScore": 5.1,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
+      {
+        "title": "NVIDIA Nemotron 3.5 Lightning now available in Amazon SageMaker JumpStart",
+        "link": "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-lightning-now-available-in-amazon-sagemaker-jumpstart/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-08-17T18:06:33.000Z",
+        "contentSnippet": "NVIDIA Nemotron 3.5 Lightning, an open model built for high-volume agentic workloads, is now available in Amazon SageMaker JumpStart. This post shows how to deploy the 30B Mixture-of-Experts model (3B active), which delivers up to 4x higher throughput and up to 30% faster task co"
+      },
+      {
+        "title": "Developing an End-to-End Document Intelligence Pipeline with docTR for OCR, Layout Analysis, KIE, Benchmarking, and Searchable PDFs",
+        "link": "https://www.marktechpost.com/2026/08/17/end-to-end-document-intelligence-pipeline-with-doctr-for-ocr/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-08-17T17:52:50.000Z",
+        "contentSnippet": "Develop a complete document intelligence pipeline with docTR, integrating OCR, layout analysis, and KIE for production-oriented extraction and searchable PDF creation. The post Developing an End-to-End Document Intelligence Pipeline with docTR for OCR, Layout Analysis, KIE, Bench"
+      },
       {
         "title": "Build OpenClaw agents that transact with Amazon Bedrock AgentCore payments",
         "link": "https://aws.amazon.com/blogs/machine-learning/build-openclaw-agents-that-transact-with-amazon-bedrock-agentcore-payments/",
@@ -1590,20 +1604,6 @@
         "source": "MarkTechPost",
         "isoDate": "2026-08-03T07:28:14.000Z",
         "contentSnippet": "Cogent AI team released Cogent VR-1, a reasoning model post-trained specifically for cybersecurity rather than picking up cyber capability as a side effect of general coding strength. It ships with two companions: IntrusionBench, a benchmark that scores agents on completed enterp"
-      },
-      {
-        "title": "Onton Releases Ontology 1: A Neurosymbolic Search Model That is 2.7x More Accurate than the World’s Best E-commerce Search Engines",
-        "link": "https://www.marktechpost.com/2026/08/02/onton-releases-ontology-1-a-neurosymbolic-search-model/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-08-03T00:49:50.000Z",
-        "contentSnippet": "Onton, a San Francisco-based search and discovery company, has released Ontology 1, a neurosymbolic model for complex, conversational, multimodal product search. On a 90-query benchmark scored by three independent LLM judges, Ontology 1 reached a mean precision@10 of 0.630, again"
-      },
-      {
-        "title": "A Tutorial on GeoAI: Designing Footprint Extraction from NAIP Imagery Using U-Net, Grounding DINO, SAM, and Mask R-CNN",
-        "link": "https://www.marktechpost.com/2026/08/02/a-tutorial-on-geoai-designing-footprint-extraction-from-naip-imagery-using-u-net-grounding-dino-sam-and-mask-r-cnn/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-08-02T21:19:48.000Z",
-        "contentSnippet": "In this tutorial, we design a complete GeoAI workflow for extracting building footprints from high-resolution NAIP aerial imagery. We begin by configuring the geospatial deep learning environment, downloading raster imagery and vector labels, and inspecting their spatial properti"
       }
     ],
     "virtualization": [
@@ -2310,11 +2310,25 @@
     ],
     "hardware": [
       {
+        "title": "Intel Xeon 658X Review: Granite Rapids For Workstations",
+        "link": "https://www.servethehome.com/intel-xeon-658x-review-granite-rapids-for-workstations/",
+        "source": "ServeTheHome",
+        "isoDate": "2026-08-17T18:00:02.000Z",
+        "contentSnippet": "Intel's Granite Rapids CPUs have finally made it to the workstation market as the Xeon 600 family. Today we are reviewing the Xeon 658X, a 24 core chip that packs a punch, thanks in part to its memory bandwidth The post Intel Xeon 658X Review: Granite Rapids For Workstations appe"
+      },
+      {
+        "title": "Geekom admits to shipping malware-laced network drivers for AMD mini PCs — company responds with guidance, removes malicious package",
+        "link": "https://www.tomshardware.com/tech-industry/cyber-security/geekom-admits-to-shipping-malware-laced-network-drivers-for-amd-mini-pcs-company-responds-with-guidance-removes-malicious-package",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-17T17:18:04.000Z",
+        "contentSnippet": "Geekom admits to shipping malware-laced network drivers for AMD mini-PCs — maker requests takedown of report on the situation"
+      },
+      {
         "title": "Best Portable SSDs in 2026: Lab-Tested Leaderboard",
         "link": "https://www.storagereview.com/best/portable-ssds",
         "source": "StorageReview",
         "isoDate": "2026-08-17T16:59:06.000Z",
-        "contentSnippet": "DRAFT for review. Not linked from the hub or nav yet. Updated August 15, 2026: Initial publication with 16 portable drives tested over the past two years. Prices are as reviewed; check current pricing before buying. Every drive on this page has been through the StorageReview lab."
+        "contentSnippet": "DRAFT for review. Not linked from the hub or nav yet. Updated August 17, 2026: Samsung T9 and T7 Shield added, and the eligibility window broadened so any drive still widely sold stays in contention regardless of review date. Pricing context added for the ongoing NAND shortage. E"
       },
       {
         "title": "HCLTech Pairs NetApp Keystone With U4X to Sell Enterprise AI Storage by Consumption",
@@ -2994,20 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-08-13T12:04:32.000Z",
         "contentSnippet": "Security researchers discovered a way to tap into the avionics of a Boeing 737 and remotely give its flight management computer erroneous data through in-flight Wi-Fi. This coin-sized device plugs into a diagnostic port in the plane's avionics bay and could easily be hidden behin"
-      },
-      {
-        "title": "Get 16GB of DDR5 RAM free when you buy AMD's 9900X and an Asus TUF motherboard — $659 Newegg combo saves $274, and you get a free 240mm AIO",
-        "link": "https://www.tomshardware.com/pc-components/ddr5/get-16gb-of-ddr5-ram-free-when-you-buy-amds-9900x-and-an-asus-tuf-motherboard-usd659-newegg-combo-saves-usd274-and-you-get-a-free-240mm-aio",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-13T11:50:20.000Z",
-        "contentSnippet": "Save $274 and snag 16GB of DDR5 RAM for free in this 3-item Newegg combo with Ryzen 9 9900X, Asus TUF Gaming X870E-Plus Wifi7, and 16GB of dual channel Team Group T-Force Vulkan RAM"
-      },
-      {
-        "title": "Critical 'Zoomsday' flaw enables total device takeover during Zoom calls — AI-assisted research only used 20 prompts to find an exploit to hack hundreds of millions of people.",
-        "link": "https://www.tomshardware.com/tech-industry/cyber-security/zoomsday-vulnerability-let-anyone-in-a-zoom-meeting-take-over-anybody-else-ai-assisted-research-only-used-20-prompts-to-find-an-exploit-to-hack-hundred-of-millions-of-people",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-13T11:20:00.000Z",
-        "contentSnippet": "Zoomsday vulnerability let anyone in a Zoom meeting take over anybody else. The vulnerability was developed with AI assistance and took research only used 20 prompts to find an exploit to hack hundred of millions of people."
       }
     ]
   }
