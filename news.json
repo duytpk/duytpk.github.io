@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-08-18T19:21:29.647Z",
+  "updatedAt": "2026-08-18T20:13:45.164Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-73103",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73103",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-18T19:41:09.000Z",
+        "contentSnippet": "None",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-12520 - Stack buffer overflow and off-by-one writes in Zephyr HL7800 modem AT response handlers",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12520",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-18T19:41:07.000Z",
+        "contentSnippet": "The Sierra Wireless HL7800 cellular modem driver (drivers/modem/vendor_standalone/hl7800.c, located at drivers/modem/hl7800.c in v4.4.0 and earlier) parses AT responses with roughly twenty handlers that call net_buf_linearize(value, sizeof(value), *buf, 0, len) into a 128-byte st",
+        "cveScore": 6.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-75936 - Memory-amplification denial of service via GZIP decompression bomb in Amazon ion-java",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75936",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-18T19:34:19.000Z",
+        "contentSnippet": "Improper handling of highly compressed data in the GZIP auto-decompression handler in Amazon ion-java before 1.12.0 might allow remote actors to cause a denial of service via a crafted compressed Ion document that expands to an arbitrarily large size upon decompression. To remedi",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-75935 - Memory-amplification denial of service via declared-length preallocation in Amazon ion-java",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75935",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-18T19:33:46.000Z",
+        "contentSnippet": "Uncontrolled memory allocation in the binary Ion stream cursor in Amazon ion-java before 1.12.0 might allow remote actors to cause a denial of service via a crafted Ion binary document containing a declared-length field that causes excessive heap preallocation. To remediate this ",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-52829 - ZEBRA: IPv4-Mapped Mempool Misbehavior Update Aborts Zebra Address Book",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52829",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-18T19:27:57.000Z",
+        "contentSnippet": "ZEBRA is a Zcash node written entirely in Rust. Prior to 4.5.0, an unauthenticated IPv4 peer can deterministically terminate a synced Zebra node using the default Linux dual-stack listener configuration. The handshake path canonicalized an IPv4-mapped IPv6 PeerSocketAddr such as ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52736 - ZEBRA: Block suppression via NU5 same-header body poisoning of sent-hash cache",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52736",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-18T19:26:40.000Z",
+        "contentSnippet": "ZEBRA is a Zcash node written entirely in Rust. Prior to 4.5.0, a remote unauthenticated P2P peer can stall a Zebra node by racing an invalid block body against the valid canonical body for the same block header hash. ZIP-244 permits the attacker to mutate coinbase scriptSig auth",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52732 - ZEBRA: Mempool transaction admission denial via single-peer inbound queue saturation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52732",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-18T19:26:07.000Z",
+        "contentSnippet": "ZEBRA is a Zcash node written entirely in Rust. Prior to 4.5.0, one unauthenticated P2P peer can monopolize all 25 MAX_INBOUND_CONCURRENCY slots in Zebra's inbound mempool download and verification pipeline. In zebrad/src/components/mempool/downloads.rs, the bounded queue was sha",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52731 - ZEBRA: Full node denial of service via non-ASCII LongPollId in getblocktemplate",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52731",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-18T19:25:39.000Z",
+        "contentSnippet": "ZEBRA is a Zcash node written entirely in Rust. Prior to 4.5.0, an attacker authenticated to an enabled Zebra RPC endpoint can terminate zebrad by supplying a getblocktemplate LongPollId containing multi-byte UTF-8 characters. In zebra-rpc/src/methods/types/long_poll.rs, LongPoll",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52733 - ZEBRA: Persistent on-disk corruption of Sapling/Orchard subtree roots after chain fork via pop_tip",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52733",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-18T19:24:44.000Z",
+        "contentSnippet": "ZEBRA is a Zcash node written entirely in Rust. Prior to 4.5.0, a natural or attacker-influenced chain fork can leave stale Sapling and Orchard note-commitment subtree roots in Zebra state. In zebra-state/src/service/non_finalized_state/chain.rs, Chain::pop_tip removed a reverted",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52738 - ZEBRA: Finalized address balance credit-first overflow on consensus-valid blocks",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52738",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-18T19:24:04.000Z",
+        "contentSnippet": "ZEBRA is a Zcash node written entirely in Rust. Prior to 4.5.0, a consensus-valid block containing a long chain of transparent self-spends to one address can permanently halt Zebra nodes. In zebra-state/src/service/finalized_state/zebra_db/transparent.rs, the finalized-state writ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52735 - ZEBRA: Consensus divergence via P2SH sigop undercount in pure-Rust disabled-opcode parser",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52735",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-18T19:23:10.000Z",
+        "contentSnippet": "ZEBRA is a Zcash node written entirely in Rust. Prior to 4.5.0, Zebra can accept a block that zcashd rejects because the P2SH signature-operation counter undercounts redeem scripts containing a disabled opcode followed by signature opcodes. In zebra-script/src/lib.rs, p2sh_input_",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52739 - ZEBRA: Repeated Non-Finalized Shielded Transaction Aborts Zebra Before Duplicate-Nullifier Rejection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52739",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-18T19:22:19.000Z",
+        "contentSnippet": "ZEBRA is a Zcash node written entirely in Rust. Prior to 4.5.0, a malicious block producer can terminate zebrad by placing the same shielded transaction in a non-finalized parent block and its child. In zebra-state/src/service/non_finalized_state/chain.rs, Chain::push originally ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52734 - ZEBRA: Unbounded memory leak in mempool download pipeline via timeout path cancel_handles retention",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52734",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-18T19:19:56.000Z",
+        "contentSnippet": "ZEBRA is a Zcash node written entirely in Rust. Prior to 4.5.0, an unauthenticated P2P peer can cause the mempool download pipeline to retain transactions after verification reaches the outer RATE_LIMIT_DELAY timeout. In zebrad/src/components/mempool/downloads.rs, Downloads::poll",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-52737 - ZEBRA: Sync restart poisoning from single unauthenticated peer via above-lookahead block",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52737",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-18T19:19:09.000Z",
+        "contentSnippet": "ZEBRA is a Zcash node written entirely in Rust. Prior to 4.5.0, a malicious unauthenticated P2P peer can answer Zebra's outbound getblocks or FindBlocks request with a small two-hash inventory and then serve a syntactically valid block whose coinbase height is far above the local",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-70667 - Lemur: SSRF protection in certificate revocation checking bypassable via HTTP redirects and DNS rebinding (incomplete fix for CVE-2026-55162)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70667",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-18T19:17:03.000Z",
+        "contentSnippet": "Lemur manages TLS certificate creation. Prior to 1.9.3, _validate_revocation_url in lemur/certificates/verify.py checked the original CRL or OCSP URL but the later request could reach a different destination. The CRL requests.get call followed HTTP redirects without validating ea",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-65959 - Vitess: Missing authorization on vttablet /debug/vrlog exposes live VReplication SQL data",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65959",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-18T19:17:00.000Z",
+        "contentSnippet": "Vitess is a database clustering system for horizontal scaling of MySQL. In 24.0.2 and earlier, the /debug/vrlog endpoint registered by addHttpEndpoint() in go/vt/vttablet/tabletmanager/vreplication/vrlog.go invokes vrlogStatsHandler() without acl.CheckAccessHTTP(r, acl.DEBUGGING)",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-55166 - Lemur: any SSO-authenticated user achieves AWS IAM compromise and permanent PKI key access via ACME acme_url SSRF and creator-equality IDOR",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55166",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-18T19:16:58.000Z",
+        "contentSnippet": "Lemur manages TLS certificate creation. Prior to 1.9.2, authenticated users could influence an ACME authority acme_url without an effective server-side destination restriction and trigger AcmeHandler.setup_acme_client to make backend requests. An attacker could target cloud insta",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-55165 - Lemur : JWT verifier trusts attacker-supplied alg from token header — defense-in-depth gap; chain-dependent ATO with secret disclosure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55165",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-18T19:16:58.000Z",
+        "contentSnippet": "Lemur manages TLS certificate creation. Prior to 1.9.2, the JWT verifier in lemur/auth/service.py:130-137 used fetch_token_header to read header_data[\"alg\"] from an unverified token and passed that attacker-controlled value to decode_with_multiple_secrets. PyJWT 2.x rejects alg=n",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-55164 - Lemur: Plaintext password storage in Lemur user-update path",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55164",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-18T19:16:58.000Z",
+        "contentSnippet": "Lemur manages TLS certificate creation. Prior to 1.9.2, lemur.users.service.update assigned a replacement password directly to users.password, while lemur/users/models.py registered User.hash_password only for the before_insert event. Because no before_update listener ran, admini",
+        "cveScore": 4.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-55163 - Lemur: Privilege escalation via PUT /api/1/roles/ — non-admin role members can rewrite role membership",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55163",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-18T19:16:58.000Z",
+        "contentSnippet": "Lemur manages TLS certificate creation. Prior to 1.9.2, PUT /api/1/roles/ in lemur/roles/views.py:298 authorized updates with RoleMemberPermission(role_id), which allowed either an administrator or any existing member of the target role. The handler passed data[\"users\"] and data[",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-55162 - Lemur: Post-authentication SSRF via certificate verification - attacker-controlled CRL and OCSP URLs in uploaded certificates",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55162",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-18T19:16:58.000Z",
+        "contentSnippet": "Lemur manages TLS certificate creation. Prior to 1.9.2, lemur/certificates/verify.py accepted CRL Distribution Point and OCSP responder URLs from uploaded certificate extensions and used them in crl_verify and ocsp_verify without adequate destination validation. An authenticated ",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-47630 - NVIDIA Triton Inference Server Path Traversal Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47630",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-18T19:16:52.000Z",
+        "contentSnippet": "NVIDIA Triton Inference Server for Linux contains a vulnerability where an attacker could cause an absolute path traversal. A successful exploit might lead to code execution.",
+        "cveScore": 5.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-47629 - NVIDIA Triton Inference Server Improper Input Validation Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47629",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-18T19:16:52.000Z",
+        "contentSnippet": "NVIDIA Triton Inference Server for Linux contains a vulnerability where an attacker could cause improper input validation. A successful exploit might lead to denial of service.",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-47628 - NVIDIA Triton Inference Server Resource Exhaustion Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47628",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-18T19:16:51.000Z",
+        "contentSnippet": "NVIDIA Triton Inference Server for Linux contains a vulnerability where an attacker could cause an allocation of resources without limits. A successful exploit might lead to denial of service.",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-47627 - NVIDIA Triton Inference Server Path Traversal Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47627",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-18T19:16:51.000Z",
+        "contentSnippet": "NVIDIA Triton Inference Server for Linux contains a vulnerability where an attacker could cause path traversal. A successful exploit might lead to denial of service.",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
       {
         "title": "CVE-2026-17106 - Tar extraction in moby/go-archive can write outside the destination directory via link following",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-17106",
@@ -29,42 +254,6 @@
         "contentSnippet": "Missing signature validation in JSON Web Tokens in Otalio Ship Property Management System versions before 2.22.0 allows authenticated attackers to escalate privileges via tampering with JWTs",
         "cveScore": 8.1,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-47630 - NVIDIA Triton Inference Server Path Traversal Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47630",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T18:24:01.000Z",
-        "contentSnippet": "NVIDIA Triton Inference Server for Linux contains a vulnerability where an attacker could cause an absolute path traversal. A successful exploit might lead to code execution.",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-47629 - NVIDIA Triton Inference Server Improper Input Validation Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47629",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T18:24:00.000Z",
-        "contentSnippet": "NVIDIA Triton Inference Server for Linux contains a vulnerability where an attacker could cause improper input validation. A successful exploit might lead to denial of service.",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-47628 - NVIDIA Triton Inference Server Resource Exhaustion Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47628",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T18:23:59.000Z",
-        "contentSnippet": "NVIDIA Triton Inference Server for Linux contains a vulnerability where an attacker could cause an allocation of resources without limits. A successful exploit might lead to denial of service.",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-47627 - NVIDIA Triton Inference Server Path Traversal Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47627",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T18:23:58.000Z",
-        "contentSnippet": "NVIDIA Triton Inference Server for Linux contains a vulnerability where an attacker could cause path traversal. A successful exploit might lead to denial of service.",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
       },
       {
         "title": "CVE-2026-47606 - NVIDIA Triton Inference Server Absolute Path Traversal",
@@ -713,195 +902,6 @@
         "contentSnippet": "BetterDesk is a remote desktop management solution. BetterDesk versions through 2.3.0 improperly invalidate deleted device identities, allowing an unauthenticated client to replay or spoof a device ID and bypass registration controls. Version 3.0.0-alpha contains a patch. No know",
         "cveScore": 7.7,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-32468 - WordPress Duitku Payment Gateway plugin <= 2.11.14 - Sensitive Data Exposure vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-32468",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T14:17:05.000Z",
-        "contentSnippet": "Unauthenticated Sensitive Data Exposure in Duitku Payment Gateway",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-32467 - WordPress [Aotuman] Grab WeChat Articles plugin <= 2.0.1 - Server Side Request Forgery (SSRF) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-32467",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T14:17:04.000Z",
-        "contentSnippet": "Subscriber Server Side Request Forgery (SSRF) in [Aotuman] Grab WeChat Articles",
-        "cveScore": 6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-32466 - WordPress Gravity Forms Bookings premium plugin <= 2.1 - SQL Injection vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-32466",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T14:17:03.000Z",
-        "contentSnippet": "Subscriber SQL Injection in Gravity Forms Bookings premium",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-32465 - WordPress Essential Real Estate plugin <= 5.3.3 - PHP Object Injection vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-32465",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T14:17:03.000Z",
-        "contentSnippet": "Customer PHP Object Injection in Essential Real Estate",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-32464 - WordPress Theme Test Drive plugin <= 2.9.1 - Local File Inclusion vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-32464",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T14:17:03.000Z",
-        "contentSnippet": "Unauthenticated Local File Inclusion in Theme Test Drive",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-32463 - WordPress Sync Post With Other Site plugin <= 1.9.3 - Arbitrary File Upload vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-32463",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T14:17:03.000Z",
-        "contentSnippet": "Contributor Arbitrary File Upload in Sync Post With Other Site",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-32444 - WordPress Cwicly plugin <= 1.4.4 - Remote Code Execution (RCE) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-32444",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T14:17:03.000Z",
-        "contentSnippet": "Contributor Remote Code Execution (RCE) in Cwicly",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-32333 - WordPress Mayosis Core plugin <= 5.4.7 - Reflected Cross Site Scripting (XSS) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-32333",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T14:17:03.000Z",
-        "contentSnippet": "Unauthenticated Cross Site Scripting (XSS) in Mayosis Core",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-28571 - WordPress FormyChat plugin <= 2.15.7 - Broken Access Control vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-28571",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T14:17:02.000Z",
-        "contentSnippet": "Unauthenticated Broken Access Control in FormyChat",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-28570 - WordPress Vavo Core plugin <= 2.3.0 - Local File Inclusion vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-28570",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T14:17:02.000Z",
-        "contentSnippet": "Unauthenticated Local File Inclusion in Vavo Core",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-28569 - WordPress SSL Zen plugin <= 4.7.43 - Reflected Cross Site Scripting (XSS) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-28569",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T14:17:02.000Z",
-        "contentSnippet": "Unauthenticated Cross Site Scripting (XSS) in SSL Zen",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-28568 - WordPress Quill Forms plugin <= 5.7.1 - Cross Site Scripting (XSS) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-28568",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T14:17:02.000Z",
-        "contentSnippet": "Unauthenticated Cross Site Scripting (XSS) in Quill Forms",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-28567 - WordPress WP Sort Order plugin <= 1.3.5 - Broken Access Control vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-28567",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T14:17:02.000Z",
-        "contentSnippet": "Unauthenticated Broken Access Control in WP Sort Order",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-28192 - WordPress Piotnet Addons For Elementor Pro plugin <= 7.1.67 - Arbitrary File Upload vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-28192",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T14:17:02.000Z",
-        "contentSnippet": "Unauthenticated Arbitrary File Upload in Piotnet Addons For Elementor Pro",
-        "cveScore": 9.6,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-24301 - Microsoft Copilot Information Disclosure Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-24301",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T13:19:23.000Z",
-        "contentSnippet": "None",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-75874 - Sandbox escape in the Remote Settings Client component",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75874",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T13:17:43.000Z",
-        "contentSnippet": "Sandbox escape in the Remote Settings Client component. This vulnerability was fixed in Firefox 154.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-75783 - TRENDnet TEW-WLC100P DHCP blobmsg netifd stack-based overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75783",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T13:17:43.000Z",
-        "contentSnippet": "A security vulnerability has been detected in TRENDnet TEW-WLC100P 12.07b01. Affected by this vulnerability is an unknown functionality of the file /sbin/netifd of the component DHCP blobmsg Handler. The manipulation leads to stack-based buffer overflow. The attack must be carrie",
-        "cveScore": 9.6,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-75778 - code-projects Task Management System Login Form index.php select_with_multiple_condition sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75778",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T13:17:43.000Z",
-        "contentSnippet": "A vulnerability was identified in code-projects Task Management System 1.0. This affects the function Operation::select_with_multiple_condition of the file /index.php of the component Login Form. Such manipulation of the argument email leads to sql injection. It is possible to la",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-74990 - Internally found bugs fixed in Firefox ESR 115.39, Firefox ESR 140.14, Firefox ESR 153.1 and Firefox 154",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74990",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T13:17:40.000Z",
-        "contentSnippet": "Internally found bugs present in Firefox ESR 115.38, Firefox ESR 140.13, Firefox ESR 153.0 and Firefox 153. Some of these bugs showed evidence of memory corruption or another security-relevant defect and we presume that with enough effort some of these could have been exploited. ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-74989 - Internally found bugs fixed in Firefox 154",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74989",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T13:17:40.000Z",
-        "contentSnippet": "Internally found bugs present in Firefox 153. Some of these bugs showed evidence of memory corruption or another security-relevant defect and we presume that with enough effort some of these could have been exploited. This vulnerability was fixed in Firefox 154.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-74988 - Internally found bugs fixed in Firefox ESR 153.1 and Firefox 154",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74988",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T13:17:40.000Z",
-        "contentSnippet": "Internally found bugs present in Firefox ESR 153.0 and Firefox 153. Some of these bugs showed evidence of memory corruption or another security-relevant defect and we presume that with enough effort some of these could have been exploited. This vulnerability was fixed in Firefox ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       }
     ],
     "ai": [
@@ -2310,6 +2310,13 @@
     ],
     "hardware": [
       {
+        "title": "Sandisk Tapes Out Its First HBF Memory Die, Targets 2027 for Inference Product Samples",
+        "link": "https://www.storagereview.com/news/sandisk-tapes-out-its-first-hbf-memory-die-targets-2027-for-inference-product-samples",
+        "source": "StorageReview",
+        "isoDate": "2026-08-18T19:25:53.000Z",
+        "contentSnippet": "Sandisk has taped out the first High Bandwidth Flash memory die. The company put it on a slide at its 2026 Investor Day on August 13, under the header HBF Roadmap, next to what the slide labels an actual die picture. The second half of that slide covers the first HBF inference pr"
+      },
+      {
         "title": "Enterprise SSD Prices Run at 6.5x Last Year: VDURA Pegs a 30TB TLC Drive at $22,600",
         "link": "https://www.storagereview.com/news/enterprise-ssd-prices-run-at-6-5x-last-year-vdura-pegs-a-30tb-tlc-drive-at-22600",
         "source": "StorageReview",
@@ -3001,13 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-08-14T11:39:52.000Z",
         "contentSnippet": "Intel has seen a “sudden inrush” of demand for Raptor Lake CPUs, and it says they’ll remain a part of the company’s lineup for desktop builders “for years to come.”"
-      },
-      {
-        "title": "Intel VP Robert Hallock sets Nova Lake expectations, teases return to Raptor Lake for DDR4 platforms — our full 1:1 interview transcript",
-        "link": "https://www.tomshardware.com/pc-components/cpus/intel-vp-robert-hallock-sets-nova-lake-expectations-teases-return-to-raptor-lake-for-ddr4-platforms-our-full-1-1-interview-transcript",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-14T11:00:00.000Z",
-        "contentSnippet": "We speak to Robert Hallock, Intel VP & GM of Enthusiast Channel Business, about Nova Lake rumors, how the company is focusing on DIY builders during RAMageddon, and how Raptor Lake refresh induced a paradigm shift for the company."
       }
     ]
   }
