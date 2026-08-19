@@ -1,8 +1,71 @@
 {
-  "updatedAt": "2026-08-19T05:21:33.679Z",
+  "updatedAt": "2026-08-19T06:28:30.469Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-66358 - acmailer Cross-Site Scripting Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66358",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T04:53:33.000Z",
+        "contentSnippet": "A cross-site scripting vulnerability exists in acmailer, which may allow an attacker to execute an arbitrary script.",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-49415 - Local privilege escalation via execve(2) TOCTOU race",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49415",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T04:38:24.000Z",
+        "contentSnippet": "During execve(2) of a SUID binary, the new virtual address space is installed before the process credentials are updated. During this window, a process running as the same user can access the target process's memory via procfs or linprocfs, because the kernel's debugging permissi",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49419 - Jail reference count underflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49419",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T04:32:39.000Z",
+        "contentSnippet": "When the JAIL_AT_DESC flag is specified, kern_jail_set() and kern_jail_get() released the reference to the caller's current prison before looking up the jail descriptor. If the descriptor lookup failed, error-handling paths released the same reference a second time. An unprivileg",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-19942 - Atarim <= 5.1.1 - Authenticated (Author+) Arbitrary File Deletion via '_wp_attached_file' Meta",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19942",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T04:27:08.000Z",
+        "contentSnippet": "The Atarim – AI Agency for WordPress: Edit Pages, Fix Code, Update Plugins, SEO & Client Feedback plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the AVCF_Abilities_Media::register (replace-media-file execute_callback) fun",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-76050 - SourceCodester Simple Online Food Ordering System ajax.php delete_menu sql injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76050",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T04:17:42.000Z",
+        "contentSnippet": "A vulnerability was found in SourceCodester Simple Online Food Ordering System 1.0. This impacts an unknown function of the file /admin/ajax.php?action=delete_menu. The manipulation of the argument ID results in sql injection. It is possible to launch the attack remotely. The exp",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-76049 - SourceCodester Simple Online Food Ordering System ajax.php save_menu sql injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76049",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T04:17:38.000Z",
+        "contentSnippet": "A vulnerability has been found in SourceCodester Simple Online Food Ordering System 1.0. This affects an unknown function of the file /admin/ajax.php?action=save_menu. The manipulation of the argument ID leads to sql injection. It is possible to initiate the attack remotely. The ",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-49418 - Use-after-free in device pager page list",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49418",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T04:14:17.000Z",
+        "contentSnippet": "When msync(MS_INVALIDATE) is called on a mapping of an unmanaged device object, the physical pages in the mapping range are marked invalid but remain in the pager's page list. A subsequent page fault will cause the fault handler to re-insert the page into the object's list. This ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2026-76048 - SourceCodester Simple Online Food Ordering System ajax.php login sql injection",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-76048",
@@ -47,15 +110,6 @@
         "contentSnippet": "A weakness has been identified in UTT HiPER 1200GW up to 2.5.3-170306. Affected is the function strcpy of the file /goform/formGroupConfig. Executing a manipulation of the argument timestart can lead to stack-based buffer overflow. The attack may be performed from remote. The exp",
         "cveScore": 9.9,
         "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-76049 - SourceCodester Simple Online Food Ordering System ajax.php save_menu sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76049",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T03:15:10.000Z",
-        "contentSnippet": "A vulnerability has been found in SourceCodester Simple Online Food Ordering System 1.0. This affects an unknown function of the file /admin/ajax.php?action=save_menu. The manipulation of the argument ID leads to sql injection. It is possible to initiate the attack remotely. The ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       },
       {
         "title": "CVE-2026-75987 - SPLWare esProc SocketData.java ObjectInputStream.readUnshared deserialization",
@@ -848,60 +902,6 @@
         "contentSnippet": "Lemur manages TLS certificate creation. Prior to 1.9.2, lemur/certificates/verify.py accepted CRL Distribution Point and OCSP responder URLs from uploaded certificate extensions and used them in crl_verify and ocsp_verify without adequate destination validation. An authenticated ",
         "cveScore": 6.3,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-47630 - NVIDIA Triton Inference Server Path Traversal Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47630",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T19:16:52.000Z",
-        "contentSnippet": "NVIDIA Triton Inference Server for Linux contains a vulnerability where an attacker could cause an absolute path traversal. A successful exploit might lead to code execution.",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-47629 - NVIDIA Triton Inference Server Improper Input Validation Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47629",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T19:16:52.000Z",
-        "contentSnippet": "NVIDIA Triton Inference Server for Linux contains a vulnerability where an attacker could cause improper input validation. A successful exploit might lead to denial of service.",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-47628 - NVIDIA Triton Inference Server Resource Exhaustion Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47628",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T19:16:51.000Z",
-        "contentSnippet": "NVIDIA Triton Inference Server for Linux contains a vulnerability where an attacker could cause an allocation of resources without limits. A successful exploit might lead to denial of service.",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-47627 - NVIDIA Triton Inference Server Path Traversal Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47627",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T19:16:51.000Z",
-        "contentSnippet": "NVIDIA Triton Inference Server for Linux contains a vulnerability where an attacker could cause path traversal. A successful exploit might lead to denial of service.",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-47606 - NVIDIA Triton Inference Server Absolute Path Traversal",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47606",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T19:16:50.000Z",
-        "contentSnippet": "NVIDIA Triton Inference Server for Linux contains a vulnerability where an attacker could cause an absolute path traversal. A successful exploit might lead to code execution and information disclosure.",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-24185 - NVIDIA NVOS SSH Server Authentication Bypass Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-24185",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T19:16:46.000Z",
-        "contentSnippet": "NVIDIA NVOS for network switches contains a vulnerability in the secure shell (SSH) server configuration component while PKA-only mode is enabled, where an administrator could inadvertently enable an alternative authentication path. If best practices for replacing the default pas",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
