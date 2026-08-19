@@ -1,14 +1,95 @@
 {
-  "updatedAt": "2026-08-19T08:26:02.335Z",
+  "updatedAt": "2026-08-19T09:24:17.407Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
+        "title": "CVE-2026-76164 - Authenticated Server-Side Request Forgery in AIL Framework Crawler Allows Access to Internal Network Resources",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76164",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T08:53:13.000Z",
+        "contentSnippet": "AIL Framework contains a server-side request forgery (SSRF) vulnerability in its crawler submission functionality. A low-privileged authenticated user with access to the crawler interface can submit an arbitrary URL for crawling without adequate validation of the destination host",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-75900 - Swtpm: swtpm: out-of-bounds read in swtpm_nvram_checkheader due to sizeof(pointer) vs sizeof(struct) mismatch",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75900",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T08:17:14.000Z",
+        "contentSnippet": "An out-of-bounds read vulnerability was found in swtpm's SWTPM_NVRAM_CheckHeader() function. The entry guard checks the buffer length against sizeof(bh), where bh is a pointer, instead of sizeof(*bh), the actual struct size. This allows an undersized buffer to pass validation, ca",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
         "title": "CVE-2026-75589 - Net::OAuth versions before 0.33 for Perl check HMAC-SHA1, HMAC-SHA256 and PLAINTEXT signatures with a non-constant-time comparison in verify",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-75589",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-19T07:20:44.000Z",
+        "isoDate": "2026-08-19T08:17:13.000Z",
         "contentSnippet": "Net::OAuth versions before 0.33 for Perl check HMAC-SHA1, HMAC-SHA256 and PLAINTEXT signatures with a non-constant-time comparison in verify. Each of the three compares the signature carried in the message against the locally computed one with the eq operator, which returns as so",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-72889 - Net::OAuth versions before 0.33 for Perl allow the sender to choose the signature algorithm in verify",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72889",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T08:17:13.000Z",
+        "contentSnippet": "Net::OAuth versions before 0.33 for Perl allow the sender to choose the signature algorithm in verify. verify resolves the signature method class from the signature_method parameter of the incoming message. signature_method is required on every request, so the algorithm used to c",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-58088 - Race condition in ELF core dump segment counting",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58088",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T08:17:12.000Z",
+        "contentSnippet": "The ELF core dump code counted the number of dumpable VM map entries, allocated a buffer for the corresponding program headers, then iterated over the map a second time to populate them. A process sharing the address space via rfork(2) can mutate the map between the two passes, c",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-58087 - Heap out-of-bounds access in semctl(2)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58087",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T08:17:12.000Z",
+        "contentSnippet": "The GETALL and SETALL commands in semctl(2) recorded the number of semaphores in the target set, dropped the lock protecting the set, allocated a buffer sized for that count, and reacquired the lock. A sequence-number check was used to verify that the set had not been replaced in",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-58086 - ktrace(2) privilege incorrectly validated in jails",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58086",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T08:17:12.000Z",
+        "contentSnippet": "As an inadvertent side effect of an unrelated code change, PRIV_KTRACE was always denied to a jailed root user. Tracing configured by a jailed root user was therefore not flagged as privileged. An unprivileged user in a jail that has permission to debug the target process can mod",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-58085 - Missing MAC validation in wg(4) packet decryption",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58085",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T08:17:12.000Z",
+        "contentSnippet": "After dispatching a decrypt operation to OCF and receiving the result, the wg(4) driver failed to check whether the MAC verification step succeeded. The driver thus silently accepted packets with an invalid Poly1305 authentication tag. A remote attacker who can send UDP packets t",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-58084 - Kernel stack disclosure via timer_settime(2)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58084",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T08:17:12.000Z",
+        "contentSnippet": "To retrieve the previous timer value, the kernel calls realtimer_gettime(), which obtains the current time for the timer's clock. For a timer using CLOCK_TAI this can fail when no TAI offset has been configured, but the error return was not checked, so the uninitialized output bu",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-58083 - Use-after-free in kqueue copy-on-fork",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58083",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T08:17:12.000Z",
+        "contentSnippet": "While the kernel was copying knotes during fork, a knote with a timer-based filter could fire and be enqueued on the kqueue's active list before the copy was complete. The copy routine did not account for this and could enqueue the new knote a second time, corrupting the active l",
         "cveScore": 0,
         "cveSeverity": "NA"
       },
@@ -16,7 +97,7 @@
         "title": "CVE-2026-58082 - Stack based buffer overflow in iconv(3)",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-58082",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-19T07:20:37.000Z",
+        "isoDate": "2026-08-19T08:17:12.000Z",
         "contentSnippet": "The ISO-2022 encoding module used a stack buffer sized to MB_LEN_MAX (6 bytes) for intermediate character output. Some ISO-2022 variants can require up to 10 bytes per character, in which case conversions can trigger a stack buffer overflow of up to four bytes. An application tha",
         "cveScore": 0,
         "cveSeverity": "NA"
@@ -25,17 +106,26 @@
         "title": "CVE-2026-58081 - Heap based buffer overflow in iconv(3)",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-58081",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-19T07:20:26.000Z",
+        "isoDate": "2026-08-19T08:17:12.000Z",
         "contentSnippet": "Several encoding modules, including HZ, UTF-7, VIQR, and ZW, did not properly check the size of the caller-supplied output buffer before writing converted characters. An application that uses iconv(3) to convert untrusted input to or from one of the affected encodings may be vuln",
         "cveScore": 0,
         "cveSeverity": "NA"
       },
       {
-        "title": "CVE-2026-72889 - Net::OAuth versions before 0.33 for Perl allow the sender to choose the signature algorithm in verify",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72889",
+        "title": "CVE-2026-49425 - Kernel stack disclosure in 32-bit compatibility support",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49425",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-19T07:20:09.000Z",
-        "contentSnippet": "Net::OAuth versions before 0.33 for Perl allow the sender to choose the signature algorithm in verify. verify resolves the signature method class from the signature_method parameter of the incoming message. signature_method is required on every request, so the algorithm used to c",
+        "isoDate": "2026-08-19T08:17:12.000Z",
+        "contentSnippet": "The compat32 kevent() handler translates a 64-bit kevent struct into a stack- declared 32-bit struct. It did not first zero the stack struct. An unprivileged user may observe a small amount of uninitialized kernel stack data, which may contain sensitive information.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49424 - Kernel stack disclosure in Linux compatibility layer",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49424",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T08:17:12.000Z",
+        "contentSnippet": "The Linux waitid() implementation translates a FreeBSD siginfo_t struct into a stack-declared Linux siginfo_t. It did not first zero the stack struct. An unprivileged user may observe 104 bytes of uninitialized kernel stack data, which may contain sensitive information.",
         "cveScore": 0,
         "cveSeverity": "NA"
       },
@@ -74,24 +164,6 @@
         "contentSnippet": "The EWWW Image Optimizer plugin for WordPress is vulnerable to Stored Cross-Site Scripting via 'data-script' Lazy Load Attribute in Post Content in all versions up to, and including, 8.7.3 due to insufficient input sanitization and output escaping. This makes it possible for auth",
         "cveScore": 6.4,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-49425 - Kernel stack disclosure in 32-bit compatibility support",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49425",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T07:11:21.000Z",
-        "contentSnippet": "The compat32 kevent() handler translates a 64-bit kevent struct into a stack- declared 32-bit struct. It did not first zero the stack struct. An unprivileged user may observe a small amount of uninitialized kernel stack data, which may contain sensitive information.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-49424 - Kernel stack disclosure in Linux compatibility layer",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49424",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T07:08:35.000Z",
-        "contentSnippet": "The Linux waitid() implementation translates a FreeBSD siginfo_t struct into a stack-declared Linux siginfo_t. It did not first zero the stack struct. An unprivileged user may observe 104 bytes of uninitialized kernel stack data, which may contain sensitive information.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       },
       {
         "title": "CVE-2026-8810 - HDD Password leakage vulnerability",
@@ -828,78 +900,6 @@
         "source": "cvefeed.io",
         "isoDate": "2026-08-18T20:50:21.000Z",
         "contentSnippet": "Blueprint Studio is a VS Code-like file editor for Home Assistant configuration files. Prior to 2.5.2, Blueprint Studio terminal SSH key authentication in custom_components/blueprint_studio/backend/terminal_manager.py wrote SSH private-key material to a file under the Home Assist",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-53455 - Blueprint Studio Git credential helper command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53455",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T20:49:36.000Z",
-        "contentSnippet": "Blueprint Studio is a VS Code-like file editor for Home Assistant configuration files. Prior to 2.5.2, Blueprint Studio generated a shell-based Git credential helper in custom_components/blueprint_studio/backend/git_manager.py by interpolating the configured Git username and toke",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-53454 - Blueprint Studio stored Git credentials in plaintext Git credential store",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53454",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T20:48:58.000Z",
-        "contentSnippet": "Blueprint Studio is a VS Code-like file editor for Home Assistant configuration files. Prior to 2.5.2, Blueprint Studio configured Git's credential.helper store when saving Git credentials, causing Git credential-store to persist usernames and access tokens in plaintext in the .g",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-53453 - Blueprint Studio API authorization bypass for non-admin Home Assistant users",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53453",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T20:48:20.000Z",
-        "contentSnippet": "Blueprint Studio is a VS Code-like file editor for Home Assistant configuration files. Prior to 2.5.2, Blueprint Studio exposed administrator-intended backend API actions to any authenticated Home Assistant user because the backend did not consistently enforce the panel's admin-o",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-53458 - Blueprint Studio API exposed internal exception details",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53458",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T20:47:25.000Z",
-        "contentSnippet": "Blueprint Studio is a VS Code-like file editor for Home Assistant configuration files. Prior to 2.5.2, Blueprint Studio backend API handlers in custom_components/blueprint_studio/backend/api.py returned raw exception strings to authenticated Home Assistant users. Some exception m",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-56874",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56874",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T20:43:44.000Z",
-        "contentSnippet": "None",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-56873",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56873",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T20:43:42.000Z",
-        "contentSnippet": "None",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-56872",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56872",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T20:43:41.000Z",
-        "contentSnippet": "None",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-56871",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56871",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T20:43:39.000Z",
-        "contentSnippet": "None",
         "cveScore": 0,
         "cveSeverity": "NA"
       }
@@ -2310,6 +2310,13 @@
     ],
     "hardware": [
       {
+        "title": "GitHub programmer ports playable Doom to DSLR camera with 3-inch TFT LCD display — Canon EOS 550D with open-source Magic Lantern firmware uses camera's button as controls, even plays sound",
+        "link": "https://www.tomshardware.com/video-games/retro-gaming/github-programmer-ports-doom-to-dslr-camera-with-3-inch-tft-lcd-display-canon-eos-550d-with-open-source-magic-lantern-firmware-uses-cameras-button-as-controls-even-plays-sound",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-19T09:00:00.000Z",
+        "contentSnippet": "A developer posted their Doom port for the Canon EOS 550D on GitHub. The game uses the Magic Lantern firmware add-on to run on the camera, and uses various camera buttons to play the game directly from the SD card."
+      },
+      {
         "title": "Qualcomm Modular Open-Sourced at ModCon 2026",
         "link": "https://www.servethehome.com/qualcomm-modular-amd-open-sourced-at-modcon-2026/",
         "source": "ServeTheHome",
@@ -3001,13 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-08-14T12:23:35.000Z",
         "contentSnippet": "A self-represented plaintiff in a Connecticut court added a hidden AI prompt injection attack in their filing in a failed attempt to influence a decision. The court bars them from submitting documents electronically and instead must print them and hand to the clerk of court."
-      },
-      {
-        "title": "US imposes up to 100% tariffs on foreign-made drones and components — China remains primary target as Washington moves to reduce reliance on overseas suppliers",
-        "link": "https://www.tomshardware.com/tech-industry/drones/us-imposes-up-to-100-percent-tariffs-on-foreign-made-drones-and-components-china-remains-primary-target-as-washington-moves-to-reduce-reliance-on-overseas-suppliers",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-14T11:53:06.000Z",
-        "contentSnippet": "The Trump administration says the new tariffs are necessary for national security and to address the US industry's heavy reliance on foreign-made drones and components, particularly from China."
       }
     ]
   }
