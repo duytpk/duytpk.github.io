@@ -1,23 +1,239 @@
 {
-  "updatedAt": "2026-08-19T16:20:57.286Z",
+  "updatedAt": "2026-08-19T17:19:15.327Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
-        "title": "CVE-2026-53477 - Dell Command Update Time-of-Check Time-of-Use Race Condition Elevation of Privilege Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53477",
+        "title": "CVE-2026-62668 - Grav API Plugin: Webhook SSRF via Unrestricted cURL Protocols",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62668",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-19T15:04:41.000Z",
-        "contentSnippet": "Dell Command Update (DCU), versions prior to 5.7.1, contain a Time-of-check Time-of-use (TOCTOU) Race Condition vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Elevation of Privileges.",
-        "cveScore": 7.8,
+        "isoDate": "2026-08-19T15:29:24.000Z",
+        "contentSnippet": "Grav API Plugin is a RESTful API for Grav CMS that provides full headless access to your site's content. Prior to 1.0.6, the Grav API plugin WebhookController.php accepts webhook URLs after only FILTER_VALIDATE_URL syntax validation, and WebhookDispatcher.php initializes cURL wit",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-62670 - Fail-open authorization in grav-plugin-flex-objects admin-next API: api.access user gets full CRUD on permission-less directories (requireFlexPermission missing else-deny)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62670",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T15:26:27.000Z",
+        "contentSnippet": "Grav Flex Objects Plugin allows you to build custom collections of objects. Prior to 1.4.3, the Grav Flex Objects Admin Next API requireFlexPermission() method in classes/Api/FlexApiController.php returns without denying access when a directory blueprint omits config.admin.permis",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-19672 - tarfile extraction filter bypass allows creation of directories outside the destination",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19672",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T15:24:08.000Z",
+        "contentSnippet": "The tarfile module's tar and data extraction filters created directories outside the destination for members whose name leaves the destination and returns to it, such as ../evil/../dest/sub/file. The containment check used the resolved path, but intermediate directories were crea",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-61842 - Grav: Twig sandbox config exfiltration via grav.offsetGet + dump filter (CVE-2026-44738 bypass)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61842",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T15:23:27.000Z",
+        "contentSnippet": "Grav is a file-based Web platform. Prior to 2.0.2, the Grav Twig content sandbox permits grav.offsetGet('config') to return the raw configuration object and permits json_encode, print_r, yaml_encode, and string filters to serialize that object without passing through GravSecurity",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-61690 - Grav: Decompression Bomb via ZipArchiver - Missing Extraction Limits",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61690",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T15:20:10.000Z",
+        "contentSnippet": "Grav is a file-based Web platform. Prior to 2.0.1, Grav ZipArchiver::extract() in system/src/Grav/Common/Filesystem/ZipArchiver.php passes archives to ZipArchive::extractTo() without enforcing the system.gpm.archive uncompressed-size, file-count, or nesting-depth limits. Code usi",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-61607 - Grav API Plugin: Stored XSS via SVG Upload - API Media Pipeline Bypasses Sanitizer",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61607",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T15:18:15.000Z",
+        "contentSnippet": "Grav API Plugin is a RESTful API for Grav CMS that provides full headless access to your site's content. Prior to 1.0.2, the Grav API plugin POST /api/v1/media pipeline in HandlesMediaUploads::processUploadedFile() validates an SVG filename extension but does not invoke Security:",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-76614 - OpenEMR < 8.3.0 Path Traversal Information Disclosure via EDI Archive Restore",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76614",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T15:18:11.000Z",
+        "contentSnippet": "OpenEMR before 8.3.0 contains a path traversal vulnerability in the EDI archive restore function. The archrestore_sel POST parameter is passed to the archive restore handler without sanitization for path traversal sequences. The handler checks whether the supplied path exists on ",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-76203 - CSS sanitizer bypass in Pentestify report themes allows forced outbound requests",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76203",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T15:18:10.000Z",
+        "contentSnippet": "Incorrect Behavior Order: Validate Before Canonicalize in the report theme CSS sanitizer in maalfer Pentestify 1.2.0 through 2.3.2 allows an authenticated user to force outbound HTTP requests from other users' browsers, disclosing their IP address and User-Agent, via CSS hex esca",
+        "cveScore": 5.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-75956 - Joomla Extension - cmsjunkie.com - DOS vector in pagination parameter handling in J-BusinessDirectory < 6.2.3",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75956",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T15:18:10.000Z",
+        "contentSnippet": "Joomla Extension - cmsjunkie.com - DOS vector in pagination parameter handling in J-BusinessDirectory",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-75955 - Joomla Extension - cmsjunkie.com - Reflected XSS / XML injection in J-BusinessDirectory < 6.2.3",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75955",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T15:18:10.000Z",
+        "contentSnippet": "Joomla Extension - cmsjunkie.com - Reflected XSS / XML injection in J-BusinessDirectory",
+        "cveScore": 5.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-75954 - Joomla Extension - cmsjunkie.com - SQL injection in trips search in J-BusinessDirectory < 6.2.3",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75954",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T15:18:10.000Z",
+        "contentSnippet": "Joomla Extension - cmsjunkie.com - SQL injection in trips search in J-BusinessDirectory",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-75953 - Joomla Extension - cmsjunkie.com - Open mail relay in J-BusinessDirectory < 6.2.3",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75953",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T15:18:09.000Z",
+        "contentSnippet": "Joomla Extension - cmsjunkie.com - Open mail relay in J-BusinessDirectory",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-75952 - Joomla Extension - cmsjunkie.com - Cross-site request forgery in J-BusinessDirectory < 6.2.3",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75952",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T15:18:09.000Z",
+        "contentSnippet": "Joomla Extension - cmsjunkie.com - Cross-site request forgery in J-BusinessDirectory",
+        "cveScore": 4.6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-75951 - Joomla Extension - cmsjunkie.com - Insecure Direct Object Reference (multiple frontend/API actions) in J-BusinessDirectory < 6.2.3",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75951",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T15:18:09.000Z",
+        "contentSnippet": "Joomla Extension - cmsjunkie.com - Insecure Direct Object Reference (multiple frontend/API actions) in J-BusinessDirectory",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-75950 - Joomla Extension - cmsjunkie.com - Unauthenticated listing ownership takeover in J-BusinessDirectory < 6.2.3",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75950",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T15:18:09.000Z",
+        "contentSnippet": "Joomla Extension - cmsjunkie.com - Unauthenticated listing ownership takeover in J-BusinessDirectory",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-75949 - Joomla Extension - cmsjunkie.com - Arbitrary file upload / deletion (path traversal) in J-BusinessDirectory < 6.2.3",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75949",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T15:18:09.000Z",
+        "contentSnippet": "Joomla Extension - cmsjunkie.com - Arbitrary file upload / deletion (path traversal) in J-BusinessDirectory",
+        "cveScore": 10,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-71961 - Cudy WR3000 2.0 OS Command Injection via Mesh MQTT Command Handler",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71961",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T15:18:02.000Z",
+        "contentSnippet": "Cudy WR3000 2.0 running firmware before 2.5.24 contains an OS command injection vulnerability that allows authenticated attackers to execute arbitrary OS commands with root privileges by sending unsanitized input through the mesh MQTT command interface. The sync_command binary fo",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-71960 - Cudy WR3000 2.0 Hard-coded JWT Secret Authentication Bypass via MQTT",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71960",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T15:18:01.000Z",
+        "contentSnippet": "Cudy WR3000 2.0 running firmware before 2.5.24 contains a hard-coded JWT HMAC signing secret vulnerability in the Mosquitto MQTT broker's authentication plugin that allows unauthenticated attackers to forge valid JWT tokens by extracting the secret from the firmware image. Attack",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-71176 - Dell OpenManage Enterprise SQL Injection Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71176",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T15:18:01.000Z",
+        "contentSnippet": "Dell OpenManage Enterprise, versions prior to 4.7.0, contains an Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to Information e",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-67268 - Dell Command Update XML External Entity Injection Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67268",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T15:17:51.000Z",
+        "contentSnippet": "Dell Command Update (DCU), versions prior to 5.7.1, contain an Improper Restriction of XML External Entity Reference vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Elevation of privileges and Server-side request",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-67267 - Dell Command Update Information Disclosure Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67267",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T15:17:51.000Z",
+        "contentSnippet": "Dell Command Update (DCU), versions prior to 5.7.1, contain an Exposure of Sensitive System Information to an Unauthorized Control Sphere vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Information disclosure.",
+        "cveScore": 5.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-67266 - Dell Command Update Incorrect Authorization Elevation of Privilege Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67266",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T15:17:51.000Z",
+        "contentSnippet": "Dell Command Update (DCU), versions prior to 5.7.1, contain an Incorrect Authorization vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Elevation of privileges.",
+        "cveScore": 5.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-58565 - Dell Command Update Missing Authorization Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58565",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T15:17:13.000Z",
+        "contentSnippet": "Dell Command Update (DCU), versions prior to 5.7.1, contain a Missing Authorization vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Elevation of Privileges.",
+        "cveScore": 8.8,
         "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-58564 - Dell Command Update Incorrect Default Permissions Vulnerability",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-58564",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-19T15:03:14.000Z",
+        "isoDate": "2026-08-19T15:17:12.000Z",
         "contentSnippet": "Dell Command Update (DCU), versions prior to 5.7.1, contain an Incorrect Default Permissions vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Filesystem access for attacker.",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-58562 - Dell Command Update Missing Authorization Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58562",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T15:17:12.000Z",
+        "contentSnippet": "Dell Command Update (DCU), versions prior to 5.7.1, contain a Missing Authorization vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Unauthorized access.",
+        "cveScore": 7.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-53477 - Dell Command Update Time-of-Check Time-of-Use Race Condition Elevation of Privilege Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53477",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T15:04:41.000Z",
+        "contentSnippet": "Dell Command Update (DCU), versions prior to 5.7.1, contain a Time-of-check Time-of-use (TOCTOU) Race Condition vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Elevation of Privileges.",
         "cveScore": 7.8,
         "cveSeverity": "HIGH"
       },
@@ -38,15 +254,6 @@
         "contentSnippet": "IBM AIX 7.2, and 7.3 and IBM PowerVM VIOS 4.1 could allow a remote attacker to cause a denial of service due to a NULL pointer dereference.",
         "cveScore": 7.5,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-67268 - Dell Command Update XML External Entity Injection Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67268",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T15:01:19.000Z",
-        "contentSnippet": "Dell Command Update (DCU), versions prior to 5.7.1, contain an Improper Restriction of XML External Entity Reference vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Elevation of privileges and Server-side request",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-16816 - Vulnerabilities in IBM AIX and PowerVM VIOS",
@@ -85,15 +292,6 @@
         "cveSeverity": "HIGH"
       },
       {
-        "title": "CVE-2026-58565 - Dell Command Update Missing Authorization Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58565",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T14:59:19.000Z",
-        "contentSnippet": "Dell Command Update (DCU), versions prior to 5.7.1, contain a Missing Authorization vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Elevation of Privileges.",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
         "title": "CVE-2026-16690 - Vulnerabilities in IBM AIX and PowerVM VIOS",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-16690",
         "source": "cvefeed.io",
@@ -101,15 +299,6 @@
         "contentSnippet": "IBM AIX 7.2, and 7.3 and IBM PowerVM VIOS 4.1 could allow a remote attacker to cause a denial of service due to uncontrolled resource consumption.",
         "cveScore": 7.5,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-67266 - Dell Command Update Incorrect Authorization Elevation of Privilege Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67266",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T14:57:22.000Z",
-        "contentSnippet": "Dell Command Update (DCU), versions prior to 5.7.1, contain an Incorrect Authorization vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Elevation of privileges.",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-52889 - Formie: Server-Side Template Injection in Formie Hidden field defaults",
@@ -139,15 +328,6 @@
         "cveSeverity": "HIGH"
       },
       {
-        "title": "CVE-2026-76614 - OpenEMR < 8.3.0 Path Traversal Information Disclosure via EDI Archive Restore",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76614",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T14:55:56.000Z",
-        "contentSnippet": "OpenEMR before 8.3.0 contains a path traversal vulnerability in the EDI archive restore function. The archrestore_sel POST parameter is passed to the archive restore handler without sanitization for path traversal sequences. The handler checks whether the supplied path exists on ",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
         "title": "CVE-2026-16656 - Vulnerabilities in IBM AIX and PowerVM VIOS",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-16656",
         "source": "cvefeed.io",
@@ -164,24 +344,6 @@
         "contentSnippet": "jxl-oxide is a pure Rust implementation of a JPEG XL decoder. Prior to jxl-grid 0.6.2, decoding a crafted JPEG XL image on a 32-bit platform can overflow length calculations in AlignedGrid::with_alloc_tracker and related grid and subgrid arithmetic. A 65536 x 65536 frame can pass",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-58562 - Dell Command Update Missing Authorization Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58562",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T14:55:22.000Z",
-        "contentSnippet": "Dell Command Update (DCU), versions prior to 5.7.1, contain a Missing Authorization vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Unauthorized access.",
-        "cveScore": 7.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-67267 - Dell Command Update Information Disclosure Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67267",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T14:53:43.000Z",
-        "contentSnippet": "Dell Command Update (DCU), versions prior to 5.7.1, contain an Exposure of Sensitive System Information to an Unauthorized Control Sphere vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Information disclosure.",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-40509 - OpenEMR < 8.3.0 CSRF via DICOM Viewer web_path Parameter",
@@ -740,168 +902,6 @@
         "contentSnippet": "Certain system calls, such open(2) with the O_TRUNC flag set, and fspacectl(2), could incorrectly free memory in largepage objects. These operations are not permitted on largepage objects, but the implementation did not verify this. An unprivileged local user can abuse the bug to",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-49427 - posixshm: largepage shared memory objects not explicitly wired",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49427",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T06:17:41.000Z",
-        "contentSnippet": "Pages belonging to largepage shared memory objects were not explicitly wired. When sendfile(2) transmitted such an object with the SF_NOCACHE flag, it freed the underlying pages after transmission even though existing mappings still referred to them. An unprivileged local user ca",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-49426 - Incorrect audit records for ptrace(2) syscall requests",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49426",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T06:17:41.000Z",
-        "contentSnippet": "When auditing a system call executed via ptrace(PT_SC_REMOTE), the kernel passed the return value of an internal setup function to AUDIT_SYSCALL_EXIT() rather than the actual result of the executed system call. As a result, committed audit records for system calls which returned ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-49422 - Use-after-free in TCP RACK stack option handler",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49422",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T06:17:41.000Z",
-        "contentSnippet": "The RACK setsockopt(2) handler drops the connection lock in order to copy option data from userspace, then reacquires the lock. After reacquiring, it verifies that the TCP stack had not been switched away, but did not reload its pointer to the stack's per-connection control block",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-49421 - unlinkat(2) ignores AT_RESOLVE_BENEATH flag",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49421",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T06:17:41.000Z",
-        "contentSnippet": "The kernel function that implements unlinkat(2) and funlinkat(2) validated the AT_RESOLVE_BENEATH flag but failed to pass it through to the underlying path lookup. The flag was silently dropped, so path resolution was not actually restricted. A process that uses AT_RESOLVE_BENEAT",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-49420 - Buffer overflow in libalias RTSP handler",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49420",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T06:17:40.000Z",
-        "contentSnippet": "The RTSP handler in libalias rewrote outgoing packets into a fixed-length stack buffer without checking whether the rewritten data fit in the buffer, or whether the result fit back in the original packet. A host sending crafted RTSP traffic from inside a NAT gateway using libalia",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-19842 - SAML Single Sign On 4.8.85 - 5.4.6 - Unauthenticated Administrator Account Takeover via SAML Trust Anchor Overwrite",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19842",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T06:17:40.000Z",
-        "contentSnippet": "The SAML Single Sign On WordPress plugin before 5.4.7 does not verify the signature of a SAML response before storing the certificate it carries, and offers an administrator a one-click control that promotes that stored certificate to the site's trusted signing certificate, allow",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-19782 - WPS Bidouille < 1.33.5 - Subscriber+ User Email Disclosure via wps_get_users",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19782",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T06:17:40.000Z",
-        "contentSnippet": "The WPS Bidouille WordPress plugin before 1.33.5 does not have proper authorisation checks in an AJAX action, allowing any authenticated user, such as a subscriber, to retrieve the email addresses of all registered users.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-19709 - Membership For WooCommerce < 3.1.2 - Unauthenticated Member Data Disclosure via REST Consumer Secret Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19709",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T06:17:40.000Z",
-        "contentSnippet": "The Membership For WooCommerce WordPress plugin before 3.1.2 does not check that an API consumer secret has actually been generated before comparing it against the one supplied in a request, allowing unauthenticated attackers to reach its REST routes and disclose any user's membe",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-19417 - KiviCare < 4.5.4 - Patient+ Arbitrary Media Attachment Read via IDOR",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19417",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T06:17:40.000Z",
-        "contentSnippet": "The KiviCare WordPress plugin before 4.5.4 does not verify that the requesting user is entitled to the media file being served, allowing authenticated patient-level users to download any file in the media library, including other patients' uploaded medical reports.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-19416 - KiviCare < 4.5.4 - Patient+ Cross-Patient Appointment Modification via IDOR",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19416",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T06:17:39.000Z",
-        "contentSnippet": "The KiviCare WordPress plugin before 4.5.4 does not verify that the requesting user owns the appointment being modified, allowing authenticated patient-level users to cancel and reschedule other patients' appointments.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-70408 - acmailer Improper Authorization Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70408",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T05:17:05.000Z",
-        "contentSnippet": "An incorrect authorization vulnerability exists in acmailer, which may allow a user to create a sub-account that has administrative privileges.",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-66358 - acmailer Cross-Site Scripting Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66358",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T05:17:05.000Z",
-        "contentSnippet": "A cross-site scripting vulnerability exists in acmailer, which may allow an attacker to execute an arbitrary script.",
-        "cveScore": 6.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-49419 - Jail reference count underflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49419",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T05:17:04.000Z",
-        "contentSnippet": "When the JAIL_AT_DESC flag is specified, kern_jail_set() and kern_jail_get() released the reference to the caller's current prison before looking up the jail descriptor. If the descriptor lookup failed, error-handling paths released the same reference a second time. An unprivileg",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-49418 - Use-after-free in device pager page list",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49418",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T05:17:03.000Z",
-        "contentSnippet": "When msync(MS_INVALIDATE) is called on a mapping of an unmanaged device object, the physical pages in the mapping range are marked invalid but remain in the pager's page list. A subsequent page fault will cause the fault handler to re-insert the page into the object's list. This ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-49415 - Local privilege escalation via execve(2) TOCTOU race",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49415",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T05:17:03.000Z",
-        "contentSnippet": "During execve(2) of a SUID binary, the new virtual address space is installed before the process credentials are updated. During this window, a process running as the same user can access the target process's memory via procfs or linprocfs, because the kernel's debugging permissi",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-19942 - Atarim <= 5.1.1 - Authenticated (Author+) Arbitrary File Deletion via '_wp_attached_file' Meta",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19942",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T05:17:02.000Z",
-        "contentSnippet": "The Atarim – AI Agency for WordPress: Edit Pages, Fix Code, Update Plugins, SEO & Client Feedback plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the AVCF_Abilities_Media::register (replace-media-file execute_callback) fun",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-76050 - SourceCodester Simple Online Food Ordering System ajax.php delete_menu sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76050",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T04:17:42.000Z",
-        "contentSnippet": "A vulnerability was found in SourceCodester Simple Online Food Ordering System 1.0. This impacts an unknown function of the file /admin/ajax.php?action=delete_menu. The manipulation of the argument ID results in sql injection. It is possible to launch the attack remotely. The exp",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-76049 - SourceCodester Simple Online Food Ordering System ajax.php save_menu sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76049",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T04:17:38.000Z",
-        "contentSnippet": "A vulnerability has been found in SourceCodester Simple Online Food Ordering System 1.0. This affects an unknown function of the file /admin/ajax.php?action=save_menu. The manipulation of the argument ID leads to sql injection. It is possible to initiate the attack remotely. The ",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
@@ -2310,6 +2310,20 @@
     ],
     "hardware": [
       {
+        "title": "Stack Automation by Quali Goes GA as a Cisco Exclusive, Promising Rack to Application in Hours",
+        "link": "https://www.storagereview.com/news/stack-automation-by-quali",
+        "source": "StorageReview",
+        "isoDate": "2026-08-19T16:57:22.000Z",
+        "contentSnippet": "Stack Automation by Quali, the infrastructure automation platform co-developed with Cisco and sold exclusively through Cisco, has reached general availability. The pitch aims at the gap between buying AI infrastructure and using it: deployments that traditionally consume six to t"
+      },
+      {
+        "title": "IBM Links Two Cryogenic Modules Below 15 Millikelvin on the Path to Its 2029 Fault-Tolerant Quantum Computer",
+        "link": "https://www.storagereview.com/news/ibm-links-two-cryogenic-modules-below-15-millikelvin-on-the-path-to-its-2029-fault-tolerant-quantum-computer",
+        "source": "StorageReview",
+        "isoDate": "2026-08-19T16:43:00.000Z",
+        "contentSnippet": "IBM has successfully integrated and cooled two cryogenic modules within a single shared environment, a step the company calls critical to scaling quantum systems that can eventually link hundreds of quantum chips. The achievement supports IBM’s stated timeline for delivering IBM "
+      },
+      {
         "title": "Samsung raises advanced foundry prices by up to 15% as AI demand fills its 4nm lines, report claims — Chinese customers accepting the largest hikes",
         "link": "https://www.tomshardware.com/tech-industry/samsung-raises-advanced-foundry-prices-by-up-to-15-percent-as-ai-demand-fills-its-4nm-lines",
         "source": "Tom's Hardware",
@@ -2994,20 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-08-15T14:16:35.000Z",
         "contentSnippet": "Nvidia quietly makes strategic and financial investments in clients, partners, and suppliers: CoreWeave, Coherent, Intel, Nokia, and SpaceX."
-      },
-      {
-        "title": "Best Enterprise SSDs in 2026: Lab-Tested Leaderboard",
-        "link": "https://www.storagereview.com/best/enterprise-ssds",
-        "source": "StorageReview",
-        "isoDate": "2026-08-15T13:45:45.000Z",
-        "contentSnippet": "Updated August 14, 2026: Initial publication. Ranked on our current enterprise bench (FIO, GDSIO, and DLIO); drives tested on the older suite are noted in Also Tested. Every drive ranked on this page has been through the StorageReview lab. We do not rank announced products or ven"
-      },
-      {
-        "title": "Devs blame Windows for VLC media player bug that causes 33-second delay when playing MP3 files — creators allege Microsoft Defender blocking plugin cache is to blame",
-        "link": "https://www.tomshardware.com/software/windows/vlc-media-player-bug-reportedly-causes-33-second-delay-when-playing-mp3-files-on-windows-developers-say-microsoft-defender-is-to-blame",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-15T13:30:00.000Z",
-        "contentSnippet": "VLC developers say a Windows 11 issue involving Microsoft Defender can interfere with the media player's plugin cache and cause unusually long playback delays."
       }
     ]
   }
