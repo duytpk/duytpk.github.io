@@ -1,32 +1,77 @@
 {
-  "updatedAt": "2026-08-19T06:28:30.469Z",
+  "updatedAt": "2026-08-19T07:30:43.222Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
+        "title": "CVE-2026-49422 - Use-after-free in TCP RACK stack option handler",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49422",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T05:28:32.000Z",
+        "contentSnippet": "The RACK setsockopt(2) handler drops the connection lock in order to copy option data from userspace, then reacquires the lock. After reacquiring, it verifies that the TCP stack had not been switched away, but did not reload its pointer to the stack's per-connection control block",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49421 - unlinkat(2) ignores AT_RESOLVE_BENEATH flag",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49421",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T05:25:43.000Z",
+        "contentSnippet": "The kernel function that implements unlinkat(2) and funlinkat(2) validated the AT_RESOLVE_BENEATH flag but failed to pass it through to the underlying path lookup. The flag was silently dropped, so path resolution was not actually restricted. A process that uses AT_RESOLVE_BENEAT",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49420 - Buffer overflow in libalias RTSP handler",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49420",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T05:20:00.000Z",
+        "contentSnippet": "The RTSP handler in libalias rewrote outgoing packets into a fixed-length stack buffer without checking whether the rewritten data fit in the buffer, or whether the result fit back in the original packet. A host sending crafted RTSP traffic from inside a NAT gateway using libalia",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-70408 - acmailer Improper Authorization Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70408",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T05:17:05.000Z",
+        "contentSnippet": "An incorrect authorization vulnerability exists in acmailer, which may allow a user to create a sub-account that has administrative privileges.",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
         "title": "CVE-2026-66358 - acmailer Cross-Site Scripting Vulnerability",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-66358",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-19T04:53:33.000Z",
+        "isoDate": "2026-08-19T05:17:05.000Z",
         "contentSnippet": "A cross-site scripting vulnerability exists in acmailer, which may allow an attacker to execute an arbitrary script.",
         "cveScore": 6.1,
         "cveSeverity": "MEDIUM"
       },
       {
-        "title": "CVE-2026-49415 - Local privilege escalation via execve(2) TOCTOU race",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49415",
+        "title": "CVE-2026-49419 - Jail reference count underflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49419",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-19T04:38:24.000Z",
-        "contentSnippet": "During execve(2) of a SUID binary, the new virtual address space is installed before the process credentials are updated. During this window, a process running as the same user can access the target process's memory via procfs or linprocfs, because the kernel's debugging permissi",
+        "isoDate": "2026-08-19T05:17:04.000Z",
+        "contentSnippet": "When the JAIL_AT_DESC flag is specified, kern_jail_set() and kern_jail_get() released the reference to the caller's current prison before looking up the jail descriptor. If the descriptor lookup failed, error-handling paths released the same reference a second time. An unprivileg",
         "cveScore": 0,
         "cveSeverity": "NA"
       },
       {
-        "title": "CVE-2026-49419 - Jail reference count underflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49419",
+        "title": "CVE-2026-49418 - Use-after-free in device pager page list",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49418",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-19T04:32:39.000Z",
-        "contentSnippet": "When the JAIL_AT_DESC flag is specified, kern_jail_set() and kern_jail_get() released the reference to the caller's current prison before looking up the jail descriptor. If the descriptor lookup failed, error-handling paths released the same reference a second time. An unprivileg",
+        "isoDate": "2026-08-19T05:17:03.000Z",
+        "contentSnippet": "When msync(MS_INVALIDATE) is called on a mapping of an unmanaged device object, the physical pages in the mapping range are marked invalid but remain in the pager's page list. A subsequent page fault will cause the fault handler to re-insert the page into the object's list. This ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49415 - Local privilege escalation via execve(2) TOCTOU race",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49415",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T05:17:03.000Z",
+        "contentSnippet": "During execve(2) of a SUID binary, the new virtual address space is installed before the process credentials are updated. During this window, a process running as the same user can access the target process's memory via procfs or linprocfs, because the kernel's debugging permissi",
         "cveScore": 0,
         "cveSeverity": "NA"
       },
@@ -34,8 +79,35 @@
         "title": "CVE-2026-19942 - Atarim <= 5.1.1 - Authenticated (Author+) Arbitrary File Deletion via '_wp_attached_file' Meta",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-19942",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-19T04:27:08.000Z",
+        "isoDate": "2026-08-19T05:17:02.000Z",
         "contentSnippet": "The Atarim – AI Agency for WordPress: Edit Pages, Fix Code, Update Plugins, SEO & Client Feedback plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the AVCF_Abilities_Media::register (replace-media-file execute_callback) fun",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-49431 - Incorrect user validation in ZFS_IOC_SET_PROP ioctl",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49431",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T05:15:37.000Z",
+        "contentSnippet": "The ZFS_IOC_SET_PROP ioctl, used by zfs-set(8), incorrectly validated the calling user such that an unprivileged user is able to set metadata on a dataset indicating that the dataset has received properties from a zfs-recv(8) stream. Any local user can set the internal ZFS metada",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49430 - Kernel heap overflow in ZFS_IOC_RECV_NEW ioctl",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49430",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T05:15:29.000Z",
+        "contentSnippet": "The ZFS_IOC_RECV_NEW ioctl, in the heal receive path, similarly truncated a 64-bit payload size to a 32-bit integer for allocation, then used the original 64-bit size as the length for a byteswap operation. A local user with the \"receive\" delegated ZFS permission can trigger kern",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49429 - Kernel heap overflow in ZFS_IOC_USERSPACE_MANY ioctl",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49429",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T05:15:21.000Z",
+        "contentSnippet": "The ZFS_IOC_USERSPACE_MANY ioctl, used by zfs-userspace(8), truncated a 64-bit output buffer size to a 32-bit integer for the kernel allocation, but used the original 64-bit size as the buffer limit when writing records. A local user with the \"userused\" delegated ZFS permission c",
         "cveScore": 0,
         "cveSeverity": "NA"
       },
@@ -56,15 +128,6 @@
         "contentSnippet": "A vulnerability has been found in SourceCodester Simple Online Food Ordering System 1.0. This affects an unknown function of the file /admin/ajax.php?action=save_menu. The manipulation of the argument ID leads to sql injection. It is possible to initiate the attack remotely. The ",
         "cveScore": 7.5,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-49418 - Use-after-free in device pager page list",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49418",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T04:14:17.000Z",
-        "contentSnippet": "When msync(MS_INVALIDATE) is called on a mapping of an unmanaged device object, the physical pages in the mapping range are marked invalid but remain in the pager's page list. A subsequent page fault will cause the fault handler to re-insert the page into the object's list. This ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       },
       {
         "title": "CVE-2026-76048 - SourceCodester Simple Online Food Ordering System ajax.php login sql injection",
@@ -839,69 +902,6 @@
         "contentSnippet": "ZEBRA is a Zcash node written entirely in Rust. Prior to 4.5.0, a malicious unauthenticated P2P peer can answer Zebra's outbound getblocks or FindBlocks request with a small two-hash inventory and then serve a syntactically valid block whose coinbase height is far above the local",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-70667 - Lemur: SSRF protection in certificate revocation checking bypassable via HTTP redirects and DNS rebinding (incomplete fix for CVE-2026-55162)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70667",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T19:17:03.000Z",
-        "contentSnippet": "Lemur manages TLS certificate creation. Prior to 1.9.3, _validate_revocation_url in lemur/certificates/verify.py checked the original CRL or OCSP URL but the later request could reach a different destination. The CRL requests.get call followed HTTP redirects without validating ea",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-65959 - Vitess: Missing authorization on vttablet /debug/vrlog exposes live VReplication SQL data",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65959",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T19:17:00.000Z",
-        "contentSnippet": "Vitess is a database clustering system for horizontal scaling of MySQL. In 24.0.2 and earlier, the /debug/vrlog endpoint registered by addHttpEndpoint() in go/vt/vttablet/tabletmanager/vreplication/vrlog.go invokes vrlogStatsHandler() without acl.CheckAccessHTTP(r, acl.DEBUGGING)",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-55166 - Lemur: any SSO-authenticated user achieves AWS IAM compromise and permanent PKI key access via ACME acme_url SSRF and creator-equality IDOR",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55166",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T19:16:58.000Z",
-        "contentSnippet": "Lemur manages TLS certificate creation. Prior to 1.9.2, authenticated users could influence an ACME authority acme_url without an effective server-side destination restriction and trigger AcmeHandler.setup_acme_client to make backend requests. An attacker could target cloud insta",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-55165 - Lemur : JWT verifier trusts attacker-supplied alg from token header — defense-in-depth gap; chain-dependent ATO with secret disclosure",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55165",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T19:16:58.000Z",
-        "contentSnippet": "Lemur manages TLS certificate creation. Prior to 1.9.2, the JWT verifier in lemur/auth/service.py:130-137 used fetch_token_header to read header_data[\"alg\"] from an unverified token and passed that attacker-controlled value to decode_with_multiple_secrets. PyJWT 2.x rejects alg=n",
-        "cveScore": 4.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-55164 - Lemur: Plaintext password storage in Lemur user-update path",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55164",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T19:16:58.000Z",
-        "contentSnippet": "Lemur manages TLS certificate creation. Prior to 1.9.2, lemur.users.service.update assigned a replacement password directly to users.password, while lemur/users/models.py registered User.hash_password only for the before_insert event. Because no before_update listener ran, admini",
-        "cveScore": 4.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-55163 - Lemur: Privilege escalation via PUT /api/1/roles/ — non-admin role members can rewrite role membership",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55163",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T19:16:58.000Z",
-        "contentSnippet": "Lemur manages TLS certificate creation. Prior to 1.9.2, PUT /api/1/roles/ in lemur/roles/views.py:298 authorized updates with RoleMemberPermission(role_id), which allowed either an administrator or any existing member of the target role. The handler passed data[\"users\"] and data[",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-55162 - Lemur: Post-authentication SSRF via certificate verification - attacker-controlled CRL and OCSP URLs in uploaded certificates",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55162",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T19:16:58.000Z",
-        "contentSnippet": "Lemur manages TLS certificate creation. Prior to 1.9.2, lemur/certificates/verify.py accepted CRL Distribution Point and OCSP responder URLs from uploaded certificate extensions and used them in crl_verify and ocsp_verify without adequate destination validation. An authenticated ",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
