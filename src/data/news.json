@@ -1,13 +1,166 @@
 {
-  "updatedAt": "2026-08-19T07:30:43.222Z",
+  "updatedAt": "2026-08-19T08:26:02.335Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
+        "title": "CVE-2026-75589 - Net::OAuth versions before 0.33 for Perl check HMAC-SHA1, HMAC-SHA256 and PLAINTEXT signatures with a non-constant-time comparison in verify",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75589",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T07:20:44.000Z",
+        "contentSnippet": "Net::OAuth versions before 0.33 for Perl check HMAC-SHA1, HMAC-SHA256 and PLAINTEXT signatures with a non-constant-time comparison in verify. Each of the three compares the signature carried in the message against the locally computed one with the eq operator, which returns as so",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-58082 - Stack based buffer overflow in iconv(3)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58082",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T07:20:37.000Z",
+        "contentSnippet": "The ISO-2022 encoding module used a stack buffer sized to MB_LEN_MAX (6 bytes) for intermediate character output. Some ISO-2022 variants can require up to 10 bytes per character, in which case conversions can trigger a stack buffer overflow of up to four bytes. An application tha",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-58081 - Heap based buffer overflow in iconv(3)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58081",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T07:20:26.000Z",
+        "contentSnippet": "Several encoding modules, including HZ, UTF-7, VIQR, and ZW, did not properly check the size of the caller-supplied output buffer before writing converted characters. An application that uses iconv(3) to convert untrusted input to or from one of the affected encodings may be vuln",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-72889 - Net::OAuth versions before 0.33 for Perl allow the sender to choose the signature algorithm in verify",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72889",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T07:20:09.000Z",
+        "contentSnippet": "Net::OAuth versions before 0.33 for Perl allow the sender to choose the signature algorithm in verify. verify resolves the signature method class from the signature_method parameter of the incoming message. signature_method is required on every request, so the algorithm used to c",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-75981 - TranslatePress – Translate Multilingual sites with AI Translation <= 3.2.5 - Unauthenticated Stored Cross-Site Scripting",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75981",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T07:16:59.000Z",
+        "contentSnippet": "The TranslatePress – Translate Multilingual sites with AI Translation plugin for WordPress is vulnerable to unauthenticated Stored Cross-Site Scripting in versions up to and including 3.2.5. The special gettext markers '#!trpst#' and '#!trpen#' are unconditionally rewritten to ' ",
+        "cveScore": 7.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-49423 - Remote DOS via uninitialized memory access in KTLS receive",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49423",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T07:16:28.000Z",
+        "contentSnippet": "When building the iovec array for a received TLS 1.2 CBC record, ktls_ocf_tls_cbc_decrypt() incremented the iovec index for every mbuf in the chain, including mbufs that were skipped because they contained only TLS header bytes. This left uninitialized entries in the iovec array.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-15780 - WP Statistics <= 14.16.8 - Unauthenticated Stored Cross-Site Scripting via 'utm_campaign' Parameter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15780",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T07:16:27.000Z",
+        "contentSnippet": "The WP Statistics – Simple, privacy-friendly Google Analytics alternative plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'utm_campaign' parameter in all versions up to, and including, 14.16.8 due to insufficient input sanitization and output escaping. T",
+        "cveScore": 7.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-15446 - EWWW Image Optimizer <= 8.7.3 - Authenticated (Contributor+) Stored Cross-Site Scripting via 'data-script' Lazy Load Attribute in Post Content",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15446",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T07:16:27.000Z",
+        "contentSnippet": "The EWWW Image Optimizer plugin for WordPress is vulnerable to Stored Cross-Site Scripting via 'data-script' Lazy Load Attribute in Post Content in all versions up to, and including, 8.7.3 due to insufficient input sanitization and output escaping. This makes it possible for auth",
+        "cveScore": 6.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-49425 - Kernel stack disclosure in 32-bit compatibility support",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49425",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T07:11:21.000Z",
+        "contentSnippet": "The compat32 kevent() handler translates a 64-bit kevent struct into a stack- declared 32-bit struct. It did not first zero the stack struct. An unprivileged user may observe a small amount of uninitialized kernel stack data, which may contain sensitive information.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49424 - Kernel stack disclosure in Linux compatibility layer",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49424",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T07:08:35.000Z",
+        "contentSnippet": "The Linux waitid() implementation translates a FreeBSD siginfo_t struct into a stack-declared Linux siginfo_t. It did not first zero the stack struct. An unprivileged user may observe 104 bytes of uninitialized kernel stack data, which may contain sensitive information.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-8810 - HDD Password leakage vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8810",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T06:17:43.000Z",
+        "contentSnippet": "On ARM platforms, a vulnerability in the architecture design of HDD Password could allow an attacker to retrieve HDD Password from UEFI variables.",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-49431 - Incorrect user validation in ZFS_IOC_SET_PROP ioctl",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49431",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T06:17:43.000Z",
+        "contentSnippet": "The ZFS_IOC_SET_PROP ioctl, used by zfs-set(8), incorrectly validated the calling user such that an unprivileged user is able to set metadata on a dataset indicating that the dataset has received properties from a zfs-recv(8) stream. Any local user can set the internal ZFS metada",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49430 - Kernel heap overflow in ZFS_IOC_RECV_NEW ioctl",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49430",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T06:17:42.000Z",
+        "contentSnippet": "The ZFS_IOC_RECV_NEW ioctl, in the heal receive path, similarly truncated a 64-bit payload size to a 32-bit integer for allocation, then used the original 64-bit size as the length for a byteswap operation. A local user with the \"receive\" delegated ZFS permission can trigger kern",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49429 - Kernel heap overflow in ZFS_IOC_USERSPACE_MANY ioctl",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49429",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T06:17:42.000Z",
+        "contentSnippet": "The ZFS_IOC_USERSPACE_MANY ioctl, used by zfs-userspace(8), truncated a 64-bit output buffer size to a 32-bit integer for the kernel allocation, but used the original 64-bit size as the buffer limit when writing records. A local user with the \"userused\" delegated ZFS permission c",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49428 - posixshm: system calls can incorrectly free memory of largepage objects",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49428",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T06:17:42.000Z",
+        "contentSnippet": "Certain system calls, such open(2) with the O_TRUNC flag set, and fspacectl(2), could incorrectly free memory in largepage objects. These operations are not permitted on largepage objects, but the implementation did not verify this. An unprivileged local user can abuse the bug to",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49427 - posixshm: largepage shared memory objects not explicitly wired",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49427",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T06:17:41.000Z",
+        "contentSnippet": "Pages belonging to largepage shared memory objects were not explicitly wired. When sendfile(2) transmitted such an object with the SF_NOCACHE flag, it freed the underlying pages after transmission even though existing mappings still referred to them. An unprivileged local user ca",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-49426 - Incorrect audit records for ptrace(2) syscall requests",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49426",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T06:17:41.000Z",
+        "contentSnippet": "When auditing a system call executed via ptrace(PT_SC_REMOTE), the kernel passed the return value of an internal setup function to AUDIT_SYSCALL_EXIT() rather than the actual result of the executed system call. As a result, committed audit records for system calls which returned ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
         "title": "CVE-2026-49422 - Use-after-free in TCP RACK stack option handler",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-49422",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-19T05:28:32.000Z",
+        "isoDate": "2026-08-19T06:17:41.000Z",
         "contentSnippet": "The RACK setsockopt(2) handler drops the connection lock in order to copy option data from userspace, then reacquires the lock. After reacquiring, it verifies that the TCP stack had not been switched away, but did not reload its pointer to the stack's per-connection control block",
         "cveScore": 0,
         "cveSeverity": "NA"
@@ -16,7 +169,7 @@
         "title": "CVE-2026-49421 - unlinkat(2) ignores AT_RESOLVE_BENEATH flag",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-49421",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-19T05:25:43.000Z",
+        "isoDate": "2026-08-19T06:17:41.000Z",
         "contentSnippet": "The kernel function that implements unlinkat(2) and funlinkat(2) validated the AT_RESOLVE_BENEATH flag but failed to pass it through to the underlying path lookup. The flag was silently dropped, so path resolution was not actually restricted. A process that uses AT_RESOLVE_BENEAT",
         "cveScore": 0,
         "cveSeverity": "NA"
@@ -25,8 +178,53 @@
         "title": "CVE-2026-49420 - Buffer overflow in libalias RTSP handler",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-49420",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-19T05:20:00.000Z",
+        "isoDate": "2026-08-19T06:17:40.000Z",
         "contentSnippet": "The RTSP handler in libalias rewrote outgoing packets into a fixed-length stack buffer without checking whether the rewritten data fit in the buffer, or whether the result fit back in the original packet. A host sending crafted RTSP traffic from inside a NAT gateway using libalia",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-19842 - SAML Single Sign On 4.8.85 - 5.4.6 - Unauthenticated Administrator Account Takeover via SAML Trust Anchor Overwrite",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19842",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T06:17:40.000Z",
+        "contentSnippet": "The SAML Single Sign On WordPress plugin before 5.4.7 does not verify the signature of a SAML response before storing the certificate it carries, and offers an administrator a one-click control that promotes that stored certificate to the site's trusted signing certificate, allow",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-19782 - WPS Bidouille < 1.33.5 - Subscriber+ User Email Disclosure via wps_get_users",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19782",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T06:17:40.000Z",
+        "contentSnippet": "The WPS Bidouille WordPress plugin before 1.33.5 does not have proper authorisation checks in an AJAX action, allowing any authenticated user, such as a subscriber, to retrieve the email addresses of all registered users.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-19709 - Membership For WooCommerce < 3.1.2 - Unauthenticated Member Data Disclosure via REST Consumer Secret Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19709",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T06:17:40.000Z",
+        "contentSnippet": "The Membership For WooCommerce WordPress plugin before 3.1.2 does not check that an API consumer secret has actually been generated before comparing it against the one supplied in a request, allowing unauthenticated attackers to reach its REST routes and disclose any user's membe",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-19417 - KiviCare < 4.5.4 - Patient+ Arbitrary Media Attachment Read via IDOR",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19417",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T06:17:40.000Z",
+        "contentSnippet": "The KiviCare WordPress plugin before 4.5.4 does not verify that the requesting user is entitled to the media file being served, allowing authenticated patient-level users to download any file in the media library, including other patients' uploaded medical reports.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-19416 - KiviCare < 4.5.4 - Patient+ Cross-Patient Appointment Modification via IDOR",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19416",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-19T06:17:39.000Z",
+        "contentSnippet": "The KiviCare WordPress plugin before 4.5.4 does not verify that the requesting user owns the appointment being modified, allowing authenticated patient-level users to cancel and reschedule other patients' appointments.",
         "cveScore": 0,
         "cveSeverity": "NA"
       },
@@ -83,33 +281,6 @@
         "contentSnippet": "The Atarim – AI Agency for WordPress: Edit Pages, Fix Code, Update Plugins, SEO & Client Feedback plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the AVCF_Abilities_Media::register (replace-media-file execute_callback) fun",
         "cveScore": 8.1,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-49431 - Incorrect user validation in ZFS_IOC_SET_PROP ioctl",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49431",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T05:15:37.000Z",
-        "contentSnippet": "The ZFS_IOC_SET_PROP ioctl, used by zfs-set(8), incorrectly validated the calling user such that an unprivileged user is able to set metadata on a dataset indicating that the dataset has received properties from a zfs-recv(8) stream. Any local user can set the internal ZFS metada",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-49430 - Kernel heap overflow in ZFS_IOC_RECV_NEW ioctl",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49430",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T05:15:29.000Z",
-        "contentSnippet": "The ZFS_IOC_RECV_NEW ioctl, in the heal receive path, similarly truncated a 64-bit payload size to a 32-bit integer for allocation, then used the original 64-bit size as the length for a byteswap operation. A local user with the \"receive\" delegated ZFS permission can trigger kern",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-49429 - Kernel heap overflow in ZFS_IOC_USERSPACE_MANY ioctl",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49429",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T05:15:21.000Z",
-        "contentSnippet": "The ZFS_IOC_USERSPACE_MANY ioctl, used by zfs-userspace(8), truncated a 64-bit output buffer size to a 32-bit integer for the kernel allocation, but used the original 64-bit size as the buffer limit when writing records. A local user with the \"userused\" delegated ZFS permission c",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       },
       {
         "title": "CVE-2026-76050 - SourceCodester Simple Online Food Ordering System ajax.php delete_menu sql injection",
@@ -729,177 +900,6 @@
         "source": "cvefeed.io",
         "isoDate": "2026-08-18T20:43:39.000Z",
         "contentSnippet": "None",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-56870",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56870",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T20:43:37.000Z",
-        "contentSnippet": "None",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-56869",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56869",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T20:43:33.000Z",
-        "contentSnippet": "None",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-56868",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56868",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T20:43:32.000Z",
-        "contentSnippet": "None",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-56867",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56867",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T20:43:28.000Z",
-        "contentSnippet": "None",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-15571 - Keycloak-services: keycloak-services: predictable account-linking hash enables account takeover via malicious oidc client",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15571",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T20:40:17.000Z",
-        "contentSnippet": "A flaw was found in the legacy client-initiated account-linking endpoint of Keycloak, a widely used open-source identity and access management solution. The mechanism used to protect the account-linking process from unauthorized requests relies on a hash that can be predicted by ",
-        "cveScore": 7.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-73103",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73103",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T19:41:09.000Z",
-        "contentSnippet": "None",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-12520 - Stack buffer overflow and off-by-one writes in Zephyr HL7800 modem AT response handlers",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12520",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T19:41:07.000Z",
-        "contentSnippet": "The Sierra Wireless HL7800 cellular modem driver (drivers/modem/vendor_standalone/hl7800.c, located at drivers/modem/hl7800.c in v4.4.0 and earlier) parses AT responses with roughly twenty handlers that call net_buf_linearize(value, sizeof(value), *buf, 0, len) into a 128-byte st",
-        "cveScore": 6.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-75936 - Memory-amplification denial of service via GZIP decompression bomb in Amazon ion-java",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75936",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T19:34:19.000Z",
-        "contentSnippet": "Improper handling of highly compressed data in the GZIP auto-decompression handler in Amazon ion-java before 1.12.0 might allow remote actors to cause a denial of service via a crafted compressed Ion document that expands to an arbitrarily large size upon decompression. To remedi",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-75935 - Memory-amplification denial of service via declared-length preallocation in Amazon ion-java",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75935",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T19:33:46.000Z",
-        "contentSnippet": "Uncontrolled memory allocation in the binary Ion stream cursor in Amazon ion-java before 1.12.0 might allow remote actors to cause a denial of service via a crafted Ion binary document containing a declared-length field that causes excessive heap preallocation. To remediate this ",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-52829 - ZEBRA: IPv4-Mapped Mempool Misbehavior Update Aborts Zebra Address Book",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52829",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T19:27:57.000Z",
-        "contentSnippet": "ZEBRA is a Zcash node written entirely in Rust. Prior to 4.5.0, an unauthenticated IPv4 peer can deterministically terminate a synced Zebra node using the default Linux dual-stack listener configuration. The handshake path canonicalized an IPv4-mapped IPv6 PeerSocketAddr such as ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-52736 - ZEBRA: Block suppression via NU5 same-header body poisoning of sent-hash cache",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52736",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T19:26:40.000Z",
-        "contentSnippet": "ZEBRA is a Zcash node written entirely in Rust. Prior to 4.5.0, a remote unauthenticated P2P peer can stall a Zebra node by racing an invalid block body against the valid canonical body for the same block header hash. ZIP-244 permits the attacker to mutate coinbase scriptSig auth",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-52732 - ZEBRA: Mempool transaction admission denial via single-peer inbound queue saturation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52732",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T19:26:07.000Z",
-        "contentSnippet": "ZEBRA is a Zcash node written entirely in Rust. Prior to 4.5.0, one unauthenticated P2P peer can monopolize all 25 MAX_INBOUND_CONCURRENCY slots in Zebra's inbound mempool download and verification pipeline. In zebrad/src/components/mempool/downloads.rs, the bounded queue was sha",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-52731 - ZEBRA: Full node denial of service via non-ASCII LongPollId in getblocktemplate",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52731",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T19:25:39.000Z",
-        "contentSnippet": "ZEBRA is a Zcash node written entirely in Rust. Prior to 4.5.0, an attacker authenticated to an enabled Zebra RPC endpoint can terminate zebrad by supplying a getblocktemplate LongPollId containing multi-byte UTF-8 characters. In zebra-rpc/src/methods/types/long_poll.rs, LongPoll",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-52733 - ZEBRA: Persistent on-disk corruption of Sapling/Orchard subtree roots after chain fork via pop_tip",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52733",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T19:24:44.000Z",
-        "contentSnippet": "ZEBRA is a Zcash node written entirely in Rust. Prior to 4.5.0, a natural or attacker-influenced chain fork can leave stale Sapling and Orchard note-commitment subtree roots in Zebra state. In zebra-state/src/service/non_finalized_state/chain.rs, Chain::pop_tip removed a reverted",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-52738 - ZEBRA: Finalized address balance credit-first overflow on consensus-valid blocks",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52738",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T19:24:04.000Z",
-        "contentSnippet": "ZEBRA is a Zcash node written entirely in Rust. Prior to 4.5.0, a consensus-valid block containing a long chain of transparent self-spends to one address can permanently halt Zebra nodes. In zebra-state/src/service/finalized_state/zebra_db/transparent.rs, the finalized-state writ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-52735 - ZEBRA: Consensus divergence via P2SH sigop undercount in pure-Rust disabled-opcode parser",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52735",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T19:23:10.000Z",
-        "contentSnippet": "ZEBRA is a Zcash node written entirely in Rust. Prior to 4.5.0, Zebra can accept a block that zcashd rejects because the P2SH signature-operation counter undercounts redeem scripts containing a disabled opcode followed by signature opcodes. In zebra-script/src/lib.rs, p2sh_input_",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-52739 - ZEBRA: Repeated Non-Finalized Shielded Transaction Aborts Zebra Before Duplicate-Nullifier Rejection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52739",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T19:22:19.000Z",
-        "contentSnippet": "ZEBRA is a Zcash node written entirely in Rust. Prior to 4.5.0, a malicious block producer can terminate zebrad by placing the same shielded transaction in a non-finalized parent block and its child. In zebra-state/src/service/non_finalized_state/chain.rs, Chain::push originally ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-52734 - ZEBRA: Unbounded memory leak in mempool download pipeline via timeout path cancel_handles retention",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52734",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T19:19:56.000Z",
-        "contentSnippet": "ZEBRA is a Zcash node written entirely in Rust. Prior to 4.5.0, an unauthenticated P2P peer can cause the mempool download pipeline to retain transactions after verification reaches the outer RATE_LIMIT_DELAY timeout. In zebrad/src/components/mempool/downloads.rs, Downloads::poll",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-52737 - ZEBRA: Sync restart poisoning from single unauthenticated peer via above-lookahead block",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52737",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-18T19:19:09.000Z",
-        "contentSnippet": "ZEBRA is a Zcash node written entirely in Rust. Prior to 4.5.0, a malicious unauthenticated P2P peer can answer Zebra's outbound getblocks or FindBlocks request with a small two-hash inventory and then serve a syntactically valid block whose coinbase height is far above the local",
         "cveScore": 0,
         "cveSeverity": "NA"
       }
