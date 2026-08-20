@@ -1,13 +1,94 @@
 {
-  "updatedAt": "2026-08-20T09:24:55.592Z",
+  "updatedAt": "2026-08-20T10:20:46.298Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
+        "title": "CVE-2026-77014 - Libsoup: libsoup: integer truncation in sort_ranges() comparator causes silent omission of http range responses",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77014",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T08:21:22.000Z",
+        "contentSnippet": "A flaw was found in libsoup's SoupServer HTTP Range header processing. The sort_ranges() comparator in soup-message-headers.c truncates a 64-bit subtraction result to 32-bit int, flipping the sign for range offsets differing by more than INT_MAX. This causes silent omission of re",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-14953 - Frauscher Sensortechnik: FDS102 for FAdC/FAdCi R2 is Missing Authorization due to improper enforcement of role-based access control",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14953",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T08:20:06.000Z",
+        "contentSnippet": "A low-privileged remote attacker can enumerate all configured users and identify which accounts hold elevated privileges using the endpoint /api/user/fetch-all.php.",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-14952 - Frauscher Sensortechnik: FDS102 for FAdC/FAdCi R2 is offering files with sensitive information for download without requiring authentication",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14952",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T08:19:46.000Z",
+        "contentSnippet": "An unauthenticated remote attacker can retrieve sensible files from the FDS Web server, such as the backup archive at /FdsBackup.zip and additional files under /downloads/*, directly over HTTP without a valid session. These files disclose detailed railway signaling and track layo",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-14951 - Frauscher Sensortechnik: FDS102 for FAdC/FAdCi R2 is vulnerable to Cross-Site Request Forgery due to missing CSFR protection headers",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14951",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T08:19:35.000Z",
+        "contentSnippet": "An low privileged remote attacker can cause authenticated users to perform unintended actions in the FDS Web interface using malicious web pages.",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-14950 - Frauscher Sensortechnik: FDS102 for FAdC/FAdCi R2 is vulnerable to Insufficient Session Expiration due to flawed session expiration logic",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14950",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T08:19:26.000Z",
+        "contentSnippet": "An unauthenticated remote attacker in possession of a valid session identifier is able to continue using the session after it should have expired. This increases the risk associated with stolen, leaked, shared, or unattended sessions and may enable unauthorized continued access t",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-14949 - Frauscher Sensortechnik: FDS102 for FAdC/FAdCi R2 is vulnerable to Incorrect Authorization due to improper enforcement of role-based access control",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14949",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T08:19:11.000Z",
+        "contentSnippet": "A low privileged remote attacker with a valid session can submit a request to the user creation functionality exposed through /api/user/add.php to create new accounts with arbitrary role values, including the highest privilege level used by the application.",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-14948 - Frauscher Sensortechnik: FDS102 for FAdC/FAdCi R2 is vulnerable to Insertion of Sensitive Information into Log File via error log archives",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14948",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T08:19:00.000Z",
+        "contentSnippet": "A low privileged remote attacker can hijack an active administrative session without needing to know the administrator password by extracting live plaintext session identifiers for authenticated users from downloadable error log archives.",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-14947 - Frauscher Sensortechnik: FDS102 for FAdC/FAdCi R2 is vulnerable to Remote Code Execution via malicious ZIP file",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14947",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T08:18:49.000Z",
+        "contentSnippet": "A high-privileged remote attacker can upload malicious ZIP archive containing directory traversal sequences such as ../ can escape the intended extraction directory and write files to arbitrary locations on the server, potentially achieve arbitrary code execution due to improper ",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-14946 - Frauscher Sensortechnik: FDS102 for FAdC/FAdCi R2 is vulnerable to Remote Code Execution via malicious configuration file.",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14946",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T08:18:37.000Z",
+        "contentSnippet": "A high privileged remote attacker can upload a .php file and then request it directly from /uploads/ .php to achieve arbitrary code execution due to improper file type validation which could result in full system compromise.",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
         "title": "CVE-2026-76569 - Joomla Extension - phoca.cz - Reflected XSS via the search GET parameter in Phoca Download 5.0.0-6.1.4",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-76569",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-20T07:29:09.000Z",
+        "isoDate": "2026-08-20T08:16:48.000Z",
         "contentSnippet": "Joomla Extension - phoca.cz - Reflected XSS via the search GET parameter in Phoca Download 5.0.0-6.1.4",
         "cveScore": 5.3,
         "cveSeverity": "MEDIUM"
@@ -16,16 +97,34 @@
         "title": "CVE-2026-76565 - Joomla Extension - phoca.cz - Reflected XSS via price_from & price_to filter parameters in Phoca Cart 5.0.0-6.1.7",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-76565",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-20T07:27:38.000Z",
+        "isoDate": "2026-08-20T08:16:47.000Z",
         "contentSnippet": "Joomla Extension - phoca.cz - Reflected XSS via price_from & price_to filter parameters in Phoca Cart 5.0.0-6.1.7",
         "cveScore": 5.3,
         "cveSeverity": "MEDIUM"
       },
       {
+        "title": "CVE-2026-76564 - Joomla Extension - phoca.cz - Stored XSS via User-Agent header in Admin Order View in Phoca Cart 5.0.0-6.1.7",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76564",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T08:16:47.000Z",
+        "contentSnippet": "Joomla Extension - phoca.cz - Stored XSS via User-Agent header in Admin Order View in Phoca Cart 5.0.0-6.1.7",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-75948 - Joomla Extension - icagenda.com - Authenticated Stored XSS in iCagenda 4.0.8 to 4.0.12",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75948",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T08:16:47.000Z",
+        "contentSnippet": "Joomla Extension - icagenda.com - Authenticated Stored XSS in iCagenda 4.0.8 to 4.0.12 - The frontend \"Submit an Event\" form stores the `image` and `file` fields as raw strings with no output-side HTML-attribute escaping.",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
         "title": "CVE-2025-14601 - vsDesk Task Scheduler OS Command Injection",
         "link": "https://cvefeed.io/vuln/detail/CVE-2025-14601",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-20T07:21:26.000Z",
+        "isoDate": "2026-08-20T08:16:46.000Z",
         "contentSnippet": "An OS command injection vulnerability in vsDesk allows an authenticated attacker with administrative privileges to execute arbitrary operating system commands due to insufficient input filtering. An attacker can exploit this flaw to disrupt web server operations, expose sensitive",
         "cveScore": 8.6,
         "cveSeverity": "HIGH"
@@ -803,105 +902,6 @@
         "contentSnippet": "IBM AIX 7.2, and 7.3 and IBM PowerVM VIOS 4.1 could allow a remote attacker to execute arbitrary code due to command injection.",
         "cveScore": 8.8,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-16864 - Vulnerabilities in IBM AIX and PowerVM VIOS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16864",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T19:39:19.000Z",
-        "contentSnippet": "IBM AIX 7.2, and 7.3 and IBM PowerVM VIOS 4.1 could allow a remote attacker to execute arbitrary code due to a stack buffer overflow.",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-16862 - Vulnerabilities in IBM AIX and PowerVM VIOS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16862",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T19:39:02.000Z",
-        "contentSnippet": "IBM AIX 7.2, and 7.3 and IBM PowerVM VIOS 4.1 could allow a remote attacker to execute arbitrary code due to a stack buffer overflow.",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-16857 - Vulnerabilities in IBM AIX and PowerVM VIOS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16857",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T19:38:44.000Z",
-        "contentSnippet": "IBM AIX 7.2, and 7.3 and IBM PowerVM VIOS 4.1 could allow a remote attacker to manipulate network traffic and DNS configuration due to improper authentication.",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-16855 - Vulnerabilities in IBM AIX and PowerVM VIOS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16855",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T19:38:09.000Z",
-        "contentSnippet": "IBM AIX 7.2, and 7.3 and IBM PowerVM VIOS 4.1 could allow a local attacker to cause a denial of service due to a heap buffer overflow.",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16852 - Vulnerabilities in IBM AIX and PowerVM VIOS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16852",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T19:37:50.000Z",
-        "contentSnippet": "IBM AIX 7.2, and 7.3 and IBM PowerVM VIOS 4.1 could allow a remote attacker to cause a denial of service due to an integer overflow.",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-16851 - Vulnerabilities in IBM AIX and PowerVM VIOS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16851",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T19:37:18.000Z",
-        "contentSnippet": "IBM AIX 7.2, and 7.3 and IBM PowerVM VIOS 4.1 could allow a remote attacker to cause a denial of service due to a use-after-free.",
-        "cveScore": 7.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-16850 - Vulnerabilities in IBM AIX and PowerVM VIOS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16850",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T19:37:00.000Z",
-        "contentSnippet": "IBM AIX 7.2, and 7.3 and IBM PowerVM VIOS 4.1 could allow a remote attacker to execute arbitrary code due to command injection via crafted Router Advertisements.",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-16849 - Vulnerabilities in IBM AIX and PowerVM VIOS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16849",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T19:36:39.000Z",
-        "contentSnippet": "IBM AIX 7.2, and 7.3 and IBM PowerVM VIOS 4.1 could allow a remote attacker to cause a denial of service due to an improper check for an array index boundary.",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-18871 - Power System Buffer Overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18871",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T19:36:34.000Z",
-        "contentSnippet": "IBM PowerVM Hypervisor FW1120.00, FW1110.00 through FW1110.30, and FW1060.00 through FW1060.80 is affected by a vulnerability in host firmware configuration parsing. An attacker with authenticated service-level access to the service processor can write specially crafted configura",
-        "cveScore": 7.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-16848 - Vulnerabilities in IBM AIX and PowerVM VIOS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16848",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T19:36:23.000Z",
-        "contentSnippet": "IBM AIX 7.2, and 7.3 and IBM PowerVM VIOS 4.1 could allow a remote attacker to execute arbitrary commands due to improper neutralization of shell metacharacters in DHCP options.",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-55086 - Etherpad: Import/export use Math.random() for temp file paths; predictable paths on shared /tmp enable symlink-based file overwrite",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55086",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T19:35:46.000Z",
-        "contentSnippet": "Etherpad is a real-time collaborative editor. Prior to 3.1.0, src/node/handler/ImportHandler.ts and src/node/handler/ExportHandler.ts derive temporary filenames from Math.random() and place them in os.tmpdir(). On a host with a shared world-writable temporary directory, a local u",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       }
     ],
     "ai": [
@@ -2310,6 +2310,34 @@
     ],
     "hardware": [
       {
+        "title": "Get an astonishing OLED 5090 gaming laptop for $3,599, $800 off — Gigabyte Aorus Master 16 features a 24-core Arrow Lake CPU, 32GB RAM, 2TB SSD",
+        "link": "https://www.tomshardware.com/laptops/gaming-laptops/get-an-astonishing-oled-5090-gaming-laptop-for-usd3-599-usd800-off-gigabyte-aorus-master-16-features-a-24-core-arrow-lake-cpu-32gb-ram-2tb-ssd",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-20T10:16:16.000Z",
+        "contentSnippet": "Get $800 off this RTX 5090 gaming laptop with Intel Core Ultra 9 275HX, 32GB of RAM, and a 2TB SSD."
+      },
+      {
+        "title": "Federal judge strikes down ATF 'ghost gun' rule for 3D printed parts — says restrictions violate Fifth Amendment and historical tradition of DIY gunsmithing",
+        "link": "https://www.tomshardware.com/3d-printing/federal-judge-strikes-down-atf-ghost-gun-rule-for-3d-printed-parts-says-restrictions-violate-fifth-amendment-and-historical-tradition-of-diy-gunsmithing",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-20T10:00:00.000Z",
+        "contentSnippet": "Judge Reed O'Connor of the Northern District of Texas said that the ATF ruling that putting part kits that can easily be turned into firearms in the same category as actual guns is unconstitutional. He also said that the vagueness of some parts of the rule violated the Due Proces"
+      },
+      {
+        "title": "Console modder builds working Switch 2 Joy-Cons inside original Wii Remote shells — motion-sensing controllers snap magnetically onto a Switch 2",
+        "link": "https://www.tomshardware.com/video-games/handheld-gaming/modder-builds-working-switch-2-joy-cons-inside-original-wii-remote-shells",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-20T09:45:00.000Z",
+        "contentSnippet": "YouTuber Kouzex has transplanted the internals of a pair of Joy-Con 2 controllers into two original Wii Remote shells, producing motion controllers that snap magnetically onto a Switch 2."
+      },
+      {
+        "title": "Amazon delivery drone dumps Texas woman's parcel straight into her swimming pool — viral video surfaces the same week the company announces 500-city Prime Air expansion",
+        "link": "https://www.tomshardware.com/tech-industry/drones/amazon-delivery-drone-dumps-texas-womans-parcel-straight-into-her-swimming-pool-viral-video-surfaces-the-same-week-the-company-announces-500-city-prime-air-expansion",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-20T09:35:39.000Z",
+        "contentSnippet": "A Texas woman has filmed the moment an Amazon Prime delivery drone dumped her package straight into her swimming pool."
+      },
+      {
         "title": "Best Local LLM Tools in 2026: Runtimes, Apps, and Agents",
         "link": "https://www.storagereview.com/best/local-llm-tools",
         "source": "StorageReview",
@@ -2980,34 +3008,6 @@
         "source": "StorageReview",
         "isoDate": "2026-08-15T20:44:23.000Z",
         "contentSnippet": "Dell has qualified KIOXIA’s 245.76TB NVMe SSDs for software-defined ObjectScale, putting 9.83PB of raw flash in a single 2U server. The density milestone lands on top of the data-path work Dell detailed earlier this year across ObjectScale 4.2 and 4.3, which targets high-throughp"
-      },
-      {
-        "title": "NVIDIA Spectrum-X Ethernet Photonics Enters Full Production With 4x Fewer Lasers and a Five-Vendor CPO Supply Chain",
-        "link": "https://www.storagereview.com/news/nvidia-spectrum-x-ethernet-photonics-enters-full-production-with-4x-fewer-lasers-and-a-five-vendor-cpo-supply-chain",
-        "source": "StorageReview",
-        "isoDate": "2026-08-15T18:31:20.000Z",
-        "contentSnippet": "NVIDIA has moved Spectrum-X Ethernet Photonics, its co-packaged optics (CPO) Ethernet switch platform, into full production. The company puts the gains at 4x fewer lasers, 5x lower power consumption, and 10x higher mean time between incidents, and it named the five manufacturing "
-      },
-      {
-        "title": "KYY X90D “Triple” Portable Monitor Review",
-        "link": "https://www.servethehome.com/kyy-x90d-triple-portable-monitor-review/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-08-15T17:00:35.000Z",
-        "contentSnippet": "Taking two 15.6\" IPS monitors with you and only one cable to surround your laptop is a huge productivity boost as we found in our KYY X90D review The post KYY X90D “Triple” Portable Monitor Review appeared first on ServeTheHome."
-      },
-      {
-        "title": "Peer-reviewed study of 443,000 Backblaze hard drives ranks HGST most reliable and Toshiba the least — Analysis of 1.66 million drive-years finds Seagate and Toshiba HDDs fail at roughly twice the rate",
-        "link": "https://www.tomshardware.com/pc-components/hdds/peer-reviewed-study-of-443000-backblaze-drivers-ranks-hgst-most-reliable-and-toshiba-least",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-15T15:30:10.000Z",
-        "contentSnippet": "Backblaze's quarterly reports compare whichever drives are available at the time."
-      },
-      {
-        "title": "Futuristic mosquito-zapping laser now available to buy, video shows device in action — tiny device shoots down bugs like a personal air defense system, but costs $1,000",
-        "link": "https://www.tomshardware.com/peripherals/futuristic-mosquito-zapping-laser-now-available-to-buy-video-shows-device-in-action-tiny-device-shoots-down-bugs-like-a-personal-air-defense-system-but-costs-usd1-000",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-15T15:04:47.000Z",
-        "contentSnippet": "This anti-mosquito air defense laser system has successfully passed the crowdfunding stage and is now readily available on the market. It costs around $1,000, but it will be money well spent if it can defend your home from mosquito-borne diseases."
       }
     ]
   }
