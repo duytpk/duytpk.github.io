@@ -1,23 +1,239 @@
 {
-  "updatedAt": "2026-08-20T18:25:30.311Z",
+  "updatedAt": "2026-08-20T19:24:25.910Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-63387 - Libevent: Off-by-one stack buffer overflow in dnsname_to_labels via crafted DNS server response",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63387",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T17:53:41.000Z",
+        "contentSnippet": "Libevent is an event notification library. Prior to 2.1.13 and 2.2.2-alpha, libevent has an off-by-one stack buffer overflow in evdns.c when dnsname_to_labels formats a name-bearing DNS record at the end of the 64 KB stack buffer allocated by evdns_server_request_format_response.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63384 - Libevent: `evtag_unmarshal_header()` decodes a wire `uint32` length into a signed `int` return value.",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63384",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T17:53:08.000Z",
+        "contentSnippet": "Libevent is an event notification library. Prior to 2.1.13 and 2.2.2-alpha, libevent has an incorrect integer conversion in event_tagging.c when evtag_unmarshal_header uses evtag_decode_int to decode an attacker-controlled uint32 payload length and returns it as a signed int. Val",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63380 - Libevent: Null Pointer Dereference in `evws_new_session`",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63380",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T17:52:29.000Z",
+        "contentSnippet": "Libevent is an event notification library. Prior to 2.2.2-alpha, libevent can dereference invalid list pointers in ws.c when evws_new_session enters its error path after evhttp_start_ws_ succeeds but bufferevent_enable_locking_ fails. evws_connection_free sees a non-null http_ser",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63382 - libevent evhttp: Multiple HTTP Parser Bugs Enable Request Smuggling",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63382",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T17:51:15.000Z",
+        "contentSnippet": "Libevent is an event notification library. Prior to 2.1.13 and 2.2.2-alpha, the libevent evhttp parser in http.c inconsistently handles duplicate Transfer-Encoding headers, comma-separated Transfer-Encoding values, and bare line feeds in chunked framing. evhttp_find_header can se",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63381 - Libevent: Dangling Pointer in `evbuffer_add_buffer_reference`",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63381",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T17:50:09.000Z",
+        "contentSnippet": "Libevent is an event notification library. Prior to 2.1.13 and 2.2.2-alpha, libevent has a use-after-free in buffer.c when evbuffer_add_buffer_reference processes an output buffer whose out_total_len is zero. evbuffer_free_all_chains frees the initial empty chain without resettin",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63495 - Libevent: Unbounded memory accumulation in WebSocket server via fragmented frames",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63495",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T17:49:16.000Z",
+        "contentSnippet": "Libevent is an event notification library. From 2.2.0-alpha-dev until 2.2.2-alpha, the libevent WebSocket server in ws.c accumulates fragmented frames in evws->incomplete_frames without enforcing a total message-size limit. An unauthenticated remote client can repeatedly send fra",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63383 - Libevent: decode_tag_internal() can lead to out-of-bounds read",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63383",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T17:48:24.000Z",
+        "contentSnippet": "Libevent is an event notification library. Prior to 2.1.13 and 2.2.2-alpha, libevent can read beyond a contiguous evbuffer region in event_tagging.c when decode_tag_internal requests at most five bytes from evbuffer_pullup but iterates using the full logical buffer length. A frag",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63388 - Libevent: Heap out-of-bounds write in bufferevent_socket_set_conn_address_ reachable via AF_UNIX accept",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63388",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T17:44:18.000Z",
+        "contentSnippet": "Libevent is an event notification library. Prior to 2.1.13 and 2.2.2-alpha, libevent has a heap out-of-bounds write in bufferevent_sock.c when bufferevent_socket_set_conn_address_ copies a kernel-supplied AF_UNIX peer address into bufferevent_private.conn_address. Release builds ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-73253 - Mongoose: TLS Hostname Verification Bypass via Overly Permissive Wildcard Matching",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73253",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T17:41:02.000Z",
+        "contentSnippet": "Mongoose is an embedded web server and network library. Prior to version 7.22, an on-path network attacker with a wildcard certificate for a parent domain can impersonate deeper subdomains to a client using the built-in TLS stack. The mg_tls_verify_cert_san() and mg_tls_verify_ce",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-73255 - Mongoose: Path traversal in SSI #include directives enables arbitrary file read",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73255",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T17:40:02.000Z",
+        "contentSnippet": "Mongoose is an embedded web server and network library. Prior to 7.22, an attacker who can control an SSI-enabled file can place directory traversal sequences in an #include file or #include virtual directive. The mg_ssi() function in src/ssi.c concatenates the directive argument",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-73259 - Mongoose: Reflected XSS via decoded URI in directory listing render",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73259",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T17:39:16.000Z",
+        "contentSnippet": "Mongoose is an embedded web server and network library. Prior to 7.22, a remote attacker can send a crafted percent-encoded request path to a deployment using MG_ENABLE_DIRLIST and persuade a user to visit it. The mg_http_serve_dir() and listdir() path in src/http.c places the de",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-73256 - Mongoose: HTTP/1.0 detection off-by-one enables request smuggling via chunked TE",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73256",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T17:37:54.000Z",
+        "contentSnippet": "Mongoose is an embedded web server and network library. Prior to 7.22, a remote unauthenticated attacker can exploit an HTTP/1.0 reverse-proxy deployment by sending a request with Transfer-Encoding: chunked and conflicting framing. The http_cb() function in src/http.c tests hm.pr",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-73254 - Mongoose: Stored XSS via unescaped filenames in directory listing",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73254",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T17:37:17.000Z",
+        "contentSnippet": "Mongoose is an embedded web server and network library. Prior to 7.22, an attacker who can create a file with an HTML payload in its name can trigger stored cross-site scripting when a user browses a directory served with MG_ENABLE_DIRLIST. The printdirentry() path called by list",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-73258 - Mongoose: Multipart boundary/header scan logic error in mg_http_next_multipart",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73258",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T17:36:39.000Z",
+        "contentSnippet": "Mongoose is an embedded web server and network library. Prior to 7.22, a remote attacker can place a lone carriage return or line feed in multipart input processed by mg_http_next_multipart() in src/http.c. The loops comparing s[b] and s[b + 1], and s[h2] and s[h2 + 1], use an in",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-73251 - Mongoose Built-in TLS: CA-bundle certificate chain accepted without any signature verification",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73251",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T17:34:50.000Z",
+        "contentSnippet": "Mongoose is an embedded web server and network library. Prior to 7.23, a network attacker can impersonate a TLS server to a Mongoose client configured with a multi-certificate CA bundle. In src/tls_builtin.c, the mg_tls_init() function stores the bundle in tls->ca_bundle_der whil",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-76641 - Expat Out-of-Bounds Read via dtdCopy",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76641",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T17:31:10.000Z",
+        "contentSnippet": "Expat through 2.8.3 contains an out-of-bounds read vulnerability that allows attackers to trigger memory corruption by processing XML with external entity parsers created via XML_ExternalEntityParserCreate. A struct size mismatch between ELEMENT_TYPE members causes storeAtts to r",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-73257 - Mongoose: Content-Length + Transfer-Encoding coexistence enables request smuggling",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73257",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T17:30:58.000Z",
+        "contentSnippet": "Mongoose is an embedded web server and network library. Priro to version 7.22, a remote unauthenticated attacker can send an HTTP request containing both Content-Length and Transfer-Encoding: chunked. The cl_count and te_count checks in the mg_http_parse() and http_cb() paths in ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-77036 - elunez eladmin GenConfigController improper authorization",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77036",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T17:30:13.000Z",
+        "contentSnippet": "A vulnerability was found in elunez eladmin up to 2.7. The impacted element is the function EmailController/AliPayController/GeneratorController/GenConfigController. The manipulation results in improper authorization. The attack can be launched remotely. The exploit has been made",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53424 - Missing one-time-use enforcement in Samly allows replay of SAML bearer assertions",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53424",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T17:27:11.000Z",
+        "contentSnippet": "Authentication Bypass by Capture-replay vulnerability in dropbox samly allows an attacker to authenticate as the subject of a captured SAML assertion by resubmitting it. Samly.Helper.decode_idp_auth_resp/3 in lib/samly/helper.ex calls esaml_sp:validate_assertion/2, whose default ",
+        "cveScore": 9.1,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-53425 - Missing InResponseTo validation in Samly allows acceptance of unsolicited SAML responses",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53425",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T17:26:35.000Z",
+        "contentSnippet": "Insufficient Verification of Data Authenticity vulnerability in dropbox samly allows an attacker to establish an authenticated session using a SAML response the service provider never requested. Samly.SPHandler.validate_authresp/3 in lib/samly/sp_handler.ex validates a SAML respo",
+        "cveScore": 7.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-77176 - Kata-containers: insufficient validation of createcontainer mount and storage rules in genpolicy",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77176",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T17:19:49.000Z",
+        "contentSnippet": "A flaw was found in Kata Containers. In configurations utilizing genpolicy for Confidential Containers guest protection, a malicious host operator can exploit insufficient validation of CreateContainer mount and storage rules. This allows them to mount arbitrary container-rootfs ",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-77025 - itsourcecode Hospital Management System viewappointmentpending.php sql injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77025",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T17:19:49.000Z",
+        "contentSnippet": "A weakness has been identified in itsourcecode Hospital Management System 1.0. This affects an unknown part of the file /viewappointmentpending.php. This manipulation of the argument delid causes sql injection. The attack is possible to be carried out remotely. The exploit has be",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-77022 - Comfast CF-N1-S SSID Configuration mbox-config sub_44B438 stack-based overflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77022",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T17:19:49.000Z",
+        "contentSnippet": "A security flaw has been discovered in Comfast CF-N1-S 2.6.0.1. Affected by this issue is the function sub_44B438 of the file /cgi-bin/mbox-config?method=SET&section=ptest_ssid of the component SSID Configuration. The manipulation of the argument ssid results in stack-based buffe",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-77020 - CodeAstro Apartment Visitor Management System password-recovery.php sql injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77020",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T17:19:49.000Z",
+        "contentSnippet": "A vulnerability was identified in CodeAstro Apartment Visitor Management System 1.0. Affected by this vulnerability is an unknown functionality of the file password-recovery.php. The manipulation of the argument email leads to sql injection. Remote exploitation of the attack is p",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-77019 - CodeAstro Apartment Visitor Management System forgotpw.php sql injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77019",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T17:19:49.000Z",
+        "contentSnippet": "A vulnerability was determined in CodeAstro Apartment Visitor Management System 1.0. Affected is an unknown function of the file /apartment-visitor/forgotpw.php. Executing a manipulation of the argument secode can lead to sql injection. The attack may be launched remotely. The ex",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-61625 - VictoriaMetrics vmrestore: path traversal via crafted backup part names escapes restore root",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-61625",
         "source": "cvefeed.io",
         "isoDate": "2026-08-20T16:45:43.000Z",
         "contentSnippet": "VictoriaMetrics is a scalable solution for monitoring and managing time series data. Prior to 1.122.25, 1.136.12, and 1.146.0, vmrestore does not validate backup part path components before using lib/backup/actions/restore.go and lib/backup/fslocal/fslocal.go to write restored da",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-77022 - Comfast CF-N1-S SSID Configuration mbox-config sub_44B438 stack-based overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77022",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T16:45:07.000Z",
-        "contentSnippet": "A security flaw has been discovered in Comfast CF-N1-S 2.6.0.1. Affected by this issue is the function sub_44B438 of the file /cgi-bin/mbox-config?method=SET&section=ptest_ssid of the component SSID Configuration. The manipulation of the argument ssid results in stack-based buffe",
         "cveScore": 0,
         "cveSeverity": "NA"
       },
@@ -72,15 +288,6 @@
         "source": "cvefeed.io",
         "isoDate": "2026-08-20T16:31:46.000Z",
         "contentSnippet": "WebOb provides objects for HTTP requests and responses. Prior to 1.8.11, Response._make_location_absolute() in src/webob/response.py checks a Location value for a URI scheme or leading double slash before urllib.parse.urljoin() strips leading C0 control characters and spaces. An ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-77020 - CodeAstro Apartment Visitor Management System password-recovery.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77020",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T16:30:10.000Z",
-        "contentSnippet": "A vulnerability was identified in CodeAstro Apartment Visitor Management System 1.0. Affected by this vulnerability is an unknown functionality of the file password-recovery.php. The manipulation of the argument email leads to sql injection. Remote exploitation of the attack is p",
         "cveScore": 0,
         "cveSeverity": "NA"
       },
@@ -695,213 +902,6 @@
         "contentSnippet": "Unauthenticated SQL Injection in Locatoraid Store Locator",
         "cveScore": 9.3,
         "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-66677 - WordPress Leyka plugin <= 3.32.3 - Broken Authentication vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66677",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T12:07:16.000Z",
-        "contentSnippet": "Subscriber Broken Authentication in Leyka",
-        "cveScore": 7.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-66673 - WordPress Flatastic theme <= 2.0 - Reflected Cross Site Scripting (XSS) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66673",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T12:07:15.000Z",
-        "contentSnippet": "Unauthenticated Cross Site Scripting (XSS) in Flatastic",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-66672 - WordPress Flatastic theme <= 2.0 - PHP Object Injection vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66672",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T12:07:14.000Z",
-        "contentSnippet": "Unauthenticated PHP Object Injection in Flatastic",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-66649 - WordPress Directory Pro plugin <= 2.5.8 - SQL Injection vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66649",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T12:07:14.000Z",
-        "contentSnippet": "Unauthenticated SQL Injection in Directory Pro",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-66647 - WordPress Homlisti theme <= 3.1.2 - Broken Access Control vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66647",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T12:07:13.000Z",
-        "contentSnippet": "Subscriber Broken Access Control in Homlisti",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-66616 - WordPress Form Maker by 10Web plugin <= 1.15.46 - Cross Site Scripting (XSS) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66616",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T12:07:12.000Z",
-        "contentSnippet": "Unauthenticated Cross Site Scripting (XSS) in Form Maker by 10Web",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-66615 - WordPress Podlove Podcast Publisher plugin <= 4.5.4 - Cross Site Scripting (XSS) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66615",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T12:07:12.000Z",
-        "contentSnippet": "Unauthenticated Cross Site Scripting (XSS) in Podlove Podcast Publisher",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-66614 - WordPress SEO Plugin by Squirrly SEO plugin <= 14.2.2 - Cross Site Scripting (XSS) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66614",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T12:07:11.000Z",
-        "contentSnippet": "Unauthenticated Cross Site Scripting (XSS) in SEO Plugin by Squirrly SEO",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-66612 - WordPress Aora theme <= 1.3.19 - Cross Site Scripting (XSS) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66612",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T12:07:10.000Z",
-        "contentSnippet": "Unauthenticated Cross Site Scripting (XSS) in Aora",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-77085 - n8n before 2.34.1 SSRF Protection Bypass via SearXNG Tool",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77085",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T11:21:15.000Z",
-        "contentSnippet": "n8n before 2.34.1 and 2.33.x before 2.33.4 contains an SSRF protection bypass in the SearXNG Agent tool. The tool sent requests to the user-supplied API URL using a raw HTTP client that did not route through n8n's centralized SSRF protection. On instances with N8N_SSRF_PROTECTION",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-77084 - n8n before 1.123.69 Remote Code Execution via Git node",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77084",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T11:21:15.000Z",
-        "contentSnippet": "n8n before 1.123.69 (and 2.x before 2.33.4 / 2.34.1) contains a code execution vulnerability in the Git node. The Git node executed certain repository-local git configuration values without neutralizing them, so any subsequent Git node operation against a repository containing a ",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-77083 - n8n before 1.123.69 Code Node Sandbox Escape via Function.prototype Pollution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77083",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T11:21:14.000Z",
-        "contentSnippet": "n8n is a workflow automation platform. In versions prior to 1.123.69, 2.33.4, and 2.34.1, the JavaScript Code node's VM sandbox did not freeze the sandbox's Function.prototype, allowing an authenticated user with the ability to create and execute workflows to pollute it from with",
-        "cveScore": 6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-77082 - n8n before 1.123.69 ReDoS via Filter and Switch Node",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77082",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T11:21:13.000Z",
-        "contentSnippet": "n8n before 1.123.69, 2.x before 2.33.4, and 2.34.x before 2.34.1 contains a regular expression denial of service (ReDoS) vulnerability in the Filter and Switch nodes, which compile user-supplied regex patterns with new RegExp() and execute them synchronously on the worker thread ",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-77081 - n8n before 1.123.69 Allowed-Domains Bypass via GraphQL Node",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77081",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T11:21:13.000Z",
-        "contentSnippet": "n8n before 1.123.69, 2.x before 2.33.4, and 2.x before 2.34.1 contain an allowed-domains bypass in the GraphQL node. When the node's Authentication parameter is set to expression mode, every authentication-gated credential selector is treated as active; if two credentials of diff",
-        "cveScore": 5.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-77080 - n8n before 1.123.69 Arbitrary File Read and Write via Snowflake",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77080",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T11:21:12.000Z",
-        "contentSnippet": "n8n before 1.123.69, 2.x before 2.33.4, and 2.34.x before 2.34.1 contain an arbitrary file read and write vulnerability in the Snowflake node, which passes free-form Execute Query input, including client-side commands, directly to the Snowflake SDK without applying n8n's file-acc",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-77079 - n8n before 2.34.1 Authorization Bypass via Custom Role Deletion",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77079",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T11:21:11.000Z",
-        "contentSnippet": "n8n before 2.34.1 and 2.33.4 contains an authorization bypass in the custom project role deletion (reassignment) path. When deleting a custom project role with a reassignment target, the code validated only that the target role existed and was project-scoped, performing no projec",
-        "cveScore": 7.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-77077 - n8n before 1.123.69 Remote Code Execution via EventEmitter Prototype Pollution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77077",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T11:21:10.000Z",
-        "contentSnippet": "n8n versions before 1.123.69, 2.33.4, and 2.34.1 contain a JavaScript task runner VM sandbox escape. The runner's prototype-freezing routine covers globalThis functions but not internal module constructors such as EventEmitter, allowing an authenticated user with Code node access",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-77076 - n8n before 1.123.69 Credential Leak via GraphQL Node Error",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77076",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T11:21:10.000Z",
-        "contentSnippet": "n8n versions before 1.123.69, 2.33.4, and 2.34.1 contain an information disclosure vulnerability in the GraphQL node. When a GraphQL request fails at the connection level, the node re-throws the underlying HTTP client error unchanged instead of wrapping it in n8n's standard error",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-77075 - n8n before 1.123.69 Expression Injection via Resource Locator",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77075",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T11:21:09.000Z",
-        "contentSnippet": "n8n before 1.123.69, 2.x before 2.33.4, and 2.34.x before 2.34.1 contain an expression injection vulnerability in resource-locator field link preview rendering. The editor spliced the field's stored value directly into the node type's URL template without checking for expression ",
-        "cveScore": 8.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-77074 - n8n before 1.123.69 SSRF via Edit Image Node",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77074",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T11:21:08.000Z",
-        "contentSnippet": "n8n versions before 1.123.69 contain a server-side request forgery vulnerability in the Edit Image node's Draw Text operation that allows authenticated users to inject MVG primitives. Attackers can craft malicious text values to issue blind outbound HTTP requests to arbitrary add",
-        "cveScore": 6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-77073 - n8n before 2.34.1 Cross-Project Credential Access via MCP",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77073",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T11:21:08.000Z",
-        "contentSnippet": "n8n versions before 2.34.1 contain a credential validation bypass in the MCP create_workflow_from_code tool when authentication type is set to an expression. Attackers with a valid MCP Bearer API key and knowledge of a target credential ID can persist unauthorized cross-project c",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-77072 - n8n before 1.123.69 Stored XSS via Form Completion Page",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77072",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T11:21:07.000Z",
-        "contentSnippet": "n8n before 1.123.69, 2.33.4, and 2.34.1 contains a stored cross-site scripting vulnerability in the Form node's completion page. The completion page applied its sandboxing Content-Security-Policy only when respondWith was not set to 'redirect', but responseText was always rendere",
-        "cveScore": 8.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-77071 - n8n before 1.123.69 PostgREST Filter Injection via Supabase",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77071",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T11:21:06.000Z",
-        "contentSnippet": "n8n before 1.123.69, 2.33.4, and 2.34.1 contains a PostgREST filter injection vulnerability in the Supabase node's Row Get Many, Delete, and Update operations, which built filter queries by concatenating an expression-bindable value without escaping. An attacker could inject a co",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
@@ -2310,6 +2310,13 @@
     ],
     "hardware": [
       {
+        "title": "Sandisk NAS 800 Brings PCIe 5.0 and 14,900MB/s to NAS, With the SATA NAS 600 Covering Legacy Bays",
+        "link": "https://www.storagereview.com/news/sandisk-nas-800-brings-pcie-5-0-and-14900mb-s-to-nas-with-the-sata-nas-600-covering-legacy-bays",
+        "source": "StorageReview",
+        "isoDate": "2026-08-20T18:53:29.000Z",
+        "contentSnippet": "Sandisk has introduced two SSD families designed specifically for network-attached storage, covering both SATA-based systems and higher-performance NVMe NAS deployments. The Sandisk NAS 600 SATA SSD offers capacities up to 4TB and endurance up to 2,500 TBW, while the Sandisk NAS "
+      },
+      {
         "title": "Cooler Master V Platinum 3000 power supply review: Verified Platinum efficiency for workstations, with a stellar 12-year warranty",
         "link": "https://www.tomshardware.com/pc-components/power-supplies/cooler-master-v-platinum-3000-workstation-power-supply-review",
         "source": "Tom's Hardware",
@@ -3001,13 +3008,6 @@
         "source": "ServeTheHome",
         "isoDate": "2026-08-16T19:00:09.000Z",
         "contentSnippet": "We tested the ADT R27A-BK3 which allows you to mount a PCIe Gen5 E1.S or E3.S EDSFF SSD into a PCIe card slot The post ADT R27A-BK3 EDSFF E1.S and E3.S to PCIe Slot Review appeared first on ServeTheHome."
-      },
-      {
-        "title": "This portable, external CD/DVD drive comes with a 2.5-inch SATA and an SD Card slot for just $26 — Save 10% on a modern essential for keeping physical media alive",
-        "link": "https://www.tomshardware.com/pc-components/this-portable-external-cd-dvd-drive-comes-with-a-2-5-inch-sata-and-an-sd-card-slot-for-just-usd26-save-10-percent-on-a-modern-essential-for-keeping-physical-media-alive",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-16T15:18:31.000Z",
-        "contentSnippet": "If you have a bunch of old CDs or DVDs lying around and want something quick and simple to access them, this external drive can get the job done for you for less than $30 while offering extra features that would make it useful in your day-to-day PC usage."
       }
     ]
   }
