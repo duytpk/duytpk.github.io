@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-08-20T12:30:04.096Z",
+  "updatedAt": "2026-08-20T13:38:53.840Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-77085 - n8n before 2.34.1 SSRF Protection Bypass via SearXNG Tool",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77085",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T11:21:15.000Z",
+        "contentSnippet": "n8n before 2.34.1 and 2.33.x before 2.33.4 contains an SSRF protection bypass in the SearXNG Agent tool. The tool sent requests to the user-supplied API URL using a raw HTTP client that did not route through n8n's centralized SSRF protection. On instances with N8N_SSRF_PROTECTION",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-77084 - n8n before 1.123.69 Remote Code Execution via Git node",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77084",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T11:21:15.000Z",
+        "contentSnippet": "n8n before 1.123.69 (and 2.x before 2.33.4 / 2.34.1) contains a code execution vulnerability in the Git node. The Git node executed certain repository-local git configuration values without neutralizing them, so any subsequent Git node operation against a repository containing a ",
+        "cveScore": 7.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-77083 - n8n before 1.123.69 Code Node Sandbox Escape via Function.prototype Pollution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77083",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T11:21:14.000Z",
+        "contentSnippet": "n8n is a workflow automation platform. In versions prior to 1.123.69, 2.33.4, and 2.34.1, the JavaScript Code node's VM sandbox did not freeze the sandbox's Function.prototype, allowing an authenticated user with the ability to create and execute workflows to pollute it from with",
+        "cveScore": 6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-77082 - n8n before 1.123.69 ReDoS via Filter and Switch Node",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77082",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T11:21:13.000Z",
+        "contentSnippet": "n8n before 1.123.69, 2.x before 2.33.4, and 2.34.x before 2.34.1 contains a regular expression denial of service (ReDoS) vulnerability in the Filter and Switch nodes, which compile user-supplied regex patterns with new RegExp() and execute them synchronously on the worker thread ",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-77081 - n8n before 1.123.69 Allowed-Domains Bypass via GraphQL Node",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77081",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T11:21:13.000Z",
+        "contentSnippet": "n8n before 1.123.69, 2.x before 2.33.4, and 2.x before 2.34.1 contain an allowed-domains bypass in the GraphQL node. When the node's Authentication parameter is set to expression mode, every authentication-gated credential selector is treated as active; if two credentials of diff",
+        "cveScore": 5.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-77080 - n8n before 1.123.69 Arbitrary File Read and Write via Snowflake",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77080",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T11:21:12.000Z",
+        "contentSnippet": "n8n before 1.123.69, 2.x before 2.33.4, and 2.34.x before 2.34.1 contain an arbitrary file read and write vulnerability in the Snowflake node, which passes free-form Execute Query input, including client-side commands, directly to the Snowflake SDK without applying n8n's file-acc",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-77079 - n8n before 2.34.1 Authorization Bypass via Custom Role Deletion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77079",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T11:21:11.000Z",
+        "contentSnippet": "n8n before 2.34.1 and 2.33.4 contains an authorization bypass in the custom project role deletion (reassignment) path. When deleting a custom project role with a reassignment target, the code validated only that the target role existed and was project-scoped, performing no projec",
+        "cveScore": 7.4,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-77077 - n8n before 1.123.69 Remote Code Execution via EventEmitter Prototype Pollution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77077",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T11:21:10.000Z",
+        "contentSnippet": "n8n versions before 1.123.69, 2.33.4, and 2.34.1 contain a JavaScript task runner VM sandbox escape. The runner's prototype-freezing routine covers globalThis functions but not internal module constructors such as EventEmitter, allowing an authenticated user with Code node access",
+        "cveScore": 7.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-77076 - n8n before 1.123.69 Credential Leak via GraphQL Node Error",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77076",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T11:21:10.000Z",
+        "contentSnippet": "n8n versions before 1.123.69, 2.33.4, and 2.34.1 contain an information disclosure vulnerability in the GraphQL node. When a GraphQL request fails at the connection level, the node re-throws the underlying HTTP client error unchanged instead of wrapping it in n8n's standard error",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-77075 - n8n before 1.123.69 Expression Injection via Resource Locator",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77075",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T11:21:09.000Z",
+        "contentSnippet": "n8n before 1.123.69, 2.x before 2.33.4, and 2.34.x before 2.34.1 contain an expression injection vulnerability in resource-locator field link preview rendering. The editor spliced the field's stored value directly into the node type's URL template without checking for expression ",
+        "cveScore": 8.4,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-77074 - n8n before 1.123.69 SSRF via Edit Image Node",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77074",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T11:21:08.000Z",
+        "contentSnippet": "n8n versions before 1.123.69 contain a server-side request forgery vulnerability in the Edit Image node's Draw Text operation that allows authenticated users to inject MVG primitives. Attackers can craft malicious text values to issue blind outbound HTTP requests to arbitrary add",
+        "cveScore": 6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-77073 - n8n before 2.34.1 Cross-Project Credential Access via MCP",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77073",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T11:21:08.000Z",
+        "contentSnippet": "n8n versions before 2.34.1 contain a credential validation bypass in the MCP create_workflow_from_code tool when authentication type is set to an expression. Attackers with a valid MCP Bearer API key and knowledge of a target credential ID can persist unauthorized cross-project c",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-77072 - n8n before 1.123.69 Stored XSS via Form Completion Page",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77072",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T11:21:07.000Z",
+        "contentSnippet": "n8n before 1.123.69, 2.33.4, and 2.34.1 contains a stored cross-site scripting vulnerability in the Form node's completion page. The completion page applied its sandboxing Content-Security-Policy only when respondWith was not set to 'redirect', but responseText was always rendere",
+        "cveScore": 8.4,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-77071 - n8n before 1.123.69 PostgREST Filter Injection via Supabase",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77071",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T11:21:06.000Z",
+        "contentSnippet": "n8n before 1.123.69, 2.33.4, and 2.34.1 contains a PostgREST filter injection vulnerability in the Supabase node's Row Get Many, Delete, and Update operations, which built filter queries by concatenating an expression-bindable value without escaping. An attacker could inject a co",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-77070 - n8n before 1.123.69 NoSQL Injection via MongoDB Node",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77070",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T11:21:06.000Z",
+        "contentSnippet": "n8n before 1.123.69, 2.33.4, and 2.34.1 contains a NoSQL injection vulnerability in the MongoDB node's Find, Delete, and Aggregate operations, which parse the Query parameter as JSON after expression resolution without sanitizing MongoDB operators. An attacker who can influence t",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-77069 - n8n before 1.123.69 SSRF Protection Bypass via OAuth2",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77069",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T11:21:05.000Z",
+        "contentSnippet": "n8n before 1.123.69, 2.33.4, and 2.34.1 contains an SSRF protection bypass in the OAuth2 credential authorization-code-to-access-token exchange. While OAuth2 discovery and dynamic-client-registration requests use n8n's SSRF-protected HTTP client, the token exchange uses a separat",
+        "cveScore": 2.3,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-77068 - n8n before 2.34.1 Remote Code Execution via Path Traversal",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77068",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T11:21:04.000Z",
+        "contentSnippet": "n8n before 2.33.4 and 2.34.x before 2.34.1 contain a remote code execution vulnerability in the @n8n/workflow-sdk node-schema loader used for MCP node-schema loading. The loader derives a node's schema module path directly from the attacker-supplied node type string without valid",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-77067 - Omnivore Stored Server-Side Request Forgery via the setWebhook Mutation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77067",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T11:16:22.000Z",
+        "contentSnippet": "The setWebhookResolver in packages/api/src/resolvers/webhooks/index.ts stores the caller-supplied url without any address validation, and the file imports no validation helper. When a subscribed event fires, callWebhook in packages/api/src/jobs/call_webhook.ts issues axios.reques",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-77066 - Omnivore Server-Side Request Forgery via the scanFeeds GraphQL Query",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77066",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T11:16:22.000Z",
+        "contentSnippet": "The scanFeedsResolver in packages/api/src/resolvers/subscriptions/index.ts passes the caller-supplied url straight to axios.get(url, rssParserConfig()) with no address validation. The same file guards the subscribe path with validateUrl(), which rejects private and reserved range",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-77026 - Joomla Extension - tassos.gr - Client-controlled validation bypass in Convert Forms extension < 5.2.5",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77026",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T11:16:21.000Z",
+        "contentSnippet": "Joomla Extension - tassos.gr - Client-controlled validation bypass in Convert Forms extension",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-73199 - Ipa: freeipa: null pointer dereference in `ipa-enrollment` extended operation (`join_oid`) via missing request value",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73199",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T11:16:21.000Z",
+        "contentSnippet": "A flaw was found in the `ipa-enrollment` SLAPI plugin. A remote authenticated client can exploit a null pointer dereference vulnerability by sending a malformed Lightweight Directory Access Protocol (LDAP) extended operation. By omitting the request value for the `JOIN_OID` in th",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-73198 - Ipa: freeipa: unauthenticated dos in `/ipa/i18n_messages` via unbounded request body read",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73198",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T11:16:21.000Z",
+        "contentSnippet": "A flaw was found in FreeIPA. A remote, unauthenticated attacker can exploit a vulnerability in the `/ipa/i18n_messages` endpoint by sending an arbitrarily large request body. This can cause the service to consume excessive memory, leading to memory exhaustion, degraded responsive",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-73197 - Ipa: freeipa: unauthenticated dos in `/ipa/migration/migration.py` via unbounded request body read",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73197",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T11:16:21.000Z",
+        "contentSnippet": "A flaw was found in FreeIPA. A remote, unauthenticated attacker can exploit this vulnerability by sending oversized form POST requests to the `/ipa/migration/migration.py` endpoint. This can force the migration handler to read attacker-controlled request bodies fully into memory,",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-73196 - Ipa: freeipa: authenticated dos in `otptoken-add` via unbounded otp key decoding/re-encoding",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73196",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T11:16:21.000Z",
+        "contentSnippet": "A flaw was found in FreeIPA. A low-privilege authenticated user can exploit this vulnerability by submitting an oversized One-Time Password (OTP) key value. This oversized key is then decoded and re-encoded without proper size limits, consuming excessive CPU and memory resources.",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-13097 - Ipa: privilege escalation via krbcanonicalname manipulation due to realm-unaware uniqueness enforcement in freeipa ldap datastore",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13097",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-20T11:16:20.000Z",
+        "contentSnippet": "A privilege escalation flaw was found in FreeIPA. The uniqueness constraint enforced on Kerberos principal name attributes in the 389-ds directory server does not properly account for equivalent representations of the same principal name, allowing a user with sufficient LDAP writ",
+        "cveScore": 9.1,
+        "cveSeverity": "CRITICAL"
+      },
       {
         "title": "CVE-2026-18917 - Libvirt: integer overflow in nodegetfreepages rpc handler leading to heap buffer overflow",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-18917",
@@ -676,231 +901,6 @@
         "isoDate": "2026-08-19T21:17:39.000Z",
         "contentSnippet": "A flaw was found in search-indexer. This vulnerability allows a registered and authenticated managed cluster to tamper with or delete another cluster's indexed search data. This is possible because the delta-sync write paths in search-indexer do not properly restrict UPDATE/DELET",
         "cveScore": 6.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-76584 - TRENDnet TV-IP751WIC alphapd set_time.cgi stack-based overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76584",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T21:17:38.000Z",
-        "contentSnippet": "A security flaw has been discovered in TRENDnet TV-IP751WIC 11.03.03. Affected by this issue is some unknown functionality of the file /cgi-bin/admin/set_time.cgi of the component alphapd. The manipulation of the argument Currenttime results in stack-based buffer overflow. The at",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-76583 - TRENDnet TV-IP751WIC alphapd set_time.cgi command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76583",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T21:17:38.000Z",
-        "contentSnippet": "A vulnerability was identified in TRENDnet TV-IP751WIC 11.03.03. Affected by this vulnerability is an unknown functionality of the file /cgi-bin/admin/set_time.cgi of the component alphapd. The manipulation leads to command injection. The attack can be initiated remotely. The exp",
-        "cveScore": 7.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-76582 - TRENDnet TEW-821DAP ssi ping.cgi system command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76582",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T21:17:38.000Z",
-        "contentSnippet": "A vulnerability was determined in TRENDnet TEW-821DAP 2.2.01b05. Affected is the function popen/system of the file /cgi-bin/ping.cgi of the component ssi. Executing a manipulation of the argument ipaddr can lead to command injection. It is possible to launch the attack remotely. ",
-        "cveScore": 7.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-76576 - yangzongzhuan RuoYi-Vue Common Download Endpoint CommonController.java resourceDownload path traversal",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76576",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T21:17:38.000Z",
-        "contentSnippet": "A vulnerability was found in yangzongzhuan RuoYi-Vue up to 3.9.2. This impacts the function fileDownload/resourceDownload of the file ruoyi-admin/src/main/java/com/ruoyi/web/controller/common/CommonController.java of the component Common Download Endpoint. Performing a manipulati",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-76139 - Acm-operator-bundle: acm-operator-bundle: bundle build execs unpinned stolostron/release@master with full build credentials",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76139",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T21:17:38.000Z",
-        "contentSnippet": "A flaw was found in acm-operator-bundle. The build process for this component downloads and runs a script from a remote source without verifying its authenticity or integrity. This script gains access to sensitive credentials, such as GitHub access tokens and registry passwords, ",
-        "cveScore": 8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-75616 - Command Injection in Router Web Management Interface",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75616",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T21:17:37.000Z",
-        "contentSnippet": "An OS command injection vulnerability exists in the web management interface of Archer C20 v6 firmware when processing certain WAN-related configuration operations. An authenticated administrator may exploit insufficient input validation to execute arbitrary system commands, pote",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-75596 - Netty: Fragmented ClientHello records trigger quadratic pre-handshake reassembly in default SNI parsing",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75596",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T21:17:37.000Z",
-        "contentSnippet": "Netty is an asynchronous, event-driven network application framework. Prior to 4.1.137.Final and 4.2.17.Final, the default io.netty.handler.ssl.SniHandler constructors use the pre-handshake ClientHello aggregation path in handler/src/main/java/io/netty/handler/ssl/SslClientHelloH",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-75595 - Netty: SNI Routing Bypass via Fragmented TLS ClientHello Causing Fallback to Default SslContext",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75595",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T21:17:37.000Z",
-        "contentSnippet": "Netty is an asynchronous, event-driven network application framework. Prior to 4.1.137.Fina and 4.2.17.Final, io.netty.handler.ssl.SslClientHelloHandler#decode checks the wrong offset before reading the four-byte TLS handshake header, so a ClientHello whose handshake header spans",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-75569 - Mce-operator-bundle: mce-operator-bundle: bundle-generation business logic fetched from mutable stolostron/release@master",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75569",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T21:17:37.000Z",
-        "contentSnippet": "A flaw was found in mce-operator-bundle. The build process fetches and executes scripts from a remote repository without performing integrity checks, such as commit pinning or signature verification. This allows a malicious actor with write access to the remote repository to inje",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-75476 - Tanium addressed a compression bomb vulnerability in Threat Response.",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75476",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T21:17:37.000Z",
-        "contentSnippet": "Tanium addressed a compression bomb vulnerability in Threat Response.",
-        "cveScore": 3.1,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-69222 - LiquidJS: Uncontrolled Resource Consumption in `join` filter allows template authors to bypass `memoryLimit` and crash the process",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-69222",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T21:17:31.000Z",
-        "contentSnippet": "LiquidJS is a Shopify / GitHub Pages compatible template engine in pure JavaScript. Prior to 10.27.2, the join filter in src/filters/array.ts computes complexity from array.length and separator length instead of the total string length produced by array.join(sep). The concat filt",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-68555 - coturn: Chained mobility resumes allow authenticated remote memory exhaustion",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68555",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T21:17:28.000Z",
-        "contentSnippet": "Coturn is a free open source implementation of TURN and STUN Server. In 4.15.0, an authenticated TURN user can repeatedly resume one allocation from fresh UDP 5-tuples without completing a handoff when the server enables --mobility. mobile_begin_transition() in src/server/ns_turn",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-68554 - Coturn: STUN attributes after MESSAGE-INTEGRITY are processed, letting on-path attackers modify authenticated TURN requests",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68554",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T21:17:28.000Z",
-        "contentSnippet": "Coturn is a free open source implementation of TURN and STUN Server. Prior to 4.15.0, an on-path attacker can append attributes after MESSAGE-INTEGRITY to an authenticated STUN request on plain UDP or TCP, adjust the STUN header length, and recompute the unkeyed FINGERPRINT while",
-        "cveScore": 2.3,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-68553 - Coturn: Format String Injection via TURN USERNAME/REALM into hiredis Redis Command",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68553",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T21:17:28.000Z",
-        "contentSnippet": "Coturn is a free open source implementation of TURN and STUN Server. Prior to 4.13.0, an authenticated TURN user can place printf-style format specifiers in the STUN USERNAME or REALM attribute, which passes is_secure_string() validation and is embedded into Redis keys at nine ca",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-68552 - Coturn: uint16_t truncation overflow in STUN message length causes TCP stream framing bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68552",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T21:17:28.000Z",
-        "contentSnippet": "Coturn is a free open source implementation of TURN and STUN Server. Prior to 4.15.0, an unauthenticated remote client can send a STUN message over TCP or TLS with a body-length field from 65520 through 65532, causing the uint16_t len variable in stun_get_message_len_str() in src",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-69550 - Windows App for Mac Information Disclosure Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-69550",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T21:17:18.000Z",
-        "contentSnippet": "None",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-62727 - Windows Telephony Service Elevation of Privilege Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62727",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T21:17:08.000Z",
-        "contentSnippet": "Concurrent execution using shared resource with improper synchronization ('race condition') in Windows Telephony Service allows an authorized attacker to elevate privileges locally.",
-        "cveScore": 7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-61556 - LiquidJS: An infinite loop vulnerability in `strip_html` filter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61556",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T21:17:03.000Z",
-        "contentSnippet": "LiquidJS is a Shopify / GitHub Pages compatible template engine in pure JavaScript. From 10.26.0 until 10.27.1, the strip_html filter in src/filters/html.ts can enter an infinite loop when an input string contains . In strip_html, the search for the next opener advances lt while ",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-54743 - Lemmy: Stored XSS via markdown image alt-text in lemmy-ui html5-embed",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54743",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T21:16:58.000Z",
-        "contentSnippet": "Lemmy is a link aggregator and forum for the fediverse. Prior to lemmy-ui 0.19.19-beta.1, LemmyNet/lemmy-ui renders Markdown in src/shared/markdown.ts for post bodies, comment bodies, private messages, and community and site sidebars through mdToHtml, which returns a raw __html o",
-        "cveScore": 6.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-54741 - Lemmy: Blocked users can edit private messages sent before the block",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54741",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T21:16:58.000Z",
-        "contentSnippet": "Lemmy is a link aggregator and forum for the fediverse. Prior to 0.19.19 and 1.0.0-alpha.18, Lemmy blocks new private messages from a sender after the recipient blocks that sender, but the edit path skips the same block check. create_private_message checks the recipient's block l",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-54740 - Lemmy: Lower-ranked federated moderator can remove higher-ranked moderators",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54740",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T21:16:58.000Z",
-        "contentSnippet": "Lemmy is a link aggregator and forum for the fediverse. Prior to 0.19.19 and 1.0.0-alpha.18, a lower-ranked remote moderator can remove a higher-ranked moderator by sending a signed ActivityPub Remove activity to the target instance. The local API uses LocalUser::is_higher_mod_or",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-62317 - Logto: ReDoS via unescaped user input in email subaddressing regex (blockSubaddressing)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62317",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T19:41:23.000Z",
-        "contentSnippet": "Logto is the modern, open-source auth infrastructure for SaaS and AI apps. Prior to 1.41.0, Logto's email subaddressing blocklist in packages/core/src/libraries/sign-in-experience/email-blocklist-policy.ts used the attacker-controlled domain from email input to construct subaddre",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-16872 - Vulnerabilities in IBM AIX and PowerVM VIOS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16872",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T19:40:30.000Z",
-        "contentSnippet": "IBM AIX 7.2, and 7.3 and IBM PowerVM VIOS 4.1 could allow a remote attacker to execute arbitrary code due to a stack-based buffer overflow.",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-16869 - Vulnerabilities in IBM AIX and PowerVM VIOS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16869",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T19:40:13.000Z",
-        "contentSnippet": "IBM AIX 7.2, and 7.3 and IBM PowerVM VIOS 4.1 could allow a local attacker to execute arbitrary code due to improperly scrubbed environment variables.",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-16724 - Power System Integer Overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16724",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-19T19:40:12.000Z",
-        "contentSnippet": "IBM Virtualization Management Interface FW1110.00 through FW1110.30, FW1120.00 through FW1120.00, and FW1060.00 through FW1060.80 is affected by a vulnerability in the Virtualization Management Interface (VMI). An attacker with authenticated administrator-level access can cause t",
-        "cveScore": 4.5,
         "cveSeverity": "MEDIUM"
       }
     ],
@@ -2310,6 +2310,41 @@
     ],
     "hardware": [
       {
+        "title": "Synopsys validates a PCIe 6.0 PHY inside a face-to-face 3D stack at 64 GT/s — says it got there by pulling apart an existing 2D test chip",
+        "link": "https://www.tomshardware.com/tech-industry/semiconductors/synopsys-validates-a-pcie-6-phy-inside-a-face-to-face-3d-stack",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-20T13:32:00.000Z",
+        "contentSnippet": "Synopsys has published silicon results for what it calls the first 3D PCIe 6.0 test chip, a 5nm PHY built into a face-to-face stacked package."
+      },
+      {
+        "title": "Virginia county with 250 data centers begins to rein in building — Loudoun’s more than 250 data centers made it one of the richest counties in the US, but residents are pushing back",
+        "link": "https://www.tomshardware.com/tech-industry/data-centers/virginia-county-with-250-data-centers-begins-to-rein-in-building-loudouns-more-than-250-data-centers-made-it-one-of-the-richest-counties-in-the-us-but-residents-are-pushing-back",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-20T13:19:34.000Z",
+        "contentSnippet": "Loudoun County recently changed its zoning policy which treated data centers as office parks. These projects now have to go through an approval process from the people and the local government, a significant change after more than 25 years of easy approvals."
+      },
+      {
+        "title": "SK hynix will pay staff $50,000 apiece according to a tentative agreement with disgruntled workers — $1.79 billion potential profit pool will be split between cash and stock grants",
+        "link": "https://www.tomshardware.com/pc-components/dram/sk-hynix-reaches-tentative-agreement-with-disgruntled-workers-usd1-79-billion-potential-profit-pool-could-see-staff-get-usd50-000-each",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-20T13:15:05.000Z",
+        "contentSnippet": "SK hynix removes 10% operating profit cap for employee profit-sharing program; union agrees to get bonuses in cash and stock."
+      },
+      {
+        "title": "Cloudera Anywhere Cloud Launches: One Control Plane for AI and Data Across Public, Sovereign, and On-Prem Environments",
+        "link": "https://www.storagereview.com/news/cloudera-anywhere-cloud-launches-one-control-plane-for-ai-and-data-across-public-sovereign-and-on-prem-environments",
+        "source": "StorageReview",
+        "isoDate": "2026-08-20T13:11:06.000Z",
+        "contentSnippet": "Cloudera has introduced Cloudera Anywhere Cloud, a hybrid data and AI platform engineered to build, deploy, and scale production-grade workloads across public clouds, sovereign environments, and private on-premises infrastructure. The platform can function as a standalone deploym"
+      },
+      {
+        "title": "QNAP QuTS MEGA 2.0 Adds Snapshots and Cross-Cluster Mirroring for Scale-Out NAS",
+        "link": "https://www.storagereview.com/news/qnap-quts-mega-2-0-adds-snapshots-and-cross-cluster-mirroring-for-scale-out-nas",
+        "source": "StorageReview",
+        "isoDate": "2026-08-20T12:39:12.000Z",
+        "contentSnippet": "QNAP has released QuTS MEGA 2.0, an update to the operating system behind its MEGA Scale-out NAS platform that adds snapshots and Cross-Cluster Mirroring for data protection and disaster recovery. The new features extend the platform’s existing Ceph-based distributed architecture"
+      },
+      {
         "title": "Seasonic unveils world's first 80 Plus Ruby ATX power supply — Prime Enterprise RX-1600 delivers 1600W with up to 95.4% efficiency",
         "link": "https://www.tomshardware.com/pc-components/power-supplies/seasonic-introduces-the-worlds-first-80-plus-ruby-certified-psu-using-a-standard-atx-form-factor",
         "source": "Tom's Hardware",
@@ -2973,41 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-08-16T12:10:00.000Z",
         "contentSnippet": "Intel’s Robert Hallock says he hopes enthusiasts “do the math” compared to AMD, highlighting that the company’s new core architecture will release in consumer processors before the data center."
-      },
-      {
-        "title": "3D-printed sound-powered jet engines propel micro drones — fliers are completely silent; researchers use ultrasonic frequencies to drive 12,000-RPM silent hovering fliers",
-        "link": "https://www.tomshardware.com/3d-printing/3d-printed-sound-powered-jet-engines-propel-micro-drones-fliers-are-completely-silent-researchers-use-ultrasonic-frequencies-to-drive-12-000-rpm-silent-hovering-fliers",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-16T11:50:00.000Z",
-        "contentSnippet": "A specially shaped 3D-printed resonator can make air shoot out of its nozzle and provide thrust when it hit with the proper frequency. While the prototypes don't deliver practical levels of thrust yet, they show proof that the concept works."
-      },
-      {
-        "title": "3D-printing enthusiast creates ‘Flock Sock’ to blind controversial cameras, shares design — slip-on cover attaches to broom handle to make it easy to put on devices placed on traffic and streetlights",
-        "link": "https://www.tomshardware.com/3d-printing/3d-printing-enthusiast-creates-flock-sock-camera-blind-slip-on-cover-attaches-to-broom-handle-to-make-it-easy-to-put-on-devices-placed-on-traffic-and-streetlights",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-16T11:30:00.000Z",
-        "contentSnippet": "SquidInk created a 3D-printing model that would allow anyone to build an easy-to-install \"protective cover\" for Flock cameras. The \"Flock Sock\" slips on these devices in seconds using a broom handle, although it must be noted that adding this \"accessory\" can you into trouble."
-      },
-      {
-        "title": "The PC age began 45 years ago with the breakthrough Intel 8088 processor — 8-bit bus fueled 45 years of x86 dominance",
-        "link": "https://www.tomshardware.com/pc-components/cpus/the-pc-age-began-45-years-ago-with-the-breakthrough-intel-8088-processor-8-bit-bus-fueled-45-years-of-x86-dominance",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-16T11:20:00.000Z",
-        "contentSnippet": "45 years ago, in August 1981, the PC age began in earnest with the launch of the IBM PC Model 5150. At its heart was the Intel 8088 microprocessor."
-      },
-      {
-        "title": "Modern OLEDs are just as vulnerable to burn-in as 2017 panels in 10,000-hour test — twice the brightness and 27% efficiency gains offer crucial headroom",
-        "link": "https://www.tomshardware.com/monitors/modern-oled-tvs-are-just-as-susceptible-to-burn-in-as-older-models-but-theyre-much-brighter-longevity-test-highlights-luminance-headroom-and-efficiency-as-mitigations",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-16T11:10:00.000Z",
-        "contentSnippet": "Rtings.com's latest update on their Accelerated Longevity Test shows that modern OLED TVs don't offer a clear advantage over older models in terms of burn-in since both show similar image retention after 10,000 hours of simulated usage. However, the new OLEDs are much brighter an"
-      },
-      {
-        "title": "xTool M2 color craft laser and engraver review: Improved print head and positioning cameras at a lower price",
-        "link": "https://www.tomshardware.com/maker-stem/xtool-m2-color-craft-laser-and-engraver-review",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-16T11:05:00.000Z",
-        "contentSnippet": "The M2 is xTool’s second take on an all-in-one craft tool in a box. It isn’t just an iterative update to the M1 Ultra, the new M2 color craft laser and engraver thoroughly remixes the offering by adding cameras, air assist, CMYK print, and more."
       }
     ]
   }
