@@ -1,25 +1,232 @@
 {
-  "updatedAt": "2026-08-21T22:14:49.563Z",
+  "updatedAt": "2026-08-21T23:15:18.763Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
-        "title": "CVE-2026-69236 - stored cross site scripting issue in Esri Portal for ArcGIS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-69236",
+        "title": "CVE-2026-53487 - Kite has an authenticated cluster RBAC bypass in /api/v1/overview",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53487",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-21T20:53:36.000Z",
-        "contentSnippet": "There is a stored cross site scripting issue in Esri Portal for ArcGIS versions 12.1 and prior that may allow a remote, privileged attacker to inject malicious code that could potentially execute arbitrary JavaScript in a victim’s browser. Users working with ArcGIS Enterprise 11.",
-        "cveScore": 6.1,
-        "cveSeverity": "MEDIUM"
+        "isoDate": "2026-08-21T21:35:41.000Z",
+        "contentSnippet": "Kite is a Kubernetes dashboard. Prior to version 0.12.3, authenticated Kite users with any role can request `/api/v1/overview` for a cluster that their roles do not permit by selecting that cluster with `x-cluster-name`. The overview route is registered before `middleware.RBACMid",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53531 - ratex-parser has unbounded parser recursion that leads to stack overflow (process abort)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53531",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T21:34:16.000Z",
+        "contentSnippet": "RaTeX is a KaTeX-compatible math rendering engine written in Rust. Prior to version 0.1.11, RaTeX’s recursive-descent parser recurses one (or more) native stack frame per nesting level at `{`, `\\left`, `\\sqrt{`, `^{`, etc, with no maximum depth limit. A short, ~10 KB input of nes",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53530 - ratex-parser panics on `\\verb` with a multibyte delimiter (UTF-8 byte-boundary slice)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53530",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T21:31:12.000Z",
+        "contentSnippet": "RaTeX is a KaTeX-compatible math rendering engine written in Rust. Prior to version 0.1.11, the public parser entrypoint `ratex_parser::parse(&str)` panics on the 9-byte input `\\verbéxé` (i.e. `\\verb` followed by the non-ASCII delimiter `é`). When handling a `\\verb` command, the ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53529 - LeafWiki vulnerable to stored XSS via search-result title (highlight() returns raw title into dangerouslySetInnerHTML)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53529",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T21:29:11.000Z",
+        "contentSnippet": "LeafWiki is a self-hosted wiki. Prior to version 0.10.2, page titles returned by the search API could be rendered as raw HTML in the frontend. A user with editor or administrator permissions could create or modify a page title containing an HTML/JavaScript payload. When another u",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53528 - FileWiki has path traversal in RenameAsset via unsanitized oldFilename parameter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53528",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T21:26:57.000Z",
+        "contentSnippet": "LeafWiki is a self-hosted wiki. Versions 0.3.0 through 0.10.0 have a path traversal vulnerability in LeafWiki’s asset rename functionality. An authenticated user with editor permissions could move files that are accessible to the LeafWiki server process into a page’s asset direct",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53527 - LeafWiki Vulnerable to Privilege Escalation via User Self-Service Update",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53527",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T21:25:16.000Z",
+        "contentSnippet": "LeafWiki is a self-hosted wiki. Versions 0.1.0 through 0.10.0 have a privilege escalation vulnerability in the user update API. An authenticated user could update their own account role and escalate privileges from a regular user, such as `viewer`, to `admin`. Exploitation requir",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-33240 - Combodo iTop: Reflected XSS in foreign key search criteria",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-33240",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T21:25:03.000Z",
+        "contentSnippet": "Combodo iTop is a web based IT service management tool. Prior to 3.2.3, there was a Reflected Cross-Site Scripting (XSS) vulnerability in the foreign key search criteria API. This issue has been fixed in version 3.2.3.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-33047 - Combodo iTop: Object can be locked by a user without write permissions",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-33047",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T21:21:53.000Z",
+        "contentSnippet": "Combodo iTop is a web based IT service management tool. Prior to 3.2.3, an object can be locked by a user who is not assigned write permissions. This issue has been fixed in version 3.2.3.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53509 - @aborruso/ckan-mcp-server: SSRF via base_url allows access to internal networks (Potential fix bypass of CVE-2026-33060)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53509",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T21:21:20.000Z",
+        "contentSnippet": "CKAN MCP Server is a tool for querying CKAN open data portals. A known vulnerability CVE-2026-33060 indicated tools including ckan_package_search and sparql_query that accept a base_url parameter had the risk of making HTTP requests to arbitrary endpoints without restriction. A f",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-53497 - CrossWatch: Unauthenticated /api/app-auth/status endpoint leaks active session metadata (IP, User-Agent, session IDs)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53497",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T21:19:04.000Z",
+        "contentSnippet": "CrossWatch (CW) is a synchronization engine. Prior to version 0.9.21, GET /api/app-auth/status is accessible without authentication and returns the other_sessions array, which exposes metadata of all active sessions — including originating IP addresses, User-Agent strings, intern",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-43980 - Malla: Stored XSS via Meshtastic node names in multiple frontend pages",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-43980",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T21:17:45.000Z",
+        "contentSnippet": "Malla is a web analyzer for Meshtastic networks based on MQTT data. Prior to commit 4086e2b5f61615a813b70b25bc76095083552135, code names (long_name, short_name) received via MQTT are stored in SQLite without sanitization and rendered into the DOM without escaping. Any participant",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-31936 - Combodo iTop: Unauthorized access to object information via search operation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-31936",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T21:17:44.000Z",
+        "contentSnippet": "Combodo iTop is a web based IT service management tool. Prior to 3.2.3, users can access to unauthorized object information through the search operation. This issue has been fixed in version 3.2.3.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-77811 - Stored Cross-Site Scripting via Integration Template Asset in OpenSearch Dashboards",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77811",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T21:17:08.000Z",
+        "contentSnippet": "Improper input validation in the dashboards-observability plugin in OpenSearch Dashboards allows a remote authenticated user with write permissions to OpenSearch Dashboards saved objects to execute arbitrary JavaScript in the context of other users' browser sessions by uploading ",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-77415 - JSONata: Arbitrary Code Execution via crafted JSONata expressions",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77415",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T21:17:07.000Z",
+        "contentSnippet": "JSONata is a JSON query and transformation language. Prior to 1.8.8 and 2.2.1, crafted JSONata expressions could chain several object-integrity weaknesses to execute arbitrary code. The chain could overwrite $clone to mutate objects through evaluateTransformExpression, expose and",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-77414 - JSONata: Arbitrary Code Execution via crafted JSONata expressions",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77414",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T21:17:07.000Z",
+        "contentSnippet": "JSONata is a JSON query and transformation language. Prior to 1.8.8 and 2.2.1, the src/jsonata.js environment.lookup function used a bypassable hasOwnProperty check. Crafted expressions could use $hasOwnProperty, $spread, $string, prototype access, and $constructor to reach the o",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-77413 - JSONata: Arbitrary Code Execution via crafted JSONata expressions",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77413",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T21:17:07.000Z",
+        "contentSnippet": "JSONata is a JSON query and transformation language. Prior to 1.8.8 and 2.2.0, the src/functions.js lookup function lacked an Object.prototype.hasOwnProperty check and allowed crafted expressions to access inherited prototype members. An attacker able to supply an expression coul",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-77354 - kin-openapi: Uncontrolled resource consumption in openapi3filter deepObject query parameter decoding",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77354",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T21:17:07.000Z",
+        "contentSnippet": "kin-openapi is a Go project for handling OpenAPI files. From 0.124.0 until 0.142.0, openapi3filter.sliceMapToSlice in openapi3filter/req_resp_decoder.go converts attacker-controlled sparse indexes from a deepObject query parameter into a dense slice by allocating entries from zer",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-77220 - PDFio < 1.6.5 Dangling Pointer via Dictionary String-Formatting",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77220",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T21:17:06.000Z",
+        "contentSnippet": "PDFio before 1.6.5 contains a dangling pointer vulnerability in the dictionary string-formatting function that stores a pointer to a stack-local buffer in the document dictionary without copying the string value. In multi-threaded or pooled-request environments, attackers or conc",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-77219 - GNU Emacs < 31.0.91 Heap Over-Read via PBM/PPM/PGM Image Loader",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77219",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T21:17:06.000Z",
+        "contentSnippet": "GNU Emacs before 31.0.91 contains an integer overflow in the PBM/PPM/PGM image loader that allows an attacker to leak heap memory contents by supplying a crafted image with large dimensions and an elevated max color index. The image loader multiplies image dimensions and channel ",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-76905 - kin-openapi openai3filter: nil-pointer panic in ConvertErrors on malformed multipart/form-data body enables unauthenticated DoS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76905",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T21:17:06.000Z",
+        "contentSnippet": "kin-openapi is a Go project for handling OpenAPI files. From 0.10.0 until 0.141.0, openapi3filter.convertParseError in openapi3filter/validation_error_encoder.go dereferences e.Parameter.In without checking whether e.Parameter is nil. A malformed non-string scalar field in a mult",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-76904 - GeoTools has unauthenticated SQL injection in the jsonArrayContains filter function against PostGIS layers",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76904",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T21:17:06.000Z",
+        "contentSnippet": "GeoTools is an open source Java library that provides tools for geospatial data. Starting in version 30.5 and prior to versions 33.6, 34.5, and 33.6, an SQL Injection Vulnerability is present when executing OGC Filters with PostGIS DataStore implementation: `jsonArrayContains` fu",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-69238 - HTML injection vulnerability in Esri Portal for ArcGIS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-69238",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T21:17:04.000Z",
+        "contentSnippet": "There is an HTML injection vulnerability in Esri Portal for ArcGIS versions 11.5 and prior that allows a remote, highly priviliged attacker to insert arbitrary HTML into the Portal for ArcGIS Home application. Users working with ArcGIS Enterprise 11.1, 11.3, and 11.5 are encourag",
+        "cveScore": 3.5,
+        "cveSeverity": "LOW"
       },
       {
         "title": "CVE-2026-69237 - HTML injection vulnerability in Esri Portal for ArcGIS",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-69237",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-21T20:53:21.000Z",
+        "isoDate": "2026-08-21T21:17:04.000Z",
         "contentSnippet": "There is an HTML injection vulnerability in Esri Portal for ArcGIS versions 11.3 and prior that allows a remote attacker with administrative privileges to insert arbitrary HTML into an administrative API. Users working with ArcGIS Enterprise 11.1, and 11.3 are encouraged to patch",
         "cveScore": 3.8,
         "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-69236 - stored cross site scripting issue in Esri Portal for ArcGIS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-69236",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T21:17:04.000Z",
+        "contentSnippet": "There is a stored cross site scripting issue in Esri Portal for ArcGIS versions 12.1 and prior that may allow a remote, privileged attacker to inject malicious code that could potentially execute arbitrary JavaScript in a victim’s browser. Users working with ArcGIS Enterprise 11.",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-69235 - stored cross site scripting issue in Esri Portal for ArcGIS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-69235",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T21:17:04.000Z",
+        "contentSnippet": "There is a stored cross site scripting issue in Esri Portal for ArcGIS versions 11.5 and prior that may allow a remote, privileged attacker to inject malicious code that could potentially execute arbitrary in a victim’s browser. Users working with ArcGIS Enterprise 11.1, 11.3, an",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-31803 - Combodo iTop: Reflected XSS in tag admin",
@@ -27,15 +234,6 @@
         "source": "cvefeed.io",
         "isoDate": "2026-08-21T20:52:09.000Z",
         "contentSnippet": "Combodo iTop is a web based IT service management tool. Prior to 3.2.3, 3.2.3, there is a Reflected Cross-Site Scripting (XSS) vulnerability in pages/tagadmin.php. This issue has been fixed in version 3.2.3.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-77414 - JSONata: Arbitrary Code Execution via crafted JSONata expressions",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77414",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T20:51:43.000Z",
-        "contentSnippet": "JSONata is a JSON query and transformation language. Prior to 1.8.8 and 2.2.1, the src/jsonata.js environment.lookup function used a bypassable hasOwnProperty check. Crafted expressions could use $hasOwnProperty, $spread, $string, prototype access, and $constructor to reach the o",
         "cveScore": 0,
         "cveSeverity": "NA"
       },
@@ -85,15 +283,6 @@
         "cveSeverity": "MEDIUM"
       },
       {
-        "title": "CVE-2026-77413 - JSONata: Arbitrary Code Execution via crafted JSONata expressions",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77413",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T20:47:08.000Z",
-        "contentSnippet": "JSONata is a JSON query and transformation language. Prior to 1.8.8 and 2.2.0, the src/functions.js lookup function lacked an Object.prototype.hasOwnProperty check and allowed crafted expressions to access inherited prototype members. An attacker able to supply an expression coul",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
         "title": "CVE-2026-69225 - information disclosure vulnerability in Esri Portal for ArcGIS",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-69225",
         "source": "cvefeed.io",
@@ -103,15 +292,6 @@
         "cveSeverity": "MEDIUM"
       },
       {
-        "title": "CVE-2026-69238 - HTML injection vulnerability in Esri Portal for ArcGIS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-69238",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T20:46:03.000Z",
-        "contentSnippet": "There is an HTML injection vulnerability in Esri Portal for ArcGIS versions 11.5 and prior that allows a remote, highly priviliged attacker to insert arbitrary HTML into the Portal for ArcGIS Home application. Users working with ArcGIS Enterprise 11.1, 11.3, and 11.5 are encourag",
-        "cveScore": 3.5,
-        "cveSeverity": "LOW"
-      },
-      {
         "title": "CVE-2026-69224 - information disclosure vulnerability in Esri Portal for ArcGIS",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-69224",
         "source": "cvefeed.io",
@@ -119,24 +299,6 @@
         "contentSnippet": "There is an information disclosure vulnerability in Esri Portal for ArcGIS versions 12.0 and earlier that may under difficult to reproduce circumstances allow a remote, unauthenticated attacker to reflect sensitive information in a http response body.",
         "cveScore": 5.9,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-77354 - kin-openapi: Uncontrolled resource consumption in openapi3filter deepObject query parameter decoding",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77354",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T20:44:47.000Z",
-        "contentSnippet": "kin-openapi is a Go project for handling OpenAPI files. From 0.124.0 until 0.142.0, openapi3filter.sliceMapToSlice in openapi3filter/req_resp_decoder.go converts attacker-controlled sparse indexes from a deepObject query parameter into a dense slice by allocating entries from zer",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-76905 - kin-openapi openai3filter: nil-pointer panic in ConvertErrors on malformed multipart/form-data body enables unauthenticated DoS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76905",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T20:43:07.000Z",
-        "contentSnippet": "kin-openapi is a Go project for handling OpenAPI files. From 0.10.0 until 0.141.0, openapi3filter.convertParseError in openapi3filter/validation_error_encoder.go dereferences e.Parameter.In without checking whether e.Parameter is nil. A malformed non-string scalar field in a mult",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       },
       {
         "title": "CVE-2026-63135 - YOURLS: Stored XSS in referrer statistics chart via crafted Referer header",
@@ -740,168 +902,6 @@
         "contentSnippet": "A vulnerability in the Calix EXOS firmware for the GS7 XGS (GS5239XG) residential router allows unauthenticated remote attackers to modify NAT port‑forwarding rules via the UPnP WANIPConnection service. The device exposes the MiniUPnPd control endpoint on the WAN interface on TCP",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-63343 - Arbitrary File Read/Write: metadata.yaml symlink in image allows host filesystem access as root",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63343",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T15:16:46.000Z",
-        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.3.0, a malicious image containing a `metadata.yaml` symlink pointing to an arbitrary host path allows an authenticated Incus user to read or overwrite any file on the host as root via the instance metadat",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-63125 - Incus vulnerable to root RCE via image backup.yaml symlink",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63125",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T15:16:46.000Z",
-        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.3.0, an unprivileged, project-confined Incus user (a non-admin TLS/RBAC identity with `can_create_images` and `can_create_instances`) can execute arbitrary code as root on the host. A crafted image ships ",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-62941 - Incus: Cross-project instance copy bypasses target project restrictions via TOCTOU in config merge",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62941",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T15:16:46.000Z",
-        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.3.0, when copying an instance across projects, the project restriction check (`AllowInstanceCreation`) runs BEFORE the source instance's configuration is merged into the request. Dangerous configuration k",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-62940 - Incus has a project restriction bypass via instance migration config override",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62940",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T15:16:46.000Z",
-        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.3.0, when migrating an instance to another cluster member, user-supplied configuration overrides (including security-critical keys like `security.privileged` and `raw.lxc`) are applied without any project",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-62867 - Incus has an argument injection in storage volume block.create_options that leads to arbitrary command execution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62867",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T15:16:46.000Z",
-        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.3.0, improper validation of user-provided `block.create_options` in storage volume configuration leads to argument injection in the constructed filesystem creation command line. This allows a project-scop",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-62313 - Incus: Project restriction `restricted.containers.privilege=isolated` bypassable by omitting `security.idmap.isolated`",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62313",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T15:16:45.000Z",
-        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.3.0, project-level enforcement of `restricted.containers.privilege=isolated` can be trivially bypassed, allowing a user to create a non-isolated (shared host idmap) container in a project that is configur",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-55622 - Incus has a project restriction bypass in instance copy across projects",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55622",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T15:16:42.000Z",
-        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.2.0, missing authorization checks exist for instance copying where an attacker knowing the name of a project that they don't have access to and the name of an instance in that project can copy the instanc",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-55621 - Incus has a project restriction bypass for custom volume copy across projects",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55621",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T15:16:41.000Z",
-        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.2.0, missing authorization checks exist for custom volume copying where an attacker knowing the name of a project that they don't have access to and the name of a custom volume in that project can copy th",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-50278 - iccDEV: CIccEmbedIO::Read8() size_t underflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50278",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T15:16:41.000Z",
-        "contentSnippet": "iccDEV provides a set of libraries and tools for working with ICC color management profiles. Versions prior to 2.3.2.1 have a `CIccEmbedIO::Read8()` size_t underflow. The issue arises due to an embedded-profile read defect when parsing ICC profiles containing `icSigEmbeddedV5Prof",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-48769 - Incus has an arbitrary file write on its client due to trusted image hash",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48769",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T15:16:41.000Z",
-        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.2.0, an arbitrary file write exists in the Incus client when a malicious image server returns a crafted `Incus-Image-Hash` header. This can lead to arbitrary command execution as root on the server. Versi",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-48756 - Incus: CreateCustomVolumeFromBackup nil-pointer dereference on volume_snapshots[*].expires_at (sibling-field variant of GHSA-r7w7)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48756",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T15:16:41.000Z",
-        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.1.0, `(*backend).CreateCustomVolumeFromBackup` in `internal/server/storage/backend.go` contains an unguarded `*time.Time` dereference on the `ExpiresAt` field of every volume-snapshot entry in an imported",
-        "cveScore": 2.1,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-48755 - Incus has an argument injection in backup compression algorithm leading to AFW and ACE",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48755",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T15:16:41.000Z",
-        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.1.0, improper validation of user-provided backup compression algorithm leads to argument injection in the constructed command line. This leads to an arbitrary file write on the host, possibly leading to a",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-48754 - Incus: Nil-pointer dereference in createDependentVolumesFromBackup on disk.{Volume,VolumeSnapshots,Pool}",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48754",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T15:16:40.000Z",
-        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.1.0, `(*backend).createDependentVolumesFromBackup` in `internal/server/storage/backend.go` contains a cluster of unguarded pointer derefs on every dependent-volume entry's `VolumeSnapshots[i]`, `Volume`, ",
-        "cveScore": 2.1,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-48753 - Incus has an arbitrary file write via path traversal in S3 multipart upload",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48753",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T15:16:40.000Z",
-        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.1.0, the S3 protocol upload endpoint is vulnerable to path traversal and allows creation of arbitrary files on the host. This behavior could lead to arbitrary command execution. Version 7.1.0 fixes the is",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-48752 - Incus has arbitrary file read+write on host via templates/ symlink in malicious image",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48752",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T15:16:40.000Z",
-        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.2.0, a specially crafted image or instance backup can be used to read or create/write arbitrary files on the host; possibly leading to arbitrary command execution. Version 7.2.0 patches the issue.",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-48751 - Incus has a restricted project bypass leading to arbitrary command execution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48751",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T15:16:40.000Z",
-        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.2.0, instance snapshots ignore the `restricted.containers.lowlevel=block` setting; allowing for arbitrary command execution on the Incus server by abusing lowlevel hooks such as `raw.lxc` and `raw.qemu`. ",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-48750 - Incus has an arbitrary file write on host via `exec-output` symlink in crafted image",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48750",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T15:16:40.000Z",
-        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.2.0, the `record-output` parameter of the `/instances/$name/exec` endpoint stores the output of the command in the `exec-output` directory of the instance. If `exec-output` is a symlink, file named `exec_",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-48749 - Incus has an arbitrary file read+write on host via rootfs/ symlink in malicious image",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48749",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T15:16:40.000Z",
-        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.2.0, a specially crafted image can be used to read or create/write arbitrary files on the host; possibly leading to arbitrary command execution. Version 7.2.0 fixes the issue.",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
       }
     ],
     "ai": [
