@@ -1,151 +1,223 @@
 {
-  "updatedAt": "2026-08-21T16:21:44.992Z",
+  "updatedAt": "2026-08-21T17:20:34.736Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
-        "title": "CVE-2026-63125 - Incus vulnerable to root RCE via image backup.yaml symlink",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63125",
+        "title": "CVE-2026-77815 - Infinite Image Browsing Resolves Paths With normpath, Allowing Symlink Escape From Scanned Directories",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77815",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-21T14:49:16.000Z",
-        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.3.0, an unprivileged, project-confined Incus user (a non-admin TLS/RBAC identity with `can_create_images` and `can_create_instances`) can execute arbitrary code as root on the host. A crafted image ships ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "isoDate": "2026-08-21T15:16:47.000Z",
+        "contentSnippet": "to_abs_path in scripts/iib/tool.py normalised the requested path with os.path.normpath, which collapses dot segments but does not resolve symbolic links. A symlink placed inside a scanned directory therefore satisfies the containment comparison performed by is_path_trusted in scr",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
       },
       {
-        "title": "CVE-2026-62941 - Incus: Cross-project instance copy bypasses target project restrictions via TOCTOU in config merge",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62941",
+        "title": "CVE-2026-77814 - Infinite Image Browsing is_path_trusted Prefix Comparison Omits the Trailing Path Separator",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77814",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-21T14:47:56.000Z",
-        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.3.0, when copying an instance across projects, the project restriction check (`AllowInstanceCreation`) runs BEFORE the source instance's configuration is merged into the request. Dangerous configuration k",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "isoDate": "2026-08-21T15:16:47.000Z",
+        "contentSnippet": "is_path_trusted in scripts/iib/api.py compares the requested path against each allowed parent directory with path.startswith(parent_path), without appending a path separator. A directory whose name merely begins with an allowed path therefore satisfies the comparison, so where /d",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
       },
       {
-        "title": "CVE-2026-62940 - Incus has a project restriction bypass via instance migration config override",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62940",
+        "title": "CVE-2026-77812 - Cleartext Exposure of DJI Drone Wi-Fi Credentials via BLE",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77812",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-21T14:47:13.000Z",
-        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.3.0, when migrating an instance to another cluster member, user-supplied configuration overrides (including security-critical keys like `security.privileged` and `raw.lxc`) are applied without any project",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "isoDate": "2026-08-21T15:16:47.000Z",
+        "contentSnippet": "DJI drones transmit DUML (DJI Universal Markup Language) protocol messages over BLE (Bluetooth Low Energy) without encryption. When a client attempts to connect to the drone over Wi-Fi, or when the drone is switched to QuickTransfer mode, the DJI Fly application exchanges DUML me",
+        "cveScore": 9.4,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-77087 - Paperclip before 0.3.1 Remote Code Execution via DNS Rebinding",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77087",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T15:16:47.000Z",
+        "contentSnippet": "Paperclip before 0.3.1 in default local_trusted mode fails to validate Host headers, allowing attackers to execute arbitrary commands via DNS rebinding. An attacker can craft a malicious webpage that, when visited by a developer running Paperclip locally, uses DNS rebinding to ma",
+        "cveScore": 9.6,
+        "cveSeverity": "CRITICAL"
       },
       {
         "title": "CVE-2026-75501 - CVE-2026-75501",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-75501",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-21T14:47:04.000Z",
+        "isoDate": "2026-08-21T15:16:47.000Z",
         "contentSnippet": "A vulnerability in the Calix EXOS firmware for the GS7 XGS (GS5239XG) residential router allows unauthenticated remote attackers to modify NAT port‑forwarding rules via the UPnP WANIPConnection service. The device exposes the MiniUPnPd control endpoint on the WAN interface on TCP",
         "cveScore": 0,
         "cveSeverity": "NA"
       },
       {
+        "title": "CVE-2026-63343 - Arbitrary File Read/Write: metadata.yaml symlink in image allows host filesystem access as root",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63343",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T15:16:46.000Z",
+        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.3.0, a malicious image containing a `metadata.yaml` symlink pointing to an arbitrary host path allows an authenticated Incus user to read or overwrite any file on the host as root via the instance metadat",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-63125 - Incus vulnerable to root RCE via image backup.yaml symlink",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63125",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T15:16:46.000Z",
+        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.3.0, an unprivileged, project-confined Incus user (a non-admin TLS/RBAC identity with `can_create_images` and `can_create_instances`) can execute arbitrary code as root on the host. A crafted image ships ",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-62941 - Incus: Cross-project instance copy bypasses target project restrictions via TOCTOU in config merge",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62941",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T15:16:46.000Z",
+        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.3.0, when copying an instance across projects, the project restriction check (`AllowInstanceCreation`) runs BEFORE the source instance's configuration is merged into the request. Dangerous configuration k",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-62940 - Incus has a project restriction bypass via instance migration config override",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62940",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T15:16:46.000Z",
+        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.3.0, when migrating an instance to another cluster member, user-supplied configuration overrides (including security-critical keys like `security.privileged` and `raw.lxc`) are applied without any project",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
         "title": "CVE-2026-62867 - Incus has an argument injection in storage volume block.create_options that leads to arbitrary command execution",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-62867",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-21T14:45:35.000Z",
+        "isoDate": "2026-08-21T15:16:46.000Z",
         "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.3.0, improper validation of user-provided `block.create_options` in storage volume configuration leads to argument injection in the constructed filesystem creation command line. This allows a project-scop",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
       },
       {
         "title": "CVE-2026-62313 - Incus: Project restriction `restricted.containers.privilege=isolated` bypassable by omitting `security.idmap.isolated`",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-62313",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-21T14:44:27.000Z",
+        "isoDate": "2026-08-21T15:16:45.000Z",
         "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.3.0, project-level enforcement of `restricted.containers.privilege=isolated` can be trivially bypassed, allowing a user to create a non-isolated (shared host idmap) container in a project that is configur",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-55622 - Incus has a project restriction bypass in instance copy across projects",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-55622",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-21T14:40:35.000Z",
+        "isoDate": "2026-08-21T15:16:42.000Z",
         "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.2.0, missing authorization checks exist for instance copying where an attacker knowing the name of a project that they don't have access to and the name of an instance in that project can copy the instanc",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 7.7,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-55621 - Incus has a project restriction bypass for custom volume copy across projects",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-55621",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-21T14:39:43.000Z",
+        "isoDate": "2026-08-21T15:16:41.000Z",
         "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.2.0, missing authorization checks exist for custom volume copying where an attacker knowing the name of a project that they don't have access to and the name of a custom volume in that project can copy th",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 7.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-50278 - iccDEV: CIccEmbedIO::Read8() size_t underflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50278",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T15:16:41.000Z",
+        "contentSnippet": "iccDEV provides a set of libraries and tools for working with ICC color management profiles. Versions prior to 2.3.2.1 have a `CIccEmbedIO::Read8()` size_t underflow. The issue arises due to an embedded-profile read defect when parsing ICC profiles containing `icSigEmbeddedV5Prof",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-48769 - Incus has an arbitrary file write on its client due to trusted image hash",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-48769",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-21T14:38:38.000Z",
+        "isoDate": "2026-08-21T15:16:41.000Z",
         "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.2.0, an arbitrary file write exists in the Incus client when a malicious image server returns a crafted `Incus-Image-Hash` header. This can lead to arbitrary command execution as root on the server. Versi",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-48756 - Incus: CreateCustomVolumeFromBackup nil-pointer dereference on volume_snapshots[*].expires_at (sibling-field variant of GHSA-r7w7)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48756",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T15:16:41.000Z",
+        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.1.0, `(*backend).CreateCustomVolumeFromBackup` in `internal/server/storage/backend.go` contains an unguarded `*time.Time` dereference on the `ExpiresAt` field of every volume-snapshot entry in an imported",
+        "cveScore": 2.1,
+        "cveSeverity": "LOW"
       },
       {
         "title": "CVE-2026-48755 - Incus has an argument injection in backup compression algorithm leading to AFW and ACE",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-48755",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-21T14:37:25.000Z",
+        "isoDate": "2026-08-21T15:16:41.000Z",
         "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.1.0, improper validation of user-provided backup compression algorithm leads to argument injection in the constructed command line. This leads to an arbitrary file write on the host, possibly leading to a",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
       },
       {
         "title": "CVE-2026-48754 - Incus: Nil-pointer dereference in createDependentVolumesFromBackup on disk.{Volume,VolumeSnapshots,Pool}",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-48754",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-21T14:36:16.000Z",
+        "isoDate": "2026-08-21T15:16:40.000Z",
         "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.1.0, `(*backend).createDependentVolumesFromBackup` in `internal/server/storage/backend.go` contains a cluster of unguarded pointer derefs on every dependent-volume entry's `VolumeSnapshots[i]`, `Volume`, ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 2.1,
+        "cveSeverity": "LOW"
       },
       {
         "title": "CVE-2026-48753 - Incus has an arbitrary file write via path traversal in S3 multipart upload",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-48753",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-21T14:34:39.000Z",
+        "isoDate": "2026-08-21T15:16:40.000Z",
         "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.1.0, the S3 protocol upload endpoint is vulnerable to path traversal and allows creation of arbitrary files on the host. This behavior could lead to arbitrary command execution. Version 7.1.0 fixes the is",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
       },
       {
         "title": "CVE-2026-48752 - Incus has arbitrary file read+write on host via templates/ symlink in malicious image",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-48752",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-21T14:31:57.000Z",
+        "isoDate": "2026-08-21T15:16:40.000Z",
         "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.2.0, a specially crafted image or instance backup can be used to read or create/write arbitrary files on the host; possibly leading to arbitrary command execution. Version 7.2.0 patches the issue.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
       },
       {
         "title": "CVE-2026-48751 - Incus has a restricted project bypass leading to arbitrary command execution",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-48751",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-21T14:21:03.000Z",
+        "isoDate": "2026-08-21T15:16:40.000Z",
         "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.2.0, instance snapshots ignore the `restricted.containers.lowlevel=block` setting; allowing for arbitrary command execution on the Incus server by abusing lowlevel hooks such as `raw.lxc` and `raw.qemu`. ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
       },
       {
         "title": "CVE-2026-48750 - Incus has an arbitrary file write on host via `exec-output` symlink in crafted image",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-48750",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-21T14:19:45.000Z",
+        "isoDate": "2026-08-21T15:16:40.000Z",
         "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.2.0, the `record-output` parameter of the `/instances/$name/exec` endpoint stores the output of the command in the `exec-output` directory of the instance. If `exec-output` is a symlink, file named `exec_",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
       },
       {
         "title": "CVE-2026-48749 - Incus has an arbitrary file read+write on host via rootfs/ symlink in malicious image",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-48749",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-21T14:17:54.000Z",
+        "isoDate": "2026-08-21T15:16:40.000Z",
         "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.2.0, a specially crafted image can be used to read or create/write arbitrary files on the host; possibly leading to arbitrary command execution. Version 7.2.0 fixes the issue.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-47753 - Incus has a Nil-Pointer Dereference Panic via Instance Backup Import (volume omitted)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47753",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T15:16:40.000Z",
+        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.1.0, `(*backend).CreateInstanceFromBackup` in `internal/server/storage/backend.go` contains a nil-pointer dereference that an authenticated user with permission to create instances in any project can trig",
+        "cveScore": 4.4,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-77806 - SPIP Remote Code Execution Vulnerability",
@@ -173,33 +245,6 @@
         "contentSnippet": "vault token disclosure via unvalidated postMessage vulnerability in N-able PassPortal allows Authentication Abuse. This issue affects the PassPortal browser extension: before 3.49.6.",
         "cveScore": 6.9,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-47753 - Incus has a Nil-Pointer Dereference Panic via Instance Backup Import (volume omitted)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47753",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T14:14:12.000Z",
-        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.1.0, `(*backend).CreateInstanceFromBackup` in `internal/server/storage/backend.go` contains a nil-pointer dereference that an authenticated user with permission to create instances in any project can trig",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-48756 - Incus: CreateCustomVolumeFromBackup nil-pointer dereference on volume_snapshots[*].expires_at (sibling-field variant of GHSA-r7w7)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48756",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T14:10:34.000Z",
-        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.1.0, `(*backend).CreateCustomVolumeFromBackup` in `internal/server/storage/backend.go` contains an unguarded `*time.Time` dereference on the `ExpiresAt` field of every volume-snapshot entry in an imported",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-77812 - Cleartext Exposure of DJI Drone Wi-Fi Credentials via BLE",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77812",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T14:06:55.000Z",
-        "contentSnippet": "DJI drones transmit DUML (DJI Universal Markup Language) protocol messages over BLE (Bluetooth Low Energy) without encryption. When a client attempts to connect to the drone over Wi-Fi, or when the drone is switched to QuickTransfer mode, the DJI Fly application exchanges DUML me",
-        "cveScore": 9.4,
-        "cveSeverity": "CRITICAL"
       },
       {
         "title": "CVE-2026-77780 - Unvalidated bank account and card foreign keys in the Prospero Flow CRM transaction save endpoint allow cross-tenant disclosure of banking identifiers",
@@ -857,54 +902,37 @@
         "contentSnippet": "The Dokan: AI Powered WooCommerce Multivendor Marketplace Solution WordPress plugin before 5.0.14 does not restrict access to per-vendor commission configuration returned by one of its unauthenticated store REST endpoints, allowing any unauthenticated user to disclose a vendor's ",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-14601 - Link Whisper < 0.9.7 - Editor+ SQL Injection via domain Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14601",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T06:00:16.000Z",
-        "contentSnippet": "The Link Whisper Free WordPress plugin before 0.9.7 does not properly sanitize and escape a parameter before using it in a SQL query, allowing authenticated users with the Editor role or above to perform SQL injection attacks.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-14325 - Drag and Drop Multiple File Upload for Contact Form 7 < 1.3.9.9 - Admin+ Stored XSS via drag_n_drop_heading_tag Setting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14325",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T06:00:15.000Z",
-        "contentSnippet": "The Drag and Drop Multiple File Upload for Contact Form 7 WordPress plugin before 1.3.9.9 does not escape one of its settings before using it as an HTML tag name in front-end output, allowing users with administrator access to inject arbitrary web scripts that execute on any fron",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2025-15671 - Welcart e-Commerce < 2.12.1 - Session Fixation via uscesid Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-15671",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T06:00:15.000Z",
-        "contentSnippet": "The Welcart e-Commerce WordPress plugin before 2.12.1 does not regenerate the session identifier on authentication and sets the session identifier from a user-supplied request parameter, allowing an unauthenticated attacker to fixate a shop member's session and take over their cu",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-16962 - Tamara Checkout <= 1.9.9.20 - Unauthenticated Order Status Manipulation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16962",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T06:00:15.000Z",
-        "contentSnippet": "The Tamara Checkout WordPress plugin through 1.9.9.20 does not verify the order key, a nonce, or any capability on its public payment cancel/fail return URLs, changing a WooCommerce order's status based solely on an attacker-supplied numeric order id, so an unauthenticated attack",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-13736 - NewPath WildApricotPress Add-on – Member Directory <= 1.0.0 - Unauthenticated Member PII Disclosure via REST API",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13736",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T06:00:15.000Z",
-        "contentSnippet": "The NewPath WildApricotPress Add-on WordPress plugin through 1.0.0 does not enforce its members-only field privacy on an unauthenticated REST route, allowing anonymous visitors to read member email addresses and phone numbers that are configured to be visible to members only.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       }
     ],
     "ai": [
+      {
+        "title": "Agentic Data Operations Platform (ADOP): Data engineering into hours",
+        "link": "https://aws.amazon.com/blogs/machine-learning/agentic-data-operations-platform-adop-data-engineering-into-hours/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-08-21T17:06:17.000Z",
+        "contentSnippet": "The Agentic Data Operations Platform (ADOP) is a reference architecture on Amazon Bedrock that uses specialized AI agents to automate the full Bronze-to-Silver-to-Gold data pipeline lifecycle, compressing new-source onboarding from weeks to hours while keeping data governance and"
+      },
+      {
+        "title": "Govern AI agent tool access with Amazon Bedrock AgentCore Gateway",
+        "link": "https://aws.amazon.com/blogs/machine-learning/govern-ai-agent-tool-access-with-amazon-bedrock-agentcore-gateway/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-08-21T17:02:35.000Z",
+        "contentSnippet": "Give your AI agents governed, auditable access to enterprise tools without consolidating infrastructure. This post walks through a four-scope maturity model (Connect, Control, Catalog, and Harden) for building a governed tool gateway with Amazon Bedrock AgentCore, advancing only "
+      },
+      {
+        "title": "Reduce RAG costs on Amazon Bedrock with query-aware compression",
+        "link": "https://aws.amazon.com/blogs/machine-learning/reduce-rag-costs-on-amazon-bedrock-with-query-aware-compression/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-08-21T16:59:15.000Z",
+        "contentSnippet": "Input tokens are often a meaningful part of the cost of running Retrieval Augmented Generation (RAG) at scale. This post describes a query-aware context compression pattern on Amazon Bedrock: after retrieval, a smaller model filters retrieved chunks against the query before the p"
+      },
+      {
+        "title": "Accelerating aircraft IFEC diagnostics with agentic AI on AWS",
+        "link": "https://aws.amazon.com/blogs/machine-learning/accelerating-aircraft-ifec-diagnostics-with-agentic-ai-on-aws/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-08-21T16:57:01.000Z",
+        "contentSnippet": "Panasonic Avionics worked with AWS and the AWS Generative AI Innovation Center to build an agentic AI system on Amazon Bedrock, Amazon SageMaker, and AWS Glue that diagnoses in-flight entertainment and connectivity (IFEC) issues across a global fleet, reducing diagnosis time from"
+      },
       {
         "title": "Meet S1-mini: Superwhisper’s 462 MB Open-Weights Text Normalizer That Turns Raw ASR Transcripts Into Clean Written Text",
         "link": "https://www.marktechpost.com/2026/08/20/meet-s1-mini-superwhispers-462-mb-open-weights-text-normalizer-that-turns-raw-asr-transcripts-into-clean-written-text/",
@@ -1576,34 +1604,6 @@
         "source": "MarkTechPost",
         "isoDate": "2026-08-06T17:17:52.000Z",
         "contentSnippet": "In this tutorial, we explore adaptive experimentation using Meta’s Ax with the modern Client API. We work through a complete workflow where we tune a RandomForest model on a synthetic classification dataset while balancing predictive accuracy against model footprint. We begin by "
-      },
-      {
-        "title": "Control agent behaviors and cost beyond a single action: new capabilities in Amazon Bedrock AgentCore",
-        "link": "https://aws.amazon.com/blogs/machine-learning/control-agent-behaviors-and-cost-beyond-a-single-action-new-capabilities-in-amazon-bedrock-agentcore/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-08-06T16:43:19.000Z",
-        "contentSnippet": "Learn about new capabilities in Amazon Bedrock AgentCore: temporal policies powered by Dogwood, a new open source policy language for AI agents, and rate limiting on the gateway. These features give you deterministic control over sequences of agent actions and cost ceilings that "
-      },
-      {
-        "title": "Build visibility for Codex on Amazon Bedrock with OpenTelemetry and Amazon CloudWatch",
-        "link": "https://aws.amazon.com/blogs/machine-learning/build-visibility-for-codex-on-amazon-bedrock-with-opentelemetry-and-amazon-cloudwatch/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-08-06T16:30:47.000Z",
-        "contentSnippet": "As engineering teams adopt coding agents like Codex, leaders need visibility into adoption, consumption, and reliability. This post shows how to route Codex OpenTelemetry metrics through a local collector to Amazon CloudWatch for an AWS native view of usage by user, team, and cos"
-      },
-      {
-        "title": "Enforcing data residency with single-Region Claude Code on Amazon Bedrock",
-        "link": "https://aws.amazon.com/blogs/machine-learning/enforcing-data-residency-with-single-region-claude-code-on-amazon-bedrock/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-08-06T16:21:54.000Z",
-        "contentSnippet": "A regulated customer needed all Claude Code inference processed in a single AWS Region (London), not just in-geography. This post shows two ways to pin Claude Code on Amazon Bedrock to one Region: an application inference profile or the Mantle endpoint, paired with an IAM Region "
-      },
-      {
-        "title": "Agent Skills for Automated Reasoning policies in Amazon Bedrock",
-        "link": "https://aws.amazon.com/blogs/machine-learning/agent-skills-for-automated-reasoning-policies-in-amazon-bedrock/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-08-06T16:12:24.000Z",
-        "contentSnippet": "Learn how to run the full Amazon Bedrock Automated Reasoning policy lifecycle from your coding agent. A suite of open source Agent Skills builds, reviews, tests, debugs, deploys, and validates a custom policy end to end, turning a specialized console task into a repeatable engine"
       }
     ],
     "virtualization": [
@@ -2310,6 +2310,27 @@
     ],
     "hardware": [
       {
+        "title": "SK hynix Takes Its Co-Packaged Optics Roadmap to Nature Electronics: 100Tb/s Nodes, Sub-1pJ/bit, Under 10ns",
+        "link": "https://www.storagereview.com/news/sk-hynix-takes-its-co-packaged-optics-roadmap-to-nature-electronics-100tb-s-nodes-sub-1pj-bit-under-10ns",
+        "source": "StorageReview",
+        "isoDate": "2026-08-21T17:11:44.000Z",
+        "contentSnippet": "Across several hardware generations, memory and networking vendors have identified different choke points in high-performance computing clusters. Memory manufacturers focused on in-package memory bandwidth, while network fabric providers addressed inter-chassis and cross-rack thr"
+      },
+      {
+        "title": "Get a full-size Keychron mechanical keyboard for just $29 — 50% off this 104-key wired keeb with your choice of Keychron Super Brown or Red switches",
+        "link": "https://www.tomshardware.com/pc-components/get-a-full-size-keychron-mechanical-keyboard-for-just-usd29-50-percent-off-this-104-key-wired-keeb-with-your-choice-of-keychron-super-brown-or-red-switches",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-21T16:45:23.000Z",
+        "contentSnippet": "Keychron’s C2 Pro full-size wired mechanical keyboard hits an all time low of $29.99 at W00t with code KEYCHRON ($24.99 if you’re new to Woot) - QMK programmability, pre-lubed switches, make this a great find while the deal lasts"
+      },
+      {
+        "title": "Bosgame M5 AMD Ryzen AI Max+ 395 128GB AI Desktop Review",
+        "link": "https://www.servethehome.com/bosgame-m5-amd-ryzen-ai-max-395-128gb-ai-desktop-review/",
+        "source": "ServeTheHome",
+        "isoDate": "2026-08-21T16:28:15.000Z",
+        "contentSnippet": "We tested the Bosgame M5, an AMD Ryzen AI Max+ 395 system that is one of the lowest cost 128GB LPDDR5X local AI systems out there The post Bosgame M5 AMD Ryzen AI Max+ 395 128GB AI Desktop Review appeared first on ServeTheHome."
+      },
+      {
         "title": "Get a $75 discount on your next Corsair upgrade — stack your cart up to $350 to enjoy big savings",
         "link": "https://www.tomshardware.com/pc-components/get-a-usd75-discount-on-your-next-corsair-upgrade-stack-your-cart-up-to-usd350-to-enjoy-big-savings",
         "source": "Tom's Hardware",
@@ -2987,27 +3008,6 @@
         "source": "StorageReview",
         "isoDate": "2026-08-17T18:48:16.000Z",
         "contentSnippet": "Two of the three big memory makers are putting money into U.S. semiconductor infrastructure at opposite ends of the production chain. Micron committed up to $3 billion to domestic supply-chain investments in July, anchored by a raw silicon wafer deal in Texas, while SK hynix is p"
-      },
-      {
-        "title": "Intel Xeon 658X Review: Granite Rapids For Workstations",
-        "link": "https://www.servethehome.com/intel-xeon-658x-review-granite-rapids-for-workstations/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-08-17T18:00:02.000Z",
-        "contentSnippet": "Intel's Granite Rapids CPUs have finally made it to the workstation market as the Xeon 600 family. Today we are reviewing the Xeon 658X, a 24 core chip that packs a punch, thanks in part to its memory bandwidth The post Intel Xeon 658X Review: Granite Rapids For Workstations appe"
-      },
-      {
-        "title": "Geekom admits to shipping malware-laced network drivers for AMD mini PCs — company responds with guidance, removes malicious package",
-        "link": "https://www.tomshardware.com/tech-industry/cyber-security/geekom-admits-to-shipping-malware-laced-network-drivers-for-amd-mini-pcs-company-responds-with-guidance-removes-malicious-package",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-17T17:18:04.000Z",
-        "contentSnippet": "Geekom admits to shipping malware-laced network drivers for AMD mini-PCs — maker requests takedown of report on the situation"
-      },
-      {
-        "title": "Best Portable SSDs in 2026: Lab-Tested Leaderboard",
-        "link": "https://www.storagereview.com/best/portable-ssds",
-        "source": "StorageReview",
-        "isoDate": "2026-08-17T16:59:06.000Z",
-        "contentSnippet": "DRAFT for review. Not linked from the hub or nav yet. Updated August 17, 2026: Samsung T9 and T7 Shield added, and the eligibility window broadened so any drive still widely sold stays in contention regardless of review date. Pricing context added for the ongoing NAND shortage. E"
       }
     ]
   }
