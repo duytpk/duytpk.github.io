@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-08-21T18:24:03.721Z",
+  "updatedAt": "2026-08-21T19:19:35.226Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-54681 - DiscordChatExporter: HTML attribute injection via unescaped emoji name in HTML export",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54681",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T18:41:45.000Z",
+        "contentSnippet": "DiscordChatExporter saves Discord chat logs to a file. Prior to 2.47.2, the VisitEmojiAsync method in DiscordChatExporter.Core/Exporting/HtmlMarkdownVisitor.cs interpolates emoji.Name into the alt attribute and emoji.Code into the title attribute without HTML entity encoding. Thi",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-54682 - DiscordChatExporter: Stored XSS in HTML export when markdown formatting is disabled",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54682",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T18:40:05.000Z",
+        "contentSnippet": "DiscordChatExporter saves Discord chat logs to a file. Prior to 2.47.2, HTML exports generated with markdown formatting disabled pass attacker-controlled content through FormatMarkdownAsync and FormatEmbedMarkdownAsync in DiscordChatExporter.Core/Exporting/MessageGroupTemplate.cs",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-56875",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56875",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T18:35:50.000Z",
+        "contentSnippet": "None",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-55850 - Element Web: A malicious homeserver can inject HTML in Element Web using its homepage",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55850",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T18:30:12.000Z",
+        "contentSnippet": "Element Web is a Matrix web client built using the Matrix React SDK. Prior to 1.12.22, EmbeddedPage in apps/web/src/components/structures/EmbeddedPage.tsx renders homeserver-supplied homepage content through dangerouslySetInnerHTML without passing it through sanitizedHtmlNode. A ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-77795 - Dromara RuoYi-Vue-Plus Workflow Endpoint TestLeaveController improper authorization",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77795",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T18:30:07.000Z",
+        "contentSnippet": "A vulnerability was identified in Dromara RuoYi-Vue-Plus up to 5.6.2. This issue affects the function FlwInstanceController/FlwDefinitionController/FlwCategoryController/FlwSpelController/TestLeaveController of the component Workflow Endpoint. Such manipulation leads to improper ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-54134 - OctoPrint: File exfiltration possible via query parameters on upload endpoints",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54134",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T18:28:15.000Z",
+        "contentSnippet": "OctoPrint provides a web interface for controlling consumer 3D printers. Prior to 1.11.8 and 2.0.0rc3, OctoPrint's custom Tornado upload handler and Flask with Werkzeug parse request parameters differently, allowing an attacker with FILE_UPLOAD permission to inject reserved inter",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-35163 - OctoPrint: XSS in Suppressed Command Notifications",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-35163",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T18:25:49.000Z",
+        "contentSnippet": "OctoPrint provides a web interface for controlling consumer 3D printers. Prior to 1.11.8 and 2.0.0rc3, Suppressed Command notification popups use PNotify rendering for printer-controlled payload.command and payload.message values in src/octoprint/static/js/app/viewmodels/terminal",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63466 - Unleash: Global Mustache.escape override disables HTML escaping process-wide, enabling Slack/Teams link-injection via unrestricted username",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63466",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T18:21:46.000Z",
+        "contentSnippet": "Unleash is an open-source feature management platform. Prior to 8.0.3, FeatureEventFormatterMd.format in src/lib/addons/feature-event-formatter-md.ts assigns Mustache.escape to an identity function before rendering action and path templates. Because Mustache.escape is process-wid",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-77237 - Missing type validation in xQueueAddToSet in FreeRTOS-Kernel",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77237",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T18:16:51.000Z",
+        "contentSnippet": "Missing queue-set type validation in xQueueAddToSet() in the FreeRTOS-Kernel before 11.3.1 might allow an unprivileged task on MPU-enabled ports with configUSE_QUEUE_SETS=1 to read privileged kernel memory. To remediate this issue, users should upgrade to version 11.3.1 or later.",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-77236 - Missing size validation in SecureContext_AllocateContext in FreeRTOS-Kernel",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77236",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T18:16:51.000Z",
+        "contentSnippet": "Missing minimum size validation in secure context allocation in FreeRTOS-Kernel before 11.3.1 might allow local users to corrupt secure-world heap metadata via an out-of-bounds write with an undersized stack size parameter. To remediate this issue, users should upgrade to version",
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-77235 - Missing privilege check in SecureContext_FreeContext in FreeRTOS-Kernel",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77235",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T18:16:51.000Z",
+        "contentSnippet": "Missing privilege verification in the secure context cleanup handler in FreeRTOS-Kernel before 11.3.1 might allow local users to cause a use-after-free condition in secure-world memory via the SVC handler for secure context deallocation. To remediate this issue, users should upgr",
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-77234 - Improper input validation in FreeRTOS-Kernel timer command handling",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77234",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T18:16:51.000Z",
+        "contentSnippet": "Improper input validation in FreeRTOS-Kernel before 11.3.1 might allow an unprivileged task on MPU-enabled ports to execute code in privileged kernel context. To remediate this issue, users should upgrade to version 11.3.1 or later.",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-71862 - Checkmate: Sensitive Bearer Token Exposure via Public Status Pages When showURL Setting is Enabled",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71862",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T18:16:50.000Z",
+        "contentSnippet": "Checkmate is an open-source, self-hosted tool designed to track and monitor server hardware, uptime, response times, and incidents in real-time with beautiful visualizations. From 3.3.0 until 3.9.2, enabling the global showURL setting causes the unauthenticated GET /api/v1/status",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-71494 - Infracost: Terraform Cloud and registry token disclosure via unvalidated hostname",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71494",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T18:16:50.000Z",
+        "contentSnippet": "Infracost provides cloud cost intelligence for engineers, AI coding agents, and CI/CD. Prior to 0.10.45, internal/hcl/remote_variables_loader.go and related Terraform Cloud, remote-plan, and Terragrunt registry request paths can attach a configured Terraform Cloud or registry tok",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-71493 - Infracost: Arbitrary file read via config-template readFile symlink traversal",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71493",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T18:16:50.000Z",
+        "contentSnippet": "Infracost provides cloud cost intelligence for engineers, AI coding agents, and CI/CD. Prior to 0.10.45, the readFile, pathExists, isDir, and matchPaths template functions in internal/config/template/parser.go use a lexical filepath.Rel check and a leaf-only os.Lstat check that d",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-70656 - Checkmate: Regular Expression Denial of Service (ReDoS) via User-Controlled Regex in Monitor Advanced Matching",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70656",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T18:16:50.000Z",
+        "contentSnippet": "Checkmate is an open-source, self-hosted tool designed to track and monitor server hardware, uptime, response times, and incidents in real-time with beautiful visualizations. From 3.5.1 until 3.9.2, an authenticated admin or superadmin can set matchMethod to regex and place a mal",
+        "cveScore": 4.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-62677 - Omnigent: Unvalidated os_env.cwd in agent bundle yields arbitrary host filesystem access on runners without OMNIGENT_RUNNER_WORKSPACE",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62677",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T18:16:49.000Z",
+        "contentSnippet": "Omnigent is an open-source AI agent framework and meta-harness for orchestrating coding agents. Prior to 0.3.0, an authenticated user can upload a session-scoped agent bundle with an absolute or traversal-containing os_env.cwd value because omnigent/spec/parser.py stores the valu",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-62676 - Omnigent Guardrail policy bypass: shell-command parser fails open in policies/builtins/_shell.py",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62676",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T18:16:49.000Z",
+        "contentSnippet": "Omnigent is an open-source AI agent framework and meta-harness for orchestrating coding agents. Prior to 0.3.0, the shared shell-command parser in omnigent/policies/builtins/_shell.py fails to recognize combined interpreter flags, the timeout, nice, setsid, and stdbuf wrappers, c",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-62675 - Omnigent: Uploaded Agent Bundle Allows Authenticated Runner RCE via Python Callable Tools",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62675",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T18:16:49.000Z",
+        "contentSnippet": "Omnigent is an open-source AI agent framework and meta-harness for orchestrating coding agents. Prior to 0.3.0, multipart POST /v1/sessions accepts an authenticated user's agent bundle and omnigent/server/bundles.py validate_agent_bundle does not reject a tools..callable dotted P",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-62674 - Omnigent: Shared Agent Bundle Overwrite Leads to Authenticated Runner RCE",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62674",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T18:16:49.000Z",
+        "contentSnippet": "Omnigent is an open-source AI agent framework and meta-harness for orchestrating coding agents. Prior to 0.3.0, PUT /sessions/{session_id}/agent checks LEVEL_EDIT permission for a session but does not reject a bound shared or template agent whose agent.session_id is None. An auth",
+        "cveScore": 9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-55241 - Checkmate: Pre-auth Denial of Service via File Upload on Registration",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55241",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T18:16:48.000Z",
+        "contentSnippet": "Checkmate is an open-source, self-hosted tool designed to track and monitor server hardware, uptime, response times, and incidents in real-time with beautiful visualizations. Prior to 3.9.1, the public POST /api/v1/auth/register route in server/src/api/routes/authRoutes.ts passes",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-41451 - UAC < 3.3.0 Command Injection via User Substitution in parse_artifact.sh",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-41451",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T18:16:48.000Z",
+        "contentSnippet": "UAC (Unix-like Artifacts Collector) versions prior to 3.3.0 contain a command injection vulnerability in the user substitution logic within parse_artifact.sh where usernames and home directories from /etc/passwd are substituted directly into command strings without escaping befor",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-41450 - UAC < 3.3.0 Command Injection via command_collector.sh",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-41450",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T18:16:48.000Z",
+        "contentSnippet": "UAC (Unix-like Artifacts Collector) versions prior to 3.3.0 contain a command injection vulnerability in the _command_collector function where foreach command output lines are substituted directly into command strings via sed without proper escaping before being evaluated with ev",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-41449 - UAC < 3.3.0 Command Injection via run_command.sh",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-41449",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T18:16:48.000Z",
+        "contentSnippet": "UAC (Unix-like Artifacts Collector) versions prior to 3.3.0 contain a command injection vulnerability in the _run_command function that allows attackers to execute arbitrary commands by injecting shell metacharacters into untrusted data such as usernames, process names, or filena",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-27875 - Simplex Incident Manager Clear Test",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-27875",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T18:16:47.000Z",
+        "contentSnippet": "Cleartext Storage of Sensitive Information in Memory vulnerability in Johnson Controls Simplex Incident Manager / Autocall Fire Administrator may allow an attcker to Retrieve Embedded Sensitive Data. This issue affects Simplex Incident Manager / Autocall Fire Administrator: befor",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
       {
         "title": "CVE-2026-75933 - Jet Admin Stored XSS",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-75933",
@@ -677,231 +902,6 @@
         "contentSnippet": "XML Injection vulnerability in joshnuss xml_builder (XmlBuilder module) allows Content Spoofing, XML Injection. This vulnerability is associated with program files lib/xml_builder.ex and program routines XmlBuilder.generate/1, XmlBuilder.generate/2, XmlBuilder.escape/1. The escap",
         "cveScore": 2.1,
         "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-47079 - Round-trip Corruption via Improper Entity Escaping in xml_builder",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47079",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T10:16:38.000Z",
-        "contentSnippet": "Inappropriate Encoding for Output Context vulnerability in joshnuss xml_builder (XmlBuilder module) allows Content Spoofing, Cross-site Scripting. This vulnerability is associated with program files lib/xml_builder.ex and program routines XmlBuilder.generate/1, XmlBuilder.generat",
-        "cveScore": 2.1,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-77710 - STIX2 Parser Confusion and Mass Assignment Allow Unauthorized MISP Attribute Metadata Injection in misp-stix library",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77710",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T09:16:41.000Z",
-        "contentSnippet": "A vulnerability in misp-stix could allow a crafted STIX document to influence security-sensitive MISP attribute metadata during import. The STIX import logic automatically selected between the internal MISP parser and the external STIX parser based on metadata contained in the ST",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-74866 - @fastify/busboy vulnerable to CRLF injection via multipart Content-Disposition filename and name",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74866",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T09:16:40.000Z",
-        "contentSnippet": "@fastify/busboy is a multipart form-data parser for Node.js. Its multipart part-header parser splits header lines only on the two-byte carriage-return line-feed sequence, so a lone carriage return or line feed embedded in a part header is not treated as a line break and is carrie",
-        "cveScore": 5.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-68745 - Apache CloudStack: SAML2 Signature Validation Silently Skipped for Cert-less IdP",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68745",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T09:16:40.000Z",
-        "contentSnippet": "Certificate validation failures in SAML authentication in Apache CloudStack 4.20.3.0 and 4.22.1.0 on all platforms allow a malicious agent to forge a SAML response to the management server. The agent will have to spoof the ip address of the IdP or get an url of its own choosing r",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-66797 - Apache CloudStack: Unauthorised comment creation and disclosure",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66797",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T09:16:40.000Z",
-        "contentSnippet": "Improper access control in CloudStack's annotation functionality allows unauthorized comment creation and disclosure. The addAnnotation and listAnnotation APIs perform an ownership check when an entity's UUID is specified, but fail to honor its result correctly. This lets any aut",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-66722 - Apache CloudStack: ProjectRole & ProjectRolePermission authorization issue",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66722",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T09:16:40.000Z",
-        "contentSnippet": "Improper authorization for CRUD operations on Project Roles and Project Role permissions for domain admins in CloudStack. A Domain Admin can create, update, delete, and list project roles and project role permissions for projects in any domain, not just their own. The check only ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-66721 - Apache CloudStack: Authorization issue with listHostTags for domain admins",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66721",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T09:16:40.000Z",
-        "contentSnippet": "Missing authorization issue for domain admins in CloudStack's host tags listing functionality. Domain Admins, by default, have permission to call the listHostTags API, but the API returns host tags for every host in the environment without domain scoping. It should instead be res",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-65613 - Apache CloudStack: Webhook Deliveries Incorrect Access",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65613",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T09:16:40.000Z",
-        "contentSnippet": "Exposure of Sensitive Information to an Unauthorized Actor vulnerability in Apache CloudStack's Webhook module while listing and deleting deliveries. This issue affects Apache CloudStack: from 4.20.0.0 through 4.20.3.0 and from 4.21.0.0 through 4.22.1.0. Users are recommended to ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-63046 - Apache InLong: Agent Installer — Command Injection to RCE via Default Credentials",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63046",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T09:16:40.000Z",
-        "contentSnippet": "Improper Neutralization of Argument Delimiters in a Command ('Argument Injection') vulnerability in Apache InLong. Agent Installer's ModuleManager executes arbitrary shell commands via ExcuteLinux.exeCmd() with no filtering or whitelist validation. This issue affects Apache InLon",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-62440 - Apache CloudStack: Improper access control in Kubernetes Service (CKS) cluster manipulation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62440",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T09:16:39.000Z",
-        "contentSnippet": "Improper Access Control vulnerability in Apache CloudStack's Kubernetes Service (CKS) plugin, allowing cross-tenant manipulation of the Kubernetes cluster while adding and removing nodes. This issue affects Apache CloudStack: from 4.21.0.0 through 4.22.1.0. Users are recommended ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-61422 - Apache CloudStack: Authenticated pre-validation SSRF in registerTemplate",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61422",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T09:16:39.000Z",
-        "contentSnippet": "Authenticated pre-validation SSRF vulnerability in Apache CloudStack's template and ISO registration functionality. When registering a template or ISO, CloudStack makes a live HTTP HEAD/GET call to determine file size for secondary storage usage-limit checks, and this happens bef",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-61400 - Apache CloudStack: Get and Run Diagnostics Command Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61400",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T09:16:39.000Z",
-        "contentSnippet": "Improper Neutralization of Special Elements used in a Command ('Command Injection') vulnerability in Apache CloudStack's run and get diagnostics functionality for the system VMs and virtual routers. An authenticated user holding the permissions required to invoke either `getDiagn",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-61399 - Apache CloudStack: Cross-Site Scripting (XSS) Vulnerability in Lock User Function in UI",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61399",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T09:16:39.000Z",
-        "contentSnippet": "Improper Encoding or Escaping of Output vulnerability in Apache CloudStack's UI while using Lock User Functionality. This issue affects Apache CloudStack: from 4.20.0.0 through 4.20.3.0 and from 4.21.0.0 through 4.22.1.0. Users are recommended to upgrade to version 4.20.3.1 or 4.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-61398 - Apache CloudStack: Cross-Site Scripting (XSS) Vulnerability in Instance Reset Password Function in UI",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61398",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T09:16:39.000Z",
-        "contentSnippet": "Improper Encoding or Escaping of Output vulnerability in Apache CloudStack's UI while using Instance Reset Password functionality. This issue affects Apache CloudStack: from 4.15.1.0 through 4.20.3.0 and from 4.21.0.0 through 4.22.1.0. Users are recommended to upgrade to version ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-61397 - Apache CloudStack: OAuth2 Token Cross-Request Leak",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61397",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T09:16:39.000Z",
-        "contentSnippet": "Exposure of Sensitive Information to an Unauthorized Actor vulnerability in Apache CloudStack's OAuth2 authentication plugin and Google OAuth integration. This issue affects Apache CloudStack: from 4.19.0.0 through 4.20.3.0 and from 4.21.0.0 through 4.22.1.0. Users are recommende",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-59799 - Apache CloudStack: Missing Privilege Check in Two-Factor Authentication Disable Flow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59799",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T09:16:38.000Z",
-        "contentSnippet": "Improper Privilege Management vulnerability in Apache CloudStack's Two-factor authentication plugin allowing bypass of the two-factor authentication disable flow. This issue affects Apache CloudStack: from 4.18.0.0 through 4.20.3.0 and from 4.21.0.0 through 4.22.1.0. Users are re",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-59780 - Apache CloudStack: LDAP provider configuration disclosure",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59780",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T09:16:38.000Z",
-        "contentSnippet": "Exposure of Sensitive Information to an Unauthorized Actor vulnerability in Apache CloudStack's LDAP authentication plugin while listing LDAP providers. LDAP configurations can be listed by any authenticated user with access to the listLdapConfigurations API. By default, this API",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-59657 - Apache CloudStack: Sensitive Information Disclosure via Cleartext Storage in AsyncJob",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59657",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T09:16:38.000Z",
-        "contentSnippet": "Cleartext Storage of Sensitive Information vulnerability in Apache CloudStack with AsyncJob storage in the database. This issue affects Apache CloudStack: from 4.0.0 through 4.20.3.0 and from 4.21.0.0 through 4.22.1.0. Users are recommended to upgrade to version 4.20.3.1 or 4.22.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-59655 - Apache CloudStack: Unauthenticated OAuth provider client-secret disclosure",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59655",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T09:16:38.000Z",
-        "contentSnippet": "Exposure of Sensitive Information to an Unauthorized Actor vulnerability in Apache CloudStack's OAuth authentication plugin while listing OAuth providers. This issue affects Apache CloudStack: from 4.19.0.0 through 4.20.3.0 and from 4.21.0.0 through 4.22.1.0. Users are recommende",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-59085 - Apache CloudStack: Server-Side Request Forgery (SSRF) vulnerability in webhook module",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59085",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T09:16:38.000Z",
-        "contentSnippet": "Server-Side Request Forgery (SSRF) vulnerability in Apache CloudStack's webhook module, exploitable via webhook delivery requests. This issue affects Apache CloudStack: from 4.20.0.0 through 4.20.3.0 and from 4.21.0.0 through 4.22.1.0. Users are recommended to upgrade to version ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-50222 - Apache CloudStack: Improper access control in Userdata reference APIs",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50222",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T09:16:38.000Z",
-        "contentSnippet": "Missing Authorization, Exposure of Sensitive Information to an Unauthorized Actor vulnerability in Apache CloudStack's Userdata reference APIs. Several userdata-related APIs in Apache CloudStack, including deleteUserData, linkUserDataToTemplate, resetUserDataForVirtualMachine, de",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-50112 - Apache CloudStack: RCE and SSRF in direct download, metalink and NFS templates",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50112",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T09:16:38.000Z",
-        "contentSnippet": "SSRF via Metalink Mirror URL Resolution: An authenticated tenant can register a template pointing to an attacker-controlled metalink file containing internal targets. The Secondary Storage VM will retrieve the data and persist it as a template file, which can later be downloaded ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-47359 - Apache CloudStack: OS Command Injection due to unsanitized mount command",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47359",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T09:16:38.000Z",
-        "contentSnippet": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability in Apache CloudStack's NAS backup provider plugin. The addBackupRepository API (available since 4.20.0.0) and updateBackupRepository API (introduced in 4.22.0.0) accept unsani",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-77264 - Automation Web Platform <= 4.8.6 - Unauthenticated Authentication Bypass via 'otp_transient' Token Disclosure",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77264",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T08:16:44.000Z",
-        "contentSnippet": "The Automation Web Platform – Notifications and OTP for WooCommerce, Advanced Country Code plugin for WordPress is vulnerable to Authentication Bypass in versions up to, and including, 4.8.6. This is due to the handle_email_otp_return() function returning the secret magic login t",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-73537 - Miraikan Assist App Cross-Site Scripting Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73537",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T08:16:44.000Z",
-        "contentSnippet": "Cross-site scripting vulnerability exists in Miraikan Assist App. If this vulnerability is exploited, an arbitrary script may be executed in the browser component (WebView) running on the affected product, resulting in the displayed content being altered.",
-        "cveScore": 5.1,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
