@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-08-21T14:25:36.540Z",
+  "updatedAt": "2026-08-21T15:24:23.416Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-63125 - Incus vulnerable to root RCE via image backup.yaml symlink",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63125",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T14:49:16.000Z",
+        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.3.0, an unprivileged, project-confined Incus user (a non-admin TLS/RBAC identity with `can_create_images` and `can_create_instances`) can execute arbitrary code as root on the host. A crafted image ships ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-62941 - Incus: Cross-project instance copy bypasses target project restrictions via TOCTOU in config merge",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62941",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T14:47:56.000Z",
+        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.3.0, when copying an instance across projects, the project restriction check (`AllowInstanceCreation`) runs BEFORE the source instance's configuration is merged into the request. Dangerous configuration k",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-62940 - Incus has a project restriction bypass via instance migration config override",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62940",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T14:47:13.000Z",
+        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.3.0, when migrating an instance to another cluster member, user-supplied configuration overrides (including security-critical keys like `security.privileged` and `raw.lxc`) are applied without any project",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-75501 - CVE-2026-75501",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75501",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T14:47:04.000Z",
+        "contentSnippet": "A vulnerability in the Calix EXOS firmware for the GS7 XGS (GS5239XG) residential router allows unauthenticated remote attackers to modify NAT port‑forwarding rules via the UPnP WANIPConnection service. The device exposes the MiniUPnPd control endpoint on the WAN interface on TCP",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-62867 - Incus has an argument injection in storage volume block.create_options that leads to arbitrary command execution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62867",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T14:45:35.000Z",
+        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.3.0, improper validation of user-provided `block.create_options` in storage volume configuration leads to argument injection in the constructed filesystem creation command line. This allows a project-scop",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-62313 - Incus: Project restriction `restricted.containers.privilege=isolated` bypassable by omitting `security.idmap.isolated`",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62313",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T14:44:27.000Z",
+        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.3.0, project-level enforcement of `restricted.containers.privilege=isolated` can be trivially bypassed, allowing a user to create a non-isolated (shared host idmap) container in a project that is configur",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-55622 - Incus has a project restriction bypass in instance copy across projects",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55622",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T14:40:35.000Z",
+        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.2.0, missing authorization checks exist for instance copying where an attacker knowing the name of a project that they don't have access to and the name of an instance in that project can copy the instanc",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-55621 - Incus has a project restriction bypass for custom volume copy across projects",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55621",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T14:39:43.000Z",
+        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.2.0, missing authorization checks exist for custom volume copying where an attacker knowing the name of a project that they don't have access to and the name of a custom volume in that project can copy th",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-48769 - Incus has an arbitrary file write on its client due to trusted image hash",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48769",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T14:38:38.000Z",
+        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.2.0, an arbitrary file write exists in the Incus client when a malicious image server returns a crafted `Incus-Image-Hash` header. This can lead to arbitrary command execution as root on the server. Versi",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-48755 - Incus has an argument injection in backup compression algorithm leading to AFW and ACE",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48755",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T14:37:25.000Z",
+        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.1.0, improper validation of user-provided backup compression algorithm leads to argument injection in the constructed command line. This leads to an arbitrary file write on the host, possibly leading to a",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-48754 - Incus: Nil-pointer dereference in createDependentVolumesFromBackup on disk.{Volume,VolumeSnapshots,Pool}",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48754",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T14:36:16.000Z",
+        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.1.0, `(*backend).createDependentVolumesFromBackup` in `internal/server/storage/backend.go` contains a cluster of unguarded pointer derefs on every dependent-volume entry's `VolumeSnapshots[i]`, `Volume`, ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-48753 - Incus has an arbitrary file write via path traversal in S3 multipart upload",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48753",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T14:34:39.000Z",
+        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.1.0, the S3 protocol upload endpoint is vulnerable to path traversal and allows creation of arbitrary files on the host. This behavior could lead to arbitrary command execution. Version 7.1.0 fixes the is",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-48752 - Incus has arbitrary file read+write on host via templates/ symlink in malicious image",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48752",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T14:31:57.000Z",
+        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.2.0, a specially crafted image or instance backup can be used to read or create/write arbitrary files on the host; possibly leading to arbitrary command execution. Version 7.2.0 patches the issue.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-48751 - Incus has a restricted project bypass leading to arbitrary command execution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48751",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T14:21:03.000Z",
+        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.2.0, instance snapshots ignore the `restricted.containers.lowlevel=block` setting; allowing for arbitrary command execution on the Incus server by abusing lowlevel hooks such as `raw.lxc` and `raw.qemu`. ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-48750 - Incus has an arbitrary file write on host via `exec-output` symlink in crafted image",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48750",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T14:19:45.000Z",
+        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.2.0, the `record-output` parameter of the `/instances/$name/exec` endpoint stores the output of the command in the `exec-output` directory of the instance. If `exec-output` is a symlink, file named `exec_",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-48749 - Incus has an arbitrary file read+write on host via rootfs/ symlink in malicious image",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48749",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T14:17:54.000Z",
+        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.2.0, a specially crafted image can be used to read or create/write arbitrary files on the host; possibly leading to arbitrary command execution. Version 7.2.0 fixes the issue.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-77806 - SPIP Remote Code Execution Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77806",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T14:16:53.000Z",
+        "contentSnippet": "SPIP before 4.4.21 allows unauthenticated remote attackers to execute arbitrary code, as exploited in the wild in August 2026. This is related to code injection via an X-Spip-Filtre HTTP request header that is mishandled by analyse_resultat_skel.",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-75946 - OMEN Gaming Hub – Potential Escalation of Privilege & Information Disclosure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75946",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T14:16:52.000Z",
+        "contentSnippet": "A potential security vulnerability has been identified in the OMEN Gaming Hub for versions prior to 1101.2608.0.0. The vulnerability could potentially allow a local attacker to escalate privileges due to insufficient access controls.",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-15580 - PassPortal browser extension: vault token disclosure via unvalidated postMessage",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15580",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T14:16:48.000Z",
+        "contentSnippet": "vault token disclosure via unvalidated postMessage vulnerability in N-able PassPortal allows Authentication Abuse. This issue affects the PassPortal browser extension: before 3.49.6.",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-47753 - Incus has a Nil-Pointer Dereference Panic via Instance Backup Import (volume omitted)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47753",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T14:14:12.000Z",
+        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.1.0, `(*backend).CreateInstanceFromBackup` in `internal/server/storage/backend.go` contains a nil-pointer dereference that an authenticated user with permission to create instances in any project can trig",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-48756 - Incus: CreateCustomVolumeFromBackup nil-pointer dereference on volume_snapshots[*].expires_at (sibling-field variant of GHSA-r7w7)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48756",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T14:10:34.000Z",
+        "contentSnippet": "Incus is a system container and virtual machine manager. Prior to version 7.1.0, `(*backend).CreateCustomVolumeFromBackup` in `internal/server/storage/backend.go` contains an unguarded `*time.Time` dereference on the `ExpiresAt` field of every volume-snapshot entry in an imported",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-77812 - Cleartext Exposure of DJI Drone Wi-Fi Credentials via BLE",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77812",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T14:06:55.000Z",
+        "contentSnippet": "DJI drones transmit DUML (DJI Universal Markup Language) protocol messages over BLE (Bluetooth Low Energy) without encryption. When a client attempts to connect to the drone over Wi-Fi, or when the drone is switched to QuickTransfer mode, the DJI Fly application exchanges DUML me",
+        "cveScore": 9.4,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-77780 - Unvalidated bank account and card foreign keys in the Prospero Flow CRM transaction save endpoint allow cross-tenant disclosure of banking identifiers",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77780",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T13:18:20.000Z",
+        "contentSnippet": "Authorization Bypass Through User-Controlled Key in the transaction save endpoint in Roskus Prospero Flow CRM 4.9.1 through 5.14.0 allows a user with transaction and accounting creation permissions to disclose another company's bank account name, bank name and card last four digi",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-77028 - Joomla Extension - yootheme.com - Reflected XSS and open redirect via the submission redirect parameter in Zoo < 4.1.66",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77028",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T13:18:20.000Z",
+        "contentSnippet": "Joomla Extension - yootheme.com - Reflected XSS and open redirect via the submission redirect parameter in Zoo",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-76613 - Joomla Extension - yootheme.com - Authenticated, privileged SQL injection in YOOtheme Pro 1.0.0-5.0.40",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76613",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T13:18:20.000Z",
+        "contentSnippet": "Joomla Extension - yootheme.com - Authenticated, privileged SQL injection in YOOtheme Pro 1.0.0-5.0.40 - An SQL injection allowed any contributor-level user to inject own content into SQL queries.",
+        "cveScore": 9.2,
+        "cveSeverity": "CRITICAL"
+      },
       {
         "title": "CVE-2026-59654 - Apache CloudStack: DoS caused by database connections leak",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-59654",
@@ -164,33 +389,6 @@
         "contentSnippet": "Joomla Extension - yootheme.com - Authenticated, privileged arbitrary file read in YOOtheme Pro 2.3.0-5.0.40 - The Filesystem source's path filter is vulnerable to glob-based pattern attacks, allowing authorized users to read arbitrary files.",
         "cveScore": 7,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-76613 - Joomla Extension - yootheme.com - Authenticated, privileged SQL injection in YOOtheme Pro 1.0.0-5.0.40",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76613",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T12:14:02.000Z",
-        "contentSnippet": "Joomla Extension - yootheme.com - Authenticated, privileged SQL injection in YOOtheme Pro 1.0.0-5.0.40 - An SQL injection allowed any contributor-level user to inject own content into SQL queries.",
-        "cveScore": 9.2,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-77028 - Joomla Extension - yootheme.com - Reflected XSS and open redirect via the submission redirect parameter in Zoo < 4.1.66",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77028",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T12:13:04.000Z",
-        "contentSnippet": "Joomla Extension - yootheme.com - Reflected XSS and open redirect via the submission redirect parameter in Zoo",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-77780 - Unvalidated bank account and card foreign keys in the Prospero Flow CRM transaction save endpoint allow cross-tenant disclosure of banking identifiers",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77780",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T12:12:59.000Z",
-        "contentSnippet": "Authorization Bypass Through User-Controlled Key in the transaction save endpoint in Roskus Prospero Flow CRM 4.9.1 through 5.14.0 allows a user with transaction and accounting creation permissions to disclose another company's bank account name, bank name and card last four digi",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-77769 - OpenPanel report.list Queries Reports by an Unverified dashboardId, Crossing Organization Boundaries",
@@ -704,204 +902,6 @@
         "contentSnippet": "The NewPath WildApricotPress Add-on WordPress plugin through 1.0.0 does not enforce its members-only field privacy on an unauthenticated REST route, allowing anonymous visitors to read member email addresses and phone numbers that are configured to be visible to members only.",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-65645 - Rocket.Chat Insecure DDP Method Schema Validation Information Disclosure",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65645",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T04:18:14.000Z",
-        "contentSnippet": "Rocket.Chat in versions before 8.8.0, 8.7.1, 8.6.2, 8.5.3, 8.4.6. 8.3.8, 8.2.8, 8.1.8, and 7.10.15, the Meteor DDP methods getThreadsList and getThreadMessages accept rid / tmid as raw, untyped parameters with no schema validation. A MongoDB operator object (e.g. {\"$gt\": \"4\"}) ca",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-65644 - Rocket.Chat Cross-Site Scripting Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65644",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T04:18:13.000Z",
-        "contentSnippet": "Rocket.Chat in versions before 8.8.0, 8.7.1, 8.6.2, 8.5.3, 8.4.6, 8.3.8, 8.2.8, 8.1.8, and 7.10.15 has a REST API endpoint POST /api/v1/livechat/visitor that accepts an unauthenticated, unsanitized name field for Livechat visitors. This name is stored raw and later rendered via d",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-45202 - GPU DDK - Silent High-Order CMA Memory Leak & Double Free in `_FreeOSPages_Fast`",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45202",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T04:18:03.000Z",
-        "contentSnippet": "Software installed and run as a non-privileged user may conduct GPU system calls which cause GPU memory leaks and possible kernel heap corruption. Scenario caused by memory free paths not maintaining state data of upgraded higher order allocations. This could cause memory leak or",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-45201 - GPU DDK - Incorrect page size validation in PhysmemNewRamBackedPMR could lead to OOB read and/or write of arbitrary physical memory",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45201",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T04:18:02.000Z",
-        "contentSnippet": "Software installed and run as a non-privileged user may conduct improper GPU system calls to pass invalid log2 page size when allocating physical pages leading to OOB read and/or write due to improper validation of the said value. Such crafted log2 page size could lead to 4K page",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-45199 - GPU DDK - rgxfw_to_ptr() does not reject FW private data pointers",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45199",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T04:18:02.000Z",
-        "contentSnippet": "Kernel software installed and running inside a Guest VM may post improper commands to the GPU Firmware to trigger a write of data outside the Guest's virtualised GPU memory. Software installed and run under a Guest VM can send commands to the GPU which result in out of bounds mem",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-18409 - WPForms Pro <= 2.0.0.2 - Unauthenticated Stored Cross-Site Scripting via Single Line Text and Paragraph Text Field Values",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18409",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T04:18:01.000Z",
-        "contentSnippet": "The WPForms Pro plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Single Line Text and Paragraph Text Field Values in all versions up to, and including, 2.0.0.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthentica",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-76158 - Datiphy Data Management Center - External Control of File Name or Path",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76158",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T03:16:39.000Z",
-        "contentSnippet": "External Control of File Name or Path in the upload API endpoint of Datiphy Data Management Center from v8.3.0 through v8.5.1 allows a remote attacker to write files to arbitrary locations outside the intended upload directory via relative or absolute path sequences.",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-76137 - VOCALOID6 Local Privilege Escalation Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76137",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T03:16:39.000Z",
-        "contentSnippet": "Missing authentication for critical function vulnerability exists in VOCALOID6. Any process running under the same local user account as a running VOCALOID6 Editor instance may escalate privileges via a local named pipe.",
-        "cveScore": 4.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-76131 - Yamaha VOCALOID6 Hard-Coded Credentials Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76131",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T03:16:39.000Z",
-        "contentSnippet": "Use of hard-coded credentials issue exists in VOCALOID6 , which may allow an attacker to impersonate a legitimate VOCALOID6 Editor and gain access to Yamaha's activation and content servers.",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-73267 - Clusterclaims-controller: clusterclaims-controller: managedcluster deletion keyed solely on clusterclaim.spec.namespace with no ownership check",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73267",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T03:16:39.000Z",
-        "contentSnippet": "A flaw was found in the clusterclaims-controller component of multicluster engine (MCE). A tenant with standard permissions to create and delete ClusterClaim resources can exploit this by manipulating the `spec.namespace` field. This allows the tenant to specify and delete any Ma",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-77392 - SourceCodester Dynamic Input Field Generator Using HTML, CSS, and PHP submit.php saveUser sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77392",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T02:16:28.000Z",
-        "contentSnippet": "A weakness has been identified in SourceCodester Dynamic Input Field Generator Using HTML, CSS, and PHP 1.0. This impacts the function saveUser of the file /public/submit.php. This manipulation of the argument Researcher causes sql injection. The attack may be initiated remotely.",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-77391 - SourceCodester Dynamic Input Field Generator Using HTML, CSS, and PHP cross-site request forgery",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77391",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T02:16:27.000Z",
-        "contentSnippet": "A security flaw has been discovered in SourceCodester Dynamic Input Field Generator Using HTML, CSS, and PHP 1.0. This affects an unknown function. The manipulation results in cross-site request forgery. The attack can be launched remotely. The exploit has been released to the pu",
-        "cveScore": 5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-76157 - Datiphy Data Management Center - Missing Authentication for Critical Function",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76157",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T02:16:27.000Z",
-        "contentSnippet": "Missing authentication for a critical function in the upload API endpoint of Datiphy Data Management Center from v8.3.0 through v8.5.1 allows an unauthenticated remote attacker to upload arbitrary files to the server's configured upload directory.",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-76156 - Datiphy Data Management Center - Improper Neutralization of Special Elements used in an OS Command",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76156",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T02:16:27.000Z",
-        "contentSnippet": "OS command injection in the api endpoint of Datiphy Data Management Center from v8.3.0 through v8.5.1 allows an authenticated administrator to execute arbitrary operating system commands as root.",
-        "cveScore": 9.4,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-76155 - Datiphy Data Management Center - Use of Default Credentials",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76155",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T02:16:25.000Z",
-        "contentSnippet": "Use of default credentials in Datiphy Data Management Center from v8.3.0 through v8.5.1 allows a remote attacker to gain administrative access to the management platform by logging in with default administrator credentials.",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-77651 - arrayref Supply Chain Compromise",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77651",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T01:17:02.000Z",
-        "contentSnippet": "The arrayref crate 0.3.10 for Rust can trigger execution of malicious code when compiling a project that uses the crate, because it has a rogue dependency that registers with a command-and-control server to offer arbitrary code execution.",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-77650 - append-only-vec Malicious Dependency Arbitrary Code Execution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77650",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T01:17:01.000Z",
-        "contentSnippet": "The append-only-vec crate 0.1.9 for Rust can trigger execution of malicious code when compiling a project that uses the crate, because it has a rogue dependency that registers with a command-and-control server to offer arbitrary code execution.",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-77649 - Internment Rust Crate Arbitrary Code Execution Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77649",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T01:17:01.000Z",
-        "contentSnippet": "The internment crate 0.8.7 for Rust can trigger execution of malicious code when compiling a project that uses the crate, because it has a rogue dependency that registers with a command-and-control server to offer arbitrary code execution.",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-43679 - Apple Watch Contacts Access Bypass via Physical Access",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-43679",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T01:17:01.000Z",
-        "contentSnippet": "This issue was addressed with improved permissions checking. This issue is fixed in watchOS 26.4. An attacker with physical access to a locked Apple Watch may be able to view user contacts.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-20679 - Apple macOS Application Denial of Service Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-20679",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T01:16:59.000Z",
-        "contentSnippet": "The issue was addressed with improved checks. This issue is fixed in macOS Sequoia 15.7.5, macOS Sonoma 14.8.5, macOS Tahoe 26.4. Processing a maliciously crafted file may lead to unexpected app termination.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-16520 - Genians Genian NAC and Genian ZTNA SQL Injection and Authentication Bypass Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16520",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T00:16:31.000Z",
-        "contentSnippet": "Improper input validation and Exposure of sensitive information through data queries vulnerability in Genians Genian NAC V4.0, Genians Genian NAC V5.0, and Genians Genian ZTNA V6.0 allows SQL Injection and Authentication Bypass. This issue affects Genian NAC V4.0: from 4.0.0 befo",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-77648 - OpenStack Glance Server-Side Request Forgery",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77648",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T23:16:28.000Z",
-        "contentSnippet": "In OpenStack Glance through 32.0.0, the /v2/tasks API accepts type=import tasks that bypass import_filtering_opts, allowing an admin to fetch internal URLs from the Glance service network (aka SSRF), as long as https:// or http:// is used. This API has been available only to admi",
-        "cveScore": 2.2,
-        "cveSeverity": "LOW"
       }
     ],
     "ai": [
@@ -2310,6 +2310,20 @@
     ],
     "hardware": [
       {
+        "title": "Florida seeks court ruling to officially classify Sam Altman and ChatGPT as a 'public nuisance' — OpenAI fights to keep lawsuit away from a state jury",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/openai-fights-to-keep-chatgpt-lawsuit-away-from-a-state-jury",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-21T15:11:18.000Z",
+        "contentSnippet": "Florida's lawsuit against OpenAI and Sam Altman has now been sitting before U.S. District Judge Aileen Cannon in Fort Pierce for seven weeks."
+      },
+      {
+        "title": "World's largest open library calls for volunteers to scan and preserve physical books as AI companies buy, scan, and destroy them — Anna's Archive says ‘time is running out’ as ‘knowledge is permanent",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/worlds-largest-open-library-calls-for-volunteers-to-scan-and-preserve-physical-books-as-ai-companies-buy-scan-and-destroy-them-annas-archive-says-time-is-running-out-as-knowledge-is-permanently-monopolized-on-private-servers",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-21T14:33:36.000Z",
+        "contentSnippet": "A volunteer for Anna's Archive is calling for volunteers to scan and upload books to the shadow library to help preserve human knowledge for the public. The move comes as more AI companies buy, scan, and destroy books to feed to AI models, which is easier and faster than scanning"
+      },
+      {
         "title": "Elegoo Centauri 2 Combo review: A budget-friendly printer made even more budget-friendly",
         "link": "https://www.tomshardware.com/3d-printing/elegoo-centauri-2-combo-review",
         "source": "Tom's Hardware",
@@ -2994,20 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-08-17T15:39:28.000Z",
         "contentSnippet": "Alibaba has agreed to sell its game development unit, Lingxi Games, to Asian private equity firm Trustar Capital, according to an internal staff memo."
-      },
-      {
-        "title": "Judge clears Nine PBS to retrieve 70 years of archival TV data — court rules station owns 50TB of data in Iron Mountain servers after host went under",
-        "link": "https://www.tomshardware.com/software/cloud-storage/judge-clears-nine-pbs-to-retrieve-70-years-of-archival-tv-data-court-rules-station-owns-50tb-of-data-in-iron-mountain-servers-after-host-went-under",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-17T14:31:31.000Z",
-        "contentSnippet": "There’s light at the end of the tunnel for Nine PBS after a judge has cleared the way for it to retrieve archival data and programming from Iron Mountain."
-      },
-      {
-        "title": "Memory prices climb 500% in 12 months, up to 10x the lowest ever tracked prices — 128GB of DDR5 now $3,399",
-        "link": "https://www.tomshardware.com/pc-components/ram/memory-prices-climb-500-percent-in-12-months-up-to-10x-the-lowest-ever-tracked-prices-128gb-of-ddr5-now-usd3-399",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-17T13:52:30.000Z",
-        "contentSnippet": "Analysis of historical price data trends indicates that the memory crisis has driven RAM prices to never-before-seen heights."
       }
     ]
   }
