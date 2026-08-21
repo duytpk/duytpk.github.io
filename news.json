@@ -1,16 +1,205 @@
 {
-  "updatedAt": "2026-08-21T11:17:55.438Z",
+  "updatedAt": "2026-08-21T12:28:52.669Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
+        "title": "CVE-2026-77759 - IDOR and missing authorization in the Prospero Flow CRM transaction API allow cross-tenant reading of financial records",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77759",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T11:29:43.000Z",
+        "contentSnippet": "Authorization Bypass Through User-Controlled Key in the transaction API in Roskus Prospero Flow CRM 5.0.0 through 5.3.5 allows an authenticated user to read the transactions of other companies on the same instance via an incremented identifier in GET /api/transaction/{id}, which ",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-77776 - Headroom Proxy Treats the Client-Supplied x-headroom-user-id Header as an Authenticated Identity",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77776",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T11:22:51.000Z",
+        "contentSnippet": "Headroom's LLM proxy derives the memory owner from the x-headroom-user-id request header. The header is read directly at several points in headroom/proxy/handlers/openai.py, including the chat completion and websocket paths, and nothing binds the value to the caller. A client can",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-77775 - Headroom Proxy Sends Upstream Requests to a Client-Supplied Base URL Without Address Validation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77775",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T11:22:51.000Z",
+        "contentSnippet": "Headroom's LLM proxy lets a client choose the upstream destination with the x-headroom-base-url request header. _resolve_openai_upstream_base in headroom/proxy/handlers/openai.py accepts the header value, requires only that it parse with an http or https scheme and a hostname, an",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-77769 - OpenPanel report.list Queries Reports by an Unverified dashboardId, Crossing Organization Boundaries",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77769",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T11:17:07.000Z",
+        "contentSnippet": "The report.list procedure in packages/trpc/src/routers/report.ts accepted a projectId and a dashboardId and returned getReportsByDashboardId(dashboardId). The enforceAccess middleware in packages/trpc/src/trpc.ts verified membership for the supplied projectId, but nothing verifie",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-77768 - OpenPanel report.get Returns Any Report by Identifier Without Checking Project Access",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77768",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T11:17:07.000Z",
+        "contentSnippet": "The report.get procedure in packages/trpc/src/routers/report.ts accepted only a reportId and returned getReportById(reportId) directly. The enforceAccess middleware in packages/trpc/src/trpc.ts evaluates membership only when the input carries a projectId or organizationId key, so",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-77767 - Reconmap Report Preview Endpoint Is Marked AllowAnonymous, Exposing Every Project and Client Organisation Without Authentication",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77767",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T11:17:07.000Z",
+        "contentSnippet": "Reconmap's API applies a fallback authorization policy in apps/api/app/Program.cs that requires an authenticated user holding the administrator role, so controllers without their own attribute reject anonymous callers. The report preview action in apps/api/app/Controllers/Reports",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-77763 - JuiceFS Local Filestore Backend Joins Object Keys onto the Storage Root Without a Containment Check, Allowing Writes Outside the Configured Directory",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77763",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T11:17:06.000Z",
+        "contentSnippet": "The filestore backend in pkg/object/file.go, used for file:// stores and as a common juicefs sync destination, derived every operation's target from path(key), which returned either filepath.Join(d.root, key) or filepath.Clean(d.root + key) with no check that the result stayed be",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-77761 - Cross-Document Parser State Contamination in misp-stix",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77761",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T11:17:06.000Z",
+        "contentSnippet": "A parser state isolation vulnerability in misp-stix could cause data from a previously processed STIX document to be retained and incorporated into the MISP event generated from a subsequent document when the same parser instance is reused. Several STIX 1 and STIX 2 parser compon",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-77686 - Dolibarr Account card.php improper authorization",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77686",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T11:17:06.000Z",
+        "contentSnippet": "A weakness has been identified in Dolibarr up to 23.0.4. This affects an unknown part of the file htdocs/user/card.php of the component Account Handler. This manipulation of the argument ID causes improper authorization. The attack may be initiated remotely. The exploit has been ",
+        "cveScore": 5.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-77683 - Comfast CF-N1-S mbox-config system command injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77683",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T11:17:06.000Z",
+        "contentSnippet": "A security flaw has been discovered in Comfast CF-N1-S 2.6.0.1. Affected by this issue is the function system of the file /cgi-bin/mbox-config?method=SET&section=ntp_timezone. The manipulation of the argument timestr results in command injection. The attack can be launched remote",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-77086 - SiYuan before v3.7.4 Path Traversal via packageName",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77086",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T11:17:06.000Z",
+        "contentSnippet": "SiYuan before v3.7.4 fails to validate the packageName parameter in Bazaar install and uninstall endpoints, allowing authenticated administrators to perform path traversal via directory traversal sequences. Attackers with admin access can write arbitrary files to any location via",
+        "cveScore": 9.4,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-59296 - Micrometer StatsD and Logging meter registries line-protocol and log injection vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59296",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T11:17:05.000Z",
+        "contentSnippet": "Using untrusted, non-normalized input as-is for metrics data (such as metric names, tag keys, or tag values) is a dangerous antipattern that general-purpose instrumentation should never perform. When such unsafe instrumentation is used, the application becomes vulnerable to injec",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-15576 - Agent receiver accepts mTLS requests without a client certificate",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15576",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T11:17:04.000Z",
+        "contentSnippet": "Improper authentication in the agent receiver of Checkmk",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-14208 - Local Privilege Escalation via Insecure DLL Permissions in Remote Utilities Host <=7.7.3.0",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14208",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T11:17:04.000Z",
+        "contentSnippet": "Remote Utilities Host",
+        "cveScore": 7.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-77755 - Denial of Service in MISP-STIX Import via Malformed or Oversized STIX Documents in misp-stix library",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77755",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T10:16:39.000Z",
+        "contentSnippet": "A denial-of-service vulnerability was identified in misp-stix when processing attacker-controlled STIX 1 or STIX 2 documents. The STIX import code used sys.exit() to handle several parsing and loading failures. Because SystemExit inherits from BaseException rather than Exception,",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-77751 - Path Traversal in MISP Object Template Resolution During STIX Import and Export in misp-stix library",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77751",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T10:16:39.000Z",
+        "contentSnippet": "A path traversal vulnerability existed in the handling of MISP object template names during STIX 2 import and MISP-to-STIX 2 export. MISP object names are passed to PyMISP's object-template resolution mechanism, which constructs a filesystem path by joining the configured MISP ob",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-77681 - CodeAstro Online Job Portal update-profile.php unrestricted upload",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77681",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T10:16:39.000Z",
+        "contentSnippet": "A vulnerability was identified in CodeAstro Online Job Portal 1.0. Affected by this vulnerability is an unknown functionality of the file /users/update-profile.php. The manipulation of the argument Name leads to unrestricted upload. The attack can be initiated remotely. The explo",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-59323 - Micrometer Tracing Brave Bridge W3C Baggage propagation DoS vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59323",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T10:16:38.000Z",
+        "contentSnippet": "An application using Micrometer Tracing with W3C baggage propagation in the Brave bridge is vulnerable to denial of service (DoS) due to unbounded object allocation when extracting incoming baggage headers. Specifically, an application is vulnerable when all the following are tru",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-48590 - Element and Attribute Names Injected Verbatim into XML Output in xml_builder",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48590",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T10:16:38.000Z",
+        "contentSnippet": "XML Injection vulnerability in joshnuss xml_builder (XmlBuilder module) allows Content Spoofing, XML Injection. This vulnerability is associated with program files lib/xml_builder.ex and program routines XmlBuilder.generate/1, XmlBuilder.generate/2, XmlBuilder.element/1, XmlBuild",
+        "cveScore": 2.1,
+        "cveSeverity": "LOW"
+      },
+      {
         "title": "CVE-2026-47827 - CVE-2026-47827 – BOSH CLI Powershell Injection",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-47827",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-21T09:38:30.000Z",
+        "isoDate": "2026-08-21T10:16:38.000Z",
         "contentSnippet": "Command Injection in BOSH CLI tool on windows in Cloud Foundry allows a remote attacker to execute arbitrary shell commands via command injection vulnerabilities",
         "cveScore": 7.5,
         "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-47080 - CDATA Section Breakout via Unsanitised ]]> in xml_builder",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47080",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T10:16:38.000Z",
+        "contentSnippet": "XML Injection vulnerability in joshnuss xml_builder (XmlBuilder module) allows Content Spoofing, XML Injection. This vulnerability is associated with program files lib/xml_builder.ex and program routines XmlBuilder.generate/1, XmlBuilder.generate/2, XmlBuilder.escape/1. The escap",
+        "cveScore": 2.1,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-47079 - Round-trip Corruption via Improper Entity Escaping in xml_builder",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47079",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-21T10:16:38.000Z",
+        "contentSnippet": "Inappropriate Encoding for Output Context vulnerability in joshnuss xml_builder (XmlBuilder module) allows Content Spoofing, Cross-site Scripting. This vulnerability is associated with program files lib/xml_builder.ex and program routines XmlBuilder.generate/1, XmlBuilder.generat",
+        "cveScore": 2.1,
+        "cveSeverity": "LOW"
       },
       {
         "title": "CVE-2026-77710 - STIX2 Parser Confusion and Mass Assignment Allow Unauthorized MISP Attribute Metadata Injection in misp-stix library",
@@ -712,195 +901,6 @@
         "isoDate": "2026-08-20T22:18:00.000Z",
         "contentSnippet": "Authorization bypass through user-controlled key in Microsoft Partner Center allows an unauthorized attacker to disclose information over a network.",
         "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-69555 - Azure Arc Elevation of Privilege Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-69555",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T22:18:00.000Z",
-        "contentSnippet": "Incorrect authorization in Azure Arc allows an unauthorized attacker to elevate privileges over a network.",
-        "cveScore": 10,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-69543 - Azure Virtual Machines Elevation of Privilege Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-69543",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T22:18:00.000Z",
-        "contentSnippet": "Server-side request forgery (ssrf) in Azure Virtual Machines allows an authorized attacker to elevate privileges over a network.",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-69519 - Azure Stack HCI Information Disclosure Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-69519",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T22:18:00.000Z",
-        "contentSnippet": "Observable response discrepancy in Azure Stack HCI allows an unauthorized attacker to disclose information over a network.",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-69419 - Azure Data Manager for Energy Remote Code Execution Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-69419",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T22:17:59.000Z",
-        "contentSnippet": "Integer overflow or wraparound in Azure Data Manager for Energy allows an authorized attacker to execute code over a network.",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-69400 - Azure Logic Apps Elevation of Privilege Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-69400",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T22:17:59.000Z",
-        "contentSnippet": "Improper limitation of a pathname to a restricted directory ('path traversal') in Azure Logic Apps allows an unauthorized attacker to elevate privileges over a network.",
-        "cveScore": 9.6,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-68789 - Azure SQL Database Elevation of Privilege Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68789",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T22:17:57.000Z",
-        "contentSnippet": "Improper neutralization of special elements used in an sql command ('sql injection') in Azure SQL Database allows an authorized attacker to elevate privileges over a network.",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-55765 - CloudNativePG: Cleartext role passwords recorded in pg_stat_statements allow privileged tenant roles to recover the PostgreSQL superuser credential and achieve RCE in the database pod",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55765",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T21:38:47.000Z",
-        "contentSnippet": "CloudNativePG is a platform designed to manage PostgreSQL databases within Kubernetes environments. Prior to 1.28.4 and 1.29.2, CloudNativePG embedded cleartext role passwords in `ALTER ROLE` and `CREATE ROLE` statements generated by SetUserPassword in pkg/management/postgres/uti",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-50192 - Kerberos Hub private key (X-Kerberos-Hub-PrivateKey) leaked to cross-host redirect target due to redirect-following HTTP client without CheckRedirect",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50192",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T21:37:20.000Z",
-        "contentSnippet": "Kerberos Agent is an open source video (surveillance) management agent. Prior to version 3.6.26, the Kerberos Hub upload path sends the agent's Hub credentials in the custom `X-Kerberos-Hub-PrivateKey` and `X-Kerberos-Hub-PublicKey` request headers to the operator-configured Hub ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-55489 - BigBlueButton: IDOR on BBB through /api/graphql via POST parameter \"presentationId\" leads to Authentication Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55489",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T21:36:35.000Z",
-        "contentSnippet": "BigBlueButton is an open-source virtual classroom. Prior to 3.0.29, BigBlueButton presenters could submit a presentationId through /api/graphql that identified a presentation belonging to another meeting. akka-bbb-apps/src/main/scala/org/bigbluebutton/core/apps/presentationpod/Re",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-55491 - BigBlueButton: Stored XSS in Screenshare Recording Playback via Unescaped Meeting Name",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55491",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T21:35:42.000Z",
-        "contentSnippet": "BigBlueButton is an open-source virtual classroom. Prior to 3.0.29, BigBlueButton failed to escape meetingName in record-and-playback/screenshare/playback/index.html.erb when generating the screenshare playback format. A low-privileged user could store a crafted meeting name that",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-46355 - BigBlueButton: Unauthenticated Session Hijack via Exposed /bigbluebutton/api/handleJoinExistingUser",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46355",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T21:34:40.000Z",
-        "contentSnippet": "BigBlueButton is an open-source virtual classroom. Prior to 3.0.23, BigBlueButton exposed /bigbluebutton/api/handleJoinExistingUser through bigbluebutton-web/grails-app/controllers/org/bigbluebutton/web/controllers/ApiController.groovy. A requester able to supply an existingUserI",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-16946 - Vulnerabilities in IBM AIX and PowerVM VIOS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16946",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T21:34:24.000Z",
-        "contentSnippet": "IBM AIX 7.2, and 7.3 and IBM PowerVM VIOS 4.1 could allow a local attacker to gain elevated privileges due to a heap buffer overflow.",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-16945 - Vulnerabilities in IBM AIX and PowerVM VIOS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16945",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T21:34:06.000Z",
-        "contentSnippet": "IBM AIX 7.2, and 7.3 and IBM PowerVM VIOS 4.1 could allow a local attacker to execute arbitrary code due to a stack-based buffer overflow.",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-46682 - BigBlueButton: Blind SQL Injection AUTH (Moderator)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46682",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T21:33:56.000Z",
-        "contentSnippet": "BigBlueButton is an open-source virtual classroom. Prior to 3.0.23, BigBlueButton allowed authenticated moderators to inject SQL through the meetingId and userId values used by refreshBreakoutRoomsVisibleForUsers in akka-bbb-apps/src/main/scala/org/bigbluebutton/core/db/BreakoutR",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-16944 - Vulnerabilities in IBM AIX and PowerVM VIOS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16944",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T21:33:49.000Z",
-        "contentSnippet": "IBM AIX 7.2, and 7.3 and IBM PowerVM VIOS 4.1 could allow a local attacker to execute arbitrary code due to a stack-based buffer overflow.",
-        "cveScore": 6.7,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16943 - Vulnerabilities in IBM AIX and PowerVM VIOS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16943",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T21:33:32.000Z",
-        "contentSnippet": "IBM AIX 7.2, and 7.3 and IBM PowerVM VIOS 4.1 could allow a local attacker to execute arbitrary code due to a heap-based buffer overflow.",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-16937 - Vulnerabilities in IBM AIX and PowerVM VIOS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16937",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T21:33:05.000Z",
-        "contentSnippet": "IBM AIX 7.2, and 7.3 and IBM PowerVM VIOS 4.1 could allow a local attacker to gain elevated privileges due to improper privilege management.",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-55893 - Capstone SH disassembler `set_reg_n` heap buffer overflow via crafted SH2A FPU bytecode",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55893",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T21:32:46.000Z",
-        "contentSnippet": "Capstone is a disassembly framework. In 6.0.0-Alpha9 and earlier, Capstone's arch/SH/SHDisassembler.c SH floating-point decoders such as opFADD, opFMUL, and opFSUB call set_reg() and set_reg_n() using sh_info.op.op_count without checking the fixed-size operands[] array. Repeated ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-16936 - Vulnerabilities in IBM AIX and PowerVM VIOS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16936",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T21:32:46.000Z",
-        "contentSnippet": "IBM AIX 7.2, and 7.3 and IBM PowerVM VIOS 4.1 could allow a local attacker to execute arbitrary code due to a buffer overflow.",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-16935 - Vulnerabilities in IBM AIX and PowerVM VIOS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16935",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T21:32:12.000Z",
-        "contentSnippet": "IBM AIX 7.2, and 7.3 and IBM PowerVM VIOS 4.1 could allow a local attacker to gain elevated privileges due to a time-of-check to time-of-use (TOCTOU) race condition.",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-16934 - Vulnerabilities in IBM AIX and PowerVM VIOS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16934",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-20T21:31:47.000Z",
-        "contentSnippet": "IBM AIX 7.2, and 7.3 and IBM PowerVM VIOS 4.1 could allow a local attacker to gain elevated privileges due to a heap-based buffer overflow.",
-        "cveScore": 8.8,
         "cveSeverity": "HIGH"
       }
     ],
@@ -1608,6 +1608,13 @@
     ],
     "virtualization": [
       {
+        "title": "7 Things I’d Install First on a Brand-New Proxmox Server This Weekend",
+        "link": "https://www.virtualizationhowto.com/2026/08/7-things-id-install-first-on-a-brand-new-proxmox-server-this-weekend/",
+        "source": "Virtualization HowTo",
+        "isoDate": "2026-08-21T12:19:39.000Z",
+        "contentSnippet": "A fresh installation of Proxmox is very complete out of the box and you definitely won’t have any problems with your server just sticking with the default installation. However, there… The post 7 Things I’d Install First on a Brand-New Proxmox Server This Weekend appeared first o"
+      },
+      {
         "title": "Veeam Backup & Replication 13.1: The Features That Actually Matter (and Why You Should Move Now)",
         "link": "https://www.vladan.fr/veeam-backup-replication-13-1-the-features-that-actually-matter-and-why-you-should-move-now/",
         "source": "Vladan.fr",
@@ -2299,16 +2306,51 @@
         "source": "Virtualization HowTo",
         "isoDate": "2026-05-26T12:09:34.000Z",
         "contentSnippet": "Running containers on Linux feels pretty normal and I have a LOT of it running in my home lab, especially for my Docker container hosts. However, Windows Server or workstation… The post Docker on Windows Server Finally Felt Easier After I Tried VisualDock Server appeared first on"
-      },
-      {
-        "title": "The Home Lab Alerts I Refuse to Live Without",
-        "link": "https://www.virtualizationhowto.com/2026/05/the-home-lab-alerts-i-refuse-to-live-without/",
-        "source": "Virtualization HowTo",
-        "isoDate": "2026-05-25T12:58:08.000Z",
-        "contentSnippet": "I have shared quite a bit of content on the tools I use in my current monitoring stack. However, I haven’t really shared the details of what I actually “alert”… The post The Home Lab Alerts I Refuse to Live Without appeared first on Virtualization Howto."
       }
     ],
     "hardware": [
+      {
+        "title": "Supermicro fires several employees following investigation into $2.5 billion China AI chip smuggling — claims that senior management had no knowledge of illicit transactions",
+        "link": "https://www.tomshardware.com/tech-industry/big-tech/supermicro-fires-several-employees-following-investigation-into-usd2-5-billion-china-ai-chip-smuggling-claims-that-senior-management-had-no-knowledge-of-illicit-transactions",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-21T12:20:54.000Z",
+        "contentSnippet": "An independent investigation on Supermicro clears senior management from any wrong-doing and also says that its financial statements were still reliable, despite the alleged diversion of its restricted products. Nevertheless, some of its employees from sales, technical support, a"
+      },
+      {
+        "title": "CPU-Z gets biggest update since 2001 with V3 — 100+ health checks, built-in stress testing, and XOC effective clock tracking",
+        "link": "https://www.tomshardware.com/software/applications/cpu-z-gets-biggest-update-since-2001-with-v3-100-health-checks-built-in-stress-testing-and-xoc-effective-clock-tracking",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-21T12:20:00.000Z",
+        "contentSnippet": "CPU-Z V3 introduces an overhauled validation system with over 100 detection points, and a new advanced validation feature that will check PC health with a stress test."
+      },
+      {
+        "title": "Micron commits $10 billion to new US-based Research Labs — Boise hub to target post-DRAM and NAND technologies and packaging",
+        "link": "https://www.tomshardware.com/tech-industry/micron-commits-usd10-billion-to-new-us-based-research-labs-boise-hub-to-target-post-dram-and-nand-technologies-and-packaging",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-21T12:00:00.000Z",
+        "contentSnippet": "Micron's Research Labs to bring together the company's own research with research by customers, partners, universities, startups, and government organizations to develop pre-competitive IP for next-generation memory technologies."
+      },
+      {
+        "title": "H200 AI GPUs finally reach China under case-by-case import licenses, but it's already too late for Nvidia — homemade chips corner the China market as country seeks semiconductor independence",
+        "link": "https://www.tomshardware.com/pc-components/gpus/china-approves-first-nvidia-h200-deliveries-to-bytedance-and-tencent-under-case-by-case-import-licenses",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-21T11:40:00.000Z",
+        "contentSnippet": "Most of each company's U.S.-licensed allowance, understood to be up to 100,000 units apiece, must stay outside the mainland."
+      },
+      {
+        "title": "Nvidia denies report it will ship Groq-based LPUs to China by year-end — says there is 'no China-specific LPU product in our roadmap'",
+        "link": "https://www.tomshardware.com/tech-industry/semiconductors/nvidia-denies-report-it-will-ship-groq-based-lpus-to-china-by-year-end",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-21T11:39:39.000Z",
+        "contentSnippet": "Nvidia has rejected a report published by The Information that it plans to begin small-batch shipments of an LPU tailored for Chinese customers by the end of 2026."
+      },
+      {
+        "title": "Sandisk's new $2,200 NAS SSD lets you fill the drive every day for five years — 7.68TB M.2 flaunts eye-popping 14,000 TBW rating",
+        "link": "https://www.tomshardware.com/pc-components/ssds/sandisks-new-nas-ssd-lets-you-fill-the-drive-every-day-for-five-years-7-68tb-m-2-flaunts-eye-popping-14-000-tbw-rating",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-21T11:20:00.000Z",
+        "contentSnippet": "Sandisk has announced the NAS 600 SATA and NAS 800 NVMe SSD lineups that target NAS environments."
+      },
       {
         "title": "Slovakia discovers Russian backdoors in 279 new traffic cameras — SMS-triggered shell access and passwordless live feeds found in EU-funded rollout",
         "link": "https://www.tomshardware.com/tech-industry/cyber-security/slovakia-discovers-russian-backdoors-in-279-new-traffic-cameras-national-security-service-deactivates-offending-units",
@@ -2966,48 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-08-17T11:27:32.000Z",
         "contentSnippet": "Cherokee Nation, with more than 475,000 citizens, has banned hyperscale data center development on its tribally owned and trust lands."
-      },
-      {
-        "title": "AI data center optical interconnect market to hit $144 billion by 2030, an over ten-fold increase from 2024 figures, according to new projections — silicon photonics expected to account for nearly two",
-        "link": "https://www.tomshardware.com/tech-industry/photonics/ai-data-center-optical-interconnect-market-to-hit-usd144-billion-by-2030-an-over-ten-fold-increase-from-2024-figures-according-to-new-projections-silicon-photonics-expected-to-account-for-nearly-two-thirds-of-revenue-driven-by-co-packaged-optics",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-17T11:20:00.000Z",
-        "contentSnippet": "A new CIC forecast projects that the data center optical interconnect market will grow from $13.7 billion in 2024 to $144.4 billion by 2030, with silicon photonics accounting for 63.7% of revenue."
-      },
-      {
-        "title": "ViewSonic VG1457 dual-screen portable monitor review: compact size and weight, but lackluster color",
-        "link": "https://www.tomshardware.com/monitors/portable-monitors/viewsonic-vg1457-dual-screen-portable-monitor-review",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-17T11:05:00.000Z",
-        "contentSnippet": "ViewSonic nailed the design with the VG1457, but should have put some more effort into sourcing higher quality display panels."
-      },
-      {
-        "title": "PC Partner warns of rising GPU prices and budget card shortages — analyst suggests makers are hiking prices beyond memory costs",
-        "link": "https://www.tomshardware.com/tech-industry/pc-partner-warns-of-rising-gpu-prices-and-budget-card-shortages-analyst-suggests-makers-are-hiking-prices-beyond-memory-costs",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-17T11:00:00.000Z",
-        "contentSnippet": "PC Partner warns that graphics card prices will rise further in H2 2026 as memory costs climb and supplies tighten and entry-level boards will gain the most. This is how they gain money, says Jon Peddie."
-      },
-      {
-        "title": "Get an RTX 5090 Alienware PC for less than the price of the GPU alone — $1,550 discount means Area-51 is $20 cheaper than buying the card by itself",
-        "link": "https://www.tomshardware.com/desktops/gaming-pcs/get-an-rtx-5090-alienware-pc-for-less-than-the-price-of-the-gpu-alone-usd1-550-discount-means-area-51-is-usd20-cheaper-than-buying-the-card-by-itself",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-17T10:55:01.000Z",
-        "contentSnippet": "Get an RTX 5090 Alienware gaming PC for less than the standalone cost of the GPU."
-      },
-      {
-        "title": "Save $60 on Corsair's impressive 96% gaming keyboard with Elgato Stream Deck integration — the Vanguard 96 RGB features pre-lubed mechanical switches, sound dampening, a color LCD screen, and a full-s",
-        "link": "https://www.tomshardware.com/peripherals/gaming-keyboards/save-usd60-on-corsairs-impressive-96-percent-gaming-keyboard-with-elgato-stream-deck-integration-the-vanguard-96-rgb-features-pre-lubed-mechanical-switches-sound-dampening-a-color-lcd-screen-and-a-full-size-number-pad",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-17T10:50:50.000Z",
-        "contentSnippet": "Save $60 on Corsair's impressive Vanguard 96 RGB mechanical gaming keyboard at Best Buy."
-      },
-      {
-        "title": "Japanese repair shop sells GDDR6 VRAM upgrades for $25 per GB during memory crisis — RTX 2080 Ti modded to 22GB for just $282, double the VRAM creates a budget AI powerhouse",
-        "link": "https://www.tomshardware.com/pc-components/gpus/japanese-repair-shop-sells-gddr6-vram-upgrades-for-usd25-per-gb-during-memory-crisis-rtx-2080-ti-modded-to-22gb-for-just-usd282-double-the-vram-creates-a-budget-ai-powerhouse",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-17T10:30:00.000Z",
-        "contentSnippet": "This vendor can upgrade your RTX 2080 Ti to feature 22GB of VRAM for less than $300, converting it into an AI powerhouse without breaking the bank."
       }
     ]
   }
