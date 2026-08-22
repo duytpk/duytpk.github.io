@@ -1,8 +1,224 @@
 {
-  "updatedAt": "2026-08-22T12:21:17.954Z",
+  "updatedAt": "2026-08-22T13:24:59.607Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-4244 - Post Duplicator <= 3.0.11 - Missing Authorization to Authenticated (Contributor+) Post Duplication with Arbitrary Author Attribution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-4244",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-22T12:28:43.000Z",
+        "contentSnippet": "The Post Duplicator plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the `duplicate_post()` function in all versions up to, and including, 3.0.11. This is due to the function not verifying that the user has `edit_others_",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-62382 - PasswordPusher before v2.9.6 Authentication Bypass via Null Comparison",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62382",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-22T12:26:45.000Z",
+        "contentSnippet": "PasswordPusher versions v1.45.11 through v2.9.5 contain an improper authorization vulnerability in the push deletion logic. The ownership check compares @push.user against current_user; for an anonymously created push both values are nil, and Ruby evaluates nil == nil as true, so",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-62381 - luci-lib-px5g 2040-bit Certificate Signing Heap Buffer Overflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62381",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-22T12:26:44.000Z",
+        "contentSnippet": "luci-lib-px5g (LuCI) contains a heap-based buffer overflow in the native ASN.1 encoding routine asn1_add_obj (x509write.c) when signing a certificate with a 2040-bit RSA key. For a 255-byte signature, the BIT STRING allocation is computed from the DER length encoding of 255 bytes",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-62380 - Netty before 4.2.16.Final SOCKS Proxy Null Byte Injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62380",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-22T12:26:43.000Z",
+        "contentSnippet": "Netty (io.netty:netty-codec-socks) versions 4.2.0.Final through 4.2.16.Final and 4.1.x through 4.1.136.Final contain null byte, CRLF, and credential injection vulnerabilities in the SOCKS4 (Socks4ClientEncoder) and SOCKS5 (Socks5ClientEncoder) client encoders, which fail to valid",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-62243 - Netty 4.2.0 through 4.2.16 TLS Hostname Verification Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62243",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-22T12:26:43.000Z",
+        "contentSnippet": "Netty (io.netty:netty-handler) versions from 4.2.0.Final through 4.2.16.Final and versions through 4.1.136.Final disable TLS hostname verification on the SslProvider.OPENSSL client path when a plain (non-extended) X509TrustManager is used and Unsafe-based trust-manager wrapping i",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-62204 - SiYuan before v3.7.4 Plugin Overwrite via Bazaar Install",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62204",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-22T12:26:41.000Z",
+        "contentSnippet": "SiYuan versions before v3.7.4 fail to validate that packageName matches the downloaded package content in bazaar install endpoints. Attackers with same-origin access can overwrite existing trusted plugins by supplying mismatched packageName and repoURL parameters, achieving persi",
+        "cveScore": 6.6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-60084 - SiYuan before v3.7.4 Arbitrary File Deletion via removeTemplate",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-60084",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-22T12:26:41.000Z",
+        "contentSnippet": "SiYuan versions before v3.7.4 contain an arbitrary file deletion vulnerability in the /api/search/removeTemplate endpoint that accepts an unvalidated path parameter passed directly to os.RemoveAll. Authenticated admin attackers can supply absolute filesystem paths to recursively ",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-60083 - SiYuan before v3.8.0 Incomplete Path Blocklist via MCP file tool",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-60083",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-22T12:26:36.000Z",
+        "contentSnippet": "SiYuan versions before v3.8.0 contain an incomplete path blocklist in the MCP file tool that fails to restrict access to sensitive workspace files protected by the HTTP API. Authenticated administrators can read plaintext publish-mode passwords from data/.siyuan/publishAccess.jso",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-59809 - SiYuan before v3.8.0 Secret Exfiltration via http_request URL",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59809",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-22T12:26:35.000Z",
+        "contentSnippet": "SiYuan before v3.8.0 interpolates secret placeholders into the destination URL parameter of the http_request MCP tool, allowing attackers to exfiltrate stored secrets. An MCP client can craft a request with an attacker-controlled URL containing secret placeholders to send plainte",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-59808 - AVideo Authentication Bypass via Unkeyed Video Hash Disclosure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59808",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-22T12:26:33.000Z",
+        "contentSnippet": "AVideo through commit 9c39d8c8 contains an authentication bypass vulnerability where deduplicateByEncoderQueueId() returns video_id_hash credentials for any video by encoder_queue_id without ownership verification, and useVideoHashOrLogin() converts this hash into passwordless lo",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-59256 - WWBN AVideo Unbound Token Authorization Bypass via Gallery",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59256",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-22T12:26:33.000Z",
+        "contentSnippet": "WWBN AVideo through commit 9c39d8c8 contains an authorization bypass vulnerability where getToken() creates tokens without binding to user identity or purpose, and plugin/Gallery/view/sections.php issues valid tokens to unauthenticated visitors. Attackers can retrieve a token fro",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-58003 - WWBN AVideo Cross-Site Request Forgery via releaseVideoNow.json.php",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58003",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-22T12:26:32.000Z",
+        "contentSnippet": "WWBN AVideo through commit 9c39d8c8 contains a cross-site request forgery vulnerability in the releaseVideoNow.json.php endpoint that lacks authenticity checks and accepts GET requests. Attackers can craft a malicious cross-site GET request carrying an administrator's session coo",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-58002 - WWBN AVideo Authorization Bypass via Users_affiliations add.json.php",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58002",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-22T12:26:31.000Z",
+        "contentSnippet": "WWBN AVideo through commit 9c39d8c8b4c1f75540788d6b391740852ceb0732 contains an authorization bypass vulnerability in the Users_affiliations add.json.php endpoint that allows authenticated users to forge two-party consent records by supplying the counterparty's agreement timestam",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-58001 - WWBN AVideo Cross-Site Request Forgery via videoEditLight.php",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58001",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-22T12:26:31.000Z",
+        "contentSnippet": "WWBN AVideo through commit 9c39d8c8 contains a cross-site request forgery vulnerability in objects/videoEditLight.php that lacks request authenticity checks and accepts GET requests. Attackers can store an img tag in a video description that transfers video ownership to an attack",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-57998 - better-npm-audit OS Command Injection via registry flag",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57998",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-22T12:26:30.000Z",
+        "contentSnippet": "better-npm-audit through 3.11.0, and the 4.0.0-rc.2 prerelease, builds its npm audit command by interpolating the user-supplied --registry option into a command string in src/handlers/handleInput.ts without validation or quoting, then passes that string to child_process.exec() in",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-57944 - AVideo channelToGallery.json.php Cross-Site Request Forgery",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57944",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-22T12:26:29.000Z",
+        "contentSnippet": "AVideo through commit 9c39d8c8 contains a cross-site request forgery vulnerability in channelToGallery.json.php that allows attackers to modify site-wide Gallery configuration by performing unauthorized writes to plugin data. Attackers can craft a cross-site GET request carrying ",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-56380 - AVideo feed/index.php Exposure of Channel Owner Email Address",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56380",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-22T12:26:29.000Z",
+        "contentSnippet": "AVideo through commit 9c39d8c8 contains an information exposure vulnerability in feed/index.php that allows unauthenticated attackers to retrieve channel owner email addresses by supplying a public channel name parameter. Attackers can enumerate all creator email addresses by ite",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-77988 - TRENDnet TEW-823DRU CLI Configuration Tool nvram_get command injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77988",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-22T12:16:25.000Z",
+        "contentSnippet": "A weakness has been identified in TRENDnet TEW-823DRU 1.1.02b01. This vulnerability affects the function nvram_get of the component CLI Configuration Tool. This manipulation causes command injection. The attack is possible to be carried out remotely. The exploit has been made ava",
+        "cveScore": 6.6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-66917 - Joomla Extension - joomgalleryfriends.net - Stored XSS in JoomGallery < 4.4.0",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66917",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-22T12:16:25.000Z",
+        "contentSnippet": "Joomla Extension - joomgalleryfriends.net - Stored XSS in JoomGallery",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-66916 - Joomla Extension - joomgalleryfriends.net - Password-Protected Category Bypass via JSON Format in JoomGallery < 4.4.0",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66916",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-22T12:16:25.000Z",
+        "contentSnippet": "Joomla Extension - joomgalleryfriends.net - Password-Protected Category Bypass via JSON Format in JoomGallery",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-4245 - Post Duplicator <= 3.0.11 - Authorization Bypass to Authenticated (Contributor+) Post Duplication",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-4245",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-22T12:16:25.000Z",
+        "contentSnippet": "The Post Duplicator plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 3.0.11. This is due to the `duplicate_post_permissions()` permission callback only verifying the `duplicate_posts` capability without checking whether the requesti",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-3424 - kk Star Ratings <= 5.4.10.3 - Unauthenticated Arbitrary Shortcode Execution via 'payload' Parameter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-3424",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-22T12:16:24.000Z",
+        "contentSnippet": "The The kk Star Ratings – Rate Post & Collect User Feedbacks plugin for WordPress is vulnerable to arbitrary shortcode execution in all versions up to, and including, 5.4.10.3. This is due to the software allowing users to execute an action that does not properly validate the 'pa",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-77946 - TRENDnet TEW-821DAP NTP Timezone Configuration apply_time.cgi uci_safe_get stack-based overflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77946",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-22T11:16:54.000Z",
+        "contentSnippet": "A vulnerability was determined in TRENDnet TEW-821DAP 2.2.01b05. Affected by this vulnerability is the function uci_safe_get of the file /cgi-bin/apply_time.cgi of the component NTP Timezone Configuration Handler. Executing a manipulation of the argument system.ntp.server/system.",
+        "cveScore": 10,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-77945 - TRENDnet TEW-821DAP ssi upload.cgi command injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77945",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-22T11:16:53.000Z",
+        "contentSnippet": "A vulnerability was found in TRENDnet TEW-821DAP 2.2.01b05. Affected is an unknown function of the file /cgi-bin/upload.cgi of the component ssi. Performing a manipulation of the argument filename results in command injection. The attack may be initiated remotely. The exploit has",
+        "cveScore": 7.4,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-78003 - Mailgun for WordPress <= 2.2.0 - Unauthenticated Server-Side Request Forgery (SSRF) via 'addresses' Array Keys",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-78003",
@@ -686,222 +902,6 @@
         "contentSnippet": "FiftyOne is an open-source platform for refining high-quality datasets and visual AI models. Prior to 1.17.0, the FiftyOne App/API server in fiftyone/server/app.py and the /media route in fiftyone/server/routes/media.py unconditionally return Access-Control-Allow-Origin: *. Becau",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-54457 - TensorZero: Arbitrary file read and SSRF in TensorZero Gateway's internal object storage endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54457",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T20:34:03.000Z",
-        "contentSnippet": "TensorZero is an open-source LLMOps platform that unifies an LLM gateway, observability, evaluation, optimization, and experimentation. Prior to 2026.6.0, the TensorZero Gateway /internal/object_storage endpoint accepts a caller-supplied JSON storage_path parameter that dynamical",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-55168 - Runtipi: Authenticated arbitrary file write via backup restore symlink planting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55168",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T20:31:38.000Z",
-        "contentSnippet": "Runtipi is a personal homeserver orchestrator. In 4.10.0 and earlier, Runtipi accepts symbolic links from an attacker-controlled backup archive and copies them into live application paths during the backup restore flow. An authenticated attacker can plant user-config/app.env as a",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-64679 - Atlantis: Path Traversal in Atlantis Workspace Handling Allows Out-of-Bounds Directory Deletion/Creation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64679",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T20:29:55.000Z",
-        "contentSnippet": "Atlantis is a self-hosted golang application that listens for Terraform pull request events via webhooks. From 0.19.8 until 0.45.0, Atlantis does not consistently validate user-controlled workspace values supplied through accepted repository-level atlantis.yaml configuration or a",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-44517 - Buildah: Build breakout using malicious Containerfile and Git Smart HTTP server or GitHub release tar archive",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44517",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T20:29:00.000Z",
-        "contentSnippet": "Buildah is a tool that facilitates building OCI images. From 1.38.1 until 1.43.2 and 1.44.0, TempDirForURL in define/types.go does not securely confine Git repository subdirectories to the downloaded build context, and downloadToDirectory and stdinToDirectory can follow a Dockerf",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-67619",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67619",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T20:27:13.000Z",
-        "contentSnippet": "None",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-27463 - Combodo iTop: Version disclosure via login page logo",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-27463",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T19:57:40.000Z",
-        "contentSnippet": "Combodo iTop is a web based IT service management tool. Prior to 3.2.3, the HTML title attribute of the logo in the login page contains the complete iTop version. This issue has been fixed in version 3.2.3.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-50290 - @asymmetric-effort/specifyjs: CSS expression sanitization is bypassable in renderToString",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50290",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T19:55:51.000Z",
-        "contentSnippet": "SpecifyJS is a declarative TypeScript user interface framework. Prior to version 0.2.136, CSS value sanitization stripped `expression(` and `url(javascript:` using simple regex, but could be bypassed with CSS unicode escapes (`\\65xpression(`), null bytes, or CSS comments (`exp/**",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-27462 - Combodo iTop: User enumeration via password reset",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-27462",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T19:52:04.000Z",
-        "contentSnippet": "Combodo iTop is a web based IT service management tool. Prior to 3.2.3, iTop returns different responses for valid/invalid usernames depending on multiple factors in the reset password mechanism, leading to user enumeration. This issue has been fixed in version 3.2.3.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-76876 - Craftplan < 0.5.1 Broken Access Control Information Disclosure via Settings API",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76876",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T19:38:45.000Z",
-        "contentSnippet": "Craftplan before 0.5.1 contains a broken access control vulnerability that allows unauthenticated attackers to read sensitive credentials by exploiting an unconditional authorization policy on the Settings resource. Attackers can send a GET request to the settings API endpoint wi",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-77810 - Code Injection via Gremlin Query Passthrough in Amazon Athena Neptune Connector",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77810",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T19:34:06.000Z",
-        "contentSnippet": "In the Neptune connector, a user with access to Neptune through Athena Federated Query could gain access to properties in the Lambda supplying the compute for the connector. To remediate this issue, users should upgrade to aws-athena-query-federation v2026.30.1 or later.",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-30866 - Combodo iTop: Insecured access to uploaded images via sniffed url",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-30866",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T19:32:00.000Z",
-        "contentSnippet": "Combodo iTop is a web based IT service management tool. Prior to 3.2.3, unauthenticated users can access uploaded sensitive via sniffed url. This issue has been fixed in version 3.2.3.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-50288 - @asymmetric-effort/specifyjs: URL parse failure silently allows request",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50288",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T19:29:45.000Z",
-        "contentSnippet": "SpecifyJS is a declarative TypeScript user interface framework. Prior to version 0.2.136, when `new URL()` throws a parse error, the `assertSecureUrl` function returned without throwing, silently allowing the request to proceed without HTTPS validation. Starting in version 0.2.13",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-67361 - Joomla Extension - j2commerce.com - Unauthenticated file upload with missing directory protection in J2Store 1.0.0-3.3.20, 4.0.0-4.0.20, 4.1.0-4.1.5",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67361",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T19:23:29.000Z",
-        "contentSnippet": "Joomla Extension - j2commerce.com - Unauthenticated file upload with missing directory protection in J2Store 1.0.0-3.3.20, 4.0.0-4.0.20, 4.1.0-4.1.5 - The file upload endpoint accepted POST requests from unauthenticated visitors with no CSRF token. Compounding this, the installer",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-74252 - Joomla Extension - j2commerce.com - Stored XSS in Guest checkout in J2Store 1.0.0-3.3.20, 4.0.0-4.0.20, 4.1.0-4.1.5",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74252",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T19:21:10.000Z",
-        "contentSnippet": "Joomla Extension - j2commerce.com - Stored XSS in Guest checkout in J2Store 1.0.0-3.3.20, 4.0.0-4.0.20, 4.1.0-4.1.5 - J2Commerce 4.1.5 is vulnerable to Stored Cross-Site Scripting (XSS) through the guest checkout billing address fields. An unauthenticated attacker exploits a filt",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-67358 - Joomla Extension - j2commerce.com - Download quota manipulation in J2Store 1.0.0-3.3.20, 4.0.0-4.0.20, 4.1.0-4.1.5",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67358",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T19:20:36.000Z",
-        "contentSnippet": "Joomla Extension - j2commerce.com - Download quota manipulation in J2Store 1.0.0-3.3.20, 4.0.0-4.0.20, 4.1.0-4.1.5 - An authenticated user with a valid order token could increment the download limit counter on a download record belonging to a different order. The endpoint also la",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-67362 - Joomla Extension - j2commerce.com - Open redirect in cart controller in J2Store 1.0.0-3.3.20, 4.0.0-4.0.20, 4.1.0-4.1.5",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67362",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T19:19:33.000Z",
-        "contentSnippet": "Joomla Extension - j2commerce.com - Open redirect in cart controller in J2Store 1.0.0-3.3.20, 4.0.0-4.0.20, 4.1.0-4.1.5 - Four task handlers accepted a base64-encoded URL from user input and redirected to it without validating the destination host, enabling phishing using the sho",
-        "cveScore": 5.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-67359 - Joomla Extension - j2commerce.com - Order content disclosure J2Store 1.0.0-3.3.20, 4.0.0-4.0.20, 4.1.0-4.1.5",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67359",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T19:18:44.000Z",
-        "contentSnippet": "Joomla Extension - j2commerce.com - Order content disclosure J2Store 1.0.0-3.3.20, 4.0.0-4.0.20, 4.1.0-4.1.5 - An unauthenticated visitor could supply any order_id as a query parameter to render the full checkout confirmation page for that order, including line items, prices, and",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-77795 - Dromara RuoYi-Vue-Plus Workflow Endpoint TestLeaveController improper authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77795",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T19:17:51.000Z",
-        "contentSnippet": "A vulnerability was identified in Dromara RuoYi-Vue-Plus up to 5.6.2. This issue affects the function FlwInstanceController/FlwDefinitionController/FlwCategoryController/FlwSpelController/TestLeaveController of the component Workflow Endpoint. Such manipulation leads to improper ",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-63466 - Unleash: Global Mustache.escape override disables HTML escaping process-wide, enabling Slack/Teams link-injection via unrestricted username",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63466",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T19:17:32.000Z",
-        "contentSnippet": "Unleash is an open-source feature management platform. Prior to 8.0.3, FeatureEventFormatterMd.format in src/lib/addons/feature-event-formatter-md.ts assigns Mustache.escape to an identity function before rendering action and path templates. Because Mustache.escape is process-wid",
-        "cveScore": 4.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-63462 - Unleash: Unauthenticated single-request DoS via OpenAPI validation error formatter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63462",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T19:17:31.000Z",
-        "contentSnippet": "Unleash is an open-source feature management platform. Prior to 7.5.2, 7.6.5, and 8.0.2, the shared OpenAPI validation error path in src/lib/error/bad-data-error.ts passes a raw request value from lodash.get to JSON.stringify in genericErrorMessage and fromOpenApiValidationErrors",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-63004 - Unleash: Addon webhook URL is dialed server-side with no internal-address filtering, enabling SSRF to internal services / cloud metadata and exfiltration of configured request headers",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63004",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T19:17:30.000Z",
-        "contentSnippet": "Unleash is an open-source feature management platform. Prior to 7.5.2, 7.6.5, and 8.0.2, the addon and integration subsystem passes the operator-controlled parameters.url value from src/lib/addons/webhook.ts and the Slack, Microsoft Teams, Datadog, and New Relic integrations to A",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-56875 - Rejected reason: reserved but not needed",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56875",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T19:17:04.000Z",
-        "contentSnippet": "Rejected reason: reserved but not needed",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-55850 - Element Web: A malicious homeserver can inject HTML in Element Web using its homepage",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55850",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T19:17:04.000Z",
-        "contentSnippet": "Element Web is a Matrix web client built using the Matrix React SDK. Prior to 1.12.22, EmbeddedPage in apps/web/src/components/structures/EmbeddedPage.tsx renders homeserver-supplied homepage content through dangerouslySetInnerHTML without passing it through sanitizedHtmlNode. A ",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-54682 - DiscordChatExporter: Stored XSS in HTML export when markdown formatting is disabled",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54682",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-21T19:17:03.000Z",
-        "contentSnippet": "DiscordChatExporter saves Discord chat logs to a file. Prior to 2.47.2, HTML exports generated with markdown formatting disabled pass attacker-controlled content through FormatMarkdownAsync and FormatEmbedMarkdownAsync in DiscordChatExporter.Core/Exporting/MessageGroupTemplate.cs",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
@@ -2310,6 +2310,20 @@
     ],
     "hardware": [
       {
+        "title": "This week on Tom's Hardware Premium: August 22, 2026 — foundries, supercomputers, China, and how to not overpay on a motherboard",
+        "link": "https://www.tomshardware.com/tech-industry/this-week-on-toms-hardware-premium-august-22-2026-foundries-supercomputers-china-and-how-to-not-overpay-on-a-motherboard",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-22T13:00:00.000Z",
+        "contentSnippet": "We recap this week's Tom's Hardware Premium articles, including our latest advice on your next motherboard purchase, a look inside Samsung's Fab roadmaps, and much more."
+      },
+      {
+        "title": "Desktop CPU shipments crater 20% amid high component costs, but AMD gains record share despite 'ugly' desktop processor market — Intel floods laptop market with millions of CPUs, but AMD still sets al",
+        "link": "https://www.tomshardware.com/pc-components/cpus/desktop-cpu-shipments-crater-20-percent-amid-high-component-costs-but-amd-gains-record-share-despite-ugly-desktop-processor-market-intel-floods-laptop-market-with-millions-of-cpus-but-amd-still-sets-all-time-share-records",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-22T12:30:00.000Z",
+        "contentSnippet": "As Intel boosts output of data center and notebook CPUs, AMD manages to outgrow it and keep capturing market share from its arch-rival."
+      },
+      {
         "title": "Storage unit auction winner finds retro Pentium 4 PC with a see-through, UV-reactive PSU — Y2K time capsule discovered among 100 laptops and hundreds of RAM sticks",
         "link": "https://www.tomshardware.com/pc-components/storage-unit-auction-winner-finds-retro-pentium-4-pc-with-a-see-through-uv-reactive-psu-y2k-time-capsule-discovered-among-100-laptops-and-hundreds-of-ram-sticks",
         "source": "Tom's Hardware",
@@ -2994,20 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-08-18T11:12:05.000Z",
         "contentSnippet": "One man’s trash is another’s treasure, and GameStop just paid out over $10,000 for hundreds of broken consoles."
-      },
-      {
-        "title": "Google buys Spirit Airlines data for AI training for just $10 million — purchase includes hundreds of millions of emails, Microsoft Teams chats, billions of flight pricing records, and anonymized pass",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/google-buys-spirit-airlines-data-for-ai-training-for-just-usd10-million-purchase-includes-hundreds-of-millions-of-emails-microsoft-teams-chats-billions-of-flight-pricing-records-and-anonymized-passenger-records",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-18T11:02:02.000Z",
-        "contentSnippet": "A U.S. bankruptcy court auctioned off Spirit Airlines' treasure trove of data, with Google making the winning bid. The tech giant is paying $10 million for various information, including hundreds of millions of emails and Microsoft Teams conversations, and billions of flight pric"
-      },
-      {
-        "title": "Judge allegedly outsourced entire ruling to AI and still can't be sued — federal court upholds blanket judicial immunity",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/judges-who-use-ai-to-make-decisions-still-protected-by-judicial-immunity-court-ruling-protects-outcomes-regardless-of-ai-usage",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-18T11:00:00.000Z",
-        "contentSnippet": "A U.S. federal court has ruled that a judge accused of relying entirely on AI to make a judicial decision can still retain judicial immunity from civil lawsuits, although the ruling does not determine whether such use of AI is legally or ethically permissible."
       }
     ]
   }
