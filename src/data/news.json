@@ -1,8 +1,107 @@
 {
-  "updatedAt": "2026-08-23T14:15:07.924Z",
+  "updatedAt": "2026-08-23T15:13:24.343Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-9769 - justhtml before 1.10.0 Denial of Service via deeply nested HTML",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9769",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-23T14:16:55.000Z",
+        "contentSnippet": "justhtml through 1.9.1 (fixed in 1.10.0) is vulnerable to uncontrolled recursion leading to denial of service. During JustHTML() construction, TreeBuilder.finish() unconditionally calls _populate_selectedcontent(), which recursively traverses the DOM tree via _find_elements()/_fi",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-8630 - justhtml before 1.12.0 Mutation XSS via Raw Text Elements",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8630",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-23T14:16:55.000Z",
+        "contentSnippet": "justhtml before 1.12.0 (versions and . When a DOM tree is processed by sanitize_dom() using a custom policy that keeps these elements, text nodes inside them are serialized literally without escaping, allowing attacker-controlled text containing the matching closing tag sequence ",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-8445 - justhtml before 1.12.0 Sanitizer Bypass via Markdown",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8445",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-23T14:16:54.000Z",
+        "contentSnippet": "justhtml versions are preserved, so untrusted input that is safe in to_html() — including entity-decoded text (e.g. &lt;script&gt;) or text from RCDATA/RAWTEXT-parsed elements like , , , and — can be emitted as raw HTML in the Markdown output, enabling a sanitizer bypass and pote",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-7808 - justhtml before 1.16.0 Multiple Security Issues via Sanitization",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-7808",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-23T14:16:54.000Z",
+        "contentSnippet": "justhtml before 1.16.0 contains multiple HTML sanitization bypass issues that can allow active/dangerous content (e.g., script or style) to survive sanitization, potentially leading to cross-site scripting. The issues primarily affect advanced usage rather than the default JustHT",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-77088 - justhtml 0.9.0 through 1.21.0 Cross-Site Scripting via code-span",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77088",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-23T14:16:54.000Z",
+        "contentSnippet": "justhtml versions 0.9.0 through 1.21.0 contain a cross-site scripting vulnerability in to_markdown() where inline code spans fail to account for blank lines as block boundaries. Attackers can inject blank lines into code or pre element text to break the inline span, causing sanit",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-74793 - justhtml before 3.11.0 XSS via selectedcontent projection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74793",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-23T14:16:54.000Z",
+        "contentSnippet": "justhtml before 3.11.0 contains a cross-site scripting vulnerability where the default sanitizer bypasses event handler removal in selectedcontent projections. Attackers can inject SVG or MathML elements with event handlers that are cloned and reinserted into output without sanit",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-6827 - justhtml before 1.17.0 Multiple Cross-Site Scripting Vulnerabilities",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-6827",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-23T14:16:53.000Z",
+        "contentSnippet": "justhtml before 1.17.0 contains multiple security issues in sanitization, serialization, and programmatic DOM handling. When custom policies preserve foreign namespaces (SVG/MathML), dangerous content such as HTML integration points (SVG , MathML ) and mutation-XSS parser-differe",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-5751 - justhtml before 1.14.0 Mutation XSS via custom sanitization policies",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-5751",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-23T14:16:53.000Z",
+        "contentSnippet": "justhtml versions 1.13.0 and earlier contain a parser-differential / mutation cross-site scripting (mXSS) vulnerability when using a custom SanitizationPolicy that preserves foreign namespaces (e.g., drop_foreign_namespaces=False with allowlisted SVG/MathML elements or raw-text c",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-5389 - justhtml before 1.13.0 XSS via code fence breakout",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-5389",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-23T14:16:53.000Z",
+        "contentSnippet": "justhtml versions before 1.13.0 contain a cross-site scripting vulnerability in the to_markdown() function when serializing attacker-controlled pre content. Attackers can place backticks inside sanitized pre elements to break out of fixed-length code fences, allowing raw HTML to ",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-5388 - justhtml before 1.15.0 Multiple Security Issues",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-5388",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-23T14:16:53.000Z",
+        "contentSnippet": "justhtml before 1.15.0 contains multiple security issues in URL sanitization helpers (clean_url_value/clean_url_in_js_string), HTML serialization, Markdown passthrough (html_passthrough=True), and several custom sanitization-policy edge cases. Depending on configuration, an attac",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-4671 - justhtml before 1.18.0 Denial of Service via CSS Selector",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-4671",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-23T14:16:53.000Z",
+        "contentSnippet": "justhtml before 1.18.0 contains multiple low-severity denial-of-service issues in CSS selector handling and linkification. Applications that evaluate attacker-controlled selector strings (via query(), matches(), or selector-based transforms), run selector matching over very large",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-78155 - Untrusted Search Path in StackGres",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-78155",
@@ -801,105 +900,6 @@
         "source": "cvefeed.io",
         "isoDate": "2026-08-22T12:26:35.000Z",
         "contentSnippet": "SiYuan before v3.8.0 interpolates secret placeholders into the destination URL parameter of the http_request MCP tool, allowing attackers to exfiltrate stored secrets. An MCP client can craft a request with an attacker-controlled URL containing secret placeholders to send plainte",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-59808 - AVideo Authentication Bypass via Unkeyed Video Hash Disclosure",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59808",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-22T12:26:33.000Z",
-        "contentSnippet": "AVideo through commit 9c39d8c8 contains an authentication bypass vulnerability where deduplicateByEncoderQueueId() returns video_id_hash credentials for any video by encoder_queue_id without ownership verification, and useVideoHashOrLogin() converts this hash into passwordless lo",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-59256 - WWBN AVideo Unbound Token Authorization Bypass via Gallery",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59256",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-22T12:26:33.000Z",
-        "contentSnippet": "WWBN AVideo through commit 9c39d8c8 contains an authorization bypass vulnerability where getToken() creates tokens without binding to user identity or purpose, and plugin/Gallery/view/sections.php issues valid tokens to unauthenticated visitors. Attackers can retrieve a token fro",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-58003 - WWBN AVideo Cross-Site Request Forgery via releaseVideoNow.json.php",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58003",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-22T12:26:32.000Z",
-        "contentSnippet": "WWBN AVideo through commit 9c39d8c8 contains a cross-site request forgery vulnerability in the releaseVideoNow.json.php endpoint that lacks authenticity checks and accepts GET requests. Attackers can craft a malicious cross-site GET request carrying an administrator's session coo",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-58002 - WWBN AVideo Authorization Bypass via Users_affiliations add.json.php",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58002",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-22T12:26:31.000Z",
-        "contentSnippet": "WWBN AVideo through commit 9c39d8c8b4c1f75540788d6b391740852ceb0732 contains an authorization bypass vulnerability in the Users_affiliations add.json.php endpoint that allows authenticated users to forge two-party consent records by supplying the counterparty's agreement timestam",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-58001 - WWBN AVideo Cross-Site Request Forgery via videoEditLight.php",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58001",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-22T12:26:31.000Z",
-        "contentSnippet": "WWBN AVideo through commit 9c39d8c8 contains a cross-site request forgery vulnerability in objects/videoEditLight.php that lacks request authenticity checks and accepts GET requests. Attackers can store an img tag in a video description that transfers video ownership to an attack",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-57998 - better-npm-audit OS Command Injection via registry flag",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57998",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-22T12:26:30.000Z",
-        "contentSnippet": "better-npm-audit through 3.11.0, and the 4.0.0-rc.2 prerelease, builds its npm audit command by interpolating the user-supplied --registry option into a command string in src/handlers/handleInput.ts without validation or quoting, then passes that string to child_process.exec() in",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57944 - AVideo channelToGallery.json.php Cross-Site Request Forgery",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57944",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-22T12:26:29.000Z",
-        "contentSnippet": "AVideo through commit 9c39d8c8 contains a cross-site request forgery vulnerability in channelToGallery.json.php that allows attackers to modify site-wide Gallery configuration by performing unauthorized writes to plugin data. Attackers can craft a cross-site GET request carrying ",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-56380 - AVideo feed/index.php Exposure of Channel Owner Email Address",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56380",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-22T12:26:29.000Z",
-        "contentSnippet": "AVideo through commit 9c39d8c8 contains an information exposure vulnerability in feed/index.php that allows unauthenticated attackers to retrieve channel owner email addresses by supplying a public channel name parameter. Attackers can enumerate all creator email addresses by ite",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-77988 - TRENDnet TEW-823DRU CLI Configuration Tool nvram_get command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77988",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-22T12:16:25.000Z",
-        "contentSnippet": "A weakness has been identified in TRENDnet TEW-823DRU 1.1.02b01. This vulnerability affects the function nvram_get of the component CLI Configuration Tool. This manipulation causes command injection. The attack is possible to be carried out remotely. The exploit has been made ava",
-        "cveScore": 6.6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-66917 - Joomla Extension - joomgalleryfriends.net - Stored XSS in JoomGallery < 4.4.0",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66917",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-22T12:16:25.000Z",
-        "contentSnippet": "Joomla Extension - joomgalleryfriends.net - Stored XSS in JoomGallery",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-66916 - Joomla Extension - joomgalleryfriends.net - Password-Protected Category Bypass via JSON Format in JoomGallery < 4.4.0",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66916",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-22T12:16:25.000Z",
-        "contentSnippet": "Joomla Extension - joomgalleryfriends.net - Password-Protected Category Bypass via JSON Format in JoomGallery",
         "cveScore": 6.9,
         "cveSeverity": "MEDIUM"
       }
