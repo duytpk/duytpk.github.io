@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T15:31:16.210Z",
+  "updatedAt": "2026-08-24T16:25:20.360Z",
   "generator": "rss",
   "feeds": {
     "cve": [
@@ -171,7 +171,7 @@
         "source": "cvefeed.io",
         "isoDate": "2026-08-24T14:17:03.000Z",
         "contentSnippet": "TypeORM's SelectQueryBuilder.distinctOn accepts an array of strings and stores it on the expression map without validation. For PostgreSQL-family drivers, createSelectDistinctExpression in src/query-builder/SelectQueryBuilder.ts joins that array and interpolates the result into t",
-        "cveScore": 7.5,
+        "cveScore": 8.7,
         "cveSeverity": "HIGH"
       },
       {
@@ -189,7 +189,7 @@
         "source": "cvefeed.io",
         "isoDate": "2026-08-24T14:17:02.000Z",
         "contentSnippet": "adm-zip 0.5.9 through 0.6.0 follows symbolic links at the extraction destination. Utils.sanitize in util/utils.js enforces containment by comparing only the string form of an archive entry name against the resolved extraction root, and Utils.writeFileTo opens the computed destina",
-        "cveScore": 6.5,
+        "cveScore": 6.8,
         "cveSeverity": "MEDIUM"
       },
       {
@@ -198,7 +198,7 @@
         "source": "cvefeed.io",
         "isoDate": "2026-08-24T14:17:02.000Z",
         "contentSnippet": "webpack-dev-middleware resolves a request to a local file in getFilenameFromUrl by testing the request pathname against a traversal guard and then slicing it at a fixed character offset. The guard, UP_PATH_REGEXP applied to path.normalize(`./${pathname}`), only matches \"..\" that ",
-        "cveScore": 7.4,
+        "cveScore": 8.3,
         "cveSeverity": "HIGH"
       },
       {
@@ -207,7 +207,7 @@
         "source": "cvefeed.io",
         "isoDate": "2026-08-24T14:17:02.000Z",
         "contentSnippet": "The official Flair wheels for 0.15.0 and 0.15.1 still contain flair/models/clustering.py, whose ClusteringModel.load static method returns pickle.loads(joblib.load(str(model_file))) and so executes arbitrary Python while loading a model file. Loading a model supplied by an attack",
-        "cveScore": 7.8,
+        "cveScore": 8.4,
         "cveSeverity": "HIGH"
       },
       {
@@ -216,7 +216,7 @@
         "source": "cvefeed.io",
         "isoDate": "2026-08-24T14:17:01.000Z",
         "contentSnippet": "The Mercado Pago Node.js SDK interpolates caller-supplied identifiers into API request paths without percent-encoding them, so characters that are structural in a URL survive into the outgoing request. The payment (get, capture, cancel), paymentRefund (create, total, list, get), ",
-        "cveScore": 8.2,
+        "cveScore": 8.8,
         "cveSeverity": "HIGH"
       },
       {
@@ -227,6 +227,15 @@
         "contentSnippet": "Xinference loads models with Hugging Face remote code execution unconditionally enabled, and before version 2.12.0 exposes no setting to disable it. Six loader call sites pass trust_remote_code=True as a literal or as an unconditional default: RerankModel._get_tokenizer in xinfer",
         "cveScore": 8.8,
         "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-76840 - RustDesk through 1.4.9 Heap Buffer Overflow via Unvalidated CLIPRDR FileContentsResponse Length",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76840",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-24T14:17:01.000Z",
+        "contentSnippet": "RustDesk's Windows clipboard redirection copies a peer-supplied length into a fixed-size caller buffer without an upper bound check. When an OLE paste consumer such as explorer.exe calls IStream::Read with a buffer of cb bytes, CliprdrStream_Read in libs/clipboard/src/windows/wf_",
+        "cveScore": 9.6,
+        "cveSeverity": "CRITICAL"
       },
       {
         "title": "CVE-2026-21756 - HCL Hive is affected by a broken access control vulnerability",
@@ -893,18 +902,30 @@
         "contentSnippet": "Heptabase developed by Hepta Platforms, Inc. has a Stored Cross-Site Scripting vulnerability. Authenticated remote attackers can inject persistent malicious content into specific pages, causing arbitrary JavaScript code to execute when other users click the crafted content.",
         "cveScore": 8.7,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-78212 - 4MOSAn Security Technology｜4MOSAn Management Center - Arbitrary File Read",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78212",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T04:16:59.000Z",
-        "contentSnippet": "4MOSAn developed by 4MOSAn Security Technology Co., Ltd. has an Arbitrary File Read vulnerability. Unauthenticated remote attackers can exploit a Relative Path Traversal flaw to download arbitrary system files.",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
+      {
+        "title": "Agentic Resource Discovery (ARD): An open specification for agent discovery",
+        "link": "https://aws.amazon.com/blogs/machine-learning/agentic-resource-discovery-ard-an-open-specification-for-agent-discovery/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-08-24T16:22:03.000Z",
+        "contentSnippet": "AWS Agent Registry gives your organization a centralized, searchable catalog for agents, tools, and skills. It works with the open Agentic Resource Discovery (ARD) standard to enable cross-environment discovery and governance at scale."
+      },
+      {
+        "title": "Building a restaurant telephony AI host with Amazon Connect",
+        "link": "https://aws.amazon.com/blogs/machine-learning/building-a-restaurant-telephony-ai-host-with-amazon-connect/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-08-24T16:13:09.000Z",
+        "contentSnippet": "Learn how to build a voice ordering system for restaurants that answers a phone call and takes an order end to end, with no app, no website, and no sign-in. It uses Amazon Connect for telephony, Amazon Connect Agentic Voice for real-time speech, an Amazon Connect AI agent for rea"
+      },
+      {
+        "title": "AI-powered metadata correction and harmonization",
+        "link": "https://aws.amazon.com/blogs/machine-learning/ai-powered-metadata-correction-and-harmonization/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-08-24T15:53:03.000Z",
+        "contentSnippet": "Metadata harmonization (standardizing labels, identifiers, and formats so datasets can work together) is still largely manual. This post shows how AI-powered metadata correction works in practice, covering two approaches, human-in-the-loop validation and autonomous agent-driven w"
+      },
       {
         "title": "Generalist AI Releases GEN-1.5: A Robot Foundation Model That Learns New Tasks From One 3–12 Second Demo",
         "link": "https://www.marktechpost.com/2026/08/24/generalist-ai-releases-gen-1-5-a-robot-foundation-model-that-learns-new-tasks-from-one-3-12-second-demo/",
@@ -1583,27 +1604,6 @@
         "source": "MarkTechPost",
         "isoDate": "2026-08-08T17:04:39.000Z",
         "contentSnippet": "Pokee AI released Pokee-Isaac 28B, a 28B text-only foundation model with a 10M-token context window built to run inside the customer boundary. It scores 93.3% on RULER at 10M tokens, where every baseline in its comparison panel returns 0.0 beyond 2M, and leads BFCL v4 at 70.94 wh"
-      },
-      {
-        "title": "Designing Scalable Interactive Visualizations with Reflex XY: Composition, Million-Point Rendering, Streaming, Custom Marks, and Export",
-        "link": "https://www.marktechpost.com/2026/08/08/designing-scalable-interactive-visualizations-with-reflex-xy-composition-million-point-rendering-streaming-custom-marks-and-export/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-08-08T09:42:18.000Z",
-        "contentSnippet": "Dive into the advanced visualization capabilities of the Reflex XY Python library. This tutorial guides you through building high-performance, interactive charts—from handling million-point datasets and real-time streaming to creating custom mark plugins and exporting publication"
-      },
-      {
-        "title": "Mistral AI Releases Shieldstral 1.0 3B: An Open-Weights Policy-Adaptive Multimodal Safety Classifier Matching Models 7× Its Size",
-        "link": "https://www.marktechpost.com/2026/08/07/mistral-ai-releases-shieldstral-1-0-3b/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-08-08T04:36:26.000Z",
-        "contentSnippet": "Mistral AI has released Shieldstral 1.0 3B, an open-weights, policy-adaptive multimodal safety classifier that frames content moderation as a single yes/no question instead of a fixed harm taxonomy. Operators supply the policy as a plain-language query at inference time and get b"
-      },
-      {
-        "title": "Now we have a timeline of the OpenAI accidental attack against Hugging Face",
-        "link": "https://simonwillison.net/2026/Aug/7/openai-timeline/",
-        "source": "Simon Willison's Weblog",
-        "isoDate": "2026-08-07T23:55:58.000Z",
-        "contentSnippet": "OpenAI gave a last-minute presentation at the Black Hat security on Wednesday about \"the Hugging Face Incident\" (previously on this blog). The video was published yesterday. It's short and information dense and well worth watching, in particular because it provides full details o"
       }
     ],
     "virtualization": [
@@ -2310,6 +2310,13 @@
     ],
     "hardware": [
       {
+        "title": "32GB of DDR5 6000 RAM now costs $400 — the latest price hike puts DIY PC building further out of reach than ever before",
+        "link": "https://www.tomshardware.com/pc-components/ddr5/32gb-of-ddr5-6000-ram-now-costs-usd400-the-latest-price-hike-puts-diy-pc-building-further-out-of-reach-than-ever-before",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-24T15:30:42.000Z",
+        "contentSnippet": "32GB of DDR5 6000 RAM now costs more than $400."
+      },
+      {
         "title": "Nine indicted by Taiwan over illegal export of Nvidia B300 GPUs to China — details reveal five-point strategy to exploit and avoid customs controls",
         "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nine-indicted-by-taiwan-over-illegal-export-of-nvidia-b300-gpus-to-china-details-reveal-five-point-strategy-to-exploit-and-avoid-customs-controls",
         "source": "Tom's Hardware",
@@ -3001,13 +3008,6 @@
         "source": "StorageReview",
         "isoDate": "2026-08-19T16:57:22.000Z",
         "contentSnippet": "Stack Automation by Quali, the infrastructure automation platform co-developed with Cisco and sold exclusively through Cisco, has reached general availability. The pitch aims at the gap between buying AI infrastructure and using it: deployments that traditionally consume six to t"
-      },
-      {
-        "title": "IBM Links Two Cryogenic Modules Below 15 Millikelvin on the Path to Its 2029 Fault-Tolerant Quantum Computer",
-        "link": "https://www.storagereview.com/news/ibm-links-two-cryogenic-modules-below-15-millikelvin-on-the-path-to-its-2029-fault-tolerant-quantum-computer",
-        "source": "StorageReview",
-        "isoDate": "2026-08-19T16:43:00.000Z",
-        "contentSnippet": "IBM has successfully integrated and cooled two cryogenic modules within a single shared environment, a step the company calls critical to scaling quantum systems that can eventually link hundreds of quantum chips. The achievement supports IBM’s stated timeline for delivering IBM "
       }
     ]
   }
