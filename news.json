@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-08-24T14:33:20.638Z",
+  "updatedAt": "2026-08-24T15:31:16.210Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-19874 - Konami's Metal Gear Online 3 contains a heap-based buffer overflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19874",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-24T15:02:51.000Z",
+        "contentSnippet": "A heap-based buffer overflow vulnerability exists in Konami's Metal Gear Online 3, originating from improper validation of lobby data fields related to kicked players. The affected function processes a list of kicked player identifiers using the lobby data key \"kick_num\" to deter",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-65053 - Horde IMP before 7.2.0 Stored Cross-Site Scripting via AppleDouble Viewer Part Name",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65053",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-24T14:53:43.000Z",
+        "contentSnippet": "Horde IMP's AppleDouble MIME viewer writes an attacker-controlled attachment name into an HTML status block without escaping it. In lib/Mime/Viewer/Appledouble.php, _IMPrender() obtains the name of the data part with IMP_Contents::getPartName(), which returns the MIME part's own ",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-78414 - Cross-site scripting in Nx Witness VMS Web Administration allows session token exfiltration via a rogue peer site name",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78414",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-24T14:51:08.000Z",
+        "contentSnippet": "Cross-site scripting in the Web Administration interface of Network Optix Nx Witness VMS before version 6.1.3 on Linux, Windows and MacOS allows an adjacent-network attacker to execute arbitrary JavaScript in the browser of an authenticated administrator and steal the administrat",
+        "cveScore": 8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-9728 - TOCTOU race in mbox_send syscall verifier allows userspace to leak kernel memory",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9728",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-24T14:28:46.000Z",
+        "contentSnippet": "The userspace syscall verifier z_vrfy_mbox_send() in drivers/mbox/mbox_handlers.c validated the nested msg->data/msg->size fields by reading them directly out of live userspace memory, and then forwarded the original, still-mutable userspace struct mbox_msg * pointer to z_impl_mb",
+        "cveScore": 6.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-76055 - Black Duck Black Duck C/C++ OS Command Injection Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76055",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-24T14:17:23.000Z",
+        "contentSnippet": "Improper Neutralization of Special Elements used in an OS Command in the package manager component of Black Duck blackduck-c-cpp before 3.0.7 allows an actor able to create a file within the scanned build directory to execute operating system commands as the account running the s",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-78386 - Unauthenticated Disclosure of Scraping Credentials and Bypass Configuration via RansomLook API",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78386",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-24T14:17:06.000Z",
+        "contentSnippet": "RansomLook exposed sensitive operator-side scraping configuration through multiple unauthenticated API responses. Location records associated with ransomware groups and markets were returned largely verbatim to unauthenticated callers whenever the location itself was not marked a",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-78385 - RansomLook Analysis PDF Generation Allows Server-Side Request Forgery and Arbitrary Local File Access",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78385",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-24T14:17:05.000Z",
+        "contentSnippet": "RansomLook contains insufficient resource validation in the analysis PDF generation functionality. Analysis documents are converted from Markdown to HTML and passed to WeasyPrint for PDF rendering. Prior to the fix, WeasyPrint used its default URL fetcher, allowing resource refer",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-78381 - RansomLook Arbitrary File Read via Path Traversal in Post screen Field",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78381",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-24T14:17:05.000Z",
+        "contentSnippet": "RansomLook contains a path traversal vulnerability in the handling of the screen field associated with group posts. The GroupPost.get API handler concatenates the database-controlled screen value directly with the application's source/ directory and opens the resulting path witho",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-78380 - Private Group and Market Posts Disclosed Through Public Notification Channels in RansomLook",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78380",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-24T14:17:05.000Z",
+        "contentSnippet": "RansomLook fails to enforce the privacy status of ransomware groups and markets when distributing newly collected victim posts to external notification channels. The post-processing logic checks whether an individual post is marked private but does not verify whether the group or",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-78378 - Redis Glob Pattern Injection Allows Unauthorized Enumeration of Private Ransomlook Data",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78378",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-24T14:17:05.000Z",
+        "contentSnippet": "Ransomlook contains a Redis glob pattern injection vulnerability caused by insufficient neutralization of user-controlled input before it is incorporated into Redis SCAN MATCH patterns. The /api/health/ endpoint attempted to resolve the supplied name to a known group or market, b",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-78376 - Webkitgtk: use-after-free of jscvalue function parameters",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78376",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-24T14:17:05.000Z",
+        "contentSnippet": "A flaw was found in WebKitGTK. Processing malicious web content can cause a use-after-free issue due to improper memory handling and result in memory corruption.",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-78372 - RansomLook Missing Authorization Allows Disclosure of Private Group and Ransom Note Data",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78372",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-24T14:17:05.000Z",
+        "contentSnippet": "RansomLook does not consistently enforce authorization checks when accessing groups, markets, and ransom notes marked as private. An unauthenticated or otherwise unauthorized remote attacker can access information associated with private entities through several web views and API",
+        "cveScore": 9.2,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-78370 - RansomLook Unauthenticated Database Export Exposes Private Data",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78370",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-24T14:17:05.000Z",
+        "contentSnippet": "RansomLook contains an authorization flaw in its legacy database export functionality that can allow unauthenticated remote users to retrieve information intended to remain private. The /export/ endpoint permits selected internal databases to be exported without requiring authent",
+        "cveScore": 9.2,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-78369 - Missing Authentication Allows Unauthorized Creation of Crypto Groups in RansomLook",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78369",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-24T14:17:04.000Z",
+        "contentSnippet": "RansomLook contains a missing authentication vulnerability in the /admin/crypto/group/new endpoint. While the endpoint provides an administrative function for creating new crypto group entries, it was not protected by the application's authentication mechanism. An unauthenticated",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-78367 - Rpm: rpmbuild gettarspec() crafted tar member name → macro injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78367",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-24T14:17:04.000Z",
+        "contentSnippet": "A flaw was found in rpmbuild. When rpmbuild processes a crafted tarball in tarball mode, a specially designed tar member name can lead to macro injection. This vulnerability allows a remote attacker to execute arbitrary code on the system by convincing a user to build a malicious",
+        "cveScore": 7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-78250 - bytebot-ai bytebot Agent Execution Workflow infinite loop",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78250",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-24T14:17:04.000Z",
+        "contentSnippet": "A vulnerability was identified in bytebot-ai bytebot 0.0.1. The affected element is an unknown function of the component Agent Execution Workflow. Such manipulation leads to infinite loop. The attack may be performed from remote. The exploit is publicly available and might be use",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-78248 - SourceCodester Simple Online Food Ordering System ajax.php save_settings sql injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78248",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-24T14:17:04.000Z",
+        "contentSnippet": "A vulnerability was determined in SourceCodester Simple Online Food Ordering System 1.0. Impacted is an unknown function of the file /fos/admin/ajax.php?action=save_settings. This manipulation of the argument Name causes sql injection. The attack is possible to be carried out rem",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-77995 - Joomla Extension - miniorange.com - Arbitrary account takeover in miniOrange OAuth Client < 3.2.0",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77995",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-24T14:17:03.000Z",
+        "contentSnippet": "Joomla Extension - miniorange.com - Arbitrary account takeover in miniOrange OAuth Client",
+        "cveScore": 10,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-76848 - TypeORM 0.2.21 through 1.1.0 SQL Injection via SelectQueryBuilder.distinctOn",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76848",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-24T14:17:03.000Z",
+        "contentSnippet": "TypeORM's SelectQueryBuilder.distinctOn accepts an array of strings and stores it on the expression map without validation. For PostgreSQL-family drivers, createSelectDistinctExpression in src/query-builder/SelectQueryBuilder.ts joins that array and interpolates the result into t",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-76847 - act 0.2.81 through 0.2.89 Missing Authorization in the Artifacts V4 Backend",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76847",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-24T14:17:02.000Z",
+        "contentSnippet": "act starts an HTTP Artifacts V4 backend whenever a workflow uses actions/upload-artifact@v4 or actions/download-artifact@v4. The control-plane RPCs of that backend, including CreateArtifact, GetSignedArtifactURL, ListArtifacts, FinalizeArtifact and DeleteArtifact, accept a caller",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-76845 - adm-zip 0.5.9 through 0.6.0 Arbitrary File Overwrite via Symlink Following on Extraction",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76845",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-24T14:17:02.000Z",
+        "contentSnippet": "adm-zip 0.5.9 through 0.6.0 follows symbolic links at the extraction destination. Utils.sanitize in util/utils.js enforces containment by comparing only the string form of an archive entry name against the resolved extraction root, and Utils.writeFileTo opens the computed destina",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-76844 - webpack-dev-middleware Path Traversal via Offset Slice on a Non-Slash-Terminated publicPath",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76844",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-24T14:17:02.000Z",
+        "contentSnippet": "webpack-dev-middleware resolves a request to a local file in getFilenameFromUrl by testing the request pathname against a traversal guard and then slicing it at a fixed character offset. The guard, UP_PATH_REGEXP applied to path.normalize(`./${pathname}`), only matches \"..\" that ",
+        "cveScore": 7.4,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-76843 - Flair 0.15.0 and 0.15.1 Deserialization of Untrusted Data via ClusteringModel.load",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76843",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-24T14:17:02.000Z",
+        "contentSnippet": "The official Flair wheels for 0.15.0 and 0.15.1 still contain flair/models/clustering.py, whose ClusteringModel.load static method returns pickle.loads(joblib.load(str(model_file))) and so executes arbitrary Python while loading a model file. Loading a model supplied by an attack",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-76842 - Mercado Pago Node.js SDK through 3.4.0 Path Injection via Unencoded Identifiers in Payment Clients",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76842",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-24T14:17:01.000Z",
+        "contentSnippet": "The Mercado Pago Node.js SDK interpolates caller-supplied identifiers into API request paths without percent-encoding them, so characters that are structural in a URL survive into the outgoing request. The payment (get, capture, cancel), paymentRefund (create, total, list, get), ",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-76841 - Xinference through 2.11.0 Remote Code Execution via Hardcoded trust_remote_code in Model Loaders",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76841",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-24T14:17:01.000Z",
+        "contentSnippet": "Xinference loads models with Hugging Face remote code execution unconditionally enabled, and before version 2.12.0 exposes no setting to disable it. Six loader call sites pass trust_remote_code=True as a literal or as an unconditional default: RerankModel._get_tokenizer in xinfer",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-21756 - HCL Hive is affected by a broken access control vulnerability",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-21756",
@@ -676,231 +901,6 @@
         "isoDate": "2026-08-24T04:16:59.000Z",
         "contentSnippet": "4MOSAn developed by 4MOSAn Security Technology Co., Ltd. has an Arbitrary File Read vulnerability. Unauthenticated remote attackers can exploit a Relative Path Traversal flaw to download arbitrary system files.",
         "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-78211 - 4MOSAn Security Technology｜4MOSAn GCB Doctor - OS Command Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78211",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T04:16:59.000Z",
-        "contentSnippet": "4MOSAn GCB Doctor developed by 4MOSAn Security Technology has a OS Command Injection vulnerability. Unauthenticated remote attackers can inject malicious commands through an unremoved ADOdb test page parameter, thereby executing arbitrary system commands on the server.",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-78185 - itsourcecode Sales and Inventory System cust_edit.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78185",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T04:16:59.000Z",
-        "contentSnippet": "A vulnerability was detected in itsourcecode Sales and Inventory System 1.0. The impacted element is an unknown function of the file /pages/cust_edit.php. The manipulation of the argument ID results in sql injection. The attack can be executed remotely. The exploit is now public ",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-78182 - Shenzhen Gongji Technology XBROTHER Dynamic Environment Monitoring System plansImmediate PlanController.getImmediatePlans sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78182",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T04:16:59.000Z",
-        "contentSnippet": "A security vulnerability has been detected in Shenzhen Gongji Technology XBROTHER Dynamic Environment Monitoring System up to 300R004C00B300. The affected element is the function PlanController.getImmediatePlans of the file /xbreport/api/v1/plamange/plansImmediate. The manipulati",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-78181 - ractivejs ractive Keypath Ractive#set prototype pollution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78181",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T04:16:58.000Z",
-        "contentSnippet": "A weakness has been identified in ractivejs ractive up to 1.4.4. Impacted is the function Ractive#set of the component Keypath Handler. Executing a manipulation can lead to improperly controlled modification of object prototype attributes. The attack may be launched remotely. The",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-78180 - alibaba-fusion next deepMerge index.tsx ConfigProvider.getContextProps prototype pollution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78180",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T04:16:58.000Z",
-        "contentSnippet": "A security flaw has been discovered in alibaba-fusion next up to 1.27.34. This issue affects the function ConfigProvider.getContextProps of the file components/dialog/index.tsx of the component deepMerge. Performing a manipulation of the argument locale results in improperly cont",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-78179 - rexrainbow phaser3-rex-notes BehaviorTree Blackboard Data SetValue.js SetValue prototype pollution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78179",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T04:16:57.000Z",
-        "contentSnippet": "A vulnerability was identified in rexrainbow phaser3-rex-notes up to 1.80.17. This vulnerability affects the function SetValue of the file plugins/utils/object/SetValue.js of the component BehaviorTree Blackboard Data Interface. Such manipulation of the argument key leads to impr",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-19853 - CyberTutor｜NewSiteServer (NSS) - Missing Authentication",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19853",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T04:16:57.000Z",
-        "contentSnippet": "NewSiteServer (NSS) developed by CyberTutor has a Missing Authentication vulnerability. Unauthenticated remote attackers can exploit a specific functionality to send emails to anyone on behalf of the school.",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-19852 - CyberTutor｜NewSiteServer (NSS) - Arbitrary File Upload",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19852",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T04:16:57.000Z",
-        "contentSnippet": "NewSiteServer (NSS) developed by CyberTutor has an Arbitrary File Upload vulnerability. Unauthenticated remote attackers can upload arbitrary files, including malicious HTML files, thereby achieving effects similar to cross-site scripting.",
-        "cveScore": 6.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-19200 - Velociraptor Analyst overwrites live built-in artifacts through verify()",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19200",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T04:16:46.000Z",
-        "contentSnippet": "The Velociraptor verify() VQL function allows a user to verify an artifact for syntatic and other issues. Due to an implementation fault in this VQL function, the global artifact repository is used which allows callers to overwrite existing artifacts without the required permissi",
-        "cveScore": 8.9,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-78178 - jQWidgets jqx-all.js jqxBaseFramework.extend prototype pollution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78178",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T03:16:40.000Z",
-        "contentSnippet": "A vulnerability was determined in jQWidgets up to 24.0.1. This affects the function JQXLite.extend/jqxBaseFramework.extend of the file jqwidgets/jqx-all.js. This manipulation causes improperly controlled modification of object prototype attributes. The attack can be initiated rem",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-78177 - TanStack devtools-vite Development Devtools Event Bus package-manager.ts installPackage os command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78177",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T03:16:40.000Z",
-        "contentSnippet": "A vulnerability was found in TanStack devtools-vite 0.7.0. Affected by this issue is the function installPackage of the file packages/devtools-bundler-core/src/package-manager.ts of the component Development Devtools Event Bus. The manipulation of the argument packageName results",
-        "cveScore": 4.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-78171 - itsourcecode Sales and Inventory System processlogin.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78171",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T03:16:39.000Z",
-        "contentSnippet": "A vulnerability has been found in itsourcecode Sales and Inventory System 1.0. Affected by this vulnerability is an unknown functionality of the file /pages/processlogin.php. The manipulation of the argument User leads to sql injection. It is possible to initiate the attack remot",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-78170 - UTT HiPER 1200GW formConfigFastDirectionW strcpy buffer overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78170",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T02:17:04.000Z",
-        "contentSnippet": "A flaw has been found in UTT HiPER 1200GW up to 2.5.3-170306. Affected is the function strcpy of the file /goform/formConfigFastDirectionW. Executing a manipulation of the argument ssid can lead to buffer overflow. The attack may be performed from remote. The exploit has been pub",
-        "cveScore": 9,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-78169 - UTT HiPER 1250GW HTTP Request aspRemoteApConfTempSend strcpy stack-based overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78169",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T02:17:04.000Z",
-        "contentSnippet": "A vulnerability was detected in UTT HiPER 1250GW up to 3.2.7-210907-180535. This impacts the function strcpy of the file /goform/aspRemoteApConfTempSend of the component HTTP Request Handler. Performing a manipulation of the argument Profile results in stack-based buffer overflow",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-78168 - EFM ipTIME T24000M Session Validation httpcon_check_session_url improper authentication",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78168",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T02:17:04.000Z",
-        "contentSnippet": "A security vulnerability has been detected in EFM ipTIME T24000M up to 14.20.0. This affects the function httpcon_check_session_url of the component Session Validation Handler. Such manipulation leads to improper authentication. The attack can be executed remotely. The exploit ha",
-        "cveScore": 10,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-78167 - EFM ipTIME T16000M Session Validation httpcon_check_session_url improper authentication",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78167",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T02:17:04.000Z",
-        "contentSnippet": "A weakness has been identified in EFM ipTIME T16000M 14.20.2. The impacted element is the function httpcon_check_session_url of the component Session Validation Handler. This manipulation causes improper authentication. Remote exploitation of the attack is possible. The exploit h",
-        "cveScore": 10,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-78166 - provectus kafka-ui Groovy Code MessagesController.java executeSmartFilterTest code injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78166",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T02:17:04.000Z",
-        "contentSnippet": "A security flaw has been discovered in provectus kafka-ui up to 0.7.2. The affected element is the function executeSmartFilterTest of the file kafka-ui-api/src/main/java/com/provectus/kafka/ui/controller/MessagesController.java of the component Groovy Code Handler. The manipulati",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-78209 - exceljs through 4.4.0 CSV Formula Injection via Unescaped Cell Values",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78209",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T01:16:58.000Z",
-        "contentSnippet": "exceljs-hardened versions before 5.0.0 fail to neutralize leading equals, plus, minus, or at signs in cell values written to CSV output. Attackers who can influence exported cell values can inject formulas that execute when the CSV file is opened in a spreadsheet application, pot",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-78208 - exceljs through 4.4.0 Path Traversal via Unvalidated addImage filename",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78208",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T01:16:58.000Z",
-        "contentSnippet": "exceljs-hardened before 5.0.0 contains a path traversal vulnerability in the Workbook.addImage() function that fails to validate file paths. Attackers can supply arbitrary file paths to read any file accessible to the Node.js process and embed it in the generated workbook.",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-78207 - exceljs through 4.4.0 Prototype Pollution via deepMerge Reached From Note Serialization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78207",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T01:16:58.000Z",
-        "contentSnippet": "exceljs-hardened before 5.0.0 contains a prototype pollution vulnerability in the deepMerge helper that fails to reject __proto__, constructor, or prototype keys when merging note objects. Attackers can assign parsed JSON with a malicious __proto__ property to cell notes, modifyi",
-        "cveScore": 9.4,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-78206 - exceljs through 4.4.0 Uncontrolled Resource Consumption via Unbounded xlsx Decompression",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78206",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T01:16:57.000Z",
-        "contentSnippet": "exceljs-hardened before 5.0.0 decompresses all entries from supplied xlsx archives into memory without limits on entry size, total size, or compression ratio. Attackers can upload highly compressed workbooks that expand to gigabytes in memory, exhausting available resources and c",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-78205 - BentoML 1.4.19 through 1.4.39 Server-Side Request Forgery via Unfiltered RFC 6598 Shared Address Space",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78205",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T01:16:57.000Z",
-        "contentSnippet": "BentoML's outbound connection safeguard (make_safe_connect in _internal/utils/uri.py) blocks private, loopback, and link-local IP addresses but fails to reject the RFC 6598 shared address space (100.64.0.0/10, CGNAT). In versions 1.4.19 through 1.4.39, an unauthenticated attacker",
-        "cveScore": 5.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-78204 - Ghostwriter through 7.2.6 Missing Authorization on Report Template Lint Endpoints",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78204",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T01:16:57.000Z",
-        "contentSnippet": "Ghostwriter through 7.2.6 does not apply per-object authorization on its report template lint endpoints. RoleBasedAccessControlMixin.test_func returns only request.user.is_active unless a view overrides it, and neither the endpoint that lints a report template nor the endpoint th",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-78203 - Ghostwriter before 7.1.2 Cross-Client Report Template Disclosure via Unauthorized Template Swap",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78203",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T01:16:57.000Z",
-        "contentSnippet": "Ghostwriter before 7.1.2 fails to validate template ownership in the report template swap endpoint, allowing attackers to attach client-scoped templates from other clients to their own reports. Attackers can exploit sequential template primary keys to enumerate and attach foreign",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-78161 - warmcat libwebsockets LECP CBOR Recording lecp.c report_raw_cbor out-of-bounds write",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78161",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T01:16:57.000Z",
-        "contentSnippet": "A vulnerability was found in warmcat libwebsockets 4.5.0. Impacted is the function report_raw_cbor of the file lib/misc/lecp.c of the component LECP CBOR Recording. The manipulation results in out-of-bounds write. The attack can be launched remotely. The exploit has been made pub",
-        "cveScore": 7.5,
         "cveSeverity": "HIGH"
       }
     ],
@@ -2310,6 +2310,13 @@
     ],
     "hardware": [
       {
+        "title": "Nine indicted by Taiwan over illegal export of Nvidia B300 GPUs to China — details reveal five-point strategy to exploit and avoid customs controls",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nine-indicted-by-taiwan-over-illegal-export-of-nvidia-b300-gpus-to-china-details-reveal-five-point-strategy-to-exploit-and-avoid-customs-controls",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-24T15:09:55.000Z",
+        "contentSnippet": "A new report claims nine people have been indicted over the illegal smuggling of Nvidia B300 servers to China."
+      },
+      {
         "title": "Two Intel chips break Amazon's top 10 CPUs for the first time in months — Core Ultra 7 270K and Core i7-14700K finally challenge AMD desktop dominance",
         "link": "https://www.tomshardware.com/pc-components/cpus/two-intel-chips-break-amazons-top-10-cpus-for-the-first-time-in-months-core-ultra-7-270k-and-core-i7-14700k-finally-challenge-amd-desktop-dominance",
         "source": "Tom's Hardware",
@@ -3001,13 +3008,6 @@
         "source": "StorageReview",
         "isoDate": "2026-08-19T16:43:00.000Z",
         "contentSnippet": "IBM has successfully integrated and cooled two cryogenic modules within a single shared environment, a step the company calls critical to scaling quantum systems that can eventually link hundreds of quantum chips. The achievement supports IBM’s stated timeline for delivering IBM "
-      },
-      {
-        "title": "Samsung raises advanced foundry prices by up to 15% as AI demand fills its 4nm lines, report claims — Chinese customers accepting the largest hikes",
-        "link": "https://www.tomshardware.com/tech-industry/samsung-raises-advanced-foundry-prices-by-up-to-15-percent-as-ai-demand-fills-its-4nm-lines",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-19T16:15:53.000Z",
-        "contentSnippet": "Samsung raised prices on new orders across its 4nm, 5nm, and 8nm foundry processes in July, with increases reaching 15% for customers in China."
       }
     ]
   }
