@@ -1,34 +1,232 @@
 {
-  "updatedAt": "2026-08-25T14:35:40.575Z",
+  "updatedAt": "2026-08-25T15:34:23.340Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
-        "title": "CVE-2026-77998 - Joomla Extension - miniorange.com - Unauthenticated Authentication Bypass via SAMLResponse Parameter in miniOrange SAML SSO < 11.0.2, SAML SP Single Sign On – Login with ADFS < 6.4, S",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77998",
+        "title": "CVE-2026-55530 - PraisonAI: ast_grep_rewrite rewrites arbitrary files without the @require_approval gate enforced on every sibling mutation tool",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55530",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-25T12:50:46.000Z",
-        "contentSnippet": "Joomla Extension - miniorange.com - Unauthenticated Authentication Bypass via SAMLResponse Parameter in miniOrange SAML SSO",
-        "cveScore": 10,
+        "isoDate": "2026-08-25T14:45:07.000Z",
+        "contentSnippet": "PraisonAI is a multi-agent teams system. Prior to praisonaiagents 1.6.58, ast_grep_rewrite lacks the @require_approval decorator used by sibling mutation tools. With dry_run=False, an agent-controlled call can pass --update-all and a broad path to rewrite matching files without t",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-55534 - PraisonAI serve agents --api-key is ignored, allowing unauthenticated remote agent execution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55534",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T14:41:13.000Z",
+        "contentSnippet": "PraisonAI is a multi-agent teams system. From praisonai 4.6.34 until 4.6.58, praisonai serve agents accepts --api-key but _create_agents_app() does not authenticate POST /agents or POST /agents/{agent_name}. A network caller can invoke configured agents without credentials even w",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-55526 - PraisonAI: SSRF protection bypass in `spider_tools._host_is_blocked()` via DNS-resolved hostnames (`127.0.0.1.nip.io`)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55526",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T14:36:09.000Z",
+        "contentSnippet": "PraisonAI is a multi-agent teams system. Prior to praisonaiagents 1.6.58, spider_tools._host_is_blocked() does not resolve ordinary hostnames before scrape_page fetches them. A hostname such as 127.0.0.1.nip.io passes validation and resolves to loopback, permitting internal HTTP ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-55531 - PraisonAI: Unauthenticated unbounded session accumulation in the PraisonAI MCP HTTP server (memory exhaustion; session TTL never enforced)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55531",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T14:33:51.000Z",
+        "contentSnippet": "PraisonAI is a multi-agent teams system. Prior to praisonai 4.6.58, the MCP HTTP Stream mcp_post handler creates a new _sessions entry for every initialize request but does not call _cleanup_sessions or enforce a maximum. An unauthenticated caller can exhaust memory. The fix invo",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-55528 - praisonaiagents: AgentServer declares auth_token but never enforces it on any route (CWE-862)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55528",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T14:32:05.000Z",
+        "contentSnippet": "PraisonAI is a multi-agent teams system. Prior to praisonaiagents 1.6.58, AgentServer exposes ServerConfig.auth_token but AgentServer._create_app does not check it on any route. A remote caller can subscribe, publish, and perform other actions without a valid bearer token or X-Au",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-55529 - PraisonAI: Origin validation bypass in MCP HTTP Stream transport allows browser-mediated unauthenticated tool execution on local MCP server",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55529",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T14:26:30.000Z",
+        "contentSnippet": "PraisonAI is a multi-agent teams system. Prior to praisonai 4.6.58, the MCP HTTP Stream _validate_origin method accepts request_origin.startswith(allowed), so the attacker-controlled localhost.evil.example HTTP origin matches the localhost allowlist. Without an API key, a malicio",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-16286 - File Upload in TRTEK Software's Software Repository Management",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16286",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T14:26:19.000Z",
+        "contentSnippet": "Unrestricted upload of file with dangerous type vulnerability in TRtek Technological Products Computer Software Hardware Industry and Trade Limited Company Software Repository Management allows Upload a Web Shell to a Web Server. This issue affects Software Repository Management:",
+        "cveScore": 9.8,
         "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-16599 - Denial of Service in GNU wget",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16599",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T14:17:04.000Z",
+        "contentSnippet": "GNU wget is vulnerable to denial of service in its FTP OPIE/S-KEY authentication functionality. The server-supplied sequence number from the FTP challenge line is used as an iteration count for an MD5 key-derivation loop without any upper bound validation. A malicious FTP server ",
+        "cveScore": 5.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-79655 - Sos: sos: path traversal in sos clean tar extraction via unvalidated symlink/hardlink targets leads to arbitrary file write",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-79655",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T14:16:58.000Z",
+        "contentSnippet": "A flaw was found in sos clean, a utility within the sos package. This vulnerability allows a local attacker to perform arbitrary file creation or overwrite. By crafting a malicious tar archive, an attacker can exploit a path traversal issue during tar extraction, where symlink an",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-79623 - FishCodeTech Muteki Default Local Worker Backend settings.json os command injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-79623",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T14:16:57.000Z",
+        "contentSnippet": "A security vulnerability has been detected in FishCodeTech Muteki up to 0.2.5. The affected element is an unknown function of the file .claude/settings.json of the component Default Local Worker Backend. The manipulation leads to os command injection. The attack can be initiated ",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-79622 - dekdee adobe-xd-mcp file-access-from-request Endpoint xd-parser.ts path traversal",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-79622",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T14:16:57.000Z",
+        "contentSnippet": "A weakness has been identified in dekdee adobe-xd-mcp 1.0.0. Impacted is an unknown function of the file src/parsers/xd-parser.ts of the component file-access-from-request Endpoint. Executing a manipulation of the argument outputFile/outputDir can lead to path traversal. It is po",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-55525 - PraisonAI: SSRF via redirect-following in praisonaiagents web_crawl",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55525",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T14:16:52.000Z",
+        "contentSnippet": "PraisonAI is a multi-agent teams system. Prior to praisonaiagents 1.6.58, the web_crawl function validates only the initial URL before _crawl_with_httpx uses httpx.Client(follow_redirects=True). Redirect targets are not revalidated, so an attacker who influences a crawl target ca",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-79406 - macrozheng mall quantity OmsCartItemServiceImpl.updateQuantity logic error",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-79406",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T13:19:32.000Z",
+        "contentSnippet": "A security vulnerability has been detected in macrozheng mall up to 1.0.3. Affected is the function OmsCartItemServiceImpl.updateQuantity of the file /cart/update/quantity. The manipulation of the argument quantity leads to business logic errors. The attack may be initiated remot",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-78887 - liketrek TREK Journey Photo Proxy validateShareTokenForAsset authorization",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-78887",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-25T12:45:10.000Z",
+        "isoDate": "2026-08-25T13:19:32.000Z",
         "contentSnippet": "A weakness has been identified in liketrek TREK up to 3.0.22. This impacts the function validateShareTokenForAsset of the component Journey Photo Proxy. Executing a manipulation can lead to incorrect authorization. The attack can be launched remotely. This attack is characterized",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-78886 - liketrek TREK Public Journey Photo Proxy journey-public.controller.ts path traversal",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-78886",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-25T12:30:09.000Z",
+        "isoDate": "2026-08-25T13:19:32.000Z",
         "contentSnippet": "A security flaw has been discovered in liketrek TREK up to 3.0.22. This affects an unknown function of the file server/src/nest/journey/journey-public.controller.ts of the component Public Journey Photo Proxy. Performing a manipulation results in path traversal. The attack can be",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-78885 - liketrek TREK OIDC Service oidcService.ts findOrCreateUser improper authentication",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78885",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T13:19:31.000Z",
+        "contentSnippet": "A vulnerability was identified in liketrek TREK up to 3.0.22. The impacted element is the function findOrCreateUser of the file server/src/services/oidcService.ts of the component OIDC Service. Such manipulation leads to improper authentication. It is possible to launch the attac",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-78581 - Authorization Bypass Through User-Controlled Key in Kibana Leading to Unauthorized Data Modification in Kibana",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78581",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T13:19:31.000Z",
+        "contentSnippet": "Authorization Bypass Through User-Controlled Key (CWE-639) in Kibana can lead to unauthorized data modification via Accessing Functionality Not Properly Constrained by ACLs (CAPEC-1). Under certain conditions, an authenticated user could reference another user's AI Assistant conv",
+        "cveScore": 4.2,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-77998 - Joomla Extension - miniorange.com - Unauthenticated Authentication Bypass via SAMLResponse Parameter in miniOrange SAML SSO < 11.0.2, SAML SP Single Sign On – Login with ADFS < 6.4, S",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77998",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T13:19:30.000Z",
+        "contentSnippet": "Joomla Extension - miniorange.com - Unauthenticated Authentication Bypass via SAMLResponse Parameter in miniOrange SAML SSO",
+        "cveScore": 10,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-75803 - AEAD Forgeries with Empty Ciphertext When Using EVP_Cipher()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75803",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T13:19:29.000Z",
+        "contentSnippet": "Issue summary: ChaCha20-Poly1305 and AES-OCB decryption with an empty ciphertext can report success without verifying the supplied authentication tag when the operation is finalized by calling the EVP_Cipher() function. Impact summary: Applications calling EVP_Cipher() on an empt",
         "cveScore": 0,
         "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63076 - Invalid Pointer Dereference in CMP Server via Crafted protectionAlg",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63076",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T13:19:26.000Z",
+        "contentSnippet": "Issue summary: OpenSSL CMP password based protection verification only checks whether the protectionAlg parameter was not NULL and not its ASN.1 type, before treating it as a PBMParameter. A crafted message can contain a parameter of a different type, which is then dereferenced a",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63075 - QUIC ACK-only Packet Retention Can Cause Memory Exhaustion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63075",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T13:19:26.000Z",
+        "contentSnippet": "Issue summary: When OpenSSL processes QUIC traffic from a peer that repeatedly sends ack-eliciting packets while not acknowledging ACK-only responses, the QUIC stack can retain ACK-only packet metadata for the lifetime of the connection. Impact summary: A remote peer that can com",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63074 - CMP Indefinite Cache Growth of ExtraCerts",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63074",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T13:19:26.000Z",
+        "contentSnippet": "Issue summary: The OpenSSL Certificate Management Protocol (CMP) caches additional certificates (extraCerts) sent in a CMP message, but never expunges them (for instance if they are invalid). If a server reuses an OSSL_CMP_CTX frequently, this cache of extraCerts may grow unbound",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63073 - Untrusted Sender DN Used as Format String in CMP Response Validation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63073",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T13:19:26.000Z",
+        "contentSnippet": "Issue summary: OpenSSL CMP response validation passed an unexpected response sender distinguished name directly as the format string to `ERR_raise_data()`. Impact summary: A malicious or intercepted CMP endpoint can crash a CMP client that enforces an expected sender or uses a pi",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63072 - Heap Buffer Overflow in CMS Key Unwrapping",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63072",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T13:19:26.000Z",
+        "contentSnippet": "Issue summary: OpenSSL CMS decryption sizes the key-unwrap output buffer based on querying the unwrapped key size, but the AES-WRAP-PAD unwrap primitive can write and cleanse more bytes than that query reports, causing an 8-byte out-of-bounds heap write. Impact summary: An attack",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-57863 - Crater Invoice 6.0.6 Path Traversal RCE via update/unzip endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57863",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T13:19:24.000Z",
+        "contentSnippet": "Crater Invoice through 6.0.6 contains a path traversal vulnerability in the self-update API that allows authenticated company owners to write arbitrary files outside the intended extraction directory by supplying crafted ZIP archives with ../ sequences to the unzip endpoint. Atta",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-79673 - Ech0 before 4.4.3 Scope Bypass via profile:read Token",
@@ -704,204 +902,6 @@
         "contentSnippet": "The WP Project Manager Pro plugin for WordPress is vulnerable to SQL Injection in all versions up to, and including, 4.0.1 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for authenti",
         "cveScore": 6.5,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-78467 - Fluent Support Pro <= 2.3.1 - Missing Authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78467",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T06:19:00.000Z",
-        "contentSnippet": "The Fluent Support Pro plugin for WordPress is vulnerable to unauthorized access due to a missing capability check on a function in all versions up to, and including, 2.3.1. This makes it possible for authenticated attackers, with Subscriber-level access and above, to perform an ",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-78466 - Fluent Boards Pro <= 2.0.11 - Authenticated (Subscriber+) Insecure Direct Object Reference",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78466",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T06:19:00.000Z",
-        "contentSnippet": "The Fluent Boards Pro plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 2.0.11 due to missing validation on a user controlled key. This makes it possible for authenticated attackers, with Subscriber-level access and above",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2025-41741 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-41741",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T06:18:26.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-78637 - Fdawgs node-poppler Argument Injection index.js pdfUnite argument injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78637",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T05:17:23.000Z",
-        "contentSnippet": "A vulnerability was detected in Fdawgs node-poppler up to 9.1.2/10.0.1. The impacted element is the function pdfInfo/pdfToText/pdfToCairo/pdfToPpm/pdfImages/pdfToHtml/pdfToPs/pdfFonts/pdfDetach/pdfAttach/pdfSeparate/pdfUnite of the file src/index.js of the component Argument Inje",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-13215 - Zephyr ext2 mount: unvalidated superblock block size causes out-of-bounds write from a crafted filesystem image",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13215",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T05:17:20.000Z",
-        "contentSnippet": "The Zephyr ext2 filesystem driver fails to validate the s_log_block_size field of the on-disk superblock when mounting a filesystem. ext2_verify_disk_superblock() in subsys/fs/ext2/ext2_impl.c checks the magic number, revision, inode size and group counts, but never bounds s_log_",
-        "cveScore": 6.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-13214 - Stack buffer overflow in OCPP GetConfiguration key parsing",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13214",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T05:17:20.000Z",
-        "contentSnippet": "The OCPP 1.6 client in subsys/net/lib/ocpp/ocpp_j.c contains a stack buffer overflow in parse_getconfig_msg(). When handling a GetConfiguration request from the central system, the handler copied the attacker-controlled JSON \"key\" string into the caller's fixed 50-byte stack buff",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-12561 - tagDiv Composer <= 5.4.5 - Authenticated (Contributor+) Stored Cross-Site Scripting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12561",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T05:17:19.000Z",
-        "contentSnippet": "The tagDiv Composer plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the vc_raw_html shortcode in all versions up to and including 5.4.5. This is due to insufficient input sanitization and output escaping in the vc_raw_html::render() method, which base64-deco",
-        "cveScore": 6.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-76063 - FundEngine <= 1.8.1 - Authenticated (Subscriber+) Stored Cross-Site Scripting via 'wfp_featured_video_url' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76063",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T04:18:20.000Z",
-        "contentSnippet": "The FundEngine – Donation and Crowdfunding Platform plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'wfp_featured_video_url' parameter in all versions up to, and including, 1.8.1 due to insufficient input sanitization and output escaping. This makes it p",
-        "cveScore": 6.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-75930 - FundEngine <= 1.8.1 - Missing Authorization to Authenticated (Subscriber+) Arbitrary Post Modification via 'campaign_post' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75930",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T04:18:20.000Z",
-        "contentSnippet": "The FundEngine – Donation and Crowdfunding Platform plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 1.8.1. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for ",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-19943 - Gutenverse <= 4.0.2 - Authenticated (Contributor+) Stored Cross-Site Scripting via 'titleTag' Block Attribute",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19943",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T04:18:10.000Z",
-        "contentSnippet": "The Gutenverse – WordPress Blocks, Page Builder & Site Editor plugin for WordPress is vulnerable to Stored Cross-Site Scripting via 'titleTag' Block Attribute in all versions up to, and including, 4.0.2 due to insufficient input sanitization and output escaping. This makes it pos",
-        "cveScore": 6.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-19892 - InfusedWoo Pro <= 5.1.18 - Authenticated (Subscriber+) Privilege Escalation via Password Reset Link Disclosure",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19892",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T04:18:10.000Z",
-        "contentSnippet": "The InfusedWoo Pro plugin for WordPress is vulnerable to Privilege Escalation via Account Takeover in all versions up to, and including, 5.1.17. This is due to a missing capability check in the `ajax_iwar_preview_email()` function, which uses `is_admin()` as its only authorizatio",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-17089 - Events Manager <= 7.4.0.1 - Reflected Cross-Site Scripting via 'header_format' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-17089",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T04:18:02.000Z",
-        "contentSnippet": "The Events Manager – Calendar, Bookings, Tickets, and more! plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the 'header_format' parameter in all versions up to, and including, 7.4.0.1 due to insufficient input sanitization and output escaping. This makes ",
-        "cveScore": 6.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-14280 - Events Manager <= 7.3.7.4 - Authenticated (Administrator+) Local File Inclusion via 'dbem_data[updates]' Array Keys",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14280",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T04:17:48.000Z",
-        "contentSnippet": "The Events Manager – Calendar, Bookings, Tickets, and more! plugin for WordPress is vulnerable to Local File Inclusion in all versions up to, and including, 7.3.7.4 via the em_options_save function. This makes it possible for authenticated attackers, with administrator-level acce",
-        "cveScore": 6.6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-78685 - Le-yan｜Medical Practice Management System - Remote Code Execution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78685",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T03:16:58.000Z",
-        "contentSnippet": "Medical Practice Management System developed by Le-yan has a Remote Code Execution vulnerability. Unauthenticated remote attackers can execute arbitrary OS commamnds via a crafted HTML page.",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-75982 - LearnPress <= 4.4.4 - Missing Authorization to Authenticated (Editor+) Limited Option Update via 'field_name' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75982",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T03:16:57.000Z",
-        "contentSnippet": "The LearnPress plugin for WordPress is vulnerable to unauthorized modification of arbitrary WordPress options in versions up to, and including, 4.4.4 via the learnpress_create_page AJAX action. The LP_Admin_Ajax::create_page() handler only checks the edit_pages capability and a w",
-        "cveScore": 4.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-75019 - Cozy Blocks <= 2.2.16 - Authenticated (Contributor+) Stored Cross-Site Scripting via cozyHoverEffect Block Attribute",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75019",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T03:16:56.000Z",
-        "contentSnippet": "The Cozy Blocks – Page Builder for Gutenberg Editor & FSE with 700+ Patterns, 58 Blocks & Templates plugin for WordPress is vulnerable to Stored Cross-Site Scripting via cozyHoverEffect Block Attribute in all versions up to, and including, 2.2.16 due to insufficient input sanitiz",
-        "cveScore": 6.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-10627 - Events Manager <= 7.4.0 - Missing Authorization to Unauthenticated Sensitive Information Disclosure via 'status', 'private', and 'private_only' Parameters",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-10627",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T03:16:54.000Z",
-        "contentSnippet": "The Events Manager – Calendar, Bookings, Tickets, and more! plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 7.4.0. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possi",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2025-9878 - Password Protect WordPress Lite <= 1.9.21 - Authenticated (Contributor+) Stored Cross-Site Scripting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-9878",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T03:16:54.000Z",
-        "contentSnippet": "The PPWP – Password Protect WordPress | #1 Most-Reviewed Password Plugin plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin's 'ppwp' shortcode in all versions up to, and including, 1.9.21 due to insufficient input sanitization and output escaping on ",
-        "cveScore": 6.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-78683 - NLTK before 3.10.0 Remote Code Execution via Unsafe Pickle Deserialization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78683",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T02:16:53.000Z",
-        "contentSnippet": "NLTK before 3.10.0 (affected versions",
-        "cveScore": 9.6,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-78682 - NLTK before 3.10.3 SSRF Protection Bypass via Proxy",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78682",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T02:16:52.000Z",
-        "contentSnippet": "NLTK before 3.10.3 contains a server-side request forgery vulnerability in nltk.pathsec.urlopen (and callers nltk.data.load, nltk.downloader.Downloader.index/download) when an HTTP proxy is configured. pathsec.urlopen validates the requested hostname locally, but proxy-handler in",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-78681 - NLTK before 3.10.3 Entity Expansion DoS via ElementTree",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78681",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T02:16:52.000Z",
-        "contentSnippet": "NLTK versions before 3.10.3 use xml.etree.ElementTree to parse XML in multiple modules, which honors entity declarations in document DTDs. Attackers can craft XML payloads with nested entity declarations that expand from hundreds of bytes to megabytes in memory, causing denial of",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-78680 - NLTK before 3.10.3 Arbitrary Code Execution via Graphviz dot Binary",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78680",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T02:16:52.000Z",
-        "contentSnippet": "NLTK versions before 3.10.3 fail to use validated absolute paths when invoking the Graphviz dot binary in dependencygraph.dot2img and AlignedSent._repr_svg_, allowing attackers to execute arbitrary code by placing a malicious dot binary in the search path or current working direc",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
@@ -2310,6 +2310,27 @@
     ],
     "hardware": [
       {
+        "title": "Best RAM deals 2026 — discounts on DDR5 and DDR4 to beat the memory price crunch",
+        "link": "https://www.tomshardware.com/gift-guides-seasonal-sales/best-ram-memory-deals-ddr5-ddr4",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-25T15:14:44.000Z",
+        "contentSnippet": "We're rounding up the best RAM deals from retailers across the U.S here."
+      },
+      {
+        "title": "Hot Chips 2026: Intel dives deep on Crescent Island AI accelerator — larger caches and deeper XMX engines target maximum AI FLOPS per watt",
+        "link": "https://www.tomshardware.com/pc-components/gpus/hot-chips-2026-intel-dives-deep-on-crescent-island-ai-accelerator-larger-caches-and-deeper-xmx-engines-target-maximum-ai-flops-per-watt",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-25T15:12:44.000Z",
+        "contentSnippet": "At Hot Chips 2026, Intel detailed more about its Crescent Island AI accelerator, which uses the Xe3P architecture. The accelerator will use liquid-cooled chips and HBM4 memory to serve inference workloads in data centers."
+      },
+      {
+        "title": "Apple price hikes continue as Mac mini with 16GB RAM and 256GB is now $899 — 1TB storage option adds $500 to entry-level headless system",
+        "link": "https://www.tomshardware.com/desktops/mini-pcs/apple-price-hikes-continue-as-mac-mini-with-16gb-ram-and-256gb-is-now-usd899-1tb-storage-option-adds-usd500-to-entry-level-headless-system",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-25T14:37:55.000Z",
+        "contentSnippet": "Apple's Mac mini and Mac Studio see price hikes, while memory and storage upgrades get even more expensive"
+      },
+      {
         "title": "Lancium Adds NVIDIA as Investor and Partner, Targeting Gigawatt AI Factories Across a 15GW Pipeline",
         "link": "https://www.storagereview.com/news/lancium-adds-nvidia-as-investor-and-partner-targeting-gigawatt-ai-factories-across-a-15gw-pipeline",
         "source": "StorageReview",
@@ -2987,27 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-08-21T14:05:33.000Z",
         "contentSnippet": "The Elegoo Centauri 2 Combo is an excellent four-color printer, but is it worth the savings without an enclosure?"
-      },
-      {
-        "title": "Tom’s Hardware Innovation Awards 2026: Progress amid turmoil",
-        "link": "https://www.tomshardware.com/pc-components/toms-hardware-innovation-awards-2026-progress-amid-turmoil",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-21T14:02:24.000Z",
-        "contentSnippet": "The continued industry advancements give us several new picks for our annual Tom's Hardware Innovation Awards: a set of products that set or expand the standard for others."
-      },
-      {
-        "title": "LG enters chip packaging arena with Laser Direct Imaging machine, as TSMC's CoWoS remains constrained — maskless machine is designed to pattern fine interconnects, trading resolution for higher throug",
-        "link": "https://www.tomshardware.com/tech-industry/semiconductors/lg-enters-chip-packaging-arena-with-laser-direct-imaging-machine-as-tsmcs-cowos-remains-constrained-maskless-machine-is-designed-to-pattern-fine-interconnects-trading-resolution-for-higher-throughput",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-21T13:35:14.000Z",
-        "contentSnippet": "LG rolls-out laser direct imaging lithography machine for chip packaging and high-density PCBs."
-      },
-      {
-        "title": "Unlock Tom's Hardware Premium's Hot Chips 2026 coverage for free — sign up for an account to read technical breakdowns from the show",
-        "link": "https://www.tomshardware.com/tech-industry/unlock-toms-hardware-premiums-hot-chips-2026-coverage-for-free-sign-up-for-an-account-to-read-technical-breakdowns-from-the-show",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-21T13:00:00.000Z",
-        "contentSnippet": "For a limited time, you’ll be able to read all of our latest reports from Hot Chips 2026 with a Tom’s Hardware account, no payment required."
       }
     ]
   }
