@@ -1,25 +1,232 @@
 {
-  "updatedAt": "2026-08-25T15:34:23.340Z",
+  "updatedAt": "2026-08-25T16:26:05.890Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
-        "title": "CVE-2026-55530 - PraisonAI: ast_grep_rewrite rewrites arbitrary files without the @require_approval gate enforced on every sibling mutation tool",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55530",
+        "title": "CVE-2026-55640 - Nextcloud MCP Server: Unauthenticated `POST /webhooks/nextcloud` allows arbitrary vector data deletion when `WEBHOOK_SECRET` is unset ( default )",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55640",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-25T14:45:07.000Z",
-        "contentSnippet": "PraisonAI is a multi-agent teams system. Prior to praisonaiagents 1.6.58, ast_grep_rewrite lacks the @require_approval decorator used by sibling mutation tools. With dry_run=False, an agent-controlled call can pass --update-all and a broad path to rewrite matching files without t",
+        "isoDate": "2026-08-25T16:03:28.000Z",
+        "contentSnippet": "Nextcloud MCP Server is a production-ready MCP server that connects AI assistants to a Nextcloud instance. Prior to 0.117.2, the POST /webhooks/nextcloud endpoint in nextcloud_mcp_server/vector/webhook_receiver.py has no authentication by default because WEBHOOK_SECRET defaults t",
         "cveScore": 0,
         "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-79785 - X-AnyLabeling before 4.0.0-beta.9 Improper Certificate Validation in Model Downloads",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-79785",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T16:03:20.000Z",
+        "contentSnippet": "X-AnyLabeling's model downloader disabled TLS certificate verification. download_with_retry in anylabeling/services/auto_labeling/model.py built a context with ssl._create_unverified_context() and passed it to urllib.request.urlopen, so neither the certificate chain nor the hostn",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-55580 - mcp-shell — Security Disabled by Default in Bare-Binary Deploy Path + Shell Interpreter in Secure-Mode Allowlist",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55580",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T15:42:36.000Z",
+        "contentSnippet": "mcp-shell is an MCP server for running shell commands securely, auditably, and on demand. Prior to 0.6.0, config.go initializes Security.Enabled to false, and when MCP_SHELL_SEC_CONFIG_FILE is unset, main.go starts the documented bare-binary deployment without a security policy. ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-55581 - mcp-shell: Secure Mode Allowlist Bypass via Default `/bin/bash` Executable",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55581",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T15:40:10.000Z",
+        "contentSnippet": "mcp-shell is an MCP server for running shell commands securely, auditably, and on demand. Prior to 0.6.0, the default Docker security.yaml includes /bin/bash in allowed_executables, while security.go validates only the first token and checkBlockedPatternsAndCommands does not reje",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-55582 - mcp-shell: Secure Mode Allowlist Bypass via Git Shell Alias",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55582",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T15:37:43.000Z",
+        "contentSnippet": "mcp-shell is an MCP server for running shell commands securely, auditably, and on demand. Prior to 0.6.0, the default security.yaml allows /usr/bin/git, while security.go omits ! from containsShellMetacharacters and containsDangerousShellConstructs and applies no per-executable a",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-55546 - QWED-MCP: Unsafe SymPy `parse_expr()` Remote Code Execution via Unsanitized Math Expression Input",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55546",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T15:25:34.000Z",
+        "contentSnippet": "QWED-MCP is a deterministic verification gateway for MCP. Prior to 0.2.1, verify_math_expression() in src/qwed_mcp/engines/math_engine.py passes attacker-controlled expression and claimed_result strings directly to SymPy's parse_expr() after only normalizing caret syntax to Pytho",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-70550 - Potential unauthorized access to private Composer repository metadata in JFrog Artifactory",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70550",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T15:22:53.000Z",
+        "contentSnippet": "An authorization weakness in JFrog Artifactory Composer repository handling may allow an authenticated user, under specific conditions, to read package metadata from repositories they are not authorized to read. The issue affects confidentiality and has been addressed in fixed Ar",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-55536 - Browser Server WebSocket origin validation bypass via unanchored regex (patch bypass of CVE-2026-40289 / GHSA-8x8f-54wf-vv92)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55536",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T15:21:53.000Z",
+        "contentSnippet": "PraisonAI is a multi-agent teams system. Prior to praisonai 4.6.58, Browser Server _handle_connection() checks Chrome extension origins with re.match() and the unanchored expression chrome-extension://[a-z0-9]{32}. Extra trailing characters pass before websocket.accept(), allowin",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-55532 - PraisonAI: Origin-validation bypass (startswith prefix match) enables unauthenticated cross-site request forgery against the PraisonAI MCP HTTP server",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55532",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T15:17:53.000Z",
+        "contentSnippet": "PraisonAI is a multi-agent teams system. Prior to praisonai 4.6.58, MCP HTTP Stream _validate_origin uses request_origin.startswith(allowed), allowing the attacker-controlled localhost.attacker.com HTTP origin to satisfy the localhost allowlist. A webpage can send Content-Type: t",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-70548 - SSRF In CocoaPods Via JFrog Artifactory External Dependency",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70548",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T15:17:16.000Z",
+        "contentSnippet": "Under specific circumstances, low-level user can run request to remote CocoaPods repos via JFrog Artifactory External Dependency.",
+        "cveScore": 3.5,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-79717 - Galaxy_ng: galaxy_ng: blind ssrf via namespace avatar_url with no private-address restriction",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-79717",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T15:16:45.000Z",
+        "contentSnippet": "A server-side request forgery (SSRF) vulnerability was found in galaxy_ng, the Ansible Galaxy server plugin for Pulp. An authenticated user with namespace management permissions can set a namespace avatar URL to an arbitrary address, including internal networks, loopback, or clou",
+        "cveScore": 6.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-70551 - Server-Side Request Forgery Via VCS remote download in JFrog Artifactory",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70551",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T15:16:38.000Z",
+        "contentSnippet": "A user who can read an existing remote VCS repository can replace its configured origin or supply an absolute VCS data URL.",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-69104 - Potential unauthorized repository migration in JFrog Artifactory",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-69104",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T15:16:37.000Z",
+        "contentSnippet": "An authenticated user may initiate repository migration operations without required repository permissions, potentially causing information disclosure, unauthorized state changes, and service disruption. Fixed versions address the issue.",
+        "cveScore": 7.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-55624 - MintyItanium Lost-Auction takes items like barrier blocks out from search GUI",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55624",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T15:16:35.000Z",
+        "contentSnippet": "MintyItanium Lost-Auction is an auction plugin for Minecraft. Prior to commit 88c920b05042929db334ba06d57f052b42d6b3f8, players can take items like barrier blocks or duplicate items from the GUI. Commit 88c920b05042929db334ba06d57f052b42d6b3f8 fixes the issue.",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-55541 - PraisonAI: `--api-key` flag on `praisonai serve` is not properly enforced",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55541",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T15:16:34.000Z",
+        "contentSnippet": "PraisonAI is a multi-agent teams system. Prior to praisonai 4.6.58, praisonai serve agents and praisonai serve unified parse --api-key but _create_agents_app() and _create_unified_app() do not install a credential check. Unauthenticated callers can reach POST /agents and POST /ap",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-55540 - PraisonAI: [Path Traversal] agent tools escape the configured workspace via symlinks",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55540",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T15:16:34.000Z",
+        "contentSnippet": "PraisonAI is a multi-agent teams system. Prior to praisonai 4.6.51, is_path_within_directory() uses os.path.abspath() rather than os.path.realpath() for the workspace boundary. A symlink inside workspace can point outside and still pass the check, allowing read_file and other cod",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-55538 - PraisonAI: [Auth Bypass] `praisonai serve agents --api-key` is silently ignored — agent-invocation routes (`POST /agents`, `POST /agents/{agent_name}`) run unauthenticated",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55538",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T15:16:34.000Z",
+        "contentSnippet": "PraisonAI is a multi-agent teams system. Prior to praisonai 4.6.51, praisonai serve agents parses config[\"api_key\"] but _create_agents_app() does not authenticate POST /agents or POST /agents/{agent_name}. Missing or incorrect bearer and X-API-Key values still reach agent executi",
+        "cveScore": 7.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-55537 - PraisonAI: Webhook SSRF via DNS fail-open in `JobSubmitRequest.validate_webhook_url()` — bypass of CVE-2026-40114",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55537",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T15:16:34.000Z",
+        "contentSnippet": "PraisonAI is a multi-agent teams system. Prior to praisonai 4.6.58, JobSubmitRequest.validate_webhook_url() accepts webhook_url when resolution raises socket.gaierror because the exception path uses except socket.gaierror: pass. JobExecutor._send_webhook() later performs a fresh ",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-55535 - PraisonAI: Server-Side Request Forgery via DNS rebinding bypass in webhook_url validation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55535",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T15:16:34.000Z",
+        "contentSnippet": "PraisonAI is a multi-agent teams system. Prior to praisonai 4.6.58, the Jobs API validate_webhook_url() path fails open on socket.gaierror and does not bind the validated address to the later request. An attacker webhook_url can later resolve to 127.0.0.1, 169.254.169.254, or ano",
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-55534 - PraisonAI serve agents --api-key is ignored, allowing unauthenticated remote agent execution",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-55534",
         "source": "cvefeed.io",
-        "isoDate": "2026-08-25T14:41:13.000Z",
+        "isoDate": "2026-08-25T15:16:34.000Z",
         "contentSnippet": "PraisonAI is a multi-agent teams system. From praisonai 4.6.34 until 4.6.58, praisonai serve agents accepts --api-key but _create_agents_app() does not authenticate POST /agents or POST /agents/{agent_name}. A network caller can invoke configured agents without credentials even w",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-55531 - PraisonAI: Unauthenticated unbounded session accumulation in the PraisonAI MCP HTTP server (memory exhaustion; session TTL never enforced)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55531",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T15:16:34.000Z",
+        "contentSnippet": "PraisonAI is a multi-agent teams system. Prior to praisonai 4.6.58, the MCP HTTP Stream mcp_post handler creates a new _sessions entry for every initialize request but does not call _cleanup_sessions or enforce a maximum. An unauthenticated caller can exhaust memory. The fix invo",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-55530 - PraisonAI: ast_grep_rewrite rewrites arbitrary files without the @require_approval gate enforced on every sibling mutation tool",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55530",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T15:16:33.000Z",
+        "contentSnippet": "PraisonAI is a multi-agent teams system. Prior to praisonaiagents 1.6.58, ast_grep_rewrite lacks the @require_approval decorator used by sibling mutation tools. With dry_run=False, an agent-controlled call can pass --update-all and a broad path to rewrite matching files without t",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-55529 - PraisonAI: Origin validation bypass in MCP HTTP Stream transport allows browser-mediated unauthenticated tool execution on local MCP server",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55529",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T15:16:33.000Z",
+        "contentSnippet": "PraisonAI is a multi-agent teams system. Prior to praisonai 4.6.58, the MCP HTTP Stream _validate_origin method accepts request_origin.startswith(allowed), so the attacker-controlled localhost.evil.example HTTP origin matches the localhost allowlist. Without an API key, a malicio",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-55528 - praisonaiagents: AgentServer declares auth_token but never enforces it on any route (CWE-862)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55528",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T15:16:33.000Z",
+        "contentSnippet": "PraisonAI is a multi-agent teams system. Prior to praisonaiagents 1.6.58, AgentServer exposes ServerConfig.auth_token but AgentServer._create_app does not check it on any route. A remote caller can subscribe, publish, and perform other actions without a valid bearer token or X-Au",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-55527 - PraisonAI: Arbitrary file write via unsanitized `user_id` in `FileMemory.__init__()` — path traversal to any writable location",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55527",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T15:16:33.000Z",
+        "contentSnippet": "PraisonAI is a multi-agent teams system. Prior to praisonaiagents 1.6.58, the FileMemory constructor joins unsanitized user_id into self.user_path. A caller supplying ../ or path separators can escape the memory directory and write JSON data to arbitrary process-writable location",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-55526 - PraisonAI: SSRF protection bypass in `spider_tools._host_is_blocked()` via DNS-resolved hostnames (`127.0.0.1.nip.io`)",
@@ -27,33 +234,6 @@
         "source": "cvefeed.io",
         "isoDate": "2026-08-25T14:36:09.000Z",
         "contentSnippet": "PraisonAI is a multi-agent teams system. Prior to praisonaiagents 1.6.58, spider_tools._host_is_blocked() does not resolve ordinary hostnames before scrape_page fetches them. A hostname such as 127.0.0.1.nip.io passes validation and resolves to loopback, permitting internal HTTP ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-55531 - PraisonAI: Unauthenticated unbounded session accumulation in the PraisonAI MCP HTTP server (memory exhaustion; session TTL never enforced)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55531",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T14:33:51.000Z",
-        "contentSnippet": "PraisonAI is a multi-agent teams system. Prior to praisonai 4.6.58, the MCP HTTP Stream mcp_post handler creates a new _sessions entry for every initialize request but does not call _cleanup_sessions or enforce a maximum. An unauthenticated caller can exhaust memory. The fix invo",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-55528 - praisonaiagents: AgentServer declares auth_token but never enforces it on any route (CWE-862)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55528",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T14:32:05.000Z",
-        "contentSnippet": "PraisonAI is a multi-agent teams system. Prior to praisonaiagents 1.6.58, AgentServer exposes ServerConfig.auth_token but AgentServer._create_app does not check it on any route. A remote caller can subscribe, publish, and perform other actions without a valid bearer token or X-Au",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-55529 - PraisonAI: Origin validation bypass in MCP HTTP Stream transport allows browser-mediated unauthenticated tool execution on local MCP server",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55529",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T14:26:30.000Z",
-        "contentSnippet": "PraisonAI is a multi-agent teams system. Prior to praisonai 4.6.58, the MCP HTTP Stream _validate_origin method accepts request_origin.startswith(allowed), so the attacker-controlled localhost.evil.example HTTP origin matches the localhost allowlist. Without an API key, a malicio",
         "cveScore": 0,
         "cveSeverity": "NA"
       },
@@ -722,189 +902,16 @@
         "contentSnippet": "FA-50 all versions miss authentication for some configuration. An attacker with access to the vessel's internal network can manipulate the product's settings screen to alter some configuration parameters.",
         "cveScore": 8.7,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-66882 - Reflected XSS in AshAuthentication confirmation and magic link interaction forms",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66882",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T08:18:10.000Z",
-        "contentSnippet": "Improper Neutralization of Input During Web Page Generation (XSS) vulnerability in team-alembic AshAuthentication allows reflected cross-site scripting via the confirmation and magic link interaction forms. When a strategy is configured with require_interaction? set to true, AshA",
-        "cveScore": 2.1,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-65633 - Purpose-limited JWT accepted as full bearer authentication in AshAuthentication",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65633",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T08:18:09.000Z",
-        "contentSnippet": "Improper Authentication vulnerability in team-alembic AshAuthentication allows purpose-limited JWTs to be replayed as full bearer API credentials when a resource uses stateless bearer-token verification. The bearer-token authentication helper AshAuthentication.Plug.Helpers.retrie",
-        "cveScore": 7.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-59769 - FA-50 Hard-Coded Credentials Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59769",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T08:18:09.000Z",
-        "contentSnippet": "FA-50 all versions contain hard-coded credentials. An attacker, who knows the credentials and has access to the vessel's internal network, can operate the settings screen using that credentials to alter the identification number.",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-19851 - Use of Default Password vulnerability affecting Tuleap Enterprise Edition from 17.0 through 17.5",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19851",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T08:18:08.000Z",
-        "contentSnippet": "A Use of Default Password vulnerability affecting Tuleap Enterprise Edition from 17.0 through 17.5 could allow an attacker to gain access to user accounts created during XML import.",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-18512 - TranslatePress <= 3.2.6 - Authenticated (Subscriber+) Stored Cross-Site Scripting via Approved Comment Body in Translation Editor",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18512",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T08:18:08.000Z",
-        "contentSnippet": "The TranslatePress – Translate Multilingual sites with AI Translation plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Approved Comment Body Rendered in Translation Editor Strings Dropdown in all versions up to, and including, 3.2.6 due to insufficient input ",
-        "cveScore": 6.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-18328 - Forminator Forms <= 1.57.0 - Unauthenticated DOM-Based Cross-Site Scripting via 'error_description' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18328",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T08:18:08.000Z",
-        "contentSnippet": "The Forminator Forms – Contact Form, Payment Form & Custom Form Builder plugin for WordPress is vulnerable to DOM-Based Reflected Cross-Site Scripting via the 'error_description' parameter in all versions up to, and including, 1.57.0 due to insufficient input sanitization and out",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-18323 - Forminator Forms <= 1.57.0.2 - Unauthenticated Stored Cross-Site Scripting via Radio Field (Save and Continue Draft)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18323",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T08:18:08.000Z",
-        "contentSnippet": "The Forminator Forms – Contact Form, Payment Form & Custom Form Builder plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Radio Field (Save and Continue Draft) in all versions up to, and including, 1.57.0.2 due to insufficient input sanitization and output esc",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-18100 - MetForm <= 4.1.8 - Authenticated (Contributor+) Stored Cross-Site Scripting via 'mf_form_id' Widget Setting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18100",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T08:18:08.000Z",
-        "contentSnippet": "The MetForm – Contact Form, Survey, Quiz, & Custom Form Builder for Elementor plugin for WordPress is vulnerable to Stored Cross-Site Scripting via 'mf_form_id' Widget Setting in all versions up to, and including, 4.1.8 due to insufficient input sanitization and output escaping. ",
-        "cveScore": 6.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16601 - CM Map Locations <= 2.1.8 - Authenticated (Subscriber+) Arbitrary File Upload via cmloc_route_image_upload AJAX Action",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16601",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T08:18:08.000Z",
-        "contentSnippet": "The CM Map Locations – Visualize and share your locations in a few clicks plugin for WordPress is vulnerable to Limited Arbitrary File Upload in all versions up to, and including, 2.1.8 via the uploadMedia function. This is due to insufficient file type validation in the upload h",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-78656 - itsourcecode Sales and Inventory System cust_del.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78656",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T07:17:10.000Z",
-        "contentSnippet": "A vulnerability was found in itsourcecode Sales and Inventory System 1.0. Affected is an unknown function of the file /pages/cust_del.php. The manipulation of the argument ID results in sql injection. The attack can be executed remotely. The exploit has been made public and could",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-69665 - SKYSEA Client View and SKYMEC IT Manager Improper Default Permissions Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-69665",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T07:17:10.000Z",
-        "contentSnippet": "SKYSEA Client View and SKYMEC IT Manager contain an issue with incorrect default permissions. If this vulnerability is exploited, an attacker who can log in to a Windows system on which the affected product is installed may execute arbitrary code with SYSTEM privilege.",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-68960 - SKYSEA Client View and SKYMEC IT Manager Stack-Based Buffer Overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68960",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T07:17:10.000Z",
-        "contentSnippet": "A stack-based buffer overflow vulnerability exists in SKYSEA Client View and SKYMEC IT Manager. If this vulnerability is exploited, an attacker who can log in to a Windows system on which the affected product is installed may be able to execute arbitrary code on another Windows s",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-68959 - SKYSEA Client View and SKYMEC IT Manager Path Traversal Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68959",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T07:17:10.000Z",
-        "contentSnippet": "SKYSEA Client View and SKYMEC IT Manager contain a path traversal vulnerability. If this vulnerability is exploited, an attacker who can log in to a Windows system on which the affected product is installed may be able to execute arbitrary code on another Windows system that has ",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-68062 - SKYSEA Client View and SKYMEC IT Manager Path Traversal Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68062",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T07:17:10.000Z",
-        "contentSnippet": "SKYSEA Client View and SKYMEC IT Manager contain a path traversal vulnerability. If this vulnerability is exploited, an attacker who can log in to a Windows system on which the affected product is installed may be able to execute arbitrary code on another Windows system that has ",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-66109 - SKYSEA Client View and SKYMEC IT Manager Missing Authorization Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66109",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T07:17:10.000Z",
-        "contentSnippet": "A missing authorization vulnerability exists in SKYSEA Client View and SKYMEC IT Manager. If this vulnerability is exploited, an attacker who can log in to the Windows system on which the affected product is installed may execute arbitrary code with SYSTEM privilege.",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-78654 - cleverbrush framework/deep deepExtend.ts deepExtend prototype pollution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78654",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T06:19:01.000Z",
-        "contentSnippet": "A vulnerability has been found in cleverbrush framework and deep up to 4.4.0. This impacts the function deepExtend of the file libs/deep/src/deepExtend.ts. The manipulation leads to improperly controlled modification of object prototype attributes. Remote exploitation of the atta",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-78638 - peerigon unzip-crx/unzip-crx-3 Archive Extraction index.js unzip path traversal",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78638",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T06:19:01.000Z",
-        "contentSnippet": "A flaw has been found in peerigon unzip-crx and unzip-crx-3 up to 0.2.0. This affects the function unzip of the file dist/index.js of the component Archive Extraction. Executing a manipulation of the argument destination can lead to path traversal. The attack can only be executed",
-        "cveScore": 3.3,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-78478 - Måne <= 1.7 - Unauthenticated Local File Inclusion",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78478",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T06:19:01.000Z",
-        "contentSnippet": "The Mane theme for WordPress is vulnerable to Local File Inclusion in all versions up to, and including, 1.7. This makes it possible for unauthenticated attackers to include and execute arbitrary files on the server, allowing the execution of any PHP code in those files. This can",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-78477 - Jawn <= 1.4.2 - Unauthenticated Privilege Escalation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78477",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T06:19:01.000Z",
-        "contentSnippet": "The Jawn theme for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 1.4.2. This makes it possible for unauthenticated attackers to elevate their privileges to that of an administrator.",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-78470 - WP Project Manager Pro <= 4.0.1 - Authenticated (Subscriber+) SQL Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78470",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T06:19:00.000Z",
-        "contentSnippet": "The WP Project Manager Pro plugin for WordPress is vulnerable to SQL Injection in all versions up to, and including, 4.0.1 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for authenti",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
+      {
+        "title": "5 ways to upgrade your home decor with Google Search",
+        "link": "https://blog.google/products-and-platforms/products/search/home-decor-tips/",
+        "source": "Google AI Blog",
+        "isoDate": "2026-08-25T16:00:00.000Z",
+        "contentSnippet": "Learn how to use Google Search tools to find home decor inspiration, shop for furniture, and tackle DIY projects."
+      },
       {
         "title": "Fastino Releases GLiNER2.5: A Boundary-Prediction Architecture That Removes Span Enumeration From Information Extraction",
         "link": "https://www.marktechpost.com/2026/08/24/fastino-releases-gliner2-5-a-boundary-prediction-architecture-that-removes-span-enumeration-from-information-extraction/",
@@ -1597,13 +1604,6 @@
         "source": "MarkTechPost",
         "isoDate": "2026-08-09T23:58:34.000Z",
         "contentSnippet": "NVIDIA releases NemotronLabs VoiceChat 11B, an open full-duplex speech-to-speech model with 448 ms latency and live tool calling. The post NVIDIA Releases NemotronLabs VoiceChat 11B: An Open Full-Duplex Speech-to-Speech Model with ~450 ms Turn-Taking and Live Tool Calling appeare"
-      },
-      {
-        "title": "Top LLM Observability and Evaluation Platforms in 2026: Langfuse, LangSmith, Braintrust, Arize, and More Compared",
-        "link": "https://www.marktechpost.com/2026/08/09/top-llm-observability-and-evaluation-platforms-in-2026-langfuse-langsmith-braintrust-arize-and-more-compared/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-08-09T18:15:30.000Z",
-        "contentSnippet": "A verified 2026 comparison of LLM observability platforms covering tracing depth, evaluation capability, production monitoring, and pricing. The post Top LLM Observability and Evaluation Platforms in 2026: Langfuse, LangSmith, Braintrust, Arize, and More Compared appeared first o"
       }
     ],
     "virtualization": [
@@ -2310,6 +2310,34 @@
     ],
     "hardware": [
       {
+        "title": "AMD Versal RF Series at Hot Chips 2026",
+        "link": "https://www.servethehome.com/amd-versal-rf-series-at-hot-chips-2026/",
+        "source": "ServeTheHome",
+        "isoDate": "2026-08-25T16:22:41.000Z",
+        "contentSnippet": "The AMD Versal RF devices are getting there time on stage at Hot Chips 2026 with hardend IP blocks to flexible FPGA fabric The post AMD Versal RF Series at Hot Chips 2026 appeared first on ServeTheHome."
+      },
+      {
+        "title": "Get 16GB of DDR5 RAM for $70 and start your AM5 gaming rig with this bundle — $568 for Ryzen 7 7700X3D, 16GB G.Skill DDR5 RAM, Asus TUF B650-E motherboard, and free AIO",
+        "link": "https://www.tomshardware.com/pc-components/get-16gb-of-ddr5-ram-for-usd70-and-start-your-am5-gaming-rig-with-this-bundle-usd568-for-ryzen-7-7700x3d-16gb-g-skill-ddr5-ram-asus-tuf-b650-e-motherboard-and-free-aio",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-25T15:59:08.000Z",
+        "contentSnippet": "568.99 ($200/26% off) gets you a 3-item Newegg combo: a Ryzen 7 7700X3D, Asus B650 board, 16GB of G.Skill DDR5-6000, and a free 240mm AIO thrown in — a inexpensive avenue into AM5."
+      },
+      {
+        "title": "AMD Versal Premium Gen2 at Hot Chips 2026",
+        "link": "https://www.servethehome.com/amd-versal-premium-gen2-at-hot-chips-2026/",
+        "source": "ServeTheHome",
+        "isoDate": "2026-08-25T15:50:56.000Z",
+        "contentSnippet": "At Hot Chips 2026 the first talk of day 2 is AMD Versal Premium Gen2 which is being shown for edge and physical AI use cases and more The post AMD Versal Premium Gen2 at Hot Chips 2026 appeared first on ServeTheHome."
+      },
+      {
+        "title": "Hot Chips 2026: Intel details cutting-edge tech in entry-level Wildcat Lake — value-focused 18A chips necessitated UCIe integration",
+        "link": "https://www.tomshardware.com/pc-components/cpus/hot-chips-2026-intel-details-cutting-edge-tech-in-entry-level-wildcat-lake-value-focused-18a-chips-necessitated-ucie-integration",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-25T15:45:08.000Z",
+        "contentSnippet": "Intel's Wildcat Lake is competing in the budget laptop market, but it takes a very different approach, leveraging a UCIe interconnect and Intel's latest 18A node."
+      },
+      {
         "title": "Best RAM deals 2026 — discounts on DDR5 and DDR4 to beat the memory price crunch",
         "link": "https://www.tomshardware.com/gift-guides-seasonal-sales/best-ram-memory-deals-ddr5-ddr4",
         "source": "Tom's Hardware",
@@ -2980,34 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-08-21T15:27:27.000Z",
         "contentSnippet": "Corsair launches a back-to-school promotion offering $75 off qualifying purchases of $350 or more in the U.S."
-      },
-      {
-        "title": "SanDisk expansion cards for Xbox Series X|S now available on Amazon — alternative storage solution to Seagate, WD arrives on the market five years after the launch of the consoles",
-        "link": "https://www.tomshardware.com/pc-components/external-ssds/sandisk-expansion-cards-for-xbox-series-x-s-now-available-on-amazon-alternative-storage-solution-to-seagate-wd-arrives-on-the-market-five-years-after-the-launch-of-the-consoles",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-21T15:25:29.000Z",
-        "contentSnippet": "The SanDisk Optimus GX C50 expansion cards for the Xbox Series X|S are now available on Amazon starting at $249.99 for the 1TB variant. While gamers can use external drives to copy and backup games from the Xbox consoles, they need expansion cards like these from SanDisk or Seaga"
-      },
-      {
-        "title": "Florida seeks court ruling to officially classify Sam Altman and ChatGPT as a 'public nuisance' — OpenAI fights to keep lawsuit away from a state jury",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/openai-fights-to-keep-chatgpt-lawsuit-away-from-a-state-jury",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-21T15:11:18.000Z",
-        "contentSnippet": "Florida's lawsuit against OpenAI and Sam Altman has now been sitting before U.S. District Judge Aileen Cannon in Fort Pierce for seven weeks."
-      },
-      {
-        "title": "World's largest open library calls for volunteers to scan and preserve physical books as AI companies buy, scan, and destroy them — Anna's Archive says ‘time is running out’ as ‘knowledge is permanent",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/worlds-largest-open-library-calls-for-volunteers-to-scan-and-preserve-physical-books-as-ai-companies-buy-scan-and-destroy-them-annas-archive-says-time-is-running-out-as-knowledge-is-permanently-monopolized-on-private-servers",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-21T14:33:36.000Z",
-        "contentSnippet": "A volunteer for Anna's Archive is calling for volunteers to scan and upload books to the shadow library to help preserve human knowledge for the public. The move comes as more AI companies buy, scan, and destroy books to feed to AI models, which is easier and faster than scanning"
-      },
-      {
-        "title": "Elegoo Centauri 2 Combo review: A budget-friendly printer made even more budget-friendly",
-        "link": "https://www.tomshardware.com/3d-printing/elegoo-centauri-2-combo-review",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-21T14:05:33.000Z",
-        "contentSnippet": "The Elegoo Centauri 2 Combo is an excellent four-color printer, but is it worth the savings without an enclosure?"
       }
     ]
   }
