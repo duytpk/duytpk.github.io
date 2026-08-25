@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-08-25T02:14:12.480Z",
+  "updatedAt": "2026-08-25T03:41:05.555Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-78683 - NLTK before 3.10.0 Remote Code Execution via Unsafe Pickle Deserialization",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78683",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T01:30:39.000Z",
+        "contentSnippet": "NLTK before 3.10.0 (affected versions",
+        "cveScore": 9.6,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-78682 - NLTK before 3.10.3 SSRF Protection Bypass via Proxy",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78682",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T01:30:38.000Z",
+        "contentSnippet": "NLTK before 3.10.3 contains a server-side request forgery vulnerability in nltk.pathsec.urlopen (and callers nltk.data.load, nltk.downloader.Downloader.index/download) when an HTTP proxy is configured. pathsec.urlopen validates the requested hostname locally, but proxy-handler in",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-78681 - NLTK before 3.10.3 Entity Expansion DoS via ElementTree",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78681",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T01:30:37.000Z",
+        "contentSnippet": "NLTK versions before 3.10.3 use xml.etree.ElementTree to parse XML in multiple modules, which honors entity declarations in document DTDs. Attackers can craft XML payloads with nested entity declarations that expand from hundreds of bytes to megabytes in memory, causing denial of",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-78680 - NLTK before 3.10.3 Arbitrary Code Execution via Graphviz dot Binary",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78680",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T01:30:37.000Z",
+        "contentSnippet": "NLTK versions before 3.10.3 fail to use validated absolute paths when invoking the Graphviz dot binary in dependencygraph.dot2img and AlignedSent._repr_svg_, allowing attackers to execute arbitrary code by placing a malicious dot binary in the search path or current working direc",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-78679 - GitPython before 3.1.59 Arbitrary File Read via TagReference.create",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78679",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T01:30:36.000Z",
+        "contentSnippet": "GitPython before 3.1.59 contains an arbitrary file read vulnerability in TagReference.create() where a positional reference parameter bypasses the unsafe option guard. Attackers can supply a reference value like --file= to read arbitrary files, with contents returned in the annot",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-78678 - GitPython before 3.1.59 Arbitrary File Read via Repo.blame()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78678",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T01:30:35.000Z",
+        "contentSnippet": "GitPython versions before 3.1.59 contain an incomplete denylist in the unsafe_git_revision_options guard that omits --contents and -S options, allowing attackers to read arbitrary files by passing these options to Repo.blame(). Attackers can supply revision values like --contents",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-78677 - GitPython before 3.1.59 Path Traversal via separate-git-dir",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78677",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T01:30:34.000Z",
+        "contentSnippet": "GitPython before 3.1.59 omits --separate-git-dir from unsafe_git_clone_options, allowing attackers to create arbitrary git directories outside the intended clone destination. Attackers can pass a separate_git_dir parameter to Repo.clone_from() or Repo.clone() to redirect reposito",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-78676 - GitPython before 3.1.59 Remote Code Execution via Config Injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78676",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T01:30:33.000Z",
+        "contentSnippet": "GitPython before 3.1.59 fails to safely re-serialize multi-line git-config values during write operations, corrupting dormant quoted values into injected directives like core.hooksPath. Attackers can craft config files with embedded newlines that become live git directives after ",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-78675 - GitPython before 3.1.59 Local File Content Disclosure via .gitmodules",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78675",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T01:30:32.000Z",
+        "contentSnippet": "GitPython before 3.1.59 fails to disable merge_includes when parsing .gitmodules, allowing attackers to disclose local file content by including arbitrary file paths via [include] directives. Attackers can craft a malicious .gitmodules file with include directives pointing to sen",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-76846 - Grav before 2.0.16 Information Disclosure via Twig Sandbox",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76846",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T01:30:31.000Z",
+        "contentSnippet": "Grav before 2.0.16 contains an incomplete default denylist in the Twig sandbox configuration that fails to block access to system configuration secrets. Attackers with page-edit permission can use config.get() or config.toArray() in Twig templates to retrieve sensitive values lik",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-76839 - Grav before 2.0.16 Information Disclosure via offsetGet",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76839",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T01:30:31.000Z",
+        "contentSnippet": "Grav before 2.0.16 allows sandboxed Twig templates to access sensitive User fields through allow-listed offsetGet() and offsetexists() methods that lack field filtering. Attackers with page-edit permissions can call offsetGet() on User objects to extract hashed passwords and 2FA ",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-75575 - Rocket.Chat Missing DDP Rate Limit on the sendForgotPasswordEmail Meteor Method",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75575",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T01:30:29.000Z",
+        "contentSnippet": "Rocket.Chat exposes the sendForgotPasswordEmail Meteor method without a DDP rate limit, so an unauthenticated caller may invoke it as often as it likes. The method is reachable over DDP and over the HTTP route POST /api/v1/method.callAnon/sendForgotPasswordEmail, and it triggers ",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-75574 - Grav before 4.2.2 Remote Code Execution via Email Twig",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75574",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T01:30:26.000Z",
+        "contentSnippet": "The Grav Email plugin (getgrav/grav-plugin-email) before 4.2.2 renders page-editor-controlled Email action parameters as unsandboxed Twig templates. An authenticated remote user with only api.access and api.pages.write permissions can place a Twig expression in header.form.proces",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-72702 - Grav CMS before 2.0.16 Origin Validation Bypass via Referer",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72702",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T01:30:25.000Z",
+        "contentSnippet": "Grav CMS before 2.0.16 contains an origin validation bypass in the Uri::referrer() and Pages::referrerRoute() methods, which validate the Referer header using an unanchored string prefix match (str_starts_with($referrer, $base)) with no trailing delimiter. An attacker who control",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-72701 - Grav CMS before 2.0.16 Timing Attack via verifyNonce",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72701",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T01:30:23.000Z",
+        "contentSnippet": "Grav CMS before 2.0.16 contains a timing vulnerability in Utils::verifyNonce() that uses non-constant-time string comparison with the === operator instead of hash_equals() for CSRF nonce validation. Attackers can measure response timing differences to recover valid nonce values b",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-72700 - Grav before 3.9.1 Timing Attack via Non-Constant-Time Token Comparison",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72700",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T01:30:22.000Z",
+        "contentSnippet": "The getgrav/grav-plugin-login Composer plugin before 3.9.1 (used by Grav) compares password reset and account activation tokens using a non-constant-time === string comparison instead of hash_equals() in classes/Controller.php (taskReset()) and login.php (activation handler). Bec",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-72699 - Grav Login Plugin before 3.9.1 Email Enumeration via Registration",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72699",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T01:30:21.000Z",
+        "contentSnippet": "The Grav Login plugin (getgrav/grav-plugin-login) before 3.9.1 is vulnerable to email address enumeration. The register() method in classes/Login.php throws a distinct exception (EMAIL_NOT_AVAILABLE) when a submitted email address already belongs to an existing account, while all",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-72698 - Grav CMS before 2.0.16 Information Disclosure via Twig Sandbox Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72698",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T01:30:21.000Z",
+        "contentSnippet": "Grav CMS before 2.0.16 fails to filter system, site, and theme configuration arrays in sandboxed Twig renders, allowing content editors to read sensitive configuration values. Attackers with page-content edit access can access raw configuration arrays including secrets like cache",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-72697 - Grav CMS before 2.0.16 Path Traversal via media_directory",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72697",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T01:30:18.000Z",
+        "contentSnippet": "Grav CMS before 2.0.16 contains a path traversal vulnerability in the media_directory() Twig function that fails to validate filesystem paths, allowing authenticated users to enumerate and access files outside intended scope. Attackers with page authoring privileges can supply ar",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-72696 - Grav CMS before 2.0.16 Symlink Following via createLockFile",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72696",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T01:30:14.000Z",
+        "contentSnippet": "Grav CMS before 2.0.16 contains a symlink following vulnerability in Scheduler Job::createLockFile() that allows local attackers to overwrite arbitrary files by pre-creating symlinks at predictable lock file paths in the world-writable temp directory. Attackers can place a symlin",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-72695 - Grav before 2.0.16 Path Traversal via MediaUploadTrait deleteFile",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-72695",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T01:30:11.000Z",
+        "contentSnippet": "Grav before 2.0.16 contains a path traversal vulnerability in MediaUploadTrait::deleteFile() that allows authenticated users with media management permissions to delete arbitrary files by supplying filenames with directory traversal sequences. The method validates only the basena",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-56710 - Grav Login Plugin before 1.0.16 Privilege Escalation via Unlock",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56710",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T01:30:11.000Z",
+        "contentSnippet": "Grav Login plugin versions before 1.0.16 fail to validate the target account's privilege level in the onApiUserListRowAction unlock handler. An attacker with api.users.write permission can clear login lockout counters on admin.super accounts, removing brute-force protection from ",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-56709 - Grav before 3.9.2 Host Header Injection via sendInvitationEmail",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56709",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T01:30:10.000Z",
+        "contentSnippet": "Grav before 3.9.2 fails to validate untrusted Host headers in the sendInvitationEmail() function when constructing token-bearing invitation links. Attackers can manipulate the Host header to poison invitation links and redirect users to attacker-controlled domains, bypassing the ",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-56708 - Grav API Plugin before 1.0.16 SSRF via DNS Rebinding",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56708",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T01:30:08.000Z",
+        "contentSnippet": "Grav API plugin before 1.0.16 contains a server-side request forgery vulnerability in webhook delivery that allows attackers to bypass hostname validation by DNS rebinding. Attackers controlling authoritative DNS for a configured webhook hostname can answer validation lookups wit",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-56707 - Grav Flex Objects 1.4.0 through 1.4.7 Authorization Bypass via Shortcode",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56707",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-25T01:30:06.000Z",
+        "contentSnippet": "Grav Flex Objects plugin versions 1.4.0 through 1.4.7 contain an authorization bypass vulnerability in the flex-objects shortcode that allows users with page-edit access to render any registered Flex collection without permission checks. Attackers can place the shortcode in publi",
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-55059 - OpenEXR: OpenEXRUtil SampleCountChannel row setter heap has an out-of-bounds write vulnerability",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-55059",
@@ -676,231 +901,6 @@
         "isoDate": "2026-08-24T18:17:19.000Z",
         "contentSnippet": "Multiple DrayTek VigorSwitch models contain a buffer overflow vulnerability in the acl_general_setup Edit ACE function. The vulnerability is caused by copying the name field into a fixed-size buffer without length validation. A remote attacker can trigger this vulnerability via c",
         "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-71939 - DrayTek VigorSwitch Multiple Models Buffer Overflow via acl_general_setup Add ACE",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71939",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T18:17:19.000Z",
-        "contentSnippet": "Multiple DrayTek VigorSwitch models contain a buffer overflow vulnerability in the acl_general_setup Add ACE function. The vulnerability is caused by copying the name field into a fixed-size buffer without length validation. A remote attacker can trigger this vulnerability via cr",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-71938 - DrayTek VigorSwitch Multiple Models Buffer Overflow via switch_lan_gvrp",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71938",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T18:17:19.000Z",
-        "contentSnippet": "Multiple DrayTek VigorSwitch models contain a buffer overflow vulnerability in the switch_lan_gvrp function. The vulnerability is caused by unsafe copying of the portList field into an undersized buffer. A remote attacker can trigger this vulnerability via crafted input, causing ",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-71937 - DrayTek VigorSwitch Multiple Models Buffer Overflow via poe_schedule_profile",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71937",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T18:17:18.000Z",
-        "contentSnippet": "Multiple DrayTek VigorSwitch models contain a buffer overflow vulnerability in the poe_schedule_profile function. The vulnerability is caused by repeated concatenation of the start_date, start_time, duration_time, how_often, weekdays, monthly_date, and cycle_duration fields into ",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-71936 - DrayTek VigorSwitch Multiple Models Buffer Overflow via sysreboot",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71936",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T18:17:18.000Z",
-        "contentSnippet": "Multiple DrayTek VigorSwitch models contain a buffer overflow vulnerability in the sysreboot function. The vulnerability is caused by unsafe concatenation of split valueN data into a fixed-size buffer. A remote attacker can trigger this vulnerability via crafted input, causing a ",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-71935 - DrayTek VigorSwitch Multiple Models Buffer Overflow via webBackupAction",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71935",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T18:17:18.000Z",
-        "contentSnippet": "Multiple DrayTek VigorSwitch models contain a buffer overflow vulnerability in the webBackupAction function. The vulnerability is caused by repeated string concatenation of the pathN, valueN, key, and option fields into fixed-size stack buffers without total length checks. A remo",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-71934 - DrayTek VigorSwitch Multiple Models Buffer Overflow via pingtrace",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71934",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T18:17:18.000Z",
-        "contentSnippet": "Multiple DrayTek VigorSwitch models contain a buffer overflow vulnerability in the pingtrace function. The vulnerability is caused by missing length checks when the host, count, and interval fields are concatenated into a fixed-size buffer. A remote attacker can trigger this vuln",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-71933 - DrayTek VigorSwitch Multiple Models Missing Authorization in Syslog Functions",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71933",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T18:17:18.000Z",
-        "contentSnippet": "Multiple DrayTek VigorSwitch models contain unauthorized operation vulnerabilities in multiple syslog functions. The vulnerability is caused by missing authorization checks. A remote attacker can trigger these vulnerabilities via crafted requests to modify configuration, restart ",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-71932 - DrayTek VigorSwitch Multiple Models Path Traversal via getSyslogFile",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71932",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T18:17:17.000Z",
-        "contentSnippet": "Multiple DrayTek VigorSwitch models contain a directory traversal vulnerability in the getSyslogFile function. The vulnerability is caused by insufficient validation of the option field. A remote attacker can trigger this vulnerability via crafted input containing path traversal ",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-75099 - Apache Allura: Unauthenticated REST disclosure",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75099",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T16:42:20.000Z",
-        "contentSnippet": "Unauthenticated REST disclosure of certain content items in Apache Allura. This issue affects Apache Allura: through 1.19.1. Users are recommended to upgrade to version 1.20.0, which fixes the issue.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2025-36939 - OpenThread MLE Packet Denial of Service and Buffer Overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-36939",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T16:38:45.000Z",
-        "contentSnippet": "Multiple vulnerabilities exist in OpenThread's handling of MLE packets. An authenticated attacker on the same Thread network could send specially crafted packets to cause a denial of service. These issues include triggerable assertion failures and a stack-based buffer overflow.",
-        "cveScore": 10,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2025-36940 - Fuchsia Zircon Kernel Pager Proxy Use-After-Free Privilege Escalation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-36940",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T16:33:53.000Z",
-        "contentSnippet": "Use-After-Free vulnerability in a zircon kernel pager proxy (Fuchsia), which could lead to a Privilege Escalation from Userspace to Kernel (AP)",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-15469 - Hard-coded Mesh Group Private Key in TP-Link Deco XE75, XE5300, and WE10800",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15469",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T16:32:12.000Z",
-        "contentSnippet": "The use of hard-coded cryptographic key vulnerability has been identified in the mesh functionality of Deco XE75 v3, XE5300 v3.6 and WE10800 v3.6. A shared RSA-512 mesh group private key is present in the affected firmware and is used by the mesh protocol for node authentication.",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-78465 - Gimp: integer overflow in pcx loader (planes=4) leads to heap overflow on 32-bit",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78465",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T16:28:12.000Z",
-        "contentSnippet": "A flaw was found in the file-pcx plugin in GIMP, affecting 32-bit builds only. When processing a PCX image file, the plugin calculates memory allocation sizes based on the image dimensions and the number of color planes. If a crafted file sets the number of planes to 4 alongside ",
-        "cveScore": 7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-78329 - Apache Camel: Camel-Undertow: the endpoint discarded the undertow-specific header filter strategy in favour of the base HTTP one, so the undertow filtering never ran on endpoint-confi",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78329",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T16:22:17.000Z",
-        "contentSnippet": "Improper input validation vulnerability in Apache Camel Undertow component. This issue affects Apache Camel: from 4.11.0 before 4.14.9, from 4.15.0 before 4.18.4, from 4.19.0 before 4.22.0. UndertowEndpoint defaulted its headerFilterStrategy field to the base HttpHeaderFilterStra",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-71300 - Apache Camel: Camel-Atmosphere-Websocket: WebSocket dispatch header injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71300",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T16:21:17.000Z",
-        "contentSnippet": "Improper input validation vulnerability in Apache Camel Atmosphere Websocket component. This issue affects Apache Camel: from 4.0.0 before 4.14.9, from 4.15.0 before 4.18.4, from 4.19.0 before 4.22.0. The camel-atmosphere-websocket producer selects which connected WebSocket peers",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-63621 - Apache Camel: Camel-Knative: CloudEvent extension fields received in structured content mode were mapped onto message headers without applying any header filter strategy",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63621",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T16:17:26.000Z",
-        "contentSnippet": "Improper Input Validation, Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection') vulnerability in Apache Camel Knative component The Knative consumer in camel-knative maps inbound CloudEvent attributes onto Camel message headers. In bi",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-78416 - Authenticated RCE via `condition.config` JSON cleanse bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78416",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T16:17:24.000Z",
-        "contentSnippet": "Craft CMS versions from 4.0.0-RC1 before 4.18.2 and from 5.0.0-RC1 before 5.10.6 contain an authenticated remote code execution vulnerability in control panel element-search condition handling. A JSON cleanse bypass in condition.config allows Yii behavior/event configuration keys",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-76071 - Netis NC63 V3.0.0.3327 Stack Buffer Overflow via destHost Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76071",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T16:17:23.000Z",
-        "contentSnippet": "Netis NC63 firmware through V3.0.0.3327 contains a stack-based buffer overflow vulnerability that allows unauthenticated remote attackers to overwrite saved stack state by supplying an oversized destHost parameter to the ipFilterList=mod action in netis.cgi. Attackers can exploit",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-76070 - Netis NC63 V3.0.0.3327 Stack Buffer Overflow via Login Password Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76070",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T16:17:22.000Z",
-        "contentSnippet": "Netis NC63 firmware through V3.0.0.3327 contains a stack-based buffer overflow vulnerability that allows unauthenticated remote attackers to overwrite saved stack state by submitting an oversized Base64-encoded password to the login handler in /bin/netis.cgi. Attackers can exploi",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-71366 - Awx: notification backends allow ssrf and credential leakage",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71366",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T16:17:22.000Z",
-        "contentSnippet": "A server-side request forgery (SSRF) vulnerability was found in multiple AWX notification backends. The webhook, Mattermost, Rocket.Chat, and Grafana notification backends use notification template URLs as direct HTTP request targets without validating the target address against ",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-71364 - Awx: project archive extraction allows path traversal file writes",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71364",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T16:17:22.000Z",
-        "contentSnippet": "A path traversal vulnerability was found in AWX's project archive extraction. The project_archive action plugin extracts zip and tar archive members by joining the project directory path with the member filename without performing path normalization, boundary validation, or rejec",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-67204 - BookStack < 26.05.4 Broken Access Control via Image Gallery API",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67204",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T16:17:17.000Z",
-        "contentSnippet": "BookStack before 26.05.4 contains a broken access control vulnerability that allows authenticated API users with image-update or image-delete permissions to manipulate other users' avatars by exploiting missing content-type restrictions in the Image Gallery API endpoints. Attacke",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-21752 - HCL Hive is affected by a use of vulnerable third-party components",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-21752",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T16:16:55.000Z",
-        "contentSnippet": "HCL Hive is affected by a use of vulnerable third-party components which could allow an attacker unauthorized access or compromise of the system by exploiting publicly documented security flaws.",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-13343 - Uninitialised stack memory disclosure in the MIDI 2.0 UMP Stream responder",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13343",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T16:16:55.000Z",
-        "contentSnippet": "The UMP Stream responder library in lib/midi2/ump_stream_responder.c builds reply packets in a 16-byte struct midi_ump (uint32_t data[4]). The builders make_endpoint_info() and make_function_block_info() populate only the first two words (res.data[0] and res.data[1]) and, before ",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-13212 - Zephyr virtio driver calls an arbitrary function pointer from an out-of-range used-ring descriptor id",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13212",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-24T16:16:55.000Z",
-        "contentSnippet": "The Zephyr virtio driver does not validate the descriptor-chain head id that the virtio device writes into the used ring. In virtio_isr() (drivers/virtio/virtio_common.c), the device-written vq->used->ring[idx].id is used directly as an index into vq->recv_cbs[] and vq->desc[], w",
-        "cveScore": 8.8,
         "cveSeverity": "HIGH"
       }
     ],
