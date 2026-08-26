@@ -1,8 +1,17 @@
 {
-  "updatedAt": "2026-08-26T02:20:09.990Z",
+  "updatedAt": "2026-08-26T03:45:57.666Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-9805 - FMTSWriteUseIntelLib: FMTS SMM IHISI Buffer Overflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9805",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-26T01:00:25.000Z",
+        "contentSnippet": "SMM IHISI command handler, FMTSWriteUseIntelLib, for FMTS command 0x32, read and write data without checking buffer size and could cause buffer overflow.",
+        "cveScore": 2.7,
+        "cveSeverity": "LOW"
+      },
       {
         "title": "CVE-2026-57171 - Trestle is vulnerable to arbitrary file write via path traversal in author generate commands (Incomplete fix of CVE-2026-46345)",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-57171",
@@ -18,8 +27,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-08-25T23:19:07.000Z",
         "contentSnippet": "Kimai before 2.56.0 does not enforce team-membership checks in TimesheetVoter::voteOnAttribute(), which maps permissions only to own_timesheet or other_timesheet. As a result, any authenticated user with ROLE_TEAMLEAD (or a role holding edit_other_timesheet/delete_other_timesheet",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-80201 - Kimai before 2.53.0 API Token Leakage via Invoice Template",
@@ -45,8 +54,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-08-25T23:19:05.000Z",
         "contentSnippet": "Kimai before 2.54.0 contains a timing oracle vulnerability in TokenAuthenticator that allows unauthenticated attackers to enumerate valid usernames via X-AUTH-USER header. Attackers can measure response time differences when the password hasher runs only for existing users, enabl",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
+        "cveScore": 3.7,
+        "cveSeverity": "LOW"
       },
       {
         "title": "CVE-2026-80198 - Kimai before 2.56.0 Information Disclosure via config() Twig Function",
@@ -54,7 +63,7 @@
         "source": "cvefeed.io",
         "isoDate": "2026-08-25T23:19:04.000Z",
         "contentSnippet": "Kimai versions before 2.56.0 fail to restrict the config() Twig function in sandboxed invoice and export templates, allowing administrators to access arbitrary configuration keys. Attackers with admin privileges can upload malicious templates to exfiltrate server-wide secrets inc",
-        "cveScore": 8.7,
+        "cveScore": 7.5,
         "cveSeverity": "HIGH"
       },
       {
@@ -63,8 +72,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-08-25T23:19:03.000Z",
         "contentSnippet": "Kimai before 2.57.0 contains an improper authorization vulnerability in the favorite timesheet add and remove endpoints that allows authenticated users to manipulate other users' bookmarks. Attackers can add or remove timesheet entries from another user's favorite list by referen",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-80196 - Kimai before 2.58.0 Authentication Bypass via Password Reset Link",
@@ -72,7 +81,7 @@
         "source": "cvefeed.io",
         "isoDate": "2026-08-25T23:19:03.000Z",
         "contentSnippet": "Kimai before 2.58.0 contains an authentication bypass vulnerability where password reset links remain valid after password changes because the LoginLink signature covers only the user id, not the password hash. Attackers who intercept or cache a password reset link can use it up ",
-        "cveScore": 8.7,
+        "cveScore": 7.5,
         "cveSeverity": "HIGH"
       },
       {
@@ -81,8 +90,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-08-25T23:19:02.000Z",
         "contentSnippet": "Kimai before 2.63.0 contains a business logic / improper authorization vulnerability in the team update API endpoint (PATCH /api/teams/{id}), which removes all existing team members before validating the submitted replacement member list. An authenticated teamlead (or other user)",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-80194 - Kimai before 2.64.0 Missing Authorization via ProjectViewController export",
@@ -90,8 +99,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-08-25T23:19:01.000Z",
         "contentSnippet": "Kimai before 2.64.0 contains a missing authorization vulnerability in the ProjectViewController export route (report_project_view_export). The authorization guards are attached to the sibling __invoke method rather than at the class level, so the export route inherits no authoriz",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-80193 - Kimai before 2.62.0 Authorization Bypass via QuickEntry",
@@ -108,7 +117,7 @@
         "source": "cvefeed.io",
         "isoDate": "2026-08-25T23:19:00.000Z",
         "contentSnippet": "@better-auth/sso before 1.6.27 (and before 1.4.8 in the 1.4.x line and before 1.7.0-rc.5 in the 1.7 prerelease line) contains two domain-ownership flaws. When domain verification is disabled, automatic organization assignment accepts unverified provider domains, allowing an authe",
-        "cveScore": 8.6,
+        "cveScore": 8.1,
         "cveSeverity": "HIGH"
       },
       {
@@ -117,7 +126,7 @@
         "source": "cvefeed.io",
         "isoDate": "2026-08-25T23:18:59.000Z",
         "contentSnippet": "GROWI applies its page-viewer permission check to attachment requests only when the request carries an authenticated user. retrieveAttachmentFromIdParam in apps/app/src/server/routes/attachment/get.ts guards the check with a condition requiring the user to be non-null, so a reque",
-        "cveScore": 8.7,
+        "cveScore": 7.5,
         "cveSeverity": "HIGH"
       },
       {
@@ -126,8 +135,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-08-25T23:18:58.000Z",
         "contentSnippet": "LeafWiki extracts an uploaded ZIP archive without limiting how much data it will write. ZipExtractor.ExtractToDir in internal/importer/zip_extractor.go opens each entry and copies it to the destination with io.Copy, which runs to the end of the decompressed stream, so only the si",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-57170 - Trestle SSTI in Jinja2 include tags allows arbitrary code execution (Incomplete fix of CVE-2026-46439)",
@@ -135,8 +144,8 @@
         "source": "cvefeed.io",
         "isoDate": "2026-08-25T23:18:29.000Z",
         "contentSnippet": "Compliance-trestle (Trestle) is a Python SDK and command-line tool for managing OSCAL compliance documents. In versions prior to 3.12.4 and 4.0.0 through 4.0.3, the custom Jinja2 include tags mdsection_include and md_clean_include re-parse the content of an included Markdown file",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-80138 - ClipBucket V5 5.5.1 through 5.5.3-#153 OS Command Injection via Installer php_cli_filepath Parameter",
@@ -893,15 +902,6 @@
         "contentSnippet": "Illustrator is affected by an out-of-bounds read vulnerability that could lead to disclosure of sensitive memory. An attacker could leverage this vulnerability to disclose sensitive information. Exploitation of this issue requires user interaction in that a victim must open a mal",
         "cveScore": 5.5,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-48425 - Substance3D - Sampler | Heap-based Buffer Overflow (CWE-122)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48425",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-25T17:46:00.000Z",
-        "contentSnippet": "Substance3D - Sampler is affected by a Heap-based Buffer Overflow vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
