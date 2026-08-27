@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-08-26T21:30:20.179Z",
+  "updatedAt": "2026-08-27T02:27:25.494Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-47874 - Reactor Netty HTTP Server Denial of Service With Pipelined Requests",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47874",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-26T23:49:26.000Z",
+        "contentSnippet": "The vulnerability occurs when a client sends HTTP/1.1 pipelined requests over a single connection, causing the Reactor Netty HTTP server to consume an excessive amount of memory. Reactor Netty 1.3.0 - 1.3.6 Reactor Netty 1.1.0 - 1.2.18 Reactor Netty 1.0.52 and earlier",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-47861 - UDP adapter sends ack to attacker-supplied host:port parsed from packet body, even when acknowledge=false",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47861",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-26T23:49:25.000Z",
+        "contentSnippet": "An unauthenticated remote attacker who can send a single UDP packet to a Spring Integration UDP inbound adapter can cause the server to emit an outbound UDP datagram to an arbitrary internal or external host and port of the attacker's choosing. Spring Integration 7.1.0 Spring Int",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-81421 - ddfourtwo sentry-selfhosted-mcp raw_sentry_api server-side request forgery",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81421",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-26T23:45:09.000Z",
+        "contentSnippet": "A security flaw has been discovered in ddfourtwo sentry-selfhosted-mcp 0.4.0. The affected element is an unknown function of the component raw_sentry_api. The manipulation of the argument endpoint results in server-side request forgery. It is possible to launch the attack remotel",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-47863 - Reactor Core bufferTimeout fair-backpressure pipeline permanently hangs when upstream delivers items during an active flush",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47863",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-26T23:28:48.000Z",
+        "contentSnippet": "In Reactor Core, applications that use the Flux.bufferTimeout operator with fairBackpressure enabled are vulnerable to a Denial of Service (DoS) condition. Reactor Core 3.8.0 - 3.8.6 Reactor Core 3.7.19 and earlier",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-47862 - ZipTransformer uses file_name header to build workDirectory path without sanitization",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47862",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-26T23:28:47.000Z",
+        "contentSnippet": "An attacker who can set the file_name header on a message reaching a ZipTransformer with ZipResultType.FILE (the default) can cause the resulting .zip archive to be written to an arbitrary filesystem path outside the configured workDirectory. Spring Integration 7.1.0 Spring Integ",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-47860 - Unbounded decompression of attacker-supplied compressed message bodies",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47860",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-26T23:28:46.000Z",
+        "contentSnippet": "An attacker who can publish to a queue consumed by an application that has enabled message decompression can crash the consumer JVM with a single ~1 MB message. Spring AMQP 4.1.0 Spring AMQP 4.0.0 - 4.0.4 Spring AMQP 3.2.0 - 3.2.12 Spring AMQP 2.4.18 and earlier",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-47859 - Unbounded memory allocation in RFC6587SyslogDeserializer (octet-counted framing) — remote DoS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47859",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-26T23:28:45.000Z",
+        "contentSnippet": "RFC6587SyslogDeserializer, used by the Spring Integration syslog TCP inbound adapter to decode RFC 6587 / RFC 5424 frames, trusts the sender-supplied octet count of an octet-counted frame and allocates a byte array of exactly that size with no upper bound. Spring Integration 7.1.",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-47857 - Reactor Core windowTimeout fair-backpressure stream hang due to 20-bit index wrap-around",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47857",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-26T23:28:44.000Z",
+        "contentSnippet": "In Reactor Core, applications that use the Flux.windowTimeout operator with fairBackpressure enabled are vulnerable to a Denial of Service (DoS) condition. Reactor Core 3.8.0 - 3.8.6 Reactor Core 3.5.0 - 3.7.19 Reactor Core 3.4.41 and earlier",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-47856 - JsonToObjectTransformer resolves the json__TypeId__ message header to an arbitrary class without an allow-list",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47856",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-26T23:28:43.000Z",
+        "contentSnippet": "Spring Integration's JSON to object conversion uses the json__TypeId__ header to choose the deserialization target type, and resolves that header value to a class with ClassUtils.forName and no type/package allow-list. Spring Integration 7.1.0 Spring Integration 7.0.0 - 7.0.5 Spr",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-47852 - Predictable cache directory location allows local ONNX model substitution in Spring AI",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47852",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-26T23:28:42.000Z",
+        "contentSnippet": "A local attacker on a multi-user host can pre-create the deterministic cache path and plant a malicious ONNX model file. Spring AI 2.0.0 Spring AI 1.1.0 - 1.1.8 Spring AI 1.0.0 - 1.0.9",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-47851 - Unbounded recursion over attacker-controlled PDF outline tree in Spring AI PDF Document Reader",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47851",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-26T23:28:41.000Z",
+        "contentSnippet": "Analyzing a PDF with a deeply nested or cyclic table of contents can cause a StackOverflowError in the ingestion thread. Spring AI 2.0.0 Spring AI 1.1.0 - 1.1.8 Spring AI 1.0.0 - 1.0.9",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-47850 - Spring Data REST allows mutation of the version property of immutable aggregates via PUT",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47850",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-26T23:28:40.000Z",
+        "contentSnippet": "Spring Data REST does not preserve the persisted version (@Version) property of an aggregate root when handling an HTTP PUT against an immutable target type. Spring Data REST 5.1.0 Spring Data REST 5.0.0 - 5.0.6 Spring Data REST 4.5.0 - 4.5.12 Spring Data REST 4.0.0 - 4.4.15 Spri",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-47845 - Reactor Netty HTTP Server may incorrectly evaluate proxy addresses",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47845",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-26T23:28:39.000Z",
+        "contentSnippet": "In specific scenarios, Reactor Netty HTTP Server may incorrectly evaluate the remote IP address when HAProxy Protocol is enabled. In order for this to happen, the application must be configured to use HAProxy Protocol. Reactor Netty 1.3.0 - 1.3.6 Reactor Netty 1.1.0 - 1.2.18 Reac",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-81203 - SourceCodester Simple Online Food Ordering System ajax.php login2 sql injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81203",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-26T23:17:20.000Z",
+        "contentSnippet": "A vulnerability has been found in SourceCodester Simple Online Food Ordering System 1.0. This affects an unknown function of the file /admin/ajax.php?action=login2. The manipulation of the argument email leads to sql injection. It is possible to initiate the attack remotely. The ",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-80158 - Ansible-collection-community-general: community.general: ipa_getkeytab does not set no_log on the bind_pw parameter, disclosing the ipa bind password in logs and process listings",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-80158",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-26T23:17:20.000Z",
+        "contentSnippet": "A flaw was found in the ipa_getkeytab module of the community.general Ansible collection. The module's bind_pw parameter, used to supply the LDAP simple-bind password when retrieving a Kerberos keytab, is not declared with no_log, unlike the sibling password parameter in the same",
+        "cveScore": 5.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-75340 - JetLinks Community Server-Side Request Forgery",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75340",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-26T23:17:19.000Z",
+        "contentSnippet": "The device metadata import interface /device/instance/{productId}/property-metadata/import of jetlinks community 2.11 is vulnerable to Server-side request forgery (SSRF).",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-75338 - Disconf Incorrect Access Control Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75338",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-26T23:17:18.000Z",
+        "contentSnippet": "disconf (Distributed Configuration Management Platform) 2.6.36 is vulnerable to Incorrect Access Control. The config-fetching APIs /api/config/item, /api/config/file, /api/config/list and /api/config/simple/list are exposed without authentication. The LoginInterceptor explicitly ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-75336 - Funiture SQL Injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75336",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-26T23:17:18.000Z",
+        "contentSnippet": "Funiture 1.0.0 is vulnerable to SQL Injection in the backend tool interfaces /sys/tool/select.json and /sys/tool/update.json.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-75332 - Zyplayer-Doc Server-Side Request Forgery",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75332",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-26T23:17:18.000Z",
+        "contentSnippet": "Zyplayer-Doc",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-75330 - Super-diamond-server SQL Injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75330",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-26T23:17:18.000Z",
+        "contentSnippet": "The front-end interface /superdiamond/preview/{projectCode}/{module}/{type} of super-diamond-server",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-69129 - KubePi: Insufficient per-cluster authorization checks in cluster management APIs",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-69129",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-26T23:17:15.000Z",
+        "contentSnippet": "KubePi is a Kubernetes multi-cluster management panel. In versions up to and including 2.0.0, cluster-scoped APIs do not consistently validate per-cluster access, allowing an authenticated user with cluster management permissions to operate on clusters outside the scope they were",
+        "cveScore": 5.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-65956 - KubePi: Unauthenticated SSO/OIDC configuration allows admin account takeover and SSRF",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65956",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-26T23:17:15.000Z",
+        "contentSnippet": "KubePi is a Kubernetes multi-cluster management panel. In versions up to and including 1.6.15, the SSO configuration API endpoints are exposed on the same public routing boundary as the SSO login and callback endpoints, so SSO, OIDC, and SAML management operations can be reached ",
+        "cveScore": 10,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-47666 - Penpot: Stored XSS via custom font family name injected into a @font-face style rule",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47666",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-26T23:17:13.000Z",
+        "contentSnippet": "Penpot is an open-source design and prototyping platform. In versions up to and including 2.14.3, Penpot is vulnerable to stored cross-site scripting through custom font family names, which are interpolated into a @font-face CSS rule and injected into the page as HTML without san",
+        "cveScore": 7.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-47665 - Penpot: Stored XSS via comment content, innerHTML renders unsanitized HTML",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47665",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-26T23:17:13.000Z",
+        "contentSnippet": "Penpot is an open-source design and prototyping platform. In versions up to and including 2.14.3, Penpot is vulnerable to stored cross-site scripting through file comments, whose content is stored as raw text and rendered into the page with innerHTML without any sanitization. Bec",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-21808 - HCL BigFix Quantum Risk Analyzer is affected by logging sensitive information",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-21808",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-26T23:17:12.000Z",
+        "contentSnippet": "HCL BigFix Quantum Risk Analyzer generates highly detailed logging information by default which increases the risk of sensitive data leakage and can provide an attacker with internal application logic and architectural details.",
+        "cveScore": 4.1,
+        "cveSeverity": "MEDIUM"
+      },
       {
         "title": "CVE-2026-77573 - Weblate: DNS rebinding in VCS operations allows server-side request forgery",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-77573",
@@ -677,234 +902,16 @@
         "contentSnippet": "The Classified Listing - Mobile Number Verification plugin for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 1.6.0. This is due to missing server-side Firebase OTP validation in the process_otp_login() function. This makes it possible for ",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-63041 - Apache APISIX: attach-consumer-label does not strip client-supplied consumer-label headers",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63041",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T11:34:59.000Z",
-        "contentSnippet": "Reliance on Untrusted Inputs in a Security Decision vulnerability in Apache APISIX. This vulnerability allows an attacker to escalate privilege or perform an authorization bypass by sending certain values that the attach-consumer-label plugin does not sanitise correctly. This iss",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-18080 - ERP: Complete HR, Accounting & CRM Suite Built for WooCommerce <= 1.17.8 - Unauthenticated Arbitrary File Upload via CRM Email Connect IMAP Attachment",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18080",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T11:05:44.000Z",
-        "contentSnippet": "The ERP: Complete HR, Accounting & CRM Suite Built for WooCommerce plugin for WordPress is vulnerable to Unrestricted File Type Upload in all versions up to, and including, 1.17.8 via the save_attachments() function. This is due to missing file extension validation and missing pa",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-3235 - WP Data Access – No-Code App Builder with Tables, Forms, Charts & Maps <= 5.5.68 - Unauthenticated Insecure Direct Object Reference to Data Access",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-3235",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T11:05:44.000Z",
-        "contentSnippet": "The WP Data Access plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 5.5.68 via the 'check_app_access' function due to missing validation on a user controlled key. This makes it possible for unauthenticated attackers to a",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-5092 - Greenshift <= 12.8.9 - Authenticated (Contributor+) Stored Cross-Site Scripting via Data URI",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-5092",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T11:05:43.000Z",
-        "contentSnippet": "The Greenshift – animation and page builder blocks plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the customapi action handler in versions up to, and including, 12.8.9. This is due to insufficient sanitization of API responses before output via innerHTML. T",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-77532 - Ubiquiti EdgeMAX EdgeSwitch Buffer Overflow Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77532",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T11:01:30.000Z",
-        "contentSnippet": "A malicious actor with access to an adjacent network could exploit a Buffer Overflow vulnerability found in a DHCPv6-enabled EdgeMAX EdgeSwitch to initiate a Remote Code Execution on such device.",
-        "cveScore": 9.6,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-77557 - UniFi Protect AI Key Improper Access Control Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77557",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T10:53:27.000Z",
-        "contentSnippet": "A malicious actor with access to the network could exploit an Improper Access Control vulnerability found in UniFi Protect AI Key to escalate privileges on the device.",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-77554 - UniFi Talk Application Command Injection Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77554",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T10:45:46.000Z",
-        "contentSnippet": "A malicious actor with access to the network could exploit an Improper Input Validation vulnerability found in UniFi Talk Application to execute a Command Injection on the host device.",
-        "cveScore": 10,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-77553 - UniFi Access Application Improper Access Control Privilege Escalation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77553",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T10:42:54.000Z",
-        "contentSnippet": "A malicious actor with access to the network and low privileges could exploit an Improper Access Control vulnerability found in UniFi Access Application to escalate privileges on the host device.",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-77552 - UniFi Enterprise Audio/Video Bridge Command Injection Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77552",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T10:40:05.000Z",
-        "contentSnippet": "A malicious actor with access to the network could exploit an Improper Input Validation vulnerability found in UniFi Enterprise Audio/Video Bridge to execute a Command Injection on the device.",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-77551 - UniFi Connect Display Cast Pro Improper Access Control Privilege Escalation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77551",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T10:37:19.000Z",
-        "contentSnippet": "A malicious actor with access to the network and under certain conditions could exploit an Improper Access Control vulnerability found in UniFi Connect Display Cast Pro to escalate privileges on the device.",
-        "cveScore": 9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-77550 - UniFi OS Improper Neutralization of CRLF Sequences Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77550",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T10:33:29.000Z",
-        "contentSnippet": "A malicious actor with access to the network could exploit an Improper Neutralization of CRLF Sequences vulnerability found in certain devices running UniFi OS to bypass authentication to such UniFi OS devices or instances.",
-        "cveScore": 10,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-77549 - UniFi OS CRLF Injection Authentication Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77549",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T10:30:06.000Z",
-        "contentSnippet": "A malicious actor with access to the network and under certain conditions could exploit an Improper Neutralization of CRLF Sequences vulnerability found in certain devices running UniFi OS to bypass authentication to such UniFi OS devices or instances.",
-        "cveScore": 9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-80206 - NLTK 3.10.2 Regular Expression Denial of Service via tgrep",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-80206",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T10:28:15.000Z",
-        "contentSnippet": "NLTK before 3.10.3 contains a regular expression denial of service (ReDoS) vulnerability in the tgrep module. The _tgrep_node_action function compiles user-supplied regular expressions embedded in /regex/ pattern nodes and executes them via re.search against tree node labels with",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-80205 - NLTK before 3.10.0 ReDoS via Text.findall() unvalidated regex",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-80205",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T10:28:14.000Z",
-        "contentSnippet": "NLTK versions before 3.10.0 contain a regular expression denial of service vulnerability in Text.findall() and TokenSearcher.findall() methods that accept user-supplied regular expressions without validation or timeout. Attackers can supply crafted regex patterns that cause catas",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-80204 - Grav before 1.0.18 Authentication Bypass via Scoped API Key",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-80204",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T10:28:13.000Z",
-        "contentSnippet": "The Grav API plugin (getgrav/grav-plugin-api) before 1.0.18 does not apply the API-key scope cap in the injectSecurityTab() function of BlueprintController when deciding whether a page's security/permissions blueprint section is editable. Because the function performs raw isSuper",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-80203 - Grav before 1.0.18 Authentication Bypass via Scoped API Key",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-80203",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T10:28:12.000Z",
-        "contentSnippet": "The getgrav/grav-plugin-api plugin before 1.0.18 does not enforce API-key scope in the requireNotSuperTarget() function in UsersController.php across seven sensitive user-management endpoints. The check uses isSuperAdmin() on the acting account rather than verifying whether the s",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-77548 - UniFi Protect Application Command Injection Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77548",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T10:23:37.000Z",
-        "contentSnippet": "A malicious actor with access to the network and low privileges could exploit an Improper Input Validation vulnerability found in UniFi Protect Application to execute a Command Injection on the host device.",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-77547 - UniFi Access Application Command Injection Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77547",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T10:20:14.000Z",
-        "contentSnippet": "A malicious actor with access to the network and low privileges could exploit an Improper Input Validation vulnerability found in UniFi Access Application to execute a Command Injection on the host device.",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-77546 - UniFi Access Application Command Injection Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77546",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T10:16:47.000Z",
-        "contentSnippet": "A malicious actor with access to the network and low privileges could exploit an Improper Input Validation vulnerability found in UniFi Access Application to execute a Command Injection on the host device.",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-77545 - Ubiquiti UniFi OS Active Debug Code Privilege Escalation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77545",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T10:13:43.000Z",
-        "contentSnippet": "A malicious actor with access to the network, low privileges and under certain conditions could exploit an Active Debug Code vulnerability found in certain devices running UniFi OS to escalate privileges within such UniFi OS devices or instances.",
-        "cveScore": 9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-80350 - OneUptime before 12.0.7 Server-Side Request Forgery via IPv4-Mapped IPv6 Webhook URL",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-80350",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T10:09:50.000Z",
-        "contentSnippet": "OneUptime's webhook target check rejects private and loopback addresses given in IPv4 form and a small set of IPv6 forms, but has no case for the IPv4-mapped IPv6 range. The webhook delivery path calls SSRFProtection.validateWebhookTargetIsSafe, and the host-literal screening ins",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-80349 - TarsWeb through 3.0.14 Authentication Bypass via Spoofed X-Forwarded-For and uid Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-80349",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T10:09:49.000Z",
-        "contentSnippet": "TarsWeb decides whether a request comes from a trusted local caller using a client-controlled header. app.js sets Koa's proxy option to true without naming which upstream proxies may be trusted and without limiting the number of forwarded hops, so the request address Koa reports ",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-80348 - TarsWeb through 3.0.16 Missing Authorization on Patch Deploy, Download and Delete Endpoints",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-80348",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T10:09:48.000Z",
-        "contentSnippet": "TarsWeb enforces its per-application roles by calling AuthService from individual controller methods, and four methods in app/controller/patch/PatchController.js make no such call. uploadAndPublish accepts a package upload and then builds and dispatches a deployment task to every",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-80347 - mcp-fetch through 1.6.3 Server-Side Request Forgery via Unstripped IPv6 Literal Brackets",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-80347",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T10:09:47.000Z",
-        "contentSnippet": "mcp-fetch checks a fetch target against its SSRF guard without removing the brackets that surround an IPv6 literal. isSafeUrl reads the hostname from the parsed URL, which for a literal such as http://[::1]/ yields the bracketed string, and then tests it with net.isIP. That call ",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-80346 - StarRocks through 4.0.13 Missing Authorization on DROP MATERIALIZED VIEW for Legacy Synchronous Materialized Views",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-80346",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T10:09:47.000Z",
-        "contentSnippet": "StarRocks performs no privilege check when a legacy synchronous materialized view is dropped. Every other statement type routed through AuthorizerStmtVisitor calls into Authorizer before execution, but visitDropMaterializedViewStatement returns immediately with a comment stating ",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
+      {
+        "title": "Z.ai Releases GLM-5.3-Flash: A 320B-A18B Natively Multimodal MoE With a 1M-Token Context",
+        "link": "https://www.marktechpost.com/2026/08/26/z-ai-releases-glm-5-3-flash-a-320b-a18b-natively-multimodal-moe-with-a-1m-token-context/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-08-26T21:33:23.000Z",
+        "contentSnippet": "Z.ai has released GLM-5.3-Flash, the first natively multimodal model in the GLM-5 series — a 320B-total / 18B-active MoE with a 1,048,576-token context window, MIT-licensed weights on Hugging Face, and API pricing at $0.15/M input and $0.50/M output. It scores 84.3 on Terminal-Be"
+      },
       {
         "title": "Evaluate any agent framework with Amazon Bedrock AgentCore Evaluations",
         "link": "https://aws.amazon.com/blogs/machine-learning/evaluate-any-agent-framework-with-amazon-bedrock-agentcore-evaluations/",
@@ -1597,13 +1604,6 @@
         "source": "MarkTechPost",
         "isoDate": "2026-08-12T05:05:52.000Z",
         "contentSnippet": "Object removal models have improved faster than the metrics used to judge them. Diffusion erasers now reconstruct shadows, reflections and occluded structure convincingly, yet PSNR, SSIM, LPIPS, ReMOVE and CFD frequently rank their outputs the wrong way. The root cause is structu"
-      },
-      {
-        "title": "Accelerate cyber defense with OpenAI and AWS: Daybreak Red & Daybreak Blue now available to eligible customers on Amazon Bedrock",
-        "link": "https://aws.amazon.com/blogs/machine-learning/accelerate-cyber-defense-with-openai-and-aws-daybreak-red-daybreak-blue-now-available-to-eligible-customers-on-amazon-bedrock/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-08-11T21:38:06.000Z",
-        "contentSnippet": "Daybreak Red and Daybreak Blue from OpenAI, specialized cyber defense models from OpenAI, are now available on Amazon Bedrock to eligible customers. Both models run with zero-operator access enforced at the chip, keeping your code and vulnerability data secure."
       }
     ],
     "virtualization": [
@@ -2310,6 +2310,13 @@
     ],
     "hardware": [
       {
+        "title": "Nvidia custom 'NVHBM' promises 30% higher bandwidth, 15% lower power than commodity HBM4e — custom base die and PHY will be available to NVLink Fusion partners",
+        "link": "https://www.tomshardware.com/pc-components/dram/nvidia-custom-nvhbm-promises-30-percent-higher-bandwidth-15-percent-lower-power-than-commodity-hbm4e-custom-base-die-and-phy-will-be-available-to-nvlink-fusion-partners",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-26T22:45:22.000Z",
+        "contentSnippet": "Nvidia has unveiled NVHBM, a custom high-bandwidth memory implementation that promises higher bandwidth and lower power for customers building chips within the NVLink Fusion partner program."
+      },
+      {
         "title": "AMD Versal RF Gets Native UCIe 1.1: Six Chiplet Links per Package, Production Parts in Q4 2027",
         "link": "https://www.storagereview.com/news/amd-versal-rf-gets-native-ucie-1-1-six-chiplet-links-per-package-production-parts-in-q4-2027",
         "source": "StorageReview",
@@ -3001,13 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-08-24T10:31:08.000Z",
         "contentSnippet": "Today marks Valve’s 30th birthday. The company was founded on August 24, 1996, by Gabe Newell and Mike Harrington, both Microsoft veterans."
-      },
-      {
-        "title": "Kyoto University builds transistor that survives 600C temperatures, compatible with standard fabs — Standard ion implantation and bottom-gate design fix leakage and voltage drift",
-        "link": "https://www.tomshardware.com/tech-industry/kyoto-university-demonstrates-a-sic-transistor-that-runs-at-600c-using-standard-ion-implantation",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-24T10:30:00.000Z",
-        "contentSnippet": "A research team at Kyoto University has built a silicon carbide transistor that operates at 600°C (873 K) using ion implantation."
       }
     ]
   }
