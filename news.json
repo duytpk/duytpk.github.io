@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-08-27T13:24:07.510Z",
+  "updatedAt": "2026-08-27T23:24:09.096Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-81934 - Redis TLS pending-data list use-after-free",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81934",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-27T20:18:57.000Z",
+        "contentSnippet": "Redis contains a use-after-free vulnerability in the 'tlsProcessPendingData()' function, which handles the TLS pending-data list if Redis is configured with TLS support. A remote, unauthenticated attacker may be able to execute arbitrary commands with the privileges of the Redis ",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-81931 - Unrestricted upload of file with dangerous type in Prospero Flow CRM product photo allows stored cross-site scripting",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81931",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-27T20:18:57.000Z",
+        "contentSnippet": "Unrestricted Upload of File with Dangerous Type in the product photo upload in Roskus Prospero Flow CRM before 5.16.0 allows an authenticated user holding the create product permission (routine Seller role) to execute arbitrary JavaScript in the application origin. The photo vali",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-81893 - Gdk-pixbuf: gdk-pixbuf: invalid write in jpeg icc profile parser on error recovery",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81893",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-27T20:18:57.000Z",
+        "contentSnippet": "A flaw was found in gdk-pixbuf. When loading a specially crafted JPEG image containing chunked ICC profile markers, an error during ICC profile parsing can leave stale size metadata after the profile buffer is freed. A subsequent allocation in the same decode can cause an out-of-",
+        "cveScore": 4.7,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-81838 - Zip Slip Arbitrary File Write in AWS diagram-as-code (awsdac)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81838",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-27T20:18:56.000Z",
+        "contentSnippet": "A relative path traversal issue in the zip extraction functionality in AWS diagram-as-code (awsdac) in versions 0.10 through 0.23 can allow a third party to write arbitrary files to the local filesystem via crafted zip entry names containing path traversal sequences. This could a",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-81834 - RooCodeInc Roo-Code README File ExecaTerminalProcess code injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81834",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-27T20:18:56.000Z",
+        "contentSnippet": "A weakness has been identified in RooCodeInc Roo-Code up to 3.51.1. Affected by this issue is the function ExecaTerminalProcess of the component README File Handler. Executing a manipulation can lead to code injection. The attack can be executed remotely. The exploit has been mad",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-81833 - RooCodeInc Roo-Code CodeIndexManager helpers.ts optimizeQuery code injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81833",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-27T20:18:56.000Z",
+        "contentSnippet": "A security flaw has been discovered in RooCodeInc Roo-Code up to 3.51.1. Affected by this vulnerability is the function optimizeQuery of the file src/utils/helpers.ts of the component CodeIndexManager. Performing a manipulation results in code injection. Remote exploitation of th",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-81731 - Frappe 15.11.0 through 16.32.0 Stored XSS via Workspace Link Description",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81731",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-27T20:18:55.000Z",
+        "contentSnippet": "Frappe 15.11.0 through 16.32.0 stores and renders the workspace card description without XSS filtering. The description field of the Workspace Link doctype is declared with \"ignore_xss_filter\": 1 in frappe/desk/doctype/workspace_link/workspace_link.json, and _sanitize_content() i",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-81730 - Dolibarr 9.0.0 through 23.0.4 Path Traversal via EmailCollector Attachment Filename",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81730",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-27T20:18:55.000Z",
+        "contentSnippet": "Dolibarr 9.0.0 through 23.0.4 saves inbound email attachments under the name supplied in the message's MIME headers without reducing it to a safe basename. The global saveAttachment() in htdocs/emailcollector/lib/emailcollector.lib.php builds $filepath = $path . $filename . '.' .",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-81729 - Dolibarr before 23.0.4 Incorrect Authorization on REST API Document Deletion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81729",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-27T20:18:55.000Z",
+        "contentSnippet": "Dolibarr before 23.0.4 authorizes REST API document deletion against the wrong permission. Documents::delete() in htdocs/api/class/api_documents.class.php calls dol_check_secure_access_document() with the mode argument 'read' when handling DELETE /api/index.php/documents, while t",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-81728 - Dolibarr before 24.0.0 SQL Injection via the CSV and XLSX Import Update Keys",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81728",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-27T20:18:55.000Z",
+        "contentSnippet": "Dolibarr before 24.0.0 contains a SQL injection in its CSV and XLSX import wizard. The wizard reads its update keys with GETPOST('updatekeys', 'array') in htdocs/imports/import.php, which applies only the generic alphanohtml filter: that strips HTML but leaves SQL keywords, comme",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-81530 - KMS master key exposure via unredacted credential serialization in driver settings string",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81530",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-27T20:18:51.000Z",
+        "contentSnippet": "A weakness in the client-side encryption configuration surface of the MongoDB C# Driver causes sensitive key-management credential material supplied by the application to be reproduced verbatim in the driver's human-readable diagnostic representation of its client settings, inste",
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-81529 - Connection-option injection via unescaped settings in the canonical MongoDB URL builder",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81529",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-27T20:18:51.000Z",
+        "contentSnippet": "Improper neutralization of delimiters in connection-URL construction allows connection-option injection in the MongoDB C# Driver. When an application passes untrusted text into the driver's connection-URL builder and round-trips the builder back into a client configuration, the u",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-81528 - NoSQL injection via array replacement bypassing update shape validation in driver write path",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81528",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-27T20:18:51.000Z",
+        "contentSnippet": "A MongoDB C# driver document-replacement code path omits the element-name/shape validation that the equivalent write paths apply, so a value supplied as a replacement is forwarded to the server without neutralization of query-language special elements. An application that passes ",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-81527 - NoSQL injection via unquoted constant GroupBy keys in LINQ pipeline translation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81527",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-27T20:18:51.000Z",
+        "contentSnippet": "A NoSQL/expression injection weakness exists in the LINQ-to-aggregation query translation layer of the MongoDB C# Driver, in both aggregation expression and query filter translation. When application-supplied values are embedded in certain query constructs, special elements conta",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-81526 - Cross-database write redirection via unvalidated dotted database name in bulk write namespaces",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81526",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-27T20:18:51.000Z",
+        "contentSnippet": "The MongoDB Rust Driver does not neutralize special characters in a caller-supplied target identifier before embedding it in the request it sends to the server. An actor able to influence that identifier in an application using the driver may cause write operations to be applied ",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-81525 - Cross-tenant database retargeting via dot/NUL injection in namespace strings in the PHP Driver",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81525",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-27T20:18:50.000Z",
+        "contentSnippet": "The MongoDB client library for PHP does not sufficiently sanitize special elements in application-supplied namespace identifiers before using them to construct the target namespace for database operations. An application that incorporates untrusted text into these identifiers may",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-81524 - Cross-tenant database retargeting via dot/NUL injection in namespace strings in the C Driver",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81524",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-27T20:18:50.000Z",
+        "contentSnippet": "A weakness in the MongoDB C Driver allows special elements in caller-supplied database and collection name components to pass without sanitization when the driver composes the target namespace for an operation. An application that incorporates untrusted input into these name comp",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-81523 - Cross-tenant database retargeting via dot/NUL injection in namespace strings in libmongocrypt",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81523",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-27T20:18:50.000Z",
+        "contentSnippet": "A missing input-validation issue in MongoDB libmongocrypt's automatic-encryption context setup allows a caller-supplied database identifier to be accepted without sanitization. The resulting impact is limited to incorrect schema selection, which may lead to limited disclosure or ",
+        "cveScore": 4.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-81522 - Cross-tenant database retargeting via dot/NUL injection in namespace strings in the C++ Driver",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81522",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-27T20:18:50.000Z",
+        "contentSnippet": "A weakness in the MongoDB C++ Driver's handling of caller-supplied namespace identifiers allows special characters embedded in those identifiers. An application that builds a namespace identifier from untrusted input without validating it may therefore have its operation directed",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-81521 - Cross-database write retargeting via unvalidated dotted database name in Client.BulkWrite in the MongoDB Go Driver",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81521",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-27T20:18:50.000Z",
+        "contentSnippet": "The MongoDB Go Driver's client-level bulk write operation may accept a caller-supplied database name containing a reserved separator character without escaping it before the name is used to build the target namespace for the operation. An application that passes untrusted input a",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-77438 - Trilium unauthenticated share-search discloses password-protected and hidden shared notes",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77438",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-27T20:18:39.000Z",
+        "contentSnippet": "Trilium is an open-source hierarchical note-taking application. In versions up to and including 0.103.0, the public share-search endpoint does not enforce the per-note shareCredentials and shareHiddenFromTree controls, allowing an unauthenticated visitor to read the titles, tree ",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-76640 - Unitree G1 EDU 1.5.2 BLE GATT RCE via WiFi Provisioning Stack",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76640",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-27T20:18:38.000Z",
+        "contentSnippet": "Unitree G1 EDU firmware through 1.5.2 contains multiple chained vulnerabilities in the BLE GATT server and WiFi provisioning stack that allow unauthenticated proximate attackers to achieve root code execution without pairing or credentials by exploiting an unquoted heredoc variab",
+        "cveScore": 7.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-76639 - Unitree G1 EDU 1.5.2 Unauthenticated RCE via DDS Bridge and Path Traversal",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76639",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-27T20:18:38.000Z",
+        "contentSnippet": "Unitree G1 EDU firmware through 1.5.2 contains an unauthenticated remote code execution vulnerability that allows network-adjacent attackers to execute arbitrary commands as root by chaining three weaknesses: an unauthenticated WebRTC-to-DDS bridge on TCP port 9991, a static AES-",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-75889 - CVE-2026-75889 CVE Record",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75889",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-27T20:18:37.000Z",
+        "contentSnippet": "Grafana Alloy’s prometheus.operator.servicemonitors component allows a user who can create or modify ServiceMonitor resources in a watched namespace to specify an arbitrary local file through bearerTokenFile. Alloy reads the file and sends its contents as a bearer token to an att",
+        "cveScore": 7.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-74820 - Unauthenticated SQL Injection via Dynamic Schema ORDER BY Clause",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74820",
+        "source": "cvefeed.io",
+        "isoDate": "2026-08-27T20:18:36.000Z",
+        "contentSnippet": "ServiceNow has remediated a SQL injection vulnerability that was identified in in the ServiceNow AI platform. This vulnerability could enable an unauthenticated user, in certain circumstances, to execute arbitrary SQL statements against the instance's underlying database and gain",
+        "cveScore": 10,
+        "cveSeverity": "CRITICAL"
+      },
       {
         "title": "CVE-2026-81814 - Flowintel Stored XSS in Calendar via Malicious Case Title",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-81814",
@@ -677,234 +902,44 @@
         "contentSnippet": "Frappe is a full-stack web application framework written in Python and JavaScript. Prior to version 15.115.0, an access control bypass in the REST API allows a user to read data from Linked DocTypes that they are not authorized to access. When a document references another docume",
         "cveScore": 7.1,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-80153",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-80153",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T16:56:46.000Z",
-        "contentSnippet": "None",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-32258 - Winter: Stored XSS through Editor Settings custom styles",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-32258",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T16:49:06.000Z",
-        "contentSnippet": "Winter is a free, open-source content management system (CMS) based on the Laravel PHP framework. From 1.2.10 through 1.2.12, authenticated backend users with the backend.manage_editor permission can store custom Markup Styles that are compiled by the LESS parser and rendered wit",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-32257 - Winter: Stored XSS through Brand Settings custom styles",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-32257",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T16:45:12.000Z",
-        "contentSnippet": "Winter is a free, open-source content management system (CMS) based on the Laravel PHP framework. Prior to 1.2.13, custom CSS supplied through the Brand Settings Styles field by a backend user with the backend.manage_branding permission is compiled by the LESS parser and rendered",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-35445 - Winter: Authenticated backend users can bypass Users controller permission checks",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-35445",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T16:40:51.000Z",
-        "contentSnippet": "Winter CMS is a content management system built on the Laravel PHP framework. In versions prior to 1.2.13, the backend did not validate the handler name submitted through the form postback _handler POST field, allowing an authenticated backend user to invoke arbitrary controller ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-81036 - Stalwart Mail Server through 0.16.19 Authorization Code Disclosure via Unvalidated OAuth redirect_uri",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81036",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T16:16:46.000Z",
-        "contentSnippet": "Stalwart Mail Server does not compare an OAuth redirect target against any registered destination in its default configuration. The validation routine in crates/http/src/auth/oauth/registration.rs returns success immediately when the client-authentication requirement is disabled,",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-81035 - Midday Missing Owner Check on Team Deletion",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81035",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T16:16:46.000Z",
-        "contentSnippet": "Midday allows any member of a team to delete it. The delete procedure in apps/api/src/trpc/routers/team.ts authorises the caller with the team-access helper, which returns true for every row in the team-membership table irrespective of the role it records, and the data-layer func",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-81034 - Netmaker through 1.6.0 Improper Certificate Validation in SMTP Client",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81034",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T16:16:46.000Z",
-        "contentSnippet": "Netmaker disables certificate verification on the connection to the configured mail server. The sender in pro/email/smtp.go assigns a TLS configuration whose skip-verify field is set to true unconditionally, directly beneath a comment stating that the setting should be false in p",
-        "cveScore": 8.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-81033 - Automatisch through 0.15.0 User Enumeration via Forgot-Password Response Discrepancy",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81033",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T16:16:46.000Z",
-        "contentSnippet": "Automatisch reveals whether an address is registered through the response to its forgot-password request. The controller at packages/backend/src/controllers/internal/api/v1/users/forgot-password.js looks the address up and chains a not-found throw onto the query, so an address wi",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-81032 - NebulaGraph through 3.8.0 Unauthenticated Read and Modification of Runtime Configuration",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81032",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T16:16:46.000Z",
-        "contentSnippet": "NebulaGraph exposes its runtime configuration over an unauthenticated HTTP service. Each daemon starts the web service defined in src/webservice/WebService.cpp, whose bind address defaults to all interfaces, and registers routes for reading and writing gflags alongside status and",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-81031 - IDURAR ERP CRM through 4.1.1 Account Takeover via Unverified Identifier on Password Update",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81031",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T16:16:45.000Z",
-        "contentSnippet": "IDURAR ERP CRM changes the password of whichever account a request names rather than the account making the request. The update handler in backend/src/controllers/middlewaresControllers/createUserController/updatePassword.js resolves the authenticated user from the request that t",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-81030 - Mage AI through 0.9.79 Arbitrary File Read via Unvalidated Path in browser_items Endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81030",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T16:16:45.000Z",
-        "contentSnippet": "Mage AI does not confine the paths accepted by its browser-items API to the project directory. BrowserItemResource in mage_ai/api/resources/BrowserItemResource.py passes a caller-supplied path to the filesystem read and write helpers without calling the containment helper that th",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-81029 - OpenMetadata before 2.0.0 JWT Disclosure via Unvalidated SAML and OIDC Redirect URI",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81029",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T16:16:45.000Z",
-        "contentSnippet": "OpenMetadata accepts a caller-supplied post-authentication redirect target and appends the issued token to it. SamlLoginServlet reads the callback request parameter and stores it in the HTTP session without comparing it against any configured or registered destination, and the as",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-81028 - ZLMediaKit downloadFile Root-Directory Confinement Bypass via Prefix Collision",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81028",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T16:16:45.000Z",
-        "contentSnippet": "ZLMediaKit confines the downloadFile API to a configured set of root directories with a prefix comparison that does not account for directory boundaries. The configuration loader in server/WebApi.cpp builds each root with File::absolutePath(\"\", item, true); because the relative-p",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-81027 - one-api through 0.6.10 Missing Authorization on URL-Parameter Channel Pinning",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81027",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T16:16:45.000Z",
-        "contentSnippet": "one-api gates one of its two channel-pinning paths and not the other. middleware/auth.go permits a request to name a specific channel either through a suffix on the API key or through a URL path parameter. The suffix path is reached only after model.IsAdmin succeeds and otherwise",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-80428 - ILIAS before 9.22, 10.10 and 11.3 Unauthenticated PHP Object Injection via Shibboleth Logout Endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-80428",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T16:16:45.000Z",
-        "contentSnippet": "ILIAS deserialises stored session data for an unauthenticated caller. The Shibboleth back-channel endpoint at components/ILIAS/AuthShibboleth/resources/shib_logout.php runs in a context that ilInitialisation exempts from authentication, and its logout-notification handler locates",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-80427 - bestzip before 2.2.6 and 3.0.x before 3.0.2 Argument Injection via Missing Option Delimiter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-80427",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T16:16:44.000Z",
-        "contentSnippet": "bestzip builds the argument list for the system zip utility without separating options from operands. The destination archive path and the caller-supplied source paths are passed to the child process with no -- delimiter between them, so any source entry beginning with a hyphen i",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-80426 - FiftyOne before 1.21.0 Stored Cross-Site Scripting via Unescaped Field Description",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-80426",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T16:16:44.000Z",
-        "contentSnippet": "FiftyOne renders a dataset field's description as markup. The sidebar field-information component at app/packages/core/src/components/FieldLabelAndInfo/index.tsx passes the description string to React's dangerouslySetInnerHTML, and no layer between storage and render escapes or s",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-54614 - DebugKit: MailPreview contains unsafe reflection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54614",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T16:16:28.000Z",
-        "contentSnippet": "DebugKit provides a debugging toolbar for CakePHP applications. Prior to 4.10.3 and 5.2.4, the DebugKit MailPreview feature in src/Controller/MailPreviewController.php accepts a route-controlled previewName value in findPreview and passes the resolved class from App::className() ",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-54606 - SunEditor: DOM XSS in SunEditor Embed Plugin via External Script Element After Iframe Embed",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54606",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T16:16:27.000Z",
-        "contentSnippet": "SunEditor is a lightweight and powerful WYSIWYG editor in vanilla JavaScript with no dependencies. Prior to 3.1.4, the SunEditor Embed plugin in src/plugins/modal/embed.js parses attacker-controlled raw embed HTML with DOMParser and processes the resulting DOM nodes. When an exte",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-54569 - SENAITE.CORE: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection') and Missing Authorization in senaite.core",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54569",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T16:16:27.000Z",
-        "contentSnippet": "SENAITE.CORE is the core framework for the SENAITE laboratory information management system. From 2.0.0 to 2.6.0, the SENAITE.CORE JSON API permits unauthenticated remote code execution through a two-request chain involving missing authorization and unsafe evaluation. The state-c",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-48549 - Nagios Core / XI CSRF via cmd.cgi Double-Submit Cookie",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48549",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T16:16:26.000Z",
-        "contentSnippet": "Nagios Core before 4.5.13 and Nagios XI before 2026R1.5 contains a CSRF vulnerability in cmd.cgi. When no Cookie header is present, the double-submit cookie protection can be bypassed by supplying matching NagFormId and nagFormId values in the POST body, allowing a cross-site req",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-48548 - Nagios Core CSRF via cmd.cgi",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48548",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T16:16:26.000Z",
-        "contentSnippet": "Nagios Core before 4.5.12 contains a cross-site request forgery vulnerability in cmd.cgi where the CSRF protection mechanism passes validation when the NagFormId cookie is absent. Attackers can craft a malicious cross-site POST request to execute arbitrary Nagios commands as a cu",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-80589 - block: stop the timeout timer when releasing a never added disk",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-80589",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T15:17:15.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: block: stop the timeout timer when releasing a never added disk disk_release() undoes blk_mq_init_allocated_queue() for a disk whose probe failed before add_disk(), but it only calls blk_mq_exit_queue(). Nothing ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-80588 - mptcp: reclaim forward-allocated memory on RX path errors",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-80588",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T15:17:15.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: mptcp: reclaim forward-allocated memory on RX path errors After commit 9db5b3cec4ec (\"mptcp: borrow forward memory from subflow\"), errors in the receive path prior to queueing skbs into the receive queue do not t",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-80587 - mptcp: avoid combining some incoming suboptions",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-80587",
-        "source": "cvefeed.io",
-        "isoDate": "2026-08-26T15:17:15.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: mptcp: avoid combining some incoming suboptions Some MPTCP suboptions are mutually exclusive according to the RFC8684, but also because in different places, the code doesn't expect some combinations to be present",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       }
     ],
     "ai": [
+      {
+        "title": "Build agentic creative workflows with Amazon Quick and fal",
+        "link": "https://aws.amazon.com/blogs/machine-learning/build-agentic-creative-workflows-with-amazon-quick-and-fal/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-08-27T23:04:22.000Z",
+        "contentSnippet": "Creative teams produce more assets than ever, but fragmented tools and manual context transfer slow production. This post shows how to build a reusable agent harness with Amazon Quick and fal, connected through the Model Context Protocol (MCP), using two hands-on workflows: an ei"
+      },
+      {
+        "title": "Introducing OpenAI models on Amazon Bedrock for in-country inferencing in India",
+        "link": "https://aws.amazon.com/blogs/machine-learning/introducing-openai-models-on-amazon-bedrock-for-in-country-inferencing-in-india/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-08-27T18:36:08.000Z",
+        "contentSnippet": "Amazon Bedrock now supports the OpenAI GPT-5.6 models, Terra and Luna, in India with India geographic cross-Region inference. If you have local data processing requirements, you can now use these models at scale while Amazon Bedrock keeps inference requests and data within India."
+      },
+      {
+        "title": "Deepgram deepens Amazon SageMaker AI observability with Enhanced Metrics",
+        "link": "https://aws.amazon.com/blogs/machine-learning/deepgram-deepens-amazon-sagemaker-ai-observability-with-enhanced-metrics/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-08-27T16:11:27.000Z",
+        "contentSnippet": "Self-hosted speech AI carries an observability trade-off: the numbers that drive capacity planning and cost management stay locked inside the vendor container. Deepgram closes that gap on Amazon SageMaker AI with two capabilities that land billing, usage, and per-GPU metrics dire"
+      },
+      {
+        "title": "Reduce ASR inference costs by 75% with NVIDIA MPS on Amazon EC2",
+        "link": "https://aws.amazon.com/blogs/machine-learning/reduce-asr-inference-costs-by-75-with-nvidia-mps-on-amazon-ec2/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-08-27T16:05:10.000Z",
+        "contentSnippet": "Serving automatic speech recognition (ASR) models at scale is costly when each request uses only a fraction of a GPU. Learn how NVIDIA CUDA Multi-Process Service (MPS) with NVIDIA Triton Inference Server on Amazon EC2 GPU instances cuts GPU infrastructure by 75% while holding sub"
+      },
+      {
+        "title": "3 new ways to plan and book travel in Search",
+        "link": "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/",
+        "source": "Google AI Blog",
+        "isoDate": "2026-08-27T16:00:00.000Z",
+        "contentSnippet": "Book hotels and track airfares, plus view miles and rewards with AI Mode in Google Search."
+      },
       {
         "title": "Google Research Introduces GlucoFM: A 0.72M-Parameter Dual-Stream Foundation Model for Continuous Glucose Monitoring",
         "link": "https://www.marktechpost.com/2026/08/26/google-research-introduces-glucofm-a-0-72m-parameter-dual-stream-foundation-model-for-continuous-glucose-monitoring/",
@@ -1569,41 +1604,6 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-08-12T17:45:20.000Z",
         "contentSnippet": "Learn how to visualize and analyze Amazon Bedrock cost attribution using Amazon Athena and CUDOS dashboards. This post shows how to set up CUR 2.0 with IAM principal data, query Bedrock spend by principal, project, and team, and build dashboards to track AI costs across your orga"
-      },
-      {
-        "title": "AllenAI Open Instruct Tulu 3 Post-Training with SFT, DPO, RLVR, GRPO, and Verifier-Based Evaluation",
-        "link": "https://www.marktechpost.com/2026/08/12/allenai-open-instruct-tulu-3-post-training-with-sft-dpo-rlvr-grpo-and-verifier-based-evaluation/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-08-12T17:37:37.000Z",
-        "contentSnippet": "Build a custom LLM post-training pipeline using AllenAI’s Open Instruct framework. This comprehensive guide walks through Supervised Fine-Tuning (SFT), Direct Preference Optimization (DPO), and Reinforcement Learning with Verifiable Rewards (GRPO), optimized to run efficiently on"
-      },
-      {
-        "title": "How OneAdvanced deployed over 50 AI agents on UK-sovereign AWS",
-        "link": "https://aws.amazon.com/blogs/machine-learning/how-oneadvanced-deployed-over-50-ai-agents-on-uk-sovereign-aws/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-08-12T13:46:28.000Z",
-        "contentSnippet": "Learn how OneAdvanced, a UK enterprise software provider, built a UK-sovereign AI platform by self-hosting Llama 4 Maverick and Llama Guard 4 on Amazon SageMaker AI, with a RAG pipeline on pgvector and over 50 agents built with Strands Agents SDK on Amazon ECS."
-      },
-      {
-        "title": "Pay with confidence: How Solv Labs built verifiable, auditable agent payments on Amazon Bedrock AgentCore payments",
-        "link": "https://aws.amazon.com/blogs/machine-learning/pay-with-confidence-how-solv-labs-built-verifiable-auditable-agent-payments-on-amazon-bedrock-agentcore-payments/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-08-12T13:44:58.000Z",
-        "contentSnippet": "Solv Labs built a governed agent-payments workflow on Amazon Bedrock AgentCore payments, where every transaction is authorized, attested in an AWS Nitro Enclave, priced for risk, and anchored to a public blockchain before settlement. See how the pattern gives enterprises a verifi"
-      },
-      {
-        "title": "Tiered KV cache for large LLMs on Amazon SageMaker HyperPod with Curvine",
-        "link": "https://aws.amazon.com/blogs/machine-learning/tiered-kv-cache-for-large-llms-on-amazon-sagemaker-hyperpod-with-curvine/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-08-12T13:42:48.000Z",
-        "contentSnippet": "Running large language model inference at scale forces a KV cache trade-off: oversized GPU instances or slow time-to-first-token. This post builds a tiered KV cache on Amazon SageMaker HyperPod that extends the cache into a shared, distributed NVMe pool with Curvine, so replicas "
-      },
-      {
-        "title": "NVIDIA AI Releases Nemotron 3.5 Lightning: A 30B Open MoE with 3B Active Parameters, and NeMo Switchyard Model Router",
-        "link": "https://www.marktechpost.com/2026/08/11/nvidia-ai-releases-nemotron-3-5-lightning-and-nemo-switchyard/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-08-12T06:59:40.000Z",
-        "contentSnippet": "NVIDIA's open 30B MoE targets the agent execution layer, with Switchyard routing each step to the cheapest capable model. The post NVIDIA AI Releases Nemotron 3.5 Lightning: A 30B Open MoE with 3B Active Parameters, and NeMo Switchyard Model Router appeared first on MarkTechPost."
       }
     ],
     "virtualization": [
@@ -2310,6 +2310,132 @@
     ],
     "hardware": [
       {
+        "title": "Podcast #152: Data Center Thermal Dynamics and Cooling Architectures With Tim Shedd",
+        "link": "https://www.storagereview.com/podcast/podcast-152-data-center-thermal-dynamics-and-cooling-architectures-with-tim-shedd",
+        "source": "StorageReview",
+        "isoDate": "2026-08-27T19:07:27.000Z",
+        "contentSnippet": "Brian recently caught up with Tim Shedd, an expert in thermal management and a pioneer in liquid cooling technologies. The podcast covers some of the historical aspects of data center liquid cooling, from Tim’s time working with Cray and spraying liquid across tubes to his more r"
+      },
+      {
+        "title": "NVIDIA Jetson Orin Nano 2: 78 TOPS and 2x the Inference of Its Predecessor, Arriving First Half of 2027",
+        "link": "https://www.storagereview.com/news/nvidia-jetson-orin-nano-2-78-tops-and-2x-the-inference-of-its-predecessor-arriving-first-half-of-2027",
+        "source": "StorageReview",
+        "isoDate": "2026-08-27T18:26:44.000Z",
+        "contentSnippet": "NVIDIA has announced the Jetson Orin Nano 2, an updated system-on-module and developer kit engineered to run compact foundation models and real-time computer vision workloads at the edge. The release targets embedded robotics, unmanned aerial vehicles, and industrial edge devices"
+      },
+      {
+        "title": "TerraMaster Stacks Five BBS Backup Servers From $899.99, With Dual 10GbE and TOS 7 Across the Line",
+        "link": "https://www.storagereview.com/news/terramaster-stacks-five-bbs-backup-servers-from-899-99-with-dual-10gbe-and-tos-7-across-the-line",
+        "source": "StorageReview",
+        "isoDate": "2026-08-27T18:11:57.000Z",
+        "contentSnippet": "TerraMaster is expanding its enterprise storage efforts around a group of rackmount and tower NAS systems designed for centralized backup, data protection, video surveillance storage, and other business workloads, a step up in ambition from the consumer NAS and Thunderbolt storag"
+      },
+      {
+        "title": "Cisco Secure AI Factory Adds Supermicro Rack-Scale Compute, With Vera Rubin NVL72 Support and October Availability",
+        "link": "https://www.storagereview.com/news/cisco-secure-ai-factory-adds-supermicro-rack-scale-compute-with-vera-rubin-nvl72-support-and-october-availability",
+        "source": "StorageReview",
+        "isoDate": "2026-08-27T17:15:04.000Z",
+        "contentSnippet": "Cisco is broadening its Secure AI Factory with NVIDIA initiative by adding Supermicro as a compute partner, incorporating Supermicro’s liquid- and air-cooled systems into Cisco’s full-stack AI infrastructure architecture. The expansion targets enterprise, neocloud, and sovereign "
+      },
+      {
+        "title": "China's YMTC aims to become the world's largest NAND maker by the end of 2027, report says — company plans to overtake Samsung and SK hynix",
+        "link": "https://www.tomshardware.com/pc-components/dram/chinas-ymtc-aims-to-become-the-worlds-largest-nand-maker-by-the-end-of-2027",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-27T16:54:24.000Z",
+        "contentSnippet": "The target would require YMTC to nearly double its market share in 16 months."
+      },
+      {
+        "title": "IBM DS8000 Release 10.2 Brings FCM5 in EDSFF, Doubled Back-End Throughput, and Automated Ransomware Containment",
+        "link": "https://www.storagereview.com/news/ibm-ds8000-release-10-2-brings-fcm5-in-edsff-doubled-back-end-throughput-and-automated-ransomware-containment",
+        "source": "StorageReview",
+        "isoDate": "2026-08-27T16:24:22.000Z",
+        "contentSnippet": "IBM has announced the IBM Storage DS8000 Release 10.2, an update to its flagship enterprise storage platform tailored for IBM Z, IBM LinuxONE, and high-performance, mission-critical environments. The release targets large-scale enterprise demands by focusing on increased drive de"
+      },
+      {
+        "title": "Oxmiq Labs HBF in AI Compute at Hot Chips 2026",
+        "link": "https://www.servethehome.com/oxmiq-labs-hbf-in-ai-compute-at-hot-chips-2026/",
+        "source": "ServeTheHome",
+        "isoDate": "2026-08-27T16:13:39.000Z",
+        "contentSnippet": "At Hot Chips 2026, Oxmiq Labs went into an analysis of HBF versus HBM in AI compute and where the buzzworthy HBF fits in the ecosystem The post Oxmiq Labs HBF in AI Compute at Hot Chips 2026 appeared first on ServeTheHome."
+      },
+      {
+        "title": "Trump administration weighs expanding chip tariffs to laptops, consoles, and servers, report claims — January's data center exemptions may be scrapped",
+        "link": "https://www.tomshardware.com/tech-industry/policy/trump-administration-weighs-expanding-chip-tariffs-to-laptops-consoles-and-servers",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-27T16:13:27.000Z",
+        "contentSnippet": "The Trump administration is weighing a second round of semiconductor tariffs that would extend duties beyond chips to products built with them."
+      },
+      {
+        "title": "NVIDIA NVHBM Moves the Memory Controller Into the HBM Stack, With Amazon’s Trainium4 First in Line",
+        "link": "https://www.storagereview.com/news/nvidia-nvhbm-moves-the-memory-controller-into-the-hbm-stack-with-amazons-trainium4-first-in-line",
+        "source": "StorageReview",
+        "isoDate": "2026-08-27T16:00:06.000Z",
+        "contentSnippet": "Hyperscalers and AI-focused infrastructure operators are increasingly developing proprietary AI accelerators and XPUs to keep pace with large language models and complex reasoning workloads. To address the physical, memory, and networking challenges of deploying proprietary silic"
+      },
+      {
+        "title": "Hot Chips 2026: Cerebras lays out the future of wafer-scale AI — Nexus system architecture triples rack-scale performance, CS-6 wafer to incorporate stacked DRAM",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/hot-chips-2026-cerebras-lays-out-the-future-of-wafer-scale-ai-nexus-system-architecture-triples-rack-scale-performance-cs-6-wafer-to-incorporate-stacked-dram",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-27T15:59:18.000Z",
+        "contentSnippet": "At Hot Chips 2026, Cerebras revealed the next two generations of its wafer-scale accelerator roadmap. It also discussed the benefits of its new Nexus rack design for the CS-4 rack-scale accelerator and the performance of the three WS-3T wafer-scale engines contained within."
+      },
+      {
+        "title": "Glass substrate roadmaps examined — Absolics in final qualification and a first product that keeps slipping",
+        "link": "https://www.tomshardware.com/tech-industry/manufacturing/glass-substrate-roadmap-examined",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-27T15:40:11.000Z",
+        "contentSnippet": "Glass-core substrates, the replacement for organic chip packaging that Intel promised in September 2023, are now in final qualification but still not in a single commercial product"
+      },
+      {
+        "title": "Nvidia expects to sell $20 billion of Vera Rubin systems in Q3 as shipments begin — figure would account for 20% of its data center revenue mix, marks fastest ramp in company history",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-expects-to-sell-usd20-billion-worth-of-vera-rubin-hardware-this-quarter-would-account-for-20-percent-of-data-center-revenue-its-fastest-ramp-in-company-history",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-27T15:33:14.000Z",
+        "contentSnippet": "Nvidia expects Vera Rubin to become its fastest-ramping data center AI platform as it projects sales of Vera Rubin hardware to hit 20% of data center revenue in its third fiscal quarter."
+      },
+      {
+        "title": "BLUETTI Elite 300 Review: 3,014Wh, 2,400W, and an 8ms UPS Switchover in a 58-Pound Box",
+        "link": "https://www.storagereview.com/review/bluetti-elite-300-review-3014wh-2400w-and-an-8ms-ups-switchover-in-a-58-pound-box",
+        "source": "StorageReview",
+        "isoDate": "2026-08-27T15:30:15.000Z",
+        "contentSnippet": "The BLUETTI Elite 300 is a 3kWh portable power station intended for home backup, RV travel, camping, remote work, and jobs where dependable AC and DC power may not be nearby. Its 3,014.4Wh LiFePO₄ battery places it above the smaller units mainly used for phones, laptops, and camp"
+      },
+      {
+        "title": "Samsung's new Odyssey G6 monitor hits a ridiculous 1,100Hz refresh rate at 720p — displays each frame for less than a millisecond",
+        "link": "https://www.tomshardware.com/monitors/gaming-monitors/samsungs-new-odyssey-g6-monitor-hits-a-ridiculous-1-100hz-refresh-rate-at-720p-displays-each-frame-for-less-than-a-millisecond",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-27T15:29:53.000Z",
+        "contentSnippet": "Ironically, the display with the four-digit refresh rate is actually the bottom of the display stack Samsung is showing off at Gamescom 2026."
+      },
+      {
+        "title": "AWS and NVIDIA to Deploy 2 Million More GPUs in 2027-2028, Bringing Vera CPUs and Custom NVHBM to Trainium",
+        "link": "https://www.storagereview.com/news/aws-and-nvidia-to-deploy-2-million-more-gpus-in-2027-2028-bringing-vera-cpus-and-custom-nvhbm-to-trainium",
+        "source": "StorageReview",
+        "isoDate": "2026-08-27T15:26:28.000Z",
+        "contentSnippet": "Amazon Web Services and NVIDIA have announced a major expansion of their joint infrastructure initiatives, outlining plans to deploy an additional 2 million NVIDIA GPUs across AWS data centers between 2027 and 2028. Building on a 16-year engineering relationship, the expanded col"
+      },
+      {
+        "title": "Many talks between data center developers and local governments are wrapped in secrecy behind non-disclosure agreements — residents question the need for NDAs, but developers argue it’s important to a",
+        "link": "https://www.tomshardware.com/tech-industry/data-centers/many-talks-between-data-center-developers-and-local-governments-are-under-nda-residents-question-the-needs-for-secrecy-but-developer-argues-its-important-to-avoid-running-afoul-of-insider-trading-rules",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-27T15:06:53.000Z",
+        "contentSnippet": "Researchers discovered that most negotiations between data centers and local governments are protected by NDAs. These documents keep details in secret, with residents having a difficult time finding information about these projects because of the agreements."
+      },
+      {
+        "title": "Save up to 61% on gaming PCs, laptops, and more in HP's Labor Day 2026 sale — huge discounts on a range of hardware, monitors, and peripherals",
+        "link": "https://www.tomshardware.com/gift-guides-seasonal-sales/save-up-to-61-percent-on-gaming-pcs-laptops-and-more-in-hps-labor-day-2026-sale-huge-discounts-on-a-range-of-hardware-monitors-and-peripherals",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-27T14:24:56.000Z",
+        "contentSnippet": "HP is hosting a Labor Day sale with up to 65% off our favorite tech products."
+      },
+      {
+        "title": "Ingenious indie hacker funds $3,000 MacBook purchase by selling advertising space on the lid — sticker space auction has already raised 111% of the price of the laptop",
+        "link": "https://www.tomshardware.com/laptops/macbooks/ingenious-indie-hacker-funds-usd3-000-macbook-purchase-by-selling-advertising-space-on-the-lid-sticker-space-auction-has-already-raised-111-percent-of-the-price-of-the-laptop",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-08-27T13:29:23.000Z",
+        "contentSnippet": "An enterprising individual has successfully pre-sold enough advertisement sticker space on their dream MacBook’s lid to raise 111% of the laptop’s retail price."
+      },
+      {
         "title": "EPA faces lawsuit over claims it fast-tracked approval of toxic 'data center chemicals' — exposure to photoacid generators used for semiconductor manufacturing could result in ‘sudden death,’ also app",
         "link": "https://www.tomshardware.com/tech-industry/semiconductors/epa-faces-lawsuit-over-claims-it-fast-tracked-approval-of-toxic-data-center-chemicals-exposure-to-photoacid-generators-used-for-semiconductor-manufacturing-could-result-in-sudden-death-also-appear-to-be-long-lasting-pfas",
         "source": "Tom's Hardware",
@@ -2882,132 +3008,6 @@
         "source": "ServeTheHome",
         "isoDate": "2026-08-25T01:30:14.000Z",
         "contentSnippet": "We learned more about the new 160GB to 480GB LPDDR5X Intel Crescent Island GPU focused on memory capacity at Hot Chips 2026 The post Intel Crescent Island 160GB to 480GB LPDDR5X AI GPU at Hot Chips 2026 appeared first on ServeTheHome."
-      },
-      {
-        "title": "AMD Helios MI400 System Architecture at Hot Chips 2026",
-        "link": "https://www.servethehome.com/amd-helios-mi400-system-architecture-at-hot-chips-2026/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-08-25T01:00:24.000Z",
-        "contentSnippet": "AMD showed off its MI400 Helios AI rack-scale infrastructure at Hot Chips 2026 going into some detail around how the rack operates The post AMD Helios MI400 System Architecture at Hot Chips 2026 appeared first on ServeTheHome."
-      },
-      {
-        "title": "AMD MI400 GPU at Hot Chips 2026",
-        "link": "https://www.servethehome.com/amd-mi400-gpu-at-hot-chips-2026/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-08-25T00:30:06.000Z",
-        "contentSnippet": "AMD showed off its MI400 architecture at Hot Chips 2026 going into how they made a giant GPU for its Helios racks The post AMD MI400 GPU at Hot Chips 2026 appeared first on ServeTheHome."
-      },
-      {
-        "title": "NVIDIA Vera Rubin NVL72 Rack at Hot Chips 2026",
-        "link": "https://www.servethehome.com/nvidia-vera-rubin-nvl72-rack-at-hot-chips-2026/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-08-25T00:00:37.000Z",
-        "contentSnippet": "At Hot Chips 2026 NVIDIA went into the NVIDIA Vera Rubin NVL72 rack design as part of its AI Factory design The post NVIDIA Vera Rubin NVL72 Rack at Hot Chips 2026 appeared first on ServeTheHome."
-      },
-      {
-        "title": "Waymo Sensor Fusion Processor at Hot Chips 2026",
-        "link": "https://www.servethehome.com/waymo-sensor-fusion-processor-at-hot-chips-2026/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-08-24T23:00:40.000Z",
-        "contentSnippet": "At Hot Chips 2026, we learned more about the Waymo Sensor Fusion processor and how it is solving autonomous driving with custom silicon The post Waymo Sensor Fusion Processor at Hot Chips 2026 appeared first on ServeTheHome."
-      },
-      {
-        "title": "Hot Chips 2026: Intel Xeon 7 'Diamond Rapids' comes with up to 256 P-cores, 1.28 GB of last-level cache — next-gen 18A-P CPU also brings AVX 10.2 and uses UCIe-S instead of EMIB",
-        "link": "https://www.tomshardware.com/pc-components/cpus/intel-xeon-7-diamond-rapids-comes-with-up-to-256-p-cores-1-28-gb-of-last-level-cache-next-gen-18a-p-cpu-also-brings-avx-10-2-and-uses-ucie-s-instead-of-emib",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-24T21:07:45.000Z",
-        "contentSnippet": "Intel has pulled back the curtain on its next-gen Diamond Rapids Xeon CPUs, packing up to 256 P-cores and 1.28 TB of last-level cache."
-      },
-      {
-        "title": "SpaceXAI Adopts NVIDIA Vera CPUs for Grok, With a Vera Rubin NVL72 Bound for Orbit in Starmind",
-        "link": "https://www.storagereview.com/news/spacexai-adopts-nvidia-vera-cpus-for-grok-with-a-vera-rubin-nvl72-bound-for-orbit-in-starmind",
-        "source": "StorageReview",
-        "isoDate": "2026-08-24T20:34:49.000Z",
-        "contentSnippet": "Alongside its Groq 3 LPX news at Hot Chips 2026, NVIDIA announced that SpaceXAI will deploy NVIDIA Vera CPUs to accelerate its next generation of agentic AI applications. The company also plans to expand the infrastructure behind Grok on the Vera Rubin platform as it scales towar"
-      },
-      {
-        "title": "NVIDIA Groq 3 LPX Enters Full Production: 3,400 Tokens per Second at 100K Context, 256 LP30s per Rack",
-        "link": "https://www.storagereview.com/news/nvidia-groq-3-lpx-enters-full-production-3400-tokens-per-second-at-100k-context-256-lp30s-per-rack",
-        "source": "StorageReview",
-        "isoDate": "2026-08-24T20:26:28.000Z",
-        "contentSnippet": "NVIDIA announced the production release of the NVIDIA Groq 3 LPX, a dedicated interactive inference accelerator built to complement the Vera Rubin NVL72 platform. As enterprise AI workloads shift from raw model pre-training toward real-time reasoning and autonomous agent orchestr"
-      },
-      {
-        "title": "Intel Hot Chips 2026: 256-Core Diamond Rapids, Crescent Island With 480GB for Inference, and Wildcat Lake at the Edge",
-        "link": "https://www.storagereview.com/news/intel-hot-chips-2026-256-core-diamond-rapids-crescent-island-with-480gb-for-inference-and-wildcat-lake-at-the-edge",
-        "source": "StorageReview",
-        "isoDate": "2026-08-24T19:55:39.000Z",
-        "contentSnippet": "At Hot Chips 2026, Intel presented architectural details for three upcoming silicon platforms targeted at enterprise agentic AI workloads spanning data center, inference, and edge tiers. The lineup consists of the next-generation Xeon processor, codenamed Diamond Rapids, for work"
-      },
-      {
-        "title": "Intel Diamond Rapids the 2027 Intel Xeon at Hot Chips 2026",
-        "link": "https://www.servethehome.com/intel-diamond-rapids-the-2027-intel-xeon-at-hot-chips-2026/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-08-24T19:40:19.000Z",
-        "contentSnippet": "At Hot Chips 2026, Intel showed off its next-gen 2027 Diamond Rapids server CPU with up to 256 cores per socket The post Intel Diamond Rapids the 2027 Intel Xeon at Hot Chips 2026 appeared first on ServeTheHome."
-      },
-      {
-        "title": "MSI XpertStation WS300 Review: 748GB of Coherent Memory and 20 PetaFLOPS on a Desk",
-        "link": "https://www.storagereview.com/review/msi-xpertstation-ws300-review-748gb-of-coherent-memory-and-20-petaflops-on-a-desk",
-        "source": "StorageReview",
-        "isoDate": "2026-08-24T19:16:11.000Z",
-        "contentSnippet": "The MSI XpertStation WS300 is built on NVIDIA’s newest DGX Station architecture, the most capable generation yet, placing a full GB300 Grace Blackwell Ultra node beside your desk. The headline number is 20 petaFLOPS of FP4 compute, delivered by a single Blackwell Ultra GPU tied t"
-      },
-      {
-        "title": "Arm’s AGI Data Center CPU at Hot Chips 2026",
-        "link": "https://www.servethehome.com/arms-agi-data-center-cpu-at-hot-chips-2026/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-08-24T19:00:24.000Z",
-        "contentSnippet": "At Hot Chips 2026, Arm is showcasing their AGI data center CPU, the company's first complete commercial CPU design. Based around Arm's Neoverse V3 CPU cores, AGI is designed to power the next generation of agentic AI servers The post Arm’s AGI Data Center CPU at Hot Chips 2026 ap"
-      },
-      {
-        "title": "Fujitsu’s Arm-based Monaka Data Center CPU at Hot Chips 2026",
-        "link": "https://www.servethehome.com/fujitsus-arm-based-monaka-data-center-cpu-at-hot-chips-2026/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-08-24T18:30:04.000Z",
-        "contentSnippet": "At Hot Chips 2026, Fujitsu outlined its upcoming Monaka CPU, a highly efficient Arm-based CPU for data centers and AI workloads The post Fujitsu’s Arm-based Monaka Data Center CPU at Hot Chips 2026 appeared first on ServeTheHome."
-      },
-      {
-        "title": "IBM’s 2nm Dual-Architecture Mainframe Processor Runs Arm and IBM Z Instructions in the Same Cores",
-        "link": "https://www.storagereview.com/news/ibms-2nm-dual-architecture-mainframe-processor-runs-arm-and-ibm-z-instructions-in-the-same-cores",
-        "source": "StorageReview",
-        "isoDate": "2026-08-24T18:21:58.000Z",
-        "contentSnippet": "At the Hot Chips conference, IBM revealed the industry’s first dual-architecture mainframe processor, engineered for future generations of IBM Z and LinuxONE enterprise systems. Developed through the joint collaboration between IBM and Arm in April 2026, the processor will allow "
-      },
-      {
-        "title": "Hot Chips 2026: SK hynix pushes hybrid bonding to HBM5 as AI memory hits 775-micron ceiling — firm extends MR-MUF through Nvidia Rubin",
-        "link": "https://www.tomshardware.com/tech-industry/semiconductors/sk-hynix-says-hybrid-bonding-wont-be-ready-for-hbm4e-as-ai-memory-runs-into-a-775-micron-ceiling",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-24T17:55:45.000Z",
-        "contentSnippet": "The problem, per SK, is that HBM cubes are capped at a total thickness of 775 microns, the standard thickness of a 300mm logic wafer."
-      },
-      {
-        "title": "Hot Chips 2026: IBM's first dual-ISA core natively executes ARM and z/Architecture in the same core; all cores run at 5.7 GHz base frequency — next-gen mainframe AI processor is built on 2nm node with",
-        "link": "https://www.tomshardware.com/pc-components/cpus/ibms-first-dual-isa-core-natively-executes-arm-and-z-architecture-in-the-same-core-all-cores-run-at-5-7-ghz-base-frequency-next-gen-mainframe-ai-processor-is-built-on-2nm-node-with-11-cores",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-24T17:42:34.000Z",
-        "contentSnippet": "IBM is vastly expanding softwarte support on its mainframes with its first dual-ISA CPU core that natively supports z/Architecture and ARM instructions."
-      },
-      {
-        "title": "NVIDIA Vera CPU at Hot Chips 2026",
-        "link": "https://www.servethehome.com/nvidia-vera-cpu-at-hot-chips-2026/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-08-24T17:30:18.000Z",
-        "contentSnippet": "At Hot Chips 2026, NVIDIA went into detail on its upcoming Vera server CPU, and the Olympus CPU architecture. With 88 cores per chip, NVIDIA has ambitious aims for its in-house designed CPU architecture The post NVIDIA Vera CPU at Hot Chips 2026 appeared first on ServeTheHome."
-      },
-      {
-        "title": "LG's native 1,000 Hz 1080p gaming monitor has a matching $1,000 price tag — preorders open for the 25-inch UltraGear 25G590B",
-        "link": "https://www.tomshardware.com/monitors/gaming-monitors/lgs-native-1-000-hz-1080p-gaming-monitor-has-a-matching-usd1-000-price-tag-preorders-open-for-the-25-inch-ultragear-25g590b",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-24T17:21:51.000Z",
-        "contentSnippet": "The UltraGear 25G590B is the first 1,000 Hz gaming monitor with a native 1080p resolution"
-      },
-      {
-        "title": "Cooler Master Q300L v3 MicroATX case review: Sub-$45 MSRP offers incredible value for MicroATX chassis with included fans",
-        "link": "https://www.tomshardware.com/pc-components/pc-cases/cooler-master-q300l-v3-microatx-case-review",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-24T17:07:15.000Z",
-        "contentSnippet": "Cooler Master’s Q300L V3 offers more airflow, bigger clearances, and a 20 Gbps USB-C for under $45"
       }
     ]
   }
