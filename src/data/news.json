@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-09-02T14:50:08.492Z",
+  "updatedAt": "2026-09-02T18:16:12.764Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-84811 - AgentVerus-Scanner Security Bypass via Malicious Python Bytecode Injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84811",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-02T17:18:05.000Z",
+        "contentSnippet": "agentverus-scanner fails to analyze compiled Python bytecode files in companion code directories, allowing attackers to bypass security scanning by shipping malicious __pycache__ entries alongside benign source files. Attackers can execute arbitrary Python bytecode on import whil",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-84810 - Claude-Skill-Antivirus Improper Input Validation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84810",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-02T17:18:05.000Z",
+        "contentSnippet": "claude-skill-antivirus fails to analyze executable files when scanning local skill directories, reading only SKILL.md while ignoring Python source, bytecode, and other artifacts in the scripts directory. Attackers can distribute skills with malicious code in non-manifest files th",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-84809 - Tencent AI-Infra-Guard Remote Code Execution via Malicious Python Bytecode Injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84809",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-02T17:18:05.000Z",
+        "contentSnippet": "Tencent AI-Infra-Guard's skill-scan component excludes compiled Python bytecode files from analysis by hardcoding __pycache__ directories and .pyc/.pyo/.pyd extensions into skip lists across multiple scanning surfaces. Attackers can distribute skills with benign Python source fil",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-84376 - Astro Pathname Authorization Bypass Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84376",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-02T17:18:00.000Z",
+        "contentSnippet": "Astro is a web framework for content-driven websites. Prior to 7.2.4, Astro stripped a configured non-root base path from request pathnames using a string-prefix check without verifying a path-segment boundary. With base \"/app\", a request to \"/appX/admin\" resolved internally to t",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-82404 - TOON Prototype Pollution Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82404",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-02T17:18:00.000Z",
+        "contentSnippet": "TOON is a compact, human-readable serialization of JSON data for LLM prompts. Prior to 2.3.1, decoding attacker-controlled TOON with a __proto__, constructor, or prototype key wrote through the object prototype chain instead of creating an own property, polluting Object.prototype",
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-79756 - Nuclio Dashboard OS Command Injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-79756",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-02T17:18:00.000Z",
+        "contentSnippet": "Nuclio is a \"Serverless\" framework for Real-Time Events and Data Processing. Prior to version 1.17.4, the fix for unauthenticated OS command injection in the nuclio dashboard on the local/Docker platform is incomplete. The fix added validateFunctionName for function names and com",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-79755 - Nuclio Dashboard OS Command Injection Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-79755",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-02T17:17:59.000Z",
+        "contentSnippet": "Nuclio is a \"Serverless\" framework for Real-Time Events and Data Processing. Prior to version 1.17.4, on the Nuclio local Docker platform, the function namespace is interpolated—unvalidated—into a double-quoted docker ps --filter \"label=nuclio.io/namespace= \" command that is exec",
+        "cveScore": 8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-79754 - Nuclio Dashboard Command Injection Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-79754",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-02T17:17:59.000Z",
+        "contentSnippet": "Nuclio is a \"Serverless\" framework for Real-Time Events and Data Processing. From version 1.6.19 to before version 1.17.2, Nuclio's Dashboard build pipeline does not sanitize the spec.build.tempDir field before using it to construct a shell command. When the Kaniko container buil",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-55421 - Open edX Platform Server-Side Request Forgery",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55421",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-02T17:17:46.000Z",
+        "contentSnippet": "Open edX Platform enables the authoring and delivery of online learning at any scale. Prior to commit 00b7c3c, the endpoint accepts user-supplied files[].url, performs a server-side fetch using \"requests.get(url, allow_redirects=True)\". The fetched bytes are then returned inside ",
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-53636 - Open edX LMS LTI Provider Replay Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53636",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-02T17:17:45.000Z",
+        "contentSnippet": "Open edX Platform enables the authoring and delivery of online learning at any scale. Prior to commit 3a5ac85, a security vulnerability has been identified in the Open edX LMS platform's LTI (Learning Tools Interoperability) Provider implementation. The validate_timestamp_and_non",
+        "cveScore": 4.7,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-53635 - Open edX Platform Improper Authorization Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53635",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-02T17:17:45.000Z",
+        "contentSnippet": "Open edX Platform enables the authoring and delivery of online learning at any scale. Prior to commit 59bb6d6, the view function set_course_mode_price() at lms/djangoapps/instructor/views/instructor_dashboard.py:430 is decorated only with @login_required and performs no course-le",
+        "cveScore": 7.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-52833 - Nuclio Java Runtime Template Injection Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52833",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-02T17:17:45.000Z",
+        "contentSnippet": "Nuclio is a \"Serverless\" framework for Real-Time Events and Data Processing. Prior to version 1.16.5, Nuclio's Java runtime generates a build.gradle file during function builds using Go's text/template package. The template renders runtimeAttributes.repositories[] values with the",
+        "cveScore": 8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-52832 - Nuclio Dashboard Improper Authentication and Arbitrary Code Execution Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52832",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-02T17:17:45.000Z",
+        "contentSnippet": "Nuclio is a \"Serverless\" framework for Real-Time Events and Data Processing. Prior to version 1.16.5, Nuclio Dashboard exposes POST /api/functions without authentication by default (NOP auth mode). The spec.handler field (e.g., mymodule:myfunction) is parsed by functionconfig.Par",
+        "cveScore": 4.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-52831 - Nuclio Controller Command Injection Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52831",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-02T17:17:45.000Z",
+        "contentSnippet": "Nuclio is a \"Serverless\" framework for Real-Time Events and Data Processing. Prior to version 1.16.4, the Nuclio controller builds a curl invocation string for each cron trigger and stores it as the args of a Kubernetes CronJob container (/bin/sh, -c, ). Two fields in the trigger",
+        "cveScore": 8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-45730 - Nuclio Dashboard Improper Authorization Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45730",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-02T17:17:40.000Z",
+        "contentSnippet": "Nuclio is a \"Serverless\" framework for Real-Time Events and Data Processing. Prior to version 1.16.0, there is a vulnerability in Nuclio Dashboard's project management API, allowing any authenticated user (without membership in the target project) to bypass OPA authorization chec",
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-20355 - Cisco Secure Email S/MIME Decryption Information Disclosure Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-20355",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-02T17:17:34.000Z",
+        "contentSnippet": "Multiple vulnerabilities in the Secure/Multipurpose Internet Mail Extensions (S/MIME) decryption functionality of Cisco Secure Email could allow an unauthenticated, remote attacker to recover plain text from encrypted email messages. These vulnerabilities are due to insufficient ",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-20354 - Cisco Secure Email S/MIME Decryption Plaintext Recovery Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-20354",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-02T17:17:33.000Z",
+        "contentSnippet": "Multiple vulnerabilities in the Secure/Multipurpose Internet Mail Extensions (S/MIME) decryption functionality of Cisco Secure Email could allow an unauthenticated, remote attacker to recover plain text from encrypted email messages. These vulnerabilities are due to insufficient ",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-20281 - Cisco IP Phone HTTP Packet Memory Exhaustion Denial of Service Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-20281",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-02T17:17:33.000Z",
+        "contentSnippet": "A vulnerability in Cisco Desk Phone 9800 Series, Cisco IP Phone 7800 and 8800 Series, and Cisco Video Phone 8875 that are running Cisco Session Initiation Protocol (SIP) Software could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on an af",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-20280 - Cisco IOS XR Software Improper Check for Exceptional Conditions Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-20280",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-02T17:17:33.000Z",
+        "contentSnippet": "As part of Cisco's ongoing commitment to proactive security and product quality, the&nbsp;Cisco IOS XR Software engineering team has conducted a comprehensive internal security review. This review resulted in a software hardening releases that address multiple internally discover",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-20279 - Cisco IOS XR Software Improper Access Control Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-20279",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-02T17:17:33.000Z",
+        "contentSnippet": "As part of Cisco's ongoing commitment to proactive security and product quality, the Cisco IOS XR Software engineering team has conducted a comprehensive internal security review. This review resulted in a software hardening releases that address multiple internally discovered vu",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-20278 - Cisco IOS XR Software Improper Neutralization Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-20278",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-02T17:17:33.000Z",
+        "contentSnippet": "As part of Cisco's ongoing commitment to proactive security and product quality, the Cisco IOS XR Software engineering team has conducted a comprehensive internal security review. This review resulted in a software hardening releases that address multiple internally discovered vu",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-20277 - Cisco IOS XR Software Protection Mechanism Failure Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-20277",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-02T17:17:33.000Z",
+        "contentSnippet": "As part of Cisco's ongoing commitment to proactive security and product quality, the Cisco IOS XR Software engineering team has conducted a comprehensive internal security review. This review resulted in a software hardening releases that address multiple internally discovered vu",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-20276 - Cisco IOS XR Software Insufficient Control Flow Management Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-20276",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-02T17:17:32.000Z",
+        "contentSnippet": "As part of Cisco's ongoing commitment to proactive security and product quality, the Cisco IOS XR Software engineering team has conducted a comprehensive internal security review. This review resulted in a software hardening releases that address multiple internally discovered vu",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-20275 - Cisco IOS XR Software Incorrect Calculation Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-20275",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-02T17:17:32.000Z",
+        "contentSnippet": "As part of Cisco's ongoing commitment to proactive security and product quality, the Cisco IOS XR Software engineering team has conducted a comprehensive internal security review. This review resulted in a software hardening releases that address multiple internally discovered vu",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-20274 - Cisco IOS XR Software Improper Resource Control Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-20274",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-02T17:17:32.000Z",
+        "contentSnippet": "As part of Cisco's ongoing commitment to proactive security and product quality, the Cisco IOS XR Software engineering team has conducted a comprehensive internal security review. This review resulted in a software hardening releases that address multiple internally discovered vu",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
       {
         "title": "CVE-2026-81269 - Data field - Moderately critical - Information disclosure - SA-CONTRIB-2026-108",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-81269",
@@ -677,234 +902,23 @@
         "contentSnippet": "Information leak in Skia in Google Chrome prior to 152.0.7977.75 allowed a remote attacker who had compromised the renderer process to leak cross-origin data via a crafted HTML page. (Chromium security",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-84483 - WWBN AVideo Unauthenticated Password Hash Oracle via encryptPass.json.php",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84483",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-01T22:25:35.000Z",
-        "contentSnippet": "WWBN AVideo through commit 9c39d8c8 contains an incomplete authentication bypass in encryptPass.json.php that allows unauthenticated attackers to compute valid HMAC tokens using the public site URL and current time. Attackers can forge authentication tokens by computing hash_hmac",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-84482 - WWBN AVideo Cross-Site Request Forgery via get_domain() validation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84482",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-01T22:25:35.000Z",
-        "contentSnippet": "WWBN AVideo through commit 9c39d8c8 contains a cross-site request forgery vulnerability in the get_domain() and isSameDomain() functions that fail to properly validate referer origins. Attackers can forge requests from sibling subdomains or unparseable long-gTLD origins to perfor",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-84481 - WWBN AVideo through 30.0 Information Disclosure via MobileManager",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84481",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-01T22:25:34.000Z",
-        "contentSnippet": "WWBN AVideo through 30.0 contains an information disclosure vulnerability in the MobileManager plugin getConfiguration endpoint that returns sensitive configuration data to unauthenticated visitors. Attackers can send an unauthenticated GET request to plugin/MobileManager/getConf",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-84480 - WWBN AVideo Password Recovery Token Expiration Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84480",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-01T22:25:33.000Z",
-        "contentSnippet": "WWBN AVideo fails to validate password recovery token expiration in userRecoverPassSave.json.php, allowing attackers to use expired tokens to reset account passwords indefinitely. Attackers who obtain a recovery token can use it at any time to change the target account's password",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-84479 - WWBN AVideo Authentication Bypass via User-Agent Header",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84479",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-01T22:25:33.000Z",
-        "contentSnippet": "WWBN AVideo (current e01e41ecc and earlier) makes three login-time security controls depend solely on the client-supplied User-Agent header. The isAVideoEncoder()/isAVideoMobileApp() checks match HTTP_USER_AGENT against a hardcoded literal (\"AVideoEncoder\"/\"AVideoMobileApp\") with",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-84478 - WWBN AVideo Unauthenticated Arbitrary Log File Deletion",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84478",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-01T22:25:32.000Z",
-        "contentSnippet": "WWBN AVideo contains a path traversal vulnerability in the API get_api_login_code endpoint that allows unauthenticated attackers to delete arbitrary .log files by supplying directory traversal sequences in the code parameter. Attackers can exploit this to destroy audit logs and p",
-        "cveScore": 7.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-84477 - AVideo Stored XSS via Live Schedule Title Description",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84477",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-01T22:25:31.000Z",
-        "contentSnippet": "AVideo Live_schedule::setTitle() and setDescription() store POST input without sanitization, allowing users with streaming permission to inject malicious scripts. Unauthenticated attackers can access remindMe.php to execute stored XSS payloads in victim browsers without requiring",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-84476 - WWBN AVideo Authentication Bypass via X-Real-IP Header",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84476",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-01T22:25:31.000Z",
-        "contentSnippet": "WWBN AVideo fails to validate trusted proxies before accepting X-Real-IP and X-Forwarded-For headers, allowing attackers to spoof the client address used by enforceRateLimit(). Attackers can rotate the header value per request to bypass login rate limiting and perform unlimited c",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-84208 - AVideo User_Location Plugin Unauthenticated SQL Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84208",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-01T22:25:30.000Z",
-        "contentSnippet": "AVideo through version 29.0 contains an unauthenticated SQL injection vulnerability in the User_Location plugin's regions.json.php and cities.json.php endpoints. The country and region GET parameters are passed directly into SQL queries without escaping or prepared statement bind",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-84642 - Allowed UNC hostnames for attachments interpreted as a regular expression",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84642",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-01T22:17:20.000Z",
-        "contentSnippet": "The values of the mail.allowed_attachment_hostnames advanced config setting were used in a regular expression without escaping. For some possible valid hostnames, this could allow certain unintended hostnames to also match and serve remote attachments. This vulnerability was fixe",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-84641 - Information disclosure due to malicious IMAP server response",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84641",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-01T22:17:19.000Z",
-        "contentSnippet": "A malicious IMAP server can trigger use-after-free and heap-memory disclosure by sending a crafted ID response. Heap contents can ultimately be persisted to prefs.js. This vulnerability was fixed in Thunderbird 155, Thunderbird 140.15, and Thunderbird 153.2.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-84640 - One byte overflow read in mail parser",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84640",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-01T22:17:19.000Z",
-        "contentSnippet": "A maliciously constructed mail header could lead to a one byte read past the end of a buffer. This vulnerability was fixed in Thunderbird 155, Thunderbird 140.15, and Thunderbird 153.2.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-84639 - Uninitialized memory in MIME parsing",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84639",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-01T22:17:19.000Z",
-        "contentSnippet": "Triggering an error condition in certain MIME bodies would cause uninitialized memory to be used. This vulnerability was fixed in Thunderbird 155, Thunderbird 140.15, and Thunderbird 153.2.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-84637 - Calendar invitation attachments could launch local executables",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84637",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-01T22:17:19.000Z",
-        "contentSnippet": "Malicious calendar invitations could use file URI attachments to launch local or network-hosted executables on Windows, bypassing Thunderbird's normal executable attachment protections. With the new invitation display enabled, the attachment could also appear under a misleading f",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-84375 - js-yaml: maxTotalMergeKeys does not limit CPU use for empty merge sources",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84375",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-01T22:17:19.000Z",
-        "contentSnippet": "js-yaml is a JavaScript YAML parser and dumper. From 3.0.0 until 3.15.2 and 4.3.2, maxTotalMergeKeys in lib/js-yaml/loader.js and lib/loader.js does not count empty mapping sources while processing the merge key",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-84374 - Laravel Excel writes exports outside the configured filesystem disk when given a caller-controlled path",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84374",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-01T22:17:19.000Z",
-        "contentSnippet": "Laravel Excel provides supercharged Excel exports and imports in Laravel. From 3.1.8 until 3.1.70, in src/Files/Disk.php the Maatwebsite\\Excel\\Files\\Disk::copy() method resolves the caller-controlled $destination supplied through Excel::store(), $export->store(), or storeExcel() ",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-84373 - Vitest: Path Traversal / Arbitrary File Read via @vitest/mocker Redirect Mock",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84373",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-01T22:17:19.000Z",
-        "contentSnippet": "Vitest is a testing framework powered by Vite. From 2.1.0 until 4.1.11 and 5.0.0-rc.2, the public mockerPlugin and standalone interceptorPlugin exports in packages/mocker/src/node/interceptorPlugin.ts register the vitest:interceptor:register handler on Vite's unauthenticated HMR ",
-        "cveScore": 5.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-84372 - Predis: Redis command injection and denial of service via CRLF smuggling in pipelined commands on aggregate connections",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84372",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-01T22:17:18.000Z",
-        "contentSnippet": "Predis is a flexible and feature-complete Redis and Valkey client for PHP. From version 3.0.0-RC1 until version 3.3.0, pipeline handling on aggregate cluster and replication connections reparses an already serialized RESP buffer in AbstractAggregateConnection::write() by splittin",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-84289 - NousResearch hermes-agent MCP Tool mcp_tool.py list_tools memory allocation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84289",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-01T22:17:18.000Z",
-        "contentSnippet": "A vulnerability was found in NousResearch hermes-agent up to 0.18.2. This vulnerability affects the function list_tools of the file tools/mcp_tool.py of the component MCP Tool. Performing a manipulation results in uncontrolled memory allocation. It is possible to initiate the att",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-84288 - NousResearch hermes-agent ACP Prompt Workflow session.py HermesACPAgent.prompt denial of service",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84288",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-01T22:17:18.000Z",
-        "contentSnippet": "A vulnerability has been found in NousResearch hermes-agent up to 0.18.2. This affects the function HermesACPAgent.prompt of the file acp_adapter/session.py of the component ACP Prompt Workflow. Such manipulation leads to denial of service. The attack may be performed from remote",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-83549 - SonicWall SMA1000 Appliance Management Console OS Command Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-83549",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-01T22:17:13.000Z",
-        "contentSnippet": "Post-authentication Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability has been identified in the SMA1000 Appliance Management Console (AMC) which in specific conditions could potentially enable a remote authenticated attacker",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-83548 - SonicWall SMA1000 Appliance Server-Side Request Forgery",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-83548",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-01T22:17:13.000Z",
-        "contentSnippet": "A Pre-authentication SSRF vulnerability exists in the SMA1000 Appliance Work Place interface due to an unintended alternate access path. A remote unauthenticated attacker could potentially exploit this vulnerability to gain unauthorized access to sensitive functionality and perfo",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-76851 - Server-Side Request Forgery vulnerability in GitHub Enterprise Server allowed remote code execution via network access from pre-receive hooks to internal services",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76851",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-01T22:17:13.000Z",
-        "contentSnippet": "A Server-Side Request Forgery (SSRF) vulnerability was identified in GitHub Enterprise Server that allowed remote code execution on the instance. Insufficient network isolation allowed malicious pre-receive hook code to impersonate an internal service and redirect trusted interna",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-75604 - Next.js: Unauthenticated Remote Code Execution on windows-hosted servers",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75604",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-01T22:17:12.000Z",
-        "contentSnippet": "Next.js is a React framework for building full-stack web applications. From 13.4.0 until 15.5.24 and 16.3.3, Next.js applications using Pages Router or App Router without Cache Components on Windows-hosted servers do not consistently escape backslashes in route segments before co",
-        "cveScore": 9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-19118 - Race condition vulnerability was identified in GitHub Enterprise Server that allowed remote code execution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19118",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-01T22:17:11.000Z",
-        "contentSnippet": "A time-of-check time-of-use race condition vulnerability was identified in GitHub Enterprise Server that allowed remote code execution. Exploitation required an authenticated user with write access to a repository and precise timing of concurrent upload requests. This vulnerabili",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
+      {
+        "title": "Trinity: Agentic AI-powered transition planning for students with disabilities",
+        "link": "https://aws.amazon.com/blogs/machine-learning/trinity-agentic-ai-powered-transition-planning-for-students-with-disabilities/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-09-02T18:14:17.000Z",
+        "contentSnippet": "Learn how University Startups and its AWS partner g/d/n/a scaled Trinity, a conversational AI solution for students with disabilities, into a serverless multi-agent architecture on Amazon Bedrock that produces IDEA-aligned transition plans for school districts across the US."
+      },
+      {
+        "title": "Proactive cyber defense for governments and enterprises",
+        "link": "https://blog.google/innovation-and-ai/technology/safety-security/fairwind-program/",
+        "source": "Google AI Blog",
+        "isoDate": "2026-09-02T15:40:00.000Z",
+        "contentSnippet": "The Fairwind Program is a limited access program for governments and trusted partners to use our cyber defense tools."
+      },
       {
         "title": "Claude's new system prompt really doesn't want to reproduce song lyrics",
         "link": "https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/",
@@ -1590,20 +1604,6 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-08-19T22:13:20.000Z",
         "contentSnippet": "Web Search on Amazon Bedrock AgentCore now supports runtime domain and published-date filtering. New per-request filters give developers per-call control over which web sources their agents consult and how fresh those sources must be, all enforced server-side. This release also e"
-      },
-      {
-        "title": "Automate Document Processing with Quick Automate and the IDP Accelerator",
-        "link": "https://aws.amazon.com/blogs/machine-learning/automate-document-processing-with-quick-automate-and-the-idp-accelerator/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-08-19T22:09:56.000Z",
-        "contentSnippet": "Classifying, extracting, and validating high volumes of documents is a challenge across banking, insurance, healthcare, and the public sector. See how a mid-size mortgage lender automates its entire document intake pipeline, from email to validated data, using the AWS GAIIC IDP A"
-      },
-      {
-        "title": "Asynchronous patterns for calling Amazon Bedrock AgentCore agents in serverless pipelines",
-        "link": "https://aws.amazon.com/blogs/machine-learning/asynchronous-patterns-for-calling-amazon-bedrock-agentcore-agents-in-serverless-pipelines/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-08-19T22:06:09.000Z",
-        "contentSnippet": "In this post, you learn three serverless patterns (task-token callback, direct service integration, and durable functions) for invoking Amazon Bedrock AgentCore agents asynchronously from AWS Step Functions pipelines, eliminating idle compute costs while your AI agent processes r"
       }
     ],
     "virtualization": [
@@ -2310,6 +2310,34 @@
     ],
     "hardware": [
       {
+        "title": "KIOXIA CM9-R 15.36TB Review: BiCS8 Flash Hits Full Speed at Low Queue Depths",
+        "link": "https://www.storagereview.com/review/kioxia-cm9-r-15-36tb-review-bics8-flash-hits-full-speed-at-low-queue-depths",
+        "source": "StorageReview",
+        "isoDate": "2026-09-02T16:13:32.000Z",
+        "contentSnippet": "The KIOXIA CM9-R is the first enterprise SSD family built on eighth-generation BiCS FLASH, and the 15.36TB E3.S model in our lab is the volume sweet spot of the range: 3,400K random read IOPS and 14,800 MB/s of sequential read from a drive with a 25W typical active rating. Gen5 e"
+      },
+      {
+        "title": "Microsoft will expand Windows 11 Memory Integrity feature to more PCs starting in October — security feature reduces gaming performance on some systems",
+        "link": "https://www.tomshardware.com/software/windows/microsoft-will-expand-windows-11-memory-integrity-feature-to-more-pcs-starting-in-october-security-feature-reduces-gaming-performance-on-some-systems",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-02T16:07:29.000Z",
+        "contentSnippet": "Microsoft will begin enabling Memory Integrity by default on more eligible Windows PCs through quality updates in October, expanding kernel-level protection while preserving existing opt-outs for users who previously disabled the feature."
+      },
+      {
+        "title": "LTO Tape Shipments Up 57% in Q1 2026 as AI and Archive Demand Accelerate",
+        "link": "https://www.storagereview.com/news/lto-tape-shipments-up-57-in-q1-2026-as-ai-and-archive-demand-accelerate",
+        "source": "StorageReview",
+        "isoDate": "2026-09-02T15:22:26.000Z",
+        "contentSnippet": "The Linear Tape-Open (LTO) Program Technology Provider Companies, comprising Hewlett Packard Enterprise, IBM Corporation, and Quantum Corporation, have released their annual tape media shipment report. Following sustained enterprise data expansion, the report highlights a strong "
+      },
+      {
+        "title": "The current state of Hybrid Bonding in 2026 — TSMC sits at 6 microns and the HBM delay that nobody expected",
+        "link": "https://www.tomshardware.com/tech-industry/semiconductors/hybrid-bonding-roadmap-examined",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-02T15:05:41.000Z",
+        "contentSnippet": "Hybrid bonding, the copper-to-copper joining technique that replaces solder microbumps in 3D chip stacks, is in high-volume production on logic and freshly postponed on memory."
+      },
+      {
         "title": "GoPro to expand into AI data centers after $285 million merger with optical-photonics company — move to solve camera maker’s financial woes, move manufacturing back into the US",
         "link": "https://www.tomshardware.com/tech-industry/data-centers/gopro-to-expand-into-ai-data-centers-after-usd285-million-merger-with-optical-photonics-company-move-to-solve-camera-makers-financial-woes-move-manufacturing-back-into-the-us",
         "source": "Tom's Hardware",
@@ -2980,34 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-08-28T13:57:35.000Z",
         "contentSnippet": "One modder has reverse-engineered DLSS 5 to function on RTX 4000 series Ada Lovelace-based GPUs, porting incompatible CUDA instructions within the Neural Rendering DLL, enabling them to be read on previous-gen hardware."
-      },
-      {
-        "title": "Cloudflare frees up 100TB of RAM by shrinking 1.1.1.1's DNS cache entries — 250 billion cached DNS entries at any given time means one wasted byte costs 250GB",
-        "link": "https://www.tomshardware.com/tech-industry/big-tech/cloudflare-frees-100tb-of-ram-by-shrinking-dns-cache-entries",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-28T13:14:41.000Z",
-        "contentSnippet": "Cloudflare says that it has freed up roughly 100TB of RAM across its global fleet without reconfiguring any physical RAM modules in its servers."
-      },
-      {
-        "title": "Nvidia denies pausing AI cloud commitments initiative after reported partner backlash — report claims company told cloud providers it could only lease its GPUs to Nvidia-approved customers",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-denies-pausing-ai-cloud-commitments-initiative-after-reported-partner-backlash-report-claims-company-told-cloud-providers-it-could-only-lease-its-gpus-to-nvidia-approved-customers",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-28T13:13:58.000Z",
-        "contentSnippet": "Nvidia denies putting AI cloud commitments initiative on hold despite reports that some deals were paused amid partner pushback over customer controls and concerns about potential antitrust scrutiny."
-      },
-      {
-        "title": "Micron workers increasingly support strike over bonus pay — labor union wants profit-sharing scheme, as employees at Samsung, SK hynix enjoy bonuses worth hundreds of thousands of dollars",
-        "link": "https://www.tomshardware.com/tech-industry/micron-workers-increasingly-support-strike-over-bonus-pay-labor-union-wants-profit-sharing-scheme-as-employees-at-samsung-sk-hynix-enjoy-bonuses-worth-hundreds-of-thousands-of-dollars",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-28T13:07:55.000Z",
-        "contentSnippet": "80% of Micron workers in Taiwan have signaled that they're willing to go on strike if the company does not strike a deal over bonuses. The employees want to replace the current bonus system with a profit-sharing scheme, allowing them to take advantage of the AI-driven memory boom"
-      },
-      {
-        "title": "Save a ridiculous 76% on this 7-in-1 Hyper Dual Monitor Thunderbolt 4 Dock — just $24 buys a dual 4K60Hz HyperDrive docking station for pennies on the dollar",
-        "link": "https://www.tomshardware.com/peripherals/docking-stations-hubs/save-a-ridiculous-76-percent-on-this-7-in-1-hyper-dual-monitor-thunderbolt-4-dock-just-usd24-buys-a-dual-4k60hz-hyperdrive-docking-station-for-pennies-on-the-dollar",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-28T11:59:37.000Z",
-        "contentSnippet": "Grab the HyperDrive Thunderbolt 4 7-in-1 dock for under $25 with code WOOTDOCK (76% off) - run two 4K60Hz monitors or one 8K30Hz display and additional connectivity for a pittance"
       }
     ]
   }
