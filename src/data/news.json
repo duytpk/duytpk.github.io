@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-09-03T16:46:59.281Z",
+  "updatedAt": "2026-09-03T19:31:31.552Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-85396 - rubyzip before 3.4.0 Path Traversal in Zip::Entry#extract via Sibling-Directory Prefix",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85396",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-03T18:54:27.000Z",
+        "contentSnippet": "rubyzip versions before 3.4.0 contain a path traversal vulnerability in Zip::Entry#extract that fails to properly validate extraction paths using prefix comparison without trailing separators. Attackers can craft archive entries with names like ../upload_backup/owned.sh to write ",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-85395 - UnoPim before 2.1.3 Missing Authorization on Integration Management Routes",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85395",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-03T18:54:27.000Z",
+        "contentSnippet": "UnoPim before 2.1.3 fails to include integration store, update, and key-generation routes in its ACL map, allowing any admin user to bypass permission checks. Attackers with minimal admin privileges can create OAuth API integrations, mint client credentials, and escalate permissi",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-85394 - python-jose through 3.5.0 Algorithm Confusion via DER-encoded Public Key as HMAC Secret",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85394",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-03T18:54:26.000Z",
+        "contentSnippet": "python-jose through 3.5.0 fails to properly validate asymmetric keys in HMAC initialization, accepting DER-encoded public keys that lack PEM armor or SSH prefixes. Attackers holding the service's public key can forge HS256 tokens that pass verification when algorithms are not exp",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-85393 - node-forge through 1.4.0 RSA PKCS#1 v1.5 Signature Forgery via Nested DigestAlgorithm Padding",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85393",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-03T18:54:25.000Z",
+        "contentSnippet": "node-forge through 1.4.0 fails to validate element count in nested DigestAlgorithm sequences during RSA PKCS#1 v1.5 signature verification. Attackers can embed garbage bytes inside the DigestAlgorithm sequence to forge valid signatures for arbitrary messages using low-exponent RS",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-85392 - Peppermint through 0.5.5 Authorization Bypass on the User Logout Endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85392",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-03T18:54:25.000Z",
+        "contentSnippet": "Peppermint through 0.5.5 contains an authorization bypass vulnerability in the GET /api/v1/auth/user/:id/logout endpoint that allows authenticated attackers to delete sessions for any user by supplying arbitrary user IDs. Attackers can forcibly log out any user including administ",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-85391 - Peppermint through 0.5.5 Use of Hard-coded JWT Signing Secret in docker-compose.yml",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85391",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-03T18:54:24.000Z",
+        "contentSnippet": "Peppermint through 0.5.5 contains a hardcoded JWT signing secret in docker-compose.yml that allows unauthenticated attackers to forge session tokens for any account. Attackers can use the published secret to mint valid tokens for arbitrary user IDs and access protected endpoints ",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-85390 - Checkmate through 3.11.0 Missing Authorization on Maintenance Window, Notification, and Check Deletion Routes",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85390",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-03T18:54:23.000Z",
+        "contentSnippet": "Checkmate through 3.11.0 omits the isAllowed role guard middleware on maintenance-window, notification, and check-deletion routes, allowing read-only users to perform administrative actions. Attackers with user-role sessions can create arbitrary maintenance windows to silence ale",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-85389 - Worklenz before 3.0.0 Authorization Bypass on Task-Scoped Endpoints",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85389",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-03T18:54:23.000Z",
+        "contentSnippet": "Worklenz before 3.0.0 fails to verify task ownership by organization when resolving task-scoped API endpoints, allowing authenticated users to access another tenant's task data. Attackers can query task endpoints with arbitrary task UUIDs to retrieve work logs, comments, attachme",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-85388 - Worklenz through 3.0.0 SQL Injection via the sort-field Query Parameter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85388",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-03T18:54:22.000Z",
+        "contentSnippet": "Worklenz through 3.0.0 fails to properly validate the sort-field query parameter in pagination helper functions, allowing authenticated users to inject arbitrary PostgreSQL expressions into ORDER BY clauses. Attackers can use time-based and boolean-based blind SQL injection techn",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-33630 - c-ares : Use-after-free / double-free in c-ares query-completion handling, remotely triggerable via ares_getaddrinfo() over TCP",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-33630",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-03T18:42:28.000Z",
+        "contentSnippet": "c-ares is an asynchronous resolver library. From ver 1.32.3 until 1.34.7, a use-after-free / double-free in c-ares' query-completion handling. The same flaw — a query's callback being invoked while the query is still linked in the channel's internal lookup structures — is present",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-82302 - Incorrect Authorization in Kibana Leading to Unauthorized Configuration Modification",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82302",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-03T18:35:44.000Z",
+        "contentSnippet": "Incorrect Authorization (CWE-863) in Kibana can lead to unauthorized configuration modification via Exploiting Incorrectly Configured Access Control Security Levels (CAPEC-180).",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-82299 - Incorrect Authorization in Kibana Leading to Information Disclosure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82299",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-03T18:35:43.000Z",
+        "contentSnippet": "Incorrect Authorization (CWE-863) in Kibana can lead to information disclosure via Exploiting Incorrectly Configured Access Control Security Levels (CAPEC-180).",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-82298 - Incorrect Authorization in Kibana Leading to Denial of Service",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82298",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-03T18:35:42.000Z",
+        "contentSnippet": "Incorrect Authorization (CWE-863) in Kibana can lead to denial of service via Exploiting Incorrectly Configured Access Control Security Levels (CAPEC-180).",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-78596 - Missing Authorization in Kibana Leading to Unauthorized Cross-Space Write Operations",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78596",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-03T18:35:40.000Z",
+        "contentSnippet": "Missing Authorization in Kibana Leading to Unauthorized Modification of Data / Missing Authorization (CWE-862) in Kibana can lead to unauthorized modification of data via Privilege Abuse (CAPEC-122). An authenticated user holding Security read-level access in a single Kibana spac",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-78595 - Missing Authorization in Kibana Fleet Plugin Leading to Cross-Space Agent Data Disclosure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78595",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-03T18:35:38.000Z",
+        "contentSnippet": "Missing Authorization in Kibana Leading to Information Disclosure / Missing Authorization (CWE-862) in the Kibana Fleet feature can lead to information disclosure via Privilege Abuse (CAPEC-122). An authenticated user holding read-level Fleet agent privileges in one Kibana space ",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-78593 - Improper Control of Generation of Code in Kibana Leading to Privilege Escalation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78593",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-03T18:35:37.000Z",
+        "contentSnippet": "An insufficiently validated configuration field in Kibana's Cribl integration allows an authenticated user holding Kibana Fleet management privileges to inject attacker-controlled expressions into a server-side script template, resulting in an Elasticsearch ingest pipeline being ",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-78583 - Incorrect Authorization in Kibana Leading to Privilege Escalation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78583",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-03T18:35:36.000Z",
+        "contentSnippet": "Incorrect Authorization (CWE-863) in Kibana can lead to privilege escalation via Input Data Manipulation (CAPEC-153). Elasticsearch cluster privilege declarations originating from integration packages were not validated before being used to mint credentials for enrolled Elastic A",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-15431 - HP Support Assistant – Potential Escalation of Privilege",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15431",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-03T18:19:14.000Z",
+        "contentSnippet": "A potential security vulnerability has been identified in the HP Support Assistant for versions prior to 9.53.2.0. The vulnerability could potentially allow a local attacker to escalate privileges due to insufficient access controls.",
+        "cveScore": 7.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-85187 - itsourcecode Online Medicine Delivery System Order Status Update controller.php pupdate sql injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85187",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-03T18:17:33.000Z",
+        "contentSnippet": "A security vulnerability has been detected in itsourcecode Online Medicine Delivery System 1.0. Affected by this issue is the function Order::pupdate of the file /rider/orders/controller.php?action=edit&actions=confirm of the component Order Status Update. The manipulation of the",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-85012 - OS command injection in the Amazon CodeCatalyst blueprints SDK",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85012",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-03T18:17:33.000Z",
+        "contentSnippet": "Improper neutralization of special elements used in an OS command (CWE-78) in the blueprint resynthesis framework in Amazon Web Services codecatalyst-blueprints before 0.3.156 might allow a user with permission to commit to a repository in the project to execute arbitrary command",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-84968 - Heap out-of-bounds read via corrupt nested BSON in field path error message",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84968",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-03T18:17:33.000Z",
+        "contentSnippet": "An out-of-bounds read in the BSON decoding component of the MongoDB PHP driver may allow an unauthenticated party who supplies specially formed input to have a small amount of adjacent process memory copied into an error message that is returned to application code. This may resu",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-83959 - Substance3D - Sampler | Heap-based Buffer Overflow (CWE-122)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-83959",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-03T18:17:24.000Z",
+        "contentSnippet": "Substance3D - Sampler is affected by a Heap-based Buffer Overflow vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-82024 - LearnPress WordPress Plugin < 4.4.6 Stored XSS via Quiz Question Answer Titles",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82024",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-03T18:17:24.000Z",
+        "contentSnippet": "LearnPress WordPress Plugin before 4.4.6 contains a stored cross-site scripting vulnerability that allows authenticated attackers with the Instructor role to inject persistent malicious payloads by submitting unsanitized input into quiz question answer title fields. Attackers can",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-82023 - LearnPress WordPress Plugin < 4.4.6 Broken Object-Level Authorization via Quiz Answer Insert",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82023",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-03T18:17:24.000Z",
+        "contentSnippet": "LearnPress WordPress Plugin before 4.4.6 contains a broken object-level authorization vulnerability that allows authenticated attackers with the Instructor role to add answers to quiz questions owned by other instructors by exploiting a missing ownership check on the question ans",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-63219 - Unauthenticated file upload via missing authorization on formatter upload endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63219",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-03T18:17:22.000Z",
+        "contentSnippet": "GeoNetwork is a catalog application to manage spatially referenced resources. Prior to versions 4.4.12 and 4.2.17, the API endpoint for creating a new formatter via file upload is unprotected and allows the upload of external uncontrolled files. An unauthenticated attacker can up",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-85226 - MISP OnDemand Correlation Engine Missing Access Control Allows Disclosure of Restricted Correlations",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-85226",
@@ -677,231 +902,6 @@
         "contentSnippet": "A vulnerability was detected in rowboatlabs rowboat up to 0.9.1. The impacted element is the function request.text/req.json of the file apps/rowboat/app/api/composio/webhook/route.ts of the component Composio Webhook Endpoint. The manipulation results in denial of service. It is ",
         "cveScore": 5.5,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-84852 - Reader Tools PDF Reader App Path Traversal Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84852",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-02T20:17:42.000Z",
-        "contentSnippet": "A security vulnerability has been detected in Reader Tools PDF Reader App 98.8 on Android. The affected element is the function ActSplashNew.handleDeeplink of the component File Handler. The manipulation of the argument _display_name leads to path traversal. An attack has to be a",
-        "cveScore": 4.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-84452 - Windows ML CLI Remote Code Execution Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84452",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-02T20:17:41.000Z",
-        "contentSnippet": "Windows ML CLI is a command line tool for building portable, performant, and high-quality AI models for Windows ML. Prior to 0.4.0, the src/winml/modelkit/serve/cli_api.py component exposes WinML CLI commands through a localhost HTTP API without authentication and configures the ",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-84292 - fast-uri URI Authority Injection Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84292",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-02T20:17:39.000Z",
-        "contentSnippet": "fast-uri serializes the port component of a URI without validating it. When recomposing the authority, the userinfo and host components are escaped but the port is concatenated verbatim, so a port value that is not a sequence of digits can inject authority delimiters, demoting th",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-82524 - UnoPim Arbitrary File Upload Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82524",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-02T20:17:39.000Z",
-        "contentSnippet": "UnoPim before 2.1.5 contains an authenticated file upload vulnerability that allows authenticated administrators to upload arbitrary PHP files through the TinyMCE image upload endpoint due to missing file extension and MIME type validation. Attackers can upload a PHP web shell to",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-78662 - Libp2p Mux Channel Denial of Service Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78662",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-02T20:17:37.000Z",
-        "contentSnippet": "Previously, a channel registered in the mux's chanList is not usable until it is established. A malicious peer was able flood the channel's incomingRequests, deadlocking the entire connection. Now, we add an atomic established state, set when a channel becomes usable. Until such ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-75137 - UpSignOn Sensitive Data Exposure via Process Memory",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75137",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-02T20:17:37.000Z",
-        "contentSnippet": "UpSignOn for Windows before 7.19.0 contains a sensitive data exposure vulnerability that allows local attackers to recover cleartext vault data from process memory even after the application has been locked. Attackers can use the PROCESS_VM_READ permission to read the memory spac",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-75136 - UpSignOn for Windows Insecure Credential Storage Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75136",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-02T20:17:36.000Z",
-        "contentSnippet": "UpSignOn for Windows before 7.19.0 contains an insecure credential storage vulnerability that allows local attackers to retrieve the biometric unlock key stored in the Windows PasswordVault API without triggering any authentication prompt. Attackers can access the stored biometri",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-75135 - UpSignOn Sensitive Data Exposure Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75135",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-02T20:17:36.000Z",
-        "contentSnippet": "UpSignOn for Windows before 7.19.0 contains a sensitive data exposure vulnerability that allows local attackers to recover the master password and decrypt vault contents by reading a retained backup key from the process memory of UpSignOn.exe, even after the vault has been re-loc",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-75134 - SEOWriting WordPress Plugin Stored Cross-Site Scripting Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75134",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-02T20:17:36.000Z",
-        "contentSnippet": "SEOWriting plugin for WordPress through 1.12.5 contains a stored cross-site scripting vulnerability that allows authenticated contributors to inject malicious JavaScript by exploiting an overly permissive KSES allowlist that explicitly permits the onload event handler on iframe e",
-        "cveScore": 6.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-56855 - SSH Protocol Implementation Denial of Service Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56855",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-02T20:17:36.000Z",
-        "contentSnippet": "Previously, after a channel has been established, a malicious peer could send crafted messages that would deadlock the entire connection. Now, we handle all RFC 4254 channel messages; global requests are handled explicitly. Then, treat all other messages as a protocol error and t",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2023-20577 - SMM Module Heap Overflow Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2023-20577",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-02T20:17:34.000Z",
-        "contentSnippet": "A heap overflow in SMM module may allow an attacker with access to a second vulnerability that enables writing to SPI flash, potentially resulting in arbitrary code execution.",
-        "cveScore": 7.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2023-20576 - AMD AGESA Insufficient Data Authenticity Verification Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2023-20576",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-02T20:17:32.000Z",
-        "contentSnippet": "Insufficient Verification of Data Authenticity in AGESA™ may allow an attacker to update SPI ROM data potentially resulting in denial of service or privilege escalation.",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-84841 - Tsi-coop Tsi-dpdp-cms Improper Neutralization of Input During Web Page Generation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84841",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-02T19:18:09.000Z",
-        "contentSnippet": "A security flaw has been discovered in tsi-coop tsi-dpdp-cms up to 0.5.0. This vulnerability affects unknown code. The manipulation results in client-side enforcement of server-side security. The attack can be launched remotely. The exploit has been released to the public and may",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-84840 - Tsi-coop Tsi-dpdp-cms Missing Authentication Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84840",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-02T19:18:09.000Z",
-        "contentSnippet": "A vulnerability was identified in tsi-coop tsi-dpdp-cms up to 0.5.0. This affects an unknown part of the file InterceptingFilter.java of the component Bootstrap Setup Endpoint. The manipulation leads to missing authentication. The attack can be initiated remotely. The exploit is ",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-84839 - TSI-COOP TSI-DPDP-CMS Missing Authentication Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84839",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-02T19:18:09.000Z",
-        "contentSnippet": "A vulnerability was determined in tsi-coop tsi-dpdp-cms up to 0.5.0. Affected by this issue is some unknown functionality of the file web.xml of the component Admin Console/DPO Compliance Console. Executing a manipulation can lead to missing authentication. It is possible to laun",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-84382 - HTTPX2 Memory Exhaustion via Unbounded Decompression",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84382",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-02T19:18:08.000Z",
-        "contentSnippet": "HTTPX2 is a next generation HTTP client for Python. Prior to 2.12.0, the HTTPX2 content decoders in src/httpx2/httpx2/_decoders.py fully inflate each gzip, deflate, br, or zstd network chunk before iter_bytes() or aiter_bytes() yields bounded pieces to the application. A 64 KiB c",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-84381 - HTTPX2 SOCKS5 Proxy TLS Upgrade Failure Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84381",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-02T19:18:08.000Z",
-        "contentSnippet": "HTTPX2 is a next generation HTTP client for Python. Prior to 2.10.0, httpcore2 fails to start TLS in src/httpcore2/httpcore2/_sync/socks_proxy.py and src/httpcore2/httpcore2/_async/socks_proxy.py when the remote origin uses wss through a SOCKS5 proxy because the TLS upgrade condi",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-19117 - FIDO2 Authentication Bypass Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19117",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-02T19:17:16.000Z",
-        "contentSnippet": "Under specific conditions, an attacker can register an attacker-controlled FIDO2 credential against a target account and then authenticate as that user. This issue affects on-premises deployments only.",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-84833 - Ntegrals Openbrowser Browser Agent Message Construction Resource Consumption Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84833",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-02T18:21:33.000Z",
-        "contentSnippet": "A vulnerability was found in ntegrals openbrowser up to 067fc45d649baa961750da8e2f4a75d87c5c75c8. Affected by this vulnerability is an unknown functionality of the file packages/core/src/agent/agent.ts of the component Browser Agent Message Construction. Performing a manipulation",
-        "cveScore": 5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-84380 - HTTPX2 Request Smuggling via Conflicting Framing Headers",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84380",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-02T18:21:29.000Z",
-        "contentSnippet": "HTTPX2 is a next generation HTTP client for Python. Prior to 2.11.0, Request._prepare() in src/httpx2/httpx2/_models.py can add a body-derived Content-Length header to a request that already contains a caller-supplied Transfer-Encoding header because its setdefault() processing c",
-        "cveScore": 5.6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-84379 - HTTPX2 Multipart Header Injection Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84379",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-02T18:21:29.000Z",
-        "contentSnippet": "HTTPX2 is a next generation HTTP client for Python. Prior to 2.11.0, FileField.render_headers() in src/httpx2/httpx2/_multipart.py directly interpolates attacker-controlled content_type values and custom headers from the files= three-element (filename, content, content_type) tupl",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-84378 - HTTPX2 Server-Sent Events Parser Quadratic Complexity Denial of Service Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84378",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-02T18:21:29.000Z",
-        "contentSnippet": "HTTPX2 is a next generation HTTP client for Python. From 2.5.0 until 2.10.0, the HTTPX2 Server-Sent Events parser in src/httpx2/httpx2/_sse.py repeatedly copies and rescans buffered text in _SSELineDecoder.decode() when an attacker-controlled or compromised SSE endpoint splits on",
-        "cveScore": 5.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-84377 - LiteLLM Credential Exposure and Server-Side Request Forgery Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84377",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-02T18:21:28.000Z",
-        "contentSnippet": "LiteLLM is a proxy server (AI Gateway) to call LLM APIs in OpenAI (or native) format. Prior to versions 1.88.6 and 1.96.2, any authenticated LiteLLM proxy user could redirect an outbound provider call to a destination the user controls and cause the proxy to send its configured p",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-82522 - libjxl Container Box Parser Integer Underflow Metadata Injection Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82522",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-02T18:21:27.000Z",
-        "contentSnippet": "libjxl before 0.12 contains an integer underflow vulnerability in the container box parser that allows remote attackers to inject arbitrary metadata by exploiting 64-bit box size truncation to size_t on 32-bit platforms. Attackers can supply a crafted JPEG XL file causing the dec",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-77125 - Sonatype Nexus Repository Blobstore Group Management Authorization Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77125",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-02T18:21:25.000Z",
-        "contentSnippet": "A vulnerability was identified in Sonatype Nexus Repository 3 in which two blobstore group management REST API endpoints did not correctly enforce the intended authorization check. A user granted only the nexus:blobstores:create permission could invoke these endpoints to convert ",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
@@ -2310,6 +2310,20 @@
     ],
     "hardware": [
       {
+        "title": "Nvidia acquires Hugging Face for $12.93 billion — company gains control of major AI model distribution platform",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-acquires-hugging-face-for-usd12-93-billion-company-gains-control-of-major-ai-model-distribution-platform",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-03T19:05:37.000Z",
+        "contentSnippet": "Nvidia expands beyond AI hardware with its $12.93 billion acquisition of Hugging Face, gains control of a major open AI model platform, vows to preserve its support for competing models, clouds, and hardware platforms."
+      },
+      {
+        "title": "Micron 6600 ION 245TB: Swap the Hard Drives, Power an NVL72 for Free",
+        "link": "https://www.storagereview.com/review/micron-6600-ion-245tb-swap-the-hard-drives-power-an-nvl72-for-free",
+        "source": "StorageReview",
+        "isoDate": "2026-09-03T17:00:39.000Z",
+        "contentSnippet": "For two decades, the SSD-versus-HDD conversation ended the same way: flash wins on performance, disk wins on price per terabyte, and the size of that price gap settled the argument in favor of bulk storage. As storage technology has matured and AI has taken over, that framing is "
+      },
+      {
         "title": "Equinix Inference Exchange Brings NVIDIA Compute and 200+ Open Models Closer to Enterprise Data",
         "link": "https://www.storagereview.com/news/equinix-inference-exchange-brings-nvidia-compute-and-200-open-models-closer-to-enterprise-data",
         "source": "StorageReview",
@@ -2994,20 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-08-30T12:00:00.000Z",
         "contentSnippet": "An epic book preservation effort."
-      },
-      {
-        "title": "China's top DRAM maker CXMT sues Pentagon over its blacklisting — argues chips are standard civilian JEDEC spec, not defense hardware",
-        "link": "https://www.tomshardware.com/pc-components/dram/chinas-top-dram-maker-cxmt-sues-pentagon-over-its-blacklisting-argues-chips-are-standard-civilian-jedec-spec-not-defense-hardware",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-30T11:30:00.000Z",
-        "contentSnippet": "Chinese DRAM maker CXMT wants the US Department of Defense to remove it from the list of companies linked to the Chinese military."
-      },
-      {
-        "title": "Corsair RM1000e (2026) ThermalProtect power supply review: Temperature-sensing 12V-2x6 cable shuts the GPU down before a connector can melt",
-        "link": "https://www.tomshardware.com/pc-components/power-supplies/corsair-rm1000e-2026-thermalprotect-power-supply-review",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-30T11:05:00.000Z",
-        "contentSnippet": "Corsair's mainstream RMe series returns for 2026 with Platinum-class efficiency, a 500W fanless window, and a temperature-sensing 12V-2x6 cable that shuts the GPU down before a connector can melt."
       }
     ]
   }
