@@ -1,14 +1,59 @@
 {
-  "updatedAt": "2026-09-04T22:40:04.773Z",
+  "updatedAt": "2026-09-05T00:30:05.089Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
-        "title": "CVE-2026-46636 - Twig: Sandbox method allowlist bypass via `Markup` subclass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46636",
+        "title": "CVE-2026-86098 - ntop nDPI before 6.0 Heap Buffer Overflow via ndpi_json_string_escape",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86098",
         "source": "cvefeed.io",
-        "isoDate": "2026-09-04T22:07:35.000Z",
-        "contentSnippet": "Twig is a template language for PHP. From version 1.0.0 to before version 3.27.0, SecurityPolicy::checkMethodAllowed() unconditionally whitelists all method calls on instances of Twig\\Markup. Twig\\Markup is not final, so subclasses inherit the bypass. An application that passes a",
+        "isoDate": "2026-09-04T23:18:03.000Z",
+        "contentSnippet": "ntop nDPI versions before 6.0 contain a heap buffer overflow vulnerability in the ndpi_json_string_escape function that writes beyond caller-supplied buffer boundaries. Attackers can trigger the overflow by supplying crafted network packet data including TLS SNI, HTTP headers, or",
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-86097 - PX4 Autopilot through 1.17.0 Null Pointer Dereference via param select",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86097",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-04T23:18:03.000Z",
+        "contentSnippet": "PX4 Autopilot through 1.17.0 contains a null pointer dereference vulnerability in param_set_default_file() and param_set_backup_file() functions that allows attackers to crash the autopilot process. Attackers can invoke 'param select' or 'param select-backup' commands with no pat",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-86096 - PX4 Autopilot through 1.17.0 Use-After-Free via Temperature Calibration Task Startup",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86096",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-04T23:18:03.000Z",
+        "contentSnippet": "PX4 Autopilot through 1.17.0 contains a use-after-free vulnerability in TemperatureCalibration::start() due to a race condition between task spawning and object deletion. Attackers can trigger the calibration process via shell commands to write to freed heap memory, corrupting un",
+        "cveScore": 6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-86095 - Unidata netcdf-c through 4.10.1 Out-of-bounds Write via Oversized HDF5 Attribute Name",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86095",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-04T23:18:03.000Z",
+        "contentSnippet": "Unidata netcdf-c through 4.10.1 contains an out-of-bounds write vulnerability in NC4_HDF5_inq_attname() that copies HDF5 attribute names into a fixed 256-byte buffer without length validation. Attackers can craft HDF5 files with oversized attribute names to overflow the destinati",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-48019 - CRLF injection in Laravel's default email rule enables SMTP smuggling and spoofed-mail relay",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48019",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-04T23:17:09.000Z",
+        "contentSnippet": "Laravel is a web application framework. Prior to versions 12.60.0 and 13.10.0, a CRLF injection vulnerability in Laravel's email validation, in combination with how Symfony Mailer and Symfony Mime handle certain character sequences, may allow an unauthenticated attacker to interf",
+        "cveScore": 8.9,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-86100 - Camaleon CMS 2.7.5 through 2.9.1 SSRF via HTTP Redirect in Upload from URL",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86100",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-04T23:16:23.000Z",
+        "contentSnippet": "Camaleon CMS versions 2.7.5 through 2.9.1 fail to validate redirect targets when fetching remote files in the Upload from URL media feature. Authenticated attackers can supply URLs that pass initial validation but redirect to internal network addresses, allowing server-side reque",
         "cveScore": 0,
         "cveSeverity": "NA"
       },
@@ -16,7 +61,7 @@
         "title": "CVE-2026-86091 - ntopng before 6.7.260717 Missing Authorization on the Host Pool Bulk Delete Handler",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-86091",
         "source": "cvefeed.io",
-        "isoDate": "2026-09-04T21:48:47.000Z",
+        "isoDate": "2026-09-04T22:17:18.000Z",
         "contentSnippet": "ntopng before 6.7.260717 fails to check user privileges in the pools bulk-delete endpoint, allowing authenticated non-administrators to delete all host pools and member bindings. Attackers can issue POST requests to the delete pools endpoint to irreversibly destroy every host poo",
         "cveScore": 7.1,
         "cveSeverity": "HIGH"
@@ -25,19 +70,55 @@
         "title": "CVE-2026-86090 - ntopng before 6.7.260717 Missing Authorization on the Notification Endpoint and Recipient Delete Handlers",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-86090",
         "source": "cvefeed.io",
-        "isoDate": "2026-09-04T21:48:46.000Z",
+        "isoDate": "2026-09-04T22:17:18.000Z",
         "contentSnippet": "ntopng before 6.7.260717 fails to perform authorization checks in the delete endpoints and recipients REST v2 handlers. Authenticated non-administrator users can issue POST requests to irreversibly delete all configured notification endpoints and recipients, silencing all alerts.",
         "cveScore": 7.1,
         "cveSeverity": "HIGH"
       },
       {
+        "title": "CVE-2026-82684 - Tycon Systems TPDIN-Monitor-WEB3 Missing Authorization",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82684",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-04T22:17:18.000Z",
+        "contentSnippet": "Tycon Systems TPDIN-Monitor-WEB3 versions 2.2.9 and prior are vulnerable to a Missing Authorization vulnerability. This could allow an attacker to extract system credentials, configurations, or flash contents.",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-77393 - Inductive Automation Ignition Incorrect Default Permissions",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77393",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-04T22:17:18.000Z",
+        "contentSnippet": "In Ignition 8.1.53 and earlier, the Gateway \"Create Project Role(s)\" setting shipped blank, which permitted any authenticated user to create projects (if they can execute gateway scripts). Ignition 8.1.54 restricts project creation to Designer sessions and no longer relies on thi",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-76925 - Flatpak: flatpak: toctou race condition allows symlink redirection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76925",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-04T22:17:18.000Z",
+        "contentSnippet": "A flaw was found in Flatpak. A Time-of-check to time-of-use (TOCTOU) race condition exists in the `org.freedesktop.Flatpak.SystemHelper` component. This vulnerability occurs because a privileged `chmod` operation executes before the OSTree repository validation within the `Deploy",
+        "cveScore": 5.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
         "title": "CVE-2026-75925 - IXON VPN Client CRLF Injection",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-75925",
         "source": "cvefeed.io",
-        "isoDate": "2026-09-04T21:19:02.000Z",
+        "isoDate": "2026-09-04T22:17:18.000Z",
         "contentSnippet": "Improper neutralization of CRLF sequences in IXON VPN Client before version 1.4.7 allows an attacker to execute commands as root or SYSTEM. Configuration values accepted by the local service are written to a file later consumed by a privileged subprocess, without line-ending sequ",
         "cveScore": 9.6,
         "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-46636 - Twig: Sandbox method allowlist bypass via `Markup` subclass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46636",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-04T22:17:17.000Z",
+        "contentSnippet": "Twig is a template language for PHP. From version 1.0.0 to before version 3.27.0, SecurityPolicy::checkMethodAllowed() unconditionally whitelists all method calls on instances of Twig\\Markup. Twig\\Markup is not final, so subclasses inherit the bypass. An application that passes a",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-85787 - An incomplete list of disallowed inputs in the SQL validation component of Amazon awslabs postgres-mcp-server",
@@ -173,33 +254,6 @@
         "contentSnippet": "Italtel NetMatch-S 5.0.0-20200703 allows Multiple Stored XSS under NP_IBCF-NATUP-01/NMSCI-WebGui/backup_restore.jsp and NP_IBCF-MIBER-03/NMSCI-WebGui/storage.jsp via the name parameter. A malicious user leveraging this vulnerability could inject arbitrary JavaScript. The maliciou",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-77393 - Inductive Automation Ignition Incorrect Default Permissions",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77393",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-04T21:10:25.000Z",
-        "contentSnippet": "In Ignition 8.1.53 and earlier, the Gateway \"Create Project Role(s)\" setting shipped blank, which permitted any authenticated user to create projects (if they can execute gateway scripts). Ignition 8.1.54 restricts project creation to Designer sessions and no longer relies on thi",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-76925 - Flatpak: flatpak: toctou race condition allows symlink redirection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76925",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-04T21:02:00.000Z",
-        "contentSnippet": "A flaw was found in Flatpak. A Time-of-check to time-of-use (TOCTOU) race condition exists in the `org.freedesktop.Flatpak.SystemHelper` component. This vulnerability occurs because a privileged `chmod` operation executes before the OSTree repository validation within the `Deploy",
-        "cveScore": 5.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-82684 - Tycon Systems TPDIN-Monitor-WEB3 Missing Authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82684",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-04T21:01:16.000Z",
-        "contentSnippet": "Tycon Systems TPDIN-Monitor-WEB3 versions 2.2.9 and prior are vulnerable to a Missing Authorization vulnerability. This could allow an attacker to extract system credentials, configurations, or flash contents.",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-85786 - Incomplete fix for CVE-2026-75936 memory-amplification denial of service in Amazon ion-java",
@@ -848,63 +902,16 @@
         "contentSnippet": "Traefik versions before v2.11.55 contain an authentication bypass vulnerability in the digestAuth middleware where unknown usernames receive an empty secret instead of rejection. Attackers can compute a valid digest response using the empty secret and arbitrary credentials to byp",
         "cveScore": 9.3,
         "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-85594 - Traefik v3.7.1 crossProviderNamespaces Bypass via Service Middleware",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85594",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-04T12:17:22.000Z",
-        "contentSnippet": "Traefik versions from v3.7.1 fail to enforce crossProviderNamespaces restrictions on the traefik.ingress.kubernetes.io/service.middlewares Service annotation in the Kubernetes Ingress provider. A namespace-limited tenant excluded from the allowlist can attach an operator-owned mi",
-        "cveScore": 7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-85593 - phpMyFAQ before 4.1.8 Stored XSS via html_entity_decode",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85593",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-04T12:17:22.000Z",
-        "contentSnippet": "phpMyFAQ versions before 4.1.8 contain a stored cross-site scripting vulnerability in FaqHelper::convertOldInternalLinks() that calls html_entity_decode() on sanitized FAQ content, reversing entity-encoding protection. Authenticated users with FAQ editing privileges can inject Ja",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-85592 - phpMyFAQ before 4.1.8 Authorization Bypass via question/create",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85592",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-04T12:17:22.000Z",
-        "contentSnippet": "phpMyFAQ before 4.1.8 contains an authorization bypass vulnerability in the question creation endpoint where the isAddingQuestionsAllowed() method grants access to all callers when main.enableAskQuestions is enabled, ignoring the records.allowQuestionsForGuests setting. Unauthent",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-85591 - phpMyFAQ before 4.1.8 Authentication Bypass via Unverified Password Change",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85591",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-04T12:17:22.000Z",
-        "contentSnippet": "phpMyFAQ versions before 4.1.8 contain an authentication bypass vulnerability in the user control panel API endpoint that allows authenticated attackers to change account passwords without verifying the current password. Attackers with session access can submit a PUT request to t",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-85590 - phpMyFAQ before 4.1.8 Authentication Bypass via Two-Factor Disable",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85590",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-04T12:17:21.000Z",
-        "contentSnippet": "phpMyFAQ before 4.1.8 contains an authentication bypass vulnerability in its two-factor authentication (TOTP) disable functionality. The removeTwofactorConfig() handler (reachable via POST /api/user/remove-twofactor) verifies only that the user is logged in and that a valid CSRF ",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-85589 - phpMyFAQ before 4.2.0-alpha.2 Missing Authorization via Dashboard API",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85589",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-04T12:17:21.000Z",
-        "contentSnippet": "phpMyFAQ before 4.2.0-alpha.2 contains a missing authorization vulnerability in the admin dashboard API endpoints searches and content-health that enforce only authentication without permission checks. Any authenticated user can access these endpoints to read site-wide search sta",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
+      {
+        "title": "The Pelican comparison grid for Astra is pretty interesting",
+        "link": "https://simonwillison.net/2026/Sep/4/astra-pelicans/",
+        "source": "Simon Willison's Weblog",
+        "isoDate": "2026-09-04T23:59:05.000Z",
+        "contentSnippet": "I got access to GPT-6 Astra this afternoon, so naturally I used it to generate SVGs of pelicans riding bicycles - at low, medium, high, xhigh and max reasoning levels (Astra doesn't support reasoning=none). Then I rendered those pelicans in a comparison grid with GPT-5.6 Sol, Ter"
+      },
       {
         "title": "Deploy a multimodal WhatsApp ordering assistant with Amazon Bedrock AgentCore",
         "link": "https://aws.amazon.com/blogs/machine-learning/deploy-a-multimodal-whatsapp-ordering-assistant-with-amazon-bedrock-agentcore/",
@@ -1597,13 +1604,6 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-08-21T17:06:17.000Z",
         "contentSnippet": "The Agentic Data Operations Platform (ADOP) is a reference architecture on Amazon Bedrock that uses specialized AI agents to automate the full Bronze-to-Silver-to-Gold data pipeline lifecycle, compressing new-source onboarding from weeks to hours while keeping data governance and"
-      },
-      {
-        "title": "Govern AI agent tool access with Amazon Bedrock AgentCore Gateway",
-        "link": "https://aws.amazon.com/blogs/machine-learning/govern-ai-agent-tool-access-with-amazon-bedrock-agentcore-gateway/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-08-21T17:02:35.000Z",
-        "contentSnippet": "Give your AI agents governed, auditable access to enterprise tools without consolidating infrastructure. This post walks through a four-scope maturity model (Connect, Control, Catalog, and Harden) for building a governed tool gateway with Amazon Bedrock AgentCore, advancing only "
       }
     ],
     "virtualization": [
@@ -2310,6 +2310,20 @@
     ],
     "hardware": [
       {
+        "title": "DGX Spark Windows Clue: This Week’s Firmware Adds a Windows Boot Certificate as NVIDIA Details October RTX Spark PCs",
+        "link": "https://www.storagereview.com/news/dgx-spark-windows-clue-firmware-adds-windows-boot-certificate-as-nvidia-details-october-rtx-spark-pcs",
+        "source": "StorageReview",
+        "isoDate": "2026-09-05T00:25:04.000Z",
+        "contentSnippet": "NVIDIA used IFA in Berlin to put Windows at the center of its local AI story. The company’s September 3 post covers a new Windows Agent framework for agents that run in the background under OS control, one-click Windows setups for OpenClaw and Nous Research’s Hermes Agent, a beta"
+      },
+      {
+        "title": "DLSS 5 officially launches inside NBA 2K27, limited to RTX 50-series GPUs for now — Nvidia promises to bring neutral rendering tech to RTX 40-series soon",
+        "link": "https://www.tomshardware.com/pc-components/gpus/dlss-5-officially-launches-inside-nba-2k27-limited-to-rtx-50-series-gpus-for-now-nvidia-promises-to-bring-neutral-rendering-tech-to-rtx-40-series-soon",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-04T23:09:31.000Z",
+        "contentSnippet": "Nvidia's controversial neural-rendering tech, DLSS 5, is now officially available in NBA 2K27, marking the start of a new era for the company. DLSS 5 will also come to RTX 40-series soon after current work on optimizing it for the RTX 50-series has reached a satisfactory state."
+      },
+      {
         "title": "NVIDIA to Acquire Hugging Face for $12.93B, Pledges the Platform Stays Open and Hardware Neutral",
         "link": "https://www.storagereview.com/news/nvidia-to-acquire-hugging-face-for-12-93b-pledges-the-platform-stays-open-and-hardware-neutral",
         "source": "StorageReview",
@@ -2994,20 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-08-31T17:28:43.000Z",
         "contentSnippet": "G.Skill launches new Flare X5X DDR5 memory kits with AMD EXPO ULL technology for Ryzen processors."
-      },
-      {
-        "title": "Dell Pro 5 14 Laptop Review A 14in Intel Core Notebook",
-        "link": "https://www.servethehome.com/dell-pro-5-14-laptop-review-a-14in-intel-core-notebook/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-08-31T17:15:18.000Z",
-        "contentSnippet": "Today we are taking a look at Dell's latest laptop for the mainstream business segment, the Intel-based Dell Pro 5 14. The 14-inch laptop hits all the high notes, pairing an Intel Core Ultra Series 3 processor with great modularity, particularly a LPCAMM2 LPDDR5X memory module Th"
-      },
-      {
-        "title": "Trump says communities that reject data centers 'want to end up being backwards and poor' — President claims China 'could not be happier' with AI data center backlash in the US",
-        "link": "https://www.tomshardware.com/tech-industry/data-centers/trump-says-communities-that-reject-data-centers-want-to-end-up-being-backwards-and-poor-president-claims-china-could-not-be-happier-with-ai-data-center-backlash-in-the-us",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-08-31T17:05:57.000Z",
-        "contentSnippet": "President Donald Trump claims that communities rejecting AI data center constructions \"want to end up being backwards and poor.\""
       }
     ]
   }
