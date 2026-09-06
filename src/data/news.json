@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-09-06T09:58:15.700Z",
+  "updatedAt": "2026-09-06T13:25:12.302Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-86259 - OpenMAIC before 1.0.1 SSRF via Environment-Gated URL Validation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86259",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-06T12:37:50.000Z",
+        "contentSnippet": "OpenMAIC before 1.0.1 skips server-side request forgery validation in non-production builds, allowing unauthenticated attackers to reach cloud instance metadata services. Attackers can supply arbitrary provider URLs via the x-base-url header or baseUrl parameter to access sensiti",
+        "cveScore": 9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-86258 - nbviewer through 1.0.1 Path Traversal via LocalFileHandler",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86258",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-06T12:37:49.000Z",
+        "contentSnippet": "nbviewer through 1.0.1 contains a path traversal vulnerability in LocalFileHandler.can_show() that uses string-prefix comparison instead of proper path validation. Attackers can read files from sibling directories outside the configured root by requesting paths that share the roo",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-86257 - wger before 2.6 CSV Formula Injection via member export",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86257",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-06T12:17:16.000Z",
+        "contentSnippet": "wger before 2.6 fails to sanitize first_name and last_name fields in the gym member TSV export endpoint, allowing any gym member to inject spreadsheet formulas. Attackers can inject formulas like =HYPERLINK to exfiltrate admin data or execute code when admins open the exported fi",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-86256 - wger before 2.6 Open Redirect via trainer-login next parameter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86256",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-06T12:17:16.000Z",
+        "contentSnippet": "wger before 2.6 (affected versions",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-86255 - wger before 2.5 Uncontrolled Resource Consumption via date_sequence",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86255",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-06T12:17:16.000Z",
+        "contentSnippet": "wger before 2.5 fails to validate the maximum duration of routine date ranges, allowing authenticated users to create routines spanning arbitrarily long periods. Attackers can trigger the date_sequence computation via routine detail endpoints, forcing the server to iterate thousa",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-86254 - wger Incomplete Authorization Fix Cross-Tenant Account Deletion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86254",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-06T12:17:16.000Z",
+        "contentSnippet": "wger versions through master contain an incomplete authorization bypass in wger/core/views/user.py where three views retain the original gym-scope check using raw integer comparison instead of the is_same_gym() helper, allowing gym staff with gym=None to delete, deactivate, or ac",
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-86253 - h3 before 1.15.6 Path Traversal via Percent-Encoded Dot Segments",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86253",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-06T12:17:16.000Z",
+        "contentSnippet": "h3 (npm package) versions",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-86252 - h3 before 1.15.9 SSE Event Injection via Carriage Return",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86252",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-06T12:17:16.000Z",
+        "contentSnippet": "h3 versions before 1.15.9 fail to sanitize carriage return characters in EventStream data and comment fields, allowing attackers to inject arbitrary SSE events by including unsanitized carriage returns. Attackers can inject event type directives, split single push calls into mult",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-86251 - h3 before 1.15.9 Path Traversal via Double Decoding",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86251",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-06T12:17:15.000Z",
+        "contentSnippet": "h3 versions before 1.15.9 contain a path traversal vulnerability in the serveStatic utility. A double-decoding flaw allows a request path containing double-encoded dot sequences (e.g. %252e%252e) to be decoded to %2e%2e, which survives resolveDotSegments() because that function o",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-86250 - h3 before 2.0.1-rc.18 Denial of Service via Unbounded Chunked Cookie",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86250",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-06T12:17:15.000Z",
+        "contentSnippet": "h3 versions before 2.0.1-rc.18 fail to validate the chunk count parsed from user-controlled cookie values in setChunkedCookie() and deleteChunkedCookie() functions. Attackers can send a crafted cookie header with an extremely large chunk count to trigger an O(n²) cleanup loop tha",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-86242 - Unauthenticated RCE via Custom Plugin HTTP Path on Dynamically Linked Builds",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86242",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-06T12:17:15.000Z",
+        "contentSnippet": "Bifrost HTTP transport before 2.0.0 accepts an enabled custom plugin whose path is an HTTP URL through unauthenticated POST /api/plugins when management authentication is disabled (the default, governance.auth_config.is_enabled=false). The shared-object loader treats an http-pref",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-86212 - Open5GS AMF/MME improper authorization",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86212",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-06T12:17:15.000Z",
+        "contentSnippet": "A vulnerability has been found in Open5GS 2.7.7/2.8.0. This vulnerability affects unknown code of the component AMF/MME. The manipulation leads to improper authorization. The attack is possible to be carried out remotely. The exploit has been disclosed to the public and may be us",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-86205 - h3 before 2.0.1-rc.18 Open Redirect via redirectBack()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86205",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-06T12:17:15.000Z",
+        "contentSnippet": "h3 versions before 2.0.1-rc.18 contain an open redirect vulnerability in the redirectBack() utility that fails to sanitize protocol-relative paths in the Referer header pathname. Attackers can craft a same-origin URL with a double-slash path segment that passes origin validation ",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2022-51009 - PocketMine-MP before 4.7.2 Denial of Service via Skin Geometry",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2022-51009",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-06T12:17:15.000Z",
+        "contentSnippet": "PocketMine-MP before 4.7.2 fails to properly handle exceptions from the adhocore/json-comment library when parsing skin geometry data. Attackers can send login or skin packets with invalid geometry JSON to trigger an unhandled RuntimeException, causing server crash.",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2022-51008 - PocketMine-MP before 4.12.3 Denial of Service via Unauthenticated Sessions",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2022-51008",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-06T12:17:14.000Z",
+        "contentSnippet": "PocketMine-MP before 4.12.3 fails to limit unauthenticated sessions, allowing attackers to exhaust player slots by creating sessions without sending LoginPacket. Attackers can flood the server with unauthenticated connections that occupy max-player slots, preventing legitimate pl",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2021-48007 - PocketMine-MP before 3.18.1 Denial of Service via MovePlayerPacket",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2021-48007",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-06T12:17:14.000Z",
+        "contentSnippet": "PocketMine-MP versions before 3.18.1 fail to validate NaN or INF values in MovePlayerPacket position and rotation fields. Malicious clients can send crafted movement packets with invalid floating-point values to crash servers through unhandled mathematical operations or prevent c",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2021-48006 - PocketMine-MP before 4.0.3 Operator Privilege Escalation via Case Sensitivity",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2021-48006",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-06T12:17:14.000Z",
+        "contentSnippet": "PocketMine-MP before 4.0.3 does not perform case-insensitive matching when removing operator entries from ops.txt. The removeOp function lowercases the supplied name but only removes an exactly matching entry, so an operator name stored with non-lowercase letters cannot be revoke",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2020-37277 - PocketMine-MP before 3.15.4 Denial of Service via InventoryTransaction",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2020-37277",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-06T12:17:13.000Z",
+        "contentSnippet": "PocketMine-MP versions before 3.15.4 contain a denial of service vulnerability in the InventoryTransaction component's findResultItem() method. Malicious clients can send specially crafted InventoryTransactionPackets with multiple conflicting pathways to cause exponential process",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-86211 - rabindralamsal inventory-management-system Login index.php sql injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86211",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-06T11:18:06.000Z",
+        "contentSnippet": "A flaw has been found in rabindralamsal inventory-management-system 1.0.0. This affects an unknown part of the file index.php of the component Login. Executing a manipulation of the argument username/password can lead to sql injection. The attack can be executed remotely. The exp",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-86210 - SourceCodester Class and Exam Timetabling System delete_user_account.php sql injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86210",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-06T10:17:15.000Z",
+        "contentSnippet": "A security vulnerability has been detected in SourceCodester Class and Exam Timetabling System 1.0. Affected by this vulnerability is an unknown functionality of the file /delete_user_account.php. Such manipulation of the argument ID leads to sql injection. The attack may be laun",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-86209 - SourceCodester Class and Exam Timetabling System delete_user.php sql injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86209",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-06T10:17:15.000Z",
+        "contentSnippet": "A weakness has been identified in SourceCodester Class and Exam Timetabling System 1.0. Affected is an unknown function of the file /delete_user.php. This manipulation of the argument ID causes sql injection. The attack may be initiated remotely. The exploit has been made availab",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-86208 - SourceCodester Class and Exam Timetabling System delete_teacher.php sql injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86208",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-06T10:17:14.000Z",
+        "contentSnippet": "A security flaw has been discovered in SourceCodester Class and Exam Timetabling System 1.0. This impacts an unknown function of the file /delete_teacher.php. The manipulation of the argument ID results in sql injection. The attack can be launched remotely. The exploit has been r",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-80439 - Redirection for Contact Form 7 2.2.7 - 3.2.10 - Unauthenticated Arbitrary Shortcode Execution via Action Setting Mail-Tags",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-80439",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-06T10:17:14.000Z",
+        "contentSnippet": "The Redirection for Contact Form 7 WordPress plugin from 2.2.7 before 3.2.11 does not prevent shortcodes in submitted form values from being executed when it substitutes those values into an action's settings and then processes those settings for shortcodes, allowing unauthentica",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-80437 - Ninja Forms 3.14.10 - 3.15.1 - Unauthenticated Arbitrary Shortcode Execution via IP and Referer Merge Tags",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-80437",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-06T10:17:14.000Z",
+        "contentSnippet": "The Ninja Forms WordPress plugin from 3.14.10 before 3.15.2 does not prevent shortcodes in request-derived values from being executed when it substitutes them into content it later processes for shortcodes, allowing unauthenticated users to run any shortcode registered on the sit",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-19862 - JetFormBuilder < 3.6.5.2 - Unauthenticated Email Header Injection via Send Email Action",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19862",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-06T10:17:14.000Z",
+        "contentSnippet": "The JetFormBuilder WordPress plugin before 3.6.5.2 does not validate or strip line breaks from address values it sources from submitted form fields before adding them to the headers of the e-mails it sends, allowing unauthenticated users to inject arbitrary e-mail headers, add hi",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
       {
         "title": "CVE-2026-86180 - code-projects Task Management System In PHP Login index.php sql injection",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-86180",
@@ -677,231 +902,6 @@
         "contentSnippet": "Plane through 1.4.2 fails to validate that issues belong to the deploy board's project in the public comment endpoint. Authenticated attackers can post comments to arbitrary issues across workspaces by supplying an issue_id parameter to the public deploy-board comment endpoint.",
         "cveScore": 5.3,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2024-11080 - Post Grid and Gutenberg Blocks – ComboBlocks 2.2.85 - 2.3.32 - Unauthenticated Hook Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2024-11080",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-05T08:27:20.000Z",
-        "contentSnippet": "The Post Grid and Gutenberg Blocks – ComboBlocks plugin for WordPress is vulnerable to Unauthenticated Hook Injection in versions 2.2.32 to 2.3.1 via several functions in the ~/includes/blocks/form-wrap/function.php file. This makes it possible for unauthenticated attackers to ex",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-76573 - Pods <= 3.3.9.1 - Authenticated (Contributor+) Stored Cross-Site Scripting via 'not_found' Shortcode Attribute",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76573",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-05T08:27:20.000Z",
-        "contentSnippet": "The Pods – Custom Content Types and Fields plugin for WordPress is vulnerable to Stored Cross-Site Scripting via 'not_found' Shortcode Attribute in all versions up to, and including, 3.3.9.1 due to insufficient input sanitization and output escaping. This makes it possible for au",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-85414 - Gallery : FooGallery <= 3.3.2 - Authenticated (Contributor+) Stored Cross-Site Scripting via 'custom_settings' Shortcode Attribute",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85414",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-05T08:16:40.000Z",
-        "contentSnippet": "The Gallery : FooGallery plugin for WordPress is vulnerable to Stored Cross-Site Scripting via 'custom_settings' Shortcode Attribute in all versions up to, and including, 3.3.2 due to insufficient input sanitization and output escaping. This makes it possible for authenticated at",
-        "cveScore": 6.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-83625 - Contact Form by Supsystic <= 1.10.2 - Unauthenticated Stored Cross-Site Scripting via IP Address Header",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-83625",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-05T08:16:40.000Z",
-        "contentSnippet": "The Contact Form by Supsystic plugin for WordPress is vulnerable to Stored Cross-Site Scripting via IP Address Header in all versions up to, and including, 1.10.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to i",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-81543 - Abandoned Cart Pro for WooCommerce <= 10.7.1 - Missing Authorization to Authenticated (Subscriber+) Privilege Escalation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81543",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-05T08:16:40.000Z",
-        "contentSnippet": "The Abandoned Cart Pro for WooCommerce plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 10.7.1. This is due to missing capability checks and nonce verification on multiple AJAX actions including wcap_save_connector_settings, wcap_se",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-75586 - Unlimited Elements For Elementor <= 2.0.17 - Reflected Cross-Site Scripting via 'formData[id]' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75586",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-05T08:16:40.000Z",
-        "contentSnippet": "The Unlimited Elements For Elementor plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via 'formData[id]' Parameter in all versions up to, and including, 2.0.17 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticat",
-        "cveScore": 6.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-75018 - Custom Contact Forms <= 7.16 - Missing Authorization to Authenticated (Contributor+) Arbitrary Post Deletion and Post Meta Modification via Nested 'fields[].ID' / 'choices[].ID' Param",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75018",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-05T08:16:40.000Z",
-        "contentSnippet": "The Custom Contact Forms plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 7.16. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, wit",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-84937 - YT Player < 2.1.0 - Contributor+ SQLi via ytp_ajax",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84937",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-05T07:17:14.000Z",
-        "contentSnippet": "The Video Player for YouTube WordPress plugin before 2.1.0 does not properly sanitise and escape user-supplied input before using it in a SQL statement, allowing users with the Contributor role and above to perform SQL injection attacks and read arbitrary data from the database.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-84936 - EmbedPress 4.6.0 - 4.6.3 - Unauthenticated Google Reviews API Quota Consumption and Database Bloat",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84936",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-05T07:17:14.000Z",
-        "contentSnippet": "The EmbedPress WordPress plugin before 4.6.4 does not have proper authorization on a public review-loading action, allowing unauthenticated users to force the site to make repeated billable third-party API requests using the site's own configured API key, and to create an unbound",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-84935 - HT Menu < 1.2.7 - Subscriber+ Stored XSS via Menu Settings",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84935",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-05T07:17:14.000Z",
-        "contentSnippet": "The HT Menu WordPress plugin before 1.2.7 does not perform any capability or object-ownership check when saving navigation menu-item settings, and does not escape those stored settings when the menu is rendered, allowing users with minimal permissions such as Subscribers to store",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-84934 - JCH Optimize < 6.0.1 - Subscriber+ Stored XSS via getcacheinfo Task Override",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84934",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-05T07:17:14.000Z",
-        "contentSnippet": "The JCH Optimize WordPress plugin before 6.0.1 does not perform a capability check on one of its authenticated AJAX actions and lets the request choose which internal action runs, allowing any authenticated users such as Subscribers to import arbitrary JCH Optimize WordPress plug",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-84931 - Joli Table Of Contents < 3.0.3 - Author+ Stored XSS via joli-toc Shortcode Theme Attribute",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84931",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-05T07:17:14.000Z",
-        "contentSnippet": "The Joli Table Of Contents WordPress plugin before 3.0.3 does not sanitise or escape a shortcode attribute value before outputting it inside an HTML element's attribute, allowing users with the Author role and above to inject arbitrary HTML attributes and JavaScript that execute ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-84930 - CatFolders Document Gallery < 2.0.7 - Author+ Stored XSS via titleTag Block Attribute",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84930",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-05T07:17:14.000Z",
-        "contentSnippet": "The CatFolders Document Gallery & PDF Library WordPress plugin before 2.0.7 does not properly validate a block attribute before using it as an HTML tag name in its gallery output, allowing users with the Author role and above to inject arbitrary web scripts that execute in the br",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-84927 - EmbedPress 4.6.0 - 4.6.3 - Contributor+ Google Reviews Modification",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84927",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-05T07:17:14.000Z",
-        "contentSnippet": "The EmbedPress WordPress plugin before 4.6.4 does not perform a sufficient authorization check on one of its Google Reviews REST API routes, allowing users with the Contributor role and above to modify a site-wide store, deleting entries an administrator configured and injecting ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-84926 - EmbedPress 4.6.0 - 4.6.3 - Contributor+ Administrator Email Disclosure via Google Reviews REST Route",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84926",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-05T07:17:14.000Z",
-        "contentSnippet": "The EmbedPress WordPress plugin before 4.6.4 does not correctly restrict access to one of its Google Reviews REST routes to administrators, allowing any authenticated user with contributor-level access or above to read the site administrator's email address, a value WordPress cor",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-84901 - Eventin < 4.1.22 - Contributor+ Site Homepage Hijack and Event Taxonomy Manipulation via Missing Authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84901",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-05T07:17:14.000Z",
-        "contentSnippet": "The Eventin WordPress plugin before 4.1.22 does not properly check authorization on several of its event-management REST routes, allowing users with contributor-level access and above to change the site's front-page setting to an event they do not own and to create, edit and dele",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-84899 - VikWidgetsLoader < 1.12.0 - Contributor+ Stored XSS via Gutenberg Block class_suffix",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84899",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-05T07:17:14.000Z",
-        "contentSnippet": "The VikWidgetsLoader WordPress plugin before 1.12.0 does not sanitise or escape a block attribute before outputting it inside an inline script, allowing users with the Contributor role to store arbitrary JavaScript that executes in the browser of any user viewing the affected pos",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-84898 - Eventin < 4.1.21 - Contributor+ LFI via Event Layout Meta",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84898",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-05T07:17:14.000Z",
-        "contentSnippet": "The Eventin WordPress plugin before 4.1.21 does not properly validate a template path value before using it to include a local file, allowing users with contributor-level access and above to include and execute arbitrary local PHP files.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-84896 - King Addons for Elementor < 51.1.77 - Contributor+ Stored XSS via Magazine Grid Widget",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84896",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-05T07:17:13.000Z",
-        "contentSnippet": "The King Addons for Elementor WordPress plugin before 51.1.77 does not escape a widget display-style setting before outputting it in an HTML attribute, allowing users with Contributor-level access and above to store JavaScript that executes in the browser of any visitor to the af",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-84745 - The Events Calendar &lt; 6.17.3.1 - Contributor+ Non-Public Event, Venue and Organizer Content Disclosure via REST API",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84745",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-05T07:17:13.000Z",
-        "contentSnippet": "The Events Calendar WordPress plugin before 6.17.3.1 does not restrict non-public content to the users entitled to read it on its public REST archives, allowing users with a low-privilege role such as contributor to read the full contents of every unpublished record on the site, ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-84225 - Kirki 6.0.0 - 6.2.5 - Authenticated Collaboration Comment Status Modification via IDOR",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84225",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-05T07:17:13.000Z",
-        "contentSnippet": "The Kirki WordPress plugin before 6.3.0 does not check that a user is allowed to act on a collaboration comment before changing its state, allowing users whom an administrator has granted content-level access to the page builder to modify comments left by other users, including o",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-84221 - Kirki 6.0.0 - 6.2.5 - Editor+ SQLi via Content Manager Field ID",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84221",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-05T07:17:13.000Z",
-        "contentSnippet": "The Kirki WordPress plugin before 6.3.0 does not escape a user-supplied identifier before using it in a SQL query, allowing users with editor-level access and above to append arbitrary SQL and read the contents of the database, including user credentials.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-84022 - Bold Page Builder < 5.9.8 - Contributor+ Stored XSS via Multiple Shortcode Element Attributes",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84022",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-05T07:17:13.000Z",
-        "contentSnippet": "The Bold Page Builder WordPress plugin before 5.9.8 does not sanitise and escape several shortcode attributes before outputting them in HTML attributes, allowing users with the Contributor role and above to inject arbitrary web scripts that execute when a user views the affected ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-84021 - Bold Page Builder < 5.9.8 - Contributor+ Stored XSS via bt_bb_button/bt_bb_headline/bt_bb_icon URL",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84021",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-05T07:17:13.000Z",
-        "contentSnippet": "The Bold Page Builder WordPress plugin before 5.9.8 does not properly validate a link URL before outputting it in an HTML attribute, relying on a filter that can be evaded, allowing users with the Contributor role and above to inject arbitrary web scripts that execute when a user",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-83544 - Greenshift < 13.2.0 - Contributor+ Stored XSS via Block Animation customProps Attribute",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-83544",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-05T07:17:13.000Z",
-        "contentSnippet": "The Greenshift WordPress plugin before 13.2.0 does not properly escape a block animation attribute before outputting it within an HTML attribute, allowing users with contributor-level access and above to inject arbitrary web scripts that execute when the content is viewed.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       }
     ],
     "ai": [
@@ -1608,6 +1608,13 @@
     ],
     "virtualization": [
       {
+        "title": "7 Weekend Projects That Make Your Home Lab Less Dependent on You",
+        "link": "https://www.virtualizationhowto.com/2026/09/7-weekend-projects-that-make-your-home-lab-less-dependent-on-you/",
+        "source": "Virtualization HowTo",
+        "isoDate": "2026-09-06T12:32:10.000Z",
+        "contentSnippet": "I have been pretty focused on automation in the home lab. But there is also mindset changes I needed to make to keep from having to baby sit my lab… The post 7 Weekend Projects That Make Your Home Lab Less Dependent on You appeared first on Virtualization Howto."
+      },
+      {
         "title": "7 Simple Home Lab HA Projects for This Weekend",
         "link": "https://www.virtualizationhowto.com/2026/09/7-simple-home-lab-ha-projects-for-this-weekend/",
         "source": "Virtualization HowTo",
@@ -2299,16 +2306,51 @@
         "source": "Virtualization HowTo",
         "isoDate": "2026-06-12T12:33:06.000Z",
         "contentSnippet": "If you have spent time looking at blogs and videos on home lab blogs, forums, and Reddit communities, you will eventually notice there is a particular service/app that is always… The post Why I Never Bought Into the Home Lab Dashboard Trend appeared first on Virtualization Howto."
-      },
-      {
-        "title": "I Tried This Storage OS Most Home Labbers Have Never Heard Of",
-        "link": "https://www.virtualizationhowto.com/2026/06/i-tried-this-storage-os-most-home-labbers-have-never-heard-of/",
-        "source": "Virtualization HowTo",
-        "isoDate": "2026-06-11T12:17:27.000Z",
-        "contentSnippet": "When it comes to storage specific operating systems that are popular in the home lab, most of the time names like TrueNAS are the ones that come to the top… The post I Tried This Storage OS Most Home Labbers Have Never Heard Of appeared first on Virtualization Howto."
       }
     ],
     "hardware": [
+      {
+        "title": "Samsung 990 2TB PCIe 4.0 SSD falls to $339.99 on Amazon — $190 discount makes high-capacity storage more affordable",
+        "link": "https://www.tomshardware.com/pc-components/ssds/samsung-990-2tb-pcie-4-0-ssd-falls-to-usd339-99-on-amazon-usd190-discount-makes-high-capacity-storage-more-affordable",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-06T13:08:31.000Z",
+        "contentSnippet": "Samsung's 2TB 990 offers plenty of fast storage for games and is currently $190 cheaper than its regular $529.99 price."
+      },
+      {
+        "title": "MSI MEG CoreLiquid E15 360 AIO Review: Bold and stunning, with market-leading performance",
+        "link": "https://www.tomshardware.com/pc-components/liquid-cooling/msi-meg-coreliquid-e15-360-aio-review-bold-and-stunning-with-market-leading-performance",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-06T12:48:03.000Z",
+        "contentSnippet": "MSI’s MEG CoreLiquid E15 360 AIO is a luxury cooling product, with a stunning 6.7-inch screen and industry-leading thermal performance."
+      },
+      {
+        "title": "Sales of CD and vinyl music sees strong resurgence amid physical media backlash — US sales of ‘retro media’ were up 59% and 18%, respectively, in H1 2026",
+        "link": "https://www.tomshardware.com/service-providers/streaming/sales-of-cd-and-vinyl-music-sees-strong-resurgence-amid-physical-media-backlash-us-sales-of-retro-media-were-up-59-percent-and-18-percent-respectively-in-h1-2026",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-06T12:16:13.000Z",
+        "contentSnippet": "Music industry physical revenues jumped by 25.9% in H1 2026, 'powered by 17.7% vinyl growth and a 58.6% increase in CDs,' reported the RIAA."
+      },
+      {
+        "title": "PS5 emulator can now run the console version of GTA V at up to 60 FPS on PC, but quickly crashes as tweakers continue to optimize — PS5 emulation advancing at an astronomical pace leading up to GTA VI",
+        "link": "https://www.tomshardware.com/video-games/pc-gaming/ps5-emulator-can-now-run-the-console-version-of-gta-v-at-up-to-60-fps-on-pc-but-quickly-crashes-as-tweakers-continue-to-optimize-ps5-emulation-advancing-at-an-astronomical-pace-leading-up-to-gta-vi-launch",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-06T11:48:08.000Z",
+        "contentSnippet": "A spark was lit under the PS5 emulation scene a couple of months ago and instead of fading over time, it seems to be burning brighter than ever. GTA V now runs between 40-60 FPS for a few minutes before crashing, along with several other games being rendered smoothly."
+      },
+      {
+        "title": "Former Old School RuneScape dev gets jail time for stealing $400,000 from players — virtual gold stolen and sold on the black market before Jagex caught the culprit using hidden firewall tweaks",
+        "link": "https://www.tomshardware.com/video-games/former-old-school-runescape-dev-gets-jail-time-for-stealing-usd400-000-from-players-virtual-gold-stolen-and-sold-on-the-black-market-before-jagex-caught-the-culprit-using-hidden-firewall-tweaks",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-06T10:30:00.000Z",
+        "contentSnippet": "A former Jagex employee stole over $400,000 worth of in-game items and virtual currency from OSRS players and sold them on the black market. He was eventually arrested and sentenced to a three-year prison sentence, with one investigator saying, \"Just because it's virtual, doesn't"
+      },
+      {
+        "title": "This 246TB SSD media server is built for millionaire cinephiles —Kaleidescape's newest home theater vault supports 25 simultaneous 4K streams, stores up to 2,300 4K cinematic movies",
+        "link": "https://www.tomshardware.com/pc-components/storage/this-246tb-ssd-media-server-is-built-for-millionaire-cinephiles-kaleidescapes-newest-home-theater-vault-supports-25-simultaneous-4k-streams-stores-up-to-2-300-4k-cinematic-movies",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-06T10:00:00.000Z",
+        "contentSnippet": "Kaleidescape, a maker of luxury home theater equipment, has revealed its latest media server, the \"Compact Terra Prime 246TB SSD.\""
+      },
       {
         "title": "Save nearly 50% on this awesome 16-inch OLED laptop with a Ryzen AI 5 430 CPU & 16GB RAM — HP's MacBook Neo-beating OmniBook X Flip is down to just $699",
         "link": "https://www.tomshardware.com/pc-components/save-nearly-50-percent-on-this-awesome-16-inch-oled-laptop-with-a-ryzen-ai-5-430-cpu-and-16gb-ram-hps-macbook-neo-beating-omnibook-x-flip-is-down-to-just-usd699",
@@ -2966,48 +3008,6 @@
         "source": "ServeTheHome",
         "isoDate": "2026-09-01T17:00:00.000Z",
         "contentSnippet": "NVIDIA and MediaTek have inked a new deal this week that more closely ties together the two companies financially and technologically. With NVIDIA investing $3.5B into the Taiwanese fabless chip designer, MediaTek will now offer the NVLink Fusion platform to customers designing c"
-      },
-      {
-        "title": "Omdia Study Highlights Declining Ransomware Recovery Rates and the Immutability Gap in Backup Storage",
-        "link": "https://www.storagereview.com/news/omdia-study-highlights-declining-ransomware-recovery-rates-and-the-immutability-gap-in-backup-storage",
-        "source": "StorageReview",
-        "isoDate": "2026-09-01T15:42:11.000Z",
-        "contentSnippet": "A recent study by the analyst firm Omdia, commissioned by Object First, reveals that enterprise ransomware recovery rates are declining despite growing awareness of modern data protection strategies. According to the research, 83 percent of surveyed organizations experienced a su"
-      },
-      {
-        "title": "VAST Data CrowdStrike Integration Goes Live: Native Falcon Sensor Now, Next-Gen SIEM and AIDR in Preview",
-        "link": "https://www.storagereview.com/news/vast-data-crowdstrike-integration-goes-live-native-falcon-sensor-now-next-gen-siem-and-aidr-in-preview",
-        "source": "StorageReview",
-        "isoDate": "2026-09-01T15:37:31.000Z",
-        "contentSnippet": "VAST Data and CrowdStrike are turning the AI security partnership they announced at VAST Forward in February into a shipping product, detailing a multi-layered integration that embeds enterprise-grade cybersecurity directly into AI storage infrastructure, data pipelines, and prod"
-      },
-      {
-        "title": "MLPerf Storage v3.0: 877 GiB/s Checkpoints, a Cloud First, and a Leaderboard Turned Over",
-        "link": "https://www.storagereview.com/news/mlperf-storage-v3-0-877-gib-s-checkpoints-a-cloud-first-and-a-leaderboard-turned-over",
-        "source": "StorageReview",
-        "isoDate": "2026-09-01T15:00:00.000Z",
-        "contentSnippet": "MLCommons published the MLPerf Storage v3.0 results today, and the round changes not only what the benchmark is but also who leads it. For the first time, the only audited AI storage benchmark covers the full pipeline: training throughput, checkpointing, and two new inference wor"
-      },
-      {
-        "title": "Nvidia pours $3.5 billion into MediaTek — company will adopt NVLink Fusion for its custom AI accelerators",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-pours-usd3-5-billion-into-mediatek-company-will-adopt-nvlink-fusion-for-its-custom-ai-accelerators",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-01T14:42:22.000Z",
-        "contentSnippet": "Nvidia invests $3.5 billion in MediaTek as the companies expand their partnership into custom AI infrastructure with NVLink Fusion, local AI computing, and automotive platforms."
-      },
-      {
-        "title": "Alienware 16X Aurora review: A thoroughly competent gaming laptop",
-        "link": "https://www.tomshardware.com/laptops/gaming-laptops/alienware-16x-aurora-review",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-01T14:31:18.000Z",
-        "contentSnippet": "The Alienware 16X Aurora pairs a gorgeous 240 Hz OLED display with solid performance, sturdy build quality, and strong upgradeability, though its size and battery life limit portability."
-      },
-      {
-        "title": "Nvidia's controversial DLSS 5 will launch September 3 with NBA2K27, company shares first benchmarks — available on all RTX 50 series GPUs, laptops, and GeForce NOW",
-        "link": "https://www.tomshardware.com/pc-components/gpus/nvidias-controversial-dlss-5-will-launch-september-3-with-nba2k27-available-on-all-rtx-50-series-gpus-laptops-and-geforce-now",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-01T13:00:00.000Z",
-        "contentSnippet": "Nvidia has confirmed DLSS 5 will launch on September 3 in NBA2K27. It will be supported on all RTX 50 series GPUs, laptops, and GeForce NOW."
       }
     ]
   }
