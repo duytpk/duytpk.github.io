@@ -1,14 +1,131 @@
 {
-  "updatedAt": "2026-09-07T20:18:53.600Z",
+  "updatedAt": "2026-09-07T23:11:36.941Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
+        "title": "CVE-2026-82586 - AshLua read operation aggregate bypasses the exposed-field allow-list, exposing private attributes",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82586",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-07T22:34:14.000Z",
+        "contentSnippet": "Improper Protection of Alternate Path vulnerability in ash-project ash_lua allows a user-supplied Lua script to read attributes that are not on the exposed-field allow-list. AshLua exposes Ash resources to Lua scripts, gated by a manifest declaring which fields are exposed. The r",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-81638 - Non-canonical ULID spellings are accepted and alias to the same record in ash_double_entry",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81638",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-07T22:33:29.000Z",
+        "contentSnippet": "Improper Handling of Alternate Encoding vulnerability in ash-project ash_double_entry allows an attacker to submit several distinct string spellings of the same identifier. AshDoubleEntry.ULID renders a 128-bit ULID as 26 Crockford base-32 characters, but the first character enco",
+        "cveScore": 2.1,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-82758 - ash_authentication_oauth2_server treats an empty resolved secret as valid, opening the gated Dynamic Client Registration endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82758",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-07T22:32:17.000Z",
+        "contentSnippet": "Improper Authentication vulnerability in ash-project ash_authentication_oauth2_server allows an unauthenticated attacker to register OAuth clients even when Dynamic Client Registration is gated by an initial access token. resolve_secret/3 in AshAuthentication.Oauth2Server (reache",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-82757 - ash_authentication_oauth2_server CIMD fetcher classifies IPv4-in-IPv6 and site-local addresses as public, allowing SSRF",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82757",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-07T22:31:34.000Z",
+        "contentSnippet": "Server-Side Request Forgery (SSRF) vulnerability in ash-project ash_authentication_oauth2_server allows an attacker who controls a client metadata URL and its DNS to make the server connect to internal or loopback addresses. public_ip?/1 in AshAuthentication.Oauth2Server.CIMD.Req",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-82756 - ash_authentication_oauth2_server interpolates a tenant-derived value into the WWW-Authenticate challenge without escaping, allowing header parameter injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82756",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-07T22:30:55.000Z",
+        "contentSnippet": "Improper Encoding or Escaping of Output vulnerability in ash-project ash_authentication_oauth2_server allows an unauthenticated attacker to inject arbitrary authentication parameters into the WWW-Authenticate challenge header. BearerPlug and RequireScopePlug built the Bearer reso",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-82755 - ash_authentication_oauth2_server serves tenant-specific OAuth metadata as publicly cacheable without Vary, enabling cross-tenant confusion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82755",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-07T22:28:24.000Z",
+        "contentSnippet": "Use of Cache Containing Sensitive Information vulnerability in ash-project ash_authentication_oauth2_server allows a shared HTTP cache to serve one tenant's OAuth discovery metadata to another tenant's clients. The RFC 8414 and RFC 9728 metadata endpoints in AshAuthentication.Pho",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-82754 - ash_authentication_oauth2_server aliases every protocol endpoint under /.well-known, bypassing path-scoped controls",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82754",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-07T22:23:56.000Z",
+        "contentSnippet": "Improper Protection of Alternate Path vulnerability in ash-project ash_authentication_oauth2_server exposes the state-changing OAuth endpoints under an unintended URL prefix, bypassing controls scoped to the canonical prefix. oauth2_server_protocol_routes/1 in AshAuthentication.P",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-82753 - Unauthenticated authorize requests create unbounded, never-expiring CIMD client rows and cache entries in ash_authentication_oauth2_server",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82753",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-07T22:23:08.000Z",
+        "contentSnippet": "Allocation of Resources Without Limits or Throttling vulnerability in ash-project ash_authentication_oauth2_server allows an unauthenticated attacker to exhaust database storage and memory. The /authorize endpoint is unauthenticated by design. With Client ID Metadata Documents en",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-86438 - Lara Dashboard before 1.3.2 Missing Authorization in Marketplace Module Install Action",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86438",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-07T22:17:22.000Z",
+        "contentSnippet": "Lara Dashboard before 1.3.2 fails to authorize the MarketplaceModuleBrowser installModule Livewire action, allowing non-Superadmin administrators to install modules. Attackers can download and auto-activate arbitrary PHP modules from the marketplace over unsigned HTTP requests, a",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-86437 - Lara Dashboard before 1.3.2 Incorrect Authorization in Core-Upgrade Archive Upload",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86437",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-07T22:17:22.000Z",
+        "contentSnippet": "Lara Dashboard before 1.3.2 authorizes the POST /admin/settings/core-upgrades/upload endpoint with only the settings.edit permission, allowing non-Superadmin administrators to upload and extract arbitrary zip archives over the live application source code. Attackers can upload a ",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-86436 - Lara Dashboard before 1.3.2 Missing Authorization in Post-Builder Media Upload Endpoints",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86436",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-07T22:17:21.000Z",
+        "contentSnippet": "Lara Dashboard before 1.3.2 fails to authorize access to the post-builder image and video upload endpoints, allowing authenticated accounts without content permissions to upload files. Attackers can upload polyglot files with attacker-chosen extensions to the public web root and ",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-75650 - Adobe Commerce | Improper Neutralization of Special Elements Used in a Template Engine (CWE-1336)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75650",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-07T21:17:30.000Z",
+        "contentSnippet": "Adobe Commerce is affected by an Improper Neutralization of Special Elements Used in a Template Engine vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to execute arbitrary code. Exploitat",
+        "cveScore": 10,
+        "cveSeverity": "CRITICAL"
+      },
+      {
         "title": "CVE-2026-86287 - Net::IP::LPM versions before 1.12 for Perl accept malformed prefix lengths",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-86287",
         "source": "cvefeed.io",
-        "isoDate": "2026-09-07T18:25:37.000Z",
+        "isoDate": "2026-09-07T19:17:28.000Z",
         "contentSnippet": "Net::IP::LPM versions before 1.12 for Perl accept malformed prefix lengths. Non-numeric and non-ASCII prefix lengths are accepted and treated as 0. Integers over 31 bits are silently truncated. A single malformed mask will poison the lookup table. The result is that the lookup wi",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-16028 - Protocol::HTTP2 versions before 1.14 for Perl allow memory exhaustion via closed streams that stream_state never removes from the connection stream table",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16028",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-07T19:17:25.000Z",
+        "contentSnippet": "Protocol::HTTP2 versions before 1.14 for Perl allow memory exhaustion via closed streams that stream_state never removes from the connection stream table. When a stream reaches the CLOSED state, stream_state returns the concurrency slot and clears most of the stream's keys, but t",
         "cveScore": 0,
         "cveSeverity": "NA"
       },
@@ -784,123 +901,6 @@
         "isoDate": "2026-09-06T19:17:27.000Z",
         "contentSnippet": "A flaw has been found in SourceCodester Class and Exam Timetabling System 1.0. The impacted element is the function mysqli_query of the file /admin/modal_add_course1.php. This manipulation of the argument course causes sql injection. The attack may be initiated remotely. The expl",
         "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-86220 - SourceCodester Class and Exam Timetabling System modal_add_course.php mysqli_query sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86220",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-06T18:17:23.000Z",
-        "contentSnippet": "A vulnerability was detected in SourceCodester Class and Exam Timetabling System 1.0. The affected element is the function mysqli_query of the file /admin/modal_add_course.php. The manipulation of the argument course results in sql injection. The attack can be launched remotely. ",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-86219 - Authen::SASL::Perl::DIGEST_MD5 versions before 2.2100 for Perl accept replayed authentication responses via unverified nonce in server_step",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86219",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-06T18:17:23.000Z",
-        "contentSnippet": "Authen::SASL::Perl::DIGEST_MD5 versions before 2.2100 for Perl accept replayed authentication responses via unverified nonce in server_step. server_start generates a fresh nonce and sends it in the challenge, and nothing later compares that value against the nonce the client retu",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-82209 - domain-scoped PSL domain cookie",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82209",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-06T18:17:22.000Z",
-        "contentSnippet": "When libpsl support is enabled, libcurl fails to enforce the Public Suffix List boundary check when processing a `Set-Cookie` header where the `Domain` attribute explicitly matches an origin host that is itself a public suffix (e.g., `Domain=co.uk` set by `co.uk`). Instead of coe",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-82208 - wolfSSL CA-cache hit overrides callback",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82208",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-06T18:17:22.000Z",
-        "contentSnippet": "With the wolfSSL backend, when CA caching is enabled and an `CURLOPT_SSL_CTX_FUNCTION` callback replaces the trust store, libcurl can silently reinstall the cached store after the callback returns. A certificate trusted by the cached store but rejected by the callback-selected st",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-80255 - secure cookie attribute bypass with tab",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-80255",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-06T18:17:22.000Z",
-        "contentSnippet": "A `Set-Cookie:` header using tab (horizontal tab, ASCII code 9) instead of space (ascii code 32) immediately before the `Secure` attribute causes curl to store the cookie without its Secure flag. The cookie might then wrongfully be sent over plaintext HTTP on subsequent requests ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-80231 - native CA store conn reuse",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-80231",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-06T18:17:22.000Z",
-        "contentSnippet": "A flaw in libcurl makes it wrongly reuse an existing HTTPS connection setup for a given hostname even when using a different Native CA Store setting (`CURLSSLOPT_NATIVE_CA`) than when the connection was created.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-80230 - OpenSSL pinning bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-80230",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-06T18:17:22.000Z",
-        "contentSnippet": "When `CURLOPT_PINNEDPUBLICKEY` is configured alongside options that disable standard peer verification (`CURLOPT_SSL_VERIFYPEER = 0` and `CURLOPT_SSL_VERIFYHOST = 0`), libcurl fails to enforce public key pinning on connections established without a presented server certificate. B",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-80229 - OpenSSL provider use-after-free",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-80229",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-06T18:17:22.000Z",
-        "contentSnippet": "When performing transfers via libcurl’s multi interface, pooled TLS connections can outlive their originating easy handles. In OpenSSL 3 provider configurations, libcurl attaches an allocated library context to the easy handle's state and passes it to OpenSSL without acquiring an",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-19931 - Negotiate ambient user conn reuse",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19931",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-06T18:17:20.000Z",
-        "contentSnippet": "A flaw in libcurl makes it wrongly reuse an HTTP connection setup for a given hostname using Negotiate authentication, when the initial request is done using empty credentials. This can make user B's request get sent over user A's previously authenticated connection.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-18924 - HTTP/2 server push UAF",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18924",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-06T18:17:20.000Z",
-        "contentSnippet": "A flaw in libcurl's handling of HTTP/2 Server Push streams, when the parent handle is set to share connections with other handles, can lead to use-after-free in the cleanup process.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-13608 - OpenLDAP SASL authentication bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13608",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-06T18:17:19.000Z",
-        "contentSnippet": "A flaw in the libcurl SASL negotiation for LDAP authentication allows an incomplete handshake sequence to be misinterpreted as a successful cryptographic verification. An attacker executing a Man-in-the-Middle (MITM) attack can inject a premature or shortcut response that bypasse",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-82751 - Unbounded key authorization in mpp Tempo fee-payer sponsorship inflates gas cost and sponsors access-key provisioning",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82751",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-06T17:17:56.000Z",
-        "contentSnippet": "Improper Validation of Specified Quantity in Input in ZenHive mpp allows an unauthenticated remote client to inflate the fee-payer's gas cost per sponsored payment by a large multiplier and to have the sponsor pay for provisioning an access key on the client's own account. When t",
-        "cveScore": 8.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-82750 - Unbounded EIP-7702 authorization list in mpp Tempo fee-payer sponsorship inflates gas cost and sponsors account delegation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82750",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-06T17:17:55.000Z",
-        "contentSnippet": "Improper Validation of Specified Quantity in Input in ZenHive mpp allows an unauthenticated remote client to inflate the fee-payer's gas cost per sponsored payment by a large multiplier and to have the sponsor pay for EIP-7702 account delegations of the client's choosing. When th",
-        "cveScore": 8.3,
         "cveSeverity": "HIGH"
       }
     ],
