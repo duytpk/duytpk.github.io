@@ -1,8 +1,53 @@
 {
-  "updatedAt": "2026-09-12T17:33:32.666Z",
+  "updatedAt": "2026-09-12T19:55:09.649Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-90560 - zstd-jni 1.2.0 through 1.5.7-13 Out-of-Bounds Read via ZstdDictDecompress",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90560",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-12T18:16:44.000Z",
+        "contentSnippet": "zstd-jni versions 1.2.0 through 1.5.7-13 contain an out-of-bounds read vulnerability in the ZstdDictDecompress constructor because offset and length arguments are never validated against the dictionary array bounds. Attackers can supply arbitrary offset or length values to read m",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-90559 - snappy-java through 1.1.10.8 Out-of-Bounds Write via uncompress",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90559",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-12T18:16:44.000Z",
+        "contentSnippet": "snappy-java through 1.1.10.8 contains an out-of-bounds write vulnerability in Snappy.uncompress(ByteBuffer, ByteBuffer) because destination buffer capacity is never validated against decompressed size. Attackers can supply valid compressed data that decompresses larger than the d",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-90558 - sngrep through 1.8.4 Stack Buffer Overflow via SIP Headers",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90558",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-12T18:16:44.000Z",
+        "contentSnippet": "sngrep through 1.8.4 contains stack buffer overflow vulnerabilities in SIP attribute formatting routines when header values exceed the 255-byte buffer limit. Attackers can craft malicious SIP packets with oversized Call-ID, X-Call-ID, or other header fields to overflow stack buff",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-90557 - Freeciv 3.1.0 through 3.2.5 Out-of-Bounds Read via Savegame",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90557",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-12T18:16:44.000Z",
+        "contentSnippet": "Freeciv versions 3.1.0 through 3.2.5 contain an out-of-bounds read vulnerability in sg_load_player_unit() when processing savegame files with invalid unit activity indices. An attacker can craft a malicious savegame file with an out-of-range activity index that bypasses bounds ch",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-90556 - Freeciv before 3.2.6 Heap Buffer Overflow via worklist_load",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90556",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-12T18:16:44.000Z",
+        "contentSnippet": "Freeciv versions before 3.2.6 contain a heap buffer overflow in worklist_load() when processing savegame files with declared worklist lengths exceeding the fixed array bound of 64 elements. Attackers can craft malicious savegame files that write past the entries array into adjace",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-90555 - vLLM before 0.28.0 Denial of Service via Audio Header",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-90555",
@@ -857,51 +902,6 @@
         "contentSnippet": "Mousehole is a background service to update a seedbox IP for MAM and web app to manage it. Prior to version 0.4.05, Mousehole's HTTP/WebSocket management boundary is reachable without application-layer authentication or browser/LAN provenance checks. The service stores a MyAnonam",
         "cveScore": 6.9,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-49865 - Kimai has Server-Side Request Forgery in Invoice PDF Rendering via Markdown Image URLs",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49865",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-11T21:17:10.000Z",
-        "contentSnippet": "Kimai is an open-source time tracking application. Versions prior to 2.58.0 contain a server-side request forgery vulnerability in their invoice PDF preview and generation workflow. If an attacker can control Markdown content that is later rendered into an invoice PDF, such as `C",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-49464 - NL Portal: IDOR allows any authenticated user to complete and tamper with another user's taak",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49464",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-11T21:17:10.000Z",
-        "contentSnippet": "NL Portal Backend Libraries provide backend components for Dutch government portals that interact with residents, customers, suppliers, and partner organizations. The `nl.nl-portal:taak` package from version 1.5.0 through 3.0.0 fails to verify ownership when processing the `submi",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-49439 - OpenRemote read-only asset users can write predicted datapoints",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49439",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-11T21:17:10.000Z",
-        "contentSnippet": "OpenRemote is an open-source internet-of-things platform. Prior to version 1.24.1, the predicted datapoint write endpoint allows users with only `read:assets` privileges to write predicted datapoints. Version 1.24.1 fixes the issue.",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-48490 - ArduinoCore-AVR: Stack-Based Buffer Overflow in String float/double concatenation handler",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48490",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-11T21:17:10.000Z",
-        "contentSnippet": "ArduinoCore-avr contains the source code and configuration files of the Arduino AVR Boards platform. A vulnerability in versions prior to 1.8.8 allows an attacker to trigger a stack-based buffer overflow when concatenating floating-point values of sufficiently large magnitude ont",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-47773 - ArduinoBLE: Memory corruption via malformed ATT write request",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47773",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-11T21:17:09.000Z",
-        "contentSnippet": "ArduinoBLE enables Bluetooth Low Energy connectivity on certain Arduino models. Versions prior to 2.0.2 contain a missing bounds check in the ATT layer write request handler that allows a remote, unauthenticated BLE client to corrupt memory in the ATTClass global object. Devices ",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
@@ -2310,6 +2310,13 @@
     ],
     "hardware": [
       {
+        "title": "Second-Gen Single-Rack AWS Outposts Puts 2,688 vCPUs and 100TB of EBS in One 42U Rack",
+        "link": "https://www.storagereview.com/news/second-gen-single-rack-aws-outposts-puts-2688-vcpus-and-100tb-of-ebs-in-one-42u-rack",
+        "source": "StorageReview",
+        "isoDate": "2026-09-12T18:24:22.000Z",
+        "contentSnippet": "AWS has made second-generation single-rack AWS Outposts generally available, a self-contained 42U rack that puts compute, storage, and networking together with up to 2,688 vCPUs and 100 TB of Amazon EBS. It runs the same APIs, console, automation, governance policies, and securit"
+      },
+      {
         "title": "Iran and Houthi rebels used Anthropic's Claude AI to target US warships and build hypersonic missiles — Houthi rebels also used the bot to code ballistic missile guidance systems",
         "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/iran-and-houthi-rebels-used-anthropics-claude-ai-to-target-us-warships-and-build-hypersonic-missiles-houthi-rebels-also-used-the-bot-to-code-ballistic-missile-guidance-systems",
         "source": "Tom's Hardware",
@@ -3001,13 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-09-07T11:05:00.000Z",
         "contentSnippet": "Anycubic’s Photon P1 MAX is the latest large resin printer, with new tech alongside its little brother, the P1. It sports a heated vat, Wave Release Technology, and a large, locking build plate and vat."
-      },
-      {
-        "title": "This 10-inch 4:3 television hides your retro consoles in a secret rear compartment — Unico's Traveller ULW10 trades composite video for RGB SCART and HDMI",
-        "link": "https://www.tomshardware.com/video-games/retro-gaming/this-10-inch-4-3-television-hides-your-retro-consoles-in-a-secret-rear-compartment-unicos-traveller-ulw10-trades-composite-video-for-rgb-scart-and-hdmi",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-07T11:00:00.000Z",
-        "contentSnippet": "The ULW10 Traveller offers retro gamers a compact alternative to modern widescreen TVs, complete with a 4:3 display and CRT-style visuals"
       }
     ]
   }
