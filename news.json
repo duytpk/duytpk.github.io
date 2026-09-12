@@ -1,52 +1,232 @@
 {
-  "updatedAt": "2026-09-11T23:43:24.000Z",
+  "updatedAt": "2026-09-12T02:21:06.160Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
+        "title": "CVE-2026-89266 - stb_vorbis through 1.22 heap buffer overflow via codebook multiplicands",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89266",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-12T00:17:06.000Z",
+        "contentSnippet": "stb_vorbis through 1.22 contains a heap buffer overflow in start_decoder() where the codebook multiplicands allocation size is truncated from size_t to int. Attackers can craft a malicious Ogg Vorbis file with large entries and dimensions values to trigger out-of-bounds writes, c",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
         "title": "CVE-2026-90461 - OpenStack Ironic Credential Exposure Vulnerability",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-90461",
         "source": "cvefeed.io",
-        "isoDate": "2026-09-11T21:32:33.000Z",
+        "isoDate": "2026-09-11T22:16:48.000Z",
         "contentSnippet": "OpenStack Ironic through 38.0.0 may send a username and password to an unexpected remote host when Image Service is configured for HTTP(S) Basic Authentication.",
         "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-90460 - OpenStack Keystone Improper Access Control Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90460",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-11T22:16:48.000Z",
+        "contentSnippet": "An issue was discovered in OpenStack Keystone before 29.0.3. Tokens obtained via delegated authentication methods (EC2 credentials, application credentials, OAuth1 access tokens, and trusts) are not blocked from creating, modifying, or deleting credentials via the /v3/credentials",
+        "cveScore": 7.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-90457 - Product Credential Store Insecure Password Hash Storage and Improper Access Control",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90457",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-11T22:16:48.000Z",
+        "contentSnippet": "The administrative password is hashed using a comparatively weak, fast algorithm for the credential store backing one authentication path, and the file containing that hash is written with permissions allowing it to be read by any local user. This is inconsistent with a separate,",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-90456 - Inventory Management Component Default Administrative Credential Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90456",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-11T22:16:47.000Z",
+        "contentSnippet": "An example environment-configuration file for a bundled inventory-management component ships with a fixed, publicly-known administrative password. A deployment that copies this example file into active configuration without running the setup routine that regenerates credentials w",
+        "cveScore": 9.2,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-90455 - HTTP Client Library Vulnerability Regression in Log-Processing Component",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90455",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-11T22:16:47.000Z",
+        "contentSnippet": "A prior update that raised a bundled HTTP client library to a version remediating known vulnerabilities was later reverted, reintroducing the earlier, vulnerable version into a log-processing component. The only code path in that component using the library issues a request to a ",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-90454 - Packet-Analysis Component Improper Access Control",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90454",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-11T22:16:47.000Z",
+        "contentSnippet": "A deployment mode intended to expose only read access to a bundled packet-analysis component's interface denies a list of write-capable routes by pattern, but the pattern omits routes that modify tags attached to stored session records, and the proxy configuration otherwise permi",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-90453 - Web Application Open Redirect Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90453",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-11T22:16:47.000Z",
+        "contentSnippet": "A file-upload handler redirects the authenticated client's browser to a URL taken directly from that same request's Referer header, without validating it against the application's own origin. This allows an authenticated attacker to craft a request that causes another user's brow",
+        "cveScore": 5.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-90452 - Identity Provider TLS Certificate Verification Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90452",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-11T22:16:47.000Z",
+        "contentSnippet": "Requests from the reverse proxy to the identity-provider service for token discovery, introspection, and credential exchange do not verify the identity provider's server certificate. An attacker positioned on the network path between the proxy and the identity provider could impe",
+        "cveScore": 6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-90451 - Packet-Analysis Component Authentication Cookie Forgery via Hardcoded Secret",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90451",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-11T22:16:47.000Z",
+        "contentSnippet": "An example environment-configuration file ships with a fixed, publicly-known secret value used to sign authentication cookies for a bundled packet-analysis component. A deployment that copies this example file into active configuration without running the setup routine that regen",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-90450 - Improper Authorization via Fail-Open Access Control",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90450",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-11T22:16:47.000Z",
+        "contentSnippet": "The application's role-authorization lookup defaults to granting access when a request handler's name is not present in its table of role requirements, rather than defaulting to deny. Any request handler that is not explicitly registered in this table is reachable by any authenti",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-90449 - Reverse Proxy Authentication Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90449",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-11T22:16:47.000Z",
+        "contentSnippet": "When a particular authentication mode is configured, the reverse proxy forwards requests for a bundled third-party administrative interface directly to that interface without applying the gateway's own authentication requirement first. All access control for this administrative i",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-90448 - Application Programming Interface Improper Access Control",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90448",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-11T22:16:46.000Z",
+        "contentSnippet": "A deployment mode intended to expose only read access to stored data proxies a set of application programming interface routes without restricting which request methods are allowed. One such route accepts a request that creates or overwrites a stored record, including an attacker",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-90447 - Routing Rule Authentication Bypass Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90447",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-11T22:16:46.000Z",
+        "contentSnippet": "A routing rule selects between two different authentication mechanisms for the same downstream service based on the value of a client-supplied request header, rather than on any property the client cannot control. An authenticated user in possession of a shared service credential",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-90446 - Elasticsearch Path Traversal via Improper Input Validation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90446",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-11T22:16:46.000Z",
+        "contentSnippet": "An application programming interface endpoint accepts a user-supplied value and interpolates it directly into the path of a backend request to the underlying search and analytics data store, without restricting its contents. This allows an authenticated attacker to substitute an ",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-90445 - Arbitrary File Write via Zip Slip Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90445",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-11T22:16:46.000Z",
+        "contentSnippet": "An interface that accepts file uploads from authenticated users extracts the contents of uploaded archives without validating that extracted file paths remain within the intended destination directory. This allows an authenticated attacker to craft an archive whose entries traver",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-90444 - Product Name OS Command Injection via Filename Validation Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90444",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-11T22:16:46.000Z",
+        "contentSnippet": "A file-transfer interface that requires valid credentials accepts attacker-controlled filenames without restricting shell metacharacters. An automated process later constructs and runs a system command using the uploaded file's name, allowing an authenticated attacker to embed an",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-90443 - Web Application Cross-Site Scripting and Open Redirect",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90443",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-11T22:16:46.000Z",
+        "contentSnippet": "A web interface reflects a portion of the request URL into a script context and a hyperlink attribute without adequate encoding, and does not require authentication to reach. This allows an unauthenticated network attacker to craft a link that, when visited by a user, executes ar",
+        "cveScore": 5.3,
         "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-54258 - Cross-monitor event media authorization bypass in direct event media endpoints",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-54258",
         "source": "cvefeed.io",
-        "isoDate": "2026-09-11T21:31:30.000Z",
+        "isoDate": "2026-09-11T22:16:38.000Z",
         "contentSnippet": "ZoneMinder is a free, open source closed-circuit television software application. Versions prior to 1.36.39, 1.38.4, and 1.39.11 allow an authenticated low-privileged user with coarse `Events=View` and/or `Snapshots=View` permissions to directly fetch media for events belonging t",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
       },
       {
-        "title": "CVE-2026-49992 - Kimai: Login CSRF in Default Team Creation Endpoints Allows Unauthorized Team and Permission Structure Changes",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49992",
+        "title": "CVE-2026-54248 - Doco-CD has an OCI Trust Policy Bypass via Artifact-Contained Configuration",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54248",
         "source": "cvefeed.io",
-        "isoDate": "2026-09-11T21:29:34.000Z",
-        "contentSnippet": "Kimai is an open-source time tracking application. Versions prior to 2.58.0 contain authenticated cross-site request forgery issues in their default team creation shortcuts for projects, customers, and activities. These endpoints are exposed through `GET` routes and directly crea",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "isoDate": "2026-09-11T22:16:38.000Z",
+        "contentSnippet": "Doco-CD is a GitOps continuous delivery tool that automatically deploys and updates Docker Compose projects/services and Swarm stacks. Prior to version 0.90.1, a trust-boundary flaw in OCI artifact verification allowed artifact-provided deployment config to influence the policy u",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-54241 - libde265: SAO sequential filter heap buffer overflow via signed integer overflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54241",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-11T22:16:38.000Z",
+        "contentSnippet": "libde265 is an open source implementation of the h.265 video codec. Versions prior to 1.1.1 use signed 32-bit arithmetic to calculate the sample adaptive offset input-buffer size, allowing a crafted HEVC stream with large dimensions and 16-bit luma samples to cause an integer ove",
+        "cveScore": 7.4,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-54240 - libde265: Pixel accessor signed integer overflow causes heap OOB read/write",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54240",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-11T22:16:38.000Z",
+        "contentSnippet": "libde265 is an open source implementation of the h.265 video codec. Versions prior to 1.1.1 use signed 32-bit arithmetic to calculate pixel offsets, allowing a crafted HEVC stream with large image dimensions to trigger an integer overflow and cause out-of-bounds heap reads or wri",
+        "cveScore": 7.4,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-50018 - Hoverfly: Denial of Service via Goroutine Leak in Remote Post-Serve Actions",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-50018",
         "source": "cvefeed.io",
-        "isoDate": "2026-09-11T21:28:29.000Z",
+        "isoDate": "2026-09-11T22:16:37.000Z",
         "contentSnippet": "Hoverfly is an open source API simulation tool. Prior to version 1.12.8, remote post-serve actions use `http.DefaultClient` without any timeout configuration. When the remote endpoint is unreachable or intentionally slow (accepts TCP connection but never responds), each triggered",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-50013 - Hoverfly: Process Crash via Concurrent Map Write Race Condition in Diff Mode",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-50013",
         "source": "cvefeed.io",
-        "isoDate": "2026-09-11T21:27:40.000Z",
+        "isoDate": "2026-09-11T22:16:37.000Z",
         "contentSnippet": "Hoverfly is an open source API simulation tool. Prior to version 1.12.8, when Hoverfly is running in Diff mode, the `AddDiff()` function writes to the shared `responsesDiff` map without any synchronization (no mutex). When multiple proxy requests are processed concurrently (the n",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-49992 - Kimai: Login CSRF in Default Team Creation Endpoints Allows Unauthorized Team and Permission Structure Changes",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49992",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-11T22:16:37.000Z",
+        "contentSnippet": "Kimai is an open-source time tracking application. Versions prior to 2.58.0 contain authenticated cross-site request forgery issues in their default team creation shortcuts for projects, customers, and activities. These endpoints are exposed through `GET` routes and directly crea",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
       },
       {
         "title": "CVE-2026-49846 - libks has path traversal in kws HTTP parser via URI segment overflow",
@@ -54,42 +234,6 @@
         "source": "cvefeed.io",
         "isoDate": "2026-09-11T21:25:40.000Z",
         "contentSnippet": "libks provides foundational support for signalwire C products. Prior to version 2.0.11, `clean_uri()` in libks's HTTP request parser fails to reject URIs whose path has more segments than its internal canonicalization buffer can hold. The canonicalization step silently passes suc",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-54248 - Doco-CD has an OCI Trust Policy Bypass via Artifact-Contained Configuration",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54248",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-11T21:24:26.000Z",
-        "contentSnippet": "Doco-CD is a GitOps continuous delivery tool that automatically deploys and updates Docker Compose projects/services and Swarm stacks. Prior to version 0.90.1, a trust-boundary flaw in OCI artifact verification allowed artifact-provided deployment config to influence the policy u",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-90460 - OpenStack Keystone Improper Access Control Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90460",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-11T21:22:35.000Z",
-        "contentSnippet": "An issue was discovered in OpenStack Keystone before 29.0.3. Tokens obtained via delegated authentication methods (EC2 credentials, application credentials, OAuth1 access tokens, and trusts) are not blocked from creating, modifying, or deleting credentials via the /v3/credentials",
-        "cveScore": 7.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-54241 - libde265: SAO sequential filter heap buffer overflow via signed integer overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54241",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-11T21:21:59.000Z",
-        "contentSnippet": "libde265 is an open source implementation of the h.265 video codec. Versions prior to 1.1.1 use signed 32-bit arithmetic to calculate the sample adaptive offset input-buffer size, allowing a crafted HEVC stream with large dimensions and 16-bit luma samples to cause an integer ove",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-54240 - libde265: Pixel accessor signed integer overflow causes heap OOB read/write",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54240",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-11T21:20:59.000Z",
-        "contentSnippet": "libde265 is an open source implementation of the h.265 video codec. Versions prior to 1.1.1 use signed 32-bit arithmetic to calculate pixel offsets, allowing a crafted HEVC stream with large image dimensions to trigger an integer overflow and cause out-of-bounds heap reads or wri",
         "cveScore": 0,
         "cveSeverity": "NA"
       },
@@ -758,153 +902,16 @@
         "contentSnippet": "WWBN AVideo at commit c3edcc274c389816d434acadac07ee78eaf330c1 and earlier contains an XML injection vulnerability in plugin/AD_Server/VMAP.php, which is reachable without authentication when the AD_Server plugin is enabled. The script emits Content-Type: application/xml and writ",
         "cveScore": 6.1,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-89246 - WWBN AVideo CSV Formula Injection via myComments.download.php",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89246",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-11T12:16:54.000Z",
-        "contentSnippet": "WWBN AVideo through commit c3edcc274c389816d434acadac07ee78eaf330c1 contains a CSV formula injection vulnerability in the myComments.download.php endpoint that fails to sanitize spreadsheet formula prefixes in comment text. Authenticated users can inject formulas starting with =,",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-89245 - WWBN AVideo Cross-Site Request Forgery via playlistRemove.php",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89245",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-11T12:16:54.000Z",
-        "contentSnippet": "WWBN AVideo through commit c3edcc274c389816d434acadac07ee78eaf330c1 contains a cross-site request forgery vulnerability in playlistRemove.php that allows attackers to delete playlists by skipping CSRF protection checks. Attackers can craft a malicious form that submits a POST req",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-89244 - WWBN AVideo Reflected XSS via Gallery Category getBackURL",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89244",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-11T12:16:54.000Z",
-        "contentSnippet": "WWBN AVideo through commit c3edcc274c389816d434acadac07ee78eaf330c1 contains a reflected cross-site scripting vulnerability in plugin/Gallery/view/Category.php when SubCategorys is enabled. The getBackURL parameter is echoed into an href attribute without HTML encoding, allowing ",
-        "cveScore": 6.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-89243 - WWBN AVideo Stored XSS via UserGroups setGroup_name",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89243",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-11T12:16:53.000Z",
-        "contentSnippet": "WWBN AVideo through commit c3edcc274c389816d434acadac07ee78eaf330c1 contains a stored cross-site scripting vulnerability in UserGroups::setGroup_name() that fails to sanitize group_name input. Administrators with canAdminUserGroups permission can inject malicious HTML and JavaScr",
-        "cveScore": 9.2,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-89242 - WWBN AVideo Unauthenticated SSRF via login.json.php",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89242",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-11T12:16:53.000Z",
-        "contentSnippet": "WWBN AVideo through commit c3edcc274c389816d434acadac07ee78eaf330c1 contains a server-side request forgery vulnerability in the _json_decode function that fetches remote URLs and local file paths without SSRF validation. Unauthenticated attackers can POST file paths or HTTP URLs ",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-89241 - WWBN AVideo Reflected XSS via confirmLivePassword.php",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89241",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-11T12:16:53.000Z",
-        "contentSnippet": "WWBN AVideo through commit c3edcc274c389816d434acadac07ee78eaf330c1 contains a reflected cross-site scripting vulnerability in confirmLivePassword.php that copies REQUEST_URI into a form action attribute without encoding. Attackers can craft a malicious URL with a quote character",
-        "cveScore": 6.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-89240 - WWBN AVideo Reflected XSS via confirmLivePassword.php",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89240",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-11T12:16:53.000Z",
-        "contentSnippet": "WWBN AVideo through commit c3edcc274c389816d434acadac07ee78eaf330c1 contains a reflected cross-site scripting vulnerability in plugin/Live/confirmLivePassword.php. The script interpolates the unauthenticated GET parameter u (which is not covered by $securityFilter) directly into ",
-        "cveScore": 6.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-89239 - WWBN AVideo Reflected XSS via Referer Header Comment Breakout",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89239",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-11T12:16:53.000Z",
-        "contentSnippet": "WWBN AVideo through commit c3edcc274c389816d434acadac07ee78eaf330c1 contains a reflected cross-site scripting vulnerability in the showAlertMessage() function that inserts the raw Referer header into a JavaScript comment without encoding. Attackers can craft a Referer header cont",
-        "cveScore": 6.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-89148 - AVideo Open Redirect via playlistSort.php Referer Header",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89148",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-11T12:16:53.000Z",
-        "contentSnippet": "AVideo through commit c3edcc274c389816d434acadac07ee78eaf330c1 contains an open redirect in objects/playlistSort.php. Because the endpoint is not a *.json.php script, AVideo's automatic CSRF guard (autoCSRFGuard()/forbidIfIsUntrustedRequest()) does not run, and when the request i",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-87776 - compression vulnerable to Denial of Service via memory leak on premature response close",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-87776",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-11T12:16:52.000Z",
-        "contentSnippet": "compression is a Node.js and Express compression middleware. In versions before 1.8.2, when a client aborts the connection while a compressed response is still being sent, the zlib stream created to compress that response is never destroyed, so each aborted compressed response le",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-86793 - CVE-2026-86793",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86793",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-11T12:16:52.000Z",
-        "contentSnippet": "SGLang allows unauthenticated pickle deserialization through /update_weights_from_tensor when no auth keys are configured, and the SafeUnpickler policy can be bypassed because builtins.import and builtins.getattr are resolvable, enabling code execution via pickle REDUCE.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-80469 - CVE-2026-80469",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-80469",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-11T08:27:39.000Z",
-        "contentSnippet": "An attacker may achieve arbitrary code execution on a target system by uploading a malicious device driver package, bypassing driver verification mechanisms, and triggering the execution of attacker-controlled code. User interaction is required.",
-        "cveScore": 8.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-19486 - SSRF in Gemini Enterprise Agent Platform App Builder",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19486",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-11T08:18:25.000Z",
-        "contentSnippet": "A Server-Side Request Forgery (SSRF) vulnerability in Google Cloud Gemini Enterprise Agent Platform App Builder versions prior to 2026-06-01 on Google Cloud Platform allows an unauthenticated attacker to leak the Compute Engine default service account access token. This vulnerabi",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-89179 - Howyar｜WeenyGenius - Missing Support for Integrity Check",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89179",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-11T08:16:49.000Z",
-        "contentSnippet": "WeenyGenius, a computer lab management system by Howyar Technologies, has a Missing Support for Integrity Check vulnerability. Unauthenticated attackers on the same network can intercept a student's connection packet and replay it, thereby forging the appearance that the student ",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-89178 - Howyar｜WeenyGenius - Origin Validation Error",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89178",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-11T08:16:48.000Z",
-        "contentSnippet": "WeenyGenius, a computer lab management system by Howyar Technologies, has an Origin Validation Error vulnerability. Unauthenticated attackers on the same network can spoof the teacher workstation and send broadcast packets, causing student computers to attempt to establish a conn",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-89177 - Howyar｜WeenyGenius - Use of Insecure Protocol",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89177",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-11T08:16:48.000Z",
-        "contentSnippet": "WeenyGenius, a computer lab management system by Howyar Technologies, has a Use of Insecure Protocol vulnerability. Due to the reliance on ZMTP Null mode, unauthenticated attackers on the same network can capture packets to leak transmitted data, or perform replay attacks with fo",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
+      {
+        "title": "OpenAI agents attacked RubyGems back in May",
+        "link": "https://simonwillison.net/2026/Sep/12/openai-agents-rubygems/",
+        "source": "Simon Willison's Weblog",
+        "isoDate": "2026-09-12T00:42:25.000Z",
+        "contentSnippet": "OpenAI agents carried out an undisclosed attack on RubyGems is a new bombshell report from Spencer Kitts, Thomas Larsen, and Sydney Von Arx - three of the four authors of the report on the agent attack on disused wikis (previously) last week. This time they're noting that it look"
+      },
       {
         "title": "Monitoring production agent lifecycle with AWS DevOps Agent and AgentCore Evaluations",
         "link": "https://aws.amazon.com/blogs/machine-learning/monitoring-production-agent-lifecycle-with-aws-devops-agent-and-agentcore-evaluations/",
@@ -1597,13 +1604,6 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-08-26T16:24:02.000Z",
         "contentSnippet": "Data preparation determines the ceiling of any supervised fine-tuning project. This first post in a two-part series covers the foundations of SFT data prep: quality checks, conversational (JSONL) formatting, reasoning and tool-calling schemas, and a representative train/evaluatio"
-      },
-      {
-        "title": "Connect Amazon Bedrock AgentCore to cross-account knowledge bases",
-        "link": "https://aws.amazon.com/blogs/machine-learning/connect-amazon-bedrock-agentcore-to-cross-account-knowledge-bases/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-08-26T15:48:10.000Z",
-        "contentSnippet": "Learn how Amazon Bedrock AgentCore agents in one account can generate answers from an Amazon Bedrock knowledge base backed by Amazon Redshift Serverless in another account, without copying source data. This post covers the architecture, security boundary, and two orchestration mo"
       }
     ],
     "virtualization": [
