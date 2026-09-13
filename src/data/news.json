@@ -1,8 +1,116 @@
 {
-  "updatedAt": "2026-09-13T21:58:15.547Z",
+  "updatedAt": "2026-09-13T23:54:17.722Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-15892 - Heap memory leak in mcumgr settings-management handlers on access-hook rejection leads to denial of service",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15892",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-13T22:46:16.000Z",
+        "contentSnippet": "The mcumgr SMP settings-management group handlers settings_mgmt_read(), settings_mgmt_write(), and settings_mgmt_delete() in subsys/mgmt/mcumgr/grp/settings_mgmt/src/settings_mgmt.c allocate a key_name buffer (and, for read, a data buffer) via k_malloc() when CONFIG_MCUMGR_GRP_SE",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-15891 - NULL pointer dereference in Zephyr MQTT-SN client when removing a non-responsive gateway",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15891",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-13T22:46:15.000Z",
+        "contentSnippet": "The MQTT-SN client keepalive handler process_ping() in subsys/net/lib/mqtt_sn/mqtt_sn.c removes the gateway record after PINGREQ retries are exhausted. It invoked SYS_SLIST_PEEK_HEAD_CONTAINER(&client->gateways, gw, next) but discarded the result. That macro is a pure expression ",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-90602 - Anil-matcha Open-Generative-AI Studio Components ImageStudio.js renderHistory cross site scripting",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90602",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-13T22:45:16.000Z",
+        "contentSnippet": "A vulnerability was determined in Anil-matcha Open-Generative-AI up to 1.0.11/2.0.0. Affected by this vulnerability is the function renderHistory of the file ImageStudio.js of the component Studio Components. This manipulation causes cross site scripting. The attack may be initia",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-90601 - getzep graphiti REST API main.py improper authentication",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90601",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-13T22:30:07.000Z",
+        "contentSnippet": "A vulnerability was found in getzep graphiti up to 0.30.2. Affected is an unknown function of the file server/graph_service/main.py of the component REST API. The manipulation results in improper authentication. The attack can be launched remotely. The pull request to fix this is",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-90599 - Rizwan17 inventory-management-system process.php cross-site request forgery",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90599",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-13T22:17:01.000Z",
+        "contentSnippet": "A flaw has been found in Rizwan17 inventory-management-system up to 5e74a46b4b70623d0e4a0c9c4aee3bd1777185d2. This affects an unknown function of the file includes/process.php. Executing a manipulation can lead to cross-site request forgery. It is possible to launch the attack re",
+        "cveScore": 5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-90598 - jaygajera17 E-commerce-project-springBoot UserController.java UserController.updateUser authorization",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90598",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-13T22:17:00.000Z",
+        "contentSnippet": "A vulnerability was detected in jaygajera17 E-commerce-project-springBoot up to 5e74a46b4b70623d0e4a0c9c4aee3bd1777185d2. The impacted element is the function UserController.updateUser of the file UserController.java. Performing a manipulation of the argument userid results in au",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-90597 - itsourcecode Sales and Inventory System sup_edit1.php sql injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90597",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-13T22:17:00.000Z",
+        "contentSnippet": "A security vulnerability has been detected in itsourcecode Sales and Inventory System 1.0. The affected element is an unknown function of the file /pages/sup_edit1.php. Such manipulation of the argument ID leads to sql injection. The attack may be performed from remote. The explo",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-90596 - embedded-graphics image_raw.rs new/bytes_per_row integer overflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90596",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-13T22:17:00.000Z",
+        "contentSnippet": "A weakness has been identified in embedded-graphics up to 0.8.2 on 32-bit. Impacted is the function ImageRaw::new/bytes_per_row of the file src/image/image_raw.rs. This manipulation causes integer overflow. The attack is possible to be carried out remotely. Upgrading the affected",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-52297 - FFmpeg MOV Parsing Out-of-Bounds Read",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52297",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-13T22:17:00.000Z",
+        "contentSnippet": "FFmpeg before 9.0 has an out-of-bounds read because there is insufficiently padded extradata in the MOV parsing path in mov_read_iacb in libavformat/mov.c.",
+        "cveScore": 2.9,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-52296 - FFmpeg WMA Out-of-Bounds Read",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52296",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-13T22:17:00.000Z",
+        "contentSnippet": "FFmpeg before 9.0 has an out-of-bounds read because of missing required padding in WMA extradata allocation paths in libavcodec/wmaenc.c.",
+        "cveScore": 2.9,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-35867 - LB-LINK AC1900_AZ2 Command Injection Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-35867",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-13T22:16:59.000Z",
+        "contentSnippet": "A Command Injection vulnerability exists in the bs_SetLimitCli_info function within the libshare.so library of the LB-LINK router AC1900_AZ2 V1.0.2 via shell metacharacters, if the device is deployed in a scenario where an actor is able to make a \"POST /goform/set_LimitClient_cfg",
+        "cveScore": 3.1,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-90600 - itsourcecode Sales and Inventory System inv_edit1.php sql injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90600",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-13T22:15:09.000Z",
+        "contentSnippet": "A vulnerability has been found in itsourcecode Sales and Inventory System 1.0. This impacts an unknown function of the file /pages/inv_edit1.php. The manipulation of the argument ID leads to sql injection. The attack can be initiated remotely. The exploit has been disclosed to th",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2026-90595 - wxiaoqi Spring-Cloud-Platform OnlineController.java OnlineController.getOnlineInfo authorization",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-90595",
@@ -98,7 +206,7 @@
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-49030",
         "source": "cvefeed.io",
         "isoDate": "2026-09-13T21:17:01.000Z",
-        "contentSnippet": "pathe through 2.0.3 unconditionally normalizes backslash characters to forward slashes on all platforms, including POSIX systems where backslash is a valid filename character. This causes join(), resolve(), and normalize() to interpret backslash-separated dot notation sequences a",
+        "contentSnippet": "Rejected reason: DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: none. Reason: This candidate was withdrawn by its CNA. Further investigation showed that it was not a security issue. Notes: none.",
         "cveScore": 0,
         "cveSeverity": "NA"
       },
@@ -137,15 +245,6 @@
         "contentSnippet": "Rhymix before 2.1.31 allows insecure direct object reference, aka RVE-2026-1. Arbitrary files can be accessed via extra variables.",
         "cveScore": 7.4,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-90596 - embedded-graphics image_raw.rs new/bytes_per_row integer overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90596",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-13T21:15:07.000Z",
-        "contentSnippet": "A weakness has been identified in embedded-graphics up to 0.8.2 on 32-bit. Impacted is the function ImageRaw::new/bytes_per_row of the file src/image/image_raw.rs. This manipulation causes integer overflow. The attack is possible to be carried out remotely. Upgrading the affected",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       },
       {
         "title": "CVE-2026-90583 - kagisearch smallweb Query String Rendering sw.py index cross site scripting",
@@ -803,105 +902,6 @@
         "contentSnippet": "A security vulnerability has been detected in webgjc web_robot 2.4.0/2.5.0/2.8.0. The affected element is the function controller_listen/controller_recover of the file py/web.py. The manipulation of the argument case_name leads to os command injection. It is possible to initiate ",
         "cveScore": 7.5,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-90491 - sanjevirau gsubs Electron index.js showQuerySuccessPage code injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90491",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-13T02:17:03.000Z",
-        "contentSnippet": "A weakness has been identified in sanjevirau gsubs up to 1.0.3. Impacted is the function showQuerySuccessPage of the file renderer/index.js of the component Electron. Executing a manipulation of the argument filename can lead to code injection. The attack may be performed from re",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-90490 - lenve vhr MailReceiver deserialization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90490",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-13T01:16:37.000Z",
-        "contentSnippet": "A security flaw has been discovered in lenve vhr 1.0-SNAPSHOT. This issue affects some unknown processing of the component MailReceiver. Performing a manipulation results in deserialization. The attack is possible to be carried out remotely. The exploit has been released to the p",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-90651 - Socket Firewall TLS Certificate Verification Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90651",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-13T00:17:07.000Z",
-        "contentSnippet": "Socket Firewall (socketdev/socket-registry-firewall) in registry mode before 2.0.0 does not verify upstream TLS certificates by default. When the api_ssl_verify and upstream_ssl_verify configuration keys are omitted from socket.yml, the generated configuration sets SOCKET_API_SSL",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-90648 - Wabt wasm2c Sandbox Escape Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90648",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-13T00:17:07.000Z",
-        "contentSnippet": "wasm2c in WebAssembly wabt through 1.0.41 allows sandbox escape in some situations that primarily involve 32-bit platforms, aka a \"table flip\" attack. It does not check the return value of calloc() in wasm_rt_allocate_funcref_table() (wasm2c/wasm-rt-impl-tableops.inc). When the f",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-90489 - Xuxueli xxl-job insert cross site scripting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90489",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-13T00:17:06.000Z",
-        "contentSnippet": "A vulnerability was identified in Xuxueli xxl-job up to 3.5.0. This vulnerability affects unknown code of the file /jobinfo/insert. Such manipulation of the argument name/author leads to cross site scripting. The attack can be executed remotely. The exploit is publicly available ",
-        "cveScore": 4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-90488 - Xuxueli xxl-job GlueFactory.java GroovyClassLoader.parseClass code injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90488",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-13T00:17:06.000Z",
-        "contentSnippet": "A vulnerability was determined in Xuxueli xxl-job up to 3.4.2. This affects the function GroovyClassLoader.parseClass of the file xxl-job-core/src/main/java/com/xxl/job/core/glue/GlueFactory.java. This manipulation causes code injection. Remote exploitation of the attack is possi",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-90647 - Kalkitech ASE2000 Improper Certificate Validation Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90647",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-12T23:17:01.000Z",
-        "contentSnippet": "ASE/Kalkitech ASE2000 V2 Communication Test Set 2.35 through 2.37 on Windows contains an improper certificate validation vulnerability in the IEC 60870-5-104 TLS client (Task Mode). This allows a network-positioned attacker to bypass certificate validation via a certificate with ",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-90487 - Xuxueli xxl-job JobGroupController.java privileges management",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90487",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-12T23:17:01.000Z",
-        "contentSnippet": "A vulnerability was found in Xuxueli xxl-job up to 3.4.2. Affected by this issue is some unknown functionality of the file xxl-job-admin/src/main/java/com/xxl/job/admin/business/controller/JobGroupController.java. The manipulation results in improper privilege management. The att",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-90486 - openstatusHQ openstatus resolve-custom-domain-rewrite.ts server-side request forgery",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90486",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-12T23:17:01.000Z",
-        "contentSnippet": "A vulnerability has been found in openstatusHQ openstatus up to f04c827112f30a11d571ebdad3892826034d6265. Affected by this vulnerability is an unknown functionality of the file apps/status-page/src/lib/proxy/resolve-custom-domain-rewrite.ts. The manipulation leads to server-side ",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-79300 - SEP sesam Improper Authorization and MFA Bypass Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-79300",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-12T23:17:00.000Z",
-        "contentSnippet": "SEP sesam before 5.2.0.24 mishandles User Authorization with MFA. If AD authentication is configured and MFA is enforced, an attacker can create a second OTP access capability. SEP sesam and Active Directory handle username capitalization differently, which may allow multiple SEP",
-        "cveScore": 3.5,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-90485 - IOBit Uninstaller IOCTL Dispatch IURegistryFilter.sys sub_11838 null pointer dereference",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90485",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-12T22:16:30.000Z",
-        "contentSnippet": "A flaw has been found in IOBit Uninstaller 15.5.0.11. Affected by this issue is the function sub_11838 of the file IURegistryFilter.sys of the component IOCTL Dispatch Handler. This manipulation causes null pointer dereference. The attack requires local access. The exploit has be",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
@@ -2310,6 +2310,13 @@
     ],
     "hardware": [
       {
+        "title": "Infineon RISC-V for Automotive at Hot Chips 2026",
+        "link": "https://www.servethehome.com/infineon-risc-v-for-automotive-at-hot-chips-2026/",
+        "source": "ServeTheHome",
+        "isoDate": "2026-09-13T21:58:44.000Z",
+        "contentSnippet": "At Hot Chips 2026, Infineon presented a case for using RISC-V in various automotive processors in next-generation cars The post Infineon RISC-V for Automotive at Hot Chips 2026 appeared first on ServeTheHome."
+      },
+      {
         "title": "AMD’s best gaming CPU drops below launch price and includes free 240mm AIO cooler and Onimusha: Way of the Sword — grab the Ryzen 7 9850X3D for $484",
         "link": "https://www.tomshardware.com/pc-components/cpus/amds-best-gaming-cpu-drops-below-launch-price-and-includes-free-240mm-aio-cooler-and-onimusha-way-of-the-sword-grab-the-ryzen-7-9850x3d-for-usd484",
         "source": "Tom's Hardware",
@@ -3001,13 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-09-08T11:20:00.000Z",
         "contentSnippet": "Hackers claiming to be white hats drained about $320 million in Bitcoin from Liquid Network’s federation wallet, promising to return the funds after the platform fixes the underlying bug"
-      },
-      {
-        "title": "Google maps entire brain and central nervous system of adult male fruit fly, software engineers immediately make it run Doom — AI-powered 3D model of over 166,000 neurons can also play Super Mario 64",
-        "link": "https://www.tomshardware.com/software/programming/google-maps-entire-brain-and-central-nervous-system-of-adult-male-fruit-fly-software-engineers-immediately-make-it-run-doom-ai-powered-3d-model-of-over-166-000-neurons-can-also-play-super-mario-64",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-08T11:06:26.000Z",
-        "contentSnippet": "Scientists mapped the complete brain and central nervous system of an adult male fruit fly for the first time. Days later the full MaleCNS v1.0 fruit fly connectome was being trained to play Doom and Mario 64."
       }
     ]
   }
