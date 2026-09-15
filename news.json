@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-09-15T14:01:47.015Z",
+  "updatedAt": "2026-09-15T18:37:35.457Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-85234 - Tftp: tftp-hpa: denial of service due to out-of-bounds read/write in remap engine",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85234",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-15T17:58:51.000Z",
+        "contentSnippet": "A flaw was found in tftp-hpa. When the `in.tftpd` remap engine processes an inverse remap rule that also aborts with a non-empty custom error message, it can pass invalid match offsets to the `genmatchstring()` function. This leads to out-of-bounds read/write operations. A remote",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-81899 - Concrete CMS 9.0 to 9.5.2 is vulnerable to Stored XSS via group folder name on the Members > Groups dashboard",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81899",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-15T17:54:58.000Z",
+        "contentSnippet": "Concrete CMS 9.0.0 to 9.5.2 stored group folder names without sanitization and printed them unescaped on the Members > Groups dashboard page, resulting in stored cross-site scripting. The add and edit group-folder handlers stored the submitted folder name without neutralizing HTM",
+        "cveScore": 7.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-57442 - MCPVault: PathFilter restricted directories (.git/.obsidian/node_modules) only denied at vault root, not nested",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57442",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-15T17:50:48.000Z",
+        "contentSnippet": "MCPVault is a lightweight Model Context Protocol server for safe access to files in an Obsidian vault. Prior to 0.11.5, PathFilter in src/pathfilter.ts uses root-anchored deny-list patterns, so nested .git, .obsidian, and node_modules path segments do not match the restriction an",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-57441 - MCPVault: PathFilter restricted-directory deny-list bypass via case and trailing dot/space equivalence",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57441",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-15T17:49:10.000Z",
+        "contentSnippet": "MCPVault is a lightweight Model Context Protocol server for safe access to files in an Obsidian vault. Prior to 0.11.4, PathFilter in src/pathfilter.ts compiles restricted-directory patterns case-sensitively and compares paths without canonicalizing filesystem-equivalent segment ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-58483 - mcp-searxng: Unbounded Response Body Read Bypasses URL Size Limit in `web_url_read`",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58483",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-15T17:48:16.000Z",
+        "contentSnippet": "mcp-searxng is a Model Context Protocol server that gives AI assistants web search and URL-reading capabilities through SearXNG. Prior to 1.7.1, web_url_read in src/index.ts passes a caller-supplied URL to readUrlContent() in src/url-reader.ts, where checkContentLength() treats a",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-40058 - Vulnerability Affecting Office Macro Removal in CrowdStrike Falcon Sensor for Windows",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-40058",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-15T17:47:53.000Z",
+        "contentSnippet": "CrowdStrike released a security update to address a vulnerability in the Falcon sensor for Windows. The vulnerability only exists when the Microsoft Office File Malicious Macro Removal Windows policy setting is enabled and customers remain protected through the Cloud Anti-malware",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-81237 - Dell Wyse Management Suite Improper Authentication Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81237",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-15T17:47:29.000Z",
+        "contentSnippet": "Dell Wyse Management Suite, versions prior to 2605.0.3.683, contain an Improper Authentication vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to Unauthorized access.",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-58485 - mcp-searxng: DNS-resolved Private Hostname SSRF in `web_url_read`",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58485",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-15T17:47:20.000Z",
+        "contentSnippet": "mcp-searxng is a Model Context Protocol server that gives AI assistants web search and URL-reading capabilities through SearXNG. Prior to 1.7.1, web_url_read receives its caller-controlled URL through src/index.ts and validates only the literal hostname in assertUrlAllowed() with",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-54688 - mcp-searxng: SSRF in web_url_read: the internal-address guard is disabled by default (MCP_HTTP_HARDEN off)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54688",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-15T17:46:23.000Z",
+        "contentSnippet": "mcp-searxng is a Model Context Protocol server that gives AI assistants web search and URL-reading capabilities through SearXNG. Prior to 1.2.0, web_url_read passes a caller-supplied URL to the server-side fetch path while assertUrlAllowed() in src/url-reader.ts runs only when MC",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-81238 - Dell Wyse Management Suite Missing Authentication for Critical Function Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81238",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-15T17:45:35.000Z",
+        "contentSnippet": "Dell Wyse Management Suite, versions prior to 2605.0.3.683, contain a Missing Authentication for Critical Function vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to Unauthorized access.",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-54689 - mcp-searxng hardened-mode SSRF bypasses permit internal URL access",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54689",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-15T17:45:19.000Z",
+        "contentSnippet": "mcp-searxng is a Model Context Protocol server that gives AI assistants web search and URL-reading capabilities through SearXNG. Prior to 1.2.0, the web_url_read URL policy in src/url-reader.ts can be bypassed while MCP_HTTP_HARDEN is enabled and MCP_HTTP_ALLOW_PRIVATE_URLS is no",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-81235 - Dell Wyse Management Suite Missing Cryptographic Step Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81235",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-15T17:43:03.000Z",
+        "contentSnippet": "Dell Wyse Management Suite, versions prior to 2605.0.3.683, contain a Missing Cryptographic Step vulnerability. A high privileged attacker with remote access could potentially exploit this vulnerability, leading to Information tampering.",
+        "cveScore": 8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-11728 - IBM MQ .NET client is vulnerable to remote code execution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11728",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-15T17:42:20.000Z",
+        "contentSnippet": "IBM MQ 9.1.0.0 through 9.1.0.37 LTS, 9.2.0.0 through 9.2.0.43 LTS, 9.3.0.0 through 9.3.0.41 LTS, 9.3.0.0 through 9.3.5.1 CD, 9.4.0.0 through 9.4.0.25 LTS, 9.4.0.0 through 9.4.5.1 CD, and 10.0.0.0 could allow a remote attacker to cause a denial of service or potentially execute ar",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-81240 - Dell Wyse Management Suite Unrestricted File Upload Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81240",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-15T17:40:13.000Z",
+        "contentSnippet": "Dell Wyse Management Suite, versions prior to 2605.0.3.683, contain an Unrestricted Upload of File with Dangerous Type vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to Remote execution.",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-18115 - In Concrete CMS 9.2.0 to 9.5.2, Missing Authorization in REST API Users update() and change_password Enables Account Takeover.",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18115",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-15T17:39:04.000Z",
+        "contentSnippet": "Concrete CMS 9.2.0 to 9.5.2 did not enforce per-field edit_user_properties permissions on the REST API user write endpoints (PUT /ccm/api/1.0/users/{uID} and POST /ccm/api/1.0/users/{uID}/change_password). A user with an update-scoped OAuth token and permission to edit only one n",
+        "cveScore": 7.4,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-58502 - githubtoplanguages: Command Injection via Issue Title in Discord Notification Workflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58502",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-15T17:37:34.000Z",
+        "contentSnippet": "githubtoplanguages generates a user's top GitHub languages as an SVG. The .github/workflows/discord-issue.yml workflow runs when an issue is opened or closed and interpolates github.event.issue.title directly into the Bash assignment for ISSUE_TITLE before shell parsing. An issue",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-81239 - Dell Wyse Management Suite Unrestricted File Upload Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81239",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-15T17:37:10.000Z",
+        "contentSnippet": "Dell Wyse Management Suite, versions prior to 2605.0.3.683, contain an Unrestricted Upload of File with Dangerous Type vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to Remote execution.",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-12910 - Missing Authentication for Critical Function in GitLab",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12910",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-15T17:36:06.000Z",
+        "contentSnippet": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 18.6 before 19.1.8, 19.2 before 19.2.6, and 19.3 before 19.3.2 that under certain conditions could have allowed an authenticated user to bypass SAML SSO sign-in restrictions and authenticate without SSO du",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-13210 - Incorrect Authorization in GitLab",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13210",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-15T17:36:01.000Z",
+        "contentSnippet": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 15.7 before 19.1.8, 19.2 before 19.2.6, and 19.3 before 19.3.2 that under certain conditions could have allowed an authenticated user to access CI/CD variables outside their intended environment scope due ",
+        "cveScore": 7.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-82837 - Insertion of Sensitive Information Into Sent Data in GitLab",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82837",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-15T17:35:41.000Z",
+        "contentSnippet": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 10.1.0 before 19.1.8, 19.2 before 19.2.6, and 19.3 before 19.3.2 that certain conditions could have allowed an authenticated user to access sensitive credentials and tokens without transiting the expected ",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-81236 - Dell Wyse Management Suite Unrestricted File Upload Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81236",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-15T17:35:02.000Z",
+        "contentSnippet": "Dell Wyse Management Suite, versions prior to 2605.0.3.683, contain an Unrestricted Upload of File with Dangerous Type vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to Remote execution.",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-55374 - canto-saas-api: Authenticated API requests can be redirected via unencoded path variables",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55374",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-15T17:33:14.000Z",
+        "contentSnippet": "canto-saas-api is a PHP library for interacting with the Canto SaaS API. Prior to version 3.0.0, Request::buildRequestUrl() joins values returned by Request::getPathVariables() without encoding individual path segments, including the scheme and contentId values used by GetContent",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-18113 - Concrete CMS 9.0 to 9.5.2 is vulnerable to Stored XSS in the Top Navigation Bar Block via Dropdown Child Page Names",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18113",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-15T17:32:16.000Z",
+        "contentSnippet": "In Concrete CMS 9.0 to 9.5.2, the Top Navigation Bar block did not HTML-escape dropdown child page names before writing them into the page, so a user who could create or rename pages could store a script through a child page name and have it run in the browser of any visitor, edi",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-11729 - IBM MQ Java messaging is vulnerable to remote code execution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11729",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-15T17:31:01.000Z",
+        "contentSnippet": "IBM MQ 9.1.0.0 through 9.1.0.37 LTS, 9.2.0.0 through 9.2.0.43 LTS, 9.3.0.0 through 9.3.0.41 LTS, 9.3.0.0 through 9.3.5.1 CD, 9.4.0.0 through 9.4.0.25 LTS, 9.4.0.0 through 9.4.5.1 CD, and 10.0.0.0 could allow an authenticated attacker to execute arbitrary code in client applicatio",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-55375 - canto-saas-api: OAuth credentials exposed in URL query string and exception messages",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55375",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-15T17:30:29.000Z",
+        "contentSnippet": "canto-saas-api is a PHP library for interacting with the Canto SaaS API. Prior to version 3.0.0, OAuth2Request::getQueryParams() places app_id, app_secret, refresh_token, and code in the URL query string of token POST requests, allowing access logs, proxy logs, and APM traces to ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2026-92079 - Mitigation bypass in the Widget: Win32 component",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-92079",
@@ -677,234 +902,51 @@
         "contentSnippet": "A security flaw has been discovered in GNU Binutils 2.47. This vulnerability affects the function elf_orphan_compatible of the file ld/ldelf.c of the component ELF Orphan Section Handler. Performing a manipulation results in null pointer dereference. The attack must be initiated ",
         "cveScore": 5.3,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-90827 - GPAC MP4Box base_scenegraph.c gf_node_deactivate_ex use after free",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90827",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-14T22:16:58.000Z",
-        "contentSnippet": "A vulnerability was identified in GPAC 26.07.0. This affects the function gf_node_deactivate_ex of the file scenegraph/base_scenegraph.c of the component MP4Box. Such manipulation leads to use after free. The attack must be carried out locally. The exploit is publicly available a",
-        "cveScore": 3.3,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-90826 - GPAC MP4Box base_scenegraph.c gf_node_del out-of-bounds",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90826",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-14T22:16:58.000Z",
-        "contentSnippet": "A vulnerability was determined in GPAC 26.07.0. Affected by this issue is the function gf_node_del of the file scenegraph/base_scenegraph.c of the component MP4Box. This manipulation causes out-of-bounds read. The attack is restricted to local execution. The exploit has been publ",
-        "cveScore": 2.8,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-90825 - GPAC MP4Box base_scenegraph.c gf_node_unregister use after free",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90825",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-14T22:16:58.000Z",
-        "contentSnippet": "A vulnerability was found in GPAC 26.07.0. Affected by this vulnerability is the function gf_node_unregister of the file scenegraph/base_scenegraph.c of the component MP4Box. The manipulation results in use after free. The attack is only possible with local access. The exploit ha",
-        "cveScore": 3.3,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-76081 - ZITADEL: Improper Role Revocation on Granted Projects during Multiple Role Deletions",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76081",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-14T22:16:57.000Z",
-        "contentSnippet": "ZITADEL is an open source identity management platform. Prior to version 4.16.0, a bug in how ZITADEL updates permissions when multiple project roles are deleted at the same time can cause some user permissions to be missed. This issue specifically affects User Grants on Granted ",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-73449 - On affected platforms running Arista EOS with both 802.1X port authentication and the RADIUS proxy feature configured with dynamic authorization, a low-privileged attacker on an adjac",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73449",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-14T22:16:57.000Z",
-        "contentSnippet": "On affected platforms running Arista EOS with both 802.1X port authentication and the RADIUS proxy feature configured with dynamic authorization, a low-privileged attacker on an adjacent network segment who induces a RADIUS packet through a configured RADIUS proxy client can prev",
-        "cveScore": 5.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-18117 - Concrete CMS 9.0.0 to 9.5.2 is vulnerable to Stored XSS in Custom Page Alias Name",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18117",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-14T22:16:57.000Z",
-        "contentSnippet": "Concrete CMS 9.0.0 through 9.5.3 is vulnerable to stored XSS via the custom page alias name (customAliasName) because the Edit Alias dialog applied only trim() to the submitted value and performed no input neutralization. An authenticated user holding canWrite (editor) permission",
-        "cveScore": 7.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-13265 - IBM MQ Managed File Transfer REST API is vulnerable to XML external entity injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13265",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-14T22:16:57.000Z",
-        "contentSnippet": "IBM MQ 9.1.0.0 through 9.1.0.37 LTS, 9.2.0.0 through 9.2.0.43 LTS, 9.3.0.0 through 9.3.0.41 LTS, 9.3.0.0 through 9.3.5.1 CD, 9.4.0.0 through 9.4.0.25 LTS, 9.4.0.0 through 9.4.5.1 CD, and 10.0.0.0 could allow an authenticated attacker with MFT publish authority to obtain sensitive",
-        "cveScore": 6.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-12944 - Incomplete Security Scanner Blocklist Enables Network-Based Code Execution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12944",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-14T22:16:56.000Z",
-        "contentSnippet": "IBM Langflow OSS 1.0.0 through 1.10.0 can allow attackers to execute arbitrary Python code with root privileges (UID=0) on the Langflow server by submitting components containing socket or urllib imports. This enables: (1) AWS credential theft via IMDSv1 SSRF with full IAM role p",
-        "cveScore": 9.6,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-12759 - Multiple security vulnerabilities are addressed with IBM Cloud Pak for Business Automation iFixes for August 2026.",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12759",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-14T22:16:56.000Z",
-        "contentSnippet": "IBM Cloud Pak for Business Automation could allow an authenticated user to cause a denial of service due to uncontrolled resource consumption.",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-12758 - Multiple security vulnerabilities are addressed with IBM Cloud Pak for Business Automation iFixes for August 2026.",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12758",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-14T22:16:56.000Z",
-        "contentSnippet": "IBM Cloud Pak for Business Automation could allow a remote attacker to bypass authorization and invoke restricted endpoints due to improper validation of HTTP headers.",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-12756 - Multiple secuirty vulnerabilies addressed with IBM Business Automation Workflow August 2026",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12756",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-14T22:16:56.000Z",
-        "contentSnippet": "IBM Business Automation Workflow containers and traditional is vulnerable to an XML external entity injection (XXE) attack when processing XML data. A remote attacker could exploit this vulnerability to expose sensitive information or consume memory resources.",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-90810 - cosmicstack-labs mercury-agent Shell Command Permission Check permissions.ts PermissionManager.checkShellCommand improper authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90810",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-14T18:30:08.000Z",
-        "contentSnippet": "A security flaw has been discovered in cosmicstack-labs mercury-agent up to 1.1.13. The impacted element is the function PermissionManager.checkShellCommand of the file mercury-agent/src/capabilities/permissions.ts of the component Shell Command Permission Check. Performing a man",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-18515 - IBM i is Affected By Multiple Vulnerabilities in Navigator for i and Digital Certificate Manager for i.",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18515",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-14T18:26:59.000Z",
-        "contentSnippet": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote authenticated attacker to place files into the file system with Navigator for i when they should be blocked by Navigator configuration. This could allow attackers to upload files onto the system to places the Navigator support did",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-19543 - Multiple vulnerabilities affect IBM License Key Server Administration and Reporting Tool and IBM LKS Administration Agent",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19543",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-14T18:26:13.000Z",
-        "contentSnippet": "IBM Common Licensing Agent 9.0, Agent 9.0.0.1, Agent 9.0.0.2, ART 9.0, ART 9.0.0.1, and ART 9.0.0.2 performs input validation exclusively on the client side and fails to enforce the same restrictions on the server side. An attacker can modify requests to bypass validation control",
-        "cveScore": 6.2,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-91081 - Docs through 5.6.1 SSRF via Unauthenticated cors-proxy Endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-91081",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-14T18:20:29.000Z",
-        "contentSnippet": "Docs through 5.6.1 contains a server-side request forgery vulnerability in the cors-proxy endpoint that allows anonymous attackers to make outbound requests by providing a public document UUID. Attackers can exploit DNS time-of-check-time-of-use race conditions and shared address",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-91080 - webhook through 2.8.3 Memory Exhaustion via Oversized Request Body",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-91080",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-14T18:20:29.000Z",
-        "contentSnippet": "webhook through 2.8.3 reads the entire request body into memory before evaluating trigger rules, allowing unauthenticated attackers to exhaust memory by sending oversized bodies. Attackers can send multi-gigabyte request bodies with invalid signatures to trigger out-of-memory con",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-91079 - Huly Platform through 0.7.426 SSRF via Print Service",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-91079",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-14T18:20:29.000Z",
-        "contentSnippet": "Huly Platform through 0.7.426 contains a server-side request forgery vulnerability in the print service due to missing hostname allowlist validation. Authenticated workspace members can supply arbitrary URLs to the print endpoint, which Puppeteer renders and returns as downloadab",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-91021 - CVE-2026-91021",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-91021",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-14T18:20:29.000Z",
-        "contentSnippet": "Trilium Notes, version v0.103.0 and earlier, contains a stored cross-site scripting (XSS) vulnerability in the share renderer for webView notes due to improper HTML escaping of user-controlled #webViewSrc values. This vulnerability allows attackers with note-authoring privileges ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-90946 - DeepWiki-Open through commit d92819a Arbitrary File Read via /ws/chat WebSocket",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90946",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-14T18:20:29.000Z",
-        "contentSnippet": "DeepWiki-Open through commit d92819a contains an arbitrary file read vulnerability in the unauthenticated /ws/chat WebSocket endpoint that accepts repo_url as a filesystem path with no containment. Attackers can supply arbitrary directory paths to read all files with supported ex",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-90945 - Crawlab through 0.6.3 Authentication Bypass via Hard-coded JWT Secret",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90945",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-14T18:20:29.000Z",
-        "contentSnippet": "Crawlab through 0.6.3 uses a hard-coded HMAC-SHA256 secret for JWT token signing that cannot be overridden via configuration or environment variables. Unauthenticated attackers can forge valid administrator tokens to access administrative APIs and execute code on worker nodes.",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-90944 - Krayin CRM through 2.2.6 Unauthenticated Email Injection via inbound-parse",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90944",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-14T18:20:28.000Z",
-        "contentSnippet": "Krayin CRM through 2.2.6 exposes the POST /admin/mail/inbound-parse endpoint without authentication, allowing unauthenticated attackers to inject arbitrary emails into the CRM inbox. Attackers can supply crafted RFC 2822 messages with forged sender information and headers to inse",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-90942 - Casdoor through 4.4.0 Private Key Exposure via Certificate Endpoints",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90942",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-14T18:20:28.000Z",
-        "contentSnippet": "Casdoor through 4.4.0 fails to properly mask the instance-wide built-in certificate private key in /api/get-certs and /api/get-cert endpoints, allowing organization administrators to retrieve it. Attackers can use the exposed private key to forge JWT tokens for any user in any or",
-        "cveScore": 9.6,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-90807 - nanocoai NanoClaw Attachment agent-route.ts forwardAttachedFiles link following",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90807",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-14T18:20:28.000Z",
-        "contentSnippet": "A vulnerability was found in nanocoai NanoClaw up to 2.1.17. This issue affects the function forwardAttachedFiles of the file src/modules/agent-to-agent/agent-route.ts of the component Attachment Handler. The manipulation results in link following. The attack may be performed fro",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-90806 - DjangoCRM django-crm Bulk Case Update bulk_views.py BulkUpdateCasesView authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90806",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-14T18:20:27.000Z",
-        "contentSnippet": "A vulnerability has been found in DjangoCRM django-crm up to 1.2. This vulnerability affects the function BulkUpdateCasesView of the file backend/cases/bulk_views.py of the component Bulk Case Update. The manipulation leads to missing authorization. The attack is possible to be c",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-90805 - subhajitkhan online-clinic-management-system doctorlogin.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90805",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-14T18:20:27.000Z",
-        "contentSnippet": "A flaw has been found in subhajitkhan online-clinic-management-system up to e9ee77a8827a1446220fa07ee693dc4d9a29a578. This affects an unknown part of the file doctorlogin.php. Executing a manipulation of the argument doc_mail/doc_pswd can lead to sql injection. The attack can be ",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
+      {
+        "title": "Optimizing cost and latency with Amazon Bedrock prompt caching",
+        "link": "https://aws.amazon.com/blogs/machine-learning/optimizing-cost-and-latency-with-amazon-bedrock-prompt-caching/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-09-15T16:18:19.000Z",
+        "contentSnippet": "Prompt caching in Amazon Bedrock can cut input token costs by up to 90% when you repeatedly send the same context to foundation models. This post walks through six practical prompt caching scenarios using the Converse API: message content, system prompt, tool definition, mixed TT"
+      },
+      {
+        "title": "Build an AI-powered product tagging system with Amazon SageMaker serverless model customization",
+        "link": "https://aws.amazon.com/blogs/machine-learning/build-an-ai-powered-product-tagging-system-with-amazon-sagemaker-serverless-model-customization/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-09-15T16:11:36.000Z",
+        "contentSnippet": "Manually tagging thousands of catalog products is slow and inconsistent. This walkthrough shows how to customize Qwen3-8B with supervised fine-tuning (SFT) and reinforcement learning with verifiable rewards (RLVR) on Amazon SageMaker serverless model customization, then deploy it"
+      },
+      {
+        "title": "Announcing instance preference lists for Amazon SageMaker AI training jobs",
+        "link": "https://aws.amazon.com/blogs/machine-learning/announcing-instance-preference-lists-for-amazon-sagemaker-ai-training-jobs/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-09-15T16:01:47.000Z",
+        "contentSnippet": "Amazon SageMaker AI now offers instance preference lists for training and processing jobs. Specify an ordered list of up to five instance types, and SageMaker AI automatically launches on the first type with available capacity, eliminating manual retry loops and capacity-watching"
+      },
+      {
+        "title": "AI for Societal Impact",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/ai-for-societal-impact/",
+        "source": "Google AI Blog",
+        "isoDate": "2026-09-15T16:00:00.000Z",
+        "contentSnippet": "Explore this collection to see how experts and local leaders are using AI breakthroughs to ensure everyone can share the opportunity of AI."
+      },
+      {
+        "title": "Building AI to accelerate science and improve lives",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/ai-applications-science-people/",
+        "source": "Google AI Blog",
+        "isoDate": "2026-09-15T16:00:00.000Z",
+        "contentSnippet": "The true measure of AI is who it helps. Here’s how it’s impacting lives today. We're focused on key areas where advanced technology can help make extraordinary progress …"
+      },
+      {
+        "title": "AI for everyone in every language",
+        "link": "https://blog.google/innovation-and-ai/technology/ai/ai-for-every-language/",
+        "source": "Google AI Blog",
+        "isoDate": "2026-09-15T16:00:00.000Z",
+        "contentSnippet": "We’re moving beyond traditional text translation to build models that understand the world’s rich, living languages exactly as they are expressed."
+      },
       {
         "title": "New insights from Google’s AI & Economy ATLAS",
         "link": "https://blog.google/innovation-and-ai/technology/ai/ai-economy-atlas-september-2026/",
@@ -924,7 +966,7 @@
         "link": "https://aws.amazon.com/blogs/machine-learning/manage-end-user-oauth-consent-for-ai-agents-with-amazon-bedrock-agentcore/",
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-09-14T20:35:45.000Z",
-        "contentSnippet": "Amazon Bedrock AgentCore Identity now offers a Consent portal, a managed web experience and session binding endpoint for AgentCore Gateway. This post walks through provisioning a portal, configuring GitHub and Slack 3LO targets, and the end-user consent flow, and shows how to rev"
+        "contentSnippet": "Amazon Bedrock AgentCore Identity now offers a Consent portal, a managed web experience and session binding endpoint for AgentCore Gateway. This post walks through provisioning a portal, configuring GitHub and Slack authorization code grant targets, and the end-user consent flow,"
       },
       {
         "title": "Watch astronaut Christina Koch and Google’s James Manyika discuss space, technology, and discovery.",
@@ -1562,48 +1604,6 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-08-27T23:04:22.000Z",
         "contentSnippet": "Creative teams produce more assets than ever, but fragmented tools and manual context transfer slow production. This post shows how to build a reusable agent harness with Amazon Quick and fal, connected through the Model Context Protocol (MCP), using two hands-on workflows: an ei"
-      },
-      {
-        "title": "Cohere Releases Parse 5 (parse-v5.0): A 2.3B Vision Language Model That Turns Enterprise Documents Into Markdown",
-        "link": "https://www.marktechpost.com/2026/08/27/cohere-releases-parse-5-parse-v5-0-a-2-3b-vision-language-model-that-turns-enterprise-documents-into-markdown/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-08-27T20:05:49.000Z",
-        "contentSnippet": "Cohere has released Parse (parse-v5.0), a 2.3B-parameter vision language model that converts PDFs, slides and images into Markdown with HTML tables, bounding boxes and image descriptions. It runs at $1.50 per 1,000 pages through the API, or on dedicated Model Vault instances from"
-      },
-      {
-        "title": "Introducing OpenAI models on Amazon Bedrock for in-country inferencing in India",
-        "link": "https://aws.amazon.com/blogs/machine-learning/introducing-openai-models-on-amazon-bedrock-for-in-country-inferencing-in-india/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-08-27T18:36:08.000Z",
-        "contentSnippet": "Amazon Bedrock now supports the OpenAI GPT-5.6 models, Terra and Luna, in India with India geographic cross-Region inference. If you have local data processing requirements, you can now use these models at scale while Amazon Bedrock keeps inference requests and data within India."
-      },
-      {
-        "title": "Best Agent Sandboxes in 2026: Cold Start, Per-Second Pricing, and Network Policy Across E2B, Daytona, Modal, Cloudflare, and Vercel",
-        "link": "https://www.marktechpost.com/2026/08/27/best-agent-sandboxes-2026-cold-start-pricing-network-policy/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-08-27T17:04:49.000Z",
-        "contentSnippet": "Every agent that writes code needs somewhere to run it, and no two vendors quote the same units. This comparison measures burst cold start across E2B, Daytona, Modal, Cloudflare, and Vercel, normalizes per-second rates to cost per 1,000 executions, and maps filesystem persistence"
-      },
-      {
-        "title": "Deepgram deepens Amazon SageMaker AI observability with Enhanced Metrics",
-        "link": "https://aws.amazon.com/blogs/machine-learning/deepgram-deepens-amazon-sagemaker-ai-observability-with-enhanced-metrics/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-08-27T16:11:27.000Z",
-        "contentSnippet": "Self-hosted speech AI carries an observability trade-off: the numbers that drive capacity planning and cost management stay locked inside the vendor container. Deepgram closes that gap on Amazon SageMaker AI with two capabilities that land billing, usage, and per-GPU metrics dire"
-      },
-      {
-        "title": "Reduce ASR inference costs by 75% with NVIDIA MPS on Amazon EC2",
-        "link": "https://aws.amazon.com/blogs/machine-learning/reduce-asr-inference-costs-by-75-with-nvidia-mps-on-amazon-ec2/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-08-27T16:05:10.000Z",
-        "contentSnippet": "Serving automatic speech recognition (ASR) models at scale is costly when each request uses only a fraction of a GPU. Learn how NVIDIA CUDA Multi-Process Service (MPS) with NVIDIA Triton Inference Server on Amazon EC2 GPU instances cuts GPU infrastructure by 75% while holding sub"
-      },
-      {
-        "title": "3 new ways to plan and book travel in Search",
-        "link": "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/",
-        "source": "Google AI Blog",
-        "isoDate": "2026-08-27T16:00:00.000Z",
-        "contentSnippet": "Book hotels and track airfares, plus view miles and rewards with AI Mode in Google Search."
       }
     ],
     "virtualization": [
@@ -2310,6 +2310,62 @@
     ],
     "hardware": [
       {
+        "title": "Seagate and WD AI Storage Research Finds Enterprises Rank Storage Above Compute as the AI Bottleneck",
+        "link": "https://www.storagereview.com/news/seagate-and-wd-ai-storage-research-finds-enterprises-rank-storage-above-compute-as-the-ai-bottleneck",
+        "source": "StorageReview",
+        "isoDate": "2026-09-15T17:23:54.000Z",
+        "contentSnippet": "Seagate and WD published separate AI storage studies within days of each other; the headline numbers: Seagate says 99% of enterprises expect AI to increase their storage requirements over the next three years, while WD’s IDC research puts the comparable figure at 74%. Read the fi"
+      },
+      {
+        "title": "AI leaders clash over safety fears after Anthropic whistleblower says AI could 'kill us all' by 2030 — OpenAI, Anthropic and xAI figureheads call for external governance, while Jensen Huang says worri",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-leaders-clash-over-safety-fears-after-anthropic-whistleblower-says-ai-could-kill-us-all-by-2030-openai-anthropic-and-xai-figureheads-call-for-external-governance-while-jensen-huang-says-worries-are-made-up",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-15T17:19:36.000Z",
+        "contentSnippet": "The CEOs of OpenAI and Anthropic, as well as other industry leaders, are calling for a general slowdown in AI development over safety fears. On the flip side, Chinese authorities, the U.S. President, and CEO of Nvidia have dismissed their concerns as fearmongering."
+      },
+      {
+        "title": "Astera Labs Releases Leo 2 CXL Memory Controllers and Leo X Controller for Rackscale Fabric-Attached Memory",
+        "link": "https://www.servethehome.com/astera-labs-releases-leo-2-cxl-memory-controllers-and-leo-x-controller-for-rackscale-fabric-attached-memory/",
+        "source": "ServeTheHome",
+        "isoDate": "2026-09-15T17:00:48.000Z",
+        "contentSnippet": "Astera Labs is launching a new generation of Leo smart memory controllers. The Leo 2 series adds support for CXL 3.2 and PCIe Gen6, while the ambitious Leo X brings the ability to attach memory expanders directly to the fabric networks of AI accelerators The post Astera Labs Rele"
+      },
+      {
+        "title": "OWC Acquires OpenDrives, Adding Atlas, Astraeus, and Edge to the Jellyfish Shared Storage Line",
+        "link": "https://www.storagereview.com/news/owc-acquires-opendrives-adding-atlas-astraeus-and-edge-to-the-jellyfish-shared-storage-line",
+        "source": "StorageReview",
+        "isoDate": "2026-09-15T16:55:08.000Z",
+        "contentSnippet": "Other World Computing (OWC) has acquired OpenDrives, the Los Angeles software-defined storage company whose Atlas platform has sat behind Hollywood studios, post houses, and live broadcast networks since 2011. The deal brings OpenDrives’ Atlas, Astraeus, and Edge platforms into O"
+      },
+      {
+        "title": "NVIDIA CUDA-Q Logical Debuts With a 7x Fermilab Speedup and a 10x Cut in Diraq’s Qubit Estimate",
+        "link": "https://www.storagereview.com/news/nvidia-cuda-q-logical-fault-tolerant-quantum-fermilab-diraq",
+        "source": "StorageReview",
+        "isoDate": "2026-09-15T16:47:58.000Z",
+        "contentSnippet": "NVIDIA has added CUDA-Q Logical to its open-source CUDA-Q platform, an orchestration layer for building applications that run on fault-tolerant quantum computers, and it arrives with two numbers that are interesting. Fermilab says the tool cut a fault-tolerant algorithm design cy"
+      },
+      {
+        "title": "Asus' ludicrous 20th anniversary bundle is now the cheapest way to buy an RTX 5090 — Nvidia's flagship GPU stock is so limited that this $10,850 bundle with a 3000W PSU, X870E board, and open-frame ca",
+        "link": "https://www.tomshardware.com/desktops/gaming-pcs/asus-ludicrous-20th-anniversary-bundle-is-now-the-cheapest-way-to-buy-an-rtx-5090-nvidias-flagship-gpu-stock-is-so-limited-that-this-usd10-850-bundle-with-a-3000w-psu-x870e-board-and-open-frame-case-is-actually-cheaper-than-some-scalper-listings",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-15T15:13:16.000Z",
+        "contentSnippet": "This ultra-premium Asus ROG Edition 20th Anniversary Combo set at Newegg is super expensive at $10,849.96, but ironically, it's the 'cheapest' way to pick up an RTX 5090 right now."
+      },
+      {
+        "title": "Intel reportedly cans 12Xe option for Nova Lake-S desktop — gaming APU design said to resurface with Razor Lake",
+        "link": "https://www.tomshardware.com/pc-components/cpus/intel-reportedly-cans-12xe-option-for-nova-lake-s-desktop-gaming-apu-design-said-to-resurface-with-razor-lake",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-15T14:17:06.000Z",
+        "contentSnippet": "Following rumors of a Nova Lake desktop SKU with 12 Xe3P cores, tipster Jaykihn suggests that Intel has canned the design and moved the target to next-gen Razor Lake instead."
+      },
+      {
+        "title": "US AI data centers projected to become the fifth-largest natural gas consumer in the world by 2035 — consumption to grow by 15 billion cubic feet per day as demand for compute increases",
+        "link": "https://www.tomshardware.com/tech-industry/data-centers/us-ai-data-centers-projected-to-become-the-fifth-largest-natural-gas-consumer-in-the-world-by-2035-consumption-to-grow-by-15-billion-cubic-feet-per-day-as-demand-for-compute-increases",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-15T13:57:36.000Z",
+        "contentSnippet": "Data centers in the U.S. are projected to use up more natural gas than most of the rest of the world to generate the electricity they need. Estimates suggest that 15 billion cubic feet per day are needed to keep data centers running by 2035."
+      },
+      {
         "title": "Axelera Europa Ships: 629 TOPS at 45W Per AIPU, in Validated Dell XE5 and Supermicro Servers",
         "link": "https://www.storagereview.com/news/axelera-europa-ships-629-tops-at-45w-per-aipu-in-validated-dell-xe5-and-supermicro-servers",
         "source": "StorageReview",
@@ -2952,62 +3008,6 @@
         "source": "ServeTheHome",
         "isoDate": "2026-09-10T13:05:36.000Z",
         "contentSnippet": "Qualcomm disclosed more on its next-gen Oryon CPU, Adreno GPU, and Hexagon NPU that will power next-gen devices The post Qualcomm Talks Next-Gen Oryon CPU, Adreno GPU, and Hexagon NPU appeared first on ServeTheHome."
-      },
-      {
-        "title": "Old MacBook uses a mirror, webcam, and AI agent to code its own AMD GPU drivers — 'agent-first' Omarchy Linux debugs itself, AI can check its own progress on screen in real-time",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/old-macbook-uses-a-mirror-webcam-and-ai-agent-to-code-its-own-amd-gpu-drivers-agent-first-omarchy-linux-debugs-itself-ai-can-check-its-own-progress-on-screen-in-real-time",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-10T13:00:00.000Z",
-        "contentSnippet": "Using an 'age of agents' Linux distro a 'MacBook is using its webcam to look at its screen in a mirror to improve AMD Radeon chip support.'"
-      },
-      {
-        "title": "China's AI accelerator supplier Biren posts 2,000% year-over-year revenue growth — US export controls benefit homegrown chips as Nvidia and AMD exit market",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/chinas-ai-accelerator-supplier-biren-posts-2-000-percent-year-over-year-revenue-growth-export-controls-benefit-homegrown-chips-as-nvidia-and-amd-exit-market",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-10T12:40:00.000Z",
-        "contentSnippet": "Biren Technology shows unprecedented shipments growth in 1H 2026 as competition from AMD and Nvidia vanishes (at least officially)."
-      },
-      {
-        "title": "Chinese quartz approved for semiconductor equipment and DRAM manufacturing, but it still can't break America's monopoly — China secures domestic supply for chipmaking components, but Spruce Pine still",
-        "link": "https://www.tomshardware.com/tech-industry/semiconductors/chinese-quartz-approved-for-semiconductor-equipment-and-dram-manufacturing-but-it-still-cant-break-americas-monopoly-china-secures-domestic-supply-for-chipmaking-components-but-spruce-pine-still-holds-the-crucible-monopoly",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-10T12:20:00.000Z",
-        "contentSnippet": "Pacific Quartz gets its high-purity quartz qualified for semiconductor equipment and DRAM manufacturing."
-      },
-      {
-        "title": "The state of ABF substrates in data center silicon in 2026 — solving the supply crunch and material wall beneath every AI accelerator",
-        "link": "https://www.tomshardware.com/tech-industry/semiconductors/the-state-of-abf-substrates-in-data-center-silicon-in-2026-solving-the-supply-crunch-and-material-wall-beneath-every-ai-accelerator",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-10T12:00:00.000Z",
-        "contentSnippet": "ABF substrates underpin today’s most advanced AI chips, but soaring demand and expanding accelerator packages are creating new supply and technical bottlenecks that the industry is currently racing to resolve"
-      },
-      {
-        "title": "Modded RTX 5090 ditches 16-pin power for triple 8-pin connectors — draws up to 900W and hits 3,400 MHz",
-        "link": "https://www.tomshardware.com/pc-components/gpus/modded-rtx-5090-ditches-16-pin-power-for-triple-8-pin-connectors-draws-up-to-900w-and-hits-3-400-mhz",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-10T11:40:00.000Z",
-        "contentSnippet": "TecLab’s experiment puts the humble 8-pin connector to an extreme test, with the modified RTX 5090 pulling more than 120A while avoiding the newer 12V-2x6 design altogether."
-      },
-      {
-        "title": "TSMC, Samsung, and Intel shore up support with ASML to deploy larger High-NA EUV photomasks — 6×12-inch photomask transition may take years despite unified effort",
-        "link": "https://www.tomshardware.com/tech-industry/semiconductors/tsmc-samsung-and-intel-shore-up-support-with-asml-to-deploy-larger-high-na-euv-photomasks-6-12-inch-photomask-transition-may-take-years-despite-unified-effort",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-10T11:20:00.000Z",
-        "contentSnippet": "ASML, Intel, Samsung, and TSMC back development of 6×12-inch to build large processors using High-NA EUV lithography systems without stitching."
-      },
-      {
-        "title": "Developer uses Claude to vibe code a Windows 3.1 shell in an hour — reanimated 12MB retro launcher runs on both Windows 11 and Apple Silicon",
-        "link": "https://www.tomshardware.com/software/windows/developer-uses-claude-to-vibe-code-a-windows-3-1-shell-in-an-hour-reanimated-12mb-retro-launcher-runs-on-both-windows-11-and-apple-silicon",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-10T11:00:00.000Z",
-        "contentSnippet": "There’s a new vibe-coded clone of the Windows 3.1 Program Manager that runs on modern Windows 11 or macOS systems."
-      },
-      {
-        "title": "Save $250 on this 1080p-ready gaming laptop with an RTX 5060, now just $1049 — MSI Cyborg 15 rig ships with a 15.6-inch 144Hz display, 16GB DDR5 RAM, and an eight-core Intel CPU",
-        "link": "https://www.tomshardware.com/laptops/gaming-laptops/save-usd250-on-this-1080p-ready-gaming-laptop-with-an-rtx-5060-now-just-usd1049-msi-cyborg-15-rig-ships-with-a-15-6-inch-144hz-display-16gb-ddr5-ram-and-an-eight-core-intel-cpu",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-10T10:53:35.000Z",
-        "contentSnippet": "This MSI gaming laptop is fit for 1080p gaming, thanks to an RTX 5060, with $250 off knocking the price down to just $1049.99."
       }
     ]
   }
