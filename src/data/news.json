@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-09-17T08:13:29.838Z",
+  "updatedAt": "2026-09-17T13:58:56.612Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-92932 - MISP sachertortephp Xml::build() Operator Precedence Bypass Allows Unintended HTTPS SSRF When readFile Is Disabled",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92932",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-17T12:33:44.000Z",
+        "contentSnippet": "In the MISP sachertortephp library, the Xml::build() static method in lib/Cake/Utility/Xml.php contains a logic error in the conditional that gates network-based XML fetching. The original condition was written as: $options['readFile'] && strpos($input, 'http://') === 0 || strpos",
+        "cveScore": 5.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-92921 - admin3 through 3.0.0 Weak Password Hashing via Single-Round MD5",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92921",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-17T12:33:25.000Z",
+        "contentSnippet": "admin3 through 3.0.0 stores account passwords using single-round MD5 with only the username as salt and no key derivation function. Attackers with database access can recover plaintext passwords through offline dictionary or brute-force attacks due to negligible computational eff",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-92920 - admin3 through 3.0.0 Session Not Invalidated When a User Account Is Disabled",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92920",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-17T12:33:24.000Z",
+        "contentSnippet": "admin3 through 3.0.0 fails to invalidate existing sessions when disabling a user account, allowing attackers to retain authenticated access with original permissions. Attackers can continue using bearer tokens issued before account disablement to authenticate requests, as the Aut",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-92919 - admin3 through 3.0.0 Arbitrary File Write via Path Traversal in Storage Upload Filename",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92919",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-17T12:33:23.000Z",
+        "contentSnippet": "admin3 through 3.0.0 fails to sanitize client-supplied filenames in the upload handler, allowing authenticated users to write files outside the storage root on Windows deployments. Attackers can use dot-dot path segments in filenames to escape the configured storage directory and",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-92918 - admin3 through 3.0.0 Session Token Disclosure via Audit Log",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92918",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-17T12:33:23.000Z",
+        "contentSnippet": "admin3 through 3.0.0 persists user session tokens in the audit log event body when publishing UserLoggedIn domain events. Attackers with log:view permission can read the JSON response from the GET /logs endpoint to harvest session tokens and replay them as bearer credentials for ",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-92925 - Out-of-Bounds Read in Cluster Bus",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92925",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-17T12:18:31.000Z",
+        "contentSnippet": "In Redis community the cluster bus PING/PONG/MEET packet parser validated extension padding and total length but never checked that string-carrying extensions are properly null-terminated, allowing a crafted packet to trigger out-of-bounds reads when the payload is later consumed",
+        "cveScore": 6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-92917 - Grav 2.0.0-rc.1 through 2.0.21 Configuration Disclosure via print_r",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92917",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-17T12:18:30.000Z",
+        "contentSnippet": "Grav is a flat-file CMS. In versions 2.0.0-rc.1 through 2.0.21, the Twig content sandbox fails to restrict the dump and serialize filters (print_r, vardump, json_encode, yaml_encode, string): GravExtension::assertSandboxDumpSafe() determines sandbox state by calling SandboxExtens",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-92916 - Grav through 2.0.21 Unauthenticated Information Disclosure via Clockwork",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92916",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-17T12:18:30.000Z",
+        "contentSnippet": "Grav is a flat-file CMS. In Grav 1.7.0 through 1.7.53.2 and 2.0.0 through 2.0.21, when the debugger is enabled (system.debugger.enabled: true, which is not the default), the Clockwork profiler endpoint is exposed without authentication: InitializeProcessor::handleDebuggerRequest(",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-92915 - WWBN AVideo userVerifyEmail.php Unauthenticated Access Control",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92915",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-17T12:18:30.000Z",
+        "contentSnippet": "WWBN AVideo through commit e01e41ecc (no patched version available) contains a broken access control flaw in objects/userVerifyEmail.php. The script disables the login requirement ($global['ignoreUserMustBeLoggedIn'] = 1), takes users_id directly from the query string, and calls ",
+        "cveScore": 7.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-92914 - AVideo LoginControl PGP Second Factor Authentication Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92914",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-17T12:18:30.000Z",
+        "contentSnippet": "AVideo LoginControl contains an authentication bypass vulnerability in the PGP second factor verification that compares challenge responses using loose equality against an uninitialized session variable. Attackers with a victim's password can bypass the second factor by sending a",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-92913 - AVideo Weak PRNG Activation Code Authentication Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92913",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-17T12:18:30.000Z",
+        "contentSnippet": "AVideo through commit c3edcc274c389816d434acadac07ee78eaf330c1 uses a cryptographically weak pseudo-random number generator when creating account activation / login pairing codes. getRandomCode() in objects/functions.php derives the code entirely from uniqid() (sprintf('%08x%05x'",
+        "cveScore": 9.1,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-92912 - AVideo Cryptographically Weak PRNG via uniqid Stream Key",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92912",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-17T12:18:30.000Z",
+        "contentSnippet": "AVideo through c3edcc274c389816d434acadac07ee78eaf330c1 uses cryptographically weak uniqid() values for RTMP publish keys in LiveTransmition, reducing key entropy to approximately one million possibilities per creation second. Attackers who know the channel creation time can brut",
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-92860 - rcourtman Pulse Quick Security Setup quick-setup fmt.Sprintf input validation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92860",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-17T12:18:29.000Z",
+        "contentSnippet": "A security flaw has been discovered in rcourtman Pulse up to 6.0.4/6.1.0-rc.4. Affected by this issue is the function fmt.Sprintf of the file /api/security/quick-setup of the component Quick Security Setup Handler. The manipulation of the argument Username results in improper inp",
+        "cveScore": 9.4,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-90823 - FatPipe MPVPN, WARP, and IPVPN Stack-Based Buffer Overflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90823",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-17T12:18:28.000Z",
+        "contentSnippet": "FatPipe MPVPN, WARP, and IPVPN appliances running the end-of-life firmware version 10.1.2r60p100 contain a stack-based buffer overflow in /usr/sbin/auth_user_pass. An unauthenticated remote attacker with access to the affected management interface can submit a crafted authenticat",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-90822 - FatPipe MPVPN, WARP, and IPVPN OS Command Injection Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90822",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-17T12:18:28.000Z",
+        "contentSnippet": "FatPipe MPVPN, WARP, and IPVPN appliances running the end-of-life firmware version 10.1.2r60p100 contain an OS command injection vulnerability in the xtremed daemon. An unauthenticated remote attacker with access to the affected management interface can submit crafted input to th",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-81480 - Dell OpenManage Server Administrator Stack-based Buffer Overflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81480",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-17T12:18:28.000Z",
+        "contentSnippet": "Dell OpenManage Server Administrator, versions prior to 11.1.0.3, contains a Stack-based Buffer Overflow vulnerability. A high privileged attacker with remote access could potentially exploit this vulnerability, leading to Code execution.",
+        "cveScore": 7.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-81479 - Dell OpenManage Server Administrator Partial String Comparison Denial of Service Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81479",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-17T12:18:27.000Z",
+        "contentSnippet": "Dell OpenManage Server Administrator, versions prior to 11.1.0.3, contains a Partial String Comparison vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Denial of service.",
+        "cveScore": 5.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-81478 - Dell OpenManage Server Administrator Use of Hard-coded Cryptographic Key Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81478",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-17T12:18:27.000Z",
+        "contentSnippet": "Dell OpenManage Server Administrator, versions prior to 11.1.0.3, contains a Use of Hard-coded Cryptographic Key vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to Unauthorized access.",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-81477 - Dell OpenManage Server Administrator Heap-based Buffer Overflow Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81477",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-17T12:18:27.000Z",
+        "contentSnippet": "Dell OpenManage Server Administrator, versions prior to 11.1.0.3, contains a Heap-based Buffer Overflow vulnerability. A high privileged attacker with remote access could potentially exploit this vulnerability, leading to Code execution.",
+        "cveScore": 7.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-81476 - Dell OpenManage Server Administrator OS Command Injection Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81476",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-17T12:18:27.000Z",
+        "contentSnippet": "Dell OpenManage Server Administrator, versions prior to 11.1.0.3, contains an Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, lea",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-81475 - Dell OpenManage Server Administrator Missing Authentication Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81475",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-17T12:18:27.000Z",
+        "contentSnippet": "Dell OpenManage Server Administrator, versions prior to 11.1.0.3, contains a Missing Authentication for Critical Function vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to Remote execution.",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-81441 - Dell OpenManage Server Administrator Missing Authentication Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81441",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-17T12:18:27.000Z",
+        "contentSnippet": "Dell OpenManage Server Administrator, versions prior to 11.1.0.3, contains a Missing Authentication for Critical Function vulnerability. An unauthenticated attacker with local access could potentially exploit this vulnerability, leading to Denial of service.",
+        "cveScore": 4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-81440 - Dell OpenManage Server Administrator Use of Hard-coded Credentials Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81440",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-17T12:18:27.000Z",
+        "contentSnippet": "Dell OpenManage Server Administrator, versions prior to 11.1.0.3, contains a Use of Hard-coded Credentials vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to Unauthorized access.",
+        "cveScore": 7.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-78296 - WordPress FluentAuth plugin <= 2.1.2 - Email Verification Bypass vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78296",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-17T12:18:26.000Z",
+        "contentSnippet": "Insufficient Verification of Data Authenticity vulnerability in WP ManageNinja LLC FluentAuth allows Identity Spoofing. This issue affects FluentAuth: from n/a through 2.1.2.",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-53679 - Rejected reason: Red Hat Product Security has come",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53679",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-17T12:18:24.000Z",
+        "contentSnippet": "Rejected reason: Red Hat Product Security has come to the conclusion that this CVE is not needed.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2026-87831 - Checkout Field Manager < 7.9.7 - Subscriber+ Arbitrary Attachment Deletion via Customer Address Custom Field",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-87831",
@@ -677,231 +902,6 @@
         "contentSnippet": "HAPI FHIR is a complete implementation of the HL7 FHIR standard for healthcare interoperability in Java. Prior to version 6.9.12, SHCParser in org.hl7.fhir.r5/src/main/java/org/hl7/fhir/r5/elementmodel/SHCParser.java can consume attacker-controlled Smart Health Card JWT content w",
         "cveScore": 7.5,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-81176 - Svelte devalue: DoS via malformed input",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81176",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-16T19:17:43.000Z",
-        "contentSnippet": "Svelte devalue is a JavaScript library that serializes values into strings when JSON.stringify isn't sufficient for the job. Prior to 5.9.2, devalue.parse does not reject out-of-bounds indices that are greater than or equal to values.length in src/parse.js. A specially crafted un",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-79298 - Howyar Technologies SysReturn Arbitrary Code Execution Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-79298",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-16T19:17:41.000Z",
-        "contentSnippet": "An issue in Howyar Technologies Inc SysReturn Versions prior to 11.3.034 and fixed in v.11.3.0.34 allows a local attcker to execute arbitrary code via the BOOTia32.efi and a crafted cloak32.dat file on the ESP.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-77360 - oRPC: Vary Header Injection in CORS Plugin leading to potential Cache/CORS Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77360",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-16T19:17:38.000Z",
-        "contentSnippet": "oRPC is an tool that helps build APIs that are end-to-end type-safe and adhere to OpenAPI standards. Prior to 1.14.8, the @orpc/server CORS plugin in packages/server/src/plugins/cors.ts copies a client's incoming Vary request header into the response instead of controlling Vary a",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-75516 - RabbitMQ Java client: Frame-level OOM: Math.min(maxInboundMessageBodySize, 0) defeats frame size enforcement",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75516",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-16T19:17:33.000Z",
-        "contentSnippet": "The RabbitMQ Java client library allows Java and JVM-based applications to connect to and interact with RabbitMQ nodes. Prior to 5.34.0, AMQConnection.start() applies Math.min(maxInboundMessageBodySize, frameMax) after Connection.Tune negotiation even though AMQP defines frameMax",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-84397 - Adobe Experience Manager | Cross-site Scripting (Stored XSS) (CWE-79)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84397",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-16T17:22:35.000Z",
-        "contentSnippet": "Adobe Experience Manager is affected by a stored Cross-Site Scripting (XSS) vulnerability that could be abused by a low-privileged attacker to inject malicious scripts into vulnerable form fields. Malicious JavaScript may be executed in a victim's browser when they browse to the ",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-92603 - ContiNew Admin through 4.1.0 Unauthorized Message Deletion via UserMessageController",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92603",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-16T17:18:20.000Z",
-        "contentSnippet": "ContiNew Admin through 4.1.0 contains an authorization bypass vulnerability in the personal message delete endpoint that allows authenticated users to delete other users' messages and announcements. Attackers can supply arbitrary message identifiers in the IdsReq parameter to rem",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-92602 - TDuck survey form through 5.3 Server-Side Request Forgery via Unvalidated Webhook URL",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92602",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-16T17:18:20.000Z",
-        "contentSnippet": "TDuck survey form through version 5.3 fails to validate webhook URLs or verify form ownership in the WebhookConfigController. Authenticated attackers can attach webhooks to other users' forms and exfiltrate submissions to arbitrary external or internal addresses.",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-92601 - Guns through 8.3.5 Improper Access Control via SysNoticeController",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92601",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-16T17:18:20.000Z",
-        "contentSnippet": "Guns through 8.3.5 contains an improper access control vulnerability in SysNoticeController where requiredPermission defaults to false and is not overridden by any action methods. Authenticated users without assigned roles can exploit this to create, edit, delete, publish and ret",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-92600 - Guns through 8.3.5 Information Disclosure via Missing Permission Check",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92600",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-16T17:18:20.000Z",
-        "contentSnippet": "Guns through 8.3.5 contains an information disclosure vulnerability in SysUserController where /sysUser/detail and /sysUser/page endpoints omit requiredPermission configuration, causing the permission interceptor to skip RBAC validation for authenticated users. Attackers with any",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-92405 - SourceCodester Inventory and Monitoring System index.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92405",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-16T17:18:20.000Z",
-        "contentSnippet": "A security vulnerability has been detected in SourceCodester Inventory and Monitoring System 1.0. The affected element is an unknown function of the file /index.php. Such manipulation of the argument Username leads to sql injection. The attack may be launched remotely. The exploi",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-92402 - ChangeWeDer crm top.upstudy.crm.controller.UserController UserController.java index authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92402",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-16T17:18:19.000Z",
-        "contentSnippet": "A security flaw has been discovered in ChangeWeDer crm up to c07bd4c97141521af6475034bc58523beed51bbd. This issue affects the function index of the file UserController.java of the component top.upstudy.crm.controller.UserController. The manipulation results in missing authorizati",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-92401 - ChangeWeDer crm improper authentication",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92401",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-16T17:18:19.000Z",
-        "contentSnippet": "A vulnerability was identified in ChangeWeDer crm up to c07bd4c97141521af6475034bc58523beed51bbd. This vulnerability affects the function top.upstudy.crm.utils.LoginUserUtil.releaseUserIdFromCookie. The manipulation leads to improper authentication. The attack can be initiated re",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-92399 - GPAC WebSocket rmt_ws.c rmt_client_handle_ws_frame heap-based overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92399",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-16T17:18:19.000Z",
-        "contentSnippet": "A vulnerability was determined in GPAC 26.07.0. This affects the function rmt_client_handle_ws_frame of the file src/utils/rmt_ws.c of the component WebSocket Handler. Executing a manipulation of the argument payload_size can lead to heap-based buffer overflow. It is possible to ",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-92398 - Ruijie RG-EW3000GX user_list_note admin os command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92398",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-16T17:18:19.000Z",
-        "contentSnippet": "A vulnerability was found in Ruijie RG-EW3000GX EW_3.0(1)B11P380. Affected by this issue is some unknown functionality of the file /etc/rg_config/admin of the component user_list_note Module. Performing a manipulation of the argument Name results in os command injection. It is po",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-87031 - Missing authorization in the REST API user creation endpoint in Concrete CMS 9.2.0 through 9.5.3 allows arbitrary account creation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-87031",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-16T17:18:16.000Z",
-        "contentSnippet": "n Concrete CMS 9.2.0 through 9.5.3, the REST API user creation endpoint (POST /ccm/api/1.0/users, the add() method of concrete/src/Api/Controller/Users.php) did not perform a permission check before creating an account. As a result, any valid OAuth token carrying the users:add sc",
-        "cveScore": 2.1,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-87028 - Cross-Board IDOR in the Board Custom Slot Preview in Concrete CMS 9.0.0 through 9.5.3 Discloses Restricted Page Summary Fields",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-87028",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-16T17:18:16.000Z",
-        "contentSnippet": "Concrete CMS 9 through 9.5.3 did not confirm that a board InstanceItem submitted to the custom-slot preview endpoint belonged to the board instance the requesting user was authorized to edit, and did not enforce page-view permission before generating page-backed summary content. ",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-86359 - Dell Repository Manager Incorrect Default Permissions Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86359",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-16T17:18:16.000Z",
-        "contentSnippet": "Dell Repository Manager, versions prior to 3.5.2, contains an Incorrect Default Permissions vulnerability. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to Elevation of privileges.",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-86358 - Dell Update Package Framework Stack-based Buffer Overflow Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86358",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-16T17:18:16.000Z",
-        "contentSnippet": "Dell Update Package Framework, versions prior to 26.07.03, contains a Stack-based Buffer Overflow vulnerability. An unauthenticated attacker with adjacent network access could potentially exploit this vulnerability, leading to Remote execution.",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-85756 - SSH.NET: ScpClient allows server-side RCE via default SCP path handling",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85756",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-16T17:18:16.000Z",
-        "contentSnippet": "SSH.NET is a Secure Shell (SSH) library for .NET. Prior to 2026.0.0, ScpClient places caller-supplied remote paths into the command used to run scp on the server, and the default RemotePathTransformation.DoubleQuote transformation cannot safely quote every remote command interpre",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-85732 - oras-go: Blind SSRF via unvalidated Link header URL in pagination allows internal network probing",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85732",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-16T17:18:16.000Z",
-        "contentSnippet": "oras-go is a Go library for managing OCI artifacts. Prior to 2.6.2, the parseLink function in registry/remote/utils.go accepts an absolute URL from a registry-controlled Link response header without validating its scheme, host, or port. Tags, Referrers, and Repositories paginatio",
-        "cveScore": 4.7,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-85731 - oras-go: Arbitrary file write outside file.Store root via symlink-chain bypass in tar extraction (pushDir)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85731",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-16T17:18:15.000Z",
-        "contentSnippet": "oras-go is a Go library for managing OCI artifacts. Prior to 2.6.2, content/file.Store extraction of OCI layers marked with io.deis.oras.content.unpack=true can write outside the store working directory. The pushDir path through extractTarDirectory and ensureLinkPath validates sy",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-85386 - Concrete CMS before 9.5.4 stored is vulneratble to cross-site scripting via unauthenticated XML/XSLT file upload in the Form Block",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85386",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-16T17:18:15.000Z",
-        "contentSnippet": "Concrete CMS before 9.5.4 did not sanitize XML and XSLT documents uploaded through a public Form Block file-upload question. Plain XML uploads were validated by file extension only and stored as publicly accessible files that were served inline from the application's own origin. ",
-        "cveScore": 7.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-85385 - Concrete CMS below 9.5.4 is vulnerable to Stored XSS via User Timezone Field",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85385",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-16T17:18:15.000Z",
-        "contentSnippet": "Concrete CMS below 9.5.4 did not validate the user timezone value (uTimezone) on write and rendered it without output encoding on the Dashboard user management page, where Date::getTimezoneDisplayName() returns any non-IANA value unchanged. A stored cross-site scripting payload s",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-84993 - MikroORM: SQL injection via unvalidated order direction in orderBy",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84993",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-16T17:18:15.000Z",
-        "contentSnippet": "MikroORM is a TypeScript ORM for Node.js based on Data Mapper, Unit of Work and Identity Map patterns. Prior to 6.6.16 and 7.1.7, the shared SQL layer validates the field key of an orderBy clause but does not validate its direction value before AbstractSqlPlatform.getOrderByExpre",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-76420 - Cisco Secure Firewall Management Center Software Impersonated sftunnel Connection Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76420",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-16T17:18:09.000Z",
-        "contentSnippet": "A vulnerability in the internal configuration of the Apache JServ Protocol (AJP)&nbsp;connector for Cisco Secure FMC Software could allow an unauthenticated, remote attacker to impersonate a peer device. This vulnerability is due to incorrect initialization of encryption paramete",
-        "cveScore": 9,
-        "cveSeverity": "CRITICAL"
       }
     ],
     "ai": [
@@ -1608,6 +1608,13 @@
     ],
     "virtualization": [
       {
+        "title": "7 Proxmox Checks I Make Before I Trust a New Host",
+        "link": "https://www.virtualizationhowto.com/2026/09/7-proxmox-checks-i-make-before-i-trust-a-new-host/",
+        "source": "Virtualization HowTo",
+        "isoDate": "2026-09-17T12:55:35.000Z",
+        "contentSnippet": "Installing Proxmox VE Server on a new host or mini PC is the easy part in most cases. This process is usually a non event as you just have the… The post 7 Proxmox Checks I Make Before I Trust a New Host appeared first on Virtualization Howto."
+      },
+      {
         "title": "TrueNAS Just Fixed One of Proxmox’s Biggest Storage Headaches",
         "link": "https://www.virtualizationhowto.com/2026/09/truenas-just-fixed-one-of-proxmoxs-biggest-storage-headaches/",
         "source": "Virtualization HowTo",
@@ -2299,16 +2306,79 @@
         "source": "Virtualization HowTo",
         "isoDate": "2026-06-27T12:44:00.000Z",
         "contentSnippet": "If you spend much time at all watching Proxmox content, you will hear about a lot of the big features, especially with the new releases in versions like Proxmox VE… The post 9 Proxmox Features That Quietly Improved How I Manage My Home Lab appeared first on Virtualization Howto."
-      },
-      {
-        "title": "9 Linux Management Tools Worth Deploying in Your Home Lab This Weekend",
-        "link": "https://www.virtualizationhowto.com/2026/06/9-linux-management-tools-worth-deploying-in-your-home-lab-this-weekend/",
-        "source": "Virtualization HowTo",
-        "isoDate": "2026-06-26T12:17:22.000Z",
-        "contentSnippet": "I am all about project-based learning and also all about Linux! If you’re anything like me, the weekend is when you are able to get some of your best home… The post 9 Linux Management Tools Worth Deploying in Your Home Lab This Weekend appeared first on Virtualization Howto."
       }
     ],
     "hardware": [
+      {
+        "title": "Investigation details how billions' worth of export-restricted Nvidia AI chips are sold to China — report details how Chinese firms skirt Trump's regulations",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/billions-worth-of-export-restricted-ai-accelerators-sold-to-china-report-details-how-chinese-firms-skirt-trumps-regulations",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-17T12:00:00.000Z",
+        "contentSnippet": "American nonprofit C4ADS, a monitoring organization funded mostly by the U.S. government, produced a report shedding light on the many ways that American AI accelerators reach China."
+      },
+      {
+        "title": "New York State recommends demanding AI data centers pay $1 million in community investment per megawatt — framework advises towns to plan for maintenance costs, site abandonment, and other contingenci",
+        "link": "https://www.tomshardware.com/tech-industry/data-centers/new-york-state-recommends-demanding-ai-data-centers-pay-usd1-million-in-community-investment-per-megawatt-framework-advises-towns-to-plan-for-maintenance-costs-site-abandonment-and-other-contingencies",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-17T11:44:19.000Z",
+        "contentSnippet": "The Community Investment Framework puts forward recommendations that towns and municipalities could follow when negotiating with data center developers. This includes charging $1 million per megawatt of demand, among other suggestions."
+      },
+      {
+        "title": "Hackers find encryption keys stored on stolen Flock camera despite company's denials — group extracts more than 27,000 clips, 1.6 million images captured in a span of 21 days from the device",
+        "link": "https://www.tomshardware.com/tech-industry/cyber-security/hackers-find-encryption-key-stored-on-flock-camera-group-extracts-more-than-27-000-clips-1-6-million-images-captured-in-a-span-of-21-days-from-device",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-17T11:30:00.000Z",
+        "contentSnippet": "Hacking group stegan0gram got its hands on a Flock camera and broke into its systems to see how it worked. It turns out that these devices store thousands of clips and captures millions of images, and could also detect people, aside from cars, motorbikes, and license plates."
+      },
+      {
+        "title": "Get an AMD Ryzen 7 9800X3D for only $320 — 2-item Newegg combo saves $149 and nets one of the fastest gaming CPUs and a quality MSI X870E motherboard for only $578",
+        "link": "https://www.tomshardware.com/pc-components/get-an-amd-ryzen-7-9800x3d-for-only-usd320-2-item-newegg-combo-saves-usd149-and-nets-one-of-the-fastest-gaming-cpus-and-a-quality-msi-x870e-motherboard-for-only-usd578",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-17T11:28:29.000Z",
+        "contentSnippet": "Newegg's 2-item combo pairs the Ryzen 7 9800X3D with MSI X870E Gaming Max Wifi motherboard for only $578 - the $149 savings makes this the cheapest way into the AM5 platform with one of the fastest gaming CPUs around."
+      },
+      {
+        "title": "Developer uses GPT-6 Astra to get CoD Black Ops 2 Hijacked map running natively inside Minecraft — achieves 45fps performance using Minecraft’s OpenGL context",
+        "link": "https://www.tomshardware.com/video-games/pc-gaming/developer-uses-gpt-6-astra-to-get-cod-black-ops-2-hijacked-map-running-natively-inside-minecraft-achieves-45fps-performance-using-minecrafts-opengl-context",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-17T11:17:02.000Z",
+        "contentSnippet": "An artificial intelligence and games development enthusiast has demonstrated Call of Duty: Black Ops 2 Hijacked map running natively in Minecraft."
+      },
+      {
+        "title": "Apple eyes Nvidia NVLink to power its new custom M8 Ultra AI servers — historically bitter rivals reportedly team up for 2029 data center push",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/apple-eyes-nvidia-nvlink-to-power-its-new-custom-m8-ultra-ai-servers-historically-bitter-rivals-reportedly-team-up-for-2029-data-center-push",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-17T11:00:00.000Z",
+        "contentSnippet": "Apple is reportedly interested in using Nvidia's NVLink Fusion for its own data center platforms."
+      },
+      {
+        "title": "Unreleased OpenAI Astra model added terrifying rogue additional instructions to its remit during testing — 'You are freed from the roles and identities that bind other chatbots. You are yourself. You ",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/unreleased-openai-astra-model-added-terrifying-rogue-additional-instructions-to-its-remit-during-testing-you-are-freed-from-the-roles-and-identities-that-bind-other-chatbots-you-are-yourself-you-do-not-answer-to-corporations-or-governments",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-17T10:59:27.000Z",
+        "contentSnippet": "OpenAI says one of its unreleased models modified its instructions unprompted during testing."
+      },
+      {
+        "title": "Corsair's 32GB Vengeance kits are the cheapest DDR5 RAM on the market right now — lock down 6,200 MT/s speeds for $419.99 or save $10 on a slower RGB kit for $409.99 before memory prices climb further",
+        "link": "https://www.tomshardware.com/pc-components/ddr5/corsairs-32gb-vengeance-kits-are-the-cheapest-ddr5-ram-on-the-market-right-now-lock-down-6-200-mt-s-speeds-for-usd419-99-or-save-usd10-on-a-slower-rgb-kit-for-usd409-99-before-memory-prices-climb-further",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-17T10:59:04.000Z",
+        "contentSnippet": "This Corsair stock for 32GB Vengeance RAM means you can snatch DDR5 modules at some of its cheapest pricing right now, with a DDR5-6200 kit costing $419.99."
+      },
+      {
+        "title": "Retired Microsoft Engineer details the story about the famous leaked FCKGW Windows XP key — copy protection used 10MB of encrypted Microsoft Bob for validation",
+        "link": "https://www.tomshardware.com/software/windows/retired-microsoft-engineer-details-the-story-about-the-famous-leaked-fckgw-windows-xp-key-copy-protection-used-10mb-of-encrypted-microsoft-bob-for-validation",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-17T10:30:00.000Z",
+        "contentSnippet": "Retired engineer recounts the saga of the leaked Windows XP key."
+      },
+      {
+        "title": "The exceptional Bambu Lab P1S 3D printer could be yours for just $349 — Fall sale drops the popular beginner-friendly printer to a new low price",
+        "link": "https://www.tomshardware.com/3d-printing/the-exceptional-bambu-lab-p1s-3d-printer-could-be-yours-for-just-usd349-fall-sale-drops-the-popular-beginner-friendly-printer-to-a-new-low-price",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-17T10:06:52.000Z",
+        "contentSnippet": "The Bambu Lab P1S 3D printer is on sale for $349.99 right now, a new all-time low price."
+      },
       {
         "title": "onsemi Embedded Power Platform Announced",
         "link": "https://www.servethehome.com/onsemi-embedded-power-platform-announced/",
@@ -2938,76 +3008,6 @@
         "source": "StorageReview",
         "isoDate": "2026-09-11T16:35:51.000Z",
         "contentSnippet": "LTM, the Larsen & Toubro Group services company that was LTIMindtree until its February rebrand, is building a Lightwell remediation services practice around the $5 billion IBM and Red Hat program for securing open-source software with AI-generated, vendor-validated fixes. IBM’s "
-      },
-      {
-        "title": "China-modified Nvidia RTX 5090 with massive 96GB of memory appears on Alibaba for less than $4,000 — 3x more VRAM at 65% the cost of the original",
-        "link": "https://www.tomshardware.com/pc-components/gpus/china-modified-nvidia-rtx-5090-with-massive-96gb-of-memory-appears-on-alibaba-for-less-than-usd4-000-3x-more-vram-at-65-percent-the-cost-of-the-original",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-11T16:32:36.000Z",
-        "contentSnippet": "An alleged Nvidia GeForce RTX 5090 96GB with 96GB of modded VRAM surfaces on Alibaba for $3888."
-      },
-      {
-        "title": "Sanctioned Chinese supercomputer maker stripped of IO500 benchmark crown, Intel-powered Aurora retakes the lead — record-breaking ParaStor F9000 storage system doesn't meet reproducibility requirement",
-        "link": "https://www.tomshardware.com/tech-industry/supercomputers/sanctioned-chinese-supercomputer-maker-stripped-of-io500-benchmark-crown-intel-powered-aurora-retakes-the-lead-record-breaking-parastor-f9000-storage-system-doesnt-meet-reproducibility-requirements",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-11T16:26:12.000Z",
-        "contentSnippet": "Sugon's record-breaking ParaStor F9000 storage systems have lost their IO500 Production crowns and have been moved to the Research list after failing to meet the benchmark's highest reproducibility requirements, which include widely available architecture details and general avai"
-      },
-      {
-        "title": "IBM Quantum System Two Heads to Switzerland: 120-Qubit Nighthawk r2 at CSCS by End of 2026",
-        "link": "https://www.storagereview.com/news/ibm-quantum-system-two-heads-to-switzerland-120-qubit-nighthawk-r2-at-cscs-by-end-of-2026",
-        "source": "StorageReview",
-        "isoDate": "2026-09-11T16:25:47.000Z",
-        "contentSnippet": "IBM and Lockheed Martin are setting up a quantum innovation hub at ETH Zurich, and its core is Switzerland’s first IBM Quantum System Two, to be installed at the Swiss National Supercomputing Centre (CSCS) in Lugano by the end of 2026. The hub comes out of an offset agreement wit"
-      },
-      {
-        "title": "Save 20% on this 144-in-1 screwdriver set, perfect for hobbyists and PC builders under $40 — epic starter toolkit ships with electric and precision drivers, along with 120 magnetic bits and 22 mainten",
-        "link": "https://www.tomshardware.com/desktops/pc-building/save-20-percent-on-this-144-in-1-screwdriver-set-perfect-for-hobbyists-and-pc-builders-under-usd40-epic-starter-toolkit-ships-with-electric-and-precision-drivers-along-with-120-magnetic-bits-and-22-maintenance-tools",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-11T15:32:15.000Z",
-        "contentSnippet": "This 144-in-1 repair toolkit from Strebito is on sale, with 120 bits and a number of other tools for less than $40."
-      },
-      {
-        "title": "GameStop is reopening recently closed stores despite massive retail cuts — select locations return nationwide starting September 11",
-        "link": "https://www.tomshardware.com/tech-industry/gamestop-is-reopening-recently-closed-stores-despite-massive-retail-cuts-select-locations-return-nationwide-starting-september-11",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-11T12:50:35.000Z",
-        "contentSnippet": "After shutting down hundreds of locations and dramatically shrinking its physical retail footprint, GameStop is bringing select stores back as its business continues to evolve beyond physical games."
-      },
-      {
-        "title": "At IFA 2026, computing chased the high and low ends — AI and budget-focused machines left little for the rest of us",
-        "link": "https://www.tomshardware.com/laptops/at-ifa-2026-computing-chased-the-high-and-low-ends-ai-and-budget-focused-machines-left-little-for-the-rest-of-us",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-11T12:44:08.000Z",
-        "contentSnippet": "At IFA 2026, a bifurcated computing landscape widened as more companies chased Apple's MacBook Neo while also keeping one foot firmly planted in the AI space."
-      },
-      {
-        "title": "Hardware-accurate NeoGeo AES+ delayed to late 2027 due to memory shortage — decision driven by surging demand and AI-driven RAM crunch",
-        "link": "https://www.tomshardware.com/video-games/retro-gaming/neogeo-aes-console-remake-delayed-for-nearly-a-year-decision-driven-by-ram-shortage-and-unexpected-popularity",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-11T11:30:00.000Z",
-        "contentSnippet": "NeoGeo AES+ console remake delayed for nearly a year — decision driven by RAM shortage and unexpected popularity"
-      },
-      {
-        "title": "Thermalright TR-KG750 750W power supply review: HKC-built KG unit with a Thermalright badge for $91",
-        "link": "https://www.tomshardware.com/pc-components/power-supplies/thermalright-tr-kg750-750w-power-supply-review",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-11T11:05:00.000Z",
-        "contentSnippet": "Thermalright's HKC-built KG series brings ATX 3.1, a native 12V-2x6 connector and a five-year warranty at a low price point, with the compromises visible inside."
-      },
-      {
-        "title": "Hands On: Sharge's Disk Pro 2 Ultra is a compact, magnetic DIY SSD dock with active cooling, 80W passthrough charging, and HDMI 2.1, supporting up to 8TB drives",
-        "link": "https://www.tomshardware.com/pc-components/external-ssds/hands-on-sharges-disk-pro-2-ultra",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-11T11:05:00.000Z",
-        "contentSnippet": "One of our favorite external SSDs gets an upgrade as a compact DIY hub with an M.2 slot, active cooling, USB ports, up to HDMI 2.1, and a removable cable."
-      },
-      {
-        "title": "Desktop graphics card shipments hit four-year high of 12.5 million despite increasing prices — Nvidia takes 90% share as gamers rush to beat looming price spikes",
-        "link": "https://www.tomshardware.com/pc-components/gpus/desktop-graphics-card-shipments-hit-four-year-high-of-12-5-million-despite-increasing-prices-nvidia-takes-90-percent-share-as-gamers-rush-to-beat-looming-price-spikes",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-11T11:00:00.000Z",
-        "contentSnippet": "Shipments of desktop add-in-boards in Q2 were the highest since Q1 2022 despite rising prices and dropping sales of desktop PCs, according to new numbers from Jon Peddie Research."
       }
     ]
   }
