@@ -1,8 +1,44 @@
 {
-  "updatedAt": "2026-09-19T14:03:30.497Z",
+  "updatedAt": "2026-09-19T17:36:44.961Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-82560 - Pod::Text versions before 6.1.1 for Perl allow CPU and memory exhaustion formatting a POD document whose =over nesting drives the margin to the output width",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82560",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-19T16:16:32.000Z",
+        "contentSnippet": "Pod::Text versions before 6.1.1 for Perl allow CPU and memory exhaustion formatting a POD document whose =over nesting drives the margin to the output width. Each =over adds its indent to the margin, which wrap() subtracts from the output width to get the space available for text",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-94001 - Keycloak-services: keycloak-services: admin credential delete bypasses denied reset-password permission",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94001",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-19T15:17:08.000Z",
+        "contentSnippet": "A flaw was found in the Admin REST API of Keycloak, an open-source identity and access management solution. The endpoint used for deleting user credentials does not correctly check for fine-grained reset-password permissions. This allows a delegated administrator, who should be r",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-94000 - Keycloak-services: keycloak-services: delegated admin with manage-users can escalate to realm-admin via group membership",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94000",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-19T15:17:08.000Z",
+        "contentSnippet": "A flaw was found in the Admin REST API of Keycloak, an open-source identity and access management solution. The issue occurs in the group-membership endpoints where the system fails to check if a group grants administrative privileges before allowing a user to be added. This allo",
+        "cveScore": 6.6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-93999 - Keycloak-services: keycloak-services: token refresh continues issuing tokens for disabled audience clients",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93999",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-19T15:17:08.000Z",
+        "contentSnippet": "A flaw was found in the OIDC protocol implementation of Keycloak, an open-source identity and access management solution. The issue occurs during the token refresh process when the server restores requested audiences from stored client IDs. Keycloak fails to verify if the target ",
+        "cveScore": 4.2,
+        "cveSeverity": "MEDIUM"
+      },
       {
         "title": "CVE-2026-93987 - rclone serve docker Path Traversal via Volume Name",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-93987",
@@ -865,42 +901,6 @@
         "isoDate": "2026-09-18T18:18:34.000Z",
         "contentSnippet": "Mongoid does not neutralize a string-typed query criterion supplied to its query builder, and instead passes it to the database as a server-side JavaScript expression. An unauthenticated party able to influence the value an application supplies as a query argument may cause code ",
         "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-93753 - deepmerge through 4.3.1 Prototype Poisoning via mergeObject",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93753",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-18T18:18:34.000Z",
-        "contentSnippet": "deepmerge through 4.3.1 contains a prototype poisoning vulnerability in the mergeObject() function that fails to properly validate keys being written to target objects. Attackers can supply malicious source objects in merge operations to inject attacker-controlled properties into",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-93752 - CSSOM through 0.5.0 Denial of Service via length Property",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93752",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-18T18:18:34.000Z",
-        "contentSnippet": "CSSOM through 0.5.0 contains a denial of service vulnerability in CSSStyleDeclaration.setProperty() that fails to validate reserved property names. Attackers can supply a stylesheet with a declaration named length to replace the internal counter and trigger excessive memory alloc",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-93751 - uri-js through 4.4.1 Improper UTF-8 Decoding via pctDecChars",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93751",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-18T18:18:34.000Z",
-        "contentSnippet": "uri-js through 4.4.1 contains an improper UTF-8 decoding vulnerability in pctDecChars() that decodes invalid and overlong percent-encoded sequences into ASCII metacharacters. Attackers can craft percent-encoded payloads to bypass platform decoder validation and inject path traver",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-93750 - http-cache-semantics through 4.2.0 Cross-Client Cache Disclosure via Vary Wildcard",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93750",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-18T18:18:33.000Z",
-        "contentSnippet": "http-cache-semantics through 4.2.0 contains a cache validation vulnerability in the _varyMatches() function that fails to properly validate Vary header wildcards due to byte-for-byte string comparison. Attackers can request URLs previously fetched by other clients to receive cach",
-        "cveScore": 8.2,
         "cveSeverity": "HIGH"
       }
     ],
@@ -2310,6 +2310,13 @@
     ],
     "hardware": [
       {
+        "title": "ChatGPT-6 Astra cracks 108-year-old unsolved WWI German code for the first time — radio message sharing enemy movement intelligence had evaded decoding, 1918 Crimean fleet warning verified against HMS",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/chatgpt-6-astra-cracks-108-year-old-unsolved-wwi-german-code-for-the-first-time-radio-message-sharing-enemy-movement-intelligence-had-evaded-decoding-1918-crimean-fleet-warning-verified-against-hms-canterbury-logs",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-19T15:02:02.000Z",
+        "contentSnippet": "108 years after it was originally transmitted, an encrypted World War I German radio message has apparently been deciphered for the first time."
+      },
+      {
         "title": "Father loses job over 9-year-old spending $118,000 on Minecraft YouTube ads using his company's credit card — 'I’m going to be working until I’m like 94,' refuses to set up GoFundMe or put up crypto c",
         "link": "https://www.tomshardware.com/video-games/father-loses-job-over-9-year-old-spending-usd118-000-on-youtube-ads-using-his-companys-credit-card-refuses-to-set-up-gofundme-or-put-up-crypto-coin-to-help-repay-massive-bill",
         "source": "Tom's Hardware",
@@ -3001,13 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-09-14T14:23:12.000Z",
         "contentSnippet": "A developer has wired up the ZLUDA project to AMD's HIP libraries for Windows, putting a small but signifcant bridge over NVIDIA's CUDA moat."
-      },
-      {
-        "title": "Need for Speed Underground 2 now runs directly on Nintendo Switch — other Classic Windows titles playable thanks to custom firmware boot",
-        "link": "https://www.tomshardware.com/video-games/retro-gaming/need-for-speed-underground-2-now-runs-directly-on-nintendo-switch-other-classic-windows-titles-playable-thanks-to-custom-firmware-boot",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-14T13:36:24.000Z",
-        "contentSnippet": "Retro gaming fans who own Nintendo Switch consoles now have several classic Windows titles they can now enjoy."
       }
     ]
   }
