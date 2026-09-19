@@ -1,8 +1,80 @@
 {
-  "updatedAt": "2026-09-19T10:01:05.754Z",
+  "updatedAt": "2026-09-19T14:03:30.497Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-93987 - rclone serve docker Path Traversal via Volume Name",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93987",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-19T12:16:42.000Z",
+        "contentSnippet": "rclone versions 1.56.0 through 1.75.0 contain a path traversal vulnerability in the `rclone serve docker` volume plugin. newVolume() in cmd/serve/docker/volume.go computes a volume's mountpoint as filepath.Join(drv.root, name) from the attacker-supplied `name` field of a Docker V",
+        "cveScore": 4.6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-93986 - rclone before 1.75.1 Path Traversal via Directory Listing Names",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93986",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-19T12:16:42.000Z",
+        "contentSnippet": "rclone before 1.75.1 fails to confine names from server and third-party listing responses to the listed directory, allowing path traversal sequences in object names. Attackers can craft special names containing forward slashes and parent directory references to potentially write ",
+        "cveScore": 3.1,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-93985 - OpenPanel js-runtime JavaScript Template Sandbox Escape RCE",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93985",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-19T12:16:41.000Z",
+        "contentSnippet": "OpenPanel js-runtime through commit bad75bdd contains a sandbox escape vulnerability in the JavaScript webhook template validator that fails to block computed member access to constructor chains. Attackers with project write access can create webhook templates using computed prop",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-93984 - OpenPanel API Authentication Bypass via Unverified Client Secret",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93984",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-19T12:16:41.000Z",
+        "contentSnippet": "OpenPanel tracking API through commit bad75bddc74d12d36cfb843f4531d3b830a8d994 fails to verify client secret cryptographic hash before authorizing revenue events and bot filtering. Attackers with only a public client ID can supply arbitrary dummy secrets to inject forged revenue ",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-93983 - OpenPanel SQL Injection via ClickHouse Property Key Filter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93983",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-19T12:16:41.000Z",
+        "contentSnippet": "OpenPanel through commit bad75bdd fails to escape property keys in ClickHouse SQL queries, allowing authenticated users to inject boolean SQL terms. Attackers can supply crafted filter names to bypass project isolation and access metrics from other projects.",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-93982 - OpenPanel MCP Authentication Token in Query Parameter Logged Plaintext",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93982",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-19T12:16:41.000Z",
+        "contentSnippet": "OpenPanel through commit bad75bdd writes Model Context Protocol authentication tokens from URL query parameters to plaintext application logs without redaction. Attackers with access to application stdout or centralized logging systems can capture base64-encoded credentials to re",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-93981 - hono/jsx before 4.13.7 Cross-Site Scripting via Unescaped Strings",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93981",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-19T12:16:41.000Z",
+        "contentSnippet": "hono before 4.13.7 fails to HTML-escape plain strings rendered by hono/jsx as a child or fallback of Suspense, as a string child of ErrorBoundary alongside an asynchronous sibling, as the single child of a Context.Provider, or as the root value passed to renderToString() or rende",
+        "cveScore": 4.7,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-78030 - DBI versions before 1.653 for Perl load arbitrary modules via unvalidated dbm_type and dbm_mldbm attributes in DBD::DBM",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78030",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-19T11:16:37.000Z",
+        "contentSnippet": "DBI versions before 1.653 for Perl load arbitrary modules via unvalidated dbm_type and dbm_mldbm attributes in DBD::DBM. DBD::DBM passes the dbm_type and dbm_mldbm connect attributes to require without checking that the value names a module. require treats a path-shaped string as",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2026-9858 - Partial Shipment for Woocommerce <= 3.4 - Missing Authorization to Authenticated (Subscriber+) Arbitrary Settings Modification via wxp_order_shipment, wxp_order_item_shipment, and wxp_",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-9858",
@@ -830,78 +902,6 @@
         "contentSnippet": "http-cache-semantics through 4.2.0 contains a cache validation vulnerability in the _varyMatches() function that fails to properly validate Vary header wildcards due to byte-for-byte string comparison. Attackers can request URLs previously fetched by other clients to receive cach",
         "cveScore": 8.2,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-93749 - source-map-js through 1.2.1 Event Loop Denial of Service",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93749",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-18T18:18:33.000Z",
-        "contentSnippet": "source-map-js through 1.2.1 fails to validate the per-section offset line value in indexed source maps, allowing attackers to specify arbitrary numeric values. Attackers can supply extremely large offset line values that cause synchronous event loop blocking for extended periods,",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-93748 - http-cache-semantics through 4.2.0 Cross-User Cache Disclosure via max-stale",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93748",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-18T18:18:33.000Z",
-        "contentSnippet": "http-cache-semantics through 4.2.0 fails to properly validate security-zeroed cache entries when processing client max-stale directives, allowing unauthenticated attackers to retrieve cached responses belonging to other users. Attackers can request the same URL with a large max-s",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-93432 - Io.quarkus.qute:quarkus-core: cross-site scripting (xss) and json injection via qute {#eval} section in quarkus",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93432",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-18T18:18:26.000Z",
-        "contentSnippet": "A flaw was found in the Quarkus Qute template engine. When the {#eval} section helper processes a sub-template, it fails to pass the parent template's content type information. This bypasses standard escaping mechanisms, allowing untrusted data to be output as raw, unescaped text",
-        "cveScore": 6.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-92768 - Cockpit-machines: sensitive data exposure in process list via command-line",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92768",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-18T18:18:17.000Z",
-        "contentSnippet": "A flaw was found in cockpit-machines. This vulnerability allows a local attacker to expose sensitive Virtual Machine (VM) credentials, including plaintext passwords, by inspecting process command-line arguments during VM creation or installation. The cockpit-machines component pa",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-92747 - Cockpit-machines: cockpit-machines: sensitive data exposure of guest credentials via json argument in process list",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92747",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-18T18:18:16.000Z",
-        "contentSnippet": "A flaw was found in `cockpit-machines`. This vulnerability allows a local attacker with the ability to inspect running processes to expose sensitive guest virtual machine (VM) credentials, such as `rootPassword` and `userPassword`. This occurs when the `install_machine.py` script",
-        "cveScore": 5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-92745 - Cockpit-machines: cockpit-machines: information disclosure of rhsm offline token via process arguments",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92745",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-18T18:18:16.000Z",
-        "contentSnippet": "A flaw was found in cockpit-machines. This vulnerability allows a local attacker with the ability to inspect process metadata to disclose a sensitive Red Hat Subscription Management (RHSM) offline token. The token is exposed when it is passed as a command-line argument to a helpe",
-        "cveScore": 5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-92702 - Cocos AI: Intra-handshake attested TLS implementation can accept Evidence with nil, empty, or omitted reportData in the AMD SEV-SNP path",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92702",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-18T18:18:16.000Z",
-        "contentSnippet": "Cocos AI is a confidential computing system for running AI workloads inside trusted execution environments. In versions up to and including 0.8.2, the intra-handshake attested TLS (aTLS) AMD SEV-SNP verification path does not enforce attestation freshness when the expected report",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-92701 - Cocos AI: Intra-handshake attested TLS implementation is vulnerable to session-misbinding attacks for Intel TDX verifier path",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92701",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-18T18:18:16.000Z",
-        "contentSnippet": "trusted execution environments. In versions up to and including 0.8.2, the intra-handshake attested TLS (aTLS) Intel TDX verification path does not copy the expected current-session freshness value into the TDX quote-body policy before quote validation, so structurally valid TDX ",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
       }
     ],
     "ai": [
@@ -1608,6 +1608,13 @@
     ],
     "virtualization": [
       {
+        "title": "TrueNAS Is Only the Beginning: 5 Proxmox Storage Predictions for 2027",
+        "link": "https://www.virtualizationhowto.com/2026/09/truenas-is-only-the-beginning-5-proxmox-storage-predictions-for-2027/",
+        "source": "Virtualization HowTo",
+        "isoDate": "2026-09-19T13:08:21.000Z",
+        "contentSnippet": "With all the recent announcements that we are seeing with Proxmox as of late, it has made me stop and think about what the future holds for the platform. The… The post TrueNAS Is Only the Beginning: 5 Proxmox Storage Predictions for 2027 appeared first on Virtualization Howto."
+      },
+      {
         "title": "7 New Home Lab Projects to Try This Weekend: September 18, 2026",
         "link": "https://www.virtualizationhowto.com/2026/09/7-new-home-lab-projects-to-try-this-weekend-september-18-2026/",
         "source": "Virtualization HowTo",
@@ -2299,16 +2306,65 @@
         "source": "Virtualization HowTo",
         "isoDate": "2026-07-01T12:04:42.000Z",
         "contentSnippet": "I am always on the lookout for new and interesting tools that allow us to manage our Proxmox servers and clusters more efficiently and overall, a little easier. I stumbled… The post I Found a New Way to Manage Proxmox Without Opening the Web UI appeared first on Virtualization Ho"
-      },
-      {
-        "title": "I Thought Docker Would Restart Unhealthy Containers. I Was Missing One Tool.",
-        "link": "https://www.virtualizationhowto.com/2026/06/i-thought-docker-would-restart-unhealthy-containers-i-was-missing-one-tool/",
-        "source": "Virtualization HowTo",
-        "isoDate": "2026-06-30T11:52:06.000Z",
-        "contentSnippet": "If you are like me, for the longest time, I just assumed that Docker was very smart in the way it recovers unhealthy containers. And, to be fair, there is… The post I Thought Docker Would Restart Unhealthy Containers. I Was Missing One Tool. appeared first on Virtualization Howto"
       }
     ],
     "hardware": [
+      {
+        "title": "Father loses job over 9-year-old spending $118,000 on Minecraft YouTube ads using his company's credit card — 'I’m going to be working until I’m like 94,' refuses to set up GoFundMe or put up crypto c",
+        "link": "https://www.tomshardware.com/video-games/father-loses-job-over-9-year-old-spending-usd118-000-on-youtube-ads-using-his-companys-credit-card-refuses-to-set-up-gofundme-or-put-up-crypto-coin-to-help-repay-massive-bill",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-19T13:37:12.000Z",
+        "contentSnippet": "Mighty Mike Play's dad is trying to figure out how to pay back the $118k his son accidentally spent on YouTube ads. He also warned against fundraisers made in their name, since they aren't making one yet."
+      },
+      {
+        "title": "Acer Nitro XV273U F5 gaming monitor review: One of the fastest LCDs on the planet",
+        "link": "https://www.tomshardware.com/monitors/gaming-monitors/acer-nitro-xv273u-f5-27-inch-qhd-540-hz-gaming-monitor-review",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-19T13:00:00.000Z",
+        "contentSnippet": "Acer’s Nitro XV273U F5 might be the fastest LCD on the planet. This 27-inch QHD IPS panel boasts 540 Hz and 1,000 Hz at HD resolution. It also delivers Adaptive-Sync, HDR10, HDR 600, and wide gamut color."
+      },
+      {
+        "title": "Researchers create DNA computer that performs 100-bit calculations without electricity — molecular system uses self-assembling strands to perform computing",
+        "link": "https://www.tomshardware.com/tech-industry/researchers-create-dna-computer-that-performs-100-bit-calculations-without-electricity-molecular-system-uses-self-assembling-strands-to-perform-computing",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-19T12:30:00.000Z",
+        "contentSnippet": "Maynooth University researchers built a scaffolded DNA computer that uses molecular reactions to perform arithmetic and 100-bit calculations without electrical power."
+      },
+      {
+        "title": "This week on Tom's Hardware Premium: September 19, 2026 — Steam Frame interview, killer AI models, and the DRAM crisis deepens",
+        "link": "https://www.tomshardware.com/tech-industry/this-week-on-toms-hardware-premium-september-19-2026-steam-frame-interview-killer-ai-models-and-the-dram-crisis-deepens",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-19T12:00:00.000Z",
+        "contentSnippet": "This week on Tom's Hardware Premium, we offer deep-dives into the Steam Frame, explore how AI is changing the landscape of consumer electrionics, and how advanced AI accelerators are reaching Eastern shores, despite export controls."
+      },
+      {
+        "title": "Fully custom copper PC features upcycled blowtorch reservoir — antique wooden pedestal complements steampunk design hiding a Ryzen 7 9800X3D, RX 9070 XT",
+        "link": "https://www.tomshardware.com/desktops/pc-building/fully-custom-copper-pc-features-upcycled-blowtorch-reservoir-antique-wooden-pedestal-complements-steampunk-design-hiding-a-ryzen-7-9800x3d-rx-9070-xt",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-19T11:30:00.000Z",
+        "contentSnippet": "If Edison and Stephenson had teamed up to build a gaming PC, it might have looked like this custom copper and wood all-AMD design."
+      },
+      {
+        "title": "Elon Musk's Terafab hits a roadblock before making a single chip, receives cease-and-desist order — firm files trademark lawsuit, has sold Tera-Fab-branded lithography tools for over a decade",
+        "link": "https://www.tomshardware.com/tech-industry/semiconductors/elon-musks-terafab-hits-a-roadblock-before-making-a-single-chip-receives-cease-and-desist-order-firm-files-trademark-lawsuit-has-sold-tera-fab-branded-lithography-tools-for-over-a-decade",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-19T11:00:00.000Z",
+        "contentSnippet": "Elon Musk's Terafab semiconductor project has run into an unexpected trademark dispute with Tera-print, a small U.S. company that has used the Tera-Fab name for its tabletop lithography equipment for about a decade."
+      },
+      {
+        "title": "Intel suspends bug bounty program that paid up to $100,000 per flaw — new Intigriti disclosure program offers no rewards",
+        "link": "https://www.tomshardware.com/tech-industry/cyber-security/intel-suspends-bug-bounty-program-that-paid-up-to-usd100-000-per-flaw-new-intigriti-disclosure-program-offers-no-rewards",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-19T10:30:00.000Z",
+        "contentSnippet": "Intel’s bug bounty program on Intigriti now shows as suspended, and a new Intel disclosure program there pays no bounties."
+      },
+      {
+        "title": "Enthusiast digs into CPU substrate for surgery to replace ripped-off data pin — resurrected chip boots and hits 33% overclock",
+        "link": "https://www.tomshardware.com/pc-components/cpus/enthusiast-digs-into-cpu-substrate-to-replace-ripped-off-data-pin-resurrected-chip-boots-and-hits-33-percent-overclock",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-19T10:00:00.000Z",
+        "contentSnippet": "An Intel Celeron 1200 (Tualatin) was revived from the dead after a ripped-off pin was successfully replaced."
+      },
       {
         "title": "Kioxia XL1 CXL XL-FLASH NAND Device Shown",
         "link": "https://www.servethehome.com/kioxia-xl1-cxl-xl-flash-nand-device-shown/",
@@ -2317,7 +2373,7 @@
         "contentSnippet": "The Kioxia XL1 is an XL-FLASH Generation 2 NAND device that is attached to a system as a 512GB memory expansion device via CXL The post Kioxia XL1 CXL XL-FLASH NAND Device Shown appeared first on ServeTheHome."
       },
       {
-        "title": "AMD shares first official benchmarks for EPYC 'Venice' CPUs, targets Nvidia — company claims 256-core chip is more than twice as fast as Nvidia Vera, 96-core model 20% faster per-core",
+        "title": "AMD targets Nvidia with first official benchmarks for EPYC 'Venice' CPUs — company claims 256-core chip is more than twice as fast as Nvidia Vera, 96-core model 20% faster per-core",
         "link": "https://www.tomshardware.com/pc-components/cpus/amd-shares-first-official-benchmarks-for-epyc-venice-cpus-targets-nvidia-company-claims-256-core-chip-is-more-than-twice-as-fast-as-nvidia-vera-96-core-model-20-percent-faster-per-core",
         "source": "Tom's Hardware",
         "isoDate": "2026-09-18T21:51:29.000Z",
@@ -2952,62 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-09-14T13:36:24.000Z",
         "contentSnippet": "Retro gaming fans who own Nintendo Switch consoles now have several classic Windows titles they can now enjoy."
-      },
-      {
-        "title": "Micron offers Taiwan employees $31,650 cash bonus as unions threaten strike over AI windfall — workers reject record payout package, demand 15% profit-sharing plan",
-        "link": "https://www.tomshardware.com/tech-industry/semiconductors/micron-offers-taiwan-employees-usd31-650-cash-bonus-as-unions-threaten-strike-over-ai-windfall-workers-reject-record-payout-package-demand-15-percent-profit-sharing-plan",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-14T12:00:00.000Z",
-        "contentSnippet": "Micron is offering Taiwan employees a NT$1 million cash bonus, but unions have rejected the package and are demanding permanent profit sharing as strike talks continue."
-      },
-      {
-        "title": "Proven 8-pin PCIe plugs aren't immune to melting — Thermal Grizzly WireView adapter burns out on Radeon RX 7900 XTX",
-        "link": "https://www.tomshardware.com/pc-components/gpus/proven-8-pin-pcie-plugs-arent-immune-to-melting-thermal-grizzly-wireview-adapter-burns-out-on-radeon-rx-7900-xtx",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-14T11:30:00.000Z",
-        "contentSnippet": "Three 8-pin connectors on a Thermal Grizzly WireView reportedly suffered burning and melting while connected to a Radeon RX 7900 XTX, with the company now investigating what caused the failure."
-      },
-      {
-        "title": "Meta Quest user vibe-codes 3D object throwing to 3D printer — ‘I've never felt more like Tony Stark’ says the software engineer",
-        "link": "https://www.tomshardware.com/3d-printing/meta-quest-user-vibe-codes-3d-object-throwing-to-3d-printer-ive-never-felt-more-like-tony-stark-says-the-software-engineer",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-14T11:17:30.000Z",
-        "contentSnippet": "A software engineer has shown off a futuristic Meta Quest plus 3D printer workflow where models are 'thrown' to the output device."
-      },
-      {
-        "title": "Save $1,289 when you build an extreme PC with these top-tier components — combo deal features AMD's Ryzen 9 9950X3D2 processor along with an 8TB 9100 Pro SSD, MSI X870E motherboard, and 32GB of DDR5-6",
-        "link": "https://www.tomshardware.com/pc-components/save-usd1-289-when-you-build-an-extreme-pc-with-these-top-tier-components-combo-deal-features-amds-ryzen-9-9950x3d2-processor-along-with-an-8tb-9100-pro-ssd-msi-x870e-motherboard-and-32gb-of-ddr5-6000-memory",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-14T11:10:03.000Z",
-        "contentSnippet": "Save $1,289 on Newegg's epic component bundle, which features AMD's top processor, a massive 8TB Samsung 9100 Pro SSD, and 32GB of DDR5 memory"
-      },
-      {
-        "title": "Asus ROG Swift PG27UCWM gaming monitor review: Speed and pixel density in a premium package",
-        "link": "https://www.tomshardware.com/monitors/gaming-monitors/asus-rog-swift-pg27ucwm-27-inch-4k-oled-gaming-monitor-review",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-14T11:05:00.000Z",
-        "contentSnippet": "Asus’ latest ROG Swift display is the PG27UCWM, a 27-inch 4K OLED panel with Tandem RGB Stripe technology, advanced cooling, 240 Hz, 480 Hz in FHD resolution, Adaptive-Sync, HDR400, HDR10, Dolby Vision and wide gamut color."
-      },
-      {
-        "title": "Russian freelancers use Claude to program autonomous combat drone swarm — AI-enabled target selection and detonation without a human in the loop",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/russian-freelancers-use-claude-to-program-autonomous-combat-drone-swarm-ai-enabled-target-selection-and-detonation-without-a-human-in-the-loop",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-14T11:00:00.000Z",
-        "contentSnippet": "Russia turned Claude into a tool for weapons development, espionage, and propaganda, Anthropic's new threat report claims."
-      },
-      {
-        "title": "Maryland data center developers offer residents biggest-ever US community benefits package as big tech seeks to quell fears — $110 million deal includes $30 million elementary school, water reclamatio",
-        "link": "https://www.tomshardware.com/tech-industry/data-centers/maryland-data-center-developers-offer-residents-biggest-ever-us-community-benefits-package-as-big-tech-seeks-to-quell-fears-usd110-million-deal-includes-usd30-million-elementary-school-water-reclamation-system-and-more",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-14T10:32:00.000Z",
-        "contentSnippet": "A new report claims AI data center builders are getting more savvy about offering communities tangible benefits to get their projects approved."
-      },
-      {
-        "title": "Modders halve FSR 4 render times on AMD’s PS5-derived BC-250 mining APU — portable FidelityFX DLL cuts 1440p upscaling time from 11.51 ms to 5.92 ms",
-        "link": "https://www.tomshardware.com/pc-components/modders-halve-fsr-4-render-times-on-amds-ps5-derived-bc-250-mining-apu-portable-fidelityfx-dll-cuts-1440p-upscaling-time-from-11-51-ms-to-5-92-ms",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-14T10:30:00.000Z",
-        "contentSnippet": "Modders have nearly halved FSR 4 processing time on AMD’s PS5-derived BC-250, using a portable FidelityFX DLL that cuts 1440p upscaling cost to 5.92 ms."
       }
     ]
   }
