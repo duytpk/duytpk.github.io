@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-09-22T10:39:29.483Z",
+  "updatedAt": "2026-09-22T15:17:29.811Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-95697 - MISP: Insufficient Authorization Allows Sharing Group Editors to Overwrite Organization Metadata",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95697",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-22T14:31:25.000Z",
+        "contentSnippet": "MISP contains an authorization flaw in the Organisation model's captureOrg method. When the $force parameter is set to true, the method unconditionally overwrites organization metadata fields without verifying that the invoking user holds sufficient privileges. A user with a shar",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-95501 - mtrano APENCMS Template weasel.php eval code injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95501",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-22T14:30:09.000Z",
+        "contentSnippet": "A vulnerability was found in mtrano APENCMS up to 6546096d354153309693efabb9a0d824628ed4f5. The affected element is the function eval of the file cms/weasel.php of the component Template Engine. The manipulation of the argument $_CMS['site'] results in code injection. The attack ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-95693 - MISP Information Disclosure via Forged Upload Path",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95693",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-22T14:22:28.000Z",
+        "contentSnippet": "In MISP, the EventReport::uploadPicture method in processed a caller-supplied tmp_name field by invoking file_exists(), mime_content_type(), and exif_imagetype() on the supplied path before verifying that the value was a genuine PHP upload via is_uploaded_file(). An authenticated",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-94127 - BIG-IP APM OAuth vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94127",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-22T14:17:42.000Z",
+        "contentSnippet": "When a BIG-IP APM access policy and an OAuth profile is configured on a virtual server, specific malicious traffic can lead to Remote Code Execution (RCE). Impact: This vulnerability allows an unauthenticated attacker to perform remote code execution. The BIG-IP system in Applian",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-95682 - MISP Stored Cross-Site Scripting via Unescaped Organization Name in Admin Email View",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95682",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-22T14:17:22.000Z",
+        "contentSnippet": "MISP contains a stored cross-site scripting (XSS) vulnerability in the admin email composition screen. The MISP.org organization name setting was interpolated directly into a JavaScript string literal using an unescaped PHP echo: var org = \" \";. Because the value was placed insid",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-95679 - MISP Unauthenticated Blind SSRF via XML Body Processing",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95679",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-22T14:17:22.000Z",
+        "contentSnippet": "MISP's RequestHandlerComponent automatically decodes XML request bodies on all write requests. The underlying Xml::build() library contains a logic error in its readFile guard condition (readFile && http || https), where PHP operator precedence causes the https branch to bypass t",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-95675 - D-Link DAP-1360 6.14 Unauthenticated RCE via Web Management Interface",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95675",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-22T14:17:22.000Z",
+        "contentSnippet": "D-Link DAP-1360 firmware version 6.14 and earlier contains an unauthenticated remote code execution vulnerability that allows remote attackers to execute arbitrary commands as root by sending crafted requests to the device's web management interface without valid credentials. Att",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-95674 - MISP EventsController queryEnrichment allows querying unavailable or legacy modules without validation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95674",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-22T14:17:21.000Z",
+        "contentSnippet": "In MISP, the queryEnrichment method in EventsController.php accepted a module name parameter and iterated over the list of enabled modules to find a match. If the specified module was not present in the enabled modules list, the code silently continued processing using default pa",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-95671 - MISP Collections: Missing Authorization Check for Sharing Group on PUT Request in collections/add",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95671",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-22T14:17:21.000Z",
+        "contentSnippet": "In MISP, the CollectionsController add() method enforced the sharing-group usability authorization check and element capture only when the HTTP request method was POST. However, the underlying CRUDComponent::add() method persists data on both POST and PUT requests. As a result, a",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-95667 - MISP Installer Log and FIFO Created World-Readable, Exposing Sensitive Credentials",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95667",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-22T14:17:21.000Z",
+        "contentSnippet": "The MISP installer scripts (for Debian 12, Debian 13, Ubuntu 24.04, and RHEL 9.4) create a log file at /var/log/misp_install.log and a named pipe (FIFO) at /var/log/misp_install.log.pipe to capture all installer output. The log captures highly sensitive data including the generat",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-95666 - Unbounded post ID array in the bulk reactions endpoint allows denial of service",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95666",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-22T14:17:21.000Z",
+        "contentSnippet": "Mattermost versions 11.9.x",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-95665 - MISP Reflected Cross-Site Scripting in Event Export Confirmation Form via Unescaped JSON",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95665",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-22T14:17:21.000Z",
+        "contentSnippet": "MISP contains a reflected cross-site scripting (XSS) vulnerability in the event REST search export confirmation form. The view template app/View/Events/ajax/eventRestSearchExportConfirmationForm.ctp renders a URL-supplied event ID list into a single-quoted JavaScript string liter",
+        "cveScore": 5.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-95499 - JosephChuks php-file-manager-with-code-editor filemanager.php move_uploaded_file unrestricted upload",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95499",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-22T14:17:20.000Z",
+        "contentSnippet": "A flaw has been found in JosephChuks php-file-manager-with-code-editor up to 3.0. This issue affects the function move_uploaded_file of the file filemanager.php. Executing a manipulation of the argument files can lead to unrestricted upload. The attack can be executed remotely. T",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-95396 - sfturing hosp_order Public Search Handlers HospitalController.java cross site scripting",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95396",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-22T14:17:20.000Z",
+        "contentSnippet": "A vulnerability was identified in sfturing hosp_order up to 627f426331da8086ce8fff2017d65b1ddef384f8. Affected is an unknown function of the file HospitalController.java of the component Public Search Handlers. The manipulation of the argument Search leads to cross site scripting",
+        "cveScore": 5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-93343 - MarketKing < 2.1.72 Missing Authorization via marketking_admin_vendors_ajax",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93343",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-22T14:17:18.000Z",
+        "contentSnippet": "MarketKing plugin for WordPress before 2.1.72 contains a missing authorization vulnerability in the marketking_admin_vendors_ajax AJAX action that allows authenticated attackers with subscriber-level access or higher to retrieve the complete vendor directory by sending a crafted ",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-93342 - MarketKing < 2.1.72 Missing Authorization via marketking_duplicate_product AJAX",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93342",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-22T14:17:18.000Z",
+        "contentSnippet": "MarketKing plugin for WordPress before 2.1.72 contains a missing authorization vulnerability in the marketking_duplicate_product AJAX action that allows authenticated attackers with subscriber-level access or higher to duplicate any vendor's product by supplying an arbitrary prod",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-93341 - MarketKing < 2.1.72 Missing Authorization via marketking_send_refund AJAX",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93341",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-22T14:17:18.000Z",
+        "contentSnippet": "MarketKing plugin for WordPress before 2.1.72 contains a missing authorization vulnerability in the marketking_send_refund AJAX action that allows authenticated attackers with subscriber-level access or higher to create refund requests against any order by supplying an arbitrary ",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-12718 - SQLi in Karel Electronics' KarelIPS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12718",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-22T14:17:12.000Z",
+        "contentSnippet": "Improper neutralization of special elements used in an SQL command ('SQL injection') vulnerability in Karel Electronic Industry and Trade Inc. KarelIPS allows Blind SQL Injection. This issue affects KarelIPS: through 22092026. NOTE: The vendor was contacted and it was learned tha",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-95500 - JosephChuks php-file-manager-with-code-editor Save codeEditor.php file_put_contents unrestricted upload",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95500",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-22T14:15:11.000Z",
+        "contentSnippet": "A vulnerability has been found in JosephChuks php-file-manager-with-code-editor up to 3.0. Impacted is the function file_put_contents of the file codeEditor.php of the component Save Handler. The manipulation of the argument filename/content leads to unrestricted upload. The atta",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-94570 - CVE-2026-94570",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94570",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-22T14:15:00.000Z",
+        "contentSnippet": "SGLang contains a DoS vulnerability caused by missing input validation for AUX_DATA ZeroMQ control messages in the Decode worker, which enables an unauthenticated remote attacker with network reachability to the Decode control PULL socket to terminate the Decode control thread an",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-95685 - MISP Missing Authorization on replaceSuggestionInReport Event Report Action",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95685",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-22T14:13:26.000Z",
+        "contentSnippet": "MISP contains an access control flaw in the EventReports functionality. The replaceSuggestionInReport action, which allows modification of suggestion content within an event report, was incorrectly mapped to the wildcard permission ('*') in the ACLComponent, making it accessible ",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-84388 - Fortinet FortiPAM Chrome Extension UI Redressing Information Disclosure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84388",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-22T14:12:50.000Z",
+        "contentSnippet": "A improper restriction of rendered ui layers or frames vulnerability in Fortinet FortiPAM Chrome Extension 8.0 all versions, FortiPAM Chrome Extension 7.4 all versions may allow attacker to information disclosure via remote unauthenticated attack",
+        "cveScore": 9.1,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-65112 - NVIDIA Infrastructure Controller Denial of Service Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65112",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-22T14:10:35.000Z",
+        "contentSnippet": "NVIDIA Infrastructure Controller for Linux contains a vulnerability where an attacker could cause uncontrolled resource consumption. A successful exploit of this vulnerability might lead to denial of service.",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-65118 - NVIDIA Infrastructure Controller Improper Certificate Validation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65118",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-22T14:10:34.000Z",
+        "contentSnippet": "NVIDIA Infrastructure Controller for Linux contains a vulnerability where an attacker could cause improper certificate validation. A successful exploit of this vulnerability might lead to information disclosure, data tampering, and denial of service.",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-65117 - NVIDIA Infrastructure Controller Hard-coded Password Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65117",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-22T14:10:33.000Z",
+        "contentSnippet": "NVIDIA Infrastructure Controller for Linux contains a vulnerability where an attacker could cause use of a hard-coded password. A successful exploit of this vulnerability might lead to data tampering, denial of service, and information disclosure.",
+        "cveScore": 5,
+        "cveSeverity": "MEDIUM"
+      },
       {
         "title": "CVE-2026-90882 - Reflected arbitrary origins with credentials, allowing cross-origin reads of authenticated user data",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-90882",
@@ -677,231 +902,6 @@
         "contentSnippet": "jshERP through 3.6 fails to validate object ownership in by-id info, update, and delete endpoints across multiple resource types. Authenticated users can read, modify, and delete other users' business objects by submitting direct object identifiers without authorization checks.",
         "cveScore": 8.7,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-94496 - jshERP through 3.6 Privilege Escalation via Role Management",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94496",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T19:17:21.000Z",
-        "contentSnippet": "jshERP through 3.6 fails to validate caller permissions in role management endpoints, allowing authenticated users to modify any role's data scope or delete roles. Attackers can exploit the /role/update and /role/delete endpoints to escalate privileges, change data visibility to ",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-94495 - jshERP through 3.6 Missing Authorization via systemConfig",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94495",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T19:17:21.000Z",
-        "contentSnippet": "jshERP through 3.6 fails to properly validate user privileges in SystemConfigService.updateSystemConfig, allowing authenticated users to modify tenant system configuration. Attackers can rewrite or delete tenant-wide settings covering company identity, stock rules, approval behav",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-94494 - jshERP through 3.6 Tenant Information Disclosure via GET /tenant/info",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94494",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T19:17:20.000Z",
-        "contentSnippet": "jshERP through 3.6 contains a tenant isolation bypass vulnerability that allows authenticated users to read other tenants' records via the GET /tenant/info endpoint. Attackers can iterate the primary key to enumerate and access sensitive tenant data including login names, validit",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-94414 - jshERP through 3.6 Missing Authorization via updateBtnStr",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94414",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T19:17:20.000Z",
-        "contentSnippet": "jshERP through 3.6 is missing an authorization check on the POST /userBusiness/updateBtnStr endpoint that allows authenticated users to modify role button-permission definitions. Attackers can supply arbitrary roleId and btnStr parameters to overwrite button-permission configurat",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-94413 - jshERP through 3.6 Password Hash Disclosure via /user/info",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94413",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T19:17:20.000Z",
-        "contentSnippet": "jshERP through 3.6 fails to redact password hashes in the /user/info endpoint, allowing authenticated users to retrieve unsalted MD5 password digests for any user. Attackers can request arbitrary user information by supplying user IDs to obtain password hashes usable for offline ",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-94412 - jshERP through 3.6 Authorization Bypass via resetPwd",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94412",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T19:17:20.000Z",
-        "contentSnippet": "jshERP through 3.6 contains an authorization bypass vulnerability in the POST /user/resetPwd endpoint that allows authenticated users to reset any other user's password. Attackers can submit a request with an arbitrary target user ID to reset that account's password to a known de",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-94411 - jshERP 3.6 Privilege Escalation via updateOneValueByKeyIdAndType",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94411",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T19:17:20.000Z",
-        "contentSnippet": "jshERP 3.6 contains a privilege escalation vulnerability in the updateOneValueByKeyIdAndType endpoint that allows authenticated users to grant themselves arbitrary roles. Attackers can send a POST request with type=UserRole, their own user ID, and a role ID list to escalate from ",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-94403 - ColorFul iGameCenter IOCTL ene.sys sub_140001AF0 untrusted pointer dereference",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94403",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T19:17:19.000Z",
-        "contentSnippet": "A weakness has been identified in ColorFul iGameCenter 1.0.3.4. This impacts the function sub_140001AF0 in the library ene.sys of the component IOCTL Handler. This manipulation causes untrusted pointer dereference. The attack can only be executed locally. The exploit has been mad",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-91167 - Warpgate: Missing authorization check on `PUT /users/:id/roles/:role_id` allows any admin to bypass the `AccessRolesAssign` permission boundary",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-91167",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T19:17:15.000Z",
-        "contentSnippet": "Warpgate is an open source SSH, HTTPS and MySQL bastion host for Linux. Prior to 0.28.4, PUT /@warpgate/admin/api/users/:id/roles/:role_id reaches api_update_user_role in warpgate-admin/src/api/users.rs through AdminContext but does not require AdminPermission::AccessRolesAssign.",
-        "cveScore": 6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-91166 - Warpgate: Web SSH stores a jump host's key against the target's address, so it validates as the target",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-91166",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T19:17:15.000Z",
-        "contentSnippet": "Warpgate is an open source SSH, HTTPS and MySQL bastion host for Linux. From 0.25.0 until 0.27.6, the browser SSH path in warpgate-web-ssh/src/manager.rs handles RCEvent::HostKeyUnknown without the presenting hop identity and instead passes ssh_options.host and ssh_options.port f",
-        "cveScore": 5.7,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-91165 - Warpgate: Markup injection in SSO form_post return page via unencoded redirect/error values",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-91165",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T19:17:15.000Z",
-        "contentSnippet": "Warpgate is an open source SSH, HTTPS and MySQL bastion host for Linux. Prior to 0.27.6, the response_mode=form_post SSO return path in warpgate-protocol-http/src/api/sso_provider_list.rs uses serde_json::to_string inside ReturnToSsoPostResponse without neutralizing a script-clos",
-        "cveScore": 2.4,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-91164 - Warpgate: API tokens bypass the user's allowed_ip_ranges restriction",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-91164",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T19:17:14.000Z",
-        "contentSnippet": "Warpgate is an open source SSH, HTTPS and MySQL bastion host for Linux. From 0.23.0 until 0.27.3, HTTP API token authentication resolves ConfigProvider::validate_api_token into RequestAuthorization::UserToken without enforcing the owning user's allowed_ip_ranges against the trust",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-82165 - Dell Command | Integration Suite for System Center Incorrect Default Permissions Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82165",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T19:17:12.000Z",
-        "contentSnippet": "Dell Command | Integration Suite for System Center, versions prior to 6.7.2, contain an Incorrect Default Permissions vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Information Disclosure.",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-85751 - Mailu: Authentication bypass in header-based proxy authentication via spoofable `X-Forwarded-By` trust",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85751",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T15:39:24.000Z",
-        "contentSnippet": "Mailu is a mail server distributed as a set of Docker images. From Mailu 2.0 until 2024.06.55 and prior to Mailu helm-charts 2.7.3, deployments with PROXY_AUTH_WHITELIST configured but REAL_IP_HEADER unset trusted a client-controlled X-Forwarded-By header for header-based proxy a",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-53940 - Conda: Entry-point path traversal in noarch:python install (arbitrary file write) — canonical Python implementation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53940",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T15:35:37.000Z",
-        "contentSnippet": "Conda is a system-level binary package and environment manager that runs on major operating systems and platforms. Prior to 26.5.2, parse_entry_point_def in conda/common/path/python.py accepted an unvalidated entry-point command from a noarch:python package's info/link.json metad",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-77165 - Database File Lock Denial of Service",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77165",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T15:25:33.000Z",
-        "contentSnippet": "File owners were unable to unlock TYPE_TOKEN locks placed by other users, leaving files permanently locked with no recovery path outside of the database.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-77166 - Mattermost Emoji Field Cross-Site Scripting or UI Redress Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77166",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T15:25:33.000Z",
-        "contentSnippet": "The emoji field in the page emoji update endpoint does not properly validate user input. By injecting long text and line breaks, the sidebar layout becomes broken and can hide other items.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-94301 - Apache MINA: CVE-2026-47065 resolveProxyClass fix missing from 2.0.X and 2.1.X branches (2.0.30 / 2.1.14) ZDRES-232",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94301",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T15:17:38.000Z",
-        "contentSnippet": "The fix for CVE-2026-47065/ZDRES-232 (\"resolveProxyClass Not Overridden - acceptMatchers Filter Bypass via java.lang.reflect.Proxy\"), released on 2026-06-02 and announced as \"Fully addressed\" in MINA 2.2.8, 2.1.13 and 2.0.29, was committed to the 2.2.X branch only. The 2.0.X and ",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-94184 - Fetchmail: fetchmail: stack-based buffer overflow in ntlm authentication (fetchmail-sa-2026-01)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94184",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T15:17:38.000Z",
-        "contentSnippet": "A stack-based buffer overflow flaw was found in fetchmail when built with NTLM support. A malicious or compromised mail server advertising NTLM authentication can send a crafted Type 2 challenge that causes fetchmail to write past a fixed stack buffer while building the NTLM auth",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-93339 - Ditty < 3.1.70 Stored XSS via Layout Tag Wrapper Attribute",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93339",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T15:17:35.000Z",
-        "contentSnippet": "Metaphor Creations Ditty (ditty-news-ticker) before 3.1.70 contains a stored cross-site scripting vulnerability that allows authenticated users with Author-level privileges or higher to inject arbitrary HTML elements by supplying malicious wrapper attribute values in layout tags.",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-86473 - Apache Airflow: Logout ignores a presented Authorization bearer token, leaving it revocable only by expiry",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86473",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T15:17:32.000Z",
-        "contentSnippet": "Apache Airflow: the Core API logout endpoint revokes only a session token presented as the _token cookie. When a client logs out presenting its credential as an Authorization bearer header instead, the endpoint returns its normal logout response but revokes nothing, so the token ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-82355 - Apache Airflow: Session cookie silently overrides explicit Authorization bearer header, enabling session fixation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82355",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T15:17:32.000Z",
-        "contentSnippet": "When a request to the Airflow core API carries both a session cookie and an explicit `Authorization: Bearer` token, Airflow resolves the caller from the cookie and ignores the bearer token, inverting the intended precedence of bearer over cookie. The request then executes -- and ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-80110 - Pki-core: dogtag pki v2 rest acl filter's reverse-lexicographic tie-break lets a ca agent invoke the admin-only raw profile creation endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-80110",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T15:17:32.000Z",
-        "contentSnippet": "A flaw was found in pki-core. The v2 REST ACL filter selects a tie-breaking permission for colliding literal and wildcard ACL keys using lexicographic string comparison rather than specificity, causing a wildcard-mapped permission to override a more specific literal-mapped permis",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-75939 - Openshift/oc-mirror: release signature verification: openpgp signatureerror checked before signed body is consumed",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75939",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T15:17:31.000Z",
-        "contentSnippet": "A flaw was found in openshift/oc-mirror. The tool incorrectly verifies PGP (Pretty Good Privacy) release image signatures by checking for signature errors before the entire signed body is processed, leading to a bypass of the signature verification. A remote attacker, by intercep",
-        "cveScore": 7.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-75158 - Apache Airflow: Assets events API returns asset events for every Dag with no per-Dag authorization filter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75158",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T15:17:31.000Z",
-        "contentSnippet": "Apache Airflow's `/assets/events` API returned asset events for every Dag in the deployment, with no filter restricting them to the Dags the caller is authorized to read. Any authenticated user holding asset-read access could therefore enumerate asset events — including the sourc",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       }
     ],
     "ai": [
@@ -1608,6 +1608,20 @@
     ],
     "virtualization": [
       {
+        "title": "Memory Tiering aware vSphere HA Admission Control in VCF/vSphere 9.1.1!",
+        "link": "https://www.yellow-bricks.com/2026/09/22/memory-tiering-aware-vsphere-ha-admission-control-in-vcf-vsphere-9-1-1/",
+        "source": "Yellow Bricks",
+        "isoDate": "2026-09-22T14:07:31.000Z",
+        "contentSnippet": "To be fair, I have not had many customers complain about the fact that vSphere HA Admission Control was not Memory Tiering aware, but if you had concerns then it is good to know that this problem was resolved with the 9.1.1 release of VCF/vSphere. For those who never gave it any "
+      },
+      {
+        "title": "I Installed the New TrueNAS Proxmox Plugin in My Home Lab. Here’s the Setup",
+        "link": "https://www.virtualizationhowto.com/2026/09/i-installed-the-new-truenas-proxmox-plugin-in-my-home-lab-heres-the-setup/",
+        "source": "Virtualization HowTo",
+        "isoDate": "2026-09-22T12:58:58.000Z",
+        "contentSnippet": "So, in case you haven’t heard yet, TrueNAS has released their official plugin for Proxmox. It means they now have a sanctioned, official plugin that they develop and support for… The post I Installed the New TrueNAS Proxmox Plugin in My Home Lab. Here’s the Setup appeared first o"
+      },
+      {
         "title": "How to enable SSH on DSM Appliance when deployed via VCFA 9.1.1",
         "link": "https://cormachogan.com/2026/09/21/how-to-enable-ssh-on-dsm-appliance-when-deployed-via-vcfa-9-1-1/",
         "source": "Cormac Hogan",
@@ -2292,25 +2306,81 @@
         "source": "Yellow Bricks",
         "isoDate": "2026-07-06T07:22:14.000Z",
         "contentSnippet": "I read a few articles the last couple of months on the topic of VCF Edge by Dhruv Tyagi , and with the 9.1 release there were a couple of interesting posts about Zero Touch Provisioning, so it was time to invite him to the podcast and explore what VCF Edge is all about. Of […] Th"
-      },
-      {
-        "title": "The Home Lab Defaults I Never Skip",
-        "link": "https://www.virtualizationhowto.com/2026/07/the-home-lab-defaults-i-never-skip/",
-        "source": "Virtualization HowTo",
-        "isoDate": "2026-07-04T12:34:47.000Z",
-        "contentSnippet": "One of the things that sometimes gets overlooked with home labbing is that good defaults matter more than we might give them credit for. When I started building out lab… The post The Home Lab Defaults I Never Skip appeared first on Virtualization Howto."
-      },
-      {
-        "title": "The Weirdest Home Lab Network Problems I’ve Actually Run Into",
-        "link": "https://www.virtualizationhowto.com/2026/07/the-weirdest-home-lab-network-problems-ive-actually-run-into/",
-        "source": "Virtualization HowTo",
-        "isoDate": "2026-07-03T12:06:43.000Z",
-        "contentSnippet": "There are definitely some home lab problems that are easier to diagnose. If you have a service you know about that crashes, a container that exits for some reason or… The post The Weirdest Home Lab Network Problems I’ve Actually Run Into appeared first on Virtualization Howto."
       }
     ],
     "hardware": [
       {
-        "title": "New DapuStor SSD pairs high-capacity QLC with a permanent pSLC region — trades 6% to 20% of its QLC capacity for more than 7x faster random writes",
+        "title": "NVIDIA Announces DSX Ready Qualification Program for Data Center Power and Cooling Hardware",
+        "link": "https://www.servethehome.com/nvidia-announces-dsx-ready-qualification-program-for-data-center-power-and-cooling-hardware/",
+        "source": "ServeTheHome",
+        "isoDate": "2026-09-22T15:00:58.000Z",
+        "contentSnippet": "NVIDIA this week has launched DSX Ready, a new qualification program for data center cooling and power hardware, for use with constructing AI data centers based on NVIDIA's DSX AI factory blueprint The post NVIDIA Announces DSX Ready Qualification Program for Data Center Power an"
+      },
+      {
+        "title": "Get this spiffy, stealthy MSI Gaming Trio RTX 5090 for just $4,299",
+        "link": "https://www.tomshardware.com/pc-components/gpus/get-this-spiffy-stealthy-msi-rtx-5090-for-just-usd4-299-geforce-week-at-walmart-serves-up-a-rare-deal-on-nvidias-fastest-gaming-gpu",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-22T15:00:52.000Z",
+        "contentSnippet": "Walmart has MSI's GeForce RTX 5090 Gaming Trio for just $4299 as part of its GeForce Week event, a rare deal on the most powerful graphics card around as the AI boom drives prices ever higher."
+      },
+      {
+        "title": "Bambu Lab R1 Review: This one stands alone",
+        "link": "https://www.tomshardware.com/maker-stem/bambu-lab-r1-review",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-22T14:00:00.000Z",
+        "contentSnippet": "Bambu Lab leverages its mastery of motion systems and UI to create a nearly perfect stand-alone laser."
+      },
+      {
+        "title": "Glorious GMMK Eternal Review: Fits anywhere, sounds great",
+        "link": "https://www.tomshardware.com/peripherals/gaming-keyboards/glorious-gmmk-eternal-review",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-22T13:00:00.000Z",
+        "contentSnippet": "Glorious' new GMMK Eternal is a compact 96-percent wired keyboard with hot-swappable mechanical switches and three layers of sound-dampening in the case."
+      },
+      {
+        "title": "‘We’ll be the first to mine Bitcoin in space’ says Nvidia-backed startup",
+        "link": "https://www.tomshardware.com/tech-industry/cryptomining/well-be-the-first-to-mine-bitcoin-in-space-says-nvidia-backed-startup-starcloud-will-fire-up-its-asics-after-its-second-spacecraft-reaches-orbit-later-this-year",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-22T12:59:50.000Z",
+        "contentSnippet": "An Nvidia-backed startup plans to establish a Bitcoin mining operation in space before the year is out."
+      },
+      {
+        "title": "US and China propose hotline to de-escalate AI threats ahead of Washington summit",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/us-and-china-propose-hotline-to-de-escalate-ai-threats-ahead-of-washington-summit-comms-channel-between-both-nations-to-be-left-open-in-case-of-national-security-threats-posed-by-autonomous-artificial-intelligence",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-22T12:13:41.000Z",
+        "contentSnippet": "The U.S. and China have proposed implementing AI red lines that will not be crossed, as well as a hotline between the two countries to provide rapid communication and opportunities for joint responses to rogue AI actions."
+      },
+      {
+        "title": "Gaming PC with RTX 5060, 32GB of RAM, and 1TB of storage gets $500 discount",
+        "link": "https://www.tomshardware.com/desktops/gaming-pcs/gaming-pc-with-rtx-5060-32gb-of-ram-and-1tb-of-storage-gets-usd500-discount-neweggs-capable-abs-cyclone-aqua-prebuilt-is-usd1-199-with-code",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-22T11:30:00.000Z",
+        "contentSnippet": "Newegg's ABS Cyclone Aqua prebuilt combines Intel's 20-core Core i7-14700F with Nvidia's RTX 5060 8GB, and 32GB of DDR4 memory for less than the cost of building a comparable system"
+      },
+      {
+        "title": "Memory chips are now more expensive than compute chips on a per-area basis",
+        "link": "https://www.tomshardware.com/pc-components/dram/dram-is-now-more-expensive-than-compute-chips-on-per-area-basis-ai-demand-drives-memory-die-value-past-leading-edge-silicon",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-22T11:12:35.000Z",
+        "contentSnippet": "DRAM makers may potentially get more money for their wafers than TSMC gets for its N3 wafers."
+      },
+      {
+        "title": "Raspberry Pi locks boards to factory RAM capacities in firmware",
+        "link": "https://www.tomshardware.com/raspberry-pi/raspberry-pi-locks-boards-to-factory-ram-capacities-in-firmware-engineer-tells-diy-modders-dont-waste-your-time-trying-repairs-or-upgrades-company-cites-shady-reseller-scams",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-22T11:07:17.000Z",
+        "contentSnippet": "Raspberry Pi users are being firmware blocked from swapping the RAM chips on their SBCs for repairs or upgrades."
+      },
+      {
+        "title": "This $299 2TB MSI SSD is one of the least expensive PCIe 4.0 SSDs you can buy right now",
+        "link": "https://www.tomshardware.com/pc-components/this-usd299-2tb-msi-ssd-is-one-of-the-least-expensive-pcie-4-0-ssds-you-can-buy-right-now-just-10-cents-per-gb-yields-a-speedy-upgrade-for-your-internal-storage",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-22T10:48:20.000Z",
+        "contentSnippet": "Get a solid deal on the 2TB MSI Spatium M461 SSD. Just $299 after promo code nets one of the least expensive Gen 4x4 SSDs available today."
+      },
+      {
+        "title": "New DapuStor SSD pairs high-capacity QLC with a permanent pSLC region",
         "link": "https://www.tomshardware.com/pc-components/ssds/dapustor-splits-qlc-ssd-to-create-a-fast-pslc-region-in-dual-mode-drive-trades-6-percent-to-20-percent-of-its-qlc-capacity-for-more-than-7x-faster-random-writes",
         "source": "Tom's Hardware",
         "isoDate": "2026-09-22T10:30:00.000Z",
@@ -2938,76 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-09-17T10:59:27.000Z",
         "contentSnippet": "OpenAI says one of its unreleased models modified its instructions unprompted during testing."
-      },
-      {
-        "title": "Corsair's 32GB Vengeance kits are the cheapest DDR5 RAM on the market right now — lock down 6,200 MT/s speeds for $419.99 or save $10 on a slower RGB kit for $409.99 before memory prices climb further",
-        "link": "https://www.tomshardware.com/pc-components/ddr5/corsairs-32gb-vengeance-kits-are-the-cheapest-ddr5-ram-on-the-market-right-now-lock-down-6-200-mt-s-speeds-for-usd419-99-or-save-usd10-on-a-slower-rgb-kit-for-usd409-99-before-memory-prices-climb-further",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-17T10:59:04.000Z",
-        "contentSnippet": "This Corsair stock for 32GB Vengeance RAM means you can snatch DDR5 modules at some of its cheapest pricing right now, with a DDR5-6200 kit costing $419.99."
-      },
-      {
-        "title": "Retired Microsoft Engineer details the story about the famous leaked FCKGW Windows XP key — copy protection used 10MB of encrypted Microsoft Bob for validation",
-        "link": "https://www.tomshardware.com/software/windows/retired-microsoft-engineer-details-the-story-about-the-famous-leaked-fckgw-windows-xp-key-copy-protection-used-10mb-of-encrypted-microsoft-bob-for-validation",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-17T10:30:00.000Z",
-        "contentSnippet": "Retired engineer recounts the saga of the leaked Windows XP key."
-      },
-      {
-        "title": "The exceptional Bambu Lab P1S 3D printer could be yours for just $349 — Fall sale drops the popular beginner-friendly printer to a new low price",
-        "link": "https://www.tomshardware.com/3d-printing/the-exceptional-bambu-lab-p1s-3d-printer-could-be-yours-for-just-usd349-fall-sale-drops-the-popular-beginner-friendly-printer-to-a-new-low-price",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-17T10:06:52.000Z",
-        "contentSnippet": "The Bambu Lab P1S 3D printer is on sale for $349.99 right now, a new all-time low price."
-      },
-      {
-        "title": "onsemi Embedded Power Platform Announced",
-        "link": "https://www.servethehome.com/onsemi-embedded-power-platform-announced/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-09-16T22:07:08.000Z",
-        "contentSnippet": "At its investor day, onsemi announced its new Embedded Power Platform for AI racks, automotive, and industrial applications The post onsemi Embedded Power Platform Announced appeared first on ServeTheHome."
-      },
-      {
-        "title": "Developer vibe codes a tool to let Nvidia RTX 50-series laptop owners crank up their power limits — can juice RTX 5090 mobile GPU to 225W",
-        "link": "https://www.tomshardware.com/pc-components/overclocking/developer-vibe-codes-a-tool-to-let-nvidia-rtx-50-series-laptop-owners-crank-up-their-power-limits-can-juice-rtx-5090-mobile-gpu-to-225w",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-16T15:19:42.000Z",
-        "contentSnippet": "A developer has created a fully vibe-coded tool that seems to work to allow some GeForce RTX 50-series laptops to crank their power limits by as much as 28%."
-      },
-      {
-        "title": "MLPerf Inference v6.1: 5.7x Per-Accelerator Gains, a 512-GPU Run, and Vera Rubin’s First Peer-Reviewed Numbers",
-        "link": "https://www.storagereview.com/news/mlperf-inference-v6-1-5-7x-per-accelerator-gains-a-512-gpu-run-and-vera-rubins-first-peer-reviewed-numbers",
-        "source": "StorageReview",
-        "isoDate": "2026-09-16T15:00:00.000Z",
-        "contentSnippet": "MLCommons has published MLPerf Inference v6.1, and the round sets a participation record with 30 submitting organizations and 486 datacenter and edge results. Two new tests join the suite: an End-to-End RAG pipeline for the datacenter and an Edge Agentic Inference benchmark for s"
-      },
-      {
-        "title": "Piecemakers bets edge AI devices will diverge from reliance on HBM — custom-designed memory fuses DRAM stack directly to the processor using hybrid bonding",
-        "link": "https://www.tomshardware.com/tech-industry/semiconductors/piecemakers-bets-edge-ai-devices-will-diverge-from-reliance-on-hbm-custom-designed-memory-fuses-dram-stack-directly-to-the-processor-using-hybrid-bonding",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-16T14:36:48.000Z",
-        "contentSnippet": "Nanya-backed DRAM designer PieceMakers began trading in Taipei on Sept. 16 on a bet that AI inference memory won’t be HBM."
-      },
-      {
-        "title": "Denuvo sues anonymous game cracker ‘voices38’ over alleged DRM circumvention — seeks damages after Anti-Tamper protections bypassed in 26 games",
-        "link": "https://www.tomshardware.com/video-games/denuvo-sues-anonymous-game-cracker-voices38-over-alleged-drm-circumvention-seeks-damages-after-anti-tamper-protections-bypassed-in-26-games",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-16T14:22:54.000Z",
-        "contentSnippet": "Instead of pursuing traditional copyright infringement, Denuvo's case relies on the DMCA's anti-circumvention provisions, targeting the alleged bypassing of its digital protections."
-      },
-      {
-        "title": "Micron announces 512GB DDR5-9200 memory modules with 16W power draw — up to 12TB per server, claims 60% less energy-intensive than four 128GB modules",
-        "link": "https://www.tomshardware.com/pc-components/dram/micron-announces-512gb-ddr5-9200-memory-modules-with-16w-power-draw-up-to-12tb-per-server-claims-60-percent-less-energy-intensive-than-four-128gb-modules",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-16T14:07:31.000Z",
-        "contentSnippet": "After five years, Samsung's 512GB DDR5 memory modules get their first direct rival from Micron, which also promises to offer speed bins up to 9200 MT/s. But their prices could be way too high even for hyperscalers."
-      },
-      {
-        "title": "AI-induced memory shortage is changing how devices are built, Fairphone says memory now 60% of materials cost — smaller laptop and phone makers are redesigning products and have to test for fake chips",
-        "link": "https://www.tomshardware.com/pc-components/ram/ai-induced-memory-shortage-is-changing-how-devices-are-built-fairphone-says-memory-now-60-percent-of-materials-cost-smaller-laptop-and-phone-makers-are-redesigning-products-and-have-to-test-for-fake-chips",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-16T12:15:42.000Z",
-        "contentSnippet": "For smaller device manufacturers, rising memory prices are only part of the problem as limited availability forces companies to rethink everything from motherboard designs to procurement strategies."
       }
     ]
   }
