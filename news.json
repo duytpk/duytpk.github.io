@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-09-21T21:28:12.313Z",
+  "updatedAt": "2026-09-22T00:25:55.450Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-94426 - xuxueli xxl-job insert cross site scripting",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94426",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-21T22:30:08.000Z",
+        "contentSnippet": "A vulnerability was determined in xuxueli xxl-job up to 3.5.0. The impacted element is an unknown function of the file /jobgroup/insert. This manipulation of the argument Name causes cross site scripting. The attack can be initiated remotely. The exploit has been publicly disclos",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-94627 - vLLM through 0.29.0 GPU KV Cache Leak via Mooncake Transfer ID Collision",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94627",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-21T22:17:01.000Z",
+        "contentSnippet": "vLLM Mooncake connector through 0.29.0 fails to properly manage GPU KV cache block ownership when concurrent child requests share a single transfer ID in prefill/decode disaggregated deployments. Attackers can trigger GPU memory exhaustion by submitting completion requests with m",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-94626 - vLLM through 0.29.0 Memory Exhaustion via Unvalidated NIXL tp_size",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94626",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-21T22:17:01.000Z",
+        "contentSnippet": "vLLM through 0.29.0 fails to validate the tp_size parameter in kv_transfer_params on OpenAI-compatible completion endpoints, allowing attackers to allocate unbounded memory. Attackers can supply arbitrary tp_size values in prefill/decode disaggregated deployments to exhaust memor",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-94625 - vLLM through 0.29.0 Resource Exhaustion via Ownerless Mooncake Transfer Placeholders",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94625",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-21T22:17:01.000Z",
+        "contentSnippet": "vLLM through 0.29.0 contains a resource exhaustion vulnerability in MooncakeConnector where rejected prefill requests create ownerless transfer placeholders that are never reclaimed. Attackers can send rejected requests to exhaust sender task pools, causing valid requests to be d",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-94624 - vLLM through 0.29.0 Denial of Service via Unbounded P2P KV Offloading Sessions",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94624",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-21T22:17:01.000Z",
+        "contentSnippet": "vLLM through 0.29.0 contains a denial of service vulnerability in P2P KV offloading when OffloadingConnector is configured with TieringOffloadingSpec and a peer-to-peer secondary tier. Attackers can supply arbitrary remote host and port values in kv_transfer_params to create unre",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-94623 - vLLM through 0.29.0 Denial of Service via NIXL Multi-Prompt Assertion Failure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94623",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-21T22:17:01.000Z",
+        "contentSnippet": "vLLM through 0.29.0 contains a denial of service vulnerability in the NIXL connector's prefix caching implementation that fails to properly validate block counts across multi-prompt completion requests in prefill/decode disaggregated deployments. Attackers can trigger an assertio",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-94622 - vLLM through 0.29.0 Denial of Service via Incomplete NIXL KV Transfer Metadata",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94622",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-21T22:17:00.000Z",
+        "contentSnippet": "vLLM versions through 0.29.0 contain a denial of service vulnerability in the NIXL connector's metadata handling for prefill/decode disaggregated deployments. Attackers can send requests with incomplete kv_transfer_params dictionary entries to trigger an uncaught KeyError in Engi",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-94540 - DesktopSMS 1.11.0 Unauthorized Access via Local Service",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94540",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-21T22:17:00.000Z",
+        "contentSnippet": "DesktopSMS 1.11.0 by MrPear contains an unauthorized access vulnerability that allows local attackers to transmit SMS, retrieve SMS-derived content, and persist an attacker-selected paired identity by interacting with the application's local service without any pairing confirmati",
+        "cveScore": 7.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-94536 - lamp-cloud through 5.10.0 Unauthorized Information Disclosure via /anyone/visible/resource",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94536",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-21T22:17:00.000Z",
+        "contentSnippet": "lamp-cloud through 5.10.0 fails to validate the employeeId parameter in the /anyone/visible/resource endpoint, allowing authenticated users to read any employee's roles and permissions. Attackers can supply arbitrary employeeId values to enumerate other employees' role codes, per",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-94535 - lamp-cloud through 5.10.0 Unauthorized Notification Deletion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94535",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-21T22:17:00.000Z",
+        "contentSnippet": "lamp-cloud through 5.10.0 contains an authorization bypass vulnerability in the deleteMyNotice endpoint that allows authenticated users to delete other users' notifications. Attackers can call the DELETE /anyone/extendNotice/deleteMyNotice endpoint with arbitrary notice IDs to pe",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-94534 - lamp-cloud through 5.10.0 Unauthorized Profile Modification via PUT endpoints",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94534",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-21T22:17:00.000Z",
+        "contentSnippet": "lamp-cloud through 5.10.0 fails to validate user identity in PUT /anyone/baseInfo and PUT /anyone/avatar endpoints, allowing authenticated attackers to modify arbitrary user profiles. Attackers can supply target user IDs in request bodies to rewrite profile fields including nickn",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-94533 - lamp-cloud through 5.10.0 Unauthorized File Download via /anyone/file",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94533",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-21T22:17:00.000Z",
+        "contentSnippet": "lamp-cloud through 5.10.0 contains an authorization bypass vulnerability in FileAnyoneController that allows authenticated users to download arbitrary attachments. Attackers can retrieve other users' stored files by supplying valid attachment identifiers to the /anyone/file/down ",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-94532 - lamp-cloud through 5.10.0 Unauthorized User Profile Access via getUserInfoById",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94532",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-21T22:17:00.000Z",
+        "contentSnippet": "lamp-cloud through 5.10.0 contains an authorization bypass vulnerability in the getUserInfoById endpoint that allows authenticated users to read any other user's full profile. Attackers can iterate the userId parameter to harvest sensitive user information including mobile number",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-93340 - Gladys Assistant < 5.1.0 Password Reset Link Poisoning via forgot_password Endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93340",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-21T22:16:59.000Z",
+        "contentSnippet": "Gladys Assistant before 5.1.0 contains a password reset link poisoning vulnerability that allows unauthenticated remote attackers to obtain valid password reset tokens for any account by exploiting the client-supplied origin parameter in the forgot_password endpoint without serve",
+        "cveScore": 7.4,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-88756 - Pagekit CMS SQL Injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-88756",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-21T22:16:59.000Z",
+        "contentSnippet": "Pagekit CMS",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-88738 - Jazzware RT1000 Edge Unrestricted File Upload Remote Code Execution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-88738",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-21T22:16:59.000Z",
+        "contentSnippet": "Jazzware RT1000 Edge webUI v. 20.0.1 contains an unrestricted file upload vulnerability in the upgrade package upload functionality. An authenticated attacker can upload a server-side executable file. The uploaded file is stored in a web-accessible executable location and can be ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-79079 - CrossWire Xiphos Arbitrary Code Execution Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-79079",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-21T22:16:59.000Z",
+        "contentSnippet": "An issue in CrossWire Xiphos",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-78847 - gray-matter Arbitrary Code Execution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78847",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-21T22:16:58.000Z",
+        "contentSnippet": "An issue in gray-matter All versions (verified on 4.0.3) allows the JavaScript engine in lib/engines.js using eval() to parse front matter when language is js/javascript.This allows arbitrary code execution.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-78806 - Matter Project Chip Information Disclosure Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78806",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-21T22:16:58.000Z",
+        "contentSnippet": "An issue in Matter Standard Specification-Implementation gap v1.5.1 Matter Project Chip V1.5.1 allows a local attacker to obtain sensitive information via the PerformCommissioningStep function in the ChipDeviceController.cpp component",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-65980 - Chartbrew: SQL Injection via Missing Backslash Escaping in ClickHouse Variable Substitution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65980",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-21T22:16:58.000Z",
+        "contentSnippet": "Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. Prior to 5.2.3, Chartbrew's ClickHouse protocol in server/sources/plugins/clickhouse/clickhouse.protocol.js calls applySqlVariables() from server/sources",
+        "cveScore": 7.9,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-61852 - Chartbrew: SQL Injection via row_limit Parameter in AI runQuery Tool",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61852",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-21T22:16:58.000Z",
+        "contentSnippet": "Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. Prior to 5.2.2, Chartbrew's runQuery() implementation in server/modules/ai/orchestrator/tools/runQuery.js interpolates the AI tool's row_limit parameter ",
+        "cveScore": 5.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-61851 - Chartbrew: Incomplete Read-Only Keyword Blocklist in AI runQuery Tool",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61851",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-21T22:16:58.000Z",
+        "contentSnippet": "Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. Prior to 5.2.2, Chartbrew's runQuery() implementation in server/modules/ai/orchestrator/tools/runQuery.js attempts to enforce read-only database access w",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-61743 - Chartbrew: DNS Rebinding SSRF Bypass in Outbound Request Validation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61743",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-21T22:16:57.000Z",
+        "contentSnippet": "Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. Prior to 5.2.2, Chartbrew's server/modules/safeRequest.js calls validateOutboundUrl() to resolve and validate a target hostname, but request-promise perf",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-61652 - Zapros: Streaming decoders ignored the requested chunk size, allowing a single compressed response chunk to allocate unbounded memory (decompression bomb)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61652",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-21T22:16:57.000Z",
+        "contentSnippet": "Zapros, a Python HTTP client, prior to version 0.14.0 is vulnerable to denial of service via memory exhaustion. The issue affects all callers who streamed compressed responses relying on the chunk size — explicit (`iter_bytes(chunk_size=...)`) or the default — to bound memory. Th",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-61541 - Zapros has an Unbounded Content-Encoding decompression chain that allows denial of service",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61541",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-21T22:16:57.000Z",
+        "contentSnippet": "Zapros, a Python HTTP client, prior to version 0.14.0 is vulnerable to denial of service when an application requests content from an untrusted server, or follows a redirect to one, because a malicious response containing an excessive number of chained `Content-Encoding` values c",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
       {
         "title": "CVE-2026-73549 - Envoy - Incomplete fix for CVE-2026-26310: copyInternetAddressAndPort crashes on scoped IPv6 addresses in ORIGINAL_DST clusters",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-73549",
@@ -677,234 +902,16 @@
         "contentSnippet": "A vulnerability was detected in drogonframework drogon up to 1.9.13. Affected by this issue is the function Mapper::orderBy in the library Mapper.h of the component ORM Mapper. Performing a manipulation of the argument sort results in sql injection. The attack is possible to be c",
         "cveScore": 7.5,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-94139 - Chengdu Feiyuxing Technology Feiyu Star Router Cookie send_order.cgi command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94139",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T04:30:35.000Z",
-        "contentSnippet": "A weakness has been identified in Chengdu Feiyuxing Technology Feiyu Star Router B-MB5E202-210322-r11656. Affected is an unknown function of the file /send_order.cgi?parameter=loginout of the component Cookie Handler. This manipulation of the argument session_id causes command in",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-94138 - Chengdu Feiyuxing Technology Feiyu Star Router send_order.cgi command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94138",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T04:17:37.000Z",
-        "contentSnippet": "A security flaw has been discovered in Chengdu Feiyuxing Technology Feiyu Star Router B-MB5E202-210322-r11656. This impacts an unknown function of the file /send_order.cgi?parameter=del_expmac. The manipulation of the argument mac results in command injection. The attack may be l",
-        "cveScore": 6.6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-94137 - Hangzhou Shunwang Technology shzh IRP_MJ_DEVICE_CONTROL shdrv_x64.sys sub_180004AC0 denial of service",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94137",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T04:17:36.000Z",
-        "contentSnippet": "A vulnerability was identified in Hangzhou Shunwang Technology shzh 10.7.2.693. This affects the function sub_180004AC0 of the file shdrv_x64.sys of the component IRP_MJ_DEVICE_CONTROL Handler. The manipulation of the argument PID leads to denial of service. The attack must be ca",
-        "cveScore": 3.3,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-94185 - nvm alias resolution follows `..` and discloses files outside $NVM_DIR/alias",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94185",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T03:16:34.000Z",
-        "contentSnippet": "nvm resolves a requested version or alias by treating it as a filename under $NVM_DIR/alias. Before 0.40.8, nvm_alias() concatenated the requested name onto that directory and read the result with no containment check, so a name containing a `..` component escaped the alias direc",
-        "cveScore": 6.7,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-94129 - BioStar VALKYRIE AURORA IOCTL BS_RVSIO64.sys sub_1105C write-what-where",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94129",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T02:16:54.000Z",
-        "contentSnippet": "A vulnerability was detected in BioStar VALKYRIE AURORA 2.10.2411.0800. This vulnerability affects the function sub_1105C of the file BS_RVSIO64.sys of the component IOCTL Handler. The manipulation of the argument PhysicalAddress results in write-what-where condition. The attack ",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-94128 - BioStar VIVID LED DJ IOCTL BS_LED64.sys sub_1105C write-what-where",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94128",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T02:16:54.000Z",
-        "contentSnippet": "A security vulnerability has been detected in BioStar VIVID LED DJ 4.0.2411.1500. This affects the function sub_1105C of the file BS_LED64.sys of the component IOCTL Handler. The manipulation of the argument AssociatedIrp leads to write-what-where condition. Local access is requi",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-94110 - QCMS Content Detail Controllers.php self_Tmp sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94110",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T02:16:53.000Z",
-        "contentSnippet": "A security vulnerability has been detected in QCMS up to 6.0.6. This issue affects the function self_Tmp in the library Lib/Config/Controllers.php of the component Content Detail Page. Such manipulation of the argument ID leads to sql injection. The attack may be performed from r",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-94103 - RooCMS Frontend Rendering site_pagePHP.php eval code injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94103",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T02:16:53.000Z",
-        "contentSnippet": "A vulnerability has been found in RooCMS up to 1.2.2/1.3.4/1.4RC2. This impacts the function eval of the file roocms/site_pagePHP.php of the component Frontend Rendering. Such manipulation of the argument content leads to code injection. The attack can be launched remotely. The e",
-        "cveScore": 5.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-94102 - WuzhiCMS Login index.php redirect",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94102",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T02:16:53.000Z",
-        "contentSnippet": "A flaw has been found in WuzhiCMS up to 4.1.0. This affects an unknown function of the file /index.php?m=member&v=Login of the component Login. This manipulation of the argument forward causes open redirect. The attack can be initiated remotely. The exploit has been published and",
-        "cveScore": 5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-94101 - Netcore NBR200V2 routerd vlan_load_form_uci buffer overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94101",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T02:16:53.000Z",
-        "contentSnippet": "A security vulnerability has been detected in Netcore NBR200V2 1.3.241127.071246. The affected element is the function vlan_load_form_uci of the file /usr/bin/routerd. The manipulation of the argument wan_num leads to buffer overflow. It is possible to initiate the attack remotel",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-94100 - Netcore NBR200V2 WAN VLAN Reconfiguration routerd wan_config_set_vlan buffer overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94100",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T01:16:30.000Z",
-        "contentSnippet": "A weakness has been identified in Netcore NBR200V2 1.3.241127.071246. Impacted is the function wan_config_set_vlan of the file /usr/bin/routerd of the component WAN VLAN Reconfiguration. Executing a manipulation of the argument vlan_wanX.ports can lead to buffer overflow. The att",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-94099 - Netcore NBR200V2 Backup Restore restore.cgi command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94099",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T01:16:29.000Z",
-        "contentSnippet": "A security flaw has been discovered in Netcore NBR200V2 1.3.241127.071246. This issue affects some unknown processing of the file restore.cgi of the component Backup Restore. Performing a manipulation of the argument QUERY_STRING results in command injection. The attack is possib",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-94098 - Netcore NBR200V2 Firmware Upgrade CGI Endpoint upgrade command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94098",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T01:16:29.000Z",
-        "contentSnippet": "A vulnerability was identified in Netcore NBR200V2 1.3.241127.071246. This vulnerability affects unknown code of the file /www/cgi-bin/upgrade of the component Firmware Upgrade CGI Endpoint. Such manipulation of the argument QUERY_STRING leads to command injection. The attack can",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-94097 - Netcore NBR200V2 CGI Diagnostic Endpoint network_tools command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94097",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T00:16:59.000Z",
-        "contentSnippet": "A vulnerability was determined in Netcore NBR200V2 1.3.241127.071246. This affects an unknown part of the file /www/cgi-bin/network_tools of the component CGI Diagnostic Endpoint. This manipulation of the argument param/key/val causes command injection. Remote exploitation of the",
-        "cveScore": 10,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-94096 - Netcore NBR200V2 LAN IP Configuration network_tools command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94096",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T00:16:59.000Z",
-        "contentSnippet": "A vulnerability was found in Netcore NBR200V2 1.3.241127.071246. Affected by this issue is some unknown functionality of the file /usr/bin/network_tools of the component LAN IP Configuration Handler. The manipulation of the argument ipv4 results in command injection. The attack m",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-94095 - Netcore NBR200V2 Traceroute Diagnostic Feature network_tools command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94095",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-21T00:16:59.000Z",
-        "contentSnippet": "A vulnerability has been found in Netcore NBR200V2 1.3.241127.071246. Affected by this vulnerability is an unknown functionality of the file /usr/bin/network_tools of the component Traceroute Diagnostic Feature. The manipulation of the argument url leads to command injection. The",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-94094 - OpenClaw Canvas Host Route server.ts createCanvasHostHandler denial of service",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94094",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-20T23:17:03.000Z",
-        "contentSnippet": "A flaw has been found in OpenClaw up to 2026.9.5. Affected is the function createCanvasHostHandler of the file extensions/canvas/src/host/server.ts of the component Canvas Host Route. Executing a manipulation can lead to denial of service. The attack can be launched remotely. The",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-94093 - DLR-RM stable-baselines3 save_util.py VecNormalize.load deserialization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94093",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-20T23:17:03.000Z",
-        "contentSnippet": "A security vulnerability has been detected in DLR-RM stable-baselines3 up to 2.9.0. This affects the function PPO.load/load_replay_buffer/VecNormalize.load of the file save_util.py. Such manipulation leads to deserialization. It is possible to launch the attack remotely. The expl",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-94092 - dmlc dgl utils.py _read_torch_data deserialization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94092",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-20T23:17:03.000Z",
-        "contentSnippet": "A vulnerability was detected in dmlc dgl up to 2.1.0. This impacts the function load_info/_read_torch_data of the file utils.py. Performing a manipulation of the argument path results in deserialization. The attack can be initiated remotely. The exploit is now public and may be u",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-94091 - piskvorky gensim Model Loader utils.py load deserialization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94091",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-20T23:17:02.000Z",
-        "contentSnippet": "A weakness has been identified in piskvorky gensim up to 4.4.0. The impacted element is the function Load of the file gensim/utils.py of the component Model Loader. This manipulation of the argument fname causes deserialization. It is possible to initiate the attack remotely. The",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-94090 - JusticeRage Manalyze PE Parser pe.cpp _parse_debug integer underflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94090",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-20T22:16:30.000Z",
-        "contentSnippet": "A security flaw has been discovered in JusticeRage Manalyze 1.0.0. The affected element is the function PE::_parse_debug of the file manape/pe.cpp of the component PE Parser. The manipulation of the argument misc.Length results in integer underflow. The attack may be performed fr",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-94089 - D-Link DIR-868L Authentication webfa_authentication.cgi strcpy stack-based overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94089",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-20T21:16:55.000Z",
-        "contentSnippet": "A vulnerability was determined in D-Link DIR-868L 2.01b05. This issue affects the function strcpy of the file /webfa_authentication.cgi of the component Authentication Handler. Executing a manipulation of the argument id/password can lead to stack-based buffer overflow. The attac",
-        "cveScore": 10,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-94051 - 0717376 cowork_bench pdf-tools-mcp server.py ControlFlowNode server-side request forgery",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94051",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-20T21:16:55.000Z",
-        "contentSnippet": "A vulnerability was found in 0717376 cowork_bench up to d943e75bc0fc8e3b27141979300cd8cbcd1e890d. Affected by this vulnerability is the function ControlFlowNode of the file local_servers/pdf-tools-mcp/pdf_tools_mcp/server.py of the component pdf-tools-mcp. Performing a manipulati",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-94050 - D-Link DIR-X1860Z ubus JSON-RPC interface routerd.get_rand_key information disclosure",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94050",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-20T21:16:55.000Z",
-        "contentSnippet": "A vulnerability has been found in D-Link DIR-X1860Z up to 1.0.2.220120.165402. Affected is the function routerd.wificfg_get/routerd.get_rand_key of the component ubus JSON-RPC interface. Such manipulation leads to information disclosure. The attack must be carried out from within",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-94049 - 06ketan slideshot renderer.ts render_slides path traversal",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94049",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-20T20:16:54.000Z",
-        "contentSnippet": "A flaw has been found in 06ketan slideshot up to 4.4.0. This impacts the function render_slides of the file packages/cli/src/renderer.ts. This manipulation of the argument htmlPath causes path traversal. The attack is possible to be carried out remotely. The exploit has been publ",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
+      {
+        "title": "Jev introduces a new shape of LLM - System One, aka Decision Models",
+        "link": "https://simonwillison.net/2026/Sep/21/jev/",
+        "source": "Simon Willison's Weblog",
+        "isoDate": "2026-09-21T23:09:20.000Z",
+        "contentSnippet": "Last week TypeSafe AI unveiled Jev, their first example of a new category of model that they are calling \"System One models\" (I'm with Maggie Appleton, I think \"decision models\" is a better name for these). Jev is an interesting variant on the usual LLM format: it still accepts t"
+      },
       {
         "title": "xAI’s Grok 4.6 is now available in Amazon Bedrock",
         "link": "https://aws.amazon.com/blogs/machine-learning/xais-grok-4-6-is-now-available-in-amazon-bedrock/",
@@ -1597,13 +1604,6 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-09-01T15:50:00.000Z",
         "contentSnippet": "t54 built x402-secure, a trust layer on Amazon Bedrock AgentCore payments that scores every endpoint before an autonomous agent pays it. See how session budgets, credential isolation, and a deterministic trust gate have governed more than 20 million agent-initiated transactions w"
-      },
-      {
-        "title": "How ZS democratized secure ad-hoc analytics with Amazon SageMaker",
-        "link": "https://aws.amazon.com/blogs/machine-learning/how-zs-democratized-secure-ad-hoc-analytics-with-amazon-sagemaker/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-09-01T15:47:00.000Z",
-        "contentSnippet": "Learn how ZS built a security-hardened Amazon SageMaker platform that balances developer agility with healthcare-grade governance, serving 1,000+ daily active users across 200+ SageMaker domains."
       }
     ],
     "virtualization": [
@@ -2324,7 +2324,7 @@
         "contentSnippet": "Apple's use of QLC NAND allows the iPhone 18 Pro Max to offer higher storage capacity, but Homolab's testing highlights the potential performance trade-off under sustained writes."
       },
       {
-        "title": "Get the world’s fastest gaming CPU and a DLSS 5-capable GPU in a gaming PC for $2,299 — fully loaded powerhouse sports Ryzen 7 9800X3D, RTX 5080 Founders Edition, 32GB RAM, and 1TB SSD",
+        "title": "Get the world’s fastest gaming CPU and a DLSS 5-capable GPU in a gaming PC for $2,299 — fully loaded powerhouse sports Ryzen 7 9800X3D, RTX 5080 Founders Edition, 32GB RAM, and 1TB SSD [Updated]",
         "link": "https://www.tomshardware.com/desktops/gaming-pcs/get-the-worlds-fastest-gaming-cpu-and-a-dlss-5-capable-gpu-in-a-gaming-pc-for-usd2-299-fully-loaded-powerhouse-sports-ryzen-7-9800x3d-rtx-5080-founders-edition-32gb-ram-and-1tb-ssd",
         "source": "Tom's Hardware",
         "isoDate": "2026-09-21T17:19:27.000Z",
