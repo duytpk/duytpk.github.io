@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-09-23T18:05:29.820Z",
+  "updatedAt": "2026-09-23T21:54:41.114Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-84724 - Automation-controller: automation-controller: systemjob extra_vars.days argument injection into uncontainerized control-plane awx-manage process",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84724",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-23T19:40:42.000Z",
+        "contentSnippet": "An argument-injection flaw was found in the Ansible Automation Platform automation-controller system-job subsystem. The system-job template launch endpoint stores a user-supplied \"days\" variable without running the integer validation defined elsewhere for that field, and the disp",
+        "cveScore": 6.6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-84721 - Automation-controller: automation-controller: email notification backend allows ssrf via user-controlled smtp host/port (internal port-scan oracle, smtp password exfil)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84721",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-23T19:40:38.000Z",
+        "contentSnippet": "A server-side request forgery flaw was found in the Ansible Automation Platform automation-controller email notification backend. The email backend passes the user-supplied SMTP host and port from a notification template directly to the SMTP client without validating that the tar",
+        "cveScore": 6.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-84720 - Automation-controller: automation-controller: workflowjobnode.ancestor_artifacts lacks prevent_search, exposing no_log set_stats artifacts via orm-traversal count-oracle",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84720",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-23T19:40:36.000Z",
+        "contentSnippet": "A flaw was found in the Ansible Automation Platform automation-controller. The WorkflowJobNode.ancestor_artifacts database column, which stores the raw merged set_stats artifacts propagated between workflow nodes, is not wrapped in prevent_search() and is therefore accepted for a",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-84718 - Automation-controller: automation-controller: client ip spoofing in audit/access logs via unrestricted x-forwarded-for trust",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84718",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-23T19:40:33.000Z",
+        "contentSnippet": "A flaw was found in the Ansible Automation Platform automation-controller. In the shipped production configuration, the Controller trusts the client-supplied X-Forwarded-For header as the request's client IP without verifying that it originated from a trusted proxy, and selects t",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-84717 - Automation-controller: automation-controller: unauthenticated 200-vs-403 oracle in bitbucket data center webhook receiver enumerates webhook-enabled job templates",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84717",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-23T19:40:32.000Z",
+        "contentSnippet": "A flaw was found in the Ansible Automation Platform automation-controller. The unauthenticated Bitbucket Data Center webhook receiver skips HMAC signature verification for diagnostics:ping events after it has already looked up the target template, causing the endpoint to return H",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-84716 - Automation-controller: automation-controller: instance install_bundle issues 10-year, non-revocable receptor mesh-ca certificates for caller-chosen (and case-variant impersonating) ho",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84716",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-23T19:40:28.000Z",
+        "contentSnippet": "A flaw was found in the automation-controller instance install-bundle endpoint. When a System Administrator downloads an execution/hop node's install bundle, the controller signs an X.509 certificate with the receptor mesh certificate authority in which the Common Name, DNS subje",
+        "cveScore": 6.6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-84713 - Automation-controller: automation-controller: notification.recipients/subject/error lack prevent_search, allowing zero-privilege cross-tenant recovery of notification recipient secret",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84713",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-23T19:40:26.000Z",
+        "contentSnippet": "A flaw was found in the automation-controller notification subsystem. Although NotificationTemplate.notification_ configuration is protected from API filtering, its recipient value is copied in clear text into the unprotected Notification.recipients field on every send. Because t",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-84712 - Automation-controller: automation-controller: unauthenticated /api/v2/ping/ discloses automation-mesh instance topology and instance-group membership",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84712",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-23T19:40:22.000Z",
+        "contentSnippet": "A flaw was found in the automation-controller API. The unauthenticated health-check endpoint /api/v2/ping/ (ApiV2PingView, AllowAny) over-serializes RBAC-gated automation-mesh data into its anonymous response, exposing the full instance inventory (node hostnames, node types, UUID",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-96889 - Librsvg: use-after-free when xml includes have duplicated entities",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96889",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-23T19:40:14.000Z",
+        "contentSnippet": "A flaw was found in librsvg. When processing an SVG document containing nested XML inclusions (Xincludes) with duplicate entity declarations, a use-after-free error can occur. This vulnerability arises because the library incorrectly frees an XML entity that is still in use by th",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-85475 - Automation-controller: automation-controller-container: automation-controller: rsyslog configuration injection via log_aggregator_* settings leads to remote code execution in the cont",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85475",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-23T19:40:11.000Z",
+        "contentSnippet": "A flaw was found in the Ansible Automation Platform automation controller. The external logging (rsyslog) configuration is generated by interpolating user-controlled settings — LOG_AGGREGATOR_HOST, LOG_AGGREGATOR_MAX_DISK_USAGE_PATH and LOG_AGGREGATOR_RSYSLOGD_ERROR_LOG_FILE — in",
+        "cveScore": 7.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-84719 - Automation-controller: automation-controller: workflowjobtemplate /copy/ deep-copy sanitizer omits instance_groups authorization (instancegroup use_role bypass to control-plane)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84719",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-23T19:40:07.000Z",
+        "contentSnippet": "A flaw was found in the Ansible Automation Platform automation-controller. When a WorkflowJobTemplate is copied, the deep-copy permission sanitizer validates only the inventory, unified_job_template, and credentials of each cloned node and fails to check the instance_groups (and ",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-84714 - Automation-controller: automation-controller: incomplete sanitize_jinja() regex allows jinja template injection into ad-hoc module_args, machine-credential fields, and host names, rea",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84714",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-23T19:40:06.000Z",
+        "contentSnippet": "A flaw was found in the automation-controller input-validation guard sanitize_jinja(). The function uses two regular expressions to reject user-supplied Jinja, but the patterns stop at the first interior '}' or '%' character, so a Jinja expression containing an inner brace (for e",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-84706 - Automation-controller: automation-controller-container: automation-controller: credential type env-injector deny-list omits process-hijacking variables (bash_env/ld_preload) allowing ",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84706",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-23T19:39:57.000Z",
+        "contentSnippet": "A flaw was found in Ansible Automation Platform's automation-controller. The custom Credential Type environment-variable injector validates variable names against a deny-list (an ANSIBLE_* prefix check plus a fixed ENV_BLOCKLIST) that omits process-hijacking loader variables such",
+        "cveScore": 7.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-75884 - Awx: awx: privilege escalation to openshift namespace via pod_spec_override injection in container groups",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75884",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-23T19:39:52.000Z",
+        "contentSnippet": "A flaw was found in AWX. The container group pod_spec_override field uses an incomplete blocklist that only restricts automountServiceAccountToken, allowing injection of initContainers, serviceAccountName overrides, and projected service account token volumes. An AAP platform adm",
+        "cveScore": 9.1,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-96550 - sfturing hosp_order MailUtil.java getProperties cleartext transmission",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96550",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-23T19:30:10.000Z",
+        "contentSnippet": "A vulnerability was found in sfturing hosp_order up to 627f426331da8086ce8fff2017d65b1ddef384f8. This issue affects the function getProperties of the file ssm_pro/src/main/java/cn/sfturing/utils/MailUtil.java. Performing a manipulation results in cleartext transmission of sensiti",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-96826 - WordPress W4 Post List plugin <= 3.0.6 - SQL Injection vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96826",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-23T19:28:55.000Z",
+        "contentSnippet": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Shazzad Hossain Khan W4 Post List allows Blind SQL Injection. This issue affects W4 Post List: from n/a through 3.0.6.",
+        "cveScore": 7.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-82405 - Klever-Go Account takeover: `kleverUpdateAccountPermission` authorizes on attacker-controlled `RecipientAddr` instead of the authenticated caller",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82405",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-23T19:26:12.000Z",
+        "contentSnippet": "Klever-Go is the Go implementation of the Klever blockchain protocol. Prior to 1.7.20, the KleverUpdateAccountPermission built-in authorizes replacement of a target account's permissions by checking attacker-controlled vmInput.RecipientAddr instead of authenticated vmInput.Caller",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-82409 - Klever-Go: Elasticsearch bulk / painless injection via on-chain account name -> explorer/indexer data forgery",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82409",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-23T19:23:45.000Z",
+        "contentSnippet": "Klever-Go is the Go implementation of the Klever blockchain protocol. Prior to 1.7.20, indexer/common.go serializedDataForUpdateAccounts places the attacker-controlled acc.Name value into an Elasticsearch _bulk JSON and NDJSON request without escaping it. The SetAccountName trans",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-96872 - WikiLambda public function execution bypasses the unsaved-code permission through nested Z825 compositions",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96872",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-23T19:19:55.000Z",
+        "contentSnippet": "Improper handling of insufficient permissions or privileges vulnerability in The Wikimedia Foundation Mediawiki - WikiLambda Extension on Linux, MacOS, and Windows allows Accessing Functionality Not Properly Constrained by ACLs. This issue affects Mediawiki - WikiLambda Extension",
+        "cveScore": 2.9,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-96770 - s2s-proxy accepts untrusted client certificates",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96770",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-23T19:19:55.000Z",
+        "contentSnippet": "All published s2s-proxy versions through 0.2.2 are affected. In versions 0.1.16 through 0.2.2, TLS server listeners use Go's RequireAnyClientCert mode when skipCAVerification is false. This mode checks that the client holds the certificate's private key but does not verify the ce",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-96549 - sfturing hosp_order CommonUserServiceImpl.java cleartext storage",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96549",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-23T19:19:54.000Z",
+        "contentSnippet": "A vulnerability has been found in sfturing hosp_order up to 627f426331da8086ce8fff2017d65b1ddef384f8. This vulnerability affects unknown code of the file ssm_pro/src/main/java/cn/sfturing/service/impl/CommonUserServiceImpl.java. Such manipulation leads to cleartext storage of sen",
+        "cveScore": 3.3,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-96548 - sfturing hosp_order jdbc.properties hard-coded credentials",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96548",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-23T19:19:54.000Z",
+        "contentSnippet": "A flaw has been found in sfturing hosp_order up to 627f426331da8086ce8fff2017d65b1ddef384f8. This affects an unknown part of the file ssm_pro/src/main/resources/jdbc.properties. This manipulation causes hard-coded credentials. It is possible to initiate the attack remotely. The a",
+        "cveScore": 5.6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-96546 - Gimp: gimp: one-byte out-of-bounds heap read in the uncompressed dds loader",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96546",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-23T19:19:54.000Z",
+        "contentSnippet": "A one-byte out-of-bounds heap read flaw was found in GIMP's uncompressed DDS image loader. When a user opens an uncompressed DDS image, the file-dds plug-in performs an unconditional one-byte look-ahead after processing the final pixel. This may cause the plug-in to crash if the ",
+        "cveScore": 2.5,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-96545 - Gimp: gimp: out-of-bounds heap read in the 4bpp tim image loader",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96545",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-23T19:19:54.000Z",
+        "contentSnippet": "An out-of-bounds heap read flaw was found in GIMP's TIM image loader. When a user opens a crafted 4bpp TIM image that causes promotion to an RGBA layer, the file-tim plug-in allocates an undersized row buffer but processes it using the larger RGBA row size. This can copy adjacent",
+        "cveScore": 4.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-96541 - Gnome-remote-desktop: gnome-remote-desktop: unauthenticated rdp sockets lack a handshake deadline",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96541",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-23T19:19:54.000Z",
+        "contentSnippet": "A denial-of-service flaw was found in gnome-remote-desktop. An unauthenticated remote attacker can open RDP connections without completing the handshake and retain the connection-throttling slots indefinitely because no pre-authentication handshake deadline is enforced. By exhaus",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-6327 - Multiple Vulnerabilities in IBM Concert Software",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-6327",
@@ -677,234 +902,37 @@
         "contentSnippet": "OpenEye Apex Network Video Recorder (NVR) firmware 3.2.9.376 uses an administrator password-reset unlock-code design that lacks a per-device secret or other server-side cryptographic material. An attacker with physical-console access and access to the privileged password-reset wo",
         "cveScore": 6.2,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-95828 - Mstfakts College-Management-System Authentication server.php session_start session fixiation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95828",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-22T23:17:08.000Z",
-        "contentSnippet": "A vulnerability was determined in Mstfakts College-Management-System. This affects the function session_start of the file Front-end/server.php of the component Authentication. Executing a manipulation can lead to session fixiation. It is possible to launch the attack remotely. Th",
-        "cveScore": 5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-95820 - anirbandutta9 College-Notes-Gallery userprofile.php admin1 unrestricted upload",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95820",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-22T23:17:08.000Z",
-        "contentSnippet": "A vulnerability was found in anirbandutta9 College-Notes-Gallery up to 8c1cf3d98f30982d069c88ca172612c001eb39f6. Affected by this issue is some unknown functionality of the file /dashboard/userprofile.php?section=admin1. Performing a manipulation of the argument image results in ",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-61685 - ReactPress has SQL injection via dynamic column names in TypeORM query builders",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61685",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-22T23:17:07.000Z",
-        "contentSnippet": "ReactPress is a publishing system for React developers. Prior to version 3.7.0, ReactPress API list endpoints build TypeORM `QueryBuilder` conditions using unsanitized HTTP query parameter names as SQL column identifiers (e.g. `` `article.${key}` ``). TypeORM parameterizes values",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57576 - plone.app.dexterity and plone.app.contenttypes have a Denial of Service due to excessive title or description length",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57576",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-22T23:17:07.000Z",
-        "contentSnippet": "plone.app.dexterity is a content-type system for the Plone content management system, and plone.app.contenttypes provides Plone’s Dexterity-based content types. Plone.app.dexterity versions through 3.2.2, 4.0.0 through 4.1.2, and 5.0.0, and plone.app.contenttypes versions through",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-18176 - IBM Financial Transaction Manager (FTM) is Impacted by Multiple Vulnerabilities",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18176",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-22T23:17:07.000Z",
-        "contentSnippet": "IBM Financial Transaction Manager (FTM) for RedHat OpenShift could allow a remote attacker to obtain sensitive information due to cleartext transmission of sensitive information.",
-        "cveScore": 7.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-18173 - IBM Financial Transaction Manager (FTM) is Impacted by Multiple Vulnerabilities",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18173",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-22T23:17:07.000Z",
-        "contentSnippet": "IBM Financial Transaction Manager (FTM) for RedHat OpenShift could allow a remote attacker to obtain sensitive information due to improper enforcement of mutual TLS authentication.",
-        "cveScore": 3.7,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-18172 - IBM Financial Transaction Manager (FTM) is Impacted by Multiple Vulnerabilities",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18172",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-22T23:17:06.000Z",
-        "contentSnippet": "IBM Financial Transaction Manager (FTM) for RedHat OpenShift could allow a remote attacker to obtain sensitive information due to improper restriction of XML external entity references.",
-        "cveScore": 7.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-18170 - IBM Financial Transaction Manager (FTM) is Impacted by Multiple Vulnerabilities",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18170",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-22T23:17:06.000Z",
-        "contentSnippet": "IBM Financial Transaction Manager (FTM) for RedHat OpenShift could allow a remote attacker to cause a denial of service due to allocation of resources without limits or throttling.",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-18169 - IBM Financial Transaction Manager (FTM) is Impacted by Multiple Vulnerabilities",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18169",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-22T23:17:06.000Z",
-        "contentSnippet": "IBM Financial Transaction Manager (FTM) for RedHat OpenShift could allow a remote authenticated attacker to obtain sensitive information due to improper validation of symbolic links.",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-18163 - IBM Financial Transaction Manager (FTM) is Impacted by Multiple Vulnerabilities",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18163",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-22T23:17:06.000Z",
-        "contentSnippet": "IBM Financial Transaction Manager (FTM) for RedHat OpenShift could allow a remote attacker to execute arbitrary code due to improper deserialization of untrusted data.",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-18162 - IBM Financial Transaction Manager (FTM) is Impacted by Multiple Vulnerabilities",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18162",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-22T23:17:06.000Z",
-        "contentSnippet": "IBM Financial Transaction Manager (FTM) for RedHat OpenShift could allow a remote attacker to execute arbitrary code due to improper neutralization of user-controlled input within the new Function constructor.",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-92929 - OpenEye Apex Network Video Recorder IP Address Spoofing Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92929",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-22T23:10:17.000Z",
-        "contentSnippet": "OpenEye Apex Network Video Recorder (NVR) firmware 3.2.9.376 trusts an X-Forwarded-For header supplied by an arbitrary client when determining the request source address. An unauthenticated remote attacker can spoof a loopback address to bypass local-connection-only security cont",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-92928 - OpenEye Apex Network Video Recorder Hardcoded Credentials Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92928",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-22T23:10:16.000Z",
-        "contentSnippet": "OpenEye Apex Network Video Recorder (NVR) firmware 3.2.9.376 contains a hardcoded, undocumented recovery account with a shared credential that cannot be changed, disabled, or rotated. An unauthenticated remote attacker can use the account to authenticate to the password-reset wor",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-95819 - anirbandutta9 College-Notes-Gallery login.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95819",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-22T22:17:12.000Z",
-        "contentSnippet": "A vulnerability has been found in anirbandutta9 College-Notes-Gallery up to 8c1cf3d98f30982d069c88ca172612c001eb39f6. Affected by this vulnerability is an unknown functionality of the file login.php. Such manipulation of the argument user/pass leads to sql injection. The attack m",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-19202 - Token Cache Reuse in mcp-toolbox-sdk-python",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19202",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-22T22:17:11.000Z",
-        "contentSnippet": "A caching flaw in the toolbox-core package of the mcp-toolbox-sdk-python SDK causes the same Google ID token to be cached and reused across different audiences. If an application uses the SDK to authenticate to two or more different audiences within the same process, the module-l",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-18161 - IBM Financial Transaction Manager (FTM) is Impacted by Multiple Vulnerabilities",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18161",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-22T22:17:11.000Z",
-        "contentSnippet": "IBM Financial Transaction Manager (FTM) for RedHat OpenShift could allow a remote authenticated attacker to falsify transaction audit logs due to improper validation of a client-supplied HTTP header.",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-18156 - IBM Financial Transaction Manager (FTM) is Impacted by Multiple Vulnerabilities",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18156",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-22T22:17:10.000Z",
-        "contentSnippet": "IBM Financial Transaction Manager (FTM) for RedHat OpenShift could allow a remote authenticated attacker to bypass security controls by forging user identities due to improper authorization.",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-18154 - IBM Financial Transaction Manager (FTM) is Impacted by Multiple Vulnerabilities",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18154",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-22T22:17:10.000Z",
-        "contentSnippet": "IBM Financial Transaction Manager (FTM) for RedHat OpenShift could allow a remote attacker to obtain sensitive information due to the use of a hard-coded or predictable cryptographic key.",
-        "cveScore": 8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-18153 - IBM Financial Transaction Manager (FTM) is Impacted by Multiple Vulnerabilities",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18153",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-22T22:17:10.000Z",
-        "contentSnippet": "IBM Financial Transaction Manager (FTM) for RedHat OpenShift could allow a remote authenticated attacker to obtain sensitive information and forge authentication tags due to the use of hard-coded cryptographic keys and initialization vectors.",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-18152 - IBM Financial Transaction Manager (FTM) is Impacted by Multiple Vulnerabilities",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18152",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-22T22:17:10.000Z",
-        "contentSnippet": "IBM Financial Transaction Manager (FTM) for RedHat OpenShift could allow a remote attacker to forge validly-signed messages due to improper verification of cryptographic signatures.",
-        "cveScore": 7.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-18137 - IBM Financial Transaction Manager (FTM) is Impacted by Multiple Vulnerabilities",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18137",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-22T22:17:10.000Z",
-        "contentSnippet": "IBM Financial Transaction Manager (FTM) for RedHat OpenShift could allow a remote attacker to execute arbitrary ESQL commands due to improper neutralization of special elements used in an ESQL command.",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-75101 - Authorization bypass vulnerability in GitHub Enterprise Server allowed reading of private pull request diffs and patches via repository name collision",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75101",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-22T20:43:59.000Z",
-        "contentSnippet": "An authorization bypass vulnerability was identified in GitHub Enterprise Server that allowed any authenticated user of the instance to read the raw diff or patch of pull requests in private repositories without authorization. Access tokens for raw pull request diffs and patches ",
-        "cveScore": 6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-77912 - Stored cross-site scripting vulnerability in GitHub Enterprise Server allowed HTML attribute injection via the Markdown rendering pipeline",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77912",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-22T20:43:56.000Z",
-        "contentSnippet": "A stored cross-site scripting (XSS) vulnerability was identified in GitHub Enterprise Server that allowed an authenticated attacker to inject arbitrary HTML attributes into rendered Markdown because the Markdown rendering pipeline rewrote quote characters in already-sanitized HTM",
-        "cveScore": 7.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-77987 - GitHub Enterprise Server notebook viewer vulnerable to Server-side request forgery",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77987",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-22T20:43:53.000Z",
-        "contentSnippet": "A server-side request forgery (SSRF) vulnerability was identified in the notebook viewer of GitHub Enterprise Server. The notebook viewer validated the scheme and host of a user-supplied URL but did not validate the port, allowing requests to be directed to internal services list",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-88020 - Improper Neutralization of Input During Web Page Generation in OpenPLC Runtime v3",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-88020",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-22T20:40:26.000Z",
-        "contentSnippet": "Autonomy Logic OpenPLC 3 is susceptible to an improper neutralization of input during web page generation vulnerability when the web interface attempts to route the program based on a query string parameter with no encoding.",
-        "cveScore": 6.1,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
+      {
+        "title": "From portal-hopping to instant answers: HEMA’s journey with MCP and Amazon Bedrock",
+        "link": "https://aws.amazon.com/blogs/machine-learning/from-portal-hopping-to-instant-answers-hemas-journey-with-mcp-and-amazon-bedrock/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-09-23T18:41:09.000Z",
+        "contentSnippet": "HEMA, a 100-year-old Dutch retailer, turned developer portal-hopping into instant answers by building HAL, an internal AI assistant on Amazon Bedrock AgentCore. Using Model Context Protocol (MCP), HAL delivers governed knowledge inside the tools teams already use, with no AWS cre"
+      },
+      {
+        "title": "Agentic conversational video intelligence built on AWS",
+        "link": "https://aws.amazon.com/blogs/machine-learning/agentic-conversational-video-intelligence-built-on-aws/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-09-23T18:21:54.000Z",
+        "contentSnippet": "Learn how to build a conversational video intelligence solution on AWS using an agentic architecture. A single Strands Agents SDK agent orchestrates Amazon Bedrock, Amazon Rekognition, and Amazon Transcribe at runtime, deciding which service to call so you can ask natural languag"
+      },
+      {
+        "title": "Use open weight models as your AI coding agent with Amazon Bedrock",
+        "link": "https://aws.amazon.com/blogs/machine-learning/use-open-weight-models-as-your-ai-coding-agent-with-amazon-bedrock/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-09-23T18:17:44.000Z",
+        "contentSnippet": "Pair OpenCode, an open-source terminal-native AI coding agent, with open weight models on Amazon Bedrock to get a secure, flexible, pay-per-use coding assistant. Learn how to configure multi-model workflows, match the right model to each task, and keep your data in your own AWS a"
+      },
+      {
+        "title": "Google Beam expands with new regions, partners, and customers",
+        "link": "https://blog.google/innovation-and-ai/technology/research/google-beam-expansion/",
+        "source": "Google AI Blog",
+        "isoDate": "2026-09-23T18:00:00.000Z",
+        "contentSnippet": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network."
+      },
       {
         "title": "Google Beam expands with new regions, partners, and customers",
         "link": "https://blog.google/innovation-and-ai/models-and-research/google-research/google-beam-expansion/",
@@ -1576,34 +1604,6 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-09-02T21:22:05.000Z",
         "contentSnippet": "Australian teams can now access OpenAI GPT-5.6 Sol, Terra, and Luna models on Amazon Bedrock with global cross-Region inference from the Asia Pacific (Sydney) and Asia Pacific (Melbourne) Regions. This post shows how to invoke the models, use prompt caching, set up Codex with Ope"
-      },
-      {
-        "title": "Modernizing and scaling support operations with generative AI on AWS",
-        "link": "https://aws.amazon.com/blogs/machine-learning/modernizing-and-scaling-support-operations-with-generative-ai-on-aws/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-09-02T18:26:35.000Z",
-        "contentSnippet": "Learn how to build a generative AI-based support operations platform on AWS that converts training videos into structured SOPs, applies Retrieval-Augmented Generation to guide ticket resolution, and uses machine learning to predict SLA risk and prioritize work."
-      },
-      {
-        "title": "How an AWS team detects dashboard content failures at scale using Amazon Bedrock",
-        "link": "https://aws.amazon.com/blogs/machine-learning/how-an-aws-team-detects-dashboard-content-failures-at-scale-using-amazon-bedrock/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-09-02T18:21:20.000Z",
-        "contentSnippet": "Business intelligence dashboards can fail silently, showing blank, stale, or wrong data even when every infrastructure monitor reports healthy. Learn how an AWS team built an automated, AI-powered content validation solution on Amazon Bedrock that scans hundreds of dashboards and"
-      },
-      {
-        "title": "From code to diagrams: Agentic architecture documentation with Amazon Bedrock AgentCore",
-        "link": "https://aws.amazon.com/blogs/machine-learning/from-code-to-diagrams-agentic-architecture-documentation-with-amazon-bedrock-agentcore/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-09-02T18:18:47.000Z",
-        "contentSnippet": "Learn how a global interdealer broker built an automated architecture documentation pipeline on Amazon Bedrock AgentCore that analyzes .NET code bases, generates architecture diagrams, and maintains searchable documentation through Amazon Bedrock Knowledge Bases and AWS CodePipel"
-      },
-      {
-        "title": "Trinity: Agentic AI-powered transition planning for students with disabilities",
-        "link": "https://aws.amazon.com/blogs/machine-learning/trinity-agentic-ai-powered-transition-planning-for-students-with-disabilities/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-09-02T18:14:17.000Z",
-        "contentSnippet": "Learn how University Startups and its AWS partner g/d/n/a scaled Trinity, a conversational AI solution for students with disabilities, into a serverless multi-agent architecture on Amazon Bedrock that produces IDEA-aligned transition plans for school districts across the US."
       }
     ],
     "virtualization": [
@@ -2310,6 +2310,20 @@
     ],
     "hardware": [
       {
+        "title": "Microsoft brings Snapdragon X2 Plus to 13-inch Surface Laptop, 12-inch Surface Pro",
+        "link": "https://www.tomshardware.com/tablets/microsoft-surface/microsoft-brings-snapdragon-x2-plus-to-13-inch-surface-laptop-12-inch-surface-pro-low-end-systems-finally-get-upgrades",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-23T20:30:00.000Z",
+        "contentSnippet": "Microsoft's lowest-end systems are getting upgrades to Qualcomm's latest Snapdragon X2 Plus processors."
+      },
+      {
+        "title": "ASUS ExpertCenter Pro ET900N G3 Review: The GB300 DGX Station Gets Handles, Titanium Power, and Cooled Optics",
+        "link": "https://www.storagereview.com/review/asus-expertcenter-pro-et900n-g3-review",
+        "source": "StorageReview",
+        "isoDate": "2026-09-23T18:53:04.000Z",
+        "contentSnippet": "The ASUS ExpertCenter Pro ET900N G3 is the second GB300 DGX Station we’ve tested and the first we’ve had hands-on in the lab; our MSI XpertStation WS300 testing ran remotely. It uses the same NVIDIA silicon we tested in the MSI XpertStation WS300: a Grace Blackwell Ultra Desktop "
+      },
+      {
         "title": "Dell AI Factory Passes 6,500 Deployments as Omdia Finds 79% of Enterprises Hit an AI Incident in 12 Months",
         "link": "https://www.storagereview.com/news/dell-ai-factory-passes-6500-deployments-as-omdia-finds-79-of-enterprises-hit-an-ai-incident-in-12-months",
         "source": "StorageReview",
@@ -2994,20 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-09-18T12:00:00.000Z",
         "contentSnippet": "A developer's live WebGPU demo runs Nvidia's DLSS 5 neural rendering in a web browser, but also apparently runs on macOS."
-      },
-      {
-        "title": "US chip fabs face massive 157,000 worker shortfall, mere 3% of US engineering grads enter chipmaking — despite six-figure salaries, US chip manufacturers are in dire need of engineers and technicians",
-        "link": "https://www.tomshardware.com/tech-industry/semiconductors/us-chip-manufacturers-are-in-dire-need-of-engineers-and-technicians-experts-suggest-a-shortage-of-up-to-157-000-semiconductor-workers-by-2030",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-18T11:30:00.000Z",
-        "contentSnippet": "As many semiconductor fabs and facilities go online in the 2030s and beyond, a global consulting firm said that these sites will need thousands of engineers and technicians that the U.S. will be hard-pressed to fill."
-      },
-      {
-        "title": "ASML snubs Elon Musk-backed particle accelerator chipmaking tech — firm doubles down on 1,000W laser-produced plasma systems for chipmaking tools",
-        "link": "https://www.tomshardware.com/tech-industry/semiconductors/asml-snubs-elon-musk-backed-particle-accelerator-chipmaking-tech-firm-doubles-down-on-1-000w-laser-produced-plasma-systems-for-chipmaking-tools",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-18T11:00:00.000Z",
-        "contentSnippet": "With progress that ASML makes with its LPP EUV light sources for its scanners, the company is barely interesting in adopting particle accelerator-based FEL sources."
       }
     ]
   }
