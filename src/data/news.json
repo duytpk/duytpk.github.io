@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-09-25T12:27:21.916Z",
+  "updatedAt": "2026-09-25T17:39:25.704Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-67236 - RabbitMQ: Plaintext username:password stored in an insecure cookie after successful POST /login",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67236",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T15:59:10.000Z",
+        "contentSnippet": "RabbitMQ is a messaging and streaming broker. From 4.2.0 until 4.2.8 and 4.3.2, a successful POST /login caused is_authorized/2 to set an auth cookie containing base64-encoded username:password credentials without HttpOnly, Secure, SameSite, or expiration protections. Because bas",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-92161 - FriendsOfFlarum OAuth: Unauthenticated account takeover via unverified email trust in Discord OAuth provider",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92161",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T15:53:34.000Z",
+        "contentSnippet": "FriendsOfFlarum OAuth allows users to log in to Flarum with GitHub, Twitter, Facebook, and other providers. Prior to 1.7.4 and 2.0.0-beta.4, the Discord OAuth provider does not check the verified field returned for an OAuth email before passing the address to Flarum core as trust",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-42322 - Piwigo: Authenticated RCE via File Upload in Logo Upload Feature",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-42322",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T15:50:34.000Z",
+        "contentSnippet": "Piwigo is a full featured open source photo gallery application for the web. Prior to 16.4.0, admin/themes_standard_pages.php validates uploaded logo content by MIME type but reuses the attacker-controlled extension from std_pgs_logo when constructing the stored filename. An auth",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-42324 - Piwigo: Second-Order SQL Injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-42324",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T15:48:55.000Z",
+        "contentSnippet": "Piwigo is a full featured open source photo gallery application for the web. Prior to 16.4.0, admin/element_set_ranks.php stores administrator-controlled image_order[] values without enforcing the existing sort-field whitelist. The stored album image_order expression is later con",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-44642 - Piwigo: SQL injection in upgrade authentication allows unauthenticated upgrade authorization bypass (PHP 8+)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44642",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T15:47:59.000Z",
+        "contentSnippet": "Piwigo is a full featured open source photo gallery application for the web. Prior to 16.4.0, check_upgrade_access_rights() in admin/include/functions_upgrade.php conditionally escapes the submitted username only when the removed get_magic_quotes_gpc function exists, so PHP 8 and",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-62262 - Piwigo: Unauthenticated SQL injection in `pwg.images.filteredSearch.create`",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62262",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T15:46:04.000Z",
+        "contentSnippet": "Piwigo is a full featured open source photo gallery application for the web. In 17.0.0beta1 and earlier, when rating is enabled, an unauthenticated guest can call pwg.images.filteredSearch.create with a crafted ratings[] value and then open the returned search URL. include/ws_fun",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-42323 - Piwigo: SQL Injection in Batch Manager",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-42323",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T15:42:01.000Z",
+        "contentSnippet": "Piwigo is a full featured open source photo gallery application for the web. Prior to 16.4.0, admin/batch_manager.php accepts administrator-controlled dimension width, height, and ratio values and filesize values from the Batch Manager filter URL without numeric validation. The U",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-97469 - PostgreSQL Anonymizer: RESTRICTED functions are reachable through a subLink",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97469",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T15:40:45.000Z",
+        "contentSnippet": "PostgreSQL Anonymizer contains a vulnerability that allows unprivileged masked users to repeatedly call the anon.hash() function and collects (seed, hash_output) pairs to perform an offline brute-force attack and deduce the salt. A masked role can run a RESTRICTED function when t",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-49850 - InvoicePlane: Missing CSRF Protection on State-Changing delete Actions",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49850",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T15:40:08.000Z",
+        "contentSnippet": "InvoicePlane is a self-hosted open source application for managing invoices, clients, and payments. Prior to 1.7.2, InvoicePlane exposes Invoices::delete() and Invoices::delete_invoice_tax() as state-changing routes without requiring POST and validating a CSRF token. When an auth",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-50547 - InvoicePlane permits local file inclusion through the e-invoice XML configuration identifier",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50547",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T15:38:31.000Z",
+        "contentSnippet": "InvoicePlane is a self-hosted open source application for managing invoices, clients, and payments. Prior to 1.7.2, InvoicePlane's Invoices::generate_xml() method appends a database-derived xml_id to the XMLconfigs helper directory and includes the resulting PHP path without vali",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-33639 - InvoicePlane permits DDL injection through tax_rate_decimal_places",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-33639",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T15:36:52.000Z",
+        "contentSnippet": "InvoicePlane is a self-hosted open source application for managing invoices, clients, and payments. Prior to 1.7.2, InvoicePlane interpolates the administrator-controlled tax_rate_decimal_places setting into an ALTER TABLE statement for ip_tax_rates in Settings::index() without s",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-100230 - Input Leap Directory Traversal and Remote Code Execution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100230",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T15:31:52.000Z",
+        "contentSnippet": "Input Leap (aka input-leap) through 3.0.3, when the non-default --enable-drag-drop option is used on Windows or macOS, mishandles the / versus \\ distinction and allows directory traversal, with resultant code execution if a file is written to a startup directory. This occurs via ",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-39353 - InvoicePlane: Remote Code Execution via Writable Templates Directory",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-39353",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T15:30:58.000Z",
+        "contentSnippet": "InvoicePlane is a self-hosted open source application for managing invoices, clients, and payments. Prior to 1.7.2-rc-1, InvoicePlane builds its permitted template list by scanning a PHP template directory that can be written through an administrator-controlled file-write capabil",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-85293 - InvoicePlane: Stored Cross-Site Scripting (XSS) via Client Email in Invoice and Quote Mailer Forms",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85293",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T15:29:30.000Z",
+        "contentSnippet": "InvoicePlane is a self-hosted open source application for managing invoices, clients, and payments. In version 1.7.2-beta-1, InvoicePlane stores client_email values without enforcing email syntax and renders them unescaped inside double-quoted value attributes in the invoice mail",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-85291 - InvoicePlane IDOR: Horizontal Privilege Escalation via Password Change Without Authorization Check",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85291",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T15:28:33.000Z",
+        "contentSnippet": "InvoicePlane is a self-hosted open source application for managing invoices, clients, and payments. Prior to 1.7.2, InvoicePlane's Users::change_password() method accepts a user_id from the URL and updates that account's password without an object-level authorization check. An au",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-85289 - InvoicePlane: Missing CSRF Token Validation on Multiple Delete Endpoints",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85289",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T15:26:22.000Z",
+        "contentSnippet": "InvoicePlane is a self-hosted open source application for managing invoices, clients, and payments. Prior to 1.7.2, InvoicePlane omits ensure_valid_post_request() from delete methods including Payments::delete(), Recurring::delete(), and User_clients::delete(). Although the route",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-85292 - InvoicePlane: Loose Type Comparison in Core Authentication Check (Defense-in-Depth)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85292",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T15:25:26.000Z",
+        "contentSnippet": "InvoicePlane is a self-hosted open source application for managing invoices, clients, and payments. Prior to 1.7.2, InvoicePlane's User_Controller compares the session user_type value with the required role by using PHP's loose inequality operator. Under a non-standard session ba",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-85274 - InvoicePlane: Recurring Invoice State Change via GET Request Without CSRF Protection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85274",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T15:24:28.000Z",
+        "contentSnippet": "InvoicePlane is a self-hosted open source application for managing invoices, clients, and payments. Prior to 1.7.2, InvoicePlane exposes Recurring::stop() as a state-changing GET route without CSRF token validation. When an authenticated administrator loads attacker-controlled co",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-85290 - InvoicePlane: Log Injection via Unsanitized User Input in Cron Key Error Logging",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85290",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T15:23:20.000Z",
+        "contentSnippet": "InvoicePlane is a self-hosted open source application for managing invoices, clients, and payments. Prior to 1.7.2, InvoicePlane's Cron::recur() method writes an invalid cron key from the URL path directly to the application log without neutralizing CRLF characters. An unauthenti",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-39372 - InvoicePlane: Sensitive Information Disclosure via Unstripped EXIF Metadata in Attachments",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-39372",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T15:21:53.000Z",
+        "contentSnippet": "InvoicePlane is a self-hosted open source application for managing invoices, clients, and payments. Prior to 1.7.2, InvoicePlane stores and serves uploaded image attachments without stripping EXIF metadata. When an administrator uploads an image through invoice attachments, quote",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-54790 - InvoicePlane: Second-order SQL injection through the unvalidated custom_field_table field in the Custom Fields module",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54790",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T15:19:21.000Z",
+        "contentSnippet": "InvoicePlane is a self-hosted open source application for managing invoices, clients, and payments. Prior to 1.7.2, InvoicePlane stores an administrator-controlled custom_field_table value without validating it against the allowed custom-field table names. Mdl_custom_fields::used",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-97866 - Zhonglun CloudPOS Automatic Update Program.cs channel accessible",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97866",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T15:18:01.000Z",
+        "contentSnippet": "A weakness has been identified in Zhonglun CloudPOS 3.0. Affected by this vulnerability is an unknown functionality of the file Program.cs of the component Automatic Update. Executing a manipulation of the argument version/url/packagekey/package name can lead to channel accessibl",
+        "cveScore": 5.6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-96812 - Host Root Sandbox Escape in gVisor via Character Device Passthrough and CUSE",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96812",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T15:17:57.000Z",
+        "contentSnippet": "Improper Exposure of Resource to Wrong Sphere in the host file helper (gofer) in Google gVisor prior to commit 573a9e73cf844f on Linux platforms with CUSE enabled allows a local attacker with container image deployment privileges to achieve root code execution on the host system.",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-93306 - This Power System update is being released to address",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93306",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T15:17:56.000Z",
+        "contentSnippet": "IBM Server Firmware FW1120.00 through FW1120.01, FW1110.00 through FW1110.31, FW1060.00 through FW1060.81, and FW950.00 through FW950.H3 is affected by a vulnerability in the ASMI web interface. An unauthenticated attacker on the management network can send a malformed HTTPS requ",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-93030 - FTM XML External Entity Injection Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93030",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T15:17:56.000Z",
+        "contentSnippet": "FTM 4.x ALL could allow a remote authenticated attacker to obtain sensitive information due to an XML external entity injection flaw.",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
       {
         "title": "CVE-2026-98149 - bpf: Fix percpu map update indexing with sparse CPU IDs",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-98149",
@@ -677,234 +902,51 @@
         "contentSnippet": "A security flaw has been discovered in YunaiV/zhijiantianya ruoyi-vue-pro up to 2026.08. Affected by this vulnerability is the function validOAuthClientFromCache of the file yudao-module-system/src/main/java/cn/iocoder/yudao/module/system/service/oauth2/OAuth2ClientServiceImpl.ja",
         "cveScore": 5,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-97324 - YunaiV/zhijiantianya ruoyi-vue-pro Demo-order Payment Callback PayDemoOrderController.java updateDemoOrderPaid improper authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97324",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T20:17:35.000Z",
-        "contentSnippet": "A vulnerability was identified in YunaiV/zhijiantianya ruoyi-vue-pro up to 2026.08. Affected is the function updateDemoOrderPaid of the file yudao-module-pay/src/main/java/cn/iocoder/yudao/module/pay/controller/admin/demo/PayDemoOrderController.java of the component Demo-order Pa",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-96883 - Type confusion in AWS pgcollection allows remote code execution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96883",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T20:17:35.000Z",
-        "contentSnippet": "pgcollection is an open source extension to PostgreSQL. A type confusion issue in AWS pgcollection 2.0.0 through 2.1.1 might allow an authenticated remote user to execute arbitrary code as the postgres operating system user via crafted SQL statements that rely on mismatched type ",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-93354 - Taskview Community Missing Authentication via OAuth Dynamic Client Registration",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93354",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T20:17:34.000Z",
-        "contentSnippet": "Taskview Community before 1.56.0 contains a missing authentication vulnerability that allows unauthenticated attackers to register arbitrary OAuth clients and take over user accounts by exploiting the OAuth 2.0 Dynamic Client Registration endpoint, which is enabled by default and",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-93291 - Improper certificate validation in Eufy Omni C20",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93291",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T20:17:34.000Z",
-        "contentSnippet": "Omni C20 lacks proper certificate validation which could allow an attacker to perform a man-in-the-middle attack which could allow them to execute arbitrary code.",
-        "cveScore": 9.4,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-93290 - Use of Hard-coded Credentials in Eufy Omni C20",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93290",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T20:17:34.000Z",
-        "contentSnippet": "Omni C20 uses hard-coded credentials that could allow an attacker to monitor log files to obtain credentials to access information like mapping data.",
-        "cveScore": 6.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-93289 - OS command injection in Eufy Omni C20, Omni X10 Pro",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93289",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T20:17:34.000Z",
-        "contentSnippet": "The affected products are vulnerable to command injection attack that could allow an unauthenticated attacker to execute system commands during the pairing process.",
-        "cveScore": 9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-88956 - Botslab G980H Dashcams Missing Authentication for Critical Function",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-88956",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T20:17:33.000Z",
-        "contentSnippet": "The Botslab G980H dash camera firmware contains an authentication vulnerability in the root account exposed through the device's UART interface. The affected account does not require a password before granting access to a privileged system interface, and the interface also displa",
-        "cveScore": 7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-88761 - Botslab G980H Dashcams Use of Weak Credentials",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-88761",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T20:17:33.000Z",
-        "contentSnippet": "The Botslab G980H dash camera firmware generates the default WiFi password using predictable device information, portions of which are advertised by the product. An unauthenticated attacker within WiFi range could potentially determine the remaining password characters through li",
-        "cveScore": 6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-85496 - Botslab G980H Dashcams Generation of Predictable Numbers or Identifiers",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85496",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T20:17:32.000Z",
-        "contentSnippet": "The Botslab G980H dash camera firmware generates session identifiers using a small sequential value space rather than a suitably unpredictable source. An unauthenticated attacker with adjacent network access and knowledge that an active session exists could potentially determine ",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-84399 - Botslab G980H Dashcams Incorrect Authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84399",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T20:17:32.000Z",
-        "contentSnippet": "The Botslab G980H dash camera firmware contains an authorization vulnerability in its session based command functionality. The product does not sufficiently associate an authenticated session with the client connection that established it, and subsequent privileged operations rel",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-82566 - Botslab G980H Dashcams Insufficient session expiration",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82566",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T20:17:32.000Z",
-        "contentSnippet": "The Botslab G980H dash camera firmware contains a session management vulnerability in which authentication state can remain valid after the associated client connection has been terminated or replaced. Under certain connection conditions, a newly established connection can displa",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-82372 - Improper handling of sensitive data during IPsec policy creation and modification in Brocade SANnav before 3.0.1.a",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82372",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T20:17:32.000Z",
-        "contentSnippet": "Improper handling of sensitive data during IPsec policy creation and modification in Brocade SANnav versions before 3.0.1a results in pre-shared keys being recorded in application logs. Individuals with read access to system log files or support bundles can view these credentials",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-82164 - Dell Trusted Device Client Incorrect Permission Assignment Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82164",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T20:17:32.000Z",
-        "contentSnippet": "Dell Trusted Device Client, versions prior to 8.1.359.0, contain an Incorrect Permission Assignment for Critical Resource vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Information tampering.",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-77967 - Botslab G980H Dashcams Authentication Bypass by Capture-replay",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77967",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T20:17:30.000Z",
-        "contentSnippet": "The Botslab G980H dash camera firmware accepts a reusable authentication value without adequately verifying its freshness or association with the requesting client. An unauthenticated attacker with adjacent network access who captures a valid authentication value could replay it ",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-81473 - Dell Rugged Control Center Improper Authorization Elevation of Privilege",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81473",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T18:53:18.000Z",
-        "contentSnippet": "Dell Rugged Control Center (RCC), versions prior to 5.2.206, contain an Improper Authorization vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Elevation of Privileges.",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-86859 - Unauthenticated Arbitrary Record Disclosure in ServiceNow AI Platform",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86859",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T18:52:51.000Z",
-        "contentSnippet": "ServiceNow has remediated an authorization bypass security issue that was identified in the ServiceNow AI Platform. This security issue, if exploited, could enable an unauthenticated user to access data within the ServiceNow AI Platform that the user otherwise would not be entitl",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-13016 - Unauthenticated SQL Injection in ServiceNow AI Platform",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13016",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T18:48:50.000Z",
-        "contentSnippet": "ServiceNow has remediated a SQL injection vulnerability that was identified in the ServiceNow AI Platform. This vulnerability could enable an unauthenticated user, in certain circumstances, to execute arbitrary SQL statements against the instance's underlying database and gain ac",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-97322 - YunaiV/zhijiantianya ruoyi-vue-pro File Upload FileController.java cross site scripting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97322",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T18:45:06.000Z",
-        "contentSnippet": "A vulnerability was found in YunaiV/zhijiantianya ruoyi-vue-pro up to 2026.08. This affects an unknown function of the file yudao-module-infra/src/main/java/cn/iocoder/yudao/module/infra/controller/admin/file/FileController.java of the component File Upload. Performing a manipula",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-81455 - Dell ThinOS Missing Authentication for Critical Function Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81455",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T18:43:51.000Z",
-        "contentSnippet": "Dell ThinOS 10, versions prior to SecurityAddon_2605.10.2766_T10, contain a Missing Authentication for Critical Function vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to Unauthorized access.",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57440 - Mediawiki EmbedVideo Extension has stored XSS via malformed src url with $wgEmbedVideoRequireConsent disabled",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57440",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T18:42:45.000Z",
-        "contentSnippet": "The EmbedVideo Extension is a MediaWiki extension which adds a parser function called #ev and various parser tags for embedding video clips from various video sharing services. Prior to 4.1.0, with $wgEmbedVideoRequireConsent disabled (not the default), the urls for videos are pa",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-86858 - Unauthenticated Privilege Escalation via GraphQL in ServiceNow AI Platform",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86858",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T18:42:40.000Z",
-        "contentSnippet": "ServiceNow has remediated an improper access control security issue that was identified in the ServiceNow AI Platform. This security issue could enable an unauthenticated user, in certain circumstances, to create, modify, or delete instance data beyond what was intended. In Augus",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-82157 - Dell ThinOS Improper Certificate Validation Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82157",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T18:39:21.000Z",
-        "contentSnippet": "Dell ThinOS 10, versions prior to SecurityAddon_2605.10.2766_T10, contains an Improper Certificate Validation vulnerability. An unauthenticated attacker with adjacent network access could potentially exploit this vulnerability, leading to Protection mechanism bypass and Unauthori",
-        "cveScore": 8.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-86857 - Authorization Bypass in ServiceNow AI Platform",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86857",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T18:37:47.000Z",
-        "contentSnippet": "ServiceNow has remediated an authorization bypass security issue that was identified in the ServiceNow AI Platform. This security issue, if exploited, could enable an authenticated user to access data within the ServiceNow AI Platform that the user otherwise would not be entitled",
-        "cveScore": 8.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-48073 - Docmost: Page export can include restricted same-space attachments through forged attachmentId",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48073",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T18:33:20.000Z",
-        "contentSnippet": "Docmost is open-source collaborative wiki and documentation software. From 0.70.0 until 0.80.1, a low-privileged authenticated user who can edit an exportable page can embed a forged attachmentId that belongs to a restricted page in the same space. Exporting the attacker-controll",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-52853 - Docmost: Privilege Escalation - ADMIN Can Invite Users as OWNER",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52853",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T18:31:54.000Z",
-        "contentSnippet": "Docmost is open-source collaborative wiki and documentation software. Prior to 0.90.1, an authenticated workspace ADMIN can use the workspace invitation flow to invite an external email address with the OWNER role because the role ceiling does not prevent ADMIN users from grantin",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       }
     ],
     "ai": [
+      {
+        "title": "Scaling MoE reinforcement learning on Amazon EKS with EFA and DeepEP with 40% more throughput",
+        "link": "https://aws.amazon.com/blogs/machine-learning/scaling-moe-reinforcement-learning-on-amazon-eks-with-efa-and-deepep-with-40-more-throughput/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-09-25T16:29:50.000Z",
+        "contentSnippet": "Learn how to scale Mixture-of-Experts (MoE) reinforcement learning on Amazon EKS using Elastic Fabric Adapter (EFA) and DeepEP. This post presents an architecture that combines Amazon EKS, EFA, and Amazon S3 and increased aggregate reinforcement learning rollout throughput by 40%"
+      },
+      {
+        "title": "Accelerate multimodal RL training with SkyRL on Amazon SageMaker HyperPod",
+        "link": "https://aws.amazon.com/blogs/machine-learning/accelerate-multimodal-rl-training-with-skyrl-on-amazon-sagemaker-hyperpod/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-09-25T16:18:07.000Z",
+        "contentSnippet": "Learn how to run SkyRL, an open-source reinforcement learning framework, on Amazon SageMaker HyperPod to post-train a Qwen3-VL-8B vision-language model with GRPO. This walkthrough covers building the container image, launching a Ray cluster from SageMaker Studio, submitting and m"
+      },
+      {
+        "title": "NarrateAI: production-ready LLM quality assurance on Amazon Bedrock",
+        "link": "https://aws.amazon.com/blogs/machine-learning/narrateai-production-ready-llm-quality-assurance-on-amazon-bedrock/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-09-25T16:15:22.000Z",
+        "contentSnippet": "NarrateAI delivers production-ready LLM quality assurance on Amazon Bedrock. This post details five techniques—adaptive pipeline orchestration, cross-account multi-model failover, real-time streaming evaluation, composite evaluation, and data accuracy verification—that reach abou"
+      },
+      {
+        "title": "Deploying real-time personalized speech with Qwen3-TTS on Amazon SageMaker AI",
+        "link": "https://aws.amazon.com/blogs/machine-learning/deploying-real-time-personalized-speech-with-qwen3-tts-on-amazon-sagemaker-ai/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-09-25T16:09:46.000Z",
+        "contentSnippet": "Deploy the publicly available Qwen3-TTS-12Hz-1.7B-Base text-to-speech model from Amazon SageMaker JumpStart to a fully managed, real-time endpoint, and clone a voice from a short reference clip. Cross-lingual cloning preserves the speaker's identity across languages."
+      },
+      {
+        "title": "How Datacor built self-service rental analytics with Amazon Quick Sight",
+        "link": "https://aws.amazon.com/blogs/machine-learning/how-datacor-built-self-service-rental-analytics-with-amazon-quick-sight/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-09-25T15:54:42.000Z",
+        "contentSnippet": "Learn how Datacor built a self-service rental analytics experience for gas and welding distributors by embedding Amazon Quick Sight dashboards and natural language querying into its TrackAbout platform, powered by an automated cross-cloud data pipeline and multi-tenant row-level "
+      },
+      {
+        "title": "Multi-Region training with Amazon SageMaker HyperPod and Qumulo",
+        "link": "https://aws.amazon.com/blogs/machine-learning/multi-region-training-with-amazon-sagemaker-hyperpod-and-qumulo/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-09-25T15:49:44.000Z",
+        "contentSnippet": "Amazon SageMaker HyperPod and Cloud Native Qumulo let you place training compute in one AWS Region while keeping your dataset in another. This post shares the architecture and validation results from a cross-Region training run, where a remote cluster matched a co-located cluster"
+      },
       {
         "title": "Speaker-labeled transcription with WhisperX on SageMaker AI",
         "link": "https://aws.amazon.com/blogs/machine-learning/speaker-labeled-transcription-with-whisperx-on-sagemaker-ai/",
@@ -1562,51 +1604,23 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-09-04T16:12:17.000Z",
         "contentSnippet": "HyperPod InstantStart is an open source control plane that composes Amazon EKS orchestration with the managed capabilities of Amazon SageMaker HyperPod. It drives the same guarded operations through both a web interface and an AI agent, turning cluster bootstrap, capacity, traini"
-      },
-      {
-        "title": "Customizing your knowledge base on Amazon Bedrock for large and complex documents using Amazon Textract",
-        "link": "https://aws.amazon.com/blogs/machine-learning/customizing-your-knowledge-base-on-amazon-bedrock-for-large-and-complex-documents-using-amazon-textract/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-09-04T16:08:10.000Z",
-        "contentSnippet": "Learn how to customize an Amazon Bedrock knowledge base for large, complex documents by combining the high-accuracy text extraction of Amazon Textract with the generative AI of Amazon Bedrock. This post shows how to ingest and preprocess PDFs and images, then query utility bills "
-      },
-      {
-        "title": "How Intuit built an agentic disaster recovery assistant with Amazon Bedrock",
-        "link": "https://aws.amazon.com/blogs/machine-learning/how-intuit-built-an-agentic-disaster-recovery-assistant-with-amazon-bedrock/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-09-04T16:06:01.000Z",
-        "contentSnippet": "Disaster recovery at scale is hard. Learn how Intuit built EWOK Agent, an agentic disaster recovery assistant on Amazon Bedrock that lets on-call engineers run production failovers from a plain-language request while keeping every action audited, policy-compliant, and safe."
-      },
-      {
-        "title": "AI-driven development lifecycle using Amazon Bedrock AgentCore",
-        "link": "https://aws.amazon.com/blogs/machine-learning/ai-driven-development-lifecycle-using-amazon-bedrock-agentcore/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-09-03T16:16:28.000Z",
-        "contentSnippet": "Engineering teams adopting the AI-Driven Development Lifecycle (AI-DLC) often struggle to turn concepts into working code. This post walks through two reference implementations on Amazon Bedrock AgentCore, Kiro, and Claude Code: an SQL-to-ER-diagram generator and a multi-agent co"
-      },
-      {
-        "title": "Migrate agentic workloads to Amazon Bedrock AgentCore",
-        "link": "https://aws.amazon.com/blogs/machine-learning/migrate-agentic-workloads-to-amazon-bedrock-agentcore/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-09-03T16:14:12.000Z",
-        "contentSnippet": "An agent that works in a notebook is not an agent in production. This post walks through migrating a LangGraph customer support agent to Amazon Bedrock AgentCore in two stages: onto Runtime, Gateway, and Memory, then to model-driven planning on Strands Agents, retiring operationa"
-      },
-      {
-        "title": "Integrating Outlook with Amazon Quick for AI-powered email automation",
-        "link": "https://aws.amazon.com/blogs/machine-learning/integrating-outlook-with-amazon-quick-for-ai-powered-email-automation/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-09-03T16:11:57.000Z",
-        "contentSnippet": "Integrate Microsoft Outlook with Amazon Quick to automate email management, calendar scheduling, and workflow coordination. This post walks through the end-to-end setup and shows automation scenarios using Amazon Quick chat agents, Amazon Quick Flows, and Amazon Quick Automate."
-      },
-      {
-        "title": "Set up OpenAI ChatGPT Codex with LiteLLM on Amazon ECS and Amazon Bedrock",
-        "link": "https://aws.amazon.com/blogs/machine-learning/set-up-openai-chatgpt-codex-with-litellm-on-amazon-ecs-and-amazon-bedrock/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-09-03T16:10:39.000Z",
-        "contentSnippet": "Deploy a customer-operated LiteLLM gateway on Amazon ECS with AWS Fargate, connect it to an OpenAI model on Amazon Bedrock, and configure Codex to route requests through the gateway's Responses API with scoped identities, budgets, rate limits, and telemetry. We also compare direc"
       }
     ],
     "virtualization": [
+      {
+        "title": "TMOG Task Manager – The Original Creator of Windows Task Manager Is Back With Something Better",
+        "link": "https://www.vladan.fr/tmog-task-manager-the-original-creator-of-windows-task-manager-is-back-with-something-better/",
+        "source": "Vladan.fr",
+        "isoDate": "2026-09-25T14:22:44.000Z",
+        "contentSnippet": "Today's freebie is from a guy who 30 years ago designed the original Windows Task manager. If you’ve ever hit Ctrl+Shift+Esc on a Windows box and stared at the Task Manager wondering what’s eating your CPU or RAM, you’ve used Dave Plummer’s work. The same guy who wrote the origin"
+      },
+      {
+        "title": "Introducing PostgreSQL Read Replicas in DSM 9.1.1",
+        "link": "https://cormachogan.com/2026/09/25/introducing-postgresql-read-replicas-in-dsm-9-1-1/",
+        "source": "Cormac Hogan",
+        "isoDate": "2026-09-25T13:00:40.000Z",
+        "contentSnippet": "In my introduction post to VMware Data Services (DSM) 9.1.1, I mentioned a new feature called PostgreSQL read replicas. In a nutshell, PostgreSQL databases provisioned by DSM can now be scaled for read workloads by adding additional Read Replicas. Previously, a PostgreSQL databas"
+      },
       {
         "title": "5 Home Lab Projects to Try This Weekend: September 25, 2026",
         "link": "https://www.virtualizationhowto.com/2026/09/5-home-lab-projects-to-try-this-weekend-september-25-2026/",
@@ -2292,29 +2306,85 @@
         "source": "Virtualization HowTo",
         "isoDate": "2026-07-13T12:16:03.000Z",
         "contentSnippet": "I have tried out a lot of different volume backups over the years and there are many great tools out there. However, there was a database backup tool that recently… The post This Free Backup Tool Just Added Docker Volume Backups appeared first on Virtualization Howto."
-      },
-      {
-        "title": "I Connected AI to My Proxmox Cluster Using MCP and It Was Better Than I Expected",
-        "link": "https://www.virtualizationhowto.com/2026/07/i-connected-ai-to-my-proxmox-cluster-using-mcp-and-it-was-better-than-i-expected/",
-        "source": "Virtualization HowTo",
-        "isoDate": "2026-07-11T12:25:24.000Z",
-        "contentSnippet": "AI is showing up literally everywhere and massively changing how things are carried out and being done. I am looking at ways that AI can benefit my home lab and… The post I Connected AI to My Proxmox Cluster Using MCP and It Was Better Than I Expected appeared first on Virtualiza"
-      },
-      {
-        "title": "7 Open Source Infrastructure Projects I’m Watching Closely Right Now",
-        "link": "https://www.virtualizationhowto.com/2026/07/7-open-source-infrastructure-projects-im-watching-closely-right-now/",
-        "source": "Virtualization HowTo",
-        "isoDate": "2026-07-10T12:34:43.000Z",
-        "contentSnippet": "One of the exciting things that I love about running a home lab is discovering new community projects before they become mainstream. Every so often there are projects that appear… The post 7 Open Source Infrastructure Projects I’m Watching Closely Right Now appeared first on Virt"
       }
     ],
     "hardware": [
       {
-        "title": "Intel expects 14A to be 'within 5%' the performance of TSMC's A14",
-        "link": "https://www.tomshardware.com/tech-industry/semiconductors/intel-expects-14a-to-be-within-5-percent-the-performance-of-tsmcs-a14-conservative-forecast-clashes-with-18as-frequency-lead-and-promised-20-percent-gains",
+        "title": "NetApp to Acquire PEAK:AIO, Bringing Its Scale-Out pNFS Metadata Work to ONTAP",
+        "link": "https://www.storagereview.com/news/netapp-to-acquire-peakaio-bringing-its-scale-out-pnfs-metadata-work-to-ontap",
+        "source": "StorageReview",
+        "isoDate": "2026-09-25T16:51:15.000Z",
+        "contentSnippet": "NetApp has agreed to acquire PEAK:AIO, the Manchester, UK software company whose metadata and parallel NFS work NetApp says will accelerate its AI infrastructure roadmap. NetApp plans to combine PEAK:AIO’s metadata services and parallel namespace technology with ONTAP, aiming at "
+      },
+      {
+        "title": "Elon Musk's SpaceXAI to add another 660,000 AI GPUs this year, nearing a total of 1.44 million in operation",
+        "link": "https://www.tomshardware.com/tech-industry/data-centers/elon-musks-spacexai-to-add-another-660-000-ai-gpus-this-year-nearing-a-total-of-1-44-million-in-operation-firm-is-building-1-2-gigawatt-power-plant-to-bring-systems-fully-online",
         "source": "Tom's Hardware",
-        "isoDate": "2026-09-25T12:00:00.000Z",
-        "contentSnippet": "Intel's Naga Chandrasekaran now claims that Intel 14A node will deliver performance 'within 5%' of TSMC's A14 technology, a claim that requires a closer examination."
+        "isoDate": "2026-09-25T15:40:00.000Z",
+        "contentSnippet": "Elon Musk says that the Colossus 2 will receive 220,000 GB300 GPUs by next week, with another two tranches of the same amount expected to arrive later this year. This will put the site at over a million AI GPUs, finally hitting the goal the billionaire set two years ago."
+      },
+      {
+        "title": "Supermicro NVIDIA Vera Rubin NVL72 Racks Now Shipping With 1.8MW In-Row CDUs and a 1,152-GPU Scalable Unit",
+        "link": "https://www.storagereview.com/news/supermicro-nvidia-vera-rubin-nvl72-racks-now-shipping-with-1-8mw-in-row-cdus-and-a-1152-gpu-scalable-unit",
+        "source": "StorageReview",
+        "isoDate": "2026-09-25T15:01:28.000Z",
+        "contentSnippet": "Supermicro is now shipping NVIDIA Vera Rubin NVL72 racks integrated with its Data Center Building Block Solutions (DCBBS) and its DLC-2 direct liquid cooling stack. The racks follow the VR NVL72 design NVIDIA launched at CES 2026: 72 NVIDIA Rubin GPUs and 36 NVIDIA Vera CPUs in a"
+      },
+      {
+        "title": "Tower Semiconductor to invest $4 billion in Japanese ops to set up massive optical connectivity hub",
+        "link": "https://www.tomshardware.com/tech-industry/photonics/tower-semiconductor-to-invest-usd4-billion-in-japanese-ops-to-set-up-massive-optical-connectivity-hub-dual-track-expansion-aims-to-increase-output-by-40-times-by-2029",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-25T15:00:22.000Z",
+        "contentSnippet": "Tower's new optical connectivity hub in Japan will increase its output by 40 times in 2029 compared to 2025 level."
+      },
+      {
+        "title": "WhiteFiber Continuum Goes Commercial, Scaling Its 83 km Two-Site GPU Supercluster Design to 136 Tbps",
+        "link": "https://www.storagereview.com/news/whitefiber-continuum-goes-commercial-scaling-its-83-km-two-site-gpu-supercluster-design-to-136-tbps",
+        "source": "StorageReview",
+        "isoDate": "2026-09-25T14:56:39.000Z",
+        "contentSnippet": "WhiteFiber has made WhiteFiber Continuum commercially available, turning the two-site GPU supercluster it first detailed as Project Redwood in July into a product enterprises can deploy. WhiteFiber calls Continuum its highest-performance cross-data-center networking solution and "
+      },
+      {
+        "title": "Meta Muse runs agents on AMD EPYC Turin hosts with two cores and 8GB of memory",
+        "link": "https://www.tomshardware.com/pc-components/cpus/meta-muse-runs-agents-on-amd-epyc-turin-hosts-with-two-cores-and-8gb-of-memory-ai-agent-can-pass-terminal-commands-to-ubuntu-host-system",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-25T14:56:36.000Z",
+        "contentSnippet": "Meta's new Muse AI agent is powered by AMD EPYC Turin hosts, with each user getting a private sandbox with two vCPUs and 8GB of memory."
+      },
+      {
+        "title": "Noctua explores 2,000W micro-channel air cooling",
+        "link": "https://www.tomshardware.com/pc-components/air-cooling/noctua-explores-2-000w-micro-channel-air-cooling-partners-with-forced-physics-to-develop-vacuum-pump-level-airflow-for-desktop-pcs",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-25T14:42:58.000Z",
+        "contentSnippet": "Noctua and Forced Physics are exploring whether densely packed micro-channels can provide extreme cooling performance without the noise associated with high-pressure airflow"
+      },
+      {
+        "title": "Save $250 on this award-winning Elegoo resin 3D printer with an integrated heater and 16K resolution",
+        "link": "https://www.tomshardware.com/3d-printing/save-usd250-on-this-award-winning-elegoo-resin-3d-printer-with-an-integrated-heater-and-16k-resolution-39-percent-discount-on-the-saturn-4-ultra-16k-gets-you-a-hugely-accurate-printer-with-fast-speeds-and-a-tilt-release-vat",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-25T13:33:16.000Z",
+        "contentSnippet": "This Elegoo Saturn 4 Ultra, one of the best resin 3D printers you can buy, is on sale for $359 right now, saving you 40% on its usual price."
+      },
+      {
+        "title": "Gamemax RGB PRO 750G power supply review: Efficient, but pricey for an average unit with pretty lights",
+        "link": "https://www.tomshardware.com/pc-components/power-supplies/gamemax-rgb-pro-750g-power-supply-review",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-25T13:00:00.000Z",
+        "contentSnippet": "Gamemax charges $105 for an average power supply with RGB lighting. The Sohoo platform underneath measures well enough, but the fan, the capacitors, and the warranty all sit below what the price should buy."
+      },
+      {
+        "title": "DDR5 laptop memory prices surge 6X in 12 months",
+        "link": "https://www.tomshardware.com/laptops/laptop-maker-says-ddr5-so-dimms-are-6x-pricier-than-last-year-schenker-says-other-component-costs-are-rising-too-announces-price-hikes",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-25T13:00:00.000Z",
+        "contentSnippet": "XMG noted that SO-DIMM prices have jumped 6x, with other components like PCBs, CPUs, and GPUs also facing increasing costs. This has forced the niche laptop manufacturer to bump their SRPs between $113 and $342."
+      },
+      {
+        "title": "Nintendo wins $4.5 million lawsuit against Switch pirate by default",
+        "link": "https://www.tomshardware.com/video-games/nintendo/nintendo-wins-usd4-5-million-lawsuit-against-switch-pirate-by-default-defendant-allegedly-moderated-r-switchpirates-and-sold-pirated-switch-games",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-25T12:26:21.000Z",
+        "contentSnippet": "A Washington court granted Nintendo of America a $4.5 million default judgment after the defendant failed to appear in court and respond to the allegations. The company claimed that it sent a cease-and-desist letter and the respondent even answered via email saying they will comp"
       },
       {
         "title": "Microsoft revamps Copilot with new tools, support for frontier models",
@@ -2322,6 +2392,13 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-09-25T12:00:00.000Z",
         "contentSnippet": "Microsoft is revamping Copilot into a singular AI workspace, mixing your projects and agents together. It will also be able to support third-party frontier models."
+      },
+      {
+        "title": "Intel expects 14A to be 'within 5%' the performance of TSMC's A14",
+        "link": "https://www.tomshardware.com/tech-industry/semiconductors/intel-expects-14a-to-be-within-5-percent-the-performance-of-tsmcs-a14-conservative-forecast-clashes-with-18as-frequency-lead-and-promised-20-percent-gains",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-25T12:00:00.000Z",
+        "contentSnippet": "Intel's Naga Chandrasekaran now claims that Intel 14A node will deliver performance 'within 5%' of TSMC's A14 technology, a claim that requires a closer examination."
       },
       {
         "title": "Asus confirms eShop data breach exposed customer order records and contact details — payment data safe, but firm warns of targeted phishing scams",
@@ -2931,83 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-09-20T14:48:57.000Z",
         "contentSnippet": "A proposed class action lawsuit has been lodged against the four big AI tech companies after they agreed to slow AI development for safety reasons. The lead counsel on the lawsuit says that 'AI will quickly spin out of control and could kill us all if we allow AI safety and proto"
-      },
-      {
-        "title": "The PC gaming ray tracing obsession began with the first RTX 20 graphics cards released on this day in 2018 — the GeForce RTX 2080 and 2080 Ti led the charge, but games were thin on the ground",
-        "link": "https://www.tomshardware.com/pc-components/gpus/the-pc-gaming-ray-tracing-obsession-began-with-the-first-rtx-20-graphics-cards-released-on-this-day-in-2018-the-geforce-rtx-2080-and-2080-ti-led-the-charge-but-games-were-thin-on-the-ground",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-20T14:05:31.000Z",
-        "contentSnippet": "Nvidia’s Turing GPU became available to enthusiasts for the first time on this day eight years ago."
-      },
-      {
-        "title": "Researchers build a drone that navigates with physical whiskers to operate in dark, dusty or smoky places where cameras or GPS can fail — sub-100 gram drones run 34KB software to enable sub-millimeter",
-        "link": "https://www.tomshardware.com/tech-industry/drones/researchers-build-a-drone-that-navigates-with-physical-whiskers-to-operate-in-dark-dusty-or-smoky-places-where-cameras-or-gps-can-fail-sub-100-gram-drones-run-34kb-software-to-enable-sub-millimeter-precision",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-20T13:48:11.000Z",
-        "contentSnippet": "Whiskers attached to three pressure sensors at their base could help drones find their way around their environment purely through touch. This lightweight system emulates the vibrissae found on mice and other small mammals that help them navigate in the dark."
-      },
-      {
-        "title": "Final Fantasy VII Revelation might use upwards of 200 GB and requires an additional download — latest entry in the series of remakes may set a new record for the size of a base install",
-        "link": "https://www.tomshardware.com/video-games/final-fantasy-vii-revelation-might-use-upwards-of-200-gb-and-requires-an-additional-download-latest-entry-in-the-series-of-remakes-may-set-a-new-record-for-the-size-of-a-base-install",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-20T13:30:00.000Z",
-        "contentSnippet": "Final Fantasy VII Revelation might use upwards of 200 GB and requires an additional download — latest entry in the series of remakes may set a new record for the size of a base install"
-      },
-      {
-        "title": "Microsoft patents system to freeze games and inject ads during downtimes — watching commercials earns ad-free playtime credits",
-        "link": "https://www.tomshardware.com/video-games/microsoft-patents-system-to-freeze-games-and-inject-ads-during-downtimes-watching-commercials-earns-ad-free-playtime-credits",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-20T13:00:00.000Z",
-        "contentSnippet": "This patent uses the game engine and machine learning to determine the best time to serve an ad."
-      },
-      {
-        "title": "Prusa CORE One+ INDX review: Time for a 'Tool' change",
-        "link": "https://www.tomshardware.com/3d-printing/prusa-core-one-plus-indx-review",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-20T13:00:00.000Z",
-        "contentSnippet": "Prusa Research reenters the toolchanger category with a little help from Bondtech."
-      },
-      {
-        "title": "Massive 192GB GTA leak reveals early GTA VI map and canceled DLCs — files show liquid nitrogen death for Trevor and scrapped Liberty City expansion",
-        "link": "https://www.tomshardware.com/video-games/massive-192gb-gta-leak-reveals-early-gta-vi-map-and-canceled-dlcs-files-show-liquid-nitrogen-death-for-trevor-and-scrapped-liberty-city-expansion",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-20T12:35:00.000Z",
-        "contentSnippet": "The massive leak revealed early efforts in the development of GTA VI, as well as unreleased side missions, alternate endings, and even planned DLCs that never came to fruition."
-      },
-      {
-        "title": "Noctua fans prevent the CAIM1 ‘Anti-AI’ 4K camera from throttling — unusual camera’s processor gets toasty as it records while performing cryptographic calculations",
-        "link": "https://www.tomshardware.com/pc-components/air-cooling/noctua-fans-prevent-the-caim1-anti-ai-4k-camera-from-throttling-unusual-cameras-processor-gets-toasty-as-it-records-while-performing-cryptographic-calculations",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-20T12:20:57.000Z",
-        "contentSnippet": "A premium PC DIY fan brand has announced that one of its prized spinners is being used in an 'Anti-AI' 4K camera to prevent throttling."
-      },
-      {
-        "title": "North Korea used job interviews to deploy malware on 30,000 devices during coding tests — WaterPlum group loots $10.7 million in crypto and plants persistent RATs",
-        "link": "https://www.tomshardware.com/tech-industry/cyber-security/north-korea-used-job-interviews-to-deploy-malware-on-30-000-devices-during-coding-tests-waterplum-group-loots-usd10-7-million-in-crypto-and-plants-persistent-rats",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-20T12:10:00.000Z",
-        "contentSnippet": "Multiple government agencies across the world released a warning that North Korean hackers are posting fake jobs to install malware on unsuspecting applicants' computers. They then steal credentials and cryptocurrency from their victims, with over $10 million reported stolen."
-      },
-      {
-        "title": "Kash Patel says that AI use at the FBI has 'increased by 605%' since he became director — claims that every major tech player is 'embedded' in the agency",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/kash-patel-says-that-ai-use-at-the-fbi-has-increased-by-605-percent-since-he-became-director-claims-that-every-major-tech-player-is-embedded-in-the-agency",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-20T11:45:00.000Z",
-        "contentSnippet": "FBI Director Kash Patel stated in an interview that he's responsible for a \"605% increase\" in the bureau's usage of AI. The problem is that it's hard to pin down what the figure refers to."
-      },
-      {
-        "title": "Autonomous strike drone uses Nvidia Jetson Orin Nano to independently pick and bomb targets — Swedish startup's attack drones run small AI model, require no human input and zero external comms",
-        "link": "https://www.tomshardware.com/tech-industry/drones/autonomous-strike-drone-uses-nvidia-jetson-orin-nano-to-independently-pick-and-bomb-targets-swedish-startups-attack-drones-run-small-ai-model-require-no-human-input-and-zero-external-comms",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-20T11:20:00.000Z",
-        "contentSnippet": "Drones built with small, non-frontier computer-vision models autonomously identified and attacked targets in a recent demo."
-      },
-      {
-        "title": "Jensen Huang says there is '0% chance' AI destroys the world by 2030 — 'We should go as fast as we can, irrespective of anyone else,' dismisses Anthropic doom warnings and rejects new regulations",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/jensen-huang-says-there-is-0-percent-chance-ai-destroys-the-world-by-2030-we-should-go-as-fast-as-we-can-irrespective-of-anyone-else-dismisses-anthropic-doom-warnings-and-rejects-new-regulations",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-20T10:55:00.000Z",
-        "contentSnippet": "Chief executive of Nvidia claims that fears that AI will destroy humanity in the coming years are unsubstantiated as safety mechanisms can preserve that."
       }
     ]
   }
