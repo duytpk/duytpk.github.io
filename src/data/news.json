@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-09-25T06:53:45.785Z",
+  "updatedAt": "2026-09-25T12:27:21.916Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-98149 - bpf: Fix percpu map update indexing with sparse CPU IDs",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98149",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T10:36:22.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: bpf: Fix percpu map update indexing with sparse CPU IDs Per-CPU array, hash, and cgroup storage map updates without BPF_F_CPU or BPF_F_ALL_CPUS use a value buffer whose per-CPU slots are packed in possible-CPU or",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98148 - drm/gud: validate GUD_ROTATION_0 is present in supported rotations",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98148",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T10:36:21.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: drm/gud: validate GUD_ROTATION_0 is present in supported rotations The rotation argument to drm_plane_create_rotation_property() is set to DRM_MODE_ROTATE_0, and the device reported rotation bitmask is used as th",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98147 - printk: Don't WARN on kthread_run failure.",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98147",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T10:36:20.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: printk: Don't WARN on kthread_run failure. Since __kthread_create_on_node() returns -EINTR upon SIGKILL, we should not use WARN_ON() in order to catch kthread_run() failure.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98146 - accel/amdxdna: Remove __counted_by from struct amdxdna_cmd_chain",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98146",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T10:36:20.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: accel/amdxdna: Remove __counted_by from struct amdxdna_cmd_chain struct amdxdna_cmd_chain contains a flexible array annotated with __counted_by(command_count). Since the structure is stored in shared AMDXDNA_BO_S",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98145 - accel/amdxdna: reject a command chain that carries no commands",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98145",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T10:36:19.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: accel/amdxdna: reject a command chain that carries no commands A chain whose command_count is zero passes the payload length check, because struct_size(payload, data, 0) is just the header. The fill loop then doe",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98144 - accel/amdxdna: put the chained BO when its mapping fails",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98144",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T10:36:19.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: accel/amdxdna: put the chained BO when its mapping fails amdxdna_cmd_set_error() looks up the first BO of a command chain, which takes a reference, and drops it at the end of the function. The mapping of that BO ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98143 - accel: ethosu: Don't read the U65 rounding mode as a storage mode",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98143",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T10:36:18.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: accel: ethosu: Don't read the U65 rounding mode as a storage mode Bits 15:14 of NPU_SET_{IFM,OFM}_PRECISION select the activation storage mode on U85 only. On U65 the same field holds the rounding mode, and the c",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98142 - drm/cirrus-qemu: Validate BAR0 size during probe",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98142",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T10:36:17.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: drm/cirrus-qemu: Validate BAR0 size during probe The `cirrus-qemu` driver relies on `CIRRUS_VRAM_SIZE` (4 MB) to validate framebuffer sizes. However, during PCI probe, the driver mapped BAR0 without verifying tha",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98141 - ntfs: propagate reparse index insertion failure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98141",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T10:36:17.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: ntfs: propagate reparse index insertion failure update_reparse_data() ignores the return value of set_reparse_index(). When index insertion fails, the code removes the just-written reparse data as cleanup but sti",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98140 - ntfs: fix kmap_local leak in write_mft_record_nolock() error paths",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98140",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T10:36:16.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: ntfs: fix kmap_local leak in write_mft_record_nolock() error paths write_mft_record_nolock() maps the MFT record folio with kmap_local_folio(), but the pre_write_mst_fixup() and bio_add_folio() failure paths jump",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98139 - ntfs: only count successfully cleared runs when freeing clusters",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98139",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T10:36:15.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: ntfs: only count successfully cleared runs when freeing clusters ntfs_cluster_free_from_rl_nolock() adds a run's length to nr_freed whenever the error bookkeeping condition is false, which includes cases where nt",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98138 - ntfs: do not mark the volume clean in sync_fs when errors were recorded",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98138",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T10:36:15.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: ntfs: do not mark the volume clean in sync_fs when errors were recorded ntfs_put_super() and the remount-read-only path both clear the dirty bit only when NVolErrors(vol) is false. ntfs_sync_fs() clears it uncond",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98137 - ntfs: treat any nonzero dio zero-range return as an error",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98137",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T10:36:14.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: ntfs: treat any nonzero dio zero-range return as an error ntfs_dio_zero_range() returns either 0 or a negative errno from blkdev_issue_zeroout(); it never returns a positive value. The zeroing failure check in nt",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98136 - ntfs: bound $AttrDef table walk to the loaded table size",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98136",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T10:36:14.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: ntfs: bound $AttrDef table walk to the loaded table size ntfs_attr_find_in_attrdef() walks the in-memory $AttrDef table, but the loop condition bounds only the start of each entry, not the whole entry: for (ad = ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98135 - ntfs: reject invalid sectors_per_cluster in the boot sector",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98135",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T10:36:13.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: ntfs: reject invalid sectors_per_cluster in the boot sector is_boot_sector_ntfs() checks the boot sector's sectors_per_cluster field with a range test that rejects 0x81..0xf3 but accepts 0 and other non-power-of-",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98134 - bpf: check_cond_jmp_op(): properly infer if register is null",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98134",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T10:36:12.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: bpf: check_cond_jmp_op(): properly infer if register is null Nicholas Carlini reported a bug when verifier can incorrectly infer that a pointer is non-null. The bug occurs when two pointers are compared and one o",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98133 - ntfs: leave HasEA flag untouched on setxattr failure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98133",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T10:36:12.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: ntfs: leave HasEA flag untouched on setxattr failure In ntfs_set_ea(), the exit path unconditionally updates the HasEA flag based on ea_info_qsize. When an error occurs before ea_info_qsize is updated, NInoClearH",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98132 - bpf: don't downgrade half-dead scalar zero spills to STACK_ZERO",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98132",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T10:36:11.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: bpf: don't downgrade half-dead scalar zero spills to STACK_ZERO states.c:__clean_func_state() can downgrade scalar zero spill to STACK_ZERO in the following case: *(u64 *)(r10 - 8) = 0; ... checkpoint ... r1 = *(",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98131 - net: stmmac: fix dma mapping leak in stmmac_tso_xmit()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98131",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T10:36:11.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: net: stmmac: fix dma mapping leak in stmmac_tso_xmit() In stmmac_tso_xmit(), if the DMA mapping of an skb fragment fails, the frame is dropped but the DMA mappings already created for the linear part and for the ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98130 - sctp: fix a TOCTOU race in SCTP_CMD_TIMER_START",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98130",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T10:36:10.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: sctp: fix a TOCTOU race in SCTP_CMD_TIMER_START The SCTP_CMD_TIMER_START handler checks timer_pending() before calling timer_reduce(). The timer can expire and detach between these operations, causing timer_reduc",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98129 - scsi: mpi3mr: Fix NULL pointer dereference in mpi3mr_sas_port_add()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98129",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T10:36:09.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: scsi: mpi3mr: Fix NULL pointer dereference in mpi3mr_sas_port_add() sas_port_alloc_num() can return NULL on memory allocation failure. The return value is passed directly to sas_port_add() without a NULL check, w",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98128 - scsi: mpi3mr: Fix target device refcount leak in mpi3mr_sas_port_add()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98128",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T10:36:09.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: scsi: mpi3mr: Fix target device refcount leak in mpi3mr_sas_port_add() mpi3mr_get_tgtdev_by_addr() increments the target device kref when it returns a device. If a subsequent error triggers a goto out_fail after ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98127 - smb/client: validate new EOF for insert range",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98127",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T10:36:08.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: smb/client: validate new EOF for insert range smb3_insert_range() does not check if the new file size (i_size + len) is valid. This allows FALLOC_FL_INSERT_RANGE to bypass RLIMIT_FSIZE, exceed s_maxbytes, or prod",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98126 - smb/client: validate new EOF for zero range",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98126",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T10:36:07.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: smb/client: validate new EOF for zero range When FALLOC_FL_ZERO_RANGE is used without FALLOC_FL_KEEP_SIZE, smb3_zero_range() may extend EOF without checking RLIMIT_FSIZE, allowing the file to grow beyond the call",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98125 - smb/client: fix stale page cache in insert/collapse range",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98125",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T10:36:07.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: smb/client: fix stale page cache in insert/collapse range smb3_insert_range() and smb3_collapse_range() use truncate_pagecache_range() to invalidate the affected page cache. However, if off or old_eof is not page",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2026-97818 - phpIPAM User API Authorization Bypass",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-97818",
@@ -677,231 +902,6 @@
         "contentSnippet": "Docmost is open-source collaborative wiki and documentation software. Prior to 0.90.1, an authenticated workspace ADMIN can use the workspace invitation flow to invite an external email address with the OWNER role because the role ceiling does not prevent ADMIN users from grantin",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-61823 - code16 Sharp vulnerable to stored XSS via iframe srcdoc Attribute",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61823",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T18:31:18.000Z",
-        "contentSnippet": "code16 Sharp is a Laravel-based framework for building content-management and administrative interfaces. Versions before 9.22.5 contain a stored cross-site scripting vulnerability in the rich-text editor because the HTML sanitizer permits the `srcdoc` attribute on iframe elements",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-48072 - Docmost: Public image fileName path traversal leads to unauthorized local file read",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48072",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T18:30:57.000Z",
-        "contentSnippet": "Docmost is open-source collaborative wiki and documentation software. Prior to 0.80.1, the public avatar and logo image endpoint accepts attacker-controlled fileName path segments and resolves them against local storage without confinement to the intended image directory. An unau",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-97321 - YunaiV/zhijiantianya ruoyi-vue-pro GoView Data Endpoint GoViewDataServiceImpl.java GoViewDataServiceImpl.getDataBySQL sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97321",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T18:30:10.000Z",
-        "contentSnippet": "A vulnerability has been found in YunaiV/zhijiantianya ruoyi-vue-pro up to 2026.08. The impacted element is the function GoViewDataServiceImpl.getDataBySQL of the file yudao-module-report/src/main/java/cn/iocoder/yudao/module/report/service/goview/GoViewDataServiceImpl.java of th",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-52850 - Docmost: Broken access control in transclusion lookup API leaks sync-block content across private spaces",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-52850",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T18:30:06.000Z",
-        "contentSnippet": "Docmost is open-source collaborative wiki and documentation software. Prior to 0.90.1, an authenticated workspace member who does not belong to a private space can call the transclusion / sync-block lookup API with a known sourcePageId and transclusionId pair because the lookup d",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-65827 - Docmost: Unbounded ZIP decompression (zip-bomb) in page import allows denial of service",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65827",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T18:28:36.000Z",
-        "contentSnippet": "Docmost is open-source collaborative wiki and documentation software. From 0.21.0 until 0.95.0, any authenticated workspace member with edit rights to a space can upload an archive to the page-import feature whose ZIP extraction routine does not limit total uncompressed size, per",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-13248 - Authenticated Remote Code Execution via Arbitrary File Write in the Intermec Fingerprint Command Interface",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13248",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T18:27:33.000Z",
-        "contentSnippet": "An Authenticated Remote Code Execution via Arbitrary File Write in the Intermec Fingerprint Command Interface vulnerability in the web management interface in Honeywell PD45 Industrial Printer version F10.19.010040, allows an authenticated user with access to the admin or itadmin",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-61825 - code16/sharp has a stored XSS via data-html-content Sanitizer Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61825",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T18:27:32.000Z",
-        "contentSnippet": "code16 Sharp is a Laravel-based framework for building content-management and administrative interfaces. Versions before 9.22.5 contain a stored cross-site scripting vulnerability in `SharpEditorFormField`: attacker-controlled content bearing the `data-html-content` attribute can",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-13249 - Unauthenticated RCE Arbitrary File Upload Honeywell PD45 Industrial Printer version F10.19.010040",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13249",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T18:24:36.000Z",
-        "contentSnippet": "An unauthenticated Remote Code Execution via Arbitrary File Upload vulnerability in the web management interface in Honeywell PD45 Industrial Printer version F10.19.010040, allows upload of attacker controlled files without requiring authentication. An attacker could potentially ",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-82371 - Plaintext exposure of sensitive authentication data in SANnav discovery service log files",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82371",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T18:20:10.000Z",
-        "contentSnippet": "Plaintext exposure of sensitive authentication data in Brocade SANnav discovery service log files enables individuals with file read access to retrieve administrative switch credentials and active session tokens. An attacker with access to system logs or support bundles can lever",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-97233 - volotat Anagnorisis Media Filename PlaylistManager.js html cross site scripting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97233",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T18:19:09.000Z",
-        "contentSnippet": "A vulnerability was identified in volotat Anagnorisis up to 0.4.11. Affected by this issue is the function html of the file PlaylistManager.js of the component Media Filename Handler. Such manipulation of the argument file_path leads to cross site scripting. The attack can be lau",
-        "cveScore": 4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-97232 - volotat Anagnorisis page.html start_streaming path traversal",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97232",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T18:19:09.000Z",
-        "contentSnippet": "A vulnerability was determined in volotat Anagnorisis up to 0.4.2. Affected by this vulnerability is the function get_file_content/save_file_content/move_files/start_streaming of the file page.html. This manipulation causes path traversal. The attack can be initiated remotely. Th",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-95985 - Kiro IDE Allows Agentic Writes to Global Configurations While Working in Untrusted Workspaces",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95985",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T18:19:08.000Z",
-        "contentSnippet": "The file write tool in Amazon Kiro IDE versions before 1.0.242 might allow remote unauthenticated actors to inject crafted instructions into the agent's context. When a user runs the agent in a crafted repository as an untrusted workspace, sending any message can cause agent modi",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-93405 - Mailspring: Stored XSS in attachment quick preview (unsanitized Markdown/DOCX/XLSX conversion)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93405",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T18:19:07.000Z",
-        "contentSnippet": "Mailspring is a fast, cross-platform, open-source email client. Prior to 1.17.0, attachment quick preview converts Markdown, DOCX, and XLSX attachments with Snarkdown, Mammoth, and SheetJS and inserts the resulting HTML into the preview document through innerHTML without sanitiza",
-        "cveScore": 6.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-91121 - Discourse: Chat upload filenames rendered as raw HTML in excerpts",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-91121",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T18:19:06.000Z",
-        "contentSnippet": "Discourse is an open-source discussion platform. Prior to 2026.1.8, 2026.6.3, 2026.7.2, and 2026.8.0, attacker-controlled upload filenames used in chat message excerpts were rendered as unescaped HTML. A user able to upload a file and send chat content could place markup in a fil",
-        "cveScore": 5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-97360 - HFS2 2.4.0 Unauthenticated Arbitrary File Read/Write via Template Engine",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97360",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T13:32:32.000Z",
-        "contentSnippet": "HFS2 version 2.4.0 and earlier contains an unauthenticated arbitrary file access vulnerability that allows unauthenticated attackers to read, write, append, and delete files anywhere the HFS service account has filesystem access outside the shared folder. Attackers can exploit th",
-        "cveScore": 10,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-97359 - HFS2 2.4.0 RCE via Multipart Upload Filename Template Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97359",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T13:28:18.000Z",
-        "contentSnippet": "HFS2 version 2.4.0 and earlier contains a template injection vulnerability in the multipart upload handler that allows unauthenticated attackers to achieve remote code execution by embedding malicious template syntax in a filename. Attackers can craft a filename containing a clos",
-        "cveScore": 10,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-95521 - Rpm: rpm: shell command injection via macro expansion of source/spec file basenames when installing a source rpm",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95521",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T13:26:56.000Z",
-        "contentSnippet": "A command injection flaw was found in rpm. Installing or rebuilding a source RPM whose source or spec file basenames contain a %() macro construct causes rpm to execute an attacker-controlled shell command via popen() while relocating the source file list. This allows arbitrary c",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-95519 - Rpm: code execution via macro expansion of manifest entries in `rpmgi` (`-q -p` / verify manifest flows)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95519",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T13:26:54.000Z",
-        "contentSnippet": "A flaw was found in rpm. An attacker can supply a crafted manifest file that, when processed by a user or automation using `rpm -q -p` or similar manifest-processing flows, leads to arbitrary code execution. This occurs because manifest entries are unexpectedly macro-expanded bef",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-91187 - Improper Verification of Cryptographic Signature in dashbit nimble_zta Cloudflare strategy",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-91187",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T13:20:52.000Z",
-        "contentSnippet": "Improper Verification of Cryptographic Signature vulnerability in dashbit nimble_zta allows an unauthenticated remote attacker to authenticate as an arbitrary Cloudflare service token. Applications using the Cloudflare Zero Trust authentication strategy are affected. verify_token",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-97182 - halo-dev Halo SpEL ReplyNotificationSubscriptionHelper.java neutralization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97182",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T13:17:19.000Z",
-        "contentSnippet": "A security vulnerability has been detected in halo-dev Halo up to 2.25.4/2.26.1. Affected is an unknown function of the file application/src/main/java/run/halo/app/content/comment/ReplyNotificationSubscriptionHelper.java of the component SpEL Handler. Such manipulation leads to i",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-96515 - Command Injection Vulnerability in Netlink ICT HG323RW Router",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96515",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T13:17:17.000Z",
-        "contentSnippet": "This vulnerability exists in the Netlink ICT HG323RW router due to insufficient authorization and input validation controls in the diagnostic script import functionality. An authenticated attacker could exploit this vulnerability by uploading and executing a specially crafted scr",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-94416 - Aap-gateway: aap-gateway: authorization bypass via workload identity token forgery",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94416",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T13:17:17.000Z",
-        "contentSnippet": "An authorization bypass was found in the Ansible Automation Platform (AAP) gateway. The gateway API allows an authenticated administrator to create a new service key for the Controller service cluster. Because service-key creation is not restricted to the installer-provisioned pr",
-        "cveScore": 6.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-88916 - Admin Access Bypass via Header Fallback in TÜBİTAK ULAKBİM's UlakPDF",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-88916",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T13:17:16.000Z",
-        "contentSnippet": "Incorrect Authorization vulnerability in TÜBİTAK ULAKBİM UlakPDF allows Privilege Escalation. This issue affects UlakPDF: through 09092026.",
-        "cveScore": 6.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-88907 - SAML ePPN Attribute Validation Bypass in TÜBİTAK ULAKBİM's UlakPDF",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-88907",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T13:17:15.000Z",
-        "contentSnippet": "Incorrect Authorization vulnerability in TÜBİTAK ULAKBİM UlakPDF allows Authentication Bypass. This issue affects UlakPDF: through 09092026.",
-        "cveScore": 7.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-19072 - Velociraptor Investigator reaches SuperUser via hunt EffectivePrincipal",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19072",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-24T13:17:09.000Z",
-        "contentSnippet": "Velociraptor stores the compiled VQL in the hunt object internally to avoid having to recompile the artifacts for each endpoint in the hunt. Although the field \"compiled_collector_args\" is an internal field, Velociraptor allowed the field to be set from a user API call. This allo",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
       }
     ],
     "ai": [
@@ -1608,6 +1608,13 @@
     ],
     "virtualization": [
       {
+        "title": "5 Home Lab Projects to Try This Weekend: September 25, 2026",
+        "link": "https://www.virtualizationhowto.com/2026/09/5-home-lab-projects-to-try-this-weekend-september-25-2026/",
+        "source": "Virtualization HowTo",
+        "isoDate": "2026-09-25T12:16:16.000Z",
+        "contentSnippet": "This past week for me in the home lab has included a LOT of cool things and really good learning experiences. It has covered the gamut from wiping out my… The post 5 Home Lab Projects to Try This Weekend: September 25, 2026 appeared first on Virtualization Howto."
+      },
+      {
         "title": "I Wiped My Proxmox Host to See If This Backup Tool Could Bring It Back",
         "link": "https://www.virtualizationhowto.com/2026/09/i-wiped-my-proxmox-host-to-see-if-this-backup-tool-could-bring-it-back/",
         "source": "Virtualization HowTo",
@@ -2299,16 +2306,58 @@
         "source": "Virtualization HowTo",
         "isoDate": "2026-07-10T12:34:43.000Z",
         "contentSnippet": "One of the exciting things that I love about running a home lab is discovering new community projects before they become mainstream. Every so often there are projects that appear… The post 7 Open Source Infrastructure Projects I’m Watching Closely Right Now appeared first on Virt"
-      },
-      {
-        "title": "The NixOS Tweaks I Wish I’d Started Using Sooner in my Home Lab",
-        "link": "https://www.virtualizationhowto.com/2026/07/the-nixos-tweaks-i-wish-id-started-using-sooner-in-my-home-lab/",
-        "source": "Virtualization HowTo",
-        "isoDate": "2026-07-09T11:52:28.000Z",
-        "contentSnippet": "I have been moving heavily into immutable server operating systems especially for hosting my containerized home lab resources. Flatcar has been my OS of choice lately for container hosts. But… The post The NixOS Tweaks I Wish I’d Started Using Sooner in my Home Lab appeared first"
       }
     ],
     "hardware": [
+      {
+        "title": "Intel expects 14A to be 'within 5%' the performance of TSMC's A14",
+        "link": "https://www.tomshardware.com/tech-industry/semiconductors/intel-expects-14a-to-be-within-5-percent-the-performance-of-tsmcs-a14-conservative-forecast-clashes-with-18as-frequency-lead-and-promised-20-percent-gains",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-25T12:00:00.000Z",
+        "contentSnippet": "Intel's Naga Chandrasekaran now claims that Intel 14A node will deliver performance 'within 5%' of TSMC's A14 technology, a claim that requires a closer examination."
+      },
+      {
+        "title": "Microsoft revamps Copilot with new tools, support for frontier models",
+        "link": "https://www.tomshardware.com/tablets/microsoft-surface/microsoft-revamps-copilot-with-new-tools-support-for-frontier-models-available-now-through-frontier-program",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-25T12:00:00.000Z",
+        "contentSnippet": "Microsoft is revamping Copilot into a singular AI workspace, mixing your projects and agents together. It will also be able to support third-party frontier models."
+      },
+      {
+        "title": "Asus confirms eShop data breach exposed customer order records and contact details — payment data safe, but firm warns of targeted phishing scams",
+        "link": "https://www.tomshardware.com/tech-industry/cyber-security/asus-online-store-hit-by-data-breach-customer-contact-details-and-order-information-revealed",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-25T11:30:00.000Z",
+        "contentSnippet": "Asus eShop hit by data breach — customer contact details and order information revealed"
+      },
+      {
+        "title": "New Jersey hits Microsoft-linked AI data center with record fine for 62 unpermitted power generators, issues 45-day shutdown deadline",
+        "link": "https://www.tomshardware.com/tech-industry/data-centers/new-jersey-fines-data-center-for-using-unpermitted-power-generators-microsoft-linked-site-also-in-trouble-with-community-for-noise-pollution-other-issues",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-25T11:00:00.000Z",
+        "contentSnippet": "The DataOne data center is facing a record fine of $1.07 million for operating portable turbine generators without permission. Residents say that the penalty is a drop in the bucket for these big tech companies."
+      },
+      {
+        "title": "Grab this 4K-ready RTX 5070 Ti gaming PC from HP for under $1,900 right now",
+        "link": "https://www.tomshardware.com/desktops/gaming-pcs/grab-this-4k-ready-rtx-5070-ti-gaming-pc-from-hp-for-under-usd1-900-right-now-powerful-omen-35l-machine-is-a-serious-bargain-with-a-20-core-intel-cpu-32gb-ddr5-ram-and-a-1tb-ssd",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-25T10:51:36.000Z",
+        "contentSnippet": "This epic HP Omen 45L gaming rig is one of the cheapest RTX 5070 Ti PC you can buy right now, fitted with a Intel Core i7-14700F, 32GB of DDR RAM, and a 1TB SSD for just $1,899.99."
+      },
+      {
+        "title": "Nvidia DLSS 5 power draw hits 647W as power connector runs hotter than the GPU die, upscales frame rates and flame temps on 16-pin",
+        "link": "https://www.tomshardware.com/pc-components/gpus/nvidia-dlss-5-upscales-frame-rates-and-flame-temps-on-16-pin-power-connector-ai-gaming-tech-pushes-connector-to-uncomfortable-thermal-and-power-limits",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-25T10:30:00.000Z",
+        "contentSnippet": "QuasarZone tests show the 16-pin power connector on a GeForce RTX 5090 reaches temperatures above 90 degrees Celsius at peak power consumption near 650W."
+      },
+      {
+        "title": "Google's orbital AI data center test packs four TPUs and 1,000W of solar power",
+        "link": "https://www.tomshardware.com/tech-industry/data-centers/google-is-blasting-an-experimental-ai-data-center-into-orbit-first-satellite-will-feature-just-four-tensor-processing-units",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-25T10:00:00.000Z",
+        "contentSnippet": "Google will launch an experimental satellite into orbit on October 1, taking four tensor processing units with it."
+      },
       {
         "title": "ASRock Rack SORANOD8-2L2T Review A New AMD EPYC 8005 Sorano Motherboard",
         "link": "https://www.servethehome.com/asrock-rack-soranod8-2l2t-review-a-new-amd-epyc-8005-sorano-motherboard/",
@@ -2959,55 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-09-20T10:55:00.000Z",
         "contentSnippet": "Chief executive of Nvidia claims that fears that AI will destroy humanity in the coming years are unsubstantiated as safety mechanisms can preserve that."
-      },
-      {
-        "title": "Putin casts online vote using unlicensed Windows on an American Dell PC — 'Activate Windows' watermark visible in official Kremlin clip, uses foreign Dell PC despite Russian tech mandate",
-        "link": "https://www.tomshardware.com/software/windows/putin-casts-online-vote-using-unlicensed-windows-on-an-american-dell-pc-activate-windows-watermark-visible-in-official-kremlin-clip-uses-foreign-dell-pc-despite-russian-tech-mandate",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-20T10:30:00.000Z",
-        "contentSnippet": "An official Russian media clip shows Putin voting on a Dell PC with an unlicensed copy of Windows."
-      },
-      {
-        "title": "Collapse of mainstream optical drive supply kills high-end CD players — PS Audio and Naim halt production as component costs double",
-        "link": "https://www.tomshardware.com/peripherals/audiophiles-in-trouble-as-manufacturers-cease-optical-drive-production-hi-fi-cd-players-require-extensive-rework-to-use-components-from-other-companies",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-20T10:05:00.000Z",
-        "contentSnippet": "PS Audio and Naim had to cease production of two Hi-Fi models as manufacturers quit making optical drives, even as CD and vinyl have hit record sales in recent months."
-      },
-      {
-        "title": "STH Q3 2026 Letter from the Editor A Moving Target",
-        "link": "https://www.servethehome.com/sth-q3-2026-letter-from-the-editor-a-moving-target/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-09-19T21:32:45.000Z",
-        "contentSnippet": "In our STH Q3 2026 Letter from the Editor we go into all that has happend in Q3 from the changing industry, to the behind-the-scenes The post STH Q3 2026 Letter from the Editor A Moving Target appeared first on ServeTheHome."
-      },
-      {
-        "title": "Acer Predator QD-OLED monitor now 36% off — 500 Hz refresh rate and True Black 500 certification slashed to $509.99",
-        "link": "https://www.tomshardware.com/monitors/gaming-monitors/acer-predator-qd-oled-monitor-now-36-percent-off-500-hz-refresh-rate-and-true-black-500-certification-slashed-to-usd509-99",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-19T18:26:39.000Z",
-        "contentSnippet": "Acer Predator X27U F5 QD-OLED monitor has 500 Hz refresh rate and True Black 500 certification for $509.99"
-      },
-      {
-        "title": "ChatGPT-6 Astra cracks 108-year-old unsolved WWI German code for the first time — radio message sharing enemy movement intelligence had evaded decoding, 1918 Crimean fleet warning verified against HMS",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/chatgpt-6-astra-cracks-108-year-old-unsolved-wwi-german-code-for-the-first-time-radio-message-sharing-enemy-movement-intelligence-had-evaded-decoding-1918-crimean-fleet-warning-verified-against-hms-canterbury-logs",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-19T15:02:02.000Z",
-        "contentSnippet": "108 years after it was originally transmitted, an encrypted World War I German radio message has apparently been deciphered for the first time."
-      },
-      {
-        "title": "Father loses job over 9-year-old spending $118,000 on Minecraft YouTube ads using his company's credit card — 'I’m going to be working until I’m like 94,' refuses to set up GoFundMe or put up crypto c",
-        "link": "https://www.tomshardware.com/video-games/father-loses-job-over-9-year-old-spending-usd118-000-on-youtube-ads-using-his-companys-credit-card-refuses-to-set-up-gofundme-or-put-up-crypto-coin-to-help-repay-massive-bill",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-19T13:37:12.000Z",
-        "contentSnippet": "Mighty Mike Play's dad is trying to figure out how to pay back the $118k his son accidentally spent on YouTube ads. He also warned against fundraisers made in their name, since they aren't making one yet."
-      },
-      {
-        "title": "Acer Nitro XV273U F5 gaming monitor review: One of the fastest LCDs on the planet",
-        "link": "https://www.tomshardware.com/monitors/gaming-monitors/acer-nitro-xv273u-f5-27-inch-qhd-540-hz-gaming-monitor-review",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-19T13:00:00.000Z",
-        "contentSnippet": "Acer’s Nitro XV273U F5 might be the fastest LCD on the planet. This 27-inch QHD IPS panel boasts 540 Hz and 1,000 Hz at HD resolution. It also delivers Adaptive-Sync, HDR10, HDR 600, and wide gamut color."
       }
     ]
   }
