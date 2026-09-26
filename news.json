@@ -1,8 +1,35 @@
 {
-  "updatedAt": "2026-09-25T23:43:15.923Z",
+  "updatedAt": "2026-09-26T02:44:55.046Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-96795 - Horilla: Authenticated RCE in Horilla List-View Export",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96795",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T23:16:55.000Z",
+        "contentSnippet": "Horilla is an HR and CRM software. Prior to 2.0.0, HorillaListView.export_data in horilla_views/generic/cbv/views.py accepts an authenticated user's columns POST parameter, takes field_tuple[1], interpolates it into dynamic_fn_str as Python source, and passes the generated functi",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-86066 - Horilla attendance approval endpoint is vulnerable to cross-site request forgery",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86066",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T23:16:54.000Z",
+        "contentSnippet": "Horilla is an HR and CRM software. Prior to 2.0.0, approve_validate_attendance_request at /attendance/approve-validate-attendance-request/ changes attendance_validated, is_validate_request_approved, approved_by, and related pending-request state through an HTTP GET before calling",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-57449 - Actual Sync Server: CORS Proxy GitHub API Allowlist Prefix Bypass Leaks Private Repositories Through the Server GitHub Token",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57449",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-25T23:16:53.000Z",
+        "contentSnippet": "Actual is a local-first personal finance tool. Prior to 26.7.0, Actual Sync Server's CORS proxy is intended to let authenticated users fetch resources only from repositories listed in the official plugin allowlist. When `ACTUAL_GITHUB_TOKEN` is configured, the proxy automatically",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-9655 - Rejected reason: This CVE ID has been rejected or",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-9655",
@@ -74,15 +101,6 @@
         "contentSnippet": "Horilla is an HR and CRM software. Prior to 1.6.0, the search parameter at /employee/employee-filter-view is reflected by jQuery .html() in employee/templates/employee_nav.html without HTML neutralization. An external attacker can craft and deliver a link that causes JavaScript t",
         "cveScore": 8.5,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-86066 - Horilla attendance approval endpoint is vulnerable to cross-site request forgery",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86066",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-25T22:18:13.000Z",
-        "contentSnippet": "Horilla is an HR and CRM software. Prior to 2.0.0, approve_validate_attendance_request at /attendance/approve-validate-attendance-request/ changes attendance_validated, is_validate_request_approved, approved_by, and related pending-request state through an HTTP GET before calling",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       },
       {
         "title": "CVE-2026-63432 - Horilla: Server-Side Template Injection (SSTI) in Mail Preview Endpoints Allows Authenticated Users to Disclose Password Hashes and Server Metadata",
@@ -882,24 +900,6 @@
         "source": "cvefeed.io",
         "isoDate": "2026-09-25T10:36:08.000Z",
         "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: smb/client: validate new EOF for insert range smb3_insert_range() does not check if the new file size (i_size + len) is valid. This allows FALLOC_FL_INSERT_RANGE to bypass RLIMIT_FSIZE, exceed s_maxbytes, or prod",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-98126 - smb/client: validate new EOF for zero range",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98126",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-25T10:36:07.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: smb/client: validate new EOF for zero range When FALLOC_FL_ZERO_RANGE is used without FALLOC_FL_KEEP_SIZE, smb3_zero_range() may extend EOF without checking RLIMIT_FSIZE, allowing the file to grow beyond the call",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-98125 - smb/client: fix stale page cache in insert/collapse range",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98125",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-25T10:36:07.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: smb/client: fix stale page cache in insert/collapse range smb3_insert_range() and smb3_collapse_range() use truncate_pagecache_range() to invalidate the affected page cache. However, if off or old_eof is not page",
         "cveScore": 0,
         "cveSeverity": "NA"
       }
