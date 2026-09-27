@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-09-26T23:16:20.764Z",
+  "updatedAt": "2026-09-27T02:45:39.222Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-100837 - Edgeless Systems Contrast through 1.20.0 Credential Leak via Registry Suffix Matching",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100837",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T01:30:05.000Z",
+        "contentSnippet": "Contrast (Edgeless Systems) through 1.20.0 performs unanchored suffix matching when selecting per-registry configuration in the imagepuller. Config.registryFor strips a single trailing dot and then uses strings.HasSuffix(hostname, fqdn) without requiring a DNS label boundary, so ",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-100836 - Edgeless Systems Contrast through 1.20.0 Denial of Service via ciphertextContainer",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100836",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T01:29:58.000Z",
+        "contentSnippet": "Contrast through 1.20.0 contains a panic vulnerability in the transit-engine endpoint's ciphertextContainer.UnmarshalJSON function that fails to validate decoded ciphertext length before slicing. An authenticated workload with a valid mesh certificate can trigger a runtime panic ",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-100865 - Heym before 0.0.53 Multiple RCE and Authentication Bypass Vulnerabilities",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100865",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T01:28:53.000Z",
+        "contentSnippet": "Heym before 0.0.53 contains multiple independent vulnerabilities. (1) The workflow condition evaluator uses Python eval() without an effective sandbox, allowing any user who can edit a workflow branch/condition node — or who can import a workflow template containing a malicious c",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-100864 - heym before 0.0.91 Remote Code Execution via Expression Engine",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100864",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T01:28:53.000Z",
+        "contentSnippet": "heym before 0.0.91 contains a sandbox escape vulnerability in the expression engine's DotList map/filter and fallback resolver that allows authenticated users to execute arbitrary Python code. Attackers can craft workflow expressions using dunder attribute access through item exp",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-100863 - Heym before 0.0.91 SSRF via image fetching and IPv6 validation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100863",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T01:28:52.000Z",
+        "contentSnippet": "Heym versions 0.0.90 and earlier contain two server-side request forgery (SSRF) egress gaps, both remediated in app/services/ssrf_guard.py in 0.0.91. First, the LLM image-edit input loader (_load_image_bytes) fetched caller-controlled HTTP/HTTPS URLs with a bare httpx.get, applyi",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-100862 - heym before 0.0.91 Multiple Secrets Plaintext Storage",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100862",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T01:28:51.000Z",
+        "contentSnippet": "heym, a workflow automation platform, stores and returns multiple capability secrets in plaintext in versions prior to 0.0.91. Affected secrets include webhook header-auth values (returned in cleartext by GET /api/workflows/{id} and persisted unsanitized into execution history), ",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-100861 - heym before 0.0.105 SSRF via credential-controlled base URLs",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100861",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T01:28:51.000Z",
+        "contentSnippet": "heym before 0.0.105 fails to apply egress guards to integration services that use credential-supplied base URLs, allowing authenticated users to bypass SSRF protections. Attackers can configure credentials pointing to loopback, private, or cloud-metadata addresses and read intern",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-100860 - heym before 0.0.105 Authentication Bypass via Redis Node",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100860",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T01:28:50.000Z",
+        "contentSnippet": "heym before 0.0.105 does not act on the result of the credential authorization lookup in the Redis workflow node (backend/app/services/node_execution/nodes/redis_node.py). When _get_accessible_credential returns None — because the credential ID does not exist or the caller is not",
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-100859 - Heym before 0.0.106 Credential Exfiltration via URL Override",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100859",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T01:28:49.000Z",
+        "contentSnippet": "Heym before 0.0.106 contains a credential exfiltration vulnerability in the POST /api/credentials/test endpoint that allows collaborators with shared credential access to exfiltrate the credential owner's secret. Attackers can override the destination URL in the config parameter ",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-100858 - heym before 0.0.109 Server-Side Request Forgery via Workflow Nodes",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100858",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T01:28:49.000Z",
+        "contentSnippet": "heym before 0.0.109 contains a server-side request forgery vulnerability in the Slack, Discord, and Crawler workflow nodes. These nodes issue HTTP requests to URLs taken from user-created credentials (webhook_url / flaresolverr_url) using an unguarded HTTP client, bypassing the S",
+        "cveScore": 7.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-100857 - AzuraCast before 0.23.4 Remote Code Execution via Liquidsoap string interpolation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100857",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T01:28:48.000Z",
+        "contentSnippet": "AzuraCast before 0.23.4 contains a code injection vulnerability in the ConfigWriter::cleanUpString() method that fails to sanitize Liquidsoap string interpolation sequences, allowing authenticated users with Media or Profile permissions to inject arbitrary Liquidsoap code into st",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-100856 - AzuraCast before 0.23.6 Code Injection via Remote Relay Password",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100856",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T01:28:47.000Z",
+        "contentSnippet": "AzuraCast before 0.23.6 contains a code injection vulnerability in the remote relay password field due to incomplete migration from the vulnerable cleanUpString method to toRawString. Attackers with RemoteRelays station permission can inject nested Liquidsoap interpolation syntax",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-100855 - AzuraCast before 0.23.6 Missing Permission Check via /play",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100855",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T01:28:47.000Z",
+        "contentSnippet": "AzuraCast before 0.23.6 contains a missing permission check vulnerability in the GET /api/station/{station_id}/file/{id}/play endpoint that allows authenticated users to download media files from any station. Attackers can enumerate media files using sequential IDs and exfiltrate",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-100854 - AzuraCast before 0.23.6 Metadata Injection via Liquidsoap API",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100854",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T01:28:46.000Z",
+        "contentSnippet": "AzuraCast before 0.23.6 lacks RequireInternalConnection middleware on the Liquidsoap API endpoint and incorrectly derives the AutoDJ flag from header presence rather than validated value. Users with View station permission can inject arbitrary now-playing metadata, disrupt live b",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-100853 - AzuraCast before 0.23.8 On-Demand Download Endpoint Authorization Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100853",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T01:28:45.000Z",
+        "contentSnippet": "In AzuraCast before 0.23.8, the public On-Demand download endpoint fails to verify playlist-level access controls, allowing unauthenticated users to download media files excluded from On-Demand-enabled playlists. Attackers can bypass the station operator's intended access restric",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-100852 - AzuraCast through 0.23.x Command Injection via Streamer Username",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100852",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T01:28:45.000Z",
+        "contentSnippet": "AzuraCast through 0.23.x contains a command injection vulnerability in the Liquidsoap config generation for live recording that fails to quote the streamer username in process.run calls. Authenticated station users with Streamers and Profile permissions can set a username contain",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-100851 - AzuraCast before 0.23.8 Broken Access Control via GET /api/station/{id}/vue/profile",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100851",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T01:28:44.000Z",
+        "contentSnippet": "AzuraCast before 0.23.8 contains a broken access control vulnerability in the GET /api/station/{id}/vue/profile endpoint that allows authenticated users with only View Station Page permission to read Icecast/Shoutcast admin, source, and relay passwords. Attackers with View-only a",
+        "cveScore": 7.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-100850 - AzuraCast before 0.23.8 SSRF and Local File Read via Remote Playlist",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100850",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T01:28:43.000Z",
+        "contentSnippet": "AzuraCast before 0.23.8 contains a server-side request forgery and local file read vulnerability in the AutoDJ remote playlist fetch (backend/src/Radio/AutoDJ/QueueBuilder.php, getMediaFromRemoteUrl()). A user with the station Media permission can create or update a playlist with",
+        "cveScore": 7.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-100849 - AzuraCast before 0.23.8 SSRF Filter Bypass via Hostname and Private IPs",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100849",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T01:28:42.000Z",
+        "contentSnippet": "AzuraCast is a self-hosted web radio management suite. In AzuraCast before 0.23.8, the station webhook URL validation in AbstractConnector::getValidUrl() (backend/src/Webhook/Connector/AbstractConnector.php), used by the Generic and Discord webhook connectors, rejects only URLs w",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-100848 - AzuraCast before 0.23.8 Server-Side Request Forgery via Remote Relay URL",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100848",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T01:28:42.000Z",
+        "contentSnippet": "AzuraCast (Composer package azuracast/azuracast) before 0.23.8 validates a station's \"Remote Relay\" URL only for URL syntax and an http/https scheme (Utilities\\Urls::parseUserUrl, used by StationRemote::getUrlAsUri) and performs no host or IP address restriction. A user holding o",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-100847 - AzuraCast before 0.23.8 DQL Injection via sortOrder",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100847",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T01:28:41.000Z",
+        "contentSnippet": "AzuraCast before 0.23.8 contains a DQL injection vulnerability in the sortOrder API parameter of AbstractSearchableListAction.php. Attackers can inject arbitrary DQL expressions through the sortOrder parameter to extract sensitive database information including user credentials a",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-100846 - MONAI before 1.5.2 Remote Code Execution via Pickle Deserialization",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100846",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T01:28:41.000Z",
+        "contentSnippet": "MONAI before 1.5.2 contains a deserialization of untrusted data vulnerability in the algo_from_pickle function in monai/auto3dseg/utils.py. The function reads a .pkl file and passes its contents to pickle.loads without validating the data source or content. If an application invo",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-100845 - MONAI before 1.6.0 Remote Code Execution via NumpyReader",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100845",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T01:28:40.000Z",
+        "contentSnippet": "MONAI before 1.6.0 contains an unsafe deserialization vulnerability in the NumpyReader class that unconditionally uses numpy.load with allow_pickle=True when loading .npy and .npz files. Attackers can craft malicious .npy files with pickle payloads that execute arbitrary code whe",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-100844 - MONAI before 1.6.0 OS Command Injection via dataset_name_or_id",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100844",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T01:28:39.000Z",
+        "contentSnippet": "MONAI before 1.6.0 is vulnerable to OS command injection in the nnUNetV2Runner component (monai.apps.nnunet.nnunetv2_runner). User-controlled values taken from the YAML configuration file (notably dataset_name_or_id) and from CLI/kwargs arguments are concatenated into a command s",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-100843 - MONAI before 1.6.0 Remote Code Execution via algo_from_pickle",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100843",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T01:28:38.000Z",
+        "contentSnippet": "MONAI versions before 1.6.0 contain a remote code execution vulnerability in the algo_from_pickle() function due to unsafe pickle.loads() deserialization in monai/auto3dseg/utils.py. Attackers can craft malicious pickle files that execute arbitrary system commands when deserializ",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-100739 - mathurvishal CloudClassroom-PHP-Project viewresult.php sql injection",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-100739",
@@ -677,231 +902,6 @@
         "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-92842 - OOB read / info leak in convert.* stream filters when line-break-chars contains NUL",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92842",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-25T22:18:49.000Z",
-        "contentSnippet": "The convert.base64-encode, convert.quoted-printable-encode and convert.quoted-printable-decode stream filters accept a line-break-chars option whose length is tracked separately from the string itself. The filter constructors duplicate the value with pestrdup(), which stops at th",
-        "cveScore": 5.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-91768 - IPv6 ACL bypass in FastCGI listen.allowed_clients due to partial address comparison (memcmp 12 bytes)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-91768",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-25T22:18:49.000Z",
-        "contentSnippet": "The IPv6 branch of the FastCGI client access check compares only the first 12 bytes of a 16-byte IPv6 address, so listen.allowed_clients matches on a /96 prefix instead of the exact address. An attacker who can source an address sharing the first 96 bits with an allowed one passe",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-88003 - InvoicePlane: Failure to Revoke Administrative Privileges After Role Downgrade",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-88003",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-25T22:18:49.000Z",
-        "contentSnippet": "InvoicePlane is a self-hosted open source application for managing invoices, clients, and payments. Prior to 1.7.2, InvoicePlane fails to revoke administrative privileges after a role downgrade because Admin_Controller trusts the user_type snapshot stored in an existing session i",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-7800 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-7800",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-25T22:18:38.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-7799 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-7799",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-25T22:18:38.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-71483 - Horilla: Reflected Cross-Site Scripting (XSS) in Employee Filter View",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71483",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-25T22:18:20.000Z",
-        "contentSnippet": "Horilla is an HR and CRM software. Prior to 1.6.0, the search parameter at /employee/employee-filter-view is reflected by jQuery .html() in employee/templates/employee_nav.html without HTML neutralization. An external attacker can craft and deliver a link that causes JavaScript t",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-63432 - Horilla: Server-Side Template Injection (SSTI) in Mail Preview Endpoints Allows Authenticated Users to Disclose Password Hashes and Server Metadata",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63432",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-25T22:17:14.000Z",
-        "contentSnippet": "Horilla is an HR and CRM software. From 1.0.0 until 1.6.0 and 2.0.0, the get_mail_preview handlers in recruitment/views/actions.py and employee/not_in_out_dashboard.py render a user-controlled body at /recruitment/get-mail-preview/ and /employee/get-employee-mail-preview with the",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-63431 - Horilla: Missing Authorization on Payroll Component Views Exposes Employee Salary Structures and Personal Loan Records (IDOR)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63431",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-25T22:17:14.000Z",
-        "contentSnippet": "Horilla is an HR and CRM software. In 1.5.0-85 and earlier, payroll/views/component_views.py does not consistently authorize access in allowances_deductions_tab, view_single_allowance, and view_single_deduction before loading records selected by emp_id, allowance_id, or deduction",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-53973 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53973",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-25T22:17:12.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-53972 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53972",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-25T22:17:11.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-53971 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53971",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-25T22:17:11.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-49118 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49118",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-25T22:17:11.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-49117 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49117",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-25T22:17:11.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-45241 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45241",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-25T22:17:11.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-45240 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45240",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-25T22:17:11.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-45239 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45239",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-25T22:17:11.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-45238 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45238",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-25T22:17:11.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-45237 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45237",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-25T22:17:11.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-45236 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45236",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-25T22:17:11.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-45235 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45235",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-25T22:17:11.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-45234 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45234",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-25T22:17:11.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-100502 - Flame through 2.4.0 Admin Token Insufficient Session Expiration",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100502",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-25T22:17:10.000Z",
-        "contentSnippet": "Flame through 2.4.0 contains an insufficient session expiration vulnerability in the login endpoint that allows attackers with former admin access to obtain tokens with arbitrary lifespans by supplying unvalidated duration parameters. Attackers can mint near-permanent administrat",
-        "cveScore": 5.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-100306 - TDuck survey form through 6.0 Write Password Bypass via Client-Side Enforcement",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100306",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-25T18:47:40.000Z",
-        "contentSnippet": "TDuck survey form through 6.0 fails to validate write passwords on submission endpoints, enforcing the check only on the front end. Remote unauthenticated attackers can submit form entries directly to public submission APIs without providing the password by using the form key fro",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-100305 - TDuck survey form through 6.0 Fill-In Restriction Bypass via Authenticated Submission Endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100305",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-25T18:47:40.000Z",
-        "contentSnippet": "TDuck survey form through 6.0 fails to enforce form fill-in restrictions on the authenticated submission endpoint POST /user/form/data/create. Authenticated attackers who know a form's key can submit unlimited entries to any form, bypassing publish status, time window, quota, and",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-100304 - TDuck survey form 6.0 Information Disclosure via Fail-Open Form Ownership Check",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100304",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-25T18:47:39.000Z",
-        "contentSnippet": "TDuck survey form 6.0 contains an information disclosure vulnerability in FormAuthUtils.hasPermission that fails open when a form does not exist, allowing authenticated users to access deleted form submissions. Attackers can read orphaned submission data including personal inform",
-        "cveScore": 6,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
