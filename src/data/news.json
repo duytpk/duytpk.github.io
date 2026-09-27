@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-09-27T08:45:49.643Z",
+  "updatedAt": "2026-09-27T14:26:40.042Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-101033 - KitchenOwl through 0.7.10 IDOR via unchecked category ID",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-101033",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T13:16:56.000Z",
+        "contentSnippet": "KitchenOwl through 0.7.10 fails to verify that category IDs belong to the caller's household in expense and item operations. Authenticated attackers can enumerate category IDs from other households to read their category names, budgets, and colors, breaking household isolation.",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-101032 - navi through 2.24.0 OS Command Injection via Cheatsheet Variables",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-101032",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T13:16:55.000Z",
+        "contentSnippet": "navi through 2.24.0 fails to properly escape cheatsheet variable values when substituting them into shell commands. Attackers can inject shell metacharacters through crafted file names in suggestion command directories to execute arbitrary commands with victim privileges.",
+        "cveScore": 7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-100872 - Sylius 2.x before 2.1.16 and 2.2.9 Payment Amount Overwrite",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100872",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T13:16:38.000Z",
+        "contentSnippet": "Sylius versions before 2.1.16 and 2.2.9 fail to validate payment amounts during cart recalculation, allowing unauthenticated attackers to modify order totals after gateway transaction initiation. Attackers can pay a small amount, enlarge the order after gateway capture, and have ",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-100871 - Sylius before 1.12.25, 1.13.17, 1.14.20, 2.1.16, and 2.2.9 JWT Audience Confusion Allows Admin API Authentication",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100871",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T13:16:38.000Z",
+        "contentSnippet": "Sylius versions before 1.12.25, 1.13.17, 1.14.20, 2.1.16, and 2.2.9 fail to include firewall identification in JWT tokens issued by separate Admin and Shop API endpoints. Attackers can register a shop customer account using an administrator's email address and obtain a token that",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-100870 - Sylius before 1.12.25, 1.13.17, 1.14.20, 2.1.16, and 2.2.9 Admin Password Reset Poisoning via Host Header",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100870",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T13:16:38.000Z",
+        "contentSnippet": "Sylius versions before 1.12.25, 1.13.17, 1.14.20, 2.1.16, and 2.2.9 build administrator password-reset links using the request Host header without validation, allowing unauthenticated attackers to redirect reset tokens to attacker-controlled domains. Attackers can request passwor",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-100869 - Sylius 2.x before 2.1.16 and 2.2.9 Arbitrary Payment Action via Shop API",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100869",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T13:16:38.000Z",
+        "contentSnippet": "Sylius versions before 2.1.16 and 2.2.9 fail to restrict payment request actions in the Shop API endpoint, allowing customers to trigger refunds on completed orders. Attackers with order tokens can submit arbitrary payment actions like refunds that payment gateways execute while ",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-100868 - Penpot before 2.18.0 Unauthenticated WebSocket Access via MCP Bridge",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100868",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T13:16:37.000Z",
+        "contentSnippet": "Penpot before 2.18.0 binds the MCP server plugin WebSocket bridge to all network interfaces without authentication in single-user mode. Unauthenticated attackers on adjacent networks can connect to the WebSocket port to impersonate the Penpot browser plugin, intercept task payloa",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-100867 - spaceship-prompt through 4.22.5 Terminal Escape Sequence Injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100867",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T13:16:37.000Z",
+        "contentSnippet": "spaceship-prompt through 4.22.5 fails to sanitize control characters from project manifest version fields before rendering them in the zsh prompt. Attackers can embed ANSI/OSC escape sequences in version fields of package manifests to manipulate terminal output, rewrite window ti",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-100866 - onefetch through 2.28.1 Terminal Escape Sequence Injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100866",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T13:16:36.000Z",
+        "contentSnippet": "onefetch through 2.28.1 writes repository information field values to the terminal without removing control characters, allowing terminal escape sequence injection. Attackers can embed ANSI/OSC escape sequences in project manifest version and name fields to manipulate terminal ou",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-97165 - Joomla Extension - svenbluege.de - Reflected XSS and open redirect in Event Gallery extension < 6.5.0",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97165",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T12:17:12.000Z",
+        "contentSnippet": "Joomla Extension - svenbluege.de - Reflected XSS and open redirect in Event Gallery extension",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-97164 - Joomla Extension - svenbluege.de - Path Traversal in Clear Cache task in Event Gallery extension < 6.5.0",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97164",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T12:17:11.000Z",
+        "contentSnippet": "Joomla Extension - svenbluege.de - Authenticated arbitrary path deletion in `clear cache` task in Event Gallery extension",
+        "cveScore": 7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-100749 - Joomla Extension - svenbluege.de - CSRF in backend cleanup actions in Event Gallery extension < 6.5.0",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100749",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T12:17:11.000Z",
+        "contentSnippet": "Joomla Extension - svenbluege.de - CSRF in backend cleanup actions in Event Gallery extension",
+        "cveScore": 5.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-100748 - Joomla Extension - svenbluege.de - CSRF in various cart actions in Event Gallery extension < 6.5.0",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100748",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T12:17:11.000Z",
+        "contentSnippet": "Joomla Extension - svenbluege.de - CSRF in various cart actions in Event Gallery extension",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-100747 - Joomla Extension - svenbluege.de - CSRF in image upload in Event Gallery extension < 6.5.0",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100747",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T12:17:10.000Z",
+        "contentSnippet": "Joomla Extension - svenbluege.de - CSRF in image upload in Event Gallery extension",
+        "cveScore": 5.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-94417 - CRL check skipped when OCSP enabled and certificate has no OCSP URL",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94417",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T10:16:59.000Z",
+        "contentSnippet": "When an application enables both OCSP and CRL revocation checking on one WOLFSSL_CTX or certificate manager, wolfSSL skips the CRL check for any peer certificate that carries no Authority Information Access OCSP URL, and accepts a certificate the loaded CRL lists as revoked. The ",
+        "cveScore": 2.3,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-93304 - (D)TLS 1.2 client accepts early ChangeCipherSpec before ClientKeyExchange",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93304",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T10:16:59.000Z",
+        "contentSnippet": "A (D)TLS 1.2 client can accept a ChangeCipherSpec message before it has sent its ClientKeyExchange. No master secret has been derived at that point, so the client installs read keys derived from a known (deterministic) key and checks the server's Finished against that same key. A",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-93302 - Trusted peer certificate match ignores public key, allowing forged CA clones",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93302",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T10:16:59.000Z",
+        "contentSnippet": "MatchTrustedPeer ignores the public key used, leading to forged CA clones passing verification. Affected builds are any that enable the macro WOLFSSL_TRUST_PEER_CERT and load CA certificates with wolfSSL_CTX_trust_peer_cert() or wolfSSL_trust_peer_cert(). The peer must know the c",
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-89136 - Client accepts unsolicited RawPublicKey server certificate type",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89136",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T10:16:59.000Z",
+        "contentSnippet": "When using RPK (Raw Public Key), the client side of a TLS 1.2, 1.3 and DTLS 1.2 connection could accept an unsolicited server_cert_type=RawPublicKey which allowed a malicious or misbehaving server to bypass authentication. RPK is off by default and only enabled in --enable-rpk OR",
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-89135 - Failed X509_verify_cert leaves unverified CA in shared CertManager",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89135",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T10:16:59.000Z",
+        "contentSnippet": "A failed X509_verify_cert call permanently plants an unverified attacker CA in the shared CertManager, bypassing certificate validation in every type-blind sibling consumer (native TLS, OCSP, CRL, direct CM verify). This affects version 5.8.4 through 5.9.2 of wolfSSL with the mac",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-89134 - Subject CN name-constraint check bypassed when non-DNS SAN present",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89134",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T10:16:59.000Z",
+        "contentSnippet": "A certificate with no dNSName SAN but another SAN type present (e.g. registeredID or iPAddress) bypassed the Subject CN dNSName name-constraint check. The CN-as-DNS fallback was gated on cert->subjectCN != NULL && cert->altNames == NULL && !cert->isCA instead of \"no dNSName SAN\",",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-89133 - NameConstraints not enforced across unconstrained intermediate CA",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89133",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T10:16:58.000Z",
+        "contentSnippet": "wolfSSL versions 5.9.2 and earlier contain a flaw in the X.509 certificate validation logic where it fails to properly enforce NameConstraints extensions when there is an unconstrained CA tier between a name-constrained intermediate CA and the leaf certificate. wolfSSL incorrectl",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-89102 - OCSP stapling v2 multi accepts non-CA chain certificates as issuers",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89102",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T10:16:58.000Z",
+        "contentSnippet": "In wolfSSL versions 5.7.2 through 5.9.2 there is a client-side implementation flaw in RFC 6961, multiple OCSP response stapling, which can lead to certificate forgery. When a wolfSSL client enables OCSP stapling with the HAVE_CERTIFICATE_STATUS_REQUEST_V2 feature and calls wolfSS",
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-15442 - Heap use-after-free on read during bidirectional (D)TLS shutdown",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15442",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T10:16:56.000Z",
+        "contentSnippet": "In all builds that make use of (D)TLS, including default builds, there is a series of conditional states during the TLS shutdown which could lead to a heap-use-after free. If an application ended up getting a partial wolfSSL_read() which is sometimes caused by a small user buffer",
+        "cveScore": 2.3,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-94419 - Client session cache reference poisoning allows resumption with wrong server",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94419",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T09:16:36.000Z",
+        "contentSnippet": "Without NO_SESSION_CACHE_REF, wolfSSL_get_session() does not return a session object but a ClientSession reference of the form {row, index, hash(sessionID)} into the process-global SessionCache, and ClientSessionToSession() validates it against that hash alone. Because the TLS 1.",
+        "cveScore": 2.3,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-94418 - Signature failure masked by date error under WOLFSSL_SMALL_CERT_VERIFY",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94418",
+        "source": "cvefeed.io",
+        "isoDate": "2026-09-27T09:16:36.000Z",
+        "contentSnippet": "Under WOLFSSL_SMALL_CERT_VERIFY, ProcessPeerCertParse() runs the certificate signature check separately from the parse to keep peak memory down, then merges the two results, but it merged the signature result back only when the parse returned 0, so any parse error hid it. ParseCe",
+        "cveScore": 2.3,
+        "cveSeverity": "LOW"
+      },
       {
         "title": "CVE-2026-100741 - Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection') in hMailServer",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-100741",
@@ -677,231 +902,6 @@
         "contentSnippet": "Froxlor before 2.3.12 does not restrict or escape the system.letsencryptchallengepath setting: unlike sibling settings hardened in GHSA-33mp, the field has no string_regexp or required_otp guard, and its value is concatenated unescaped into the acme.sh command line built in lib/F",
         "cveScore": 9.4,
         "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-100713 - Froxlor before 2.3.12 Privilege Escalation via SSH Key Sync",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100713",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-26T14:16:57.000Z",
-        "contentSnippet": "Froxlor 2.3.10 and earlier contain a time-of-check time-of-use (TOCTOU) race condition in the SSH key synchronization cron (lib/Froxlor/Cron/System/SshKeys.php, SshKeys::generateFiles). The containment/symlink validation performed by FileDir::makeCorrectDir()/makeCorrectFile() is",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-100712 - froxlor before 2.3.12 Two-Factor Authentication Bypass via CSRF",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100712",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-26T14:16:56.000Z",
-        "contentSnippet": "froxlor through 2.3.10 disables a user's two-factor authentication immediately upon an unauthenticated-triggerable GET request to the 2FA management page (e.g. /customer_index.php?page=2fa&action=delete), with no confirmation, re-authentication, or CSRF token. The global CSRF mid",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-100711 - froxlor before 2.3.12 Authentication Bypass via Session Persistence",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100711",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-26T14:16:56.000Z",
-        "contentSnippet": "froxlor versions before 2.3.12 fail to invalidate existing panel sessions, API keys, and 2FA trust cookies when a user password is changed. Attackers holding hijacked sessions, valid API keys, or 2FA trust tokens retain full account access after password rotation, bypassing incid",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-100710 - Froxlor before 2.3.12 DKIM Private Key Disclosure via API",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100710",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-26T14:16:56.000Z",
-        "contentSnippet": "Froxlor through 2.3.10 does not filter sensitive columns from API responses: Domains::get(), Domains::listing(), SubDomains::get(), and the admin branch of SubDomains::listing() perform a wildcard SELECT over the panel_domains table and return the row unmodified, including the pa",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-100709 - Froxlor before 2.3.12 2FA Bypass via Namespace Confusion",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100709",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-26T14:16:56.000Z",
-        "contentSnippet": "Froxlor through 2.3.10 stores only a numeric user ID in remembered-2FA tokens (panel_2fa_tokens) without recording the account namespace, and the remembered-token lookup during login is not constrained to the customer or administrator account type. Because customer and administra",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-100708 - Froxlor before 2.3.13 Private Key Disclosure via Certificates API",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100708",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-26T14:16:56.000Z",
-        "contentSnippet": "Froxlor before 2.3.13 returns the ssl_key_file column — which stores the raw PEM TLS private-key content — verbatim in the JSON responses of the Certificates.get and Certificates.listing API commands, because the results of the underlying domain_ssl_settings queries are passed th",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-100707 - Kyverno before 1.19.1 Namespace Isolation Bypass via Percent-Encoded Path",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100707",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-26T14:16:55.000Z",
-        "contentSnippet": "Kyverno before 1.19.1 contains a namespace isolation bypass in the apiCall context entry of namespaced Policy resources due to inconsistent path interpretation between validation and execution. A low-privilege tenant can use percent-encoded dot-segments in urlPath to bypass names",
-        "cveScore": 8.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-100706 - kyverno before 1.19.1 Privilege Escalation via Policy apiCall urlPath",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100706",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-26T14:16:55.000Z",
-        "contentSnippet": "kyverno before 1.19.1 fails to properly validate URL-encoded path segments in Policy apiCall urlPath, allowing namespace tenants to bypass the per-namespace clamp and create objects in other namespaces as the admission-controller ServiceAccount. Attackers can exploit this by usin",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-100705 - Kyverno before 1.19.1 SSRF via legacy apiCall service executor",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100705",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-26T14:16:55.000Z",
-        "contentSnippet": "Kyverno before 1.19.1 is vulnerable to server-side request forgery. The default egress blocklist (169.254.169.254, 169.254.169.253, metadata.google.internal, 127.0.0.0/8, ::1/128) and the scoped-token control were wired only into the new CEL http.Get/Post library and were never a",
-        "cveScore": 8.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-100704 - Kyverno before 1.19.1 ImageValidatingPolicy Exception Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100704",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-26T14:16:55.000Z",
-        "contentSnippet": "Kyverno is a policy engine for Kubernetes. In versions 1.14.0 through 1.19.0, the ImageValidatingPolicy (policies.kyverno.io/v1beta1) evaluator never reads the spec.images and spec.allowedValues fields of a PolicyException. Any PolicyException whose policyRefs and matchConditions",
-        "cveScore": 8.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-100703 - Kyverno before 1.19.1 Cross-Namespace Data Access via globalcontext.Lib",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100703",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-26T14:16:55.000Z",
-        "contentSnippet": "Kyverno 1.16.0 through 1.19.0 registers the globalcontext.Lib CEL library in its policy environment without confining it to the policy's namespace, unlike the sibling libraries (resource.Lib, http.Lib, configMap loader) which are handed the policy namespace. A tenant who can crea",
-        "cveScore": 8.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-100314 - mathurvishal CloudClassroom-PHP-Project updatedetailsfromstudent.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100314",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-26T12:17:35.000Z",
-        "contentSnippet": "A security vulnerability has been detected in mathurvishal CloudClassroom-PHP-Project up to 5dadec098bfbbf3300d60c3494db3fb95b66e7be. This impacts an unknown function of the file updatedetailsfromstudent.php. The manipulation of the argument eno leads to sql injection. The attack",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-100313 - mathurvishal CloudClassroom-PHP-Project updatequery.php cross site scripting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100313",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-26T12:17:33.000Z",
-        "contentSnippet": "A weakness has been identified in mathurvishal CloudClassroom-PHP-Project up to 5dadec098bfbbf3300d60c3494db3fb95b66e7be. This affects an unknown function of the file updatequery.php. Executing a manipulation of the argument queryx can lead to cross site scripting. It is possible",
-        "cveScore": 5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-98163 - cgroup: Avoid iteration of dying tasks with zero refcount",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98163",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-26T09:16:38.000Z",
-        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: cgroup: Avoid iteration of dying tasks with zero refcount The commit 260fbcb92bbea (\"cgroup: Move dying_tasks cleanup from cgroup_task_release() to cgroup_task_free()\") extended the lifetime of tasks on the dying",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-100312 - mathurvishal CloudClassroom-PHP-Project updateguest.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100312",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-26T09:16:37.000Z",
-        "contentSnippet": "A security flaw has been discovered in mathurvishal CloudClassroom-PHP-Project up to 5dadec098bfbbf3300d60c3494db3fb95b66e7be. The impacted element is an unknown function of the file /updateguest.php. Performing a manipulation of the argument gname/editassid results in sql inject",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-100311 - mathurvishal CloudClassroom-PHP-Project Faculty Video Management managevideos2.php cross site scripting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100311",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-26T08:16:32.000Z",
-        "contentSnippet": "A vulnerability was identified in mathurvishal CloudClassroom-PHP-Project up to 5dadec098bfbbf3300d60c3494db3fb95b66e7be. The affected element is an unknown function of the file managevideos2.php of the component Faculty Video Management. Such manipulation of the argument V_Title",
-        "cveScore": 4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-96533 - Testimonials Widget <= 4.0.4 - Unauthenticated SSRF via Featured Image URL",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96533",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-26T07:17:03.000Z",
-        "contentSnippet": "The Testimonials Widget WordPress plugin through 4.0.4 does not validate a user-supplied URL before fetching it server-side and storing the response as a public file, allowing unauthenticated users to make the server issue requests to internal services and read the responses.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-96532 - Testimonials Widget <= 4.0.4 - Unauthenticated Arbitrary Post Update",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96532",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-26T07:17:03.000Z",
-        "contentSnippet": "The Testimonials Widget WordPress plugin through 4.0.4 does not perform a capability or ownership check when handling its front-end testimonial submission form, allowing unauthenticated users to modify or create arbitrary posts, including overwriting the title, content and author",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-96531 - Optimole 4.0.0 - 4.2.12 - Author+ Stored XSS via Video Player Block",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96531",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-26T07:17:03.000Z",
-        "contentSnippet": "The Optimole WordPress plugin before 4.2.13 does not escape unrecognized attributes of its video-player block before rendering them onto the block's wrapper element, allowing users with the Author role and above to store an event-handler attribute that executes scripts in the bro",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-96526 - MCP Server for WordPress < 1.8.2 - Contributor+ Arbitrary Post Title Disclosure via workflows/run REST Route",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96526",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-26T07:17:03.000Z",
-        "contentSnippet": "The MCP Server for WordPress WordPress plugin before 1.8.2 does not perform an object-level authorization check on one of its workflow REST routes, allowing users with the Contributor role to disclose the title and publication status of any post, page or custom post type, includi",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-96525 - MCP Server for WordPress < 1.8.2 - Contributor+ Workflow Modification and Deletion via Missing Ownership Check",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96525",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-26T07:17:03.000Z",
-        "contentSnippet": "The MCP Server for WordPress WordPress plugin before 1.8.2 does not perform an ownership or sufficient capability check on its workflow create, update and delete REST routes, allowing users with the Contributor role to modify, delete and create site-wide workflow configuration, i",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-96524 - MCP Server for WordPress < 1.8.2 - Administrator Account Creation via CSRF",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96524",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-26T07:17:03.000Z",
-        "contentSnippet": "The MCP Server for WordPress WordPress plugin before 1.8.2 does not correctly verify the WordPress REST API nonce for cookie-authenticated requests when a condition an attacker can influence is present, allowing unauthenticated attackers to perform administrator-only actions, inc",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-92411 - WP Delicious < 1.10.8 - Contributor+ Stored XSS via Recipe Block Tag Name",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92411",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-26T07:17:03.000Z",
-        "contentSnippet": "The WP Delicious WordPress plugin before 1.10.8 does not validate or escape the HTML tag name taken from user-supplied recipe block data before rendering it on the front end, allowing users with the Contributor role and above to inject arbitrary HTML tags, including script tags, ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-89237 - Bluff Post <= 1.1.1 - Unauthenticated SQLi via 'table_name' and 'column_name' Parameters",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89237",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-26T07:17:02.000Z",
-        "contentSnippet": "The Bluff Post WordPress plugin through 1.1.1 does not sanitise and escape parameters before using them as identifiers in a SQL query, allowing unauthenticated attackers to append additional SQL and extract sensitive information from the database.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-85081 - Multiple elFinder Plugins - DOM-based XSS via postMessage Origin Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85081",
-        "source": "cvefeed.io",
-        "isoDate": "2026-09-26T07:17:02.000Z",
-        "contentSnippet": "The File Manager WordPress plugin before 8.0.5, FileOrganizer WordPress plugin before 1.2.1, File Manager Pro WordPress plugin before 2.1.3 do not correctly validate the origin of window messages received by the file browser they load on their admin screens, accepting any origin ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       }
     ],
     "ai": [
@@ -1608,6 +1608,13 @@
     ],
     "virtualization": [
       {
+        "title": "I Built My Ultimate TrueNAS Storage Setup for Proxmox",
+        "link": "https://www.virtualizationhowto.com/2026/09/i-built-my-ultimate-truenas-storage-setup-for-proxmox/",
+        "source": "Virtualization HowTo",
+        "isoDate": "2026-09-27T12:54:46.000Z",
+        "contentSnippet": "As you all know if you have been following here, I have been knee deep with TrueNAS with the new Proxmox plugin the last couple of weeks and have been… The post I Built My Ultimate TrueNAS Storage Setup for Proxmox appeared first on Virtualization Howto."
+      },
+      {
         "title": "The Dockhand Security Setting You Should Turn On in Your Home Lab Now",
         "link": "https://www.virtualizationhowto.com/2026/09/the-dockhand-security-setting-you-should-turn-on-in-your-home-lab-now/",
         "source": "Virtualization HowTo",
@@ -2299,16 +2306,72 @@
         "source": "Virtualization HowTo",
         "isoDate": "2026-07-14T12:11:08.000Z",
         "contentSnippet": "Proxmox has a lot of really great features that make it ideal to run your virtualization stack in the home lab. You can take advantage of either virtual machines or… The post 7 Proxmox LXC Commands That Changed How I Manage My Home Lab Containers appeared first on Virtualization "
-      },
-      {
-        "title": "Veeam Bare Metal Recovery from Recovery partition",
-        "link": "https://www.vladan.fr/veeam-bare-metal-recovery-from-recovery-partition/",
-        "source": "Vladan.fr",
-        "isoDate": "2026-07-14T08:20:44.000Z",
-        "contentSnippet": "Bare metal restore with Veeam from a recovery partition is a method to avoid using USB media by installing the Veeam Recovery Media directly onto a dedicated partition on the server's internal drive. This approach allows for faster recovery times and eliminates the need to access"
       }
     ],
     "hardware": [
+      {
+        "title": "Thieves steal Nvidia-labeled trailers expecting massive AI GPU payday, but score 40,000 pounds of sand instead",
+        "link": "https://www.tomshardware.com/pc-components/gpus/thieves-steal-nvidia-labeled-trailers-expecting-massive-ai-gpu-payday-but-score-40-000-pounds-of-sand-instead-crooks-duped-by-20-tons-of-ballast-sand",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-27T14:14:40.000Z",
+        "contentSnippet": "The two PlusAI trailers with Nvidia-partner markings were apparently left outside the startup's warehouse, making it a juicy target for criminals looking to make easy money on AI GPUs. However, they were deliberately left outside as the trailers only contained sand for simulating"
+      },
+      {
+        "title": "Gigabyte 1000GM PG5 1000W power supply review: Impressive Platinum-level efficiency with T-Guard thermal protection",
+        "link": "https://www.tomshardware.com/pc-components/power-supplies/gigabyte-1000gm-pg5-1000w-power-supply-review",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-27T13:00:00.000Z",
+        "contentSnippet": "Gigabyte's new Gaming series flagship, the Gigabyte 1000GM PG5 1000W, pairs an HEC-built platform with all-Japanese capacitors, Platinum-level efficiency, and T-Guard thermal protection for the 12V-2x6 connector."
+      },
+      {
+        "title": "PS5 emulator successfully runs six titles at a playable 60 FPS",
+        "link": "https://www.tomshardware.com/desktops/gaming-pcs/ps5-emulator-successfully-runs-six-titles-at-a-playable-60-fps-ps5-emulation-continues-to-gather-momentum-as-developers-improve-shader-translation-and-vulkan-support",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-27T12:40:00.000Z",
+        "contentSnippet": "SharpEmu’s latest release can run six tested PS5 games at 60 FPS, with 12 of 55 titles now reaching gameplay state, as developers improve shader translation and Vulkan support."
+      },
+      {
+        "title": "Linux enthusiasts see 10-second kernel compilation times on the horizon",
+        "link": "https://www.tomshardware.com/software/linux/linux-enthusiasts-see-10-second-kernel-compilation-times-on-the-horizon-ai-assisted-patches-cut-build-times-by-nearly-a-third-without-a-ramdisk",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-27T12:20:00.000Z",
+        "contentSnippet": "It won’t be long until Linux enthusiasts will be able to complete a clean kernel build in under 10 seconds thanks to advances in PC hardware and the AI-assisted optimization of compilers."
+      },
+      {
+        "title": "Flock seeks to have security researchers' map of Flock cameras taken down",
+        "link": "https://www.tomshardware.com/tech-industry/cyber-security/flock-seeks-to-have-security-researchers-map-of-flock-cameras-taken-down-unauthenticated-flaw-exposed-335-701-camera-locations-nationwide",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-27T12:00:00.000Z",
+        "contentSnippet": "A vulnerability on the Flock website allowed a security researcher to access its third-party provider to download the locations and descriptions of over 300,000 Flock cameras. He also pointed out how the Flock system could be used to track personnel heading to and from sensitive "
+      },
+      {
+        "title": "Developer says AI decision model Jev beat Pokémon Red in under a week",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/developer-says-jev-decision-model-beat-pokemon-red-in-under-a-week-non-llm-engine-succeeds-where-traditional-chatbots-stalled-for-months-but-claude-opus-5-coached-the-model-through-its-dead-ends",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-27T11:30:00.000Z",
+        "contentSnippet": "TypeSafe AI's Jev beat Pokémon Red in under a week, eventually reaching the Hall of Fame."
+      },
+      {
+        "title": "U.S. and UK navies successfully launch 3,700-pound submarine-sinking torpedo from robotic drone submarine in historic first",
+        "link": "https://www.tomshardware.com/tech-industry/u-s-and-uk-navies-successfully-launch-3-700-pound-submarine-sinking-torpedo-from-robotic-drone-submarine-in-historic-first-project-broadsword-proves-weapon-interchangeability-in-just-seven-months",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-27T10:30:00.000Z",
+        "contentSnippet": "The U.S. Navy and Royal Navy have successfully launched a 3,700-pound Mk 48 heavyweight torpedo from Britain’s uncrewed XV Excalibur submarine, marking the first time the weapon has been fired from an autonomous underwater vehicle"
+      },
+      {
+        "title": "Counterfeit vinyl record maker sentenced to three years in the slammer after making $3.5 million",
+        "link": "https://www.tomshardware.com/tech-industry/counterfeit-vinyl-record-maker-sentenced-to-three-years-in-the-slammer-police-bust-largest-fake-vinyl-operation-in-uk-history-raid-uncovers-four-70-year-old-presses-and-3-000-metal-stampers",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-27T10:00:00.000Z",
+        "contentSnippet": "Authorities seized thousands of counterfeit records and specialist manufacturing equipment after a BPI test purchase helped expose the long-running operation."
+      },
+      {
+        "title": "Taiwan's chip talisman snack faces production halt after 94% strike vote",
+        "link": "https://www.tomshardware.com/tech-industry/taiwans-chip-talisman-snack-faces-production-halt-after-94-percent-strike-vote-workers-demand-share-of-usd176-million-factory-sale-to-ase",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-09-27T09:30:00.000Z",
+        "contentSnippet": "Taiwan's tech talisman snack production could be halted as the Guai Guai company faces strike action."
+      },
       {
         "title": "AMD Posts the Full EPYC 9006 SKU List: 31 Venice Parts From $700 to $14,904 Across SP7 and SP8",
         "link": "https://www.storagereview.com/news/amd-posts-the-full-epyc-9006-sku-list-31-venice-parts-from-700-to-14904-across-sp7-and-sp8",
@@ -2945,69 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-09-21T17:34:47.000Z",
         "contentSnippet": "Apple's use of QLC NAND allows the iPhone 18 Pro Max to offer higher storage capacity, but Homolab's testing highlights the potential performance trade-off under sustained writes."
-      },
-      {
-        "title": "Get the world’s fastest gaming CPU and a DLSS 5-capable GPU in a gaming PC for $2,299 — fully loaded powerhouse sports Ryzen 7 9800X3D, RTX 5080 Founders Edition, 32GB RAM, and 1TB SSD [Updated]",
-        "link": "https://www.tomshardware.com/desktops/gaming-pcs/get-the-worlds-fastest-gaming-cpu-and-a-dlss-5-capable-gpu-in-a-gaming-pc-for-usd2-299-fully-loaded-powerhouse-sports-ryzen-7-9800x3d-rtx-5080-founders-edition-32gb-ram-and-1tb-ssd",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-21T17:19:27.000Z",
-        "contentSnippet": "Walmart is selling a CyberPowerPC gaming PC with a Ryzen 7 9800X3D, GeForce RTX 5080 Founders Edition, 32GB of DDR5-6000 memory, and a 1TB PCIe 4.0 SSD for $2,299."
-      },
-      {
-        "title": "ABB Infinitus Brings a Source-to-Rack 800 VDC Portfolio to AI Data Centers, Targeting 1 MW Racks and 5% Efficiency Gains",
-        "link": "https://www.storagereview.com/news/abb-infinitus-brings-a-source-to-rack-800-vdc-portfolio-to-ai-data-centers",
-        "source": "StorageReview",
-        "isoDate": "2026-09-21T17:03:03.000Z",
-        "contentSnippet": "ABB has introduced Infinitus, a portfolio of direct current power technologies for AI data centers built around 800 VDC distribution and rack power demands the company expects to reach 1 MW and beyond. ABB says today’s AI racks draw close to 200 kW, and the next chip generations "
-      },
-      {
-        "title": "Local opposition blocked 45 data center projects worth $68 billion in the second quarter of 2026 — data center investments reportedly still on track to hit $32 trillion by 2050",
-        "link": "https://www.tomshardware.com/tech-industry/data-centers/local-opposition-blocked-usd68-billion-worth-of-data-center-projects-in-the-second-quarter-of-2026-data-center-investments-reportedly-still-on-track-to-hit-usd32-trillion-by-2050",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-21T16:00:00.000Z",
-        "contentSnippet": "Local opposition to data center buildouts has blocked $68 billion worth of data center projects in the second quarter of 2026, despite investments still rising."
-      },
-      {
-        "title": "AMD beats Intel to the trillion-dollar club as stock price soars — firm joins Nvidia, Broadcom, and SK hynix for companies worth over $1 trillion",
-        "link": "https://www.tomshardware.com/tech-industry/amd-beats-intel-to-the-trillion-dollar-club-as-stock-price-soars-firm-joins-nvidia-broadcom-and-sk-hynix-for-companies-worth-over-usd1-trillion",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-21T15:42:55.000Z",
-        "contentSnippet": "AMD has crossed the $1 trillion market cap mark, joining an exclusive list of less than two dozen companies around the world."
-      },
-      {
-        "title": "FCIA’s FC-SP-3: A Standard Ready for the Quantum-Computing World",
-        "link": "https://www.storagereview.com/review/fcias-fc-sp-3-a-standard-ready-for-the-quantum-computing-world",
-        "source": "StorageReview",
-        "isoDate": "2026-09-21T15:14:40.000Z",
-        "contentSnippet": "In enterprise IT, most security upgrades typically occur in response to breaches or other significant incidents. The recently developed INCITS FC-SP-3 standard, however, represents a proactive response to regulatory and cryptographic deadlines that are already influencing infrast"
-      },
-      {
-        "title": "IDC External Storage Tracker: $10.3 Billion in Q2 2026 as Server Market Tops $166 Billion on AI Demand",
-        "link": "https://www.storagereview.com/news/idc-external-storage-tracker-q2-2026-10-3-billion-as-server-market-tops-166-billion",
-        "source": "StorageReview",
-        "isoDate": "2026-09-21T15:00:25.000Z",
-        "contentSnippet": "IDC’s Worldwide Quarterly Enterprise Storage Systems Tracker shows the external OEM enterprise storage systems (ESS) market reached $10.3 billion in vendor revenue during the second quarter of 2026, up 33.6% year over year. It’s the second-highest quarterly total in the tracker’s"
-      },
-      {
-        "title": "AMD Ryzen 5 5500F and 7500 show up at retail with pricing above MSRP — budget CPUs are $20 more expensive than list price, even from first-party sellers",
-        "link": "https://www.tomshardware.com/pc-components/cpus/amd-ryzen-5-5500f-and-7500-show-up-at-retail-with-pricing-above-msrp-budget-cpus-are-usd20-more-expensive-than-list-price-even-from-first-party-sellers",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-21T14:45:00.000Z",
-        "contentSnippet": "Nearly two weeks after they were announced, AMD's Ryzen 5 5500F and 7500 (non-F) are available for sale, though prices are slightly above MSRP."
-      },
-      {
-        "title": "Huawei shelves global AI chip rollout as China's own demand outstrips supply — 15,488-chip Atlas clusters leverage optical networking to counter Nvidia, scales to 120 EFLOPS",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/huawei-shelves-global-ai-chip-rollout-as-chinas-own-demand-outstrips-supply-15-488-chip-atlas-clusters-leverage-optical-networking-to-counter-nvidia-scales-to-120-eflops",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-21T14:30:00.000Z",
-        "contentSnippet": "Huawei says it will not offer its latest AI hardware outside of China citing lack of capacity to serve domestic demand."
-      },
-      {
-        "title": "New RTX 5070 Autumn Limited Edition gaming GPU doubles as an air freshener with built-in 'e-sports aromatherapy' — AX Gaming's white and purple card also features an anime character and floral graphic",
-        "link": "https://www.tomshardware.com/pc-components/gpus/new-rtx-5070-autumn-limited-edition-gaming-gpu-doubles-as-an-air-freshener-with-built-in-e-sports-aromatherapy-ax-gamings-white-and-purple-card-also-features-an-anime-character-and-floral-graphics",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-21T14:00:00.000Z",
-        "contentSnippet": "AX Gaming has revealed its latest seasonal anime-themed limited edition graphics card which, this time, is designed to please your nose as much as your eyes."
       }
     ]
   }
