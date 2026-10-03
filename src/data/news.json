@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-10-03T05:55:32.961Z",
+  "updatedAt": "2026-10-03T10:53:51.887Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-97873 - Legacy PBES1 and PKCS#12 PBE iteration count honoured unbounded in the raw JCA provider",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97873",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-03T09:17:06.000Z",
+        "contentSnippet": "In Bouncy Castle for Java before 1.86, the raw JCA provider's legacy PBES1 (PKCS#5 scheme 1) and PKCS#12 PBE families ran their password-based key derivation with an iteration count taken from untrusted input without bounding it, so a small input could dictate an arbitrary amount",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-85515 - OpenPGP message truncation not reported, bypassing the SEIPDv1 integrity check",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85515",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-03T09:17:06.000Z",
+        "contentSnippet": "In Bouncy Castle for Java before 1.86, a truncated OpenPGP encrypted message was accepted with no error reported, and on the SEIPD version 1 path with no integrity check performed at all. RFC 9580 sec. 13.7 permits an implementation to release the cleartext of the fully authentic",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-71892 - CMS key-transport recipient key-size validation never runs for RFC 9709 HKDF-derived keys",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71892",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-03T09:17:05.000Z",
+        "contentSnippet": "In Bouncy Castle for Java before 1.86, the opt-in key-size validation on CMS key-transport recipients, org.bouncycastle.cms.jcajce.JceKeyTransRecipient.setKeySizeValidation(true), never ran for a message using RFC 9709 content-encryption key derivation (id-alg-cek-hkdf-sha256). T",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-71891 - BLS12-381 key validation accepts a public key built on a foreign curve",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71891",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-03T09:17:05.000Z",
+        "contentSnippet": "In Bouncy Castle for Java before 1.86, BLS12_381BasicScheme.keyValidate, and so BLSPublicKeyParameters and every BasicScheme, MessageAugmentation and ProofOfPossession verify and aggregateVerify that gate on it, accepted a public key built on a foreign ECCurve that merely shares ",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-71890 - MLS external commit can remove an arbitrary group member",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71890",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-03T09:17:05.000Z",
+        "contentSnippet": "In Bouncy Castle for Java before 1.86, validation of an MLS (RFC 9420) external commit's proposal list, org.bouncycastle.mls.protocol.Group.validateExternalCachedProposals, counted the proposals by type and bounded the removed leaf index but never established that the removed lea",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-71889 - PKIXCertPathReviewer does not apply X.509 name constraints to the target certificate",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71889",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-03T09:17:05.000Z",
+        "contentSnippet": "In Bouncy Castle for Java before 1.86, neither copy of PKIXCertPathReviewer - org.bouncycastle.pkix.jcajce.PKIXCertPathReviewer nor the legacy org.bouncycastle.x509.PKIXCertPathReviewer - applied X.509 name constraints to the end-entity certificate. checkNameConstraints walked th",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-71888 - CMS AuthenticatedData exposes attacker-inserted authAttrs when digestAlgorithm is absent",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71888",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-03T09:17:05.000Z",
+        "contentSnippet": "In Bouncy Castle for Java before 1.86, the streaming CMS AuthenticatedData parser accepted a message whose digestAlgorithm and authAttrs fields disagreed about whether authenticated attributes were present. RFC 5652 sec. 9.1 pairs the two, requiring that authAttrs be present when",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-71887 - OpenPGP data signature accepted from a signing subkey without cross-certification",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71887",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-03T09:17:05.000Z",
+        "contentSnippet": "In Bouncy Castle for Java before 1.86, the high-level OpenPGP API accepted a data signature made by a signing subkey whose Subkey Binding signature carried no embedded Primary Key Binding (cross-certification) signature, in the case where that binding omits a Key Flags subpacket.",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-71886 - OpenPGP certification accepted from a subkey without certification authority",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71886",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-03T09:17:04.000Z",
+        "contentSnippet": "In Bouncy Castle for Java before 1.86, the high-level OpenPGP certificate API accepted a third-party certification or trust delegation from any component key of the issuing certificate, without requiring that component to have been granted the authority to certify. OpenPGPCertifi",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-71885 - MLS X.509 credential not bound to the LeafNode signature key",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71885",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-03T09:17:04.000Z",
+        "contentSnippet": "In Bouncy Castle for Java before 1.86, the Messaging Layer Security (MLS, RFC 9420) implementation did not bind an X.509 credential to a LeafNode's signature_key. LeafNode.verify() checked a leaf's signature against the signature_key carried in the leaf itself, while the credenti",
+        "cveScore": 9.2,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-71883 - Native AES packet cipher returns the raw AES key on an alias",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71883",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-03T09:17:04.000Z",
+        "contentSnippet": "In Bouncy Castle for Java LTS before 2.73.13, the one-shot native packet ciphers for AES-CBC, CCM, CFB, CTR, GCM and GCM-SIV released the caller's key, IV and additional authenticated data arrays with JNI's ReleaseByteArrayElements in mode 0, which commits the native copy back in",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-18040 - HQC leaks private key information through secret-indexed GF(2^8) tables and a secret-dependent fixed-weight sampler",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18040",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-03T09:17:04.000Z",
+        "contentSnippet": "In Bouncy Castle for Java before 1.86, HQC leaked secret-derived data through two side channels: its GF(2^8) arithmetic used lookup tables indexed by field elements, making the cache line touched a function of the operand, and its fixed-weight support sampler left its duplicate s",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-92767 - Twenty20 Image Before-After <= 2.0.5 - Authenticated (Contributor+) Stored Cross-Site Scripting via 'offset' Shortcode Attribute",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92767",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-03T08:16:27.000Z",
+        "contentSnippet": "The Twenty20 Image Before-After plugin for WordPress is vulnerable to Stored Cross-Site Scripting via 'offset' Shortcode Attribute in all versions up to, and including, 2.0.5 due to insufficient input sanitization and output escaping. This makes it possible for authenticated atta",
+        "cveScore": 6.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-92084 - Beaver Builder Page Builder <= 2.11.0.5 - Unauthenticated Arbitrary Shortcode Execution via Sidebar Module Widget Output",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92084",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-03T08:16:26.000Z",
+        "contentSnippet": "The The Beaver Builder Page Builder – Drag and Drop Website Builder plugin for WordPress is vulnerable to arbitrary shortcode execution in all versions up to, and including, 2.11.0.5. This is due to the software allowing users to execute an action that does not properly validate ",
+        "cveScore": 9.1,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-104982 - Linux Mint Xreader EPUB File epub-document.c g_strdup_printf path traversal",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104982",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-03T08:16:26.000Z",
+        "contentSnippet": "A flaw has been found in Linux Mint Xreader up to 4.6.5. This issue affects the function setup_document_content_list/g_strdup_printf of the file backend/epub/epub-document.c of the component EPUB File Handler. This manipulation causes path traversal. The attack is possible to be ",
+        "cveScore": 5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-97660 - WPC Product Options for WooCommerce <= 4.0.5 - Unauthenticated Stored Cross-Site Scripting via wpcpo-* Array Key via Multipart Field Name",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97660",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-03T07:16:49.000Z",
+        "contentSnippet": "The WPC Product Options for WooCommerce plugin for WordPress is vulnerable to Stored Cross-Site Scripting via wpcpo-* Array Key via Multipart Field Name in all versions up to, and including, 4.0.5 due to insufficient input sanitization and output escaping. This makes it possible ",
+        "cveScore": 7.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-97343 - Burst Statistics <= 3.7.1 - Improper Authentication to Account Persistence via Share-Link Authentication Bypass via 'burst_share_token'",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97343",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-03T07:16:49.000Z",
+        "contentSnippet": "The Burst Statistics – Simple WordPress Analytics (Google Analytics Alternative) plugin for WordPress is vulnerable to Improper Authentication leading to Account Persistence in all versions up to, and including, 3.7.1. This is due to the `maybe_load_shared_dashboard()` handler is",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-96267 - WP Visitor Statistics (Real Time Traffic) <= 8.7 - Unauthenticated SQL Injection via 'fullRef' Parameter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96267",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-03T07:16:49.000Z",
+        "contentSnippet": "The WP Visitor Statistics (Real Time Traffic) plugin for WordPress is vulnerable to generic SQL Injection via the 'fullRef' parameter in all versions up to, and including, 8.7 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the ex",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-94505 - Nelio Content <= 4.5.0 - Missing Authorization to Authenticated (Contributor+) Arbitrary Reusable Message Deletion via 'id' Parameter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94505",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-03T07:16:49.000Z",
+        "contentSnippet": "The Nelio Content – Editorial Calendar & Social Media Auto-Posting plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 4.5.0 This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-93896 - WPFront Notification Bar <= 3.5.1 - Reflected Cross-Site Scripting via REQUEST_URI",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93896",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-03T07:16:48.000Z",
+        "contentSnippet": "The WPFront Notification Bar plugin for WordPress is vulnerable to Reflected Cross-Site Scripting in versions up to, and including, 3.5.1. This is due to the debug-log output path (write_debug_logs) reflecting the raw value of $_SERVER['REQUEST_URI'] through vprintf() directly in",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-93889 - Mail logging <= 2.1.12 - Unauthenticated Stored Cross-Site Scripting via PHPMailer 'wp_mail_failed' Error Message",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93889",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-03T07:16:48.000Z",
+        "contentSnippet": "The Mail logging – WP Mail Catcher plugin for WordPress is vulnerable to Stored Cross-Site Scripting via PHPMailer 'wp_mail_failed' Error Message in all versions up to, and including, 2.1.12 due to insufficient input sanitization and output escaping. This makes it possible for un",
+        "cveScore": 7.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-92974 - Photo Gallery by 10Web <= 1.8.46 - Reflected Cross-Site Scripting via 'thumb_url' Parameter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92974",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-03T07:16:48.000Z",
+        "contentSnippet": "The Photo Gallery by 10Web – Mobile-Friendly Image Gallery plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the 'thumb_url' parameter in all versions up to, and including, 1.8.46 due to insufficient input sanitization and output escaping. This makes it pos",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-87115 - VikAppointments Services Booking Calendar <= 1.2.21 - Unauthenticated Arbitrary File Deletion via 'old_vapcfN' Parameter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-87115",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-03T07:16:48.000Z",
+        "contentSnippet": "The VikAppointments Services Booking Calendar plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the extract function in all versions up to, and including, 1.2.21. This makes it possible for unauthenticated attackers to delet",
+        "cveScore": 9.1,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-75028 - WPCafe <= 3.0.18 - Authenticated (Contributor+) Local File Inclusion via 'food_menu_style' Elementor Widget Setting",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75028",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-03T07:16:48.000Z",
+        "contentSnippet": "The WPCafe – Restaurant Menu, Online Food Ordering & Table Booking System plugin for WordPress is vulnerable to Local File Inclusion in all versions up to, and including, 3.0.18 via the (template scope) function. This makes it possible for authenticated attackers, with contributo",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-18443 - Smart Manager <= 8.97.0 - Authenticated (Subscriber+) SQL Injection to Privilege Escalation via 'access_privileges' Parameter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18443",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-03T07:16:47.000Z",
+        "contentSnippet": "The Smart Manager – Advanced WooCommerce Bulk Edit & Inventory Management plugin for WordPress is vulnerable to generic SQL Injection via the 'access_privileges' parameter in all versions up to, and including, 8.97.0 due to insufficient escaping on the user supplied parameter and",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-97644 - Groundhogg <= 4.9 - Authenticated (Sales Person+) Privilege Escalation via Contact Identity Rebinding leading to Administrator Account Takeover to 'user_id' Parameter (v3 /contacts) c",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-97644",
@@ -677,231 +902,6 @@
         "contentSnippet": "Next.js is a React framework for building full-stack web applications. From 16.0.0 until 16.3.8, the `next dev` development server exposes a Model Context Protocol endpoint without reliably restricting cross-site requests. A malicious website visited by a developer can reach the ",
         "cveScore": 6.3,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-104638 - onetwothreeneth HospitalManagementSystem sessions.php improper authentication",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104638",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-02T15:00:11.000Z",
-        "contentSnippet": "A security vulnerability has been detected in onetwothreeneth HospitalManagementSystem up to 9ef91ed6007314b6473110ed699dff76d158f61d. The impacted element is an unknown function of the file php/sessions.php. The manipulation of the argument ID leads to improper authentication. R",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-39717 - WordPress LearnPress plugin <= 4.4.9.1 - Broken Access Control vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-39717",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-02T14:49:50.000Z",
-        "contentSnippet": "Missing Authorization vulnerability in ThimPress LearnPress learnpress allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects LearnPress: from n/a through 4.4.9.1.",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-39601 - WordPress Booking Calendar plugin <= 11.8.4 - Race Condition vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-39601",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-02T14:49:13.000Z",
-        "contentSnippet": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition') vulnerability in WPdevelop Booking Calendar booking allows Leveraging Race Conditions.This issue affects Booking Calendar: from n/a through 11.8.4.",
-        "cveScore": 3.7,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-39600 - WordPress Aculect AI Companion plugin <= 0.8.1 - Unvalidated Redirects and Forwards vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-39600",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-02T14:47:33.000Z",
-        "contentSnippet": "URL Redirection to Untrusted Site ('Open Redirect') vulnerability in Mehul Gohil Aculect AI Companion aculect-ai-companion allows Phishing.This issue affects Aculect AI Companion: from n/a through 0.8.1.",
-        "cveScore": 4.7,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-39444 - WordPress PublishPress Series plugin <= 3.1.3 - Insecure Direct Object References (IDOR) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-39444",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-02T14:46:08.000Z",
-        "contentSnippet": "Authorization Bypass Through User-Controlled Key vulnerability in PublishPress PublishPress Series organize-series allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects PublishPress Series: from n/a through 3.1.3.",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-104637 - onetwothreeneth HospitalManagementSystem controller.php edit_patient unrestricted upload",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104637",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-02T14:45:15.000Z",
-        "contentSnippet": "A weakness has been identified in onetwothreeneth HospitalManagementSystem up to 9ef91ed6007314b6473110ed699dff76d158f61d. The affected element is the function add_patient/add_physician/add_account/update_account/update_subaccount/edit_physician/edit_patient of the file php/contr",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-39439 - WordPress WebSamurai plugin <= 1.0.7 - Broken Access Control vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-39439",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-02T14:43:15.000Z",
-        "contentSnippet": "Missing Authorization vulnerability in Kiera Howe WebSamurai websamurai allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects WebSamurai: from n/a through 1.0.7.",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-32585 - WordPress Airano MCP Bridge plugin <= 2.11.0 - Broken Access Control vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-32585",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-02T14:42:08.000Z",
-        "contentSnippet": "Missing Authorization vulnerability in airano Airano MCP Bridge airano-mcp-bridge allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Airano MCP Bridge: from n/a through 2.11.0.",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-32584 - WordPress Smart One Click Setup – Complete Demo Import &amp; Export plugin <= 1.4.3 - Sensitive Data Exposure vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-32584",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-02T14:41:03.000Z",
-        "contentSnippet": "Insertion of Sensitive Information Into Sent Data vulnerability in Chiranjit Hazarika Smart One Click Setup – Complete Demo Import &amp; Export smart-one-click-setup allows Retrieve Embedded Sensitive Data.This issue affects Smart One Click Setup – Complete Demo Import &amp; Expo",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-90970 - Improper Neutralization of Special Elements Used in a Template Engine in GitLab AI Gateway",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90970",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-02T14:34:49.000Z",
-        "contentSnippet": "GitLab has remediated a vulnerability in the GitLab AI Gateway component affecting all versions of the AI Gateway from 18.1.6 before 19.2.4, 19.3 before 19.3.2, and 19.4 before 19.4.1 that, under certain conditions, could have allowed an authenticated user with Duo Agent Platform",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-104625 - CodeAstro Simple Loan Management System index.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104625",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-02T14:30:10.000Z",
-        "contentSnippet": "A security flaw has been discovered in CodeAstro Simple Loan Management System 1.0. Impacted is an unknown function of the file /admin/index.php. Performing a manipulation of the argument g_name results in sql injection. The attack may be initiated remotely. The exploit has been ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-94422 - xdg-dbus-proxy: message filtering bypass via reply serial allows sandbox escape",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94422",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-02T14:17:12.000Z",
-        "contentSnippet": "An incorrect implementation of message filtering in xdg-dbus-proxy versions before 0.1.9 allows an attacker to bypass the intended message filtering on the D-Bus session bus by setting a reply serial number on non-reply messages. A malicious or compromised Flatpak app could use t",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-93875 - JetAppointment <= 2.5.2.1 - Unauthenticated Stored Cross-Site Scripting via 'friendlyTime' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93875",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-02T14:17:11.000Z",
-        "contentSnippet": "The JetAppointment plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'friendlyTime' parameter in all versions up to, and including, 2.5.2.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to ",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-85215 - SQL Injection in GG Soft's Paperwork",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85215",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-02T14:17:11.000Z",
-        "contentSnippet": "Improper neutralization of special elements used in an SQL command ('SQL injection') vulnerability in GG Soft Software Services Inc. Paperwork allows SQL Injection. This issue affects Paperwork: through 2026-09-09.",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-19652 - Divi Membership <= 2.2.0 - Unauthenticated Privilege Escalation via 'form_id' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19652",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-02T14:17:10.000Z",
-        "contentSnippet": "The Divi Membership plugin for WordPress is vulnerable to Privilege Escalation in versions up to, and including, 2.2.0. This is due to the `dmem_form_submit_handler()` function determining the new user's role by iterating all WordPress roles and calling `password_verify()` agains",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-104721 - Logback: Incomplete protection against CVE-2026-19880",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104721",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-02T14:17:10.000Z",
-        "contentSnippet": "Path-traversal vulnerability in QOS.CH Sarl Logback-classic on Java (logback-classic module) allows path-traversal vulnerability. More specifically, an MDC-based discriminator value flows unsanitized into a nested FileAppender path, letting an attacker who influences that MDC val",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-104614 - CodeAstro Simple Pharmacy Management System delete.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104614",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-02T14:17:09.000Z",
-        "contentSnippet": "A vulnerability was identified in CodeAstro Simple Pharmacy Management System 1.0. This issue affects some unknown processing of the file /SimplePharmacy-PHP/product/delete.php. Such manipulation of the argument ID leads to sql injection. The attack can be launched remotely. The ",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-104613 - CodeAstro Simple Pharmacy Management System view.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104613",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-02T14:17:09.000Z",
-        "contentSnippet": "A vulnerability was determined in CodeAstro Simple Pharmacy Management System 1.0. This vulnerability affects unknown code of the file /SimplePharmacy-PHP/product/view.php. This manipulation of the argument ID causes sql injection. The attack can be initiated remotely. The exploi",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-5782 - Reflected XSS in Loglama.NET's TurkHotspot",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-5782",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-02T14:13:02.000Z",
-        "contentSnippet": "Improper neutralization of input during web page generation ('cross-site scripting') vulnerability in Loglama.net TurkHotspot allows Reflected XSS. This issue affects TurkHotspot: through 2026-10-02. NOTE: The vendor was contacted early about this disclosure but did not respond i",
-        "cveScore": 5.2,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-104026 - Sapling SCM Git Subtree URL Control Character Injection Remote Code Execution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104026",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-02T14:06:02.000Z",
-        "contentSnippet": "In Sapling SCM prior to v0.2.20260929-102736, control characters were allowed to be embedded in Git subtree URLs. A maliciously constructed repository, if cloned by a target, could trigger code execution on otherwise read-only actions such as sl log/blame/annotate.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-96289 - Apache Thrift: php `--gen php:inlined` struct readers (and `TProtocol::skipBinary`) have no recursion-depth guard",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96289",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-02T13:18:05.000Z",
-        "contentSnippet": "Uncontrolled Recursion vulnerability in Apache Thrift PHP bindings. This issue affects Apache Thrift: before 0.25.0. Users are recommended to upgrade to version 0.25.0, which fixes the issue.",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-96287 - Apache Thrift: Perl `FramedTransport` reads and TLS socket writes re-slice the remaining buffer on every call (quadratic)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96287",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-02T13:18:05.000Z",
-        "contentSnippet": "Inefficient Algorithmic Complexity vulnerability in Apache Thrift Perl bindings. This issue affects Apache Thrift: before 0.25.0. Users are recommended to upgrade to version 0.25.0, which fixes the issue.",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-96286 - Apache Thrift: Perl servers end `serve()` when serving one connection fails",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96286",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-02T13:18:05.000Z",
-        "contentSnippet": "Uncaught exception vulnerability in Apache Thrift Perl bindings. This issue affects Apache Thrift: before 0.25.0. Users are recommended to upgrade to version 0.25.0, which fixes the issue.",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-96277 - Apache Thrift: Ruby `SimpleServer` ends `serve()` on any non-Transport/Protocol exception",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96277",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-02T13:18:05.000Z",
-        "contentSnippet": "Uncaught exception, Improper Handling of Exceptional Conditions vulnerability in Apache Thrift Ruby bindings. This issue affects Apache Thrift: before 0.25.0. Users are recommended to upgrade to version 0.25.0, which fixes the issue.",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-94658 - Apache Thrift: Lua `TFramedTransport`/`THttpTransport` re-slice the buffer on every read (quadratic)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94658",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-02T13:18:03.000Z",
-        "contentSnippet": "Inefficient Algorithmic Complexity vulnerability in Apache Thrift Lua bindings. This issue affects Apache Thrift: before 0.25.0. Users are recommended to upgrade to version 0.25.0, which fixes the issue.",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
@@ -2310,6 +2310,20 @@
     ],
     "hardware": [
       {
+        "title": "AMD’s secret Zen 3 gaming CPU had 128MB of game-boosting L3 cache but never saw the light of day",
+        "link": "https://www.tomshardware.com/pc-components/cpus/amds-secret-zen-3-gaming-cpu-had-128mb-of-l3-cache-but-never-saw-the-light-of-day-canceled-ryzen-9-5900x3d-breaks-free-from-the-chipmakers-vault",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-03T10:30:00.000Z",
+        "contentSnippet": "A user from the Chinese Chiphell forums shows off AMD's unreleased Ryzen 9 5900X3D, the X3D variant of the Ryzen 9 5900X."
+      },
+      {
+        "title": "ChatGPT-6 Astra plays World of Warcraft 'blind' and clears the orc starting zone in 40 minutes with no deaths",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/gpt-6-astra-plays-world-of-warcraft-blind-and-clears-the-orc-starting-zone-in-40-minutes-with-no-deaths-ai-agent-navigates-by-server-network-traffic-with-pulled-quest-data",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-03T10:00:00.000Z",
+        "contentSnippet": "The model created its own World of Warcraft pathfinder on a private server with one prompt in OpenAI's Codex."
+      },
+      {
         "title": "This is BiCS NAND Close Up from Kioxia and Sandisk",
         "link": "https://www.servethehome.com/this-is-bics-nand-close-up-from-kioxia-and-sandisk/",
         "source": "ServeTheHome",
@@ -2994,20 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-09-28T11:40:00.000Z",
         "contentSnippet": "Data center developer proposes paying checks of $10,000 per household to sway public sentiment."
-      },
-      {
-        "title": "Denuvo cracking group DenuvOwO reportedly disbands",
-        "link": "https://www.tomshardware.com/video-games/pc-gaming/denuvo-cracking-group-denuvowo-reportedly-disbands-lawsuit-from-irdeto-has-a-chilling-effect-but-cracking-continues-as-piracy-hub-purges-links",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-28T11:30:00.000Z",
-        "contentSnippet": "Denuvo hypervisor-bypassing group DenuvOwO reportedly disbands — lawsuit from Irdeto has a chilling effect, but cracking continues"
-      },
-      {
-        "title": "ASUS AI Tech 2026 Seoul South Korea",
-        "link": "https://www.servethehome.com/asus-ai-tech-2026-seoul-south-korea/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-09-27T17:00:26.000Z",
-        "contentSnippet": "At the ASUS AI Tech 2026 day in Seoul, South Korea, the company brought together its partners, customers, and suppliers and I hosted a panel The post ASUS AI Tech 2026 Seoul South Korea appeared first on ServeTheHome."
       }
     ]
   }
