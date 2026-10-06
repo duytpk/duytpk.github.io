@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-10-05T11:01:17.283Z",
+  "updatedAt": "2026-10-06T01:11:25.387Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-105786 - Joplin: Unauthenticated account takeover via an attacker-chosen application-authorisation identifier",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105786",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-05T23:18:27.000Z",
+        "contentSnippet": "Joplin is an open source note-taking and to-do application that organises notes and lists into notebooks. Prior to 3.7.13, packages/server/src/models/ApplicationModel.ts accepts a caller-chosen application authorization identifier, applications/:id/confirm binds that identifier t",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-105761 - Dify: IDOR in AppMCPServer PUT Endpoint Allows Modification of Other Apps' MCP Servers",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105761",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-05T23:17:03.000Z",
+        "contentSnippet": "Dify is an open-source LLM app development platform. Prior to 1.16.0, the PUT /console/api/apps/&lt;app_id&gt;/server endpoint in api/controllers/console/app/mcp_server.py used AppMCPServerController.put() to retrieve an AppMCPServer by the client-supplied server ID without verif",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-105760 - vLLM: GLMGA video sampling permits request-driven CPU and memory exhaustion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105760",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-05T23:17:02.000Z",
+        "contentSnippet": "vLLM is an inference and serving engine for large language models. Prior to 0.30.0, a caller can use the request-level media_io_kwargs field to select the GLMGA video backend and supply large values for the fps and max_frames options without a strict work ceiling. GLMGA construct",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-105759 - vLLM: Unbounded Prometheus label cardinality from attacker-controlled HTTP method tokens in the vLLM Rust frontend metrics middleware (unauthenticated denial of service)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105759",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-05T23:17:02.000Z",
+        "contentSnippet": "vLLM is an inference and serving engine for large language models. Prior to 0.30.0, the Rust frontend's track_http_metrics middleware records the raw HTTP method token as a Prometheus label for requests reaching registered routes. An unauthenticated attacker can send unique arbit",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-105758 - vLLM: Qwen2-VL / Qwen3-VL video samplers bound on request-controlled max_frames, which the num_frames ceiling does not reach",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105758",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-05T23:17:02.000Z",
+        "contentSnippet": "vLLM is an inference and serving engine for large language models. From 0.24.0 until 0.30.0, the Qwen2VLVideoBackend and Qwen3VLVideoBackend classes accept request-level values for the media_io_kwargs.video.max_frames and media_io_kwargs.video.fps fields without enforcing server-",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-105757 - vLLM: Structured-output request errors escape the request boundary and terminate the shared EngineCore — engine-fatal denial of service (3 sites)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105757",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-05T23:17:02.000Z",
+        "contentSnippet": "vLLM is an inference and serving engine for large language models. Prior to 0.30.0, structured-output request failures can escape request-scoped validation and reach the EngineCore fatal-error path. A per-request backend mismatch can re-raise a grammar compilation exception, padd",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-105756 - vLLM: Loose `cache_salt` validation lets a single request kill EngineCore on LMCache-MP deployments — uncaught downstream `ValueError` denial of service",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105756",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-05T23:17:02.000Z",
+        "contentSnippet": "vLLM is an inference and serving engine for large language models. Prior to 0.30.0, OpenAI-compatible request models accept a non-empty cache_salt value without enforcing the character and length restrictions required by the IPCCacheServerKey consumer in LMCache-MP. On deployment",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-105755 - vLLM: Flash late-interaction scoring caches query embeddings under a caller-controlled request id — cross-request integrity break and induced errors on `/score` and `/rerank`",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105755",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-05T23:17:02.000Z",
+        "contentSnippet": "vLLM is an inference and serving engine for large language models. Prior to 0.30.0, flash late-interaction scoring at the /score and /rerank endpoints derives each worker's query_key value from the caller-controlled X-Request-Id header. A concurrent request that reuses a victim's",
+        "cveScore": 4.2,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-105754 - vLLM: Scale-out disaggregated multimodal transport trusts caller-supplied features",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105754",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-05T23:17:02.000Z",
+        "contentSnippet": "vLLM is an inference and serving engine for large language models. Prior to 0.30.0, the /inference/v1/generate endpoint in the disaggregated scale-out path accepts caller-supplied tensors in the features.kwargs_data field, cache identifiers in the features.mm_hashes field, ranges",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-105753 - vLLM: Mirrored multimodal IPC caches desync after a rejected request — a later request reusing the same media hash trips a receiver assertion in the engine core",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105753",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-05T23:17:01.000Z",
+        "contentSnippet": "vLLM is an inference and serving engine for large language models. Prior to 0.28.0, the default mirrored multimodal LRU cache can commit a media hash in the frontend sender cache during multimodal rendering and before engine admission, while the engine receiver cache never receiv",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-105752 - vLLM: Harmony tool continuations drop `cache_salt` — restoring a cross-tenant prefix-cache membership oracle",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105752",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-05T23:17:01.000Z",
+        "contentSnippet": "vLLM is an inference and serving engine for large language models. Prior to 0.30.0, Harmony tool continuations submitted through \"POST /v1/responses\" requests rebuild the next-turn engine input without preserving the cache_salt value, placing the continuation prefix in the global",
+        "cveScore": 3.1,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-105470 - girishsaraf Online-Appointment-Booking-System Doctor Search Endpoint locateus.php mysqli_query sql injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105470",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-05T23:17:01.000Z",
+        "contentSnippet": "A vulnerability was identified in girishsaraf Online-Appointment-Booking-System up to f427b4757128ca253d33d0cc4e87bbb9c999a4d5. This issue affects the function mysqli_query of the file locateus.php of the component Doctor Search Endpoint. The manipulation of the argument doctorna",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-105469 - girishsaraf Online-Appointment-Booking-System AJAX Endpoint get_town.php sql injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105469",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-05T23:17:01.000Z",
+        "contentSnippet": "A vulnerability was determined in girishsaraf Online-Appointment-Booking-System up to f427b4757128ca253d33d0cc4e87bbb9c999a4d5. This vulnerability affects unknown code of the file get_town.php of the component AJAX Endpoint. Executing a manipulation of the argument countryid/town",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-104852 - GraphQL Tools has prototype pollution in well-established utility function `mergeDeep`",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104852",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-05T23:17:00.000Z",
+        "contentSnippet": "GraphQL Tools provides utilities for building, stitching, and mocking GraphQL schemas. Prior to 12.0.1, the GraphQL Tools utils package's mergeDeep function follows inherited properties while recursively merging source objects and does not exclude __proto__, constructor, or proto",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-105471 - girishsaraf Online-Appointment-Booking-System Registration signup.php sql injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105471",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-05T23:15:18.000Z",
+        "contentSnippet": "A security flaw has been discovered in girishsaraf Online-Appointment-Booking-System up to f427b4757128ca253d33d0cc4e87bbb9c999a4d5. Impacted is an unknown function of the file signup.php of the component Registration Handler. The manipulation of the argument fname results in sql",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-82988 - CVE-2026-82988",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82988",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-05T23:14:28.000Z",
+        "contentSnippet": "There exists an arbitrary file download in vCast APK delivery mechanism in ViewSonic ViewBoard unknown allows a remote, unauthenticated attacker to trigger unprivileged APK installation via serving a malicious APK URL through an unauthenticated download endpoint",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-82989 - CVE-2026-82989",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82989",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-05T23:14:14.000Z",
+        "contentSnippet": "There is an input injection in vCast exposed network services in ViewSonic ViewBoard that allows a remote, unauthenticated attacker to inject arbitrary input into service endpoints via network-based HTTP requests to unauthenticated endpoints",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-105785 - Joplin Server password reset accepts tokens issued for unrelated purposes",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105785",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-05T23:12:45.000Z",
+        "contentSnippet": "Joplin is an open source note-taking and to-do application that organises notes and lists into notebooks. Prior to Joplin Server 3.7.2, packages/server/src/models/TokenModel.ts stores CSRF, account-confirmation, email-change, and password-reset tokens without a purpose, and packa",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-105784 - Joplin whiteboard card rendering allows CSS injection into application chrome",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105784",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-05T23:11:35.000Z",
+        "contentSnippet": "Joplin is an open source note-taking and to-do application that organises notes and lists into notebooks. Prior to 3.7.13, selecting a note containing a jsoncanvas fence causes the whiteboard text and file-node components in packages/app-desktop/gui/NoteEditor/NoteBody/Whiteboard",
+        "cveScore": 4.6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-105783 - Joplin Web Clipper pairing allows cross-origin theft of a permanent API token",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105783",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-05T23:10:26.000Z",
+        "contentSnippet": "Joplin is an open source note-taking and to-do application that organises notes and lists into notebooks. Prior to 3.7.13, when Joplin Desktop is running with the opt-in Web Clipper server enabled, the server in packages/lib/ClipperServer.ts sends Access-Control-Allow-Origin: * a",
+        "cveScore": 8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-105782 - Scrapy: Arbitrary Module Import via Referrer-Policy Header in RefererMiddleware",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105782",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-05T23:08:55.000Z",
+        "contentSnippet": "Scrapy is a high-level web crawling and scraping framework for Python. From 1.4.0 until 2.14.2, RefererMiddleware in scrapy/spidermiddlewares/referer.py treated a Referrer-Policy response-header value that resembled a Python import path as a referrer policy class, imported the re",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-105764 - Immich: Authenticated SVG upload reaches ImageMagick coders and enables RCE",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105764",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-05T23:07:38.000Z",
+        "contentSnippet": "Immich is a high-performance self-hosted photo and video management solution. Prior to 3.2.4, an authenticated non-admin user could upload SVG files that thumbnail-generation code in server/src/repositories/media.repository.ts passed to libvips. Files that bypassed libvips' nativ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-105763 - Twenty: Plaintext IMAP/SMTP/CalDAV password disclosure to any workspace member via /metadata GraphQL",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105763",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-05T23:05:56.000Z",
+        "contentSnippet": "Twenty is an open-source CRM (customer relationship management) platform. From 1.20.10 until 2.7.0, the /metadata GraphQL connectedAccounts query returned connectionParameters from ConnectedAccountDTO for every connected account in a workspace, including plaintext IMAP, SMTP, and",
+        "cveScore": 9.6,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-105762 - Dify: Unauthenticated Server-Side Request Forgery in /console/api/remote-files/upload endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105762",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-05T23:04:58.000Z",
+        "contentSnippet": "Dify is an open-source LLM app development platform. Prior to 1.13.0, the /console/api/remote-files/upload endpoint in api/controllers/web/remote_files.py accepted an attacker-controlled URL without authentication and caused the Dify server to retrieve it. A remote attacker could",
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-93321 - Malformed LLB file operation can crash buildkitd",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93321",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-05T22:16:58.000Z",
+        "contentSnippet": "A malicious frontend can submit an LLB definition that causes buildkitd to panic and terminate, interrupting all builds running on that daemon.",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
       {
         "title": "CVE-2026-97071 - WordPress CURCY plugin <= 2.2.17 - Broken Access Control vulnerability",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-97071",
@@ -677,234 +902,79 @@
         "contentSnippet": "A vulnerability has been found in Weaviate Verba up to 2.1.3. Affected by this vulnerability is the function get_environment of the file goldenverba/components/util.py of the component generate_stream Endpoint. The manipulation leads to information disclosure. It is possible to i",
         "cveScore": 5.5,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-97276 - WordPress WP Statistics plugin <= 14.16.14 - Cross Site Scripting (XSS) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97276",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-04T09:16:39.000Z",
-        "contentSnippet": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in VeronaLabs WP Statistics wp-statistics allows Reflected XSS.This issue affects WP Statistics: from n/a through 14.16.14.",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-105144 - Drogon Static File Router StaticFileRouter.cc route path traversal",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105144",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-04T09:16:39.000Z",
-        "contentSnippet": "A flaw has been found in Drogon up to 1.9.13-1/10.0-beta.3 on Windows. Affected is the function StaticFileRouter::route of the file lib/src/StaticFileRouter.cc of the component Static File Router. Executing a manipulation can lead to path traversal. The attack may be performed fr",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-105141 - topoteretes cognee JWT Signing Key get_api_auth_backend.py get_user_id_by_email hard-coded credentials",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105141",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-04T09:16:39.000Z",
-        "contentSnippet": "A security flaw has been discovered in topoteretes cognee up to 1.5.4. The affected element is the function get_user_id_by_email of the file cognee/modules/users/authentication/get_api_auth_backend.py of the component JWT Signing Key Handler. The manipulation of the argument FAST",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-105137 - Laradock Build Process Dockerfile code download",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105137",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-04T09:16:38.000Z",
-        "contentSnippet": "A vulnerability was found in Laradock up to 20.4. Impacted is an unknown function of the file workspace/Dockerfile of the component Build Process. The manipulation results in download of code without integrity check. The attack can be launched remotely. A high complexity level is",
-        "cveScore": 5.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-103355 - WordPress Unlimited Elements For Elementor (Free Widgets, Addons, Templates) plugin <= 2.0.20 - SQL Injection vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-103355",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-04T09:16:38.000Z",
-        "contentSnippet": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Unlimited Elements Unlimited Elements For Elementor (Free Widgets, Addons, Templates) unlimited-elements-for-elementor allows Blind SQL Injection.This issue affects Unlimited Ele",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-103354 - WordPress Gutenberg Blocks by Kadence Blocks plugin <= 3.7.11.1 - Cross Site Scripting (XSS) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-103354",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-04T09:16:38.000Z",
-        "contentSnippet": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Liquid Web / StellarWP Gutenberg Blocks by Kadence Blocks kadence-blocks allows Stored XSS.This issue affects Gutenberg Blocks by Kadence Blocks: from n/a through 3.7.11.1.",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-103344 - WordPress Unlimited Elements For Elementor (Free Widgets, Addons, Templates) plugin <= 2.0.20 - Cross Site Scripting (XSS) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-103344",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-04T09:16:38.000Z",
-        "contentSnippet": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Unlimited Elements Unlimited Elements For Elementor (Free Widgets, Addons, Templates) unlimited-elements-for-elementor allows Reflected XSS.This issue affects Unlimited Elements ",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-103062 - WordPress TranslatePress plugin <= 3.3.6 - Cross Site Scripting (XSS) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-103062",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-04T09:16:37.000Z",
-        "contentSnippet": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Cozmoslabs TranslatePress translatepress-multilingual allows Stored XSS.This issue affects TranslatePress: from n/a through 3.3.6.",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-97332 - User Private Files < 2.2.0 - Unauthenticated Private File Disclosure via .htaccess Rewrite Rule Bypass (Multisite)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97332",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-04T07:16:34.000Z",
-        "contentSnippet": "The User Private Files WordPress plugin before 2.2.0 does not properly protect its stored private files on multisite installations, where the rewrite rule it relies on to route file requests through its access check is never reached, allowing unauthenticated users to retrieve oth",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-93549 - CoCart 4.9.0 - 4.9.6 - Administrator Account Creation via REST API Authentication Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93549",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-04T07:16:34.000Z",
-        "contentSnippet": "The CoCart WordPress plugin before 4.9.7 does not scope its REST API authentication filter to its own endpoints, which disables WordPress core's REST nonce protection for every route, allowing an attacker to perform a cross-site request forgery attack that creates a new administr",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-86817 - Five Star Business Profile and Schema 2.3.20 - 2.3.21 - Author+ Sensitive Data Disclosure via Schema Field Default Callback",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86817",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-04T07:16:34.000Z",
-        "contentSnippet": "The Five Star Business Profile and Schema WordPress plugin before 2.4.0 does not properly restrict the callbacks used to resolve schema field default values, allowing authenticated users with Author-level access and above to store input that discloses sensitive data, including ot",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-17005 - Horizontal Scrolling Announcements <= 2.6 - Contributor+ Stored XSS via Style Field",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-17005",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-04T07:16:33.000Z",
-        "contentSnippet": "The Horizontal scrolling announcements WordPress plugin through 2.6 does not sanitise and escape one of its announcement settings before outputting it into an attribute context on the front end, allowing users granted access to the announcement management page (Contributor and ab",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-105135 - InternLM MindSearch Planner Agent graph.py ExecutionAction.run code injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105135",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-04T07:16:33.000Z",
-        "contentSnippet": "A vulnerability has been found in InternLM MindSearch 0.1.0. This issue affects the function ExecutionAction.run of the file mindsearch/agent/graph.py of the component Planner Agent. The manipulation of the argument inputs leads to code injection. The attack can be initiated remo",
-        "cveScore": 10,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-105134 - Ahsay AhsayCBS Replication Receiver UpdateReceivers.do os command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105134",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-04T07:16:33.000Z",
-        "contentSnippet": "A flaw has been found in Ahsay AhsayCBS up to 10.3.2. This vulnerability affects unknown code of the file /rps/api/json/UpdateReceivers.do of the component Replication Receiver. Executing a manipulation of the argument random can lead to os command injection. It is possible to la",
-        "cveScore": 10,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-105133 - Ahsay AhsayCBS API ApiStructsAction.java checkSysPwd improper authentication",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105133",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-04T07:16:33.000Z",
-        "contentSnippet": "A vulnerability was detected in Ahsay AhsayCBS up to 10.3.2. This affects the function checkSysPwd of the file com/ahsay/obs/api/ApiStructsAction.java of the component API. Performing a manipulation of the argument random results in improper authentication. It is possible to init",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-104119 - Simple Shopping Cart < 5.2.6 - Admin+ Stored XSS via PayPal API Credentials",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104119",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-04T07:16:32.000Z",
-        "contentSnippet": "The Simple Shopping Cart WordPress plugin before 5.2.6 does not escape some of its settings field values before outputting them on an admin settings page, allowing high-privilege users such as administrators to perform Stored Cross-Site Scripting attacks, which is notably impactf",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-104118 - Razorpay for WooCommerce < 4.8.8 - Unauthenticated Order Shipping Modification via IDOR",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104118",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-04T07:16:31.000Z",
-        "contentSnippet": "The Razorpay for WooCommerce WordPress plugin before 4.8.8 does not perform ownership or authorization checks on a REST API route used during checkout, allowing unauthenticated attackers to modify the shipping information stored on arbitrary orders.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-105099 - Omega Solution CoinEx Crypto Ticket Attachment Upload ticket cross site scripting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105099",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-04T05:16:26.000Z",
-        "contentSnippet": "A weakness has been identified in Omega Solution CoinEx Crypto 2025. Affected by this vulnerability is an unknown functionality of the file /user/ticket of the component Ticket Attachment Upload. This manipulation causes cross site scripting. The attack is possible to be carried ",
-        "cveScore": 4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-88779 - Memory overflow vulnerability leading to Denial of Service",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-88779",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-04T04:16:43.000Z",
-        "contentSnippet": "Vulnerability in NetScaler ADC and NetScaler Gateway. This issue affects ADC: before 14.1-73.41, before 13.1-64.28, before 14.1-73.41 FIPS, and before 13.1-37.282; Gateway: before 14.1-73.41 and before 13.1-64.28.",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-105098 - Omega Solution CoinEx Crypto Support Ticket API customer information disclosure",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105098",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-04T04:16:36.000Z",
-        "contentSnippet": "A security flaw has been discovered in Omega Solution CoinEx Crypto 2025. Affected is an unknown function of the file /ticket/customer of the component Support Ticket API. The manipulation of the argument status/page/count results in information disclosure. The attack can be exec",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-105097 - Omega Solution CoinEx Crypto Customer Information API customer-currency authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105097",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-04T03:16:49.000Z",
-        "contentSnippet": "A vulnerability was identified in Omega Solution CoinEx Crypto 2025. This impacts an unknown function of the file /customer-currency/ of the component Customer Information API. The manipulation of the argument ID leads to authorization bypass. Remote exploitation of the attack is",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-105131 - mayswind ezBookkeeping 1.2.0 before 2.0.1 Privilege Escalation via Token Refresh Endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105131",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-04T02:16:33.000Z",
-        "contentSnippet": "ezBookkeeping 1.2.0 before 2.0.1 contains a privilege escalation vulnerability that allows attackers holding an API token to obtain a full session token via /api/v1/tokens/refresh.json. Because TokenRefreshHandler never checks token type, attackers can exchange short-lived or IP-",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-105096 - Omega Solution CoinEx Crypto Customer Profile API customer authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105096",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-04T02:16:28.000Z",
-        "contentSnippet": "A vulnerability was determined in Omega Solution CoinEx Crypto 2025. This affects an unknown function of the file /customer/ of the component Customer Profile API. Executing a manipulation of the argument ID can lead to authorization bypass. The attack may be launched remotely. T",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-105130 - LaraDashboard 1.4.0 before 1.4.8 Race Condition Bypasses Per-IP Registration Limit",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105130",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-04T00:16:36.000Z",
-        "contentSnippet": "LaraDashboard from 1.4.0 before 1.4.8 contains a race condition vulnerability in RegisterController::register that allows unauthenticated attackers to bypass the per-IP daily registration limit. Attackers can send many concurrent registration requests from one IP so all pass Regi",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-105129 - LaraDashboard before 1.4.8 Incorrect Authorization Exposes Secrets via Settings API",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105129",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-04T00:16:36.000Z",
-        "contentSnippet": "LaraDashboard before 1.4.8 contains an incorrect authorization vulnerability that allows authenticated users with only settings.view permission to read stored secrets through the settings API. Attackers can query GET /api/settings or /api/settings/{option_name} to retrieve plaint",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
+      {
+        "title": "Introducing GLM 5.3 on Amazon Bedrock",
+        "link": "https://aws.amazon.com/blogs/machine-learning/introducing-glm-5-3-on-amazon-bedrock/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-10-05T23:25:17.000Z",
+        "contentSnippet": "GLM 5.3 from Z.ai is now available on Amazon Bedrock: a 753B-parameter mixture-of-experts model built for coding and long-horizon agentic tasks. Learn how to invoke it with the OpenAI-compatible APIs, cut cost and latency with prompt caching, and run an authorized security test w"
+      },
+      {
+        "title": "Meet Together Link: A Free CLI That Runs Open Models Like Kimi K3 and GLM 5.3 Inside Claude Code, Codex, and OpenCode",
+        "link": "https://www.marktechpost.com/2026/10/05/meet-together-link-a-free-cli-that-runs-open-models-like-kimi-k3-and-glm-5-3-inside-claude-code-codex-and-opencode/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-10-05T22:51:05.000Z",
+        "contentSnippet": "Together AI has released Together Link, a free, MIT-licensed CLI that connects Claude Code, Codex, OpenCode, Pi, and the Claude and ChatGPT desktop apps to open models like Kimi K3 and GLM 5.3. One install command sets it up, and an Auto router picks a model for each session. Tog"
+      },
+      {
+        "title": "Building a Streaming Robotics Learning Pipeline Using NVIDIA Cosmos3-DROID",
+        "link": "https://www.marktechpost.com/2026/10/05/building-a-streaming-robotics-learning-pipeline-using-nvidia-cosmos3-droid/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-10-05T21:41:14.000Z",
+        "contentSnippet": "Discover how to construct an end-to-end streaming robotics learning pipeline using the NVIDIA Cosmos3-DROID dataset without local downloads, leveraging byte-range Parquet reads, behavior cloning, and temporal ensembling. The post Building a Streaming Robotics Learning Pipeline Us"
+      },
+      {
+        "title": "Reflection AI Introduces Beam: A 501B Open-Weight MoE Model With 23B Active Parameters for Coding and Agentic Workloads",
+        "link": "https://www.marktechpost.com/2026/10/05/reflection-ai-introduces-beam-a-501b-open-weight-moe-model-with-23b-active-parameters-for-coding-and-agentic-workloads/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-10-05T21:04:20.000Z",
+        "contentSnippet": "Reflection AI has introduced Beam, its first open-weight model. It is a 501B sparse Mixture-of-Experts model with 23B active parameters, built for coding and agentic work. Reflection says it matches GLM-5.2 on reasoning with 3 to 4x less inference compute. Apache 2.0 weights are "
+      },
+      {
+        "title": "Supercharge regulated workloads with Claude Code and Amazon Bedrock",
+        "link": "https://aws.amazon.com/blogs/machine-learning/supercharge-regulated-workloads-with-claude-code-and-amazon-bedrock/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-10-05T17:25:20.000Z",
+        "contentSnippet": "Anthropic Claude Opus 5.5 and Claude Sonnet 5.5 are available on Amazon Bedrock in the AWS GovCloud (US) Regions. Learn how to use them with Claude Code, Anthropic's agentic coding tool, for compliance-aligned, AI-assisted development on regulated and ITAR workloads."
+      },
+      {
+        "title": "New agent skill: Amazon SageMaker optimized generative AI inference for your coding agent",
+        "link": "https://aws.amazon.com/blogs/machine-learning/new-agent-skill-amazon-sagemaker-optimized-generative-ai-inference-for-your-coding-agent/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-10-05T17:23:19.000Z",
+        "contentSnippet": "Amazon SageMaker optimized generative AI inference introduces the aws-ai-ml skill through the Agent Toolkit for AWS, giving coding agents like Kiro, Claude Code, and Codex deep expertise in inference optimization and benchmarking. Describe what you want, and your agent generates "
+      },
+      {
+        "title": "Making Amazon Quick enterprise-ready: Automated, auditable cross-account resource promotion",
+        "link": "https://aws.amazon.com/blogs/machine-learning/making-amazon-quick-enterprise-ready-automated-auditable-cross-account-resource-promotion/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-10-05T15:56:28.000Z",
+        "contentSnippet": "Promoting Amazon Quick resources (agents, action connectors, knowledge bases, flows, and spaces) from a development to a production AWS account has been a manual, error-prone chore. This post shows how to automate cross-account promotion with an idempotent, auditable MCP server o"
+      },
+      {
+        "title": "Agentic retrieval with LangChain and Amazon Bedrock Knowledge Bases",
+        "link": "https://aws.amazon.com/blogs/machine-learning/agentic-retrieval-with-langchain-and-amazon-bedrock-knowledge-bases/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-10-05T15:53:56.000Z",
+        "contentSnippet": "Build a Retrieval Augmented Generation (RAG) application on Amazon Bedrock Managed Knowledge Base with LangChain, and see how agentic retrieval handles the multi-part questions that single-shot retrieval answers poorly. Run the same query through both paths, read the trace events"
+      },
+      {
+        "title": "Downgrading user roles in Amazon Quick",
+        "link": "https://aws.amazon.com/blogs/machine-learning/downgrading-user-roles-in-amazon-quick/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-10-05T15:51:38.000Z",
+        "contentSnippet": "Amazon Quick doesn't offer a direct console path to downgrade a user from Admin or Author to Reader. This post walks through two reliable methods: a manual delete-and-recreate approach and an AWS CLI step-down sequence that downgrades roles safely while preserving asset ownership"
+      },
+      {
+        "title": "Evaluating multi-agent systems for explainability and helpfulness with Amazon Bedrock AgentCore",
+        "link": "https://aws.amazon.com/blogs/machine-learning/evaluating-multi-agent-systems-for-explainability-and-helpfulness-with-amazon-bedrock-agentcore/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-10-05T15:50:01.000Z",
+        "contentSnippet": "Multi-agent systems need deeper guarantees than fluent responses: they must select the right tools, respect constraints, and explain their decisions. Learn how to build a Strands-based multi-agent supply chain decisioning system and evaluate it with Amazon Bedrock AgentCore Evalu"
+      },
       {
         "title": "Yandex Introduces Sona: A Single Generative Recommender That Replaces Entire Recommendation Cascade",
         "link": "https://www.marktechpost.com/2026/10/05/yandex-introduces-sona-a-single-generative-recommender-that-replaces-entire-recommendation-cascade/",
@@ -1534,79 +1604,16 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-09-17T15:36:42.000Z",
         "contentSnippet": "Learn how MRH Trowe, one of Germany's leading commercial and industrial insurance brokers, gave about 400 employees secure, self-service access to AI agents in its first month of production - using Strands Agents, Amazon Bedrock AgentCore, and LibreChat to meet the security, data"
-      },
-      {
-        "title": "Implementing defense-in-depth authorization for MCP tools on Amazon Quick",
-        "link": "https://aws.amazon.com/blogs/machine-learning/implementing-defense-in-depth-authorization-for-mcp-tools-on-amazon-quick/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-09-17T15:30:17.000Z",
-        "contentSnippet": "Learn how to enforce defense-in-depth authorization for Model Context Protocol (MCP) tools on Amazon Quick. This walkthrough wires Microsoft Entra ID group and claims-based JWTs through an Amazon Bedrock AgentCore Gateway interceptor to apply per-user, per-tool role-based and att"
-      },
-      {
-        "title": "Enhancing industrial safety AI with synthetic data on Amazon SageMaker AI",
-        "link": "https://aws.amazon.com/blogs/machine-learning/enhancing-industrial-safety-ai-with-synthetic-data-on-amazon-sagemaker-ai/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-09-17T15:28:08.000Z",
-        "contentSnippet": "Learn how to build a synthetic data augmentation pipeline on Amazon SageMaker AI and Amazon Rekognition that generates photo-realistic, auto-labeled training images for industrial safety AI. This approach improved person detection by up to 160% without manual annotation or hazard"
-      },
-      {
-        "title": "Improving HCLS AI reasoning with open-source agent skills",
-        "link": "https://aws.amazon.com/blogs/machine-learning/improving-hcls-ai-reasoning-with-open-source-agent-skills/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-09-16T19:00:00.000Z",
-        "contentSnippet": "AI agents on foundation models often misapply healthcare and life sciences decision frameworks, citing the right guideline but applying it incorrectly. This post shares 38 open-source agent skills across 11 HCLS domains that close this gap, with installation steps, three worked u"
-      },
-      {
-        "title": "Fault tolerant distributed training on Amazon EKS using NVRx",
-        "link": "https://aws.amazon.com/blogs/machine-learning/fault-tolerant-distributed-training-on-amazon-eks-using-nvrx/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-09-16T18:59:25.000Z",
-        "contentSnippet": "Integrate NVIDIA Resiliency Extension (NVRx) into PyTorch FSDP training on Amazon EKS to overlap checkpoint I/O with training and recover from GPU faults in seconds. This post covers async checkpointing, in-process restart, and ft_launcher in-job restart, with H100 benchmarks at "
-      },
-      {
-        "title": "Optimizing agent system prompts with Amazon Bedrock AgentCore",
-        "link": "https://aws.amazon.com/blogs/machine-learning/optimizing-agent-system-prompts-with-amazon-bedrock-agentcore/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-09-16T15:47:39.000Z",
-        "contentSnippet": "AgentCore optimization turns production traces into proposed configuration changes, then validates them before promotion. This technical companion to the launch post explains how the system prompt optimizer's reflector engine works and shares benchmark results for the Single Agen"
-      },
-      {
-        "title": "Build a serverless PII redaction pipeline with Amazon Bedrock Data Automation",
-        "link": "https://aws.amazon.com/blogs/machine-learning/build-a-serverless-pii-redaction-pipeline-with-amazon-bedrock-data-automation/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-09-16T15:17:37.000Z",
-        "contentSnippet": "Learn how to automate end-to-end PII detection and redaction from scanned documents at scale using Amazon Bedrock Data Automation with a custom blueprint, AWS Step Functions, and AWS Lambda. A custom blueprint redacts sensitive fields with field-level precision, and a token match"
-      },
-      {
-        "title": "Optimizing cost and latency with Amazon Bedrock prompt caching",
-        "link": "https://aws.amazon.com/blogs/machine-learning/optimizing-cost-and-latency-with-amazon-bedrock-prompt-caching/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-09-15T16:18:19.000Z",
-        "contentSnippet": "Prompt caching in Amazon Bedrock can cut input token costs by up to 90% when you repeatedly send the same context to foundation models. This post walks through six practical prompt caching scenarios using the Converse API: message content, system prompt, tool definition, mixed TT"
-      },
-      {
-        "title": "Build an AI-powered product tagging system with Amazon SageMaker serverless model customization",
-        "link": "https://aws.amazon.com/blogs/machine-learning/build-an-ai-powered-product-tagging-system-with-amazon-sagemaker-serverless-model-customization/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-09-15T16:11:36.000Z",
-        "contentSnippet": "Manually tagging thousands of catalog products is slow and inconsistent. This walkthrough shows how to customize Qwen3-8B with supervised fine-tuning (SFT) and reinforcement learning with verifiable rewards (RLVR) on Amazon SageMaker serverless model customization, then deploy it"
-      },
-      {
-        "title": "Announcing instance preference lists for Amazon SageMaker AI training jobs",
-        "link": "https://aws.amazon.com/blogs/machine-learning/announcing-instance-preference-lists-for-amazon-sagemaker-ai-training-jobs/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-09-15T16:01:47.000Z",
-        "contentSnippet": "Amazon SageMaker AI now offers instance preference lists for training and processing jobs. Specify an ordered list of up to five instance types, and SageMaker AI automatically launches on the first type with available capacity, eliminating manual retry loops and capacity-watching"
-      },
-      {
-        "title": "AI for Societal Impact",
-        "link": "https://blog.google/innovation-and-ai/technology/ai/ai-for-societal-impact/",
-        "source": "Google AI Blog",
-        "isoDate": "2026-09-15T16:00:00.000Z",
-        "contentSnippet": "Explore this collection to see how experts and local leaders are using AI breakthroughs to ensure everyone can share the opportunity of AI."
       }
     ],
     "virtualization": [
+      {
+        "title": "This Proxmox Restore Portal Helps You Find the File You Actually Need",
+        "link": "https://www.virtualizationhowto.com/2026/10/this-proxmox-restore-portal-helps-you-find-the-file-you-actually-need/",
+        "source": "Virtualization HowTo",
+        "isoDate": "2026-10-05T12:42:58.000Z",
+        "contentSnippet": "There are really two kinds of restores when it comes to your backups. You can restore an entire VM when needed which is the scenario that we tend to think… The post This Proxmox Restore Portal Helps You Find the File You Actually Need appeared first on Virtualization Howto."
+      },
       {
         "title": "7 ZFS Things I Wish I’d Known Before Using It on Proxmox",
         "link": "https://www.virtualizationhowto.com/2026/10/7-zfs-things-i-wish-id-known-before-using-it-on-proxmox/",
@@ -2299,16 +2306,93 @@
         "source": "Virtualization HowTo",
         "isoDate": "2026-07-28T11:45:14.000Z",
         "contentSnippet": "Reverse proxies are one of the most critical pieces of infrastructure once you stand up a home lab and start learning containers and hosting things in those containers. You quickly… The post The Reverse Proxy Mistakes I Still See in Home Labs (And How I Avoid Them) appeared first"
-      },
-      {
-        "title": "StarWind V2V Converter: The Free Swiss Army Knife for VM Migrations and Its Powerful Automation Capabilities",
-        "link": "https://www.vladan.fr/starwind-v2v-converter-the-free-swiss-army-knife-for-vm-migrations-and-its-powerful-automation-capabilities/",
-        "source": "Vladan.fr",
-        "isoDate": "2026-07-28T09:35:25.000Z",
-        "contentSnippet": "Over the years, I've covered countless tools that make our lives as virtualization admins easier, especially when it comes to migrations. If you've been in the game since the early VMware days (or Hyper-V, or even Proxmox these days), you know how painful V2V or P2V conversions c"
       }
     ],
     "hardware": [
+      {
+        "title": "Get into a 32GB DDR5 memory kit for less this Big Deals Day with these picks",
+        "link": "https://www.tomshardware.com/pc-components/these-32gb-ddr5-memory-kits-are-the-cheapest-available-on-the-market-we-found-the-cheapest-one-around-plus-amd-and-intel-tailored-options",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-05T23:29:26.000Z",
+        "contentSnippet": "DDR5 RAM is still expensive, but some sizeable discounts on 32GB kits this Prime Big Deals Day week make getting 32GB into your build easier than it has been. Check out our picks."
+      },
+      {
+        "title": "It's finally a good time to buy a Raptor Lake CPU during Prime Big Deals Day",
+        "link": "https://www.tomshardware.com/pc-components/cpus/its-finally-a-good-time-to-buy-a-raptor-lake-cpu-during-prime-big-deals-day-chips-drop-to-all-time-low-prices-as-inventory-seemingly-stabilizes",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-05T23:25:04.000Z",
+        "contentSnippet": "Intel's 14th Gen Raptor Lake Refresh CPUs are finally getting some good discounts after a year of inconsistent pricing, and some of these chips are even dropping to all-time lows."
+      },
+      {
+        "title": "Kioxia CM9-R 15.36TB E3.S NVMe SSD Review",
+        "link": "https://www.servethehome.com/kioxia-cm9-r-15-36tb-e3-s-nvme-ssd-review/",
+        "source": "ServeTheHome",
+        "isoDate": "2026-10-05T20:31:34.000Z",
+        "contentSnippet": "We test the Kioxia CM9-R at 15.36TB capacity. This is a fast drive that is a top-tier option for x86 and Arm PCIe Gen5 servers The post Kioxia CM9-R 15.36TB E3.S NVMe SSD Review appeared first on ServeTheHome."
+      },
+      {
+        "title": "Nvidia RTX 5060 Ti gaming PC hits $999 with 8-core Ryzen CPU, 16GB RAM, and 1TB PCIe 4.0 SSD — $600 instant savings on a complete 1080p powerhouse",
+        "link": "https://www.tomshardware.com/pc-components/nvidia-rtx-5060-ti-gaming-pc-hits-usd999-with-8-core-ryzen-cpu-16gb-ram-and-1tb-pcie-4-0-ssd-usd600-instant-savings-on-a-complete-1080p-powerhouse",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-05T19:28:28.000Z",
+        "contentSnippet": "MSI's Codex Z2C is on sale for $999 and comes with a Ryzen 7 8700F and a GeForce RTX 5060 Ti 8GB."
+      },
+      {
+        "title": "Nintendo Switch 2 drops to £354.99 all-time low to defy the AI tax — pocket £65 in savings across these retailers",
+        "link": "https://www.tomshardware.com/video-games/nintendo/nintendo-switch-2-drops-to-gbp354-99-all-time-low-to-defy-the-ai-tax-pocket-gbp65-in-savings-across-these-retailers",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-05T18:13:45.000Z",
+        "contentSnippet": "The Nintendo Switch 2, typically priced at £419.99, is now available for just £354.99, giving you a great 15% savings!"
+      },
+      {
+        "title": "DGX Station GB300 Cluster: Two Towers, Two 400G DACs, and Frontier Models Without the Offload Penalty",
+        "link": "https://www.storagereview.com/review/dgx-station-gb300-cluster-two-towers-two-400g-dacs",
+        "source": "StorageReview",
+        "isoDate": "2026-10-05T17:16:42.000Z",
+        "contentSnippet": "We’ve taken a look at a couple of GB300 DGX Stations now, and recently had two of them physically in our lab at the same time: the ASUS ExpertCenter Pro ET900N G3 and the HP ZGX Fury AI Station. With both towers sitting next to each other, we wanted to connect them and see what T"
+      },
+      {
+        "title": "Snag an Apple MacBook or Mac Mini with these Amazon Prime Big Deal Days deals that can save you up to $600",
+        "link": "https://www.tomshardware.com/laptops/macbooks/amazons-prime-big-deal-day-sales-have-big-savings-on-macbooks-and-mac-minis-up-to-usd600-in-savings-on-apple-hardware",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-05T17:16:38.000Z",
+        "contentSnippet": "Amazon's Prime Big Deal Days sales event is a great opportunity to pick up a new Apple MacBook or Mac Mini at a discount."
+      },
+      {
+        "title": "Grab this $79.98 TP-Link wireless router with Wi-Fi 7 support at its lowest ever price",
+        "link": "https://www.tomshardware.com/networking/routers/grab-this-usd79-98-tp-link-wireless-router-with-wi-fi-7-support-at-its-lowest-ever-price-33-percent-discount-on-archer-be3600-delivers-multi-gigabit-speeds-for-lag-free-streaming-and-gaming",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-05T16:15:51.000Z",
+        "contentSnippet": "This TP-Link Archer BE3600 wireless router is down to a record-low price, now just $79.98 on Amazon ahead of its big sale event."
+      },
+      {
+        "title": "Intel's Googlebooks might not run some Android apps as well as Qualcomm's",
+        "link": "https://www.tomshardware.com/laptops/ultrabooks-ultraportables/intels-googlebooks-might-not-run-some-android-apps-as-well-as-qualcomms-google-says-this-is-because-android-apps-were-designed-for-arm-chips",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-05T15:53:44.000Z",
+        "contentSnippet": "Some Android apps not optimized for x86-64 may have trouble running on Intel Googlebooks."
+      },
+      {
+        "title": "AMD attempts to get ahead of expected RTX Spark launch with Gorgon Halo benchmarks",
+        "link": "https://www.tomshardware.com/pc-components/cpus/amd-attempts-to-get-ahead-of-expected-rtx-spark-launch-with-gorgon-halo-ai-benchmarks-company-says-it-has-shipped-over-half-a-million-agentic-pcs-to-date",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-05T15:38:45.000Z",
+        "contentSnippet": "AMD is getting ahead of an expected RTX Spark launch later this week with a few benchmarks for its flagship Gorgon Halo chip, the Ryzen AI Max+ Pro 495."
+      },
+      {
+        "title": "Take $40 off the blistering Ryzen 7 9800X3D and get two freebies",
+        "link": "https://www.tomshardware.com/pc-components/take-usd40-off-the-blistering-ryzen-7-9800x3d-and-get-two-freebies-just-usd429-buys-one-of-the-fastest-gaming-processors-around-with-a-free-msi-240mm-aio-and-a-game",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-05T13:47:51.000Z",
+        "contentSnippet": "Get some solid deals on X3D chips from Newegg. Buy a Ryzen 7 9800X3D for only $429 and Newegg throws in a free 240mm AIO and AMD Onimusha game"
+      },
+      {
+        "title": "Tencent scores 100,000 offshore AI chip deal with Oracle for $7 billion despite climbing prices",
+        "link": "https://www.tomshardware.com/tech-industry/data-centers/tencent-scores-100-000-offshore-ai-chip-deal-with-oracle-for-usd7-billion-despite-climbing-prices-per-hour-costs-estimated-to-be-43-percent-under-standard-h100-rental-rates",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-05T13:20:00.000Z",
+        "contentSnippet": "Tencent is reportedly renting 100,000 AI chips from Oracle data centers in Southeast Asia for about $7 billion over five years."
+      },
       {
         "title": "Russian firm completes country's first 130nm-capable chipmaking tool, trails modern equipment by 25 years",
         "link": "https://www.tomshardware.com/tech-industry/semiconductors/russias-zntc-reportedly-completes-development-of-130nm-capable-litho-tool-volume-production-still-years-away",
@@ -2924,90 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-09-30T15:43:47.000Z",
         "contentSnippet": "TP-Link's first Wi-Fi 8 product, the Archer 8 Ultra, is off limits in the U.S."
-      },
-      {
-        "title": "Save 60% on your first month of Meshy 7 AI — streamline your 3D printing workflow for less",
-        "link": "https://www.tomshardware.com/3d-printing/save-60-percent-on-your-first-month-of-meshy-7-ai-streamline-your-3d-printing-workflow-for-less",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-30T15:00:00.000Z",
-        "contentSnippet": "Use the exclusive TOMESHY60 discount code to slash 60% off your first month of Meshy 7."
-      },
-      {
-        "title": "Anthropic claims popular Chinese AI model has Mythos-class hacking abilities",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropic-claims-popular-chinese-ai-model-has-mythos-class-hacking-abilities-frontier-red-teaming-report-details-weak-safeguards-on-open-weight-ai",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-30T14:40:00.000Z",
-        "contentSnippet": "Anthropic has released a frontier red teaming report, claiming that Zhipu AI's GLM-5.3 has weak safeguarding, and can easily be used to generate harmful content."
-      },
-      {
-        "title": "Meta's Muse AI agent accused of ignoring user permissions and accessing forbidden personal user data",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/metas-muse-ai-agent-accused-of-accessing-sensitive-user-data-on-iphone-and-mac-without-permission-agent-shocks-reporter-by-referring-to-confidential-messages-it-wasnt-granted-access-to",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-30T14:00:00.000Z",
-        "contentSnippet": "Meta's Muse AI agent has been accused of ignoring user permissions and accessing forbidden personal user data on an iPhone and Mac, including iMessages."
-      },
-      {
-        "title": "iBuyPower Slate Gaming Desktop review: Strong gaming value and extras",
-        "link": "https://www.tomshardware.com/desktops/gaming-pcs/ibuypower-slate-gaming-desktop-review",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-30T13:50:00.000Z",
-        "contentSnippet": "The iBuyPower Slate pairs a Ryzen 7 7700X3D and RTX 5070 in a stylish RGB-equipped chassis, delivering strong gaming performance and surprising extras, though productivity performance trails some similarly priced rivals."
-      },
-      {
-        "title": "Grab this 10-port gigabit PoE+ switch with up to 60W of power for under $38, a new record low",
-        "link": "https://www.tomshardware.com/networking/network-switches/grab-this-10-port-gigabit-poe-switch-with-up-to-60w-of-power-for-under-usd38-a-new-record-low-ugreen-switch-upgrades-your-home-network-with-eight-power-delivery-ports-for-cameras-and-wi-fi-extenders",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-30T13:40:00.000Z",
-        "contentSnippet": "This Ugreen 10-port unmanaged Ethernet switch has hit record-low pricing of $37.79, unlocking eight PoE+ ports for up to 60W of power delivery for cameras and WiFi extenders, along with two extra ports for Gigabit uplink to your existing network."
-      },
-      {
-        "title": "Florida attorney general asks judge to bar OpenAI from developing new AI models without third-party approval",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/florida-attorney-general-asks-judge-to-bar-openai-from-developing-new-ai-models-without-third-party-approval-openai-says-it-already-paused-training-its-most-capable-models-last-week",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-30T13:20:00.000Z",
-        "contentSnippet": "Florida asked a court to bar OpenAI from developing new AI models without third-party approval and to keep minors off ChatGPT."
-      },
-      {
-        "title": "Trump tells federal agencies to use the term 'Super Intelligence ' instead of artificial intelligence",
-        "link": "https://www.tomshardware.com/tech-industry/policy/trump-tells-federal-agencies-to-use-the-term-super-intelligence-instead-of-artificial-intelligence-president-insists-that-ai-is-only-suffering-from-a-branding-problem",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-30T12:51:29.000Z",
-        "contentSnippet": "President Donald Trump issued an executive order directing all federal agencies to stop using the term 'artificial intelligence' and instead call it 'Super Intelligence.' The president said that the new term will solve AI's branding issue and that it 'more appropriately captures "
-      },
-      {
-        "title": "Former EVGA employee recounts company’s degrading relationship with Nvidia before 2022 blow-up",
-        "link": "https://www.tomshardware.com/pc-components/gpus/former-evga-employee-recounts-companys-degrading-relationship-with-nvidia-before-2022-blow-up-founders-editions-pricing-mandates-and-forward-looking-tech-all-led-to-friction",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-30T10:00:00.000Z",
-        "contentSnippet": "In a personal blog, former EVGA product manager Brendon Ray Hedrick shared how the first Nvidia Founders Edition GPUs alarmed the company and how pricing pressure and risky forward-looking tech ultimately led to the end of the two companies' storied partnership."
-      },
-      {
-        "title": "AMD acquires AI legend Fei-Fei Li's World Labs for $8.2 billion",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/amd-acquires-ai-legend-fei-fei-lis-world-labs-for-usd8-2-billion-imagenet-pioneer-will-become-amd-chief-scientist-as-the-chipmaker-brings-her-lab-in-house",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-30T09:30:00.000Z",
-        "contentSnippet": "AMD has agreed agreed to buy generative AI world model developer World Labs for $8.2 billion in stock. Legendary CEO and co-founder Fei-Fei Li will join the company as an executive vice president and chief scientist."
-      },
-      {
-        "title": "DGX Spark Shared Storage: Bringing Deskside AI Back Under Data Center Governance",
-        "link": "https://www.storagereview.com/review/dgx-spark-shared-storage-solidigm-qlc-100gbe",
-        "source": "StorageReview",
-        "isoDate": "2026-09-29T19:46:46.000Z",
-        "contentSnippet": "Deskside AI systems built on NVIDIA’s GB10 have one job, and they do it well: put 128GB of unified memory and a petaflop of compute on a desk close enough to the person using it that iteration is instant. What they don’t have is a connection to the storage an organization already"
-      },
-      {
-        "title": "Where We Expect AMD EPYC 9006 CPUs in the era of Agentic AI",
-        "link": "https://www.servethehome.com/where-we-expect-amd-epyc-9006-cpus-in-the-era-of-agentic-ai/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-09-29T17:00:59.000Z",
-        "contentSnippet": "We go into the AMD EPYC 9006 series and how the line-up aligns to the demand seens in the era of agentic AI The post Where We Expect AMD EPYC 9006 CPUs in the era of Agentic AI appeared first on ServeTheHome."
-      },
-      {
-        "title": "Zotac denies warranty support to RTX 3060 owner in India after just one year despite offering three years of coverage",
-        "link": "https://www.tomshardware.com/pc-components/gpus/zotac-denies-warranty-support-to-rtx-3060-owner-in-india-after-just-one-year-despite-offering-three-years-of-coverage-company-says-gpus-2023-import-date-takes-precedence-over-purchase-date",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-09-29T15:17:35.000Z",
-        "contentSnippet": "The owner of a Zotac RTX 3060 in India was denied warranty coverage just one year after buying the card in 2025, despite Zotac's offer of a three-year standard warranty in the country. The company claims that the warranty begins from the date of import, not the date of sale, and "
       }
     ]
   }
