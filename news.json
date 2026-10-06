@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-10-06T15:35:18.563Z",
+  "updatedAt": "2026-10-06T20:41:17.186Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-96589 - Gitea private repository access retained after rejected transfer",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96589",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-06T19:25:38.000Z",
+        "contentSnippet": "When a private repository is transferred to a user who lacks access, Gitea grants that recipient temporary read access as a collaborator so they can review the repository. Rejecting or cancelling the transfer did not revoke this collaboration, so the named recipient kept persiste",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-96580 - Gitea Actions memory exhaustion through large static matrices",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96580",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-06T19:25:33.000Z",
+        "contentSnippet": "Gitea expanded a workflow's static `strategy.matrix` into its full Cartesian product without a size limit when creating a run, before the fork pull request approval gate applied. A user who can open a pull request from a fork could submit a small workflow file whose matrix expand",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-96404 - Gitea installer authentication bypass for existing accounts",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96404",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-06T19:25:28.000Z",
+        "contentSnippet": "When Gitea's web installer is reachable against a database that already contains users, such as after `INSTALL_LOCK` has been reset to `false`, submitting the install form with an administrator username matching an existing account issued an authenticated session for that account",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-96400 - Gitea migration SSRF to reserved addresses through ALLOWED_DOMAINS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96400",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-06T19:25:23.000Z",
+        "contentSnippet": "With `[migrations] ALLOWED_DOMAINS` set to a matching entry such as `*` or a hostname wildcard, Gitea's migration URL validation could permit reserved and link-local addresses, such as `169.254.169.254`, even when `ALLOW_LOCALNETWORKS = false`. The local-network block list did no",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-96399 - Gitea denial of service through external issue tracker patterns",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96399",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-06T19:25:18.000Z",
+        "contentSnippet": "A repository's external issue tracker regular expression containing alternating capture groups could produce invalid slice indexes when Gitea rendered issue references, causing a runtime panic that terminated the Gitea process. A user who can edit a repository's external issue tr",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-95112 - Gitea issue reference parsing CPU exhaustion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95112",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-06T19:25:12.000Z",
+        "contentSnippet": "When processing issue and comment bodies, Gitea scanned the entire preceding text for action keywords such as \"closes\" or \"fixes\" once per Markdown link, giving processing time quadratic in the input size. An authenticated user able to submit issue or comment content could send a",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-94205 - Gitea fork workflow approval bypass through maintainer-triggered events",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94205",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-06T19:25:04.000Z",
+        "contentSnippet": "Gitea Actions decided whether a fork pull request run needed approval based on the user who triggered the event rather than the pull request author. For `pull_request` activity triggered by a maintainer during ordinary triage, such as adding a label, the run was created without r",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-79960 - Gitea deploy key pushes acting as the repository owner",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-79960",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-06T19:24:55.000Z",
+        "contentSnippet": "When a push was authenticated with a deploy key, Gitea recorded the repository owner as the pusher, so permission checks in the push hook pipeline evaluated the owner instead of the deploy key. A holder of a writable deploy key could create protected tags without being on the tag",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-70357 - Gitea repository migration SSRF through DNS rebinding",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-70357",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-06T19:24:50.000Z",
+        "contentSnippet": "Gitea validates a repository migration hostname against its network allow and block lists before invoking Git, but the Git subprocess independently resolves the hostname when connecting. An attacker who can start a migration and control the destination's DNS can change the addres",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-104636 - Gitea SSRF through Git HTTP redirects in mirrors and fetches",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104636",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-06T19:24:45.000Z",
+        "contentSnippet": "Gitea validated the initial remote URL for push mirrors, wiki remote checks, and fetches of migrated pull request heads, but the subsequent raw Git operations followed HTTP redirects without revalidating the destination. A repository administrator using a policy-allowed endpoint ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-76061 - Cri-o: cri-o: bind_mount_prefix intermediate-symlink prefix bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76061",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-06T19:24:30.000Z",
+        "contentSnippet": "A flaw was found in CRI-O's `bind_mount_prefix` handling. When configured with a non-empty `bind_mount_prefix`, a malicious container or local attacker could use a Container Runtime Interface (CRI) hostPath containing an intermediate absolute symlink. This could cause the bind mo",
+        "cveScore": 5.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-103504 - Gitea API team demotion not applied to unit permissions",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-103504",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-06T19:24:26.000Z",
+        "contentSnippet": "Changing an organization team's permission through the API with only the `permission` field did not rebuild the team's per-unit access, and the requested level was not applied as a cap. After an organization owner demoted a team, for example from admin to read, the team's members",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-95106 - Gitea review and execution mismatch through duplicate tree entries",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95106",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-06T19:23:57.000Z",
+        "contentSnippet": "Gitea accepted pushed Git trees containing two entries with the same name, which Git's own consistency checks reject. Gitea's web views resolved such a path to the first entry, while `git checkout`, Gitea Actions, and release archives use the last. A contributor could open a pull",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-89430 - Gitea push mirror SSRF and forced writes to internal Git hosts",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89430",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-06T19:23:52.000Z",
+        "contentSnippet": "Gitea validated a push mirror's remote address against the `[migrations]` allow and block lists only when the mirror was created. Each synchronization passed the stored address directly to `git push`, so a name that later resolved to a blocked or internal address was still reache",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-103670 - Gitea trusted workflow cancellation by unapproved fork runs",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-103670",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-06T19:23:40.000Z",
+        "contentSnippet": "When a Gitea Actions run was inserted, older runs in the same workflow-level concurrency group were cancelled without checking whether the new run still needed approval. Because fork pull request runs are inserted under the base repository, a user who can open a pull request from",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-103667 - Gitea container registry stored XSS through blob media type",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-103667",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-06T19:23:34.000Z",
+        "contentSnippet": "Gitea's container registry served blob downloads with a `Content-Type` taken from the media type declared in pushed image manifests, without a `Content-Disposition` or restrictive content security policy. A user who can push container images can publish a blob containing HTML and",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-101029 - Gitea migration and pull mirror SSRF through multi-answer DNS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-101029",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-06T19:23:26.000Z",
+        "contentSnippet": "Gitea's repository migration and pull mirror egress checks could be bypassed with a hostname that returns multiple DNS answers, because the address that was validated was not necessarily the address Git later connected to. A low-privileged user who can create migrations or mirror",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-101027 - Gitea migration SSRF through ALLOWED_DOMAINS address check bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-101027",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-06T19:23:20.000Z",
+        "contentSnippet": "When `[migrations] ALLOWED_DOMAINS` was configured, a hostname matching the allow list was accepted without checking its resolved address against the local-network restrictions. A user who can start repository migrations and control the DNS of an allowed hostname could make it re",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-104626 - Gitea fork workflow job revival through later approval",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104626",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-06T19:23:03.000Z",
+        "contentSnippet": "A user who can open a fork pull request can place workflow content with a shared run-level concurrency group into a Gitea Actions run that is awaiting approval. When a later run in that group cancels the blocked job, the run becomes terminal while still marked as needing approval",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-103059 - Gitea built-in SSH server authentication bypass through key case folding",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-103059",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-06T19:22:57.000Z",
+        "contentSnippet": "When Gitea's built-in SSH server is enabled (`START_SSH_SERVER = true`), the presented public key was looked up with an SQL `LIKE` comparison of its encoded content, which is case-insensitive on some databases, including the default SQLite. An attacker who can construct a case va",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-104632 - Gitea fork workflow approval bypass through cancel and rerun",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104632",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-06T19:22:04.000Z",
+        "contentSnippet": "Gitea Actions blocks the jobs of workflow runs from first-time fork pull request contributors until a maintainer approves the run. The rerun path only required a run to be finished and built the new attempt's jobs without considering the pending approval, so when a user with Acti",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-9226 - Devolutions Server Azure AD Authentication Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9226",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-06T19:18:19.000Z",
+        "contentSnippet": "Authentication bypass in the Azure AD external login flow in Devolutions Server 2026.3.7.0 and earlier allows a remote attacker to take over a user's account via replay of a captured login-session token exposed in a redirect URL.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-96890 - Server-Side Request Forgery vulnerability was identified in GitHub Enterprise Server that allowed requests to attacker-controlled internal hosts",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96890",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-06T19:18:17.000Z",
+        "contentSnippet": "A Server-Side Request Forgery (SSRF) vulnerability was identified in GitHub Enterprise Server that allowed a repository contributor to cause the appliance to issue requests to attacker-controlled internal hosts, which could be chained to achieve remote code execution on the appli",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-86362 - Dell System Update Improper Access Control Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86362",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-06T19:18:16.000Z",
+        "contentSnippet": "Dell System Update, versions prior to 2.3.0.0, contains an Improper Access Control vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Elevation of privileges.",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-86361 - Dell System Update Incorrect Permission Assignment Elevation of Privilege Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86361",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-06T19:18:16.000Z",
+        "contentSnippet": "Dell System Update, versions prior to 2.3.0.0, contains an Incorrect Permission Assignment for Critical Resource vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Elevation of privileges.",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-87975 - Privilege abuse in model formsets with editable primary keys",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-87975",
@@ -677,234 +902,58 @@
         "contentSnippet": "A malicious frontend can submit an LLB definition that causes buildkitd to panic and terminate, interrupting all builds running on that daemon.",
         "cveScore": 6.9,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-97071 - WordPress CURCY plugin <= 2.2.17 - Broken Access Control vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97071",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-05T09:17:13.000Z",
-        "contentSnippet": "Incorrect Calculation vulnerability in VillaTheme CURCY woo-multi-currency allows Integer Attacks.This issue affects CURCY: from n/a through 2.2.17.",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-39721 - WordPress Starter Templates plugin <= 4.7.7 - Broken Access Control vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-39721",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-05T09:17:13.000Z",
-        "contentSnippet": "Missing Authorization vulnerability in Brainstorm Force Starter Templates astra-sites allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Starter Templates: from n/a through 4.7.7.",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-19185 - Unvalidated user-supplied buffer pointers in the I3C do_ccc system call handler allow kernel memory read/write from user mode",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19185",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-05T09:17:13.000Z",
-        "contentSnippet": "The system-call verifier for i3c_do_ccc() in drivers/i3c/i3c_handlers.c validated the outer struct i3c_ccc_payload, the broadcast ccc.data buffer and the targets.payloads[] array, but did not validate the per-target data buffers those array elements point at. Each struct i3c_ccc_",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-19184 - Out-of-bounds write in the NXP GAU ADC driver due to byte-versus-sample buffer size validation mismatch",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19184",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-05T09:17:12.000Z",
-        "contentSnippet": "The NXP GAU ADC driver (drivers/adc/adc_mcux_gau_adc.c) validated the caller-supplied sequence->buffer_size, which is expressed in bytes, against the number of active channels, which is a sample count. It then stored that byte count directly in data->results_length and used it in",
-        "cveScore": 8.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-105284 - Totolink A3002MU Authentication Check boa sub_40FCFC improper authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105284",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-05T09:17:12.000Z",
-        "contentSnippet": "A weakness has been identified in Totolink A3002MU 1.0.0-B20230403.1455. The impacted element is the function sub_40FCFC of the file /bin/boa of the component Authentication Check. Executing a manipulation can lead to improper authorization. The attack may be launched remotely. T",
-        "cveScore": 10,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-105263 - Shaarli Admin Metadata Endpoint MetadataController.php MetadataController server-side request forgery",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105263",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-05T09:17:12.000Z",
-        "contentSnippet": "A security flaw has been discovered in Shaarli up to 0.16.3. The affected element is the function MetadataController of the file application/front/controller/admin/MetadataController.php of the component Admin Metadata Endpoint. Performing a manipulation of the argument url resul",
-        "cveScore": 5.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-105254 - itsourcecode Online Admission System schoolyear.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105254",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-05T09:17:11.000Z",
-        "contentSnippet": "A vulnerability was identified in itsourcecode Online Admission System 1.0. Impacted is an unknown function of the file /admin/schoolyear.php. Such manipulation of the argument sy leads to sql injection. The attack can be launched remotely. The exploit is publicly available and m",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-105253 - itsourcecode Online Admission System Project login1.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105253",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-05T09:17:11.000Z",
-        "contentSnippet": "A vulnerability was determined in itsourcecode Online Admission System Project 1.0. This issue affects some unknown processing of the file /admin/login1.php. This manipulation of the argument User causes sql injection. The attack can be initiated remotely. The exploit has been pu",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-105251 - vgmstream VAG File psx_decoder.c ps_find_padding out-of-bounds",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105251",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-05T09:17:11.000Z",
-        "contentSnippet": "A vulnerability was detected in vgmstream up to r2117. Affected by this vulnerability is the function ps_find_padding of the file src/coding/psx_decoder.c of the component VAG File Handler. Performing a manipulation results in out-of-bounds read. The attack is possible to be carr",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-105069 - WordPress QR Redirector plugin <= 2.0.5 - Cross Site Scripting (XSS) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105069",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-05T09:17:11.000Z",
-        "contentSnippet": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Nikki Blight QR Redirector qr-redirector allows Stored XSS.This issue affects QR Redirector: from n/a through 2.0.5.",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-105068 - WordPress Events Manager plugin <= 7.4.5 - Sensitive Data Exposure vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105068",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-05T09:17:11.000Z",
-        "contentSnippet": "Insertion of Sensitive Information Into Sent Data vulnerability in Pixelite Events Manager events-manager allows Retrieve Embedded Sensitive Data.This issue affects Events Manager: from n/a through 7.4.5.",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-105064 - WordPress Unlimited Elements For Elementor (Free Widgets, Addons, Templates) plugin <= 2.0.22 - Broken Access Control vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105064",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-05T09:17:11.000Z",
-        "contentSnippet": "Use of Externally-Controlled Input to Select Classes or Code ('Unsafe Reflection') vulnerability in Unlimited Elements Unlimited Elements For Elementor (Free Widgets, Addons, Templates) unlimited-elements-for-elementor allows Parameter Injection.This issue affects Unlimited Eleme",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-105062 - WordPress WP Admin Audit plugin <= 1.2.17 - Broken Access Control vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105062",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-05T09:17:11.000Z",
-        "contentSnippet": "Missing Authorization vulnerability in Brandtoss WP Admin Audit wp-admin-audit allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects WP Admin Audit: from n/a through 1.2.17.",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-105060 - WordPress Logo Showcase plugin <= 4.0.4 - Cross Site Scripting (XSS) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105060",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-05T09:17:10.000Z",
-        "contentSnippet": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Themepoints Logo Showcase logo-showcase allows Stored XSS.This issue affects Logo Showcase: from n/a through 4.0.4.",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-105056 - WordPress eCommerce Product Catalog plugin <= 3.6.2 - Cross Site Scripting (XSS) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105056",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-05T09:17:10.000Z",
-        "contentSnippet": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in impleCode eCommerce Product Catalog ecommerce-product-catalog allows Stored XSS.This issue affects eCommerce Product Catalog: from n/a through 3.6.2.",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-105055 - WordPress WP Mailster plugin <= 1.9.0.0 - Broken Access Control vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105055",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-05T09:17:10.000Z",
-        "contentSnippet": "Missing Authorization vulnerability in WP Mailster WP Mailster wp-mailster allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects WP Mailster: from n/a through 1.9.0.0.",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-104811 - Mitel MiVoice Office 400 Music on Hold WAV File Upload Code Execution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104811",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-05T09:17:10.000Z",
-        "contentSnippet": "DigitalCanion SA has discovered a vulnerability that allows remote attackers to execute arbitrary code on affected installations of the product. Authentication may be required to exploit this vulnerability. The specific flaw exists within the Configuration → Services → Music on H",
-        "cveScore": 8.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-104810 - Mitel MiVoice Office 400 File Management File Browser path traversal vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104810",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-05T09:17:10.000Z",
-        "contentSnippet": "This vulnerability allows remote attackers to delete sensitive files on vulnerable installations of Mitel MiVoice Office 400. Authentication is required to exploit this vulnerability. The specific flaw exists within the web portal listening on TCP port 443, under Maintenance → Fi",
-        "cveScore": 8.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-104809 - Mitel MiVoice Office 400 Shared Object Hijacking Leading to Arbitrary Code Execution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104809",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-05T09:17:10.000Z",
-        "contentSnippet": "DigitalCanion has discovered a vulnerability that allows an attacker to cause the system to load an attacker-controlled .so file instead of the expected legitimate module. The loading mechanism relies on a predictable module name without adequately verifying the file’s origin or ",
-        "cveScore": 8.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-104808 - Mitel MiVoice Office 400 stored Cross-Site Scripting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104808",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-05T09:17:09.000Z",
-        "contentSnippet": "DigitalCanion has discovered a stored Cross-Site Scripting (XSS) vulnerability that allows an authenticated malicious user to inject persistent JavaScript or HTML content, resulting in a denial-of-service condition within the web application. The specific flaw exists within the w",
-        "cveScore": 1.9,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-104807 - Mitel MiVoice Office 400 stored Cross-Site Scripting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104807",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-05T09:17:09.000Z",
-        "contentSnippet": "DigitalCanion has discovered a stored Cross-Site Scripting (XSS) vulnerability that allows an authenticated malicious user to inject persistent JavaScript or HTML content into the web application. The specific flaw exists within the web portal listening on TCP port 443, under Con",
-        "cveScore": 1.9,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-104806 - Mitel MiVoice Office 400 System Logs Path Traversal Information Disclosure",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104806",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-05T09:17:09.000Z",
-        "contentSnippet": "DigitalCanion has discovered a path traversal vulnerability that allows an attacker to access files outside of the intended directory. The specific flaw exists within the Maintenance → System Logs functionality of the web management portal listening on TCP port 443. The applicati",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-104805 - Mitel MiVoice Office 400 Backup Restoration Arbitrary File Write Leading to Root Code Execution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104805",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-05T09:17:09.000Z",
-        "contentSnippet": "DigitalCanion has discovered a vulnerability in the backup restoration functionality that allows an attacker with access to the configured backup repository to introduce arbitrary files into the system during restoration. The specific flaw exists within the backup restoration mec",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-104706 - Mitel MiVoice Office 400 view system files path traversal",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104706",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-05T09:17:09.000Z",
-        "contentSnippet": "DigitalCanion has discovered a path traversal vulnerability that allows to view or download sensitive system files over the portal https:// :8443 via menus Administration -> View Logs",
-        "cveScore": 8.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-104675 - WordPress Event Tickets plugin <= 5.30.0 - Broken Access Control vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104675",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-05T09:17:09.000Z",
-        "contentSnippet": "Missing Authorization vulnerability in Liquid Web / StellarWP Event Tickets event-tickets allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Event Tickets: from n/a through 5.30.0.",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
+      {
+        "title": "Building a context-aware AI assistant on AgentCore and OpenClaw",
+        "link": "https://aws.amazon.com/blogs/machine-learning/building-a-context-aware-ai-assistant-on-agentcore-and-openclaw/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-10-06T19:19:15.000Z",
+        "contentSnippet": "Off-the-shelf AI assistants forget you between conversations. This post shows how to build a personal assistant that accumulates context using OpenClaw on Amazon Bedrock AgentCore runtime, with AgentCore memory turning disposable chats into durable, structured knowledge you can r"
+      },
+      {
+        "title": "Google DeepMind Releases EmbeddingGemma 2, a 740M Open Multimodal Embedding Model Built on Gemma 4",
+        "link": "https://www.marktechpost.com/2026/10/06/google-deepmind-releases-embeddinggemma-2-a-740m-open-multimodal-embedding-model-built-on-gemma-4/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-10-06T18:36:08.000Z",
+        "contentSnippet": "Google DeepMind's EmbeddingGemma 2 maps 5 input types into one 768d space and ships today under Apache 2.0. The post Google DeepMind Releases EmbeddingGemma 2, a 740M Open Multimodal Embedding Model Built on Gemma 4 appeared first on MarkTechPost."
+      },
+      {
+        "title": "Mistral AI Releases Mistral Large 4 (Le Chonk): A 1.05T Parameter Multimodal MoE Model",
+        "link": "https://www.marktechpost.com/2026/10/06/mistral-ai-releases-mistral-large-4-le-chonk-a-1-05t-parameter-open-weight-multimodal-moe/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-10-06T17:30:46.000Z",
+        "contentSnippet": "Mistral AI has released Mistral Large 4, nicknamed Le Chonk, as a public preview. It is a 1.05 trillion parameter Mixture of Experts model with 49 billion active parameters, native image input, and a 1 million token context window, trained on 3,800 NVIDIA Grace Blackwell GPUs in "
+      },
+      {
+        "title": "Responsible AI governance: How AWS positions customers to align with ISO/IEC 42005:2025",
+        "link": "https://aws.amazon.com/blogs/machine-learning/responsible-ai-governance-how-aws-positions-customers-to-align-with-iso-iec-420052025/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-10-06T15:53:28.000Z",
+        "contentSnippet": "AWS invests in tools that help customers align with international standards for responsible AI governance. In this post, we explore the AI system impact assessment: what it is, how it improves enterprise-wide risk management, and how ISO/IEC 42005:2025 codifies best practices for"
+      },
+      {
+        "title": "Best practices for Amazon SageMaker HyperPod administration and governance",
+        "link": "https://aws.amazon.com/blogs/machine-learning/best-practices-for-amazon-sagemaker-hyperpod-administration-and-governance/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-10-06T15:50:23.000Z",
+        "contentSnippet": "Learn how to administer Amazon SageMaker HyperPod through Amazon SageMaker Unified Studio while preserving cluster governance. This post shows platform teams how to design infrastructure boundaries, govern access, allocate shared capacity, and operate HyperPod consistently across"
+      },
+      {
+        "title": "Manage Amazon SageMaker HyperPod Spaces directly from SageMaker Studio",
+        "link": "https://aws.amazon.com/blogs/machine-learning/manage-amazon-sagemaker-hyperpod-spaces-directly-from-sagemaker-studio/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-10-06T15:47:02.000Z",
+        "contentSnippet": "Data scientists and ML engineers can now create, configure, start, stop, and open Amazon SageMaker Spaces on SageMaker HyperPod EKS clusters directly from SageMaker Studio. Launch JupyterLab and Code Editor environments in a few clicks, without using command-line tools."
+      },
+      {
+        "title": "Build a voice travel concierge with Amazon Bedrock AgentCore, Managed Knowledge Base and Nova Sonic",
+        "link": "https://aws.amazon.com/blogs/machine-learning/build-a-voice-travel-concierge-with-amazon-bedrock-agentcore-managed-knowledge-base-and-nova-sonic/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-10-06T15:45:42.000Z",
+        "contentSnippet": "Add a voice travel concierge to an airline app with Amazon Bedrock AgentCore, Amazon Nova Sonic for real-time speech, and Amazon Bedrock Knowledge Bases for policy answers. Travelers change seats, check delays, and ask policy questions by voice, while the agent reaches your backe"
+      },
       {
         "title": "Reka Releases Rho-1: A 19B Omni-Reasoning Model That Understands, Generates Video and Outputs Robot Actions in One",
         "link": "https://www.marktechpost.com/2026/10/05/reka-releases-rho-1-a-19b-omni-reasoning-model-that-understands-generates-video-and-outputs-robot-actions-in-one/",
@@ -1555,55 +1604,6 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-09-18T15:25:23.000Z",
         "contentSnippet": "Deploy production-ready Hugging Face models on Amazon SageMaker AI using six open-source agent skills. Point a coding agent at a model and get back a real-time endpoint with the right serving container, autoscaling, Amazon CloudWatch alarms, and a verified teardown path."
-      },
-      {
-        "title": "New experts join Google’s AI & Economy team",
-        "link": "https://blog.google/innovation-and-ai/technology/ai/expanding-ai-economy-research-bench/",
-        "source": "Google AI Blog",
-        "isoDate": "2026-09-18T14:00:00.000Z",
-        "contentSnippet": "We are expanding our AI & Economy team with world-class academic advisors, fellows, and core internal researchers."
-      },
-      {
-        "title": "Introducing Amazon SageMaker HyperPod Inference Gateway",
-        "link": "https://aws.amazon.com/blogs/machine-learning/introducing-amazon-sagemaker-hyperpod-inference-gateway/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-09-18T13:08:34.000Z",
-        "contentSnippet": "Amazon SageMaker HyperPod Inference Gateway is a Kubernetes-native, GPU-aware routing add-on for Amazon EKS. It uses real-time GPU signals to send each inference request to the best-suited pod, cutting first-token latency by up to 82% with no changes to your model servers or clie"
-      },
-      {
-        "title": "Co-creating the future of fashion with Google",
-        "link": "https://blog.google/innovation-and-ai/technology/ai/google-flow-fashion-week/",
-        "source": "Google AI Blog",
-        "isoDate": "2026-09-18T13:00:00.000Z",
-        "contentSnippet": "Google worked side-by-side with designers Jane Wade and Sergio Hudson to custom-design Google Flow tools to prep for NYFW."
-      },
-      {
-        "title": "Making global data easier to explore",
-        "link": "https://blog.google/innovation-and-ai/technology/ai/google-un-data-commons-platform/",
-        "source": "Google AI Blog",
-        "isoDate": "2026-09-17T20:00:00.000Z",
-        "contentSnippet": "Google and the UN system have launched the UN System Data Commons, a new open platform making global statistics accessible and easy to search."
-      },
-      {
-        "title": "Reduce time-to-hire for quality candidates with AI-powered Amazon Connect Talent",
-        "link": "https://aws.amazon.com/blogs/machine-learning/reduce-time-to-hire-for-quality-candidates-with-ai-powered-amazon-connect-talent/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-09-17T17:55:20.000Z",
-        "contentSnippet": "Amazon Connect Talent is an AI hiring solution built for talent acquisition leaders managing scaled hiring. It delivers AI-led interviews, data-driven assessments, and consistent evaluation, helping recruiters identify strong candidates more efficiently while providing applicants"
-      },
-      {
-        "title": "Selecting a vector store for Amazon Bedrock Knowledge Bases",
-        "link": "https://aws.amazon.com/blogs/machine-learning/selecting-a-vector-store-for-amazon-bedrock-knowledge-bases/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-09-17T15:53:13.000Z",
-        "contentSnippet": "Choosing the right vector store for your Amazon Bedrock Knowledge Bases RAG application affects performance and cost. This post compares Amazon OpenSearch Service, Amazon Aurora PostgreSQL with pgvector, and Amazon S3 Vectors across three RAG use cases, with benchmarks and a prac"
-      },
-      {
-        "title": "A serverless, data-driven Git metrics dashboard using Amazon Quick Sight",
-        "link": "https://aws.amazon.com/blogs/machine-learning/a-serverless-data-driven-git-metrics-dashboard-using-amazon-quick-sight/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-09-17T15:42:31.000Z",
-        "contentSnippet": "Learn how to build a fully serverless pipeline that automatically collects Git metrics from GitHub and GitLab and visualizes them in interactive Amazon Quick Sight dashboards, giving engineering teams near-real-time delivery analytics at low cost."
       }
     ],
     "virtualization": [
@@ -2310,6 +2310,76 @@
     ],
     "hardware": [
       {
+        "title": "Get a 1440p QD-OLED monitor for just $280 — entry-level AOC display comes with 144Hz refresh rate and 0.03ms response time",
+        "link": "https://www.tomshardware.com/monitors/gaming-monitors/get-a-1440p-qd-oled-monitor-for-just-usd280-entry-level-aoc-display-comes-with-144hz-refresh-rate-and-0-03ms-response-time",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-06T20:15:40.000Z",
+        "contentSnippet": "At $280, AOC's 27-inch 1440p QD-OLED monitor with a 144Hz refresh rate is one of the cheapest OLED displays we've seen."
+      },
+      {
+        "title": "HP takes $2200 off a Ryzen 7 9800X3D and RTX 5080 prebuilt at $2,799",
+        "link": "https://www.tomshardware.com/desktops/gaming-pcs/hp-takes-usd2200-off-a-ryzen-7-9800x3d-and-rtx-5080-prebuilt-at-usd2-799-sale-slashes-44-percent-off-an-omen-system-thats-ready-to-game-however-you-want",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-06T18:47:37.000Z",
+        "contentSnippet": "HP is selling its Omen 35L with an Nvidia RTX 5080 and Ryzen 7 9800X3D for $2,799, or $2200 off. This system has 32GB of RAM and a 2TB SSD for strong supporting performance, too."
+      },
+      {
+        "title": "Black Friday laptop deals: What should small and medium-sized businesses be looking for?",
+        "link": "https://www.tomshardware.com/laptops/black-friday-laptop-deals-what-should-small-and-medium-sized-businesses-be-looking-for",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-06T18:30:51.000Z",
+        "contentSnippet": "Dell Pro 3, 5, and 7 laptops offer excellent options for small and medium-sized businesses this Black Friday. Here's how to find the best deal on the right laptop for your business."
+      },
+      {
+        "title": "Mac Mini docks add more ports and storage — get more out of your headless server, AI machine, or Apple workstation",
+        "link": "https://www.tomshardware.com/peripherals/docking-stations-hubs/mac-mini-docks-add-more-ports-and-storage-get-more-out-of-your-headless-server-ai-machine-or-apple-workstation",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-06T17:50:00.000Z",
+        "contentSnippet": "Mac Mini docks add more ports and allow for further internal storage. Many of them are molded to fit directly beneath Apple's popular mini PC."
+      },
+      {
+        "title": "Award-winning Anycubic 3D Printers on sale with up to 47% off",
+        "link": "https://www.tomshardware.com/3d-printing/award-winning-anycubic-3d-printers-on-sale-with-up-to-47-percent-off-massive-discounts-available-on-the-most-popular-models",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-06T17:30:00.000Z",
+        "contentSnippet": "Anycubic's range of 3D printers sees large discounts in the Amazon Prime Big Deal Days sale"
+      },
+      {
+        "title": "Gigabyte W775-V10-L01 Hands-on Bringing NVIDIA GB300 Deskside",
+        "link": "https://www.servethehome.com/gigabyte-w775-v10-l01-hands-on-bringing-nvidia-gb300-deskside/",
+        "source": "ServeTheHome",
+        "isoDate": "2026-10-06T17:00:41.000Z",
+        "contentSnippet": "We test the Gigabyte W775-V10-L01, including getting over 2.2B tokens/ day on the Blackwell Ultra GPU, 800Gbps from the ConnectX-8 SuperNIC, and testing the NVIDIA Grace CPU with the C2C link between it and the GPU The post Gigabyte W775-V10-L01 Hands-on Bringing NVIDIA GB300 Des"
+      },
+      {
+        "title": "Save up to 43% on these handy Hoto tools for PC builders and hobbyists, starting from $14",
+        "link": "https://www.tomshardware.com/peripherals/save-up-to-43-percent-on-these-handy-hoto-tools-for-pc-builders-and-hobbyists-starting-from-usd14-limited-time-deals-on-electric-screwdrivers-air-blowers-flashlights-cordless-drills-and-more",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-06T16:50:00.000Z",
+        "contentSnippet": "Amazon's big discount event means that now is the perfect time to stock up on Hoto's tools for hobbyists and PC builders, with deals running until October 7."
+      },
+      {
+        "title": "Grab this epic Razer Wolverine V3 controller for a great 53% off",
+        "link": "https://www.tomshardware.com/peripherals/controllers-gamepads/grab-this-epic-razer-wolverine-v3-controller-for-a-great-52-percent-off-now-just-usd94-99-for-this-competitive-wireless-gamepad-with-tmr-sticks-and-8k-polling-rate",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-06T16:40:00.000Z",
+        "contentSnippet": "This esports pro-friendly Razer Wolverine V3 Tournament Edition controller is on sale for a record-low Amazon Price, now just $94.99."
+      },
+      {
+        "title": "The Swiss army knife of USB DVD drives is on sale, also features a built-in M.2 SSD slot, USB hub, and SATA hard drive dock",
+        "link": "https://www.tomshardware.com/pc-components/storage/the-swiss-army-knife-of-usb-docking-dvd-drives-is-on-sale-also-available-with-built-in-m-2-ssd-slot-or-sata-hard-drive-dock-usd28-for-dvd-writer-and-hub-usd33-gets-an-added-sata-dock-or-pay-usd39-for-the-m-2-version",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-06T16:20:00.000Z",
+        "contentSnippet": "Portable DVD writers with flash media reading, M.2, and SATA drive docking abilities are great Prime Day Deals."
+      },
+      {
+        "title": "Intel's Core Ultra 5 250K Plus is down to its lowest price ever at $145",
+        "link": "https://www.tomshardware.com/pc-components/cpus/intel-core-ultra-5-250k-plus-falls-to-its-lowest-price-ever-at-usd145-grab-an-18-core-midrange-cpu-with-5-3-ghz-boost-at-an-entry-level-price",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-06T15:50:00.000Z",
+        "contentSnippet": "Intel's 18-core Core Ultra 5 250K Plus is down to its lowest price ever on Amazon, selling for just $145 on sale."
+      },
+      {
         "title": "Buy an Nvidia RTX 5070 Ti 16GB for only $1099",
         "link": "https://www.tomshardware.com/pc-components/buy-an-nvidia-rtx-5070-ti-16gb-for-only-usd1099-extra-discount-on-newegg-drops-the-price-on-the-triple-fan-gigabyte-windforce-to-the-lowest-price-weve-seen-in-months",
         "source": "Tom's Hardware",
@@ -2938,76 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-10-01T14:00:00.000Z",
         "contentSnippet": "DeepSeek and Huawei have released open-source programming tools for Ascend 950 AI chips, including compute and communication libraries, aimed at making Huawei hardware easier to program and optimize."
-      },
-      {
-        "title": "Maingear’s new program offers instant trade-ins for gaming PC buyers",
-        "link": "https://www.tomshardware.com/desktops/gaming-pcs/maingears-new-program-offers-instant-trade-ins-for-gaming-pc-buyers-delivers-quotes-for-old-laptops-phones-tablets-smartwatches-headphones-cameras-lenses-and-microphones-in-minutes",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-01T13:45:00.000Z",
-        "contentSnippet": "American custom and prebuilt computer seller Maingear has launched a new instant trade-in scheme through SELLIT9."
-      },
-      {
-        "title": "Get over 70% off this Cherry Xtrfy MX 3.1 wired mechanical gaming keyboard",
-        "link": "https://www.tomshardware.com/pc-components/get-over-70-percent-off-this-cherry-xtrfy-mx-3-1-wired-mechanical-gaming-keyboard-just-usd34-buys-a-quality-full-size-keeb-with-cherry-mx2a-switches",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-01T13:20:00.000Z",
-        "contentSnippet": "Buy the full-size Cherry Xtrfy MX 3.1 mechanical gaming keyboard for only $34 with promo code WOOTCHERRY. That’s over 70% off, an all-time low, and new Woot customers can drop it $29"
-      },
-      {
-        "title": "Dell Pro Rugged 13 Extreme and Pro Rugged 14 Move to Core Ultra Series 3, With 1,400 Nits and an RTX Pro 500 Blackwell Option",
-        "link": "https://www.storagereview.com/news/dell-pro-rugged-13-extreme-pro-rugged-14-intel-core-ultra-series-3",
-        "source": "StorageReview",
-        "isoDate": "2026-10-01T13:00:00.000Z",
-        "contentSnippet": "Dell Technologies has updated its rugged laptop lineup with new versions of the Dell Pro Rugged 13 Extreme and Pro Rugged 14, bringing Intel Core Ultra Series 3 processors and other hardware updates to both systems. The fully rugged Pro Rugged 13 Extreme now offers up to a Core U"
-      },
-      {
-        "title": "Gears of War E-Day is an uncharacteristically CPU-heavy Unreal Engine 5 game",
-        "link": "https://www.tomshardware.com/pc-components/cpus/gears-of-war-e-day-is-an-uncharacteristically-cpu-heavy-unreal-engine-5-game-benchmarking-25-cpus-from-intel-and-amd-and-investigating-low-core-mode",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-01T13:00:00.000Z",
-        "contentSnippet": "Gears of War E-Day is a surprisingly heavy Unreal Engine 5 game on the CPU. We benchmarked the game with 25 processors, as well as investigated what the “low core mode” actually does."
-      },
-      {
-        "title": "HP boards the MacBook Neo competitor train",
-        "link": "https://www.tomshardware.com/laptops/hp-boards-the-macbook-neo-competitor-train-omnibook-5-comes-in-four-colors-with-wildcat-lake-and-starts-at-usd699-99",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-01T13:00:00.000Z",
-        "contentSnippet": "The new HP OmniBook 5 (14-inch) uses Wildcat Lake and a variety of colors to compete with the MacBook Neo."
-      },
-      {
-        "title": "Gears of War: E-Day PC graphics performance tested",
-        "link": "https://www.tomshardware.com/video-games/pc-gaming/gears-of-war-e-day-pc-graphics-performance-tested-43-gpus-take-us-back-to-the-start-of-an-iconic-saga",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-01T13:00:00.000Z",
-        "contentSnippet": "Gears of War: E-Day is the first game to implement Unreal Engine's MegaLights technology, allowing for hundreds of dynamic ray-traced light sources in a scene. We put it to the test on 43 graphics cards to see what this next-gen feature demands across three generations of GPUs fr"
-      },
-      {
-        "title": "Micron projects tightening RAM shortages through 2028 as it generates record profit",
-        "link": "https://www.tomshardware.com/pc-components/dram/micron-projects-tightening-ram-shortages-through-2028-as-it-generates-record-profit-record-86-25-percent-gross-margin-drives-over-usd53-billion-in-quarterly-profit",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-01T12:50:00.000Z",
-        "contentSnippet": "Micron makes big money amid the NAND and DRAM shortage. Company expects supply crunch to continue through 2028."
-      },
-      {
-        "title": "PS3 emulator devs warn of fake Blu-ray drives on Newegg and AliExpress",
-        "link": "https://www.tomshardware.com/video-games/retro-gaming/ps3-emulator-devs-warn-of-fake-blu-ray-drives-on-newegg-and-aliexpress-beware-of-fake-blu-ray-drives-devs-warn-retrogamers-scammers-use-spoofed-firmware-to-disguise-older-mechanisms-in-high-end-shells",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-01T12:30:00.000Z",
-        "contentSnippet": "The developers of a leading PlayStation 3 emulator warn of 'a recent influx of fake Blu-ray drives.'"
-      },
-      {
-        "title": "OpenAI says actors linked to China-based Moonshot AI spearheaded a campaign to extract its models’ hidden reasoning",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/openai-says-actors-linked-to-moonshot-ai-spearheaded-a-campaign-to-extract-its-models-hidden-reasoning-logged-attempts-peaked-at-16-000-users-over-two-days",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-01T12:00:00.000Z",
-        "contentSnippet": "OpenAI says operators copied its models’ encrypted reasoning and asked a model in a separate conversation to decrypt it."
-      },
-      {
-        "title": "Grab a huge $520 saving on this RTX 5090 gaming laptop from MSI with 64GB DDR5 and a 2TB SSD",
-        "link": "https://www.tomshardware.com/laptops/gaming-laptops/grab-a-huge-usd520-saving-on-this-rtx-5090-gaming-laptop-from-msi-with-64gb-ddr5-and-a-2tb-ssd-stealth-a18-ai-rig-ships-with-12-core-amd-ryzen-ai-9-cpu-along-with-an-18-inch-uhd-display-with-a-120hz-refresh-rate",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-01T11:40:00.000Z",
-        "contentSnippet": "Pick up a $720 saving on this RTX 5090 MSI gaming laptop, featuring 64GB DDR5 RAM, 2TB SSD, and an AMD Ryzen AI 9 HX 370 CPU, now just $3,779."
       }
     ]
   }
