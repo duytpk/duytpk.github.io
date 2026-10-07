@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-10-07T00:15:53.524Z",
+  "updatedAt": "2026-10-07T06:43:45.764Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-19572 - FlexNet Publisher lmadmin SOAP Authentication Bypass Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19572",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-07T04:18:09.000Z",
+        "contentSnippet": "A security vulnerability has been identified in FlexNet Publisher lmadmin. The vulnerability exists in a SOAP handler, where a hardcoded authentication bypass could allow an unauthenticated user to obtain a privileged administrator session without providing valid credentials.",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-84897 - wolfSSH server accepts server-to-client DH group exchange messages from an unauthenticated client, causing pre-authentication primality-test CPU exhaustion and key exchange role confu",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84897",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-07T03:17:00.000Z",
+        "contentSnippet": "src/internal.c in wolfSSL wolfSSH through 1.5.0 admits the server-to-client Diffie-Hellman group exchange messages SSH_MSG_KEX_DH_GEX_GROUP (31) and SSH_MSG_KEX_DH_GEX_REPLY (33) when a server receives them from an unauthenticated client. IsMessageAllowedServer() applies no direc",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-83742 - wstrncat() unsigned integer underflow leads to an off-by-one null write in wolfSSH on non-Windows platforms",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-83742",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-07T03:16:59.000Z",
+        "contentSnippet": "Unsigned integer underflow in wstrncat() in src/port.c in wolfSSL wolfSSH from v1.4.11 through v1.5.0 on non-Windows platforms allows an authenticated remote attacker to write one out-of-bounds null byte past the end of a stack buffer by sending a crafted SFTP path. wolfSSH_RealP",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-83540 - wolfSSHd on Windows race condition leading to logon token reused across connections",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-83540",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-07T03:16:59.000Z",
+        "contentSnippet": "When password or public key authentication is used with the Windows port of wolfSSHd, the Windows logon token acquired for one authenticated connection is not released before a token is acquired for a subsequent connection, resulting in user login poisoning between connections. A",
+        "cveScore": 7.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-81535 - wolfSSH SSH client accepts unsolicited forwarded-tcpip channel opens without an authorization check",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81535",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-07T03:16:59.000Z",
+        "contentSnippet": "In wolfSSH through 1.5.0 built with --enable-fwd, DoChannelOpen() in src/internal.c gates only direct-tcpip channel opens with the forwarding policy callback. forwarded-tcpip opens are admitted without an authorization check and are not capped in number, allowing a malicious SSH ",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-16516 - wolfSSH ECDSA host key curve not validated against negotiated algorithm",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16516",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-07T03:16:58.000Z",
+        "contentSnippet": "wolfSSH does not validate that the ECDSA curve identifier in a KEXDH_REPLY host key blob matches the algorithm negotiated during key exchange. In ParseECCPubKey() (src/internal.c), the blob's algorithm string is used to derive the curve via NameToId/wcPrimeForId without checking ",
+        "cveScore": 9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-14911 - ASUS Router Cross-Site Scripting Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14911",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-07T03:16:58.000Z",
+        "contentSnippet": "Improper Neutralization of Input During Web Page Generation (“Cross-site Scripting”) in ASUS router modules allows a remote attacker to read DOM information, modify router settings, and cause a denial-of-service condition when an authenticated user visits a crafted URL.Refer to t",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-106061 - Gimp: gimp: heap buffer over-read in x cursor (xmc) thumbnail loader on crafted file",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-106061",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-07T03:16:57.000Z",
+        "contentSnippet": "A flaw was found in GIMP’s X cursor (XMC) thumbnail loader. When GIMP generates a thumbnail for a crafted XMC file, it allocates a pixel buffer using a width * height size computed in 32-bit signed arithmetic. If that product overflows, the allocation is smaller than the true ima",
+        "cveScore": 5.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-19396 - ASUS Router IFTTT Pairing Token Predictable Seed Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19396",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-07T02:16:58.000Z",
+        "contentSnippet": "A predictable seed in the pseudo-random number generator (PRNG) in the IFTTT pairing token generation of the ASUS RT-BE57 router allows an unauthenticated nearby user to derive the pairing token and read or modify router settings via observed values from an administrator-initiate",
+        "cveScore": 7.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-19386 - ASUS Router Stack-Based Buffer Overflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19386",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-07T02:16:57.000Z",
+        "contentSnippet": "A stack-based buffer overflow in the ASUS router modules allows an authenticated nearby user to execute arbitrary code via a crafted configuration file upload that exceeds the expected buffer size.Refer to the ' Security Update for ASUS Router Firmware ' section on the ASUS Secur",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-16528 - ASUS Router Sensitive Information Disclosure in Log File",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16528",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-07T02:16:57.000Z",
+        "contentSnippet": "Insertion of Sensitive Information into Log File in certain ASUS router models allows a remote authenticated attacker to obtain DDNS credentials from the system log, potentially enabling modification of DNS settings.Refer to the ' Security Update for ASUS Router Firmware ' sectio",
+        "cveScore": 8.4,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-106471 - Candlepin: candlepin: broken object-level authorization via verifyauthorizationfilter multi-@verify hasaccess latching",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-106471",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-07T02:16:57.000Z",
+        "contentSnippet": "A flaw was found in Candlepin. The central authorization filter incorrectly grants access when any one of multiple @Verify-annotated parameters is accessible, instead of requiring access to every verified entity. A low-privilege authenticated attacker who can access the first ref",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-105324 - An HTTP header injection vulnerability was found in the ADM",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105324",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-07T02:16:57.000Z",
+        "contentSnippet": "An HTTP header injection vulnerability in start-page-loader.cgi of ADM allows an unauthenticated remote attacker to read arbitrary files on the host system. By sending a crafted HTTP request with injected headers via the state parameter, the attacker can leverage the underlying w",
+        "cveScore": 9.2,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-102478 - Octopus Server Privilege Escalation Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-102478",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-07T02:16:56.000Z",
+        "contentSnippet": "In affected versions of Octopus Server, an authenticated user with permission to modify roles could bypass the protections preventing access abuse resulting in privilege escalation. It was possible for the built-in role to be weakened and the attacker's account added to a privile",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-97680 - Langflow OSS is affected by multiple vulnerabilities",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97680",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-07T01:16:36.000Z",
+        "contentSnippet": "IBM Langflow OSS 1.0.0 through 1.12.2 could allow a remote authenticated attacker to obtain sensitive information or inject malicious data due to improper access control in the vertex result caching subsystem.",
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-97679 - Langflow OSS is affected by multiple vulnerabilities",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97679",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-07T01:16:36.000Z",
+        "contentSnippet": "IBM Langflow OSS 1.0.0 through 1.12.2 could allow a remote authenticated attacker to execute arbitrary code due to improper neutralization of special elements used in an OS command ('Code Injection') related to improper input validation.",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-97678 - Langflow OSS is affected by multiple vulnerabilities",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97678",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-07T01:16:36.000Z",
+        "contentSnippet": "IBM Langflow OSS 1.0.0 through 1.12.2 could allow a remote authenticated attacker to execute arbitrary code due to improper input validation.",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-97676 - Langflow OSS is affected by multiple vulnerabilities",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97676",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-07T01:16:36.000Z",
+        "contentSnippet": "IBM Langflow OSS 1.0.0 through 1.12.2 could allow a remote authenticated attacker to execute arbitrary code due to improper neutralization of special elements used in code, resulting in a sandbox escape.",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-97674 - Langflow OSS is affected by multiple vulnerabilities",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97674",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-07T01:16:36.000Z",
+        "contentSnippet": "IBM Langflow OSS 1.0.0 through 1.12.2 could allow a remote authenticated attacker to execute arbitrary OS commands due to improper neutralization of special elements used in an OS command ('Code Injection'), aka improper control of code generation.",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-97673 - Langflow OSS is affected by multiple vulnerabilities",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97673",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-07T01:16:36.000Z",
+        "contentSnippet": "IBM Langflow OSS 1.0.0 through 1.12.2 could allow a remote authenticated attacker to execute arbitrary code due to improper input validation.",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-97671 - Langflow OSS is affected by multiple vulnerabilities",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97671",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-07T01:16:35.000Z",
+        "contentSnippet": "IBM Langflow OSS 1.0.0 through 1.12.2 could allow a remote authenticated attacker to obtain sensitive information due to a path traversal vulnerability.",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-97655 - Langflow OSS is affected by multiple vulnerabilities",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97655",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-07T01:16:35.000Z",
+        "contentSnippet": "IBM Langflow OSS 1.0.0 through 1.12.2 could allow a remote attacker to execute arbitrary code due to an incomplete blocklist in the code security scanner.",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-93679 - Langflow OSS is affected by multiple vulnerabilities",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93679",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-07T01:16:35.000Z",
+        "contentSnippet": "IBM Langflow OSS 1.0.0 through 1.12.2 could allow a remote authenticated attacker to cause a denial of service due to uncontrolled resource consumption during ZIP file extraction.",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-93678 - Langflow OSS is affected by multiple vulnerabilities",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93678",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-07T01:16:35.000Z",
+        "contentSnippet": "IBM Langflow OSS 1.0.0 through 1.12.2 could allow a remote authenticated attacker to obtain sensitive information due to improper authorization.",
+        "cveScore": 7.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-93677 - Langflow OSS is affected by multiple vulnerabilities",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93677",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-07T01:16:35.000Z",
+        "contentSnippet": "IBM Langflow OSS 1.0.0 through 1.12.2 could allow a remote authenticated attacker to obtain sensitive information due to exposure of sensitive information to an unauthorized actor.",
+        "cveScore": 7.7,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-97626 - Gitea profile feed disclosure bypassing user visibility",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-97626",
@@ -677,234 +902,23 @@
         "contentSnippet": "GNU Aspell contains an out-of-bounds read vulnerability in ReadOnlyDict::load() in readonly_ws.cpp. When loading a binary .rws dictionary file, it uses offset fields from the file header as byte indices into a heap buffer without validating their bounds. An attacker can trigger t",
         "cveScore": 1.8,
         "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-94299 - elegro Crypto Payment <= 1.0.1 - Unauthenticated Arbitrary Order Status Change via IPN Callback",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94299",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-06T07:17:00.000Z",
-        "contentSnippet": "The elegro Crypto Payment WordPress plugin through 1.0.1 does not require a shared secret to be configured before trusting incoming payment notification requests, allowing unauthenticated attackers to forge payment confirmations and change the status of arbitrary orders on any in",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-94293 - Missing authentication for critical function in the aas-edge-client REST API",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94293",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-06T07:17:00.000Z",
-        "contentSnippet": "An unauthenticated remote attacker can modify Asset Administration Shell submodel data via PATCH requests and can read all data exposed by the GET endpoints.",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-94278 - File Media Renamer <= 1.3 - Author+ Arbitrary File Rename via save-attachment-compat",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94278",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-06T07:17:00.000Z",
-        "contentSnippet": "The File Media Renamer WordPress plugin through 1.3 does not verify that the requesting user is authorised to modify a given media attachment, allowing any user with file-upload privileges to rename attachments belonging to other users, including administrators, and to corrupt un",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-94271 - Deema Payment Gateway <= 1.1.2 - Unauthenticated Payment Confirmation Forgery via Unverified Success Return",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94271",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-06T07:16:59.000Z",
-        "contentSnippet": "The Deema Payment Gateway WordPress plugin through 1.1.2 does not verify the payment with the payment provider when handling the return from the hosted checkout, and does not check the payment status or amount, allowing unauthenticated users to have orders marked as paid without ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-94270 - Deema Payment Gateway <= 1.1.2 - Unauthenticated Payment Bypass and Order Manipulation via Webhook",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94270",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-06T07:16:59.000Z",
-        "contentSnippet": "The Deema Payment Gateway WordPress plugin through 1.1.2 does not verify the authenticity of incoming payment provider notifications, and ships with that verification disabled by default, allowing unauthenticated attackers to mark an unpaid order as paid, or to cancel or refund a",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-89289 - Fast Courier <= 5.2.3 - Unauthenticated Order Fulfillment Update via order-status-update REST Endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89289",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-06T07:16:59.000Z",
-        "contentSnippet": "The Fast Courier WordPress plugin through 5.2.3 does not restrict an unauthenticated REST route that writes order fulfillment data, allowing unauthenticated attackers to overwrite the courier status and customer-facing tracking details of any WooCommerce order by supplying its id",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-86786 - Slider Pro <= 1.0.0 - Unauthenticated Sensitive Data Disclosure via sliderpro_multiple_images",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86786",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-06T07:16:59.000Z",
-        "contentSnippet": "The Slider Pro WordPress plugin through 1.0.0 does not perform any capability or authorisation check on one of its AJAX actions, allowing unauthenticated users to retrieve the title, excerpt and permalink of non-public posts, including drafts, pending, scheduled, private and tras",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-59358 - UAA OAuth Token Endpoint Vulnerability allows user access token reuse for client_credentials grant type",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59358",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-06T07:16:59.000Z",
-        "contentSnippet": "Improper authentication (CWE-287) in the OAuth token endpoint in Cloud Foundry UAA allows a remote, authenticated attacker holding a valid user access token to obtain a fully-privileged client_credentials token for the OAuth client that issued it, by presenting the user token as ",
-        "cveScore": 7.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-59357 - Self-UAA OIDC Configuration allows JWT injection to establish unauthorized sessions",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59357",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-06T07:16:59.000Z",
-        "contentSnippet": "Insufficient verification of data authenticity (CWE-345) in the external OIDC login callback in Cloud Foundry UAA v4.5.0 to v79.6.0 (inclusive) allows an authenticated UAA user to bypass the OAuth authorization-code exchange and establish an authenticated external-OIDC browser se",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-57559 - Use After Free in DSP_Services",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57559",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-06T07:16:59.000Z",
-        "contentSnippet": "Memory corruption while processing service requests.",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57555 - Use After Free in DSP Service",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57555",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-06T07:16:58.000Z",
-        "contentSnippet": "Memory Corruption when executing system service routines due to improper handling of user input buffers.",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57554 - Use After Free in DSP Service",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57554",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-06T07:16:58.000Z",
-        "contentSnippet": "Memory Corruption when asynchronous threads access shared performance counter data simultaneously during FastRPC invocations.",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57546 - Buffer Over-read in WLAN HAL",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57546",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-06T07:16:58.000Z",
-        "contentSnippet": "Transient DOS when processing a continuous receive command with a zero-sized global configuration override.",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57545 - Untrusted Pointer Dereference in Graphics",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57545",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-06T07:16:58.000Z",
-        "contentSnippet": "Memory corruption when processing draw objects of incorrect type during graphics command list execution.",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57537 - Use After Free in DSP Service",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57537",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-06T07:16:58.000Z",
-        "contentSnippet": "Memory Corruption when accessing and modifying geographic mapping data concurrently without proper synchronization.",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-25302 - Improper Verification of Cryptographic Signature in Boot",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-25302",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-06T07:16:58.000Z",
-        "contentSnippet": "Cryptographic Issue when processing non-ELF partitions, authentication and signature checks are bypassed, allowing unsigned or corrupted images to be mounted and processed.",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-25291 - Use After Free in Graphics",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-25291",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-06T07:16:57.000Z",
-        "contentSnippet": "Memory corruption when performing concurrent operations on shared memory page lists due to lack of proper synchronization mechanisms.",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-25274 - Use After Free in Windows WLAN Host",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-25274",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-06T07:16:57.000Z",
-        "contentSnippet": "Memory Corruption when processing concurrent DMA buffer allocation and deallocation commands without proper synchronization.",
-        "cveScore": 6.7,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-25273 - Out-of-bounds Write in Camera Driver",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-25273",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-06T07:16:57.000Z",
-        "contentSnippet": "Memory Corruption when processing camera operations due to out-of-bounds write during driver updates.",
-        "cveScore": 6.7,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-25272 - Out-of-bounds Write in Camera Driver",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-25272",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-06T07:16:57.000Z",
-        "contentSnippet": "Memory Corruption when processing camera CRE driver operations with improper handling of buffer limits during hardware update preparation.",
-        "cveScore": 6.7,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-25270 - Out-of-bounds Write in Camera Driver",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-25270",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-06T07:16:57.000Z",
-        "contentSnippet": "Memory corruption when processing command buffer requests with invalid length parameters in the Android Camera driver.",
-        "cveScore": 6.7,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-25269 - Out-of-bounds Write in Camera Driver",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-25269",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-06T07:16:57.000Z",
-        "contentSnippet": "Memory corruption when processing camera requests with excessive batch and IO buffer configurations exceeds allocated memory size.",
-        "cveScore": 6.7,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-25267 - Missing Authorization in Core",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-25267",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-06T07:16:56.000Z",
-        "contentSnippet": "Memory corruption when non-secure loader rewrites page tables before secure memory initialization.",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-25263 - Out of Bounds write in Linux Camera",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-25263",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-06T07:16:56.000Z",
-        "contentSnippet": "Memory corruption while processing IOCTL command called from user space to the kernel with invalid parameters.",
-        "cveScore": 6.6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-105778 - Tenda AC5 Wifi setWifi stack-based overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105778",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-06T07:16:56.000Z",
-        "contentSnippet": "A vulnerability has been found in Tenda AC5 02.03.01.111_multi. Affected by this issue is some unknown functionality of the file /goform/setWifi of the component Wifi Handler. Such manipulation of the argument wifiPwd leads to stack-based buffer overflow. It is possible to launch",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
       }
     ],
     "ai": [
+      {
+        "title": "Meta AI Open-Sources Rebalancer: A C++ Assignment Solver That Runs About 40 Million Placement Problems a Day",
+        "link": "https://www.marktechpost.com/2026/10/06/meta-ai-open-sources-rebalancer-a-c-assignment-solver-that-runs-about-40-million-placement-problems-a-day/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-10-07T06:29:14.000Z",
+        "contentSnippet": "Meta has open-sourced Rebalancer, the C++ and Python library it has used for over 9 years to place shards, servers and traffic. It handles about 40 million assignment problems a day, using local search or MIP solvers like Gurobi, FICO Xpress and HiGHS. It is pip-installable under"
+      },
+      {
+        "title": "A Developer’s Guide to Laya: Zero-Shot Decisions and Calibration",
+        "link": "https://www.marktechpost.com/2026/10/06/a-developers-guide-to-laya-zero-shot-decisions-and-calibration/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-10-07T00:53:03.000Z",
+        "contentSnippet": "Explore a comprehensive coding guide to Laya, the open-source zero-shot decision engine. Learn how to implement typed decisions, fit custom temperatures, and build reliable abstention gates using real-world CLINC150 banking data. The post A Developer’s Guide to Laya: Zero-Shot De"
+      },
       {
         "title": "Building a context-aware AI assistant on AgentCore and OpenClaw",
         "link": "https://aws.amazon.com/blogs/machine-learning/building-a-context-aware-ai-assistant-on-agentcore-and-openclaw/",
@@ -1590,20 +1604,6 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-09-18T15:38:53.000Z",
         "contentSnippet": "Migrate a multi-model healthcare AI agent from self-managed Amazon ECS with AWS Fargate to Amazon Bedrock AgentCore runtime, preserving triple-model orchestration and vector-enhanced knowledge retrieval while reducing infrastructure management. The framework-agnostic pattern appl"
-      },
-      {
-        "title": "The new AgentCore runtime: Elastic, optimized, and consistently fast starts",
-        "link": "https://aws.amazon.com/blogs/machine-learning/the-new-agentcore-runtime-elastic-optimized-and-consistently-fast-starts/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-09-18T15:31:34.000Z",
-        "contentSnippet": "Today we are announcing the new AgentCore runtime, a capability of Amazon Bedrock AgentCore built for the speed, flexibility, and cost efficiency that production agents demand. It reclaims memory as sessions release it and delivers consistent cold starts regardless of image size "
-      },
-      {
-        "title": "Deploy Hugging Face models on Amazon SageMaker AI with coding agents",
-        "link": "https://aws.amazon.com/blogs/machine-learning/deploy-hugging-face-models-on-amazon-sagemaker-ai-with-coding-agents/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-09-18T15:25:23.000Z",
-        "contentSnippet": "Deploy production-ready Hugging Face models on Amazon SageMaker AI using six open-source agent skills. Point a coding agent at a model and get back a real-time endpoint with the right serving container, autoscaling, Amazon CloudWatch alarms, and a verified teardown path."
       }
     ],
     "virtualization": [
@@ -2310,6 +2310,20 @@
     ],
     "hardware": [
       {
+        "title": "Best Amazon Prime Day tech deals live",
+        "link": "https://www.tomshardware.com/live/news/amazon-prime-big-deal-days-2026-day-two",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-07T06:21:39.000Z",
+        "contentSnippet": "It's the final day of the Amazon Prime sale."
+      },
+      {
+        "title": "Get 22% off this sweet Ryzen 7 7800X3D and RTX 5070-powered gaming PC at just $1799",
+        "link": "https://www.tomshardware.com/desktops/gaming-pcs/get-usd500-off-this-sweet-ryzen-7-7800x3d-and-rtx-5070-powered-gaming-pc-at-just-usd1799-32gb-of-ddr5-6000-comes-standard-too-at-a-22-percent-discount",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-07T00:42:54.000Z",
+        "contentSnippet": "Get $500 off this prebuilt gaming PC with a sweet Ryzen 7 7800X3D CPU, a powerful RTX 5070 graphics card, and 32GB of memory at just $1799."
+      },
+      {
         "title": "Grab some of our favorite controllers for PC gaming for less than the cost of a DualSense",
         "link": "https://www.tomshardware.com/peripherals/controllers-gamepads/grab-some-of-our-favorite-controllers-for-pc-gaming-for-less-than-the-cost-of-a-dualsense-get-a-quality-controller-with-more-features-during-prime-day",
         "source": "Tom's Hardware",
@@ -2994,20 +3008,6 @@
         "source": "StorageReview",
         "isoDate": "2026-10-01T17:48:35.000Z",
         "contentSnippet": "NetApp used its INSIGHT 2026 conference in Las Vegas to announce NetApp Novus, a disaggregated storage architecture for AI factories that separates metadata from the data path and that the company says is designed to exceed 100 TB/s of aggregate throughput, keep hundreds of thous"
-      },
-      {
-        "title": "First Intel Panther Lake mini PC cooled with solid-state AirJet tech operates at less than 21 dBA",
-        "link": "https://www.tomshardware.com/desktops/mini-pcs/first-intel-panther-lake-mini-pc-cooled-with-solid-state-airjet-tech-operates-at-less-than-21-dba-aaeon-claims-its-fanless-up-xtreme-ptl-edge-air-is-also-slimmer-lighter-than-actively-cooled-rivals",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-01T15:27:09.000Z",
-        "contentSnippet": "Aaeon's UP Xtreme PTL Edge Air is the first Panther Lake mini PC we've seen with AirJet technology for ultra-low-noise active cooling."
-      },
-      {
-        "title": "Nvidia launches Open Agent Safety Platform to physically restrain rogue AI agents",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-launches-open-agent-safety-platform-to-restrain-rogue-ai-agents-new-hardware-and-software-security-stack-can-quarantine-agents-in-milliseconds",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-01T14:30:00.000Z",
-        "contentSnippet": "Nvidia’s new Open Agent Safety Platform combines OpenShell sandboxing with BlueField-powered Sentry hardware to monitor and rapidly quarantine rogue AI agents"
       }
     ]
   }
