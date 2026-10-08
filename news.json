@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-10-08T14:15:18.347Z",
+  "updatedAt": "2026-10-08T20:23:43.735Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-105452 - Docker Sandboxes egress proxy could forward unrecognized client credentials to managed hosts",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105452",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T18:49:37.000Z",
+        "contentSnippet": "Docker Sandboxes could forward a client-supplied credential alongside a credential injected by the host egress proxy. The proxy removed alternate credentials only when their values matched known sentinel values, so untrusted code in an authorized sandbox could supply an unrecogni",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-40804 - WordPress aBlocks plugin <= 2.16.0 - Cross Site Scripting (XSS) vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-40804",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T18:48:17.000Z",
+        "contentSnippet": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Kodezen LLC aBlocks ablocks allows Reflected XSS.This issue affects aBlocks: from n/a through 2.16.0.",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-101998 - Fail-open response masking in Docker Sandboxes can expose proxy-managed credentials",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-101998",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T18:47:28.000Z",
+        "contentSnippet": "Docker Sandboxes could fail open while masking credentials in protected proxy responses. When a response-body read returned data together with an error, affected handlers could forward unmasked bytes. Code inside an authorized sandbox could use this to recover host-managed OAuth ",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-105570 - Docker Sandboxes OAuth response masking could be bypassed with a case-variant token host",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105570",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T18:46:05.000Z",
+        "contentSnippet": "Docker Sandboxes compared OAuth token-endpoint hostnames case-sensitively when deciding whether to mask managed credential responses, while request routing treated DNS hostnames case-insensitively. Untrusted code inside a sandbox could use a case-variant hostname to reach the gen",
+        "cveScore": 6.7,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-106430 - Query and rename target confusion via embedded NUL truncation in MongoDB C++ Driver",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-106430",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T18:45:56.000Z",
+        "contentSnippet": "The MongoDB C++ Driver discards content after an embedded NUL byte in certain field and collection names accepted by the collection API. This can cause the driver and the calling application to interpret the same name differently. An authenticated actor who can influence a name p",
+        "cveScore": 6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-106438 - Silent Decimal128 value corruption via incorrect exactness check in MongoDB C Driver",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-106438",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T18:44:05.000Z",
+        "contentSnippet": "An incorrect calculation in Decimal128 string parsing in the MongoDB C Driver can accept certain over-precision inputs containing leading zeros instead of rejecting them. This produces a value different from the supplied text. An actor who can provide a decimal string to an embed",
+        "cveScore": 5.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-106437 - Out-of-bounds read and write via undersized BSON buffer reservation in MongoDB C Driver",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-106437",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T18:42:14.000Z",
+        "contentSnippet": "The BSON buffer-reservation API in the MongoDB C Driver can record a length smaller than the five-byte BSON minimum. Later append or comparison operations can underflow unsigned length calculations and read or write outside the document buffer. An actor who can influence the leng",
+        "cveScore": 6.2,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-106431 - One-byte heap buffer overflow in BSON bulk document writer in MongoDB C Driver",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-106431",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T18:40:32.000Z",
+        "contentSnippet": "An off-by-one error in the BSON bulk document writer in the MongoDB C Driver can write one zero byte immediately past a heap allocation when a document ends at a specific buffer boundary. An actor who can influence the size of documents serialized by an embedding application can ",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-107322 - OS command injection in Amazon Agent Plugins for AWS databases-on-aws",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107322",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T18:39:27.000Z",
+        "contentSnippet": "An incomplete list of disallowed inputs in Amazon Agent Plugins for AWS databases-on-aws plugin before 1.7.1 might allow a remote unauthenticated actor to execute arbitrary operating system commands on the host running the helper via a crafted database command value introduced in",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-107385 - MariaDB Connector/Node.js: SQL injection in the text protocol when the session uses NO_BACKSLASH_ESCAPES",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107385",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T18:38:29.000Z",
+        "contentSnippet": "MariaDB Connector/Node.js is used to connect applications developed on Node.js to MariaDB and MySQL databases. Prior to 3.2.5, 3.3.4, 3.4.7, and 3.5.4, text-protocol escaping always prefixes quotes with a backslash and does not honor the session's NO_BACKSLASH_ESCAPES mode, inclu",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-107704 - image_optimizer 1.3.0 through 1.9.0 OS Command Injection via identify_format",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107704",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T18:36:37.000Z",
+        "contentSnippet": "The image_optimizer Ruby gem 1.3.0 through 1.9.0 contains an OS command injection vulnerability in ImageOptimizer#identify_format that allows attackers to execute commands by supplying a crafted image path when the identify option is enabled. Attackers controlling the path, such ",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-107703 - @enmaso/node-convert through 1.0.0 OS Command Injection via filepath and convertTo",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107703",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T18:36:36.000Z",
+        "contentSnippet": "@enmaso/node-convert through 1.0.0 contains an OS command injection vulnerability in convert.js that allows attackers to execute shell commands via unsanitized filepath and convertTo arguments. Attackers can inject shell metacharacters or a single quote into the ImageMagick comma",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-107701 - dot-access through 1.0.0 Prototype Pollution via set() path argument",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107701",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T18:36:36.000Z",
+        "contentSnippet": "dot-access through 1.0.0 contains a prototype pollution vulnerability that allows attackers to modify Object.prototype by supplying a crafted dotted path to set(). Attackers controlling the path, such as through user-supplied field names, can use __proto__ segments to inject prop",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-107700 - dot-access 0.0.3 through 1.0.0 Code Injection via get() Path Argument",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107700",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T18:36:35.000Z",
+        "contentSnippet": "dot-access 0.0.3 through 1.0.0 contains a code injection vulnerability that allows remote attackers to execute JavaScript by supplying crafted paths to get(). The path is concatenated into a new Function body in index.js, so attackers can reach constructor.constructor to load chi",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-107699 - ppt2png through 0.0.6 OS Command Injection via input and output paths",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107699",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T18:36:35.000Z",
+        "contentSnippet": "ppt2png through 0.0.6 contains an OS command injection vulnerability that allows attackers to execute operating system commands by supplying unsanitized input or output path arguments. Attackers can append shell metacharacters such as ';' to file names passed to child_process.exe",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-106428 - Out-of-bounds read in SCRAM response parsing in MongoDB C Driver",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-106428",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T18:35:02.000Z",
+        "contentSnippet": "An out-of-bounds read in SCRAM authentication response parsing in the MongoDB C Driver can read one byte beyond a fixed-size buffer when processing a malformed server-final message. A server or network intermediary able to provide this message before server-signature verification",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-107384 - MariaDB Connector/Node.js: SQL injection through object keys in SET expansion (permitSetMultiParamEntries)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107384",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T18:32:30.000Z",
+        "contentSnippet": "MariaDB Connector/Node.js is used to connect applications developed on Node.js to MariaDB and MySQL databases. From 3.2.0 until 3.2.5, 3.3.4, 3.4.7, and 3.5.4, applications that enable permitSetMultiParamEntries can pass objects whose keys are expanded into a SQL SET clause witho",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-107383 - MariaDB Connector/Node.js exposes uninitialized process memory through malformed GeoJSON parameters",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107383",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T18:27:02.000Z",
+        "contentSnippet": "MariaDB Connector/Node.js is used to connect applications developed on Node.js to MariaDB and MySQL databases. Prior to 3.2.5, 3.3.4, 3.4.7, and 3.5.4, the GeoJSON Polygon and MultiPolygon binary encoders size a Buffer.allocUnsafe() allocation from each ring's numeric length befo",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-107382 - MariaDB Connector/Node.js: Uncaught exception crashes the client during ed25519 authentication with zero-configuration TLS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107382",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T18:24:10.000Z",
+        "contentSnippet": "MariaDB Connector/Node.js is used to connect applications developed on Node.js to MariaDB and MySQL databases. From 3.3.0 until 3.5.4, the zero-configuration TLS fingerprint-validation path calls Ed25519PasswordAuth.hash() through Authentication.validateFingerPrint, but Ed25519Pa",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-97147 - OpenStack Mistral Insecure Direct Object Reference and Resource Hijacking Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97147",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T18:18:33.000Z",
+        "contentSnippet": "In OpenStack Mistral through 23.0.0, several of the v2 API write paths resolve the target object with a query that can return another project's resource, then write to it. An authenticated project member can use this to rewrite and un-publish another project's public action defin",
+        "cveScore": 7.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-95210 - GnuTLS Improper Certificate Validation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95210",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T18:18:33.000Z",
+        "contentSnippet": "Improper certificate validation in gnutls v3.8.13 causes the application to accept certificates containing invalid extensions.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-95184 - GnuTLS Improper Certificate Validation Denial of Service",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95184",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T18:18:33.000Z",
+        "contentSnippet": "Improper certificate validation in gnutls v3.8.13 causes the application to reject legitimate certificates for valid users, leading to a Denial of Service (DoS).",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-93861 - OpenStack Mistral Workflow Unauthorized Access Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93861",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T18:18:31.000Z",
+        "contentSnippet": "In OpenStack Mistral through 23.0.0, the workflow membership API lets a project that has accepted a share of another project's private workflow create a further membership naming a third project. The new membership row is created with its project_id defaulted to the accepting pro",
+        "cveScore": 6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-93860 - OpenStack Mistral Missing Authorization Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93860",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T18:18:30.000Z",
+        "contentSnippet": "In OpenStack Mistral through 23.0.0, the /v2/maintenance API controller clears the request context and calls the maintenance service directly without any policy enforcement. Any holder of a valid Mistral token, regardless of assigned role, can read and change the service's cluste",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-93858 - OpenStack Mistral Command Injection Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93858",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T18:18:30.000Z",
+        "contentSnippet": "In OpenStack Mistral through 23.0.0, the std.ssh_proxied action passes a caller-supplied proxy_command value directly to paramiko.ProxyCommand() before any SSH connection to a gateway or target host is attempted. An authenticated project member can use the standard action-executi",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-14990 - IBM DataPower Gateway affected by cross-site scripting",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-14990",
@@ -677,234 +902,30 @@
         "contentSnippet": "In Splunk Enterprise versions below 10.4.3, 10.2.7, 10.0.10, and 9.4.15, a user that holds a role with the run_collect capability could use the collect Search Processing Language (SPL) command to write events to internal indexes outside the index access configured for the role. T",
         "cveScore": 4.3,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-97717 - Denial of Service in Absolute Secure Access",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97717",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T19:54:40.000Z",
-        "contentSnippet": "CVE-2026-97717 is a vulnerability in the proxy sub-system of Secure Access servers prior to 14.60. Authenticated attackers can send malformed data to the server and cause a persistent denial of service.",
-        "cveScore": 6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-97716 - Denial of Service in Absolute Secure Access",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97716",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T19:41:12.000Z",
-        "contentSnippet": "CVE-2026-97716 is a vulnerability in the connection set up sub-system of Secure Access servers prior to version 14.60. Unauthenticated attackers can send specially crafted traffic to the server and cause a persistent denial of service.",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-34499 - Johnson Controls ADVMS Hard-Coded Cryptographic Key Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34499",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T19:36:37.000Z",
-        "contentSnippet": "Use of hard-coded cryptographic key vulnerability in Johnson Controls ADVMS allows Read Sensitive Constants Within an Executable. This issue affects ADVMS: before 3.10.",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-107353 - traverse: set() can write to built-in prototypes via an untrusted path",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107353",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T19:35:15.000Z",
-        "contentSnippet": "traverse (npm) versions 0.3.6 through 0.3.9, 0.4.0 through 0.4.6, 0.5.0 through 0.5.2, and 0.6.0 through 0.6.11 allow prototype pollution through set(). When the path passed to set() crosses a primitive value, the next path segment is resolved on that primitive's built-in prototy",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-97715 - Denial of Service in Absolute Secure Access",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97715",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T19:30:14.000Z",
-        "contentSnippet": "CVE-2026-97715 is a vulnerability in the client registration process of Secure Access servers prior to version 14.60. Authenticated attackers can pass malformed data to the server and cause a persistent denial of service.",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-107176 - Cluster-samples-operator: role reads all secrets in openshift-config, not just pull-secret",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107176",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T19:29:31.000Z",
-        "contentSnippet": "A flaw was found in the cluster-samples-operator. The RBAC Role coreos-pull-secret-reader in namespace openshift-config grants get, list, and watch permissions on all Secret resources without resourceNames scoping. The operator only requires access to the pull-secret Secret. If t",
-        "cveScore": 6.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-107161 - Cyrus-sasl: heap buffer overflow in cyrus-sasl add_to_challenge() allows malicious server to crash or compromise digest-md5 clients",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107161",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T19:29:28.000Z",
-        "contentSnippet": "A heap-based buffer overflow flaw was found in Cyrus SASL. The add_to_challenge() function in the DIGEST-MD5 plugin computes the size of the buffer needed for a challenge/response field before DIGEST-MD5 quoting is applied, but does not recompute that size when quoting (escaping ",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-97714 - Denial of service vulnerability in Secure Access",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97714",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T19:20:14.000Z",
-        "contentSnippet": "CVE-2026-97714 is a is a vulnerability in the authentication sub-system of Secure Access servers prior to version 14.60. Attackers can send a malformed response during authentication and cause a persistent denial of service.",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-107313 - pgjdbc stores bytes of earlier messages in place of a large value on GSS-encrypted connections",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107313",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T19:17:35.000Z",
-        "contentSnippet": "pgjdbc, the PostgreSQL JDBC Driver, versions 42.7.4 and 42.7.5 can send the previous contents of the GSS send buffer in place of the first part of a value on a connection with GSS encryption (gssEncMode=prefer or require), and the server stores the value without an error. The buf",
-        "cveScore": 4.2,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-107225 - Excelize: GetStyle panics on a negative fillId, borderId or fontId in styles.xml",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107225",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T19:17:35.000Z",
-        "contentSnippet": "Excelize is a Go language library for reading and writing Microsoft Excel spreadsheets. From 2.8.0 to 2.11.0, GetStyle's fill, border, and font extraction predicates check only upper bounds for attacker-controlled style-table indices. File.GetStyle relies on extractStyleCondFuncs",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-107224 - Excelize: A Zip64 uncompressed-size of 2^63 panics OpenFile/OpenReader",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107224",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T19:17:35.000Z",
-        "contentSnippet": "Excelize is a Go language library for reading and writing Microsoft Excel spreadsheets. From 2.1.0 to 2.11.0, a Zip64 uncompressed size with the high bit set is converted from uint64 to a negative int64 before signed size-limit checks and allocation. ReadZipReader obtains Uncompr",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-107223 - Excelize: Unbounded attribute is loaded with no MaxColumns check and expanded per-column by flatCols(), so any column mutator hangs or OOMs the process",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107223",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T19:17:34.000Z",
-        "contentSnippet": "Excelize is a Go language library for reading and writing Microsoft Excel spreadsheets. From 2.1.0 to 2.11.0, flatCols expands file-loaded column ranges without validating Min and Max against the worksheet column limit. SetColWidth reaches flatCols, which expands xlsxCol.Min thro",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-107222 - Excelize: GetConditionalFormats indexes conditional-formatting rule sub-elements with no length or nil check",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107222",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T19:17:34.000Z",
-        "contentSnippet": "Excelize is a Go language library for reading and writing Microsoft Excel spreadsheets. From 2.7.0 to 2.11.0, conditional-format extraction indexes required child slices or dereferences an optional colorScale child without validating malformed rule structure. GetConditionalFormat",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-107221 - Excelize: a row whose earlier cell has a higher column reference than its last cell panics index out of range on almost every worksheet read API",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107221",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T19:17:34.000Z",
-        "contentSnippet": "Excelize is a Go language library for reading and writing Microsoft Excel spreadsheets. From 2.0.0 to 2.11.0, checkRow sizes its target cell slice from the last cell in XML document order and then re-scatters every cell by its explicit column reference. GetCellValue reaches workS",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-107220 - Excelize: Panic in cellInRange on a worksheet with an empty mergeCell ref",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107220",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T19:17:34.000Z",
-        "contentSnippet": "Excelize is a Go language library for reading and writing Microsoft Excel spreadsheets. From 2.7.1 to 2.11.0, mergeCellsParser leaves the cached rectangle empty for an empty mergeCell ref and then passes that empty slice to cellInRange without a length check. GetCellValue reaches",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-107219 - Excelize: Unbounded spinCount in agile decryption burns CPU during OpenFile",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107219",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T19:17:34.000Z",
-        "contentSnippet": "Excelize is a Go language library for reading and writing Microsoft Excel spreadsheets. From 2.3.1 to 2.11.0, agile decryption accepts an attacker-controlled spinCount and performs that many password-key derivation iterations before verifier validation. OpenFile reaches agileDecr",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-107218 - Excelize: RIGHT() on supplementary-plane text slices with a negative index and panics",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107218",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T19:17:34.000Z",
-        "contentSnippet": "Excelize is a Go language library for reading and writing Microsoft Excel spreadsheets. From 2.10.1 to 2.11.0, RIGHT validates the requested length with UTF-16 code-unit counts but slices a rune array using Unicode code-point counts. RIGHT reaches leftRight through CalcCellValue,",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-107217 - Excelize ColumnNameToNumber: int64 overflow yields an out-of-domain coordinate with nil error, causing negative slice index panic on r=\"0\" rows",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107217",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T19:17:33.000Z",
-        "contentSnippet": "Excelize is a Go language library for reading and writing Microsoft Excel spreadsheets. From 2.0.0 to 2.11.0 in github.com/xuri/excelize/v2 and from 1.1.0 to 1.4.1 in github.com/xuri/excelize, ColumnNameToNumber accumulates a bijective base-26 value in int64 without detecting ove",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-106164 - Infinite Loop in Telerik Document Processing XLS Import",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-106164",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T19:17:31.000Z",
-        "contentSnippet": "In Progress® Telerik® Document Processing SpreadProcessing library, versions prior to 2026.3.1006, an infinite loop vulnerability exists when importing an XLS file with a specifically-targted corruption, the import timeout is ignored resulting in an unresponsive CPU thread and de",
-        "cveScore": 7.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-103371 - Apache Geode: Management REST API: Insertion of Sensitive Information into Log File",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-103371",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T19:17:31.000Z",
-        "contentSnippet": "Insertion of Sensitive Information into Log File in Apache Geode Web Management. This issue affects Apache Geode: from 2.0.0 before 2.0.3. Users are recommended to upgrade to version 2.0.3, which fixes the issue.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-96335 - WordPress Forminator plugin <= 1.57.2 - Broken Access Control vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96335",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T18:17:32.000Z",
-        "contentSnippet": "Missing Authorization vulnerability in WPMU DEV Forminator allows Exploiting Incorrectly Configured Access Control Security Levels. This issue affects Forminator: from n/a through 1.57.2.",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-56851 - Panic parsing crafted input in x/text/secure/precis in golang.org/x/text",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56851",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T18:17:20.000Z",
-        "contentSnippet": "The Nickname profile can panic with an out-of-bounds slice error when transforming crafted input into a short destination buffer.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-107216 - Excelize ANCHORARRAY: mutually-referencing array formulas recurse unboundedly via re-entrant CalcCellValue, causing a fatal stack overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107216",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T18:17:19.000Z",
-        "contentSnippet": "Excelize is a Go language library for reading and writing Microsoft Excel spreadsheets. From 2.8.1 to 2.11.0, ANCHORARRAY recursively calls the exported CalcCellValue function, creating a fresh calculation context at each cycle and bypassing in-flight and iteration controls. ANCH",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-107215 - Excelize: extractPart allocates attacker-controlled, unbounded and negative-sized buffers from CFB directory entries: remote panic / OOM DoS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107215",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T18:17:19.000Z",
-        "contentSnippet": "Excelize is a Go language library for reading and writing Microsoft Excel spreadsheets. From 2.3.1 to 2.11.0, extractPart allocates a byte slice directly from an attacker-controlled CFB directory-entry size before validating the sector chain or size domain. extractPart trusts the",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-107214 - Excelize Decrypt: unrecoverable panics on malformed OLE/CFB encrypted workbooks",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107214",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T18:17:19.000Z",
-        "contentSnippet": "Excelize is a Go language library for reading and writing Microsoft Excel spreadsheets. From 2.3.1 to 2.11.0, the decryption dispatch performs insufficient structural and parameter validation before standard and agile decryptors slice, index, allocate, and divide using attacker-c",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
+      {
+        "title": "Pay-per-inference for AI agents: How BlockRun and Incarna use Amazon Bedrock AgentCore payments",
+        "link": "https://aws.amazon.com/blogs/machine-learning/pay-per-inference-for-ai-agents-how-blockrun-and-incarna-use-amazon-bedrock-agentcore-payments/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-10-08T18:33:29.000Z",
+        "contentSnippet": "Amazon Bedrock AgentCore payments gives AI agents a managed way to pay for services on demand, with spending limits enforced by the infrastructure. See how Incarna's agents pay BlockRun for model inference one request at a time over x402, cutting the work of adding x402 payment s"
+      },
+      {
+        "title": "Share GPU clusters across teams with isolation and fairness using Amazon SageMaker HyperPod",
+        "link": "https://aws.amazon.com/blogs/machine-learning/share-gpu-clusters-across-teams-with-isolation-and-fairness-using-amazon-sagemaker-hyperpod/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-10-08T16:20:04.000Z",
+        "contentSnippet": "A reference architecture for securely sharing one Amazon SageMaker HyperPod EKS cluster across multiple teams, using AWS IAM Identity Center for authentication, per-team SageMaker Domains and Kubernetes namespaces for isolation, HyperPod Task Governance for fairness, and namespac"
+      },
+      {
+        "title": "JetBrains Releases Mellum2.1: A 12B MoE Open Model for Coding Agents",
+        "link": "https://www.marktechpost.com/2026/10/08/jetbrains-releases-mellum2-1-a-12b-moe-open-model-for-coding-agents/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-10-08T16:17:35.000Z",
+        "contentSnippet": "JetBrains released Mellum2.1, an Apache 2.0, 12B mixture-of-experts thinking model with 2.5B active parameters. RL in real repositories lifted its SWE-bench Verified score from 2.0 to 47.0. The post JetBrains Releases Mellum2.1: A 12B MoE Open Model for Coding Agents appeared fir"
+      },
       {
         "title": "Architect Launches Liquid Inference, a Real-Time Auction for LLM Inference",
         "link": "https://www.marktechpost.com/2026/10/08/architect-launches-liquid-inference-a-real-time-auction-for-llm-inference/",
@@ -1583,27 +1604,6 @@
         "source": "Google AI Blog",
         "isoDate": "2026-09-23T18:00:00.000Z",
         "contentSnippet": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network."
-      },
-      {
-        "title": "Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war",
-        "link": "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/",
-        "source": "Simon Willison's Weblog",
-        "isoDate": "2026-09-22T23:46:41.000Z",
-        "contentSnippet": "Yesterday was Grok 4.7 (pelicans) and MiMo v2.6 Flash/Pro (more pelicans). Today Anthropic released Claude Opus 5.5, and around an hour later OpenAI released GPT-6 Sol and GPT-6 Luna. It's going to take a while to get a good read on all of these new models, but here are my impres"
-      },
-      {
-        "title": "Bring more intelligence to everyday work with GPT-6 Sol and GPT-6 Luna on Amazon Bedrock",
-        "link": "https://aws.amazon.com/blogs/machine-learning/bring-more-intelligence-to-everyday-work-with-gpt-6-sol-and-gpt-6-luna-on-amazon-bedrock/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-09-22T18:10:22.000Z",
-        "contentSnippet": "GPT-6 Sol and GPT-6 Luna are now generally available on Amazon Bedrock, giving you more options to match intelligence and efficiency to each workload."
-      },
-      {
-        "title": "Claude Opus 5.5 is now available on AWS",
-        "link": "https://aws.amazon.com/blogs/machine-learning/claude-opus-5-5-is-now-available-on-aws/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-09-22T17:28:01.000Z",
-        "contentSnippet": "Claude Opus 5.5, Anthropic's most capable Opus model for agentic coding, knowledge work, and long-running tasks, is now available on Amazon Bedrock and Claude Platform on AWS. This post covers what's new in Opus 5.5, practical guidance, and how to start building with the model on"
       }
     ],
     "virtualization": [
@@ -2310,6 +2310,76 @@
     ],
     "hardware": [
       {
+        "title": "CTERA Forward Deployed Engineering Embeds Engineers With Customers to Put File-Data AI Into Production",
+        "link": "https://www.storagereview.com/news/ctera-forward-deployed-engineering-embeds-engineers-file-data-ai-production",
+        "source": "StorageReview",
+        "isoDate": "2026-10-08T19:40:34.000Z",
+        "contentSnippet": "CTERA announced CTERA Forward Deployed Engineering on October 6, a service that places CTERA engineers inside customer environments to put specific AI use cases into production on the customer’s own unstructured file data. Each engagement is tied to a defined business outcome, ru"
+      },
+      {
+        "title": "Best Mini PCs in 2026: Lab-Tested Leaderboard",
+        "link": "https://www.storagereview.com/best/mini-pcs",
+        "source": "StorageReview",
+        "isoDate": "2026-10-08T19:15:00.000Z",
+        "contentSnippet": "Published October 8, 2026. Ranked on our current cross-platform client suite; systems tested on earlier suite versions are noted in Also Tested. Every mini PC ranked on this page has been through the StorageReview lab. We run the same client suite on every one: PCMark 10, Geekben"
+      },
+      {
+        "title": "GlobalFoundries to produce silicon interposers for TSMC's CoWoS in the US — Five-year agreement valued at $2 billion",
+        "link": "https://www.tomshardware.com/tech-industry/semiconductors/globalfoundries-to-produce-silicon-interposers-for-tsmcs-cowos-in-the-us-five-year-agreement-valued-at-usd2-billion",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-08T18:23:28.000Z",
+        "contentSnippet": "GlobalFoundries becomes a part of TSMC's CoWoS supply chain in the U.S.: set to participate in production of leading-edge AI and HPC accelerators without investing in leading-edge process technologies."
+      },
+      {
+        "title": "ASUS ExpertCenter PN55 Review: Ryzen AI 7 450, Dual 2.5GbE, and 64GB of DDR5 in 0.57 Liters",
+        "link": "https://www.storagereview.com/review/asus-expertcenter-pn55-review",
+        "source": "StorageReview",
+        "isoDate": "2026-10-08T17:54:10.000Z",
+        "contentSnippet": "The ASUS ExpertCenter PN55 is the AMD side of ASUS’s commercial mini PC line, a 130 x 130 x 34mm box that puts a Ryzen AI 400 Series processor, two DDR5 SO-DIMM slots, two M.2 2280 slots, and dual 2.5GbE behind a fingerprint reader and a Copilot key. Our review unit runs the Ryze"
+      },
+      {
+        "title": "U.S. suspends green card path for H-1B workers at Microsoft and Adobe — labor certification program blocked due to alleged fraud",
+        "link": "https://www.tomshardware.com/tech-industry/policy/u-s-suspends-green-card-path-for-h-1b-workers-at-microsoft-and-adobe-labor-certification-program-blocked-due-to-alleged-fraud",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-08T17:26:07.000Z",
+        "contentSnippet": "U.S. suspends green card path for H-1B workers at Microsoft, Adobe, and IT outsourcing companies — PERM program blocked due to alleged fraud"
+      },
+      {
+        "title": "The Atari 800XL returns with a 'faithful' but modern Retro Games Ltd redesign",
+        "link": "https://www.tomshardware.com/video-games/retro-gaming/the-atari-800xl-returns-with-a-faithful-but-modern-retro-games-ltd-redesign-classic-8-bit-home-computer-revamp-sports-mechanical-keyboard-and-hdmi-connectivity",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-08T16:37:20.000Z",
+        "contentSnippet": "Pre-orders for the Atari-licensed THE 800XL began today. This is a modernized yet claimed to be faithful recreation of the classic 8-bit home computer, popular in the early 1980s."
+      },
+      {
+        "title": "Scality AI Inference Factory Serves KV Cache From Object Storage Over RDMA, 14x Faster Than Recompute",
+        "link": "https://www.storagereview.com/news/scality-ai-inference-factory-kv-cache-object-storage-rdma",
+        "source": "StorageReview",
+        "isoDate": "2026-10-08T16:32:44.000Z",
+        "contentSnippet": "Scality today launched Scality AI Inference Factory, an open-code software stack for running open-weight models on infrastructure the customer owns. Scality validates, ships, and maintains the whole stack, which places its AI Data Infrastructure (ADI) object storage under the inf"
+      },
+      {
+        "title": "Department of War dishes out $1.5 billion loan commitment to boost semiconductor supply chain",
+        "link": "https://www.tomshardware.com/tech-industry/semiconductors/department-of-war-dishes-out-usd1-5-billion-loan-commitment-to-boost-semiconductor-supply-chain-wolfspeed-to-focus-on-national-security-applications-as-part-of-30-year-agreement",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-08T16:24:54.000Z",
+        "contentSnippet": "Wolfspeed has secured a conditional $1.5 billion, 30-year loan commitment from the U.S. Department of War to expand GaN epitaxy and radiation-hardened SiC and GaN technologies for U.S. national security applications"
+      },
+      {
+        "title": "KIOXIA LD4 Brings QLC to E1.L for 1U Servers, Sampling at 30.72TB With a Path to 122.88TB",
+        "link": "https://www.storagereview.com/news/kioxia-ld4-qlc-e1-l-ssd-1u-servers-30-72tb-122-88tb",
+        "source": "StorageReview",
+        "isoDate": "2026-10-08T16:21:35.000Z",
+        "contentSnippet": "KIOXIA America announced the LD4 Series today, its first E1.L SSD built with BiCS FLASH generation 8 QLC flash. The drive targets read-intensive storage in high-density 1U servers and is sampling to select customers now at 15.36TB and 30.72TB, on an architecture KIOXIA says it ha"
+      },
+      {
+        "title": "Finland orders Google to stop work on two AI data centers over alleged deforestation",
+        "link": "https://www.tomshardware.com/tech-industry/data-centers/finland-orders-google-to-stop-work-on-two-ai-data-centers-over-alleged-deforestation-company-admits-it-has-fallen-short-of-our-own-high-standards-in-this-instance",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-08T15:52:45.000Z",
+        "contentSnippet": "Finnish authorities say they cannot conduct a proper environmental assessment after the site has already been changed."
+      },
+      {
         "title": "Bambu Lab’s 3D printing patent application for a new heatbed design may improve peeling issues",
         "link": "https://www.tomshardware.com/3d-printing/bambu-labs-3d-printing-patent-application-for-a-new-heatbed-design-may-improve-peeling-issues-replacement-costs-could-possibly-rise-as-a-consequence",
         "source": "Tom's Hardware",
@@ -2938,76 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-10-05T10:50:00.000Z",
         "contentSnippet": "ZNTC completes development of Russia's first 130nm-capable lithography stepper, which could be used to produce chips sometimes late this decade, or rather early next."
-      },
-      {
-        "title": "US Senate kills bill that could potentially shield Americans from skyrocketing power bills due to AI data centers",
-        "link": "https://www.tomshardware.com/tech-industry/data-centers/us-senate-kills-bill-that-could-potentially-shield-americans-from-skyrocketing-power-bills-due-to-ai-data-centers-opponents-say-bill-is-toothless-and-doesnt-do-enough-to-protect-citizens",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-05T10:25:00.000Z",
-        "contentSnippet": "The U.S. Senate has blocked the Ratepayer Protection Act in a 57-43 vote, killing legislation that would have pushed regulators to consider making data centers pay the incremental grid costs created by their massive electricity demand."
-      },
-      {
-        "title": "Customer sends two-stick $16,000 DDR5 memory kit to repair shop",
-        "link": "https://www.tomshardware.com/pc-components/ddr5/customer-sends-two-stick-usd16-000-ddr5-memory-kit-to-repair-shop-soaring-replacement-costs-make-dimm-repairs-viable-technician-revives-dead-module-with-hot-air-reflow-and-new-pmic",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-05T10:00:00.000Z",
-        "contentSnippet": "A YouTube channel best known for its skillful graphics card fixes has published its first DDR5 module repair video after the economics of RAM repair change."
-      },
-      {
-        "title": "Windows 11 was released five years ago today",
-        "link": "https://www.tomshardware.com/software/windows/windows-11-was-released-five-years-ago-today-microsoft-promises-latest-update-is-predictable-and-low-disruption",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-05T09:51:27.000Z",
-        "contentSnippet": "Windows 11 was released five years ago, on October 5, 2021. But it feels like it's been around longer as Microsoft’s latest OS has put users through so much pain."
-      },
-      {
-        "title": "Anthropic reports Florida woman’s Claude ‘diary’ threat to shoot up sheriff’s office, felony charge follows",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropic-reports-florida-womans-claude-diary-threat-to-shoot-up-sheriffs-office-felony-charge-follows-its-at-least-the-third-such-conversation-to-reach-police-since-august",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-05T09:40:00.000Z",
-        "contentSnippet": "Anthropic reviewers reported a Florida woman’s Claude threat against the Lee County Sheriff’s Office, leading to a felony charge."
-      },
-      {
-        "title": "Russia's uncrewed robot tank fails during debut military display in front of President Putin",
-        "link": "https://www.tomshardware.com/tech-industry/russias-uncrewed-robot-tank-fails-during-debut-military-display-in-front-of-president-putin-vehicle-repeatedly-lost-control-links-and-eventually-got-stuck-in-the-mud-despite-the-switch-to-a-human-driver",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-05T09:20:00.000Z",
-        "contentSnippet": "Russia’s new Shturm uncrewed assault tank reportedly suffered repeated command-link failures during its Tsentr-2026 debut, forcing organizers to use a human driver before the vehicle eventually got stuck in mud"
-      },
-      {
-        "title": "Best Amazon Prime Day tech deals live",
-        "link": "https://www.tomshardware.com/live/news/amazon-prime-big-deal-days-2026",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-05T06:48:40.000Z",
-        "contentSnippet": "Get all the best deals in the October 2026 Amazon Prime Big Deal Days tech event."
-      },
-      {
-        "title": "Vultr Commits $1.2B to the AMD Helios AI Rack by HPE, HPE’s First Order for the 72-GPU MI455X System",
-        "link": "https://www.storagereview.com/news/vultr-1-2b-amd-helios-ai-rack-by-hpe-first-order",
-        "source": "StorageReview",
-        "isoDate": "2026-10-04T19:37:15.000Z",
-        "contentSnippet": "HPE has booked its first order for the AMD Helios AI Rack by HPE, a $1.2 billion commitment from Vultr to deploy the 72-GPU racks across Vultr’s cloud data centers in the United States. HPE announced the order on September 30, the same day it held its Networking investor day, and"
-      },
-      {
-        "title": "Intel Xeon 6+ SKU List and Value Analysis: Clearwater Forest Runs Wide",
-        "link": "https://www.servethehome.com/intel-xeon-6-sku-list-and-value-analysis-clearwater-forest-runs-wide/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-10-04T15:00:08.000Z",
-        "contentSnippet": "With Intel's Xeon 6+ \"Clearwater Forest\" CPUs now shipping in volume, we are taking a look at the various SKU options among chips, and what configurations offer the best value for different needs The post Intel Xeon 6+ SKU List and Value Analysis: Clearwater Forest Runs Wide appe"
-      },
-      {
-        "title": "Modder 'fixes' melting RTX 5090 power connectors with custom distributor",
-        "link": "https://www.tomshardware.com/pc-components/gpus/modder-fixes-melting-rtx-5090-power-connectors-with-custom-distributor-dual-8-pin-mod-peaks-at-just-40c-during-a-48-hour-550w-stress-test",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-04T14:50:00.000Z",
-        "contentSnippet": "Reddit user u/DallasGrave shared a fix for his RTX 5090, one of the best graphics cards, whose 12VHPWR connector was overheating, along with an image of a module screwed onto the back of his GPU."
-      },
-      {
-        "title": "Robotics startup has real human vs. robot cage match, California responds with cease-and-desist order",
-        "link": "https://www.tomshardware.com/tech-industry/robotics/robotics-startup-has-real-human-vs-robot-cage-match-california-responds-with-cease-and-desist-order-regulator-threatens-misdemeanor-charges-after-youtuber-fights-three-robotic-humanoids",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-04T14:36:25.000Z",
-        "contentSnippet": "The California State Athletic Commission intervened when it saw a human facing off with a humanoid robot inside the fighting ring."
       }
     ]
   }
