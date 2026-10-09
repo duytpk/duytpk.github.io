@@ -1,8 +1,80 @@
 {
-  "updatedAt": "2026-10-09T00:52:21.785Z",
+  "updatedAt": "2026-10-09T07:01:01.664Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-107889 - Keycloak-services: keycloak-services: stored xss on login page via kcsanitize bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107889",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-09T04:28:55.000Z",
+        "contentSnippet": "A flaw was found in the login theme rendering component of Keycloak. The issue occurs because the security filter responsible for cleaning user input can be bypassed, allowing a realm administrator to store malicious scripts in display fields. This could result in unauthorized Ja",
+        "cveScore": 5.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-107886 - OpenPrinting CUPS Printer Class Management Double-Free Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107886",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-09T04:18:05.000Z",
+        "contentSnippet": "OpenPrinting CUPS before 2.4.20 contains a double-free in printer-class management. When CUPS-Add-Modify-Class replaces an existing class member list, add_class() frees pclass->printers without clearing the pointer. If subsequent validation fails, the class retains the dangling p",
+        "cveScore": 2.3,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-107885 - OpenPrinting CUPS Resource Exhaustion Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107885",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-09T04:18:04.000Z",
+        "contentSnippet": "OpenPrinting CUPS through 2.4.20 contains a resource-exhaustion vulnerability in the submission-timeout handling of cupsdCheckJobs(). The scheduler suppresses timeout processing for all pending jobs whenever any client connection has an in-flight Send-Document operation, without ",
+        "cveScore": 3.3,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-107890 - CUPS NULL Pointer Dereference Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107890",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-09T04:10:52.000Z",
+        "contentSnippet": "OpenPrinting CUPS before 2.4.20 contains a NULL pointer dereference caused by repeated IPP group tags in job-creation requests. IPP parsing creates unnamed separator attributes with IPP_TAG_ZERO, but add_job() converts these separators to IPP_TAG_JOB. During job startup, get_opti",
+        "cveScore": 3.3,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-107888 - OpenPrinting CUPS NULL Pointer Dereference",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107888",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-09T04:06:55.000Z",
+        "contentSnippet": "OpenPrinting CUPS before 2.4.20 contains a NULL pointer dereference in cupsdCheckJobs() when a job marked job-held-on-create refers to a temporary printer that has been automatically deleted. Temporary-printer cleanup can remove the destination without canceling its held jobs, an",
+        "cveScore": 5.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-7826 - Heap out-of-bounds read in FalkorDB BufferSerializerIOv2_ReadBuffer via crafted RDB",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-7826",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-09T04:04:30.000Z",
+        "contentSnippet": "A heap-based out-of-bounds read in the BufferSerializerIOv2_ReadBuffer function (src/serializers/serializer_io.c) in FalkorDB before 4.18.4 allows a remote attacker who can issue Redis replication commands (for example, against an instance with no password configured) to cause a ",
+        "cveScore": 9.1,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-7827 - Stack-based buffer overflow in FalkorDB _RdbLoadEntity via unbounded property count in crafted RDB",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-7827",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-09T04:04:29.000Z",
+        "contentSnippet": "A stack-based buffer overflow in the _RdbLoadEntity function of the RDB graph decoders (src/serializers/decoders/*/decode_graph_entities.c) in FalkorDB before 4.18.4 allows a remote attacker who can issue Redis replication commands (for example, against an instance with no passwo",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-5759 - Double free and use-after-free in FalkorDB RdbLoadDeletedNodes allows remote code execution via crafted RDB",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-5759",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-09T04:04:28.000Z",
+        "contentSnippet": "A double free and use-after-free vulnerability in the RdbLoadDeletedNodes function of the RDB graph decoders (src/serializers/decoders/*/decode_graph_entities.c) in FalkorDB before 4.18.1 allows a remote attacker who can issue Redis replication commands (for example, against an i",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
       {
         "title": "CVE-2026-97032 - HTTP/2 server crash due to HPACK encoder race in net/http",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-97032",
@@ -830,81 +902,16 @@
         "contentSnippet": "A logic vulnerability in Brocade Fabric OS versions before 10.0.1 web management framework allows an authenticated, low-privileged user to bypass inner Role-Based Access Control (RBAC) checks under specific environmental conditions. Successful exploitation lowers the system autho",
         "cveScore": 6.9,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-87688 - Brocade Fabric OS Command Injection Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-87688",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-08T04:17:56.000Z",
-        "contentSnippet": "An input validation vulnerability exists in the security certificate management component of the Brocade Fabric OS administrative management API. When processing certificate management operations, user-supplied certificate identifiers are handled without adequate sanitization pri",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-87687 - Brocade Fabric OS Improper Authorization Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-87687",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-08T04:17:56.000Z",
-        "contentSnippet": "An authorization and input validation vulnerability exists in Brocade Fabric OS versions before 9.2.2d and 10.0.0 through 10.0.0a1. An authenticated user with restricted privileges in one Virtual Fabric can exploit this issue by submitting a specially crafted request containing a",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-87685 - Brocade Fabric OS WebTools Arbitrary File Manipulation Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-87685",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-08T04:17:56.000Z",
-        "contentSnippet": "An arbitrary file manipulation vulnerability exists in the WebTools management interface of Brocade Fabric OS versions before 9.2.2d and 10.0.0 through 10.0.0a1. When processing configuration transfer requests, the application fails to properly validate and sanitize a user-suppli",
-        "cveScore": 8.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-87675 - Brocade Fabric OS OS Command Injection Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-87675",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-08T04:17:55.000Z",
-        "contentSnippet": "An OS command injection vulnerability exists in the configuration management subsystem of Brocade Fabric OS versions before 9.2.2d and 10.0.0 through 10.0.0a1. When performing a configuration download operation, the management daemon will relay configuration parameters, user-supp",
-        "cveScore": 7.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-87674 - Brocade Fabric OS Local Privilege Escalation Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-87674",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-08T04:17:53.000Z",
-        "contentSnippet": "A local privilege escalation vulnerability exists in the system logging daemon of Brocade Fabric OS versions before 9.2.2d and 10.0.0 through 10.0.0a1. Insufficient access controls on internal inter-process communication (IPC) channels allow an unprivileged local user to submit m",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-87673 - Brocade Fabric OS OS Command Injection Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-87673",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-08T04:17:53.000Z",
-        "contentSnippet": "An OS command injection vulnerability exists in maintenance command-line diagnostic utilities on Brocade Fabric OS versions before 9.2.2d and 10.0.0 through 10.0.0a1. The binary fails to sanitize user-supplied input options when invoking underlying system commands through a shell",
-        "cveScore": 7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-87667 - Brocade Fabric OS Argument Injection Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-87667",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-08T04:17:52.000Z",
-        "contentSnippet": "An argument injection vulnerability exists in the configuration management command-line utility of Brocade Fabric OS versions before 9.2.2d and 10.0.0 through 10.0.0a1. When executing configuration viewing commands with search pattern filters, the utility fails to sanitize user-s",
-        "cveScore": 8.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-87666 - Brocade Fabric OS OS Command Injection Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-87666",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-08T04:17:52.000Z",
-        "contentSnippet": "An OS command injection vulnerability exists in the time and zone management subsystem of Brocade Fabric OS versions before 9.2.2d and 10.0.0 through 10.0.0a1. When updating system timezone settings via the REST API or configuration download routines, the system fails to sanitize",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
+      {
+        "title": "Google Research RRSI Guide: Mastering Self-Improving AI Agents",
+        "link": "https://www.marktechpost.com/2026/10/08/google-research-rrsi-guide-mastering-self-improving-ai-agents/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-10-09T05:06:17.000Z",
+        "contentSnippet": "Explore a comprehensive coding guide to Google Research's RRSI (Regularized Recursive Self-Improvement), detailing how noise bands, cost rules, and leakage screens enable safe, efficient, and self-improving AI agents. The post Google Research RRSI Guide: Mastering Self-Improving "
+      },
       {
         "title": "Pay-per-inference for AI agents: How BlockRun and Incarna use Amazon Bedrock AgentCore payments",
         "link": "https://aws.amazon.com/blogs/machine-learning/pay-per-inference-for-ai-agents-how-blockrun-and-incarna-use-amazon-bedrock-agentcore-payments/",
@@ -1594,13 +1601,6 @@
       {
         "title": "Google Beam expands with new regions, partners, and customers",
         "link": "https://blog.google/innovation-and-ai/technology/research/google-beam-expansion/",
-        "source": "Google AI Blog",
-        "isoDate": "2026-09-23T18:00:00.000Z",
-        "contentSnippet": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network."
-      },
-      {
-        "title": "Google Beam expands with new regions, partners, and customers",
-        "link": "https://blog.google/innovation-and-ai/models-and-research/google-research/google-beam-expansion/",
         "source": "Google AI Blog",
         "isoDate": "2026-09-23T18:00:00.000Z",
         "contentSnippet": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network."
