@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-10-08T20:23:43.735Z",
+  "updatedAt": "2026-10-09T00:52:21.785Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-97032 - HTTP/2 server crash due to HPACK encoder race in net/http",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97032",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T23:17:06.000Z",
+        "contentSnippet": "HTTP/2 servers could end up crashing due to inadvertently modifying its HPACK encoder concurrently. This happens because the server modifies the HPACK encoder from two goroutines without synchronization: one uses the encoder to encode a HEADERS frame as part of a response sent to",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-97031 - Reject malformed ECH outer extension references in crypto/tls",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97031",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T23:17:06.000Z",
+        "contentSnippet": "Multiple ECH outer extension references are not permitted under RFC 9849; previously, a client could send a well-crafted packet that could trigger memory exhaustion in the server process by specifying multiple references. We now reject these as malformed and curb the memory ampli",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-97030 - Recognize yield as regexp preceder keyword in html/template",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97030",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T23:17:05.000Z",
+        "contentSnippet": "A trusted template author may have previously written a valid template wherein the use of the 'yield' keyword would not be correctly escaped. We now ensure that valid keyword uses are escaped and non-keyword uses are not escaped.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-96207 - Microsoft Partner Center Elevation of Privilege Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96207",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T23:17:05.000Z",
+        "contentSnippet": "Improper certificate validation in Microsoft Partner Center allows an unauthorized attacker to elevate privileges over a network.",
+        "cveScore": 10,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-94510 - Microsoft Bookings Elevation of Privilege Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94510",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T23:17:05.000Z",
+        "contentSnippet": "Authorization bypass through user-controlled key in Microsoft Bookings allows an unauthorized attacker to elevate privileges over a network.",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-94448 - Reset context tracking on consecutive template expressions in html/template",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94448",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T23:17:05.000Z",
+        "contentSnippet": "When a JavaScript template literal contains consecutive expressions, the context tracking state was not properly reset upon entering a new expression. We now ensure that template-literal expression entries correctly reset context variables so all subsequent regular expression lit",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-94447 - Checksum database bypass for golang.org/toolchain in cmd/go",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94447",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T23:17:05.000Z",
+        "contentSnippet": "Previously, a user operating inside of a malicious Go project that defines a bogus golang.org/toolchain go.sum entry and operates a malicious GOMODPROXY the user chooses to use can bypass the intended checksum. We now ensure that golang.org/toolchain always goes to the network fo",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-94444 - Checksum bypass for golang.org/fips140 in cmd/go",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94444",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T23:17:05.000Z",
+        "contentSnippet": "Previously, a user operating inside of a malicious Go project that defines a bogus golang.org/fips140 and operates a malicious GOMODPROXY the user chooses to connect to can serve an arbitrary module in its place. We now unpack the trusted ziphash for the bundled golang.org/fips14",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-94440 - Memory limit bypass when parsing MIME headers in net/textproto, mime/multipart",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94440",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T23:17:04.000Z",
+        "contentSnippet": "Parsing a multipart form can bypass memory limits and read an arbitrarily long line into memory when the remaining limit at the start of a part is less than 400 bytes.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-94439 - HTTP/1 server connection desynchronization after 2xx CONNECT response in net/http",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94439",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T23:17:04.000Z",
+        "contentSnippet": "When an HTTP server handler sends a 2xx response to an HTTP/1 CONNECT request and returns without hijacking the connection, the server improperly continues to read and serve requests from the connection. Since a 2xx response to an HTTP/1 CONNECT converts the connection into a tun",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-88131 - Microsoft Dataverse Remote Code Execution Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-88131",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T23:17:04.000Z",
+        "contentSnippet": "Deserialization of untrusted data in Microsoft Dataverse allows an unauthorized attacker to execute code over a network.",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-83947 - Azure Event Grid Spoofing Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-83947",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T23:17:04.000Z",
+        "contentSnippet": "Missing authorization in Azure Event Grid allows an authorized attacker to perform spoofing over a network.",
+        "cveScore": 7.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-83943 - Azure API Center Information Disclosure Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-83943",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T23:17:04.000Z",
+        "contentSnippet": "Exposure of sensitive information to an unauthorized actor in Azure API Center allows an unauthorized attacker to disclose information over a network.",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-78669 - Excessive CPU consumption from repeated initial window changes in net/http",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78669",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T23:17:04.000Z",
+        "contentSnippet": "A malicious HTTP/2 peer can cause excessive CPU consumption in the client or server by opening a large number of streams and then sending many small SETTINGS frames containing SETTINGS_INITIAL_WINDOW_SIZE values.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-78667 - Lack of limit on size of parsed Range headers in net/http",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78667",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T23:17:03.000Z",
+        "contentSnippet": "When parsing a Range header containing a large number of small ranges, FileServer(FS), ServeContent, and ServeFile(FS) can consume an excessive amount of CPU.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-78663 - Double flow control refund on HTTP/2 server streams in net/http",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78663",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T23:17:03.000Z",
+        "contentSnippet": "The HTTP/2 server can refund connection-level flow control twice for the same data: Once when a client resets a stream (refunding data for any sent-but-unread portion of the stream), and again when a request handler reads the buffered data. A malicious client can exploit this to ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-78660 - HTTP/2 transport accepts malformed framing-related headers in net/http",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78660",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T23:17:03.000Z",
+        "contentSnippet": "Historically, we have been rather lax about malformed framing-related headers in our HTTP/2 implementation, as they cannot interfere with HTTP/2 framing. However, this makes it possible for our HTTP/2 implementation to forward responses containing such headers to an HTTP/1 client",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-78659 - HTTP/2 server memory exhaustion due to Trailer headers in net/http",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78659",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T23:17:03.000Z",
+        "contentSnippet": "When \"Trailer\" headers are sent by a client, the HTTP server internally uses the header values to populate the Request.Trailer map passed to the server handler. Because Request.Trailer is a map, each entry incurs memory overhead. For HTTP/2 servers, a malicious client can exploit",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-77900 - Azure App Service Remote Code Execution Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77900",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T23:17:03.000Z",
+        "contentSnippet": "Missing authentication for critical function in Azure App Service allows an unauthorized attacker to execute code over a network.",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-69435 - Azure SRE Agent Elevation of Privilege Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-69435",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T23:17:02.000Z",
+        "contentSnippet": "Missing authorization in Azure SRE Agent allows an authorized attacker to elevate privileges over a network.",
+        "cveScore": 9.6,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-56866 - HTTP/1 client connection desynchronization after CONNECT rejection in net/http",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56866",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T23:17:01.000Z",
+        "contentSnippet": "When http.Transport sends an HTTP/1 CONNECT request with a non-empty Request.Body, it writes the body directly to the connection without framing after the request headers. If the server rejects the CONNECT request with a non-2xx keep-alive response, Transport returns the connecti",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-56857 - Root.Mkdir(All) can follow junctions out of the root on Windows in os",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-56857",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T23:17:01.000Z",
+        "contentSnippet": "On Windows, when the target of Root.Mkdir or Root.MkdirAll is a junction pointing to an empty location, the operation can create a directory at the junction target even when that target is located outside the root. This only applies to operations where the last path component is ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-107802 - SumatraPDF — Windows command-line argument injection in AI selection-translate",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107802",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T23:17:00.000Z",
+        "contentSnippet": "SumatraPDF is a multi-format reader for Windows. In 3.6.1 and earlier, src/SelectionTranslate.cpp embeds selected or pasted translation text in quoted Windows command lines using incomplete quote-only escaping. The affected BuildGrokTranslateCmdLineTemp(), BuildClaudeTranslateCmd",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-107738 - SumatraPDF: Untrusted binary record offset used without lower-bound validation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107738",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T23:16:59.000Z",
+        "contentSnippet": "SumatraPDF is a multi-format reader for Windows. In 3.6.1 and earlier, ChmFile::GetCharZ() narrows file-controlled unsigned string offsets from /#WINDOWS and /#IVB to signed integers without a lower-bound check. An offset that becomes negative can make the function read before th",
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-107737 - SumatraPDF CHM `its://` signed index causes an out-of-bounds object lookup",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107737",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-08T23:16:59.000Z",
+        "contentSnippet": "SumatraPDF is a multi-format reader for Windows. In 3.6.1 and earlier, and in pre-release 3.7.0.20369 when WebView2 is absent or cannot initialize, ParseProtoUrl() accepts the signed host component of an its:// URL and FindHtmlWindowById() uses it directly as an index into gHtmlW",
+        "cveScore": 5.7,
+        "cveSeverity": "MEDIUM"
+      },
       {
         "title": "CVE-2026-105452 - Docker Sandboxes egress proxy could forward unrecognized client credentials to managed hosts",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-105452",
@@ -677,231 +902,6 @@
         "contentSnippet": "An OS command injection vulnerability exists in the time and zone management subsystem of Brocade Fabric OS versions before 9.2.2d and 10.0.0 through 10.0.0a1. When updating system timezone settings via the REST API or configuration download routines, the system fails to sanitize",
         "cveScore": 8.6,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-97664 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97664",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T23:17:01.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-89322 - Vault ACL Policy Evaluation May Allow Bypass of Deny Restrictions",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89322",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T23:17:01.000Z",
-        "contentSnippet": "Vault and Vault Enterprise did not consistently evaluate ACL policies against the canonical form of resource and policy names. This may allow an authenticated user with delegated permissions to bypass an explicit deny restriction and access a protected resource or assign a denied",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-107314 - pgjdbc does not enforce requireAuth when the value excludes every authentication method",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107314",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T23:17:00.000Z",
-        "contentSnippet": "pgjdbc, the PostgreSQL JDBC Driver, versions 42.7.11 through 42.7.13 enforce no restriction when the requireAuth connection property excludes all six authentication methods the driver knows, for example requireAuth=!password,!md5,!gss,!sspi,!scram-sha-256,!none. The driver then a",
-        "cveScore": 5.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-107315 - pgjdbc pads a value shorter than its declared length with bytes of earlier statements (rather than zeros)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107315",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T23:03:18.000Z",
-        "contentSnippet": "pgjdbc, the PostgreSQL JDBC Driver, versions 42.7.4 through 42.7.13 pads a value that is shorter than its declared length with bytes left in its send buffer instead of zeros, and the server stores those bytes as part of the value. The bytes are messages the driver sent earlier on",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-107285 - AsyncHttpClient: WebSocket proxy credentials sent to the origin server over a CONNECT tunnel",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107285",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T22:17:04.000Z",
-        "contentSnippet": "The AsyncHttpClient (AHC) library allows Java applications to easily execute HTTP requests and asynchronously process HTTP responses. Prior to 3.0.12 and 2.16.1, a proxied ws request is carried through CONNECT, but NettyRequestFactory.newNettyRequest and requestUri decide whether",
-        "cveScore": 5.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-107284 - AsyncHttpClient: WebSocket handshake continues after a failed Sec-WebSocket-Accept check",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107284",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T22:17:04.000Z",
-        "contentSnippet": "The AsyncHttpClient (AHC) library allows Java applications to easily execute HTTP requests and asynchronously process HTTP responses. Prior to 3.0.12 and 2.16.1, WebSocketHandler.upgrade aborts a handshake whose Sec-WebSocket-Accept value is missing or invalid but continues into ",
-        "cveScore": 3.7,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-107283 - AsyncHttpClient: Digest authentication cnonce generated with a non-cryptographic random source",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107283",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T22:17:04.000Z",
-        "contentSnippet": "The AsyncHttpClient (AHC) library allows Java applications to easily execute HTTP requests and asynchronously process HTTP responses. Prior to 3.0.12 and 2.16.1, Realm.Builder generates the HTTP Digest client nonce with ThreadLocalRandom rather than a cryptographically secure ran",
-        "cveScore": 3.7,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-107282 - AsyncHttpClient: Replay to a different host sends the original host request and credentials to the new host",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107282",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T22:17:04.000Z",
-        "contentSnippet": "The AsyncHttpClient (AHC) library allows Java applications to easily execute HTTP requests and asynchronously process HTTP responses. Prior to 3.0.13 and 2.16.1, cross-host request replay updates the current request but leaves the target request and related proxy context pointing",
-        "cveScore": 9.4,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-107281 - AsyncHttpClient: Connection pool key omits the authenticated principal, so an NTLM or Negotiate connection is reused across identities",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107281",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T22:17:03.000Z",
-        "contentSnippet": "The AsyncHttpClient (AHC) library allows Java applications to easily execute HTTP requests and asynchronously process HTTP responses. Prior to 3.0.13 and 2.16.1, the HTTP/1.1 connection-pool key excludes the authenticated principal for connection-oriented NTLM and Negotiate authe",
-        "cveScore": 7.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-107280 - AsyncHttpClient: Cookie Domain attribute is not checked against the public suffix list, so a cookie can be set for co.uk",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107280",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T22:17:03.000Z",
-        "contentSnippet": "The AsyncHttpClient (AHC) library allows Java applications to easily execute HTTP requests and asynchronously process HTTP responses. Prior to 3.0.13 and 2.16.1, ThreadSafeCookieStore validates Domain attributes with domain matching but does not reject public suffixes. A host ben",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-107279 - AsyncHttpClient: Digest mutual authentication is switched off by a peer offering qop=auth-int",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107279",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T22:17:03.000Z",
-        "contentSnippet": "The AsyncHttpClient (AHC) library allows Java applications to easily execute HTTP requests and asynchronously process HTTP responses. In 3.0.12, a peer offering only Digest qop=auth-int causes mutual-authentication verification to be skipped. AuthenticatorUtils.computeExpectedRsp",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-107232 - AsyncHttpClient: Origin credentials sent in cleartext to a proxy that rejects the CONNECT",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107232",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T22:17:03.000Z",
-        "contentSnippet": "The AsyncHttpClient (AHC) library allows Java applications to easily execute HTTP requests and asynchronously process HTTP responses. Prior to 3.0.12 on 3.x and 2.16.1 on 2.x, the client infers that an HTTP proxy tunnel exists from the last request method rather than the CONNECT ",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-107231 - AsyncHttpClient: Digest challenge without a usable nonce downgrades to Basic and sends the password in cleartext",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107231",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T22:17:03.000Z",
-        "contentSnippet": "The AsyncHttpClient (AHC) library allows Java applications to easily execute HTTP requests and asynchronously process HTTP responses. Prior to 3.0.13 and 2.16.1, Realm.Builder treats a Digest challenge that yields no usable nonce as a Basic challenge. A malicious origin or proxy ",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-107230 - AsyncHttpClient: Pooled connections can still be shared across NTLM, Negotiate and proxy logins",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107230",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T22:17:03.000Z",
-        "contentSnippet": "The AsyncHttpClient (AHC) library allows Java applications to easily execute HTTP requests and asynchronously process HTTP responses. From 2.0.0 until 3.0.14, connection-pool partitioning still omits identity-defining fields for Kerberos, SPNEGO, NTLM, and authenticated proxy con",
-        "cveScore": 7.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-105820 - Vault ACL Policy Cache Vulnerable to Cross-Namespace Policy Resolution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105820",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T22:17:02.000Z",
-        "contentSnippet": "Vault's ACL policy cache allowed namespace traversal when policy names contained path traversal constructs. This may allow a token assigned specially crafted policy names to use the capabilities of policies defined in other namespaces, including the root namespace. This vulnerabi",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-105818 - Vault PKI ACME Issues Certificate With Unvalidated SANs",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105818",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T22:17:02.000Z",
-        "contentSnippet": "Vault's PKI secrets engine ACME server did not restrict certificate identities that ACME challenges do not validate when issuing certificates under the default directory policy. This may allow an ACME client to obtain a certificate containing unverified identity claims, potential",
-        "cveScore": 5.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-105816 - Vault Vulnerable to Arbitrary Code Execution via Plugin Catalog Entries Restored From Raft Snapshots",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105816",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T22:17:02.000Z",
-        "contentSnippet": "Vault and Vault Enterprise did not consistently verify that stored plugin catalog entries reference binaries within the configured plugin directory. When Vault uses Shamir seals and has an external plugin directory configured, a privileged operator able to restore an Integrated S",
-        "cveScore": 8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-76286 - Server-Side Request Forgery (SSRF) through Custom API Tools in Splunk MCP Server",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76286",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T21:17:20.000Z",
-        "contentSnippet": "In Splunk MCP Server versions below 1.2.1, Splunk MCP Server could send the Splunk platform authentication token of a user who runs a custom Application Programming Interface (API) tool to the URL configured for that tool. If another user controls that URL, they could capture the",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-76285 - Improper Adherence to Coding Standards in Splunk Enterprise",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76285",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T21:17:20.000Z",
-        "contentSnippet": "Improper Adherence to Coding Standards. Splunk addressed multiple internally identified vulnerabilities in Splunk Enterprise versions 10.4.3, 10.2.7, 10.0.10, and 9.4.15. The vulnerabilities are grouped by Common Weakness Enumeration (CWE), with one Common Vulnerabilities and Exp",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-76284 - Improper Neutralization in Splunk Enterprise",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76284",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T21:17:20.000Z",
-        "contentSnippet": "Improper Neutralization. Splunk addressed multiple internally identified vulnerabilities in Splunk Enterprise versions 10.4.3, 10.2.7, 10.0.10, and 9.4.15. The vulnerabilities are grouped by Common Weakness Enumeration (CWE), with one Common Vulnerabilities and Exposures (CVE) id",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-76283 - Protection Mechanism Failure in Splunk Enterprise",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76283",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T21:17:19.000Z",
-        "contentSnippet": "Protection Mechanism Failure. Splunk addressed multiple internally identified vulnerabilities in Splunk Enterprise versions 10.4.3, 10.2.7, 10.0.10, and 9.4.15. The vulnerabilities are grouped by Common Weakness Enumeration (CWE), with one Common Vulnerabilities and Exposures (CV",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-76282 - Improper Control of a Resource Through its Lifetime in Splunk Enterprise",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76282",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T21:17:19.000Z",
-        "contentSnippet": "Improper Control of a Resource Through its Lifetime. Splunk addressed multiple internally identified vulnerabilities in Splunk Enterprise versions 10.4.3, 10.2.7, 10.0.10, and 9.4.15. The vulnerabilities are grouped by Common Weakness Enumeration (CWE), with one Common Vulnerabil",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-76281 - Improper Access Control in Splunk Enterprise",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76281",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T21:17:19.000Z",
-        "contentSnippet": "Improper Access Control. Splunk addressed multiple internally identified vulnerabilities in Splunk Enterprise versions 10.4.3, 10.2.7, 10.0.10, and 9.4.15. The vulnerabilities are grouped by Common Weakness Enumeration (CWE), with one Common Vulnerabilities and Exposures (CVE) id",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-76280 - Incorrect Permission Assignment for App Key Value Store Collections in Splunk Secure Gateway",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76280",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T21:17:19.000Z",
-        "contentSnippet": "In Splunk Enterprise versions below 10.4.3, 10.2.7, 10.0.10, and 9.4.15, and Splunk Secure Gateway versions below 3.10.11, 3.9.25, and 3.8.72, an authenticated user who does not hold the \"admin\" or \"sc_admin\" Splunk roles could modify Splunk Secure Gateway alert and mobile-device",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-76279 - Improper Input Validation of Index Names through the collect Command in Splunk Enterprise",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76279",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-07T21:17:19.000Z",
-        "contentSnippet": "In Splunk Enterprise versions below 10.4.3, 10.2.7, 10.0.10, and 9.4.15, a user that holds a role with the run_collect capability could use the collect Search Processing Language (SPL) command to write events to internal indexes outside the index access configured for the role. T",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
