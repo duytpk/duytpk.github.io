@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-10-11T13:39:59.183Z",
+  "updatedAt": "2026-10-11T18:32:16.311Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-19740 - Bluetooth LE Controller: retained RX node leak and reachable assertion in the PHY Update procedure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19740",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T17:15:08.000Z",
+        "contentSnippet": "The Link Layer Control Procedure (LLCP) implementation of the Zephyr software Bluetooth LE Controller retains the receive node that carried an accepted LL_PHY_UPDATE_IND so that it can later be reused for the host notification when the update instant is reached (llcp_rx_node_reta",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-19739 - Bluetooth LE controller leaks a retained RX node when an unexpected LL Control PDU arrives during a Connection Update",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19739",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T17:15:06.000Z",
+        "contentSnippet": "The Bluetooth Link Layer control procedure code in subsys/bluetooth/controller/ll_sw/ull_llcp_conn_upd.c retains the received RX node while a Connection Update / Connection Parameter procedure waits for its instant, so the node can later carry the host notification (llcp_rx_node_",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-19738 - Retained RX node leak and reachable assertion in Bluetooth Controller CIS Create procedures",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19738",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T17:15:04.000Z",
+        "contentSnippet": "The Bluetooth Link Layer Control Procedure (LLCP) implementation for Connected Isochronous Stream (CIS) creation retains an RX node (ctx->node_ref.rx, marked NODE_RX_TYPE_RETAIN) so it can later be reused as the host notification — on the peripheral while awaiting the Host's repl",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-19935 - Use-after-free of an L2CAP CoC channel object in the Zephyr Bluetooth host: RX work item is not cancelled on channel teardown",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19935",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T17:15:03.000Z",
+        "contentSnippet": "The Bluetooth LE host queues received L2CAP connection-oriented channel (CoC) data for deferred processing through a struct k_work embedded in the channel object (le_chan->rx_work, handler l2cap_rx_process()) whenever the channel uses a dynamic PSM (0x0080-0x00FF). Channel teardo",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-19737 - NULL pointer dereference in the ESP32 I2S driver when triggering an unsupported direction",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19737",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T17:15:01.000Z",
+        "contentSnippet": "i2s_esp32_trigger_check() in drivers/i2s/i2s_esp32.c validates the requested direction only for I2S_DIR_BOTH. The I2S_DIR_RX and I2S_DIR_TX branches read dev_cfg->rx.data->configured / dev_cfg->tx.data->configured without first checking the stream pointers. The device instantiati",
+        "cveScore": 5.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-18418 - Out-of-bounds read when the zbus proxy agent IPC backend logs a rejected peer frame's channel name",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18418",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T17:15:00.000Z",
+        "contentSnippet": "The zbus proxy agent IPC backend in subsys/zbus/proxy_agent/zbus_proxy_agent_ipc.c logged the channel name of a rejected inter-domain frame with a plain %s conversion. The frame type struct zbus_proxy_msg carries a fixed-size channel_name[] array as its last member, and nothing i",
+        "cveScore": 3.4,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-19736 - Out-of-bounds write in the NXP MCUX TRNG entropy driver for non-word-multiple request lengths",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19736",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T17:14:58.000Z",
+        "contentSnippet": "The NXP MCUX TRNG entropy driver in drivers/entropy/entropy_mcux_trng.c passed the caller's byte count straight to the vendor SDK routine TRNG_GetRandomData(). On i.MX RT5xx and RT6xx parts the SDK compiles its TRNG_SW_HEALTH_TESTS variant, which always copies whole 32-bit words ",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-19735 - Predictable TCP initial sequence numbers when the RFC 6528 secret key generation fails silently in the Zephyr TCP stack",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19735",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T17:14:56.000Z",
+        "contentSnippet": "The RFC 6528 initial-sequence-number implementation in subsys/net/ip/tcp.c derived every TCP ISN from SHA-256(unique_key || four-tuple) plus a uptime-derived offset, where unique_key is a 128-bit secret filled once by sys_csrand_get(). The return value of that call was discarded ",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-19577 - Out-of-bounds read in IPv6 route forwarding when the nexthop neighbor has no link-layer address",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19577",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T17:14:55.000Z",
+        "contentSnippet": "net_route_ipv6_packet() in subsys/net/ip/route_ipv6.c resolved the nexthop's link-layer address with net_nbr_get_lladdr(nbr->idx) without first checking whether the neighbor cache entry actually had a linked link-layer address. An unresolved neighbor carries idx == NET_NBR_LLADDR",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-19576 - Stack out-of-bounds write in the Goodix GT911 touch controller driver from an unvalidated device-reported touch point count",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19576",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T17:14:53.000Z",
+        "contentSnippet": "The Goodix GT9xx input driver in drivers/input/input_gt911.c reads the touch point count from the controller's status register and masks it with GT911_TOUCH_POINTS_MSK (0x0F), yielding a value of 0..15. In gt911_process() that value is used directly as the loop bound for filling ",
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-19669 - Unbounded variable-length array in fuel gauge syscall verifiers allows kernel stack overflow from user mode",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19669",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T17:14:51.000Z",
+        "contentSnippet": "The user-mode syscall verifiers z_vrfy_fuel_gauge_get_props() and z_vrfy_fuel_gauge_set_props() in drivers/fuel_gauge/fuel_gauge_syscall_handlers.c declared two variable-length arrays, union fuel_gauge_prop_val k_vals[len] and fuel_gauge_prop_t k_props[len], sized directly by the",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-108913 - Omarchy Arbitrary Code Execution Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108913",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T16:16:31.000Z",
+        "contentSnippet": "omarchy-theme-set in Omarchy 4 before 4.0.1 allows code execution via a third-party theme because the files placed into ~/.local/state/omarchy/current/theme may include executable content from an untrusted Git repository.",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-107761 - Channel tokens and organization API key exposed in API responses",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107761",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T16:16:30.000Z",
+        "contentSnippet": "Several Postiz endpoints return the complete database row of the record they operate on instead of only the fields the client needs. Two of them include secrets the caller is not meant to receive. The public API's channel delete returns the deleted integration row, including the ",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108905 - pH7Builder before 18.6.0 Hard-Coded API Key Bypass via Host Header",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108905",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T15:16:56.000Z",
+        "contentSnippet": "pH7Builder (pH7 Social Dating CMS) before 18.6.0 contains a hard-coded API key vulnerability in Tool.class.php that allows unauthenticated attackers to bypass API access checks by spoofing the Host header. Attackers can send Host: localhost with private_api_key=dev772277 and the ",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-108904 - pH7Builder before 18.5.0 Sensitive Data Exposure via Member API UserController",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108904",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T15:16:56.000Z",
+        "contentSnippet": "pH7Builder (pH7 Social Dating CMS) before 18.5.0 contains an information disclosure vulnerability that allows API clients to obtain sensitive member data because UserController::users() and user() return unfiltered database rows. Attackers holding a valid private API key can retr",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-108903 - pH7Builder before 19.3.0 CAPTCHA Bypass via Client-Chosen Form ID",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108903",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T15:16:56.000Z",
+        "contentSnippet": "pH7Builder (pH7 Social Dating CMS) before 19.3.0 contains a CAPTCHA bypass vulnerability that allows unauthenticated attackers to skip form validation by supplying a client-chosen form ID to PFBC Form::isValid(). Attackers can load a CAPTCHA-free form like login or search, then s",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108902 - pH7Builder before 18.5.0 Path Traversal Arbitrary File Deletion via picture_link",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108902",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T15:16:56.000Z",
+        "contentSnippet": "pH7Builder (pH7 Social Dating CMS) before 18.5.0 contains a path traversal vulnerability in the picture module deletePhoto() action that allows authenticated members to delete arbitrary files. Attackers can supply ../ sequences in the POST picture_link parameter to remove other m",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-108891 - JeecgBoot through 3.9.5 Missing Authorization via /sys/user/getUserDetailByUserId",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108891",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T15:16:56.000Z",
+        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability in the SysUserController getUserDetailByUserId handler that allows any authenticated user to read other users' details. Low-privileged attackers can supply arbitrary userId values to retrieve real names, usern",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108888 - JeecgBoot through 3.9.5 Missing Authorization via /sys/sysDepartRole/exportXls",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108888",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T15:16:56.000Z",
+        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability in the SysDepartRoleController exportXls handler that allows any authenticated user to export department roles. Low-privileged attackers holding only the default minimal role can call /sys/sysDepartRole/export",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108887 - JeecgBoot through 3.9.5 Missing Authorization via /sys/comment/exportXls",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108887",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T15:16:55.000Z",
+        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability in the SysCommentController exportXls handler that allows any authenticated user to export all comments. Low-privileged attackers can request /sys/comment/exportXls to download every sys_comment row, including",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108886 - JeecgBoot through 3.9.5 Missing Authorization via /sys/user/queryChildrenByUsername",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108886",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T15:16:55.000Z",
+        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability in the SysUserController queryChildrenByUsername handler that allows any authenticated user to retrieve other users' account records. Low-privileged attackers can supply arbitrary userId values to obtain names",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108885 - JeecgBoot through 3.9.5 Missing Authorization via /sys/message/sysMessage/delete",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108885",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T15:16:55.000Z",
+        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability in the SysMessageController delete handler that allows low-privileged authenticated users to delete message records. Attackers can send DELETE requests with arbitrary id values to remove any sys_sms row, erasi",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108884 - JeecgBoot through 3.9.5 Missing Authorization via sysMessageTemplate Delete Endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108884",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T15:16:55.000Z",
+        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability in the SysMessageTemplateController delete handler that allows any authenticated user to delete message templates. Low-privileged attackers can obtain template ids from the unguarded list endpoint and delete s",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108883 - JeecgBoot through 3.9.5 Missing Authorization via /sys/thirdApp/editThirdAppConfig",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108883",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T15:16:55.000Z",
+        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability in the editThirdAppConfig handler that allows any authenticated user to modify third-party application configurations. Low-privileged attackers can replace client id, client secret, agent id and corp id of Din",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-108882 - JeecgBoot through 3.9.5 Missing Authorization via /sys/position/removePositionUser",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108882",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T15:16:55.000Z",
+        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability in the SysPositionController removeUserPosition handler that allows any authenticated user to remove position members. Low-privileged attackers can send DELETE requests with arbitrary userIds and positionId va",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
       {
         "title": "CVE-2026-108760 - LlamaFarm through 0.0.34 Unauthenticated API Exposed on All Interfaces",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-108760",
@@ -677,231 +902,6 @@
         "contentSnippet": "Phi 0.3.0 through 0.28.4 contains a permission bypass vulnerability that allows spawned sub-agents to escape workspace_only_writes and readonly mode by supplying an unchecked workdir to agent_spawn. Attackers can plant prompt-injected instructions in processed content so the agen",
         "cveScore": 5.3,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-108594 - Mealie 3.26.0 through 3.28.0 SSRF via OIDC Picture Claim Avatar Fetch",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108594",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T18:16:57.000Z",
-        "contentSnippet": "Mealie 3.26.0 through 3.28.0 contains a server-side request forgery vulnerability in the OpenID Connect avatar fetch that ignores ports when allowlisting the identity provider hostname. Authenticated OIDC users who control their picture URL can make the server send GET requests t",
-        "cveScore": 3.5,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-108593 - 9router 0.4.1 through 0.5.99 Config Injection RCE via hermes-settings Endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108593",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T18:16:57.000Z",
-        "contentSnippet": "9router 0.4.1 through 0.5.99 contains a configuration injection vulnerability in the POST /api/cli-tools/hermes-settings endpoint that allows authenticated dashboard users to inject arbitrary keys into the Hermes Agent config.yaml file. Attackers can submit a baseUrl containing d",
-        "cveScore": 6.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-108592 - mini-swe-agent 1.10.0 through 2.4.6 Environment Exposure via BubblewrapEnvironment",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108592",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T18:16:56.000Z",
-        "contentSnippet": "mini-swe-agent 1.10.0 through 2.4.6 contains an information exposure vulnerability in BubblewrapEnvironment because bwrap omits --clearenv, so sandboxed commands inherit the host environment. Attackers using prompt injection in processed task content can make the agent read API k",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-108591 - InnoShop 0.9.2 Local File Disclosure via AI Core MCP file_upload Tool",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108591",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T18:16:55.000Z",
-        "contentSnippet": "InnoShop 0.9.2 contains a local file disclosure vulnerability that allows authenticated administrators with files_create permission to read server files by abusing the AI Core MCP file_upload tool's source argument. Attackers can supply file:// or php:// stream wrappers passed to",
-        "cveScore": 4.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-106610 - WordPress miniorange otp verification plugin <= 5.5.7 - Privilege Escalation vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-106610",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T18:09:06.000Z",
-        "contentSnippet": "Incorrect Privilege Assignment vulnerability in miniOrange miniorange otp verification miniorange-otp-verification allows Privilege Escalation.This issue affects miniorange otp verification: from n/a through 5.5.7.",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-96341 - WordPress Forminator plugin <= 1.57.3 - Privilege Escalation vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96341",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T18:09:06.000Z",
-        "contentSnippet": "Incorrect Privilege Assignment vulnerability in WPMU DEV Forminator forminator allows Privilege Escalation.This issue affects Forminator: from n/a through 1.57.3.",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-105892 - WordPress rtMedia for WordPress, BuddyPress and bbPress plugin <= 4.7.13 - Arbitrary File Deletion vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105892",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T18:09:05.000Z",
-        "contentSnippet": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability in rtCamp Inc. rtMedia for WordPress, BuddyPress and bbPress buddypress-media allows Path Traversal.This issue affects rtMedia for WordPress, BuddyPress and bbPress: from n/a through 4.7.",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-94160 - WordPress ThemeStek Extras for LabtechCO Theme plugin <= 8.4 - Reflected Cross Site Scripting (XSS) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94160",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T17:17:01.000Z",
-        "contentSnippet": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in themeStek ThemeStek Extras for LabtechCO Theme themestek-labtechco-extras allows Reflected XSS.This issue affects ThemeStek Extras for LabtechCO Theme: from n/a through 8.4.",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-62044 - WordPress Super Video Player plugin <= 1.8.13 - PHP Object Injection vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62044",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T17:17:00.000Z",
-        "contentSnippet": "Deserialization of Untrusted Data vulnerability in bPlugins Super Video Player super-video-player allows Object Injection.This issue affects Super Video Player: from n/a through 1.8.13.",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-108586 - 1MCP Agent 0.20.0 through 0.39.0 OAuth Tag-Scope Bypass via Negated Tag Filter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108586",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T17:17:00.000Z",
-        "contentSnippet": "1MCP Agent (@1mcp/agent) 0.20.0 through 0.39.0 contains an incorrect authorization vulnerability that allows authenticated clients to bypass OAuth tag-scope enforcement using negated advanced tag-filter expressions. Attackers holding a single-tag token can send a filter like not ",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-108585 - argocd-mcp through 0.9.0 Path Traversal via delete_application Tool",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108585",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T17:17:00.000Z",
-        "contentSnippet": "argocd-mcp (Argo CD MCP Server) through 0.9.0 contains a path traversal vulnerability in the delete_application tool that allows MCP clients to reach unintended API endpoints via unvalidated applicationName values. Attackers or prompt-injected models can supply dot-segment values",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-106609 - WordPress Bayarcash WooCommerce plugin <= 4.4.2 - Broken Access Control vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-106609",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T17:17:00.000Z",
-        "contentSnippet": "Missing Authorization vulnerability in Web Impian Bayarcash WooCommerce bayarcash-wc allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Bayarcash WooCommerce: from n/a through 4.4.2.",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-106608 - WordPress WooCommerce plugin 9.8.0-11.1.2 - Shop Manager+ Privilege Escalation vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-106608",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T17:17:00.000Z",
-        "contentSnippet": "Incorrect Privilege Assignment vulnerability in Automattic WooCommerce woocommerce allows Privilege Escalation.This issue affects WooCommerce: from 9.8.0 through 11.1.2.",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-105889 - WordPress Tickera plugin <= 3.6.0.6 - SQL Injection vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105889",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T17:17:00.000Z",
-        "contentSnippet": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Tickera Tickera tickera-event-ticketing-system allows Blind SQL Injection.This issue affects Tickera: from n/a through 3.6.0.6.",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-104398 - WordPress AFFI – Affiliate Marketing for WooCommerce plugin <= 1.0.10 - PHP Object Injection vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104398",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T17:16:59.000Z",
-        "contentSnippet": "Deserialization of Untrusted Data vulnerability in VillaTheme AFFI – Affiliate Marketing for WooCommerce affi-affiliate-marketing-for-woo allows Object Injection.This issue affects AFFI – Affiliate Marketing for WooCommerce: from n/a through 1.0.10.",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-103357 - WordPress GIFT4U plugin <= 1.1.3 - Broken Access Control vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-103357",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T17:16:59.000Z",
-        "contentSnippet": "Missing Authorization vulnerability in VillaTheme GIFT4U gift4u-gift-cards-all-in-one-for-woo allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects GIFT4U: from n/a through 1.1.3.",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-103071 - WordPress Thank You Page Customizer for WooCommerce plugin <= 1.2.3 - Content Injection vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-103071",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T17:16:59.000Z",
-        "contentSnippet": "Improper Control of Generation of Code ('Code Injection') vulnerability in VillaTheme Thank You Page Customizer for WooCommerce woo-thank-you-page-customizer allows Code Injection.This issue affects Thank You Page Customizer for WooCommerce: from n/a through 1.2.3.",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-108583 - zotero-mcp 0.10.0 through 0.14.1 SSRF via zotero_add_by_url Tool",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108583",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T16:16:31.000Z",
-        "contentSnippet": "zotero-mcp 0.10.0 through 0.14.1 contains a server-side request forgery vulnerability that allows attackers to reach internal services because _fetch_embedded_metadata fetches URLs without destination validation. Attackers can steer the agent via prompt injection into calling zot",
-        "cveScore": 4.2,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-108582 - GenOffice through 0.11.505 Insecure Permissions in HTTP MCP Server File Store",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108582",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T16:16:31.000Z",
-        "contentSnippet": "GenOffice through 0.11.505 contains an incorrect permissions vulnerability in its HTTP MCP server file store that allows local unprivileged users to read uploaded and generated documents. Attackers can list the world-readable genoffice-mcp-http directory under the system temporar",
-        "cveScore": 6.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-108581 - Octop through 1.0.2b6 Missing Authorization Exposes Provider API Keys via /api/providers",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108581",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T16:16:31.000Z",
-        "contentSnippet": "TencentCloud Octop through 1.0.2b6 contains a missing authorization vulnerability that allows authenticated low-privileged users to read stored provider API keys via GET /api/providers and GET /api/voice/providers. Attackers can query these endpoints, which only validate the JWT,",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-108580 - AniWorld Downloader before 5.3.0 WebUI Login Brute Force via /login",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108580",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T16:16:31.000Z",
-        "contentSnippet": "AniWorld Downloader before 5.3.0 contains an improper restriction of authentication attempts vulnerability in the WebUI /login POST handler that allows unauthenticated attackers to guess passwords without throttling. Attackers can enumerate usernames through verify_user response ",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-108579 - OpenPanel through 2.3.0 CSV Formula Injection via Cohort Member Export",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108579",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T16:16:31.000Z",
-        "contentSnippet": "OpenPanel through 2.3.0 contains a CSV formula injection vulnerability that allows unauthenticated attackers to embed spreadsheet formulas by supplying crafted profile IDs to the /track endpoint. Attackers can send tracking events with profile IDs like =HYPERLINK(...) matching a ",
-        "cveScore": 4.2,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-108555 - PairDrop through 1.11.2 IP Spoofing via cf-connecting-ip Header",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108555",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T15:16:58.000Z",
-        "contentSnippet": "PairDrop through 1.11.2 contains an IP spoofing vulnerability in Peer._setIP that allows remote attackers to join other networks' discovery rooms by supplying a forged cf-connecting-ip header. Attackers who know a victim's public IP can appear as a local device on self-hosted ins",
-        "cveScore": 4.2,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-108554 - PDFMathTranslate through 1.9.11 SSRF via Gradio Web GUI Link Input",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108554",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T15:16:58.000Z",
-        "contentSnippet": "PDFMathTranslate (pdf2zh) through 1.9.11 contains a server-side request forgery vulnerability that allows unauthenticated attackers to make the server fetch arbitrary URLs via the Link input. The translate_file handler passes user URLs to download_with_limit without scheme or add",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-97264 - WordPress WPAdverts plugin <= 2.3.4 - Cross Site Scripting (XSS) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97264",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T14:16:38.000Z",
-        "contentSnippet": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Greg Winiarski WPAdverts wpadverts allows Reflected XSS.This issue affects WPAdverts: from n/a through 2.3.4.",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
@@ -2310,6 +2310,34 @@
     ],
     "hardware": [
       {
+        "title": "Console market craters as Xbox sales crash 33% to the lowest since launch 25 years ago, PS5 sales drop 25%",
+        "link": "https://www.tomshardware.com/video-games/console-gaming/console-market-craters-as-xbox-sales-crash-33-percent-to-the-lowest-since-launch-25-years-ago-ps5-sales-drop-25-percent-steep-price-hikes-push-series-x-to-usd800-and-ps5-pro-to-usd900",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-11T16:30:00.000Z",
+        "contentSnippet": "PlayStation sales dropped by 25% YTD compared to last year, while Xbox contracted by 33%, marking the biggest decline in retail sales over the past decade."
+      },
+      {
+        "title": "Cyberleek threatens full GTA 6 build leak unless Take-Two apologizes and his $30 million crypto memecoin goal is met",
+        "link": "https://www.tomshardware.com/software/linux/cyberleek-threatens-full-gta-6-build-leak-unless-take-two-apologizes-and-his-usd30-million-crypto-memecoin-goal-is-met-leaker-demands-physical-release-while-pumping-solana-memecoin-to-usd30m",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-11T16:10:00.000Z",
+        "contentSnippet": "Notorious GTA VI leaker Cyberleek is threatening to release a full build of GTA VI if Take-Two doesn't release a physical build, but only if its memecoin hits $30 million."
+      },
+      {
+        "title": "Canadian YouTuber builds 'Flock-like' camera to exclusively track police vehicles",
+        "link": "https://www.tomshardware.com/tech-industry/cyber-security/canadian-youtuber-builds-flock-like-camera-to-exclusively-track-police-vehicles-officers-visit-his-home-to-express-privacy-concerns",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-11T15:11:18.000Z",
+        "contentSnippet": "Canadian YouTuber Anthony Sistilli says police questioned him after he built an ALPR camera designed to track police vehicles, leading to an ironic discussion over the privacy risks of mass license-plate surveillance."
+      },
+      {
+        "title": "Modder discovers that putting a GPU in the 'wrong place' can deliver a 19 degree cooler hotspot",
+        "link": "https://www.tomshardware.com/pc-components/gpus/modder-discovers-that-putting-a-gpu-in-the-wrong-place-can-deliver-a-19-degree-cooler-hotspot-breaking-convention-can-produce-great-results-despite-decades-of-pc-diy-evolution",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-11T14:23:20.000Z",
+        "contentSnippet": "In PC DIY it might still be worth challenging convention, as TrashBench shows with his GPU hotspot getting up to 19C cooler."
+      },
+      {
         "title": "Russia's Yandex bot traffic nearly eliminated overnight after Ukraine drone strikes cripple multiple of 'Russia's Google' data centers",
         "link": "https://www.tomshardware.com/tech-industry/data-centers/russian-disinformation-bot-traffic-nearly-eliminated-overnight-after-ukraine-drone-strikes-cripple-multiple-of-russias-google-data-centers-ukraine-intensifies-bombing-of-yandex-data-centers-in-response-to-moscows-strikes-on-kyiv-data-centers",
         "source": "Tom's Hardware",
@@ -2980,34 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-10-07T06:21:39.000Z",
         "contentSnippet": "It's the final day of the Amazon Prime sale."
-      },
-      {
-        "title": "Get 22% off this sweet Ryzen 7 7800X3D and RTX 5070-powered gaming PC at just $1799",
-        "link": "https://www.tomshardware.com/desktops/gaming-pcs/get-usd500-off-this-sweet-ryzen-7-7800x3d-and-rtx-5070-powered-gaming-pc-at-just-usd1799-32gb-of-ddr5-6000-comes-standard-too-at-a-22-percent-discount",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-07T00:42:54.000Z",
-        "contentSnippet": "Get $500 off this prebuilt gaming PC with a sweet Ryzen 7 7800X3D CPU, a powerful RTX 5070 graphics card, and 32GB of memory at just $1799."
-      },
-      {
-        "title": "Grab some of our favorite controllers for PC gaming for less than the cost of a DualSense",
-        "link": "https://www.tomshardware.com/peripherals/controllers-gamepads/grab-some-of-our-favorite-controllers-for-pc-gaming-for-less-than-the-cost-of-a-dualsense-get-a-quality-controller-with-more-features-during-prime-day",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-06T21:53:18.000Z",
-        "contentSnippet": "Sony's PC game controllers are on sale."
-      },
-      {
-        "title": "TrueNAS 27 RC.1 Debuts with Native S3, TrueSearch, and OpenZFS 2.4",
-        "link": "https://www.storagereview.com/news/truenas-27-rc1-native-s3-truesearch-openzfs-2-4",
-        "source": "StorageReview",
-        "isoDate": "2026-10-06T21:16:53.000Z",
-        "contentSnippet": "TrueNAS has renamed its upcoming release from TrueNAS 26 to TrueNAS 27, starting with the RC.1 released today. The change does not affect the release schedule, with TrueNAS 27.0 still planned for early December 2026. The new naming reflects TrueNAS’s move to one major release per"
-      },
-      {
-        "title": "Get a 1440p QD-OLED monitor for just $280 — entry-level AOC display comes with 144Hz refresh rate and 0.03ms response time",
-        "link": "https://www.tomshardware.com/monitors/gaming-monitors/get-a-1440p-qd-oled-monitor-for-just-usd280-entry-level-aoc-display-comes-with-144hz-refresh-rate-and-0-03ms-response-time",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-06T20:15:40.000Z",
-        "contentSnippet": "At $280, AOC's 27-inch 1440p QD-OLED monitor with a 144Hz refresh rate is one of the cheapest OLED displays we've seen."
       }
     ]
   }
