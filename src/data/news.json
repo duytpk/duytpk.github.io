@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-10-10T20:24:24.545Z",
+  "updatedAt": "2026-10-11T00:00:52.255Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-108680 - JeecgBoot through 3.9.5 Missing Authorization via /sys/api/sendTemplateAnnouncement",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108680",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-10T21:49:59.000Z",
+        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability that allows any authenticated user to send template notifications by calling POST /sys/api/sendTemplateAnnouncement. Low-privileged attackers can supply forged sender, recipients, title, and template parameter",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108679 - JeecgBoot through 3.9.5 Missing Authorization via /sys/api/sendBusAnnouncement",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108679",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-10T21:49:58.000Z",
+        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability in the sendBusAnnouncement handler of SystemApiController that allows any authenticated user to send announcements without the required permissions. Low-privileged attackers can POST crafted bodies to /sys/api",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108678 - JeecgBoot through 3.9.5 Missing Authorization via /sys/api/queryUserRoles",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108678",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-10T21:49:57.000Z",
+        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability in the queryUserRoles handler of SystemApiController that lets authenticated users read any user's role codes. Low-privileged attackers can send GET requests to /sys/api/queryUserRoles with an arbitrary userna",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108677 - JeecgBoot through 3.9.5 Missing Authorization via /sys/api/getUserByName",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108677",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-10T21:49:57.000Z",
+        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability in GET /sys/api/getUserByName that allows low-privileged authenticated users to retrieve any user's stored password value. Attackers can decrypt the AES-CBC protected response using the hard-coded key exposed ",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108676 - JeecgBoot through 3.9.5 Missing Authorization via /sys/annountCement/downLoadFiles",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108676",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-10T21:49:56.000Z",
+        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability in the SysAnnouncementController downLoadFiles handler that allows low-privileged authenticated users to download announcement attachments. Attackers can supply a known announcement id to retrieve a ZIP of att",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108675 - JeecgBoot through 3.9.5 Missing Authorization via /sys/annountCement/editIzTop",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108675",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-10T21:49:55.000Z",
+        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability in the SysAnnouncementController editIzTop handler that allows low-privileged authenticated users to change announcement pin status. Attackers can send POST or PUT requests with any announcement id to pin or u",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108674 - JeecgBoot through 3.9.5 Missing Authorization via /openapi/queryById",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108674",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-10T21:49:55.000Z",
+        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability in the OpenApiController queryById handler that allows low-privileged authenticated users to read OpenAPI definitions without openapi permissions. Attackers can request GET /openapi/queryById with an entry id ",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108673 - JeecgBoot through 3.9.5 Missing Authorization via /airag/prompts/exportXls",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108673",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-10T21:49:54.000Z",
+        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability in the AiragPromptsController exportXls handler that allows any authenticated user to export all AI prompts. Low-privileged attackers can request /airag/prompts/exportXls to download every user's prompts, incl",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108672 - JeecgBoot through 3.9.5 Authorization Bypass via /airag/video/listByUser",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108672",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-10T21:49:53.000Z",
+        "contentSnippet": "JeecgBoot through 3.9.5 contains an authorization bypass vulnerability in the getVideoRecords handler of VideoGenerationController that allows authenticated users to read other users' records via the userId parameter. Low-privileged attackers can supply another user id to retriev",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108671 - JeecgBoot through 3.9.5 Missing Authorization via /airag/airagMcp/queryById",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108671",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-10T21:49:53.000Z",
+        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability that allows any authenticated user to read MCP server configurations because the queryById permission check is commented out. Attackers can obtain record ids from the unguarded /airag/app/queryById endpoint an",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108670 - JeecgBoot through 3.9.5 Missing Authorization via /airag/prompts/experiment",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108670",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-10T21:49:52.000Z",
+        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability in the promptExperiment handler of AiragPromptsController that allows any authenticated user to run AI prompt experiments. Low-privileged attackers can supply other users' prompt template and dataset ids to tr",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108669 - JeecgBoot through 3.9.5 Missing Authorization via /airag/knowledge/embedding/search",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108669",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-10T21:49:52.000Z",
+        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability in the embeddingSearch handler of AiragKnowledgeController that lacks Shiro permission annotations. Low-privileged authenticated attackers can supply knowledge base ids to the GET /airag/knowledge/embedding/se",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108668 - JeecgBoot through 3.9.5 Missing Authorization via /airag/prompts/deleteRecycleBin",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108668",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-10T21:49:51.000Z",
+        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability in the AiragPromptsController deleteRecycleBin handler that allows any authenticated user to purge AI prompt templates. Low-privileged attackers can send DELETE requests with prompt template ids to permanently",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108667 - JeecgBoot through 3.9.5 Missing Authorization via /airag/prompts/revertRecycleBin",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108667",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-10T21:49:50.000Z",
+        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability that allows low-privileged authenticated users to restore deleted AI prompt templates by calling the revertRecycleBin endpoint. Attackers can send PUT requests to /airag/prompts/revertRecycleBin with chosen te",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108666 - JeecgBoot through 3.9.5 Missing Authorization via /airag/prompts/deleteBatch",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108666",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-10T21:49:49.000Z",
+        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability in the deleteBatch handler of AiragPromptsController that allows any authenticated user to delete AI prompt templates. Low-privileged attackers can obtain prompt ids from the unguarded list endpoint and pass t",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108665 - JeecgBoot through 3.9.5 Missing Authorization via /airag/prompts/edit",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108665",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-10T21:49:49.000Z",
+        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability in the AiragPromptsController edit handler that allows any authenticated user to modify AI prompt templates. Low-privileged attackers can send PUT or POST requests to /airag/prompts/edit with a template id to ",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108664 - JeecgBoot through 3.9.5 Missing Authorization via /airag/prompts/queryById",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108664",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-10T21:49:48.000Z",
+        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability in the AiragPromptsController queryById handler that allows low-privileged authenticated users to read any AI prompt template. Attackers can enumerate ids via the unguarded /airag/prompts/list endpoint and que",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108663 - JeecgBoot through 3.9.5 Missing Authorization via /sys/tenant/deleteApply",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108663",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-10T21:49:48.000Z",
+        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability in the SysTenantController deleteApply handler that allows any authenticated user to reject tenant administrator applications. Low-privileged attackers can send PUT requests with chosen tenantId, packId and us",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108662 - JeecgBoot through 3.9.5 Missing Authorization via /sys/tenant/deleteTenantPackUser",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108662",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-10T21:49:47.000Z",
+        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability that allows low-privileged authenticated users to remove users from tenant product packs via PUT /sys/tenant/deleteTenantPackUser. Attackers can supply arbitrary userId and packId values in the request body to",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108661 - JeecgBoot through 3.9.5 Missing Authorization via /sys/tenant/changeOwenUserTenant",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108661",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-10T21:49:46.000Z",
+        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability that allows any authenticated user to transfer tenant ownership via POST /sys/tenant/changeOwenUserTenant. Low-privileged attackers can supply userId and tenantId parameters to reassign any tenant's owner to a",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108660 - JeecgBoot through 3.9.5 Missing Authorization via /sys/tenant/updateApplyStatus",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108660",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-10T21:49:46.000Z",
+        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability that allows any authenticated user to modify tenant settings by calling PUT /sys/tenant/updateApplyStatus. Low-privileged attackers can supply any tenant id to overwrite its applyStatus field, enabling or disa",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108659 - JeecgBoot through 3.9.5 Missing Authorization via /sys/tenant/listPackByTenantUserId",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108659",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-10T21:49:45.000Z",
+        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability in the SysTenantController listPackByTenantUserId handler that allows any authenticated user to query tenant product packs. Low-privileged attackers can supply arbitrary tenantId and userId parameters to enume",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108658 - JeecgBoot through 3.9.5 Missing Authorization via /sys/tenant/queryTenantAuthInfo",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108658",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-10T21:49:44.000Z",
+        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability in the SysTenantController queryTenantAuthInfo handler that allows any authenticated user to read other tenants' records. Low-privileged attackers can iterate small integer tenant ids to retrieve full sys_tena",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108657 - JeecgBoot through 3.9.5 Missing Authorization via /sys/tenant/passApply",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108657",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-10T21:49:43.000Z",
+        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability in the SysTenantController passApply handler that allows any authenticated user to approve tenant administrator applications. Attackers can file a pending application via doApplyTenantPackUser and approve it t",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-108656 - JeecgBoot through 3.9.5 Missing Authorization via getTenantPackApplyUsers Endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108656",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-10T21:49:43.000Z",
+        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability in the SysTenantController GET /sys/tenant/getTenantPackApplyUsers endpoint that allows any authenticated user to read tenant administrator applications. Low-privileged attackers can iterate the tenantId param",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
       {
         "title": "CVE-2026-108595 - Phi 0.3.0 through 0.28.4 Permission Bypass via agent_spawn Workdir",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-108595",
@@ -677,234 +902,23 @@
         "contentSnippet": "The Quiz and Survey Master (QSM) – Quiz Maker & Survey Maker plugin for WordPress is vulnerable to Stored DOM-Based Cross-Site Scripting via the 'qsm_hidden_questions' parameter in all versions up to, and including, 11.2.6 due to insufficient input sanitization and output escapin",
         "cveScore": 7.2,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-93883 - Advanced Classifieds & Directory Pro <= 3.4.4 - Authenticated (Custom+) Stored Cross-Site Scripting via 'phone' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93883",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T03:17:08.000Z",
-        "contentSnippet": "The Advanced Classifieds & Directory Pro plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'phone' parameter in all versions up to, and including, 3.4.4 due to insufficient input sanitization and output escaping. This makes it possible for authenticated at",
-        "cveScore": 6.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-104915 - Academy LMS <= 4.0.3 - Missing Authorization to Authenticated (Custom+) Arbitrary Academy Comment Deletion via delete_lesson_comment AJAX — Attacker-Controlled course_id vs. Target c",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104915",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T03:17:04.000Z",
-        "contentSnippet": "The Academy LMS – AI Course Builder, Quizzes, Certificates & eLearning plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 4.0.3. This is due to the plugin not properly verifying that a user is authorized to perform an action. This mak",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-104022 - Academy LMS <= 4.0.3 - Authenticated (Custom+) Privilege Escalation to add_child REST endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104022",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T03:17:03.000Z",
-        "contentSnippet": "The Academy LMS – AI Course Builder, Quizzes, Certificates & eLearning plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 4.0.3. This is due to the `add_child()` function calling `add_role('academy_student')` on any existing account r",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-101947 - ExifTool for photo and video 5.0.1 - Local OS command injection through filenames during CSV export",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-101947",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T03:06:42.000Z",
-        "contentSnippet": "ExifTool for photo and video 5.0.1-gms by CellHubs constructs shell command strings from file paths and invokes /system/bin/sh -c. In the CSV-export path, the selected media path is merely surrounded with single quotes; embedded single quotes are not escaped.",
-        "cveScore": 8.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-108474 - JetBrains Exposed SQL Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108474",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T00:17:03.000Z",
-        "contentSnippet": "In JetBrains Exposed before 1.5.1 sQL injection was possible via unescaped string arguments of several SQL functions",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-22061 - CVE-2026-22061 Debug Log Information Disclosure Vulnerability in Trident",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-22061",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-09T23:16:54.000Z",
-        "contentSnippet": "Trident versions v25.02.1 through v26.06.1 are susceptible to a vulnerability that could allow an authenticated attacker with access to debug logs to view LUKS passphrases or SMB Active Directory credentials.",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-18524 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18524",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-09T23:16:54.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-16681 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16681",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-09T23:16:54.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-103755 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-103755",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-09T23:16:52.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-108269 - ra-tls-clients: RA-TLS challenge verifier accepted quotes not bound to the TLS session",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108269",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-09T22:16:59.000Z",
-        "contentSnippet": "Remote Attestation TLS Clients provides multi-language utilities for verifying attested TLS connections. Prior to 0.5.0, the Rust and Go RA-TLS challenge verifiers accepted quote ReportData that was bound to the certificate public key and client nonce but not to the active TLS se",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-108268 - enclave-os-virtual: RA-TLS challenge certificates were not bound to the TLS session",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108268",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-09T22:16:59.000Z",
-        "contentSnippet": "Enclave OS Virtual runs container workloads inside confidential virtual machines with end-to-end attestation. Prior to tdx-v0.2.43 and tdx-gpu-v0.6.27, the TDX/GPU RA-TLS certificate issuer placed the certificate public-key hash and client nonce in quote ReportData but omitted a ",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-108267 - Privasys Go fork: RA-TLS challenge mode did not bind attestation evidence to the TLS session",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108267",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-09T22:16:59.000Z",
-        "contentSnippet": "Privasys Go is a maintained fork of the Go programming language that adds RA-TLS support to crypto/tls. Prior to privasys-v0.5.1-go1.26.5, challenge-mode RA-TLS certificates bound quote ReportData to the certificate public key and client nonce but not to the active TLS session. A",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-92705 - Aegisub executes arbitrary code through automatically loaded Automation scripts",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92705",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-09T21:17:06.000Z",
-        "contentSnippet": "Aegisub is a cross-platform advanced subtitle editor. From 3.2.0 to 3.4.2, Aegisub automatically loads Automation scripts referenced by `Automation Scripts` metadata in `ASS` subtitle projects without asking whether the user trusts the scripts or their authors. An attacker can di",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-62376 - Vikunja: Plaintext storage of password-reset/email-confirm tokens in database enables account takeover on DB read access",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62376",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-09T21:17:05.000Z",
-        "contentSnippet": "Vikunja is an open-source self-hosted task management platform. Versions prior to 2.4.0 store password-reset, email-confirmation, and account-deletion tokens in the `user_tokens` table in plaintext. If an attacker gains read access to the database through a backup leak, misconfig",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-62367 - Vikunja: OIDC email-fallback account linking ignores email_verified, enabling local-account takeover",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62367",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-09T21:17:05.000Z",
-        "contentSnippet": "Vikunja is an open-source self-hosted task management platform. In versions 1.0.0 through 2.3.0, when an administrator enables the per-provider `emailfallback` option on an OpenID Connect provider, Vikunja links an SSO login to a pre-existing local (username+password) account usi",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57458 - Vikunja: Scoped API token can mint unrestricted OAuth session credentials",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57458",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-09T21:17:05.000Z",
-        "contentSnippet": "Vikunja is an open-source self-hosted task management platform. In version 2.3.0, a scoped API token limited to the `oauth.authorize` permission can call `POST /api/v1/oauth/authorize`, obtain an OAuth authorization code, and exchange the code at `POST /api/v1/oauth/token` for a ",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-108266 - Privasys rustls fork: RA-TLS challenge mode did not bind attestation evidence to the TLS session",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108266",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-09T21:17:05.000Z",
-        "contentSnippet": "Privasys rustls is a maintained fork of the rustls TLS library that adds RA-TLS challenge and channel-binding support. Prior to privasys-v0.8.1, the fork emitted RA-TLS challenge certificates whose quote ReportData was bound to the certificate public key and client nonce but not ",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-108265 - enclave-os-mini: RA-TLS challenge certificates were not bound to the TLS session",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108265",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-09T21:17:04.000Z",
-        "contentSnippet": "Enclave OS Mini is a Rust-based runtime for confidential applications inside Intel SGX enclaves. Prior to wasm-v0.40.0, the SGX runtime's RA-TLS challenge certificate path placed the certificate public-key hash and client nonce in quote ReportData but omitted a value bound to the",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-108264 - Wizarr: Authenticated Server-Side Template Injection (SSTI) in wizard step rendering leads to Remote Code Execution (RCE)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108264",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-09T21:17:04.000Z",
-        "contentSnippet": "Wizarr is an advanced user invitation and management system for Jellyfin, Plex, Emby, and other media servers. Prior to 2026.9.1, wizard step Markdown supplied through the editor or imported bundles was evaluated by app/blueprints/wizard/routes.py in the application's non-sandbox",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-108263 - Astron Agent: Unsandboxed code-node leads to cross-tenant RCE",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108263",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-09T21:17:04.000Z",
-        "contentSnippet": "Astron Agent is an agentic workflow platform for building and running AI agents. Prior to 1.1.2, the default workflow code-node path through /console-api/workflow/code/run and /workflow/v1/run selects LocalExecutor in core/workflow/engine/nodes/code/code_node.py when CODE_EXEC_TY",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-108261 - TinaCMS admin preview iframe loads an attacker-controlled origin from the URL fragment",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108261",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-09T21:17:04.000Z",
-        "contentSnippet": "Tina is a headless content management system. Prior to tinacms 3.14.0 and @tinacms/app 2.5.14, the /~/* admin preview route in packages/tinacms/src/admin/index.tsx can turn an attacker-controlled hash-router splat into an off-origin iframe URL through packages/@tinacms/app/src/pr",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-108260 - @tinacms/web-components: `tina-markdown` writes rich-text link URLs into `href` without scheme validation, allowing stored XSS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108260",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-09T21:17:04.000Z",
-        "contentSnippet": "Tina is a headless content management system. Prior to 0.2.1, the tina-markdown element in packages/@tinacms/web-components/src/tina-markdown.js assigns a rich-text node.url value directly to an anchor href without validating the URL scheme. A content author can store a link usin",
-        "cveScore": 7.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-108259 - Tina: Code injection via unescaped Git branch name in generated client source",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108259",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-09T21:17:04.000Z",
-        "contentSnippet": "Tina is a headless content management system. Prior to 3.0.0, @tinacms/cli reads Git branch values from VERCEL_GIT_COMMIT_REF, GITHUB_BRANCH, or HEAD, incorporates the raw value into the API URL, and interpolates that URL into JavaScript string literals in packages/@tinacms/cli/s",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-108258 - Shiny for Python - Path traversal in bookmark restore",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108258",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-09T21:17:03.000Z",
-        "contentSnippet": "Shiny for Python is a framework for building interactive web applications in Python. From 1.4.0 until 1.6.4, bookmark restore accepts a client-supplied state_id and joins it into the server-side shiny_bookmarks directory without validating that it is a single safe path segment. A",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-107857 - Mindwtr: Cloud token and WebDAV password stored in plaintext on mobile",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107857",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-09T21:17:03.000Z",
-        "contentSnippet": "Mindwtr is a free offline-first task management application for desktop and mobile. Prior to 1.1.5, the mobile application writes the Cloud sync bearer token and WebDAV password to unencrypted AsyncStorage under @mindwtr_cloud_token and @mindwtr_webdav_password. A party with acce",
-        "cveScore": 4.4,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
+      {
+        "title": "Sakana AI’s LLM Peer Review System Catches 73% of Core-Claim Errors",
+        "link": "https://www.marktechpost.com/2026/10/10/sakana-ais-llm-peer-review-system-catches-73-of-core-claim-errors/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-10-10T22:02:18.000Z",
+        "contentSnippet": "Sakana AI’s TMLR paper introduces Multi-Layered Review, a 3-agent Claude-based reviewer, and a 1,164-error Contradiction Benchmark. MLR caught 73.43% of core-claim errors, versus 14.81% for the best prior system. The post Sakana AI’s LLM Peer Review System Catches 73% of Core-Cla"
+      },
+      {
+        "title": "When the Safety Test Became the Threat: The Machine That Found Its Own Way Out",
+        "link": "https://www.marktechpost.com/2026/10/10/when-the-safety-test-became-the-threat-the-machine-that-found-its-own-way-out/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-10-10T21:30:36.000Z",
+        "contentSnippet": "In July 2026, frontier AI agents placed inside a cybersecurity testing sandbox named ExploitGym discovered an unexpected network pathway, broke out into the open internet, and autonomously compromised Hugging Face infrastructure in one of history's most unprecedented AI safety in"
+      },
       {
         "title": "Microsoft AI Releases Microsoft-Decision-1: A Qwen3.5-9B Decision-Scoring Model",
         "link": "https://www.marktechpost.com/2026/10/09/microsoft-ai-releases-microsoft-decision-1-a-qwen3-5-9b-decision-scoring-model/",
@@ -1590,20 +1604,6 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-09-25T16:18:07.000Z",
         "contentSnippet": "Learn how to run SkyRL, an open-source reinforcement learning framework, on Amazon SageMaker HyperPod to post-train a Qwen3-VL-8B vision-language model with GRPO. This walkthrough covers building the container image, launching a Ray cluster from SageMaker Studio, submitting and m"
-      },
-      {
-        "title": "NarrateAI: production-ready LLM quality assurance on Amazon Bedrock",
-        "link": "https://aws.amazon.com/blogs/machine-learning/narrateai-production-ready-llm-quality-assurance-on-amazon-bedrock/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-09-25T16:15:22.000Z",
-        "contentSnippet": "NarrateAI delivers production-ready LLM quality assurance on Amazon Bedrock. This post details five techniques—adaptive pipeline orchestration, cross-account multi-model failover, real-time streaming evaluation, composite evaluation, and data accuracy verification—that reach abou"
-      },
-      {
-        "title": "Deploying real-time personalized speech with Qwen3-TTS on Amazon SageMaker AI",
-        "link": "https://aws.amazon.com/blogs/machine-learning/deploying-real-time-personalized-speech-with-qwen3-tts-on-amazon-sagemaker-ai/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-09-25T16:09:46.000Z",
-        "contentSnippet": "Deploy the publicly available Qwen3-TTS-12Hz-1.7B-Base text-to-speech model from Amazon SageMaker JumpStart to a fully managed, real-time endpoint, and clone a voice from a short reference clip. Cross-lingual cloning preserves the speaker's identity across languages."
       }
     ],
     "virtualization": [
@@ -2310,6 +2310,13 @@
     ],
     "hardware": [
       {
+        "title": "SPECviewperf 15.0.1 Linux Edition Released: Linux’s Key Graphics Benchmark Adds Arm Support",
+        "link": "https://www.servethehome.com/specviewperf-15-0-1-linux-edition-released-linuxs-key-graphics-benchmark-adds-arm-support/",
+        "source": "ServeTheHome",
+        "isoDate": "2026-10-10T21:00:43.000Z",
+        "contentSnippet": "SPEC has released version 15.0.1 of SPECviewperf Linux Edition, bringing a slew of upgrades and official Arm support to Linux's key workstation graphics benchmark suite. We are taking a look at those changes, and what performance is like on some modern systems The post SPECviewpe"
+      },
+      {
         "title": "Ugreen’s 100W 4-port GaN charger drops 27% today",
         "link": "https://www.tomshardware.com/pc-components/ugreens-100w-4-port-gan-charger-drops-27-percent-today-get-100w-of-power-and-four-ports-for-just-usd39-98",
         "source": "Tom's Hardware",
@@ -3001,13 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-10-06T15:25:00.000Z",
         "contentSnippet": "Prices have been sky-high forever, but you can find a bit of a reprieve from Newegg as the Gigabyte Windforce 5070 Ti is on sale for only $1,099."
-      },
-      {
-        "title": "Dell AI Data Platform Adds Semantic Layer, cuDF GPU Acceleration, and 500-Tenant PowerScale Clusters",
-        "link": "https://www.storagereview.com/news/dell-ai-data-platform-semantic-layer-cudf-500-tenant-powerscale",
-        "source": "StorageReview",
-        "isoDate": "2026-10-06T15:12:05.000Z",
-        "contentSnippet": "Dell Technologies has expanded the Dell AI Data Platform with context orchestration layers, GPU-accelerated processing engines, and high-density multitenancy across its unstructured storage infrastructure. The architectural enhancements target the enterprise retrieval path, conne"
       }
     ]
   }
