@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-10-11T06:39:49.641Z",
+  "updatedAt": "2026-10-11T13:39:59.183Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-108760 - LlamaFarm through 0.0.34 Unauthenticated API Exposed on All Interfaces",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108760",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T13:17:21.000Z",
+        "contentSnippet": "LlamaFarm through 0.0.34 contains an insecure default configuration that binds its unauthenticated FastAPI server to 0.0.0.0 on port 14345, while the lf CLI silently discards HOST overrides. Network-adjacent attackers can call the project and dataset management API to read stored",
+        "cveScore": 7.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-108759 - mistral.rs 0.9.0 through 0.9.4 Sandbox Escape via Symlink Following in mistralrs-code-exec",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108759",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T13:17:21.000Z",
+        "contentSnippet": "mistral.rs 0.9.0 through 0.9.4 contains a link following vulnerability in mistralrs-code-exec that allows sandboxed shell code to read and overwrite files outside the sandbox via symlinks. Attackers or prompt-injected agents can name symlinks as outputs or reuse sessions with sym",
+        "cveScore": 7.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-108758 - Easy!Appointments through 1.6.0 Authorization Bypass via booking/register Endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108758",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T13:17:21.000Z",
+        "contentSnippet": "Easy!Appointments through 1.6.0 contains an authorization bypass vulnerability in Booking::register() that allows unauthenticated attackers to modify any appointment by supplying an appointment id without its hash. Attackers can enumerate sequential appointment ids with a self-as",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-108757 - Nexting pinclaw through 0.3.0 Missing Authentication via POST /pinclaw/send",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108757",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T13:17:20.000Z",
+        "contentSnippet": "Nexting pinclaw OpenClaw channel plugin through 0.3.0 contains a missing authentication vulnerability in src/core/http-router.ts that skips the authToken check on POST /pinclaw/send. Unauthenticated attackers reaching port 18790, which binds all interfaces by default, can inject ",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-108756 - Abilityai Trinity through 0.9.5 Missing Authorization in Telegram Binding Routes",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108756",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T13:17:20.000Z",
+        "contentSnippet": "Abilityai Trinity through 0.9.5 contains a missing authorization vulnerability in the Telegram router that allows agent-scoped MCP API keys to perform human-only binding operations. Attackers controlling an agent, typically via prompt injection, can send messages through the owne",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108755 - Hatchet through 0.110.5 Unauthenticated Memory Exhaustion via SNS Ingestion Endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108755",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T13:17:20.000Z",
+        "contentSnippet": "Hatchet through 0.110.5 contains an allocation of resources without limits vulnerability that allows unauthenticated attackers to exhaust memory via the SNS ingestion endpoint. Attackers can send arbitrarily large or concurrent request bodies to POST /api/v1/sns/{tenant}/{event} ",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108754 - GPT-Load through 1.4.11 Cleartext Proxy Key Logging via Access Logger",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108754",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T13:17:20.000Z",
+        "contentSnippet": "GPT-Load through 1.4.11 contains a cleartext logging vulnerability that exposes client proxy keys because the Gin Logger middleware records the raw query string before extractAuthKey strips the key parameter. Attackers with read access to console logs or ./data/logs/app.log can r",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108753 - Agnaistic agnai through 1.0.555 Hard-Coded Credentials in self-host Docker Compose",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108753",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T13:17:20.000Z",
+        "contentSnippet": "Agnaistic agnai through 1.0.555 contains a hard-coded credentials vulnerability in self-host.docker-compose.yml, which sets a fixed admin password and public JWT secret. Unauthenticated attackers can log in as admin or sign their own JWT with admin: true to impersonate users, res",
+        "cveScore": 9.4,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-108752 - JupyterHub through 6.0.1 OAuth Client ID Collision via Unescaped Hyphen",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108752",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T13:17:20.000Z",
+        "contentSnippet": "JupyterHub through 6.0.1 contains an identifier collision vulnerability that allows authenticated users to overwrite another user's named-server OAuth client by registering a hyphenated username. Attackers holding a name like alice-prod can overwrite the client for alice's server",
+        "cveScore": 4.2,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108751 - MoAI-ADK through 3.1.2 Symlink Following via moai init Template Deployer",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108751",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T13:17:19.000Z",
+        "contentSnippet": "MoAI-ADK through 3.1.2 contains an improper link resolution vulnerability in the moai init template deployer that allows malicious repositories to overwrite files outside the project via a symlinked .moai-tmp staging path. Attackers can commit a symlink such as .claude/settings.j",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108750 - OpenDocMan 2.4.0 through 2.10.0 Decompression Bomb DoS via Upload Text Extraction",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108750",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T13:17:19.000Z",
+        "contentSnippet": "OpenDocMan 2.4.0 through 2.10.0 contains a decompression bomb vulnerability that allows authenticated users to exhaust PHP memory by uploading crafted office documents. Attackers can upload a small ODT, DOCX, or XLSX file whose XML entries decompress to hundreds of megabytes, cra",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108749 - docling-serve 1.14.0 through 1.36.0 Missing Authentication via Memory Management Endpoints",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108749",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T13:17:19.000Z",
+        "contentSnippet": "docling-serve 1.14.0 through 1.36.0 contains a missing authentication vulnerability that allows unauthenticated attackers to access /v1/memory/stats and /v1/memory/counts because they omit the require_auth dependency. Attackers can bypass the configured DOCLING_SERVE_API_KEY to r",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108748 - Quarkus LangChain4j 1.9.0 through 1.14.1 Memory Exhaustion via /_chat/routes WebSocket",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108748",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T13:17:19.000Z",
+        "contentSnippet": "Quarkus LangChain4j 1.9.0 through 1.14.1 contains a missing release of memory vulnerability in the chat-scopes WebSocket /_chat/routes endpoint that allows unauthenticated remote clients to exhaust server memory. Attackers can send repeated CONNECT frames reusing one chatId, leav",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108747 - Lightdash through 2.556.0 Authorization Bypass via Personal Access Token Deletion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108747",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T13:17:19.000Z",
+        "contentSnippet": "Lightdash through 2.556.0 contains an authorization bypass vulnerability that allows authenticated organization members to delete other users' personal access tokens by supplying their UUID. Attackers can send DELETE requests to the personal-access-tokens route with a victim's to",
+        "cveScore": 4.2,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108746 - Vearch 3.5.2 through 3.5.9 Incorrect Authorization via Role.HasPermissionForResources",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108746",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T13:17:19.000Z",
+        "contentSnippet": "Vearch 3.5.2 through 3.5.9 contains an incorrect authorization vulnerability in Role.HasPermissionForResources that ignores stored ReadOnly or None privilege levels for resources listed in a role. Authenticated non-root users can upsert and delete documents with read-only access,",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-108745 - CloudBeaver through 25.3.5 Missing Authorization via /api/sql-result-value Servlet",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108745",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T13:17:19.000Z",
+        "contentSnippet": "CloudBeaver through 25.3.5 contains a missing authorization vulnerability in WebSQLResultServlet that allows any web session holder to read other users' LOB export files from a shared folder. Attackers can guess table and column names and enumerate second-resolution timestamps to",
+        "cveScore": 3.1,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-108744 - pbi-cli 3.10.1 through 3.12.0 OS Command Injection via Desktop Sync",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108744",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T13:17:18.000Z",
+        "contentSnippet": "pbi-cli 3.10.1 through 3.12.0 contains an OS command injection vulnerability in desktop_sync.py that passes unquoted .pbip paths to cmd /c start when reopening projects. Attackers can lure victims into opening a Power BI project from a space-free path containing & to run commands",
+        "cveScore": 7.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-108742 - CloudBeaver through 25.3.5 Missing Authorization via initConnection GraphQL Mutation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108742",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T13:17:18.000Z",
+        "contentSnippet": "CloudBeaver through 25.3.5 contains a missing authorization vulnerability in the initConnection GraphQL mutation that lets view-only shared-project members persist credentials without datasource-edit permission. Attackers can set saveCredentials and sharedCredentials flags with c",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108741 - Shepherd through 0.3.1 SSRF via DNS Rebinding in Citation Checker",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108741",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T13:17:18.000Z",
+        "contentSnippet": "Shepherd (shepherd-ai) through 0.3.1 contains a server-side request forgery guard bypass in the citation-checker extra because the public_url guard validates a resolved address but fetch re-resolves the hostname at connect time. Attackers who plant a crafted reference URL in a ch",
+        "cveScore": 3.1,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-108740 - GoatCounter through 2.7.0 Privilege Escalation via /user/pref Mass Assignment",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108740",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T13:17:18.000Z",
+        "contentSnippet": "GoatCounter through 2.7.0 contains a mass assignment privilege escalation vulnerability in the userPrefSave handler that allows logged-in users to modify protected account fields via form-encoded requests. Attackers with read-only access can POST user.access[all]=* and user.email",
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-108739 - OpenAgents Workspace through launcher-v1.0.17 Unauthenticated Credential Exposure via /v1/workspaces",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108739",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T13:17:18.000Z",
+        "contentSnippet": "OpenAgents Workspace backend through launcher-v1.0.17 contains an information disclosure vulnerability that allows unauthenticated attackers to list all workspaces via GET /v1/workspaces. Attackers can read the unmasked browserfabric_api_key in each workspace's settings map, alon",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-108738 - Traccar 5.7 through 6.16.0 Login CSRF via OpenID Connect Callback",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108738",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T13:17:18.000Z",
+        "contentSnippet": "Traccar 5.7 through 6.16.0 contains a cross-site request forgery vulnerability that allows attackers to log victims into attacker-controlled accounts because the OpenID Connect callback never validates the OAuth state parameter. Attackers can induce a victim's browser to load /ap",
+        "cveScore": 4.2,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108737 - Traccar through 6.16.0 Weak Password Recovery via TokenManager Token Purpose Confusion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108737",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T13:17:18.000Z",
+        "contentSnippet": "Traccar through 6.16.0 contains a weak password recovery vulnerability that allows attackers to reuse password reset tokens as session credentials because TokenManager does not bind tokens to a purpose. Attackers holding a leaked reset link can obtain a full session via /api/sess",
+        "cveScore": 7.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-108736 - Speedtest Tracker through 1.15.0 IP Allowlist Bypass via X-Forwarded-For Spoofing",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108736",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T13:17:17.000Z",
+        "contentSnippet": "Speedtest Tracker through 1.15.0 contains an IP allowlist bypass vulnerability that allows unauthenticated remote attackers to evade ALLOWED_IPS and Prometheus allowlists by spoofing X-Forwarded-For headers. Because bootstrap/app.php trusts every peer as a proxy, attackers can su",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108735 - Miniflux 2.3.0 through 2.3.3 SSRF via Per-Feed Proxy URL",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108735",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-11T13:17:17.000Z",
+        "contentSnippet": "Miniflux 2.3.0 through 2.3.3 contains a server-side request forgery vulnerability that allows authenticated users to reach internal addresses by setting a feed's proxy_url. Attackers can point proxy_url at loopback or internal hosts, bypassing FETCHER_ALLOW_PRIVATE_NETWORKS check",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
       {
         "title": "CVE-2026-108539 - GPAC MP4Box filter_queue.c gf_fq_pop use after free",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-108539",
@@ -677,234 +902,16 @@
         "contentSnippet": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Greg Winiarski WPAdverts wpadverts allows Reflected XSS.This issue affects WPAdverts: from n/a through 2.3.4.",
         "cveScore": 7.1,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-97263 - WordPress WPAdverts plugin <= 2.3.4 - Cross Site Scripting (XSS) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97263",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T14:16:38.000Z",
-        "contentSnippet": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Greg Winiarski WPAdverts wpadverts allows Stored XSS.This issue affects WPAdverts: from n/a through 2.3.4.",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-94676 - WordPress Tainacan plugin <= 1.3.0 - PHP Object Injection vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94676",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T14:16:38.000Z",
-        "contentSnippet": "Deserialization of Untrusted Data vulnerability in Tainacan Community Tainacan tainacan allows Object Injection.This issue affects Tainacan: from n/a through 1.3.0.",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-66435 - WordPress WP Rollback plugin <= 3.1.2 - Sensitive Data Exposure vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66435",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T14:16:38.000Z",
-        "contentSnippet": "Insertion of Sensitive Information Into Sent Data vulnerability in Devin Walker WP Rollback wp-rollback allows Retrieve Embedded Sensitive Data.This issue affects WP Rollback: from n/a through 3.1.2.",
-        "cveScore": 5.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-108165 - Immich through 3.3.1 Missing Authorization in Partner Sync Exposes Locked Folder Metadata",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108165",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T14:16:37.000Z",
-        "contentSnippet": "Immich through 3.3.1 contains a missing authorization vulnerability in the partner synchronization stream that allows authenticated partners to read Locked Folder asset metadata because sync queries do not exclude Locked visibility. Attackers with an active partner relationship c",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-108164 - Open Source Social Network (OSSN) through 10.1 IDOR via Message Attachment Route",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108164",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T14:16:37.000Z",
-        "contentSnippet": "Open Source Social Network (OSSN) through 10.1 contains an insecure direct object reference vulnerability in components/OssnMessages/ossn_com.php that allows authenticated users to read other users' private message attachments. Attackers can request the /messages/attachment/{guid",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-108163 - Pingvin Share X before 1.22.0 Ineffective Authentication Rate Limiting via Throttler TTL",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108163",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T14:16:37.000Z",
-        "contentSnippet": "Pingvin Share X before 1.22.0 contains an ineffective rate limiting vulnerability because throttler TTL values specified in seconds are interpreted as milliseconds. Unauthenticated attackers can send effectively unthrottled requests to /api/auth/signIn, /api/auth/signIn/totp and ",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-108162 - Pingvin Share X before 1.22.0 Rate Limit Bypass via Spoofed X-Forwarded-For",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108162",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T14:16:37.000Z",
-        "contentSnippet": "Pingvin Share X before 1.22.0 contains a rate limit bypass vulnerability that allows unauthenticated remote attackers to evade per-IP throttling because backend/src/main.ts unconditionally trusts proxy headers. Attackers can rotate spoofed X-Forwarded-For values against /api/auth",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-108161 - FusionPBX through 5.6.5 OS Command Injection via Caller ID in Recording ZIP Download",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108161",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T14:16:37.000Z",
-        "contentSnippet": "FusionPBX through 5.6.5 contains an OS command injection vulnerability in call_recordings::download() that allows unauthenticated attackers to execute commands by placing calls with malicious caller ID values. When the record_name filename template is enabled, attackers can embed",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-105885 - WordPress Slider by 10Web plugin <= 1.2.62 - PHP Object Injection vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105885",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T14:16:37.000Z",
-        "contentSnippet": "Deserialization of Untrusted Data vulnerability in 10Web Slider by 10Web slider-wd allows Object Injection.This issue affects Slider by 10Web: from n/a through 1.2.62.",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-102388 - WordPress Forminator plugin <= 1.57.3 - Cross Site Scripting (XSS) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-102388",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T14:16:36.000Z",
-        "contentSnippet": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in WPMU DEV Forminator forminator allows Stored XSS.This issue affects Forminator: from n/a through 1.57.3.",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-108546 - Spotweb through 1.5.8 OS Command Injection via Spot Title in Runcommand Integration",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108546",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T14:15:52.000Z",
-        "contentSnippet": "Spotweb through 1.5.8 contains an OS command injection vulnerability in the runcommand NZB handler that allows remote attackers to execute commands by publishing spots with malicious titles. Attackers can post self-signed spots over Usenet with shell metacharacters in the title, ",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-108545 - SillyTavern 1.12.13 through 1.19.0 Pre-Authentication Denial of Service via Body Parsing",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108545",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T14:15:52.000Z",
-        "contentSnippet": "SillyTavern 1.12.13 through 1.19.0 contains a denial of service vulnerability that allows unauthenticated remote attackers to exhaust resources because body-parser middleware runs before authentication and whitelist checks. Attackers can send large or compressed JSON or urlencode",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-108115 - Kortix Suna 0.10.7 before 0.13.52 SSRF Guard Bypass via IPv6 6to4 Addresses",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108115",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T14:15:51.000Z",
-        "contentSnippet": "Kortix Suna 0.10.7 before 0.13.52 contains a server-side request forgery vulnerability that allows project managers to bypass the isPrivateIp guard by supplying IPv6 6to4 or Teredo addresses that embed private IPv4 destinations. Attackers holding project.connector.write can set c",
-        "cveScore": 4.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-108114 - Strapi 5.47.0 through 5.57.0 Improper Authorization via Admin API Token Field Permissions",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108114",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T14:15:50.000Z",
-        "contentSnippet": "Strapi 5.47.0 through 5.57.0 contains an improper authorization vulnerability that allows admin API tokens to retain all-field Content Manager access after the owner's role is field-restricted. Because reconcileTokenPermissionsToUserCeiling ignores token permissions with omitted ",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-107794 - ExtUtils::Typemaps::STL::List versions before 1.07 for Perl allocate a 32 GiB array on an empty list",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107794",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T13:17:31.000Z",
-        "contentSnippet": "ExtUtils::Typemaps::STL::List versions before 1.07 for Perl allocate a 32 GiB array on an empty list. The OUTPUT typemaps call av_extend( av, len-1 ). On an empty list, this undeflows, and av_extend will allocate an array with 2^32 slots, leading to memory exhaustion. Note that a",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-107373 - ExtUtils::Typemaps::STL::String versions before 1.06 for Perl T_STD_STRING typemap may read the SV length before stringifying the argument",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107373",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T13:17:31.000Z",
-        "contentSnippet": "ExtUtils::Typemaps::STL::String versions before 1.06 for Perl T_STD_STRING typemap may read the SV length before stringifying the argument. The typemap uses $var = std::string( SvPV_nolen($arg), SvCUR($arg) ) However, evaluation order for C++ arguments is not specified, and some ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2013-10076 - ExtUtils::Typemaps::STL::Vector versions before 1.05 for Perl allocate a 32 GiB array on an empty list",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2013-10076",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T13:17:30.000Z",
-        "contentSnippet": "ExtUtils::Typemaps::STL::Vector versions before 1.05 for Perl allocate a 32 GiB array on an empty list. The OUTPUT typemaps call av_extend( av, len-1 ). On an empty list, this undeflows, and av_extend will allocate an array with 2^32 slots, leading to memory exhaustion.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-103636 - Apache DataSketches: datasketches-cpp: Out-of-bounds read in VarOpt union deserialization allows denial of service via a truncated sketch",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-103636",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T11:17:36.000Z",
-        "contentSnippet": "Out-of-bounds read in the VarOpt union deserialization of Apache DataSketches C++ (repo: datasketches-cpp). var_opt_union::deserialize() read the 32-byte preamble of a non-empty union after checking that only 8 bytes were available, so a truncated serialized union could cause a r",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-103635 - Apache DataSketches: datasketches-cpp: Out-of-bounds read in compact Theta sketch deserialization allows denial of service via a crafted sketch",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-103635",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T11:17:35.000Z",
-        "contentSnippet": "Out-of-bounds read in the compact Theta sketch deserialization of Apache DataSketches C++ (repo: datasketches-cpp). compact_theta_sketch::deserialize() and wrapped_compact_theta_sketch::wrap() read header fields before checking that the input was long enough. For the compressed f",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-103513 - Apache DataSketches: datasketches-cpp: Out-of-bounds read and write in the CPC sketch deserialization allows memory corruption via a crafted sketch",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-103513",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T11:17:35.000Z",
-        "contentSnippet": "Out-of-bounds read and write in the CPC sketch deserialization of Apache DataSketches C++ (repo: datasketches-cpp). A crafted serialized CPC sketch passed to cpc_sketch::deserialize(), from either a byte buffer or a stream, can cause the decompressor to read past the end of the c",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-103501 - Apache DataSketches: datasketches-cpp: HLL CouponList Deserialization Buffer Overflow allows memory corruption via a crafted sketch",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-103501",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T11:17:34.000Z",
-        "contentSnippet": "Heap buffer overflow in the HLL sketch deserialization of Apache DataSketches C++ (repo: datasketches-cpp). When deserializing a sketch in LIST mode, from either a byte buffer or a stream, the coupon count was read from the input and used as the number of entries to copy into a f",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-108506 - Unauthorized access vulnerability in ZTE Z80 Ultra product",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108506",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T10:16:44.000Z",
-        "contentSnippet": "ZTE Z80 Ultra's system interfaces do not have robust invocation authentication, with inadequate access control. Third-party apps may call the interfaces through reflection and retrieve relevant information.",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-106139 - Cross-Site Scripting via Chart Tooltip in Kendo UI for Vue",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-106139",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T10:16:43.000Z",
-        "contentSnippet": "In Progress® Kendo UI for Vue (@progress/kendo-vue-charts) starting with version 2.5.0 and prior to 16.2.0, the default Chart tooltip renders the formatted point value as raw HTML without encoding, in both the single-point and the shared tooltip. An attacker with low privileges w",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-106138 - Cross-Site Scripting via Chart Tooltip in KendoReact",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-106138",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T10:16:42.000Z",
-        "contentSnippet": "In Progress® KendoReact (@progress/kendo-react-charts) starting with version 1.1.0 and prior to 16.2.0, the default Chart tooltip renders the formatted point value as raw HTML without encoding, in both the single-point and the shared tooltip. An attacker with low privileges who c",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-93951 - WordPress Zeinet theme <= 1.0.0 - Reflected Cross Site Scripting (XSS) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93951",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T08:00:09.000Z",
-        "contentSnippet": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Bracketweb Zeinet zeinet allows Reflected XSS.This issue affects Zeinet: from n/a through 1.0.0.",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
+      {
+        "title": "OrcaRouter Releases OrcaCyber Zero 1.5 Cybersecurity Model With 1M Context",
+        "link": "https://www.marktechpost.com/2026/10/10/orcarouter-releases-orcacyber-zero-1-5-cybersecurity-model-with-1m-context/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-10-11T06:20:21.000Z",
+        "contentSnippet": "OrcaRouter released OrcaCyber Zero 1.5, a gated cybersecurity model with a 1M-token context window. It reports 100% on Cybench and 95.8% on an evaluable CVE-Bench subset, priced at $3.00 / $7.50 per 1M tokens. The post OrcaRouter Releases OrcaCyber Zero 1.5 Cybersecurity Model Wi"
+      },
       {
         "title": "Sakana AI’s LLM Peer Review System Catches 73% of Core-Claim Errors",
         "link": "https://www.marktechpost.com/2026/10/10/sakana-ais-llm-peer-review-system-catches-73-of-core-claim-errors/",
@@ -1597,13 +1604,6 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-09-25T16:29:50.000Z",
         "contentSnippet": "Learn how to scale Mixture-of-Experts (MoE) reinforcement learning on Amazon EKS using Elastic Fabric Adapter (EFA) and DeepEP. This post presents an architecture that combines Amazon EKS, EFA, and Amazon S3 and increased aggregate reinforcement learning rollout throughput by 40%"
-      },
-      {
-        "title": "Accelerate multimodal RL training with SkyRL on Amazon SageMaker HyperPod",
-        "link": "https://aws.amazon.com/blogs/machine-learning/accelerate-multimodal-rl-training-with-skyrl-on-amazon-sagemaker-hyperpod/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-09-25T16:18:07.000Z",
-        "contentSnippet": "Learn how to run SkyRL, an open-source reinforcement learning framework, on Amazon SageMaker HyperPod to post-train a Qwen3-VL-8B vision-language model with GRPO. This walkthrough covers building the container image, launching a Ray cluster from SageMaker Studio, submitting and m"
       }
     ],
     "virtualization": [
@@ -2310,6 +2310,76 @@
     ],
     "hardware": [
       {
+        "title": "Russia's Yandex bot traffic nearly eliminated overnight after Ukraine drone strikes cripple multiple of 'Russia's Google' data centers",
+        "link": "https://www.tomshardware.com/tech-industry/data-centers/russian-disinformation-bot-traffic-nearly-eliminated-overnight-after-ukraine-drone-strikes-cripple-multiple-of-russias-google-data-centers-ukraine-intensifies-bombing-of-yandex-data-centers-in-response-to-moscows-strikes-on-kyiv-data-centers",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-11T13:15:09.000Z",
+        "contentSnippet": "Russian bot traffic falls dramatically as Ukraine takes out several Yandex data centers."
+      },
+      {
+        "title": "Sandisk NAS 800 1.92TB SSD Review: Endurance at a premium",
+        "link": "https://www.tomshardware.com/pc-components/ssds/sandisk-nas-800-1-92tb-ssd-review",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-11T13:05:59.000Z",
+        "contentSnippet": "The Sandisk NAS 800 is a high-end PCIe 5.0 NVMe SSD built for NAS workloads, with high endurance, strong sustained write performance, and low 4KB random latency. It’s mainly held back by its high price."
+      },
+      {
+        "title": "Developer turns classic Windows Minesweeper into hand-holding 'big-budget, Triple-A’ parody",
+        "link": "https://www.tomshardware.com/video-games/developer-turns-classic-windows-minesweeper-into-hand-holding-big-budget-triple-a-parody-browser-reboot-mocks-modern-gaming-with-chatty-npcs-internal-monologues-and-promised-loot-boxes",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-11T12:50:00.000Z",
+        "contentSnippet": "This reboot of Minesweeper makes it feel like a big budget game created by a massive game studio."
+      },
+      {
+        "title": "Programmer ports Super Mario 64 to Microsoft’s Zune HD media player",
+        "link": "https://www.tomshardware.com/video-games/retro-gaming/programmer-ports-super-mario-64-to-microsofts-zune-hd-media-player-the-2009-ipod-rival-runs-the-game-natively-on-its-nvidia-tegra-chip-with-touchscreen-controls-and-saves",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-11T12:30:00.000Z",
+        "contentSnippet": "A fan port of Nintendo’s Super Mario 64 runs natively on Microsoft’s 2009 Zune HD media player, with touch controls and saves."
+      },
+      {
+        "title": "Two Steam games generated $560,000 across 135,000 sales, but the co-creator only took home $15,000 annually",
+        "link": "https://www.tomshardware.com/video-games/pc-gaming/two-steam-games-generated-usd560-000-across-135-000-sales-but-the-co-creator-only-took-home-usd15-000-annually-high-chinese-refund-rates-steams-30-percent-fee-and-publisher-cuts-eat-most-of-the-profit-leaving-the-co-creator-driving-a-2012-mazda",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-11T12:10:00.000Z",
+        "contentSnippet": "Game developer explains how $560,000 in Steam sales gets reduced to $146,000 in pockets — breakdown highlights harsh realities of gaming business"
+      },
+      {
+        "title": "Cryptomining malware used poetry to infect more than 3,400 servers, researchers say",
+        "link": "https://www.tomshardware.com/tech-industry/cyber-security/cryptomining-malware-used-poetry-to-infect-more-than-3-400-servers-researchers-say-four-words-in-the-poellm-verse-changed-11-times-point-the-botnet-to-new-servers",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-11T11:45:00.000Z",
+        "contentSnippet": "Lumen's Black Lotus Labs says PoeLLM malware has hit more than 3,400 servers, most of them exposed AI tools like LiteLLM and Ollama."
+      },
+      {
+        "title": "State of California sues 3D printer filament company Polymaker for promoting ghost guns by marketing to 3D-printed gun community",
+        "link": "https://www.tomshardware.com/3d-printing/state-of-california-sues-3d-printer-filament-company-polymaker-for-promoting-ghost-guns-by-marketing-to-3d-printed-gun-community-state-alleges-company-turns-harmless-pla-filament-into-a-regulated-firearm-precursor-part",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-11T11:15:00.000Z",
+        "contentSnippet": "The newly formed Consumer Fairness and Public Protection Division is also targeting Roblox and AppLovin."
+      },
+      {
+        "title": "Creator of free Adobe clones unveils open-source Microsoft Office Excel, PowerPoint, and Word replications",
+        "link": "https://www.tomshardware.com/software/microsoft-office/creator-of-free-adobe-clones-unveils-open-source-microsoft-office-excel-powerpoint-and-word-replications-autodesk-tools-and-other-subscription-based-services-may-come-next",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-11T10:50:00.000Z",
+        "contentSnippet": "ArtCraft is expanding its roster of open-source creative tools as cross-platform alternatives to predatory subscription models."
+      },
+      {
+        "title": "New Cray-1 supercomputer replica built with 30 vintage Mac Minis and packs 1.5 TFLOPS of compute",
+        "link": "https://www.tomshardware.com/tech-industry/supercomputers/working-cray-1-supercomputer-replica-packs-30-vintage-mac-minis-and-1-5-tflops-passively-cooled-tribute-is-9-375x-faster-than-the-1976-supercomputer",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-11T10:20:00.000Z",
+        "contentSnippet": "Legendary 1975 supercomputer gets a modernized replica with old Mac Minis, showcasing decades of innovation."
+      },
+      {
+        "title": "US military-backed cargo pod promises 90-minute orbital delivery anywhere on Earth, 10-ton Ghost vehicle gets first real-world test",
+        "link": "https://www.tomshardware.com/tech-industry/space/u-s-military-backed-cargo-pod-promises-90-minute-orbital-delivery-anywhere-on-earth-10-ton-ghost-vehicle-gets-first-real-world-test-sierra-space-drops-radio-and-whiskey-from-68-500-feet-to-test-starcraft-like-supply-drops",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-11T10:00:00.000Z",
+        "contentSnippet": "Sierra Space is testing its Ghost reentry vehicle, which is designed to deliver supplies to any unit across the world within 90 minutes."
+      },
+      {
         "title": "SPECviewperf 15.0.1 Linux Edition Released: Linux’s Key Graphics Benchmark Adds Arm Support",
         "link": "https://www.servethehome.com/specviewperf-15-0-1-linux-edition-released-linuxs-key-graphics-benchmark-adds-arm-support/",
         "source": "ServeTheHome",
@@ -2938,76 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-10-06T20:15:40.000Z",
         "contentSnippet": "At $280, AOC's 27-inch 1440p QD-OLED monitor with a 144Hz refresh rate is one of the cheapest OLED displays we've seen."
-      },
-      {
-        "title": "HP takes $2200 off a Ryzen 7 9800X3D and RTX 5080 prebuilt at $2,799",
-        "link": "https://www.tomshardware.com/desktops/gaming-pcs/hp-takes-usd2200-off-a-ryzen-7-9800x3d-and-rtx-5080-prebuilt-at-usd2-799-sale-slashes-44-percent-off-an-omen-system-thats-ready-to-game-however-you-want",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-06T18:47:37.000Z",
-        "contentSnippet": "HP is selling its Omen 35L with an Nvidia RTX 5080 and Ryzen 7 9800X3D for $2,799, or $2200 off. This system has 32GB of RAM and a 2TB SSD for strong supporting performance, too."
-      },
-      {
-        "title": "Black Friday laptop deals: What should small and medium-sized businesses be looking for?",
-        "link": "https://www.tomshardware.com/laptops/black-friday-laptop-deals-what-should-small-and-medium-sized-businesses-be-looking-for",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-06T18:30:51.000Z",
-        "contentSnippet": "Dell Pro 3, 5, and 7 laptops offer excellent options for small and medium-sized businesses this Black Friday. Here's how to find the best deal on the right laptop for your business."
-      },
-      {
-        "title": "Mac Mini docks add more ports and storage — get more out of your headless server, AI machine, or Apple workstation",
-        "link": "https://www.tomshardware.com/peripherals/docking-stations-hubs/mac-mini-docks-add-more-ports-and-storage-get-more-out-of-your-headless-server-ai-machine-or-apple-workstation",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-06T17:50:00.000Z",
-        "contentSnippet": "Mac Mini docks add more ports and allow for further internal storage. Many of them are molded to fit directly beneath Apple's popular mini PC."
-      },
-      {
-        "title": "Award-winning Anycubic 3D Printers on sale with up to 47% off",
-        "link": "https://www.tomshardware.com/3d-printing/award-winning-anycubic-3d-printers-on-sale-with-up-to-47-percent-off-massive-discounts-available-on-the-most-popular-models",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-06T17:30:00.000Z",
-        "contentSnippet": "Anycubic's range of 3D printers sees large discounts in the Amazon Prime Big Deal Days sale"
-      },
-      {
-        "title": "Gigabyte W775-V10-L01 Hands-on Bringing NVIDIA GB300 Deskside",
-        "link": "https://www.servethehome.com/gigabyte-w775-v10-l01-hands-on-bringing-nvidia-gb300-deskside/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-10-06T17:00:41.000Z",
-        "contentSnippet": "We test the Gigabyte W775-V10-L01, including getting over 2.2B tokens/ day on the Blackwell Ultra GPU, 800Gbps from the ConnectX-8 SuperNIC, and testing the NVIDIA Grace CPU with the C2C link between it and the GPU The post Gigabyte W775-V10-L01 Hands-on Bringing NVIDIA GB300 Des"
-      },
-      {
-        "title": "Save up to 43% on these handy Hoto tools for PC builders and hobbyists, starting from $14",
-        "link": "https://www.tomshardware.com/peripherals/save-up-to-43-percent-on-these-handy-hoto-tools-for-pc-builders-and-hobbyists-starting-from-usd14-limited-time-deals-on-electric-screwdrivers-air-blowers-flashlights-cordless-drills-and-more",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-06T16:50:00.000Z",
-        "contentSnippet": "Amazon's big discount event means that now is the perfect time to stock up on Hoto's tools for hobbyists and PC builders, with deals running until October 7."
-      },
-      {
-        "title": "Grab this epic Razer Wolverine V3 controller for a great 53% off",
-        "link": "https://www.tomshardware.com/peripherals/controllers-gamepads/grab-this-epic-razer-wolverine-v3-controller-for-a-great-52-percent-off-now-just-usd94-99-for-this-competitive-wireless-gamepad-with-tmr-sticks-and-8k-polling-rate",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-06T16:40:00.000Z",
-        "contentSnippet": "This esports pro-friendly Razer Wolverine V3 Tournament Edition controller is on sale for a record-low Amazon Price, now just $94.99."
-      },
-      {
-        "title": "The Swiss army knife of USB DVD drives is on sale, also features a built-in M.2 SSD slot, USB hub, and SATA hard drive dock",
-        "link": "https://www.tomshardware.com/pc-components/storage/the-swiss-army-knife-of-usb-docking-dvd-drives-is-on-sale-also-available-with-built-in-m-2-ssd-slot-or-sata-hard-drive-dock-usd28-for-dvd-writer-and-hub-usd33-gets-an-added-sata-dock-or-pay-usd39-for-the-m-2-version",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-06T16:20:00.000Z",
-        "contentSnippet": "Portable DVD writers with flash media reading, M.2, and SATA drive docking abilities are great Prime Day Deals."
-      },
-      {
-        "title": "Intel's Core Ultra 5 250K Plus is down to its lowest price ever at $145",
-        "link": "https://www.tomshardware.com/pc-components/cpus/intel-core-ultra-5-250k-plus-falls-to-its-lowest-price-ever-at-usd145-grab-an-18-core-midrange-cpu-with-5-3-ghz-boost-at-an-entry-level-price",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-06T15:50:00.000Z",
-        "contentSnippet": "Intel's 18-core Core Ultra 5 250K Plus is down to its lowest price ever on Amazon, selling for just $145 on sale."
-      },
-      {
-        "title": "Buy an Nvidia RTX 5070 Ti 16GB for only $1099",
-        "link": "https://www.tomshardware.com/pc-components/buy-an-nvidia-rtx-5070-ti-16gb-for-only-usd1099-extra-discount-on-newegg-drops-the-price-on-the-triple-fan-gigabyte-windforce-to-the-lowest-price-weve-seen-in-months",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-06T15:25:00.000Z",
-        "contentSnippet": "Prices have been sky-high forever, but you can find a bit of a reprieve from Newegg as the Gigabyte Windforce 5070 Ti is on sale for only $1,099."
       }
     ]
   }
