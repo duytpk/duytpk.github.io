@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-10-12T01:56:07.075Z",
+  "updatedAt": "2026-10-12T08:25:58.299Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-93582 - Authentication Bypass via Spoofed Remote-User Header in HTTP Basic Authentication",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93582",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-12T07:16:37.000Z",
+        "contentSnippet": "The HTTP Basic Authentication modules in ((OTRS)) Community Edition 6 and prior accept the authenticated username from either the REMOTE_USER or HTTP_REMOTE_USER environment variable. In CGI and mod_perl based deployments, HTTP request headers may be mapped to corresponding HTTP_",
+        "cveScore": 9.4,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-93581 - Insufficient Neutralization of Formula Elements in CSV Exports",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93581",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-12T07:16:37.000Z",
+        "contentSnippet": "User-controlled values are not sufficiently neutralized when included in CSV exports. Values originating from user input, including data submitted by authenticated users or received through external communication channels such as email, may be stored in fields that are later incl",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-78359 - Duplicate Identity / Identity Shadowing across CustomerUser backends",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78359",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-12T07:16:37.000Z",
+        "contentSnippet": "OTRS does not sufficiently enforce the uniqueness of customer user identities across multiple configured CustomerUser backends. When multiple backends, such as a database and LDAP, are configured, the uniqueness check for customer user email addresses is performed only within the",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-78358 - Cross-Site Request Forgery in Administrative Actions",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78358",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-12T07:16:37.000Z",
+        "contentSnippet": "Several administrative actions do not sufficiently validate whether a request was intentionally initiated by the authenticated user. In particular, the DBUpdateLogCleanUp action can be triggered through a GET request without validating a ChallengeToken. An unauthenticated remote ",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-78357 - Insufficient Session Revocation for JWT Authentication",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78357",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-12T07:16:37.000Z",
+        "contentSnippet": "Previously issued authentication tokens are not immediately invalidated when an OTRS agent or customer user account is deactivated or its password is changed. As a result, an existing JWT may remain valid until its regular expiration time, which can be approximately 16 hours. An ",
+        "cveScore": 9.1,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-78356 - Unauthenticated Disclosure of Agent Frontend Configuration",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78356",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-12T07:16:36.000Z",
+        "contentSnippet": "The OTRS Agent Frontend configuration endpoint can be accessed without authentication. This allows unauthenticated remote users to retrieve internal application configuration that is intended for use by the authenticated Agent Frontend. The exposed information may include configu",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-78355 - Path Traversal in SendSupportBundle allows File Deletion Outside the Intended Directory",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78355",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-12T07:16:36.000Z",
+        "contentSnippet": "A path traversal vulnerability in the OTRS SendSupportBundle functionality allows an authenticated administrator to reference file paths outside the intended directory. This may allow files accessible to the OTRS application process to be deleted. The vulnerability does not bypas",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-48212 - Stored XSS in external pages",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48212",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-12T07:16:36.000Z",
+        "contentSnippet": "An OTRS administrator can enter arbitrary JavaScript into the content of an OTRS Custom Page, which is stored by the application and subsequently executed in the browser of users accessing that page. This issue affects OTRS: * 7.0.X * 8.0.X * 2023.X * 2024.X * 2025.X * 2026.X bef",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-48211 - Cross-Site Request Forgery in Import/Export Admin console",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48211",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-12T07:16:36.000Z",
+        "contentSnippet": "An authenticated administrator can be induced to delete administrative Import/Export templates through a Cross-Site Request Forgery (CSRF) attack. The OTRS AdminImportExport::TemplateDelete action does not validate the request's ChallengeToken, allowing an unauthenticated remote ",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-109082 - Keycloak-services: keycloak-services: ciba confidential-only contract not enforced for public clients",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-109082",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-12T07:16:36.000Z",
+        "contentSnippet": "A flaw was found in the Client-Initiated Backchannel Authentication CIBA implementation within the keycloak-services component of Keycloak. This component handles advanced authentication flows where a client initiates a login on behalf of a user. The issue occurs because Keycloak",
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108809 - Eleveo Call Recording Software logout session expiration",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108809",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-12T07:16:36.000Z",
+        "contentSnippet": "A vulnerability was identified in Eleveo Call Recording Software up to 10.3.0. This issue affects some unknown processing of the file /auth/realms/default/protocol/openid-connect/logout. The manipulation leads to session expiration. Remote exploitation of the attack is possible. ",
+        "cveScore": 4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108808 - Eleveo Call Recording Software JWT Token logout get request method with sensitive query strings",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108808",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-12T07:16:35.000Z",
+        "contentSnippet": "A vulnerability was determined in Eleveo Call Recording Software up to 10.3.0. This vulnerability affects unknown code of the file /auth/realms/default/protocol/openid-connect/logout of the component JWT Token Handler. Executing a manipulation of the argument id_token_hint can le",
+        "cveScore": 2.6,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-108807 - krupalshah EmployeeRecruitmentSystem Registration adminregister.php mysql_query sql injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108807",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-12T07:16:35.000Z",
+        "contentSnippet": "A vulnerability was found in krupalshah EmployeeRecruitmentSystem up to 922ff6d208278282e7c8e36d70d9ae356adec9fe. This affects the function mysql_query of the file source/adminregister.php of the component Registration Handler. Performing a manipulation results in sql injection. ",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-108811 - WMCMS index.php information disclosure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108811",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-12T07:15:18.000Z",
+        "contentSnippet": "A weakness has been identified in WMCMS 4.446.1257. The affected element is an unknown function of the file /index.php. This manipulation of the argument path/file causes information disclosure. The attack is possible to be carried out remotely. The exploit has been made availabl",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-108810 - tsi-coop tsi-dpdp-cms JSON Schema Validation information disclosure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108810",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-12T07:00:16.000Z",
+        "contentSnippet": "A security flaw has been discovered in tsi-coop tsi-dpdp-cms 0.5.0/0.5.1/0.5.2. Impacted is an unknown function of the component JSON Schema Validation. The manipulation of the argument _func results in information disclosure. The attack can be executed remotely. The exploit has ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98385 - sched/cache: Decouple sched_cache_group from mm to fix UAF",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98385",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-12T06:17:00.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: sched/cache: Decouple sched_cache_group from mm to fix UAF Currently the sched cache grouping is by mm and the scheduling statistics sched_cache_stat lives in the mm structure. This ties the life cycle of schedul",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-84167 - Hotel Booking <= 3.8 - Subscriber+ Booking Order PII Disclosure via IDOR",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84167",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-12T06:17:00.000Z",
+        "contentSnippet": "The Hotel Booking WordPress plugin through 3.8 does not verify that a booking record belongs to the user requesting it, allowing any authenticated user such as a Subscriber to read other customers' booking details, including their name, email address, phone number and postal addr",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-84166 - Hotel Booking <= 3.8 - Booking Order Creation, Deletion, and Modification via CSRF",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84166",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-12T06:17:00.000Z",
+        "contentSnippet": "The Hotel Booking WordPress plugin through 3.8 does not implement CSRF protection on its administrative booking order management, allowing attackers to trick a logged-in administrator into creating, deleting, or modifying arbitrary booking order records via a forged request.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-109080 - SQL injection in Night Shift bulk license plate search allows cross-organization data access",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-109080",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-12T06:17:00.000Z",
+        "contentSnippet": "SQL injection in the bulk license plate search of the Flock Night Shift hosted service allowed an authenticated user to read other customer organizations' data, including license plate recognition records, via a crafted license plate value. Data could not be modified. Flock ident",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-108806 - krupalshah EmployeeRecruitmentSystem Forgot Password authprocessing.php mysql_query sql injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108806",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-12T06:16:59.000Z",
+        "contentSnippet": "A vulnerability has been found in krupalshah EmployeeRecruitmentSystem up to 922ff6d208278282e7c8e36d70d9ae356adec9fe. Affected by this issue is the function mysql_query of the file source/authprocessing.php of the component Forgot Password Handler. Such manipulation of the argum",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-108805 - krupalshah EmployeeRecruitmentSystem Login loginprocessing.php mysql_query sql injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108805",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-12T06:16:59.000Z",
+        "contentSnippet": "A flaw has been found in krupalshah EmployeeRecruitmentSystem up to 922ff6d208278282e7c8e36d70d9ae356adec9fe. Affected by this vulnerability is the function mysql_query of the file source/loginprocessing.php of the component Login Handler. This manipulation of the argument email/",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-108804 - TRENDnet TEW-751DR/TEW-752DRU/TEW733GR Web Management Backend pigwidgeon.cgi fwrite os command injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108804",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-12T06:16:59.000Z",
+        "contentSnippet": "A vulnerability was detected in TRENDnet TEW-751DR, TEW-752DRU and TEW733GR 1.03B01/1.03B03. Affected is the function fwrite of the file pigwidgeon.cgi of the component Web Management Backend. The manipulation of the argument service results in os command injection. It is possibl",
+        "cveScore": 10,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-108803 - y_project RuoYi Disable API add changeStatus session expiration",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108803",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-12T06:16:59.000Z",
+        "contentSnippet": "A security vulnerability has been detected in y_project RuoYi up to 4.8.3. This impacts the function changeStatus of the file /system/config/add of the component Disable API. The manipulation leads to session expiration. It is possible to initiate the attack remotely. The vendor ",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108802 - y_project RuoYi Dictionary Data Drawer Preview add renderDrawer cross site scripting",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108802",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-12T06:16:58.000Z",
+        "contentSnippet": "A weakness has been identified in y_project RuoYi up to 4.8.3. This affects the function renderDrawer of the file /system/dict/data/add of the component Dictionary Data Drawer Preview. Executing a manipulation of the argument cssClass can lead to cross site scripting. The attack ",
+        "cveScore": 4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-107791 - WP Comment Cleaner 6.1 - 7.1 - Subscriber+ Bulk Comment Deletion via nav_delete_all_comment",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107791",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-12T06:16:58.000Z",
+        "contentSnippet": "The WP Comment Cleaner WordPress plugin before 7.2 does not perform a capability check or validate a nonce on one of its bulk comment-deletion routines, allowing authenticated users with minimal permissions, such as subscribers, to permanently delete all comments on the site.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2026-108778 - erzhongxmu JEEWMS Inbound Quality Check Pda WmInQmIController.java WmInQmIController.list sql injection",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-108778",
@@ -677,234 +902,16 @@
         "contentSnippet": "eladmin through commit 55fbf70 contains a missing authorization vulnerability in the downloadS3Storage handler that allows any authenticated user to retrieve stored object URLs without storage permissions. Attackers can enumerate sequential ids against GET /api/s3Storage/download",
         "cveScore": 5.3,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-108705 - CordysCRM through 1.9.3 Missing Authorization via /custom-form/data/import",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108705",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-11T02:16:39.000Z",
-        "contentSnippet": "CordysCRM through 1.9.3 contains a missing authorization vulnerability in the POST /custom-form/data/import endpoint that allows authenticated users to import data into any custom form by customFormId. Low-privileged attackers can upload Excel files with importType ADD or UPDATE ",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-108704 - CordysCRM through 1.9.3 Authorization Bypass via Follow-Up Record Add Endpoints",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108704",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-11T02:16:38.000Z",
-        "contentSnippet": "CordysCRM through 1.9.3 contains an authorization bypass vulnerability that allows low-privileged authenticated users to skip permission checks by setting the owner field to their own user id. Attackers can send requests to the follow/record/add endpoints to add follow-up records",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-108703 - CordysCRM through 1.9.3 Missing Authorization via /approval-resource/push",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108703",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-11T02:16:38.000Z",
-        "contentSnippet": "CordysCRM through 1.9.3 contains a missing authorization vulnerability in POST /approval-resource/push that allows authenticated users to submit any resource for approval without ownership checks. Low-privileged attackers can supply arbitrary resourceId values for contracts, invo",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-108702 - CordysCRM through 1.9.3 Missing Authorization and Blind SSRF via Webhook Test",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108702",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-11T02:16:38.000Z",
-        "contentSnippet": "1Panel-dev CordysCRM through 1.9.3 lacks a PROCESS_SETTING permission check on POST /approval-flow/webhook/test, allowing any authenticated user to trigger server-side requests to attacker-supplied URLs. Attackers can redirect GET requests from a controlled host to bypass SSRFVal",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-108701 - 1Panel-dev CordysCRM before 1.9.2 Missing Authorization via POST /contract/sort",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108701",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-11T02:16:38.000Z",
-        "contentSnippet": "1Panel-dev CordysCRM before 1.9.2 contains a missing authorization vulnerability in the ContractController sortModule handler for POST /contract/sort, which lacks any permission annotation. Authenticated users without contract update permission can supply a dragNodeId, stage and ",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-108700 - 1Panel-dev CordysCRM before 1.9.2 Missing Authorization via /field/source/business-title",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108700",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-11T02:16:38.000Z",
-        "contentSnippet": "1Panel-dev CordysCRM before 1.9.2 contains a missing authorization vulnerability that allows authenticated users to list business titles by calling POST /field/source/business-title without permission checks. Users lacking CONTRACT_BUSINESS_TITLE_READ can retrieve organization in",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-108696 - CoreShop through 1.5.5 Authorization Bypass via OrderController OrderConfirm and SendReship",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108696",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-11T02:16:38.000Z",
-        "contentSnippet": "CoreShop through 1.5.5 contains an authorization bypass vulnerability in the OrderController that allows authenticated customers to act on other customers' orders by supplying user-controlled ids. Attackers can omit the data field in OrderConfirm or supply another reshipId to Sen",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-108695 - MultiVendorX through 5.0.19 Incorrect Authorization via Settings REST Endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108695",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-11T02:16:37.000Z",
-        "contentSnippet": "MultiVendorX WordPress plugin through 5.0.19 contains an incorrect authorization vulnerability that allows vendor accounts to modify marketplace-wide settings via the settings REST endpoint. Attackers with the store_owner role can send POST requests to /wp-json/multivendorx/v1/se",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-108694 - ConvertX through 0.19.0 Arbitrary File Read via Pandoc Converter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108694",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-11T02:16:37.000Z",
-        "contentSnippet": "ConvertX through 0.19.0 contains an arbitrary file read vulnerability that allows authenticated users to read server files because src/converters/pandoc.ts invokes Pandoc without the --sandbox flag. Attackers can upload a reStructuredText document with an include directive naming",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-108693 - ImageMagick through 7.1.2-33 and 6.9.13-58 Uncontrolled Search Path via Ghostscript Delegate",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108693",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-11T02:16:37.000Z",
-        "contentSnippet": "ImageMagick on Windows through 7.1.2-33 and 6.9.13-58 contains an uncontrolled search path vulnerability in NTGhostscriptEXE() that launches gswin64c.exe by bare name when Ghostscript is unregistered. Attackers can plant a malicious gswin64c.exe in the working directory to execut",
-        "cveScore": 7.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-108692 - 1Panel-dev CordysCRM 1.9.0 before 1.9.2 Missing Authorization via /field/source Endpoints",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108692",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-11T02:16:37.000Z",
-        "contentSnippet": "1Panel-dev CordysCRM from 1.9.0 before 1.9.2 contains a missing authorization vulnerability in eight ModuleFieldController /field/source data-source endpoints lacking permission checks. Authenticated users denied module permission can page through organization-wide leads, contact",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-108691 - mall4j through 4.0 Operator Precedence Error Deletes Other Users' Cart Items via /p/shopCart/cleanExpiryProdList",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108691",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-11T02:16:37.000Z",
-        "contentSnippet": "mall4j through 4.0 contains an improper authorization vulnerability that allows authenticated storefront customers to delete other shoppers' cart items through an operator precedence error in the cleanExpiryProdList SQL statement. Attackers can send one DELETE request to /p/shopC",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-108690 - mall4j through 4.0 Operator Precedence Error Exposes Other Users' Cart Items via /p/shopCart/expiryProdList",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108690",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-11T02:16:37.000Z",
-        "contentSnippet": "mall4j through 4.0 contains an information disclosure vulnerability that allows authenticated customers to read other shoppers' cart items due to an operator precedence error in the getShopCartExpiryItems SQL filter. Attackers with any storefront account can request GET /p/shopCa",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-108689 - Wukong AICRM through 20260610 Authorization Bypass via User-Controlled Session ID in POST /chat/send",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108689",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-11T02:16:36.000Z",
-        "contentSnippet": "Wukong AICRM through 20260610 contains a missing authorization vulnerability that allows authenticated users to write into other users' AI chat sessions by supplying an arbitrary sessionId to POST /chat/send. Attackers can append messages to a victim's conversation and receive st",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-108688 - Eladmin through 2.7 Missing Authorization via /api/localStorage/pictures Upload",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108688",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-11T02:16:35.000Z",
-        "contentSnippet": "Eladmin through 2.7 contains a missing authorization vulnerability in the LocalStorageController uploadPicture handler that allows low-privileged authenticated users to bypass the storage:add permission. Attackers can send POST requests with image-named files to /api/localStorage",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-104841 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104841",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T23:16:26.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-108680 - JeecgBoot through 3.9.5 Missing Authorization via /sys/api/sendTemplateAnnouncement",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108680",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T22:16:45.000Z",
-        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability that allows any authenticated user to send template notifications by calling POST /sys/api/sendTemplateAnnouncement. Low-privileged attackers can supply forged sender, recipients, title, and template parameter",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-108679 - JeecgBoot through 3.9.5 Missing Authorization via /sys/api/sendBusAnnouncement",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108679",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T21:49:58.000Z",
-        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability in the sendBusAnnouncement handler of SystemApiController that allows any authenticated user to send announcements without the required permissions. Low-privileged attackers can POST crafted bodies to /sys/api",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-108678 - JeecgBoot through 3.9.5 Missing Authorization via /sys/api/queryUserRoles",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108678",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T21:49:57.000Z",
-        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability in the queryUserRoles handler of SystemApiController that lets authenticated users read any user's role codes. Low-privileged attackers can send GET requests to /sys/api/queryUserRoles with an arbitrary userna",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-108677 - JeecgBoot through 3.9.5 Missing Authorization via /sys/api/getUserByName",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108677",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T21:49:57.000Z",
-        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability in GET /sys/api/getUserByName that allows low-privileged authenticated users to retrieve any user's stored password value. Attackers can decrypt the AES-CBC protected response using the hard-coded key exposed ",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-108676 - JeecgBoot through 3.9.5 Missing Authorization via /sys/annountCement/downLoadFiles",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108676",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T21:49:56.000Z",
-        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability in the SysAnnouncementController downLoadFiles handler that allows low-privileged authenticated users to download announcement attachments. Attackers can supply a known announcement id to retrieve a ZIP of att",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-108675 - JeecgBoot through 3.9.5 Missing Authorization via /sys/annountCement/editIzTop",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108675",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T21:49:55.000Z",
-        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability in the SysAnnouncementController editIzTop handler that allows low-privileged authenticated users to change announcement pin status. Attackers can send POST or PUT requests with any announcement id to pin or u",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-108674 - JeecgBoot through 3.9.5 Missing Authorization via /openapi/queryById",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108674",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T21:49:55.000Z",
-        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability in the OpenApiController queryById handler that allows low-privileged authenticated users to read OpenAPI definitions without openapi permissions. Attackers can request GET /openapi/queryById with an entry id ",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-108673 - JeecgBoot through 3.9.5 Missing Authorization via /airag/prompts/exportXls",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108673",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T21:49:54.000Z",
-        "contentSnippet": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability in the AiragPromptsController exportXls handler that allows any authenticated user to export all AI prompts. Low-privileged attackers can request /airag/prompts/exportXls to download every user's prompts, incl",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-108672 - JeecgBoot through 3.9.5 Authorization Bypass via /airag/video/listByUser",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108672",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-10T21:49:53.000Z",
-        "contentSnippet": "JeecgBoot through 3.9.5 contains an authorization bypass vulnerability in the getVideoRecords handler of VideoGenerationController that allows authenticated users to read other users' records via the userId parameter. Low-privileged attackers can supply another user id to retriev",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
+      {
+        "title": "TII Releases Falcon-ASR: 1.6B Arabic Speech Model Hits 20.92% WER",
+        "link": "https://www.marktechpost.com/2026/10/11/tii-falcon-asr-arabic-speech-recognition/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-10-12T03:16:09.000Z",
+        "contentSnippet": "TII has released Falcon-ASR, a 1.6B speech recognition model for Arabic with an Emirati focus. It reports 20.92% average WER on 6 Arabic test sets, but weights and an API are not yet available. The post TII Releases Falcon-ASR: 1.6B Arabic Speech Model Hits 20.92% WER appeared fi"
+      },
       {
         "title": "Meet Cloudflare Clef-omni: A 30B-A3B Multimodal Decision Model for Audio, Video, Image and Text",
         "link": "https://www.marktechpost.com/2026/10/11/cloudflare-clef-omni-multimodal-decision-model/",
@@ -1597,13 +1604,6 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-09-28T15:56:32.000Z",
         "contentSnippet": "Learn an agent-driven approach to synthetic monitoring using Amazon Nova Act and Amazon Bedrock AgentCore. The post covers the architecture and patterns for resilient, managed user-journey validation that moves beyond brittle UI scripts, with a complete sample implementation."
-      },
-      {
-        "title": "Automating Amazon Textract adapter lifecycle management across accounts",
-        "link": "https://aws.amazon.com/blogs/machine-learning/automating-amazon-textract-adapter-lifecycle-management-across-accounts/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-09-28T15:49:04.000Z",
-        "contentSnippet": "Learn how to operationalize Amazon Textract Custom Queries adapters for production: infrastructure as code with AWS CloudFormation and Terraform, a cross-account adapter promotion process, a pre-classification routing pattern for multiple form versions, and production security co"
       }
     ],
     "virtualization": [
@@ -2310,6 +2310,13 @@
     ],
     "hardware": [
       {
+        "title": "AMD EPYC 8005 SKU List and Value Analysis: Mainstream Sorano’s Big Stride",
+        "link": "https://www.servethehome.com/amd-epyc-8005-sku-list-and-value-analysis-mainstream-soranos-big-stride/",
+        "source": "ServeTheHome",
+        "isoDate": "2026-10-12T04:00:38.000Z",
+        "contentSnippet": "Following the recent launch of AMD's EPYC 8005 Sorano server CPUs, we are taking a look at the various SKU options among chips, and what configurations offer the best value for different needs The post AMD EPYC 8005 SKU List and Value Analysis: Mainstream Sorano’s Big Stride appe"
+      },
+      {
         "title": "Console market craters as Xbox sales crash 33% to the lowest since launch 25 years ago, PS5 sales drop 25%",
         "link": "https://www.tomshardware.com/video-games/console-gaming/console-market-craters-as-xbox-sales-crash-33-percent-to-the-lowest-since-launch-25-years-ago-ps5-sales-drop-25-percent-steep-price-hikes-push-series-x-to-usd800-and-ps5-pro-to-usd900",
         "source": "Tom's Hardware",
@@ -3001,13 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-10-07T11:00:00.000Z",
         "contentSnippet": "The popular Olight imini 2 rechargeable flashlight has gone on sale on Amazon for $11.99, 40% off its regular price."
-      },
-      {
-        "title": "Best Amazon Prime Day tech deals live",
-        "link": "https://www.tomshardware.com/live/news/amazon-prime-big-deal-days-2026-day-two",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-07T06:21:39.000Z",
-        "contentSnippet": "It's the final day of the Amazon Prime sale."
       }
     ]
   }
