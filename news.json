@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-10-15T12:20:09.636Z",
+  "updatedAt": "2026-10-15T17:31:20.721Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-62679 - Lychee: Path traversal in `SecurePathController` allows authenticated arbitrary file read",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62679",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-15T16:33:43.000Z",
+        "contentSnippet": "Lychee is a free, open-source photo-management tool. Prior to 7.6.4, SecurePathController, which serves GET /image/{path}, concatenates the attacker-controlled path with the local storage root and performs a string-prefix check before canonicalizing dot segments. Under the suppor",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-61838 - Lychee: Album password bypass in ZIP downloads",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61838",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-15T16:32:37.000Z",
+        "contentSnippet": "Lychee is a free, open-source photo-management tool. Prior to 7.6.3, GET /api/v2/Zip authorizes album and photo archives through AlbumPolicy::canDownload() and PhotoPolicy::canDownload() without first enforcing AlbumPolicy::canAccess(). For a public, password-protected album with",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-61610 - Lychee: unauthenticated photo starring reveals existence of private photos when photos_star_visibility=anonymous",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61610",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-15T16:26:16.000Z",
+        "contentSnippet": "Lychee is a free, open-source photo-management tool. Prior to 7.6.1, when photos_star_visibility is set to anonymous, POST /api/v2/Photo::highlight can fetch and modify a photo without confirming that the caller can see it. BaseApiRequest::validateResolved() invokes SetPhotosHigh",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-61611 - Lychee: Missing rate limiting on album password unlock endpoint allows brute-force attacks",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61611",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-15T16:25:24.000Z",
+        "contentSnippet": "Lychee is a free, open-source photo-management tool. Prior to 7.6.1, POST /api/v2/Album::unlock has no throttle, attempt counter, backoff, CAPTCHA, or lockout. UnlockAlbumRequest::authorize() permits any caller to submit attempts, and app/Actions/Album/Unlock.php verifies each gu",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-57569 - Lychee: Distinct post-fix SSRF variant in Photo::fromUrl due to missing IP pinning after DNS-based validation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57569",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-15T16:24:34.000Z",
+        "contentSnippet": "Lychee is a free, open-source photo-management tool. Prior to 7.6.0, the POST /api/v2/Photo::fromUrl flow validates a hostname and its resolved addresses in app/Rules/PhotoUrlRule.php but later passes the original hostname through app/Actions/Import/FromUrl.php to app/Image/Files",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-57568 - Lychee: Stored XSS via Markdown javascript: Links in Photo and Album Descriptions (Gallery View)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57568",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-15T16:22:30.000Z",
+        "contentSnippet": "Lychee is a free, open-source photo-management tool. Prior to 7.6.0, Lychee permits an authenticated user with album-edit permissions to store a javascript URI in an album or photo Markdown description because config/markdown.php enables allow_unsafe_links. app/Http/Resources/Mod",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-97712 - Nexus Repository 3 - Privilege Escalation via Role Management",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97712",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-15T16:18:26.000Z",
+        "contentSnippet": "Sonatype Nexus Repository 3 allows a user that holds the role create or role update permission to grant roles and privileges that the account does not hold. This can give the user more access than intended, up to full administrative access.",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-97667 - Nexus Repository 3 - Stored Cross-Site Scripting in Browse UI",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97667",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-15T16:18:25.000Z",
+        "contentSnippet": "Sonatype Nexus Repository 3 allows a user account that holds the edit permission on a hosted R repository to store script content in the metadata of an uploaded R package. The script runs in the browser of a user who opens the details of that package in the Browse user interface,",
+        "cveScore": 5.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-97666 - Nexus Repository 3 - Unsafe Reflection in ExtDirect Repository Endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97666",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-15T16:18:25.000Z",
+        "contentSnippet": "Sonatype Nexus Repository 3 allows an unauthenticated remote attacker to supply attacker-controlled input to a Java class loading call through an ExtDirect endpoint. This allows the attacker to learn whether specific classes are present in the application. The issue does not by i",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-97665 - Nexus Repository 3 - Missing Authorization on NuGet Symbol Package Upload",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97665",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-15T16:18:25.000Z",
+        "contentSnippet": "A missing authorization check in Nexus Repository 3's NuGet Components API upload path allows an account holding only repository read and browse privileges to upload and persist NuGet symbol packages (.snupkg) to a hosted repository, bypassing the write-permission check enforced ",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-97394 - kin-openapi: Nil-pointer dereference panic in openapi3filter for OpenAPI 3.1 array schemas missing items",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97394",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-15T16:18:25.000Z",
+        "contentSnippet": "kin-openapi is a Go project for handling OpenAPI files. From 0.136.0 until 0.143.0, openapi3filter accepts OpenAPI 3.1 array schemas without an items keyword and then dereferences the nil Schema.Items value while decoding application/x-www-form-urlencoded or multipart/form-data r",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-95155 - FasterXML Jackson Denial of Service Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95155",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-15T16:18:24.000Z",
+        "contentSnippet": "FasterXML Jackson 1.x, confirmed in jackson-mapper-asl versions 1.8.3, 1.9.2, 1.9.11, 1.9.12, and 1.9.13, allows attackers to cause a denial of service by supplying deeply nested JSON input to an application that deserializes untrusted JSON using ObjectMapper.readValue.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-92982 - Ansible-operator-plugins: ansible operator plugins: arbitrary code execution via jinja2 template injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92982",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-15T16:18:23.000Z",
+        "contentSnippet": "A flaw was found in Ansible Operator Plugins. A low-privileged Kubernetes user can exploit a Jinja2 template injection vulnerability by crafting malicious custom resource (CR) specification values. These values are processed by Ansible without proper sanitization, allowing embedd",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-88753 - markdown2 Regular-Expression Denial of Service",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-88753",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-15T16:18:22.000Z",
+        "contentSnippet": "A Regular-Expression Denial of Service (ReDoS) in the Markdown2. extract_metadata() function (lib/markdown2.py) of trentm markdown2 through v2.5.5 allows attackers to cause a Denial of Service (DoS) via a crafted Markdown document.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-75505 - EspoCRM: Access control bypass in Mass Update letting regular user with Mass Update permission read any attachment",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75505",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-15T16:18:20.000Z",
+        "contentSnippet": "EspoCRM is an open source customer relationship management application. Prior to 10.0.2, an authenticated user with mass-update permission can supply a known attachment identifier to the mass-update functionality. The mass-update processor duplicates the attachment without checki",
+        "cveScore": 6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-71490 - OPNsense: Direct comma-separated user privileges bypass OPNsense MVC read-only write protection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71490",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-15T16:18:19.000Z",
+        "contentSnippet": "OPNsense is a FreeBSD based firewall and routing platform. Prior to 26.1.11, OPNsense\\Core\\ACL::hasPrivilege() appends a directly assigned comma-separated value as one string and then uses an exact comparison when checking user-config-readonly. A user directly assigned both a com",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-63442 - OPNsense: Log Forgery via Login Username CRLF in WebGUI Authentication → Pf Table IP Blocking",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63442",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-15T16:18:19.000Z",
+        "contentSnippet": "OPNsense is a FreeBSD based firewall and routing platform. Prior to version 26.1.11, the unauthenticated WebGUI login usernamefld accepts carriage-return and line-feed characters that survive LOG_AUTH processing through syslog-ng-lockout.conf into the syslog-ng program destinatio",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-58395 - OPNsense: XPath injection in MVC safe-delete",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58395",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-15T16:18:18.000Z",
+        "contentSnippet": "OPNsense is a FreeBSD based firewall and routing platform. Prior to version 26.1.11, the safe-delete path reached through ApiMutableModelControllerBase::delBase() interpolates an unvalidated safe-delete token from the request URL into an XPath expression over config.xml before co",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-58394 - OPNsense: Stored XSS in Administration Settings via Certificate Description",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58394",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-15T16:18:18.000Z",
+        "contentSnippet": "OPNsense is a FreeBSD based firewall and routing platform. Prior to version 26.1.11, src/www/system_advanced_admin.php reads certificate records into $a_cert but omits that array from legacy_html_escape_form_data() before rendering each certificate descr value in the SSL Certific",
+        "cveScore": 5.2,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-58393 - OPNsense: OpenVPN Client Specific Override common_name allows path traversal in generated CSO files",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58393",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-15T16:18:18.000Z",
+        "contentSnippet": "OPNsense is a FreeBSD based firewall and routing platform. Prior to version 26.1.11, the OpenVPN Client Specific Override common_name field accepts path traversal sequences and openvpn_csc_conf_write() concatenates the value into /var/etc/openvpn-csc/ / without normalization or a",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-58392 - OPNsense: Stored XSS in Services: NTP GPS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58392",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-15T16:18:18.000Z",
+        "contentSnippet": "OPNsense is a FreeBSD based firewall and routing platform. Prior to version 26.1.11, the NTP GPS page stores the operator-supplied initcmd value in base64 form, applies legacy_html_escape_form_data() to the encoded string, and then uses base64_decode() to decode the value directl",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-58391 - OPNsense: Stored XSS in Firewall Rules/NAT pages via a HTML-attribute breakout",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58391",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-15T16:18:18.000Z",
+        "contentSnippet": "OPNsense is a FreeBSD based firewall and routing platform. Prior to version 26.1.11, Firewall Rules and NAT views place stored category names and alias descriptions into HTML title attributes in filter_rule.volt and nat_rule.volt without quote-safe encoding. The response layer us",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-58390 - OPNsense: Stored XSS to root RCE via OpenVPN client common_name in status views",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-58390",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-15T16:18:17.000Z",
+        "contentSnippet": "OPNsense is a FreeBSD based firewall and routing platform. Prior to version 26.1.11, the OpenVPN connection-status dashboard widget in src/opnsense/www/js/widgets/OpenVPNClients.js and the connection-status view place a client common_name into data-common-name attributes without ",
+        "cveScore": 8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-57155 - OPNsense: Root RCE via Arbitrary File Write in GeoIP Alias Importer",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57155",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-15T16:18:17.000Z",
+        "contentSnippet": "OPNsense is a FreeBSD based firewall and routing platform. Prior to version 26.1.11, the Firewall Alias GeoIP importer's process_zip() and process_gzip() paths in src/opnsense/scripts/filter/lib/alias/geoip.py use an unvalidated CSV country_code value to construct output filename",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-53582 - OPNsense: XPATH Injection can disclose any secret in config.xml",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-53582",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-15T16:18:12.000Z",
+        "contentSnippet": "OPNsense is a FreeBSD based firewall and routing platform. Prior to version 26.1.10, the Trust module stores attacker-controlled certificate authority and certificate refid values and interpolates them into XPath expressions in src/opnsense/mvc/app/models/OPNsense/Trust/FieldType",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-79829 - HPE NonStop HTTP WEBSERVER - Memory corruption vulnerability",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-79829",
@@ -677,234 +902,30 @@
         "contentSnippet": "n8n before 1.123.83, 2.41.4, and 2.42.1 contains a stored cross-site scripting vulnerability in the file-preview modal, which re-publishes binary data as an unsandboxed same-origin blob URL. A member who uploads a crafted item can run script in the n8n origin of whoever previews ",
         "cveScore": 7.2,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-107795 - Improper Authorization in TP-Link Omada Controller TLS Certificate and Private Key Management API",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107795",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T22:26:50.000Z",
-        "contentSnippet": "Omada Controller's MSP and OpenAPI certificate/private-key management APIs do not properly enforce administrative authorization, allowing an authenticated user to perform privileged certificate management operations. Successful exploitation may allow a low-privileged authenticate",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-105627",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105627",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T22:26:43.000Z",
-        "contentSnippet": "None",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-106006",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-106006",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T22:26:43.000Z",
-        "contentSnippet": "None",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-106068",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-106068",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T22:26:43.000Z",
-        "contentSnippet": "None",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-106485",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-106485",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T22:26:42.000Z",
-        "contentSnippet": "None",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-110816 - qs.stringify with arrayFormat comma throws TypeError on array elements that cannot be coerced to a string",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110816",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T22:17:23.000Z",
-        "contentSnippet": "### Summary `qs.stringify` with `arrayFormat: 'comma'` throws `TypeError: Cannot convert object to primitive value` when an array element cannot be coerced to a string, such as an object with an own non-callable `toString` (`{ \"toString\": \"x\" }`) or a null-prototype object. The c",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-110698 - Praat Model Loader whisper.cpp whisper_model_load out-of-bounds write",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110698",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T22:17:23.000Z",
-        "contentSnippet": "A security vulnerability has been detected in Praat up to 7.0.02. Affected is the function whisper_model_load of the file external/whispercpp/whisper.cpp of the component Model Loader. The manipulation of the argument n_dims leads to out-of-bounds write. The attack can be initiat",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-110696 - itsmeravitejak Online-Examination-System dbtables.sql information disclosure",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110696",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T22:17:22.000Z",
-        "contentSnippet": "A weakness has been identified in itsmeravitejak Online-Examination-System up to e6208e630b14657999bbfe4c9912302d2a1e2449. The affected element is an unknown function of the file dbtables.sql. Executing a manipulation can lead to information disclosure. The attack may be launched",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-110695 - turboderp ExLlamaV2 Safetensors Tensor Loader stloader.py STFile.get_tensor buffer overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110695",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T22:17:22.000Z",
-        "contentSnippet": "A vulnerability was detected in turboderp ExLlamaV2 up to 0.3.2. Affected is the function STFile.get_tensor of the file exllamav2/stloader.py of the component Safetensors Tensor Loader. Performing a manipulation of the argument data_offsets results in buffer overflow. The attack ",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-108337 - Password Reset Code Accessible in User Listing API",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108337",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T22:17:22.000Z",
-        "contentSnippet": "An administrator could retrieve the password reset code for any user and take over the account. The password reset codes were included in the output of an API and could be used to reset the password of any account. The API is limited to use by administrator accounts only. An atta",
-        "cveScore": 7.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-108336 - Token Signing Key Allows Unauthenticated Administrative Access",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108336",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T22:17:22.000Z",
-        "contentSnippet": "When the default self-signed certificate is used, an attacker could gain administrative access to the application. The SSL certificate for the web interface is used to sign JWT access tokens that are used to validate that the user is logged in. When the default SSL certificate is",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-108335 - Password Reset Functionality Missing Brute-Force Protection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108335",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T22:17:22.000Z",
-        "contentSnippet": "When the password reset functionality is enabled, and email is configured, an attacker could take over any account using a brute-force attack. There is no rate limiting on the attempts to enter the reset code, leading to the possibility of a brute force solution to the password r",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-102298 - Insufficient Authorization and User Boundary Validation in Omada Controller MSP",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-102298",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T22:17:22.000Z",
-        "contentSnippet": "In Omada Controller MSP mode, the user-confirmation endpoint fails to enforce the required permission check. An authenticated user can supply a caller-controlled Identifier parameter to validate credentials for another account and receive responses that distinguish nonexistent us",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-96540 - SonicWall Network Security Manager Improper Access Control Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96540",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T21:17:39.000Z",
-        "contentSnippet": "An improper access control vulnerability has been identified in the SonicWall Network Security Manager (NSM) on-prem in export settings, potentially allowing a remote authenticated attacker to obtain sensitive information. This may allow the attacker to escalate privileges to an ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-77427 - FileRise: Insecure default cryptographic key fallback in manual installs",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77427",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T21:17:39.000Z",
-        "contentSnippet": "FileRise is a self-hosted web-based file manager with multi-file upload, editing, and batch operations. From 3.9.0 until 3.22.0, pristine manual FileRise installations without PERSISTENT_TOKENS_KEY or metadata/persistent_tokens.key can activate a published legacy compatibility ke",
-        "cveScore": 5.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-71854 - OpenAEV has unauthenticated access and missing object-level authorization on player lessons API",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71854",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T21:17:39.000Z",
-        "contentSnippet": "OpenAEV is an open source platform allowing organizations to plan, schedule and conduct cyber adversary simulation campaign and tests. Prior to version 2.260622.0, on a default installation, the `/api/player/**` lessons endpoints can be called without authentication, and they tru",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-69194 - FileRise: Unsanitized footerHtml in Public Site Config",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-69194",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T21:17:39.000Z",
-        "contentSnippet": "FileRise is a self-hosted web-based file manager with multi-file upload, editing, and batch operations. Prior to 3.21.0, FileRise returns the stored branding.footerHtml value through the unauthenticated public site configuration API without server-side sanitization. The FileRise ",
-        "cveScore": 4.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-69193 - FileRise: Rate Limiting Bypass via Username Rotation Enables Unlimited Password Spraying",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-69193",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T21:17:38.000Z",
-        "contentSnippet": "FileRise is a self-hosted web-based file manager with multi-file upload, editing, and batch operations. Prior to 3.21.0, FileRise tracks failed logins only by the combination of source IP address and username. A remote unauthenticated attacker can rotate usernames to obtain a fre",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-69191 - FileRise: Login Method Restriction Bypass via Direct API Access",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-69191",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T21:17:38.000Z",
-        "contentSnippet": "FileRise is a self-hosted web-based file manager with multi-file upload, editing, and batch operations. Prior to 3.21.0, FileRise enforces disableFormLogin, disableBasicAuth, and disableOIDCLogin in the client interface but not consistently in the corresponding server-side authen",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-64856 - FileRise: Missing Authentication Guard on File Snippet Preview Endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64856",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T21:17:38.000Z",
-        "contentSnippet": "FileRise is a self-hosted web-based file manager with multi-file upload, editing, and batch operations. Prior to 3.20.0, FileRise /api/file/snippet.php does not apply the standard authenticated-session guard before processing short text preview requests. The endpoint still perfor",
-        "cveScore": 3.7,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-62664 - FileRise: Authenticated path traversal in createFolder allows arbitrary directory creation outside the upload root",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62664",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T21:17:38.000Z",
-        "contentSnippet": "FileRise is a self-hosted web-based file manager with multi-file upload, editing, and batch operations. Prior to 3.19.0, FileRise validates the complete folderName string but does not reject dot-dot path segments before FolderModel::createFolder() constructs and creates the desti",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-61844 - FileRise: Folder Metadata Filename Collisions Bypass \"read_own\" Isolation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61844",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T21:17:38.000Z",
-        "contentSnippet": "FileRise is a self-hosted web-based file manager with multi-file upload, editing, and batch operations. Prior to 3.18.0, FileRise flattens logical folder paths into metadata filenames by replacing separators and spaces with hyphens, so distinct folders such as team/docs and team-",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-61843 - FileRise: Unauthenticated File Overwrite Through Upload-Enabled Folder Shares",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61843",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T21:17:37.000Z",
-        "contentSnippet": "FileRise is a self-hosted web-based file manager with multi-file upload, editing, and batch operations. Prior to 3.18.0, FileRise upload-enabled shared-folder and upload-only links do not reject a destination filename that already exists. An unauthenticated visitor with a valid s",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-57493 - FileRise: Remember-me auto-login uses stale admin role from token instead of current role",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57493",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T21:17:37.000Z",
-        "contentSnippet": "FileRise is a self-hosted web-based file manager with multi-file upload, editing, and batch operations. Prior to 3.16.0, FileRise stores the isAdmin flag in remember-me tokens and restores that stale value during automatic login instead of resolving the account's current role fro",
-        "cveScore": 6.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-57492 - FileRise: Setup mode re-activates when users.txt becomes empty, allowing unauthenticated admin creation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-57492",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T21:17:37.000Z",
-        "contentSnippet": "FileRise is a self-hosted web-based file manager with multi-file upload, editing, and batch operations. Prior to 3.16.0, FileRise treats an empty or missing users.txt file as a fresh installation even after setup previously completed. If storage loss, truncation, or another failu",
-        "cveScore": 7.4,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
+      {
+        "title": "Trust in Depth: Giving agents more autonomy without losing control",
+        "link": "https://aws.amazon.com/blogs/machine-learning/trust-in-depth-giving-agents-more-autonomy-without-losing-control/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-10-15T15:05:35.000Z",
+        "contentSnippet": "Enterprise leaders want AI agents to take on more work but don't fully trust them to act correctly every time. Trust in Depth is AWS's layered approach-scope, know, bound, observe, and prove-that lets agents act on their own when their actions can be verified, reserving human jud"
+      },
+      {
+        "title": "CopilotKit Releases CLiF: A Continual Learning Platform That Turns Agent Traces and User Actions into Skills, Evals, and Fine-Tuning Data",
+        "link": "https://www.marktechpost.com/2026/10/15/copilotkit-releases-clif-a-continual-learning-platform-that-turns-agent-traces-and-user-actions-into-skills-evals-and-fine-tuning-data/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-10-15T14:19:27.000Z",
+        "contentSnippet": "Introduction Teams shipping AI agents at scale keep running into the same pattern. Even agents built on top-tier models like Fable and Astra struggle to carry out complex, end-to-end tasks inside a specific product consistently enough to deploy. So teams grind out evals for the w"
+      },
+      {
+        "title": "openKylin Outlines Its Vision for Reimagining Linux in the AI Era at Open Source Summit Europe 2026",
+        "link": "https://www.marktechpost.com/2026/10/15/openkylin-outlines-its-vision-for-reimagining-linux-in-the-ai-era-at-open-source-summit-europe-2026/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-10-15T13:23:45.000Z",
+        "contentSnippet": "At Open Source Summit Europe 2026, openKylin outlined its vision for transitioning from resource management to intent management in the AI era. The community introduced KART, a unified AI runtime, alongside core desktop features in openKylin 3.0 like the AI Assistant, Global Inte"
+      },
       {
         "title": "TypeSafe AI Releases Jev 1.14 With Images, Box Type and 262k Context",
         "link": "https://www.marktechpost.com/2026/10/14/typesafe-ai-jev-1-14-images-box-long-context/",
@@ -1583,30 +1604,16 @@
         "source": "MarkTechPost",
         "isoDate": "2026-10-02T18:04:56.000Z",
         "contentSnippet": "NVIDIA announced a new 64GB configuration of DGX Spark — from Acer, ASUS, Dell, Gigabyte, HP and MSI — its GB10-powered desktop AI system. It gives developers a way to start with one system for local models and agents, then cluster two 64GB units for 128GB of memory across the cl"
-      },
-      {
-        "title": "Sweep thousands of leases for compliance using Amazon Quick and the Adjudicated Query pattern",
-        "link": "https://aws.amazon.com/blogs/machine-learning/sweep-thousands-of-leases-for-compliance-using-amazon-quick-and-the-adjudicated-query-pattern/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-10-02T15:48:26.000Z",
-        "contentSnippet": "The Adjudicated Query pattern pairs the Amazon Quick chat agent with a bounded MCP server over a deterministic rules engine to deliver provably complete, defensible compliance answers. This post walks through the reference architecture and a deployable AWS CDK sample, using lease"
-      },
-      {
-        "title": "Add secure Web Search to Claude Desktop with Amazon Bedrock AgentCore",
-        "link": "https://aws.amazon.com/blogs/machine-learning/add-secure-web-search-to-claude-desktop-with-amazon-bedrock-agentcore/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-10-02T15:46:05.000Z",
-        "contentSnippet": "Claude Desktop on Amazon Bedrock is limited to the model's knowledge cutoff without web search. In this post, we walk through connecting Claude Desktop to Web Search using Amazon Bedrock AgentCore Gateway, with JWT-based inbound authentication through AWS IAM Identity Center and "
-      },
-      {
-        "title": "Fine-tune a search agent with multi-turn RL on Amazon SageMaker AI",
-        "link": "https://aws.amazon.com/blogs/machine-learning/fine-tune-a-search-agent-with-multi-turn-rl-on-amazon-sagemaker-ai/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-10-02T15:44:20.000Z",
-        "contentSnippet": "Fine-tuning teaches a small search agent your tools and environment, giving it the reliability of a frontier model at lower latency and cost. In this post, we fine-tune an LLM-powered search agent with multi-turn reinforcement learning (MTRL) on Amazon SageMaker AI and share the "
       }
     ],
     "virtualization": [
+      {
+        "title": "Let’s Encrypt Is Shortening Certificate Lifetimes. Is Your Home Lab Ready?",
+        "link": "https://www.virtualizationhowto.com/2026/10/lets-encrypt-is-shortening-certificate-lifetimes-is-your-home-lab-ready/",
+        "source": "Virtualization HowTo",
+        "isoDate": "2026-10-15T12:23:39.000Z",
+        "contentSnippet": "SSL certificates are not one of the shiny things that we typically get excited about in our home labs. But, we all realize how important they are to security. Also,… The post Let’s Encrypt Is Shortening Certificate Lifetimes. Is Your Home Lab Ready? appeared first on Virtualizati"
+      },
       {
         "title": "ZSvirt.io – Open-Source KVM Virtualization That Actually Feels Enterprise (and Deploys in Minutes)",
         "link": "https://www.vladan.fr/zsvirt-io-open-source-kvm-virtualization-that-actually-feels-enterprise-and-deploys-in-minutes/",
@@ -2299,16 +2306,79 @@
         "source": "Virtualization HowTo",
         "isoDate": "2026-08-07T12:33:43.000Z",
         "contentSnippet": "When I think about one of the things that I am most proud of in my home lab in 2026 it is the level of automation and “self sufficiency” that… The post The 9 Things My Home Lab Automates While I’m Sleeping appeared first on Virtualization Howto."
-      },
-      {
-        "title": "Proxmox ARM64 Changes Everything for Home Labs",
-        "link": "https://www.virtualizationhowto.com/2026/08/proxmox-arm64-changes-everything-for-home-labs/",
-        "source": "Virtualization HowTo",
-        "isoDate": "2026-08-06T12:09:54.000Z",
-        "contentSnippet": "For years, there has been a common request from the Proxmox community for an official ARM release that is supported. So, realistically, every time a new Raspberry Pi or Ampere… The post Proxmox ARM64 Changes Everything for Home Labs appeared first on Virtualization Howto."
       }
     ],
     "hardware": [
+      {
+        "title": "Microsoft Surface Laptop Ultra for Business Review: RTX Spark N1X Runs a 35B-Parameter Coding Agent at 89 Tokens per Second, With One Major Caveat",
+        "link": "https://www.storagereview.com/review/microsoft-surface-laptop-ultra-for-business-review-rtx-spark-n1x",
+        "source": "StorageReview",
+        "isoDate": "2026-10-15T17:28:06.000Z",
+        "contentSnippet": "The Microsoft Surface Laptop Ultra for Business is the first Surface laptop built on NVIDIA silicon, and the first RTX Spark system to get a review from us. Our unit carries the full chip: a 20-core Grace Arm CPU, a 6,144-core Blackwell RTX GPU, and 128GB of LPDDR5X unified memor"
+      },
+      {
+        "title": "Samsung CXL Memory Pooling Demo With AMD at OCP 2026 Claims 38 Percent Lower TTFT and 3.3x Goodput for Agentic AI",
+        "link": "https://www.storagereview.com/news/samsung-cxl-memory-pooling-amd-ocp-2026-cmm-d-agentic-ai",
+        "source": "StorageReview",
+        "isoDate": "2026-10-15T16:56:10.000Z",
+        "contentSnippet": "Samsung is showing a CXL memory pool validated with AMD at the OCP Global Summit in San Jose this week, built on its CMM-D CXL memory modules and aimed at agentic AI inference. The companies worked together to validate CXL memory as a way to scale memory capacity and bandwidth al"
+      },
+      {
+        "title": "Celestica DS6005 Puts 102.4Tbps of Co-Packaged Optics and 64 1.6TbE Ports in a 1.5OU Liquid-Cooled ORv3 Switch",
+        "link": "https://www.storagereview.com/news/celestica-ds6005-102-4tbps-co-packaged-optics-1-5ou-liquid-cooled-orv3-switch",
+        "source": "StorageReview",
+        "isoDate": "2026-10-15T16:50:02.000Z",
+        "contentSnippet": "Celestica introduced the DS6005 at the OCP Global Summit, a co-packaged optics (CPO) data center switch that puts 102.4Tbps of switching capacity and 64 optically enabled 1.6TbE ports in a 1.5OU, fully liquid-cooled chassis for Open Rack v3. It is built on Broadcom’s Tomahawk 6 D"
+      },
+      {
+        "title": "Nvidia RTX 5090 disappears from Micro Center amid rumors of a production halt",
+        "link": "https://www.tomshardware.com/pc-components/gpus/nvidia-rtx-5090-disappears-from-micro-center-amid-rumors-of-a-production-halt-retailer-flags-flagship-as-not-carried-as-stock-mysteriously-vanishes",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-15T15:37:41.000Z",
+        "contentSnippet": "Micro Center has reclassified Nvidia GeForce RTX 5090 graphics cards as 'Not Carried,' and almost all units are out of stock at its stores."
+      },
+      {
+        "title": "Googlebooks from Dell, Lenovo, and HP tested: Nice hardware, but the OS isn't ready yet",
+        "link": "https://www.tomshardware.com/laptops/googlebooks-from-dell-lenovo-and-hp-tested-nice-hardware-but-the-os-isnt-ready-yet",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-15T15:00:00.000Z",
+        "contentSnippet": "Googlebook OS needs a lot of love to feel like something other than Android on a PC."
+      },
+      {
+        "title": "Sipeed reveals Chinese-made DGX Spark and Ryzen AI Halo rival, expected to cost $3,999",
+        "link": "https://www.tomshardware.com/desktops/mini-pcs/sipeed-reveals-chinese-made-dgx-spark-and-ryzen-ai-halo-rival-expected-to-cost-usd3-999-maixstation-pairs-axeras-ax8860p-with-128gb-of-lpddr5x-at-273-gb-s-with-promising-local-ai-performance-claims",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-15T14:30:00.000Z",
+        "contentSnippet": "Sipeed’s MaixStation pairs Axera’s AX8860P with 128GB of LPDDR5X at 273 GB/s to take on Nvidia’s DGX Spark and AMD’s Ryzen AI Halo."
+      },
+      {
+        "title": "The internet isn’t the best place for finding PC components to upgrade your computer — brick-and-mortar stores still reign supreme thanks to bundled deals",
+        "link": "https://www.tomshardware.com/desktops/gaming-pcs/the-internet-isnt-the-best-place-for-finding-pc-components-to-upgrade-your-computer-brick-and-mortar-stores-still-reign-supreme-thanks-to-bundled-deals",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-15T14:00:00.000Z",
+        "contentSnippet": "Component bundles are a great way of offsetting high prices on certain parts, but your proximity to a Micro Center may save you even more."
+      },
+      {
+        "title": "EU negotiates sanction swap with China to rescue critical ASML supplier",
+        "link": "https://www.tomshardware.com/tech-industry/semiconductors/eu-negotiates-sanction-swap-with-china-to-rescue-critical-asml-supplier-german-coatings-firm-faces-shutdown-without-chinese-rare-earths",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-15T13:30:00.000Z",
+        "contentSnippet": "The EU is reportedly negotiating with Beijing to remove Chinese restrictions on German ASML supplier Sindlhauser Materials, to prevent the China-dependent company from going out of business"
+      },
+      {
+        "title": "Alienware AW3226Q 32-inch 4K OLED gaming monitor review: Sleek design with performance and value to match",
+        "link": "https://www.tomshardware.com/monitors/gaming-monitors/alienware-aw3226q-32-inch-4k-oled-gaming-monitor-review",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-15T13:00:00.000Z",
+        "contentSnippet": "Alienware rolls Tandem RGB Stripe OLED tech into a stylish 32-inch gaming monitor for a low price. The AW3226Q delivers 4K resolution, 165 Hz, Adaptive-Sync, HDR400 True Black, Dolby Vision, and wide-gamut color."
+      },
+      {
+        "title": "Malicious Russian disinformation bot traffic barely flinches after Ukraine strikes Yandex data centers and auto-migration kicks in",
+        "link": "https://www.tomshardware.com/service-providers/network-providers/malicious-russian-disinformation-bot-traffic-barely-flinches-after-ukraine-strikes-yandex-data-centers-and-auto-migration-kicks-in-cloudflare-tracks-170-million-automated-attacks-shifting-to-alternate-cloud-hosts",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-15T12:28:24.000Z",
+        "contentSnippet": "Ukraine's strikes on Russian data centers have caused legitimate bot traffic to go down, but malicious bots remain operational."
+      },
       {
         "title": "We tested the RTX Spark Superchip in Microsoft's Surface Laptop Ultra",
         "link": "https://www.tomshardware.com/laptops/we-test-the-rtx-spark-superchip-in-microsofts-surface-laptop-ultra-nvidias-windows-on-arm-platform-impresses-in-local-ai-but-gaming-isnt-its-strong-suit",
@@ -2938,76 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-10-10T15:00:00.000Z",
         "contentSnippet": "This week on Tom's Hardware Premium, we covered how the AI buildout is affecting the industry supporting it across all axioms, including in law, chip design, manufacturing, and finance."
-      },
-      {
-        "title": "Senate investigation says that some AI data center claims are misleading",
-        "link": "https://www.tomshardware.com/tech-industry/data-centers/senate-investigation-says-that-some-ai-data-center-claims-are-misleading-senators-question-number-of-permanent-jobs-projects-bring-to-communities-but-companies-refuse-to-divulge-data",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-10T14:40:00.000Z",
-        "contentSnippet": "A Senate investigation on AI data centers question that costs and benefits that AI hyperscalers show when they apply for permits to put up their developments. The report says that these claims are misleading and that they don't show the real impact of these sites on the local eco"
-      },
-      {
-        "title": "We tested gaming performance in 17-year-old Windows 7 on a modern gaming PC against Windows 11",
-        "link": "https://www.tomshardware.com/software/windows/we-tested-gaming-performance-in-17-year-old-windows-7-against-windows-11-on-a-modern-gaming-pc-older-operating-system-delivers-advantages-in-some-scenarios",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-10T13:40:00.000Z",
-        "contentSnippet": "We managed to install Windows 7 on a modern PC and put it to the test across eight DirectX 11 games and two DirectX 9 titles to see how its gaming performance compares to Windows 11 today."
-      },
-      {
-        "title": "Top AI labs reportedly planning for catastrophic AI event fallout",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/top-ai-labs-reportedly-planning-for-catastrophic-ai-event-fallout-anthropic-openai-and-others-reportedly-building-contingency-plans-and-running-scenarios-of-a-runaway-ai-wreaking-havoc",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-10T13:20:00.000Z",
-        "contentSnippet": "One focus of these contingency plans is how to manage Congress after a catastrophic event puts these labs in the spotlight."
-      },
-      {
-        "title": "Free Steam demo runs up $1,000 daily AI bill and forces devs to take out bank loan",
-        "link": "https://www.tomshardware.com/video-games/pc-gaming/free-steam-demo-runs-up-usd1-000-daily-ai-bill-and-forces-devs-to-take-out-bank-loan-studio-eyes-local-hardware-models-to-escape-cloud-limits-as-cheaper-automatic-fallback-ai-models-create-problems-game-uses-ai-to-process-your-voice-and-build-responses",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-10T12:52:20.000Z",
-        "contentSnippet": "Easy Fox were surprised by the number of users and didn't expect that the demo's popularity would cause its AI expenses to go that high."
-      },
-      {
-        "title": "Nvidia reportedly halts GeForce RTX 5090 production in favor of AI data center and professional GPUs",
-        "link": "https://www.tomshardware.com/pc-components/gpus/nvidia-reportedly-halts-geforce-rtx-5090-production-in-favor-of-ai-data-center-and-professional-gpus-impending-supply-drought-expected-to-drive-up-prices-rtx-5080-24gb-rumored-as-new-gaming-flagship",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-10T12:20:00.000Z",
-        "contentSnippet": "Nvidia reportedly discontinues GeForce RTX 5090-series products leaving GB202 for data center and professional graphics boards. GeForce RTX 5080 24 GB rumored to become de-facto flagship from the green camp for a while."
-      },
-      {
-        "title": "Russian modder slaps DLSS 5 onto Pac-Man with 4x Multipass",
-        "link": "https://www.tomshardware.com/video-games/pc-gaming/dlss-5-on-pac-man-is-a-creepypasta-one-rendering-mode-even-removes-the-eyes-of-a-ghost",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-10T12:00:00.000Z",
-        "contentSnippet": "Russian YouTube channel dedicated to DLSS 5 experiments tries Pac-Man, and it's genuinely cursed."
-      },
-      {
-        "title": "World’s first 3D-printed remote control aircraft with a jet turbine takes flight, aims for Mach 0.8 to beat world record for fastest model aircraft",
-        "link": "https://www.tomshardware.com/3d-printing/worlds-first-3d-printed-remote-control-aircraft-with-a-jet-turbine-takes-flight-aims-for-mach-0-8-to-beat-world-record-for-fastest-model-aircraft-mostly-printed-using-standard-petg-materials",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-10T10:00:00.000Z",
-        "contentSnippet": "Team of graduates attempts to beat Guiness World Record for fastest jet-powered model aircraft using PETG and clever engineering."
-      },
-      {
-        "title": "GMKtec EVO-X3 Mini-PC Review Looking at a 128GB AMD Local AI Box",
-        "link": "https://www.servethehome.com/gmktec-evo-x3-mini-pc-review/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-10-09T17:30:25.000Z",
-        "contentSnippet": "Today we are taking a look at GMKtec's latest Ryzen AI Max+ 395 mini-PC, the EVO-X3, an interesting AI workstation with the added twist of an OCuLink Port The post GMKtec EVO-X3 Mini-PC Review Looking at a 128GB AMD Local AI Box appeared first on ServeTheHome."
-      },
-      {
-        "title": "IBM Moves to DARPA Quantum Benchmarking Initiative Stage C, Putting Its Starling Hardware Under Test",
-        "link": "https://www.storagereview.com/news/ibm-darpa-quantum-benchmarking-initiative-stage-c",
-        "source": "StorageReview",
-        "isoDate": "2026-10-09T16:33:01.000Z",
-        "contentSnippet": "IBM has announced that DARPA has selected it for Stage C, the third phase of the Quantum Benchmarking Initiative (QBI). DARPA launched QBI in 2024 to determine whether an industrially useful fault-tolerant quantum computer can be built by 2033, and it defines such a system as one"
-      },
-      {
-        "title": "Seagate and Toshiba Reportedly Pursue TDK HDD Head Business as Nearline Demand Accelerates",
-        "link": "https://www.storagereview.com/news/seagate-toshiba-reportedly-pursue-tdk-hdd-head-business",
-        "source": "StorageReview",
-        "isoDate": "2026-10-09T15:33:30.000Z",
-        "contentSnippet": "Seagate and Toshiba have each held preliminary talks to acquire TDK’s hard disk drive recording head business in a potential multibillion-dollar deal, Bloomberg reported this week. The report describes TDK as the only independent HDD head supplier, selling to all three nearline d"
       }
     ]
   }
