@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-10-14T22:53:15.448Z",
+  "updatedAt": "2026-10-15T01:07:52.607Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-110873 - Heym 0.0.55 before 0.0.121 Credential Theft via error_workflow_id Field",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110873",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-14T23:17:29.000Z",
+        "contentSnippet": "Heym from 0.0.55 before 0.0.121 contains a privilege escalation vulnerability that allows shared collaborators to overwrite a workflow's error_workflow_id because the field is missing from OWNER_ONLY_EXECUTION_FIELDS. Attackers can point the error workflow to their own workflow w",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-110872 - Nodemailer 3.0.0 before 10.0.10 Denial of Service via SMTP Reply Parsing",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110872",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-14T23:17:29.000Z",
+        "contentSnippet": "Nodemailer from 3.0.0 before 10.0.10 contains a quadratic complexity denial of service vulnerability in the SMTP client reply parser in SMTPConnection._onData and isPartialResponse. A malicious SMTP server or on-path attacker can stream continuation lines without a completion lin",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-110871 - Nodemailer 3.0.0 before 10.0.10 Quadratic DKIM Header Unfolding Denial of Service",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110871",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-14T23:17:28.000Z",
+        "contentSnippet": "Nodemailer from 3.0.0 before 10.0.10 contains a denial of service vulnerability in MessageParser.parseHeaders that allows users to exhaust CPU through quadratic header unfolding. Attackers can supply large recipient lists or long headers that fold into tens of thousands of contin",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-110870 - Nodemailer before 10.0.13 Improper Input Validation via Angle-Bracket Address Comments",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110870",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-14T23:17:28.000Z",
+        "contentSnippet": "Nodemailer from 3.0.0 before 10.0.13 contains an improper input validation vulnerability in its address parser that fails to strip RFC 5322 comments inside angle-bracket addresses. Attackers can supply recipients like a display name with a parenthesized comment in the domain, so ",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-110869 - Nodemailer 3.0.0 before 10.0.13 ReDoS via SMTP AUTH Mechanism Detection Regexes",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110869",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-14T23:17:28.000Z",
+        "contentSnippet": "Nodemailer 3.0.0 before 10.0.13 has a regular expression denial of service in SMTPConnection._actionEHLO, whose four AUTH mechanism detection regexes contain overlapping whitespace sub-patterns that backtrack quadratically. A malicious or man-in-the-middle SMTP server can reply t",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-110868 - Renovate before 44.79.0 SSRF via HTTP Preset URLs and customDatasources",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110868",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-14T23:17:28.000Z",
+        "contentSnippet": "Renovate before 44.79.0 contains a server-side request forgery vulnerability that allows users to make the shared HTTP client request arbitrary internal URLs via extends presets or customDatasources. Attackers can point a preset at an instance metadata service endpoint to obtain ",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-110867 - Renovate before 44.60.1 allowedEnv Allowlist Bypass via Shared Preset",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110867",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-14T23:17:28.000Z",
+        "contentSnippet": "Renovate before 44.60.1 contains an allowlist bypass vulnerability that allows repositories to set restricted environment variables by placing env inside a shared preset. Attackers controlling an externally sourced preset can override variables like PATH, LD_PRELOAD, NODE_OPTIONS",
+        "cveScore": 9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-110866 - Renovate before 44.61.3 minimumReleaseAge Bypass via PR Rebase Request",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110866",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-14T23:17:28.000Z",
+        "contentSnippet": "Renovate before 44.61.3 contains a protection mechanism bypass vulnerability that allows minimumReleaseAge checks to be skipped when a user requests a PR rebase via the rebase/retry checkbox. Attackers who publish a malicious dependency version can have it pushed into the PR and ",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-110865 - Renovate before 44.60.1 HTTP Header Allowlist Bypass via Shared Presets",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110865",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-14T23:17:28.000Z",
+        "contentSnippet": "Renovate before 44.60.1 contains an allowlist bypass vulnerability that allows repository users to evade the allowedHeaders restriction by placing hostRules headers inside shared presets. Attackers can supply internal or externally sourced presets with unvalidated hostRules[].hea",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-110864 - Better Auth 1.5.0-beta.12 before 1.7.7 Authentication Bypass via OAuth Proxy",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110864",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-14T23:17:27.000Z",
+        "contentSnippet": "Better Auth from 1.5.0-beta.12 before 1.7.7 contains an authentication bypass vulnerability in the OAuth Proxy plugin that allows unauthenticated attackers to sign in as other users by forging encrypted profiles. When the proxy shares the global secret and cookie-stored state is ",
+        "cveScore": 9.1,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-110863 - Better Auth @better-auth/sso before 1.7.3 Authentication Bypass via Personal SSO Providers",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110863",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-14T23:17:27.000Z",
+        "contentSnippet": "Better Auth @better-auth/sso from 1.7.0-rc.2 before 1.7.3 contains an authentication bypass vulnerability that allows authenticated users to sign in as other users by registering a personal SSO provider. Attackers can copy a legitimate provider's OIDC issuer or SAML entity ID and",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-110862 - Better Auth 1.4.0-beta.18 before 1.7.7 Authentication Bypass via Magic Link",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110862",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-14T23:17:27.000Z",
+        "contentSnippet": "Better Auth from 1.4.0-beta.18 before 1.7.7 contains an authentication bypass vulnerability that allows unauthenticated attackers to sign in as other users by reusing OAuth state values as Magic Link tokens. Attackers can start an OAuth sign-in with a victim's email and submit th",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-110861 - Better Auth drizzle-adapter 1.6.17 before 1.7.7 Rate Limit Bypass via Race Condition",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110861",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-14T23:17:27.000Z",
+        "contentSnippet": "Better Auth @better-auth/drizzle-adapter and better-auth from 1.6.17 before 1.7.7, and @better-auth/kysely-adapter from 1.6.17 before 1.7.0, contain a race condition in database-backed rate limiting on PostgreSQL where the limit check is not atomic with the counter update. Remote",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-110860 - GitPython 3.1.62 before 3.2.0 Symlink Path Traversal via Submodule.move()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110860",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-14T23:17:27.000Z",
+        "contentSnippet": "GitPython from 3.1.62 before 3.2.0 contains a symlink-following flaw in Submodule.move(), which checks the destination only lexically and does not reject symbolic links in intermediate path components. An untrusted repository can commit a symlink such as vendor pointing outside t",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-110859 - GitPython before 3.2.0 Arbitrary File Read via Head.checkout() Branch Name",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110859",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-14T23:17:27.000Z",
+        "contentSnippet": "GitPython before 3.2.0 contains an argument injection vulnerability in Head.checkout() that allows remote attackers to read arbitrary files by supplying a branch name parsed as a git option. Attackers can host a repository whose default branch is named --pathspec-from-file= , cau",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-110858 - GitPython 3.1.30 before 3.2.0 Command Injection via Remote.pull() Refspec",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110858",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-14T23:17:27.000Z",
+        "contentSnippet": "GitPython from 3.1.30 before 3.2.0 contains a remote code execution vulnerability in Remote.pull() whose unsafe-option guard inspects only keyword arguments, not the positional refspec. Attackers controlling the refspec can supply --upload-pack= to execute OS commands as the call",
+        "cveScore": 9.2,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-110857 - GitPython before 3.2.0 Command Execution via ls_remote ext:: URLs",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110857",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-14T23:17:26.000Z",
+        "contentSnippet": "GitPython before 3.2.0 contains a remote code execution vulnerability that allows attackers to run commands because Git.ls_remote forwards URLs without check_unsafe_protocols validation. Attackers can supply ext:: remote-helper URLs to execute commands when git permits the ext tr",
+        "cveScore": 7.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-110856 - GitPython before 3.2.0 ReDoS via _re_actor_epoch in parse_actor_and_date",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110856",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-14T23:17:26.000Z",
+        "contentSnippet": "GitPython before 3.2.0 contains a regular expression denial of service vulnerability in the _re_actor_epoch pattern used by parse_actor_and_date on author, committer, and tagger lines. Attackers can serve repositories with commit or tag objects containing long space-filled lines ",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-110855 - GitPython before 3.2.0 Environment Variable Disclosure via .gitmodules Submodule Name",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110855",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-14T23:17:26.000Z",
+        "contentSnippet": "GitPython before 3.2.0 contains an information disclosure vulnerability that allows malicious repositories to expand environment variables via separate_git_dir in Repo._clone(), which omits expand_vars=False when calling Git.polish_url(). Attackers can craft a .gitmodules submodu",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-110854 - Parse Server before 8.6.97 and 9.10.2-alpha.6 Denial of Service via Unhandled Email Error",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110854",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-14T23:17:26.000Z",
+        "contentSnippet": "Parse Server before 8.6.97 and 9.0.0 before 9.10.2-alpha.6 does not handle errors raised while sending verification or password reset emails, causing the server process to exit. A client holding only the public application keys can sign up, request a verification email, or reques",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-110853 - n8n before 1.123.83 Authorization Bypass via Execute Sub-workflow Inline JSON",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110853",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-14T23:17:26.000Z",
+        "contentSnippet": "n8n before 1.123.83 contains an authorization bypass vulnerability that allows authenticated members to spoof workflow identity by supplying a trusted identifier in Execute Sub-workflow inline JSON mode. Attackers can set this identifier to resolve credentials from projects they ",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-110852 - n8n before 1.123.83, 2.41.4, and 2.42.1 Unauthenticated Workflow Execution via Dynamic-Path Webhook Resolution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110852",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-14T23:17:26.000Z",
+        "contentSnippet": "n8n before 1.123.83, 2.x before 2.41.4, and 2.42.x before 2.42.1 contains an authentication bypass because dynamic-path webhook resolution matched requests on the path alone, ignoring the server-generated identifier that is the URL's only unguessable component. Unauthenticated at",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-110851 - n8n before 2.41.4 and 2.42.1 Cross-Project Agent Ownership Transfer via Agents Create Endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110851",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-14T23:17:26.000Z",
+        "contentSnippet": "n8n before 2.41.4 and 2.42.x before 2.42.1 contains an authorization bypass in the Agents create endpoint, which accepts a caller-supplied Agent ID, checks permissions only against the requested project, and updates an existing Agent without verifying which project owns it. An au",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-110850 - n8n before 2.41.4 and 2.42.1 Credential Check Bypass via Agent Node Parameters",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110850",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-14T23:17:25.000Z",
+        "contentSnippet": "n8n before 2.41.4 and 2.42.0 before 2.42.1 does not validate credential ids stored in agent node parameters when an editor saves a shared workflow, because the check inspects only a node's credentials field. An editor can configure a Message an Agent node in inline mode with tool",
+        "cveScore": 7.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-110849 - n8n before 1.123.83, 2.41.4, and 2.42.1 Stored XSS via Binary-Data File Preview",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110849",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-14T23:17:25.000Z",
+        "contentSnippet": "n8n before 1.123.83, 2.41.4, and 2.42.1 contains a stored cross-site scripting vulnerability in the file-preview modal, which re-publishes binary data as an unsandboxed same-origin blob URL. A member who uploads a crafted item can run script in the n8n origin of whoever previews ",
+        "cveScore": 7.2,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-107795 - Improper Authorization in TP-Link Omada Controller TLS Certificate and Private Key Management API",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-107795",
@@ -677,234 +902,23 @@
         "contentSnippet": "The WPForms Lite WordPress plugin before 2.0.2.2 does not verify server-side that a payment was completed before accepting a submission on forms using its PayPal Commerce gateway, allowing unauthenticated visitors to submit paid forms without paying. The form's confirmation is de",
         "cveScore": 5.3,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-73792 - HPE NonStop Java JToolkit - Command Injection and buffer overflow vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73792",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T09:21:56.000Z",
-        "contentSnippet": "A security vulnerability in HPE NonStop Java JToolkit can allow command Injection and buffer overflow.",
-        "cveScore": 3.8,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-73790 - HPE NonStop iTP WebServer - Memory corruption vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73790",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T09:17:22.000Z",
-        "contentSnippet": "A vulnerability in HPE NonStop iTP WebServer can cause memory corruption and system shutdown.",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-14851 - Unauthorised disclosure of information on Copart’s online billing service",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-14851",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T09:17:22.000Z",
-        "contentSnippet": "A vulnerability relating to the exposure of confidential information in the customer invoicing web application, which exposes personally identifiable information (PII) and financial data – including customer names, addresses, invoice numbers, payment details and tax information –",
-        "cveScore": 9.2,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-107428 - WordPress Paid Videochat Turnkey Site plugin <= 7.5.12 - Cross Site Scripting (XSS) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107428",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T09:17:22.000Z",
-        "contentSnippet": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in VideoWhisper.com Paid Videochat Turnkey Site ppv-live-webcams allows Reflected XSS.This issue affects Paid Videochat Turnkey Site: from n/a through 7.5.12.",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-103671 - EC-CUBE AmazonPay Plugin Open Redirect Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-103671",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T09:17:22.000Z",
-        "contentSnippet": "External control of assumed-Immutable web parameter issue exists in EC-CUBE plugin (for EC-CUBE 4 series) \"AmazonPay Plugin\". If exploited, the user may be redirected to an arbitrary website during the ordering process. As a result, user's account information may be obtained.",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-73791 - HPE NonStop Hpjmeter - Buffer overflow vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-73791",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T09:06:31.000Z",
-        "contentSnippet": "A security vulnerability in HPE NonStop Hpjmeter can cause stack and heap buffer overflow.",
-        "cveScore": 2,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-92392 - HTTP/2 upload Use-After-Free",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92392",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T08:17:05.000Z",
-        "contentSnippet": "During an upload, curl mishandles HTTP/2 `RST_STREAM` received from the server (with reason `HTTP_1_1_REQUIRED` or `REFUSED_STREAM`) leading to a use after free of a `struct Curl_easy` object.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-110284 - LifterLMS <= 10.3.1 - Authenticated (Contributor+) Local File Inclusion via 'lifterlms_checkout' Shortcode Attributes",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110284",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T08:17:05.000Z",
-        "contentSnippet": "The LifterLMS – WP LMS for eLearning, Online Courses, & Quizzes plugin for WordPress is vulnerable to Local File Inclusion in versions up to, and including, 10.3.1 via attacker-controlled attributes of the [lifterlms_checkout] shortcode. This is due to the llms_get_template() hel",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-110227 - WordPress Restricted Site Access plugin <= 7.6.2 - Broken Access Control vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110227",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T08:17:05.000Z",
-        "contentSnippet": "Missing Authorization vulnerability in 10up Restricted Site Access restricted-site-access allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Restricted Site Access: from n/a through 7.6.2.",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-109901 - WordPress CP Multi View Event Calendar plugin <= 1.4.41 - SQL Injection vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-109901",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T08:17:05.000Z",
-        "contentSnippet": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Codepeople CP Multi View Event Calendar cp-multi-view-calendar allows SQL Injection.This issue affects CP Multi View Event Calendar : from n/a through 1.4.41.",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-107757 - Gallery Custom Links <= 2.3.3 - Authenticated (Subscriber+) Stored Cross-Site Scripting via Comment Author Display Name + Comment HTML Comment Body",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107757",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T08:17:05.000Z",
-        "contentSnippet": "The Gallery Custom Links plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'display_name (profile.php) + comment (wp-comments-post.php)' parameter in all versions up to, and including, 2.3.3 due to insufficient input sanitization and output escaping. This ",
-        "cveScore": 4.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-107756 - Meow Lightbox <= 5.6.2 - Authenticated (Subscriber+) Stored Cross-Site Scripting via Output Buffering parser noise substitution via comment body + display_name",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107756",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T08:17:04.000Z",
-        "contentSnippet": "The Meow Lightbox plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'display_name + comment' parameter in all versions up to, and including, 5.6.2 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attacker",
-        "cveScore": 6.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-107754 - GeoDirectory <= 2.8.190 - Authenticated (Subscriber+) Stored Cross-Site Scripting via Image Title",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107754",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T08:17:04.000Z",
-        "contentSnippet": "The GeoDirectory – WP Business Directory Plugin and Classified Listings Directory plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'post_images (file_info[2] = title)' parameter in all versions up to, and including, 2.8.190 due to insufficient input sanit",
-        "cveScore": 6.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-107751 - Mang Board <= 2.4.3 - Unauthenticated Stored Cross-Site Scripting via 'user_name' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107751",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T08:17:04.000Z",
-        "contentSnippet": "The Mang Board plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'user_name' parameter in all versions up to, and including, 2.4.3 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject ar",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-107650 - GeoDirectory <= 2.8.190 - Authenticated (Subscriber+) Stored Cross-Site Scripting via Dynamic Content Field-Token Substitution via Listing Title",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107650",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T08:17:04.000Z",
-        "contentSnippet": "The GeoDirectory – WP Business Directory Plugin and Classified Listings Directory plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'post_title' parameter in all versions up to, and including, 2.8.190 due to insufficient input sanitization and output escap",
-        "cveScore": 6.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-107631 - Record of Consent Extension for Complianz <= 2.5 - Unauthenticated Stored Cross-Site Scripting via 'uid' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107631",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T08:17:04.000Z",
-        "contentSnippet": "The Record of Consent Extension for Complianz plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'uid' parameter in all versions up to, and including, 2.5 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-107171 - Trellix Agent Hardcoded Cryptographic Key Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107171",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T08:17:04.000Z",
-        "contentSnippet": "An Hardcoded Cryptographic Key vulnerability existed in Trellix Agent 5.8.4 via mfecryptc.dll leads to Database Decryption by Regular Users.",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-105107 - Koha SQL injection in reports/cat_issues_top.pl via the Criteria, Filter and Limit request parameters",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105107",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T08:17:03.000Z",
-        "contentSnippet": "Koha is vulnerable to SQL injection in the Most-circulated items report. The reports/cat_issues_top.pl script (sub calculate) concatenates the user-controlled Criteria, Filter, and Limit request parameters directly into dynamic SQL. Criteria is only prefix-normalized and never va",
-        "cveScore": 7.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-105106 - Koha authenticated OS command injection in tools/scheduler.pl via the jobid parameter when deleting a scheduled task",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105106",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T08:17:03.000Z",
-        "contentSnippet": "Koha is vulnerable to OS command injection in the Task Scheduler deletion path. The tools/scheduler.pl handler accepts the jobid request parameter for op=cud-delete and passes it to C4::Scheduler::remove_at_job without validating it. Schedule::At::remove substitutes the supplied ",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-104909 - Mang Board _type' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104909",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T08:17:03.000Z",
-        "contentSnippet": "The Mang Board plugin for WordPress is vulnerable to Local File Inclusion in all versions up to, and including, 2.4.3 via the ' _type (e.g. foo_type)' parameter parameter. This makes it possible for unauthenticated attackers to include and execute arbitrary .php files on the serv",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-104764 - Post Export Import with Media <= 1.17.1 - Authenticated (Administrator+) PHP Object Injection via 'page_data[meta]' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104764",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T08:17:03.000Z",
-        "contentSnippet": "The Post Export Import with Media plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 1.17.1 via deserialization of untrusted input . This makes it possible for authenticated attackers, with administrator-level access and above, to inj",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-104761 - Mang Board <= 2.4.3 - Authenticated (Custom+) Stored Cross-Site Scripting via 'content' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104761",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T08:17:03.000Z",
-        "contentSnippet": "The Mang Board plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'content' parameter in all versions up to, and including, 2.4.3 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with custom-lev",
-        "cveScore": 6.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-104748 - SimpleForm <= 3.10.0 - Unauthenticated Privilege Escalation to wp_capabilities Mass Assignment via simpleform_wp_register",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104748",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T08:17:02.000Z",
-        "contentSnippet": "The SimpleForm – Form Maker to Chat Apps with Quiz, Poll and Multi Lead Notifications plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 3.10.0 This is due to the `wp_ajax_nopriv_simpleform_wp_register` AJAX action lacking any capabil",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-103907 - Jeg Kit for Elementor <= 3.2.19 - Missing Authorization to Authenticated (Subscriber+) Sensitive Information Exposure via 'jeg_find_author' AJAX Action",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-103907",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T08:17:02.000Z",
-        "contentSnippet": "The JNews - Jeg Elementor Kit plugin for WordPress is vulnerable to unauthorized access of data due to a missing capability check on both the 'jkit_post_block' and 'jeg_find_author' AJAX actions in versions up to, and including, 3.2.19. The 'wp_ajax_jkit_post_block' handler (regi",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-103380 - Appointment Booking Plugin <= 5.7.3 - Authenticated (Subscriber+) Sensitive Information Exposure in 'first_name' Parameter Template Re-expansion",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-103380",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-14T08:17:02.000Z",
-        "contentSnippet": "The Appointment Booking Plugin – LatePoint | Calendar & Scheduling for WordPress plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 5.7.3 via the 'params[customer][first_name]' parameter. This makes it possible for authentic",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
+      {
+        "title": "Datalab Releases OmniParseBench: An Open OCR Benchmark With 16,288 Pass/Fail Tests to Audit OCR Parsers",
+        "link": "https://www.marktechpost.com/2026/10/14/datalab-omniparsebench-open-ocr-document-parsing-benchmark/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-10-14T23:37:25.000Z",
+        "contentSnippet": "Datalab released OmniParseBench, an open OCR benchmark with 16,288 yes/no tests on 2,937 pages in 92 languages. Every score is a pass rate you can slice by tag, script or language. The post Datalab Releases OmniParseBench: An Open OCR Benchmark With 16,288 Pass/Fail Tests to Audi"
+      },
+      {
+        "title": "Fish Audio Releases Drama 3, a 35B Open-Weight MoE Text-to-Speech Model",
+        "link": "https://www.marktechpost.com/2026/10/14/fish-audio-drama-3-open-weight-tts-model/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-10-14T22:52:17.000Z",
+        "contentSnippet": "Fish Audio released Drama 3, a 35B mixture-of-experts text-to-speech model with about 3B active parameters. It takes plain-language direction, covers 83 languages and ships open weights under a revenue-capped community license. The post Fish Audio Releases Drama 3, a 35B Open-Wei"
+      },
       {
         "title": "Build self-improving document processing using Amazon Bedrock AgentCore",
         "link": "https://aws.amazon.com/blogs/machine-learning/build-self-improving-document-processing-using-amazon-bedrock-agentcore/",
@@ -1590,20 +1604,6 @@
         "source": "Google AI Blog",
         "isoDate": "2026-10-02T15:00:00.000Z",
         "contentSnippet": "Here are Google’s latest AI updates from September 2026"
-      },
-      {
-        "title": "AWS Strands Labs Releases Strands Decider 2B: An Open Source Decision Model That Picks Options in About 115 ms",
-        "link": "https://www.marktechpost.com/2026/10/01/aws-strands-labs-releases-strands-decider-2b/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-10-02T06:35:00.000Z",
-        "contentSnippet": "AWS's Strands Agents team released Strands Decider 2B, an Apache-2.0 decision model built on Qwen3.5-2B-Base. It returns choices, yes/no probabilities and scores with calibrated confidence in one forward pass, never text. It runs at a 115 ms median on an RTX 3090 and scores 0.723"
-      },
-      {
-        "title": "Scaling cloud migrations with agentic AI on Amazon Bedrock AgentCore",
-        "link": "https://aws.amazon.com/blogs/machine-learning/scaling-cloud-migrations-with-agentic-ai-on-amazon-bedrock-agentcore/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-10-01T22:06:14.000Z",
-        "contentSnippet": "Learn how AWS Professional Services uses a multi-agent framework built on Amazon Bedrock AgentCore to automate enterprise cloud migrations end to end. Purpose-built AI agents handle discovery, infrastructure as code generation, portfolio governance, and post-migration operations,"
       }
     ],
     "virtualization": [
