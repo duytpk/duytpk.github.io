@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-10-16T20:18:51.160Z",
+  "updatedAt": "2026-10-16T23:09:43.832Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-96628 - Arcane: Environment access token bypasses the admin-required authorization gate on `/api/debug/pprof`",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96628",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T22:18:58.000Z",
+        "contentSnippet": "Arcane is an interface for managing Docker containers, images, networks, and volumes. Prior to 2.11.0, AuthMiddleware.managerAuth accepts X-Arcane-Agent-Token credentials and the environment-token branch calls next before the AdminRequired option is evaluated. An attacker with a ",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-96627 - Arcane: Delegated users:update permission allows admin account takeover via password reset (no privilege-hierarchy check)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96627",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T22:18:58.000Z",
+        "contentSnippet": "Arcane is an interface for managing Docker containers, images, networks, and volumes. Prior to 2.6.0, UpdateUser in backend/api/handlers/users.go sets PasswordHash for any target without comparing caller and target privilege. A holder of delegated users:update permission can subm",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-96626 - Arcane: Container-registry credential exfiltration via URL repoint + test to attacker host",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96626",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T22:18:58.000Z",
+        "contentSnippet": "Arcane is an interface for managing Docker containers, images, networks, and volumes. Prior to 2.5.0, UpdateRegistry and TestRegistry in backend/api/services/container_registry_service.go allow the registry URL to change while preserving the stored encrypted token. When a holder ",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-68498 - jackson-core: Delayed maxNameLength enforcement for char-backed input (ReaderBasedJsonParser) allows memory-exhaustion denial of service",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68498",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T22:17:25.000Z",
+        "contentSnippet": "StreamReadConstraints.maxNameLength (default 50,000 characters) is intended to bound how much memory a single JSON Object property name can consume while being parsed, independently of the much larger maxStringLength (default 100,000,000 characters) that bounds ordinary string va",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-62439 - Gimp: gimp: file-pvr plug-in pvr file parsing integer overflow heap-based buffer overflow vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62439",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T22:17:24.000Z",
+        "contentSnippet": "A flaw was found in GIMP. An integer overflow occurs in the file-pvr plug-in when calculating memory buffer sizes for image dimensions. By tricking a user into opening or previewing a specially crafted PowerVR (.pvr) file, an attacker can trigger a heap-based buffer overflow, pot",
+        "cveScore": 7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-62438 - Gimp: gimp: paa integer overflow out-of-bounds read",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62438",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T22:17:24.000Z",
+        "contentSnippet": "A flaw was found in GIMP. An attacker can cause a Denial of Service (DoS) or potentially disclose sensitive memory contents by convincing a user to open or preview a specially crafted Bohemia Interactive (PAA) texture file. Due to an integer overflow when calculating image dimens",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-49410 - OpenHuman /auth/telegram CSRF allows attacker-controlled session implantation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49410",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T22:17:23.000Z",
+        "contentSnippet": "OpenHuman is an open-source agent harness available as a desktop application and Rust library. Versions before 0.56.0 allow cross-site request forgery against the unauthenticated GET /auth/telegram loopback callback because telegram_auth_handler consumes an attacker-supplied one-",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-111044 - Disabled Sunshine clients can bypass revocation with a derived client certificate",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111044",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T22:17:20.000Z",
+        "contentSnippet": "Sunshine is a self-hosted game stream host for Moonlight. From 2026.329.165800 until 2026.906.222525, Sunshine accepted any client certificate that chained to a stored paired-client certificate, but it did not require the presented certificate to be the exact enabled paired ident",
+        "cveScore": 7.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-108372 - LoopX serve-status permissive CORS policy exposes control-plane state and private Markdown files",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108372",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T22:17:14.000Z",
+        "contentSnippet": "Open and provider-neutral, LoopX is a lightweight state kernel and local-first control plane for loop engineering. From version 0.0.1 until 0.4.5, `loopx serve-status` in `loopx/status_server.py` uses `StatusRequestHandler._send_json()` and `do_OPTIONS()` to send `Access-Control-",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-110759 - Text::CSV_XS versions before 1.65 for Perl return a 0xFF byte that is not in the input for an empty last field followed by a lone CR in parse",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110759",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T22:08:23.000Z",
+        "contentSnippet": "Text::CSV_XS versions before 1.65 for Perl return a 0xFF byte that is not in the input for an empty last field followed by a lone CR in parse. When the input to parse ends in a separator and a lone CR, the parser treats the end of the input as the next character and stores the en",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-110758 - Text::CSV_XS versions before 1.65 for Perl read before the start of an all-blank field under allow_whitespace in strip_trail_whitespace",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110758",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T22:08:10.000Z",
+        "contentSnippet": "Text::CSV_XS versions before 1.65 for Perl read before the start of an all-blank field under allow_whitespace in strip_trail_whitespace. Under allow_whitespace, strip_trail_whitespace removes trailing spaces and tabs from each unquoted field without stopping at the start of the f",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-110757 - Text::CSV_XS versions before 1.65 for Perl allow record splitting by writing strings used as numbers without quotes in combine",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110757",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T22:07:56.000Z",
+        "contentSnippet": "Text::CSV_XS versions before 1.65 for Perl allow record splitting by writing strings used as numbers without quotes in combine. combine and print do not check whether a field needs quotes when its value has Perl's integer or numeric flag set. Perl sets these flags on a string use",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-110756 - Text::CSV_XS versions before 1.65 for Perl drop the end of a record and its line ending when a UTF-8 flagged field precedes invalid UTF-8 bytes in print",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110756",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T22:07:37.000Z",
+        "contentSnippet": "Text::CSV_XS versions before 1.65 for Perl drop the end of a record and its line ending when a UTF-8 flagged field precedes invalid UTF-8 bytes in print. When a record contains a UTF-8 flagged field, print holds back trailing bytes that are not valid UTF-8 at each buffer flush, s",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-110755 - Text::CSV_XS versions before 1.65 for Perl allow quadratic CPU use by copying the unparsed remainder per record of CR-only input in getline",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110755",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T22:07:10.000Z",
+        "contentSnippet": "Text::CSV_XS versions before 1.65 for Perl allow quadratic CPU use by copying the unparsed remainder per record of CR-only input in getline. With eol unset, the default, getline reads with Perl's default line separator, so input with CR-only line endings arrives as one chunk. Aft",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-110754 - Text::CSV_XS versions before 1.65 for Perl leak the parsed fields of a record that fails to parse in getline",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110754",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T22:06:46.000Z",
+        "contentSnippet": "Text::CSV_XS versions before 1.65 for Perl leak the parsed fields of a record that fails to parse in getline. getline collects the fields of a record into a new array and returns a reference to it only when the parse succeeds. When the record has a syntax error, getline returns u",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-110753 - Text::CSV_XS versions from 1.46 before 1.65 for Perl have a use-after-free of bind_columns variables when skip_empty_rows skips an empty line in getline",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110753",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T22:06:23.000Z",
+        "contentSnippet": "Text::CSV_XS versions from 1.46 before 1.65 for Perl have a use-after-free of bind_columns variables when skip_empty_rows skips an empty line in getline. With bind_columns, the parser writes each field into the caller's own scalar without taking a reference to it. When skip_empty",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-110752 - Text::CSV_XS versions before 1.65 for Perl allow memory exhaustion by allocating one entry per index of an RFC 7111 selector in fragment",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110752",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T22:06:03.000Z",
+        "contentSnippet": "Text::CSV_XS versions before 1.65 for Perl allow memory exhaustion by allocating one entry per index of an RFC 7111 selector in fragment. fragment expands a row= or col= selector into an array with one element per selected index before it reads any data, and it does not clamp an ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-111802 - Nautilus: nautilus: arbitrary file deletion via trash symlink",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111802",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T22:03:50.000Z",
+        "contentSnippet": "A flaw was found in Nautilus. When a removable drive or disk image is unmounted or ejected, Nautilus prompts the user to empty the trash without verifying whether the trash directory paths are symbolic links. An attacker can exploit this flaw by tricking a user into mounting a cr",
+        "cveScore": 6.6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-17591 - Libarchive: libarchive: use-after-free via aliased mac metadata copy",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-17591",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T22:03:40.000Z",
+        "contentSnippet": "A flaw was found in libarchive. An attacker can cause a Denial of Service (DoS) or potential information disclosure due to a use-after-free vulnerability, which occurs when a program reads memory that has already been released. This issue arises when the archive_entry_copy_mac_me",
+        "cveScore": 3.6,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-96542 - EA Javelin Anticheat Installer Local Privilege Escalation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96542",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T21:21:02.000Z",
+        "contentSnippet": "Incorrect permission assignment (CWE-732) in the standalone installer for EA Javelin Anticheat (versions 1.0.14329371, 1.0.14547437, 1.0.14789537, and 1.0.14940698) on Windows allows a local non-administrative user to elevate privileges to NT AUTHORITY\\SYSTEM by modifying the EAA",
+        "cveScore": 5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-64862 - Frappe HR: Missing Authorization on PWA API Endpoints enables Cross-Employee Data access in HRMS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64862",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T21:19:19.000Z",
+        "contentSnippet": "Frappe HR is an open-source human resources management solution (HRMS). Prior to 15.58.3 and 16.4.3, HRMS PWA API endpoints for employee data do not consistently authorize employee-specific PWA API requests. An authenticated user requests records associated with another employee.",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-55796 - Frappe HR: SQL Injection in HRMS Salary Payments via ECS Report",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55796",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T21:19:18.000Z",
+        "contentSnippet": "Frappe HR is an open-source human resources management solution (HRMS). Prior to 15.60.3 and 16.7.1, the Salary Payments via ECS report constructs report conditions with unsafe SQL string interpolation. An authenticated HR user supplies crafted Salary Payments via ECS report filt",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-108374 - ERPNext: Unauthorised status modification due to missing validation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108374",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T21:17:19.000Z",
+        "contentSnippet": "ERPNext is a free and open source Enterprise Resource Planning tool. Prior to 15.121.0 and 16.34.0, certain endpoints for status modification fail to enforce proper authorization checks. A low-privileged authenticated user can invoke state-changing whitelisted methods without req",
+        "cveScore": 7.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-108373 - ERPNext: Unauthorised access to financial data due to missing validation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108373",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T21:17:19.000Z",
+        "contentSnippet": "ERPNext is a free and open source Enterprise Resource Planning tool. Prior to 15.118.0 and 16.27.0, certain endpoints in the Sales Person-wise Transaction Summary report fail to enforce proper authorization checks. When a role-limited authenticated user requests the affected fina",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-96620 - Claude Agent SDK: Argument Injection via resume Option Allows Arbitrary Command Execution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96620",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T20:18:28.000Z",
+        "contentSnippet": "Claude Agent SDK is a Python SDK for Claude Code. Prior to 0.2.121, the resume option is passed to the Claude CLI as a separate token without validation, so a dash-leading value is parsed as an independent CLI flag. An attacker can inject the --mcp-config flag to define a stdio M",
+        "cveScore": 9.2,
+        "cveSeverity": "CRITICAL"
+      },
       {
         "title": "CVE-2026-17068 - IBM i is Affected By Improper Authorization and Access Control Vulnerabilities in Network File System",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-17068",
@@ -677,234 +902,16 @@
         "contentSnippet": "The SureDash – Community, Courses & Member Dashboard plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'display_name' parameter in all versions up to, and including, 1.12.0 due to insufficient input sanitization and output escaping. This makes it possible ",
         "cveScore": 6.4,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-96570 - Schema & Structured Data for WP & AMP <= 1.67 - Unauthenticated Stored Cross-Site Scripting via 'saswp_review_text' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96570",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T06:17:13.000Z",
-        "contentSnippet": "The Schema & Structured Data for WP & AMP plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'saswp_review_text' parameter in all versions up to, and including, 1.67 due to insufficient input sanitization and output escaping. This makes it possible for unau",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-95809 - Opti-Behavior <= 1.9.2.1 - Unauthenticated Stored DOM-Based Cross-Site Scripting via 'country_name' Location Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95809",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T06:17:13.000Z",
-        "contentSnippet": "The Opti-Behavior – Self-Hosted Heatmaps, Session Recordings, Funnels, A/B Testing & Smart Insights plugin for WordPress is vulnerable to Stored DOM-Based Cross-Site Scripting via 'country_name' Location Parameter in all versions up to, and including, 1.9.2.1 due to insufficient ",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-95686 - Opti-Behavior <= 1.9.2.1 - Unauthenticated Stored DOM-Based Cross-Site Scripting via 'targetUrl' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95686",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T06:17:12.000Z",
-        "contentSnippet": "The Opti-Behavior – Self-Hosted Heatmaps, Session Recordings, Funnels, A/B Testing & Smart Insights plugin for WordPress is vulnerable to Stored DOM-Based Cross-Site Scripting via the 'targetUrl' parameter in all versions up to, and including, 1.9.2.1 due to insufficient input sa",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-93767 - Tainacan <= 1.3.0 - Authenticated (Subscriber+) Path Traversal to Arbitrary File Read via 'guid' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93767",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T06:17:12.000Z",
-        "contentSnippet": "The Tainacan plugin for WordPress is vulnerable to Directory Traversal in all versions up to, and including, 1.3.0 via the 'guid' parameter parameter. This makes it possible for authenticated attackers, with subscriber-level access and above, to read the contents of arbitrary fil",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-89079 - Theme My Login <= 7.2.1 - Unauthenticated Privilege Escalation via 'user_pass1' POST Parameter in wp_pre_insert_user_data Filter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89079",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T06:17:12.000Z",
-        "contentSnippet": "The Theme My Login plugin for WordPress is vulnerable to privilege escalation via account takeover in versions up to, and including, 7.2.1. This is due to the plugin not properly validating a user's identity prior to updating their password. This makes it possible for unauthentic",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-89051 - Hide My WP Ghost <= 7.0.12 - Unauthenticated Stored Cross-Site Scripting via Comment Content",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89051",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T06:17:12.000Z",
-        "contentSnippet": "The WP Ghost (Hide My WP Ghost) – Security & Firewall plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'replaceHeadersAndTags' function in versions up to, and including, 7.0.12 due to insufficient input sanitization and output escaping. This makes it poss",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-88963 - Tutor LMS <= 4.0.8 - Authenticated (Subscriber+) Reflected DOM-Based Cross-Site Scripting via 'redirect_url' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-88963",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T06:17:11.000Z",
-        "contentSnippet": "The Tutor LMS – eLearning and online course solution plugin for WordPress is vulnerable to DOM-Based Cross-Site Scripting via the 'redirect_url' parameter in versions up to, and including, 4.0.8 This is due to insufficient input validation in the Topbar component's back button ha",
-        "cveScore": 6.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-85659 - PilotPress <= 2.0.43 - Authenticated (Subscriber+) Privilege Escalation via Account Takeover via 'username' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85659",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T06:17:11.000Z",
-        "contentSnippet": "The PilotPress plugin for WordPress is vulnerable to Privilege Escalation via Account Takeover in all versions up to, and including, 2.0.43. The vulnerability exists because the `update_cc_details()` AJAX handler forwards an attacker-supplied `username` parameter to ONTRAPORT via",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-12272 - Lightweight Cookie Notice <= 1.19 - Sensitive Information Exposure via W3TC_DYNAMIC_SECURITY Constant",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12272",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T06:17:09.000Z",
-        "contentSnippet": "The Lightweight Cookie Notice – Cookie Banner for Cookie Consent plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 1.19 This is due to the W3TC_DYNAMIC_SECURITY constant being hardcoded to a publicly known value. This makes",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-111458 - ssldump Heap Buffer Overflow in FAN/1 X.509 Fingerprint Formatting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111458",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T06:17:09.000Z",
-        "contentSnippet": "The fanx_fingerprint function in ssl/sslxprint.c of ssldump allocates a heap buffer for formatting FAN/1 X.509 certificate fingerprints. The allocation size is computed as strlen(b64) + strlen(hex) + 31, but the format string \"fan1:x509:server:passive:%s:sha256:%s\" contains 33 fi",
-        "cveScore": 6.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-111122 - SiteOrigin CSS <= 1.6.7 - Unauthenticated Stored DOM-Based Cross-Site Scripting via Comment Anchor href via Visual Inspector",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111122",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T06:17:09.000Z",
-        "contentSnippet": "The SiteOrigin CSS plugin for WordPress is vulnerable to Stored DOM-Based Cross-Site Scripting via the 'href' parameter in all versions up to, and including, 1.6.7 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to ",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-110017 - Quick PayPal Payments: Payment Button & Form <= 6.0.4 - Authenticated (Contributor+) Stored Cross-Site Scripting via 'form' Shortcode Attribute",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110017",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T06:17:08.000Z",
-        "contentSnippet": "The Quick PayPal Payments: Payment Button & Form plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'form' parameter in all versions up to, and including, 6.0.4 due to insufficient input sanitization and output escaping. This makes it possible for authentic",
-        "cveScore": 6.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-109513 - NotificationX <= 3.3.3 - Unauthenticated Stored Cross-Site Scripting via 'name' Parameter via popup-submit REST Route",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-109513",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T06:17:08.000Z",
-        "contentSnippet": "The NotificationX – FOMO, Live Sales Notification, WooCommerce Sales Popup, GDPR, Social Proof, Announcement Banner & Floating Notification Bar plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'name' parameter in all versions up to, and including, 3.3.3 d",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-109447 - User Profile Builder <= 4.0.3 - Unauthenticated Privilege Escalation to 'role' Parameter via Legacy Meta-Name Collision on [wppb-register]",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-109447",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T06:17:08.000Z",
-        "contentSnippet": "The User Profile Builder – Beautiful User Registration Forms, User Profiles & User Role Editor plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 4.0.3 via the `role` parameter handled by the `wppb_add_meta_to_user_on_activation()` fu",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-109414 - Vitepos <= 3.6.1 - Authenticated (Vendor+) SQL Injection via 'src_by[].val' Parameter via 'bt' Operator",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-109414",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T06:17:07.000Z",
-        "contentSnippet": "The Vitepos – Point of Sale (POS) for WooCommerce plugin for WordPress is vulnerable to blind SQL Injection via the 'src_by[].val.start / src_by[].val.end (operator 'bt')' parameter in all versions up to, and including, 3.6.1 due to insufficient escaping on the user supplied para",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-109232 - Salon Booking System <= 10.31.9 - Unauthenticated Stored Cross-Site Scripting via Custom Checkout Field (Html/File Type) via Public Booking AJAX",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-109232",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T06:17:06.000Z",
-        "contentSnippet": "The Salon Booking System – Appointment Booking for Salons, Barbershops & Spas plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'sln[ ]' parameter in all versions up to, and including, 10.31.9 due to insufficient input sanitization and output escaping. Thi",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-107764 - SiteOrigin CSS <= 1.6.7 - Unauthenticated Stored DOM-Based Cross-Site Scripting via Comment Author URL via Inspector href Sink",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107764",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T06:17:06.000Z",
-        "contentSnippet": "The SiteOrigin CSS plugin for WordPress is vulnerable to Stored DOM-Based Cross-Site Scripting via the 'url (comment_author_url)' parameter in all versions up to, and including, 1.6.7 due to insufficient input sanitization and output escaping. This makes it possible for unauthent",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-107748 - User Profile Builder <= 4.0.3 - Authenticated (Subscriber+) Stored Cross-Site Scripting via 'display_name' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107748",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T06:17:05.000Z",
-        "contentSnippet": "The User Profile Builder – Beautiful User Registration Forms, User Profiles & User Role Editor plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'display_name' parameter in all versions up to, and including, 4.0.3 due to insufficient input sanitization and",
-        "cveScore": 6.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-104932 - Search Regex 3.5 - Authenticated (Subscriber+) Remote Code Execution via User Meta Serialized String Corruption",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104932",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T06:17:05.000Z",
-        "contentSnippet": "The Search Regex plugin for WordPress is vulnerable to PHP Object Injection in version 3.5 via deserialization of untrusted input in the replace_all function. This allows authenticated attackers, with subscriber-level access and above, to inject a PHP Object. The additional prese",
-        "cveScore": 8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-104001 - Slim SEO <= 4.11.1 - Authenticated (Subscriber+) Arbitrary Shortcode Execution via 'Biographical Info' User Meta",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104001",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T06:17:05.000Z",
-        "contentSnippet": "The The Slim SEO – AI SEO Plugin, Lightweight, Fast & Automated plugin for WordPress is vulnerable to arbitrary shortcode execution in all versions up to, and including, 4.11.1 This is due to the software allowing users to execute an action that does not properly validate a value",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-104000 - Simply Schedule Appointments <= 1.6.12.35 - Unauthenticated Stored Cross-Site Scripting via 'status' Parameter via /wp-json/ssa/v1/appointments/{id}",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104000",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T06:17:04.000Z",
-        "contentSnippet": "The Simply Schedule Appointments plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'status' parameter in all versions up to, and including, 1.6.12.35 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated att",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-103999 - Ultra Addons for Contact Form 7 <= 3.5.54 - Unauthenticated Stored Cross-Site Scripting via File Upload",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-103999",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T06:17:03.000Z",
-        "contentSnippet": "The Ultra Addons for Contact Form 7 plugin for WordPress is vulnerable to Stored Cross-Site Scripting via File Upload in all versions up to, and including, 3.5.54 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to i",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-103896 - 10Web Booster <= 2.34.5 - Unauthenticated Limited File Write / Cache Poisoning via Query-string Parameter Traversal in Page-Cache Path",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-103896",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T06:17:03.000Z",
-        "contentSnippet": "The 10Web Booster – Website speed optimization, Cache & Page Speed optimizer plugin for WordPress is vulnerable to a limited file write via path traversal in versions up to, and including, 2.34.5 This is due to the OptimizerWebPageCache::get_cache_file_dir() function concatenatin",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-103768 - ELEX WordPress HelpDesk & Customer Ticketing System <= 3.3.7 - Unauthenticated Arbitrary File Upload via IMAP Email Attachment",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-103768",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T06:17:03.000Z",
-        "contentSnippet": "The ELEX WordPress HelpDesk & Customer Ticketing System plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 3.3.7 via the initMailPart function. This is due to insufficient file type validation when saving IMAP email attachments. This",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-103480 - Tourfic <= 3.0.1 - Authenticated (Contributor+) Stored Cross-Site Scripting via 'type' Shortcode Attribute",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-103480",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T06:17:02.000Z",
-        "contentSnippet": "The Tourfic – AI Powered Travel Booking, Hotel Booking & Car Rental plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'type' parameter in all versions up to, and including, 3.0.1 due to insufficient input sanitization and output escaping. This makes it pos",
-        "cveScore": 6.4,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
+      {
+        "title": "Building trust in AI agents: A production-ready evaluation framework with Amazon Bedrock AgentCore",
+        "link": "https://aws.amazon.com/blogs/machine-learning/building-trust-in-ai-agents-a-production-ready-evaluation-framework-with-amazon-bedrock-agentcore/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-10-16T20:48:16.000Z",
+        "contentSnippet": "Autonomous AI agents fail softly: latency stays flat while answer quality quietly erodes. This post shares a nine-stage evaluation framework, built on Amazon Bedrock AgentCore, that catches silent quality regressions across the full agent lifecycle, from first commit to live prod"
+      },
       {
         "title": "Introducing Reflection Beam: an open-weight model for agentic coding on AWS",
         "link": "https://aws.amazon.com/blogs/machine-learning/introducing-reflection-beam-an-open-weight-model-for-agentic-coding-on-aws/",
@@ -1597,13 +1604,6 @@
         "source": "Simon Willison's Weblog",
         "isoDate": "2026-10-03T23:34:02.000Z",
         "contentSnippet": "Here's a product feature which the world is going to need a whole lot more of over the coming months and years: default hard budget caps. I'm talking about the feature of pay-by-usage services and APIs that lets you say \"after $X/month, cut this thing off and return errors\". Thes"
-      },
-      {
-        "title": "Meta, OpenAI and Uber Just Taught AI Agents to Talk First. What About When to Stay Quiet?",
-        "link": "https://www.marktechpost.com/2026/10/03/meta-openai-and-uber-just-taught-ai-agents-to-talk-first-what-about-when-to-stay-quiet/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-10-03T07:05:11.000Z",
-        "contentSnippet": "TL;DR: Meta’s Muse, OpenAI’s Dots and Uber’s driver assistant share one bet: the agent speaks first. That moves the hard problem from what to answer to when to interrupt, on which channel, and with what offer. Classic ML and new decision models can solve it. Three launches, one p"
       }
     ],
     "virtualization": [
@@ -2310,6 +2310,20 @@
     ],
     "hardware": [
       {
+        "title": "HP OmniBook Ultra 16 Review: RTX Spark With 128GB Tops Our Local Coding Agent Test",
+        "link": "https://www.storagereview.com/review/hp-omnibook-ultra-16-review-rtx-spark-n1x",
+        "source": "StorageReview",
+        "isoDate": "2026-10-16T20:53:58.000Z",
+        "contentSnippet": "The HP OmniBook Ultra 16 is HP’s 16-inch NVIDIA RTX Spark notebook, a 0.62-inch-thick laptop built around NVIDIA’s N1X superchip and a 3K OLED display. We tested two units side by side: one with the full 20-core N1X, 128GB of LPDDR5X, and a 2TB Gen5 SSD, and one with the same chi"
+      },
+      {
+        "title": "Lenovo Yoga 9n 2-in-1 16 Review: The Coolest-Running RTX Spark Notebook",
+        "link": "https://www.storagereview.com/review/lenovo-yoga-9n-2-in-1-16-review-rtx-spark-n1x",
+        "source": "StorageReview",
+        "isoDate": "2026-10-16T20:44:05.000Z",
+        "contentSnippet": "The Lenovo Yoga 9n 2-in-1 16 puts the NVIDIA RTX Spark N1X into a convertible: a 16-inch OLED touchscreen on a hinge that folds into tablet and tent modes, a pen-enabled haptic touchpad, and a 0.69-inch aluminum chassis. Our unit carries the full 20-core N1X with its 6,144-core B"
+      },
+      {
         "title": "Lenovo Pro 9n 15 Review: 18-Core RTX Spark Keeps Pace With 20 Cores and Runs Cooler",
         "link": "https://www.storagereview.com/review/lenovo-pro-9n-15-review-rtx-spark-n1x",
         "source": "StorageReview",
@@ -2322,6 +2336,13 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-10-16T17:04:44.000Z",
         "contentSnippet": "With no new Nvidia 5090 GPU replacement anticipated before at least 2028, this could well be your last opportunity to get your hands on a very powerful GPU for gaming."
+      },
+      {
+        "title": "Microsoft Surface Laptop Ultra Review",
+        "link": "https://www.servethehome.com/microsoft-surface-laptop-ultra-review/",
+        "source": "ServeTheHome",
+        "isoDate": "2026-10-16T17:00:27.000Z",
+        "contentSnippet": "We review the Microsoft Surface Ultra to see how the NVIDIA RTX Spark powered laptop fares and try to answer who the platform is for The post Microsoft Surface Laptop Ultra Review appeared first on ServeTheHome."
       },
       {
         "title": "China startup demoes prototype EUV light source",
@@ -2987,27 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-10-12T14:46:57.000Z",
         "contentSnippet": "RafaelNGP released a native Xbox Game Pass app allowing Xbox Cloud Gaming on the PS5, with support for 4 controllers and 4K upscaling on the PS5 GPU."
-      },
-      {
-        "title": "GlobalFoundries unveils 7nm-class FDX Fusion node — comes 7 years after firm abandoned FinFET",
-        "link": "https://www.tomshardware.com/tech-industry/semiconductors/globalfoundries-unveils-7nm-class-fdx-fusion-node-fd-soi-node-doubles-22fdx-transistor-density-comes-7-years-after-firm-abandoned-finfet",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-12T14:30:00.000Z",
-        "contentSnippet": "GlobalFoundries returns to advanced FD-SOI development with 7nm-class FDX Fusion process — production planned for 2028."
-      },
-      {
-        "title": "Intel to phase out SGX after Xeon Diamond Rapids in favor of TDX",
-        "link": "https://www.tomshardware.com/pc-components/cpus/intel-to-phase-out-sgx-after-xeon-diamond-rapids-in-favor-of-tdx-confidential-computing-pivot-adds-trusted-i-o-and-post-quantum-crypto-for-agentic-ai",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-12T14:00:00.000Z",
-        "contentSnippet": "Intel set to discontinue SGX after Xeon 'Diamond Rapids' and focus on expanding TDX capabilities to meet emerging security requirements of cloud computing, enterprise workloads, and agentic AI."
-      },
-      {
-        "title": "Diamond-infused watercooling coldplates for 2,300W Nvidia Rubin drop temps by up to 22C",
-        "link": "https://www.tomshardware.com/pc-components/liquid-cooling/diamond-infused-watercooling-coldplates-for-2-300w-nvidia-rubin-drop-temps-by-up-to-22c-bespoke-frore-liquidjet-diamond-cooling-tames-770-w-cm2-hotspots",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-12T13:30:00.000Z",
-        "contentSnippet": "A bespoke coldplate for custom designed AI servers: Frore's LiquidJet Diamond."
       }
     ]
   }
