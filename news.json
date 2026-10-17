@@ -1,8 +1,152 @@
 {
-  "updatedAt": "2026-10-16T23:09:43.832Z",
+  "updatedAt": "2026-10-17T02:19:16.555Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-89096 - Nfs-utils: nfs-utils: denial of service via memory leak in rpc.statd",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89096",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T23:17:02.000Z",
+        "contentSnippet": "A flaw was found in nfs-utils. An unauthenticated remote attacker can trigger a Denial of Service (DoS) by sending repeated state notification requests to an exposed rpc.statd service. The service fails to properly release memory allocated during callback processing, leading to c",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-89088 - Parted: parted: denial of service via heap buffer overflow during fat16 resize",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89088",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T23:17:02.000Z",
+        "contentSnippet": "A flaw was found in parted. A heap-based buffer overflow exists in libparted's file system resizing logic when handling FAT16 volumes. By convincing a user or administrator to resize a specially crafted FAT16 file system image with malformed directory metadata, an attacker can tr",
+        "cveScore": 5.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-89085 - Parted: parted: heap-based buffer overflow via crafted fat32 filesystem image",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89085",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T23:17:02.000Z",
+        "contentSnippet": "A flaw was found in parted. A heap-based buffer overflow can occur when processing a specially crafted FAT32 filesystem due to an integer calculation error during buffer allocation. A local attacker could exploit this by enticing a user or automated service to open a malicious fi",
+        "cveScore": 6.6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-17591 - Libarchive: libarchive: use-after-free via aliased mac metadata copy",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-17591",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T23:17:01.000Z",
+        "contentSnippet": "A flaw was found in libarchive. An attacker can cause a Denial of Service (DoS) or potential information disclosure due to a use-after-free vulnerability, which occurs when a program reads memory that has already been released. This issue arises when the archive_entry_copy_mac_me",
+        "cveScore": 3.6,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-111802 - Nautilus: nautilus: arbitrary file deletion via trash symlink",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111802",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T23:17:01.000Z",
+        "contentSnippet": "A flaw was found in Nautilus. When a removable drive or disk image is unmounted or ejected, Nautilus prompts the user to empty the trash without verifying whether the trash directory paths are symbolic links. An attacker can exploit this flaw by tricking a user into mounting a cr",
+        "cveScore": 6.6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-110759 - Text::CSV_XS versions before 1.65 for Perl return a 0xFF byte that is not in the input for an empty last field followed by a lone CR in parse",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110759",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T23:17:01.000Z",
+        "contentSnippet": "Text::CSV_XS versions before 1.65 for Perl return a 0xFF byte that is not in the input for an empty last field followed by a lone CR in parse. When the input to parse ends in a separator and a lone CR, the parser treats the end of the input as the next character and stores the en",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-110758 - Text::CSV_XS versions before 1.65 for Perl read before the start of an all-blank field under allow_whitespace in strip_trail_whitespace",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110758",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T23:17:01.000Z",
+        "contentSnippet": "Text::CSV_XS versions before 1.65 for Perl read before the start of an all-blank field under allow_whitespace in strip_trail_whitespace. Under allow_whitespace, strip_trail_whitespace removes trailing spaces and tabs from each unquoted field without stopping at the start of the f",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-110757 - Text::CSV_XS versions before 1.65 for Perl allow record splitting by writing strings used as numbers without quotes in combine",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110757",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T23:17:00.000Z",
+        "contentSnippet": "Text::CSV_XS versions before 1.65 for Perl allow record splitting by writing strings used as numbers without quotes in combine. combine and print do not check whether a field needs quotes when its value has Perl's integer or numeric flag set. Perl sets these flags on a string use",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-110756 - Text::CSV_XS versions before 1.65 for Perl drop the end of a record and its line ending when a UTF-8 flagged field precedes invalid UTF-8 bytes in print",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110756",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T23:17:00.000Z",
+        "contentSnippet": "Text::CSV_XS versions before 1.65 for Perl drop the end of a record and its line ending when a UTF-8 flagged field precedes invalid UTF-8 bytes in print. When a record contains a UTF-8 flagged field, print holds back trailing bytes that are not valid UTF-8 at each buffer flush, s",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-110755 - Text::CSV_XS versions before 1.65 for Perl allow quadratic CPU use by copying the unparsed remainder per record of CR-only input in getline",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110755",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T23:17:00.000Z",
+        "contentSnippet": "Text::CSV_XS versions before 1.65 for Perl allow quadratic CPU use by copying the unparsed remainder per record of CR-only input in getline. With eol unset, the default, getline reads with Perl's default line separator, so input with CR-only line endings arrives as one chunk. Aft",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-110754 - Text::CSV_XS versions before 1.65 for Perl leak the parsed fields of a record that fails to parse in getline",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110754",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T23:17:00.000Z",
+        "contentSnippet": "Text::CSV_XS versions before 1.65 for Perl leak the parsed fields of a record that fails to parse in getline. getline collects the fields of a record into a new array and returns a reference to it only when the parse succeeds. When the record has a syntax error, getline returns u",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-110753 - Text::CSV_XS versions from 1.46 before 1.65 for Perl have a use-after-free of bind_columns variables when skip_empty_rows skips an empty line in getline",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110753",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T23:17:00.000Z",
+        "contentSnippet": "Text::CSV_XS versions from 1.46 before 1.65 for Perl have a use-after-free of bind_columns variables when skip_empty_rows skips an empty line in getline. With bind_columns, the parser writes each field into the caller's own scalar without taking a reference to it. When skip_empty",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-110752 - Text::CSV_XS versions before 1.65 for Perl allow memory exhaustion by allocating one entry per index of an RFC 7111 selector in fragment",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110752",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T23:17:00.000Z",
+        "contentSnippet": "Text::CSV_XS versions before 1.65 for Perl allow memory exhaustion by allocating one entry per index of an RFC 7111 selector in fragment. fragment expands a row= or col= selector into an array with one element per selected index before it reads any data, and it does not clamp an ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-107346 - Rejected reason: This CVE ID has been rejected or",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107346",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T23:16:58.000Z",
+        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-106549 - Rejected reason: This CVE ID has been rejected or",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-106549",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T23:16:58.000Z",
+        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-111823 - Mage OSS OAuth Authentication Bypass Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111823",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-16T23:16:29.000Z",
+        "contentSnippet": "Mage OSS through 0.9.80 before 76c4f46 can proceed with session creation upon encountering an unknown OAuth provider.",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
       {
         "title": "CVE-2026-96628 - Arcane: Environment access token bypasses the admin-required authorization gate on `/api/debug/pprof`",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-96628",
@@ -83,96 +227,6 @@
         "contentSnippet": "Open and provider-neutral, LoopX is a lightweight state kernel and local-first control plane for loop engineering. From version 0.0.1 until 0.4.5, `loopx serve-status` in `loopx/status_server.py` uses `StatusRequestHandler._send_json()` and `do_OPTIONS()` to send `Access-Control-",
         "cveScore": 7.1,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-110759 - Text::CSV_XS versions before 1.65 for Perl return a 0xFF byte that is not in the input for an empty last field followed by a lone CR in parse",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110759",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T22:08:23.000Z",
-        "contentSnippet": "Text::CSV_XS versions before 1.65 for Perl return a 0xFF byte that is not in the input for an empty last field followed by a lone CR in parse. When the input to parse ends in a separator and a lone CR, the parser treats the end of the input as the next character and stores the en",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-110758 - Text::CSV_XS versions before 1.65 for Perl read before the start of an all-blank field under allow_whitespace in strip_trail_whitespace",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110758",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T22:08:10.000Z",
-        "contentSnippet": "Text::CSV_XS versions before 1.65 for Perl read before the start of an all-blank field under allow_whitespace in strip_trail_whitespace. Under allow_whitespace, strip_trail_whitespace removes trailing spaces and tabs from each unquoted field without stopping at the start of the f",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-110757 - Text::CSV_XS versions before 1.65 for Perl allow record splitting by writing strings used as numbers without quotes in combine",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110757",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T22:07:56.000Z",
-        "contentSnippet": "Text::CSV_XS versions before 1.65 for Perl allow record splitting by writing strings used as numbers without quotes in combine. combine and print do not check whether a field needs quotes when its value has Perl's integer or numeric flag set. Perl sets these flags on a string use",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-110756 - Text::CSV_XS versions before 1.65 for Perl drop the end of a record and its line ending when a UTF-8 flagged field precedes invalid UTF-8 bytes in print",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110756",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T22:07:37.000Z",
-        "contentSnippet": "Text::CSV_XS versions before 1.65 for Perl drop the end of a record and its line ending when a UTF-8 flagged field precedes invalid UTF-8 bytes in print. When a record contains a UTF-8 flagged field, print holds back trailing bytes that are not valid UTF-8 at each buffer flush, s",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-110755 - Text::CSV_XS versions before 1.65 for Perl allow quadratic CPU use by copying the unparsed remainder per record of CR-only input in getline",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110755",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T22:07:10.000Z",
-        "contentSnippet": "Text::CSV_XS versions before 1.65 for Perl allow quadratic CPU use by copying the unparsed remainder per record of CR-only input in getline. With eol unset, the default, getline reads with Perl's default line separator, so input with CR-only line endings arrives as one chunk. Aft",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-110754 - Text::CSV_XS versions before 1.65 for Perl leak the parsed fields of a record that fails to parse in getline",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110754",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T22:06:46.000Z",
-        "contentSnippet": "Text::CSV_XS versions before 1.65 for Perl leak the parsed fields of a record that fails to parse in getline. getline collects the fields of a record into a new array and returns a reference to it only when the parse succeeds. When the record has a syntax error, getline returns u",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-110753 - Text::CSV_XS versions from 1.46 before 1.65 for Perl have a use-after-free of bind_columns variables when skip_empty_rows skips an empty line in getline",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110753",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T22:06:23.000Z",
-        "contentSnippet": "Text::CSV_XS versions from 1.46 before 1.65 for Perl have a use-after-free of bind_columns variables when skip_empty_rows skips an empty line in getline. With bind_columns, the parser writes each field into the caller's own scalar without taking a reference to it. When skip_empty",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-110752 - Text::CSV_XS versions before 1.65 for Perl allow memory exhaustion by allocating one entry per index of an RFC 7111 selector in fragment",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110752",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T22:06:03.000Z",
-        "contentSnippet": "Text::CSV_XS versions before 1.65 for Perl allow memory exhaustion by allocating one entry per index of an RFC 7111 selector in fragment. fragment expands a row= or col= selector into an array with one element per selected index before it reads any data, and it does not clamp an ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-111802 - Nautilus: nautilus: arbitrary file deletion via trash symlink",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111802",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T22:03:50.000Z",
-        "contentSnippet": "A flaw was found in Nautilus. When a removable drive or disk image is unmounted or ejected, Nautilus prompts the user to empty the trash without verifying whether the trash directory paths are symbolic links. An attacker can exploit this flaw by tricking a user into mounting a cr",
-        "cveScore": 6.6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-17591 - Libarchive: libarchive: use-after-free via aliased mac metadata copy",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-17591",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T22:03:40.000Z",
-        "contentSnippet": "A flaw was found in libarchive. An attacker can cause a Denial of Service (DoS) or potential information disclosure due to a use-after-free vulnerability, which occurs when a program reads memory that has already been released. This issue arises when the archive_entry_copy_mac_me",
-        "cveScore": 3.6,
-        "cveSeverity": "LOW"
       },
       {
         "title": "CVE-2026-96542 - EA Javelin Anticheat Installer Local Privilege Escalation",
@@ -848,63 +902,16 @@
         "contentSnippet": "An SQL injection vulnerability has been discovered in TSG Profleet. The vulnerability could allow an attacker to retrieve, create, update and delete data from the database by sending a GET request using the ‘Identificación’ parameter of the ‘/cgi-bin/index.php’ endpoint.",
         "cveScore": 9.3,
         "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-111311 - DoubleScale | All-in-One CRM <= 1.5.1 - Authenticated (Subscriber+) Arbitrary File Upload via Portal 'ticketless' Attachment Endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111311",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T09:17:04.000Z",
-        "contentSnippet": "The DoubleScale | All-in-One CRM – Sales, Multi-Channel Marketing, Newsletter, Booking, Helpdesk, Automation, MCP & More plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 1.5.1 via the store_upload function. This is due to a fail-op",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-109224 - SureCart <= 4.9.4 - Unauthenticated Stored Cross-Site Scripting via sc-cart-loader 'template' Attribute in Comment",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-109224",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T09:17:04.000Z",
-        "contentSnippet": "The SureCart – Ecommerce Made Easy For Selling Physical Products, Digital Downloads, Subscriptions, Donations, & Payments plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'comment' parameter in all versions up to, and including, 4.9.4 due to insufficient ",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-104726 - Name Directory <= 1.34.2 - Authenticated (Contributor+) Stored Cross-Site Scripting via 'dir' Shortcode Attribute",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104726",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T09:17:03.000Z",
-        "contentSnippet": "The Name Directory plugin for WordPress is vulnerable to Stored Cross-Site Scripting via 'dir' Shortcode Attribute in all versions up to, and including, 1.34.2 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with con",
-        "cveScore": 6.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-104003 - Paid Membership Plugin, Ecommerce, User Registration Form, Login Form, User Profile & Restrict Content <= 4.17.5 - Authenticated (Subscriber+) Arbitrary Shortcode Execution via Comme",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104003",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T09:17:03.000Z",
-        "contentSnippet": "The WP User Avatar / ProfilePress plugin for WordPress is vulnerable to Arbitrary Shortcode Execution in versions up to, and including, 4.17.5. This is due to the get_user_profile_structure() function assembling the front-end profile buffer — which includes raw comment excerpts i",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-101300 - Server-Side Request Forgery in Wegow PDF export",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-101300",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T09:17:03.000Z",
-        "contentSnippet": "Server-Side Request Forgery (SSRF) reported in the ticket sales chart PDF export functionality of Wegow. According to the report, an authenticated user with a promoter account can manipulate the parameter of the POST request generated by selecting Download PDF. The content is pro",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-96870 - SureDash <= 1.12.0 - Authenticated (Subscriber+) Stored Cross-Site Scripting via 'display_name' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96870",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T08:17:13.000Z",
-        "contentSnippet": "The SureDash – Community, Courses & Member Dashboard plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'display_name' parameter in all versions up to, and including, 1.12.0 due to insufficient input sanitization and output escaping. This makes it possible ",
-        "cveScore": 6.4,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
+      {
+        "title": "Perplexity Open-Sources SPACE, a Firecracker MicroVM Sandbox for AI Agents",
+        "link": "https://www.marktechpost.com/2026/10/16/perplexity-open-sources-space-firecracker-microvm-sandbox-ai-agents/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-10-17T00:09:12.000Z",
+        "contentSnippet": "Perplexity has open-sourced SPACE, the sandbox platform behind every task in Perplexity Computer. The Perplexity SPACE sandbox gives each agent task its own Firecracker microVM. Credentials and outbound traffic are controlled from outside that VM. The code ships under Apache 2.0 "
+      },
       {
         "title": "Building trust in AI agents: A production-ready evaluation framework with Amazon Bedrock AgentCore",
         "link": "https://aws.amazon.com/blogs/machine-learning/building-trust-in-ai-agents-a-production-ready-evaluation-framework-with-amazon-bedrock-agentcore/",
@@ -1597,13 +1604,6 @@
         "source": "MarkTechPost",
         "isoDate": "2026-10-04T00:19:38.000Z",
         "contentSnippet": "Learn how NVIDIA IsaacTeleop turns XR hand tracking and motion controller input into robot commands using a pure Python retargeting engine and NumPy. The post Inside NVIDIA’s IsaacTeleop: From Hand and Controller Tracking to Robot Actions with the Graph-Based Retargeting Engine a"
-      },
-      {
-        "title": "We're going to need default hard budget caps on pretty much everything",
-        "link": "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/",
-        "source": "Simon Willison's Weblog",
-        "isoDate": "2026-10-03T23:34:02.000Z",
-        "contentSnippet": "Here's a product feature which the world is going to need a whole lot more of over the coming months and years: default hard budget caps. I'm talking about the feature of pay-by-usage services and APIs that lets you say \"after $X/month, cut this thing off and return errors\". Thes"
       }
     ],
     "virtualization": [
