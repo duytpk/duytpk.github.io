@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-10-17T19:53:38.094Z",
+  "updatedAt": "2026-10-17T21:53:56.162Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-111934 - Coder before 2.34.7 IP Spoofing via X-Forwarded-For Header",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111934",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-17T19:16:36.000Z",
+        "contentSnippet": "Coder before 2.34.7 contains an IP spoofing vulnerability in the ExtractRealIPAddress middleware that trusts the leftmost, client-supplied X-Forwarded-For value instead of the client IP appended by a reverse proxy. Attackers can send forged X-Forwarded-For values through appendin",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-111933 - Coder before 2.34.2 User Enumeration via Login Placeholder Hash",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111933",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-17T19:16:36.000Z",
+        "contentSnippet": "Coder before 2.29.17, 2.30.0 before 2.32.7, 2.33.0 before 2.33.8, and 2.34.0 before 2.34.2 contains a user enumeration vulnerability because userpassword.Compare() substitutes a placeholder hash derived from the string \"hunter2\" when a stored password hash is empty. Unauthenticat",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-111932 - Coder before 2.34.2 Stored HTML Injection via Appearance Settings",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111932",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-17T19:16:36.000Z",
+        "contentSnippet": "Coder before 2.29.17, 2.30.0 before 2.32.7, 2.33.0 before 2.33.8, and 2.34.0 before 2.34.2 contains a stored HTML injection vulnerability because the ApplicationName and LogoURL appearance settings are rendered into HTML output without sufficient escaping. Attackers with the Owne",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-111931 - Coder 2.0.0 before 2.34.8 Open Redirect via Workspace App Proxy",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111931",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-17T19:16:36.000Z",
+        "contentSnippet": "Coder from 2.0.0 before 2.34.8 contains an open redirect vulnerability in handleAPIKeySmuggling that allows attackers to redirect users externally via unsanitized r.URL.Path values. Attackers can craft links on trusted workspace app subdomains with paths beginning with double sla",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-111930 - Coder from 2.26.0 before 2.34.8 Information Disclosure via Workspace ACL Endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111930",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-17T19:16:35.000Z",
+        "contentSnippet": "Coder from 2.26.0 before 2.34.8 contains an incorrect authorization flaw in the GET /api/v2/workspaces/{id}/acl endpoint, which checks only workspace read access and then fetches group members using an elevated system context. Authenticated users granted workspace use access can ",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-111929 - Coder 2.30.0 before 2.34.8 Cross-Organization File Disclosure via DownloadFile RPC",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111929",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-17T19:16:35.000Z",
+        "contentSnippet": "Coder from 2.30.0 before 2.34.8 contains an authorization bypass vulnerability in the provisioner daemon DownloadFile gRPC handler that allows authenticated provisioner daemons to download other organizations' cached Terraform module archives. Attackers with an org-scoped provisi",
+        "cveScore": 6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-111928 - Coder 2.0.0 before 2.34.8 Authorization Bypass via User-Level ACL in RBAC Policy",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111928",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-17T19:16:35.000Z",
+        "contentSnippet": "Coder from 2.0.0 before 2.34.8 contains an incorrect authorization vulnerability in the acl_allow rule of coderd/rbac/policy.rego, which does not verify organization membership for per-user ACL entries, and organization member removal does not scrub those entries. Authenticated u",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-111927 - Coder before 2.35.4 Credential Theft via Workspace Proxy Hostname Prefix Match",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111927",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-17T19:16:35.000Z",
+        "contentSnippet": "Coder before 2.29.20, 2.33.0 before 2.33.12, 2.34.0 before 2.34.8, and 2.35.0 before 2.35.4 contains an improper hostname validation flaw in GetWorkspaceProxyByHostname whose SIMILAR TO pattern performs a prefix match, so any domain that is a string prefix of a workspace-proxy ac",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-111926 - Coder from 2.10.0 before 2.34.8 Information Disclosure via Agent /debug/manifest",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111926",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-17T19:16:35.000Z",
+        "contentSnippet": "Coder from 2.10.0 before 2.34.8 has an unauthenticated agent debug HTTP server on 127.0.0.1:2113 whose /debug/manifest handler returns the full agent manifest, including template-provided environment variable values. A lower-privileged Unix user or process in the same workspace c",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-111924 - Fleet before 4.83.0 Denial of Service via Unbounded Gzip Decompression",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111924",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-17T19:16:35.000Z",
+        "contentSnippet": "Fleet before 4.83.0 contains a denial of service vulnerability that allows unauthenticated attackers to exhaust server memory by sending gzip-compressed request bodies. Attackers can send small, highly compressed requests with Content-Encoding: gzip to unauthenticated endpoints t",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-111923 - Fleet before 4.89.0 Unauthenticated DoS via Apple MDM Enrollment Plist Parsing",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111923",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-17T19:16:35.000Z",
+        "contentSnippet": "Fleet before 4.89.0 contains an unbounded recursion vulnerability in Apple MDM enrollment property list parsing that allows unauthenticated attackers to crash the server. Attackers can send a crafted binary plist payload of about 150 bytes to the enrollment endpoints, triggering ",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-111922 - Vikunja 2.2.0 before 2.7.0 Permissive CORS Policy Trusting Localhost Origins",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111922",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-17T19:16:34.000Z",
+        "contentSnippet": "Vikunja from 2.2.0 before 2.7.0 contains a permissive CORS configuration that trusts every localhost and 127.0.0.1 port with credentials, even when service.publicurl is set. Attackers controlling a page on any localhost port can send a credentialed request to the token refresh en",
+        "cveScore": 7.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-111921 - Vikunja 0.13.0 before 2.7.0 Incorrect Authorization in Link Share Deletion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111921",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-17T19:16:34.000Z",
+        "contentSnippet": "Vikunja 0.13.0 before 2.7.0 contains an incorrect authorization vulnerability that allows project members with Write permission to delete admin-tier link shares because the delete permission check reads an unloaded share object. Attackers can send DELETE requests to the v1 or v2 ",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-111920 - Vikunja 2.6.0 Broken Access Control via Inherited Project Permissions",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111920",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-17T19:16:34.000Z",
+        "contentSnippet": "Vikunja 2.6.0 contains a broken access control flaw in getProjectAccessForUser (pkg/models/project_access.go), which resolves a user's effective project permission as the maximum over the project tree, silently overriding explicit lower-permission shares on sub-projects. A collab",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-111919 - Vikunja 0.22.0 before 2.7.0 Improper Access Revocation via Webhooks",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111919",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-17T19:16:34.000Z",
+        "contentSnippet": "Vikunja 0.22.0 before 2.7.0 contains an improper access revocation vulnerability that allows removed collaborators to keep receiving project data through webhooks they created. Former collaborators keep receiving task titles and descriptions through their webhook, including conte",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-111918 - Vikunja 1.0.0-rc0 before 2.7.0 Cross-Tenant Task Position Writes via Saved Filter Creation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111918",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-17T19:16:34.000Z",
+        "contentSnippet": "Vikunja from 1.0.0-rc0 before 2.7.0 contains an improper authorization vulnerability in RecalculateTaskPositions that allows authenticated users with zero accessible projects to write task_positions rows for all tasks instance-wide. Attackers can delete their Inbox after repointi",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-111917 - Vikunja 2.3.0 before 2.7.0 WebSocket Authentication Ignores Session Revocation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111917",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-17T19:16:34.000Z",
+        "contentSnippet": "Vikunja 2.3.0 before 2.7.0 contains an improper session validation vulnerability that allows attackers to keep WebSocket access after revocation because handleAuth never checks the JWT sid claim against the sessions table. Attackers holding a stolen access token can open or maint",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-111916 - Admidio before 5.0.16 Information Disclosure via rss/links.php Weblinks Feed",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111916",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-17T19:16:34.000Z",
+        "contentSnippet": "Admidio before 5.0.16 contains an information disclosure vulnerability that allows unauthenticated attackers to view role-restricted weblinks because rss/links.php omits the category_view role-visibility filter. Attackers can request the weblinks RSS feed for an organization to r",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-111914 - Admidio 5.0.11 before 5.0.16 Broken Access Control via inventory_data.php",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111914",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-17T19:16:33.000Z",
+        "contentSnippet": "Admidio from 5.0.11 before 5.0.16 contains a broken access control vulnerability in modules/inventory/inventory_data.php that allows authenticated users to bypass the inventory_module_enabled restriction. Attackers with any valid login can request the DataTables JSON feed to read",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-111913 - Admidio 5.0.0 before 5.0.16 Authorization Bypass via pdfl Mode in lists_show.php",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111913",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-17T19:16:33.000Z",
+        "contentSnippet": "Admidio from 5.0.0 before 5.0.16 contains an authorization bypass vulnerability that allows authenticated users to export lists despite export restrictions by requesting mode=pdfl. The groups_roles_export check in modules/groups-roles/lists_show.php omits pdfl, which later runs t",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-111912 - Admidio 5.0.0 before 5.0.16 IDOR via Forum Topic Update",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111912",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-17T19:16:33.000Z",
+        "contentSnippet": "Admidio from 5.0.0 before 5.0.16 contains an insecure direct object reference vulnerability in ForumService::saveTopic() that allows authenticated members to modify other users' forum topics. Attackers can replace the topic_uuid parameter in their own topic_save request, reusing ",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-111911 - phpMyFAQ 4.0.0 before 4.1.9 Authentication Bypass via WebAuthn Credential Injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111911",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-17T19:16:33.000Z",
+        "contentSnippet": "phpMyFAQ 4.0.0 before 4.1.9 contains an authentication bypass vulnerability where WebAuthn registration endpoints attach credentials to any account without authentication or challenge validation. Attackers can stage a victim username, submit a forged fmt=none attestation to regis",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-111910 - phpMyFAQ before 4.1.9 and 4.2.0-alpha before 4.2.0-beta Authorization Bypass via attachment.php Downloads",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111910",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-17T19:16:33.000Z",
+        "contentSnippet": "phpMyFAQ before 4.1.9 and 4.2.0-alpha before 4.2.0-beta contains an authorization bypass vulnerability in attachment.php that allows attackers to download attachments of restricted FAQs by bypassing per-record permission checks. Low-privileged users with the dlattachment right, o",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-111909 - phpMyFAQ before 4.1.9 Missing Authorization Allows Superadmin Deletion via deleteUser API",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111909",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-17T19:16:33.000Z",
+        "contentSnippet": "phpMyFAQ before 4.1.9 contains a missing authorization vulnerability in the deleteUser() API that allows authenticated non-superadmin users with delete_user permission to delete superadmin accounts. Attackers can send a DELETE request to /admin/api/user/delete with a superadmin's",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-111908 - phpMyFAQ 4.0.0 before 4.1.9 and 4.2.0-alpha before 4.2.0-beta BOLA in FAQ Update via REST API",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111908",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-17T19:16:33.000Z",
+        "contentSnippet": "phpMyFAQ 4.0.0 before 4.1.9 and 4.2.0-alpha before 4.2.0-beta contains a broken object-level authorization vulnerability in the PUT /api/v3.1/faq/update endpoint, which checks only the global edit_faq permission and does not verify access to the target FAQ. Authenticated users wi",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-109701 - WordPress PAYCOMET for WooCommerce plugin <= 5.45 - Cross Site Scripting (XSS) vulnerability",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-109701",
@@ -677,234 +902,16 @@
         "contentSnippet": "Authentication bypass by assumed-immutable data in Microsoft Identity Web allows an authorized attacker to elevate privileges over a network.",
         "cveScore": 5.3,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-111723 - LingGuo-Drama through commit 8a6924a Broken Access Control via /admin/v1/admins API",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111723",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T18:17:56.000Z",
-        "contentSnippet": "LingGuo-Drama through commit 8a6924a contains a missing authorization vulnerability that allows any registered user to manage all accounts through the /admin/v1/admins API protected only by AuthAdminJWT. Attackers can self-register, read every account's bcrypt hash, reset the boo",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-111722 - LingGuo-Drama through commit 8a6924a IDOR via /admin/v1/projects/:id API",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111722",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T18:17:56.000Z",
-        "contentSnippet": "LingGuo-Drama through commit 8a6924a contains an insecure direct object reference vulnerability that allows registered users to access other users' projects because projects.Get lacks an owner check. Self-registered attackers can iterate numeric IDs via GET, PUT and DELETE /admin",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-111721 - Open WES through 1.0.0 Broken Access Control via GlobalGatewayFilter Warehouse Scoping",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111721",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T18:17:56.000Z",
-        "contentSnippet": "Open WES through 1.0.0 contains an authorization bypass vulnerability that allows authenticated users to modify other warehouses' stock records because GlobalGatewayFilter never enforces auth_warehouse scoping. Attackers holding the menu permission can enumerate sequential IDs on",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-111720 - fish-island-backend through commit 7c61b78 SSRF via /api/web/parse",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111720",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T18:17:56.000Z",
-        "contentSnippet": "fish-island-backend through commit 7c61b78 contains an unauthenticated server-side request forgery vulnerability that allows remote attackers to make the server fetch attacker-supplied URLs via the url parameter of GET /api/web/parse. Attackers can target internal hosts, loopback",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-111719 - Roncoo-pay through commit 9428382 Information Disclosure via /f2fPay/order/query",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111719",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T18:17:56.000Z",
-        "contentSnippet": "Roncoo-pay through commit 9428382 contains a missing authorization vulnerability in F2FPayController.orderQuery that allows unauthenticated attackers to retrieve payment records by supplying a trxNo parameter. Attackers can guess transaction numbers, a '7' prefix plus a snowflake",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-111718 - AipexBase through commit 690adb9 SQL Injection via /api/data/invoke",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111718",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T18:17:56.000Z",
-        "contentSnippet": "AipexBase through commit 690adb9 contains a sql injection vulnerability that allows attackers to inject SQL through the order_by and group_by fields of the /api/data/invoke endpoint. Attackers can supply subqueries or EXTRACTVALUE and UPDATEXML functions that bypass the SqlGuard ",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-111717 - Arkon through 0.9.2 Missing Authorization via Skills Versions API",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111717",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T18:17:56.000Z",
-        "contentSnippet": "Arkon through 0.9.2 contains a missing authorization vulnerability in list_skill_versions that allows authenticated employees to read other departments' skill version metadata by bypassing the can_access_skill check. Attackers holding the default skill:read permission can request",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-111716 - Arkon through 0.9.2 Broken Access Control via Sources By-ID Routes",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111716",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T18:17:55.000Z",
-        "contentSnippet": "Arkon through 0.9.2 contains a broken access control vulnerability that allows authenticated employees to read and modify other departments' sources because by-id routes in app/routers/sources.py skip can_access_document. Attackers can call the plan, progress, PATCH, retry and ap",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-111715 - Arkon through 0.9.2 Missing Authorization via Wiki Graph Neighborhood API",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111715",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T18:17:55.000Z",
-        "contentSnippet": "Arkon through 0.9.2 contains a missing authorization vulnerability in GET /api/wiki/graph that lets authenticated employees read other departments' wiki metadata by supplying a foreign slug. Attackers with only wiki:read:own_dept permission can query get_neighborhood() without sc",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-111714 - tarteaucitron.js before 1.37.0 ReDoS via Unescaped Cookie Name in cookie.purge",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111714",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T18:17:55.000Z",
-        "contentSnippet": "tarteaucitron.js before 1.37.0 contains a regular expression denial of service vulnerability that allows attackers to block visitor pages by supplying unescaped cookie names to cookie.purge. Attackers can plant a cookie from a sibling subdomain or inject a purgeBtn element with a",
-        "cveScore": 3.1,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-111713 - tarteaucitron.js before 1.37.0 XSS via getElemAttr Attribute Validation Mismatch",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111713",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T18:17:55.000Z",
-        "contentSnippet": "tarteaucitron.js before 1.37.0 contains a cross-site scripting vulnerability because getElemAttr resolves 'data-' prefixed attributes while the https-only guard validates the unprefixed attribute. Attackers who can place markup, such as CMS authors, can add data-url with a javasc",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-111712 - Netcore NR256CN through 1.5.140116 Authentication Bypass via CGI Path Prefix",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111712",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T18:17:55.000Z",
-        "contentSnippet": "Netcore NR256CN through 1.5.140116 contains an authentication bypass vulnerability that allows unauthenticated attackers to reach protected management CGI handlers by prefixing the URI with a public route. Attackers can request paths prefixed with l7_web_auth.cgi or an .ico route",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-111711 - Netcore NR256CN through 1.5.140116 Pre-Auth Stack Overflow via Boa user_ok()",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111711",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T18:17:55.000Z",
-        "contentSnippet": "Netcore NR256CN through 1.5.140116 contains a pre-authentication stack overflow vulnerability in the Boa web server's user_ok() function, which copies Basic-auth usernames with unbounded strcpy() calls into 64-byte stack buffers. Unauthenticated attackers can send a username long",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-55836 - Open Zaak: Path traversal / arbitrary server-file read via Documenten API document import (bestandspad)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55836",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T15:23:22.000Z",
-        "contentSnippet": "Open Zaak is an open-source data and services layer for Dutch case-oriented working. From 1.13.0 until 1.27.2, 1.28.2, and 1.29.0, _import_document_row in src/openzaak/components/documenten/tasks.py uses the attacker-controlled bestandspad CSV field without ensuring that the reso",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-54657 - Open Zaak: /zaken/_zoek and /enkelvoudiginformatieobjecten/_zoek endpoints do not filter result lists based on authorizations linked to token",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54657",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T15:21:57.000Z",
-        "contentSnippet": "Open Zaak is an open-source data and services layer for Dutch case-oriented working. From 1.0.0 until 1.27.2, 1.28.2, and 1.29.0, the POST search endpoints /zaken/api/v1/zaken/_zoek and /documenten/api/v1/enkelvoudiginformatieobjecten/_zoek do not filter result querysets accordin",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-95859 - libp2p-rust: Gossipsub GRAFT topics unbounded growth",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95859",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T15:19:04.000Z",
-        "contentSnippet": "libp2p-rust is the official Rust language implementation of the libp2p networking stack. Prior to 0.49.5, Gossipsub GRAFT control-message handling unconditionally adds attacker-supplied topic hashes to connected_peer.topics without confirming that the peer previously subscribed t",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-97851 - J4Care dcm4che Missing Authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97851",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T15:17:38.000Z",
-        "contentSnippet": "The storage status-change REST service allows location records still associated with DICOM instances to be changed to deletion-related states. Changing a location to TO_DELETE causes PurgeStorageScheduler to delete the referenced object from storage even though the corresponding ",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-95183 - DeepSeek Harness Prompt Injection Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95183",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T15:17:37.000Z",
-        "contentSnippet": "An issue in the context-compaction feature of DeepSeek Harness (dsh) commit c291e796 allows attackers to execute a prompt injection attack via crafted external content.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-95182 - DeepSeek Harness Untrusted Search Path Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95182",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T15:17:36.000Z",
-        "contentSnippet": "An untrusted search path in DeepSeek Harness (dsh) commit c291e796 allows attackers to execute arbitrary code via supplying and opening crafted executable files in place of legitimate content.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-88755 - Z.ai ZCode Arbitrary Code Execution Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-88755",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T15:17:33.000Z",
-        "contentSnippet": "Z.ai ZCode v3.11.2.6792 was discovered to automatically establish connections with MCP servers declared inside a repository's workspace configuration, possibly allowing attackers to execute arbitrary code via opening a crafted repository.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-111728 - Seanime v3.10.3 Argument Injection via TranscodeHwAccelCustomSettings",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111728",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T15:17:15.000Z",
-        "contentSnippet": "Seanime v3.7.0 to v3.10.3 contains an argument injection vulnerability reachable through improper authorization, allowing unauthenticated LAN or Tailnet clients to bypass the privileged mediastream settings guard by setting transcodeHwAccel to custom and supplying attacker-contro",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-107777 - Thermo Fisher Torrent Suite Software Path Traversal",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107777",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T15:17:05.000Z",
-        "contentSnippet": "Thermo Fisher Torrent Suite Software is vulnerable to a path traversal, which could allow an authenticated attacker to read arbitrary files on the Torrent Server that are accessible to the web service account.",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-107621 - J4Care dcm4che Loop with Unreachable Exit Condition",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107621",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T15:17:05.000Z",
-        "contentSnippet": "JPEGParser can enter an infinite loop while parsing a specially crafted or truncated stream.",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-106705 - ELADMIN Improper Access Control Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-106705",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T15:17:04.000Z",
-        "contentSnippet": "ELADMIN (eladmin-mp) up to 2.7 contains an improper access control vulnerability in the role management module. The endpoint PUT /api/roles/menu (RoleController.updateRoleMenu) authorizes the request only by comparing the target role's level with the caller's minimum level. The a",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-105667 - J4Care dcm4che Missing Authentication for Critical Function",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105667",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-16T15:17:04.000Z",
-        "contentSnippet": "In the default configuration, the HL7 listener accepts ADT^A40 patient-merge messages without authenticating the sending application. A remote sender can reassign studies and related workflow records from one patient identity to another. The archive's unmerge does not reverse thi",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
+      {
+        "title": "Meet Kyutai REKI: The 2.4B VLA Model Bringing Efficient Memory to Robot Manipulation",
+        "link": "https://www.marktechpost.com/2026/10/17/meet-kyutai-reki-the-2-4b-vla-model-bringing-efficient-memory-to-robot-manipulation/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-10-17T20:22:11.000Z",
+        "contentSnippet": "Kyutai, with Inria and École des Ponts, has released REKI, a 2.4B vision-language-action model (VLA) for robot manipulation. The REKI vision-language-action model is pretrained only on public data. It also carries a cheap memory of its recent past. On three out-of-distribution be"
+      },
       {
         "title": "DeepSeek Just Released V4.1-Flash-1017, Scores 77.0 on DeepSWE, Opens Search API",
         "link": "https://www.marktechpost.com/2026/10/17/deepseek-just-released-v4-1-flash-1017-scores-77-0-on-deepswe-opens-search-api/",
@@ -1597,13 +1604,6 @@
         "source": "MarkTechPost",
         "isoDate": "2026-10-04T20:59:56.000Z",
         "contentSnippet": "Astra leads computer use, Argon leads legal and finance work, and Sol wins on price for coding agents. The post GPT-6 Astra vs GPT-6.1 Sol vs Gemini 4 Argon vs Claude Fable 5.1: Which Frontier Model Fits Which Job appeared first on MarkTechPost."
-      },
-      {
-        "title": "Google Research Moves Federated Learning Into TEEs: Gboard Now Trains With Externally Verifiable Differential Privacy",
-        "link": "https://www.marktechpost.com/2026/10/04/google-research-moves-federated-learning-into-tees-gboard-now-trains-with-externally-verifiable-differential-privacy/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-10-04T07:29:59.000Z",
-        "contentSnippet": "Google Research has unveiled a federated learning system that moves gradient computation from phones into attested server-side TEEs. Access policies are published to Sigstore's Rekor log and the binaries are reproducibly buildable, so central differential privacy can be checked e"
       }
     ],
     "virtualization": [
@@ -2310,6 +2310,13 @@
     ],
     "hardware": [
       {
+        "title": "Grab an RTX 5090 for a discounted $5,300 as part of an MSI Infinite ZS prebuilt gaming PC — price includes other components worth about $2,300 on their own",
+        "link": "https://www.tomshardware.com/pc-components/gpus/grab-an-rtx-5090-for-discounted-usd5-300-as-part-of-an-msi-infinite-zs-prebuilt-gaming-pc-usd7-599-price-includes-other-components-worth-about-usd2-300-on-their-own",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-17T20:30:58.000Z",
+        "contentSnippet": "Grab an RTX 5090 for $5,300 as part of an MSI Infinite ZS prebuilt — $7,599 price includes other components worth about $2,300 on their own"
+      },
+      {
         "title": "HyperX Cloud Alpha Air Review: Open-back and budget-friendly",
         "link": "https://www.tomshardware.com/peripherals/gaming-headsets/hyperx-cloud-alpha-air-review",
         "source": "Tom's Hardware",
@@ -3001,13 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-10-13T11:18:35.000Z",
         "contentSnippet": "Pick up a prebuilt desktop gaming and video editing PC with 64GB of memory and a large 4TB SSD and save $1440"
-      },
-      {
-        "title": "CXMT president says company’s first 4F² DRAM will be a server DDR5 RDIMM due by year-end",
-        "link": "https://www.tomshardware.com/pc-components/dram/cxmt-president-says-companys-first-4f2-dram-will-be-a-server-ddr5-rdimm-due-by-year-end-vertical-transistors-cut-each-memory-cells-footprint-by-a-third-on-paper-but-no-speeds-or-capacities-yet",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-13T11:00:00.000Z",
-        "contentSnippet": "CXMT president Cao Kanyu says the company’s first 4F² DRAM product will be a DDR5 RDIMM for servers, expected by the end of 2026."
       }
     ]
   }
