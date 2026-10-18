@@ -1,8 +1,125 @@
 {
-  "updatedAt": "2026-10-18T19:07:00.298Z",
+  "updatedAt": "2026-10-18T22:06:04.999Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-97859 - Gitea API disclosure of private user social graph, keys and stars",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97859",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T19:16:33.000Z",
+        "contentSnippet": "Seven Gitea API routes under `/api/v1/users/{username}` (followers, following, following/{target}, starred, subscriptions, keys and gpg_keys) were registered without the `individualPermsChecker` middleware that enforces the visibility of the target user. An authenticated user cou",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-97204 - Gitea label deletion across repository and organization IDs",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97204",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T19:16:33.000Z",
+        "contentSnippet": "Deleting a label compared the ID of the repository in the request against the organization ID of organization labels, and the two ID sequences overlap. A user with write access to the issues of a repository could therefore delete the labels of an organization that has the same nu",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-110494 - Gitea release attachment re-linking of issue attachments",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110494",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T19:16:33.000Z",
+        "contentSnippet": "Adding attachments to a release checked the repository and release of an attachment but not whether it was already linked to an issue or comment. A user with write access to the releases of a repository, who knew the UUID of an attachment in that repository, could link it to a re",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-110324 - Gitea private profile information disclosure through POST request",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110324",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T19:16:33.000Z",
+        "contentSnippet": "The visibility check of Gitea user profiles was applied to GET requests only, while `POST /{username}` (follow and unfollow) required only a signed-in user. Any authenticated user could therefore obtain the full name, location, website and description of a user with a private pro",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-110311 - Gitea draft release creation disclosing attachment metadata",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110311",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T19:16:33.000Z",
+        "contentSnippet": "Creating a draft release through the API returned an `assets` list that was built from a release without an ID, which matched every attachment that was not linked to a release. A user who could create a draft release in a repository therefore received the metadata (file name, UUI",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-109844 - Gitea watched repositories API disclosure after access revocation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-109844",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T19:16:33.000Z",
+        "contentSnippet": "`GET /api/v1/user/subscriptions` returned the metadata of every repository a user was watching without checking that the user still had access to it. A user who watched a private repository while having access, and later lost it, for example through a team permission downgrade, c",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-109553 - Gitea SSH certificate principal impersonation of other users",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-109553",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T19:16:32.000Z",
+        "contentSnippet": "Gitea resolved the principals of an SSH certificate by searching the content of all stored public keys instead of only principal keys. When Gitea trusts a user certificate authority (`SSH_TRUSTED_USER_CA_KEYS`) and accepts arbitrary principals (`SSH_AUTHORIZED_PRINCIPALS_ALLOW=an",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-107686 - Gitea reactions accepted on locked issues and comments",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107686",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T19:16:32.000Z",
+        "contentSnippet": "The Gitea web handlers for adding and removing reactions on issues and comments did not refuse locked issues for users without write access, although the API did. A signed-in user who could read an issue could therefore add or remove reactions on a locked issue and its comments, ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-107618 - Gitea cross-site request forgery on repository topics",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107618",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T19:16:32.000Z",
+        "contentSnippet": "`POST /{owner}/{repo}/topics` was registered without the sign-in middleware that provides the cross-origin protection, so a request issued by a third-party site was not rejected. A repository administrator who visited a malicious page could have the topics of their repository cha",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-105964 - Gitea Actions artifact v4 API unbounded request body",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105964",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T19:16:32.000Z",
+        "contentSnippet": "The Gitea Actions artifact v4 (Twirp) handlers read the whole request body into memory without a size limit. A user who can run a workflow and obtains the runner token of that run could send an oversized request to the artifact service and exhaust the memory of the server, which ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-105661 - Gitea panic on the repositories route of individual users",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105661",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T19:16:32.000Z",
+        "contentSnippet": "Requesting `/{username}/-/repositories` for an individual user instead of an organization made the organization home handler dereference a nil organization and panic. The request needs no authentication and no special configuration. The server answered with an HTTP 500 error and ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-104627 - Gitea OpenID account linking without session binding",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104627",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T19:16:32.000Z",
+        "contentSnippet": "The Gitea OpenID association callback in the security settings accepted a positive OpenID 2.0 assertion without checking that the signed-in user had started the linking. Because OpenID 2.0 allows unsolicited assertions, an attacker-controlled OpenID provider could attach the atta",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2024-4457 - Remote Code Execution via JDBC User Store Configuration in Multiple WSO2 Products Allows Arbitrary Code Execution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2024-4457",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T18:16:28.000Z",
+        "contentSnippet": "The Management Console fails to properly validate input related to the configuration of JDBC user stores. This weakness allows an attacker to supply specially crafted input that can lead to the execution of arbitrary code on the affected server. Successful exploitation of this vu",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2026-111993 - Soarkey StudentManagement AdminDao.java UserDao.login cleartext storage",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-111993",
@@ -785,126 +902,16 @@
         "contentSnippet": "Coder from 2.26.0 before 2.34.8 contains an incorrect authorization flaw in the GET /api/v2/workspaces/{id}/acl endpoint, which checks only workspace read access and then fetches group members using an elevated system context. Authenticated users granted workspace use access can ",
         "cveScore": 5.3,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-111929 - Coder 2.30.0 before 2.34.8 Cross-Organization File Disclosure via DownloadFile RPC",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111929",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T19:16:35.000Z",
-        "contentSnippet": "Coder from 2.30.0 before 2.34.8 contains an authorization bypass vulnerability in the provisioner daemon DownloadFile gRPC handler that allows authenticated provisioner daemons to download other organizations' cached Terraform module archives. Attackers with an org-scoped provisi",
-        "cveScore": 6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-111928 - Coder 2.0.0 before 2.34.8 Authorization Bypass via User-Level ACL in RBAC Policy",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111928",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T19:16:35.000Z",
-        "contentSnippet": "Coder from 2.0.0 before 2.34.8 contains an incorrect authorization vulnerability in the acl_allow rule of coderd/rbac/policy.rego, which does not verify organization membership for per-user ACL entries, and organization member removal does not scrub those entries. Authenticated u",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-111927 - Coder before 2.35.4 Credential Theft via Workspace Proxy Hostname Prefix Match",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111927",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T19:16:35.000Z",
-        "contentSnippet": "Coder before 2.29.20, 2.33.0 before 2.33.12, 2.34.0 before 2.34.8, and 2.35.0 before 2.35.4 contains an improper hostname validation flaw in GetWorkspaceProxyByHostname whose SIMILAR TO pattern performs a prefix match, so any domain that is a string prefix of a workspace-proxy ac",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-111926 - Coder from 2.10.0 before 2.34.8 Information Disclosure via Agent /debug/manifest",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111926",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T19:16:35.000Z",
-        "contentSnippet": "Coder from 2.10.0 before 2.34.8 has an unauthenticated agent debug HTTP server on 127.0.0.1:2113 whose /debug/manifest handler returns the full agent manifest, including template-provided environment variable values. A lower-privileged Unix user or process in the same workspace c",
-        "cveScore": 4.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-111924 - Fleet before 4.83.0 Denial of Service via Unbounded Gzip Decompression",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111924",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T19:16:35.000Z",
-        "contentSnippet": "Fleet before 4.83.0 contains a denial of service vulnerability that allows unauthenticated attackers to exhaust server memory by sending gzip-compressed request bodies. Attackers can send small, highly compressed requests with Content-Encoding: gzip to unauthenticated endpoints t",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-111923 - Fleet before 4.89.0 Unauthenticated DoS via Apple MDM Enrollment Plist Parsing",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111923",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T19:16:35.000Z",
-        "contentSnippet": "Fleet before 4.89.0 contains an unbounded recursion vulnerability in Apple MDM enrollment property list parsing that allows unauthenticated attackers to crash the server. Attackers can send a crafted binary plist payload of about 150 bytes to the enrollment endpoints, triggering ",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-111922 - Vikunja 2.2.0 before 2.7.0 Permissive CORS Policy Trusting Localhost Origins",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111922",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T19:16:34.000Z",
-        "contentSnippet": "Vikunja from 2.2.0 before 2.7.0 contains a permissive CORS configuration that trusts every localhost and 127.0.0.1 port with credentials, even when service.publicurl is set. Attackers controlling a page on any localhost port can send a credentialed request to the token refresh en",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-111921 - Vikunja 0.13.0 before 2.7.0 Incorrect Authorization in Link Share Deletion",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111921",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T19:16:34.000Z",
-        "contentSnippet": "Vikunja 0.13.0 before 2.7.0 contains an incorrect authorization vulnerability that allows project members with Write permission to delete admin-tier link shares because the delete permission check reads an unloaded share object. Attackers can send DELETE requests to the v1 or v2 ",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-111920 - Vikunja 2.6.0 Broken Access Control via Inherited Project Permissions",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111920",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T19:16:34.000Z",
-        "contentSnippet": "Vikunja 2.6.0 contains a broken access control flaw in getProjectAccessForUser (pkg/models/project_access.go), which resolves a user's effective project permission as the maximum over the project tree, silently overriding explicit lower-permission shares on sub-projects. A collab",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-111919 - Vikunja 0.22.0 before 2.7.0 Improper Access Revocation via Webhooks",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111919",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T19:16:34.000Z",
-        "contentSnippet": "Vikunja 0.22.0 before 2.7.0 contains an improper access revocation vulnerability that allows removed collaborators to keep receiving project data through webhooks they created. Former collaborators keep receiving task titles and descriptions through their webhook, including conte",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-111918 - Vikunja 1.0.0-rc0 before 2.7.0 Cross-Tenant Task Position Writes via Saved Filter Creation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111918",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T19:16:34.000Z",
-        "contentSnippet": "Vikunja from 1.0.0-rc0 before 2.7.0 contains an improper authorization vulnerability in RecalculateTaskPositions that allows authenticated users with zero accessible projects to write task_positions rows for all tasks instance-wide. Attackers can delete their Inbox after repointi",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-111917 - Vikunja 2.3.0 before 2.7.0 WebSocket Authentication Ignores Session Revocation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111917",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T19:16:34.000Z",
-        "contentSnippet": "Vikunja 2.3.0 before 2.7.0 contains an improper session validation vulnerability that allows attackers to keep WebSocket access after revocation because handleAuth never checks the JWT sid claim against the sessions table. Attackers holding a stolen access token can open or maint",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-111916 - Admidio before 5.0.16 Information Disclosure via rss/links.php Weblinks Feed",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111916",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T19:16:34.000Z",
-        "contentSnippet": "Admidio before 5.0.16 contains an information disclosure vulnerability that allows unauthenticated attackers to view role-restricted weblinks because rss/links.php omits the category_view role-visibility filter. Attackers can request the weblinks RSS feed for an organization to r",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
+      {
+        "title": "TinyFish Makes Search Free: What It Really Costs an AI Agent to Read the Web",
+        "link": "https://www.marktechpost.com/2026/10/18/tinyfish-free-search-ai-agent-token-cost/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-10-18T18:20:28.000Z",
+        "contentSnippet": "An AI agent that reads the web pays 2 kinds of cost. The first is the retrieval charge: what a search or fetch API bills per request. The second is model processing: content passed from retrieved pages into an AI model consumes tokens, while reasoning and generated responses add "
+      },
       {
         "title": "Google Open-Sources Harness2, a Recursive Agent Harnessing Framework",
         "link": "https://www.marktechpost.com/2026/10/18/google-harness2-recursive-agent-harnessing-framework/",
@@ -1597,13 +1604,6 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-10-05T15:50:01.000Z",
         "contentSnippet": "Multi-agent systems need deeper guarantees than fluent responses: they must select the right tools, respect constraints, and explain their decisions. Learn how to build a Strands-based multi-agent supply chain decisioning system and evaluate it with Amazon Bedrock AgentCore Evalu"
-      },
-      {
-        "title": "Yandex Introduces Sona: A Single Generative Recommender That Replaces Entire Recommendation Cascade",
-        "link": "https://www.marktechpost.com/2026/10/05/yandex-introduces-sona-a-single-generative-recommender-that-replaces-entire-recommendation-cascade/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-10-05T08:10:37.000Z",
-        "contentSnippet": "One transformer ran candidate generation and ranking in Yandex Music's A/B test without hand-engineered features, lifting likes 11.42%. The post Yandex Introduces Sona: A Single Generative Recommender That Replaces Entire Recommendation Cascade appeared first on MarkTechPost."
       }
     ],
     "virtualization": [
