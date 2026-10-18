@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-10-18T16:15:31.054Z",
+  "updatedAt": "2026-10-18T19:07:00.298Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-111993 - Soarkey StudentManagement AdminDao.java UserDao.login cleartext storage",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111993",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T17:16:43.000Z",
+        "contentSnippet": "A flaw has been found in Soarkey StudentManagement up to e08f7f1d5015af407aa4cca0ada3dea189b4937e. Impacted is the function UserDao.login of the file code/src/service/AdminDao.java. This manipulation of the argument Password causes cleartext storage of sensitive information. The ",
+        "cveScore": 3.3,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-111992 - itsmeravitejak Online-Examination-System Exam exam.php startExam sql injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111992",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T17:16:41.000Z",
+        "contentSnippet": "A vulnerability was detected in itsmeravitejak Online-Examination-System up to e6208e630b14657999bbfe4c9912302d2a1e2449. This issue affects the function Exam::startExam of the file exam.php of the component Exam Module. The manipulation of the argument topicid results in sql inje",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-98868 - dm-pcache: reject a kset that overruns its segment",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98868",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T16:17:41.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: dm-pcache: reject a kset that overruns its segment cache_replay(), the writeback worker and the GC worker read a kset of get_kset_onmedia_size() bytes and advance the position by it. A forged key_num makes that s",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98867 - dm-pcache: bound the logical key offset from persistent memory",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98867",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T16:17:41.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: dm-pcache: bound the logical key offset from persistent memory cache_key_decode() takes a key's logical off from the cache device and later indexes req_key_tree->subtrees[] by it in get_subtree(). An off past the",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98866 - sched/cache: Introduce task_struct->sched_cache_grp to fix UAF",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98866",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T16:17:41.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: sched/cache: Introduce task_struct->sched_cache_grp to fix UAF Add a sched_cache_grp pointer to task_struct so that scheduler code can access the cache group directly via the task, without going through mm->sched",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98865 - sched_ext: Don't run ops.dequeue() with a DSQ lock held",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98865",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T16:17:40.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: sched_ext: Don't run ops.dequeue() with a DSQ lock held ops.dequeue() is invoked with the source user DSQ's lock still held on the consume and move paths (scx_consume_dispatch_q(), move_task_between_dsqs()). A BP",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98864 - sched_ext: Wait for SCX_OPSS_DISPATCHING before reenqueueing a task",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98864",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T16:17:40.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: sched_ext: Wait for SCX_OPSS_DISPATCHING before reenqueueing a task ebf1ccff79c4 (\"sched_ext: Fix ops.dequeue() semantics\") moved the final ops_state store in scx_dispatch_enqueue() after the DSQ unlock so that t",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98863 - KVM: x86: Re-pend GET_NESTED_STATE_PAGES if getting said pages fails",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98863",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T16:17:40.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: KVM: x86: Re-pend GET_NESTED_STATE_PAGES if getting said pages fails Re-pend GET_NESTED_STATE_PAGES before exiting to userspace if getting the nested pages fails in the KVM_RUN path. If userspace re-runs the vCPU",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98862 - audit: fix exe mark UAF in kill_rules()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98862",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T16:17:40.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: audit: fix exe mark UAF in kill_rules() kill_rules() removes mixed AUDIT_DIR and AUDIT_EXE rules when an audit tree is pruned. It drops entry->rule.exe before removing the rule from the RCU-visible filter lists. ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98861 - fprobe: Use guard(rcu_sched_notrace) and check rcu_is_watching()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98861",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T16:17:40.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: fprobe: Use guard(rcu_sched_notrace) and check rcu_is_watching() unregister_fprobe() and unregister_fprobe_async() (used by BPF kprobe-multi) rely on standard RCU grace periods (synchronize_rcu() and call_rcu()) ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98860 - HID: bpf: cast size to ssize_t when checking hid_bpf_hw_request",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98860",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T16:17:40.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: HID: bpf: cast size to ssize_t when checking hid_bpf_hw_request As reported by Sashiko: If a transport driver encounters a hardware error and returns a negative error code such as -EPIPE, ret is implicitly promot",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98859 - HID: multitouch: stop the release timer from being rearmed on remove",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98859",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T16:17:40.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: HID: multitouch: stop the release timer from being rearmed on remove mt_remove() quiesces the sticky-finger timer before stopping the hardware: timer_delete_sync(&td->release_timer); sysfs_remove_group(&hdev->dev",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98858 - io_uring: fix task_work add use-after-free with SQPOLL",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98858",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T16:17:40.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: io_uring: fix task_work add use-after-free with SQPOLL For SQPOLL, the sqpoll thread runs task_work off its own list and doesn't need to be told about it, so it can pop and complete a request as soon as mpscq_pus",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98857 - ipvs: bound LBLCR and LBLC cache growth",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98857",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T16:17:40.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: ipvs: bound LBLCR and LBLC cache growth ip_vs_lblcr_new() and ip_vs_lblc_new() create cache entries for every previously unseen destination address. The table max_size only tells the periodic collector to reclaim",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98856 - kprobes: Skip disarmed probes when checking optkprobe overlap",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98856",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T16:17:40.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: kprobes: Skip disarmed probes when checking optkprobe overlap On x86, an optkprobe at A replaces five bytes with a jump. If a disabled probe B is at A+2, get_optimized_kprobe() stops at B when arming a new probe ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98855 - of/overlay: put property on deadprops only after changeset add succeeds",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98855",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T16:17:39.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: of/overlay: put property on deadprops only after changeset add succeeds add_changeset_property() links a new property of a not-yet-live target node into the node's deadprops list before handing it to of_changeset",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98854 - of/overlay: only treat a positive changeset id as registered",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98854",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T16:17:39.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: of/overlay: only treat a positive changeset id as registered of_overlay_fdt_apply() stores the idr_alloc() return value in ovcs->id before checking it. On failure the stored id is negative, free_overlay_changeset",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98853 - net: gso: limit recursive IP-in-IP segmentation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98853",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T16:17:39.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: net: gso: limit recursive IP-in-IP segmentation IP-in-IP GSO can re-enter inet_gso_segment() or ipv6_gso_segment() for each nested IP header. encap_level tracks header bytes, not callback depth, so a deep chain c",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98852 - net: extend IPv6 exthdr detection of tunneled packets",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98852",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T16:17:39.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: net: extend IPv6 exthdr detection of tunneled packets Commit c4336a07eb6b (\"net: correctly handle tunneled traffic on IPV6_CSUM GSO fallback\") split skb_gso_has_extension_hdr() into mutually exclusive branches on",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98851 - netfilter: nft_flow_offload: drop flowtable reference on init error path",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98851",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T16:17:39.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: netfilter: nft_flow_offload: drop flowtable reference on init error path nft_flow_offload_init() bumps the flowtable use count with nft_use_inc() before calling nf_ct_netns_get(). When the latter fails, the error",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98850 - net/packet: prevent TX_RING byte count overflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98850",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T16:17:39.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: net/packet: prevent TX_RING byte count overflow tpacket_snd() drains every SEND_REQUEST frame in a TX ring and adds each valid packet length to the signed int len_sum. Userspace can recycle completed frames concu",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98849 - pfcp: fix socket lifetime on netdevice registration failure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98849",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T16:17:39.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: pfcp: fix socket lifetime on netdevice registration failure pfcp_newlink() creates the UDP socket before register_netdevice(). If registration fails after pfcp_dev_init() succeeds, the core calls pfcp_dev_uninit(",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98848 - rtc: ac100: Assign .num before accessing .hws",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98848",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T16:17:39.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: rtc: ac100: Assign .num before accessing .hws Commit f316cdff8d67 (\"clk: Annotate struct clk_hw_onecell_data with __counted_by\") annotated the hws member of 'struct clk_hw_onecell_data' with __counted_by, which i",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98847 - rtc: spear: initialize IRQ state before requesting alarm IRQ",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98847",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T16:17:39.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: rtc: spear: initialize IRQ state before requesting alarm IRQ devm_request_irq() enables the interrupt before it returns, so the handler may run while probe is still initializing the device. Initialize the MMIO ad",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-98846 - sctp: check RCV_SHUTDOWN after the sendmsg connect wait",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-98846",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-18T16:17:38.000Z",
+        "contentSnippet": "In the Linux kernel, the following vulnerability has been resolved: sctp: check RCV_SHUTDOWN after the sendmsg connect wait sctp_wait_for_connect() drops the socket lock while it sleeps. An out-of-the-blue ABORT can then be processed from the socket backlog and unlink the associa",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2026-111987 - AUTOMATIC1111 stable-diffusion-webui Extra-Networks Card Builder sd_models.py read_metadata_from_safetensors cross site scripting",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-111987",
@@ -677,231 +902,6 @@
         "contentSnippet": "Admidio before 5.0.16 contains an information disclosure vulnerability that allows unauthenticated attackers to view role-restricted weblinks because rss/links.php omits the category_view role-visibility filter. Attackers can request the weblinks RSS feed for an organization to r",
         "cveScore": 6.9,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-111914 - Admidio 5.0.11 before 5.0.16 Broken Access Control via inventory_data.php",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111914",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T19:16:33.000Z",
-        "contentSnippet": "Admidio from 5.0.11 before 5.0.16 contains a broken access control vulnerability in modules/inventory/inventory_data.php that allows authenticated users to bypass the inventory_module_enabled restriction. Attackers with any valid login can request the DataTables JSON feed to read",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-111913 - Admidio 5.0.0 before 5.0.16 Authorization Bypass via pdfl Mode in lists_show.php",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111913",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T19:16:33.000Z",
-        "contentSnippet": "Admidio from 5.0.0 before 5.0.16 contains an authorization bypass vulnerability that allows authenticated users to export lists despite export restrictions by requesting mode=pdfl. The groups_roles_export check in modules/groups-roles/lists_show.php omits pdfl, which later runs t",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-111912 - Admidio 5.0.0 before 5.0.16 IDOR via Forum Topic Update",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111912",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T19:16:33.000Z",
-        "contentSnippet": "Admidio from 5.0.0 before 5.0.16 contains an insecure direct object reference vulnerability in ForumService::saveTopic() that allows authenticated members to modify other users' forum topics. Attackers can replace the topic_uuid parameter in their own topic_save request, reusing ",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-111911 - phpMyFAQ 4.0.0 before 4.1.9 Authentication Bypass via WebAuthn Credential Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111911",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T19:16:33.000Z",
-        "contentSnippet": "phpMyFAQ 4.0.0 before 4.1.9 contains an authentication bypass vulnerability where WebAuthn registration endpoints attach credentials to any account without authentication or challenge validation. Attackers can stage a victim username, submit a forged fmt=none attestation to regis",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-111910 - phpMyFAQ before 4.1.9 and 4.2.0-alpha before 4.2.0-beta Authorization Bypass via attachment.php Downloads",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111910",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T19:16:33.000Z",
-        "contentSnippet": "phpMyFAQ before 4.1.9 and 4.2.0-alpha before 4.2.0-beta contains an authorization bypass vulnerability in attachment.php that allows attackers to download attachments of restricted FAQs by bypassing per-record permission checks. Low-privileged users with the dlattachment right, o",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-111909 - phpMyFAQ before 4.1.9 Missing Authorization Allows Superadmin Deletion via deleteUser API",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111909",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T19:16:33.000Z",
-        "contentSnippet": "phpMyFAQ before 4.1.9 contains a missing authorization vulnerability in the deleteUser() API that allows authenticated non-superadmin users with delete_user permission to delete superadmin accounts. Attackers can send a DELETE request to /admin/api/user/delete with a superadmin's",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-111908 - phpMyFAQ 4.0.0 before 4.1.9 and 4.2.0-alpha before 4.2.0-beta BOLA in FAQ Update via REST API",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111908",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T19:16:33.000Z",
-        "contentSnippet": "phpMyFAQ 4.0.0 before 4.1.9 and 4.2.0-alpha before 4.2.0-beta contains a broken object-level authorization vulnerability in the PUT /api/v3.1/faq/update endpoint, which checks only the global edit_faq permission and does not verify access to the target FAQ. Authenticated users wi",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-109701 - WordPress PAYCOMET for WooCommerce plugin <= 5.45 - Cross Site Scripting (XSS) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-109701",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T17:16:28.000Z",
-        "contentSnippet": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in PAYCOMET PAYCOMET for WooCommerce paytpv-for-woocommerce allows Reflected XSS.This issue affects PAYCOMET for WooCommerce: from n/a through 5.45.",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-110889 - WordPress Gantry 5 Framework plugin <= 5.6.4 - Sensitive Data Exposure vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110889",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T11:16:32.000Z",
-        "contentSnippet": "Generation of Error Message Containing Sensitive Information vulnerability in Gantry Gantry 5 Framework gantry5 allows Retrieve Embedded Sensitive Data.This issue affects Gantry 5 Framework: from n/a through 5.6.4.",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-111110 - Payment forms, Buy now buttons, and Invoicing System | GetPaid <= 2.8.61 - Unauthenticated Stored Cross-Site Scripting via 'mmdwqzpoxadd' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111110",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T08:16:28.000Z",
-        "contentSnippet": "The Payment forms, Buy now buttons, and Invoicing System | GetPaid plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'mmdwqzpoxadd' parameter in all versions up to, and including, 2.8.61 due to insufficient input sanitization and output escaping. This make",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-110253 - weForms <= 1.6.28 - Unauthenticated Limited Media File Deletion via 'wpuf_files' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110253",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T08:16:28.000Z",
-        "contentSnippet": "The weForms – Easy Drag & Drop Contact Form Builder For WordPress plugin for WordPress is vulnerable to limited media file deletion due to insufficient file path validation in the weforms_delete_entry_attachments function in all versions up to, and including, 1.6.28 This makes it",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-109983 - YMC Filter <= 3.12.19 - Authenticated (Author+) Stored DOM-Based Cross-Site Scripting via 'post_title' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-109983",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T08:16:28.000Z",
-        "contentSnippet": "The YMC Filter plugin for WordPress is vulnerable to Stored DOM-Based Cross-Site Scripting via the 'post_title' parameter in all versions up to, and including, 3.12.19 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, ",
-        "cveScore": 6.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-100316 - European VAT Compliance Assistant for WooCommerce <= 1.36.10 - Unauthenticated Stored Cross-Site Scripting via CF-IPCountry Header",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100316",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T08:16:26.000Z",
-        "contentSnippet": "The European VAT Compliance Assistant for WooCommerce plugin for WordPress is vulnerable to Stored Cross-Site Scripting via CF-IPCountry Header in all versions up to, and including, 1.36.10 due to insufficient input sanitization and output escaping. This makes it possible for una",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-110384 - WordPress Fancy Comments WordPress plugin <= 1.2.21 - Cross Site Scripting (XSS) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110384",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T07:16:50.000Z",
-        "contentSnippet": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Heateor Support Fancy Comments WordPress fancy-facebook-comments allows Reflected XSS.This issue affects Fancy Comments WordPress: from n/a through 1.2.21.",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-97314 - ThirstyAffiliates < 3.12.1 - Unauthenticated Non-Public Affiliate Link Destination Disclosure and Click Statistic Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97314",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T06:16:34.000Z",
-        "contentSnippet": "The ThirstyAffiliates WordPress plugin before 3.12.1 does not check the status or type of the object requested by its link redirect tracking handler, allowing unauthenticated attackers to disclose the destination URLs of unpublished affiliate links and to record fabricated click ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-92433 - Patreon WordPress < 1.10.0 - Patreon Integration Takeover via CSRF",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92433",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T06:16:34.000Z",
-        "contentSnippet": "The Patreon WordPress plugin before 1.10.0 does not verify a nonce when connecting the site to a Patreon account, allowing attackers to make a logged-in administrator re-link the integration to an attacker-controlled account via a crafted request (CSRF), taking over the site's Pa",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-92432 - Patreon WordPress < 1.10.0 - Open Redirect via 'state' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92432",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T06:16:34.000Z",
-        "contentSnippet": "The Patreon WordPress plugin before 1.10.0 does not validate a user-supplied redirect destination before redirecting, allowing unauthenticated attackers to redirect visitors to an arbitrary external URL through a crafted link, which is useful for phishing.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-92431 - Patreon WordPress < 1.10.0 - Unauthenticated Taxonomy and Term Enumeration",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92431",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T06:16:34.000Z",
-        "contentSnippet": "The Patreon WordPress plugin before 1.10.0 does not perform an authorization check on some of its functionality, allowing unauthenticated users to enumerate the names of terms in any taxonomy, including non-public taxonomies that WordPress does not expose on the front end.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-91074 - BSK PDF Manager <= 3.8.1 - Contributor+ SQLi via tags_specific Shortcode Attribute",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-91074",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T06:16:33.000Z",
-        "contentSnippet": "The BSK PDF Manager WordPress plugin through 3.8.1 does not properly sanitise and escape a parameter before using it in a SQL statement, which could allow authenticated users with contributor-level access and above to perform SQL injection attacks and read sensitive data such as ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-81344 - Frontend Admin by DynamiApps <= 3.29.13 - Admin+ PHP Object Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81344",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T06:16:33.000Z",
-        "contentSnippet": "The ACF Frontend Admin by DynamiApps WordPress plugin through 3.29.13 does not restrict which PHP classes may be instantiated when it deserialises stored post content that is rendered on public-facing pages, allowing high-privilege users such as administrators to inject a PHP obj",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-81343 - Frontend Admin by DynamiApps <= 3.29.13 - Unauthenticated ACF Options Page Field Update via Form Submission",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81343",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T06:16:33.000Z",
-        "contentSnippet": "The ACF Frontend Admin by DynamiApps WordPress plugin through 3.29.13 does not perform a capability check on one of its form-submission actions before writing submitted values into the site's global ACF options store, allowing unauthenticated visitors to overwrite site-wide optio",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-110527 - WP User Manager 2.9 - 2.9.19 - Unauthenticated Account Creation via Stripe Registration Payment Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110527",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T06:16:33.000Z",
-        "contentSnippet": "The WP User Manager WordPress plugin before 2.9.20 does not roll back the WordPress account it creates during payment-gated registration when the subsequent payment step fails, allowing unauthenticated users to create functional accounts without completing payment.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-106470 - WP Data Access < 5.5.88 - Subscriber+ SSRF",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-106470",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T06:16:33.000Z",
-        "contentSnippet": "The WP Data Access WordPress plugin before 5.5.88 does not have authorisation and CSRF checks in one of its actions, allowing any authenticated user, such as a subscriber, to make the server open connections to arbitrary hosts and ports, including internal ones, and read back the",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-104246 - Contact Form 7 Signature Addon <= 4.2.2 - Unauthenticated Arbitrary File Read via Path Traversal in Email Attachments",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104246",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T06:16:33.000Z",
-        "contentSnippet": "The Contact Form 7 Signature Addon WordPress plugin through 4.2.2 does not sanitize a signature field value before building an email attachment path from it, allowing unauthenticated users to attach arbitrary files (bounded to wp-content on current Contact Form 7) to a form's out",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-104122 - Ukr-To-Lat <= 1.3.5 - Contributor+ SQLi via Term Name",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104122",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-17T06:16:33.000Z",
-        "contentSnippet": "The Ukr-To-Lat WordPress plugin through 1.3.5 does not sanitize and escape a term name before using it in a SQL query, allowing users with Contributor-level access and above to perform SQL injection attacks.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       }
     ],
     "ai": [
