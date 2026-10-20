@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-10-20T12:26:14.455Z",
+  "updatedAt": "2026-10-20T17:39:12.771Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-95109 - Cortex-A7 module data validation checks only the first address of a caller-supplied range",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95109",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-20T16:17:18.000Z",
+        "contentSnippet": "The Cortex-A7 MMU Modules port validates a caller-supplied buffer by translating **one address** — the first byte. The common Module Manager hands its range check the module instance, the start address and the complete byte size; the Cortex-A7 implementation discarded the instanc",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-95108 - Deleting a user-mode module thread leaks its privileged kernel stack",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95108",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-20T16:17:18.000Z",
+        "contentSnippet": "One logical thread of a user-mode ThreadX module costs the Module Manager's shared object pool two allocations, not one. The module asks for a `TX_THREAD` control block through `txm_module_object_allocate`; `_txm_module_manager_thread_create` then takes a second allocation of `TX",
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-95107 - Module object allocation size overflow corrupts the manager object pool",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95107",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-20T16:17:18.000Z",
+        "contentSnippet": "A ThreadX module chooses `object_size` when it calls `txm_module_object_allocate`. The Module Manager adds its own 16-byte private header to that size and asked the object pool for the result **without checking the addition**. A size near the top of a `ULONG` wrapped, the pool se",
+        "cveScore": 7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-94202 - Module block-pool create validates two of the four parameter words it reads",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94202",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-20T16:17:18.000Z",
+        "contentSnippet": "The Module Manager's block-pool create dispatcher proved that two `ALIGN_TYPE` words of the extra-parameter array a memory-protected module supplies lay inside the module's data, and then used indices 0 through 3 of that array. One of the two unproved words is read by the dispatc",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-94192 - Module object deallocation can free a live ThreadX kernel object",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94192",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-20T16:17:18.000Z",
+        "contentSnippet": "A ThreadX module allocates the control blocks of its kernel objects from the Module Manager's object pool, and can ask for that memory back by address with `txm_module_object_deallocate`. The manager released it whatever was in it, including a control block the kernel was still u",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-94024 - Module Manager object lookup validates one byte of a module's search name",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94024",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-20T16:17:17.000Z",
+        "contentSnippet": "The Module Manager's object lookup validated one byte of a memory-protected module's search name and then walked as much of it as the module declared, in privileged mode, with the kernel's preemption count raised. Both lookup dispatchers are affected: the recommended `txm_module_",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-94023 - Module delete dispatchers do not enforce kernel-object ownership before irreversible deletion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94023",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-20T16:17:17.000Z",
+        "contentSnippet": "A ThreadX module reaches a kernel object's delete service through the Module Manager's dispatch layer, which asked one question about the pointer: does the object lie outside the module's own code and data. That is the policy for *using* an object, and using an object a module do",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-94018 - NetX Duo Web HTTP server releases an uninitialized packet pointer on the PUT Content-Length underflow path",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94018",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-20T16:17:17.000Z",
+        "contentSnippet": "The Web add-on's HTTP server dereferences and releases an uninitialized pointer when it detects a `Content-Length` underflow while processing a `PUT` request. The condition is reachable by an unauthenticated remote client with a single malformed request.",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-93475 - Out-of-bounds Write via an Unbounded RSA Modulus in NetX Secure X.509",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93475",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-20T16:17:17.000Z",
+        "contentSnippet": "The X.509 parser in NetX Secure accepts an RSA public key of any size, but every signature-verification path decrypts into fixed-size buffers dimensioned for the `NX_CRYPTO_MAX_RSA_MODULUS_SIZE` default of 4096 bits. A certificate carrying a larger modulus drives an out-of-bounds",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-93003 - NetX Duo Web HTTP server interprets request body content as HTTP header fields",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93003",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-20T16:17:17.000Z",
+        "contentSnippet": "The Web add-on's HTTP server searches the entire request packet for header fields instead of stopping at the end of the header section. A header field name placed in the request body is therefore reported to the server as though it were a header, which lets a client control reque",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-92853 - Out-of-bounds Read via a Zero-length TLS 1.3 Certificate Message in NetX Secure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92853",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-20T16:17:17.000Z",
+        "contentSnippet": "The TLS 1.3 Certificate-message parser in NetX Secure decrements the message length to skip a context byte without first establishing that the message has a byte to skip. A zero-length Certificate message therefore wraps the unsigned length to `0xFFFFFFFF`, which makes the bounds",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-92843 - Out-of-bounds Read via the TLS 1.3 Certificate extensions_length in NetX Secure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92843",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-20T16:17:17.000Z",
+        "contentSnippet": "A missing bounds check in the TLS 1.3 Certificate-message parser of NetX Secure lets a malicious TLS 1.3 server trigger an unsigned-integer underflow and a subsequent heap out-of-bounds read in any peer that processes a remote Certificate message. It is reachable pre-authenticati",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-91057 - Out-of-bounds read when a multi-line text view string ends with a carriage return",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-91057",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-20T16:17:16.000Z",
+        "contentSnippet": "`_gx_multi_line_text_view_display_info_get()` reads one byte past the end of the application's text buffer when the string it is given ends with a carriage return (`\\r`). The over-read can also cause callers to advance their index past the end of the string, producing a second ov",
+        "cveScore": 4.6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-90800 - Apache CouchDB: Auth bypass in prefixed _users and _replicator databases",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90800",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-20T16:17:16.000Z",
+        "contentSnippet": "Missing authorisation checks in chttpd in Apache CouchDB 3.5.2 and below on all platforms allows any request to read the full contents of a prefixed _user or _replicator database via an unauthorised API endpoint. The use of prefixed system databases is very rare. Users are recomm",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-90799 - Apache CouchDB: Atom-table exhaustion in _changes sequences and _search bookmarks with specially crafted sequence values",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90799",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-20T16:17:15.000Z",
+        "contentSnippet": "Unsafe binary deserialisation in chttpd in Apache CouchDB 3.5.2 and below on all platforms allows an authenticated user to cause a denial of service via memory exhaustion. Users are recommended to upgrade to version 3.5.3, which fixes this issue.",
+        "cveScore": 1.3,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-90798 - Apache CouchDB: Replicator follows redirects indefinitely",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90798",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-20T16:17:15.000Z",
+        "contentSnippet": "A missing circuit-breaker in the replicator in Apache CouchDB 3.5.2 and below on all platforms allows the owner of a replication source or target to cause a denial of service via creating an infinite HTTP redirect loop. Users are recommended to upgrade to version 3.5.3, which fix",
+        "cveScore": 0.6,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-90797 - Apache CouchDB: Pre-authentication gzip decompression bomb via POST /_session",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90797",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-20T16:17:15.000Z",
+        "contentSnippet": "An unlimited gzip decompression routine in chttpd in Apache CouchDB 3.5.2 and below on all platforms allows any remote client to cause a denial of service via memory exhaustion. Users are recommended to upgrade to version 3.5.3, which fixes this issue.",
+        "cveScore": 7.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-86471 - Apache CouchDB: Admin credentials leading to code execution as operating system user",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86471",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-20T16:17:15.000Z",
+        "contentSnippet": "An unvalidated runtime configuration value in Apache CouchDB 3.5.2 and below on all platforms allows a CouchDB server admin to run arbitrary shell commands as the CouchDB operating system user. Users are recommended to upgrade to version 3.5.3, which fixes this issue.",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-113703 - SuggestArr before 3.0.0 Authentication Bypass via X-Forwarded-For Spoofing",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-113703",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-20T16:17:13.000Z",
+        "contentSnippet": "SuggestArr before 3.0.0 contains an authentication bypass vulnerability in its local_bypass authentication mode where enforce_authentication() in api_service/auth/middleware.py trusts the client-controlled request.remote_addr value, which is derived from the spoofable X-Forwarded",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-113683 - VPL for Moodle before 5.0.0 Reflected XSS via similarity/diff.php filename",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-113683",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-20T16:17:13.000Z",
+        "contentSnippet": "VPL (Virtual Programming Lab) for Moodle before 5.0.0 contains a reflected cross-site scripting vulnerability that allows remote attackers to inject script via unencoded filename1/filename2 parameters in similarity/diff.php. Attackers can craft a diff.php link with a JavaScript p",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-113682 - Networknt light-4j 2.1.5 before 2.4.0 Authentication Bypass via Empty LDAP Password",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-113682",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-20T16:17:13.000Z",
+        "contentSnippet": "Networknt light-4j from 2.1.5 before 2.4.0 contains an authentication bypass vulnerability in BasicAuthHandler that allows unauthenticated attackers to log in as LDAP/AD-delegated users. Attackers can send a Basic Authorization header with a known username and empty password, tri",
+        "cveScore": 9.1,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-113681 - OpenImageIO before 3.0.20.0, 3.1.x before 3.1.15.0, and 3.2.x before 3.2.0.3-beta1 Cineon Reader Heap Out-of-Bounds Read",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-113681",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-20T16:17:13.000Z",
+        "contentSnippet": "OpenImageIO before 3.0.20.0, 3.1.x before 3.1.15.0, and 3.2.x before 3.2.0.3-beta1 contains an integer overflow in cineon::Codec::Read that undersizes the scanline buffer, causing a heap out-of-bounds read. Attackers can supply a crafted Cineon file with a huge declared width tha",
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-113680 - HarfBuzz 8.0.0 through 14.6.0 WebAssembly Shaper NULL Pointer Dereference DoS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-113680",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-20T16:17:12.000Z",
+        "contentSnippet": "HarfBuzz from 8.0.0 through 14.6.0 contains a NULL pointer dereference vulnerability in the experimental WebAssembly shaper host imports buffer_set_contents, face_create, and font_set_coords. Attackers can supply a crafted font whose embedded wasm module passes out-of-range addre",
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-113679 - HarfBuzz 8.0.0 through 14.6.0 Out-of-Bounds Write via WebAssembly font_glyph_to_string",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-113679",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-20T16:17:12.000Z",
+        "contentSnippet": "HarfBuzz 8.0.0 through 14.6.0 contains an out-of-bounds write vulnerability in the experimental WebAssembly shaper because the font_glyph_to_string import has a wrong WAMR signature. Attackers can supply a crafted font whose wasm module places the output buffer near linear memory",
+        "cveScore": 7.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-113678 - Froxlor before 2.3.15 Symlink Following Privilege Escalation via Traffic Cron",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-113678",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-20T16:17:12.000Z",
+        "contentSnippet": "Froxlor before 2.3.15 contains a symlink following vulnerability in Statistics::makeChownWithNewStats that allows authenticated customers to take ownership of arbitrary host directories by abusing the root-run traffic cron. Attackers can replace the goaccess statistics directory ",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
       {
         "title": "CVE-2026-9589 - Unblu Spark Authorization Bypass in Configuration Cascade Operations",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-9589",
@@ -677,234 +902,79 @@
         "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-112391 - Pillow: PdfParser can recurse without limit in get_value() and linearize_page_tree()",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-112391",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-19T20:40:36.000Z",
-        "contentSnippet": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow's PdfParser.get_value() can recurse without a limit while reading nested PDF objects. The parser follows attacker-controlled arrays and dictionaries when an existing PDF is opened for append. An attacker can prov",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-76788 - Stack out-of-bounds write in the OSDP Control Panel reply parser",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76788",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-19T20:39:22.000Z",
-        "contentSnippet": "The OSDP Control Panel reply parser cp_decode_response() in subsys/mgmt/osdp/src/osdp_cp.c decodes replies from a Peripheral Device into a stack-allocated struct osdp_event. For the REPLY_KEYPPAD and REPLY_RAW reply types, the payload length is taken from the received frame and t",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-76787 - NULL pointer dereference in the UpdateHub FOTA client when probe metadata omits sha256sum",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76787",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-19T20:39:20.000Z",
-        "contentSnippet": "The UpdateHub firmware-over-the-air client parses the CoAP probe response with Zephyr's JSON library in z_impl_updatehub_probe() (subsys/mgmt/updatehub/updatehub.c). The decoder treats every descriptor field as optional — json_obj_parse() returns a bitmask of the fields it actual",
-        "cveScore": 5.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-112390 - Pillow: Infinite loop in MIC n_frames when the embedded TIFF",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-112390",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-19T20:35:39.000Z",
-        "contentSnippet": "Pillow is a Python imaging library. From 7.2.0 until 13.0.0, Pillow can enter an infinite loop while determining the frame count of a MIC image. MicImageFile inherits TIFF frame traversal, but MicImageFile.tell reports the OLE stream index and its seek() resets TIFF frame state, ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-112300 - DiffSK configobj __init__.py _sectionmarker redos",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-112300",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-19T20:30:18.000Z",
-        "contentSnippet": "A vulnerability was identified in DiffSK configobj up to 5.0.9. Affected by this vulnerability is the function _sectionmarker of the file configobj/__init__.py. The manipulation leads to inefficient regular expression complexity. Remote exploitation of the attack is possible. The",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-82166 - Dell Application Store Missing Authentication Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82166",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-19T20:20:06.000Z",
-        "contentSnippet": "Dell Application Store, versions prior to 26.05.0.7, contain a Missing Authentication for Critical Function vulnerability. An unauthenticated attacker with adjacent network access could potentially exploit this vulnerability, leading to arbitrary code execution.",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-71170 - Dell Application Store Uncontrolled Path Element Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71170",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-19T20:20:03.000Z",
-        "contentSnippet": "Dell Application Store, versions prior to 26.05.0.7, contains an Uncontrolled Path Element vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to an Elevation of Privilege and arbitrary code execution.",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-71169 - Dell Application Store Incorrect Permission Assignment Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71169",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-19T20:20:03.000Z",
-        "contentSnippet": "Dell Application Store, versions prior to 26.05.0.7, contain an Incorrect Permission Assignment for Critical Resource vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Disclosure of sensitive information",
-        "cveScore": 7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-112782 - Grav before 1.7.53.5 and 2.2.2 Image Pixel Limit Bypass Denial of Service",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-112782",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-19T20:17:55.000Z",
-        "contentSnippet": "Grav 1.7.53 before 1.7.53.5 and 2.0.0-rc.8 before 2.2.2 contains a resource exhaustion vulnerability that allows anonymous visitors to bypass the system.images.max_pixels limit when system.images.url_actions is enabled. Attackers can send single-dimension or percentage forceResiz",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-112781 - Grav 2.0.0 before 2.2.2 Information Disclosure via Form config-*@ Directives",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-112781",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-19T20:17:55.000Z",
-        "contentSnippet": "Grav from 2.0.0 before 2.2.2 contains an information disclosure vulnerability that allows page editors to read protected configuration by adding config-*@ directives to page frontmatter forms. Attackers with page-edit permission can bypass the Twig sandbox config_denied_paths red",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-112780 - Grav 2.0.15 before 2.2.2 Arbitrary Static Method Call via Flex Form replace-name@",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-112780",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-19T20:17:55.000Z",
-        "contentSnippet": "Grav from 2.0.15 before 2.2.2 contains an allowlist bypass vulnerability that allows page editors to call arbitrary public static methods by renaming Flex form fields with replace-name@. Attackers with page-edit permission can smuggle data-*@ directives past the callable check to",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-112779 - Grav API Plugin before 1.0.42 Cache Exhaustion and Page Permission Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-112779",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-19T20:17:55.000Z",
-        "contentSnippet": "Grav API plugin (grav-plugin-api) 1.0.40 before 1.0.42 caches a full translation dictionary for every well-formed language code sent to the unauthenticated GET /api/v1/translations/{lang} endpoint, and 1.0.16 before 1.0.42 fails to check target and destination page rules in the s",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-112778 - Traefik before 2.11.46, 3.6.17, and 3.7.1 Cross-Namespace Resource Reference via Kubernetes Annotations",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-112778",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-19T20:17:55.000Z",
-        "contentSnippet": "Traefik before 2.11.46, 3.x before 3.6.17, and 3.7.0 lack namespace validation for Ingress and Service annotations in the Kubernetes Ingress provider, allowing references to Middlewares, ServersTransports, and TLSOptions in other namespaces. Attackers able to create or update Ing",
-        "cveScore": 6.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-112777 - Craft CMS before 4.18.8 and 5.11.0 Twig create() Blocklist Bypass Leading to RCE",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-112777",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-19T20:17:55.000Z",
-        "contentSnippet": "Craft CMS 4.x before 4.18.8 and 5.x before 5.11.0 contains a blocklist bypass in the Twig create() function because its class-name checks are case-sensitive while PHP class resolution is not. Attackers with template-execution rights, such as Control Panel administrators, can inst",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-112776 - Craft CMS 5.0.0 before 5.11.0 GraphQL Site-Scope Bypass via Mutations",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-112776",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-19T20:17:54.000Z",
-        "contentSnippet": "Craft CMS from 5.0.0 before 5.11.0 contains an authorization bypass vulnerability that allows site-scoped GraphQL tokens to mutate other sites' content because requireAllowedSite() is not enforced. Attackers holding a site-A token can create entries in site B via supplied siteId ",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-112775 - Craft CMS 5.0.0 before 5.11.0 Verification Code Reuse via users/set-password",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-112775",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-19T20:17:54.000Z",
-        "contentSnippet": "Craft CMS from 5.0.0 before 5.11.0 contains an authentication bypass vulnerability that allows attackers to reuse verification codes because users/verify-email does not invalidate them for active users. Attackers who obtain a victim's emailed code can submit it to users/set-passw",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-112774 - Craft CMS 5.8.0 before 5.11.0 Admin RCE via ContentBlock Field Layout",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-112774",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-19T20:17:54.000Z",
-        "contentSnippet": "Craft CMS from 5.8.0 before 5.11.0 contains a remote code execution vulnerability that allows authenticated administrators to inject Yii behaviors by supplying a JSON-string field layout to ContentBlock::setFieldLayout(). Attackers with allowAdminChanges enabled can include 'as X",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-112773 - Craft CMS 5.0.0 before 5.11.0 RCE via Twig Sandbox Behavior Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-112773",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-19T20:17:54.000Z",
-        "contentSnippet": "Craft CMS from 5.0.0 before 5.11.0 contains a remote code execution vulnerability that allows authenticated Control Panel users to escape the Twig sandbox by passing uncleansed criteria to getNext, getPrev, or getOwners. Attackers can inject Yii \"as\" or \"on\" config keys to attach",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-112772 - Craft CMS 5.0.0 before 5.11.0 RCE via Asset::getMimeType Transform Injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-112772",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-19T20:17:54.000Z",
-        "contentSnippet": "Craft CMS from 5.0.0 before 5.11.0 contains a remote code execution vulnerability that allows authenticated Control Panel users to escape the Twig sandbox via Asset::getMimeType transforms. Attackers can supply 'as' or 'on' keys passed unfiltered to Craft::createObject, attaching",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-112771 - Craft CMS before 4.18.8 and 5.11.0 Twig Sandbox Allowlist Bypass via Array Filters",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-112771",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-19T20:17:54.000Z",
-        "contentSnippet": "Craft CMS 4.0.0 before 4.18.8 and 5.0.0 before 5.11.0 contains a Twig sandbox allowlist bypass because the column, contains, filterByValue, index, where, and multisort filters resolve caller-supplied keys via ArrayHelper::getValue() without consulting the sandbox security policy.",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-112770 - Craft CMS before 4.18.8 and 5.11.0 Authenticated RCE via Twig group Filter Array-Callable",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-112770",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-19T20:17:54.000Z",
-        "contentSnippet": "Craft CMS 4.x before 4.18.8 and 5.x before 5.11.0 contains a remote code execution vulnerability in the Twig group filter, which invokes non-string arrow arguments as callables without the checkArrow guard used by other arrow-accepting filters. Authenticated control panel users c",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-112769 - Parse Server before 8.6.98 and 9.x before 9.10.3-alpha.1 Session Class-Level Permission Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-112769",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-19T20:17:53.000Z",
-        "contentSnippet": "Parse Server before 8.6.98 and 9.0.0 before 9.10.3-alpha.1 does not enforce the create and addField class-level permissions of the _Session class when creating sessions. An authenticated user, or anyone holding that user's session token, can send POST requests to /sessions or /cl",
-        "cveScore": 2.3,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-112768 - Parse Server before 8.6.99 and 9.x before 9.10.3-alpha.2 Information Disclosure via User Update",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-112768",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-19T20:17:53.000Z",
-        "contentSnippet": "Parse Server before 8.6.99 and 9.0.0 before 9.10.3-alpha.2 evaluates checks against the target account during a user update before authorizing the caller, and reflects their outcome in the response. An unauthorized caller, with or without a session, can confirm guessed usernames ",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-112297 - ptbsare anx-calibre-manager LLM Configuration llm.py LLMClient.chat server-side request forgery",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-112297",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-19T20:17:53.000Z",
-        "contentSnippet": "A flaw has been found in ptbsare anx-calibre-manager up to 1.13.12. The impacted element is the function LLMClient.chat of the file blueprints/api/llm.py of the component LLM Configuration Handler. This manipulation of the argument base_url causes server-side request forgery. The",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-112260 - Gimp: gimp: heap out-of-bounds read in xcf text-layer parasite parsing",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-112260",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-19T20:17:52.000Z",
-        "contentSnippet": "A flaw was found in GIMP. Opening a crafted XCF with a malformed text-layer parasite can cause a heap out-of-bounds read, disclosing adjacent heap data into layer text and causing denial of service.",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
+      {
+        "title": "How Octave built a secure multi-tenant AI foundation on Amazon Bedrock",
+        "link": "https://aws.amazon.com/blogs/machine-learning/how-octave-built-a-secure-multi-tenant-ai-foundation-on-amazon-bedrock/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-10-20T17:34:04.000Z",
+        "contentSnippet": "Octave built a secure, multi-tenant AI foundation on Amazon Bedrock, using Cohere Embed v4 for embeddings and Amazon Bedrock AgentCore for isolated agent execution, to power a Complaint Triage Assistant that searches 2 billion regulated documents without crossing tenant boundarie"
+      },
+      {
+        "title": "Access OpenAI GPT models on Amazon Bedrock from Canada with cross-Region inference",
+        "link": "https://aws.amazon.com/blogs/machine-learning/access-openai-gpt-models-on-amazon-bedrock-from-canada-with-cross-region-inference/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-10-20T16:42:53.000Z",
+        "contentSnippet": "Canadian organizations can now access OpenAI GPT-5.6, GPT-6, and GPT-6.1 models on Amazon Bedrock from the Canada (Central) and Canada West (Calgary) Regions using cross-Region inference. This post covers the models and inference profiles, how to set up permissions, and how to in"
+      },
+      {
+        "title": "Discover tools at runtime with AWS Agent Registry",
+        "link": "https://aws.amazon.com/blogs/machine-learning/discover-tools-at-runtime-with-aws-agent-registry/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-10-20T16:22:24.000Z",
+        "contentSnippet": "Hardcoded tool wiring breaks down as an agent's catalog grows from a handful of tools to hundreds. This post walks through a runtime Discover, Instantiate, Execute loop built on AWS Agent Registry, where an orchestrator discovers MCP servers and A2A agents through semantic search"
+      },
+      {
+        "title": "Securing AI agent identity with X.509 PKI on AWS",
+        "link": "https://aws.amazon.com/blogs/machine-learning/securing-ai-agent-identity-with-x-509-pki-on-aws/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-10-20T16:03:48.000Z",
+        "contentSnippet": "Learn how to secure multi-agent AI systems with cryptographic identity using Keyfactor EJBCA and AWS services. This reference architecture combines signed request envelopes, user-signed delegation assertions, RFC 8693 audience-scoped tokens, and real-time OCSP revocation to prove"
+      },
+      {
+        "title": "How Eon built multi-cloud investigation with an MCP Gateway on Amazon Bedrock AgentCore",
+        "link": "https://aws.amazon.com/blogs/machine-learning/how-eon-built-multi-cloud-investigation-with-an-mcp-gateway-on-amazon-bedrock-agentcore/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-10-20T15:57:57.000Z",
+        "contentSnippet": "Learn how Eon replaced per-tool credentials and local MCP processes across AWS, GCP, and Azure with a single authenticated Amazon Bedrock AgentCore gateway, giving more than 100 developers and autonomous agents unified access to production investigation and cutting new-engineer o"
+      },
+      {
+        "title": "Build a semantic layer for agentic AI on AWS with Denodo and Amazon Bedrock AgentCore",
+        "link": "https://aws.amazon.com/blogs/machine-learning/build-a-semantic-layer-for-agentic-ai-on-aws-with-denodo-and-amazon-bedrock-agentcore/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-10-20T15:39:04.000Z",
+        "contentSnippet": "Build a governed semantic layer for agentic AI on AWS with the Denodo Platform and Amazon Bedrock AgentCore. It federates Amazon Aurora, Amazon Redshift, and an on-premises PostgreSQL database into a single customer 360 view an agent queries in VQL, with identity propagation and "
+      },
+      {
+        "title": "Build a semantic layer for agentic AI on AWS with Strategy Mosaic and Amazon Bedrock AgentCore",
+        "link": "https://aws.amazon.com/blogs/machine-learning/build-a-semantic-layer-for-agentic-ai-on-aws-with-strategy-mosaic-and-amazon-bedrock-agentcore/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-10-20T15:36:39.000Z",
+        "contentSnippet": "The third post in our semantic-layer series builds a customer 360 across Amazon Redshift and Amazon Aurora with Strategy Mosaic, exposes it to a Strands agent on Amazon Bedrock AgentCore through the Mosaic MCP server, and enforces per-user row and column security end-to-end."
+      },
+      {
+        "title": "Build a semantic layer for agentic AI on AWS with AtScale and Amazon Bedrock AgentCore",
+        "link": "https://aws.amazon.com/blogs/machine-learning/build-a-semantic-layer-for-agentic-ai-on-aws-with-atscale-and-amazon-bedrock-agentcore/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-10-20T15:33:54.000Z",
+        "contentSnippet": "The third post in our semantic-layer series builds a governed customer 360 model on Amazon Redshift with AtScale, then exposes it to a Strands agent on Amazon Bedrock AgentCore through the AtScale MCP server. Identity propagation, RBAC, row security, and full query audit are enfo"
+      },
+      {
+        "title": "Google Open-Sources TorchTPU, a Native PyTorch Backend for Cloud TPUs",
+        "link": "https://www.marktechpost.com/2026/10/20/google-torchtpu-open-source-native-pytorch-tpu/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-10-20T15:22:03.000Z",
+        "contentSnippet": "Google and Meta open-sourced TorchTPU, a native PyTorch backend for Cloud TPUs. It runs eager by default, compiles through torch.compile and XLA, and replaces PyTorch/XLA for new workloads. The post Google Open-Sources TorchTPU, a Native PyTorch Backend for Cloud TPUs appeared fi"
+      },
+      {
+        "title": "DeepSeek Open-Sources DeepInfer, the Inference Framework Behind DeepSeek-V4.1-Flash",
+        "link": "https://www.marktechpost.com/2026/10/20/deepseek-deepinfer-open-source-inference-framework/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-10-20T14:31:59.000Z",
+        "contentSnippet": "DeepSeek has open-sourced DeepInfer, the Apache 2.0 inference framework that serves DeepSeek-V4.1-Flash in production. It targets NVIDIA SM100 GPUs and Huawei Ascend 950 NPUs, and ships offline inference only. The post DeepSeek Open-Sources DeepInfer, the Inference Framework Behi"
+      },
       {
         "title": "Exa 3.0 Search API Tops Perplexity, Brave and Parallel on 8 Benchmarks",
         "link": "https://www.marktechpost.com/2026/10/20/exa-3-0-search-api-lite/",
@@ -1534,76 +1604,6 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-10-07T15:46:49.000Z",
         "contentSnippet": "AWS DevOps Agent can diagnose production incidents but is kept in observe-and-report mode so it does not change resources directly. This post shows how to use AWS Lambda Durable Functions, Amazon EventBridge, and Amazon Bedrock to turn its investigation summaries into pre-validat"
-      },
-      {
-        "title": "Building AI builders: Playbook for closing the AI knowledge-capability gap",
-        "link": "https://aws.amazon.com/blogs/machine-learning/building-ai-builders-playbook-for-closing-the-ai-knowledge-capability-gap/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-10-07T15:44:27.000Z",
-        "contentSnippet": "The biggest barrier to AI adoption isn't awareness. It's the gap between talking about AI and building with it. Here's the playbook we used to turn non-technical, customer-facing professionals into confident AI builders in six weeks, and how your organization can replicate it."
-      },
-      {
-        "title": "How Cornerstone OnDemand cut database diagnosis by 78% with Amazon Bedrock",
-        "link": "https://aws.amazon.com/blogs/machine-learning/how-cornerstone-ondemand-cut-database-diagnosis-by-78-with-amazon-bedrock/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-10-07T15:38:28.000Z",
-        "contentSnippet": "Cornerstone OnDemand built Orion AI, a multi-agent system on Amazon Bedrock and Strands Agents, to turn database operations from reactive firefighting into proactive automation. A three-person team cut database diagnosis from 45 minutes to 10, a 78% reduction, in six months. See "
-      },
-      {
-        "title": "Introducing Playground: Create and play custom games",
-        "link": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/",
-        "source": "Google AI Blog",
-        "isoDate": "2026-10-07T12:00:00.000Z",
-        "contentSnippet": "Playground is a new experimental gaming platform that lets you create, play, and share custom games."
-      },
-      {
-        "title": "Meta AI Open-Sources Rebalancer: A C++ Assignment Solver That Runs About 40 Million Placement Problems a Day",
-        "link": "https://www.marktechpost.com/2026/10/06/meta-ai-open-sources-rebalancer-a-c-assignment-solver-that-runs-about-40-million-placement-problems-a-day/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-10-07T06:29:14.000Z",
-        "contentSnippet": "Meta has open-sourced Rebalancer, the C++ and Python library it has used for over 9 years to place shards, servers and traffic. It handles about 40 million assignment problems a day, using local search or MIP solvers like Gurobi, FICO Xpress and HiGHS. It is pip-installable under"
-      },
-      {
-        "title": "A Developer’s Guide to Laya: Zero-Shot Decisions and Calibration",
-        "link": "https://www.marktechpost.com/2026/10/06/a-developers-guide-to-laya-zero-shot-decisions-and-calibration/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-10-07T00:53:03.000Z",
-        "contentSnippet": "Explore a comprehensive coding guide to Laya, the open-source zero-shot decision engine. Learn how to implement typed decisions, fit custom temperatures, and build reliable abstention gates using real-world CLINC150 banking data. The post A Developer’s Guide to Laya: Zero-Shot De"
-      },
-      {
-        "title": "Building a context-aware AI assistant on AgentCore and OpenClaw",
-        "link": "https://aws.amazon.com/blogs/machine-learning/building-a-context-aware-ai-assistant-on-agentcore-and-openclaw/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-10-06T19:19:15.000Z",
-        "contentSnippet": "Off-the-shelf AI assistants forget you between conversations. This post shows how to build a personal assistant that accumulates context using OpenClaw on Amazon Bedrock AgentCore runtime, with AgentCore memory turning disposable chats into durable, structured knowledge you can r"
-      },
-      {
-        "title": "Google DeepMind Releases EmbeddingGemma 2, a 740M Open Multimodal Embedding Model Built on Gemma 4",
-        "link": "https://www.marktechpost.com/2026/10/06/google-deepmind-releases-embeddinggemma-2-a-740m-open-multimodal-embedding-model-built-on-gemma-4/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-10-06T18:36:08.000Z",
-        "contentSnippet": "Google DeepMind's EmbeddingGemma 2 maps 5 input types into one 768d space and ships today under Apache 2.0. The post Google DeepMind Releases EmbeddingGemma 2, a 740M Open Multimodal Embedding Model Built on Gemma 4 appeared first on MarkTechPost."
-      },
-      {
-        "title": "Mistral AI Releases Mistral Large 4 (Le Chonk): A 1.05T Parameter Multimodal MoE Model",
-        "link": "https://www.marktechpost.com/2026/10/06/mistral-ai-releases-mistral-large-4-le-chonk-a-1-05t-parameter-open-weight-multimodal-moe/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-10-06T17:30:46.000Z",
-        "contentSnippet": "Mistral AI has released Mistral Large 4, nicknamed Le Chonk, as a public preview. It is a 1.05 trillion parameter Mixture of Experts model with 49 billion active parameters, native image input, and a 1 million token context window, trained on 3,800 NVIDIA Grace Blackwell GPUs in "
-      },
-      {
-        "title": "Responsible AI governance: How AWS positions customers to align with ISO/IEC 42005:2025",
-        "link": "https://aws.amazon.com/blogs/machine-learning/responsible-ai-governance-how-aws-positions-customers-to-align-with-iso-iec-420052025/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-10-06T15:53:28.000Z",
-        "contentSnippet": "AWS invests in tools that help customers align with international standards for responsible AI governance. In this post, we explore the AI system impact assessment: what it is, how it improves enterprise-wide risk management, and how ISO/IEC 42005:2025 codifies best practices for"
-      },
-      {
-        "title": "Best practices for Amazon SageMaker HyperPod administration and governance",
-        "link": "https://aws.amazon.com/blogs/machine-learning/best-practices-for-amazon-sagemaker-hyperpod-administration-and-governance/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-10-06T15:50:23.000Z",
-        "contentSnippet": "Learn how to administer Amazon SageMaker HyperPod through Amazon SageMaker Unified Studio while preserving cluster governance. This post shows platform teams how to design infrastructure boundaries, govern access, allocate shared capacity, and operate HyperPod consistently across"
       }
     ],
     "virtualization": [
@@ -2310,6 +2310,62 @@
     ],
     "hardware": [
       {
+        "title": "TP-Link proposes $1 billion US Wi-Fi router manufacturing alliance with Key Tronic",
+        "link": "https://www.tomshardware.com/networking/routers/tp-link-proposes-usd1-billion-us-wi-fi-router-manufacturing-alliance-with-key-tronic-potential-deal-seeks-to-end-ongoing-saga-blocking-its-wi-fi-8-products-from-american-homes",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-20T16:25:55.000Z",
+        "contentSnippet": "TP-Link is at the mercy of the FCC regarding its ready-to-go Wi-Fi 8 routers, so it has a sweetener in mind to move things along."
+      },
+      {
+        "title": "NVIDIA JUPITER Quantum Simulation Models a 104-Qubit Fault-Tolerant Processor Across 8,192 GH200 GPUs and 512 TiB",
+        "link": "https://www.storagereview.com/news/nvidia-jupiter-quantum-simulation-104-qubit-fault-tolerant-8192-gh200",
+        "source": "StorageReview",
+        "isoDate": "2026-10-20T16:00:58.000Z",
+        "contentSnippet": "NVIDIA has run a 104-qubit simulation of a fault-tolerant quantum processor on JUPITER, Europe’s first exascale supercomputer at the Jülich Supercomputing Centre, using 8,192 GH200 GPUs. Announced ahead of GTC Berlin, the run models magic state cultivation, a method of producing "
+      },
+      {
+        "title": "HPE Spaceborne Computer-4 Will Bring AI and HPC to the Moon on Astrolab FLIP",
+        "link": "https://www.servethehome.com/hpe-spaceborne-computer-4-will-bring-ai-and-hpc-to-the-moon-on-astrolab-flip/",
+        "source": "ServeTheHome",
+        "isoDate": "2026-10-20T14:13:22.000Z",
+        "contentSnippet": "The HPE Spaceborne Computer 4 will head to the moon on Astrolab's Flip to test HPC benchmarks and AI on the lunar surface The post HPE Spaceborne Computer-4 Will Bring AI and HPC to the Moon on Astrolab FLIP appeared first on ServeTheHome."
+      },
+      {
+        "title": "HPE Spaceborne Computer-4 Will Run AI Inference on the Moon Aboard Astrolab’s FLIP Rover",
+        "link": "https://www.storagereview.com/news/hpe-spaceborne-computer-4-ai-inference-moon-astrolab-flip-rover",
+        "source": "StorageReview",
+        "isoDate": "2026-10-20T14:00:23.000Z",
+        "contentSnippet": "HPE announced HPE Spaceborne Computer-4, a compute module that will run AI inference and what HPE says will be the first HPC benchmarks on the Moon. Loaded with KIOXIA SSDs, the module will fly as a payload on Astrolab’s FLIP rover, which Voyager Technologies’ Griffin-1 lander wi"
+      },
+      {
+        "title": "Mysterious AMD Zen 6 APU with 24GB of LPDDR5 memory appears in benchmarks",
+        "link": "https://www.tomshardware.com/pc-components/cpus/mysterious-amd-zen-6-apu-with-24gb-of-lpddr5-memory-appears-in-benchmarks-chip-may-be-for-next-gen-steam-deck-or-gaming-handhelds",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-20T13:59:43.000Z",
+        "contentSnippet": "The engineering sample features six CPU cores, 24GB of LPDDR5 memory running at 9,600 MT/s, and an integrated GPU clocked at 2.4 GHz, although its connection to a future Steam Deck remains unconfirmed."
+      },
+      {
+        "title": "U.S. Army developing program that would deploy AI agents to autonomously seek and destroy targets in enemy digital infrastructures",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/us-army-reportedly-developing-program-that-would-deploy-ai-agents-to-autonomously-seek-and-destroy-targets-in-enemy-digital-infrastructures-experts-warn-echotribble-program-could-have-disastrous-consequences",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-20T13:30:00.000Z",
+        "contentSnippet": "The U.S. Army is developing a program to deploy autonomous AI agents that can navigate digital and network infrastructures, identify targets, and “neutralize” them."
+      },
+      {
+        "title": "US restarts three shut-down nuclear reactors to feed AI data centers",
+        "link": "https://www.tomshardware.com/tech-industry/big-tech/us-takes-unprecedented-step-of-recommissioning-nuclear-plants-due-to-ai-power-demand-2-25-gw-currently-on-tap-from-refurbished-reactors",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-20T12:50:00.000Z",
+        "contentSnippet": "The U.S. government is helping fund projects to bring nuclear reactors back online in an attempt to provide more energy capacity to AI data centers."
+      },
+      {
+        "title": "Oblivion gamer uses Claude AI to boost average FPS gains up to 48%, stutters slashed by 90%",
+        "link": "https://www.tomshardware.com/video-games/pc-gaming/oblivion-gamer-uses-claude-ai-to-boost-average-fps-gains-up-to-48-percent-stutters-slashed-by-90-percent-performance-mod-doesnt-change-game-assets-or-alter-visuals",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-20T12:30:00.000Z",
+        "contentSnippet": "The new Oblivion Remastered Performance Fix mod is a pure code fix, with no changes to game assets or the game's visuals, yet it offers massive gains."
+      },
+      {
         "title": "Buy a complete RTX 5070 Ti gaming PC from Newegg and save $450",
         "link": "https://www.tomshardware.com/pc-components/buy-a-complete-rtx-5070-ti-gaming-pc-from-newegg-and-save-usd450-get-a-16gb-gpu-32gb-of-ram-an-i9-14900kf-processor-a-2tb-ssd-and-more-for-only-usd2-549",
         "source": "Tom's Hardware",
@@ -2952,62 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-10-15T14:00:00.000Z",
         "contentSnippet": "Component bundles are a great way of offsetting high prices on certain parts, but your proximity to a Micro Center may save you even more."
-      },
-      {
-        "title": "EU negotiates sanction swap with China to rescue critical ASML supplier",
-        "link": "https://www.tomshardware.com/tech-industry/semiconductors/eu-negotiates-sanction-swap-with-china-to-rescue-critical-asml-supplier-german-coatings-firm-faces-shutdown-without-chinese-rare-earths",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-15T13:30:00.000Z",
-        "contentSnippet": "The EU is reportedly negotiating with Beijing to remove Chinese restrictions on German ASML supplier Sindlhauser Materials, to prevent the China-dependent company from going out of business"
-      },
-      {
-        "title": "Alienware AW3226Q 32-inch 4K OLED gaming monitor review: Sleek design with performance and value to match",
-        "link": "https://www.tomshardware.com/monitors/gaming-monitors/alienware-aw3226q-32-inch-4k-oled-gaming-monitor-review",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-15T13:00:00.000Z",
-        "contentSnippet": "Alienware rolls Tandem RGB Stripe OLED tech into a stylish 32-inch gaming monitor for a low price. The AW3226Q delivers 4K resolution, 165 Hz, Adaptive-Sync, HDR400 True Black, Dolby Vision, and wide-gamut color."
-      },
-      {
-        "title": "Malicious Russian disinformation bot traffic barely flinches after Ukraine strikes Yandex data centers and auto-migration kicks in",
-        "link": "https://www.tomshardware.com/service-providers/network-providers/malicious-russian-disinformation-bot-traffic-barely-flinches-after-ukraine-strikes-yandex-data-centers-and-auto-migration-kicks-in-cloudflare-tracks-170-million-automated-attacks-shifting-to-alternate-cloud-hosts",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-15T12:28:24.000Z",
-        "contentSnippet": "Ukraine's strikes on Russian data centers have caused legitimate bot traffic to go down, but malicious bots remain operational."
-      },
-      {
-        "title": "We tested the RTX Spark Superchip in Microsoft's Surface Laptop Ultra",
-        "link": "https://www.tomshardware.com/laptops/we-test-the-rtx-spark-superchip-in-microsofts-surface-laptop-ultra-nvidias-windows-on-arm-platform-impresses-in-local-ai-but-gaming-isnt-its-strong-suit",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-15T12:00:21.000Z",
-        "contentSnippet": "We've tested Nvidia's RTX Spark against the latest and greatest from Apple and AMD to see how Nvidia's efforts to transform the PC for the agentic AI era stack up."
-      },
-      {
-        "title": "ASML reports record $13 billion quarter, vows to expand capacity as demand for lithography equipment soars",
-        "link": "https://www.tomshardware.com/tech-industry/semiconductors/asml-reports-record-usd13-billion-quarter-vows-to-expand-capacity-as-demand-for-lithography-equipment-soars-customers-eager-to-secure-orders-in-2030-as-demand-is-expected-to-outstrip-2027-and-2028-supply",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-15T12:00:00.000Z",
-        "contentSnippet": "ASML vows to expand production capacity amid growing demand, record earnings and profitability."
-      },
-      {
-        "title": "Save $249 on 32GB of DDR5 with this 3-item Newegg bundle",
-        "link": "https://www.tomshardware.com/pc-components/save-usd249-on-32gb-of-ddr5-with-this-3-item-newegg-bundle-score-32gb-of-g-skill-trident-z5-neox-ram-a-ryzen-7-9800x3d-and-an-msi-x870e-motherboard-for-only-usd1-094-99",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-15T11:56:24.000Z",
-        "contentSnippet": "Score 32GB of G.Skill DDR5-6000 RAM for just $321 in Newegg’s new AM5 combo. For $1,094 ($249 off), you also get a Ryzen 7 9800X3D and an MSI X870E Tomahawk MAX WiFi board, plus a free AIO cooler."
-      },
-      {
-        "title": "ASML struggling to keep up with demand for chipmaking equipment as AI spending continues to boom",
-        "link": "https://www.tomshardware.com/tech-industry/semiconductors/asml-struggling-to-keep-up-with-demand-for-chipmaking-equipment-as-ai-spending-continues-to-boom-chipmakers-are-already-looking-to-place-orders-for-2029-and-2030-output-ceo-says-demand-could-surpass-capacity-despite-massive-expansion-plans",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-15T11:30:00.000Z",
-        "contentSnippet": "ASML says customers are already placing orders for advanced chipmaking tools years in advance, with AI-driven semiconductor demand remaining strong enough to strain capacity despite planned expansions"
-      },
-      {
-        "title": "TSMC confirms it is considering Terafab chipmaking expansion with Elon Musk",
-        "link": "https://www.tomshardware.com/tech-industry/semiconductors/tsmc-confirms-it-is-considering-terafab-chipmaking-expansion-with-elon-musk-ceo-insists-tsmc-would-have-to-run-texas-based-project",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-15T11:15:39.000Z",
-        "contentSnippet": "TSMC's management confirms that the company is looking forward to expand U.S. capacity beyond Arizona and Texas is one of its options. However, to become a part of the Terafab project, it insists on running the whole fab."
       }
     ]
   }
