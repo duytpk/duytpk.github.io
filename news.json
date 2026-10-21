@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-10-21T10:53:38.302Z",
+  "updatedAt": "2026-10-21T15:45:56.607Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2024-6423 - Sensitive Data Exposure via URL Parameters in Multiple WSO2 Products Allows Confidential Information Leakage",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2024-6423",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-21T13:56:26.000Z",
+        "contentSnippet": "The product failed to enforce validation constraints on user-supplied input in URL parameters, allowing sensitive data to be passed to flows where it was not intended to be processed. Although the product did not utilize this data, its acceptance could lead to logging. If a user ",
+        "cveScore": 4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-109619 - RCE via stale global state",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-109619",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-21T13:54:43.000Z",
+        "contentSnippet": "PHP has various global state that temporarily points into request memory. In some scenarios, global state may not be correctly reset, or may be repopulated after being reset. The global state may then refer to request memory even after it has been freed. Subsequent requests may r",
+        "cveScore": 9.2,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-104949 - WarehousePG Missing Authorization Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104949",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-21T13:54:11.000Z",
+        "contentSnippet": "WarehousePG (WHPG) 6.27.1 through 6.27.6 and 7.2.1 through 7.6.0 are affected by a missing authorization vulnerability (CWE-862) in gp_add_coordinator_standby(). The function is named gp_add_master_standby() in WHPG 6, and WHPG 7 keeps that name as an alias. Unlike the other segm",
+        "cveScore": 2.3,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-104948 - WarehousePG Missing Authorization Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104948",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-21T13:53:54.000Z",
+        "contentSnippet": "WarehousePG (WHPG) 6.27.1 through 6.27.6 and 7.2.1 through 7.6.0 are affected by a missing authorization vulnerability (CWE-862) in the built-in cluster expansion functions gp_expand_lock_catalog() and gp_expand_bump_version(). Any authenticated database role can run them, and ne",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-104947 - WarehousePG Missing Authorization Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104947",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-21T13:53:05.000Z",
+        "contentSnippet": "WarehousePG (WHPG) 7.2.1 through 7.6.0 is affected by a missing authorization vulnerability (CWE-862) in the built-in function gp_log_backend_memory_contexts(). Any authenticated database role can run this function without a GRANT. It also gets around the superuser restriction th",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-114437 - Chi Client IP Spoofing in ClientIPFromXFF via X-Forwarded-For",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-114437",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-21T13:52:25.000Z",
+        "contentSnippet": "In the Golang Chi web framework, the ClientIPFromXFF middleware skips any X-Forwarded-For entry in a configured trusted CIDR but never verifies that the direct TCP peer in http.Request.RemoteAddr belongs to that CIDR. A client that can reach the Go server directly can therefore a",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2025-0326 - Improper Token Revocation in WSO2 Identity Server Allows Unauthorized Access",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-0326",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-21T13:50:42.000Z",
+        "contentSnippet": "The system fails to invalidate existing access tokens associated with sub-organization users during sensitive account management operations such as password reset, role change, or sub-organization disablement. This oversight allows previously issued tokens to remain active even a",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2024-7478 - Username Enumeration via External User Stores in Multiple WSO2 Products Allows User Account Discovery",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2024-7478",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-21T13:49:07.000Z",
+        "contentSnippet": "When a WSO2 product is configured to use an external user store, the system fails to adequately obscure the existence or validity of usernames during authentication attempts. This oversight allows an attacker to repeatedly query the authentication mechanism with different usernam",
+        "cveScore": 5.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-109618 - RCE via OOM corruption",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-109618",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-21T13:48:34.000Z",
+        "contentSnippet": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request cle",
+        "cveScore": 9.2,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2024-5563 - Incomplete reCaptcha Implementation in Authentication Flows in WSO2 Identity Server Allows Brute Force Attacks",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2024-5563",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-21T13:44:40.000Z",
+        "contentSnippet": "Due to an incomplete implementation, reCaptcha is not applied to certain authentication flows even when the reCaptcha option is enabled. This oversight permits attackers to bypass the intended protection mechanism. Brute force attacks, if successful, can lead to unauthorized acce",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2024-4989 - Open Redirection via Callback URL in WSO2 API Manager Allows Phishing Attacks",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2024-4989",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-21T13:41:06.000Z",
+        "contentSnippet": "The callback URL parameter in WSO2 API Manager fails to validate user-supplied input, allowing it to be controlled by malicious actors. Exploitation of this vulnerability could lead to users being redirected to attacker-controlled web pages. This can be used in conjunction with s",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2024-5139 - Cross-Site Scripting via Authentication Endpoint in Multiple WSO2 Products Enables UI Manipulation and Redirection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2024-5139",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-21T13:36:49.000Z",
+        "contentSnippet": "The Authentication Endpoint accepts user-supplied input without sufficient encoding, allowing for the injection of malicious JavaScript payloads. This vulnerability can be triggered by submitting crafted input to the Authentication Endpoint. Successful exploitation allows an atta",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-114249 - dhikshitha29 Insurance-Management-System Policy Holder Update Form UpdatePolicyHolder-inc.php improper authorization",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-114249",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-21T13:30:18.000Z",
+        "contentSnippet": "A vulnerability was detected in dhikshitha29 Insurance-Management-System 91de5edda5baa109ad8e9baf03ce6a3ceda84183/125362cc21dca20d74091a4913a5096bb58dd837. This vulnerability affects unknown code of the file /Agent/includes/UpdatePolicyHolder-inc.php of the component Policy Holde",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-97313 - Specific RPZ configurations and query patterns may result in an unexpected exit",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97313",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-21T13:21:09.000Z",
+        "contentSnippet": "A recursive BIND server that receives a query with recursion desired (RD=1) followed by a non-recursive query (RD=0) may exit with an assertion failure, resulting in a denial of service. To be vulnerable, the BIND server must allow recursive queries and have at least two RPZ zone",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-96888 - Named may terminate unexpectedly when a redirect zone is used with strict QNAME minimization",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96888",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-21T13:21:08.000Z",
+        "contentSnippet": "A BIND resolver that is configured with both a \"redirect\" zone and \"qname-minimization strict\" may abort with an assertion failure while processing the redirect. This issue affects BIND 9 versions 9.16.0 through 9.18.50, 9.20.0 through 9.20.29, 9.21.0 through 9.21.26, 9.16.8-S1 t",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-94300 - Concurrent GSS-TSIG messages corrupt memory",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94300",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-21T13:21:08.000Z",
+        "contentSnippet": "Replaying GSS-TSIG signed UDP messages can result in memory corruption in \"`named`\". An attacker who can capture a previously signed UDP message can replay it while the negotiated TSIG key is still valid. By also sending crafted queries to a zone the attacker controls, the attack",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-90484 - Apache bRPC: Null pointer dereference in MySQL reply parser leading to client crash",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90484",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-21T13:20:56.000Z",
+        "contentSnippet": "The MySQL client response parser in Apache bRPC dereferences a null pointer when the server peer sends a zero-payload-length response packet. A response packet whose declared payload length is zero is accepted by the frame-length check (is_full_package), after which the parser re",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-87849 - Apache bRPC: Out-of-bounds read via non-object fields in Discovery naming-service reply parsing",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-87849",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-21T13:20:04.000Z",
+        "contentSnippet": "The Discovery naming-service reply parser in Apache bRPC (versions",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-86249 - Apache bRPC: Authentication bypass when a server sets ServerOptions.internal_port and ServerOptions.auth",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86249",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-21T13:20:04.000Z",
+        "contentSnippet": "On a brpc::Server that sets both ServerOptions.auth and ServerOptions.internal_port, the HTTP built-in service exemption on internal_port can be abused to bypass authentication entirely. VerifyHttpRequest() returns true without checking any credential when a built-in service is r",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-86147 - Apache bRPC: Arbitrary file creation/truncation via /flags and unbounded profiling duration via /pprof",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86147",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-21T13:20:04.000Z",
+        "contentSnippet": "External control of file name or path and uncontrolled resource consumption in Apache bRPC (version",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-86146 - Apache bRPC: HTTP Request Smuggling and Header Injection via Lenient HTTP/1.1 Header Parsing",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86146",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-21T13:20:04.000Z",
+        "contentSnippet": "Inconsistent interpretation of HTTP requests (HTTP request/response smuggling) in the bundled HTTP/1.1 parser of Apache bRPC (version",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-84748 - Apache bRPC: Builtin services reachable from the public port via protobuf protocols despite ServerOptions.internal_port configuration",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84748",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-21T13:20:03.000Z",
+        "contentSnippet": "Improper authorization in Apache bRPC (versions",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-84747 - Apache bRPC: Access Control Bypass via HTTP Request Paths Containing Empty Path Segments",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84747",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-21T13:20:03.000Z",
+        "contentSnippet": "Interpretation conflict in the HTTP protocol implementation in Apache bRPC (version",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-84727 - Apache bRPC: Use-After-Free in RTMP Chunk Stream Handling via Abort Message",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84727",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-21T13:20:03.000Z",
+        "contentSnippet": "Use-after-free in the RTMP protocol implementation in Apache bRPC (version RtmpChunkStream::SerializeMessage) runs concurrently on sender threads and dereferences the same RtmpChunkStream object without synchronization. If a remote peer sends an Abort message naming a chunk strea",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-82953 - Apache bRPC: NULL Pointer Dereference in RTMP createStream Error Path Leading to Remote Denial of Service",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82953",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-21T13:20:03.000Z",
+        "contentSnippet": "NULL pointer dereference in the RTMP protocol implementation in Apache bRPC (version _onfail_id, causing the process to crash. Affected Scenarios: Run an Apache bRPC RTMP server whose RtmpService::NewStream() may return null (i.e., the service rejects createStream requests). A re",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2026-105923 - Null-pointer dereference in QTriangulator reachable through VectorImage",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-105923",
@@ -676,231 +901,6 @@
         "isoDate": "2026-10-20T22:21:05.000Z",
         "contentSnippet": "Vulnerability in Oracle Essbase (component: Essbase Web Platform). The supported version that is affected is 21.8.3.0.0. Difficult to exploit vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle Essbase. While the vulnerability is in Orac",
         "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-113720 - virtualenv: Seeded files retain permissions from an older cache",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-113720",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-20T19:43:32.000Z",
-        "contentSnippet": "virtualenv is a tool for creating isolated virtual python environments. Prior to 21.14.9, the app-data copy seeder uses shutil.copy() to copy cached package files into later environments, causing cached source modes to override the current run's umask. A cache populated under a p",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-113715 - virtualenv: Venv configuration readback can reinterpret path boundaries",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-113715",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-20T19:42:55.000Z",
-        "contentSnippet": "virtualenv is a tool for creating isolated virtual python environments. Prior to 21.14.9, the stdlib venv creator reads generated pyvenv.cfg with str.splitlines() and merges parsed keys over virtualenv's selected configuration. An untrusted caller who influences the destination p",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-113719 - virtualenv: Seed replacement does not contain metadata deletion paths",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-113719",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-20T19:42:07.000Z",
-        "contentSnippet": "virtualenv is a tool for creating isolated virtual python environments. Prior to 21.14.9, PipInstall._uninstall_previous_version() accepts existing seed-package metadata and _uninstall_dist() joins entries from top_level.txt and RECORD to site-packages without checking containmen",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-113718 - virtualenv: Xonsh activation literals depend on the script decoding codec",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-113718",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-20T19:39:52.000Z",
-        "contentSnippet": "virtualenv is a tool for creating isolated virtual python environments. Prior to 21.14.9, POSIX xonsh activation quote() uses repr() to write printable non-ASCII prompt or destination data into UTF-8 activate.xsh, while xonsh can read that script using $XONSH_ENCODING. Under a le",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-113717 - virtualenv: Pip seeding with download omits wheel digest verification",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-113717",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-20T19:22:11.000Z",
-        "contentSnippet": "virtualenv is a tool for creating isolated virtual python environments. Prior to 21.14.9, PipInvoke.get_pip_install_cmd() handles --seeder pip --download by calling get_wheel(download=False) and then allowing pip to consult the configured index, bypassing virtualenv's download_wh",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-97406 - Authentication Bypass via Bearer Tokens to Unauthorized Credential Minting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97406",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-20T19:19:38.000Z",
-        "contentSnippet": "XERJ Console API bearer tokens can bypass the passkey‑only authentication requirement and directly invoke the API‑token creation endpoint, allowing unauthorized minting of persistent successor credentials.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-75997 - Acrobat for Edge | Out-of-bounds Write (CWE-787)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75997",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-20T19:18:15.000Z",
-        "contentSnippet": "Rejected reason: this CVE was issued in error.",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-75751 - Acrobat for Edge | Out-of-bounds Write (CWE-787)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75751",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-20T19:18:15.000Z",
-        "contentSnippet": "Rejected reason: this CVE was issued in error.",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-75747 - Acrobat for Edge | Out-of-bounds Write (CWE-787)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75747",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-20T19:18:15.000Z",
-        "contentSnippet": "Rejected reason: this CVE was issued in error.",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-113716 - virtualenv: Builtin creation follows linked environment directories",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-113716",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-20T19:18:09.000Z",
-        "contentSnippet": "virtualenv is a tool for creating isolated virtual python environments. Prior to 21.14.9, the builtin creator calls ensure_dir() for executable, library, and package directories, and ensure_dir() accepts an existing symlink to a directory because exists() follows it. Interpreter ",
-        "cveScore": 4.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-48279 - Acrobat for Edge | Out-of-bounds Write (CWE-787)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48279",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-20T19:17:38.000Z",
-        "contentSnippet": "Rejected reason: this CVE was issued in error.",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-21356 - Acrobat for Edge | Out-of-bounds Write (CWE-787)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-21356",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-20T19:17:35.000Z",
-        "contentSnippet": "Rejected reason: this CVE was issued in error.",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-21270 - Acrobat for Edge | Out-of-bounds Write (CWE-787)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-21270",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-20T19:17:35.000Z",
-        "contentSnippet": "Rejected reason: this CVE was issued in error.",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-21266 - Acrobat for Edge | Out-of-bounds Read (CWE-125)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-21266",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-20T19:17:35.000Z",
-        "contentSnippet": "Rejected reason: this CVE was issued in error.",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-113810 - Stored XSS on SNS Enrollment Portal",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-113810",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-20T19:17:34.000Z",
-        "contentSnippet": "A Stored Cross-Site Scripting vulnerability exists in the SNS enrollment Portal. Through the captive portal an attacker can inject an XSS when requesting certificate creation for user. The stored XSS can only be triggered during validation by the administrator.",
-        "cveScore": 7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-113808 - Stored XSS on SNS Enrollment Portal",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-113808",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-20T19:17:34.000Z",
-        "contentSnippet": "A Stored Cross-Site Scripting vulnerability exists in the SNS enrollment Portal. Through the captive portal an attacker can inject an XSS when requesting user creation. The stored XSS can only be triggered during validation by the administrator.",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-113714 - virtualenv: Downloaded wheel selection and caching precede verification",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-113714",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-20T19:17:34.000Z",
-        "contentSnippet": "virtualenv is a tool for creating isolated virtual python environments. From 21.14.8 until 21.14.9, download_wheel() writes package-index downloads directly into the reusable wheel/house cache before selecting a verification target from pip's textual Saved output. With default-in",
-        "cveScore": 2.3,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-113713 - virtualenv: Temporary app-data can leave dangling seed package links",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-113713",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-20T19:17:33.000Z",
-        "contentSnippet": "virtualenv is a tool for creating isolated virtual python environments. From 21.14.8 until 21.14.10, the app-data seeder can leave an environment linked to temporary package files that virtualenv deletes when creation finishes. The environment-variable and configuration-file form",
-        "cveScore": 4.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-113712 - Cachet has Stored XSS in Incident Component",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-113712",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-20T19:17:33.000Z",
-        "contentSnippet": "Cachet is an open-source status page system. Versions 2.4.1 and earlier have a stored Cross-Site Scripting (XSS) vulnerability in the incident creation form, allowing an authenticated attacker to inject malicious HTML/JavaScript that executes in the browser of any user who views ",
-        "cveScore": 4.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-113709 - Argo CD: A Kustomize Helm config home can run commands in the repo-server",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-113709",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-20T19:17:33.000Z",
-        "contentSnippet": "Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. From 2.1.0 until 3.3.15, 3.4.10, 3.5.4, and 3.6.0-rc2, when an operator has enabled --enable-helm for kustomize build, helmGlobals.configHome can point Helm's config and data directories at a repository-con",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-113708 - Argo CD: A Kustomize remote ref can run commands in the repo-server",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-113708",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-20T19:17:33.000Z",
-        "contentSnippet": "Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. From 2.7.0 until 3.3.15, 3.4.10, 3.5.4, and 3.6.0-rc2, Kustomize passes ref or version query values from remote resource, base, or component URLs to git fetch without an end-of-options separator. A leading-",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-113643 - EspoCRM PDF Rendering Pipeline ImageSourceProvider.php get authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-113643",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-20T19:17:32.000Z",
-        "contentSnippet": "A vulnerability was found in EspoCRM up to 9.3.10/10.0.10. This affects the function ImageSourceProvider::get of the file application/Espo/Tools/Pdf/Dompdf/ImageSourceProvider.php of the component PDF Rendering Pipeline. Performing a manipulation of the argument ID results in aut",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-111767 - MCP TypeScript SDK: Experimental tasks were not tied to the session that created them",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111767",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-20T19:17:30.000Z",
-        "contentSnippet": "MCP TypeScript SDK is the official TypeScript SDK for Model Context Protocol servers and clients. From version 1.24.0 to before version 1.32.0, the experimental tasks feature (taskStore) did not check which session created a task. Clients sharing one InMemoryTaskStore could list,",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-111088 - Stored XSS in the VPN logs monitor",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111088",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-20T19:17:30.000Z",
-        "contentSnippet": "A Stored Cross-Site Scripting vulnerability exists in the SNS VPN log monitoring screen.",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-100134 - Acrobat for Edge | Out-of-bounds Write (CWE-787)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100134",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-20T19:17:11.000Z",
-        "contentSnippet": "Acrobat for Edge is affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
-        "cveScore": 8.8,
         "cveSeverity": "HIGH"
       }
     ],
@@ -1608,6 +1608,13 @@
     ],
     "virtualization": [
       {
+        "title": "Do You Really Need Proxmox If You Only Run Docker?",
+        "link": "https://www.virtualizationhowto.com/2026/10/do-you-really-need-proxmox-if-you-only-run-docker/",
+        "source": "Virtualization HowTo",
+        "isoDate": "2026-10-21T12:39:52.000Z",
+        "contentSnippet": "I think for many home labbers and those running self-hosted infrastructure at home, there are two platforms that account for the majority of where we run applications. That includes Proxmox… The post Do You Really Need Proxmox If You Only Run Docker? appeared first on Virtualizat"
+      },
+      {
         "title": "7 Things You Don’t Need to Run a Great Proxmox Home Lab",
         "link": "https://www.virtualizationhowto.com/2026/10/7-things-you-dont-need-to-run-a-great-proxmox-home-lab/",
         "source": "Virtualization HowTo",
@@ -2299,16 +2306,107 @@
         "source": "Virtualization HowTo",
         "isoDate": "2026-08-14T12:21:42.000Z",
         "contentSnippet": "It is that time of year again where school is starting for the kiddos and everyone is talking about back to school. If you have a home lab there is… The post Back to Home Lab School 2026: 7 Learning Projects to Start This Weekend appeared first on Virtualization Howto."
-      },
-      {
-        "title": "8 Modern Linux Commands I Use Instead of the Old-School Alternatives",
-        "link": "https://www.virtualizationhowto.com/2026/08/8-modern-linux-commands-i-use-instead-of-the-old-school-alternatives/",
-        "source": "Virtualization HowTo",
-        "isoDate": "2026-08-13T12:16:13.000Z",
-        "contentSnippet": "If you are like me, you spend a lot of time behind the wheel of the Linux command line. I usually am connected to Proxmox hosts, Docker servers, kubernetes nodes,… The post 8 Modern Linux Commands I Use Instead of the Old-School Alternatives appeared first on Virtualization Howto"
       }
     ],
     "hardware": [
+      {
+        "title": "ASML and other critical semiconductor equipment suppliers expedite shipments to Musk's Terafab",
+        "link": "https://www.tomshardware.com/tech-industry/semiconductors/elon-musk-says-asml-and-other-critical-semiconductor-equipment-suppliers-will-expedite-shipments-to-terafab-facility-targets-volume-chip-production-by-q3-q4-2028-in-highly-aspirational-timeline",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-21T15:30:00.000Z",
+        "contentSnippet": "Elon Musk says ASML and other semiconductor equipment suppliers are expediting deliveries for Terafab, as Tesla and SpaceX target volume chip production in Texas by late 2028 alongside a massive expansion in AI compute capacity."
+      },
+      {
+        "title": "Nutanix Private Inference System With Supermicro Puts Eight NVIDIA B300 Blackwell Ultra GPUs per Node Behind Dedicated NX Management and Storage Clusters, Ships Early 2027",
+        "link": "https://www.storagereview.com/news/nutanix-supermicro-private-inference-blackwell-ultra-vera-netris-gtc-berlin",
+        "source": "StorageReview",
+        "isoDate": "2026-10-21T15:11:15.000Z",
+        "contentSnippet": "Nutanix announced three collaborations today at NVIDIA GTC Berlin: a jointly engineered private inference system with Supermicro built on servers with eight NVIDIA B300 Blackwell Ultra GPUs per node, Day Zero support for NVIDIA Vera CPUs starting with NKP Bare Metal, and a multit"
+      },
+      {
+        "title": "Intel Moves Forward at Ohio One With First Major Structural Truss Installation",
+        "link": "https://www.servethehome.com/intel-moves-forward-at-ohio-one-with-first-major-structural-truss-installation/",
+        "source": "ServeTheHome",
+        "isoDate": "2026-10-21T15:00:47.000Z",
+        "contentSnippet": "Intel Ohio One is making progress with truss installation as part of its construction and future wafer capacity The post Intel Moves Forward at Ohio One With First Major Structural Truss Installation appeared first on ServeTheHome."
+      },
+      {
+        "title": "AMD brings official Ryzen overclocking to Linux with AOD driver support",
+        "link": "https://www.tomshardware.com/software/linux/amd-brings-official-ryzen-overclocking-to-linux-with-aod-driver-support-no-official-app-but-third-party-options-should-arrive-soon",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-21T14:52:23.000Z",
+        "contentSnippet": "New driver enablement work from AMD brings full platform-level tuning control to Ryzen systems running Linux, finally."
+      },
+      {
+        "title": "CoreWeave Physical AI Launchables Put Isaac Sim, CARLA, and MuJoCo Behind One Command, With a Six-Layer Zero Trust AI Framework",
+        "link": "https://www.storagereview.com/news/coreweave-physical-ai-launchables-zero-trust-ai-framework-gtc-berlin",
+        "source": "StorageReview",
+        "isoDate": "2026-10-21T14:21:32.000Z",
+        "contentSnippet": "CoreWeave launched Physical AI Launchables and the CoreWeave Zero Trust AI Framework today at NVIDIA GTC Berlin. Launchables is a catalog of tested, ready-to-run templates for robotics and autonomous vehicle tools, each started with one command, that pairs environments for NVIDIA"
+      },
+      {
+        "title": "Trump announces mandate forcing AI data centers to pay energy dividends to the local community",
+        "link": "https://www.tomshardware.com/tech-industry/data-centers/trump-announces-mandate-for-data-centers-to-pay-dividends-to-the-local-community-hopes-to-win-more-data-center-supporters-through-dividend-scheme",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-21T13:46:18.000Z",
+        "contentSnippet": "Trump's latest post on Truth Social announces his plans to make data centers more popular among local communities."
+      },
+      {
+        "title": "Qualcomm to cut jobs globally in \"performance-based\" layoffs, as company pivots to AI data center and edge computing markets",
+        "link": "https://www.tomshardware.com/tech-industry/big-tech/qualcomm-to-cut-jobs-globally-in-performance-based-layoffs-ceo-says-move-will-build-stronger-performance-culture-as-company-pivots-to-ai-data-center-and-edge-products",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-21T13:00:00.000Z",
+        "contentSnippet": "Qualcomm will begin performance-based layoffs worldwide in November as the chipmaker reallocates resources toward AI infrastructure, data centers, automotive, PCs, and edge computing, amid weaker consumer electronics demand."
+      },
+      {
+        "title": "FADU puts the filesystem inside the SSD's flash to bypass host CPUs",
+        "link": "https://www.tomshardware.com/pc-components/ssds/fadu-puts-the-filesystem-inside-the-ssds-flash-to-bypass-host-cpus-file-semantic-pcie-6-0-ssd-delivers-460-000-ops-s-to-gpus-and-dpus-samples-due-by-q3-2027",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-21T12:30:00.000Z",
+        "contentSnippet": "FADU’s FS-SSD carries NFSv3 file operations inside NVMe commands, letting GPUs, DPUs, and NICs read files without a host file system."
+      },
+      {
+        "title": "AMD and Intel will work together to create a single PyTorch code path for AI inference on CPUs",
+        "link": "https://www.tomshardware.com/pc-components/cpus/amd-and-intel-will-work-together-to-create-a-single-pytorch-code-path-for-ai-inference-on-cpus-amd-zendnn-library-gets-folded-into-intel-onednn-to-make-cpu-ai-simpler",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-21T12:00:00.000Z",
+        "contentSnippet": "AMD and Intel are working together to bring CPU inference optimizations for PyTorch under the unified oneDNN library."
+      },
+      {
+        "title": "Iran threatens to attack undersea cables in the Strait of Hormuz, calls them 'legitimate new targets' in future conflict",
+        "link": "https://www.tomshardware.com/tech-industry/iran-threatens-to-attack-undersea-cables-in-the-strait-of-hormuz-calls-them-legitimate-new-targets-in-future-conflict-irgc-spokesman-warns-that-a-future-third-phase-in-war-with-us-could-lead-them-to-sever-global-data-links",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-21T11:52:08.000Z",
+        "contentSnippet": "Iran could attack seven undersea cables that run through the Strait of Hormuz, describing them as \"legitimate new targets\" in a potential \"third phase\" of further conflict with the United States."
+      },
+      {
+        "title": "Samsung and SK Hynix are upgrading Chinese factories to produce advanced RAM chips as AI data center competition ramps up",
+        "link": "https://www.tomshardware.com/pc-components/dram/samsung-and-sk-hynix-are-upgrading-chinese-factories-to-produce-advanced-ram-chips-as-ai-data-center-competition-ramps-up-big-players-move-to-fight-off-the-threat-from-cxmt-and-co",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-21T11:49:44.000Z",
+        "contentSnippet": "Samsung and SK Hynix are reportedly upgrading their factories to produce more advanced RAM chips designed for AI data centers in an attempt to fend off competition from Chinese companies."
+      },
+      {
+        "title": "Why you don't need an audiophile headset for gaming — comfort, convenience, and a good mic win over pure audio fidelity",
+        "link": "https://www.tomshardware.com/peripherals/headphones-headsets/why-you-dont-need-an-audiophile-headset-for-gaming-comfort-convenience-and-a-good-mic-win-over-pure-audio-fidelity",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-21T11:30:00.000Z",
+        "contentSnippet": "Headsets are mainly about audio, but that doesn't mean that the \"objectively\" best-sounding headset by audiophile standards translates to the best-sounding headset by gaming standards."
+      },
+      {
+        "title": "HPE Private Cloud AI Adds MCP Servers, Mixed H200 and RTX PRO 6000 Clusters, and a 256-CPU NVIDIA Vera Rack",
+        "link": "https://www.storagereview.com/news/hpe-private-cloud-ai-mcp-servers-mixed-gpu-clusters-vera-cpu-rack",
+        "source": "StorageReview",
+        "isoDate": "2026-10-21T11:30:00.000Z",
+        "contentSnippet": "HPE announced updates to HPE AI Factory with NVIDIA today at NVIDIA GTC Berlin, and most of the changes land in HPE Private Cloud AI. Developers, independent software vendors, and AI agents get governed access to the platform’s inference, models, and pipelines through production "
+      },
+      {
+        "title": "Micron's Taiwan union will launch a one-day strike this week, threatening memory production",
+        "link": "https://www.tomshardware.com/pc-components/dram/microns-taiwan-union-will-launch-a-one-day-strike-this-week-threatening-round-the-clock-fab-operations-workers-demand-concrete-terms-for-2026-bonus-and-clearer-profit-sharing-arrangements",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-21T11:00:00.000Z",
+        "contentSnippet": "Micron's Taiwan union is set to conduct a one-day strike at the company's Taoyuan DRAM facility as workers demand bonuses for this year and transparent terms of bonuses for upcoming years."
+      },
       {
         "title": "Score a 1440p-ready gaming PC with an RTX 5060 Ti 16GB for under $1,500 right now, saving you $200",
         "link": "https://www.tomshardware.com/desktops/gaming-pcs/score-a-1440p-ready-gaming-pc-with-an-rtx-5060-ti-16gb-for-under-usd1-500-right-now-saving-you-usd200-abs-cyclone-aqua-rig-ships-with-16gb-ddr5-1tb-ssd-and-a-20-core-intel-cpu",
@@ -2910,104 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-10-16T12:00:00.000Z",
         "contentSnippet": "Microsoft’s Surface Laptop Ultra is its most beautiful laptop ever, but using Windows on it is the same as ever. Only AI enthusiasts will get the most out of RTX Spark."
-      },
-      {
-        "title": "Taiwan raising $4 billion to build industrial park in Texas to support US chipmaking supply chain",
-        "link": "https://www.tomshardware.com/tech-industry/semiconductors/taiwan-raising-usd4-billion-to-build-industrial-park-in-texas-to-support-us-chipmaking-supply-chain-project-to-support-countless-small-manufacturers-crucial-to-tsmc-foxconn-supply-chain",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-16T11:57:18.000Z",
-        "contentSnippet": "This $4 billion industrial park would make it easier for smaller Taiwanese companies who can't afford to build their own sites in the U.S. to expand and follow major Taiwanese manufacturers like TSMC and Foxconn."
-      },
-      {
-        "title": "Epic introduces an improved version of anti-cheat for Linux",
-        "link": "https://www.tomshardware.com/video-games/pc-gaming/epic-introduces-an-improved-version-of-anti-cheat-for-linux-eac-linux-v2-will-finally-allow-linux-gamers-to-play-fortnite",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-16T11:30:00.000Z",
-        "contentSnippet": "Epic wants to work with developers and maintainers to find the best solution to making anti-cheat work seamlessly on Linux."
-      },
-      {
-        "title": "Experiment shows liquid metal TIM doesn’t dry out; it turns solid",
-        "link": "https://www.tomshardware.com/pc-components/cooling/experiment-shows-liquid-metal-tim-doesnt-dry-out-it-turns-solid-two-year-electron-microscope-test-finds-gallium-bonds-with-copper-coolers-and-nickel-plating-keeps-the-layer-about-10-times-thinner",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-16T11:00:00.000Z",
-        "contentSnippet": "Der8auer’s two-year electron microscope test shows liquid metal’s gallium turns solid on copper and nickel-plated coolers."
-      },
-      {
-        "title": "Corsair's Vengeance RGB DDR5 32GB memory receives a $108 price cut",
-        "link": "https://www.tomshardware.com/pc-components/ddr5/corsairs-vengeance-rgb-ddr5-32gb-memory-receives-a-usd108-price-cut-the-cheapest-ddr5-5600-kit-available-to-buy-right-now",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-16T10:55:27.000Z",
-        "contentSnippet": "Save $108 on Corsair's Vengeance RGB RAM and bag 32GB of DDR5 memory for your PC."
-      },
-      {
-        "title": "Linus Torvalds posts his first AI-assisted patch to the Linux kernel, synthetic test clocks 23x performance leap",
-        "link": "https://www.tomshardware.com/software/linux/linus-torvalds-posts-his-first-llm-assisted-patch-to-the-linux-kernel-after-issuing-clear-pro-ai-directives-the-bossman-makes-use-of-ai-tooling-himself",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-16T10:30:00.000Z",
-        "contentSnippet": "Linus Torvalds posts his first LLM-assisted patch to the Linux kernel — after issuing clear pro-AI directives, the bossman makes use of AI tooling himself"
-      },
-      {
-        "title": "Thai cops bust 'audacious' cross-border fiberoptic cable running to Myanmar scam compound",
-        "link": "https://www.tomshardware.com/tech-industry/thai-cops-bust-audacious-cross-border-fiberoptic-cable-running-to-myanmar-scam-compound-350-meter-48-core-cable-was-supplying-illegal-border-casino-and-a-scam-center-with-6tb-of-data-per-day",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-16T10:24:24.000Z",
-        "contentSnippet": "Thai authorities have busted a cross-border fiber-optic internet cable being used to steal data."
-      },
-      {
-        "title": "Ukrainian drones hit Russian data centers, disrupting Russian apps and services",
-        "link": "https://www.tomshardware.com/tech-industry/data-centers/ukrainian-drones-hit-russian-data-centers-disrupting-russian-apps-and-services-attacks-highlight-the-fragility-of-the-countrys-digital-services",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-16T10:15:00.000Z",
-        "contentSnippet": "After Ukrainian long-range strike drones targeted Russian data centers, various Russian digital services and apps went down or faced severe disruption. There's even some suggestion that online bot activity may be down, but not by as much as initial reports claimed."
-      },
-      {
-        "title": "Newegg has slashed $260 off this all-AMD 4K gaming PC — 9800X3D and Radeon RX 9070 XT combo comes with 32GB of DDR5 and a 2TB SSD",
-        "link": "https://www.tomshardware.com/desktops/gaming-pcs/newegg-has-slashed-usd260-off-this-all-amd-4k-gaming-pc-9800x3d-and-radeon-rx-9070-xt-combo-comes-with-32gb-of-ddr5-and-a-2tb-ssd",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-16T10:03:21.000Z",
-        "contentSnippet": "Save $260 on an all-AMD gaming PC with 9800X3D and Radeon RX 9070 XT."
-      },
-      {
-        "title": "This is the AMD Helios HPE Juniper QFX5252 Switch Tray at OCP 2026",
-        "link": "https://www.servethehome.com/this-is-the-amd-helios-hpe-juniper-qfx5252-switch-tray-at-ocp-2026/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-10-16T04:49:49.000Z",
-        "contentSnippet": "At OCP 2026, we saw an AMD Helios AI rack switch tray, the HPE Juniper QFX5252. This just looks super cool The post This is the AMD Helios HPE Juniper QFX5252 Switch Tray at OCP 2026 appeared first on ServeTheHome."
-      },
-      {
-        "title": "SP Industrial Enterprise SSD Lineup Adds PCIe Gen5 E1.S and U.2 Drives up to 15.3TB With eTLC and 3 DWPD Options",
-        "link": "https://www.storagereview.com/news/sp-industrial-enterprise-ssd-gen5-e1s-u2-etlc",
-        "source": "StorageReview",
-        "isoDate": "2026-10-15T20:42:37.000Z",
-        "contentSnippet": "SP Industrial introduced six enterprise SSDs, spanning E1.S, U.2, M.2 2280, and 2.5-inch SATA form factors, aimed at AI and data center storage as well as enterprise boot drives. Every model in the lineup pairs 3D eTLC flash with DRAM and power failure protection (PFP), and the d"
-      },
-      {
-        "title": "Veeam Intelligent ResOps for Microsoft 365 Goes GA With File-by-File Undo for AI Agent Changes",
-        "link": "https://www.storagereview.com/news/veeam-intelligent-resops-microsoft-365-ga-ai-agent-file-undo",
-        "source": "StorageReview",
-        "isoDate": "2026-10-15T20:30:41.000Z",
-        "contentSnippet": "Veeam made Intelligent ResOps (iResOps) for Microsoft 365 generally available today, the first iResOps product to reach general availability since Veeam introduced Intelligent ResOps in May. It is an add-on for Veeam Data Cloud for Microsoft 365 that connects to the existing serv"
-      },
-      {
-        "title": "Formlabs Form Studio 1 Review: Professional status, consumer price tag",
-        "link": "https://www.tomshardware.com/3d-printing/formlabs-form-studio-1-review",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-15T18:00:00.000Z",
-        "contentSnippet": "The Form Studio 1 is Formlabs first consumer-grade printer. It combines a 200 × 125 × 235 mm build volume with resin heating, automatic dispensing, and a free Open Material Mode."
-      },
-      {
-        "title": "SK hynix reportedly playing hardball with Trump admin over 3D NAND fab",
-        "link": "https://www.tomshardware.com/pc-components/ssds/sk-hynix-reportedly-playing-hardball-with-trump-admin-over-3d-nand-fab-company-demands-increased-chipmaking-equipment-exports-to-china-in-exchange-for-us-fab",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-15T17:40:09.000Z",
-        "contentSnippet": "SK hynix reportedly conditions building new Solidigm 3D NAND fab in the U.S. to equipment exports to the Solidigm fab in Dalian, China."
-      },
-      {
-        "title": "Microsoft Surface Laptop Ultra for Business Review: RTX Spark N1X Runs a 35B-Parameter Coding Agent at 89 Tokens per Second, With One Major Caveat",
-        "link": "https://www.storagereview.com/review/microsoft-surface-laptop-ultra-for-business-review-rtx-spark-n1x",
-        "source": "StorageReview",
-        "isoDate": "2026-10-15T17:28:06.000Z",
-        "contentSnippet": "The Microsoft Surface Laptop Ultra for Business is the first Surface laptop built on NVIDIA silicon, and the first RTX Spark system to get a review from us. Our unit carries the full chip: a 20-core Grace Arm CPU, a 6,144-core Blackwell RTX GPU, and 128GB of LPDDR5X unified memor"
       }
     ]
   }
