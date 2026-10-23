@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-10-23T05:35:51.231Z",
+  "updatedAt": "2026-10-23T10:45:32.992Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-16762 - Denial-of-service vulnerability in the Qt Core QXmlStream parser (QXmlStreamReader) impacts Qt",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16762",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-23T08:58:40.000Z",
+        "contentSnippet": "An attacker able to supply a crafted XML document to an application using QXmlStreamReader can cause disproportionate CPU consumption during parsing, making the application unresponsive (denial of service). Exploitation requires only that the application parse attacker-influenced",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-89320 - HmacShaCryptor.Hash never hashes its input — returns constant HMAC_K(\"\") for all inputs, voiding CBC-HMAC JWE integrity",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89320",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-23T08:56:20.000Z",
+        "contentSnippet": "`HmacShaCryptor.Hash` never hashed its input. For any input it returned `HMAC_K(\"\")` — the MAC of the empty message under the key. Every AES-CBC-HMAC JWE produced or verified by gose therefore carried an authentication tag that is constant per key and independent of the message, ",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-25784 - bluespice/wiki container: Insecure default configuration of service token authentication allows privilege escalation to sysop",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-25784",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-23T08:54:57.000Z",
+        "contentSnippet": "Initialization of a Resource with an Insecure Default vulnerability in Hallo Welt! GmbH BlueSpice (container image bluespice/wiki) allows privilege escalation. The default value of $mwsgTokenAuthenticatorServiceCIDR in the container's LocalSettings.php was intended to restrict in",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-89319 - JweDirectDecryptorBlock.Decrypt: unchecked _thales_aad length header reachable with forged tag → index-out-of-range / slice-bounds panic and unbounded allocation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89319",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-23T08:54:37.000Z",
+        "contentSnippet": "`JweDirectDecryptorBlock.Decrypt` read a 64-bit plaintext length from the `_thales_aad` protected-header field and used it without any validation. A truncated field panics `binary.BigEndian.Uint64`, an oversized value drives an unbounded allocation, and a value larger than the de",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-25716 - BlueSpiceUserManager: Missing authorization in REST endpoints for blocking and unblocking users",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-25716",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-23T08:53:47.000Z",
+        "contentSnippet": "Missing Authorization vulnerability in Hallo Welt! GmbH BlueSpice (Extension:BlueSpiceUserManager) allows any authenticated user without special privileges to block or unblock arbitrary user accounts, including administrators. The REST endpoints /bs-usermanager/v1/block/create an",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-89318 - JweRsaKeyEncryptionDecryptorImpl.Decrypt panics on attacker-chosen IV length (stdlib GCM.Open reached without nonce-size check)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89318",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-23T08:51:55.000Z",
+        "contentSnippet": "`JweRsaKeyEncryptionDecryptorImpl.Decrypt` passed the JWE's initialization vector to `cipher.AEAD.Open` without checking its length. The Go standard library **panics** rather than returning an error when a GCM nonce is not exactly `NonceSize()` bytes, so a JWE carrying a wrong-si",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-89317 - JwtVerifierImpl.Verify does not enforce the JWS `crit` header (RFC 7515 §4.1.11)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89317",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-23T08:50:22.000Z",
+        "contentSnippet": "gose parsed the JWS `crit` header into `JwsHeader.Crit` and then never read it. RFC 7515 §4.1.11 requires a recipient to reject a JWS whose listed critical extension parameters it does not understand. gose implements no header extensions, so every token carrying a non-empty `crit",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-89316 - LoadPublicKey panics on kty/alg mismatch (kty=EC with a non-EC alg) via unchecked *ECDSAOptions type assertion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89316",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-23T08:48:08.000Z",
+        "contentSnippet": "`LoadPublicKey` resolved an EC key's curve with an unchecked type assertion, `algToOptsMap[alg].(*ECDSAOptions)`. A JWK declaring `\"kty\":\"EC\"` together with a non-EC `\"alg\"` — which RFC 7517 §4.4 permits — reaches that assertion and **panics**.",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-89315 - JwtClaims.MarshalJSON panics via reflect.StructOf when any untyped claim key is not a valid Go identifier suffix",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89315",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-23T08:46:30.000Z",
+        "contentSnippet": "`JwtClaims.MarshalJSON` built a Go struct at runtime with `reflect.StructOf`, synthesising a field named `\"A\" + claimName` for each untyped claim. `reflect.StructOf` **panics** when a field name is not a valid Go identifier, or when it duplicates another field. Both conditions ar",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-89314 - Quadratic-time key_ops duplicate check lets a sub-1 MB JWKS body pin a CPU core for ~15 s",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89314",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-23T08:43:38.000Z",
+        "contentSnippet": "`jwkFields.CheckConsistency` detected duplicate `key_ops` entries with a pairwise nested loop, making validation cost grow with the **square** of the entry count. Because the check runs on every JWK and JWKS unmarshal, a modestly sized but hostile JWKS document could occupy a CPU",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-89313 - JwksTrustStore.Get returns the last fetched JWKS key (err=nil) when the requested kid is absent, instead of nil",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89313",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-23T08:40:55.000Z",
+        "contentSnippet": "`JwksTrustStore.Get` assigned each parsed key to the function's **named return value** while refreshing the JWKS cache. When the requested `kid` was not present, the trailing naked `return` handed the caller the last key in the JWKS document together with a `nil` error — a confid",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-89312 - AesGcmCryptor.Open passes attacker-controlled nonce to cipher.AEAD.Open without length check, causing panic on wrong-size IV",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89312",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-23T08:36:53.000Z",
+        "contentSnippet": "`AesGcmCryptor.Open` passed a caller-supplied nonce straight to `cipher.AEAD.Open` without checking its length. The Go standard library **panics** rather than returning an error when a GCM nonce is not exactly `NonceSize()` bytes, so a JWE carrying a wrong-sized IV crashes the de",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2025-58403 - Reflected Cross-Site Scripting (XSS) in CGM CLININET",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-58403",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-23T08:23:44.000Z",
+        "contentSnippet": "CGM CLININET is vulnerable to Reflected Cross-Site Scripting (XSS) due to improper neutralization of user-supplied data. A remote unauthenticated attacker can craft a malicious URL containing JavaScript or HTML code, which is executed in the victim's browser when the URL is visit",
+        "cveScore": 5.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2025-30054 - Local Privilege Escalation in CGM CLININET",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-30054",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-23T08:22:59.000Z",
+        "contentSnippet": "CGM CLININET is vulnerable to local privilege escalation. The service that processes incoming HL7 messages runs with root privileges, but due to incorrect permissions, its scripts and configuration files can be modified by the uhcapache user. An attacker with uhcapache privileges",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2025-30053 - Missing Authentication in CGM CLININET",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-30053",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-23T08:22:59.000Z",
+        "contentSnippet": "The CGM CLININET application runs the cgm-updater process listening on an open network port without any authentication. The vulnerability was confirmed to affect versions up to 2026.MS3 but later versions may also be vulnerable.",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2025-30052 - Authentication Bypass via IP Spoofing in CGM CLININET rsyncd",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-30052",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-23T08:22:58.000Z",
+        "contentSnippet": "The rsyncd service of the CGM CLININET is vulnerable to Authentication Bypass via IP spoofing. Access is granted based solely on the client's source IP address. An attacker able to spoof an allowed IP address, can bypass this check and gain the ability to edit files on the affect",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2025-30051 - Insecure File Permissions in CGM CLININET",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-30051",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-23T08:22:57.000Z",
+        "contentSnippet": "The CGM CLININET application stores the production database login and password, as well as RabbitMQ broker credentials, in the SysIO.pl configuration file. Insecure file permissions make this file readable by any local account. This issue was fixed in version 2026.MS3",
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2025-30050 - Remote Code Execution in CGM CLININET",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-30050",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-23T08:22:57.000Z",
+        "contentSnippet": "CGM CLININET is vulnerable to Code Injection in the RunCGI.pm component, which dynamically imports the module specified as a query parameter and executes code from untrusted data provided by the user. An attacker from adjacent network can supply a crafted query parameter to have ",
+        "cveScore": 9.4,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2025-30049 - Use of Unsalted MD5 Password Hashes in CGM CLININET",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-30049",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-23T08:22:56.000Z",
+        "contentSnippet": "The CGM CLININET application stores user passwords as unsalted MD5 hashes. This issue was fixed in versions 2026.MS1 and 2026.MS3",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2025-30047 - Remote Code Execution via Java Deserialization in CGM CLININET",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-30047",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-23T08:22:55.000Z",
+        "contentSnippet": "CGM CLININET is vulnerable to Remote Code Execution caused by deserialization of untrusted data. The server exposes an HTTP-based API, used by the administrative module, that exchanges data using Java object serialization. An attacker within the same local network is able to send",
+        "cveScore": 9.4,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2025-30046 - Remote Code Execution in CGM CLININET",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-30046",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-23T08:22:55.000Z",
+        "contentSnippet": "In the CGM CLININET application server, multiple processes responsible for HL7 communication with external systems run with root privileges while processing untrusted data received from those external systems. An attacker in adjacent network able to send data to these HL7 communi",
+        "cveScore": 9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2025-30045 - Code Injection in CGM CLININET",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-30045",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-23T08:22:54.000Z",
+        "contentSnippet": "CGM CLININET is vulnerable to Code Injection in the ConvExpr function, which processes Perl expressions into RTF document content. Due to improper control of the code evaluated from these expressions, an authenticated, high-privileged attacker can cause arbitrary code to be execu",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2025-30043 - Missing Authentication in CGM CLININET",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-30043",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-23T08:22:54.000Z",
+        "contentSnippet": "CGM CLININET is vulnerable to Missing Authentication for Critical Function in the /DocManagment path. The endpoint is accessible without authentication, allowing an unauthenticated attacker in the adjacent network to retrieve the list of patient documents and download those docum",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-93489 - ASUS Router Improper Authentication Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93489",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-23T08:16:55.000Z",
+        "contentSnippet": "Improper Authentication in ASUS router modules allows an unauthenticated nearby user to send an HTTP request and forge an access ticket, subsequently enabling the user to perform administrator operations. Refer to the ' Security Update for ASUS Router Firmware ' section on the AS",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-75779 - ASUS Router OS Command Injection and Cross-Site Request Forgery",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-75779",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-23T08:16:55.000Z",
+        "contentSnippet": "Improper Neutralization of Special Elements used in an OS Command (“OS Command Injection”) and Cross-Site Request Forgery (CSRF) in an ASUS router model allow an attacker to trick a logged-in administrator into visiting a phishing website, causing the router to execute arbitrary ",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-109198 - Anti-Spam by CleanTalk <= 6.89.1 - Unauthenticated Stored Cross-Site Scripting via 'user_email' Registration Parameter",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-109198",
@@ -677,234 +902,30 @@
         "contentSnippet": "No description provided",
         "cveScore": 7.5,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-114603 - OpenTelemetry Python: Unbounded tracestate parsing in opentelemetry-api",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-114603",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-22T15:29:25.000Z",
-        "contentSnippet": "OpenTelemetry Python provides the Python API and SDK for OpenTelemetry. Prior to 1.45.1, the opentelemetry-api function TraceState.from_header in opentelemetry/trace/span.py, reached through TraceContextTextMapPropagator.extract, parses inbound W3C tracestate headers with an unbo",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-115454 - Large tables in data apps can bring down execution services in KNIME Hub",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-115454",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-22T15:25:45.000Z",
-        "contentSnippet": "An excessive resource allocation issue in the remote workflow editing capabilities of KNIME Business Hub prior to version 1.19.0 allows a authenticated attack to exhaust resources on the server side. This leads to intermittent unavailability of workflow execution functionality. A",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-94482 - Next.js: Denial of Service in App Router using Server Actions",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94482",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-22T15:22:10.000Z",
-        "contentSnippet": "Next.js is a React framework for building full-stack web applications. From 13.0.0 until 15.5.28 and 16.4.1, crafted requests targeting App Router applications with at least one Server Action can cause excessive CPU consumption and block processing of further requests in the same",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-115453 - Cross user deletion and modification of cart and wishlist rows in Ecommerce Template through unscoped primary key queries",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-115453",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-22T15:22:09.000Z",
-        "contentSnippet": "Authorization Bypass Through User-Controlled Key (CWE-639) in the cart and wishlist repositories of MarcosCamara01 Ecommerce Template allows any authenticated user to delete and modify the cart and wishlist rows of any other user, because cartRepository.delete(), cartRepository.u",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-78846 - AiDot Linkind Matter Smart Plug Buffer Overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78846",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-22T15:17:06.000Z",
-        "contentSnippet": "AiDot Linkind Matter Smart Plug 1.01.32 is vulnerable to Buffer Overflow via SSDP local header parsing.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-78801 - SKYWORTH DIGITAL Router Information Disclosure Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78801",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-22T15:17:06.000Z",
-        "contentSnippet": "An issue in SKYWORTH DIGITAL CO., LTD SK-WR6640X Wi-Fi 6 Dual-Band Fiber Router (AX1800M) V1.0.3 allows a remote attacker to obtain sensitive information via the hidden_factory_switch.gch",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-61791 - OCO-Server: Stored XSS through agent hostnames in command buttons",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61791",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-22T15:17:05.000Z",
-        "contentSnippet": "OCO-Server is a self-hosted endpoint management application for computer inventory, software deployment, and mobile device management. Prior to 1.2.1, `Html::commandButton()` in `lib/Html.class.php` embeds an action URL containing a stored computer hostname into a JavaScript stri",
-        "cveScore": 7.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-16477 - Insecure Deserialization of .cleanshot Files in CleanShot X",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16477",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-22T15:17:05.000Z",
-        "contentSnippet": "CleanShot X for macOS insecurely deserializes untrusted data embedded in a .cleanshot project file (editable screenshot annotations). Exploitation requires an attacker to craft a malicious .cleanshot file, deliver it to the target, and have the target open it; the payload then ex",
-        "cveScore": 8.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-114515 - OCO-Server: Self-Service Portal uninstall-job authorization bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-114515",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-22T15:17:05.000Z",
-        "contentSnippet": "OCO-Server is a self-hosted endpoint management application for computer inventory, software deployment, and mobile device management. Prior to 1.2.3, a valid Self-Service Portal user with permission to create job containers and read visibility on a computer and package can queue",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-114510 - Flexible GraphRAG: Cypher/Graph Injection via broken string-escaping in FalkorDB adapter (_escape()) - full graph wipe from ingested-document content",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-114510",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-22T15:17:05.000Z",
-        "contentSnippet": "Flexible GraphRAG is a Python framework for building graph and retrieval-augmented generation applications across multiple graph, vector, and search backends. From 0.6.0 until 0.8.2, the _escape() helper in flexible-graphrag/langchain/graph/pg_store_adapters/falkordb_adapter.py e",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-113872 - multer vulnerable to Denial of Service via a pending asynchronous fileFilter after request teardown",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-113872",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-22T15:17:05.000Z",
-        "contentSnippet": "multer is a middleware for Node.js that handles multipart/form-data file uploads. In versions from 2.0.0 before 2.5.0, when multer is configured with an asynchronous fileFilter, a single request can crash the Node.js process. If the request is aborted while one file's asynchronou",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-111181 - body-parser vulnerable to Denial of Service via trailing bytes after a compressed request body",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111181",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-22T15:17:04.000Z",
-        "contentSnippet": "body-parser is body parsing middleware for Node.js and Express. In versions before 1.20.9 and in versions from 2.0.0 before 2.4.0, a single request can crash any application using body-parser with default options. When a request carries a Content-Encoding such as gzip, body-parse",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-115450 - Price manipulation in the Ecommerce Template checkout flow through a client supplied Stripe price identifier",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-115450",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-22T15:13:37.000Z",
-        "contentSnippet": "External Control of Assumed-Immutable Web Parameter (CWE-472) in the cart and checkout flow of MarcosCamara01 Ecommerce Template allows an authenticated user with no special privileges to be charged the price of one product while placing an order for another, because POST /api/us",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-115482 - lsquic HTTP/3 Header Buffer Memory Exhaustion",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-115482",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-22T15:07:30.000Z",
-        "contentSnippet": "In lsquic before 4.9.0, the HTTP/3 implementation can use an excessive amount of memory because the number of buffered header sets is not limited, as demonstrated by a QPACK amplification attack. This is related to header_out_dynamic_entry and es_max_header_list_size.",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-94502 - Out-of-bounds write in Zigbee Publish Price Matrix handling",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94502",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-22T14:17:51.000Z",
-        "contentSnippet": "In EmberZNet 9.1.1 and earlier, a malformed Publish Price Matrix command can result in an out-of-bounds write potentially leading to remote code execution. These messages must come from a device that has already joined the network. Only devices supporting the Price Cluster are im",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-92709 - Rsyslog: DynFile Path Traversal → Arbitrary File Write as Root → RCE",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-92709",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-22T14:17:51.000Z",
-        "contentSnippet": "Rsyslog is a rocket-fast system for log processing. From versions 1.15.0 to 8.2610.0, rsyslog's omfile dynaFile facility intentionally allows templates to generate flexible output paths. This supports valid deployments that route logs into different directories or use dynamically",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-89410 - Out-of-bounds read in Z-Wave NCP SPI Handler",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89410",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-22T14:17:51.000Z",
-        "contentSnippet": "In Z-Wave SDK 8.1.1 and earlier, a malformed NCP SPI command can trigger out-of-bounds reads that leak sensitive information.",
-        "cveScore": 5.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-89409 - Unvalidated ZWAVE_CMD_NODES_EXIST May Cause Deletion of End Nodes​",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89409",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-22T14:17:51.000Z",
-        "contentSnippet": "In Z-Wave SDK 8.1.1 and earlier (for 700/800 series devices) and 6.85.02 and earlier (for 500 series devices), missing checks in the ZWAVE_CMD_NODES_EXIST handler can result in nodes being removed from the network. These messages must come from a device that has already joined th",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-85080 - Authenticated Denial-of-Service in Zigbee GetGroupMembership Handling",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85080",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-22T14:17:51.000Z",
-        "contentSnippet": "In EmberZNet 9.1.1 and earlier, a malformed GetGroupMembership message can result in an out-of-bounds write leading to a crash. A limited number of values can be written using this vulnerability, so no route to remote code execution was observed. These messages must come from a d",
-        "cveScore": 6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-85079 - Out-of-bounds write in Zigbee Simple_Desc_req handling",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85079",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-22T14:17:50.000Z",
-        "contentSnippet": "In EmberZNet 9.1.1 and earlier, a malformed Simple_Desc_req response can result in an out-of-bounds write potentially leading to remote code execution. This response must come from a device that has already joined the network, and the attacker must wait for a Simple_Desc_req befo",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-66282 - Authenticated Denial-of-Service in Zigbee Publish Billing Period",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66282",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-22T14:17:44.000Z",
-        "contentSnippet": "In EmberZNet 9.1.1 and earlier, a malformed Publish Billing Period command can result in a recursive function call that will never reach its end condition. These messages must come from a device that has already joined the network. Only devices supporting the Price Cluster are im",
-        "cveScore": 6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-66281 - Authenticated Denial-of-Service in Zigbee Discover Attributes Handling",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66281",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-22T14:17:43.000Z",
-        "contentSnippet": "In EmberZNet 9.1.1 and earlier, a malformed Discover Attributes command can result in a loop with unreachable exit condition (infinite loop). These messages must come from a device that has already joined the network. Only devices supporting manufacturer-specific clusters are imp",
-        "cveScore": 6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-66279 - Dis-connect vulnerability in Connect Stack",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-66279",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-22T14:17:43.000Z",
-        "contentSnippet": "In Connect SDK 4.3.1 and earlier and Flex SDK 3.7.7 and earlier, a message with invalid security settings may bypass authentication resulting in network disruption. This vulnerability does not allow an attacker to gain the Network Key or otherwise break confidentiality.",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-115411 - crawlseo before 0.2.4 Server-Side Request Forgery via Crawler",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-115411",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-22T14:17:39.000Z",
-        "contentSnippet": "crawlseo before version 0.2.4 contains a server-side request forgery vulnerability in its crawler engine where isPrivateIp() fails to block reserved IP ranges such as RFC 6598 Carrier-Grade NAT, RFC 6890, TEST-NET ranges and certain IPv6 addresses, and additionally fails to pin t",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-115400 - crawlseo before 0.2.5 Cleartext Storage of Google OAuth Tokens",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-115400",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-22T14:17:39.000Z",
-        "contentSnippet": "crawlseo before version 0.2.5 contains a cleartext storage vulnerability that allows attackers with database read access to obtain Google OAuth access and refresh tokens stored unencrypted in the User.googleTokens column. Attackers can read the plaintext long-lived refresh tokens",
-        "cveScore": 6.7,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
+      {
+        "title": "TinyFish Breaks Down Agentic Search Architecture for Production AI Agents",
+        "link": "https://www.marktechpost.com/2026/10/23/tinyfish-agentic-search-architecture-deep-research/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-10-23T08:58:47.000Z",
+        "contentSnippet": "TinyFish published two engineering research articles on agentic search. One defines a 7-phase production architecture with evidence contracts and bounded retries. The other explains why its deep research system dropped a separate planner and per-query subagents. The post TinyFish"
+      },
+      {
+        "title": "Google Cloud Launches Agent Compute Engine: A MicroVM per AI Agent",
+        "link": "https://www.marktechpost.com/2026/10/22/google-cloud-agent-compute-engine-microvm-ai-agents/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-10-23T06:05:10.000Z",
+        "contentSnippet": "Google Cloud announced Agent Compute Engine, a compute service that gives every AI agent its own hardware-isolated microVM with no credentials inside. It already runs Gemini agents and enters preview in the coming months. The post Google Cloud Launches Agent Compute Engine: A Mic"
+      },
+      {
+        "title": "You.com Launches Inference Router: 12 Open-Weight Models With 99.9% Uptime SLA",
+        "link": "https://www.marktechpost.com/2026/10/22/you-com-inference-router-open-weight-models-uptime-sla/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-10-23T05:28:21.000Z",
+        "contentSnippet": "You.com launched Inference Router, an OpenAI-compatible API for 12 open-weight models with a 99.9% uptime SLA, zero data retention, 100% US hosting, server-side web search and no platform fee. The post You.com Launches Inference Router: 12 Open-Weight Models With 99.9% Uptime SLA"
+      },
       {
         "title": "Amazon Polly delivers a major upgrade to its Generative engine",
         "link": "https://aws.amazon.com/blogs/machine-learning/amazon-polly-delivers-a-major-upgrade-to-its-generative-engine/",
@@ -1583,27 +1604,6 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-10-12T17:52:22.000Z",
         "contentSnippet": "Learn how to run OpenAI GPT-6 Sol, Luna, and Astra on Amazon Bedrock through global cross-Region inference from Singapore, Jakarta, Thailand, Malaysia, and Taipei. This post covers the Converse and OpenAI-compatible APIs, IAM and SCP permissions, quota sizing, and monitoring infe"
-      },
-      {
-        "title": "Deploy decision models with llama.cpp on Amazon SageMaker AI",
-        "link": "https://aws.amazon.com/blogs/machine-learning/deploy-decision-models-with-llama-cpp-on-amazon-sagemaker-ai/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-10-12T15:51:46.000Z",
-        "contentSnippet": "Learn how to deploy decision models with llama.cpp on Amazon SageMaker AI. This technical how-to serves OpenAI-compatible chat completions with the AWS Deep Learning Container for llama.cpp, then extends the runtime with SemIf to return probabilities over declared options on CPU "
-      },
-      {
-        "title": "Run multi-node inference workloads using Ray LLM Deep Learning Containers",
-        "link": "https://aws.amazon.com/blogs/machine-learning/run-multi-node-inference-workloads-using-ray-llm-deep-learning-containers/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-10-12T15:50:14.000Z",
-        "contentSnippet": "Learn how to deploy one large language model across two GPU nodes on Amazon EKS using the multi-node Ray LLM Deep Learning Containers, with separate prefill and decode nodes behind one OpenAI-compatible endpoint. The pre-built container ships the full inference stack, so you conf"
-      },
-      {
-        "title": "Top 12 AI Live Translation Tools in 2026: Latency, Languages, Pricing",
-        "link": "https://www.marktechpost.com/2026/10/12/top-12-ai-live-translation-tools-2026/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-10-12T08:20:49.000Z",
-        "contentSnippet": "We checked 12 AI live translation tools, including Palabra.ai, Google Live Translate, DeepL Voice, Teams Interpreter and Wordly, against official pages for languages, latency, platforms and pricing. The post Top 12 AI Live Translation Tools in 2026: Latency, Languages, Pricing ap"
       }
     ],
     "virtualization": [
@@ -2310,6 +2310,41 @@
     ],
     "hardware": [
       {
+        "title": "China-aligned hackers deploy AI agents in massive ConnectWise supply chain attack",
+        "link": "https://www.tomshardware.com/tech-industry/cyber-security/microsoft-says-china-aligned-hackers-used-ai-agents-in-connectwise-supply-chain-attack-agents-attempted-sign-ins-at-more-than-2-250-microsoft-365-tenants-with-some-of-the-groups-attacks-reaching-privileged-access-in-under-three-hours",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-23T10:30:00.000Z",
+        "contentSnippet": "Microsoft says China-aligned Storm-0940 used the ARTEX AI agent framework in the ConnectWise Cloud Backup supply chain attack."
+      },
+      {
+        "title": "Save $450 on this 4K gaming PC with an RTX 5070 Ti and 9800X3D, now $2,549.99",
+        "link": "https://www.tomshardware.com/desktops/gaming-pcs/save-usd450-on-this-4k-gaming-pc-with-an-rtx-5070-ti-and-9800x3d-now-usd2-549-99-liquid-cooled-abs-stratos-ii-ruby-rig-comes-with-32gb-ddr5-and-a-2tb-ssd",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-23T10:10:35.000Z",
+        "contentSnippet": "You can save $450 on this 4K-capable gaming machine from Newegg's ABS brand, featuring the powerful RTX 5070 Ti, AMD Ryzen 7 9800X3D, 32GB DDR5, and a 2TB SSD for $2,549.99."
+      },
+      {
+        "title": "Wolves roam into Finnish villages after Google destroys 1,300 acres of forest for AI data centers",
+        "link": "https://www.tomshardware.com/tech-industry/data-centers/wolves-roam-into-finnish-villages-after-google-destroys-1-300-acres-of-forest-for-ai-data-centers-forest-where-wolf-packs-used-to-live-are-now-an-expanse-of-mud",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-23T10:00:00.000Z",
+        "contentSnippet": "Wolves, who used to live in the forests recently cleared for Google data center development, are now roaming into Finnish villages nearby."
+      },
+      {
+        "title": "Extremely rare and 'previously undocumented' Pokémon Red prototype cartridge surfaces at auction, starting at $25,000",
+        "link": "https://www.tomshardware.com/video-games/nintendo/extremely-rare-and-previously-undocumented-pokemon-red-prototype-cartridge-surfaces-at-auction-starting-at-usd25-000-nintendo-game-boy-dev-board-from-1998-features-32kb-of-readable-memory-fully-identical-to-the-final-game-release",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-23T09:40:00.000Z",
+        "contentSnippet": "A rare prototype cartridge of Pokémon Red for the Nintendo Game Boy is on sale, with one $25,000 bid so far."
+      },
+      {
+        "title": "The original Apple iPod debuted 25 years ago today",
+        "link": "https://www.tomshardware.com/tech-industry/the-original-apple-ipod-debuted-25-years-ago-today-steve-jobs-usd399-device-fit-1-000-songs-into-a-package-the-size-of-a-deck-of-cards-with-5-gigabytes-of-storage",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-23T09:20:00.000Z",
+        "contentSnippet": "On this day in 2001, Apple CEO Steve Jobs unveiled the original iPod. He began the presentation by teasing 'a breakthrough digital device that’s not a Mac.'"
+      },
+      {
         "title": "Qotom Q51551UT 4x 10GbE and 6x 2.5GbE Mini PC Review",
         "link": "https://www.servethehome.com/qotom-q51551ut-4x-10gbe-and-6x-2-5gbe-intel-mini-pc-review/",
         "source": "ServeTheHome",
@@ -2973,41 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-10-18T10:00:00.000Z",
         "contentSnippet": "This new feature could help users avoid Flock and other ALPR cameras."
-      },
-      {
-        "title": "Grab an RTX 5090 for a discounted $5,300 as part of an MSI Infinite ZS prebuilt gaming PC — price includes other components worth about $2,300 on their own",
-        "link": "https://www.tomshardware.com/pc-components/gpus/grab-an-rtx-5090-for-discounted-usd5-300-as-part-of-an-msi-infinite-zs-prebuilt-gaming-pc-usd7-599-price-includes-other-components-worth-about-usd2-300-on-their-own",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-17T20:30:58.000Z",
-        "contentSnippet": "Grab an RTX 5090 for $5,300 as part of an MSI Infinite ZS prebuilt — $7,599 price includes other components worth about $2,300 on their own"
-      },
-      {
-        "title": "NVIDIA RTX Spark N1X Launch Overview: NVIDIA Arms Windows",
-        "link": "https://www.servethehome.com/nvidia-rtx-spark-n1x-launch-overview-nvidia-arms-windows/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-10-17T17:00:47.000Z",
-        "contentSnippet": "This week NVIDIA launched their high-end RTX Spark N1X platform. Bringing their powerful GB10 SoC to Windows for the first time, the company is seeking to remake the Windows laptop market with their powerful, AI-focused SoC The post NVIDIA RTX Spark N1X Launch Overview: NVIDIA Ar"
-      },
-      {
-        "title": "HyperX Cloud Alpha Air Review: Open-back and budget-friendly",
-        "link": "https://www.tomshardware.com/peripherals/gaming-headsets/hyperx-cloud-alpha-air-review",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-17T15:40:00.000Z",
-        "contentSnippet": "The HyperX Cloud Alpha Air is the brand's first open-back gaming headset. It's lightweight and comfortable, and it sounds very good. But microphone pickup is low, and it doesn't seem to work with the brand's peripheral software (yet)."
-      },
-      {
-        "title": "Quad 8-pin mod protects the $8,500 RTX 5090 you can’t replace from melting",
-        "link": "https://www.tomshardware.com/pc-components/gpus/quad-8-pin-mod-protects-the-usd8-500-rtx-5090-you-cant-replace-from-melting-modders-custom-power-solution-claims-to-fix-nvidia-16-pin-gpu-meltdowns",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-17T15:20:00.000Z",
-        "contentSnippet": "Redditor showcases a new quad 8-pin power-conversion kit for the 16-pin power connector on Nvidia GeForce RTX graphics cards."
-      },
-      {
-        "title": "MOZA AY210 Force Feedback Base and MFY Yoke review: Taking flight sim immersion to the next level",
-        "link": "https://www.tomshardware.com/peripherals/controllers-gamepads/moza-ay210-force-feedback-base-and-mfy-yoke-review",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-17T15:00:00.000Z",
-        "contentSnippet": "The MOZA AY210 Force Feedback Base and MFY Yoke Bundle brings force feedback and autopilot following to the world of desktop flight simulators."
       }
     ]
   }
