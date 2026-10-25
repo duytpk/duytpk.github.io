@@ -1,8 +1,35 @@
 {
-  "updatedAt": "2026-10-25T19:24:15.197Z",
+  "updatedAt": "2026-10-25T22:11:11.519Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-115635 - AshPostgres returns another tenant's record for a skipped upsert when return_skipped_upsert? is set",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-115635",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-25T20:16:32.000Z",
+        "contentSnippet": "Incorrect Authorization vulnerability in ash-project ash_postgres allows a user to read another tenant's record through a skipped upsert. When Ash.bulk_create/4 or a single create runs as an upsert with return_skipped_upsert?: true and the upsert is skipped (for example because i",
+        "cveScore": 6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-115627 - AshPostgres ignores attribute multitenancy on the join resource when loading many_to_many and through relationships, returning records related through other tenants' rows",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-115627",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-25T20:16:32.000Z",
+        "contentSnippet": "Incorrect Authorization vulnerability in ash-project ash_postgres allows a user to load destination records linked to a source record only through another tenant's join rows. When a many_to_many relationship, or a through relationship, is loaded with a lateral join (for example w",
+        "cveScore": 6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-114214 - Loading a through relationship with a limit of 1 in Ash ignores the through path and returns unrelated destination records",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-114214",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-25T20:16:31.000Z",
+        "contentSnippet": "Incorrect Authorization vulnerability in ash-project ash allows a client to read destination records unrelated to the source record through a through relationship. When a has_many relationship declared with through: was loaded for a single record with a limit of 1, or an unsorted",
+        "cveScore": 6,
+        "cveSeverity": "MEDIUM"
+      },
       {
         "title": "CVE-2026-116063 - DedeCMS update_guide.php require_once code injection",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-116063",
@@ -875,33 +902,6 @@
         "contentSnippet": "Xiaozhi-esp32-server before 0.9.8 contains an insecure direct object reference vulnerability in the manager-api DeviceController.getAddressBook handler that allows authenticated users to read other users' device address books. Attackers with a normal or self-registered account ca",
         "cveScore": 5.3,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-116016 - yudao-cloud through 2026.09 Data Permission Bypass via data-permission-enable Header",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116016",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-24T12:16:57.000Z",
-        "contentSnippet": "yudao-cloud through 2026.09 contains an authorization bypass vulnerability that allows authenticated users to evade row-level data scope restrictions by sending a data-permission-enable header set to false. Attackers can add this header to /admin-api requests, which DataPermissio",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-116015 - yudao-cloud through 2026.09 IDOR via after-sale-log list endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116015",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-24T12:16:57.000Z",
-        "contentSnippet": "yudao-cloud through 2026.09 contains an insecure direct object reference vulnerability in the mall trade module that allows authenticated members to read other members' after-sale operation logs by supplying arbitrary afterSaleId values. Attackers can enumerate sequential after-s",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-116014 - open62541 1.5.0 before 1.5.7 Integer Overflow Heap Buffer Overflow via Custom DataType",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116014",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-24T12:16:57.000Z",
-        "contentSnippet": "open62541 1.5.0 before 1.5.7 contains an integer overflow in UA_DataType_fromStructureDescription() that wraps the 16-bit memSize field for large custom structure definitions. A malicious OPC UA server can supply DataType definitions via UA_Client_getRemoteDataTypes(), causing de",
-        "cveScore": 9.2,
-        "cveSeverity": "CRITICAL"
       }
     ],
     "ai": [
@@ -2310,6 +2310,13 @@
     ],
     "hardware": [
       {
+        "title": "Aivres NVIDIA Vera Rubin and HGX B300 at OCP Summit",
+        "link": "https://www.servethehome.com/aivres-nvidia-vera-rubin-and-hgx-b300-at-ocp-summit-2026/",
+        "source": "ServeTheHome",
+        "isoDate": "2026-10-25T21:51:55.000Z",
+        "contentSnippet": "We check out the range of Aivres NVIDIA Vera, Vera Rubin, and Blackwell Ultra platforms at OCP Summit 2026 The post Aivres NVIDIA Vera Rubin and HGX B300 at OCP Summit appeared first on ServeTheHome."
+      },
+      {
         "title": "Big Tech is cashing in on AI while the rest of corporate America sees no financial returns",
         "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/big-tech-is-cashing-in-on-ai-while-the-rest-of-corporate-america-sees-no-financial-returns-report-outlines-how-rising-token-costs-threaten-to-squeeze-corporate-profit-margins",
         "source": "Tom's Hardware",
@@ -3001,13 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-10-20T12:10:00.000Z",
         "contentSnippet": "Modern computing remains vulnerable to the low bus factor of many open-source projects — continued lack of funding and manpower for voluntary-maintained infrastructure makes for a perennial threat"
-      },
-      {
-        "title": "Mods can almost double DLSS 5 performance through Foveation, reducing resolution at the edges of frames",
-        "link": "https://www.tomshardware.com/pc-components/gpus/mods-can-almost-double-dlss-5-performance-through-foveation-reducing-resolution-at-the-edges-of-frames-technique-makes-dlss-5-possible-on-high-resolution-ultrawide-monitors",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-20T11:54:18.000Z",
-        "contentSnippet": "VR rendering technique of foveated imaging gets integrated into DLSS 5, making it much easier to run"
       }
     ]
   }
