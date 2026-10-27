@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-10-26T22:57:05.835Z",
+  "updatedAt": "2026-10-27T01:48:03.540Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-116828 - YesWiki before 4.7.0 SQL Injection via despam.php INTERVAL operand",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116828",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-27T00:17:18.000Z",
+        "contentSnippet": "YesWiki before 4.7.0 contains a sql injection vulnerability in despam.php where the from parameter is escaped but placed in an unquoted INTERVAL position. Authenticated administrators can inject SQL via the from POST parameter to perform blind reads of the database including user",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-116827 - YesWiki before 4.7.0 SSRF via copyUrlToLocalFile in Bazar CSV Import",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116827",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-27T00:17:18.000Z",
+        "contentSnippet": "YesWiki before 4.7.0 contains a server-side request forgery vulnerability in the Bazar CSV import copyUrlToLocalFile() function that allows authenticated administrators to make arbitrary outbound requests by supplying crafted URLs in CSV file or image fields. Attackers can bypass",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-116826 - YesWiki before 4.7.0 Authenticated SSRF via Page Duplication API downloadFile",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116826",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-27T00:17:18.000Z",
+        "contentSnippet": "YesWiki before 4.7.0 contains a server-side request forgery vulnerability in DuplicationManager::downloadFile() that allows authenticated administrators to make arbitrary outbound requests via the files array. Attackers can POST file:// or internal URLs to /api/pages/{tag}/duplic",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-116825 - YesWiki from 4.6.2 before 4.7.0 HTTP Signature Replay via ActivityPub Inbox",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116825",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-27T00:17:17.000Z",
+        "contentSnippet": "YesWiki from 4.6.2 before 4.7.0 lacks replay protection in HttpSignatureService::verifySignature(), which never validates the Date header or tracks seen signatures. Attackers who capture a signed request to the /api/forms/{formId}/actor/inbox endpoint can replay it later to re-ex",
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-116824 - YesWiki before 4.7.0 Stored XSS via Referer Header in referrers_sites Handler",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116824",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-27T00:17:17.000Z",
+        "contentSnippet": "YesWiki before 4.7.0 contains a stored cross-site scripting vulnerability in handlers/page/referrers_sites.php that allows unauthenticated attackers to inject scripts via crafted Referer headers. Attackers can send a Referer hostname containing HTML metacharacters that renders un",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-116823 - YesWiki before 4.7.0 Reflected XSS via BazarField $_REQUEST Fallback",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116823",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-27T00:17:17.000Z",
+        "contentSnippet": "YesWiki before 4.7.0 contains a reflected cross-site scripting vulnerability that allows unauthenticated attackers to inject JavaScript by supplying query parameters matching missing Bazar field names. Attackers can craft links where BazarField::getValue() falls back to unsanitiz",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-116822 - YesWiki before 4.7.0 Template Traversal via BazarListeAction template Parameter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116822",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-27T00:17:17.000Z",
+        "contentSnippet": "YesWiki before 4.7.0 contains a path traversal vulnerability in BazarListeAction that allows unauthenticated attackers to select arbitrary templates within the @bazar Twig namespace via the template GET parameter. Attackers can append crafted template values to pages containing t",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-116821 - YesWiki before 4.7.0 Read-ACL Bypass via SQL LIKE Wildcards in Usernames",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116821",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-27T00:17:16.000Z",
+        "contentSnippet": "YesWiki before 4.7.0 contains a read-ACL bypass in AclService::updateRequestWithACL, which interpolates usernames into SQL LIKE patterns without escaping the _ and % wildcards. Self-registered attackers can use usernames such as ___ or %%% that over-match ACL tokens, reading page",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-116820 - YesWiki from 4.6.0 before 4.7.0 SQL Query Disclosure via showreq Parameter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116820",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-27T00:17:16.000Z",
+        "contentSnippet": "YesWiki from 4.6.0 before 4.7.0 contains an information disclosure vulnerability that allows unauthenticated attackers to view assembled SQL queries by adding the showreq parameter. Attackers can append showreq to public Bazar listing API requests to obtain table names, JSON stor",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-116819 - OpenPanel before 3.0.0 Credential Disclosure via notification.rules Query",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116819",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-27T00:17:16.000Z",
+        "contentSnippet": "OpenPanel before 3.0.0 contains an information disclosure vulnerability that allows read-level project members to obtain plaintext integration secrets because the notification.rules query skips redactIntegration. Attackers can call the notification.rules tRPC query to retrieve Sl",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-116818 - OpenPanel before 3.0.0 Unauthenticated ClickHouse SQL Injection via /live/visitors WebSocket",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116818",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-27T00:17:16.000Z",
+        "contentSnippet": "OpenPanel before 3.0.0 contains an unauthenticated ClickHouse sql injection vulnerability that allows remote attackers to inject SQL through the projectId parameter of the /live/visitors/:projectId WebSocket, which lacks session and project-access checks. Attackers can use UNION ",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-116817 - OpenPanel before 3.0.0 Missing Authentication on Worker Bull Board",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116817",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-27T00:17:15.000Z",
+        "contentSnippet": "OpenPanel before 3.0.0 contains a missing authentication vulnerability that allows unauthenticated attackers to access the Bull Board dashboard served on the worker HTTP port. Attackers can query /api/queues and call mutating Bull Board APIs to add, retry, or clean jobs and read ",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-116815 - OpenPanel before 3.0.0 Improper ClickHouse Escaping in sankey.service.ts",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116815",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-27T00:17:15.000Z",
+        "contentSnippet": "OpenPanel before 3.0.0 contains an improper escaping vulnerability in sankey.service.ts that allows authenticated project members to break ClickHouse string literals by supplying backslashes in event names. Attackers with read access can submit crafted events[].name values to the",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-116814 - OpenPanel before 3.0.0 Sensitive Information Exposure via Application Logs",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116814",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-27T00:17:15.000Z",
+        "contentSnippet": "OpenPanel before 3.0.0 contains an information exposure vulnerability that writes database connection URLs and email template data to standard output logs. Users with log access can obtain database credentials from migration startup logs and password-reset tokens logged when SMTP",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-116813 - OpenPanel before 3.0.0 ClickHouse SQL Injection via conversion.service.ts",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116813",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-27T00:17:14.000Z",
+        "contentSnippet": "OpenPanel before 3.0.0 contains an sql injection vulnerability in ConversionService.getConversion that allows project-read members and share-link holders to inject ClickHouse SQL through unescaped event names and dates. Attackers can break out of string literals in series names o",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-116812 - OpenPanel before 3.0.0 ClickHouse SQL Injection via cohort.preview profile filter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116812",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-27T00:17:14.000Z",
+        "contentSnippet": "OpenPanel before 3.0.0 contains a sql injection vulnerability in profileColumnAccess in cohort.service.ts that allows project-read members to inject SQL by supplying unescaped profile filter column names. Attackers can submit a cohort.preview filter whose name contains a subquery",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-116811 - OpenPanel before 3.0.0 Sandbox Escape RCE via Webhook JavaScript Template",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116811",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-27T00:17:14.000Z",
+        "contentSnippet": "OpenPanel before 3.0.0 contains a sandbox escape vulnerability in the js-runtime validator that allows a project member to bypass the AST allowlist by aliasing the Function constructor. Attackers with write access can read payload.constructor.constructor into a local and call it ",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-116810 - OpenPanel before 3.0.0 Missing Authorization via reference.getChartReferences",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116810",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-27T00:17:13.000Z",
+        "contentSnippet": "OpenPanel before 3.0.0 contains a missing authorization vulnerability that allows unauthenticated attackers to read any project's annotations by calling the public reference.getChartReferences tRPC procedure. Attackers can send requests with guessable slug-based project IDs to du",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-116809 - OpenPanel before 3.0.0 Missing Authorization in event.bots tRPC Procedure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116809",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-27T00:17:13.000Z",
+        "contentSnippet": "OpenPanel before 3.0.0 contains a missing authorization vulnerability in the event.bots tRPC procedure that allows unauthenticated attackers to read bot events by only checking shareOverview row existence. Attackers can send anonymous requests with a projectId to retrieve bot-eve",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-116808 - OpenPanel before 3.0.0 ClickHouse SQL Injection via profile.values",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116808",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-27T00:17:13.000Z",
+        "contentSnippet": "OpenPanel before 3.0.0 contains an sql injection vulnerability that allows authenticated users to read cross-tenant data by supplying a crafted property parameter to profile.values. Attackers can inject a SELECT expression with their own FROM/WHERE clauses and comment out the pro",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-116807 - OpenPanel before 3.0.0 ClickHouse SQL Injection via event.events tRPC Query",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116807",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-27T00:17:13.000Z",
+        "contentSnippet": "OpenPanel before 3.0.0 contains an sql injection vulnerability that allows authenticated users to bypass tenant scoping by injecting unescaped profile filter names into a JOIN subquery. Attackers can supply a crafted filter name with a trailing comment to bypass the project_id WH",
+        "cveScore": 7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-116806 - OpenPanel before 3.0.0 Privilege Escalation via onboarding.project tRPC Mutation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116806",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-27T00:17:12.000Z",
+        "contentSnippet": "OpenPanel before 3.0.0 contains a missing authorization vulnerability in the onboarding.project tRPC mutation that allows non-admin organization members to create projects and mint write-type ingestion credentials, bypassing the admin-only policy. Attackers can repeatedly call th",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-116805 - OpenPanel before 3.0.0 Information Disclosure of Ingestion Secret Hashes via client.list",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116805",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-27T00:17:12.000Z",
+        "contentSnippet": "OpenPanel before 3.0.0 contains an information disclosure vulnerability that allows read-level project members to obtain argon2id hashes of ingestion credentials through the client.list tRPC query. Attackers can request client.list with a project ID and receive full Client rows i",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-116804 - DOMPurify from 3.4.4 before 3.4.17 SAFE_FOR_TEMPLATES Bypass via Shadow Root Content",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116804",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-27T00:17:12.000Z",
+        "contentSnippet": "DOMPurify from 3.4.4 before 3.4.17 contains a SAFE_FOR_TEMPLATES bypass that lets attackers preserve template expressions in attached shadow roots when using RETURN_DOM, RETURN_DOM_FRAGMENT, or IN_PLACE modes. Attackers can split expressions across text nodes separated by disallo",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-116803 - DOMPurify before 3.4.17 DOM XSS via IN_PLACE Hook-Detached Subtrees",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116803",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-27T00:17:11.000Z",
+        "contentSnippet": "DOMPurify before 3.4.17 contains a cross-site scripting vulnerability that allows attackers to keep event handlers armed when an IN_PLACE hook removes a parent or sibling node. Attacker markup in detached subtrees is never walked or neutralized, so handlers like img onerror fire ",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
       {
         "title": "CVE-2026-116508 - TOTOLINK A950RG Device-Information CGI infostat.cgi sub_402340 stack-based overflow",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-116508",
@@ -676,231 +901,6 @@
         "isoDate": "2026-10-26T10:16:50.000Z",
         "contentSnippet": "A reflected Cross-Site Scripting (XSS) vulnerability has been identified in the web application of the Castile-La Mancha Regional Parliament’s video library. The application embeds user-supplied content into the page without properly sanitising it before it is rendered by the bro",
         "cveScore": 5.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-116119 - NocoDB Password-Reset Flow users.service.ts race condition",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116119",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-26T04:45:13.000Z",
-        "contentSnippet": "A vulnerability was found in NocoDB up to 2026.08.0. This affects an unknown part of the file packages/nocodb/src/services/users/users.service.ts of the component Password-Reset Flow. The manipulation results in race condition. The attack can be executed remotely. The vendor dele",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-113345 - Electronic delivery item Inspection Support System Improper File Access Control Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-113345",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-26T04:43:59.000Z",
-        "contentSnippet": "Electronic delivery item Inspection Support System provided by Japan's Ministry of Land, Infrastructure, Transport and Tourism contains an improper file access permission vulnerability. Files in the installation folder of the application may be tampered with, resulting in arbitra",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-116118 - Z.ai Zcode Sed Command Filter os command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116118",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-26T04:30:43.000Z",
-        "contentSnippet": "A vulnerability has been found in Z.ai Zcode up to 3.14.3/3.15.1. Affected by this issue is some unknown functionality of the component Sed Command Filter. The manipulation leads to os command injection. Remote exploitation of the attack is possible. The exploit has been disclose",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-116116 - Yoosee GM8135S Camera Secure Boot signature verification",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116116",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-26T04:17:55.000Z",
-        "contentSnippet": "A vulnerability was detected in Yoosee GM8135S Camera 21.00.01.36. Affected is an unknown function of the component Secure Boot. Performing a manipulation results in improper verification of cryptographic signature. The attack needs to be approached locally. The exploit is now pu",
-        "cveScore": 8.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-116115 - Yoosee GM8135S Camera WiFi Configuration wpa_supplicantX.conf initialization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116115",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-26T04:17:54.000Z",
-        "contentSnippet": "A security vulnerability has been detected in Yoosee GM8135S Camera 21.00.01.36. This impacts an unknown function of the file wpa_supplicantX.conf of the component WiFi Configuration. Such manipulation leads to improper initialization. The attack can only be initiated within the ",
-        "cveScore": 3.1,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-116114 - Yoosee GM8135S Camera Live UDP H.264 Video Stream npc cleartext transmission",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116114",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-26T04:17:54.000Z",
-        "contentSnippet": "A weakness has been identified in Yoosee GM8135S Camera 21.00.01.36. This affects an unknown function of the file /npc/npc of the component Live UDP H.264 Video Stream Handler. This manipulation causes cleartext transmission of sensitive information. The attack can be initiated r",
-        "cveScore": 3.7,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-116113 - GouGuOA Api.php chunkUpload unrestricted upload",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116113",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-26T04:17:47.000Z",
-        "contentSnippet": "A security flaw has been discovered in GouGuOA up to 6.1.2. The impacted element is the function chunkUpload of the file app/disk/controller/Api.php. The manipulation of the argument file_extension results in unrestricted upload. It is possible to launch the attack remotely. The ",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-116117 - halo-dev halo View Name Resolver DefaultViewNameResolver.java path traversal",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116117",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-26T04:15:13.000Z",
-        "contentSnippet": "A flaw has been found in halo-dev halo up to 2.27.0-beta.1. Affected by this vulnerability is the function run.halo.app.theme.DefaultViewNameResolver.resolveViewNameOrDefault of the file application/src/main/java/run/halo/app/theme/DefaultViewNameResolver.java of the component Vi",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-116112 - HashenUdara edoc-doctor-appointment-system add-new.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116112",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-26T03:17:11.000Z",
-        "contentSnippet": "A vulnerability was identified in HashenUdara edoc-doctor-appointment-system up to cc258425b915d1af9e298777ccd26d160493e68d. The affected element is an unknown function of the file admin/add-new.php. The manipulation of the argument spec leads to sql injection. It is possible to ",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-116111 - 2K Games Civilization V Lua Sandbox loadstring type confusion",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116111",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-26T03:17:11.000Z",
-        "contentSnippet": "A vulnerability was determined in 2K Games Civilization V 1.0.3.144. Impacted is the function loadstring of the component Lua Sandbox. Executing a manipulation can lead to type confusion. The attack may be performed from remote. The exploit has been publicly disclosed and may be ",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-116110 - GiantappMan LiveWallPaper SignalR Hub UploadFile missing authentication",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116110",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-26T03:17:11.000Z",
-        "contentSnippet": "A vulnerability was found in GiantappMan LiveWallPaper 2.6.8.0 on Windows. This issue affects some unknown processing of the file /LiveWallpaper/UploadFile of the component SignalR Hub. Performing a manipulation results in missing authentication. The attack is possible to be carr",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-116109 - continuedev Continue MCP Server Transport ConfigHandler.ts MCPManagerSingleton.setConnections os command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116109",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-26T03:17:10.000Z",
-        "contentSnippet": "A vulnerability has been found in continuedev Continue 2.0.0. This vulnerability affects the function MCPManagerSingleton.setConnections of the file core/config/ConfigHandler.ts of the component MCP Server Transport. Such manipulation leads to os command injection. The attack can",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-116108 - openbq-org OpenBB Local API Server api_settings.py access control",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116108",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-26T02:17:06.000Z",
-        "contentSnippet": "A flaw has been found in openbq-org OpenBB up to 4.7.2/5.0.0. This affects an unknown part of the file openbb_platform/core/openbb_core/app/model/api_settings.py of the component Local API Server. This manipulation causes improper access controls. Remote exploitation of the attac",
-        "cveScore": 5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-116107 - Datafeedr Product Sets Plugin AJAX Handlers ajax.php dfrps_ajax_delete_saved_search authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116107",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-26T02:17:06.000Z",
-        "contentSnippet": "A vulnerability was detected in Datafeedr Product Sets Plugin up to 1.3.24 on WordPress. Affected by this issue is the function dfrps_ajax_delete_saved_search of the file functions/ajax.php of the component AJAX Handlers. The manipulation results in missing authorization. The att",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-116106 - HeyCyan App FileProvider access control",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116106",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-26T02:17:06.000Z",
-        "contentSnippet": "A security vulnerability has been detected in HeyCyan App 1.0.103 on Android. Affected by this vulnerability is an unknown functionality of the component FileProvider. The manipulation leads to improper access controls. The attack may be initiated remotely. The vendor was contact",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-116105 - HeyCyan App Network Security Configuration AndroidManifest.xml cleartext transmission",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116105",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-26T02:17:06.000Z",
-        "contentSnippet": "A weakness has been identified in HeyCyan App 1.0.103 on Android. Affected is an unknown function of the file AndroidManifest.xml of the component Network Security Configuration. Executing a manipulation can lead to cleartext transmission of sensitive information. The attack can ",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-116104 - Sony Neural Network Libraries NNP Converter utils.py func_set_nnabla_version_decorate code injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116104",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-26T01:17:15.000Z",
-        "contentSnippet": "A security flaw has been discovered in Sony Neural Network Libraries up to 1.39.0. This impacts the function func_set_nnabla_version_decorate of the file python/src/nnabla/utils/converter/utils.py of the component NNP Converter. Performing a manipulation of the argument function.",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-116103 - Sony Neural Network Libraries Encode Param encode_decode_param.py load_param_in_txt code injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116103",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-26T01:17:15.000Z",
-        "contentSnippet": "A vulnerability was identified in Sony Neural Network Libraries up to 1.39.0. This affects the function load_param_in_txt of the file python/src/nnabla/utils/cli/encode_decode_param.py of the component Encode Param Command Handler. Such manipulation leads to code injection. It is",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-116102 - QuantGeekDev docker-mcp docker_executor.py _build_windows_command os command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116102",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-26T01:17:15.000Z",
-        "contentSnippet": "A vulnerability was determined in QuantGeekDev docker-mcp 0.1.0/0.2.0. The impacted element is the function _build_windows_command of the file docker_executor.py. This manipulation of the argument project_name causes os command injection. It is possible to initiate the attack rem",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-116101 - itsourcecode Online Cake Ordering System deletetransac.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116101",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-26T01:17:15.000Z",
-        "contentSnippet": "A vulnerability was found in itsourcecode Online Cake Ordering System 1.0. The affected element is an unknown function of the file /deletetransac.php. The manipulation of the argument ID results in sql injection. The attack may be performed from remote. The exploit has been made ",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-116100 - gougucms User Level Level.php add cross site scripting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116100",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-26T01:17:15.000Z",
-        "contentSnippet": "A vulnerability has been found in gougucms up to 4.08.18. Impacted is the function Add of the file app/admin/controller/Level.php of the component User Level Handler. The manipulation of the argument Title leads to cross site scripting. The attack is possible to be carried out re",
-        "cveScore": 3.3,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-116099 - Fusion Creators Studio SCP Containment Breach Multiplayer Skynet++ Virtual Machine BlitzBanks out-of-bounds write",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116099",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-26T00:17:14.000Z",
-        "contentSnippet": "A flaw has been found in Fusion Creators Studio SCP Containment Breach Multiplayer up to 1.295. This issue affects the function BlitzBanks of the component Skynet++ Virtual Machine. Executing a manipulation can lead to out-of-bounds write. The attack can be executed remotely. The",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-116098 - SteelRaven7 Ravenfield RFL Custom Map Handler/RFLD Custom Map cacheCoverPoints deserialization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116098",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-26T00:17:14.000Z",
-        "contentSnippet": "A vulnerability was detected in SteelRaven7 Ravenfield 25407073. This vulnerability affects the function cacheCoverPoints of the component RFL Custom Map Handler/RFLD Custom Map Handler. Performing a manipulation results in deserialization. Remote exploitation of the attack is po",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-116097 - CloudClassroom-PHP-Project addnewstudent.php cross site scripting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116097",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-26T00:17:14.000Z",
-        "contentSnippet": "A security vulnerability has been detected in CloudClassroom-PHP-Project. This affects an unknown part of the file addnewstudent.php. Such manipulation of the argument fname leads to cross site scripting. The attack may be launched remotely. The exploit has been disclosed publicl",
-        "cveScore": 5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-116096 - ggml-org llama.cpp Pocket-TTS pockettts-gen.cpp list_pockettts_state_slots out-of-bounds write",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116096",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-25T23:17:41.000Z",
-        "contentSnippet": "A weakness has been identified in ggml-org llama.cpp. Affected by this issue is the function list_pockettts_state_slots of the file tools/mtmd/models/pockettts-gen.cpp of the component Pocket-TTS. This manipulation of the argument mmproj causes out-of-bounds write. The attack req",
-        "cveScore": 5.3,
         "cveSeverity": "MEDIUM"
       }
     ],
