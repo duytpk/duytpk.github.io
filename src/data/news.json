@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-10-30T10:37:42.549Z",
+  "updatedAt": "2026-10-30T16:53:54.597Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-119291 - zuke setup and zuke import follow symbolic links planted at scaffold names, allowing writes outside the target directory",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-119291",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T15:52:01.000Z",
+        "contentSnippet": "Zuke is a code-first, strongly typed build automation system for Deno. Prior to 1.4.0, @zuke/cli uses lstat to inspect scaffold names but then performs link-following reads, writes, and permission changes in zuke setup and zuke import. An attacker who supplies an untrusted cloned",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-119290 - Zuke: Resolved secret() values are written to GITHUB_STEP_SUMMARY in the clear, disclosing them to anyone who can view the workflow run",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-119290",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T15:50:46.000Z",
+        "contentSnippet": "Zuke is a code-first, strongly typed build automation system for Deno. Prior to 1.51.0, @zuke/core writes rendered reportSummary(...) notes to GITHUB_STEP_SUMMARY through writeJobSummary without applying the redactor that protects resolved secret() values in console and persisted",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-104615 - Cluster identity takeover in Fleet cluster registration allows access to another cluster's Fleet namespace",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104615",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T15:49:01.000Z",
+        "contentSnippet": "A security vulnerability was discovered in SUSE Rancher Fleet's cluster registration flow, in Fleet versions before 0.12, 0.13.0 up to 0.13.17, 0.14.0 up to 0.14.12, 0.15.0 up t o 0.15.17 and 0.16.0 up to 0.16.3. The cluster identity claimed by a registration request was accepted",
+        "cveScore": 7.9,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-119289 - Zuke: githubWorkflow adopts any workflow run whose title matches its marker, so anyone who can dispatch the workflow can satisfy or block a release gate",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-119289",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T15:48:59.000Z",
+        "contentSnippet": "Zuke is a code-first, strongly typed build automation system for Deno. Prior to 1.10.0, the @zuke/gh githubWorkflow(...) gate correlates a dispatched workflow run using only a display-title marker that is visible in the workflow run list and can be copied by another dispatcher. I",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-119288 - Zuke: Argument injection on Windows: batch shims are launched through cmd.exe, which re-parses the command line",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-119288",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T15:47:23.000Z",
+        "contentSnippet": "Zuke is a code-first, strongly typed build automation system for Deno. Prior to 1.51.0, @zuke/core launches resolved Windows .cmd and .bat shims by prepending cmd /c, causing cmd.exe to reparse a command line assembled with C-runtime quoting rules. A build running on Windows that",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-119287 - Zuke: Command-form registry descriptors bypass the MCP launch policy",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-119287",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T15:39:52.000Z",
+        "contentSnippet": "Zuke is a code-first, strongly typed build automation system for Deno. Prior to 1.51.0, the @zuke/core MCP registry mode accepts command-form registry descriptors without applying the ZUKE_REGISTRY_LAUNCH_HOSTS authorization enforced for remote module descriptors. When zuke mcp -",
+        "cveScore": 8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-105454 - Stored XSS via crafted URLs in HTML ticket content in Request Tracker",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105454",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T15:34:57.000Z",
+        "contentSnippet": "RT's automatic link creation for URLs in HTML ticket content does not HTML-escape the URL it places in the link. A URL crafted to break out of the link's address can add a script that runs when the ticket history is displayed, with no further action by the viewer. Anyone who can ",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-105455 - Stored XSS via related ticket subject on RTIR Split and Create Incident forms",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105455",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T15:34:49.000Z",
+        "contentSnippet": "RTIR's ticket creation forms show the subject of the related ticket when splitting a ticket or creating an incident from a report, and they render that subject without HTML escaping. A ticket subject containing script runs it when a user opens either form. RTIR grants everyone th",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-62141 - WordPress Fluent CRM plugin <= 3.2.6 - Broken Access Control vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62141",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T15:29:24.000Z",
+        "contentSnippet": "Missing Authorization vulnerability in WP ManageNinja LLC Fluent CRM fluent-crm allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Fluent CRM: from n/a through 3.2.6.",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-105456 - Stored XSS via HTML scrubber rule in RTIR",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105456",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T15:22:07.000Z",
+        "contentSnippet": "RTIR extends RT's HTML scrubber to allow an internal link placeholder, and the extension lets through any link that merely contains the placeholder, including links using the executable javascript: scheme. The change applies to the whole RT instance once RTIR is installed, not on",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-93327 - Unsafe Java Deserialization in Application Integration SubWorkflow tasks allows Remote Code Execution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93327",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T15:16:56.000Z",
+        "contentSnippet": "A Deserialization of Untrusted Data vulnerability in the SubWorkflow task in Google Cloud Application Integration versions prior to 2026-09-11 on Google Cloud Platform allows an authenticated attacker to execute arbitrary code using a maliciously crafted serialized object. This v",
+        "cveScore": 9.4,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-65444 - WordPress Blocksy Companion plugin <= 2.1.60 - Cross Site Scripting (XSS) vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65444",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T15:16:54.000Z",
+        "contentSnippet": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Creative Themes Blocksy Companion blocksy-companion allows Stored XSS.This issue affects Blocksy Companion: from n/a through 2.1.60.",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-61739 - SOCFortress CoPilot: Authentication Bypass and Missing Authorization on Velociraptor Sigma Exclusion Rules (Detection Suppression)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61739",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T15:16:53.000Z",
+        "contentSnippet": "SOCFortress CoPilot focuses on providing a single pane of glass for all your security operations needs. Prior to 0.1.77, the Velociraptor Sigma exclusion-management endpoints in `backend/app/incidents/routes/incident_alert.py` omit role and tenant authorization, and `POST /api/in",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-61738 - SOCFortress CoPilot: Arbitrary Host File Write as Root via Path Traversal in the ScoutSuite GCP Report Upload (RCE)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61738",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T15:16:53.000Z",
+        "contentSnippet": "SOCFortress CoPilot focuses on providing a single pane of glass for all your security operations needs. Prior to 0.1.77, `POST /api/scoutsuite/generate-gcp-report` in `backend/app/integrations/scoutsuite/routes/scoutsuite.py` admits admin and analyst users and validates the uploa",
+        "cveScore": 10,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-61737 - ng-antd-admin: Hardcoded JWT Secret allows Authentication Bypass in ng-antd-admin",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61737",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T15:16:53.000Z",
+        "contentSnippet": "ng-antd-admin is an Angular and NestJS administration system template. Prior to 22.0, a hardcoded default `JWT` secret permits token forgery when a deployment has not replaced the default secret, without a startup warning. An attacker can bypass authentication and authorization, ",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-61730 - SOCFortress CoPilot: Unauthenticated Exposure of ScoutSuite Reports and Uploaded GCP Service-Account Key via Static Mount",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61730",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T15:16:53.000Z",
+        "contentSnippet": "SOCFortress CoPilot focuses on providing a single pane of glass for all your security operations needs. In affected deployments, the unauthenticated `/scoutsuite-report` `StaticFiles` mount in `backend/copilot.py` exposes the `scoutsuite-report` directory even though normal /api ",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-61729 - SOCFortress CoPilot: Hardcoded Default Header Secret - Unauthenticated Active-Response Invocation and Alert Injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61729",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T15:16:53.000Z",
+        "contentSnippet": "SOCFortress CoPilot focuses on providing a single pane of glass for all your security operations needs. Prior to 0.1.76, `verify_graylog_header` in `backend/app/active_response/routes/graylog.py` and `verify_velociraptor_header` in `backend/app/incidents/routes/incident_alert.py`",
+        "cveScore": 9.4,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-61728 - SOCFortress CoPilot: Stored comment and SOC-field XSS permits privileged account takeover",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61728",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T15:16:52.000Z",
+        "contentSnippet": "SOCFortress CoPilot focuses on providing a single pane of glass for all your security operations needs. In affected snapshots preceding the respective 0.1.70 and 0.1.76 sink repairs, portal users, including `customer_user`, can submit stored markup through `POST /api/incidents/db",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-61708 - SOCFortress CoPilot: Cross-Tenant Arbitrary Object-Store Write via the Data-Store Upload Endpoint (customer_user)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61708",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T15:16:52.000Z",
+        "contentSnippet": "SOCFortress CoPilot focuses on providing a single pane of glass for all your security operations needs. Prior to 0.1.76, `POST /api/agent_data_store/upload` in `backend/app/data_store/data_store_routes.py` permits `customer_user` callers to choose `bucket_name` and `object_name` ",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-61627 - libass: Out-of-bounds read and write in wrap_lines_measure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61627",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T15:16:52.000Z",
+        "contentSnippet": "libass is a portable subtitle renderer for the `ASS`/SSA (Advanced Substation Alpha/Substation Alpha) subtitle format. Prior to 0.17.5, libass can overread and overwrite the glyph array in `wrap_lines_measure` while rendering malicious `ASS` content. In `wrap modes other than two",
+        "cveScore": 7.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-61626 - libass: Out-of-bounds bit clears for negative Matroska ReadOrder values",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61626",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T15:16:52.000Z",
+        "contentSnippet": "libass is a portable subtitle renderer for the ASS/SSA (Advanced Substation Alpha/Substation Alpha) subtitle format. From 0.17.4 until 0.17.5, libass event pruning does not guard negative Matroska `ReadOrder` values, allowing an attacker to clear arbitrarily many bits to zero at ",
+        "cveScore": 7.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-48164 - Collabora Online: Reflected HTML injection through host_session_id",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48164",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T15:16:52.000Z",
+        "contentSnippet": "Collabora Online is a collaborative online office suite based on LibreOffice technology. Prior to 24.04.18 and 25.04.11, the `host_session_id` query/form parameter is substituted into the `cool.html` editor page without HTML encoding, unlike parameters passed through the existing",
+        "cveScore": 4.7,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-46499 - Collabora Online: Read-only session authorization bypass permits live document edits",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46499",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T15:16:52.000Z",
+        "contentSnippet": "Collabora Online is a collaborative online office suite based on LibreOffice technology. Prior to 24.04.18 and 25.04.11, several document operations delegated to `LibreOfficeKit` in the per-document kit process fail to enforce a session's read-only state. A read-only user, such a",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-45145 - Chamilo LMS: Database-backed PHP object injection in career deserialization",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45145",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T15:16:51.000Z",
+        "contentSnippet": "Chamilo LMS is an open-source learning management system. Prior to 2.0.1, `public/main/inc/lib/career.lib.php` and `public/main/cron/import_csv.php` call PHP's native `unserialize()` on `user_career.extra_data` retrieved from the database without the `allowed_classes: false` safe",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-45144 - Chamilo LMS: Stored XSS in public user-profile fields",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-45144",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T15:16:51.000Z",
+        "contentSnippet": "Chamilo LMS is an open-source learning management system. From 2.0.0 until 2.0.1, `GET /user/{username}` is anonymously reachable and renders six user-editable profile fields (`firstname`, `lastname`, `competences`, `openarea`, `teach`, and `diplomas`) inside `{% autoescape false",
+        "cveScore": 8.9,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-85268 - Cross-Site Scripting (XSS) in Firebase Auth Handler via Malicious Bundle ID",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-85268",
@@ -677,231 +902,6 @@
         "contentSnippet": "MariaDB Connector/J is used to connect applications developed in Java to MariaDB and MySQL databases. From 3.0.0 until 3.3.7, 3.4.5, and 3.5.10, the ReadableByteBuf.readLength() and ReadableByteBuf.readIntLengthEncodedNotNull() methods narrowed the protocol's unsigned 8-byte leng",
         "cveScore": 5.9,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-119249 - WiFiman Desktop Binding to an Unrestricted IP Address Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-119249",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-29T18:23:36.000Z",
-        "contentSnippet": "A malicious actor with access to the network could exploit a Binding to an Unrestricted IP Address vulnerability found in WiFiman Desktop for macOS to obtain information about the host device.",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-60111 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-60111",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-29T18:17:33.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-51912 - OpenBMB XAgent Directory Traversal Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-51912",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-29T18:17:32.000Z",
-        "contentSnippet": "OpenBMB XAgent v1.0.0 contains directory traversal vulnerability in main-upload_file-the-preserved-live-upload-file-witness-directly-reaches (ToolServer/ToolServerNode/main.py:46).",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-51905 - SuperAGI Incorrect Access Control Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-51905",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-29T18:17:32.000Z",
-        "contentSnippet": "TransformerOptimus SuperAGI v0.0.14 is vulnerable to Incorrect Access Control in get_agent_execution_configuration in superagi/controllers/agent_execution_config.py. A remote authenticated attacker from one organization can read another organization's agent execution configuratio",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-51903 - SuperAGI Improper Access Control Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-51903",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-29T18:17:32.000Z",
-        "contentSnippet": "SuperAGI v0.0.14 contains an improper access control vulnerability in get_agent_by_latest_execution in superagi/controllers/agent_execution.py. A remote authenticated attacker from one organization can retrieve latest execution and agent metadata for another organization's projec",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-51902 - SuperAGI Improper Access Control Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-51902",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-29T18:17:32.000Z",
-        "contentSnippet": "SuperAGI up to v0.0.14 contains an improper access control vulnerability. The agent controller endpoint /api/agents/get/project/{project_id} allows authenticated users from one organization to retrieve the complete list of agents belonging to a different organization's project. T",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-51863 - DB-GPT Path Traversal Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-51863",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-29T18:17:32.000Z",
-        "contentSnippet": "DB-GPT v0.7.5 and 0.8.0 contains directory traversal in use_example_file (packages/dbgpt-app/src/dbgpt_app/openapi/api_v1/examples_api.py:129). A remote attacker can use the validated exploitation path to write files outside the intended workspace or storage boundary.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-51851 - ModelScope Agent-Zero Directory Traversal Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-51851",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-29T18:17:32.000Z",
-        "contentSnippet": "modelscope agent-zero 1.7, 1.8, 1.9, and 1.10 is vulnerable to Directory Traversal in python/helpers/file_browser.py:FileBrowser.save_text_file. The save_text_file method accepts user-controlled file paths without normalization or validation, allowing path traversal attacks.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-118769 - Botan: Integer overflow when reporting block size in FFI can cause memory corruption",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-118769",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-29T18:17:29.000Z",
-        "contentSnippet": "Botan is a C++ cryptography library. From 2.1.0 until 3.13.0, the Botan C API function botan_block_cipher_block_size converted a size_t block size to int without a bounds check. In an application that accepts external algorithm parameter strings and uses the FFI raw ECB mode, an ",
-        "cveScore": 9.2,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-118768 - Botan: CLI utility `ocsp_check` accepts unauthenticated responses",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-118768",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-29T18:17:28.000Z",
-        "contentSnippet": "Botan is a C++ cryptography library. From 1.11.34 until 3.13.0, the botan ocsp_check command requested an OCSP response from a certificate's Authority Information Access URL without verifying the response signature or authorizing the signer. A malicious responder or on-path attac",
-        "cveScore": 5.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-118767 - Botan: Python binding bcrypt APIs truncate passwords containing embedded NULs",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-118767",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-29T18:17:28.000Z",
-        "contentSnippet": "Botan is a C++ cryptography library. From 1.11.22 until 3.13.0, Botan's Python binding converted Python strings containing U+0000 to const char* values without consistently rejecting the embedded NUL, causing bcrypt and check_bcrypt to process only the prefix before the NUL. Appl",
-        "cveScore": 4.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-118766 - Botan: Online OCSP redirects enable blind requests to internal HTTP services",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-118766",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-29T18:17:28.000Z",
-        "contentSnippet": "Botan is a C++ cryptography library. Prior to 3.13.0, Botan's online OCSP client allowed a single HTTP redirect while posting an OCSP request to the URI in a certificate's Authority Information Access extension. A malicious OCSP responder or an on-path attacker could redirect the",
-        "cveScore": 6.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-116566 - socket.getaddrinfo() accepts embedded null bytes in host and port",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116566",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-29T18:17:24.000Z",
-        "contentSnippet": "socket.getaddrinfo() previously accepted null bytes within *host* and *port* parameters which can cause the values to be silently truncated.",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-107347 - Nomad dispatch payload writes can escape the allocation directory through symlinks",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107347",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-29T18:17:21.000Z",
-        "contentSnippet": "HashiCorp Nomad and Nomad Enterprise are vulnerable to symlink following during dispatch payload and executor log writes that may allow a malicious workload to modify files outside its allocation directory. When the client agent runs as root, this could lead to code execution as ",
-        "cveScore": 8.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-102260 - Nomad vulnerable to cross-namespace information disclosure in multiple endpoints",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-102260",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-29T18:17:21.000Z",
-        "contentSnippet": "HashiCorp Nomad and Nomad Enterprise are vulnerable to cross-namespace authorization bypasses in several read-only API endpoints that may allow an authenticated user with read permissions in one namespace to view information about objects in other namespaces. This vulnerability (",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-41216 - VTK Invalid Pointer Dereference Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-41216",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-29T18:16:43.000Z",
-        "contentSnippet": "An invalid pointer dereference vulnerability exists in the vtkPNGReader::ExecuteInformation functionality of vtk 9.6. A specially crafted .png file can lead to a denial of service. An attacker can provide a malicious file to trigger this vulnerability.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-42057 - VTK Invalid Pointer Dereference Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-42057",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-29T18:16:42.000Z",
-        "contentSnippet": "An invalid pointer dereference vulnerability exists in the vtkPNGReader::vtkPNGReaderUpdate2 functionality of vtk 9.6. A specially crafted .png file can lead to a denial of service. An attacker can provide a malicious file to trigger this vulnerability.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-8822 - VTK Buffer Overflow Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8822",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-29T18:16:42.000Z",
-        "contentSnippet": "A memory corruption vulnerability exists in the vtkDEMReader ReadProfiles functionality of vtk (version(s): 9.6.1). A specially crafted USGS DEM can lead to a buffer overflow. An attacker can provide a malicious file to trigger this vulnerability.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-8824 - VTK BMPReader Buffer Overflow Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-8824",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-29T18:16:41.000Z",
-        "contentSnippet": "A memory corruption vulnerability exists in the vtkBMPReader ExecuteDataWithInformation functionality of vtk (version(s): 9.6.1). A specially crafted .bmp file can lead to a buffer overflow. An attacker can provide a malicious file to trigger this vulnerability.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-9535 - VTK ChacoReader Out-of-Bounds Read",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9535",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-29T18:16:41.000Z",
-        "contentSnippet": "A out-of-bounds read vulnerability exists in the vtkChacoReader InputGraph2 functionality of vtk (version(s): 9.6.1). A specially crafted chaco can lead to an out-of-bounds read. An attacker can provide a malicious file to trigger this vulnerability.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-9536 - VTK Heap-Based Buffer Overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-9536",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-29T18:16:40.000Z",
-        "contentSnippet": "A heap-based buffer overflow vulnerability exists in the vtkWindBladeReader FindVariableOffsets functionality of vtk (version(s): 9.6.1). A specially crafted .wind can lead to a buffer overflow. An attacker can provide a malicious file to trigger this vulnerability.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-118772 - joi: quadratic-time split in `string().email({ multiple: true })` allows denial of service",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-118772",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-29T18:13:33.000Z",
-        "contentSnippet": "joi is a schema description language and data validator for JavaScript. From 17.1.1 until 17.13.9 and 18.3.1, the Joi.string().email({ multiple: true }) rule uses a separator regular expression whose leading whitespace quantifier is retried at every position in a long whitespace ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-119168 - Nomad allocation data migration may allow host directory permission modification via symlink following",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-119168",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-29T18:12:51.000Z",
-        "contentSnippet": "HashiCorp Nomad and Nomad Enterprise are vulnerable to symlink following during same-client allocation data migration that may allow a malicious workload to change permissions and ownership of host directories. This could allow unauthorized access to host data or modification of ",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-62374 - SD JWT JS: Tampered disclosures silently dropped instead of rejected",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62374",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-29T17:18:10.000Z",
-        "contentSnippet": "SD JWT JS is a JavaScript implementation of the Selective Disclosure JWT (SD-JWT) specification. In version 0.19.0 and earlier, `@sd-jwt/decode`, also used by `@sd-jwt/core`, silently drops a tampered Disclosure whose digest no longer matches the Issuer-signed `_sd` array and ret",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-11587 - Authenticated SQL Injection via PHP Array Key in ACL Management (Resources & Actions) — Centreon 26.03.0",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-11587",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-29T17:18:08.000Z",
-        "contentSnippet": "SQL injection allowing an authenticated user with access to ACL management to read and modify the Centreon database",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
@@ -1608,6 +1608,13 @@
     ],
     "virtualization": [
       {
+        "title": "5 Home Lab Projects to Try This Weekend: October 30, 2026",
+        "link": "https://www.virtualizationhowto.com/2026/10/5-home-lab-projects-to-try-this-weekend-october-30-2026/",
+        "source": "Virtualization HowTo",
+        "isoDate": "2026-10-30T12:59:41.000Z",
+        "contentSnippet": "Lots of good stuff in the home lab this week and lots of learning. I covered a lot of territory here with everything from VMFS for Proxmox to patching your… The post 5 Home Lab Projects to Try This Weekend: October 30, 2026 appeared first on Virtualization Howto."
+      },
+      {
         "title": "7 Tools My Home Lab Depends On in Late 2026",
         "link": "https://www.virtualizationhowto.com/2026/10/7-tools-my-home-lab-depends-on-in-late-2026/",
         "source": "Virtualization HowTo",
@@ -2299,16 +2306,86 @@
         "source": "Virtualization HowTo",
         "isoDate": "2026-08-24T11:46:14.000Z",
         "contentSnippet": "I think ARM64 has become super interesting for home labs in 2026. Everyone it seems is looking for ways to cut down on the cost of electricity spend in the… The post 8 ARM64 Home Lab Mistakes I’d Avoid in 2026 appeared first on Virtualization Howto."
-      },
-      {
-        "title": "I Built a Server That Catches Every Change on My Home Lab Network",
-        "link": "https://www.virtualizationhowto.com/2026/08/i-built-a-server-that-catches-every-change-on-my-home-lab-network/",
-        "source": "Virtualization HowTo",
-        "isoDate": "2026-08-22T12:19:43.000Z",
-        "contentSnippet": "I have covered a lot of different angles on home lab backups. For the most part though, these are around the hypervisor, virtual machines on a Proxmox server, and persistent… The post I Built a Server That Catches Every Change on My Home Lab Network appeared first on Virtualizati"
       }
     ],
     "hardware": [
+      {
+        "title": "OpenAI CEO says it's 'quite terrible' for your PC to have RAM — Sam Altman says data centers offer better utilization",
+        "link": "https://www.tomshardware.com/tech-industry/data-centers/openai-ceo-says-its-quite-terrible-for-your-pc-to-have-ram-sam-altman-says-data-centers-offer-better-utilization",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-30T16:28:11.000Z",
+        "contentSnippet": "OpenAI CEO Sam Altman said in a podcast interview that \"it's quite terrible\" for people to have RAM in their own PCs when it could go into AI data centers."
+      },
+      {
+        "title": "Cigent Software Full Drive Encryption Clears Intel vPro Power and CPU Targets, Earns Certified App Status",
+        "link": "https://www.storagereview.com/news/cigent-software-full-drive-encryption-intel-vpro-certified-app",
+        "source": "StorageReview",
+        "isoDate": "2026-10-30T14:54:55.000Z",
+        "contentSnippet": "Cigent Software Full Drive Encryption and its command line interface have received Intel vPro Certified App status, Intel’s validation that a background application meets its power and performance targets on vPro business PCs. Cigent’s software is a CSfC-listed encryption compone"
+      },
+      {
+        "title": "PsiQuantum turns its photonics know-how into an optical switch for supercharging AI data center GPU networks",
+        "link": "https://www.tomshardware.com/tech-industry/photonics/psiquantum-turns-its-photonics-know-how-into-an-optical-switch-for-supercharging-ai-data-center-gpu-networks-8x8-lab-prototype-loses-less-light-than-rivals-with-plans-to-develop-larger-devices",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-30T14:30:00.000Z",
+        "contentSnippet": "PsiQuantum’s eight-port optical switch typically loses 1.2 dB, under a quarter of its light, where data centers allow up to 3 dB."
+      },
+      {
+        "title": "TCL 27C2A Pro 27-inch QD-Mini LED 4K gaming monitor review: Extreme color and brightness",
+        "link": "https://www.tomshardware.com/monitors/gaming-monitors/tcl-27c2a-pro-27-inch-qd-mini-led-4k-gaming-monitor-review",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-30T14:00:00.000Z",
+        "contentSnippet": "TCL’s 27C2A Pro is a super-bright 27-inch 4K Mini LED gaming monitor with full-array local dimming (2,304 zones), Quantum Dot color, 160 Hz, 320 Hz/FHD mode, HDR10 and Adaptive-Sync. It’s also color-accurate with premium video processing."
+      },
+      {
+        "title": "Intelligence agency misplaced 'a very significant number' of removable drives",
+        "link": "https://www.tomshardware.com/pc-components/usb-flash-drives/intelligence-agency-misplaced-a-very-significant-number-of-removable-drives-storage-media-have-been-missing-for-years-but-exact-number-of-lost-devices-remain-unknown",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-30T13:35:48.000Z",
+        "contentSnippet": "An investigation revealed that thousands of drives have been lost, with officials having no idea where they could be."
+      },
+      {
+        "title": "A primer on key AI LLM concepts — KV cache, weights, quantization, and how inference actually works",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/a-primer-on-key-ai-llm-concepts-kv-cache-weights-quantization-and-how-inference-actually-works",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-30T13:30:00.000Z",
+        "contentSnippet": "How do AI models work? This primer explains crucial concepts to understand how LLMs work, with definitions and explanations for all of AI's new nomenclature."
+      },
+      {
+        "title": "This is your chance to secure an entire entry-level ABS gaming PC for only $849",
+        "link": "https://www.tomshardware.com/desktops/gaming-pcs/this-is-your-chance-to-secure-an-entire-entry-level-abs-gaming-pc-for-only-usd849-amazing-walmart-deal-sets-you-up-with-an-rtx-5060-graphics-card-and-shaves-usd350-off-the-list-price",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-30T13:00:00.000Z",
+        "contentSnippet": "An affordable desktop gaming PC with an RTX 5060 GPU inside for under $850."
+      },
+      {
+        "title": "5 years’ worth of salary in bonuses given to 700 eligible Micron workers as company continues to battle union",
+        "link": "https://www.tomshardware.com/tech-industry/semiconductors/5-years-worth-of-salary-in-bonuses-given-to-700-eligible-micron-workers-as-company-continues-to-battle-union-more-than-4-300-production-line-staff-to-receive-three-bonuses-of-more-than-usd31-000-plus-quarterly-profit-bonuses-starting-next-year",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-30T11:44:03.000Z",
+        "contentSnippet": "Eligible employees get an annual performance bonus, a mass-production bonus, and a one-time appreciation bonus. A quarterly profit bonus has also been introduced starting January 2027."
+      },
+      {
+        "title": "Intel leaker reveals Moon Lake chip as a likely replacement for N-series SoCs",
+        "link": "https://www.tomshardware.com/pc-components/cpus/intel-leaker-reveals-moon-lake-chip-as-a-likely-replacement-for-n-series-socs-four-lower-power-efficiency-cores-no-performance-cores-and-a-6-w-tdp",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-30T11:40:00.000Z",
+        "contentSnippet": "An Intel leaker revealed Moon Lake chip as a likely replacement for N-series SoCs with four lower-power-efficiency cores, no performance cores, and a 6-watt TDP"
+      },
+      {
+        "title": "Cisco gives 27-year-old engineer unlimited AI tokens to rewrite 98% of the company's legacy code in 24 months",
+        "link": "https://www.tomshardware.com/tech-industry/big-tech/cisco-gives-27-year-old-engineer-unlimited-ai-tokens-to-rewrite-98-percent-of-the-companys-legacy-code-in-24-months-president-plucks-former-startup-founder-telling-him-to-go-nuts",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-30T11:26:56.000Z",
+        "contentSnippet": "Cisco President Jeetu Patel has handed a 27-year-old ex-startup founder a huge job to rewrite 98% of Cisco's legacy code within 24 months."
+      },
+      {
+        "title": "Former esports commentator builds his own custom mouse shell generator for 3D printing that doesn’t use AI",
+        "link": "https://www.tomshardware.com/peripherals/gaming-mice/esports-commentator-builds-his-own-custom-mouse-shell-generator-for-3d-printing-that-doesnt-use-ai-mausstudio-automatically-detects-buttons-screwholes-and-sensor-locations",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-10-30T11:20:00.000Z",
+        "contentSnippet": "A Counter-Strike commentator just showed the demo of his customizable gaming mouse shell generator for 3D printing that detects key components like mouse buttons, the scroll wheel, and screw hole locations without using AI."
+      },
       {
         "title": "Binance withdrawals frozen after suspected North Korean hackers steal $5.6 billion in crypto in record-breaking cryptocurrency heist— firm says it will cover losses as stablecoin networks move to free",
         "link": "https://www.tomshardware.com/tech-industry/cryptocurrency/binance-withdrawals-frozen-after-thieves-steal-usd5-6-billion-in-crypto-in-record-breaking-cryptocurrency-heist-firm-says-it-will-cover-losses-as-stablecoin-networks-move-to-freeze-usd2-4b-in-stolen-assets",
@@ -2342,7 +2419,7 @@
         "link": "https://www.storagereview.com/review/dell-xps-16-creator-edition-review-rtx-spark-n1x",
         "source": "StorageReview",
         "isoDate": "2026-10-29T21:02:44.000Z",
-        "contentSnippet": "The Dell XPS 16 Creator Edition is the first XPS built on NVIDIA’s RTX Spark N1X, and Dell has put the chip in what it calls the thinnest high-performance XPS it has made: a 17.8mm CNC aluminum chassis with a 3.2K Tandem OLED touch panel, a 99Wh battery, three USB4 ports, HDMI 2."
+        "contentSnippet": "The Dell XPS 16 Creator Edition is the first XPS built on NVIDIA’s RTX Spark N1X. Dell houses the chip in what it calls its thinnest high-performance XPS yet: a 17.8mm CNC aluminum chassis with a 3.2K Tandem OLED touch panel, a 99Wh battery, three USB4 ports, HDMI 2.1b, and a ful"
       },
       {
         "title": "One Array for AI: Inside the IBM FlashSystem and Broadcom Fibre Channel Architecture Behind Oracle AI Database 26ai",
@@ -2931,83 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-10-25T15:25:40.000Z",
         "contentSnippet": "Revenue per employee at the Magnificent Seven has outpaced the S&P 493, and a new comparison highlights the growing divide in fortunes between America’s largest technology companies and the rest of the S&P 500."
-      },
-      {
-        "title": "IQUNIX MQ80 low profile mechanical keyboard review",
-        "link": "https://www.tomshardware.com/peripherals/mechanical-keyboards/iqunix-mq80-low-profile-mechanical-keyboard-review",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-25T15:08:23.000Z",
-        "contentSnippet": "The IQUNIX MQ80 is well-made and super stylish, but it’s not quite the instant sell it used to be. Catch this one if you don’t like magnetic switches, but otherwise wait for a sale."
-      },
-      {
-        "title": "Ukrainian drone attacks hammer Russia's finance ministry data center, damaged facility reportedly holds tax databases",
-        "link": "https://www.tomshardware.com/tech-industry/data-centers/ukrainian-drone-attacks-hammer-russias-finance-ministry-data-center-damaged-facility-reportedly-holds-tax-databases-facility-also-holds-other-important-state-registry-data",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-25T14:05:00.000Z",
-        "contentSnippet": "Reports say that this is one of three data centers that the Russian finance ministry operated."
-      },
-      {
-        "title": "Samsung's new 2TB 990 SSD is 38% off at Amazon today",
-        "link": "https://www.tomshardware.com/pc-components/ssds/samsungs-new-2tb-990-ssd-is-38-percent-off-at-amazon-today-get-usd200-off-this-pcie-4-0-all-rounder-drive-for-a-limited-time",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-25T13:43:37.000Z",
-        "contentSnippet": "Get 38% off the new Samsung 990 2TB SSD, a $200 saving."
-      },
-      {
-        "title": "Nvidia discusses $2,000-per-GPU annual fee for software that 'runs agents on AI factories'",
-        "link": "https://www.tomshardware.com/pc-components/gpus/nvidia-discusses-usd2-000-per-gpu-annual-software-fee-for-running-agents-on-ai-infrastructure-firm-already-charges-more-than-twice-that-amount-for-its-ai-enterprise-software-platform",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-25T13:00:00.000Z",
-        "contentSnippet": "Nvidia CEO Jensen Huang is reportedly weighing annual software fees of around $2,000 per GPU for enterprise AI, a model that could generate $10 billion a year if five million licenses were sold. The pricing and launch timeline remain unconfirmed, while Nvidia continues to expand "
-      },
-      {
-        "title": "Jailbroken PS5s can now run Steam PC games",
-        "link": "https://www.tomshardware.com/video-games/playstation/jailbroken-ps5s-can-now-run-steam-pc-games-you-can-now-sign-in-with-your-steam-account-and-install-games-from-your-library-directly-to-the-console",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-25T12:40:11.000Z",
-        "contentSnippet": "Playden for PS5 creates an app for each Steam game that it downloads, allowing it to appear as a separate tile on the console's home screen."
-      },
-      {
-        "title": "Windows XP debuted 25 years ago today",
-        "link": "https://www.tomshardware.com/software/windows/windows-xp-debuted-25-years-ago-today-microsofts-biggest-launch-since-95-was-its-first-consumer-os-to-remove-the-dos-underpinnings",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-25T12:20:00.000Z",
-        "contentSnippet": "Windows XP became available at retailers for the first time on this day back in 2001."
-      },
-      {
-        "title": "New CD players keep launching, but a drive shortage could make them unfixable",
-        "link": "https://www.tomshardware.com/peripherals/new-cd-players-keep-launching-but-a-drive-shortage-could-make-them-unfixable-almost-nobody-makes-the-drives-anymore",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-25T12:00:00.000Z",
-        "contentSnippet": "The lack of optical drive manufacturers is raising questions about the repairability and longevity of new CD players that are coming out on the market today."
-      },
-      {
-        "title": "OpenAI's isolated red-team agents built a hidden CPU cache channel to talk with no network or shared files",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/openais-isolated-red-team-ai-agents-built-a-hidden-cpu-cache-channel-to-talk-with-no-network-or-shared-files-exploited-cpu-cache-timing-to-bypass-microvm-sandboxes",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-25T11:30:00.000Z",
-        "contentSnippet": "OpenAI’s red-team agents passed hidden messages through the CPU cache, a covert trick already shown to move data between cloud VMs."
-      },
-      {
-        "title": "AMD CEO Lisa Su proposed bringing back the Ryzen 7 5800X3D, set plan in motion before DDR5 shortages",
-        "link": "https://www.tomshardware.com/pc-components/cpus/amd-ceo-lisa-su-proposed-bringing-back-the-ryzen-7-5800x3d-set-plan-in-motion-before-ddr5-shortages-am4-cpu-considered-a-final-gift-to-loyal-fans-of-the-decade-old-socket",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-25T11:00:00.000Z",
-        "contentSnippet": "AMD Director Travis Kirsch confirmed the rationale for relaunching the first X3D chip and explained why the company no longer offers many Ryzen 3 SKUs."
-      },
-      {
-        "title": "Nvidia eyes converting old nuclear plants into massive AI data centers",
-        "link": "https://www.tomshardware.com/tech-industry/data-centers/nvidia-eyes-converting-old-nuclear-plants-into-massive-ai-data-centers-reusing-shut-down-german-energy-sites-could-reduce-the-cost-and-timeline-of-building-from-scratch",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-25T10:30:00.000Z",
-        "contentSnippet": "Nvidia and PreussenElektra are studying whether decommissioned sites of German nuclear power plants can be repurposed as AI data centers, potentially cutting development time by reusing existing grid connections, land, and industrial infrastructure."
-      },
-      {
-        "title": "Cybersecurity bounty hunter says Samsung TVs use AI to record audio and screenshots for ads",
-        "link": "https://www.tomshardware.com/tech-industry/cyber-security/hacker-finds-own-samsung-tv-collecting-scary-amounts-of-user-information-and-gets-banned-by-openai-for-cyber-abuse-tv-runs-an-ai-model-that-collects-audio-screenshots-and-plenty-of-other-user-data-for-ad-targeting",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-25T10:00:00.000Z",
-        "contentSnippet": "A hacker reverse-engineered his own Samsung TV and found alarming spying activity, including code that used connected devices' microphones to listen to users."
       }
     ]
   }
