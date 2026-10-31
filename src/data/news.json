@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-10-30T21:15:42.888Z",
+  "updatedAt": "2026-10-31T01:16:42.722Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-77152 - Field Collection for Drupal 7 access bypass via missing parent entity access check",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77152",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-31T00:16:51.000Z",
+        "contentSnippet": "Improper Authorization vulnerability in Drupal Field Collection for Drupal 7 allows a user with the \"edit field collections\" permission to bypass access control on the parent (host) entity. The access check for field collection items (field_collection_item_access()) granted edit ",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-117656 - Unverified Sign in with Apple callback parameter can override verified ID token claims",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-117656",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-31T00:16:51.000Z",
+        "contentSnippet": "Acceptance of Extraneous Untrusted Data With Trusted Data vulnerability in the Sign in with Apple strategy in pow-auth Assent allows an unauthenticated remote attacker to impersonate another user via the user parameter of the authorization callback. Apple posts the user's name to",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-63414 - Shopify App: Token exchange shop context confusion may allow cross-shop authorization bypass in affected apps",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63414",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T23:17:15.000Z",
+        "contentSnippet": "Shopify App is a Rails engine for building Shopify applications. From 22.1.0 until 23.0.3, `token-exchange` authenticated controllers can expose a request-derived `shop` context instead of the identity from a verified Shopify ID token or active Shopify session. `current_shopify_d",
+        "cveScore": 7.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-63410 - secp256k1-native: Compiler-reconstructed secret-dependent branch in native scalar multiplication",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63410",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T23:17:15.000Z",
+        "contentSnippet": "secp256k1-native is a native C secp256k1 implementation for Ruby. In affected native builds, native constant-time scalar multiplication through `Point#mul` or `scalar_multiply_ct` can leak timing information about a secret scalar when compiled by a toolchain that reconstructs bra",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-63402 - i18next: Shared built-in corruption through inherited-key deepExtend recursion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63402",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T23:17:15.000Z",
+        "contentSnippet": "i18next is an internationalization framework for JavaScript. Prior to version 26.3.4, `deepExtend` in `src/utils.js` checks property existence with the in operator and recurses into inherited built-ins reached through `Object.prototype`. An application must explicitly pass attack",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-63401 - Coop has cross-org IDOR in addAccessibleQueuesForUser / removeAccessibleQueuesForUser",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63401",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T23:17:15.000Z",
+        "contentSnippet": "Coop is an open source review and moderation tool from ROOST. Prior to 1.0.2, `addAccessibleQueuesForUser` and `removeAccessibleQueuesForUser` accepted arbitrary `queueId` and `userId` values without organization scoping. An authenticated user belonging to one organization and ho",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-63400 - Coop sessions are not invalidated on password reset",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63400",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T23:17:15.000Z",
+        "contentSnippet": "Coop is an open source review and moderation tool from ROOST. Prior to 1.0.2, `resetPasswordForToken` updates the password row without invalidating database-backed sessions. An attacker who has acquired a password and established a session retains access even after the legitimate",
+        "cveScore": 2.3,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-63399 - Coop: Unauthenticated org provisioning via GraphQL Mutation.createOrg",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63399",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T23:17:14.000Z",
+        "contentSnippet": "Coop is an open source review and moderation tool from ROOST. Prior to 1.0.0, the `GraphQL` `Mutation.createOrg` operation allows an unauthenticated actor to create arbitrary organizations on a publicly accessible instance. In addition to creating noise in the logs, the lack of r",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-63398 - Coop has SAML cross-tenant authentication bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63398",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T23:17:14.000Z",
+        "contentSnippet": "Coop is an open source review and moderation tool from ROOST. Prior to 1.0.2, the SAML strategy's verify callback resolved the authenticated user by email alone using `kyselyUserFindByEmail`, without binding the lookup to the organization in `/saml/login/:orgId/callback`. An atta",
+        "cveScore": 7.4,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-63396 - Coop has a data leak via unauthenticated GraphQL Query.allOrgs",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63396",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T23:17:14.000Z",
+        "contentSnippet": "Coop is an open source review and moderation tool from ROOST. Prior to 1.0.0, an unauthenticated actor can query `Query.allOrgs` through `/api/v1/graphql` on a publicly accessible deployment and obtain data for all organizations, including organization IDs, names, email addresses",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-63393 - OpenSearch SQL plugin: Unsafe cursor deserialization permits server code execution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63393",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T23:17:14.000Z",
+        "contentSnippet": "OpenSearch SQL supports querying OpenSearch data using SQL and Piped Processing Language. In the 2.x line from 2.8.0.0 until 2.19.6.0, and the 3.x line prior to 3.7.0.0, a remote authenticated user with basic read/search permissions can provide a crafted `cursor` parameter to the",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-63378 - TAKO AI Agent for Okta: Authenticated Python execution through validator bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63378",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T23:17:14.000Z",
+        "contentSnippet": "TAKO AI Agent for Okta is a local-first AI agent that helps Okta administrators query tenant data using natural language. Prior to 3.0.1-beta, any authenticated user with a valid `fctr_session` cookie can submit arbitrary Python source in the `script_code` field of `POST /api/rea",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-63377 - TAKO AI Agent for Okta: Unauthenticated first-run administrator takeover",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63377",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T23:17:14.000Z",
+        "contentSnippet": "TAKO AI Agent for Okta is a local-first AI agent that helps Okta administrators query tenant data using natural language. Prior to 3.0.1-beta, `POST /api/auth/setup` in `src/api/routers/auth.py` allows an unauthenticated network attacker to create the first administrator account ",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-63346 - Refitter: C# source injection through OpenAPI header parameter names",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63346",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T23:17:14.000Z",
+        "contentSnippet": "Refitter is a tool for generating a C# REST API client using the Refit library. Prior to 2.1.2, the header parameter name in `parameters[].name` with `in: header` is emitted verbatim into a Refit `[Header(\" \")]` attribute string without escaping quotation marks. An attacker-influ",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-63345 - Refitter: C# source injection through OpenAPI path keys",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63345",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T23:17:13.000Z",
+        "contentSnippet": "Refitter is a tool for generating a C# REST API client using the Refit library. Prior to 2.1.2, OpenAPI `paths`-object keys are emitted verbatim into Refit route attributes such as `[Get(\" \")]` without escaping quotation marks or restricting characters. An attacker-influenced sin",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-63344 - Refitter: C# source injection through OpenAPI content-type map keys",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63344",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T23:17:13.000Z",
+        "contentSnippet": "Refitter is a tool for generating a C# REST API client using the Refit library. Prior to 2.1.2, content-type keys in the content maps of `requestBody/responses` are emitted verbatim into a Refit `[Headers(\"Accept: \", \"Content-Type: \")]` attribute string without escaping quotation",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-63341 - Aedes has Uncaught Exception and Uncontrolled Resource Consumption",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63341",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T23:17:13.000Z",
+        "contentSnippet": "Aedes is an MQTT broker that can run on any stream server. Prior to 1.1.1, the MQTT broker does not bound topic depth or structural complexity before passing topics through `mqemitter` into `qlobber`. A `PUBLISH`, `SUBSCRIBE`, or registered `Will` message containing an excessivel",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-63339 - IXP Manager has authenticated non-administrator privilege escalation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63339",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T23:17:13.000Z",
+        "contentSnippet": "IXP Manager is a full-stack web application for managing Internet Exchange Points. Prior to version 7.3.0, an authenticated, non-administrative user can elevate their privileges to administrator status. Restricting administrative functions reduces exposure but is not a complete f",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-63338 - IXP Manager has Broken Object-Level Authorization",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63338",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T23:17:13.000Z",
+        "contentSnippet": "IXP Manager is a full-stack web application for managing Internet Exchange Points. Prior to version 7.3.0, an authenticated user can view and edit a resource belonging to another user without authorization. The API-key edit/update path in `ApiKeyController` selects records by ide",
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-61725 - sevenz-rust2: unchecked 7z entry paths permit traversal and absolute-path file overwrites",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61725",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T23:17:11.000Z",
+        "contentSnippet": "sevenz-rust2 is a Rust-native 7z compressor and `decompress`or. Prior to 0.21.1, extracting an attacker-supplied 7z archive can write or overwrite files outside the destination directory. In `src/util/decompress.rs`, `decompress_impl` computes each destination with `dest.join(ent",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-111477 - Rejected reason: This CVE ID has been rejected or",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111477",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T23:17:09.000Z",
+        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-63224 - OpenRemote has authenticated SQL injection in crosstab datapoint exports",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63224",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T22:16:58.000Z",
+        "contentSnippet": "OpenRemote is an open-source internet-of-things platform. Prior to 1.26.0, the `datapoint export` API constructs `CSV crosstab` SQL by concatenating an `asset name` and `attribute name` into a `COPY` query that uses `crosstab` and streams `TO STDOUT`. The `asset name` enters both",
+        "cveScore": 7.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-63201 - netopeer2-server logging has format string vulnerability via subtree filter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63201",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T22:16:58.000Z",
+        "contentSnippet": "Netopeer2 is a server for implementing network configuration management based on the `NETCONF` Protocol. In affected versions, a low-privileged authenticated `NETCONF` user can remotely crash `netopeer2-server` by sending a `get RPC` with an invalid `subtree filter` whose text co",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-63184 - Refitter: Unrestricted OpenAPI references permit build-host SSRF and file inclusion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63184",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T22:16:58.000Z",
+        "contentSnippet": "Refitter is a tool for generating a C# REST API client using the Refit library. Prior to 2.1.1, the `refitter` dotnet tool invokes `NJsonSchema` with unsafe defaults for `$ref` resolution when generating Refit interfaces and contracts from attacker-controlled or attacker-influenc",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-63182 - LightSAML: Signature reference wrapping permits unsigned assertion claims",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63182",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-30T22:16:58.000Z",
+        "contentSnippet": "LightSAML implements SAML 2.0 data model classes, XML serialization and deserialization, XML security, certificate support, and message bindings. Prior to 4.7.1 and 5.0.1, LightSAML and xmlseclibs disagree about which assertion an inbound SAML signature covers. `Response::deseria",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-95673",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-95673",
@@ -677,234 +902,23 @@
         "contentSnippet": "The Gravity Forms plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 3.1.2 via a Post Custom Field whose input type is List. This is due to GFFormsModel::create_post() passing the submitted value to WordPress' unrestricted global mayb",
         "cveScore": 9.8,
         "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-65584 - GPU DDK - Stack Buffer Overflow via undersized UFO address array in DumpStalledContextInfo",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65584",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T01:32:56.000Z",
-        "contentSnippet": "Software installed and run as a non-privileged user may conduct improper GPU system calls causing a stack overflow in the kernel. The overflow occurs when processing resolved Linux/Android fence synchronization checkpoints, while user checkpoints are excluded from the stack array",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-118475 - Eog: eye of gnome: buffer overrun when parsing malicious png files with non-standard iccp chunk",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-118475",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T01:24:43.000Z",
-        "contentSnippet": "A flaw was found in Eye of GNOME. When parsing a specially crafted PNG image containing malformed color profile metadata, the application fails to validate chunk boundaries while searching for a null terminator. An attacker could trick a user into opening a malicious image, causi",
-        "cveScore": 3.6,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-112922 - Ghostscript: out-of-bounds read in ghostscript shade_next_color via integer overflow of indexed color index in mesh shading",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-112922",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T01:24:32.000Z",
-        "contentSnippet": "A flaw was found in Ghostscript. A remote attacker could exploit this vulnerability by enticing a user to process a specially crafted PDF or PostScript document containing malicious mesh shading data. Due to improper bounds validation during the processing of indexed color values",
-        "cveScore": 3.3,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-15466 - GPU DDK - Write UAF due to a race condition caused by insufficient locking in PVRSRVRGXCloseHWPerfClientStreamKM()",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15466",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T01:23:24.000Z",
-        "contentSnippet": "Software installed and run as a non-privileged user may conduct improper GPU system calls to cause race condition in hardware performance counters buffer’s destruction path leading to read and/or write UAF. The race condition in the destruction path could lead to reference counte",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-91920 - Undertow: undertow: chunkreader message length permits chunk-size overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-91920",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T01:16:53.000Z",
-        "contentSnippet": "A flaw was found in the ChunkReader component of the Undertow web server, which is used to handle chunked transfer encoding in HTTP requests. The issue occurs because a security check for the chunk size is performed before the value is shifted, allowing a specifically crafted 15-",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-76031 - Google Chrome Input Use-After-Free Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76031",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T01:16:47.000Z",
-        "contentSnippet": "Use after free in Input in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-76030 - Google Chrome FileSystem Memory Corruption",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76030",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T01:16:47.000Z",
-        "contentSnippet": "Memory corruption in FileSystem in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-76029 - Google Chrome Network Memory Corruption Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76029",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T01:16:47.000Z",
-        "contentSnippet": "Memory corruption in Network in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-76028 - Google Chrome FileSystem Use-After-Free Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76028",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T01:16:47.000Z",
-        "contentSnippet": "Use after free in FileSystem in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-76027 - Google Chrome CacheStorage Memory Corruption",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76027",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T01:16:47.000Z",
-        "contentSnippet": "Memory corruption in CacheStorage in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to read memory via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-76026 - Google Chrome Autofill Memory Corruption",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76026",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T01:16:47.000Z",
-        "contentSnippet": "Memory corruption in Autofill in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-76025 - Google Chrome FileSystem Use-After-Free Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76025",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T01:16:46.000Z",
-        "contentSnippet": "Use after free in FileSystem in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-76024 - Google Chrome MediaStream Memory Corruption",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76024",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T01:16:46.000Z",
-        "contentSnippet": "Memory corruption in MediaStream in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to potentially read memory inside the sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-119272 - Google Chrome FileSystem Out-of-Bounds Read",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-119272",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T01:16:46.000Z",
-        "contentSnippet": "Out of bounds read in FileSystem in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to read memory inside the sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-119271 - Google Chrome Skia Use-After-Free Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-119271",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T01:16:46.000Z",
-        "contentSnippet": "Use after free in Skia in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-119270 - Google Chrome CacheStorage Improper Input Validation Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-119270",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T01:16:45.000Z",
-        "contentSnippet": "Improper input validation in CacheStorage in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-119269 - Google Chrome Blink Use-After-Free Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-119269",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T01:16:45.000Z",
-        "contentSnippet": "Use after free in Blink in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-119268 - Google Chrome Editing Integer Overflow Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-119268",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T01:16:45.000Z",
-        "contentSnippet": "Integer overflow in Editing in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-119267 - Google Chrome DOM Memory Corruption Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-119267",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T01:16:45.000Z",
-        "contentSnippet": "Memory corruption in DOM in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-119266 - Google Chrome Quota Use-After-Free Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-119266",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T01:16:45.000Z",
-        "contentSnippet": "Use after free in Quota in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-119265 - Google Chrome Quota Memory Corruption",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-119265",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T01:16:45.000Z",
-        "contentSnippet": "Memory corruption in Quota in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-119264 - Google Chrome Dawn Memory Corruption",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-119264",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T01:16:45.000Z",
-        "contentSnippet": "Memory corruption in Dawn in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-119263 - Google Chrome Garbage Collection Memory Corruption",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-119263",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T01:16:45.000Z",
-        "contentSnippet": "Memory corruption in GarbageCollection in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to potentially execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-119262 - Google Chrome V8 Improper Input Validation Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-119262",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T01:16:44.000Z",
-        "contentSnippet": "Improper input validation in V8 in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-119261 - Google Chrome Skia Improper Input Validation Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-119261",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T01:16:44.000Z",
-        "contentSnippet": "Improper input validation in Skia in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to potentially execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       }
     ],
     "ai": [
+      {
+        "title": "Managing Amazon Bedrock costs end to end: A playbook for FinOps and platform teams",
+        "link": "https://aws.amazon.com/blogs/machine-learning/managing-amazon-bedrock-costs-end-to-end-a-playbook-for-finops-and-platform-teams/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-10-30T22:42:24.000Z",
+        "contentSnippet": "This post presents a five-stage operating model for managing Amazon Bedrock cost: attribute every dollar to an owner, make every request observable, enforce budgets, optimize platform defaults, and operate a review cadence. Written for FinOps and platform engineering teams."
+      },
+      {
+        "title": "Preview web apps live as your coding agent builds them with Amazon Bedrock AgentCore runtime",
+        "link": "https://aws.amazon.com/blogs/machine-learning/preview-web-apps-live-as-your-coding-agent-builds-them-with-amazon-bedrock-agentcore-runtime/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-10-30T21:40:03.000Z",
+        "contentSnippet": "Amazon Bedrock AgentCore Session endpoints give each runtime session an authenticated URL that forwards any HTTP method, path, and WebSocket connection to the ports you allow. In this post, you deploy a coding agent that keeps a Vite website running in its session, then watch the"
+      },
       {
         "title": "Meet TokenEconomizer: Microsoft’s Plugin That Cuts Coding Agent Costs by Up to 30.9%",
         "link": "https://www.marktechpost.com/2026/10/30/microsoft-tokeneconomizer-coding-agent-cost-control/",
@@ -1590,20 +1604,6 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-10-20T15:39:04.000Z",
         "contentSnippet": "Build a governed semantic layer for agentic AI on AWS with the Denodo Platform and Amazon Bedrock AgentCore. It federates Amazon Aurora, Amazon Redshift, and an on-premises PostgreSQL database into a single customer 360 view an agent queries in VQL, with identity propagation and "
-      },
-      {
-        "title": "Build a semantic layer for agentic AI on AWS with Strategy Mosaic and Amazon Bedrock AgentCore",
-        "link": "https://aws.amazon.com/blogs/machine-learning/build-a-semantic-layer-for-agentic-ai-on-aws-with-strategy-mosaic-and-amazon-bedrock-agentcore/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-10-20T15:36:39.000Z",
-        "contentSnippet": "The third post in our semantic-layer series builds a customer 360 across Amazon Redshift and Amazon Aurora with Strategy Mosaic, exposes it to a Strands agent on Amazon Bedrock AgentCore through the Mosaic MCP server, and enforces per-user row and column security end-to-end."
-      },
-      {
-        "title": "Build a semantic layer for agentic AI on AWS with AtScale and Amazon Bedrock AgentCore",
-        "link": "https://aws.amazon.com/blogs/machine-learning/build-a-semantic-layer-for-agentic-ai-on-aws-with-atscale-and-amazon-bedrock-agentcore/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-10-20T15:33:54.000Z",
-        "contentSnippet": "The third post in our semantic-layer series builds a governed customer 360 model on Amazon Redshift with AtScale, then exposes it to a Strands agent on Amazon Bedrock AgentCore through the AtScale MCP server. Identity propagation, RBAC, row security, and full query audit are enfo"
       }
     ],
     "virtualization": [
@@ -2310,28 +2310,35 @@
     ],
     "hardware": [
       {
-        "title": "Nvidia store quietly pulls the RTX 5080 following RTX 5090 removal — street prices climb to 2.2X MSRP",
+        "title": "Intel Q3 2026 Earnings Data Center Soars While PC Faces Memory Pressure",
+        "link": "https://www.servethehome.com/intel-q3-2026-earnings-data-center-foundry-client/",
+        "source": "ServeTheHome",
+        "isoDate": "2026-10-30T22:43:29.000Z",
+        "contentSnippet": "Intel's Q3 2026 earnings highlighted how well the data center segment is doing and how rough the client segment is due to DRAM and NAND pricing The post Intel Q3 2026 Earnings Data Center Soars While PC Faces Memory Pressure appeared first on ServeTheHome."
+      },
+      {
+        "title": "Nvidia store quietly pulls the RTX 5080 following RTX 5090 removal",
         "link": "https://www.tomshardware.com/pc-components/gpus/nvidia-store-quietly-pulls-the-rtx-5080-following-rtx-5090-removal-street-prices-climb-to-2-2x-over-msrp",
         "source": "Tom's Hardware",
         "isoDate": "2026-10-30T20:13:10.000Z",
         "contentSnippet": "First the RTX 5090, now the RTX 5080. Nvidia quietly removes the RTX 5080 listing from the marketplace as prices explode to 2.2X MSRP on the retail market."
       },
       {
-        "title": "Intel’s woes wipe out $1 trillion of semiconductor market cap in one day — PC market bloodbath leaves few chip stocks unscathed",
+        "title": "Intel’s woes wipe out $1 trillion of semiconductor market cap in one day",
         "link": "https://www.tomshardware.com/pc-components/cpus/intels-woes-wipe-out-usd1-trillion-of-semiconductor-market-cap-in-one-day-pc-market-bloodbath-leaves-few-chip-stocks-unscathed",
         "source": "Tom's Hardware",
         "isoDate": "2026-10-30T20:06:11.000Z",
         "contentSnippet": "Intel's gloomy outlook for its PC business wipes out $1 trillion of semiconductor market capitalization in a day, barely affects Apple."
       },
       {
-        "title": "Celebrate Warhammer Day on the 31st of October with these 20 Warhammer 40K-themed products — the best Space Marine gear this side of the Warp",
+        "title": "Celebrate Warhammer Day on the 31st of October with these 20 Warhammer 40K-themed products",
         "link": "https://www.tomshardware.com/gift-guides-seasonal-sales/celebrate-warhammer-day-on-the-31st-of-october-with-these-20-warhammer-40k-themed-products-the-best-space-marine-gear-this-side-of-the-warp",
         "source": "Tom's Hardware",
         "isoDate": "2026-10-30T18:30:00.000Z",
         "contentSnippet": "Warhammer Day is celebrated on October 31st 2026, 2026. Check out these great gift ideas for all fans of the grimdark future."
       },
       {
-        "title": "OpenAI CEO says it's 'quite terrible' for your PC to have RAM — Sam Altman says data centers offer better utilization",
+        "title": "OpenAI CEO says it's 'quite terrible' for your PC to have RAM",
         "link": "https://www.tomshardware.com/tech-industry/data-centers/openai-ceo-says-its-quite-terrible-for-your-pc-to-have-ram-sam-altman-says-data-centers-offer-better-utilization",
         "source": "Tom's Hardware",
         "isoDate": "2026-10-30T16:28:11.000Z",
@@ -3001,13 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-10-26T10:30:00.000Z",
         "contentSnippet": "The “Steal My Bitcoin” challenge offers a bounty to anyone who can breach a deliberately vulnerable PHP website using the recently disclosed PHP2Shell flaws. The challenge follows previous recoveries of locked Bitcoin fortunes through software vulnerabilities and AI-assisted inve"
-      },
-      {
-        "title": "Reddit’s r/opensource bans AI-made and AI-focused projects, also bans non-English speakers",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/reddits-r-opensource-bans-ai-made-and-ai-focused-projects-also-bans-non-english-speakers-sweeping-new-rules-spark-backlash-over-linux-kernel-contributions-and-solo-developers",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-26T10:00:00.000Z",
-        "contentSnippet": "Reddit’s r/opensource has barred AI-built, AI-focused, and AI-using projects under new rules announced October 24. The crackdown also imposes strict requirements on project age and contributors, while restrictions on non-English speakers have sparked further backlash. The debate "
       }
     ]
   }
