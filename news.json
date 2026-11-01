@@ -1,13 +1,148 @@
 {
-  "updatedAt": "2026-10-31T22:08:35.876Z",
+  "updatedAt": "2026-11-01T01:42:39.400Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
+        "title": "CVE-2026-120252 - imagecodecs 2023.1.23 through 2026.10.10 Stack Buffer Overflow via jpegsof3_decode()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120252",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T00:57:15.000Z",
+        "contentSnippet": "imagecodecs 2023.1.23 through 2026.10.10 contains a stack-based buffer overflow vulnerability in the lossless JPEG Define Huffman Table parser in decode_jpegsof3(). Attackers can supply a crafted lossless JPEG whose DHT symbol counts wrap an 8-bit sum, overflowing the 32-entry Hu",
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-120251 - imagecodecs 2026.3.6 through 2026.10.10 Infinite Loop via ccittfax4_decode()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120251",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T00:57:14.000Z",
+        "contentSnippet": "imagecodecs 2026.3.6 through 2026.10.10 contains an infinite loop vulnerability in ccitt_fax4_decode_size() that allows attackers to hang the calling process by supplying a crafted CCITT Group 4 stream. Attackers can provide an 8-byte G4 stream lacking EOFB to ccittfax4_decode() ",
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-120250 - OpenAlgo 1.0.0.29 before 2.0.3.1 Improper Certificate Validation in SMTP Connections",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120250",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T00:57:14.000Z",
+        "contentSnippet": "OpenAlgo 1.0.0.29 before 2.0.3.1 contains an improper certificate validation vulnerability in utils/email_utils.py and utils/email_debug.py that disables TLS hostname and certificate checks for STARTTLS and SMTPS. Network-positioned attackers can present a forged certificate to i",
+        "cveScore": 6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-120249 - Thelia Back-office Default Twig Template before 1.1.1 CSRF via Product Combination Routes",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120249",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T00:57:13.000Z",
+        "contentSnippet": "Thelia Back-office Default Twig Template before 1.1.1 contains a cross-site request forgery vulnerability in the /admin/product/combinations/update and /admin/product/default-price/update routes, which accept GET requests without anti-CSRF token checks. Attackers can lure a logge",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-120248 - Thelia before 3.1.1 Stored XSS via SVG Store Logo and Banner Uploads",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120248",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T00:57:12.000Z",
+        "contentSnippet": "Thelia before 3.1.1 contains a stored cross-site scripting vulnerability that allows authenticated back-office administrators with store update permission to inject scripts by uploading unsanitized SVG logo_file or banner_file images. Attackers can upload an SVG with an onload pa",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-120247 - FFmpeg 2.3 through 9.0.2 Huffyuv Decoder Uninitialized Heap Memory Disclosure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120247",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T00:57:12.000Z",
+        "contentSnippet": "FFmpeg 2.3 through 9.0.2 contains a use of uninitialized resource vulnerability in the Huffyuv decoder that allows attackers to leak heap memory into decoded pixels via short packed-BGR bitstreams. Attackers can craft a Huffyuv BGR24/BGRA video whose entropy data ends early, caus",
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-120246 - FFmpeg 4.4 through 9.0.2 Uninitialized Memory Disclosure via CDXL HAM Decoder",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120246",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T00:57:11.000Z",
+        "contentSnippet": "FFmpeg 4.4 through 9.0.2 contains a use of uninitialized variable vulnerability in the CDXL decoder that leaks stack memory into decoded pixels via unfilled HAM palette entries. Attackers can craft a type-0 CDXL file whose HAM pixels select unfilled new_palette entries in cdxl_de",
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-120245 - FFmpeg 0.10 through 9.0.2 Uninitialized Memory Disclosure via Sun Raster Decoder",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120245",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T00:57:10.000Z",
+        "contentSnippet": "FFmpeg 0.10 through 9.0.2 contains a use of uninitialized resource vulnerability in sunrast_decode_frame() that leaks heap memory when decoding truncated 1-bit and 4-bit paletted Sun Raster images. Attackers can craft a truncated Sun Raster file so the uncleared temporary bitmap ",
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-120244 - FFmpeg 2.1 through 9.0.2 Uninitialized Memory Leak via PCX Decoder",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120244",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T00:57:10.000Z",
+        "contentSnippet": "FFmpeg 2.1 through 9.0.2 contains a use of uninitialized resource vulnerability in the PCX decoder that allows attackers to leak heap memory through truncated RLE scanlines. Attackers can craft a PCX image whose RLE data ends early, causing pcx_decode_frame() to copy uninitialize",
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-120243 - FFmpeg 2.0 through 9.0.2 Information Disclosure via G2M Kempf Palette",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120243",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T00:57:09.000Z",
+        "contentSnippet": "FFmpeg 2.0 through 9.0.2 contains a use of uninitialized variable vulnerability in the Go2Meeting decoder that allows attackers to leak stack memory through out-of-range palette indices. Attackers can craft a G2M3/G2M4 stream with a short Kempf palette so kempf_restore_buf() copi",
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-120190 - PostyBirb Plus Submission Description Editor DescriptionInput.tsx cross site scripting",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120190",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T00:30:25.000Z",
+        "contentSnippet": "A security flaw has been discovered in PostyBirb Plus up to 3.1.75. Affected by this vulnerability is an unknown functionality of the file ui/src/views/submissions/submission-forms/form-components/DescriptionInput.tsx of the component Submission Description Editor. The manipulati",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-115946 - XS::libbrotli versions before 1.2.1.0 for Perl bundle a brotli library with an out-of-bounds write in the decoder",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-115946",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T00:16:34.000Z",
+        "contentSnippet": "XS::libbrotli versions before 1.2.1.0 for Perl bundle a brotli library with an out-of-bounds write in the decoder. Affected versions compile a bundled brotli into static archives that dependent XS modules link against at build time, rather than using the system library. The bundl",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-120189 - D-Link DIR-505 TFTP Upload Filename tftpd mp_upload_file stack-based overflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120189",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T00:00:23.000Z",
+        "contentSnippet": "A vulnerability was identified in D-Link DIR-505 1.10B02. Affected is the function save_upload_file/mp_upload_file of the file /usr/bin/tftpd of the component TFTP Upload Filename Handler. The manipulation leads to stack-based buffer overflow. The attack is possible to be carried",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-120185 - ken678 YznCMS Auth Group Group.php Backend privileges management",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120185",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-31T23:17:11.000Z",
+        "contentSnippet": "A security flaw has been discovered in ken678 YznCMS up to 2.2.0. The affected element is the function Backend of the file app/admin/controller/auth/Group.php of the component Auth Group Handler. Performing a manipulation results in improper privilege management. The attack can b",
+        "cveScore": 5.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-120135 - Apache Thrift: Java TProtocolUtil.skip() does not limit the recursion depth by default",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120135",
+        "source": "cvefeed.io",
+        "isoDate": "2026-10-31T21:16:53.000Z",
+        "contentSnippet": "Uncontrolled Recursion vulnerability in Apache Thrift Java bindings. This issue affects Apache Thrift: before 0.24.0. Users are recommended to upgrade to version 0.24.0, which fixes the issue.",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
         "title": "CVE-2026-118636 - Apache MINA: Unsafe Deserialization (CWE-502) in JavaNativeMessageDecoder",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-118636",
         "source": "cvefeed.io",
-        "isoDate": "2026-10-31T20:17:11.000Z",
+        "isoDate": "2026-10-31T21:16:53.000Z",
         "contentSnippet": "**UNSUPPORTED WHEN ASSIGNED** JavaNativeMessageDecoder in the MINA 3.0 codec module calls ObjectInputStream.readObject() on frame bytes with no class filter, so an application that puts it in front of an untrusted peer is open to gadget-chain RCE. As the 3.0.0 branch is inactive,",
         "cveScore": 9.8,
         "cveSeverity": "CRITICAL"
@@ -767,141 +902,6 @@
         "contentSnippet": "IXP Manager is a full-stack web application for managing Internet Exchange Points. Prior to version 7.3.0, an authenticated user can view and edit a resource belonging to another user without authorization. The API-key edit/update path in `ApiKeyController` selects records by ide",
         "cveScore": 8.3,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-61725 - sevenz-rust2: unchecked 7z entry paths permit traversal and absolute-path file overwrites",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61725",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T23:17:11.000Z",
-        "contentSnippet": "sevenz-rust2 is a Rust-native 7z compressor and `decompress`or. Prior to 0.21.1, extracting an attacker-supplied 7z archive can write or overwrite files outside the destination directory. In `src/util/decompress.rs`, `decompress_impl` computes each destination with `dest.join(ent",
-        "cveScore": 6.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-111477 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111477",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T23:17:09.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-63224 - OpenRemote has authenticated SQL injection in crosstab datapoint exports",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63224",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T22:16:58.000Z",
-        "contentSnippet": "OpenRemote is an open-source internet-of-things platform. Prior to 1.26.0, the `datapoint export` API constructs `CSV crosstab` SQL by concatenating an `asset name` and `attribute name` into a `COPY` query that uses `crosstab` and streams `TO STDOUT`. The `asset name` enters both",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-63201 - netopeer2-server logging has format string vulnerability via subtree filter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63201",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T22:16:58.000Z",
-        "contentSnippet": "Netopeer2 is a server for implementing network configuration management based on the `NETCONF` Protocol. In affected versions, a low-privileged authenticated `NETCONF` user can remotely crash `netopeer2-server` by sending a `get RPC` with an invalid `subtree filter` whose text co",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-63184 - Refitter: Unrestricted OpenAPI references permit build-host SSRF and file inclusion",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63184",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T22:16:58.000Z",
-        "contentSnippet": "Refitter is a tool for generating a C# REST API client using the Refit library. Prior to 2.1.1, the `refitter` dotnet tool invokes `NJsonSchema` with unsafe defaults for `$ref` resolution when generating Refit interfaces and contracts from attacker-controlled or attacker-influenc",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-63182 - LightSAML: Signature reference wrapping permits unsigned assertion claims",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63182",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T22:16:58.000Z",
-        "contentSnippet": "LightSAML implements SAML 2.0 data model classes, XML serialization and deserialization, XML security, certificate support, and message bindings. Prior to 4.7.1 and 5.0.1, LightSAML and xmlseclibs disagree about which assertion an inbound SAML signature covers. `Response::deseria",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-95673",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95673",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T19:37:06.000Z",
-        "contentSnippet": "None",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-61850 - Kargo: Privilege escalation via Project RBAC management in the Kargo API",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61850",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T19:33:01.000Z",
-        "contentSnippet": "Kargo manages and automates the promotion of software artifacts. From 0.6.0 until 1.8.14, 1.9.9, and 1.10.8, two authorization flaws in the `project-scoped RBAC API` let an authenticated user with delegated permission to manage a Project's `Roles` or `ServiceAccounts` confer perm",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-55598 - PinePods: Authenticated SSRF via podcast RSS enclosure URL (server-side fetch of attacker-controlled URL, no host validation)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55598",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T19:31:04.000Z",
-        "contentSnippet": "PinePods is a complete, self-hosted podcast management system written in Rust. Prior to 0.9.0, an authenticated user can subscribe to an attacker-controlled RSS feed through `POST /api/data/add_podcast` in `rust-api/src/handlers/podcasts.rs`. `get_podcast_values` and `add_episode",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-62302 - MyTube: Unauthenticated Media Access via Static Routes Bypassing Login",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62302",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T19:29:46.000Z",
-        "contentSnippet": "MyTube is a self-hosted downloader and player for several video websites. Prior to version 1.10.3, `server.ts` calls `registerStaticRoutes` and `registerCloudRoutes` before `registerApiRoutes`, where `authMiddleware` and `roleBasedAuthMiddleware` are mounted. Because Express proc",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-62301 - MyTube: Visitor Can Access Hidden Video Metadata and Content",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62301",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T19:26:59.000Z",
-        "contentSnippet": "MyTube is a self-hosted downloader and player for several video websites. Prior to version 1.10.3, backend video access does not enforce the visitor role's intended public-only restriction when `loginEnabled=true` and a visitor password is configured. The frontend filter in `Vide",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-55493 - HotCRP: comment-author search exposes anonymous commenter identities",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55493",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T19:25:29.000Z",
-        "contentSnippet": "HotCRP is conference review software. Starting with 2.101, the `cmt:` search term checks whether a comment is visible to the searching user but fails to check whether the commenter's identity should be visible. A `cmt:USER` search can therefore match a paper with a visible commen",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-62284 - OSAC operator: Kubeconfig credential-plugin execution and SSRF in console proxy",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62284",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T19:23:39.000Z",
-        "contentSnippet": "OSAC operator is a Kubernetes operator. In the affected revision identified as 8220502, the `console-proxy` `RemoteConfigResolver` parses Kubernetes Secret kubeconfig data with `clientcmd.RESTConfigFromKubeConfig` without sanitizing the resulting `rest.Config`. An attacker who ca",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-94175 - WordPress All In One Login plugin <= 2.4.1 - Cross Site Scripting (XSS) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94175",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T19:20:19.000Z",
-        "contentSnippet": "Unauthenticated Cross Site Scripting (XSS) in All In One Login",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-90888 - WordPress LeadSnap plugin <= 1.25 - PHP Object Injection vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-90888",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T19:20:18.000Z",
-        "contentSnippet": "Unauthenticated PHP Object Injection in LeadSnap",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
       }
     ],
     "ai": [
