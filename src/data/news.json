@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-11-01T08:28:23.717Z",
+  "updatedAt": "2026-11-01T15:37:37.359Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-120308 - Beta9 host filesystem exposure via volume path traversal",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120308",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T13:18:01.000Z",
+        "contentSnippet": "A Beta9 tenant can attach a volume when deploying a function, endpoint, or task queue. The gateway builds the host path by joining the shared volumes root, the workspace name, and the volume identifier from the stub configuration. Nothing checks that the identifier names a volume",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-120307 - Beta9 container escape via unvalidated sandbox file paths",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120307",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T13:18:01.000Z",
+        "contentSnippet": "The Beta9 worker serves the sandbox file API from outside the container. getHostPathFromContainerPath turns the tenant's container path into a worker path. If the unresolved path starts with a mount destination, including the default upload mount at /tmp/.beta9, the remainder is ",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-120306 - Beta9 build sandbox escape via chroot-only isolation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120306",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T13:18:01.000Z",
+        "contentSnippet": "Beta9 turns each shell command in a tenant image definition into a Dockerfile RUN line and executes it with Buildah on the build worker. The worker image sets BUILDAH_ISOLATION=chroot, and no buildah invocation passes --isolation, so the step only changes its filesystem root. It ",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-120227 - WAVLINK WN701AE ioos Web Backend static_route_setting.sh del_staticrule os command injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120227",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T13:18:00.000Z",
+        "contentSnippet": "A vulnerability was detected in WAVLINK WN701AE M01AE_V260105. This affects the function del_staticrule of the file static_route_setting.sh of the component ioos Web Backend. Performing a manipulation of the argument rule_name results in os command injection. Remote exploitation ",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-120226 - Hangzhou Xiongmai Technology P2PAPI.dll P2P SDK P2PAPI_Connect buffer overflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120226",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T12:17:09.000Z",
+        "contentSnippet": "A security vulnerability has been detected in Hangzhou Xiongmai Technology P2PAPI.dll 1.3.3.32 on Windows. Affected by this issue is the function P2PAPI_Connect of the component P2P SDK. Such manipulation of the argument input as part of String leads to buffer overflow. An attack",
+        "cveScore": 3.3,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-13575 - HTTP::Session versions before 0.54 for Perl allow memcached command injection via unfiltered session ids in HTTP::Session::Store::CHI",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-13575",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T11:18:58.000Z",
+        "contentSnippet": "HTTP::Session versions before 0.54 for Perl allow memcached command injection via unfiltered session ids in HTTP::Session::Store::CHI. The session id from the client's cookie reaches the CHI cache unchanged. The sibling HTTP::Session::Store::Memcached rejects ids that contain con",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-120225 - Oray Pugongying X5 Pro openwrt_release config_restore_ex path traversal",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120225",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T11:18:57.000Z",
+        "contentSnippet": "A weakness has been identified in Oray Pugongying X5 Pro up to 7.6.1. Affected by this vulnerability is the function config_restore_ex of the file /etc/openwrt_release. This manipulation of the argument filename causes relative path traversal. The attack may be initiated remotely",
+        "cveScore": 9.1,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-120224 - Oray Pugongying X5 Pro API Authorization run_async_task improper authorization",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120224",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T11:18:57.000Z",
+        "contentSnippet": "A security flaw has been discovered in Oray Pugongying X5 Pro up to 7.6.1. Affected is the function run_apis_by_json/run_async_task of the component API Authorization. The manipulation results in improper authorization. The attack can be launched remotely. The exploit has been re",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-120263 - Gitea OAuth2 account auto-linking takeover through the sign-up form",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120263",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T10:18:37.000Z",
+        "contentSnippet": "When `[oauth2_client].ACCOUNT_LINKING` is set to `auto` (not the default) and registration is enabled, the link-account sign-up form looked up the existing account to link by the user name or email submitted in the form instead of the identity asserted by the OAuth2 provider. An ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-120223 - Oray Pugongying X5 Pro Session ID session.lua session_get random values",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120223",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T10:18:37.000Z",
+        "contentSnippet": "A vulnerability was identified in Oray Pugongying X5 Pro up to 7.6.1. This impacts the function session_get of the file session.lua of the component Session ID Handler. The manipulation of the argument _user leads to insufficiently random values. The attack can be initiated remot",
+        "cveScore": 3.1,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-119627 - Gitea limited-visibility profile disclosure with public-only tokens",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-119627",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T10:18:37.000Z",
+        "contentSnippet": "The web profile and RSS/Atom feed routes of users and organizations checked only whether a signed-in viewer could see a limited-visibility owner, without considering the `public-only` restriction of the personal access token used to authenticate. Any user holding a public-only to",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-119625 - Gitea user and organization feed token scope bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-119625",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T10:18:36.000Z",
+        "contentSnippet": "The `/{username}` web route accepted personal access tokens over HTTP Basic authentication without checking their scope. A token confined to an unrelated scope, such as `read:issue`, could read its owner's private activity through the user RSS/Atom feed and the profile activity t",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-119533 - Gitea private pull request disclosure on project boards",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-119533",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T10:18:36.000Z",
+        "contentSnippet": "Repository and organization project boards listed the pull requests that reference each issue on the board without checking whether the viewer can read them. When a private pull request mentions an issue on a board the viewer can open, the board revealed the private repository's ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-119441 - Gitea public-only token bypass on bulk organization repository deletion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-119441",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T10:18:36.000Z",
+        "contentSnippet": "`DELETE /api/v1/orgs/{org}/repos` deletes all repositories of an organization, but it did not enforce the public-only restriction of access tokens: the route only checked that the organization itself was public. A public-only token of an owner of a public organization could there",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-118504 - Gitea issue changes on archived repositories through the API",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-118504",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T10:18:36.000Z",
+        "contentSnippet": "The web interface blocks issue and pull request changes on archived repositories, but several issue routes of the REST API did not check whether the repository is archived. A user allowed to change issues of an archived repository could use the API to edit, close or delete issues",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-118395 - Gitea public-only token bypass in repository and organization creation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-118395",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T10:18:36.000Z",
+        "contentSnippet": "Gitea 1.27.3 stopped personal access tokens restricted to public resources (`public-only`) from creating repositories through `POST /api/v1/user/repos` and `POST /api/v1/repos/migrate`, but `POST /api/v1/org/{org}/repos`, `POST /api/v1/orgs/{org}/repos`, `POST /api/v1/orgs` and `",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-118394 - Gitea OAuth2 userinfo private group disclosure to public-only tokens",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-118394",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T10:18:36.000Z",
+        "contentSnippet": "The OAuth2 userinfo endpoint (`/login/oauth/userinfo`) decided whether to limit the `groups` claim to public organizations by re-parsing the `Authorization` header as an OAuth2 access token instead of using the scope of the credential that authenticated the request. When a public",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-118386 - Gitea Actions fork workflow trust through pull request review commit",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-118386",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T10:18:36.000Z",
+        "contentSnippet": "Workflows triggered by a pull request review were read from the commit named in the review's `commit_id`, while the fork restrictions were decided by the reviewed pull request, and the commit was not checked to belong to that pull request. A user with read access to a repository ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-117685 - Gitea public-only package token access to private OCI blobs",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-117685",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T10:18:35.000Z",
+        "contentSnippet": "The OCI registry's cross-repository blob mount checked the target package against the token's `public-only` restriction, but checked the source blob only against the full account permissions of the token owner. A `public-only` token with `write:package` scope, whose owner can rea",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-117677 - Gitea Helm chart upload decompression denial of service",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-117677",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T10:18:35.000Z",
+        "contentSnippet": "When parsing an uploaded Helm chart, Gitea decompressed the archive and read every tar entry while looking for `Chart.yaml` without limiting the decompressed size, and did so before the package size quota was checked; the quota only considers the compressed upload size. A user wi",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-117649 - Gitea private issue disclosure through issue dependency timeline events",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-117649",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T10:18:35.000Z",
+        "contentSnippet": "The issue timeline API and the web issue page hid cross-reference events that point at issues the reader cannot access, but not \"dependency added\" and \"dependency removed\" events. When a readable issue had been linked as a dependency to an issue in a repository the reader cannot ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-117646 - Gitea private repository listing to public-only tokens on profiles",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-117646",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T10:18:35.000Z",
+        "contentSnippet": "The repositories, stars and watching tabs of user profiles and the repository list of organization home pages included private repositories for every signed-in request without checking whether the request used a personal access token restricted to public resources (`public-only`)",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-117635 - Gitea admin API public-only token scope bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-117635",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T10:18:35.000Z",
+        "contentSnippet": "The `/api/v1/admin` route group did not enforce the `public-only` restriction of personal access tokens. A public-only token with admin scope issued by a site administrator could therefore list private organizations and the email addresses of all users, create organizations, obta",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-116474 - Gitea Actions job token spoofing of instance-signed commits",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116474",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T10:18:35.000Z",
+        "contentSnippet": "The `GITEA_TOKEN` of a Gitea Actions job authenticates as the `gitea-actions` system user, and the `/api/v1/user` email and GPG key endpoints accepted that user, so a job could register an email address and a GPG key on it; without required email confirmation (the default) the ad",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-116296 - Gitea archived repository release, milestone and label modification",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116296",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T10:18:35.000Z",
+        "contentSnippet": "The API routes for releases, release assets, milestones and repository labels did not reject changes to archived repositories. A user with write access to an archived repository, or a holder of such a user's write-scoped token, could replace or delete release assets while keeping",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2026-120218 - Typemill SvgSanitizer.php saveImage cross site scripting",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-120218",
@@ -676,231 +901,6 @@
         "isoDate": "2026-10-31T06:16:35.000Z",
         "contentSnippet": "The Spectra Gutenberg Blocks – Website Builder for the Block Editor plugin for WordPress is vulnerable to limited file deletion due to insufficient file path validation in the '__construct' function in all versions up to, and including, 2.20.4 This makes it possible for unauthent",
         "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-82214 - Quick Event Manager 8.4.6 - 9.18 - Unauthenticated Private and Draft Content Disclosure via ICS Download",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82214",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T06:16:34.000Z",
-        "contentSnippet": "The Quick Event Manager WordPress plugin before 9.19 does not verify the status or type of the requested post before returning its details through a calendar export, allowing unauthenticated users to read the content of draft and private posts.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-119977 - WordPress Core 4.7.0 - 7.1.3 - Unauthenticated Upgrade-Window Staged-Installer Remote Code Execution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-119977",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T06:16:34.000Z",
-        "contentSnippet": "WordPress Core is vulnerable to Remote Code Execution in versions 4.7 through 7.1.3. This is due to predictable, web-accessible staging paths used during full-package core upgrades. This makes it possible for unauthenticated attackers to execute code on the server during the upgr",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-118638 - Mapster WP Maps < 2.0.6 - Unauthenticated Arbitrary Post Modification via save-mapmaker REST Route",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-118638",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T06:16:34.000Z",
-        "contentSnippet": "The Mapster WP Maps WordPress plugin before 2.0.6 does not perform any authorization check on a REST API route that writes post data, allowing unauthenticated attackers to overwrite the title of arbitrary posts, create arbitrary published posts, and overwrite the Mapster WP Maps ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-118629 - All-in-One Video Gallery < 5.0.0 - Unauthenticated Private and Draft Video Disclosure",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-118629",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T06:16:34.000Z",
-        "contentSnippet": "The All-in-One Video Gallery WordPress plugin before 5.0.0 does not check a video's publication status before rendering it on its player page, allowing unauthenticated users to view the title and source URLs of private, draft, pending, scheduled and trashed videos by their ID.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-118438 - Firelight Lightbox < 2.3.24 - Contributor+ Stored XSS via Image 'src' Attribute",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-118438",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T06:16:33.000Z",
-        "contentSnippet": "The Firelight Lightbox WordPress plugin before 2.3.24 does not properly escape image attribute values before processing them in the browser, which could allow users with contributor-level access and above to inject arbitrary web scripts that execute when another user views or pre",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-118437 - BuddyForms 2.8.8 - 2.10.0 - Unauthenticated Guest Attachment Deletion",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-118437",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T06:16:33.000Z",
-        "contentSnippet": "The BuddyForms WordPress plugin before 2.10.1 does not properly verify ownership before deleting guest-uploaded attachments, allowing unauthenticated attackers to permanently delete media files uploaded by other unauthenticated visitors.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-118185 - Security Optimizer < 1.6.9 - 2FA Bypass via Missing Rate Limiting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-118185",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T06:16:33.000Z",
-        "contentSnippet": "The Security Optimizer WordPress plugin before 1.6.9 does not limit the number of two-factor authentication codes that can be submitted for a pending login, allowing an attacker who already knows a user's password to brute force the second factor and take over the account.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-118184 - Premium Packages < 7.2.2 - Unauthenticated Order Total Manipulation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-118184",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T06:16:33.000Z",
-        "contentSnippet": "The Premium Packages WordPress plugin before 7.2.2 does not prevent unauthenticated visitors from overwriting the stored price of items in their shopping cart, allowing them to create orders for any product at an arbitrary total of their choosing.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-118043 - Bulk Media Register < 2.01 - Author+ Arbitrary File Move via Path Traversal",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-118043",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T06:16:33.000Z",
-        "contentSnippet": "The Bulk Media Register WordPress plugin before 2.01 does not properly validate a user-supplied path before moving a file on the server, allowing users with the Author role to move or rename arbitrary files, including outside the WordPress root, which can defeat directory-level a",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-116563 - Photo Gallery, Sliders, Proofing and Themes <= 4.5.4 - Unauthenticated Stored DOM-Based Cross-Site Scripting via Comment `title` Attribute via Shutter Lightbox innerHTML",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116563",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T06:16:32.000Z",
-        "contentSnippet": "The Photo Gallery, Sliders, Proofing and Themes – NextGEN Gallery plugin for WordPress is vulnerable to Stored DOM-Based Cross-Site Scripting via the 'comment' parameter in all versions up to, and including, 4.5.4 due to insufficient input sanitization and output escaping. This m",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-116520 - PPWP <= 1.9.26 - Unauthenticated Stored Cross-Site Scripting via '[ppwp]' Shortcode 'desc_below_form' Attribute via Placeholder Marker Collision",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116520",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T06:16:32.000Z",
-        "contentSnippet": "The PPWP – Password Protect Pages plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'comment / shortcode attribute desc_below_form (and placeholder as the marker-smuggling helper)' parameter in all versions up to, and including, 1.9.26 due to insufficient ",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-110808 - Essential Addons for Elementor 6.6.0 - 6.8.7 - Author+ Privilege Escalation via register_user_role",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110808",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T06:16:32.000Z",
-        "contentSnippet": "The Essential Addons for Elementor WordPress plugin before 6.8.8 does not correctly restrict who may set the role assigned to accounts created through its registration form, allowing authenticated users with Author-level access and above to cause newly registered accounts, includ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-110042 - Payment Forms for Paystack < 4.0.6 - Contributor+ Sensitive Information Disclosure via Settings Page",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110042",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T06:16:32.000Z",
-        "contentSnippet": "The Payment Forms for Paystack WordPress plugin before 4.0.6 does not properly restrict access to a page that displays its stored configuration, allowing users with the Contributor role and above to view secret payment-gateway API credentials, both the live and test secret keys, ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-109997 - Ninja Forms <= 3.15.5 - Unauthenticated Stored Cross-Site Scripting via 'extra' Parameter via Metadata Key Normalization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-109997",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T06:16:31.000Z",
-        "contentSnippet": "The Ninja Forms – Contact Form Builder with Calculators, Quizzes, Signatures & AI Form Builder plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'formData.extra' parameter in all versions up to, and including, 3.15.5 due to insufficient input sanitization ",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-109234 - Meow Lightbox <= 5.6.4 - Unauthenticated Stored Cross-Site Scripting via HTML Parser Quote-Metadata Desynchronization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-109234",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T06:16:31.000Z",
-        "contentSnippet": "The Meow Lightbox plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'post_content (bbPress reply body)' parameter in all versions up to, and including, 5.6.4 due to insufficient input sanitization and output escaping. This makes it possible for unauthentic",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-101326 - Ninja Forms <= 3.15.5 - Authenticated (Subscriber+) Arbitrary Shortcode Execution via '{wp:user_display_name}' Merge Tag via display_name",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-101326",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T06:16:31.000Z",
-        "contentSnippet": "The The Ninja Forms – Contact Form Builder with Calculators, Quizzes, Signatures & AI Form Builder plugin for WordPress is vulnerable to arbitrary shortcode execution in all versions up to, and including, 3.15.5 This is due to the software allowing users to execute an action that",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-100155 - Ninja Forms <= 3.15.5 - Unauthenticated Arbitrary Shortcode Execution via 'formData' Field Value via Success Message Merge Tag",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100155",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T06:16:29.000Z",
-        "contentSnippet": "The The Ninja Forms – Contact Form Builder with Calculators, Quizzes, Signatures & AI Form Builder plugin for WordPress is vulnerable to arbitrary shortcode execution in all versions up to, and including, 3.15.5 This is due to the software allowing users to execute an action that",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-116755 - SoftIron HyperCloud: OS Command Injection in Orchestrator via Virtual Machine Template Fields",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-116755",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T02:17:33.000Z",
-        "contentSnippet": "Improper Neutralization of Special Elements used in a Command ('Command Injection') in the Orchestrator component of SoftIron HyperCloud allows an authenticated user with access to the management plane to execute arbitrary operating system commands on hypervisor hosts as the priv",
-        "cveScore": 7.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-110176 - File Force Download for Drupal 7 Access Bypass via Unconditional Download Headers",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110176",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T01:17:05.000Z",
-        "contentSnippet": "The File Force Download module for Drupal 7 implements hook_file_download() to add a Content-Disposition header when a file URL carries the download query parameter. In Drupal 7, returning a non-empty header array from that hook is itself a grant of access to the file. In version",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-77152 - Field Collection for Drupal 7 access bypass via missing parent entity access check",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77152",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T00:16:51.000Z",
-        "contentSnippet": "Improper Authorization vulnerability in Drupal Field Collection for Drupal 7 allows a user with the \"edit field collections\" permission to bypass access control on the parent (host) entity. The access check for field collection items (field_collection_item_access()) granted edit ",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-117656 - Unverified Sign in with Apple callback parameter can override verified ID token claims",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-117656",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T00:16:51.000Z",
-        "contentSnippet": "Acceptance of Extraneous Untrusted Data With Trusted Data vulnerability in the Sign in with Apple strategy in pow-auth Assent allows an unauthenticated remote attacker to impersonate another user via the user parameter of the authorization callback. Apple posts the user's name to",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-63414 - Shopify App: Token exchange shop context confusion may allow cross-shop authorization bypass in affected apps",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63414",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T23:17:15.000Z",
-        "contentSnippet": "Shopify App is a Rails engine for building Shopify applications. From 22.1.0 until 23.0.3, `token-exchange` authenticated controllers can expose a request-derived `shop` context instead of the identity from a verified Shopify ID token or active Shopify session. `current_shopify_d",
-        "cveScore": 7.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-63410 - secp256k1-native: Compiler-reconstructed secret-dependent branch in native scalar multiplication",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63410",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T23:17:15.000Z",
-        "contentSnippet": "secp256k1-native is a native C secp256k1 implementation for Ruby. In affected native builds, native constant-time scalar multiplication through `Point#mul` or `scalar_multiply_ct` can leak timing information about a secret scalar when compiled by a toolchain that reconstructs bra",
-        "cveScore": 5.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-63402 - i18next: Shared built-in corruption through inherited-key deepExtend recursion",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63402",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T23:17:15.000Z",
-        "contentSnippet": "i18next is an internationalization framework for JavaScript. Prior to version 26.3.4, `deepExtend` in `src/utils.js` checks property existence with the in operator and recurses into inherited built-ins reached through `Object.prototype`. An application must explicitly pass attack",
-        "cveScore": 5.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-63401 - Coop has cross-org IDOR in addAccessibleQueuesForUser / removeAccessibleQueuesForUser",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63401",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-30T23:17:15.000Z",
-        "contentSnippet": "Coop is an open source review and moderation tool from ROOST. Prior to 1.0.2, `addAccessibleQueuesForUser` and `removeAccessibleQueuesForUser` accepted arbitrary `queueId` and `userId` values without organization scoping. An authenticated user belonging to one organization and ho",
-        "cveScore": 5.3,
         "cveSeverity": "MEDIUM"
       }
     ],
@@ -2310,6 +2310,76 @@
     ],
     "hardware": [
       {
+        "title": "Brazilian lawyers busted for attempting to manipulate court's AI with prompt injection hidden in filing",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/brazilian-lawyers-busted-for-attempting-to-manipulate-courts-ai-with-prompt-injection-hidden-in-filing-courts-ai-flags-hidden-text-that-demanded-superficial-legal-scrutiny-lawyers-fined-usd16-000",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-01T15:05:00.000Z",
+        "contentSnippet": "The lawyers of a plaintiff in a labor case attempted to use prompt injection to influence the court's AI but were caught. They won the case anyway, as the defendant did not respond, making the move totally unnecessary."
+      },
+      {
+        "title": "Biwin M560 2TB SSD Review: The DRAM-less drive to beat",
+        "link": "https://www.tomshardware.com/pc-components/ssds/biwin-m560-2tb-ssd-review",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-01T15:00:00.000Z",
+        "contentSnippet": "The Biwin M560 brings SMI’s SM2504XT to retail with top-tier responsiveness and excellent efficiency, though not the fastest post-cache writes."
+      },
+      {
+        "title": "Anycubic and Thingiverse announce exclusive 3D printing partnership",
+        "link": "https://www.tomshardware.com/3d-printing/anycubic-and-thingiverse-announce-exclusive-3d-printing-partnership-makeronline-platform-to-offer-1-click-multicolor-3mf-models",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-01T15:00:00.000Z",
+        "contentSnippet": "Thingiverse partners with Anycubic to bring models directly to 3D printers."
+      },
+      {
+        "title": "Bambu Lab's Black Friday sale cuts up to $300 on the flagship H2C printer and more",
+        "link": "https://www.tomshardware.com/3d-printing/bambu-labs-black-friday-sale-cuts-up-to-usd300-on-the-flagship-h2c-printer-and-more-deep-cuts-across-companys-3d-printer-and-filament-lineup",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-01T14:30:00.000Z",
+        "contentSnippet": "Strike an early bargain in Bambu Lab's Black Friday sale. Running until December 1st, save up to $300 on their flagship 3D printer."
+      },
+      {
+        "title": "Sam Altman meets with Samsung leadership to secure more RAM for data centers amid crushing shortages",
+        "link": "https://www.tomshardware.com/tech-industry/data-centers/sam-altman-travels-to-south-korea-to-meet-samsung-leadership-to-secure-more-ram-for-data-centers-amid-crushing-shortages-openai-ceo-meets-samsung-leadership-to-discuss-future-ai-data-centers",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-01T14:21:23.000Z",
+        "contentSnippet": "OpenAI CEO Sam Altman met with around 50 Samsung executives in South Korea on October 31 to discuss AI's future, business opportunities and the technology's impact on corporate operations. The meeting comes as demand for memory chips grows alongside AI infrastructure spending, pu"
+      },
+      {
+        "title": "Open-source USB tool unlocks Nvidia's half-speed GPU AI limiter on Windows",
+        "link": "https://www.tomshardware.com/pc-components/gpus/open-source-usb-tool-unlocks-nvidias-half-speed-gpu-ai-limiter-on-windows-lifts-gpus-fp16-math-performance-up-to-65-percent-uefi-unlocker-covers-rtx-20-30-and-40-series-desktops-and-laptops",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-01T14:00:00.000Z",
+        "contentSnippet": "An open-source UEFI tool, nv-uefi-unlocker, lifts Nvidia’s tensor rate cap on RTX 20, 30, and 40-series GPUs under Windows."
+      },
+      {
+        "title": "Police Chief physically unplugs Flock cameras after the company ignores contract cancellation",
+        "link": "https://www.tomshardware.com/tech-industry/big-tech/police-chief-physically-unplugs-flock-cameras-after-the-company-ignores-contract-cancellation-city-takes-matters-into-its-own-hands-amid-privacy-controversies",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-01T13:55:26.000Z",
+        "contentSnippet": "The Plymouth City Council was left with no choice but to physically disconnect the cameras after Flock failed to respond to its demands."
+      },
+      {
+        "title": "Elon Musk says Neuralink's 'BlindSight' is ready to cure blindness",
+        "link": "https://www.tomshardware.com/peripherals/wearable-tech/elon-musk-says-neuralink-is-ready-to-cure-blindness-says-blindsight-will-enable-even-those-who-are-completely-blind-or-have-never-seen-to-see",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-01T13:30:00.000Z",
+        "contentSnippet": "Neuralink's second product, Blindsight, aims to bring sight back for blind patients, with the company \"just waiting on regulatory approval.\""
+      },
+      {
+        "title": "Lenovo's 'encrypted' fingerprint USB drive is just an unencrypted SD card in a fancy case",
+        "link": "https://www.tomshardware.com/tech-industry/cyber-security/lenovo-fingerprint-usb-stick-sold-as-aes-256-encrypted-had-a-plain-sd-card-inside-ai-assisted-follow-up-finds-a-backdoor-and-hardcoded-keys-in-other-secure-usb-products",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-01T13:00:00.000Z",
+        "contentSnippet": "Lenovo’s ThinkPlus FU100 fingerprint USB drive held an unencrypted SD card, and Codex found fixed keys in other ‘secure’ USB products."
+      },
+      {
+        "title": "AI agent swarms unleashed in Minecraft to ‘build a thriving civilization’",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-agent-swarms-unleashed-in-minecraft-to-build-a-thriving-civilization-50-agent-teams-fail-after-falling-into-paralyzing-bureaucracy",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-01T12:33:52.000Z",
+        "contentSnippet": "Researchers recently tested AI agent swarm performance in various Minecraft gaming modes."
+      },
+      {
         "title": "NVIDIA Updates Rubin GPU Specs as First Production Hardware Arrives",
         "link": "https://www.servethehome.com/nvidia-updates-rubin-gpu-specs-as-first-production-hardware-arrives/",
         "source": "ServeTheHome",
@@ -2938,76 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-10-27T11:11:37.000Z",
         "contentSnippet": "Grab the 9800X3D with a matching Gigabyte motherboard, 32GB of DDR5 RAM, and a 2TB SSD, all for just $1,180.99, giving you a $358.98 discount that makes the equivalent RAM price just $151."
-      },
-      {
-        "title": "Nvidia is bankrolling AI accelerator supply chain buildout to reserve production capacity",
-        "link": "https://www.tomshardware.com/tech-industry/semiconductors/nvidia-is-bankrolling-ai-accelerator-supply-chain-buildout-to-reserve-production-capacity-announces-billion-dollar-deals-with-six-major-suppliers-across-substrates-advanced-packaging-semiconductor-testing-and-optical-engines",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-27T11:00:00.000Z",
-        "contentSnippet": "Nvidia is committing billions to expand substrate, co-packaged optics, advanced packaging, and chip-testing capacity through 2028, reserving capacity at nearly every stage of its AI accelerator supply chain."
-      },
-      {
-        "title": "60,000 Microsoft employees offered voluntary buyouts as AI buildout costs bite",
-        "link": "https://www.tomshardware.com/tech-industry/big-tech/60-000-microsoft-employees-offered-voluntary-buyouts-as-ai-buildout-costs-bite-program-covers-roughly-27-percent-of-workforce-across-us-canada-india-and-the-uk",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-27T10:30:00.000Z",
-        "contentSnippet": "Microsoft is offering buyouts to around 60,000 members of its workforce as it looks to balance the books amid a ramp-up in AI data center spending."
-      },
-      {
-        "title": "Anthropic prepares for potential $2 trillion IPO valuation after reporting billions in revenue",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropic-prepares-for-potential-usd2-trillion-ipo-valuation-after-reporting-billions-in-revenue-company-warns-ai-could-pose-catastrophic-existential-risks-to-humanity",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-27T10:00:00.000Z",
-        "contentSnippet": "Anthropic has filed to go public as it pursues a potential multitrillion-dollar valuation, reporting $16.3 billion in revenue for the first half of 2026. The company’s filing also warns that its AI safety measures may not prevent catastrophic risks. OpenAI and AI chipmaker Cerebr"
-      },
-      {
-        "title": "Data center gear is being hijacked in transit to the tune of hundreds of millions",
-        "link": "https://www.tomshardware.com/tech-industry/big-tech/data-center-gear-is-being-hijacked-in-transit-to-the-tune-of-hundreds-of-millions-grand-theft-gpu-thieves-hack-accounts-perform-hit-and-runs-spoof-gps-signals-and-funnel-hardware-to-china",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-27T09:40:00.000Z",
-        "contentSnippet": "Data center gear is being stolen in transit to the tune of hundreds of millions — grand-theft-GPU thieves hack accounts, perform hit-and-runs, and spoof GPS signals"
-      },
-      {
-        "title": "Lenovo ThinkPad P1 Gen 9 Review: Panther Lake and a 50W RTX PRO 2000 in the Thin ThinkPad Flagship",
-        "link": "https://www.storagereview.com/review/lenovo-thinkpad-p1-gen-9-review-panther-lake-rtx-pro-2000",
-        "source": "StorageReview",
-        "isoDate": "2026-10-26T20:32:05.000Z",
-        "contentSnippet": "The Lenovo ThinkPad P1 Gen 9 is Lenovo’s thin flagship mobile workstation. This 16-inch machine carries the premium features the rest of the ThinkPad P line trims to meet weight and price targets. It’s an aluminum chassis that measures 9.87mm at the front edge and weighs under 1."
-      },
-      {
-        "title": "Cisco IQ Goes GA for Partners With an MCP Server, Model Foundry, and a Quantum-Resilient Wi-Fi 7 AP",
-        "link": "https://www.storagereview.com/news/cisco-iq-general-availability-partners-model-foundry-live-protect-wifi-7",
-        "source": "StorageReview",
-        "isoDate": "2026-10-26T20:00:00.000Z",
-        "contentSnippet": "Cisco today made Cisco IQ generally available to partners at Cisco Partner Summit in Vancouver, opening the support platform’s telemetry and automation to partner workflows through a Cisco IQ MCP Server, expanded API access, and role-based access control that lets a customer gran"
-      },
-      {
-        "title": "Intel quietly confirms Raptor Lake Next CPUs through internal driver publication",
-        "link": "https://www.tomshardware.com/pc-components/cpus/intel-quietly-confirms-raptor-lake-next-cpus-through-internal-driver-publication-lga-1700-chips-also-appear-in-shipping-manifests-dating-back-to-august",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-26T18:50:28.000Z",
-        "contentSnippet": "An internal driver and a shipping manifest reveal that Intel's desktop Raptor Lake Next parts may be on the way right now."
-      },
-      {
-        "title": "ASRock Creator Radeon AI Pro R9700 Review: Workstation Inference, AMD Style",
-        "link": "https://www.servethehome.com/asrock-creator-radeon-ai-pro-r9700-review-workstation-inference-amd-style/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-10-26T18:07:04.000Z",
-        "contentSnippet": "Today we are taking a look at ASRock's high-end Radeon AI inference card for workstations, the Creator Radeon AI Pro R9700. With 32GB of RAM and a $1700 price tag, the card is a highly affordable way to fill out a workstation for local AI inference The post ASRock Creator Radeon "
-      },
-      {
-        "title": "JSAUX FlipGo dual-screen portable monitor review: Gorgeous displays with touch support and a built-in USB hub",
-        "link": "https://www.tomshardware.com/monitors/portable-monitors/jsaux-flipgo-dual-screen-portable-monitor-review",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-26T16:33:31.000Z",
-        "contentSnippet": "The JSAUX FlipGo features dual 16-inch touch displays and a built-in hub."
-      },
-      {
-        "title": "Save $134 on this WD Red Plus 10TB HDD bundle at Newegg",
-        "link": "https://www.tomshardware.com/pc-components/hdds/save-usd134-on-this-wd-red-plus-10tb-hdd-bundle-at-newegg-this-double-drive-deal-lands-you-with-20tb-of-total-capacity-for-your-nas",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-26T16:00:00.000Z",
-        "contentSnippet": "Grab two 10TB NAS Hard Disk Drives and save $134 — this two-pack WD Red Plus bundle is the best deal for adding capacity to your NAS"
       }
     ]
   }
