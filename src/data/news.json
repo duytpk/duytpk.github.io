@@ -1,25 +1,214 @@
 {
-  "updatedAt": "2026-11-01T20:00:12.392Z",
+  "updatedAt": "2026-11-01T23:25:36.327Z",
   "generator": "rss",
   "feeds": {
     "cve": [
       {
+        "title": "CVE-2026-111089 - Apache Wicket: XSS via a resource bundle text written unescaped into generated JavaScript and markup",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111089",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T22:32:09.000Z",
+        "contentSnippet": "Apache Wicket reads texts from the application's resource bundles — a localized label, a css class name — and writes some of them into the JavaScript and the markup it generates for a component. Those texts are placed inside single-quoted JavaScript string literals and inside quo",
+        "cveScore": 7.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-95863 - Apache Wicket: XSS via a component id or markup id written unescaped into generated JavaScript and markup",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95863",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T22:30:47.000Z",
+        "contentSnippet": "Improper neutralization of input during web page generation in Apache Wicket. Apache Wicket generates JavaScript that refers to the elements it renders, and writes into that JavaScript two values it derives itself: a component's markup id, and the input name of a form component, ",
+        "cveScore": 7.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-87718 - Apache Wicket: CSP headers silently omitted for pages served through nested request handler delegates",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-87718",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T22:28:35.000Z",
+        "contentSnippet": "Apache Wicket 10.10.0, 10.11.0 and 9.24.0 do not set the Content-Security-Policy headers on a page whose render request handler is wrapped in more than one IRequestHandlerDelegate. The framework unwraps only a single delegate level when deciding whether a request renders a page, ",
+        "cveScore": 2.3,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-84231 - Apache Wicket: XSS in ExternalLink via the model URL when the component is bound to a non-anchor tag",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84231",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T22:26:18.000Z",
+        "contentSnippet": "Improper neutralization of input during web page generation in Apache Wicket. org.apache.wicket.markup.html.link.ExternalLink builds a JavaScript click handler and writes it into the tag's onclick attribute whenever the markup tag the component is bound to is not an a, link or ar",
+        "cveScore": 7.4,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-84177 - Apache Wicket: A component's markup is served as a package resource when its class name contains an underscore",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84177",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T22:25:22.000Z",
+        "contentSnippet": "Incorrect behavior order in Apache Wicket: a file path is validated before the framework appends the attributes that complete it. org.apache.wicket.request.resource.PackageResource asks the configured package resource guard about a path built from the scope class' package and the",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-84172 - Apache Wicket: Component markup is served as a package resource when wicket-core has its own class loader",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84172",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T22:24:14.000Z",
+        "contentSnippet": "Files accessible to external parties in Apache Wicket. org.apache.wicket.markup.html.PackageResourceGuard decides whether a file on the classpath may be streamed to a client as a package resource. HTML is on the default allow list, so the only thing that separates a static HTML f",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-84170 - Apache Wicket: Configured upload limits are not enforced by the standalone file upload resource",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84170",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T22:22:48.000Z",
+        "contentSnippet": "Allocation of resources without limits or throttling in Apache Wicket. org.apache.wicket.markup.html.form.upload.resource.AbstractFileUploadResource is the server side of the form-less upload offered by FileUploadToResourceField, which posts the selected files to a separately mou",
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-83594 - Apache Wicket: FileUploadToResourceField accepts a client-asserted upload result and allocates the size it names",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-83594",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T22:21:13.000Z",
+        "contentSnippet": "Memory allocation with an excessive size value in Apache Wicket. org.apache.wicket.markup.html.form.upload.resource.FileUploadToResourceField uploads files to a separately mounted resource rather than through a form, and is told the outcome afterwards over its own Ajax callback. ",
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-83559 - Apache Wicket: JavaScriptUtils#escapeQuotes does not escape the backslash, so its output can leave its string literal",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-83559",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T22:19:47.000Z",
+        "contentSnippet": "Improper encoding or escaping of output in Apache Wicket. org.apache.wicket.core.util.string.JavaScriptUtils#escapeQuotes() replaces each single quote in its input with a backslash and a single quote, and each double quote with a backslash and a double quote, so that the value ca",
+        "cveScore": 7.4,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-83539 - Apache Wicket: XSS in SmartLinkLabel and SmartLinkMultiLineLabel via a javascript: URL in the model data",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-83539",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T22:18:13.000Z",
+        "contentSnippet": "Improper neutralization of input during web page generation in Apache Wicket. org.apache.wicket.extensions.markup.html.basic.SmartLinkLabel and org.apache.wicket.extensions.markup.html.basic.SmartLinkMultiLineLabel display a text value and turn any URL they find in it into a hype",
+        "cveScore": 7.4,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-82898 - Apache Wicket: A cross-origin listener invocation stopped by a login wall is replayed after the user signs in",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82898",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T22:17:48.000Z",
+        "contentSnippet": "Incorrect order of security checks in Apache Wicket. org.apache.wicket.protocol.http.ResourceIsolationRequestCycleListener obtains the page a request targets before it consults its resource isolation policies, because those policies are passed that page. Obtaining the page instan",
+        "cveScore": 2.1,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-82840 - Apache Wicket: The session id is renewed only on the first sign in, not on re-authentication",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82840",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T22:17:48.000Z",
+        "contentSnippet": "Session fixation in Apache Wicket. org.apache.wicket.authroles.authentication.AuthenticatedWebSession is the authentication base class of Wicket's role-based security module, and its signIn(String, String) method is the entry point through which an application authenticates a ses",
+        "cveScore": 7.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-82705 - Apache Wicket: The configured authorization strategy is not applied to an IResource embedded in a component",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82705",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T22:17:47.000Z",
+        "contentSnippet": "Missing authorization in Apache Wicket. org.apache.wicket.authorization.IAuthorizationStrategy declares isResourceAuthorized(), and that method has a single enforcement point in the framework: org.apache.wicket.request.handler.resource.ResourceRequestHandler, the handler that ser",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-82704 - Apache Wicket: A listener is invoked on a page instance the request itself created and never configured",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82704",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T22:17:47.000Z",
+        "contentSnippet": "Missing authorization in Apache Wicket. org.apache.wicket.core.request.handler.ListenerRequestHandler invokes an IRequestListener only when org.apache.wicket.Component#canCallListener() allows it, and that method is isEnabledInHierarchy() && isVisibleInHierarchy(). The visibility",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-82559 - Apache Wicket: WebSocket messages are processed against an HTTP session snapshot that survives invalidation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82559",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T22:17:47.000Z",
+        "contentSnippet": "Insufficient session expiration in Apache Wicket. org.apache.wicket.protocol.ws.WebSocketSettings#newWebSocketRequest() wraps the WebSocket upgrade request in an org.apache.wicket.protocol.ws.api.ServletRequestCopy, which is kept for the life of the connection and used to build t",
+        "cveScore": 2.3,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-82558 - Apache Wicket: WebSocketBehavior delivers client messages to a component the client may not invoke",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82558",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T22:17:47.000Z",
+        "contentSnippet": "Missing authorization in Apache Wicket. org.apache.wicket.protocol.ws.api.WebSocketBehavior, through which Wicket's native WebSocket support hands a message sent by the client to the application, calls its onMessage() callbacks without checking whether the client may invoke the c",
+        "cveScore": 2.3,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-82557 - Apache Wicket: A disabled or invisible form submitting component is still invoked on a plain form submission",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82557",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T22:17:46.000Z",
+        "contentSnippet": "Missing authorization in Apache Wicket. org.apache.wicket.markup.html.form.Form resolves the component that submitted a form from the request parameters in Form#onRequest() and passes the result directly to Form#onFormSubmitted(IFormSubmitter). The check that the submitting compo",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-82115 - Apache Wicket: The configured authorization strategy is not applied to a shared WebSocketResource",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82115",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T22:17:46.000Z",
+        "contentSnippet": "Missing authorization in Apache Wicket. org.apache.wicket.protocol.ws.api.WebSocketMessageBroadcastHandler, the request handler Wicket's native WebSocket support uses to deliver an incoming frame, resolves the shared resource named by the client's handshake parameter and calls We",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-82956 - Apache Wicket: XSS in AjaxNewWindowNotifyingBehavior via the client-supplied window name",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82956",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T22:16:45.000Z",
+        "contentSnippet": "Improper neutralization of input during web page generation in Apache Wicket. org.apache.wicket.ajax.AjaxNewWindowNotifyingBehavior notices that a page instance has been opened in a second browser window or tab. It asks the browser for the value of window.name, which reaches the ",
+        "cveScore": 7.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-120274 - beecue FastBee Groovy Script Executor script code injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120274",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T21:17:08.000Z",
+        "contentSnippet": "A vulnerability was identified in beecue FastBee up to 2.1.0. Affected by this issue is some unknown functionality of the file /iot/script of the component Groovy Script Executor. The manipulation leads to code injection. The attack is possible to be carried out remotely. The ide",
+        "cveScore": 5.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-120242 - Ruijie RG-ES205GC Cloud Management set_cloud_serverUrl.cgi cross site scripting",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120242",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-01T19:16:59.000Z",
+        "contentSnippet": "A security flaw has been discovered in Ruijie RG-ES205GC, RG-ES206GC-P, RG-ES208GC, RG-ES210GC-LP and RG-ES210GS-P ESW_1.0(1)B1P48. The affected element is an unknown function of the file set_cloud_serverUrl.cgi of the component Cloud Management. The manipulation of the argument ",
+        "cveScore": 3.3,
+        "cveSeverity": "LOW"
+      },
+      {
         "title": "CVE-2026-120241 - Ruijie RG-ES205GC Local Firmware Upgrade httpupg.cgi buffer overflow",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-120241",
         "source": "cvefeed.io",
-        "isoDate": "2026-11-01T18:45:15.000Z",
+        "isoDate": "2026-11-01T19:16:59.000Z",
         "contentSnippet": "A vulnerability was identified in Ruijie RG-ES205GC, RG-ES206GC-P, RG-ES208GC, RG-ES210GC-LP and RG-ES210GS-P ESW_1.0(1)B1P48. Impacted is an unknown function of the file httpupg.cgi of the component Local Firmware Upgrade Interface. The manipulation leads to buffer overflow. It ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
       },
       {
         "title": "CVE-2026-120240 - WAVLINK WN553X1-B WireGuard CLI Group ioos sub_41A748 os command injection",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-120240",
         "source": "cvefeed.io",
-        "isoDate": "2026-11-01T18:30:11.000Z",
+        "isoDate": "2026-11-01T19:16:57.000Z",
         "contentSnippet": "A vulnerability was determined in WAVLINK WN553X1-B V260403_2.0.0. This issue affects the function sub_41A748 of the file /bin/ioos of the component WireGuard CLI Group Handler. Executing a manipulation of the argument group_id/group_name can lead to os command injection. The att",
-        "cveScore": 0,
-        "cveSeverity": "NA"
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
       },
       {
         "title": "CVE-2026-120239 - WAVLINK WN553X1-B WireGuard CLI ioos sub_419DA8 os command injection",
@@ -713,195 +902,6 @@
         "contentSnippet": "libheif 1.18.0 before 1.23.3 contains a heap-based buffer overflow vulnerability in unc_decoder_mixed_interleave::processTile() that allows attackers to write out of bounds by supplying chroma components with unequal bit depths. Attackers can craft a HEIF file declaring, for exam",
         "cveScore": 7.7,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-120207 - Thelia Page Module before 2.0.4 CSRF via Page Tag, Document and Image Delete Routes",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120207",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T18:17:08.000Z",
-        "contentSnippet": "Thelia Page Module before 2.0.4 contains a cross-site request forgery vulnerability that allows remote attackers to delete page tags, documents and images by abusing back-office delete routes lacking CSRF tokens and permission checks. Attackers can lure a logged-in administrator ",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-120206 - Thelia before 3.2.0 Back-Office CSRF via URL Token and Unprotected Actions",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120206",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T18:17:08.000Z",
-        "contentSnippet": "Thelia before 3.2.0 contains a cross-site request forgery vulnerability in the back office that allows attackers to forge administrative actions because per-session CSRF tokens leak via URL query strings. Attackers can reuse leaked tokens or target the unprotected setToggleVisibi",
-        "cveScore": 5.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-120205 - Thelia before 3.1.0 Stored XSS via Coupon Condition Customer Name",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120205",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T18:17:08.000Z",
-        "contentSnippet": "Thelia before 3.1.0 contains a stored cross-site scripting vulnerability in ForSomeCustomers::getSummary() that allows unauthenticated attackers to inject scripts via unescaped customer names. Attackers can register with a script payload as their name that executes when administr",
-        "cveScore": 8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-120204 - DeepInfer through 0.1.0 Path Traversal via /profile output_dir Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120204",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T18:17:08.000Z",
-        "contentSnippet": "DeepInfer through 0.1.0 contains a path traversal vulnerability in the unauthenticated /profile endpoint that allows remote attackers to create arbitrary directories via the output_dir parameter. Attackers, including cross-site GET requests from an operator's browser, can write c",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-120203 - ShowDoc 2.8.14 before 3.9.6 Code Injection via Mock Templates",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120203",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T18:17:08.000Z",
-        "contentSnippet": "ShowDoc 2.8.14 before 3.9.6 contains a code injection vulnerability in its Mock feature that allows authenticated users to execute shell commands through mockjs templates. Attackers can store a template via MockController::add with escaped parentheses that mockjs evaluates with e",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-120202 - Highflame ramparts 0.8.1 through 0.8.10 Skill Bundle Scan Bypass via Nested .pyc",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120202",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T18:17:08.000Z",
-        "contentSnippet": "Highflame ramparts 0.8.1 through 0.8.10 contains a security scan bypass vulnerability that allows attackers to hide malicious payloads because collect_bundle_siblings and walk_bundle_subdir skip nested directories and .pyc files. Attackers can distribute a skill bundle with an un",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-120201 - Jpom 2.10.0 through 2.11.12 Authentication Bypass via JPOM-USER-TOKEN Header",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120201",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T18:17:07.000Z",
-        "contentSnippet": "Jpom 2.10.0 through 2.11.12 contains an authentication bypass vulnerability that allows unauthenticated attackers to gain super-administrator access by injecting query conditions into the JPOM-USER-TOKEN header. Attackers can send a value like 'is not null', which Hutool's Condit",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-120200 - Nexterm through 1.2.2-BETA Missing Authorization in Server Session Lifecycle Routes",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120200",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T18:17:07.000Z",
-        "contentSnippet": "Nexterm through 1.2.2-BETA contains a missing authorization vulnerability that allows authenticated users to hibernate, resume, or terminate other users' remote sessions via session lifecycle routes. Attackers who obtain a session ID can call the hibernate, resume, or DELETE conn",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-120199 - LearnHouse before 1.1.1 Missing Authorization via Assignment Submissions API",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120199",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T18:17:07.000Z",
-        "contentSnippet": "LearnHouse before 1.1.1 contains a missing authorization vulnerability in the assignment API that allows authenticated users to read other users' grades and submissions. Attackers can supply another user_id to the submissions grade endpoint or query submission read functions to v",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-102212 - Pre-Auth Heap Buffer Overflow in the Multipart Request",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-102212",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T16:16:52.000Z",
-        "contentSnippet": "Heap-based buffer overflow in Opengear IM72XX, CM71XX, and ACM70XX firmware versions 4.8.0 through 5.5.2 on console server appliances allows an unauthenticated remote attacker to crash the index.cgi process via a crafted multipart/form-data POST request containing an overlong Con",
-        "cveScore": 8.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-78192 - WebDyne versions from 2.022 before 3.022 for Perl disclose application source to unauthenticated clients via the viewer in the default index page",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78192",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T15:16:54.000Z",
-        "contentSnippet": "WebDyne versions from 2.022 before 3.022 for Perl disclose application source to unauthenticated clients via the viewer in the default index page. WebDyne's wrapper scripts, such as webdyne.psgi, enable the built-in index page by default. Its source viewer returns files under the",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-78191 - WebDyne versions from 2.031 before 3.022 for Perl execute files with .psp anywhere in the name as Perl pages",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78191",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T15:16:54.000Z",
-        "contentSnippet": "WebDyne versions from 2.031 before 3.022 for Perl execute files with .psp anywhere in the name as Perl pages. WebDyne decides whether to run a requested file as a page by matching its name against WEBDYNE_PSP_EXT_RE, which has no end anchor. An application that accepts uploads by",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-78190 - WebDyne versions from 2.014 before 3.022 for Perl reflect request parameters unescaped into form field values, allowing cross-site scripting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78190",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T15:16:54.000Z",
-        "contentSnippet": "WebDyne versions from 2.014 before 3.022 for Perl reflect request parameters unescaped into form field values, allowing cross-site scripting. The textfield, password_field and filefield tags fill their value attribute from the request parameter of the same name. WEBDYNE_CGI_AUTOE",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-78189 - WebDyne versions from 3.007 before 3.022 for Perl execute .psp files outside the document root via path traversal in the PSGI API route fallback",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78189",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T15:16:54.000Z",
-        "contentSnippet": "WebDyne versions from 3.007 before 3.022 for Perl execute .psp files outside the document root via path traversal in the PSGI API route fallback. When a request matches no file, the PSGI handler retries it as an API route through api_filename. That keeps .. segments in the reques",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-78188 - WebDyne versions from 2.014 before 3.022 for Perl issue session cookies without the Secure, HttpOnly and SameSite attributes",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78188",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T15:16:53.000Z",
-        "contentSnippet": "WebDyne versions from 2.014 before 3.022 for Perl issue session cookies without the Secure, HttpOnly and SameSite attributes. WebDyne::Session sets its session cookie with only a name, value and path. Browsers then send the session ID over plain HTTP and with cross-site requests,",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-15272 - Web 2.0 Directory <= 2.10.12 - Unauthenticated SQL Injection via 'w2dc_level_filter' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15272",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T12:16:27.000Z",
-        "contentSnippet": "The Web 2.0 Directory plugin for WordPress is vulnerable to time-based SQL Injection via the 'w2dc_level_filter' parameter in all versions up to, and including, 2.10.12 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing ",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-96554 - BuddyBoss Platform <= 3.6.0 - Authenticated (Subscriber+) Stored Cross-Site Scripting via Group Name",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-96554",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T10:16:38.000Z",
-        "contentSnippet": "The BuddyBoss Platform plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Group Name in all versions up to, and including, 3.6.0 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-leve",
-        "cveScore": 6.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-76010 - Photo Gallery, Sliders, Proofing and Themes – NextGEN Gallery <= 4.4.1 - Authenticated (Custom+) Remote Code Execution via XML-RPC 'meta_data' Mass Assignment and Path Traversal",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76010",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T10:16:38.000Z",
-        "contentSnippet": "The Photo Gallery, Sliders, Proofing and Themes – NextGEN Gallery plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 4.4.1 via the render_image function. This is due to unrestricted mass assignment of caller-supplied meta_data keys o",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-120194 - Json-glib: json-glib: infinite loop in json_path_query() with negative jsonpath slice step",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120194",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T10:16:38.000Z",
-        "contentSnippet": "A flaw was found in json-glib. The JSONPath slice evaluator used by json_path_query() can enter an infinite loop when given a slice expression with a negative step. An application that evaluates attacker-controlled JSONPath expressions can be forced into a hang, leading to a deni",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-120114 - Debug Log Manager <= 2.5.2 - Unauthenticated Stored Cross-Site Scripting via 'log_js_errors' AJAX Endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120114",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T10:16:38.000Z",
-        "contentSnippet": "The Debug Log Manager – Conveniently Monitor and Inspect Errors plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'message (and pageUrl)' parameter in all versions up to, and including, 2.5.2 due to insufficient input sanitization and output escaping. This",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-118599 - epiphany: TAR-based .xpi with hard links can overwrite user files during WebExtension install",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-118599",
-        "source": "cvefeed.io",
-        "isoDate": "2026-10-31T10:16:38.000Z",
-        "contentSnippet": "A file overwrite vulnerability exists in Epiphany when installing WebExtension packages from .xpi files. In src/webextension/ephy-web-extension-manager.c, decompress_xpi_thread() used libarchive with archive_read_support_format_all() (and filters), so the installer did not requir",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
@@ -2310,7 +2310,14 @@
     ],
     "hardware": [
       {
-        "title": "GOG explores reviving physical PC game releases — digital storefront needs publisher approvals, has to figure out the logistics and legal challenges",
+        "title": "New AI-driven Windows malware feeds stolen data to Claude to rank victims’ assets by value, then deletes itself",
+        "link": "https://www.tomshardware.com/tech-industry/cyber-security/new-ai-driven-windows-malware-feeds-stolen-data-to-claude-to-rank-victims-assets-by-value-then-deletes-itself-payload-builds-custom-target-assessment-can-switch-models-if-one-refuses-or-skip-the-ai-step-entirely",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-01T21:00:00.000Z",
+        "contentSnippet": "Cisco Talos says the VOLTA infostealer sends stolen victim data to Claude Opus 4.6 to rank assets by monetization value."
+      },
+      {
+        "title": "GOG explores reviving physical PC game releases",
         "link": "https://www.tomshardware.com/video-games/gog-explores-reviving-physical-pc-game-releases-digital-storefront-needs-publisher-approvals-has-to-figure-out-the-logistics-and-legal-challenges",
         "source": "Tom's Hardware",
         "isoDate": "2026-11-01T18:45:00.000Z",
@@ -2338,18 +2345,18 @@
         "contentSnippet": "The lawyers of a plaintiff in a labor case attempted to use prompt injection to influence the court's AI but were caught. They won the case anyway, as the defendant did not respond, making the move totally unnecessary."
       },
       {
-        "title": "Anycubic and Thingiverse announce exclusive 3D printing partnership",
-        "link": "https://www.tomshardware.com/3d-printing/anycubic-and-thingiverse-announce-exclusive-3d-printing-partnership-makeronline-platform-to-offer-1-click-multicolor-3mf-models",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-01T15:00:00.000Z",
-        "contentSnippet": "Thingiverse partners with Anycubic to bring models directly to 3D printers."
-      },
-      {
         "title": "Biwin M560 2TB SSD Review: The DRAM-less drive to beat",
         "link": "https://www.tomshardware.com/pc-components/ssds/biwin-m560-2tb-ssd-review",
         "source": "Tom's Hardware",
         "isoDate": "2026-11-01T15:00:00.000Z",
         "contentSnippet": "The Biwin M560 brings SMI’s SM2504XT to retail with top-tier responsiveness and excellent efficiency, though not the fastest post-cache writes."
+      },
+      {
+        "title": "Anycubic and Thingiverse announce exclusive 3D printing partnership",
+        "link": "https://www.tomshardware.com/3d-printing/anycubic-and-thingiverse-announce-exclusive-3d-printing-partnership-makeronline-platform-to-offer-1-click-multicolor-3mf-models",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-01T15:00:00.000Z",
+        "contentSnippet": "Thingiverse partners with Anycubic to bring models directly to 3D printers."
       },
       {
         "title": "Bambu Lab's Black Friday sale cuts up to $300 on the flagship H2C printer and more",
@@ -3001,13 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-10-27T13:28:23.000Z",
         "contentSnippet": "Apple updated its 14-inch MacBook Pro and iMac lineup with the M6 chip."
-      },
-      {
-        "title": "Hacker awarded $50k bounty for reporting bug to Sony that allowed PS5 Linux exploit",
-        "link": "https://www.tomshardware.com/video-games/playstation/hacker-awarded-usd50k-bounty-for-reporting-bug-to-sony-that-allowed-ps5-linux-exploit-move-sparks-backlash-from-jailbreaking-community",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-10-27T13:22:04.000Z",
-        "contentSnippet": "The hypervisor bug that allowed PS5 users to install Linux on their consoles was patched before the launch of GTA VI, meaning they have to choose between experimenting with Linux and running the game."
       }
     ]
   }
