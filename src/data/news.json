@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-11-06T17:45:24.256Z",
+  "updatedAt": "2026-11-06T22:34:19.008Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-50240 - Pipelines-as-code: openshift-pipelines-operator-rh: pipelines-as-code: repository users can trigger namespace edit-equivalent execution via auto-provisioned pipeline serviceaccount",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50240",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-06T21:53:53.000Z",
+        "contentSnippet": "A flaw was found in OpenShift Pipelines-as-Code (PAC). PAC does not verify whether the creator of a Repository custom resource has permission to create PipelineRuns. A namespace user with only Repository and Secret create/delete permissions can cause PAC to execute attacker-contr",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-123791 - OpenBMB Internet of Agents Agent Registry milvus_utils.py _primary_field_query data query logic injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-123791",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-06T21:45:15.000Z",
+        "contentSnippet": "A vulnerability was detected in OpenBMB Internet of Agents up to 9d78e88e47160eb42ee1ee8538c05e1c2c47877a. This affects the function _primary_field_query of the file common/utils/milvus_utils.py of the component Agent Registry. The manipulation of the argument key results in impr",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-59104 - UgCS server HCI authentication bypass with empty credentials",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59104",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-06T21:41:49.000Z",
+        "contentSnippet": "UgCS server before 6.2 contains an authentication bypass in the HCI protocol login handler (LoginHandler) exposed on TCP port 3334. When the user database contains exactly one user (the default single-operator installation), a LoginRequest with empty userLogin and userPassword fi",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-103022 - Urwid: handle_short_request() crashes on non-ASCII POST body (UnicodeEncodeError DoS)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-103022",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-06T21:33:37.000Z",
+        "contentSnippet": "Urwid is a console user interface library for Python. Prior to 4.0.7, handle_short_request() in urwid/display/web.py performs unguarded character encoding on POST input and unguarded UTF-8 decoding on polling update socket output. A remote attacker who obtains a valid X-Urwid-ID ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-94619 - FileGator: Missing authorization in POST /upload allows cross-user read and deletion of temporary files",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94619",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-06T21:32:00.000Z",
+        "contentSnippet": "FileGator is a multi-user file manager. Prior to 7.15.0, POST /upload in backend/Controllers/UploadController.php uses the request-supplied resumableFilename as an unnamespaced key in shared temporary storage. In a multi-user deployment configured with distinct per-user home dire",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-94618 - FileGator: Missing authorization in GET /batchdownload allows cross-user retrieval of another user's archive",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94618",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-06T21:30:39.000Z",
+        "contentSnippet": "FileGator is a multi-user file manager. Prior to 7.15.0, GET /batchdownload in backend/Controllers/DownloadController.php uses batchDownloadStart() to stream a shared temporary archive selected by the request-supplied uniqid without checking that the current session created it. I",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-119800 - Ryot: Cross-tenant collection read via `collectionContents`",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-119800",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-06T21:29:32.000Z",
+        "contentSnippet": "Ryot is a self-hosted personal tracking application. Prior to 10.5.6, the collectionContents GraphQL query implemented by collection_contents() in crates/services/collection/src/content_operations.rs accepts a caller-controlled CollectionContentsInput.collection_id and returns a ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-77442 - Ryot: `createOrUpdateUserIntegration` trusts a client-supplied `integrationId` with no ownership check, letting any user hijack/overwrite another user's integration (cross-tenant IDOR",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77442",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-06T21:26:52.000Z",
+        "contentSnippet": "Ryot is a self-hosted personal tracking application. Prior to 10.4.0, the createOrUpdateUserIntegration GraphQL mutation in crates/services/user/src/integration_operations.rs allows a low-privileged authenticated user to supply another user's integrationId to create_or_update_use",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-104267 - Botan: scrypt V-buffer heap overflow on 32-bit from constructor-accepted parameters",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104267",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-06T21:25:42.000Z",
+        "contentSnippet": "Botan is a C++ cryptography library. From 2.7.0 until 3.13.0, Botan's Scrypt implementation on 32-bit platforms computes required memory with unchecked multiplication, allowing attacker-controlled Scrypt parameters to wrap the allocation size and create a buffer smaller than the ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-48057 - Botan: directoryName nameConstraint bypass via multi-AVA RDN flattening in matches_dn",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48057",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-06T21:24:51.000Z",
+        "contentSnippet": "Botan is a C++ cryptography library. Prior to 3.13.0, Botan's X.509 Distinguished Name decoder flattens the Attribute-Value Assertions in each Relative Distinguished Name and loses multi-value RDN grouping before DN name-constraint enforcement. An attacker controlling a name-cons",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-47738 - liboqs: Uninitialized function-pointer dereference in OQS_KEM_encaps_derand for NTRU KEMs",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-47738",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-06T21:23:45.000Z",
+        "contentSnippet": "liboqs is a C-language cryptographic library that provides implementations of post-quantum cryptography algorithms. Prior to 0.16.0, OQS_KEM_encaps_derand can dereference an uninitialized encaps_derand function pointer when called on NTRU-HPS-2048-509, NTRU-HPS-2048-677, NTRU-HPS",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-44519 - liboqs: Missing value barrier in FO implicit rejection path (FrodoKEM, NTRU, and others)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-44519",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-06T21:22:27.000Z",
+        "contentSnippet": "liboqs is a C-language cryptographic library that provides implementations of post-quantum cryptography algorithms. Prior to 0.16.0, the ct_select function in src/kem/frodokem/external/util.c for the FrodoKEM-640, FrodoKEM-976, and FrodoKEM-1344 AES and SHAKE reference variants l",
+        "cveScore": 5.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-104254 - liboqs: Heap out-of-bounds read in LMS/HSS signature verification via unvalidated signature length (hss_verify_inc.c:215)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104254",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-06T21:20:48.000Z",
+        "contentSnippet": "liboqs is a C-language cryptographic library that provides implementations of post-quantum cryptography algorithms. From 0.11.0 through 0.16.0, builds configured with OQS_ENABLE_SIG_STFL_LMS=ON can read beyond a caller-supplied signature buffer when an untrusted truncated LMS or ",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-69128 - Chartbrew: AI orchestrator run_query SQL blocklist bypass enables arbitrary file read on connected PostgreSQL (quoted-identifier + pg_stat_file/pg_ls_* sibling gap)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-69128",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-06T21:17:12.000Z",
+        "contentSnippet": "Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. In 5.2.2, the AI SQL blocklist omitted sibling PostgreSQL filesystem functions and failed to match double-quoted identifier forms of denied functions. Th",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-86044 - JupyterLab Desktop: One-Click Jupyter Server Token Leak leading to Remote Code Execution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86044",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-06T21:17:12.000Z",
+        "contentSnippet": "JupyterLab Desktop is the cross-platform desktop application for JupyterLab. Prior to 4.6.2-1, JupyterLab Desktop exposed getServerInfo to the renderer without confirming that the current page still had the local Jupyter server origin. In a local managed session using JupyterLab ",
+        "cveScore": 9.6,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-86005 - Chartbrew: Unauthenticated BullMQ Admin Dashboard Exposure in Chartbrew",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86005",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-06T21:17:12.000Z",
+        "contentSnippet": "Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. Prior to 5.2.3, the administrative BullMQ dashboard was mounted without an authentication check. The vulnerable surface is the Bull Board/BullMQ administ",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-85737 - Velociraptor: Low-priv analyst reads arbitrary server files via ungated sql() VQL plugin",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85737",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-06T21:17:11.000Z",
+        "contentSnippet": "Velociraptor is a tool for collecting host-based state information using Velociraptor Query Language (VQL) queries. Prior to 0.77.2, SQLPlugin.Call in vql/parsers/sql/sql.go does not enforce plugin-level FILESYSTEM_READ or NETWORK checks before the mysql and postgres branches pas",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-85736 - Chartbrew: Arbitrary file deletion as root via data connection SSL/SSH paths",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85736",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-06T21:17:11.000Z",
+        "contentSnippet": "Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. Prior to 5.2.3, connection creation or update stored attacker-chosen absolute SSL and SSH file paths, and later connection cleanup passed those stored pa",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-85726 - Chartbrew: Blind NoSQL injection via date variable in embedded chart",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85726",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-06T21:17:11.000Z",
+        "contentSnippet": "Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. Prior to 5.2.3, a date-typed MongoDB variable placed inside a quoted query placeholder was inserted as an unescaped string, unlike the safely escaped or ",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-85712 - Chartbrew: Cross-tenant project takeover via body.team_id in /project routes",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85712",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-06T21:17:11.000Z",
+        "contentSnippet": "Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. Prior to 5.2.3, the shared project permission check trusted a caller-controlled team_id and let the teamOwner/teamAdmin branch continue without confirmin",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-85708 - Chartbrew: Private chart data disclosure via forgeable CB_SECRET share tokens",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85708",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-06T21:17:11.000Z",
+        "contentSnippet": "Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. Prior to 5.2.3, Chart share and embed tokens were signed with CB_SECRET, including known or shipped-default values in stock source and repository Docker ",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-85295 - Chartbrew: Full account takeover via JWTs accepted under default CB_SECRET",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85295",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-06T21:17:10.000Z",
+        "contentSnippet": "Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. Prior to 5.2.3, four authentication helpers accepted session tokens signed with CB_SECRET, including known, weak, or shipped-default values. The vulnerab",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-71863 - SecureDrop: Onion Service client auth credentials copied to Monitor Server",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71863",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-06T21:17:10.000Z",
+        "contentSnippet": "SecureDrop is an open-source whistleblower submission system that media organizations can use to securely accept documents from, and communicate with anonymous sources. From 2.13.0 until 2.16.1, running the securedrop-admin install Ansible playbook with journalist alerts disabled",
+        "cveScore": 2.6,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-71397 - Unbounded request body accumulation on streaming RPCs causes memory exhaustion in grpc_server",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71397",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-06T21:17:10.000Z",
+        "contentSnippet": "Allocation of Resources Without Limits or Throttling vulnerability in elixir-grpc grpc_server allows unauthenticated attackers to exhaust memory and crash the node via an oversized client-streaming or bidirectional-streaming request body. The streaming read clause of 'Elixir.GRPC",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-63441 - 2FAuth: SSRF guard misses IPv6 NAT64 prefixes, allowing image fetch to reach internal/metadata targets",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63441",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-06T21:17:10.000Z",
+        "contentSnippet": "2FAuth is a web app to manage Two-Factor Authentication (2FA) accounts and generate their security codes. From 6.1.0 until 8.0.0, App\\Services\\Traits\\ValidatesUrls::isPublicIp() does not recognize the 64:ff9b::/96 and 64:ff9b:1::/48 NAT64 prefixes, so an otpauth URI image paramet",
+        "cveScore": 4.9,
+        "cveSeverity": "MEDIUM"
+      },
       {
         "title": "CVE-2026-12067 - AvastSvc denial of service via unhandled JsonCpp exceptions in native message handlers",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-12067",
@@ -677,234 +902,16 @@
         "contentSnippet": "Kubeflow Pipelines enables users to build and deploy portable, scalable machine learning workflows. Prior to 2.15.0, the frontend routes /pipeline/k8s/pod and /pipeline/k8s/pod/events use frontend/server/k8s-helper.ts to include untrusted podname and podnamespace query values and",
         "cveScore": 6.1,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-87008 - Code Graph RAG structural tools follow out-of-root symlinks",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-87008",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-05T21:18:54.000Z",
-        "contentSnippet": "Code Graph RAG is an AI-powered knowledge graph and retrieval system for querying, understanding, and editing multi-language codebases. Prior to 0.0.589, AstGrepService in codebase_rag/tools/ast_grep_service.py enumerates files beneath project_root and relies on should_skip_path ",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-85076 - Cronicle: Privilege Escalation via Arbitrary Environment Variable Injection through Event Params (Incomplete Fix for CVE-2026-39401)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-85076",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-05T21:18:54.000Z",
-        "contentSnippet": "Cronicle is a multi-server task scheduler and runner, with a web based front-end UI. Prior to 0.9.124, an authenticated non-admin with run_events, create_events, or edit_events privilege can supply undeclared keys in event params through api_create_event, api_update_event, or api",
-        "cveScore": 9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-81190 - KurrentDB: Privileged access to read $all enables arbitrary file read and GET-only SSRF",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81190",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-05T21:18:54.000Z",
-        "contentSnippet": "KurrentDB is a database engineered for modern software applications and event-driven architectures. In version 26.1.0, a user authorized to read the $all stream can use Secondary Indexing query capabilities to read arbitrary files accessible to the database process, enumerate dir",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-77622 - Sliver: Unauthenticated Memory Exhaustion Denial of Service in Sliver HTTP(S) Listener PNG Decoder",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77622",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-05T21:18:53.000Z",
-        "contentSnippet": "Sliver is a command and control framework. Prior to 1.7.6, an HTTP(S) listener using the PNG encoder accepts attacker-controlled PNG dimensions without an effective decoded-size or pixel limit in util/encoders/images.go, while the listener nonce space implemented in server/encode",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-77463 - Remark42: Rate limit bypass via unconditional trust of X-Forwarded-For/X-Real-IP headers in direct-internet deployment",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77463",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-05T21:18:53.000Z",
-        "contentSnippet": "Remark42 is a self-hosted comment engine for blogs, articles, or any other place where readers can add comments. From 1.0.0 until 1.16.2, Remark42 globally trusts True-Client-IP, X-Real-IP, and X-Forwarded-For without verifying that the direct peer is a trusted proxy, and middlew",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-69143 - Rejected reason: This CVE is a duplicate of anothe",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-69143",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-05T21:18:52.000Z",
-        "contentSnippet": "Rejected reason: This CVE is a duplicate of another CVE.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-62268 - borg extract might modify out-of-tree files when extracting maliciously crafted archives",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-62268",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-05T21:18:52.000Z",
-        "contentSnippet": "borgbackup is an opensource, deduplicating archiver with compression and authenticated encryption. Prior to 1.4.5 and 2.0.0b22, extracting a malicious archive can follow a symlinked parent path or resolve embedded dot-dot path components and delete or overwrite files outside the ",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-55458 - Caddy: RFC 7230 §6.1 compliance issue / Hop-by-hop headers that leak through",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-55458",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-05T21:18:51.000Z",
-        "contentSnippet": "Caddy is an extensible server platform that uses TLS by default. Prior to 2.11.5, the reverse proxy's finalizeResponse method in modules/caddyhttp/reverseproxy/reverseproxy.go handles an upstream 101 Switching Protocols response before running removeConnectionHeaders and the hopH",
-        "cveScore": 2.9,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-54442 - NationalSecurityAgency/emissary: Incomplete fix for CVE-2026-35571: SSRF",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-54442",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-05T21:18:51.000Z",
-        "contentSnippet": "Emissary is a P2P based data-driven workflow engine. Prior to 8.51.0, the VALID_LINK validation in src/main/java/emissary/server/mvc/NavAction.java accepts protocol-relative URLs when processing configured navigation links. Browser URL normalization can interpret these accepted s",
-        "cveScore": 4.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-49272 - OAuthLib: Bearer token can be retrieved as long as client knows a valid client ID for device workflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49272",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-05T21:18:50.000Z",
-        "contentSnippet": "OAuthLib is an implementation of the OAuth request-signing logic for Python 3.6+. From 3.3.0 until 4.0.1, OAuthLib's RFC 8628 device workflow does not require DeviceCodeGrant.validate_token_request to check that the device_code parameter is present and valid. A caller whose clien",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-48705 - MONAI: MONAILabel Server Crash and Silent Inference Corruption via Crafted DICOM (pydicom DS/IS Validation Bypass)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48705",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-05T21:18:50.000Z",
-        "contentSnippet": "MONAI (Medical Open Network for AI) is an AI toolkit for health care imaging. Prior to 1.6.1, PydicomReader._get_affine() trusts non-finite values in the DICOM PixelSpacing, ImagePositionPatient, and ImageOrientationPatient fields and composes them into an affine matrix without v",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-46350 - dcmjs: DS/IS VALUE REPRESENTATION INPUT VALIDATION BYPASS",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-46350",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-05T21:18:50.000Z",
-        "contentSnippet": "dcmjs is a JavaScript implementation of DICOM manipulation. Prior to 0.52.0, the DecimalString and IntegerString implementations in src/ValueRepresentation.js sanitize text with a permissive regular expression and pass the result to JavaScript's Number constructor without validat",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-34157 - Wails: wildcardPatternToRegex allows Origin bypass via suffix match in BindingsAllowedOrigins",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-34157",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-05T21:18:47.000Z",
-        "contentSnippet": "Wails is a framework for building desktop applications using Go and web technologies. From 2.0.0 until 2.13.0, BindingsAllowedOrigins in v2/internal/frontend/originvalidator/originValidator.go passes wildcard patterns to wildcardPatternToRegex, which expands every asterisk to an ",
-        "cveScore": 7.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-119434 - Decompression bomb in ezstd:decompress_using_ddict/2 allows BEAM memory exhaustion via unbounded output buffer",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-119434",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-05T21:18:41.000Z",
-        "contentSnippet": "Improper Handling of Highly Compressed Data (Data Amplification) vulnerability in silviucpp ezstd allows an attacker who supplies a zstd frame to ezstd:decompress_using_ddict/2 to exhaust memory and terminate the Erlang VM via a small frame that declares a very large content size",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-114604 - GraphQL Tools: Prototype pollution in mergeIncrementalResult via non-primitive path segments",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-114604",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-05T21:18:37.000Z",
-        "contentSnippet": "GraphQL Tools provides utilities for building, stitching, and mocking GraphQL schemas. From 10.10.1 until 12.0.2, the @graphql-tools/utils mergeIncrementalResult helper passes incrementalResult.path segments to setObjectKeyPath without runtime primitive-type validation. A non-pri",
-        "cveScore": 8.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-114134 - Black: GitHub Action installs unvalidated required-version from pyproject.toml",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-114134",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-05T21:18:36.000Z",
-        "contentSnippet": "Black is the uncompromising Python code formatter. Prior to 26.10.1, the Black GitHub Action with use_pyproject: true accepts tool.black.required-version from pyproject.toml without validating that it is a released Black version specifier. An attacker who can submit a pull reques",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-112902 - Pillow: Memory disclosure and segfault in libtiff encoder via crafted TIFF tags",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-112902",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-05T21:18:36.000Z",
-        "contentSnippet": "Pillow is a Python imaging library. In versions through 12.3.0, the libtiff TIFF encoder can pass arguments to TIFFSetField() that do not match libtiff’s definition of the corresponding tag. When an application saves attacker-controlled image metadata through this encoder, crafte",
-        "cveScore": 8.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-112899 - Pillow: EPS load(scale) lets Ghostscript render past the decompression bomb limit",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-112899",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-05T21:18:36.000Z",
-        "contentSnippet": "Pillow is a Python imaging library. In versions 2.3.0 through 12.3.0, EPS rendering does not validate the scaled image dimensions before invoking Ghostscript. Applications that process untrusted EPS or PostScript files using an application-selected scale greater than one can incu",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-111771 - Model Context Protocol TypeScript SDK: Server bearer authentication accepted tokens issued for another service",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111771",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-05T21:18:35.000Z",
-        "contentSnippet": "The Model Context Protocol TypeScript SDK provides TypeScript client and server implementations of the Model Context Protocol. From 1.6.0 until 1.32.0 in @modelcontextprotocol/sdk, from 2.0.0 until 2.3.0 in @modelcontextprotocol/server, from 2.0.0 until 2.0.2 in @modelcontextprot",
-        "cveScore": 6.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-111753 - Angular: XSRF Token Leakage via URL Parsing Discrepancy in Angular HTTP Client (Incomplete fix for CVE-2025-66035)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111753",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-05T21:18:35.000Z",
-        "contentSnippet": "Angular is a development platform for building mobile and desktop web applications using TypeScript/JavaScript and other languages. Prior to 20.3.34 and 21.0.3, the @angular/common HttpClient function xsrfInterceptorFn uses a regular expression that does not normalize request URL",
-        "cveScore": 5.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-111062 - A russh SSH server accepts a publickey authentication whose signature uses a different algorithm than the one named in the request",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111062",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-05T21:18:35.000Z",
-        "contentSnippet": "russh is a Rust SSH client and server library. From version 0.34.0-beta.1 until version 0.64.0, its SSH server does not require the signature algorithm in a public-key authentication signature to match the algorithm named in the authentication request. A client possessing an auth",
-        "cveScore": 2.3,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-110802 - Altair: DOM-based XSS via attacker-controlled script URLs in the iframe sandbox",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110802",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-05T21:18:35.000Z",
-        "contentSnippet": "Altair is a GraphQL client for all platforms. From 7.2.4 until 8.5.8, packages/altair-iframe-sandbox/src/main.ts reads plugin_sandbox_opts from the iframe-sandbox query string and passes attacker-controlled scriptUrls to injectScript() in packages/altair-core/src/utils/inject.ts,",
-        "cveScore": 6.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-77604 - Code Graph RAG: MCP paginated read_file path traversal / arbitrary file read",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77604",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-05T20:18:00.000Z",
-        "contentSnippet": "Code Graph RAG is an AI-powered knowledge graph and retrieval system for querying, understanding, and editing multi-language codebases. Prior to 0.0.345, the MCPToolsRegistry.read_file implementation in codebase_rag/mcp/tools.py joins attacker-controlled file_path input to projec",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-76580 - OpenText Directory Services Cross-Site Scripting Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76580",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-05T20:17:59.000Z",
-        "contentSnippet": "Improper neutralization of input during web page generation ('cross-site scripting') vulnerability in OpenText OpenText Directory Services (OTDS) on Windows and Linux allows Cross-Site Scripting (XSS). This issue affects OpenText Directory Services (OTDS): from 25.1 through 26.2.",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-76181 - Heap buffer overflow in dBASE index import",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76181",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-05T20:17:59.000Z",
-        "contentSnippet": "LibreOffice includes a dBASE database driver, which reads dBASE tables and their .ndx index files when a folder of dBASE files is used as a data source. A heap buffer overflow existed when an index page was read. The number of entries recorded in a page was not checked against th",
-        "cveScore": 6.6,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
+      {
+        "title": "SageMaker Inference now supports Multi-Instance GPU to maximize GPU utilization for model endpoints",
+        "link": "https://aws.amazon.com/blogs/machine-learning/sagemaker-inference-now-supports-multi-instance-gpu-to-maximize-gpu-utilization-for-model-endpoints/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-06T18:01:00.000Z",
+        "contentSnippet": "Amazon SageMaker Inference now supports GPU partitioning with NVIDIA Multi-Instance GPU (MIG), which divides one GPU into hardware-isolated partitions so you can run a different model in each or take a right-sized fraction of a newer accelerator. This post shows how two optional "
+      },
       {
         "title": "Taxonomy of agentic primitives in Amazon Quick",
         "link": "https://aws.amazon.com/blogs/machine-learning/taxonomy-of-agentic-primitives-in-amazon-quick/",
@@ -1597,13 +1604,6 @@
         "source": "MarkTechPost",
         "isoDate": "2026-10-25T11:32:29.000Z",
         "contentSnippet": "Anthropic has launched OSS Scanner, a free, opt-in vulnerability scanner for critical open-source projects. The Anthropic OSS Scanner runs the company’s strongest models, including Claude Mythos, against enrolled codebases. Reports go straight to maintainers without human review."
-      },
-      {
-        "title": "Microsoft Open-Sources Agensh: A Multi-Agent Harness for 1,024 Agents",
-        "link": "https://www.marktechpost.com/2026/10/24/microsoft-agensh-multi-agent-harness-1024-agents/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-10-25T03:32:59.000Z",
-        "contentSnippet": "Microsoft Research open-sourced Agensh, a multi-agent harness with no central orchestrator. Self-organizing workers share a Git repo, chat and a findings board, scaling from 1 to 1,024 agents on ProgramBench under a 6-hour budget. The post Microsoft Open-Sources Agensh: A Multi-A"
       }
     ],
     "virtualization": [
@@ -2310,6 +2310,13 @@
     ],
     "hardware": [
       {
+        "title": "Cisco Catalyst C1300-24XTS Review A Neat 24-port 10GbE Switch",
+        "link": "https://www.servethehome.com/cisco-catalyst-c1300-24xts-review-a-neat-24-port-10gbe-switch-marvell/",
+        "source": "ServeTheHome",
+        "isoDate": "2026-11-06T20:30:45.000Z",
+        "contentSnippet": "In our Cisco Catalyst C1300-24XTS review, we take the switch apart to see how it works and test it under full load to see if it holds up The post Cisco Catalyst C1300-24XTS Review A Neat 24-port 10GbE Switch appeared first on ServeTheHome."
+      },
+      {
         "title": "Dell and CrowdStrike Bundle Falcon Guardian, Cloud Security, and Next-Gen SIEM Into the Dell AI Factory With NVIDIA",
         "link": "https://www.storagereview.com/news/dell-crowdstrike-falcon-guardian-openshell-dell-ai-factory-nvidia-security",
         "source": "StorageReview",
@@ -3001,13 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-11-01T13:00:00.000Z",
         "contentSnippet": "Lenovo’s ThinkPlus FU100 fingerprint USB drive held an unencrypted SD card, and Codex found fixed keys in other ‘secure’ USB products."
-      },
-      {
-        "title": "AI agent swarms unleashed in Minecraft to ‘build a thriving civilization’",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-agent-swarms-unleashed-in-minecraft-to-build-a-thriving-civilization-50-agent-teams-fail-after-falling-into-paralyzing-bureaucracy",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-01T12:33:52.000Z",
-        "contentSnippet": "Researchers recently tested AI agent swarm performance in various Minecraft gaming modes."
       }
     ]
   }
