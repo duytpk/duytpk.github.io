@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-11-07T23:29:19.829Z",
+  "updatedAt": "2026-11-08T03:37:21.358Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-114713 - UnrealIRCd IRCv3 Label Message Tag Command Injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-114713",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-08T02:31:48.000Z",
+        "contentSnippet": "The labeled-response module in UnrealIRCd 6.0.0 before 6.2.7.1 does not escape the IRCv3 \"label\" message tag when echoing it into replies, which allows any user on a network with two or more linked servers to inject server-to-server commands that are executed with server authorit",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-124422 - SunEditor 3.0.0 before 3.4.0 Stored XSS via html.clean() Iframe Placeholder",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-124422",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-08T02:16:57.000Z",
+        "contentSnippet": "SunEditor from 3.0.0 before 3.4.0 contains a stored cross-site scripting vulnerability in html.clean() that rebuilds iframes from data-se-iframe-holder-attrs JSON without filtering srcdoc or uppercase SRC keys. Attackers can inject crafted HTML through paste, html.set, or html.in",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-123616 - imgproxy 3.3.0 before 4.0.16 Memory Exhaustion DoS via ICO Loader",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-123616",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-08T02:16:57.000Z",
+        "contentSnippet": "imgproxy from 3.3.0 before 4.0.16 contains an unbounded memory allocation vulnerability in the ICO loader that fails to validate the data_size field. Attackers can supply a crafted 23-byte ICO file declaring a ~4GB data_size to trigger memory exhaustion and worker crashes without",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-123615 - imgproxy before 4.0.17 Out-of-Bounds Write in ICO Loader",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-123615",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-08T02:16:57.000Z",
+        "contentSnippet": "imgproxy 3.3.0 before 4.0.17 contains an out-of-bounds heap read and write in the ICO loader's BMP header reconstruction (vips_foreign_load_ico_header in vips/icoload.c) when an ICO entry declares a tiny data size, causing unvalidated header fields to be read and written past the",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-123614 - imgproxy 4.0.0 before 4.0.16 Heap Buffer Overflow via ICO Loader Integer Overflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-123614",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-08T02:16:56.000Z",
+        "contentSnippet": "imgproxy from 4.0.0 before 4.0.16 contains an integer overflow in the ICO loader that allows remote attackers to trigger a heap buffer overflow via a crafted data_size value. Attackers can submit a crafted ICO image whose data_size wraps the allocation in vips/icoload.c, corrupti",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-123613 - Rustls 0.23.13 before 0.23.45 TLS 1.3 Handshake Encryption Level Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-123613",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-08T02:16:56.000Z",
+        "contentSnippet": "Rustls from 0.23.13 before 0.23.45 accepts TLS 1.3 handshake messages at the wrong encryption level when they follow a key-changing message in the same record, because Deframer::aligned does not enforce RFC 8446 record-boundary alignment. A peer or on-path attacker can pack a pla",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-123612 - rustls 0.23.44 and 0.23.45 ECH Rejection Application Data Disclosure",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-123612",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-08T02:16:56.000Z",
+        "contentSnippet": "rustls 0.23.44 and 0.23.45 contain an information disclosure vulnerability that sends application data buffered before the handshake completes to the client-facing server when Encrypted Client Hello is rejected. Because start_traffic() queues plaintext from ClientConnection::writ",
+        "cveScore": 4.6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-123611 - rustls before 0.23.46 Key Exchange Downgrade via Unauthenticated ServerHello",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-123611",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-08T02:16:56.000Z",
+        "contentSnippet": "rustls before 0.23.46 contains a key exchange downgrade vulnerability that allows network attackers to poison the per-server-name key-exchange group record via an unauthenticated ServerHello. Attackers can answer one connection with a ServerHello selecting X25519, causing later C",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-123610 - rustls before 0.23.46 Denial of Service via Brotli Certificate Decompression",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-123610",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-08T02:16:56.000Z",
+        "contentSnippet": "rustls before 0.23.46 contains an uncontrolled memory allocation flaw in its optional Brotli certificate decompression, which limits decompressed output size but accepts an input-selected large history window. Malicious peers can send a certificate with a five-byte Brotli header ",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-123609 - Rustls before 0.23.46 and 0.24.0-dev.1 before 0.24.0-dev.2 Secret Exposure via Debug",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-123609",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-08T02:16:56.000Z",
+        "contentSnippet": "Rustls before 0.23.46 and 0.24.0-dev.1 before 0.24.0-dev.2 contains an information disclosure vulnerability where derived Debug formatting of client session values exposes secret key material. Custom ClientSessionStore implementations that log Tls12ClientSessionValue or Tls13Clie",
+        "cveScore": 4.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-123608 - Hickory DNS hickory-proto 0.3.1 before 0.26.1 CPU Exhaustion via BinEncoder Name Compression",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-123608",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-08T02:16:55.000Z",
+        "contentSnippet": "Hickory DNS hickory-proto from 0.3.1 before 0.26.1 contains a denial of service vulnerability in BinEncoder that allows remote attackers to exhaust CPU through quadratic-time name compression. Attackers can send malicious DNS messages with many records that add many candidate lab",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-123607 - Hickory DNS NSEC3 Closest-Encloser Proof Unbounded Loop Denial of Service",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-123607",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-08T02:16:55.000Z",
+        "contentSnippet": "Hickory DNS hickory-proto 0.25.0-alpha.3 through 0.25.2 and hickory-net before 0.26.1 contain an unbounded loop vulnerability in DnssecDnsHandle NSEC3 closest-encloser proof validation when the SOA owner is not an ancestor of the QNAME. Upstream attackers can return NoData or NXD",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-123606 - Hickory-DNS Recursor 0.25.0-alpha.3 through 0.25.2 Glueless-NS Referral Amplification",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-123606",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-08T02:16:55.000Z",
+        "contentSnippet": "The hickory-dns recursor in hickory-recursor 0.25.0-alpha.3 through 0.25.2 and hickory-resolver 0.26.0-alpha.1 before 0.26.2 iterates every out-of-bailiwick NS target lacking glue in a referral without any per-query work budget. Remote attackers can serve such referrals to force ",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-123605 - Hickory DNS through 0.25.0-alpha.3 DNSSEC Validation Bypass via RRSIG Signer's Name",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-123605",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-08T02:16:55.000Z",
+        "contentSnippet": "Hickory DNS hickory-proto 0.1 through 0.25.0-alpha.3 and hickory-net before 0.26.2 contain a DNSSEC validation bypass because the validator verifies an RRSIG against the DNSKEY of whatever name appears in its Signer's Name field without checking that this name is the zone contain",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-123604 - Hickory DNS 0.26.0-beta.1 before 0.26.2 Resource Exhaustion DoS via NameServerPool::try_send TC-Retry Loop",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-123604",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-08T02:16:55.000Z",
+        "contentSnippet": "Hickory DNS hickory-resolver 0.26.0-beta.1 before 0.26.2 contains an unbounded retry loop in NameServerPool::try_send, which re-queues truncated (TC) responses without checking the answering transport or counting iterations. A malicious authoritative server returning TC=1 on ever",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-123603 - Hickory DNS Missing IPv4-Mapped IPv6 Canonicalization Access Control Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-123603",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-08T02:16:55.000Z",
+        "contentSnippet": "hickory-proto and hickory-resolver 0.26.0 before 0.26.2, hickory-server 0.25.0-alpha.1 before 0.26.2, and hickory-recursor 0.25.0-alpha.3 through 0.26.0-alpha.1 fail to canonicalize IPv4-mapped IPv6 addresses when checking deny_answers, deny_server, or AccessControlSet rules. Att",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-123602 - Hickory DNS Recursor Ghost Domain Attack via Child-Side NS RRset Caching",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-123602",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-08T02:16:54.000Z",
+        "contentSnippet": "The Hickory DNS recursor in all versions of hickory-recursor and in hickory-resolver 0.26.0-beta.1 before 0.26.2 (recursor feature) is vulnerable to ghost domain names attacks because it reuses child-side apex NS RRsets cached from zone NS queries for iterative resolution. By rep",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-123601 - Hickory DNS 0.26.0-beta.1 before 0.26.2 NSEC3 Proof of Nonexistence Forgery",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-123601",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-08T02:16:54.000Z",
+        "contentSnippet": "Hickory DNS hickory-proto 0.25.0 through 0.26.0-alpha.1 and hickory-net 0.26.0-beta.1 before 0.26.2 invert the relational operators in the wrap-around branch of find_covering_record() in nsec3.rs, so the last NSEC3 record in a zone's hash ring covers every hash except its owner. ",
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-123600 - Hickory DNS hickory-proto 0.25.0-alpha.3 through 0.25.2 NSEC3 Apex NODATA Validation Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-123600",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-08T02:16:54.000Z",
+        "contentSnippet": "Hickory DNS hickory-proto 0.25.0-alpha.3 through 0.25.2 and hickory-net 0.26.0-alpha.1 before 0.26.2 contain a DNSSEC validation flaw in DnssecDnsHandle that accepts NSEC3-signed NODATA responses for zone-apex queries as secure without an NSEC3 record matching the hashed QNAME. O",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-123599 - Hickory DNS before 0.26.0-beta.1 DNSSEC Validation Bypass via Non-IN Class Records",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-123599",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-08T02:16:54.000Z",
+        "contentSnippet": "Hickory DNS hickory-proto before 0.26.0-beta.1 and hickory-net before 0.26.2 contain a DNSSEC validation bypass because verify_rrsets() ignores DNS class when partitioning RRsets, so non-IN records skip signature verification yet are marked secure when the IN records verify. Atta",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-123598 - Hickory DNS 0.25.0 through 0.26.0-alpha.1 DNSSEC Bogus Answer Cache Poisoning",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-123598",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-08T02:16:54.000Z",
+        "contentSnippet": "The validating recursor in Hickory DNS hickory-recursor 0.25.0 through 0.26.0-alpha.1, hickory-resolver 0.26.0-alpha.1 before 0.26.2, and hickory-net 0.26.0-beta.1 before 0.26.2 caches DNSSEC-bogus answers using the untrusted, attacker-supplied record TTL (capped at 24 hours) ins",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-123597 - Hickory DNS DNSSEC Validation Cache Poisoning via Transient DS-Fetch Errors",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-123597",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-08T02:16:54.000Z",
+        "contentSnippet": "Hickory DNS hickory-proto 0.25.0-alpha.1 through 0.26.0-alpha.1 and hickory-net before 0.26.2 contain a logic bug in DnssecDnsHandle's DS-fetch path that caches transient DS lookup errors as Bogus DNSSEC validation verdicts. An attacker who induces a SERVFAIL, REFUSED, or timeout",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-123596 - Hickory DNS through 0.26.0-alpha.1 DNSSEC Validation Bypass via Ancestor-Delegation NSEC",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-123596",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-08T02:16:54.000Z",
+        "contentSnippet": "Hickory DNS hickory-proto through 0.26.0-alpha.1 and hickory-net 0.26.0-beta.1 before 0.26.2 contain a DNSSEC validation flaw in the validating recursor's NSEC handler that accepts parent-side ancestor-delegation NSEC records as proof of nonexistence for names below the zone cut.",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-123595 - Hickory DNS through 0.26.0-alpha.1 DNSSEC Validation Bypass via Ancestor-Delegation NSEC3",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-123595",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-08T02:16:53.000Z",
+        "contentSnippet": "Hickory DNS hickory-proto 0.25 through 0.26.0-alpha.1 and hickory-net 0.26.0-beta.1 before 0.26.2 contain a DNSSEC validation flaw in the validating recursor's NSEC3 handler, which matches the closest encloser by hash alone without checking the type bitmap and so accepts parent-s",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-123594 - Hickory DNS through 0.26.0-alpha.1 DNSSEC NSEC Validation Bypass for Empty Non-Terminals",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-123594",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-08T02:16:53.000Z",
+        "contentSnippet": "Hickory DNS hickory-proto through 0.26.0-alpha.1 and hickory-net 0.26.0-beta.1 before 0.26.2 contain an NSEC validation flaw that returns a secure proof for NXDOMAIN responses when the covering NSEC's Next Domain Name is a strict descendant of the query name, which actually prove",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
       {
         "title": "CVE-2026-120531 - Subscribe2 – Form, Email Subscribers & Newsletters <= 10.47 - Unauthenticated Stored Cross-Site Scripting via 'data[ip]' Parameter",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-120531",
@@ -677,231 +902,6 @@
         "contentSnippet": "A vulnerability was found in OpenBMB Internet of Agents up to 9d78e88e47160eb42ee1ee8538c05e1c2c47877a. This issue affects the function fetch_chat_record of the file im_server/app.py of the component Message Handler. The manipulation of the argument comm_id results in improper ac",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-97191 - Advanced Custom Fields < 6.8.11 - Contributor+ Admin-Restricted Custom Field Update via Post Save Path",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97191",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-07T06:16:59.000Z",
-        "contentSnippet": "The Advanced Custom Fields (ACF®) WordPress plugin before 6.8.11 does not re-apply its field-group location rules when persisting values submitted through the post editor save path, allowing users with contributor-level access and above to write custom fields the site restricted ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-97190 - Advanced Custom Fields 6.2.0 - 6.8.10 - Contributor+ Relationship Field Update on Arbitrary Objects via IDOR",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97190",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-07T06:16:59.000Z",
-        "contentSnippet": "The Advanced Custom Fields (ACF®) WordPress plugin before 6.8.11 does not verify that a user is allowed to edit the target object before writing to it during bidirectional relationship synchronization, allowing users with contributor-level access and above to add or remove a refe",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-97189 - Advanced Custom Fields < 6.8.11 - Contributor+ Unpublished Post Title and Status Disclosure via Relational Fields",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-97189",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-07T06:16:59.000Z",
-        "contentSnippet": "The Advanced Custom Fields (ACF®) WordPress plugin before 6.8.11 does not perform a read-permission check when it renders and formats the values of its relational fields, allowing users with post-editing access (Contributor and above) to disclose the titles and non-public statuse",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-122001 - Komfortkasse for WooCommerce < 1.4.9 - Administrator Account Creation via CSRF",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-122001",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-07T06:16:59.000Z",
-        "contentSnippet": "The Komfortkasse for WooCommerce WordPress plugin before 1.4.9 does not properly validate the authenticity of REST API requests, overriding WordPress's own nonce verification so that a request forged in a logged-in administrator's browser is accepted, which can be used to create ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-121866 - Exsile SMS Gateway < 2.0.0 - Subscriber+ Privilege Escalation via Arbitrary Option Update",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-121866",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-07T06:16:58.000Z",
-        "contentSnippet": "The iLeads SMS Gateway by Exsile WordPress plugin before 2.0.0 does not check capabilities or nonces in several AJAX actions that update a site option chosen by the request, allowing any authenticated user, such as a subscriber, to change arbitrary WordPress options and escalate ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-71881 - Cross-site scripting in Integrated Publishing Toolkit",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71881",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-07T00:16:58.000Z",
-        "contentSnippet": "Multiple injection issues in resource metadata fields in GBIF Integrated Publishing Toolkit versions before 3.3.5 allows authenticated remote attackers to execute code in another user's session after user interaction via stored cross-site scripting",
-        "cveScore": 4.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-27356 - WordPress MC4WP plugin <= 4.14.1 - Broken Access Control vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-27356",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-06T23:17:22.000Z",
-        "contentSnippet": "Missing Authorization vulnerability in ibericode MC4WP mailchimp-for-wp allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects MC4WP: from n/a through 4.14.1.",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-123471 - WordPress myCred plugin <= 4.0.2 - Content Injection vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-123471",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-06T23:17:21.000Z",
-        "contentSnippet": "Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) vulnerability in myCred myCred mycred allows Code Injection.This issue affects myCred: from n/a through 4.0.2.",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-122670 - WordPress Polylang plugin <= 3.9 - Broken Access Control vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-122670",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-06T23:17:21.000Z",
-        "contentSnippet": "Missing Authorization vulnerability in WP SYNTEX Polylang polylang allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Polylang: from n/a through 3.9.",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-120851 - WordPress PublishPress Revisions plugin <= 4.2.0 - Broken Access Control vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120851",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-06T23:17:21.000Z",
-        "contentSnippet": "Missing Authorization vulnerability in PublishPress PublishPress Revisions revisionary allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects PublishPress Revisions: from n/a through 4.2.0.",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-120845 - WordPress Smush Image Compression and Optimization plugin <= 4.3.5 - Cross Site Scripting (XSS) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120845",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-06T23:17:21.000Z",
-        "contentSnippet": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in WPMU DEV Smush Image Compression and Optimization wp-smushit allows Stored XSS.This issue affects Smush Image Compression and Optimization: from n/a through 4.3.5.",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-119519 - WordPress Royal Elementor Addons plugin <= 1.7.1068 - Broken Access Control vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-119519",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-06T23:17:21.000Z",
-        "contentSnippet": "Missing Authorization vulnerability in WProyal Royal Elementor Addons royal-elementor-addons allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Royal Elementor Addons: from n/a through 1.7.1068.",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-118786 - NXP MCUXpresso SDK rpmsg-lite TZM Example before 26.06.01-lts Secure Memory Disclosure via NSC Veneer Functions",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-118786",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-06T23:17:20.000Z",
-        "contentSnippet": "Improper input validation in non-secure-callable (NSC) veneer functions of the NXP MCUXpresso SDK rpmsg-lite multicore example (multicore_examples/rpmsg_lite_pingpong_tzm) up to releases 26.06.00-lts and 26.09.00 may allow a non-secure caller to supply unvalidated pointers and si",
-        "cveScore": 6.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-118785 - NXP MCUXpresso SDK TrustZone-M Examples before 26.06.01-lts Secure Memory Disclosure via NSC Veneer Functions",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-118785",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-06T23:17:20.000Z",
-        "contentSnippet": "Improper handling of non-secure-world input in NSC veneer functions of NXP MCUXpresso SDK TrustZone-M examples (trustzone_examples), affecting versions through 26.06.00-lts and 26.09.00-pvw2, may allow a non-secure caller to supply unvalidated pointers or untrusted data, causing ",
-        "cveScore": 6.7,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-109469 - Entra Device Registration Elevation of Privilege Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-109469",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-06T23:17:20.000Z",
-        "contentSnippet": "Authorization bypass through user-controlled key in Entra Device Registration allows an unauthorized attacker to elevate privileges over a network.",
-        "cveScore": 10,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-107931 - Rejected reason: This CVE ID has been rejected or",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107931",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-06T23:17:20.000Z",
-        "contentSnippet": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-94619 - FileGator: Missing authorization in POST /upload allows cross-user read and deletion of temporary files",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94619",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-06T22:18:00.000Z",
-        "contentSnippet": "FileGator is a multi-user file manager. Prior to 7.15.0, POST /upload in backend/Controllers/UploadController.php uses the request-supplied resumableFilename as an unnamespaced key in shared temporary storage. In a multi-user deployment configured with distinct per-user home dire",
-        "cveScore": 5.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-94618 - FileGator: Missing authorization in GET /batchdownload allows cross-user retrieval of another user's archive",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-94618",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-06T22:18:00.000Z",
-        "contentSnippet": "FileGator is a multi-user file manager. Prior to 7.15.0, GET /batchdownload in backend/Controllers/DownloadController.php uses batchDownloadStart() to stream a shared temporary archive selected by the request-supplied uniqid without checking that the current session created it. I",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-77442 - Ryot: `createOrUpdateUserIntegration` trusts a client-supplied `integrationId` with no ownership check, letting any user hijack/overwrite another user's integration (cross-tenant IDOR",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77442",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-06T22:17:59.000Z",
-        "contentSnippet": "Ryot is a self-hosted personal tracking application. Prior to 10.4.0, the createOrUpdateUserIntegration GraphQL mutation in crates/services/user/src/integration_operations.rs allows a low-privileged authenticated user to supply another user's integrationId to create_or_update_use",
-        "cveScore": 5.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-69128 - Chartbrew: AI orchestrator run_query SQL blocklist bypass enables arbitrary file read on connected PostgreSQL (quoted-identifier + pg_stat_file/pg_ls_* sibling gap)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-69128",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-06T22:17:59.000Z",
-        "contentSnippet": "Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. In 5.2.2, the AI SQL blocklist omitted sibling PostgreSQL filesystem functions and failed to match double-quoted identifier forms of denied functions. Th",
-        "cveScore": 4.6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-68935 - Chartbrew: SSRF to Internal Network via User-Controlled allowPrivateHost Flag on API Connections",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68935",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-06T22:17:59.000Z",
-        "contentSnippet": "Chartbrew is an open-source web application for creating charts from databases and APIs. In versions 4.8.5 through 5.2.2, API connection creation and update operations accept the internal allowPrivateHost field from user input. An authenticated user with permission to manage API ",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-68933 - Chartbrew: Unauthenticated Brute Force of Password-Protected Dashboards Due to Missing Rate Limit and Plaintext Password Storage",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68933",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-06T22:17:59.000Z",
-        "contentSnippet": "Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. Prior to 5.2.3, public dashboard passwords were stored in plaintext, accepted through a URL query parameter, and checked without effective attempt thrott",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-59104 - UgCS server HCI authentication bypass with empty credentials",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59104",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-06T22:17:59.000Z",
-        "contentSnippet": "UgCS server before 6.2 contains an authentication bypass in the HCI protocol login handler (LoginHandler) exposed on TCP port 3334. When the user database contains exactly one user (the default single-operator installation), a LoginRequest with empty userLogin and userPassword fi",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-50240 - Pipelines-as-code: openshift-pipelines-operator-rh: pipelines-as-code: repository users can trigger namespace edit-equivalent execution via auto-provisioned pipeline serviceaccount",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-50240",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-06T22:17:58.000Z",
-        "contentSnippet": "A flaw was found in OpenShift Pipelines-as-Code (PAC). PAC does not verify whether the creator of a Repository custom resource has permission to create PipelineRuns. A namespace user with only Repository and Secret create/delete permissions can cause PAC to execute attacker-contr",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-48057 - Botan: directoryName nameConstraint bypass via multi-AVA RDN flattening in matches_dn",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-48057",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-06T22:17:53.000Z",
-        "contentSnippet": "Botan is a C++ cryptography library. Prior to 3.13.0, Botan's X.509 Distinguished Name decoder flattens the Attribute-Value Assertions in each Relative Distinguished Name and loses multi-value RDN grouping before DN name-constraint enforcement. An attacker controlling a name-cons",
-        "cveScore": 2.1,
-        "cveSeverity": "LOW"
       }
     ],
     "ai": [
