@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-11-10T09:00:04.087Z",
+  "updatedAt": "2026-11-10T16:53:35.612Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-105813 - Ivanti UWM Insecure Storage of Sensitive Information",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105813",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T15:24:52.000Z",
+        "contentSnippet": "Cleartext storage of sensitive information in Ivanti UWM before version 2026.4 allows a local authenticated attacker to retrieve another local user's session token.",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-111245 - Apache TomEE: Privilege escalation via WS-Security caller identity leaking between requests",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111245",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T15:24:08.000Z",
+        "contentSnippet": "After a successful WS-Security UsernameToken authentication, the caller identity stays associated with the worker thread once the request completes when web services are served by the standalone OpenEJB HTTP server. A remote unauthenticated attacker whose request is later process",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-111246 - Apache TomEE: HTTP sessions shared across web applications in embedded HTTP server",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111246",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T15:23:45.000Z",
+        "contentSnippet": "The embedded OpenEJB HTTP server does not isolate HTTP sessions between web applications. A remote attacker can use a session established in one web application in another one, which then trusts session state set by the first application. Only deployments hosting several web appl",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-111247 - Apache TomEE: Privilege escalation via user name matching a role name",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111247",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T15:23:23.000Z",
+        "contentSnippet": "When resolving security roles of a realm-authenticated caller, the caller's user name is also treated as a role name in addition to the roles assigned by the realm. An authenticated attacker who can obtain an account whose user name equals a role name, for example through self-re",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-111248 - Apache TomEE: Authentication with the stored password digest in Tomcat user identity store",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111248",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T15:22:48.000Z",
+        "contentSnippet": "The Jakarta Security identity store backed by the Tomcat user database compares the supplied password with the stored value as plain text and ignores the configured credential handler. When digested passwords are stored, an attacker who obtained a stored digest, for example from ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-125747 - ZenTao PMS through 22.7 IDOR via Build Module Mutation Methods",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-125747",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T15:22:44.000Z",
+        "contentSnippet": "ZenTao PMS through 22.7 contains a missing object-level authorization vulnerability in module/build/control.php that allows authenticated users to modify builds in projects they do not belong to. Attackers holding build privileges in any project can supply sequential buildID valu",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-111249 - Apache TomEE: Unauthenticated LiveReload endpoint reachable from the network",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111249",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T15:22:18.000Z",
+        "contentSnippet": "The development-time LiveReload support listens on all network interfaces without authentication and accepts websocket connections from any origin. A network attacker, or a web page visited by the developer, can observe the names of changed files in the watched folder and the ser",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-111250 - Apache TomEE: Authentication bypass via programmatic authentication in embedded HTTP server",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111250",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T15:21:32.000Z",
+        "contentSnippet": "The embedded OpenEJB HTTP server reports every request as authenticated when an application requests authentication programmatically. A remote unauthenticated attacker can access functionality protected this way. Only applications served by the embedded HTTP server that rely on p",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-111251 - Apache TomEE: Unauthenticated server shutdown via the admin port",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111251",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T15:20:26.000Z",
+        "contentSnippet": "The admin service of the standalone OpenEJB server accepts stop requests without any authentication. Any local user or process able to connect to the admin port can stop the server, leading to denial of service; the admin service is enabled by default in the standalone server and",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-111256 - Apache TomEE: Missing authentication for web service endpoints in embedded HTTP server",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111256",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T15:20:02.000Z",
+        "contentSnippet": "When JAX-WS or JAX-RS endpoints are published by the embedded OpenEJB HTTP server rather than Tomcat, some configured authentication methods are silently ignored and the endpoint is published without authentication. A remote unauthenticated attacker can invoke the exposed operati",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-111257 - Apache TomEE: Well-known administrative credentials created at startup",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111257",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T15:19:32.000Z",
+        "contentSnippet": "With the default configuration and no users defined in the default user database, TomEE silently adds an administrative user with a well-known password at startup. A remote attacker can use these credentials to authenticate to web applications that use the default realm and grant",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-111258 - Apache TomEE: Security constraint bypass via request routing",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111258",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T15:19:06.000Z",
+        "contentSnippet": "The optional request routing feature forwards requests to their configured destination without applying the security constraints of that destination or the protection of the web application's private directories. If a route copies client-controlled parts of the request path into ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-111259 - Apache TomEE: Predictable HTTP session identifiers in embedded server",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111259",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T15:18:07.000Z",
+        "contentSnippet": "The embedded server generates HTTP session identifiers with a non-cryptographic random number generator by default. A remote attacker who observes a session identifier can predict the identifiers issued to other users and hijack their sessions, if the application relies on HTTP s",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-111260 - Apache TomEE: Predictable OpenID Connect state and nonce values",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111260",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T15:15:35.000Z",
+        "contentSnippet": "The Jakarta Security OpenID Connect authentication mechanism generates the state and nonce values with a non-cryptographic random number generator and insufficient entropy. A remote attacker who predicts these values can forge an authentication callback that logs a victim into th",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-111261 - Apache TomEE: Authentication bypass with empty password in LDAP identity store",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111261",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T15:14:33.000Z",
+        "contentSnippet": "The Jakarta Security LDAP identity store accepts an empty password as valid if the directory server allows unauthenticated binds, which some directory servers do by default. A remote attacker can then authenticate as any existing user without knowing the password. Users are recom",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-111262 - Apache TomEE: LDAP injection in LDAP identity store",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111262",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T15:05:56.000Z",
+        "contentSnippet": "The Jakarta Security LDAP identity store does not neutralize special characters in the caller name before using it in directory queries. A remote unauthenticated attacker can alter the queries to enumerate accounts, infer directory attribute values, or influence which directory e",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-111263 - Apache TomEE: Missing authentication on EJB web service endpoints deployed in a web application",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111263",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T15:05:08.000Z",
+        "contentSnippet": "Authentication configured for an EJB JAX-WS endpoint in the TomEE deployment descriptor is not enforced when the endpoint is published within an existing web application. A remote unauthenticated attacker can invoke the web service operations, unless the application protects the ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-111264 - Apache TomEE: Authentication bypass on EJB web service endpoints via HTTP method",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111264",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T15:04:30.000Z",
+        "contentSnippet": "The security constraint generated for EJB JAX-WS endpoints with configured authentication protects only some HTTP methods. A remote unauthenticated attacker can bypass authentication by sending requests with another HTTP method. Users are recommended to upgrade to version 10.3.0 ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-87756 - Apache TomEE: Missing authorization on internal deployer EJBs in default profile",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-87756",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T14:57:19.000Z",
+        "contentSnippet": "The internal system EJBs used for remote deployment and configuration did not enforce their administrative role check when the server ran with the default profile. A remote unauthenticated attacker able to reach the remote EJB endpoint could deploy arbitrary applications and exec",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-87755 - Apache TomEE: Stateful session bean hijacking via predictable session identifiers",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-87755",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T14:56:29.000Z",
+        "contentSnippet": "Stateful session bean identifiers are not generated from a cryptographically secure random source. A remote attacker with access to the EJB remote endpoint who holds one valid identifier can derive those of other clients' sessions and invoke methods on their beans, exposing or mo",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-86811 - Apache TomEE: Path traversal via stateful EJB passivation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86811",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T14:55:50.000Z",
+        "contentSnippet": "The stateful session bean passivation mechanism derives the on-disk file name from a client-supplied identifier without validating it. A remote attacker with access to the remote EJB service can cause session state to be read from or written to files outside the passivation direc",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-86532 - Apache TomEE: Username enumeration and timing side channel in JAAS login modules",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86532",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T14:53:27.000Z",
+        "contentSnippet": "The bundled JAAS login modules leak whether a username exists and compare credentials in a non-constant-time manner. A remote unauthenticated attacker can enumerate valid accounts and may infer credential material through timing analysis. Users are recommended to upgrade to versi",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-123082 - Docker Desktop logs can expose the Docker Hub access token",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-123082",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T14:37:24.000Z",
+        "contentSnippet": "Docker Desktop before version 4.94.0 could write the signed-in user's Docker Hub access token (a JWT) in cleartext to application logs and diagnostics bundles. IPC payloads that were bare JSON strings or arrays were not redacted before logging, and a Docker Desktop component logg",
+        "cveScore": 5.7,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-113422 - Eclipse Kura Privilege Escalation Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-113422",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T14:36:40.000Z",
+        "contentSnippet": "In Eclipse Kura versions 5.0.0 through 5.6.2, the Wire Graph update functionality of the Kura Web UI, and the Wire Service REST API v1 (available since 5.1.0, org.eclipse.kura.rest.wire.provider), determine whether a configuration update targets a Wire Component, Driver or Asset ",
+        "cveScore": 7.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-121885 - Podman: untrusted image labels allow auto-update to restart arbitrary systemd units",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-121885",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T14:34:31.000Z",
+        "contentSnippet": "A flaw was found in Podman. An attacker can trigger a Denial of Service (DoS) by supplying a container image containing crafted metadata labels. Podman's auto-update mechanism improperly trusts these image labels to determine which system services to restart. If a user runs the m",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
       {
         "title": "CVE-2026-93427 - ARMember Premium <= 7.8.1 - Unauthenticated Stored Cross-Site Scripting via Registration Custom Field",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-93427",
@@ -677,234 +902,37 @@
         "contentSnippet": "Other issue in Firefox for iOS. This vulnerability was fixed in Firefox for iOS 160.0.",
         "cveScore": 0,
         "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-124575 - SiteServer SSCMS Admin-Login CAPTCHA LoginController.Submit.cs LoginController.Submit excessive authentication",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-124575",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T06:45:19.000Z",
-        "contentSnippet": "A vulnerability was identified in SiteServer SSCMS up to 7.1.3/7.2.1/7.4.0. This issue affects the function LoginController.Submit of the file src/SSCMS.Web/Controllers/Admin/LoginController.Submit.cs of the component Admin-Login CAPTCHA. Such manipulation of the argument isForce",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-124574 - chenyme grok2api Video Job Retry video.go beginSelectionSession improper authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-124574",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T06:30:32.000Z",
-        "contentSnippet": "A vulnerability was determined in chenyme grok2api up to 3.1.6. This vulnerability affects the function beginSelectionSession of the file backend/internal/application/gateway/video.go of the component Video Job Retry Handler. This manipulation causes improper authorization. It is",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-124571 - SourceCodester Simple CRUD using PHP and FPDF register.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-124571",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T06:17:58.000Z",
-        "contentSnippet": "A flaw has been found in SourceCodester Simple CRUD using PHP and FPDF 1.0. Affected by this vulnerability is an unknown functionality of the file app/register.php. Executing a manipulation of the argument firstname can lead to sql injection. The attack can be executed remotely. ",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-124570 - SourceCodester Online Leave Management System Employee Avatar Upload Extension Master.php cross site scripting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-124570",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T06:17:58.000Z",
-        "contentSnippet": "A vulnerability was detected in SourceCodester Online Leave Management System 1.0. Affected is an unknown function of the file app/classes/Master.php of the component Employee Avatar Upload Extension. Performing a manipulation of the argument employee avatar filename results in c",
-        "cveScore": 3.3,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-124569 - fushengqian fuintCatering CommissionCashServiceImpl.java updateCommissionCash access control",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-124569",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T06:17:57.000Z",
-        "contentSnippet": "A vulnerability was found in fushengqian fuintCatering up to 6d054f5788ac8645eb491f79242bb8a625efc133. The affected element is the function updateCommissionCash of the file CommissionCashServiceImpl.java. The manipulation of the argument Status results in improper access controls",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-124573 - logseq Local HTTP API server.cljs validate-auth-token missing authentication",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-124573",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T06:15:15.000Z",
-        "contentSnippet": "A vulnerability was found in logseq 2.0.1/2.0.2. This affects the function validate-auth-token of the file src/electron/electron/server.cljs of the component Local HTTP API. The manipulation results in missing authentication. The attack may be performed from remote. The exploit h",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-124572 - DataLinkDC dinky Catalogue Upload API CatalogueController.java CatalogueController.upload path traversal",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-124572",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T06:00:36.000Z",
-        "contentSnippet": "A vulnerability has been found in DataLinkDC dinky up to 1.2.5. Affected by this issue is the function CatalogueController.upload of the file dinky-admin/src/main/java/org/dinky/controller/CatalogueController.java of the component Catalogue Upload API. The manipulation leads to p",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-81422 - Advanced Appointment Booking & Scheduling < 2.7 - Unauthenticated Arbitrary User Registration",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-81422",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T06:00:29.000Z",
-        "contentSnippet": "The Advanced Appointment Booking & Scheduling WordPress plugin before 2.7 does not verify the site's user-registration setting before creating accounts through a publicly accessible shortcode, allowing unauthenticated attackers to register arbitrary user accounts, and be automati",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-123751 - WP Duplicate <= 1.1.11 - Unauthenticated Arbitrary File Upload via Authentication Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-123751",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T06:00:29.000Z",
-        "contentSnippet": "The WP Duplicate WordPress plugin through 1.1.11 does not properly verify a request authentication value and does not validate the path or type of uploaded files, making it possible for unauthenticated attackers to write arbitrary files to the server and achieve remote code execu",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-123145 - WooCommerce Stripe Payment Gateway 10.9.0 - 11.0.1 - Customer Password Stored in Plaintext via Express Checkout",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-123145",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T06:00:28.000Z",
-        "contentSnippet": "The WooCommerce Stripe Payment Gateway WordPress plugin before 11.1.0 does not exclude the account password from the checkout fields it saves to order metadata during express checkout, causing the password a customer chooses when creating an account at checkout to be stored in pl",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-123131 - GemBooking < 1.7.1 - Staff+ Arbitrary Post Deletion and Site Settings Update via REST Context Check Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-123131",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T06:00:28.000Z",
-        "contentSnippet": "The GemBooking WordPress plugin before 1.7.1 does not properly verify that a REST request is addressed to its own routes before temporarily granting staff users administrative capabilities, allowing users with the GemBooking WordPress plugin before 1.7.1's Staff role to delete ar",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-123129 - Event Tickets Manager for WooCommerce 1.5.4 - 1.5.9 - Unauthenticated Site-wide Event Ticket Price Manipulation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-123129",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T06:00:28.000Z",
-        "contentSnippet": "The Event Tickets Manager for WooCommerce WordPress plugin before 1.6.0 does not validate the ticket-type price sent to one of its unauthenticated AJAX actions when the referenced product has no ticket types configured, and stores the submitted price site-wide, where it is applie",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-123128 - GemBooking < 1.7.1 - Unauthenticated Team Member Double-Booking via Cross-Object Race Condition",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-123128",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T06:00:28.000Z",
-        "contentSnippet": "The GemBooking WordPress plugin before 1.7.1 does not serialise concurrent booking requests per team member, allowing unauthenticated users to create overlapping confirmed bookings for the same team member across different bookable items by sending simultaneous requests.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-123091 - Vigilant < 2.11.0 - 2FA Bypass via Third-Party Login Forms",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-123091",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T06:00:28.000Z",
-        "contentSnippet": "The Vigilant WordPress plugin before 2.11.0 does not enforce its two-factor authentication on login forms other than the default WordPress one, allowing an attacker who knows a user's password to skip the second factor and log in as that user.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-123088 - UniPAY Payment Gateway For WooCommerce < 2.4 - Unauthenticated Order Key and Customer PII Disclosure",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-123088",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T06:00:28.000Z",
-        "contentSnippet": "The UniPAY Payment Gateway For WooCommerce WordPress plugin before 2.4 does not perform any authorization check before returning an order's order-received URL for an attacker-supplied order id, exposing the order's secret key in the redirect and allowing unauthenticated attackers",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-123064 - WP BASE Booking of Appointments, Services and Events 6.5.0 - Subscriber+ Privilege Escalation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-123064",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T06:00:27.000Z",
-        "contentSnippet": "The WP BASE Booking of Appointments, Services and Events WordPress plugin before 6.5.1 does not properly restrict access to one of its user-creation actions, allowing authenticated users with Subscriber-level access and above to create a new administrator account and thereby esca",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-121875 - Post Duplicator < 3.0.18 - Admin+ Privilege Escalation via Unvalidated Capability Assignment",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-121875",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T06:00:27.000Z",
-        "contentSnippet": "The Post Duplicator WordPress plugin before 3.0.18 does not validate the capabilities assigned to roles through its permissions settings, allowing a site administrator on a multisite network who is not a Super Admin to grant any role arbitrary capabilities, including the network-",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-121874 - Post Duplicator < 3.0.18 - Admin+ Arbitrary Option Update via Unvalidated Option Name",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-121874",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T06:00:27.000Z",
-        "contentSnippet": "The Post Duplicator WordPress plugin before 3.0.18 does not restrict settings saves to its own options, allowing a site administrator on a multisite network who is not a Super Admin to overwrite arbitrary options of their site, including the role definitions, and so grant themsel",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-121759 - Fusion Page Builder < 1.7.1 - Contributor+ Arbitrary Post Trashing via IDOR",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-121759",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T06:00:27.000Z",
-        "contentSnippet": "The Fusion Page Builder WordPress plugin before 1.7.1 does not check that the user owns the content it moves to the trash, which could allow users with a role as low as Contributor to trash arbitrary posts and pages, or delete them permanently where the trash is disabled.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-120409 - All-in-One Video Gallery < 5.1.1 - Unauthenticated Password-Protected Video Disclosure via Player Page and Download Handler",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120409",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T06:00:27.000Z",
-        "contentSnippet": "The All-in-One Video Gallery WordPress plugin before 5.1.1 does not check whether a video is password protected before serving it through its standalone player page and its download link, allowing unauthenticated visitors to obtain the media source of password-protected videos, s",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-118202 - Limit Login Attempts Reloaded < 3.4.1 - Two-Factor Authentication Bypass via Malformed X-Forwarded-For Header",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-118202",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T06:00:26.000Z",
-        "contentSnippet": "The Limit Login Attempts Security WordPress plugin before 3.4.1 does not confirm that its two-factor authentication step succeeded before completing a login and treats a failure to build that step as success, so an attacker who holds a protected user's password can bypass the sec",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-118201 - Limit Login Attempts Reloaded 3.0.0 - 3.4.0 - Two-Factor Authentication Bypass via XML-RPC",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-118201",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T06:00:26.000Z",
-        "contentSnippet": "The Limit Login Attempts Security WordPress plugin before 3.4.1 does not enforce its two-factor authentication on every password-authentication route, so an attacker who already knows a protected user's password can authenticate through an alternative login interface and obtain t",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-115256 - Mail Debug for WooCommerce <= 1.3.0 - Unauthenticated Sent Email Disclosure Leading to Account Takeover",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-115256",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T06:00:26.000Z",
-        "contentSnippet": "The Mail Debug for WooCommerce WordPress plugin through 1.3.0 does not perform any capability, authentication, or nonce check on one of its email-logging actions, which is exposed to unauthenticated users and is not restricted to its own data, allowing anyone to read the full bod",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-115237 - Grand Job <= 1.2.1 - Unauthenticated Account Takeover via Empty Password Reset Code",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-115237",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T06:00:26.000Z",
-        "contentSnippet": "The Grand Job WordPress plugin through 1.2.1 does not correctly verify the password reset code before updating a user's password, allowing unauthenticated attackers to set the password of arbitrary accounts, including administrators, and fully take over the site.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-115213 - EASY-JS-WPAPI <= 2.0 - Unauthenticated Administrator Password Disclosure and Authentication Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-115213",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T06:00:26.000Z",
-        "contentSnippet": "The EASY-JS-WPAPI Client HANDLE for the WordPress REST-API WordPress plugin through 2.0 does not prevent the administrator credentials it stores from being disclosed to unauthenticated users and does not correctly verify authentication, allowing unauthenticated attackers to obtai",
-        "cveScore": 0,
-        "cveSeverity": "NA"
       }
     ],
     "ai": [
+      {
+        "title": "Zyphra Releases ZONOS3-Mini: Open-Source TTS With 100M Active Parameters",
+        "link": "https://www.marktechpost.com/2026/11/10/zyphra-zonos3-mini-open-source-tts/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-11-10T15:42:55.000Z",
+        "contentSnippet": "Zyphra released ZONOS3-Mini, an Apache 2.0 text-to-speech model with 800M total and 100M active parameters. It clones voices, steers delivery word by word and runs in real time in the browser The post Zyphra Releases ZONOS3-Mini: Open-Source TTS With 100M Active Parameters appear"
+      },
+      {
+        "title": "Anthropic Launches Claude Fable 5.2 and Mythos 5.2: Same Model, Different Safeguards",
+        "link": "https://www.marktechpost.com/2026/11/10/anthropic-claude-fable-5-2-mythos-5-2-release/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-11-10T14:59:09.000Z",
+        "contentSnippet": "Anthropic released Claude Fable 5.2 and Claude Mythos 5.2, one model with two safeguard levels. Fable 5.2 scores 49.1% on FrontierCode 2.0, costs $8/$40 per million tokens, and ships with a 1M-token context window. The post Anthropic Launches Claude Fable 5.2 and Mythos 5.2: Same"
+      },
+      {
+        "title": "We’re bringing Adobe’s creative and productivity tools closer to your everyday Google apps.",
+        "link": "https://blog.google/company-news/inside-google/company-announcements/adobe-google-partnership-integration/",
+        "source": "Google AI Blog",
+        "isoDate": "2026-11-10T14:00:00.000Z",
+        "contentSnippet": "Google and Adobe are integrating creative and productivity tools. Edit PDFs in Drive and use Adobe AI in Gemini. See what’s new in this partnership."
+      },
+      {
+        "title": "Google Cloud launches Gemini for healthcare.",
+        "link": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-for-healthcare/",
+        "source": "Google AI Blog",
+        "isoDate": "2026-11-10T13:00:00.000Z",
+        "contentSnippet": "Google Cloud launches Gemini for healthcare to unify clinical data and automate workflows. Reduce administrative burnout. See how it works."
+      },
       {
         "title": "Meta Releases Muse Ember, a 1M-Context Model for High-Volume Agent Work",
         "link": "https://www.marktechpost.com/2026/11/09/meta-muse-ember-small-agent-model/",
@@ -1576,37 +1604,16 @@
         "source": "MarkTechPost",
         "isoDate": "2026-10-28T17:48:38.000Z",
         "contentSnippet": "Google DeepMind introduced Gemini 4 Carbon, a frontier model that scores 59 on the Artificial Analysis Intelligence Index and 88.2% on SEC-bench Pro. Access starts with vetted cyber defenders, at $2/$10 per million tokens. The post Google DeepMind Introduces Gemini 4 Carbon, Its "
-      },
-      {
-        "title": "MiniMax Open-Sources MCode Stack: 15 Agent Skills Its Coding Team Uses Daily",
-        "link": "https://www.marktechpost.com/2026/10/28/minimax-open-sources-mcode-stack-agent-skills/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-10-28T17:20:29.000Z",
-        "contentSnippet": "MiniMax has open-sourced MCode Stack, an MIT-licensed repo of 17 SKILL.md skills and 5 checklists that its MiniMax Code team uses daily for code review, subagent splits, context budgets and long-running commands. The post MiniMax Open-Sources MCode Stack: 15 Agent Skills Its Codi"
-      },
-      {
-        "title": "The October inflection point for vibe game development",
-        "link": "https://simonwillison.net/2026/Oct/28/vibe-game-development/",
-        "source": "Simon Willison's Weblog",
-        "isoDate": "2026-10-28T13:55:15.000Z",
-        "contentSnippet": "I've written before about how November 2025 was an inflection point for coding agents - the point where Opus 4.5 and GPT-5.1 crossed a tipping point that meant their respective coding agents became reliable daily drivers for software engineers. I think we've reached a new inflect"
-      },
-      {
-        "title": "Polymathic AI and Princeton Researchers Release FlashMap, a Flow Map Drafter for 6.14x Faster LLM Decoding",
-        "link": "https://www.marktechpost.com/2026/10/28/flashmap-flow-map-speculative-decoding/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-10-28T08:18:03.000Z",
-        "contentSnippet": "FlashMap is a speculative decoding drafter from Polymathic AI, Princeton and USC ISI researchers. It drafts 16 tokens jointly in one pass and reaches up to 6.14x lossless speedup on Qwen3-8B. The post Polymathic AI and Princeton Researchers Release FlashMap, a Flow Map Drafter fo"
-      },
-      {
-        "title": "Meet Google DeepMind’s Genie 4: Real-Time World Model With Native Audio",
-        "link": "https://www.marktechpost.com/2026/10/28/google-deepmind-genie-4-world-model/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-10-28T07:34:58.000Z",
-        "contentSnippet": "Google DeepMind released Genie 4 as a research preview. The real-time world model adds native audio, live dialogue and text steering, with Gemini 3.8 Flash planning events inside the simulation loop. The post Meet Google DeepMind’s Genie 4: Real-Time World Model With Native Audio"
       }
     ],
     "virtualization": [
+      {
+        "title": "Broadcom Wants VMware Customers Back. There’s Just One Problem.",
+        "link": "https://www.virtualizationhowto.com/2026/11/broadcom-wants-vmware-customers-back-theres-just-one-problem/",
+        "source": "Virtualization HowTo",
+        "isoDate": "2026-11-10T13:10:23.000Z",
+        "contentSnippet": "Since early 2024, VMware has never been the same with he Broadcom buyout. It seems that many customers have chosen to jump ship due to the tremendous price increases and… The post Broadcom Wants VMware Customers Back. There’s Just One Problem. appeared first on Virtualization How"
+      },
       {
         "title": "Is Self-Hosting Dying in Late 2026? Here’s What I Seeing for Home Labs",
         "link": "https://www.virtualizationhowto.com/2026/11/is-self-hosting-dying-in-late-2026-heres-what-i-seeing-for-home-labs/",
@@ -2299,16 +2306,79 @@
         "source": "Virtualization HowTo",
         "isoDate": "2026-09-04T12:32:34.000Z",
         "contentSnippet": "I have used Keepalived in my home lab for quite some time and most of the time, I have thought of it in a very simple way as to what… The post I Thought Keepalived Only Protected My Home Lab Servers. Then I Found Track Scripts appeared first on Virtualization Howto."
-      },
-      {
-        "title": "Proxmox Just Removed One of Its Biggest Weaknesses",
-        "link": "https://www.virtualizationhowto.com/2026/09/proxmox-just-removed-one-of-its-biggest-weaknesses/",
-        "source": "Virtualization HowTo",
-        "isoDate": "2026-09-03T12:07:08.000Z",
-        "contentSnippet": "For many who have been evaluating the market to settle on their hypervisor of choice for the enterprise moving forward since the Broadcom VMware meltdown, there have been several vendors… The post Proxmox Just Removed One of Its Biggest Weaknesses appeared first on Virtualization"
       }
     ],
     "hardware": [
+      {
+        "title": "Alice Huang reportedly instrumental in securing over $7.5 billion of Nvidia AI GPU imports during three-year relationship with Jensen Huang",
+        "link": "https://www.tomshardware.com/tech-industry/policy/alice-huang-reportedly-instrumental-in-securing-over-usd7-5-billion-of-nvidia-ai-gpu-imports-during-three-year-relationship-with-jensen-huang-helped-move-240-000-banned-chips-into-china-mostly-h100-and-h200",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-10T16:50:02.000Z",
+        "contentSnippet": "Alice Huang is reportedly connected to a web of Chinese companies, which then leveraged her closeness to Jensen Huang to gain access to billions of dollars' worth of Nvidia GPUs."
+      },
+      {
+        "title": "Secretlab debuts monitor light bar add-on to reduce glare and eye strain",
+        "link": "https://www.tomshardware.com/peripherals/secretlab-debuts-monitor-light-bar-add-on-to-reduce-glare-and-eye-strain-ergoarch-has-a-three-point-adjustment-arm-costs-usd179",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-10T15:30:16.000Z",
+        "contentSnippet": "Popular desk and chair maker Secretlab has released a new monitor light bar."
+      },
+      {
+        "title": "New framework grades AI jailbreaks across capability gains, scope, and how easy they are to deploy",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/new-framework-grades-ai-jailbreaks-across-capability-gains-scope-and-how-easy-they-are-to-deploy-frontier-model-forum-proposes-cvss-style-rating-system-for-new-ai-models",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-10T13:40:00.000Z",
+        "contentSnippet": "Frontier Model Forum releases its Jailbreak Rating Framework to estimate how easy it is for models to escape their cages and how much damage they can do."
+      },
+      {
+        "title": "Going deep on local AI performance benchmarking with Apple’s Mac Studio with M5 Ultra taking on Nvidia DGX Spark",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/going-deep-on-local-ai-performance-with-apples-mac-studio-with-m5-ultra-inference-engine-recipes-mandatory-for-bigger-models-as-mlx-stack-matures",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-10T13:20:00.000Z",
+        "contentSnippet": "But if you're thinking about dropping over $10K for the purpose of building a local AI inference setup, is a Mac Studio right for you?"
+      },
+      {
+        "title": "Elon Musk’s Terafab targets 1 million wafers a month after 2032",
+        "link": "https://www.tomshardware.com/tech-industry/semiconductors/elon-musks-terafab-targets-1-million-wafers-a-month-after-2032-planned-700-000-monthly-memory-wafers-could-rival-samsungs-entire-estimated-dram-production-capacity",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-10T13:00:00.000Z",
+        "contentSnippet": "Tesla and SpaceX’s Terafab reportedly plans 1 million wafers per month after 2032, with about 700,000 for memory."
+      },
+      {
+        "title": "Linus Torvalds says that AI fixes drove most of the progress in latest Linux kernel",
+        "link": "https://www.tomshardware.com/software/linux/linus-torvalds-says-that-ai-fixes-drove-most-of-the-progress-in-latest-linux-kernel-bpf-saw-more-ai-written-fixes-than-bug-reports-possibly-indicating-a-tidal-shift-for-open-source-maintainers-tired-of-flood-of-junk-reports",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-10T12:40:00.000Z",
+        "contentSnippet": "Linus Torvalds thinks that AI fixes drove most of the progress in Linux kernel 7.4rc2 — BPF saw more AI-written fixes than bug reports, possibly indicating a tidal shift"
+      },
+      {
+        "title": "President Trump says the FBI is investigating Jensen Huang’s affair",
+        "link": "https://www.tomshardware.com/tech-industry/policy/president-trump-says-the-fbi-is-investigating-jensen-huangs-affair-nvidia-also-accused-of-intervening-in-megaspeed-chip-smuggling-investigation",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-10T12:33:17.000Z",
+        "contentSnippet": "The FBI is probably concerned about the implication of a Chinese agent having influence over the leader of the U.S.'s leading AI chip manufacturer."
+      },
+      {
+        "title": "$10 programmer saves BIOS-locked Lenovo ThinkPads from the dump",
+        "link": "https://www.tomshardware.com/laptops/usd10-programmer-saves-bios-locked-lenovo-thinkpads-from-the-dump-exploit-bypasses-supervisor-passwords-to-save-4th-to-8th-gen-intel-models-from-e-waste",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-10T12:20:00.000Z",
+        "contentSnippet": "Many cheap company ThinkPads come with supervisor passwords and often end up as e-waste. Ukrainian YouTuber Hileeq shows how easy it is to bypass the password with a $10 programmer."
+      },
+      {
+        "title": "Software engineer Rickrolls his Prusa 3D printer via remote code execution exploit",
+        "link": "https://www.tomshardware.com/tech-industry/cyber-security/software-engineer-rickrolls-his-prusa-3d-printer-via-remote-code-execution-exploit-one-week-of-testing-with-claude-opus-uncovers-23-prusa-buddy-firmware-defects",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-10T12:18:07.000Z",
+        "contentSnippet": "A software engineer demonstrated the ability to Rickroll a 3D printer via remote code execution (RCE). This security flaw has been fixed in the latest Prusa software."
+      },
+      {
+        "title": "Upgrade your PS5's storage for GTA 6's digital pre-load with these SSD storage options from $174",
+        "link": "https://www.tomshardware.com/video-games/playstation/upgrade-your-ps5s-storage-for-gta-6s-digital-pre-load-with-these-ssd-storage-options-from-usd174-ultra-fast-drives-slot-into-the-m-2-expansion-slot-to-ready-your-console-for-gtas-huge-212gb-installation",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-10T12:00:00.000Z",
+        "contentSnippet": "With GTA 6's digital pre-loads beginning on November 10, you'll need enough storage on your PS5 to match. Here are some of the top PS5 SSD options to help you."
+      },
       {
         "title": "QNAP ES2486AFdc Puts 24 Gen4 NVMe Bays Behind Dual Active-Active Controllers, Rated at 616K IOPS and 15GB/s",
         "link": "https://www.storagereview.com/news/qnap-es2486afdc-24-bay-nvme-dual-controller-all-flash-zfs-nas",
@@ -2938,76 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-11-04T12:00:00.000Z",
         "contentSnippet": "Cloudflare engineers are at it again, optimizing DNS-building services for twice the speed and 85% less RAM usage"
-      },
-      {
-        "title": "Upgrade to an OLED display for only $269 at Walmart — Acer's 27-inch Nitro gaming monitor has a superfast 240Hz refresh rate and crisp WQHD resolution",
-        "link": "https://www.tomshardware.com/monitors/gaming-monitors/upgrade-to-an-oled-display-for-only-usd269-at-walmart-acers-27-inch-nitro-gaming-monitor-has-a-superfast-240hz-refresh-rate-and-crisp-wqhd-resolution",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-04T11:51:07.000Z",
-        "contentSnippet": "Switch to a QD-OLED gaming monitor for just $269. This Walmart bargain nets you a 27-inch QHD display with a super-fast 240Hz refresh rate."
-      },
-      {
-        "title": "Disgruntled software developers start ambitious open-source revolt, using AI to clone common services — OccupySaaS AI-powered project wants to kick Auth0, Salesforce, and other pricy service-as-softwa",
-        "link": "https://www.tomshardware.com/software/applications/disgruntled-software-developers-start-ambitious-open-source-revolt-using-ai-to-clone-common-services-occupysaas-ai-powered-project-wants-to-kick-auth0-salesforce-and-other-pricy-service-as-software-to-the-curb",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-04T11:30:00.000Z",
-        "contentSnippet": "OccupySaaS AI-powered project wants to kick Auth0, Salesforce, and other pricy service-as-software to the curb"
-      },
-      {
-        "title": "Save $300 on this 1440p gaming PC with a 9800X3D and RTX 5070 right now",
-        "link": "https://www.tomshardware.com/desktops/gaming-pcs/save-usd300-on-this-1440p-gaming-pc-with-a-9800x3d-and-rtx-5070-right-now-pre-built-cyberpowerpc-machine-ships-with-32gb-ddr5-and-a-2tb-ssd-for-just-usd2-199-99",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-04T11:26:04.000Z",
-        "contentSnippet": "Grab a CyberPowerPC machine wtih an RTX 5070, 9800X3D, 32GB DDR5 and a 2TB SSD for $2,199."
-      },
-      {
-        "title": "AMD expects to outsell Intel in Q4 for the first time in history",
-        "link": "https://www.tomshardware.com/pc-components/cpus/amd-expects-to-outsell-intel-in-q4-for-the-first-time-in-history-usd17b-guidance-would-exceed-intels-projections",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-04T11:15:00.000Z",
-        "contentSnippet": "AMD's data center business surges as strong demand for Epyc processors and Instinct accelerators continues and sales of client hardware declines only slightly."
-      },
-      {
-        "title": "Certified Android TV manufacturer put unauthorized backdoor in 1.3 million set-top boxes, Google reveals — OEM sold access to criminal affiliates, used massive network as botnet for ad fraud, resident",
-        "link": "https://www.tomshardware.com/tech-industry/cyber-security/certified-android-tv-manufacturer-put-unauthorized-backdoor-in-set-top-boxes-google-reveals-oem-sold-access-to-criminal-affiliates-for-1-3-million-devices-used-massive-network-as-botnet-for-ad-fraud-residential-proxy",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-04T11:00:00.000Z",
-        "contentSnippet": "Google discovered and shut down a backdoor built into millions of Google TV and Android TV set-top boxes built by Videostrong Technology Co."
-      },
-      {
-        "title": "US Army successfully flies a hybrid electric drone with 3D-printed heavy-fuel rotary engine — 400v motor-generator uses advanced engineering to ditch a bulky liquid cooling system",
-        "link": "https://www.tomshardware.com/tech-industry/drones/us-army-successfully-flies-a-hybrid-electric-drone-with-3d-printed-heavy-fuel-rotary-engine-400v-motor-generator-uses-advanced-engineering-to-ditch-a-bulky-liquid-cooling-system",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-04T10:30:00.000Z",
-        "contentSnippet": "The US Army VICTOR drone uses an optimized heavy-fuel rotary engine developed with metal 3D printing for rapid prototyping."
-      },
-      {
-        "title": "AMD Q3 2026 Earnings Data Center Growth Drives Record Quarter",
-        "link": "https://www.servethehome.com/amd-q3-2026-earnings-data-center-growth/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-11-04T05:24:08.000Z",
-        "contentSnippet": "AMD Q3 2026 earnings were massive with the data center and embedded segments seeing big uplift with the clear Venice x86 leadership looming The post AMD Q3 2026 Earnings Data Center Growth Drives Record Quarter appeared first on ServeTheHome."
-      },
-      {
-        "title": "Dell Pro 5 Micro Review: Panther Lake vPro, SO-DIMMs, and a 4 Xe Core GPU in 1.17 Liters",
-        "link": "https://www.storagereview.com/review/dell-pro-5-micro-review",
-        "source": "StorageReview",
-        "isoDate": "2026-11-03T21:47:59.000Z",
-        "contentSnippet": "The Dell Pro 5 Micro is Dell’s mainstream commercial mini PC for the Panther Lake generation, a 1.17-liter box that fits behind a monitor and ships with vPro, two SO-DIMM slots, two M.2 SSD slots, and a rear module bay for whatever legacy port a fleet still needs. Our review unit"
-      },
-      {
-        "title": "AMD Instinct MI350P First Look: 144GB of HBM3E in a 600W PCIe Card",
-        "link": "https://www.storagereview.com/review/amd-instinct-mi350p-first-look",
-        "source": "StorageReview",
-        "isoDate": "2026-11-03T17:07:17.000Z",
-        "contentSnippet": "The AMD Instinct MI350P is AMD’s first new PCIe Instinct GPU in four years, following the MI210 in 2022. It brings the company’s CDNA 4 architecture to a conventional add-in card, with up to 4.6 PFLOPS of MXFP4 performance, 144GB of HBM3E, and 4TB/s of memory bandwidth. All of th"
-      },
-      {
-        "title": "Windows 11 8GB RAM configurations get a performance boost",
-        "link": "https://www.tomshardware.com/software/windows/windows-11-8gb-ram-configurations-get-a-performance-boost-as-ai-demand-keeps-pushing-prices-up-microsoft-says-windows-is-now-20-percent-more-responsive-multitasking-40-percent-faster-on-memory-constrained-machines",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-03T17:00:00.000Z",
-        "contentSnippet": "Microsoft claims that it has made drastic improvements to the performance of Windows 11 while using 8GB of RAM."
       }
     ]
   }
