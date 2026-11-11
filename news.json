@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-11-10T22:05:10.887Z",
+  "updatedAt": "2026-11-11T02:25:45.690Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-126546 - Viber for iOS through 29.4.0.24 Denial of Service via Malformed GIF",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126546",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T00:58:56.000Z",
+        "contentSnippet": "Viber for iOS through 29.4.0.24 fails to validate the logical screen width and height in received GIF headers, allowing attackers to crash the app. Attackers can send a crafted GIF with zero dimensions that triggers an uncaught NSInternalInconsistencyException, aborting the app w",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-126545 - WWBN AVideo through 29.7.1 Missing Authorization via get_api_tags API",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126545",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T00:58:56.000Z",
+        "contentSnippet": "WWBN AVideo through 29.7.1 contains a missing authorization vulnerability in API::get_api_tags() in plugin/API/API.php that allows registered users to access restricted video data by querying the tags API. Attackers can subscribe to a tag and query APIName=tags to obtain filename",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-126544 - WWBN AVideo 6.5 through 29.7.1 Email Verification Bypass via User::verifyCode()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126544",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T00:58:55.000Z",
+        "contentSnippet": "WWBN AVideo 6.5 through 29.7.1 contains an email verification bypass vulnerability in User::verifyCode() in objects/user.php caused by PHP loose comparison of the recoverPass token. Registered users can reuse the installation-wide salt from their own verification link and craft a",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-126543 - WWBN AVideo through 29.7.1 Wallet Credit Manipulation via PayPalYPT ipnV2.php",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126543",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T00:58:54.000Z",
+        "contentSnippet": "WWBN AVideo through 29.7.1 contains an improper payment verification vulnerability in plugin/PayPalYPT/ipnV2.php that credits wallets from PayPal IPNs not bound to the site's merchant account. Unauthenticated attackers can forward genuine VERIFIED recurring-payment IPNs from thei",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-126542 - WWBN AVideo 6.5 through 29.7.1 Authentication Bypass via Hybridauth Social Login",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126542",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T00:58:54.000Z",
+        "contentSnippet": "WWBN AVideo 6.5 through 29.7.1 contains an authentication bypass vulnerability that allows unauthenticated attackers to log in as any user via Hybridauth social login display names. Attackers can set their X, Facebook, Yahoo or LinkedIn display name to a victim's username and wit",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-126541 - WWBN AVideo through 29.7.1 Missing Authorization via Live Restream Endpoints",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126541",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T00:58:53.000Z",
+        "contentSnippet": "WWBN AVideo through 29.7.1 contains a missing authorization vulnerability in Live plugin restream endpoints that allows authenticated streamers to obtain other users' stream keys by supplying arbitrary live_transmitions_history_id values. Attackers can redeem the issued action to",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-126539 - Directus before 12.1.0 Authorization Bypass via Public WebSocket REST Interface",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126539",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T00:58:52.000Z",
+        "contentSnippet": "Directus before 12.1.0 contains an authorization bypass vulnerability that allows unauthenticated attackers to skip permission checks by sending a failed auth message on public-mode WebSocket connections. Attackers can send an invalid token so handleAuthRequest sets accountabilit",
+        "cveScore": 9.2,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-126499 - Jellyfin before 12.0 Path Traversal via Library VirtualFolders Endpoints",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126499",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T00:58:51.000Z",
+        "contentSnippet": "Jellyfin before 12.0 contains a path traversal vulnerability in the DELETE /Library/VirtualFolders and POST /Library/VirtualFolders/Name endpoints that allows attackers to delete or move directories via unvalidated library names. Unauthenticated attackers can supply names like ..",
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-126498 - WriteFreely before 0.17.3 Stored XSS via Unsanitized Post Slug",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126498",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T00:58:50.000Z",
+        "contentSnippet": "WriteFreely before 0.17.3 contains a stored cross-site scripting vulnerability that allows authenticated authors to inject HTML by supplying a malicious post slug via the CreatePost API. The raw slug is concatenated into an anchor by augmentReadingDestination() for paid-shortcode",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-126497 - LibreCAD through 2.2.1.6 Heap Out-of-Bounds Write via dwgReader18::parseDataPage",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126497",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T00:58:50.000Z",
+        "contentSnippet": "LibreCAD through 2.2.1.6 contains a heap-based out-of-bounds write vulnerability in the bundled libdxfrw dwgReader18::parseDataPage() function due to unchecked buffer size and page offsets. Attackers can craft an AC1018 (R2004) DWG file with malicious startOffset values that caus",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-126496 - 1Panel-dev CordysCRM before 1.9.6 Authorization Bypass via /account/contact/get/{id}",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126496",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T00:58:49.000Z",
+        "contentSnippet": "1Panel-dev CordysCRM before 1.9.6 contains an authorization bypass vulnerability in CustomerContactController.get that allows authenticated users to read other users' contacts because no organization, owner or data-scope check is applied. Attackers holding ordinary contact or cus",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-126495 - MQTTX through 1.13.3 Stored XSS via Topic Tree and JSON Tree Tooltips",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126495",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T00:58:48.000Z",
+        "contentSnippet": "MQTTX desktop through 1.13.3 contains a stored cross-site scripting vulnerability that allows attackers to inject script by publishing malicious MQTT topic names or payloads rendered unescaped in tooltips. Attackers controlling a broker or publishing to subscribed topics can exec",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-126188 - Active Storage: Possible local file disclosure in Active Storage video previews and analysis",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126188",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T00:18:47.000Z",
+        "contentSnippet": "Active Storage makes it simple to upload and reference files in cloud services and attach those files to Active Record objects. Prior to 8.0.5.2 and from 8.1 until 8.1.4.1, Active Storage's ActiveStorage::Previewer::VideoPreviewer, ActiveStorage::Analyzer::VideoAnalyzer, and Acti",
+        "cveScore": 3.7,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-20183 - ISE Authorization Bypass vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-20183",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T23:17:21.000Z",
+        "contentSnippet": "A vulnerability in the web-based management interface of Cisco Identity Services Engine (ISE) could allow an authenticated, remote attacker to modify parts of the configuration on an affected device. This vulnerability is due to the lack of server-side validation of&nbsp;Administ",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-126261 - Fortinet FortiManager Improper Authorization Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126261",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T23:17:20.000Z",
+        "contentSnippet": "A improper authorization vulnerability in Fortinet FortiManager 8.0.0, FortiManager 7.6.0 through 7.6.7, FortiManager 7.4.0 through 7.4.5, FortiManager 7.2.0 through 7.2.8 may allow an unauthenticated attacker that can reach the FGFM port to execute code or commands via crafted F",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-126187 - React: Unauthenticated Remote Code Execution in React Server Components",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126187",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T23:17:20.000Z",
+        "contentSnippet": "React is a JavaScript library for building user interfaces. From 19.0.0 until 19.0.9, 19.1.10, 19.2.9, and 19.3.1, the react-server-dom-webpack, react-server-dom-parcel, and react-server-dom-turbopack packages are vulnerable to unauthenticated remote code execution through crafte",
+        "cveScore": 9.5,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-123084 - Python-pulpcore: pulpcore: header content guard jq filter exposes the content-app environment",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-123084",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T23:17:19.000Z",
+        "contentSnippet": "An **expression language injection** has been found in the HeaderContentGuard.permit function in publication.py of the content guard in the **Pulpcore** package. The guard is supposed to check a value in a request header. It saves a jq filter and runs that filter against the head",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-0480 - AMD Secure Encrypted Virtualization Missing Authentication Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-0480",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T23:17:19.000Z",
+        "contentSnippet": "Missing Authentication for Critical Function in AMD Secure Encrypted Virtualization (SEV) firmware could allow a malicious hypervisor to forge SEV-TIO guest request messages potentially compromising SEV-SNP guest memory integrity and confidentiality.",
+        "cveScore": 6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-0454 - AMD Secure Encrypted Virtualization Out-of-Bounds Write",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-0454",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T23:17:19.000Z",
+        "contentSnippet": "An out-of-bounds write in the AMD Secure Encrypted Virtualization (SEV) firmware could allow a malicious hypervisor to corrupt global firmware variables, potentially resulting in loss of integrity.",
+        "cveScore": 4.6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-0435 - AMD Secure Encrypted Virtualization Use-After-Free Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-0435",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T23:17:19.000Z",
+        "contentSnippet": "Operation on a resource after expiration or release in the AMD Secure Encrypted Virtualization (SEV) firmware could allow an attacker with administrative privileges to swap out a guest device without the guest's knowledge, potentially resulting in a loss of confidentiality and in",
+        "cveScore": 6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-0003 - AMD SEV Firmware Downgrade Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-0003",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T23:17:19.000Z",
+        "contentSnippet": "Use of a per-part static key in the ASP Bootloader could allow an attacker to downgrade the Secure Encrypted Virtualization (SEV) firmware and exploit known vulnerabilities to decrypt memory potentially resulting in loss of confidentiality.",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2025-48504 - AMD SEV Use-After-Free Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-48504",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T23:17:19.000Z",
+        "contentSnippet": "Operation on a resource after expiration or release in the Secure Encrypted Virtualization (SEV) firmware could allow a malicious hypervisor to manipulate metadata pages potentially resulting in the loss of confidentiality and integrity of guest memory.",
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2025-29941 - AMD SEV Weak Pseudo-Random Number Generator Seed Generation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-29941",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T23:17:18.000Z",
+        "contentSnippet": "Incorrect usage of seeds in pseudo-random number generator in the Secure Encrypted Virtualization (SEV) firmware could allow a malicious hypervisor or migration agent to import a forged guest context potentially resulting in loss of confidentiality for derived guest keys.",
+        "cveScore": 6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2025-0008 - Secure Debug Unlock Authentication Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2025-0008",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T23:17:18.000Z",
+        "contentSnippet": "Insufficient verification of data authenticity may allow a local attacker to bypass Secure Debug Unlock (SDU), potentially resulting in unauthorized debug access.",
+        "cveScore": 8.4,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2024-36309 - AMD Northbridge IO Missing Lock Bit Protection Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2024-36309",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-10T23:17:18.000Z",
+        "contentSnippet": "Missing Lock Bit Protection in the Northbridge IO (NBIO) could allow a privileged attacker to use an intentionally disabled device as part of a remapping attack potentially impacting data confidentiality, integrity, or availability.",
+        "cveScore": 4.6,
+        "cveSeverity": "MEDIUM"
+      },
       {
         "title": "CVE-2026-92545 - Kong Gateway Cache Key Collision Vulnerability",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-92545",
@@ -677,234 +902,37 @@
         "contentSnippet": "Insecure Temporary File Vulnerability in Hitachi Dynamic Link Manager for AIX (for markets outside Japan) and Hitachi Dynamic Link Manager EX for AIX (for the Japanese market). This issue affects Hitachi Dynamic Link Manager for AIX: from 7.4.1-00 before 9.0.4-01; Hitachi Dynamic",
         "cveScore": 7.3,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-125077 - SourceCodester Smart Attendance System with QR Code Scanner cross-site request forgery",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-125077",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T23:45:23.000Z",
-        "contentSnippet": "A vulnerability was determined in SourceCodester Smart Attendance System with QR Code Scanner 1.0. Affected by this vulnerability is an unknown functionality. Executing a manipulation can lead to cross-site request forgery. It is possible to launch the attack remotely. The exploi",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-125076 - SourceCodester Smart Attendance System with QR Code Scanner JSON Endpoint attendance_handler.php missing authentication",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-125076",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T23:30:24.000Z",
-        "contentSnippet": "A vulnerability was found in SourceCodester Smart Attendance System with QR Code Scanner 1.0. Affected is an unknown function of the file api/attendance_handler.php of the component JSON Endpoint. Performing a manipulation of the argument student_code results in missing authentic",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-125406 - Ettercap through 0.8.4.1 Stack Buffer Underwrite via Telnet Dissector Backspace Handling",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-125406",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T23:28:07.000Z",
-        "contentSnippet": "Ettercap through 0.8.4.1 contains a stack buffer underwrite vulnerability in the telnet dissector in src/dissectors/ec_telnet.c that decrements the output pointer on backspace without a lower bound check. Attackers can send a telnet stream with more backspaces than preceding char",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-125405 - Ettercap through 0.8.4.1 Out-of-Bounds Read via HTTP NTLM Authentication Parsing",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-125405",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T23:28:06.000Z",
-        "contentSnippet": "Ettercap through 0.8.4.1 contains an out-of-bounds read vulnerability in Parse_NTLM_Auth() in src/dissectors/ec_http.c due to unvalidated NTLM message offsets. Attackers can send a crafted HTTP Authorization header observed by Ettercap to read beyond the buffer, disclosing memory",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-125404 - Ettercap through 0.8.4.1 Stack Buffer Overflow via WPA CCMP Decryption",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-125404",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T23:28:05.000Z",
-        "contentSnippet": "Ettercap through 0.8.4.1 contains an integer underflow in ccmp_decrypt() in src/ec_encryption_ccmp.c that subtracts the 8-byte CCMP trailer without checking minimum length. Attackers on a network whose WPA key is loaded can send a short crafted CCMP frame to overflow a stack buff",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-125403 - Ettercap through 0.8.4.1 Out-of-Bounds Read via sslw_remove_sts",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-125403",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T23:28:04.000Z",
-        "contentSnippet": "Ettercap through 0.8.4.1 contains an out-of-bounds read and size_t underflow vulnerability in sslw_remove_sts() in src/ec_sslwrap.c, caused by a stale length and an unchecked memmem() result when stripping Strict-Transport-Security headers. A malicious HTTPS server whose response",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-125402 - Ettercap through 0.8.4.1 Heap Out-of-Bounds Read via TLS SNI Parsing",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-125402",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T23:28:04.000Z",
-        "contentSnippet": "Ettercap through 0.8.4.1 contains a heap out-of-bounds read vulnerability in sslw_get_clienthello_sni() in src/ec_sslwrap.c that trusts the unchecked 16-bit SNI length field. Network-adjacent attackers can send crafted TLS ClientHello messages during SSL interception to leak up t",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-125401 - Ettercap through 0.8.4.1 Heap Buffer Overflow via Gadu-Gadu Dissector",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-125401",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T23:28:03.000Z",
-        "contentSnippet": "Ettercap through 0.8.4.1 contains a heap buffer overflow vulnerability in gg_get_version() in src/dissectors/ec_gg.c that writes up to 44 bytes into a 30-byte allocation. Remote attackers can send Gadu-Gadu traffic on TCP port 8074 with a crafted version field through a monitored",
-        "cveScore": 8.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-125400 - Ettercap through 0.8.4.1 Use-After-Free via PCRE2 Filter Substitution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-125400",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T23:28:02.000Z",
-        "contentSnippet": "Ettercap through 0.8.4.1 contains a use-after-free vulnerability in func_pcre() in src/ec_filter.c that reads the PCRE2 ovector after freeing match data. Network-adjacent attackers can send packets matching a loaded pcre_regex() substitution filter to corrupt memory and potential",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-125399 - Fluxion before 6.39 OS Command Injection via Crafted SSID",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-125399",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T23:28:02.000Z",
-        "contentSnippet": "Fluxion before 6.39 contains an OS command injection vulnerability in the fluxion.sh target scanner, which decodes access point ESSIDs with eval after escaping only single quotes. Attackers within Wi-Fi range can broadcast an access point with a crafted SSID to execute commands a",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-125398 - Instatic before 0.0.21 Authorization Bypass via Row Author Reassignment Endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-125398",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T23:28:01.000Z",
-        "contentSnippet": "Instatic before 0.0.21 contains an authorization bypass vulnerability in handleRowAuthor that allows authenticated users to skip table-level access checks by loading rows with getDataRow() instead of loadRowForAccess(). Attackers holding content.edit.any but lacking data.system.t",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-125397 - NocoBase plugin-ai 2.1.0 through 2.2.41 Authorization Bypass via Sub-Agent Username Override",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-125397",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T23:28:00.000Z",
-        "contentSnippet": "NocoBase plugin-ai 2.1.0 through 2.2.41 contains an authorization bypass vulnerability in getAccessibleAIEmployee() that lets authenticated users access unassigned AI employees by overriding the role-derived filter with a supplied username. Attackers can use the dispatch-sub-agen",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-125396 - Ghostscript before 10.08.0 -dSAFER Bypass via .putgstringcopy .forceput Recovery",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-125396",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T23:28:00.000Z",
-        "contentSnippet": "Ghostscript before 10.08.0 contains a -dSAFER bypass vulnerability in the .putgstringcopy procedure in gs_fonts.ps, which calls the privileged .forceput operator without checking operand types. Attackers can supply crafted PostScript or PDF documents that trigger a type error, re",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-125395 - Ampache before 8.4.0 Stored XSS via Song Lyrics ID3 Tag",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-125395",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T23:27:59.000Z",
-        "contentSnippet": "Ampache before 8.4.0 contains a stored cross-site scripting vulnerability that allows users with upload rights to inject script through unescaped song lyrics in LyricsView.php getLyrics() and show_lyrics.inc.php. Attackers can upload a song whose lyrics ID3 tag contains HTML and ",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-125394 - FreeRDP before 3.33.0 Use-After-Free via Stale Brush Cache Pointer",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-125394",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T23:27:58.000Z",
-        "contentSnippet": "FreeRDP before 3.33.0 contains a heap use-after-free vulnerability in update_gdi_patblt(), update_gdi_polygon_cb() and update_gdi_mem3blt() that retain stale brush cache pointers. A malicious RDP server can resend CACHE_BRUSH to the same slot then send PATBLT, causing clients to ",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-125393 - MailEnable Enterprise Premium before 10.62 Heap Overflow via IMAP X-FB-FETCH",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-125393",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T23:27:57.000Z",
-        "contentSnippet": "MailEnable Enterprise Premium before 10.62 contains a heap overflow vulnerability in the IMAP X-FB-FETCH command that allows authenticated users to overflow a fixed 0x400-byte heap buffer. Attackers can supply an X-FB-USER address longer than about 1016 bytes, which is formatted ",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-125392 - Webmin through 2.670 Stored XSS via BIND8 edit_recs.cgi ALL View",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-125392",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T23:27:57.000Z",
-        "contentSnippet": "Webmin through 2.670 contains a stored cross-site scripting vulnerability in bind8/edit_recs.cgi that outputs raw DNS record values without HTML escaping in ALL view mode. Delegated zone users such as Virtualmin domain owners can store record values containing script that execute",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-125391 - Webmin through 2.670 OS Command Injection via Samba User Account Options",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-125391",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T23:27:56.000Z",
-        "contentSnippet": "Webmin through 2.670 contains an OS command injection vulnerability in samba/save_euser.cgi that allows authenticated Samba user maintainers to inject commands via unvalidated opts parameter. Attackers can embed shell metacharacters in account option flags passed by create_user a",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-125390 - Group-Office before 6.8.181, 25.0.116, and 26.0.58 Local File Read via processUploadQueue",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-125390",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T23:27:55.000Z",
-        "contentSnippet": "Group-Office before 6.8.181, 25.0.116, and 26.0.58 contains an arbitrary local file read vulnerability in FolderController::actionProcessUploadQueue that allows authenticated users to read server files by supplying absolute paths in the blobs parameter. Attackers can have files h",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-125389 - Group-Office before 6.8.181, 25.0.116, and 26.0.58 Stored XSS via filterXSS Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-125389",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T23:27:55.000Z",
-        "contentSnippet": "Intermesh Group-Office before 6.8.181, 25.0.116, and 26.0.58 contains a stored cross-site scripting vulnerability in the email viewer due to a flawed regex in StringHelper::filterXSS. Remote attackers can send emails containing tags like svg/onload, which MessagePanel.js renders ",
-        "cveScore": 6.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-125388 - Group-Office before 6.8.181, 25.0.116, and 26.0.58 Missing Authorization in Forms Report Download",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-125388",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T23:27:54.000Z",
-        "contentSnippet": "Intermesh Group-Office before 6.8.181, 25.0.116, and 26.0.58 contains a missing authorization vulnerability that allows authenticated users to download form reports via api/download.php without permission checks. Attackers can request the business/forms/report blob with a form ID",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-125387 - Faveo Helpdesk through 2.0.3 Cross-Department Ticket Tampering via TicketController",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-125387",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T23:27:53.000Z",
-        "contentSnippet": "Faveo Helpdesk through 2.0.3 contains an authorization bypass vulnerability in TicketController that allows authenticated agents to modify tickets outside their department by referencing raw ticket IDs. Attackers can call merge-tickets, change-owner, ticket/assign and ticket/surr",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-125386 - langchain4j-aideepin through 3.32.0 IDOR via /character/message reference endpoints",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-125386",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T23:27:53.000Z",
-        "contentSnippet": "langchain4j-aideepin through 3.32.0 contains an insecure direct object reference vulnerability in CharacterMessageController that allows authenticated users to access other users' message references due to missing owner checks. Attackers can supply another user's message uuid to ",
-        "cveScore": 6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-125385 - INDOTALENT WHMS before 10.20261109 Path Traversal via FileDocument/GetDocument and FileImage/GetImage",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-125385",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T23:27:52.000Z",
-        "contentSnippet": "INDOTALENT WHMS before 10.20261109 contains a path traversal vulnerability that allows authenticated users to read arbitrary files via the documentName and imageName parameters. Attackers can self-register and supply traversal sequences to GetDocument or GetImage, which use Path.",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-125384 - INDOTALENT WHMS before 10.20261109 Default Administrator Credentials via UserAdminSeeder",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-125384",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-09T23:27:51.000Z",
-        "contentSnippet": "INDOTALENT WHMS before 10.20261109 contains a default credentials vulnerability that allows unauthenticated attackers to gain administrator access because UserAdminSeeder creates admin@root.com with password 123456. Attackers can log in with these credentials, which carry every a",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
       }
     ],
     "ai": [
+      {
+        "title": "Introducing Kimi K3.1 Pro on Amazon Bedrock",
+        "link": "https://aws.amazon.com/blogs/machine-learning/introducing-kimi-k3-1-pro-on-amazon-bedrock/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-11T01:07:19.000Z",
+        "contentSnippet": "Kimi K3.1 Pro from Moonshot AI is now available on Amazon Bedrock. Learn how to get started through the OpenAI-compatible Chat Completions, Responses, and Converse APIs, optimize inference with explicit prompt caching, and use the model as a coding assistant in OpenCode."
+      },
+      {
+        "title": "Build a daily dependency watcher with LangGraph and Amazon Bedrock AgentCore web search",
+        "link": "https://aws.amazon.com/blogs/machine-learning/build-a-daily-dependency-watcher-with-langgraph-and-amazon-bedrock-agentcore-web-search/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-10T23:34:05.000Z",
+        "contentSnippet": "The Web Search API in Amazon Bedrock AgentCore gives agents current, cited web results signed with the AWS credentials they already use. In this post, build a daily dependency watcher as a LangGraph graph that researches package ecosystems in parallel, keeps its rules in code, an"
+      },
+      {
+        "title": "Meta FAIR Releases e-means: An Algorithm Beating k-means in 10x Fewer Epochs",
+        "link": "https://www.marktechpost.com/2026/11/10/meta-fair-e-means-k-means-faiss/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-11-10T23:20:19.000Z",
+        "contentSnippet": "Meta FAIR’s e-means is a mini-batch k-means replacement shipped in FAISS 1.16.0. It reaches Lloyd’s 25-epoch loss in 1.4 to 2.6 epochs, with 10-45x GPU speedups and no extra hyperparameters. The post Meta FAIR Releases e-means: An Algorithm Beating k-means in 10x Fewer Epochs app"
+      },
+      {
+        "title": "The agent evaluation playbook: Built-in, DeepEval, and AutoEval on Amazon Bedrock AgentCore Evaluations",
+        "link": "https://aws.amazon.com/blogs/machine-learning/the-agent-evaluation-playbook-built-in-deepeval-and-autoeval-on-agentcore/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-10T22:35:03.000Z",
+        "contentSnippet": "When you deploy an agent, whether it is working is really several questions: did it finish the task, stay on topic, leak data, or skip steps? This post shows how to evaluate agents on Amazon Bedrock AgentCore with built-in, DeepEval, and AutoEval evaluators, and how to match each"
+      },
       {
         "title": "Gemini Intelligence: New features, on more devices",
         "link": "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence-november-features-devices/",
@@ -1576,34 +1604,6 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-10-29T16:11:08.000Z",
         "contentSnippet": "NVIDIA Nemotron 3.5 Super VL is a 120B-parameter mixture-of-experts model that pairs reasoning and tool use with multimodal understanding. This post explores its architecture and use cases, then shows how to deploy it on Amazon EKS, EKS Auto Mode, and Amazon SageMaker HyperPod EK"
-      },
-      {
-        "title": "Infini-AI-Lab Releases Hermit, an Open-Source Harness Adapter Framework for AI Agents",
-        "link": "https://www.marktechpost.com/2026/10/29/infini-ai-lab-hermit-harness-adapter-framework/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-10-29T08:24:52.000Z",
-        "contentSnippet": "Infini-AI-Lab released Hermit, an Apache-2.0 harness adapter framework that trains an external layer of instructions, skills, memory and tools from task feedback, leaving the agent’s model and harness unchanged. The post Infini-AI-Lab Releases Hermit, an Open-Source Harness Adapt"
-      },
-      {
-        "title": "Block Unveils Dessa, a Full-Duplex Speech Model Trained Only on Speech",
-        "link": "https://www.marktechpost.com/2026/10/29/block-dessa-full-duplex-speech-model/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-10-29T07:50:39.000Z",
-        "contentSnippet": "Block’s AI lab released Dessa, a full-duplex speech-to-speech model trained only on human conversation audio. It runs locally on a MacBook Pro M4 Max, but Block has published no size, benchmarks or weights. The post Block Unveils Dessa, a Full-Duplex Speech Model Trained Only on "
-      },
-      {
-        "title": "AssemblyAI Ships AssemblyAI-TTS-1: A $15 per 1M Character Text-to-Speech API for Voice Agents",
-        "link": "https://www.marktechpost.com/2026/10/29/assemblyai-tts-1-text-to-speech-api-voice-agents/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-10-29T07:28:36.000Z",
-        "contentSnippet": "AssemblyAI has released AssemblyAI-TTS-1, its first text-to-speech model for voice agents. It costs $15 per 1M characters, offers unlimited concurrency without a contract, and supports 6 languages at launch. The post AssemblyAI Ships AssemblyAI-TTS-1: A $15 per 1M Character Text-"
-      },
-      {
-        "title": "NVIDIA Releases Nemotron 3.5 Transcribe: An Open 30B MoE Model for 40-Language Transcription with ~4B Active Parameters",
-        "link": "https://www.marktechpost.com/2026/10/28/nvidia-nemotron-3-5-transcribe-open-speech-llm/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-10-29T04:41:24.000Z",
-        "contentSnippet": "NVIDIA released Nemotron 3.5 Transcribe, an open-weights speech LLM with 4.3B active parameters. It transcribes 40 languages, adds speaker labels and word timestamps, and posts a 4.71% mean WER on the English Open ASR Leaderboard. The post NVIDIA Releases Nemotron 3.5 Transcribe:"
       }
     ],
     "virtualization": [
@@ -2310,6 +2310,20 @@
     ],
     "hardware": [
       {
+        "title": "AMD EPYC Venice SP7 Review: 256 Cores Per Socket and the Bandwidth to Feed Them",
+        "link": "https://www.storagereview.com/review/amd-epyc-venice-sp7-review",
+        "source": "StorageReview",
+        "isoDate": "2026-11-11T00:57:44.000Z",
+        "contentSnippet": "AMD’s 6th Gen EPYC server CPU family, codenamed Venice, brings Zen 6 and Zen 6c cores to a lineup built to take on every corner of the server market. AMD is pushing core counts and clock speeds higher and giving those cores considerably more bandwidth to work with, through a larg"
+      },
+      {
+        "title": "Dell PowerEdge R9825 Review: 512 Venice Cores in an Air-Cooled 3U Server",
+        "link": "https://www.storagereview.com/review/dell-poweredge-r9825-review",
+        "source": "StorageReview",
+        "isoDate": "2026-11-10T22:13:29.000Z",
+        "contentSnippet": "The Dell PowerEdge R9825 is the first server built on AMD’s 6th Gen EPYC to reach our lab, and it is the dual-socket flagship of Dell’s 18th generation PowerEdge line. Two EPYC 9996 processors give it 512 Zen 6c cores and 1,024 threads, 32 DDR5 slots take it to 8TB of memory, and"
+      },
+      {
         "title": "Portworx Kube Datastore Reaches GA With Single-Replica Pools on FlashArray",
         "link": "https://www.storagereview.com/news/portworx-kube-datastore-ga-single-replica-pools-pre-staged-volumes",
         "source": "StorageReview",
@@ -2994,20 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-11-04T16:50:33.000Z",
         "contentSnippet": "T-Mobile is offering up to 5 Gbps fiber internet for less than $100/month"
-      },
-      {
-        "title": "Team Group CEO warns memory crisis could reach point where 'even money can't buy goods' — will get worse next year, with 'no downward trend in price whatsoever'",
-        "link": "https://www.tomshardware.com/pc-components/dram/team-group-ceo-warns-memory-crisis-could-reach-point-where-even-money-cant-buy-goods-will-get-worse-next-year-with-no-downward-trend-in-price-whatsoever",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-04T15:28:30.000Z",
-        "contentSnippet": "“How can prices fall when there’s nothing left?” Team Group CEO Chen Ching-wen said during the company's earnings call."
-      },
-      {
-        "title": "Logitech G Pro X3 Superstrike Review: $200 for the illusion of a click",
-        "link": "https://www.tomshardware.com/peripherals/gaming-mice/logitech-g-pro-x3-superstrike-review",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-04T15:00:00.000Z",
-        "contentSnippet": "Logitech's G Pro X3 Superstrike is a minor but noticeable update to its revolutionary mouse — there's a new chipset and the weight has been rebalanced, so it lasts longer and feels better. And it costs $200."
       }
     ]
   }
