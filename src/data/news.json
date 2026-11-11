@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-11-11T10:05:11.027Z",
+  "updatedAt": "2026-11-11T18:14:14.607Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-110697 - Quay: quay: sql like wildcard injection in robot listing leaks cross-tenant robot tokens",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110697",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T17:06:13.000Z",
+        "contentSnippet": "A flaw was found in Quay where the robot account listing function constructs a SQL LIKE pattern from user-controlled namespace names without escaping wildcard metacharacters. An attacker who creates a namespace containing an underscore character can match and retrieve robot accou",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-124694 - Cross-Site Scripting in Kendo UI for jQuery PropertyGrid Values and Descriptions",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-124694",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T16:57:45.000Z",
+        "contentSnippet": "In Progress Kendo UI for jQuery versions 2026.3.1015 up to, but not including, 2026.4.1110, PropertyGrid does not encode bound property values and items[].description in its default configuration. An attacker who can influence either value can cause JavaScript to execute when a u",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-119723 - HHVM Request Parsing Denial of Service Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-119723",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T16:57:01.000Z",
+        "contentSnippet": "When parsing request variables such as query-string and form parameters, HHVM did not check that appending a nested array succeeded before descending into it. A remote, unauthenticated attacker could send a GET or POST request which would crash the HHVM server process before any ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-121737 - Proxygen Use-After-Free Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-121737",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T16:55:44.000Z",
+        "contentSnippet": "When a remote, unauthenticated HTTP/1.1 client pipelined the start of a second request and then stopped reading, proxygen's coroutine-based HTTP session could free that pipelined stream while resetting the connection's streams on the resulting write timeout, then go on to use it.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-119237 - Proxygen QPACK Blocked Stream Denial of Service Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-119237",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T16:55:20.000Z",
+        "contentSnippet": "In proxygen's HTTP/3 session, when a HEADERS block referenced QPACK dynamic table entries that had not yet been received, header decoding for that stream was paused, but the session continued to read the stream from the QUIC transport. The unread data bypassed the session's ingre",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-119236 - mvfst CRYPTO Frame Memory Exhaustion Denial of Service",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-119236",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T16:55:09.000Z",
+        "contentSnippet": "An mvfst QUIC server retained CRYPTO frame data received at an encryption level (Initial or Handshake) that the TLS handshake had already moved past. Because the transport treated this data as delivered, it did not count against the CRYPTO stream buffer limit. A remote, unauthent",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-119235 - Proxygen QPACK Decoder Memory Exhaustion Denial of Service",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-119235",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T16:54:58.000Z",
+        "contentSnippet": "proxygen's QPACK decoder enforced its size limit on a string literal in an encoder-stream instruction only after the entire literal had been received. A remote, unauthenticated HTTP/3 peer could send an insert instruction on the QPACK encoder stream that declares an arbitrarily l",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-119234 - mvfst Stream Fragment Denial of Service Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-119234",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T16:54:48.000Z",
+        "contentSnippet": "mvfst did not adequately merge or compact out-of-order STREAM frame data, and a small received fragment could keep a much larger receive buffer alive. QUIC flow control limits the number of buffered stream bytes, but not this per-fragment memory and bookkeeping. A remote, unauthe",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-119233 - Proxygen HTTP/3 Codec Denial of Service Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-119233",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T16:54:35.000Z",
+        "contentSnippet": "proxygen's HTTP/3 codec buffered an incomplete non-DATA frame, such as a control-stream frame, a frame of an unknown or reserved type, or a HEADERS frame, until its entire declared length had arrived, without limiting that length, and re-scanned all buffered data each time more b",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-124693 - Cross-Site Scripting in Kendo UI for jQuery PivotGrid Axis Chips",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-124693",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T16:54:21.000Z",
+        "contentSnippet": "In Progress Kendo UI for jQuery versions 2026.3.1015 up to, but not including, 2026.4.1110, PivotGrid and PivotConfigurator axis field names are passed to a chip template without appropriate encoding. An attacker who can influence an axis field name can cause JavaScript to execut",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-124692 - Cross-Site Scripting in Kendo UI for jQuery Grid and TreeList Column Reordering",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-124692",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T16:52:26.000Z",
+        "contentSnippet": "In Progress Kendo UI for jQuery versions 2026.3.1015 up to, but not including, 2026.4.1110, the Grid and TreeList column-reorder drag clue reparses header text as HTML. An attacker who can influence a column field or title used by an affected application can cause JavaScript to e",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-124690 - Cross-Site Scripting During Kendo UI for jQuery Custom SVG Icon Sanitization",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-124690",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T16:50:59.000Z",
+        "contentSnippet": "In Progress Kendo UI for jQuery, sanitizeSvgContent() parses custom icon markup into a live DOM before filtering it. An attacker who can influence custom icon content can cause JavaScript to execute during icon creation, before an unsafe element is removed. The issue was reported",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-124689 - Cross-Site Scripting in Kendo UI for jQuery ActionSheet Header Labels",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-124689",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T16:48:21.000Z",
+        "contentSnippet": "In Progress Kendo UI for jQuery versions 2026.3.1014 up to, but not including, 2026.4.1110, ActionSheet does not encode title, subtitle, and header button label values before rendering them. An attacker who can influence these values can inject markup that executes as JavaScript ",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-124688 - Cross-Site Scripting via the spriteCssClass Field in Kendo UI for jQuery",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-124688",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T16:44:32.000Z",
+        "contentSnippet": "In Progress® Kendo® UI for jQuery prior to 2026.4.1111 the TabStrip, PanelBar, and Menu widgets support mapping a dataSource field to `spriteCssClass`. If an attacker can control the mapped data, they can break out of the attribute and inject markup, including event-handler attri",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-126722 - CVE-2026-126722",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126722",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T16:41:42.000Z",
+        "contentSnippet": "Rooxis RXR-12 Wi-Fi router contains an undocumented telnet backdoor daemon (/usr/bin/telnetd_startup) that, upon receipt of a precomputed AES-128-CBC magic packet using a firmware-wide static key and IV, enables telnet service with default credentials, providing remote root acces",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-126723 - CVE-2026-126723",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126723",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T16:41:28.000Z",
+        "contentSnippet": "Rooxis RXR-12 Wi-Fi router contains an authenticated command injection vulnerability in the LuCI white_list RPC handler (/usr/lib/lua/luci/data/white_list_plt.lua), where unsanitized user-supplied MAC addresses are concatenated into os.execute() without validation, yielding root ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-126724 - CVE-2026-126724",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126724",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T16:41:18.000Z",
+        "contentSnippet": "Rooxis RXR-12 Wi-Fi router contains an undocumented UID-0 backdoor account (dg) with a firmware-wide default password (ivanlee) and interactive shell (/bin/ash), allowing authentication as root via SSH or local console without device-specific secrets. Firmware 20260813_c2169ea5 r",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-126720 - CVE-2026-126720",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126720",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T16:41:07.000Z",
+        "contentSnippet": "Rooxis RXR-12 Wi-Fi router contains an unauthenticated remote code execution vulnerability in /usr/bin/cloud_manage, where a server-controlled JSON diagnoseParameter field is passed unsanitized to popen(), enabling arbitrary command execution as root over cleartext HTTP when an a",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-124687 - Cross-Site Scripting in DropDownButton and SplitButton Items in Kendo UI for jQuery",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-124687",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T16:25:03.000Z",
+        "contentSnippet": "In Progress® Kendo® UI for jQuery versions from 2022.2.621 prior to 2026.4.1111 the DropDownButton and SplitButton allow markup injection through the `id` and `target` attributes. An attacker who can influence these item values can break out of the attributes and inject markup, i",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-122043 - repmgr OS Command Injection Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-122043",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T16:21:53.000Z",
+        "contentSnippet": "repmgr 4.0.0 through 5.5.0 is affected by an OS command injection vulnerability (CWE-78) in event notifications. When event_notification_command is configured, repmgr substitutes the %a (node name), %c (connection string) and %d (details) placeholders into the command and runs it",
+        "cveScore": 6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-64855 - soapbar: verify_envelope_bsp accepts an unauthenticated embedded certificate (signature forgery / authentication bypass)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-64855",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T16:17:25.000Z",
+        "contentSnippet": "soapbar is a SOAP library for Python — client, server, and WSDL handling. Prior to version 0.13.0, verify_envelope_bsp() derived its trust anchor from the message it was verifying. It read the X.509 certificate out of the caller-untrusted wsse:BinarySecurityToken, validated only ",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-124686 - JavaScript Code Injection through kendo.init() in Kendo UI for jQuery",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-124686",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T16:17:25.000Z",
+        "contentSnippet": "In Progress® Kendo® UI for jQuery versions prior to 2026.4.1111, kendo.init() compiles data-* attribute values with new Function when an invalid JSON object is supplied. An attacker with low privileges who can control these attribute values can inject JavaScript that executes dur",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-115819 - One-byte buffer overflow in wide scanf %s and %[ conversions",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-115819",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T16:17:24.000Z",
+        "contentSnippet": "Calling the wide scanf family of functions (swscanf, fwscanf, wscanf, vswscanf, vfwscanf and vwscanf) with a %s or %[ conversion without the 'l' length modifier in the GNU C Library version 2.2 to version 2.44 writes an extra null byte one past the end of the destination array wh",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-105440 - Switch Engine (EXOS) JSON-RPC Authorization Bypass Allows Read-Only Users to Disclose Sensitive Information",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105440",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T16:17:24.000Z",
+        "contentSnippet": "Missing authorization in the JSON-RPC web services interface of Extreme Networks Switch Engine (EXOS) allows an authenticated, low-privileged (read-only) user to execute CLI show commands that are restricted to that role through the command line interface. Successful exploitation",
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-100290 - Double free after allocation failure in regcomp and regexec",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100290",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-11T16:17:24.000Z",
+        "contentSnippet": "The regcomp and regexec functions in the GNU C Library version 2.3 to version 2.44 may read freed memory and free the same heap block twice when a memory allocation fails while a regular expression is compiled or matched. The re_dfa_add_node (the NFA node table) and build_range_e",
+        "cveScore": 3.7,
+        "cveSeverity": "LOW"
+      },
       {
         "title": "CVE-2026-18769 - Insufficient IOCTL access control allows local relocation of arbitrary physical memory",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-18769",
@@ -677,234 +902,44 @@
         "contentSnippet": "Action Pack is a framework for handling and responding to web requests. From 8.1 until 8.1.4.1, Since Rails 8.1.0, ActionDispatch::RemoteIp derives request.remote_ip from Rack::Request#forwarded_for, which under Rack 3 reads the RFC 7239 Forwarded header in preference to X-Forwar",
         "cveScore": 7.4,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-105813 - Ivanti UWM Insecure Storage of Sensitive Information",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-105813",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-10T15:24:52.000Z",
-        "contentSnippet": "Cleartext storage of sensitive information in Ivanti UWM before version 2026.4 allows a local authenticated attacker to retrieve another local user's session token.",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-111245 - Apache TomEE: Privilege escalation via WS-Security caller identity leaking between requests",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111245",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-10T15:24:08.000Z",
-        "contentSnippet": "After a successful WS-Security UsernameToken authentication, the caller identity stays associated with the worker thread once the request completes when web services are served by the standalone OpenEJB HTTP server. A remote unauthenticated attacker whose request is later process",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-111246 - Apache TomEE: HTTP sessions shared across web applications in embedded HTTP server",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111246",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-10T15:23:45.000Z",
-        "contentSnippet": "The embedded OpenEJB HTTP server does not isolate HTTP sessions between web applications. A remote attacker can use a session established in one web application in another one, which then trusts session state set by the first application. Only deployments hosting several web appl",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-111247 - Apache TomEE: Privilege escalation via user name matching a role name",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111247",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-10T15:23:23.000Z",
-        "contentSnippet": "When resolving security roles of a realm-authenticated caller, the caller's user name is also treated as a role name in addition to the roles assigned by the realm. An authenticated attacker who can obtain an account whose user name equals a role name, for example through self-re",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-111248 - Apache TomEE: Authentication with the stored password digest in Tomcat user identity store",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111248",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-10T15:22:48.000Z",
-        "contentSnippet": "The Jakarta Security identity store backed by the Tomcat user database compares the supplied password with the stored value as plain text and ignores the configured credential handler. When digested passwords are stored, an attacker who obtained a stored digest, for example from ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-125747 - ZenTao PMS through 22.7 IDOR via Build Module Mutation Methods",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-125747",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-10T15:22:44.000Z",
-        "contentSnippet": "ZenTao PMS through 22.7 contains a missing object-level authorization vulnerability in module/build/control.php that allows authenticated users to modify builds in projects they do not belong to. Attackers holding build privileges in any project can supply sequential buildID valu",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-111249 - Apache TomEE: Unauthenticated LiveReload endpoint reachable from the network",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111249",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-10T15:22:18.000Z",
-        "contentSnippet": "The development-time LiveReload support listens on all network interfaces without authentication and accepts websocket connections from any origin. A network attacker, or a web page visited by the developer, can observe the names of changed files in the watched folder and the ser",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-111250 - Apache TomEE: Authentication bypass via programmatic authentication in embedded HTTP server",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111250",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-10T15:21:32.000Z",
-        "contentSnippet": "The embedded OpenEJB HTTP server reports every request as authenticated when an application requests authentication programmatically. A remote unauthenticated attacker can access functionality protected this way. Only applications served by the embedded HTTP server that rely on p",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-111251 - Apache TomEE: Unauthenticated server shutdown via the admin port",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111251",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-10T15:20:26.000Z",
-        "contentSnippet": "The admin service of the standalone OpenEJB server accepts stop requests without any authentication. Any local user or process able to connect to the admin port can stop the server, leading to denial of service; the admin service is enabled by default in the standalone server and",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-111256 - Apache TomEE: Missing authentication for web service endpoints in embedded HTTP server",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111256",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-10T15:20:02.000Z",
-        "contentSnippet": "When JAX-WS or JAX-RS endpoints are published by the embedded OpenEJB HTTP server rather than Tomcat, some configured authentication methods are silently ignored and the endpoint is published without authentication. A remote unauthenticated attacker can invoke the exposed operati",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-111257 - Apache TomEE: Well-known administrative credentials created at startup",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111257",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-10T15:19:32.000Z",
-        "contentSnippet": "With the default configuration and no users defined in the default user database, TomEE silently adds an administrative user with a well-known password at startup. A remote attacker can use these credentials to authenticate to web applications that use the default realm and grant",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-111258 - Apache TomEE: Security constraint bypass via request routing",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111258",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-10T15:19:06.000Z",
-        "contentSnippet": "The optional request routing feature forwards requests to their configured destination without applying the security constraints of that destination or the protection of the web application's private directories. If a route copies client-controlled parts of the request path into ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-111259 - Apache TomEE: Predictable HTTP session identifiers in embedded server",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111259",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-10T15:18:07.000Z",
-        "contentSnippet": "The embedded server generates HTTP session identifiers with a non-cryptographic random number generator by default. A remote attacker who observes a session identifier can predict the identifiers issued to other users and hijack their sessions, if the application relies on HTTP s",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-111260 - Apache TomEE: Predictable OpenID Connect state and nonce values",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111260",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-10T15:15:35.000Z",
-        "contentSnippet": "The Jakarta Security OpenID Connect authentication mechanism generates the state and nonce values with a non-cryptographic random number generator and insufficient entropy. A remote attacker who predicts these values can forge an authentication callback that logs a victim into th",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-111261 - Apache TomEE: Authentication bypass with empty password in LDAP identity store",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111261",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-10T15:14:33.000Z",
-        "contentSnippet": "The Jakarta Security LDAP identity store accepts an empty password as valid if the directory server allows unauthenticated binds, which some directory servers do by default. A remote attacker can then authenticate as any existing user without knowing the password. Users are recom",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-111262 - Apache TomEE: LDAP injection in LDAP identity store",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111262",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-10T15:05:56.000Z",
-        "contentSnippet": "The Jakarta Security LDAP identity store does not neutralize special characters in the caller name before using it in directory queries. A remote unauthenticated attacker can alter the queries to enumerate accounts, infer directory attribute values, or influence which directory e",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-111263 - Apache TomEE: Missing authentication on EJB web service endpoints deployed in a web application",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111263",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-10T15:05:08.000Z",
-        "contentSnippet": "Authentication configured for an EJB JAX-WS endpoint in the TomEE deployment descriptor is not enforced when the endpoint is published within an existing web application. A remote unauthenticated attacker can invoke the web service operations, unless the application protects the ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-111264 - Apache TomEE: Authentication bypass on EJB web service endpoints via HTTP method",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-111264",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-10T15:04:30.000Z",
-        "contentSnippet": "The security constraint generated for EJB JAX-WS endpoints with configured authentication protects only some HTTP methods. A remote unauthenticated attacker can bypass authentication by sending requests with another HTTP method. Users are recommended to upgrade to version 10.3.0 ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-87756 - Apache TomEE: Missing authorization on internal deployer EJBs in default profile",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-87756",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-10T14:57:19.000Z",
-        "contentSnippet": "The internal system EJBs used for remote deployment and configuration did not enforce their administrative role check when the server ran with the default profile. A remote unauthenticated attacker able to reach the remote EJB endpoint could deploy arbitrary applications and exec",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-87755 - Apache TomEE: Stateful session bean hijacking via predictable session identifiers",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-87755",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-10T14:56:29.000Z",
-        "contentSnippet": "Stateful session bean identifiers are not generated from a cryptographically secure random source. A remote attacker with access to the EJB remote endpoint who holds one valid identifier can derive those of other clients' sessions and invoke methods on their beans, exposing or mo",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-86811 - Apache TomEE: Path traversal via stateful EJB passivation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86811",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-10T14:55:50.000Z",
-        "contentSnippet": "The stateful session bean passivation mechanism derives the on-disk file name from a client-supplied identifier without validating it. A remote attacker with access to the remote EJB service can cause session state to be read from or written to files outside the passivation direc",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-86532 - Apache TomEE: Username enumeration and timing side channel in JAAS login modules",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86532",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-10T14:53:27.000Z",
-        "contentSnippet": "The bundled JAAS login modules leak whether a username exists and compare credentials in a non-constant-time manner. A remote unauthenticated attacker can enumerate valid accounts and may infer credential material through timing analysis. Users are recommended to upgrade to versi",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-123082 - Docker Desktop logs can expose the Docker Hub access token",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-123082",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-10T14:37:24.000Z",
-        "contentSnippet": "Docker Desktop before version 4.94.0 could write the signed-in user's Docker Hub access token (a JWT) in cleartext to application logs and diagnostics bundles. IPC payloads that were bare JSON strings or arrays were not redacted before logging, and a Docker Desktop component logg",
-        "cveScore": 5.7,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-113422 - Eclipse Kura Privilege Escalation Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-113422",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-10T14:36:40.000Z",
-        "contentSnippet": "In Eclipse Kura versions 5.0.0 through 5.6.2, the Wire Graph update functionality of the Kura Web UI, and the Wire Service REST API v1 (available since 5.1.0, org.eclipse.kura.rest.wire.provider), determine whether a configuration update targets a Wire Component, Driver or Asset ",
-        "cveScore": 7.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-121885 - Podman: untrusted image labels allow auto-update to restart arbitrary systemd units",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-121885",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-10T14:34:31.000Z",
-        "contentSnippet": "A flaw was found in Podman. An attacker can trigger a Denial of Service (DoS) by supplying a container image containing crafted metadata labels. Podman's auto-update mechanism improperly trusts these image labels to determine which system services to restart. If a user runs the m",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
+      {
+        "title": "Accelerating product development with AI-driven lifecycle management (AI-PDLC) in AWS Quick",
+        "link": "https://aws.amazon.com/blogs/machine-learning/accelerating-product-development-with-ai-driven-lifecycle-management-ai-pdlc-in-aws-quick/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-11T16:05:33.000Z",
+        "contentSnippet": "Learn how to build an AI-driven product development lifecycle (AI-PDLC) with a suite of six AWS Quick agents that take you from scattered customer signals to a validated prototype across Discover, Decide, Design, and Prototype, with human approval at every gate and a specificatio"
+      },
+      {
+        "title": "Try Tabletop: Customizable, collaborative spaces for groups to plan, play and do more together.",
+        "link": "https://blog.google/innovation-and-ai/models-and-research/google-labs/tabletop/",
+        "source": "Google AI Blog",
+        "isoDate": "2026-11-11T16:00:00.000Z",
+        "contentSnippet": "Tabletop is a new Google Labs experiment for group collaboration. Build interactive itineraries, polls, and brackets with your team. Join the waitlist."
+      },
+      {
+        "title": "Marktechpost AI Launches GPU Leaderboard and the Deploy It Chrome Extension",
+        "link": "https://www.marktechpost.com/2026/11/11/marktechpost-gpu-leaderboard-chrome-extension-launch/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-11-11T15:51:14.000Z",
+        "contentSnippet": "Marktechpost Launches GPU Leaderboard and the Deploy It Chrome Extension The post Marktechpost AI Launches GPU Leaderboard and the Deploy It Chrome Extension appeared first on MarkTechPost."
+      },
+      {
+        "title": "UAEF: A framework-agnostic system for closed-loop evaluation of AI agents",
+        "link": "https://aws.amazon.com/blogs/machine-learning/uaef-a-framework-agnostic-system-for-closed-loop-evaluation-of-ai-agents/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-11T15:50:55.000Z",
+        "contentSnippet": "The Universal Agent Evaluation Framework (UAEF) is a framework-agnostic system for evaluating AI agents. UAEF converts each framework's traces into one canonical format, scores them with 36 built-in metrics across 7 dimensions, and stores results so teams can compare agent versio"
+      },
+      {
+        "title": "Introducing usage-based pricing for Amazon SageMaker AI bidirectional streaming",
+        "link": "https://aws.amazon.com/blogs/machine-learning/introducing-usage-based-pricing-for-amazon-sagemaker-ai-bidirectional-streaming/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-11T15:10:23.000Z",
+        "contentSnippet": "AWS Marketplace now supports usage-based metering for Amazon SageMaker bidirectional streaming inference, so model providers can charge for what customers actually consume during a live stream. Deepgram is the launch partner, bringing usage-based speech-to-text and text-to-speech"
+      },
       {
         "title": "Experience the art and legacy of Dr. Esther Mahlangu",
         "link": "https://blog.google/company-news/outreach-and-initiatives/arts-culture/esther-mahlangu/",
@@ -1569,44 +1604,23 @@
         "source": "MarkTechPost",
         "isoDate": "2026-10-30T05:02:52.000Z",
         "contentSnippet": "Edge0 released Audio8-TTS-Realistic, a 0.6B open-weight zero-shot voice cloning TTS model under Apache 2.0. It supports 23 languages and adds a final GRPO stage driven by a learned realism critic. The post Edge0 Releases Audio8-TTS-Realistic, a 0.6B Voice Cloning TTS Model appear"
-      },
-      {
-        "title": "Baseten Releases joey-1, a 2B Decision Model at $0.01 per 1M Tokens",
-        "link": "https://www.marktechpost.com/2026/10/29/baseten-joey-1-2b-decision-model/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-10-29T21:20:29.000Z",
-        "contentSnippet": "Baseten has released joey-1, a 2B open-weight decision model that returns calibrated probabilities instead of text. It runs at 20 ms P50 latency and costs $0.01 per million input tokens. The post Baseten Releases joey-1, a 2B Decision Model at $0.01 per 1M Tokens appeared first o"
-      },
-      {
-        "title": "How the UK Amazon Quick User Group grew in 2026",
-        "link": "https://aws.amazon.com/blogs/machine-learning/how-the-uk-amazon-quick-user-group-grew-in-2026/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-10-29T20:16:40.000Z",
-        "contentSnippet": "The UK Amazon Quick User Group's 2026 roundup: three quarterly meetups, 150+ attendees, and customer stories from Arriva, Carsa, and Propulse Lab on using agentic AI and Amazon Quick to turn data into faster decisions, higher satisfaction, and scalable growth."
-      },
-      {
-        "title": "Prime Intellect Releases Prime Mega MoE: Trainable Fused MoE Kernel, 3.11x Faster Forward Pass",
-        "link": "https://www.marktechpost.com/2026/10/29/prime-intellect-prime-mega-moe-fused-moe-kernel-training/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-10-29T18:28:57.000Z",
-        "contentSnippet": "Prime Intellect released Prime Mega MoE, a backward pass for DeepSeek’s fused Mega MoE kernel. It makes the kernel trainable and speeds Qwen3 MoE training steps by up to 34% in prime-rl. The post Prime Intellect Releases Prime Mega MoE: Trainable Fused MoE Kernel, 3.11x Faster Fo"
-      },
-      {
-        "title": "Building intent-driven UI testing with Amazon Nova Act",
-        "link": "https://aws.amazon.com/blogs/machine-learning/building-intent-driven-ui-testing-with-amazon-nova-act/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-10-29T18:20:27.000Z",
-        "contentSnippet": "Epsilon's Agentic Platform team delivers UI testing as a managed, multi-tenant service built on Amazon Nova Act and Amazon Bedrock AgentCore Browser Tool. Tests are written in plain English and run on browsers managed by AWS, giving every product team resilient, intent-driven tes"
-      },
-      {
-        "title": "Build a repeatable PHP-to-Java migration engine with Kiro",
-        "link": "https://aws.amazon.com/blogs/machine-learning/build-a-repeatable-php-to-java-migration-engine-with-kiro/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-10-29T18:14:17.000Z",
-        "contentSnippet": "Turn a PHP-to-Java migration from a one-time leap of faith into a measurable, repeatable process with Kiro. This post walks through a reusable engine: a mechanical discovery scanner and an eight-phase, parity-first workflow that treats the original PHP application as the specific"
       }
     ],
     "virtualization": [
+      {
+        "title": "Do You Even Need Proxmox in Your Home Lab Anymore?",
+        "link": "https://www.virtualizationhowto.com/2026/11/do-you-even-need-proxmox-in-your-home-lab-anymore/",
+        "source": "Virtualization HowTo",
+        "isoDate": "2026-11-11T13:33:22.000Z",
+        "contentSnippet": "Proxmox is the de facto hypervisor in the home lab. Being Linux underneath the hood, it is compatible with just about any hardware out there and has the features we… The post Do You Even Need Proxmox in Your Home Lab Anymore? appeared first on Virtualization Howto."
+      },
+      {
+        "title": "Commvault Rethinks Recovery for the AI Era – Commvault SHIFT 2026",
+        "link": "https://www.vladan.fr/commvault-rethinks-recovery-for-the-ai-era-commvault-shift-2026/",
+        "source": "Vladan.fr",
+        "isoDate": "2026-11-11T11:00:15.000Z",
+        "contentSnippet": "Recovery is no longer something you do after things break. We have that old model – something goes wrong, you call the recovery team, and they put the pieces back together, they restore and clean the data, and so on. However, in the AI era this no longer works. This is not enough"
+      },
       {
         "title": "Broadcom Wants VMware Customers Back. There’s Just One Problem.",
         "link": "https://www.virtualizationhowto.com/2026/11/broadcom-wants-vmware-customers-back-theres-just-one-problem/",
@@ -2292,23 +2306,100 @@
         "source": "Vladan.fr",
         "isoDate": "2026-09-04T15:06:27.000Z",
         "contentSnippet": "Lost important files from a virtual machine and are not sure how to get them back? Virtual disk recovery may seem complicated, but it doesn’t have to be. With this virtual machine data recovery guide, you can easily understand what to do and which steps to follow to successfully "
-      },
-      {
-        "title": "Announcing VMware Data Services Manager 9.1.1",
-        "link": "https://cormachogan.com/2026/09/04/announcing-vmware-data-services-manager-9-1-1/",
-        "source": "Cormac Hogan",
-        "isoDate": "2026-09-04T13:00:11.000Z",
-        "contentSnippet": "As part of the latest VMware Cloud Foundation version 9.1.1 release (see this link for more details), it gives me great pleasure to announce that we also have a new 9.1.1 version of VMware Data Services Manager (DSM). This is a not just a patch release. It is a release that is ch"
-      },
-      {
-        "title": "I Thought Keepalived Only Protected My Home Lab Servers. Then I Found Track Scripts",
-        "link": "https://www.virtualizationhowto.com/2026/09/i-thought-keepalived-only-protected-my-home-lab-servers-then-i-found-track-scripts/",
-        "source": "Virtualization HowTo",
-        "isoDate": "2026-09-04T12:32:34.000Z",
-        "contentSnippet": "I have used Keepalived in my home lab for quite some time and most of the time, I have thought of it in a very simple way as to what… The post I Thought Keepalived Only Protected My Home Lab Servers. Then I Found Track Scripts appeared first on Virtualization Howto."
       }
     ],
     "hardware": [
+      {
+        "title": "Cornelis CN5000 Connects 300 Dual-EPYC 9745 Nodes at GWDG as AMD Joint HPC Program Launches",
+        "link": "https://www.storagereview.com/news/cornelis-cn5000-amd-epyc-gwdg-emmy-p4-joint-hpc-program",
+        "source": "StorageReview",
+        "isoDate": "2026-11-11T17:47:19.000Z",
+        "contentSnippet": "Cornelis and AMD have launched a joint program to design, validate, and deploy HPC and AI-for-science systems that pair AMD EPYC CPUs and Instinct GPUs with Cornelis networking, sold through the OEMs and system integrators customers already use. The announcement is anchored by a "
+      },
+      {
+        "title": "Sandisk iNAND CL EM181 Brings 112-Layer TLC to e.MMC 5.1 at Up to 256GB and 300MB/s",
+        "link": "https://www.storagereview.com/news/sandisk-inand-cl-em181-emmc-112-layer-tlc-256gb",
+        "source": "StorageReview",
+        "isoDate": "2026-11-11T17:36:50.000Z",
+        "contentSnippet": "Sandisk has introduced the iNAND CL EM181, an e.MMC 5.1A embedded flash drive built on 112-layer 3D TLC NAND in 64GB, 128GB, and 256GB capacities. Announced at electronica 2026 in Munich, it is aimed at products that stay in production for years and still use e.MMC, including set"
+      },
+      {
+        "title": "Nexsan Unity NV12000 Puts 15.72PB of NVMe Flash in 10U With 122.88TB QLC SSDs",
+        "link": "https://www.storagereview.com/news/nexsan-unity-nv12000-15pb-nvme-flash-10u",
+        "source": "StorageReview",
+        "isoDate": "2026-11-11T17:29:56.000Z",
+        "contentSnippet": "Nexsan has introduced the Unity NV12000, a 2U dual-controller unified storage array that takes 24 122.88TB QLC NVMe SSDs for nearly 3PB of raw flash in the head unit. Four of the company’s new U2F226 NVMe expansion enclosures, at 26 bays each, bring an all-flash system to 15.72PB"
+      },
+      {
+        "title": "OpenAI and Georgia county leaders hit with Mafia-style RICO racketeering lawsuit over $30 billion AI data center",
+        "link": "https://www.tomshardware.com/tech-industry/data-centers/georgia-politicians-openai-slapped-with-racketeering-lawsuit-over-3-2-gigawatt-ai-data-centers-plaintiffs-allege-multiple-violations-were-part-of-a-coordinated-scheme-to-get-project-camellia-approved",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-11T16:30:00.000Z",
+        "contentSnippet": "The plaintiffs alleged that the parties committed fraud and concealment through NDAs and misleading public statements."
+      },
+      {
+        "title": "PC peripheral maker Logitech giving all of its 7,000 employees the day off to play GTA 6",
+        "link": "https://www.tomshardware.com/video-games/pc-peripheral-maker-logitech-giving-all-of-its-7-000-employees-the-day-off-to-play-gta-6-company-announces-game-day-initiative-dedicated-vacation-day-to-play-video-games",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-11T15:55:12.000Z",
+        "contentSnippet": "Accessory maker Logitech has a new \"Logi Game Day\" initiative that allows employees to take a day off from now until this time next year to play a game of their choice — including the one everyone is talking about."
+      },
+      {
+        "title": "SpaceX develops its own ‘Kessel’ rack-scale system featuring 72 Nvidia Rubin GPUs for data centers in space, report claims",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/spacex-develops-its-own-kessel-rack-scale-system-featuring-72-nvidia-rubin-gpus-for-data-centers-in-space-report-claims-replaces-conventional-nvlink-cable-assemblies-with-a-massive-84-layer-printed-circuit-board",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-11T15:03:08.000Z",
+        "contentSnippet": "SpaceX is reportedly developing a 'Kessel' rack-scale system design with 72 Nvidia Rubin GPUs that relies on a massive 84-layer PCB midplane."
+      },
+      {
+        "title": "Softbank loses $3.7 billion on canceled AI data center gas turbine orders days after denying Elon Musk’s claim it was defaulting",
+        "link": "https://www.tomshardware.com/tech-industry/data-centers/softbank-loses-usd3-7-billion-on-canceled-ai-data-center-gas-turbine-orders-days-after-denying-elon-musks-claim-it-was-defaulting-company-kills-reserved-13-gigawatts-of-power-more-than-six-hoover-dams-worth-of-capacity",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-11T14:29:43.000Z",
+        "contentSnippet": "SoftBank might not have defaulted on a raft of gas turbine orders, but it has pulled out of deals for unwanted power units after overestimating how many it could use amid the AI data center buildout boom."
+      },
+      {
+        "title": "ASRock quietly rolls out new firmware after disastrous previous update killed Radeon RX 7900-series GPUs",
+        "link": "https://www.tomshardware.com/pc-components/gpus/asrock-attempts-to-correct-botched-radeon-rx-7000-firmware-release-with-new-version-revised-release-should-work-ok-but-company-provides-no-explanation-for-bricked-cards",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-11T14:20:00.000Z",
+        "contentSnippet": "Asrock's VBIOS 1.0.6 update follows reports of Radeon RX 7900 XT and XTX graphics cards failing to boot after installing the previous firmware."
+      },
+      {
+        "title": "Montech King 95 3D Pro case review: The King has returned",
+        "link": "https://www.tomshardware.com/pc-components/pc-cases/montech-king-95-3d-pro-case-review",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-11T14:00:00.000Z",
+        "contentSnippet": "The new Montech King 95 3D case offers 3-panel panoramic views of the inside, loads of interior space for components and cooling, and the Pro version comes with seven RGB fan"
+      },
+      {
+        "title": "Nintendo unleashes DMCA takedown wave against open-source Switch modchip firmware, 144 tools disabled",
+        "link": "https://www.tomshardware.com/video-games/nintendo/nintendo-unleashes-dmca-takedown-wave-against-open-source-switch-modchip-firmware-144-tools-disabled-picofly-sx-core-and-hwfly-among-casualties-following-criminal-trial-victory",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-11T13:42:37.000Z",
+        "contentSnippet": "Nintendo is going after the open-source firmware behind hardware modchips on Nintendo Switch"
+      },
+      {
+        "title": "Cognichip reveals how its new AI-assisted program can slash chip design times from months to days — automating labor-intensive tasks cuts design time down, Chief Product Officer explains",
+        "link": "https://www.tomshardware.com/tech-industry/semiconductors/cognichip-reveals-how-its-new-ai-assisted-program-can-slash-chip-design-times-from-months-to-days-automating-labor-intensive-tasks-cuts-design-time-down-chief-product-officer-explains",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-11T13:30:00.000Z",
+        "contentSnippet": "Cognichip claims its AI can slash chip design time from months to days, only that that design must be very simplistic."
+      },
+      {
+        "title": "Congress could issue subpoena to Nvidia CEO Jensen Huang if he doesn’t respond by today to request for a ‘joint, closed-door briefing’",
+        "link": "https://www.tomshardware.com/tech-industry/policy/congress-could-issue-subpoena-to-nvidia-ceo-jensen-huang-if-he-doesnt-respond-by-today-to-request-for-a-joint-closed-door-briefing-us-representatives-want-to-discuss-companys-security-protocols-against-foreign-adversary-espionage",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-11T13:04:44.000Z",
+        "contentSnippet": "Three committee chairpersons want to grill Jensen Huang about his company's 'security protocols against foreign adversary espionage,' as a former CIA agent says that he had a target on his back as the leader of a trillion-dollar company."
+      },
+      {
+        "title": "Cyanogen co-founder unveils Kora, a Linux OS that splits AI models across the CPU, GPU, and NPU",
+        "link": "https://www.tomshardware.com/software/linux/cyanogen-co-founder-unveils-kora-a-linux-os-that-splits-ai-models-across-the-cpu-gpu-and-npu-snapdragon-x2-elite-and-hexagon-npu-get-full-support-first",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-11T13:00:00.000Z",
+        "contentSnippet": "Kora, a Linux desktop OS with built-in AI models and agents for local agentic work, is coming to PCs in 2027, including Snapdragon X2 Elite machines."
+      },
       {
         "title": "3,500 laser-armed AI submarine drones patrol Norwegian salmon farms, killing sea lice and protecting 112 million fish",
         "link": "https://www.tomshardware.com/tech-industry/drones/3-500-ai-laser-robots-patrol-norwegian-salmon-farms-killing-sea-lice-parasites-get-zapped-by-high-tech-alternative-to-harsh-chemical-baths",
@@ -2917,97 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-11-05T16:27:28.000Z",
         "contentSnippet": "Nintendo's Switch 2 sales decreased by 41% compared to the same time frame last year due to an increase in the console's price. Investors are pressuring Nintendo to release more big games to attract more Switch 2 buyers."
-      },
-      {
-        "title": "UPERFECT GR14BU portable monitor review: A 120 Hz 3K OLED touch display at a killer price",
-        "link": "https://www.tomshardware.com/monitors/portable-monitors/uperfect-gr14bu-portable-monitor-review",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-05T15:00:00.000Z",
-        "contentSnippet": "With a 3K OLED panel and a 120 Hz refresh rate, the GR14BU comes out swinging."
-      },
-      {
-        "title": "Intel leaker claims Nova Lake desktop chips have 5.1 GHz clock limit beyond 90°C",
-        "link": "https://www.tomshardware.com/pc-components/cpus/intel-leaker-claims-nova-lake-desktop-chips-have-5-1-ghz-clock-limit-beyond-90-c-high-clock-speeds-could-demand-significant-cooling-for-next-gen-chips",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-05T14:57:51.000Z",
-        "contentSnippet": "A known Intel leaker claims that Intel's next-generation processors will top out at 5.1 GHz if the CPU core temperatures aren't kept below 90°C."
-      },
-      {
-        "title": "Micron's $4.5 billion Taoyuan plant construction halted amidst labor dispute",
-        "link": "https://www.tomshardware.com/tech-industry/semiconductors/microns-usd4-5-billion-taoyuan-plant-construction-halted-amidst-labor-dispute-company-and-union-still-havent-reached-agreement-as-latter-asks-for-clearer-profit-sharing-terms",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-05T14:28:30.000Z",
-        "contentSnippet": "Micron and the Taoyuan labor union is set to meet again on November 6 as the two parties engage in a protracted labor dispute regarding profit-sharing."
-      },
-      {
-        "title": "Apple MacBook Pro with PROLED XDR Display review: The screen that every Mac deserves",
-        "link": "https://www.tomshardware.com/laptops/macbooks/apple-macbook-pro-with-proled-xdr-display-review",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-05T14:00:00.000Z",
-        "contentSnippet": "Apple's MacBook Pro with PROLED Display has lots of small tweaks that make it a major upgrade, including a lighter weight and touch functionality, but it's exceptionally expensive and out of reach for many."
-      },
-      {
-        "title": "Boost your Nintendo Switch 2's storage for Zelda: Ocarina of Time with these microSD Express deals, starting at $48",
-        "link": "https://www.tomshardware.com/pc-components/microsd-cards/boost-your-nintendo-switch-2s-storage-for-zelda-ocarina-of-time-with-these-microsd-express-deals-starting-at-usd48-make-room-for-hyrule-with-these-high-speed-cards-that-double-or-triple-your-game-storage",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-05T14:00:00.000Z",
-        "contentSnippet": "With the Legend of Zelda: Ocarina of Time remake now available for the Nintendo Switch 2, you're going to need enough storage to install it. Here are some Switch 2 microSD Express card deals to help you."
-      },
-      {
-        "title": "Apple MacBook Pro (14-inch, M6) review: Speedy M6 chip slips into comfortable shoes",
-        "link": "https://www.tomshardware.com/laptops/macbooks/apple-macbook-pro-14-inch-m6-review",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-05T14:00:00.000Z",
-        "contentSnippet": "Apple’s brings its powerful M6 chip and N1 Wi-Fi 7 chip to the MacBook Pro."
-      },
-      {
-        "title": "Congresswoman calls for artificial superintelligence ban after Democrats' seismic midterm sweep",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/congresswoman-calls-for-artificial-superintelligence-ban-after-democrats-seismic-midterm-sweep-demands-regulation-of-out-of-control-industry-and-pause-on-advanced-ai",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-05T13:30:16.000Z",
-        "contentSnippet": "Rep. Yassamin Ansari of Arizona is asking her party to focus on AI issues."
-      },
-      {
-        "title": "This $79.98 TP-Link wireless router with Wi-Fi 7 tech is back down to its lowest-ever price",
-        "link": "https://www.tomshardware.com/networking/routers/this-usd79-98-tp-link-wireless-router-with-wi-fi-7-tech-is-back-down-to-its-lowest-ever-price-archer-be3600-unlocks-multi-gigabit-networking-ideal-for-gaming-or-4k-streaming-with-33-percent-off",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-05T13:00:00.000Z",
-        "contentSnippet": "You can pick up a TP-Link Archer BE3600 wireless router at its lowest ever price on Amazon for just $79.98."
-      },
-      {
-        "title": "Qualcomm Dragonwing Nabs a Big SpaceX Starlink Mobile Nationwide US 5G Network Win",
-        "link": "https://www.servethehome.com/qualcomm-dragonwing-nabs-a-big-spacex-starlink-mobile-nationwide-us-5g-network-win/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-11-04T21:32:22.000Z",
-        "contentSnippet": "Qualcomm Dragonwing just landed a new US customer as part of the SpaceX Starlink mobile nationwide build-out The post Qualcomm Dragonwing Nabs a Big SpaceX Starlink Mobile Nationwide US 5G Network Win appeared first on ServeTheHome."
-      },
-      {
-        "title": "Supermicro Plans 10,000 SambaNova SN50 RDUs for GPU-Paired Inference Racks, With GPUs on Prefill and RDUs on Decode",
-        "link": "https://www.storagereview.com/news/supermicro-sambanova-sn50-rdu-inference-racks-10000-chips",
-        "source": "StorageReview",
-        "isoDate": "2026-11-04T18:31:43.000Z",
-        "contentSnippet": "SambaNova and Supermicro will build and sell disaggregated inference systems that pair NVIDIA GPUs with SambaNova’s SN50 Reconfigurable Dataflow Units (RDUs), with Supermicro initially planning for 10,000 SN50 chips. The racks join Supermicro’s Data Center Building Block Solution"
-      },
-      {
-        "title": "Broadcom Launches 128-Core vSphere Express and Adds Live Recovery and Compliance Services to VMware Cloud Foundation",
-        "link": "https://www.storagereview.com/news/broadcom-vcf-portfolio-update-vsphere-express-live-recovery",
-        "source": "StorageReview",
-        "isoDate": "2026-11-04T17:52:04.000Z",
-        "contentSnippet": "Broadcom today updated the VMware Cloud Foundation (VCF) portfolio with two new Advanced Services, VMware Live Recovery and VMware Compliance and Configuration Management, and introduced VMware vSphere Express, a 128-core package built on vSphere 9 for smaller environments. The u"
-      },
-      {
-        "title": "Simplyblock Earns Red Hat Certification for OpenShift Virtualization Storage, With Zero-RPO DR Built In",
-        "link": "https://www.storagereview.com/news/simplyblock-red-hat-certified-openshift-virtualization-storage",
-        "source": "StorageReview",
-        "isoDate": "2026-11-04T17:37:52.000Z",
-        "contentSnippet": "Simplyblock’s Container Storage Interface (CSI) driver and Kubernetes operator now carry Red Hat certification and are listed in the Red Hat Ecosystem Catalog, which gives OpenShift Virtualization customers a validated storage layer for VMs moved off VMware vSphere. The software-"
-      },
-      {
-        "title": "Nintendo ROM chip supplier Macronix quits to focus on chips for AI data centers, reports indicate",
-        "link": "https://www.tomshardware.com/video-games/nintendo/nintendo-rom-chip-supplier-macronix-quits-to-focus-on-chips-for-ai-data-centers-game-key-cards-may-be-more-available-as-large-game-storage-chips-become-more-expensive",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-04T17:10:59.000Z",
-        "contentSnippet": "Macronix, one of Nintendo's ROM chip manufacturers, is shutting down the business to reallocate manufacturing for NOR and NAND flash chips that the AI industry demands."
       }
     ]
   }
