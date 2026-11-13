@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-11-12T23:00:27.619Z",
+  "updatedAt": "2026-11-13T04:19:13.875Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-127286 - Zackriya-Solutions Meetily main.py missing authentication",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-127286",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-13T02:30:30.000Z",
+        "contentSnippet": "A vulnerability was identified in Zackriya-Solutions Meetily up to 0.4.1. Affected is an unknown function of the file backend/app/main.py. The manipulation leads to missing authentication. The attack is possible to be carried out remotely. The exploit is publicly available and mi",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-107414 - Memory overflow in WebAuth authentication can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107414",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-13T02:26:08.000Z",
+        "contentSnippet": "Memory overflow in WebAuth authentication can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway.",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-107413 - Memory overflow in SAML authentication can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107413",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-13T02:24:22.000Z",
+        "contentSnippet": "Memory overflow in SAML authentication can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway.",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-74911 - GPU Driver Out-of-Bounds Read and Write Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-74911",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-13T02:22:19.000Z",
+        "contentSnippet": "Software installed and run as a non-privileged user may conduct improper GPU system calls to the execution of an error path that triggers an OOB read & write. An error can be triggered which causes the index of the array element to be cleaned up by the error path would be outside",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-107412 - Multiple Memory overflow vulnerabilities can lead to unpredictable or erroneous behavior and Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107412",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-13T02:21:30.000Z",
+        "contentSnippet": "Multiple Memory overflow vulnerabilities can lead to unpredictable or erroneous behavior and Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway.",
+        "cveScore": 9.5,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-16671 - Out-of-bounds stack write in MCUboot split-image validation with SHA-384/SHA-512 builds",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16671",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-13T02:18:57.000Z",
+        "contentSnippet": "split_image_check() in boot/bootutil/src/loader.c declares a fixed uint8_t loader_hash[32] buffer and passes it as the out_hash out-parameter to bootutil_img_validate(). That routine copies IMAGE_HASH_SIZE bytes into out_hash (memcpy(out_hash, hash, IMAGE_HASH_SIZE) in boot/bootu",
+        "cveScore": 2.9,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-16664 - Unchecked serial-recovery image index causes out-of-bounds slot-table read in MCUboot Zephyr port",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16664",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-13T02:18:57.000Z",
+        "contentSnippet": "MCUboot's Zephyr serial-recovery upload handler bs_upload() in boot/boot_serial/src/boot_serial.c decodes the host-supplied image field of an MCUmgr image-upload request into img_num (a full 32-bit value) and latches it on the off == 0 packet without any range check. It then pass",
+        "cveScore": 5.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-16662 - Uninitialised bootloader stack disclosed into the measured-boot attestation record via a short EXPECTED_HASH TLV in MCUboot",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16662",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-13T02:18:57.000Z",
+        "contentSnippet": "boot_save_boot_status() in boot/bootutil/src/boot_record.c reads the image's EXPECTED_HASH_TLV into a stack buffer image_hash[IMAGE_HASH_SIZE] that is never zero-initialised. The TLV handler validates only the upper bound (len > sizeof(image_hash)) and then reads exactly len byte",
+        "cveScore": 2.4,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-16659 - Pre-authentication NULL pointer dereference in MCUboot serial-recovery image upload (encrypted-image builds)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16659",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-13T02:18:56.000Z",
+        "contentSnippet": "MCUboot's serial-recovery image-upload handler bs_upload() in boot/boot_serial/src/boot_serial.c declares const struct flash_area *fap = NULL and assigns it only via flash_area_open() part-way through the function. Two early validation failures (goto out_invalid_data) — a CBOR ma",
+        "cveScore": 4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-15465 - GPU DDK - Write UAF in OSDebugSignalPID due to incorrect management of PID resources",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-15465",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-13T02:18:56.000Z",
+        "contentSnippet": "Software installed and run as a non-privileged user may conduct improper GPU system calls through the DDK kernel module interface. Under unsupported use of the interface, a use-after-free condition may occur that can lead to kernel memory corruption, platform instability, or syst",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-128321 - Tight JPEG decoding in TightVNC and UltraVNC viewers contains a heap-based buffer overflow vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-128321",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-13T02:18:56.000Z",
+        "contentSnippet": "Tight JPEG decoding in TightVNC and UltraVNC viewers contains a heap-based buffer overflow because an attacker-controlled framebuffer rectangle width is not validated against a fixed-size decoding buffer. A malicious VNC server can cause an out-of-bounds heap write when a user co",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-128091 - AES key schedule not cleared by the TinyCrypt AES-CTR backend in MCUboot bootutil",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-128091",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-13T02:18:56.000Z",
+        "contentSnippet": "When MCUboot is built with the TinyCrypt crypto backend (MCUBOOT_USE_TINYCRYPT), bootutil_aes_ctr_drop() in boot/bootutil/include/bootutil/crypto/aes_ctr_tinycrypt.h was an empty stub. The AES-CTR context for this backend is the fully expanded AES-128 key schedule (struct tc_aes_",
+        "cveScore": 2,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-127928 - AES image key left on the stack after serial-recovery encrypted-image handling in MCUboot",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-127928",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-13T02:18:56.000Z",
+        "contentSnippet": "In MCUboot's serial-recovery encrypted-image support (boot/boot_serial/src/boot_serial_encryption.c), decrypt_image_inplace() and boot_image_validate_encrypted() each keep a stack-local struct boot_status. boot_enc_load() writes the plaintext per-image AES key into its enckey[] f",
+        "cveScore": 2,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-127916 - MCUboot image hash span is not bounded against the slot, allowing a read past the flash area during image validation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-127916",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-13T02:18:55.000Z",
+        "contentSnippet": "bootutil_img_hash() computes the image digest over ih_hdr_size + ih_img_size + ih_protect_tlv_size bytes, all three taken from the candidate image's header, and reads that span out of the slot without checking that it fits in the flash area. The three sizes are also summed withou",
+        "cveScore": 2.9,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-127915 - TLV iterator does not bound each entry against the declared TLV area in MCUboot bootutil",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-127915",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-13T02:18:55.000Z",
+        "contentSnippet": "The MCUboot TLV iterator bootutil_tlv_iter_next() in boot/bootutil/src/tlv.c walks image trailer TLVs with a single loop guard (it->tlv_off tlv_end) and advances by sizeof(struct image_tlv) + tlv.it_len using the attacker-controlled it_len field, without validating that the entry",
+        "cveScore": 2,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-127284 - SourceCodester Food Ordering System Admin Write add_category.php sql injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-127284",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-13T02:18:55.000Z",
+        "contentSnippet": "A security flaw has been discovered in SourceCodester Food Ordering System 1.0. This affects an unknown part of the file admin/add_category.php of the component Admin Write Handler. Performing a manipulation of the argument title/description/price/current_image/featured/active/id",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-127283 - SourceCodester Food Ordering System Admin Image update_food.php unrestricted upload",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-127283",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-13T02:18:55.000Z",
+        "contentSnippet": "A vulnerability was identified in SourceCodester Food Ordering System 1.0. Affected by this issue is some unknown functionality of the file admin/update_food.php of the component Admin Image Handler. Such manipulation of the argument cmd leads to unrestricted upload. The attack m",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-127282 - SourceCodester Smart Attendance System with QR Code Scanner reset_password.php cross site scripting",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-127282",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-13T02:18:55.000Z",
+        "contentSnippet": "A vulnerability was determined in SourceCodester Smart Attendance System with QR Code Scanner 1.0. Affected by this vulnerability is an unknown functionality of the file reset_password.php. This manipulation of the argument Username causes cross site scripting. The attack is poss",
+        "cveScore": 5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-127281 - lanyulei ferry JWT Validation auth.go improper authentication",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-127281",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-13T02:18:55.000Z",
+        "contentSnippet": "A vulnerability was found in lanyulei ferry 1.0.0-beta.1/1.0.0. Affected is an unknown function of the file middleware/auth.go of the component JWT Validation. The manipulation results in improper authentication. The attack can be executed remotely. The exploit has been made publ",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-127279 - AIP-PUB ACPs-community Discovery Server main.py missing authentication",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-127279",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-13T02:18:54.000Z",
+        "contentSnippet": "A vulnerability was detected in AIP-PUB ACPs-community up to 2.2.0. This impacts an unknown function of the file discovery-server/app/main.py of the component Discovery Server. The manipulation results in missing authentication. The attack may be launched remotely. The exploit is",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-127278 - AIP-PUB ACPs-community verify-code Endpoint service_auth.py send_verification_code improper authentication",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-127278",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-13T02:18:54.000Z",
+        "contentSnippet": "A weakness has been identified in AIP-PUB ACPs-community up to 2.2.0. The impacted element is the function send_verification_code of the file registry-server/app/account/service_auth.py of the component verify-code Endpoint. Executing a manipulation of the argument phone can lead",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-127277 - Linksys EA8100 SMB Service service_smbd.sh initialization",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-127277",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-13T02:18:54.000Z",
+        "contentSnippet": "A security flaw has been discovered in Linksys EA8100 1.0.3.216940. The affected element is an unknown function of the file etc/init.d/service_smbd.sh of the component SMB Service. Performing a manipulation of the argument ANON_ACCESS results in improper initialization. The attac",
+        "cveScore": 10,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-127276 - Linksys EA8100 Web UI cookie httponly flag",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-127276",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-13T02:18:54.000Z",
+        "contentSnippet": "A vulnerability was identified in Linksys EA8100 1.0.3.216940. Impacted is an unknown function of the component Web UI. Such manipulation leads to cookie without 'httponly' flag. It is possible to launch the attack remotely. This attack is characterized by high complexity. The ex",
+        "cveScore": 3.7,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-107410 - Memory overflow in NetScaler Push can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107410",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-13T02:18:49.000Z",
+        "contentSnippet": "Memory overflow in NetScaler Push can lead to unpredictable or erroneous behavior or Denial of Service in NetScaler ADC and NetScaler Gateway.",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-107409 - Memory corruption in DNS-over-HTTPS (DoH) can lead to unpredictable or erroneous behavior or a Denial of Service in Citrix NetScaler",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-107409",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-13T02:18:49.000Z",
+        "contentSnippet": "Memory corruption in DNS-over-HTTPS (DoH) can lead to unpredictable or erroneous behavior or a Denial of Service in NetScaler ADC and NetScaler Gateway.",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
       {
         "title": "CVE-2026-126793 - Privilege escalation in Aurora PostgreSQL dialect detection in AWS Advanced Go Wrapper",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-126793",
@@ -675,231 +900,6 @@
         "source": "cvefeed.io",
         "isoDate": "2026-11-12T06:17:12.000Z",
         "contentSnippet": "The ContentPen WordPress plugin before 1.1.1 discloses its REST API key to unauthenticated users, who can then use it to create posts containing unfiltered JavaScript, leading to Stored XSS that executes in the browser of any visitor, including administrators.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-68549 - ClickMigrate has Path Traversal in \"revision -m\" argument",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68549",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-11T23:17:23.000Z",
-        "contentSnippet": "ClickMigrate is a database migration tool for ClickHouse with automatic SQL migration management and version tracking. Prior to version 1.0.3, a path traversal vulnerability in the revision command allowed a crafted migration name supplied via the -m argument to escape the intend",
-        "cveScore": 3.3,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-126935 - Zipline before 4.8.0 maxViews Limit Bypass via Race Condition",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126935",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-11T23:17:23.000Z",
-        "contentSnippet": "Zipline before 4.8.0 contains a race condition vulnerability in src/server/routes/raw/[id].ts that allows remote attackers to bypass file maxViews limits through non-atomic view counting. Attackers holding a file link can send parallel requests that read the same pre-increment co",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-126934 - Zipline 4.3.2 before 4.8.0 Rate Limit Bypass via Spoofed X-Forwarded-For",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126934",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-11T23:17:23.000Z",
-        "contentSnippet": "Zipline 4.3.2 before 4.8.0 contains a rate limit bypass vulnerability that allows unauthenticated attackers to evade throttling by spoofing X-Forwarded-For headers when core.trustProxy is enabled. Attackers can send a different X-Forwarded-For value per request to obtain fresh ra",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-126933 - Zipline 4.0.0 before 4.8.0 Disabled Extensions Upload Filter Bypass via Extension Format Mismatch",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126933",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-11T23:17:23.000Z",
-        "contentSnippet": "Zipline 4.0.0 before 4.8.0 contains an upload filter bypass vulnerability that allows users with upload access to store blocked file types due to extension format mismatch. The upload and partial handlers compare dotted, case-sensitive extensions against undotted disabledExtensio",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-126932 - Zipline 4.6.2 before 4.8.0 Disabled MIME Type Policy Bypass via File Metadata Update",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126932",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-11T23:17:22.000Z",
-        "contentSnippet": "Zipline 4.6.2 before 4.8.0 contains a policy bypass vulnerability that allows authenticated users to evade administrator-disabled MIME types by editing file metadata. Attackers can upload a permitted file, then set a disabled type such as text/html through PATCH /api/user/files/:",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-126922 - Google Chrome Skia Out-of-Bounds Read",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126922",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-11T23:17:22.000Z",
-        "contentSnippet": "Out of bounds read in Skia in Google Chrome prior to 157.0.8103.78 allowed a remote attacker who had compromised the renderer process to leak cross-origin data via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-126921 - Google Chrome Accessibility Use-After-Free Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126921",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-11T23:17:22.000Z",
-        "contentSnippet": "Use after free in Accessibility in Google Chrome prior to 157.0.8103.78 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-126920 - Google Chrome Skia Cross-Origin Information Disclosure",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126920",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-11T23:17:22.000Z",
-        "contentSnippet": "Information leak in Skia in Google Chrome prior to 157.0.8103.78 allowed a remote attacker to obtain cross-origin data via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-126919 - Google Chrome BrowserTag Use-After-Free Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126919",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-11T23:17:22.000Z",
-        "contentSnippet": "Use after free in BrowserTag in Google Chrome prior to 157.0.8103.78 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-126918 - Google Chrome Layout Use-After-Free Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126918",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-11T23:17:22.000Z",
-        "contentSnippet": "Use after free in Layout in Google Chrome prior to 157.0.8103.78 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-126917 - Google Chrome V8 Memory Corruption Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126917",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-11T23:17:22.000Z",
-        "contentSnippet": "Memory corruption in V8 in Google Chrome prior to 157.0.8103.78 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-126916 - Google Chrome V8 Integer Overflow Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126916",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-11T23:17:21.000Z",
-        "contentSnippet": "Integer overflow in V8 in Google Chrome prior to 157.0.8103.78 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-126915 - Google Chrome Skia Uninitialized Variable Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126915",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-11T23:17:21.000Z",
-        "contentSnippet": "Use of uninitialized variable in Skia in Google Chrome on on Android prior to 157.0.8103.78 allowed a remote attacker who had compromised the renderer process to potentially execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-126914 - Google Chrome Skia Uninitialized Resource Information Disclosure",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126914",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-11T23:17:21.000Z",
-        "contentSnippet": "Uninitialized resource in Skia in Google Chrome prior to 157.0.8103.78 allowed a remote attacker to obtain cross-origin data via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-126913 - Google Chrome Compositing Out-of-Bounds Read",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126913",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-11T23:17:21.000Z",
-        "contentSnippet": "Out of bounds read in Compositing in Google Chrome prior to 157.0.8103.78 allowed a remote attacker who had compromised the renderer process to read memory outside the sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-126912 - Google Chrome Skia Buffer Overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126912",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-11T23:17:21.000Z",
-        "contentSnippet": "Buffer overflow in Skia in Google Chrome prior to 157.0.8103.78 allowed a remote attacker to execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-126911 - Google Chrome Accessibility Use-After-Free Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126911",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-11T23:17:21.000Z",
-        "contentSnippet": "Use after free in Accessibility in Google Chrome prior to 157.0.8103.78 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-126910 - Google Chrome V8 Type Confusion Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126910",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-11T23:17:21.000Z",
-        "contentSnippet": "Type confusion in V8 in Google Chrome prior to 157.0.8103.78 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-126909 - Google Chrome Passwords Use After Free Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126909",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-11T23:17:20.000Z",
-        "contentSnippet": "Use after free in Passwords in Google Chrome prior to 157.0.8103.78 allowed a remote attacker leveraging social engineering to execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-126908 - Google Chrome V8 Type Confusion Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126908",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-11T23:17:20.000Z",
-        "contentSnippet": "Type confusion in V8 in Google Chrome prior to 157.0.8103.78 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-126907 - Google Chrome Media Uninitialized Resource Memory Disclosure",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126907",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-11T23:17:20.000Z",
-        "contentSnippet": "Uninitialized resource in Media in Google Chrome on on Windows prior to 157.0.8103.78 allowed a remote attacker who had compromised the renderer process to potentially read memory outside the sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-126906 - Google Chrome Extensions Race Condition Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126906",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-11T23:17:20.000Z",
-        "contentSnippet": "Race condition in Extensions in Google Chrome on on Mac prior to 157.0.8103.78 allowed a remote attacker who had compromised the renderer process to obtain sensitive information via crafted network traffic. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-126905 - Google Chrome V8 Incomplete Cleanup Arbitrary Code Execution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126905",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-11T23:17:20.000Z",
-        "contentSnippet": "Incomplete cleanup in V8 in Google Chrome prior to 157.0.8103.78 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-126904 - Google Chrome Compositing Use-After-Free Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126904",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-11T23:17:20.000Z",
-        "contentSnippet": "Use after free in Compositing in Google Chrome prior to 157.0.8103.78 allowed a remote attacker who had compromised the renderer process to execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-126903 - Google Chrome ANGLE Improper State Validation Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126903",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-11T23:17:20.000Z",
-        "contentSnippet": "Improper state validation in ANGLE in Google Chrome on on Windows prior to 157.0.8103.78 allowed a remote attacker to bypass web origin policy via a crafted HTML page. (Chromium security",
         "cveScore": 0,
         "cveSeverity": "NA"
       }
