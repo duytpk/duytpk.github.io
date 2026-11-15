@@ -1,8 +1,53 @@
 {
-  "updatedAt": "2026-11-14T20:15:16.524Z",
+  "updatedAt": "2026-11-15T00:33:35.762Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-129352 - TRENDnet TEW-657BRM upgrade_flash.cgi stack-based overflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129352",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-14T23:16:48.000Z",
+        "contentSnippet": "A vulnerability was detected in TRENDnet TEW-657BRM 1.00.1. This issue affects some unknown processing of the file /usr/sbin/upgrade_flash.cgi. Performing a manipulation of the argument boundary results in stack-based buffer overflow. The attack is possible to be carried out remo",
+        "cveScore": 9.1,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-129351 - TRENDnet TEW-657BRM mini_httpd setup.cgi sprintf out-of-bounds write",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129351",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-14T23:16:47.000Z",
+        "contentSnippet": "A security vulnerability has been detected in TRENDnet TEW-657BRM 1.00.1. This vulnerability affects the function sprintf of the file /setup.cgi of the component mini_httpd. Such manipulation leads to out-of-bounds write. The attack can be executed remotely. The exploit has been ",
+        "cveScore": 10,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-129353 - D-Link DIR-600L authentication.cgi authenticationcgi_main stack-based overflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129353",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-14T23:15:19.000Z",
+        "contentSnippet": "A vulnerability was detected in D-Link DIR-600L 2.17/2.17b02. Affected by this vulnerability is the function authenticationcgi_main of the file authentication.cgi. Performing a manipulation of the argument id/password results in stack-based buffer overflow. Remote exploitation of",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-129456 - frr: bgpd use-after-free of Tunnel Encapsulation sub-TLVs after a malformed attribute length from a peer",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129456",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-14T20:17:40.000Z",
+        "contentSnippet": "In FRRouting, bgpd accepts a Tunnel Encapsulation attribute (type 23) whose outer TLV length does not match the length of the attribute: the mismatch is only logged and the attribute is processed anyway. A BGP neighbor can send UPDATE messages carrying such an attribute that put ",
+        "cveScore": 7.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2015-10149 - Dancer versions before 1.3400 for Perl pass unvalidated session ids from the session cookie to the session engine",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2015-10149",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-14T20:17:39.000Z",
+        "contentSnippet": "Dancer versions before 1.3400 for Perl pass unvalidated session ids from the session cookie to the session engine. read_session_id returns the cookie value as the session id without checking its characters, and Dancer hands it to the session engine to load the session. A remote a",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2026-129447 - Kroki before 0.36.0 Reflected XSS via DBML Table URLs",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-129447",
@@ -857,51 +902,6 @@
         "contentSnippet": "russh is a Rust SSH client and server library that includes an SSH agent protocol implementation. From version 0.55.0 until version 0.65.1, the initial key exchange invokes client::Handler::kex_done() with the raw shared secret before check_server_key() accepts the server host ke",
         "cveScore": 3.7,
         "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-128086 - OpenTelemetry-Go: Eager W3C baggage-property materialization causes bounded memory-allocation amplification",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-128086",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-13T19:19:31.000Z",
-        "contentSnippet": "OpenTelemetry-Go is the Go implementation of OpenTelemetry. From version 1.0.0-RC1 until version 1.47.0, baggage.Parse and propagation.Baggage.Extract eagerly materialize every W3C baggage property through parseMember, grow property slices, serialize members, and copy properties ",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-128085 - opentelemetry-go: AttributeValueLengthLimit is fully bypassed by attribute values composed of valid U+FFFD runes",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-128085",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-13T19:19:31.000Z",
-        "contentSnippet": "OpenTelemetry-Go is the Go implementation of OpenTelemetry. From SDK version 1.33.0, SDK log version 0.9.0, and trace version 1.35.0 until version 1.47.0, the AttributeValueLengthLimit and WithAttributeValueLengthLimit truncation paths in sdk/internal/attrnorm, sdk/log/internal/a",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-128084 - sqlite3-ruby: SQL Query Truncation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-128084",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-13T19:19:31.000Z",
-        "contentSnippet": "sqlite3 provides Ruby bindings for the SQLite3 embedded database. Prior to 2.10.2, sqlite3-ruby casts Ruby string lengths to int before passing SQL through Database#prepare, bound String or Blob values through Statement#bind_param, and String or Blob results from Ruby-defined SQL",
-        "cveScore": 4.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-128083 - Laravel: Task Output Injection - Concurrency Process",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-128083",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-13T19:19:30.000Z",
-        "contentSnippet": "Laravel is a web application framework. Prior to 12.71.0 and 13.40.0, Laravel's Concurrency::run process driver can treat a forged internal result message in child standard output as framework output. An application route must invoke Concurrency::run, and a task must write attack",
-        "cveScore": 2.3,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-128082 - AutoMapper: Uncontrolled Recursion with Constructor Parameters",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-128082",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-13T19:19:30.000Z",
-        "contentSnippet": "AutoMapper is a convention-based object-object mapper in .NET. Prior to 15.1.4 and from 16.0.0 until 16.3.0, AutoMapper increments type depth only after creating the destination, so recursive mapping performed through constructor parameters occurs before MaxDepth is counted. Dest",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
@@ -2310,6 +2310,13 @@
     ],
     "hardware": [
       {
+        "title": "Wacky PC and gadget gift guide",
+        "link": "https://www.tomshardware.com/gift-guides-seasonal-sales/wacky-pc-and-gadget-gift-guide-surprise-tech-lovers-with-10-different-options-like-wireless-power-buttons-dvd-burner-usb-hubs-and-clamp-on-pegboards",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-14T21:00:00.000Z",
+        "contentSnippet": "Our list of fun and wacky PC and gadget gifts is surprising, delightful, and actually useful."
+      },
+      {
         "title": "AMD Launches EPYC Embedded 9006: Venice Gets an Early Start in Embedded",
         "link": "https://www.servethehome.com/amd-launches-epyc-embedded-9006-venice-gets-an-early-start-in-embedded/",
         "source": "ServeTheHome",
@@ -3001,13 +3008,6 @@
         "source": "ServeTheHome",
         "isoDate": "2026-11-09T21:37:58.000Z",
         "contentSnippet": "The new Google TPU 8tx pairs AMD EPYC Turin hosts with confidential computing while TPU 8i Max doubles memory bandwidth for inference The post Google TPU 8tx Pairs AMD EPYC Turin Hosts with Confidential Computing while TPU 8i Max Doubles Memory Bandwidth appeared first on ServeTh"
-      },
-      {
-        "title": "Ethereum Foundation sued after firing employee over mandatory 'Source Seppuku' suicide pact",
-        "link": "https://www.tomshardware.com/tech-industry/cryptocurrency/ethereum-foundation-sued-after-firing-employee-over-mandatory-source-seppuku-suicide-pact-crypto-firm-demanded-employees-pledge-to-take-their-own-lives-with-a-sword-to-protect-open-source-code-founder-vitalik-claims-1-000-year-mandate-just-artwork",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-09T18:43:48.000Z",
-        "contentSnippet": "A former employee of The Ethereum Foundation is suing the nonprofit after being fired for refusing to sign its 'Source Seppuku License.'"
       }
     ]
   }
