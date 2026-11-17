@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-11-16T17:41:45.833Z",
+  "updatedAt": "2026-11-17T01:19:50.947Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-130327 - Open Object Rexx RXAPI Insecure Local Communication Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-130327",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-16T23:17:15.000Z",
+        "contentSnippet": "In Open Object Rexx (ooRexx) before 5.2.0, RXAPI relies on a world-writable /tmp file unless XDG_RUNTIME_DIR is set, or localhost TCP port 10010, allowing RXAPI communication by any local user, e.g., for injection of a macro that will be executed by a REXX script.",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-130320 - Open Object Rexx RXAPI Buffer Overflow",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-130320",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-16T23:17:15.000Z",
+        "contentSnippet": "In Open Object Rexx (ooRexx) before 5.2.0, RXAPI mishandles nameArg and userid bounds checking, possibly leading to arbitrary code execution via crafted messages.",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-130335 - Info-ZIP Zip OS Command Injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-130335",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-16T23:12:25.000Z",
+        "contentSnippet": "Info-ZIP Zip 3.0 (and 3.1 beta through 3.1c) allows OS command injection by an attacker who controls the command line. The victim must use the -T option followed by a filename containing shell metacharacters, on a platform (such as Linux) where a suitable shell is run. This occur",
+        "cveScore": 2.9,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-93673 - WebSocket client accepts a handshake without verifying the full Sec-WebSocket-Accept value",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93673",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-16T22:18:27.000Z",
+        "contentSnippet": "The Zephyr WebSocket client validates the server's handshake response in on_header_value() in subsys/net/lib/websocket/websocket.c. The comparison was performed as strncmp(at, str, length), where length is the length of the value the server sent rather than the length of the expe",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-93672 - NULL pointer dereference in the Bluetooth host ATT request lookup (bt_att_find_req_by_user_data)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93672",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-16T22:18:27.000Z",
+        "contentSnippet": "bt_att_find_req_by_user_data() in subsys/bluetooth/host/att.c walks every ATT channel attached to a connection and dereferences chan->req->user_data without checking chan->req. An ATT channel with no client request in flight holds chan->req == NULL — that is its normal idle state",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-93671 - Out-of-bounds read logging a mismatched Sec-WebSocket-Accept header in the Zephyr websocket client",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93671",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-16T22:18:26.000Z",
+        "contentSnippet": "The websocket client's HTTP header callback on_header_value() in subsys/net/lib/websocket/websocket.c receives the Sec-WebSocket-Accept header value as a pointer/length pair from the HTTP parser. The referenced bytes live inside the application-supplied receive buffer and are not",
+        "cveScore": 3.7,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-93670 - Out-of-bounds write in the DesignWare I3C driver when the device address table is full",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93670",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-16T22:18:26.000Z",
+        "contentSnippet": "The Synopsys DesignWare I3C controller driver (drivers/i3c/i3c_dw.c) tracks free Device Address Table (DAT) slots with get_free_pos(), which signals an exhausted table by returning -1. The helper declared its return type as uint8_t, so the sentinel was truncated to 255, and both ",
+        "cveScore": 3.5,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-93669 - NULL pointer dereference in the ITE IT8xxx2 SHI host-command backend when a host transaction arrives before backend initialization",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93669",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-16T22:18:26.000Z",
+        "contentSnippet": "The ITE IT8xxx2 SHI host-command backend in subsys/mgmt/ec_host_cmd/backends/ec_host_cmd_backend_shi_ite.c arms the SPI peripheral before its receive context exists. shi_ite_init_registers() sets the state machine to SHI_STATE_READY_TO_RECV and calls irq_enable() while the device",
+        "cveScore": 4.7,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-93668 - Bluetooth BR/EDR SDP server blocks the Bluetooth workqueue indefinitely when the SDP buffer pool is empty",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93668",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-16T22:18:26.000Z",
+        "contentSnippet": "The Bluetooth Classic SDP server in subsys/bluetooth/host/classic/sdp.c allocated every response PDU through bt_sdp_create_pdu(), which expands to bt_l2cap_create_pdu() and therefore uses a K_FOREVER timeout. The allocation is made from sdp_pool, a fixed pool holding only CONFIG_",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-93667 - Function pointer type confusion in Zephyr Virtual L2 when a VLAN-tagged frame finds no handling virtual interface",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93667",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-16T22:18:26.000Z",
+        "contentSnippet": "The Virtual L2 receive handler virtual_recv() in subsys/net/l2/virtual/virtual.c ends with a fall-through path meant for a virtual interface that has nothing attached below it: it takes net_if_get_device(iface)->api, treats it as a struct virtual_interface_api, and calls api->rec",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-93666 - Bluetooth Classic SDP client can deadlock the Bluetooth workqueue on buffer allocation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-93666",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-16T22:18:26.000Z",
+        "contentSnippet": "The Bluetooth Classic SDP client built its outgoing request PDUs with bt_sdp_create_pdu(), which allocates from the sdp_pool net-buf pool with a K_FOREVER timeout and no failure handling, in sdp_client_ss_search(), sdp_client_sa_search() and sdp_client_ssa_search() in subsys/blue",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-69154 - Coder VS Code extension allowed workspace settings to trigger command execution",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-69154",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-16T22:18:25.000Z",
+        "contentSnippet": "The Coder VS Code extension opens Coder workspaces in VS Code with a single click. From 0.1.20 until 1.14.6, a malicious repository can provide .vscode/settings.json values for security-sensitive Coder settings because the extension permits workspace and folder scope to override ",
+        "cveScore": 7.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-68934 - code-review-mcp-server: Command injection via unsanitized folderPath/baseBranch parameters",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-68934",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-16T22:18:25.000Z",
+        "contentSnippet": "code-review-mcp-server automates code review and can post comments directly on GitHub pull requests. Prior to 1.5.3, the getLocalGitDiff, codeReview, createPR, and getPRTemplate MCP tools accept caller-controlled folderPath and baseBranch string parameters that are interpolated i",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-130290 - Open Object Rexx RXAPI Heap Buffer Over-read",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-130290",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-16T22:18:24.000Z",
+        "contentSnippet": "In Open Object Rexx (ooRexx) before 5.2.0, RXAPI has a heap buffer over-read in a QueueManager DataQueue::addmethod. In particular, the code blindly trusts the message.parameter1 value provided by the client as the size used to fill the data from the queueData heap buffer. An att",
+        "cveScore": 7.9,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-130206 - Chyrp Lite Admin Login Brute-Force via main_login()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-130206",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-16T22:18:24.000Z",
+        "contentSnippet": "Chyrp Lite (xenocrat/chyrp-lite) contains a missing brute-force protection vulnerability in the main_login() function that allows remote attackers to repeatedly submit login attempts against the admin account without any attempt counter, lockout, delay, or CAPTCHA enforcement. At",
+        "cveScore": 5.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-130083 - BookStack before 26.09.2 Storage Amplification via ZIP Import File References",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-130083",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-16T22:18:24.000Z",
+        "contentSnippet": "BookStack before 26.09.2 contains an uncontrolled resource consumption vulnerability in the ZIP content importer that allows authenticated users with the Import Content permission to exhaust server storage. Attackers can upload a small ZIP whose data.json references one bundled f",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-130082 - django-tenants 3.4.8 before 4.0.1 SQL Injection via Unescaped Schema Name",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-130082",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-16T22:18:24.000Z",
+        "contentSnippet": "django-tenants 3.4.8 before 4.0.1 contains an SQL injection vulnerability in its PostgreSQL backend that allows attackers to inject SQL through unescaped tenant schema names. Attackers who can choose or influence a schema name can supply quote characters that are interpolated int",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-130081 - B3log Solo through 4.4.0 Article View Password Disclosure via /articles",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-130081",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-16T22:18:23.000Z",
+        "contentSnippet": "B3log Solo through 4.4.0 contains an information disclosure vulnerability that allows unauthenticated attackers to obtain article view passwords by querying the public GET /articles API. The ArticleProcessor.getArticlesByPage handler leaves the articleViewPwd property in JSON res",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-130080 - B3log Solo through 4.4.0 SQL Injection via Article JSON Property Names",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-130080",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-16T22:18:23.000Z",
+        "contentSnippet": "B3log Solo through 4.4.0 contains an SQL injection vulnerability in the console article update API that allows authenticated authors to inject SQL through unvalidated JSON property names. Attackers can send a PUT request to /console/article/ with crafted property names used as UP",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-130079 - B3log Solo through 4.4.0 Stored XSS via Article Title",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-130079",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-16T22:18:23.000Z",
+        "contentSnippet": "B3log Solo through 4.4.0 contains a stored cross-site scripting vulnerability that allows attackers to inject script by setting a malicious article title rendered without escaping. Attackers can set titles, including via the B3 sync endpoint, so admin/article-pwd.ftl, skin templa",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-130078 - B3log Solo through 4.4.0 Missing Authorization via Symphony Article Sync Endpoint",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-130078",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-16T22:18:23.000Z",
+        "contentSnippet": "B3log Solo through 4.4.0 contains a missing authorization vulnerability in B3Receiver.receiveArticle that allows visitor accounts to modify any article via the POST /apis/symphony/article endpoint. Attackers can supply their username as userB3Key, since OAuth-created visitors rec",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-130077 - crw-server before 0.45.1 SSRF via proxy and proxy_list in /v1/scrape",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-130077",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-16T22:18:23.000Z",
+        "contentSnippet": "crw-server before 0.45.1 contains a server-side request forgery vulnerability that allows unauthenticated attackers to reach internal hosts via caller-controlled proxy and proxy_list fields in /v1/scrape. Attackers can supply proxy entries pointing to loopback, private-network or",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-130076 - crw-server before 0.45.1 SSRF via BYOK LLM baseUrl in /v1/scrape",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-130076",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-16T22:18:23.000Z",
+        "contentSnippet": "crw-server before 0.45.1 contains a server-side request forgery vulnerability that allows unauthenticated attackers to reach internal services by supplying an unvalidated baseUrl to the /v1/scrape endpoint. Attackers can set llmApiKey and request the summary format, making the se",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-130075 - SplitPro through 2.1.6 Missing Authorization via Expense Write tRPC Mutations",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-130075",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-16T22:18:22.000Z",
+        "contentSnippet": "SplitPro through 2.1.6 contains a missing authorization vulnerability in the addOrEditExpense and addOrEditCurrencyConversion tRPC mutations that allows authenticated users to assign expenses to arbitrary users. Attackers can enumerate sequential user IDs and supply them in parti",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-130074 - free5GC WebConsole through 1.4.6 Account Takeover via /api/change-password",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-130074",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-16T22:18:22.000Z",
+        "contentSnippet": "free5GC WebConsole through 1.4.6 contains an authorization flaw in the ChangePasswordInfo handler that allows authenticated tenant users to change other members' passwords. Attackers can send POST /api/change-password with another tenant member's email and a new password, without",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-88989 - Silverstripe Framework: Auth bypass GridFieldDetailForm",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-88989",
@@ -677,234 +902,37 @@
         "contentSnippet": "GPAC before 26.02.0 contains a NULL pointer dereference vulnerability in gf_node_get_field_by_name() in src/scenegraph/base_scenegraph.c that lets attackers crash applications. Attackers can supply a crafted XMT scene referencing a never-created node to crash MP4Box or GPAC scene",
         "cveScore": 6.8,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2025-71466 - GPAC before 26.02.0 NULL Pointer Dereference via m2tsdmx_update_sdt",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2025-71466",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-15T16:16:55.000Z",
-        "contentSnippet": "GPAC before 26.02.0 contains a NULL pointer dereference vulnerability in m2tsdmx_update_sdt() in src/filters/dmx_m2ts.c that allows attackers to crash the MPEG-2 TS demuxer. Attackers can supply a crafted .ts file with an invalid service descriptor leaving service or provider nam",
-        "cveScore": 6.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-128893 - WordPress Wise Chat plugin <= 3.4.5 - Cross Site Scripting (XSS) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-128893",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-15T15:16:47.000Z",
-        "contentSnippet": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Marcin Wise Chat wise-chat allows Reflected XSS.This issue affects Wise Chat: from n/a through 3.4.5.",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-125799 - WordPress Flow-Flow Social Stream plugin <= 5.0.5 - Sensitive Data Exposure vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-125799",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-15T15:16:47.000Z",
-        "contentSnippet": "Insertion of Sensitive Information into Externally-Accessible File or Directory vulnerability in Looks Awesome Flow-Flow Social Stream flow-flow-social-streams allows Retrieve Embedded Sensitive Data.This issue affects Flow-Flow Social Stream: from n/a through 5.0.5.",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-125795 - WordPress Estatik plugin <= 4.3.6 - Local File Inclusion vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-125795",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-15T15:16:47.000Z",
-        "contentSnippet": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in Estatik Estatik estatik allows PHP Local File Inclusion.This issue affects Estatik: from n/a through 4.3.6.",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-125793 - WordPress Flexmls® IDX plugin <= 4.1.2 - Cross Site Scripting (XSS) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-125793",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-15T15:16:47.000Z",
-        "contentSnippet": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in flexmls Flexmls® IDX flexmls-idx allows Reflected XSS.This issue affects Flexmls® IDX: from n/a through 4.1.2.",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-125771 - WordPress MCP Server for WordPress plugin <= 2.0.3 - Privilege Escalation vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-125771",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-15T15:16:46.000Z",
-        "contentSnippet": "Incorrect Privilege Assignment vulnerability in AtlasAiDev MCP Server for WordPress ai-workflow-automation-ai-agent-hub allows Privilege Escalation.This issue affects MCP Server for WordPress: from n/a through 2.0.3.",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-125765 - WordPress ShortPixel Adaptive Images plugin <= 3.11.6 - Cross Site Scripting (XSS) vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-125765",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-15T15:16:46.000Z",
-        "contentSnippet": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in ShortPixel ShortPixel Adaptive Images shortpixel-adaptive-images allows Stored XSS.This issue affects ShortPixel Adaptive Images: from n/a through 3.11.6.",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-129453 - DrayTek Vigor2960 File Existence Check mainfunction.cgi check_file_exist heap-based overflow",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129453",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-15T13:30:11.000Z",
-        "contentSnippet": "A vulnerability was found in DrayTek Vigor2960 1.5.1.6. This issue affects the function check_file_exist of the file /cgi-bin/mainfunction.cgi of the component File Existence Check. Performing a manipulation of the argument upload_name results in heap-based buffer overflow. The a",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-129469 - Course-tencent-cloud before 2.0.2 IDOR via /api/refund/confirm",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129469",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-15T13:17:00.000Z",
-        "contentSnippet": "Course-tencent-cloud before 2.0.2 contains an insecure direct object reference vulnerability that allows unauthenticated attackers to view other users' refund previews by supplying an order sn to /api/refund/confirm. Attackers can compute valid sn values from Sqids-encoded sequen",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-129468 - Netcccyun dnsmgr 2.18 before 2.22 Missing Authorization via get_domain_default_line",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129468",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-15T13:17:00.000Z",
-        "contentSnippet": "Netcccyun dnsmgr 2.18 before 2.22 contains a missing authorization vulnerability in POST /cloudflare/get_domain_default_line that allows restricted users to access domains outside their permissions. Restricted sub-users or single-domain logins can iterate the domain_id parameter ",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-129467 - GeoPulse 1.5.0 through 2.3.0 IDOR via Geocoding Place-Details Endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129467",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-15T13:16:59.000Z",
-        "contentSnippet": "GeoPulse 1.5.0 through 2.3.0 contains an insecure direct object reference vulnerability in GET /api/v1/places/geocoding/{id} that allows authenticated users to read other users' private locations. Attackers can enumerate sequential reverse_geocoding_location ids to retrieve other",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-129452 - DrayTek Vigor2960 mainfunction.cgi set_table command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129452",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-15T13:16:59.000Z",
-        "contentSnippet": "A vulnerability has been found in DrayTek Vigor2960 1.5.1.6. This vulnerability affects the function set_table of the file /cgi-bin/mainfunction.cgi. Such manipulation of the argument jsondata leads to command injection. The attack can be launched remotely. The exploit has been d",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-129451 - DrayTek Vigor2960 mainfunction.cgi app_guest_export path traversal",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129451",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-15T13:16:58.000Z",
-        "contentSnippet": "A flaw has been found in DrayTek Vigor2960 up to 1.5.1.6. This affects the function app_guest_export of the file /cgi-bin/mainfunction.cgi. This manipulation of the argument filename causes path traversal. The attack can be initiated remotely. The exploit has been published and m",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-129477 - Assimp through 6.0.6 Path Traversal via glTF External Buffer URIs",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129477",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-15T13:12:10.000Z",
-        "contentSnippet": "Assimp through 6.0.6 contains a path traversal vulnerability in the glTF and glTF2 importers that allows attackers to read local files via crafted buffers[].uri values. Attackers can supply glTF models with '..' segments or absolute paths in buffer URIs to load files like /etc/pa",
-        "cveScore": 6.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-129478 - Assimp through 6.0.6 Heap Out-of-Bounds Read via glTF ParseDataURI",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129478",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-15T13:12:09.000Z",
-        "contentSnippet": "Assimp through 6.0.6 contains a heap out-of-bounds read vulnerability in glTFCommon::Util::ParseDataURI caused by storing the data offset in a signed char. Attackers can supply a crafted glTF file with a raw data URI whose segment starts beyond byte 127 to crash applications or l",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-129479 - Assimp through 6.0.6 Integer Overflow via OgreBinarySerializer::ReadSubMesh",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129479",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-15T13:12:09.000Z",
-        "contentSnippet": "Assimp through 6.0.6 contains an integer overflow vulnerability in OgreBinarySerializer::ReadSubMesh that allows attackers to crash applications by supplying crafted Ogre binary .mesh files. Attackers can set a large index count so the 32-bit buffer size wraps, causing a segmenta",
-        "cveScore": 6.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-129480 - Assimp through 6.0.6 Heap Out-of-Bounds Read via MD2 Importer frameSize",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129480",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-15T13:12:08.000Z",
-        "contentSnippet": "Assimp through 6.0.6 contains a heap out-of-bounds read vulnerability in MD2Importer::InternReadFile that allows attackers to read past the file buffer via an unvalidated stored frameSize header field. Attackers can supply a crafted .md2 file loaded with a non-zero keyframe selec",
-        "cveScore": 5.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-129450 - DrayTek Vigor2960 mainfunction.cgi sub_1E084 path traversal",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129450",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-15T12:17:20.000Z",
-        "contentSnippet": "A vulnerability was detected in DrayTek Vigor2960 1.5.1.6. Affected by this issue is the function sub_1E084 of the file /cgi-bin/mainfunction.cgi?action=doWebBackup. The manipulation of the argument option results in path traversal. It is possible to launch the attack remotely. T",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-129449 - DrayTek Vigor2960 mainfunction.cgi sub_14914 command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129449",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-15T11:17:10.000Z",
-        "contentSnippet": "A security vulnerability has been detected in DrayTek Vigor2960 up to 1.5.1.6. Affected by this vulnerability is the function sub_14914 of the file /cgi-bin/mainfunction.cgi. The manipulation of the argument swmconfigupload leads to command injection. It is possible to initiate t",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-82663 - Give - Peer-to-Peer <= 2.9.5 - Authorization Bypass to Team Modification and Media Upload",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82663",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-15T10:16:54.000Z",
-        "contentSnippet": "The Give - Peer-to-Peer plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 2.9.5. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for unauthenticated attackers wh",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-82568 - Give - Peer-to-Peer <= 2.9.3 - Unauthenticated SQL Injection via 'sort' Parameter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-82568",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-15T10:16:54.000Z",
-        "contentSnippet": "The Give - Peer-to-Peer plugin for WordPress is vulnerable to time-based SQL Injection via the 'sort' parameter in all versions up to, and including, 2.9.3 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. Th",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-129445 - D-Link DIR-850L Console Login consolepwd hard-coded credentials",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129445",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-15T10:16:53.000Z",
-        "contentSnippet": "A security flaw has been discovered in D-Link DIR-850L FW1.20WWb03. This impacts an unknown function of the file /usr/sbin/consolepwd of the component Console Login. Performing a manipulation results in hard-coded credentials. The attack requires a local approach. The exploit has",
-        "cveScore": 8.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-129349 - Apache Shiro: DefaultLdapRealm accepts any password when authentication caching is enabled",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129349",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-15T10:16:53.000Z",
-        "contentSnippet": "When authentication caching is enabled on DefaultLdapRealm, after a user logs in successfully once, subsequent logins for that user succeed with any password. A cached authentication skips the LDAP bind, and the AllowAllCredentialsMatcher installed by default in DefaultLdapRealm ",
-        "cveScore": 9.1,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-129444 - D-Link DSL-6740C FTP Daemon ftpd_conf.php hard-coded credentials",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129444",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-15T09:16:44.000Z",
-        "contentSnippet": "A vulnerability was identified in D-Link DSL-6740C 20131126. This affects an unknown function of the file /etc/templates/ftpd/ftpd_conf.php of the component FTP Daemon. Such manipulation leads to hard-coded credentials. The attack can be executed remotely. The exploit is publicly",
-        "cveScore": 10,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-129443 - itsourcecode Airline Reservation System manage_user.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129443",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-15T08:17:21.000Z",
-        "contentSnippet": "A vulnerability was determined in itsourcecode Airline Reservation System 1.0. The impacted element is an unknown function of the file /admin/manage_user.php. This manipulation of the argument ID causes sql injection. Remote exploitation of the attack is possible. The exploit has",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
       }
     ],
     "ai": [
+      {
+        "title": "Build memory-aware AI agents with Agentic Retrieve on Amazon Bedrock Managed Knowledge Base",
+        "link": "https://aws.amazon.com/blogs/machine-learning/build-memory-aware-ai-agents-with-agentic-retrieve-on-amazon-bedrock-managed-knowledge-base/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-16T22:43:30.000Z",
+        "contentSnippet": "Amazon Bedrock Managed Knowledge Base and Amazon Bedrock AgentCore memory now store conversations, extract facts, and bring long-term memory into a single AgenticRetrieveStream call. This post shows how to build a memory-aware, multi-user assistant where each user sees only the d"
+      },
+      {
+        "title": "How Duco transforms financial data automation with Amazon Bedrock AgentCore",
+        "link": "https://aws.amazon.com/blogs/machine-learning/how-duco-transforms-financial-data-automation-with-amazon-bedrock-agentcore/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-16T22:06:08.000Z",
+        "contentSnippet": "Duco, a data automation platform for tier-one banks, rebuilt its agentic AI stack on Amazon Bedrock and Amazon Bedrock AgentCore. With strict per-tenant isolation, a multi-model strategy, and an MCP skills architecture that cut context overhead by 90%, Duco cut reconciliation dep"
+      },
+      {
+        "title": "Taxonomy of multi-agent design patterns, anti-patterns, and lessons from manufacturing",
+        "link": "https://aws.amazon.com/blogs/machine-learning/taxonomy-of-multi-agent-design-patterns-anti-patterns-and-lessons-from-manufacturing/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-16T21:53:46.000Z",
+        "contentSnippet": "Multi-agent coordination is a distributed systems problem, not a model problem. This post gives a field-tested taxonomy of multi-agent design patterns and anti-patterns, a framework for deciding when multiple agents are warranted, and how to build cost-efficient, reliable systems"
+      },
+      {
+        "title": "How MoEngage built agentic customer engagement on Amazon Bedrock AgentCore",
+        "link": "https://aws.amazon.com/blogs/machine-learning/how-moengage-built-agentic-customer-engagement-on-amazon-bedrock-agentcore/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-16T18:16:07.000Z",
+        "contentSnippet": "MoEngage built Merlin AI, a set of AI agents on Amazon Bedrock and Amazon Bedrock AgentCore that let marketing and product teams draft, analyze, and adjust campaigns from a single conversation. Learn how MoEngage turned its existing APIs into MCP tools and kept each tenant's data"
+      },
       {
         "title": "Modernizing mainframe Assembler to Java using Amazon Bedrock and AWS Transform",
         "link": "https://aws.amazon.com/blogs/machine-learning/modernizing-mainframe-assembler-to-java-using-amazon-bedrock-and-aws-transform/",
@@ -1576,34 +1604,6 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-11-06T17:34:45.000Z",
         "contentSnippet": "As we built Amazon Quick, its agents grew from answering questions to taking actions, and the same primitives kept getting rebuilt under different names. This post shares the taxonomy we converged on — triggers, agents, capabilities, and learned context — found by decomposing age"
-      },
-      {
-        "title": "Zyphra ZYFA: FP8 FlashAttention for AMD MI355X, Up to 1.76x Faster",
-        "link": "https://www.marktechpost.com/2026/11/06/zyphra-zyfa-fp8-flashattention-amd-mi355x/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-11-06T17:28:04.000Z",
-        "contentSnippet": "Zyphra released ZYFA, open-source FP8 and BF16 prefill attention kernels for AMD Instinct MI355X. On real model activations, its FP8 kernels run 1.16-1.76x faster than AMD’s AITER, with 62-78% lower error at head dimension 128. The post Zyphra ZYFA: FP8 FlashAttention for AMD MI3"
-      },
-      {
-        "title": "Serverless MCP server for AI agent data lake access on Amazon ECS Fargate",
-        "link": "https://aws.amazon.com/blogs/machine-learning/serverless-mcp-server-for-ai-agent-data-lake-access-on-amazon-ecs-fargate/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-11-06T17:13:13.000Z",
-        "contentSnippet": "Learn how to build a serverless Model Context Protocol (MCP) server on Amazon ECS with AWS Fargate that gives AI agents secure, metadata-driven access to an enterprise data lake. Exposing a new dataset requires only a JSON file, with no per-dataset integration code."
-      },
-      {
-        "title": "Govern AI agent access with Okta Cross App Access and Amazon Bedrock AgentCore – Part 2",
-        "link": "https://aws.amazon.com/blogs/machine-learning/govern-ai-agent-access-with-okta-cross-app-access-and-amazon-bedrock-agentcore-part-2/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-11-06T17:09:23.000Z",
-        "contentSnippet": "In Part 1 you built one governed agent. Part 2 scales the pattern to an enterprise: Amazon Bedrock AgentCore Gateway becomes the single front door and redeems Okta's grant, Cedar policies bind each tool to the agent, a second agent runs on Amazon EKS, and AgentCore Observability "
-      },
-      {
-        "title": "Govern AI agent access with Okta Cross App Access and Amazon Bedrock AgentCore – Part 1",
-        "link": "https://aws.amazon.com/blogs/machine-learning/govern-ai-agent-access-with-okta-cross-app-access-and-amazon-bedrock-agentcore-part-1/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-11-06T17:09:18.000Z",
-        "contentSnippet": "An AI agent that acts for a user raises an identity question that per-app OAuth and service accounts leave open: which agent may act for which user, and how you stop it. In this first post of two, you build a task agent on Amazon Bedrock AgentCore that governs access through Okta"
       }
     ],
     "virtualization": [
@@ -2310,6 +2310,90 @@
     ],
     "hardware": [
       {
+        "title": "The best Warhammer 40K-themed gifts for your gaming setup",
+        "link": "https://www.tomshardware.com/gift-guides-seasonal-sales/the-best-warhammer-40k-themed-gifts-for-your-gaming-setup-chairs-desks-backpacks-toys-and-games-that-will-please-the-imperium",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-16T23:00:00.000Z",
+        "contentSnippet": "Check out these great gift ideas for all fans of the grimdark future."
+      },
+      {
+        "title": "15 retro tech gift ideas for the nostalgic gamer or builder in your life",
+        "link": "https://www.tomshardware.com/gift-guides-seasonal-sales/15-retro-tech-gift-ideas-for-the-nostalgic-gamer-or-builder-in-your-life-old-school-designs-packed-with-modern-hardware-from-game-controllers-to-desk-accessories",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-16T22:20:00.000Z",
+        "contentSnippet": "Pick up a retro tech gift for yourself or a loved one this holiday season, from mini PCs to old-school controllers."
+      },
+      {
+        "title": "China retains fastest supercomputer in the world crown as AI data centers soak up new hardware",
+        "link": "https://www.tomshardware.com/tech-industry/supercomputers/china-retains-fastest-supercomputer-in-the-world-crown-as-ai-data-centers-soak-up-new-hardware-top500-records-fewest-new-systems-in-33-years",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-16T22:17:02.000Z",
+        "contentSnippet": "The Top 500 list records the fewest new entrants in its history amid a massive shift in compute infrastructure investments towards AI factories."
+      },
+      {
+        "title": "New US rules aim to restrict Chinese firms’ remote access to AI servers and infrastructure",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/new-us-rules-aim-to-restrict-remote-access-to-ai-servers-and-infrastructure-seeks-to-combat-cloud-rental-workarounds-to-gpu-export-controls",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-16T21:50:00.000Z",
+        "contentSnippet": "The Bureau of Industry and Security has announced a new interim final rule to ensure restrictions on the export of physical AI hardware cannot be bypassed by accessing it remotely in data centers around the world."
+      },
+      {
+        "title": "Researchers ‘recognize that AI will never replace HPC,’ says AMD executive — high-precision workloads will ‘exist for a very long time’ even as AI usage expands",
+        "link": "https://www.tomshardware.com/tech-industry/supercomputers/researchers-recognize-that-ai-will-never-replace-hpc-says-amd-executive-high-precision-workloads-will-exist-for-a-very-long-time-even-as-ai-usage-expands",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-16T21:30:00.000Z",
+        "contentSnippet": "The emergence of AI has seemingly posed a threat to high-precision FP64 computation, but AMD doesn't think the HPC world is moving away from those complex calculations in the wake of AI."
+      },
+      {
+        "title": "NVIDIA and Lambda Disclose First Production Co-Packaged Optics Cluster… It is FINALLY real",
+        "link": "https://www.servethehome.com/nvidia-and-lambda-disclose-first-production-co-packaged-optics-cluster-it-is-finally-real/",
+        "source": "ServeTheHome",
+        "isoDate": "2026-11-16T21:24:47.000Z",
+        "contentSnippet": "Lambda is the first to disclose it has co-packaged optics deployed in a production cluster with over 10,000 GPUs The post NVIDIA and Lambda Disclose First Production Co-Packaged Optics Cluster… It is FINALLY real appeared first on ServeTheHome."
+      },
+      {
+        "title": "AMD grabs over 40% of new TOP500 list for supercomputers, up 14% since last year",
+        "link": "https://www.tomshardware.com/tech-industry/supercomputers/amd-grabs-over-40-percent-of-new-top500-list-for-supercomputers-up-14-percent-since-last-year-new-lux-system-developed-between-amd-and-department-of-energy-debuts-at-no-14-with-epyc-cpus-and-instinct-mi355x-gpus",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-16T21:00:00.000Z",
+        "contentSnippet": "AMD's Lux supercomputer debuted at position 14 on the new TOP500 list published during SC26. It's one of two machines AMD is developing as part of a $1 billion deal with the U.S. Department of Energy."
+      },
+      {
+        "title": "Nvidia announces Rubin HPC GPU with 'record number of CUDA cores' at Supercomputing 2026",
+        "link": "https://www.tomshardware.com/pc-components/gpus/nvidia-announces-rubin-hpc-gpu-with-record-number-of-cuda-cores-at-supercomputing-2026-new-chip-accelerates-agentic-hpc-workloads-arrives-in-2028",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-16T19:05:24.000Z",
+        "contentSnippet": "Nvidia took the wraps off its Rubin HPC GPU at Supercomputing 2026. This new GPU will give scientists, engineers, and analysts over 50,000 CUDA cores to speed up agentic HPC workloads when it arrives in 2028."
+      },
+      {
+        "title": "HPE Lux AI Cluster Debuts at No. 14 on the TOP500 With 220.79 Petaflops on AMD Instinct MI355X GPUs",
+        "link": "https://www.storagereview.com/news/hpe-lux-ai-cluster-top500-no-14-220-79-petaflops-ornl-genesis-mission",
+        "source": "StorageReview",
+        "isoDate": "2026-11-16T19:00:00.000Z",
+        "contentSnippet": "HPE today announced that Lux, the AI cluster it built with AMD for Oak Ridge National Laboratory (ORNL), has debuted at No. 14 on the TOP500 list with 220.79 petaflops of measured HPL performance. HPE says the system, which was designed for AI training and inference, placed ahead"
+      },
+      {
+        "title": "Hearing Aids on Windows 11: ReSound Enzo IA Streams From the Dell Pro 7 13 2-in-1 Over Bluetooth LE Audio",
+        "link": "https://www.storagereview.com/review/hearing-aids-on-windows-11-le-audio-with-the-dell-pro-7",
+        "source": "StorageReview",
+        "isoDate": "2026-11-16T18:30:13.000Z",
+        "contentSnippet": "ReSound Enzo IA hearing aids paired with a Dell Pro 7 13 2-in-1 on the first attempt and streamed Windows 11 audio directly, with no streamer box or USB adapter in between. We ran the test on a system Dell provided for this project, and the result depends on Bluetooth LE Audio, a"
+      },
+      {
+        "title": "Trump calls for Jensen Huang reinstatement as Nvidia CEO",
+        "link": "https://www.tomshardware.com/tech-industry/trump-calls-for-jensen-huang-reinstatement-as-nvidia-ceo-nvidia-board-reportedly-refuses-to-reinstate-disgraced-ceo-due-to-ongoing-national-security-investigation-into-jensen",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-16T18:24:40.000Z",
+        "contentSnippet": "President Trump has called for Jensen Huang to return as Nvidia CEO, but a new report says the board is not considering the move."
+      },
+      {
+        "title": "Top tech gift ideas for frequent travelers — from USB wall chargers to power banks, here are the best options",
+        "link": "https://www.tomshardware.com/gift-guides-seasonal-sales/top-tech-gift-ideas-for-frequent-travelers-from-usb-wall-chargers-to-power-banks-here-are-the-best-options",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-16T18:10:29.000Z",
+        "contentSnippet": "Our list of useful accessories for folks who spend countless days and nights traversing hotels and airports"
+      },
+      {
         "title": "NVIDIA SC26: Rubin HPC GPU With 50,000 CUDA Cores Due in 2028, 192-CPU Vera Racks in Early 2027, and a 13,000x Quantum Decoder",
         "link": "https://www.storagereview.com/news/nvidia-sc26-rubin-hpc-gpu-vera-cpu-hpc-rack-nemotron-for-science-quantum",
         "source": "StorageReview",
@@ -2317,7 +2401,7 @@
         "contentSnippet": "NVIDIA has announced a new GPU for scientific computing at SC26. Rubin HPC is a member of the Vera Rubin platform that puts more than 50,000 CUDA cores on a single GPU, and NVIDIA expects it to be available in 2028. The rest of the company’s SC26 slate covers a 192-CPU Vera rack "
       },
       {
-        "title": "Intel bets on Classiq acquisition to turn Quantum efforts into commercially viable business — deal positions company as leading vendor of qubit chips, acquisition to close by the first half of 2027",
+        "title": "Intel bets on Classiq acquisition to turn Quantum efforts into commercially viable business",
         "link": "https://www.tomshardware.com/tech-industry/quantum-computing/intel-bets-on-classiq-acquisition-to-turn-quantum-efforts-into-commercially-viable-business-deal-positions-company-as-leading-vendor-of-qubit-chips-acquisition-to-close-by-the-first-half-of-2027",
         "source": "Tom's Hardware",
         "isoDate": "2026-11-16T16:30:00.000Z",
@@ -2924,90 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-11-12T14:00:00.000Z",
         "contentSnippet": "Corsair puts the internals of a CWT-built, Cybenetics Platinum 1000W platform on display behind three clear panels, adding side-mounted connectors, iCUE LINK integration and per-pin 12V-2x6 protection."
-      },
-      {
-        "title": "Nvidia CEO Jensen Huang resigns in the wake of multiple affairs, Chinese spy allegations",
-        "link": "https://www.tomshardware.com/tech-industry/nvidia-confirms-jensen-huang-has-resigned-as-ceo-colette-kress-executive-vice-president-and-chief-financial-officer-appointed-interim-ceo",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-12T13:58:41.000Z",
-        "contentSnippet": "NVIDIA (NASDAQ: NVDA) Board of Directors announced today that Jensen Huang has resigned as President, Chief Executive Officer, and a member of the Board, effective immediately."
-      },
-      {
-        "title": "Noctua brings space-grade carbon nanotube thermal pad to AMD AM5 and AM4 processors",
-        "link": "https://www.tomshardware.com/pc-components/thermal-paste/noctua-brings-space-grade-carbon-nanotube-thermal-pad-to-amd-am5-and-am4-processors-promises-years-of-maintenance-free-performance-for-usd24-95",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-12T13:04:13.000Z",
-        "contentSnippet": "Noctua says the NT-CP1 uses carbon nanotubes originally developed for aerospace applications, with the material gradually adapting to microscopic surface imperfections to improve heat transfer over repeated heating and cooling cycles."
-      },
-      {
-        "title": "Suspected Chinese spy at center of Jensen Huang affair surfaces in Beijing",
-        "link": "https://www.tomshardware.com/tech-industry/suspected-chinese-spy-at-center-of-jensen-huang-affair-surfaces-in-beijing-alice-huang-last-spotted-heading-to-shanghai-after-being-detained-questioned-in-singapore-in-2025-allegedly-helped-china-smuggle-hundreds-of-thousands-of-banned-chips",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-12T12:53:36.000Z",
-        "contentSnippet": "There are multiple speculations about Alice Huang's s history and how she built her relationship with Jensen Huang."
-      },
-      {
-        "title": "Save $300 on this 1440p gaming PC with a 9800X3D and RTX 5070 right now",
-        "link": "https://www.tomshardware.com/desktops/gaming-pcs/save-usd350-on-this-all-amd-1440p-gaming-desktop-with-9800x3d-rx-9070-also-features-32gb-of-ram-and-a-1tb-ssd-for-just-usd1-949",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-12T11:12:26.000Z",
-        "contentSnippet": "Grab a CyberPowerPC machine with an RX 9070, 9800X3D, 32GB DDR5 and a 2TB SSD for $2,199."
-      },
-      {
-        "title": "Google reworks TPU silicon into specialized systems for agents and security",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/google-adds-two-new-specialized-chips-for-ai-agents-and-security-to-8th-gen-tpu-lineup-tpu-8i-max-puts-two-chips-on-one-package-for-long-context-work-tpu-8tx-swaps-arm-hosts-for-amd-epyc",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-12T11:00:00.000Z",
-        "contentSnippet": "Google’s TPU 8i Max and TPU 8tx reuse TPU 8i and TPU 8t silicon to target long-context agents and confidential inference."
-      },
-      {
-        "title": "Techie uses voltage glitching hack to turn $2,500 Nvidia 8GB cryptomining GPU into a full-fat $20,000 A100 with 80GB of VRAM",
-        "link": "https://www.tomshardware.com/pc-components/gpus/techie-turns-usd2-500-cmp-170hx-8gb-mining-card-into-a-full-fat-a100-80gb-with-voltage-glitching-carefully-blowing-onboard-fuses-to-unlock-entire-vram-and-shader-modules",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-12T10:30:00.000Z",
-        "contentSnippet": "A techie turned a $2,500 CMP-170HX 8GB mining card into a full-fat $20,000 A100 80GB by carefully blowing onboard fuses to unlock entire VRAM and shader modules."
-      },
-      {
-        "title": "This is the Meta MetaRoCE Network Adapter",
-        "link": "https://www.servethehome.com/this-is-the-meta-metaroce-network-adapter/",
-        "source": "ServeTheHome",
-        "isoDate": "2026-11-12T04:51:39.000Z",
-        "contentSnippet": "At OCP Summit 2026, Meta showed off its MetaRoCE adapter designed to scale to million-GPU training clusters The post This is the Meta MetaRoCE Network Adapter appeared first on ServeTheHome."
-      },
-      {
-        "title": "Nvidia’s Board reportedly preparing to oust CEO Jensen Huang as second extra-marital affair emerges",
-        "link": "https://www.tomshardware.com/pc-components/gpus/nvidias-board-reportedly-preparing-to-oust-ceo-jensen-huang-as-second-extra-marital-affair-emerges-stock-has-plunged-20-percent-since-scandals-began-huang-has-been-first-and-only-ceo-for-33-years",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-11T23:45:00.000Z",
-        "contentSnippet": "Nvidia Board reportedly moves to expel Jensen Huang as stock tumbles on latest scandals and lack of succession plans at Nvidia."
-      },
-      {
-        "title": "Jensen Huang now accused of affair with Nvidia executive who reported to him, alleged cover-up attempt",
-        "link": "https://www.tomshardware.com/tech-industry/jensen-huang-now-accused-of-affair-with-nvidia-executive-who-reported-to-him-alleged-cover-up-attempt-new-indiscretion-comes-in-wake-of-admitted-affair-with-alleged-chinese-spy",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-11T22:31:39.000Z",
-        "contentSnippet": "Nvidia CEO Jensen Huang reportedly had an extramarital affair with a direct report, following a separate affair with a woman suspected of being a Chinese spy."
-      },
-      {
-        "title": "AMD’s Venice-X maxes out family at 5.3 GHz, returning 3D V-Cache to data center after four years",
-        "link": "https://www.tomshardware.com/pc-components/cpus/amds-venice-x-maxes-out-family-at-5-3-ghz-returning-3d-v-cache-to-data-center-after-four-years-chips-target-hpc-workloads-with-pcie-6-0-and-1-6-tb-s-memory-bandwidth",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-11T21:30:00.000Z",
-        "contentSnippet": "AMD's Venice-X CPUs launch in the second half of 2027, bringing 3D V-Cache back to the data center after four years on the sidelines."
-      },
-      {
-        "title": "Prusa launches new carbon-fiber and carbon-nanotube-filled 3D printing filament for electronics manufacturing",
-        "link": "https://www.tomshardware.com/3d-printing/prusa-launches-new-carbon-3d-printing-filament-for-electronics-manufacturing-carbon-fiber-and-carbon-nanotube-filled-material-dissipates-electrostatic-energy-for-static-sensitive-electronics",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-11T21:00:00.000Z",
-        "contentSnippet": "Prusament PETG ESD is the cheapest ESD filament on the market, while being carbon-fiber reinforced, something the competition doesn't have."
-      },
-      {
-        "title": "Lenovo ThinkSystem SC755 V5 Puts 96 EPYC 9006 CPUs and 24,000 Cores in a Liquid-Cooled Rack",
-        "link": "https://www.storagereview.com/news/lenovo-thinksystem-sc755-v5-sr755-v5-de6800-amd-epyc-9006",
-        "source": "StorageReview",
-        "isoDate": "2026-11-11T18:29:14.000Z",
-        "contentSnippet": "Lenovo has introduced two ThinkSystem V5 servers built on AMD’s 6th Gen EPYC 9006 SP7 processors: the SC755 V5, a Neptune liquid-cooled dual-socket node for HPC clusters, and the SR755 V5, an air-cooled single-socket 2U rack server. Announced ahead of SC26, the launch also covers"
       }
     ]
   }
