@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-11-17T18:53:18.414Z",
+  "updatedAt": "2026-11-18T01:26:54.056Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-131842 - Poppler pdfdetach 24.03.0 through 26.11.0 Path Traversal via Embedded File Names",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-131842",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-17T23:42:35.000Z",
+        "contentSnippet": "Poppler pdfdetach 24.03.0 through 26.11.0 contains a path traversal vulnerability in utils/pdfdetach.cc that allows attackers to write files outside the output directory by bypassing a string-prefix containment check. Attackers can craft PDFs with embedded file names containing '",
+        "cveScore": 5.7,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-131843 - Poppler pdftohtml through 26.11.0 XSS via Unescaped Link Annotation URIs",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-131843",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-17T23:42:34.000Z",
+        "contentSnippet": "Poppler pdftohtml through 26.11.0 contains a cross-site scripting vulnerability in HtmlLink::getLinkStart() in utils/HtmlLinks.cc that writes PDF link annotation URIs into href attributes without escaping in HTML output modes. Attackers can craft a PDF whose /URI entry contains a",
+        "cveScore": 6.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-131844 - Poppler through 26.11.0 Uncontrolled Memory Allocation via Forged HTTP Content-Length",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-131844",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-17T23:42:33.000Z",
+        "contentSnippet": "Poppler through 26.11.0 contains an uncontrolled memory allocation vulnerability in the libcurl-based remote file loader that trusts unvalidated HEAD Content-Length values in CurlCachedFileLoader::init(). Malicious HTTP servers can return an enormous Content-Length so CachedFile ",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-131845 - Poppler 21.01.0 through 26.11.0 TOCTOU Race Condition in signDocument()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-131845",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-17T23:42:33.000Z",
+        "contentSnippet": "Poppler 21.01.0 through 26.11.0 contains a time-of-check time-of-use race condition in FormWidgetSignature::signDocument() that allows local attackers to obtain valid signatures over altered content. Attackers with write access to the output file or directory can overwrite or swa",
+        "cveScore": 4.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-131846 - Poppler 0.76.1 through 26.11.0 Heap Buffer Overflow via SplashOutputDev::iccTransform()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-131846",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-17T23:42:32.000Z",
+        "contentSnippet": "Poppler 0.76.1 through 26.11.0 contains a heap-based buffer overflow in SplashOutputDev::iccTransform() that allows attackers to write out of bounds when rendering in splashModeDeviceN8. Attackers can supply a PDF with an ICCBased image whose alternate is DeviceN, causing getDevi",
+        "cveScore": 5.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-131847 - Poppler through 26.11.0 Use-After-Free in NSS Signature Verification Backend",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-131847",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-17T23:42:31.000Z",
+        "contentSnippet": "Poppler through 26.11.0 contains a use-after-free vulnerability in NSSCryptoSignBackend.cc that allows attackers to trigger reads of freed CMS arena memory during repeated signature verification. Attackers can supply a signed PDF embedding the signer certificate to crash applicat",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-131848 - Snap7 through 1.4.3 Out-of-Bounds Write via TSnap7MicroClient::opReadMultiVars",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-131848",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-17T23:42:30.000Z",
+        "contentSnippet": "Snap7 through 1.4.3 contains an out-of-bounds write vulnerability in TSnap7MicroClient::opReadMultiVars() that allows malicious PLCs to overflow client buffers via unchecked DataLength fields. Attackers controlling or impersonating a PLC can return crafted ReadVar responses to Cl",
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-131849 - Snap7 through 1.4.3 Heap-Based Buffer Overflow via TSnap7MicroClient::opReadSZL",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-131849",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-17T23:42:30.000Z",
+        "contentSnippet": "Snap7 through 1.4.3 contains a heap-based buffer overflow in TSnap7MicroClient::opReadSZL() that allows malicious PLCs to overwrite client memory by sending oversized multi-slice SZL responses. A rogue or impersonated PLC can keep flagging more data with attacker-controlled DLen ",
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-131850 - ILIAS 11.0 before 11.6 SQL Injection via Registration Codes Table Sorting",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-131850",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-17T23:42:29.000Z",
+        "contentSnippet": "ILIAS 11.0 before 11.6 contains an sql injection vulnerability in RegistrationCodeRepository::getCodesData() that concatenates unvalidated sort fields into an ORDER BY clause. Authenticated users with read access to the Authentication and Registration administration node can supp",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-131851 - ILIAS before 9.25, 10.13, and 11.6 SQL Injection via StudyProgramme Members Filter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-131851",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-17T23:42:28.000Z",
+        "contentSnippet": "ILIAS before 9.25, 10.13, and 11.6 contains an SQL injection vulnerability in ilPRGAssignmentFilter::toConditions() that allows authenticated users to inject SQL through the StudyProgramme members list Name and Status filters. Attackers holding only the OrgUnit permission to view",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-131852 - OwnTracks Recorder before 1.0.5 Format String via Stored tid Value",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-131852",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-17T23:42:28.000Z",
+        "contentSnippet": "OwnTracks Recorder before 1.0.5 contains a format string vulnerability in json_response() and related output functions that allows unauthenticated attackers to execute code by storing a malicious tid value. Attackers can publish locations via POST /pub or MQTT with printf specifi",
+        "cveScore": 9.8,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-131853 - Ettercap through 0.8.5.1 Heap Out-of-Bounds Read via SSHv1 Dissector",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-131853",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-17T23:42:27.000Z",
+        "contentSnippet": "Ettercap through 0.8.5.1 contains a heap out-of-bounds read vulnerability in dissector_ssh() in src/dissectors/ec_ssh.c that copies a peer-supplied data_len without checking remaining packet bytes. A malicious SSHv1 client or server in an intercepted session can send a short pack",
+        "cveScore": 6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-131854 - Ettercap through 0.8.5.1 Heap Out-of-Bounds Read via MySQL Dissector",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-131854",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-17T23:42:26.000Z",
+        "contentSnippet": "Ettercap through 0.8.5.1 contains a heap out-of-bounds read vulnerability in dissector_mysql() in src/dissectors/ec_mysql.c that copies seed and password bytes without bounds checks. A malicious MySQL server or client can send truncated greeting or login packets to leak adjacent ",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-131855 - Ettercap through 0.8.5.1 Heap Out-of-Bounds Read via VNC Dissector",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-131855",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-17T23:42:26.000Z",
+        "contentSnippet": "Ettercap through 0.8.5.1 contains a heap out-of-bounds read vulnerability in dissector_vnc() in src/dissectors/ec_vnc.c that checks total packet length instead of remaining bytes. A malicious VNC server can send the authentication type and challenge in one short packet to leak up",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-131856 - Pika before 1.5.0 Memory Exhaustion via Unbounded AMQP Frame Size",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-131856",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-17T23:42:25.000Z",
+        "contentSnippet": "Pika before 1.5.0 contains an uncontrolled resource allocation vulnerability that allows malicious brokers to exhaust client memory by declaring oversized frame payloads. Attackers can send frame headers declaring up to 4 GiB payloads, unchecked against frame_max, or very large m",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-131857 - Supergateway 4.2.0 through 4.2.2 DoS via Prototype-Inherited sessionId",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-131857",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-17T23:42:24.000Z",
+        "contentSnippet": "Supergateway 4.2.0 through 4.2.2 contains a denial of service vulnerability in stdio-to-SSE mode that allows unauthenticated attackers to crash the gateway via prototype-inherited sessionId values. Attackers can send a POST message request with sessionId set to toString or constr",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-129892 - IO::Socket::SSL::PublicSuffix versions through 2.099 for Perl allow code injection via a fetched list line that closes the built-in data heredoc when update_self_from_url rewrites th",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129892",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-17T23:39:19.000Z",
+        "contentSnippet": "IO::Socket::SSL::PublicSuffix versions through 2.099 for Perl allow code injection via a fetched list line that closes the built-in data heredoc when update_self_from_url rewrites the module's source. The rewrite copies the module's source down to the built-in list's heredoc and ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-129891 - IO::Socket::SSL::PublicSuffix versions through 2.099 for Perl let an on-path attacker choose the installed public suffix list because update_self_from_url fetches it over cleartext H",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129891",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-17T23:39:01.000Z",
+        "contentSnippet": "IO::Socket::SSL::PublicSuffix versions through 2.099 for Perl let an on-path attacker choose the installed public suffix list because update_self_from_url fetches it over cleartext HTTP with no integrity check. Called with no argument, as the module's documentation shows, the upd",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-129069 - WordPress Create plugin <= 3.1.3 - Broken Access Control vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129069",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-17T23:24:29.000Z",
+        "contentSnippet": "Missing Authorization vulnerability in John-Michael L'Allier Create mediavine-create allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Create: from n/a through 3.1.3.",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-130816 - WordPress Ad Inserter plugin <= 2.8.19 - Content Injection vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-130816",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-17T23:17:53.000Z",
+        "contentSnippet": "Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) vulnerability in Igor Funa Ad Inserter ad-inserter allows Code Injection.This issue affects Ad Inserter: from n/a through 2.8.19.",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-130599 - WordPress TranslatePress plugin <= 3.3.9 - Cross Site Scripting (XSS) vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-130599",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-17T23:17:52.000Z",
+        "contentSnippet": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Cozmoslabs TranslatePress translatepress-multilingual allows Stored XSS.This issue affects TranslatePress: from n/a through 3.3.9.",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-130021 - Use-after-free in the Audio/Video: Playback component",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-130021",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-17T23:17:52.000Z",
+        "contentSnippet": "Use-after-free in the Audio/Video: Playback component. This vulnerability was fixed in Firefox 160.0.1.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-130020 - Privilege escalation due to incorrect boundary conditions in the Graphics: CanvasWebGL component on Android",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-130020",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-17T23:17:52.000Z",
+        "contentSnippet": "Privilege escalation due to incorrect boundary conditions in the Graphics: CanvasWebGL component on Android. This vulnerability was fixed in Firefox 160.0.1.",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-129512 - Apache log4net: AdoNetAppender loses an event whose text the database cannot store",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129512",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-17T23:17:51.000Z",
+        "contentSnippet": "Improper Neutralization of Null Byte or NUL Character vulnerability in the AdoNetAppender of Apache log4net. Text parameters were bound unchanged, so a NUL character or an unpaired UTF-16 surrogate reached the database as it was. A database that refuses such a value, such as Post",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-129511 - Apache log4net: Best-fit encoding in FileAppender lets fullwidth text forge XML log events",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129511",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-17T23:17:51.000Z",
+        "contentSnippet": "Improper Output Neutralization for Logs vulnerability in the FileAppender, RollingFileAppender, UdpAppender and SmtpAppender of Apache log4net. Characters the configured encoding could not represent were converted by that encoding's best-fit fallback, which turns fullwidth charac",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
       {
         "title": "CVE-2026-67455 - NVIDIA Model Optimizer Insecure Deserialization Vulnerability",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-67455",
@@ -677,234 +902,86 @@
         "contentSnippet": "free5GC WebConsole through 1.4.6 contains an authorization flaw in the ChangePasswordInfo handler that allows authenticated tenant users to change other members' passwords. Attackers can send POST /api/change-password with another tenant member's email and a new password, without",
         "cveScore": 8.6,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-88989 - Silverstripe Framework: Auth bypass GridFieldDetailForm",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-88989",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-16T16:24:30.000Z",
-        "contentSnippet": "Silverstripe Framework is a PHP framework which powers the Silverstripe CMS. Prior to 6.2.13, a CMS user who can edit records through a GridField detail form can send a direct save request that creates a new record even when the user does not have permission to create that record",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-91112 - Silverstripe Framework: CMS_ACCESS_SecurityAdmin privilege escalation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-91112",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-16T16:22:00.000Z",
-        "contentSnippet": "Silverstripe Framework is a PHP framework which powers the Silverstripe CMS. Prior to 6.2.13, a user with CMS_ACCESS_SecurityAdmin but without ADMIN can edit or reparent a group that grants ADMIN-equivalent permissions through an assigned role or a parent group, thereby escalatin",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-88987 - Silverstripe Framework: XSS via XHTML data URI",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-88987",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-16T16:20:34.000Z",
-        "contentSnippet": "Silverstripe Framework is a PHP framework which powers the Silverstripe CMS. Prior to 6.2.13, the HTML sanitiser does not remove script-capable XHTML and XML data URIs from stored CMS content. A CMS author can save such content, and JavaScript executes in the browser of another u",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-91113 - Silverstripe Framework: User-controlled ClassName allows unauthorized record type change",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-91113",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-16T16:18:47.000Z",
-        "contentSnippet": "Silverstripe Framework is a PHP framework which powers the Silverstripe CMS. Prior to 6.2.13, a CMS user who can edit a record through a GridField detail form can submit a user-controlled ClassName value to change the record into an unrelated class without the create and edit per",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-32789 - VideoLAN VLC Out-of-Bounds Read",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-32789",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-16T16:17:53.000Z",
-        "contentSnippet": "An out-of-bounds read vulnerability exists in VideoLAN VLC 3.0.23. By using a specially crafted NUV file, an attacker could exploit this vulnerability to perform an out-of-bounds read, potentially leading to the disclosure of sensitive information.",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-28731 - VideoLAN VLC Media Player Memory Corruption Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-28731",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-16T16:17:53.000Z",
-        "contentSnippet": "A memory corruption vulnerability exists in VideoLAN VLC 3.0.23. A specially crafted Interplay MVE file can trigger a condition that allows access to a variable that is not explicitly initialized, which under certain conditions can lead to code execution in the context of the cur",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-3860 - CSRF vulnerability in OpenText Vibe",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-3860",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-16T15:17:32.000Z",
-        "contentSnippet": "CSRF vulnerability in OpenText Vibe versions",
-        "cveScore": 2.3,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-3859 - XSS Vulnerability in OpenText Vibe",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-3859",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-16T15:17:32.000Z",
-        "contentSnippet": "XSS vulnerability in Vibe Versions",
-        "cveScore": 7.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-129957 - PrestaShop before 8.2.9 and 9.2.1 Path Traversal RCE via Theme/Module Import",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129957",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-16T15:17:31.000Z",
-        "contentSnippet": "PrestaShop before 8.2.9 and 9.0.0 before 9.2.1 contains a path traversal vulnerability in back-office theme and module archive import that allows authenticated employees to write files outside intended directories. Attackers can craft a theme name in config/theme.yml or upload a ",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-129956 - Sandboxie-Plus before 1.18.6 Privilege Escalation via SbieSvc MSGID_PROCESS_RUN_UPDATER",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129956",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-16T15:17:31.000Z",
-        "contentSnippet": "Sandboxie-Plus before 1.18.6 contains a local privilege escalation vulnerability in SbieSvc that allows standard users to launch UpdUtil.exe as SYSTEM via MSGID_PROCESS_RUN_UPDATER requests. Attackers can inject code into a signed SandMan.exe process to bypass the signature check",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-129955 - NodePress through 8.5.1 Authentication Bypass via Default Administrator Password",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129955",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-16T15:17:31.000Z",
-        "contentSnippet": "NodePress through 8.5.1 contains an authentication bypass vulnerability that allows unauthenticated attackers to gain administrator access by using the hardcoded default password 'root'. Attackers can send base64-encoded 'root' to POST /admin/login when NP_ADMIN_DEFAULT_PASSWORD ",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-129954 - NodePress through 8.5.1 HTML Injection in Comment Notification Emails",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129954",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-16T15:17:30.000Z",
-        "contentSnippet": "NodePress through 8.5.1 contains an HTML injection vulnerability in linesToEmailContent() that allows unauthenticated attackers to inject markup into notification emails because comment content is not escaped. Attackers can post comments or replies via POST /comments containing f",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-129953 - NodePress through 8.5.1 Rate Limit Bypass via Spoofed X-Forwarded-For",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129953",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-16T15:17:30.000Z",
-        "contentSnippet": "NodePress through 8.5.1 contains a rate limit bypass vulnerability that allows unauthenticated attackers to evade throttling by spoofing the X-Forwarded-For header, because trustProxy is enabled. Attackers can send X-Forwarded-For set to 127.0.0.1 or rotate values to brute-force ",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-129952 - NodePress through 8.5.1 Authentication Bypass via Default JWT Signing Secret",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129952",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-16T15:17:30.000Z",
-        "contentSnippet": "NodePress through 8.5.1 contains an authentication bypass vulnerability that allows unauthenticated remote attackers to gain administrator access by forging JWTs with the hardcoded 'nodepress-secret' fallback key. Attackers can sign HS256 bearer tokens with the default issuer, au",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-129951 - Rowy through 3.0.0 Stored XSS via URL Field Link",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129951",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-16T15:17:30.000Z",
-        "contentSnippet": "Rowy through 3.0.0 contains a stored cross-site scripting vulnerability that allows authenticated users with table write access to inject scripts via URL field links lacking scheme validation. Attackers can store values like javascript: URIs containing the string http in URL cell",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-129950 - Rowy through 3.0.0 Overly Permissive Default Firebase Storage Security Rules",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129950",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-16T15:17:30.000Z",
-        "contentSnippet": "Rowy through 3.0.0 contains an incorrect permission assignment vulnerability in default Firebase Storage rules that grants any user holding a role read and write access to the entire bucket. Authenticated users restricted to a single table or read-only access can use the Firebase",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-129949 - Rowy through 3.0.0 Stored XSS via Markdown Field Renderer",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129949",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-16T15:17:30.000Z",
-        "contentSnippet": "Rowy through 3.0.0 contains a stored cross-site scripting vulnerability that allows authenticated users with table write access to inject unsanitized HTML into Markdown cells. Attackers can store iframe, object, or form elements with javascript: URLs that execute when administrat",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-129948 - Contentlayer @contentlayer/source-files through 0.3.4 Code Injection via JavaScript Frontmatter",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129948",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-16T15:17:29.000Z",
-        "contentSnippet": "Contentlayer @contentlayer/source-files through 0.3.4 contains a code injection vulnerability that allows attackers who control content files to execute JavaScript by abusing gray-matter's still-enabled JavaScript engine in parseMarkdown(). Attackers can start a Markdown or MDX f",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-129947 - Contentlayer @contentlayer/core through 0.3.4 Code Injection via Generated _index.mjs",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129947",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-16T15:17:29.000Z",
-        "contentSnippet": "Contentlayer @contentlayer/core through 0.3.4 contains a code injection vulnerability that allows attackers to inject JavaScript by embedding single quotes in content file names. Attackers can add a content file whose name breaks out of the import specifier in makeDataExportFile(",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-129946 - Keystatic through 0.6.9 Stored XSS via javascript: Link href in DocumentRenderer",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129946",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-16T15:17:29.000Z",
-        "contentSnippet": "Keystatic through 0.6.9 contains a stored cross-site scripting vulnerability in the DocumentRenderer component that allows authenticated content editors to inject scripts via unvalidated link href values. Editors can paste anchors with javascript: URLs into document fields, execu",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-129945 - Keystatic through 0.6.9 GitHub OAuth Login CSRF via Missing State Validation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129945",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-16T15:17:29.000Z",
-        "contentSnippet": "Keystatic through 0.6.9 contains a login cross-site request forgery vulnerability in the githubOauthCallback handler that allows unauthenticated remote attackers to sign victims in with the attacker's GitHub account by omitting state validation. Attackers can induce victims to vi",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-129944 - Keystatic through 0.6.9 Path Traversal via Local Mode API Prefix Bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129944",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-16T15:17:29.000Z",
-        "contentSnippet": "Keystatic through 0.6.9 contains a path traversal vulnerability in the getIsPathValid function that allows unauthenticated remote attackers to access sibling paths sharing a content directory name prefix. Attackers can send requests with a no-cors header to the blob, update, and ",
-        "cveScore": 6.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-129943 - Prime CMS through 0.4.0-beta.0 OS Command Injection via updateSystem Mutation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129943",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-16T15:17:29.000Z",
-        "contentSnippet": "Prime CMS (@primecms/core) through 0.4.0-beta.0 contains an OS command injection vulnerability in the updateSystem GraphQL mutation that allows authenticated administrators to execute shell commands via the package version string. Attackers can append shell metacharacters to the ",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-129942 - Prime CMS through 0.4.0-beta.0 Missing Authentication via GraphQL Mutations",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129942",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-16T15:17:28.000Z",
-        "contentSnippet": "Prime CMS (@primecms/core) through 0.4.0-beta.0 contains a missing authentication vulnerability that allows unauthenticated attackers to invoke privileged GraphQL mutations because the @Authorized() decorator is omitted. Attackers can call updateWebhook, createRelease, unpublishD",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-129941 - Prime CMS through 0.4.0-beta.0 Authentication Bypass via createUser GraphQL Mutation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129941",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-16T15:17:28.000Z",
-        "contentSnippet": "Prime CMS (@primecms/core) through 0.4.0-beta.0 contains an authentication bypass vulnerability that allows unauthenticated attackers to register accounts via the createUser mutation on /prime/graphql. Because the isAuthenticated() guard has its check commented out and createAbil",
-        "cveScore": 9.8,
-        "cveSeverity": "CRITICAL"
       }
     ],
     "ai": [
+      {
+        "title": "Managed NVIDIA Dynamo on Amazon SageMaker HyperPod Inference",
+        "link": "https://aws.amazon.com/blogs/machine-learning/managed-nvidia-dynamo-on-amazon-sagemaker-hyperpod-inference/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-17T23:33:26.000Z",
+        "contentSnippet": "Amazon SageMaker HyperPod Inference now supports NVIDIA Dynamo for distributed inference, with multi-node and disaggregated serving, KV-aware routing, and automatic fault recovery. Serve large models across many nodes without building the orchestration layer yourself."
+      },
+      {
+        "title": "Perplexity Computer Adds Multiagent: Up to 16 AI Agents That Cross-Check Work",
+        "link": "https://www.marktechpost.com/2026/11/17/perplexity-computer-multiagent-effort-level/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-11-17T22:52:04.000Z",
+        "contentSnippet": "Perplexity added Multiagent to Computer, an effort level above Ultra where a lead agent runs up to 16 agents on Claude, GPT and Gemini models that share findings and check each other’s work. The post Perplexity Computer Adds Multiagent: Up to 16 AI Agents That Cross-Check Work ap"
+      },
+      {
+        "title": "Reducing token costs and latency in Amazon Bedrock AgentCore JSON workloads",
+        "link": "https://aws.amazon.com/blogs/machine-learning/reducing-token-costs-and-latency-in-amazon-bedrock-agentcore-json-workloads/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-17T22:44:51.000Z",
+        "contentSnippet": "As production agents on Amazon Bedrock AgentCore process multi-megabyte JSON payloads, token costs and latency climb. This post shares three composable strategies: offloading heavy artifacts to Amazon S3, on-demand result paging, and dictionary compaction. Together they cut per-t"
+      },
+      {
+        "title": "OpenAI Releases GPT-6.2 Astra and Sol With a 20% Cheaper Astra API",
+        "link": "https://www.marktechpost.com/2026/11/17/openai-gpt-6-2-astra-sol-release/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-11-17T22:07:30.000Z",
+        "contentSnippet": "OpenAI released GPT-6.2 Astra and GPT-6.2 Sol on November 17, 2026. Astra's API price drops 20% to $8/$40 per million tokens, and it ranks second on the Artificial Analysis Intelligence Index. The post OpenAI Releases GPT-6.2 Astra and Sol With a 20% Cheaper Astra API appeared fi"
+      },
+      {
+        "title": "Cut generative AI costs: Code for rules, models for judgment",
+        "link": "https://aws.amazon.com/blogs/machine-learning/cut-generative-ai-costs-code-for-rules-models-for-judgment/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-17T21:14:55.000Z",
+        "contentSnippet": "The biggest cost lever in a generative AI system is whether you call a model at all. Learn how to decide whether each workflow step needs a model, and map each option to AWS: deterministic code, a constrained decision call, or a right-sized model on Amazon Bedrock."
+      },
+      {
+        "title": "Amazon SageMaker AI real-time endpoints now support KV cache aware routing",
+        "link": "https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-ai-real-time-endpoints-now-support-kv-cache-aware-routing/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-17T21:11:51.000Z",
+        "contentSnippet": "Amazon SageMaker AI real-time endpoints now support KV cache-aware routing, a new strategy that routes each request to the instance holding the longest cached match for its prompt. Learn how it works, when to use it compared with prefix-aware routing, and how to enable, invoke, a"
+      },
+      {
+        "title": "Clearing Up the Confusion on AI Data Retention: Two Standard Designs Explained",
+        "link": "https://www.marktechpost.com/2026/11/17/zero-data-retention-ai-apis-explained/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-11-17T20:49:45.000Z",
+        "contentSnippet": "Zero data retention applies to specific AI endpoints, not whole vendors. This guide explains the 2 standard API designs for data retention, who manages deletion in each, and 6 checks for developers. The post Clearing Up the Confusion on AI Data Retention: Two Standard Designs Exp"
+      },
+      {
+        "title": "Govern and discover records with common metadata in AWS Agent Registry",
+        "link": "https://aws.amazon.com/blogs/machine-learning/govern-and-discover-records-with-common-metadata-in-aws-agent-registry/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-17T20:31:04.000Z",
+        "contentSnippet": "Custom metadata schemas in AWS Agent Registry let an administrator define typed, validated fields that every agent, MCP server, and skill must carry. This post follows an MCP record from schema definition through registration, enrichment, approval, and discovery, so teams govern "
+      },
+      {
+        "title": "Secure OAuth patterns for Snowflake Cortex AI through Amazon Bedrock AgentCore",
+        "link": "https://aws.amazon.com/blogs/machine-learning/secure-oauth-patterns-for-snowflake-cortex-ai-through-amazon-bedrock-agentcore/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-17T20:25:23.000Z",
+        "contentSnippet": "When an AI agent on Amazon Bedrock AgentCore calls Snowflake Cortex AI over MCP, how does it authenticate? This post walks through three OAuth patterns we tested on AgentCore Identity: Snowflake OAuth, three-legged OAuth with a corporate IdP, and two-legged OAuth, so you can matc"
+      },
+      {
+        "title": "Announcing AI data preparation capabilities in Amazon SageMaker: Build high-quality datasets for model development workflows",
+        "link": "https://aws.amazon.com/blogs/machine-learning/announcing-ai-data-preparation-capabilities-in-amazon-sagemaker-build-high-quality-datasets-for-model-development-workflows/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-17T19:40:01.000Z",
+        "contentSnippet": "Amazon SageMaker AI now offers AI data preparation capabilities for building high-quality training and evaluation data. Generate synthetic examples, assess and improve datasets, auto-label at scale, and bring in expert review through Python SDK APIs and an agent skill, all from y"
+      },
+      {
+        "title": "Getting AI out of the demo and into businesses globally",
+        "link": "https://aws.amazon.com/blogs/machine-learning/getting-ai-out-of-the-demo-and-into-businesses-globally/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-17T19:05:22.000Z",
+        "contentSnippet": "Most enterprises have AI that works in a demo but stalls before production. AWS Forward Deployed Engineering closes that gap. AWS engineers embed with customer teams to take high-value workflows to production in 45-day sprints, leaving a foundation, workflows, and governance the "
+      },
       {
         "title": "Build WhatsApp AI agents with Amazon Bedrock AgentCore",
         "link": "https://aws.amazon.com/blogs/machine-learning/build-whatsapp-ai-agents-with-amazon-bedrock-agentcore/",
@@ -1527,83 +1604,6 @@
         "source": "Google AI Blog",
         "isoDate": "2026-11-10T13:00:00.000Z",
         "contentSnippet": "Google Cloud launches Gemini for healthcare to unify clinical data and automate workflows. Reduce administrative burnout. See how it works."
-      },
-      {
-        "title": "Meta Releases Muse Ember, a 1M-Context Model for High-Volume Agent Work",
-        "link": "https://www.marktechpost.com/2026/11/09/meta-muse-ember-small-agent-model/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-11-10T06:36:10.000Z",
-        "contentSnippet": "Meta Muse Ember is Meta’s smallest model, built for tool calls, coding subtasks and document parsing. It ties Claude Haiku 5.5 on the Artificial Analysis Intelligence Index at roughly a third of the cost per task. The post Meta Releases Muse Ember, a 1M-Context Model for High-Vol"
-      },
-      {
-        "title": "How skills and agents work in AWS Quick",
-        "link": "https://aws.amazon.com/blogs/machine-learning/how-skills-and-agents-work-in-aws-quick/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-11-10T00:21:34.000Z",
-        "contentSnippet": "Repeatable tasks like status updates, release notes, and ticket creation can be encoded in AWS Quick through agents and skills. This post covers how agents, skills, and your data fit together in AWS Quick, how to build and share skills for your team, and how the official catalog "
-      },
-      {
-        "title": "Locating the source of a mysterious beep with Claude",
-        "link": "https://simonwillison.net/2026/Nov/9/mysterious-beeps/",
-        "source": "Simon Willison's Weblog",
-        "isoDate": "2026-11-09T23:57:21.000Z",
-        "contentSnippet": "Our house has a box room, full of boxes that we still haven't unpacked from our last move. A couple of weeks ago something in that room started intermittently beeping. The beeps were far enough apart that standing in the room and trying to determine the source of the noise was fr"
-      },
-      {
-        "title": "Single-shot and agentic retrieval with Amazon Bedrock Managed Knowledge Base",
-        "link": "https://aws.amazon.com/blogs/machine-learning/single-shot-and-agentic-retrieval-with-amazon-bedrock-managed-knowledge-base/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-11-09T20:13:18.000Z",
-        "contentSnippet": "Amazon Bedrock Managed Knowledge Base now supports single-shot RAG and retrieval-only requests through AgenticRetrieveStream, alongside agentic retrieval. This post explains how the maxAgentIteration parameter matches retrieval effort to each request, using an illustrative intern"
-      },
-      {
-        "title": "Introducing Claude Fable 5.2 on AWS",
-        "link": "https://aws.amazon.com/blogs/machine-learning/introducing-claude-fable-5-2-on-aws/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-11-09T20:04:37.000Z",
-        "contentSnippet": "Claude Fable 5.2 and Claude Mythos 5.2 are now available on Amazon Bedrock and Claude Platform on AWS. Learn what's new in both models, why Fable 5.2 matters for your technical workloads, and how to get started building with it on Amazon Bedrock."
-      },
-      {
-        "title": "NVIDIA Nemotron 3.5 Super VL is now available in Amazon SageMaker JumpStart",
-        "link": "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-11-09T20:01:20.000Z",
-        "contentSnippet": "NVIDIA Nemotron 3.5 Super VL, a 120B-parameter multimodal vision-language model, is now available in Amazon SageMaker JumpStart. Deploy the NVFP4 or BF16 variant in a few steps, then run text, image, and video inference for document intelligence, computer-use agents, and multimod"
-      },
-      {
-        "title": "Pluggable Agentic AI Framework: A seven-layer composable enterprise agentic AI reference architecture on Amazon Bedrock AgentCore",
-        "link": "https://aws.amazon.com/blogs/machine-learning/pluggable-agentic-ai-framework-a-seven-layer-composable-enterprise-agentic-ai-reference-architecture-on-amazon-bedrock-agentcore/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-11-09T19:05:54.000Z",
-        "contentSnippet": "A seven-layer composable reference architecture for taking enterprise agentic AI from prototype to production on Amazon Bedrock AgentCore. Each layer has a stable contract, so you can swap technologies at any layer without redesigning the rest of the stack."
-      },
-      {
-        "title": "How CrossnoKaye grounds physical AI with Amazon Bedrock AgentCore",
-        "link": "https://aws.amazon.com/blogs/machine-learning/how-crossnokaye-grounds-physical-ai-with-amazon-bedrock-agentcore/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-11-09T18:55:43.000Z",
-        "contentSnippet": "CrossnoKaye brought physical AI to heavy industry with Amazon Bedrock AgentCore. Its ATLAS platform and AURA agentic system ground AI reasoning in live plant data and run verifiable Python in isolated AgentCore sandboxes, giving plant engineers checkable, math-backed answers inst"
-      },
-      {
-        "title": "Professional work deserves professional tools. Meet AWS Quick.",
-        "link": "https://aws.amazon.com/blogs/machine-learning/professional-work-deserves-professional-tools-meet-aws-quick/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-11-09T18:43:30.000Z",
-        "contentSnippet": "Introducing AWS Quick, formerly Amazon Quick, and the debut of our first brand campaign celebrating teams who keep business moving. AWS Quick is the AI workspace built only for work, where teams use AI agents to research, analyze, and act across the data and applications they alr"
-      },
-      {
-        "title": "Google Unveils TPU 8i Max and TPU 8tx: A Dual-Chip TPU and a Confidential TPU",
-        "link": "https://www.marktechpost.com/2026/11/09/google-tpu-8i-max-tpu-8tx/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-11-09T17:09:54.000Z",
-        "contentSnippet": "Google added TPU 8i Max and TPU 8tx to its eighth-generation TPU lineup. TPU 8i Max packs 2 TPU 8i chips per package for long-context agents. TPU 8tx adds hardware confidential inference. Bloomberg reports 2027 availability. The post Google Unveils TPU 8i Max and TPU 8tx: A Dual-"
-      },
-      {
-        "title": "Baidu’s ERNIE Evolve Automated Research System Beats NanoChat and NanoGPT Records",
-        "link": "https://www.marktechpost.com/2026/11/09/baidu-ernie-evolve-automated-research-system/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-11-09T16:31:59.000Z",
-        "contentSnippet": "Baidu’s ERNIE Evolve is an automated research system that edits code, runs experiments and keeps only verified gains. It beat public bests on NanoChat and NanoGPT Speedrun and sped up ERNIE-5.5-Flash inference. The post Baidu’s ERNIE Evolve Automated Research System Beats NanoCha"
       }
     ],
     "virtualization": [
@@ -2310,6 +2310,27 @@
     ],
     "hardware": [
       {
+        "title": "Budget-friendly gifts for gamers — keyboards, mice, headsets, and more under $80",
+        "link": "https://www.tomshardware.com/gift-guides-seasonal-sales/budget-friendly-gifts-for-gamers-keyboards-mice-headsets-and-more-under-usd80",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-18T00:00:00.000Z",
+        "contentSnippet": "The best budget-friendly gifts for gamers — keyboards, mice, headsets, and more, all for under $80."
+      },
+      {
+        "title": "Nvidia employee warns of 'irreplaceable' talent exodus if Jensen Huang not reinstated",
+        "link": "https://www.tomshardware.com/tech-industry/big-tech/nvidia-employee-warns-of-irreplaceable-talent-exodus-if-jensen-huang-not-reinstated-cautions-board-and-top-brass-that-talent-at-nvidia-is-now-contemplating-departing",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-17T21:00:00.000Z",
+        "contentSnippet": "An internal letter was sent to Nvidia's board and top executives warning that \"irreplaceable talent\" could leave if Jensen Huang isn't reinstated as CEO."
+      },
+      {
+        "title": "10 desk upgrade gifts to improve PC work and gaming spaces",
+        "link": "https://www.tomshardware.com/gift-guides-seasonal-sales/10-desk-upgrade-gifts-to-improve-pc-work-and-gaming-spaces-a-monitor-riser-with-charging-and-usb-ports-an-excellent-speaker-upgrade-modern-charging-hubs-and-more",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-17T21:00:00.000Z",
+        "contentSnippet": "These 10 devices can make the desk space around a PC more versatile, enjoyable, and productive experience."
+      },
+      {
         "title": "Nvidia claims its Vera CPU can gain up to 39% performance boost via software optimization at SC26 — architectural fine-tuning is needed to fully unleash custom Olympus cores",
         "link": "https://www.tomshardware.com/pc-components/cpus/nvidia-claims-its-vera-cpu-can-gain-up-to-39-percent-performance-boost-via-software-optimization-at-sc26-architectural-fine-tuning-is-needed-to-fully-unleash-custom-olympus-cores",
         "source": "Tom's Hardware",
@@ -2987,27 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-11-13T11:00:00.000Z",
         "contentSnippet": "Top analyst firm SemiAnalysis says it has tracked staggering 1.5 gigawatts of banned AI accelerators flowing into China."
-      },
-      {
-        "title": "How Shanghai fund manager Kang Wei introduced his wife Alice Huang to Jensen and built $7.5 billion Nvidia AI GPU smuggling operation",
-        "link": "https://www.tomshardware.com/tech-industry/how-shanghai-fund-manager-kang-wei-introduced-his-wife-alice-huang-to-jensen-and-built-usd7-5-billion-nvidia-ai-gpu-smuggling-operation-mistresss-husband-joked-she-was-the-ceos-personal-assistant",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-13T11:00:00.000Z",
-        "contentSnippet": "While Alice Huang lives on the headlines, it was actually her husband who put her in the same room as Jensen Huang."
-      },
-      {
-        "title": "Grab this 8BitDo wireless controller for your gaming PC and Switch 2 at its lowest ever price, now $51.12",
-        "link": "https://www.tomshardware.com/peripherals/controllers-gamepads/grab-this-8bitdo-wireless-controller-for-your-gaming-pc-and-switch-2-at-its-lowest-ever-price-now-usd51-12-27-percent-off-this-fully-customizable-ultimate-2-gamepad-with-tmr-joysticks-dual-triggers-and-remappable-buttons",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-13T10:53:49.000Z",
-        "contentSnippet": "This 8BitDo Ultimate 2 game controller for your PC or Nintendo Switch is down to a record low price on Amazon right now."
-      },
-      {
-        "title": "1994 Jeep Cherokee owner hacks 32-year-old car with Claude AI to pass California smog tests",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/1994-jeep-cherokee-owner-hacks-32-year-old-car-with-claude-ai-to-pass-california-smog-tests-enthusiast-reverse-engineered-the-ancient-ecu-for-diagnostics-and-control",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-13T10:30:00.000Z",
-        "contentSnippet": "An AI enthusiast managed to get his old 1994 Jeep Cherokee to pass the California smog tests thanks to the help of AI, a little electronics wiring skill, and $15 of components."
       }
     ]
   }
