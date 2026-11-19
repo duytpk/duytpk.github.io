@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-11-18T18:30:54.315Z",
+  "updatedAt": "2026-11-19T00:51:03.425Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-77283 - obsidian-sync-mcp: Missing Host/Origin validation lets a public website drive a victim's Obsidian vault via DNS rebinding (no-auth mode)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77283",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-18T23:17:21.000Z",
+        "contentSnippet": "obsidian-sync-mcp is an MCP server that gives AI agents access to Obsidian vaults. Prior to 0.5.7, deployments running without MCP_AUTH_TOKEN install no serverOptions.authenticate check for the HTTP /mcp endpoint, so requests are dispatched without validating the Host or Origin h",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-71536 - Mareforma: verify_bundle never checks a per-claim signature",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71536",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-18T23:17:21.000Z",
+        "contentSnippet": "Mareforma is a local verification layer for AI-assisted research. From 0.3.0 until 0.3.8, verify_bundle in mareforma/export_bundle.py validates the outer DSSE envelope and exporter-signed subject digests, but JSONLDExporter._claim_node in mareforma/exporters/jsonld.py supplies no",
+        "cveScore": 7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-71535 - Mareforma: Unsigned Claims Can Be Promoted to REPLICATED via Missing Signature Enforcement in Convergence Path",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71535",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-18T23:17:21.000Z",
+        "contentSnippet": "Mareforma is a local verification layer for AI-assisted research. From 0.3.0 until 0.3.7, the _maybe_update_replicated_unlocked convergence path in mareforma/db/core.py uses generated_by labels without requiring a valid signature_bundle from a distinct enrolled signer, so an unsi",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-71534 - Mareforma: transparency_logged trusts the unsigned rekor block",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71534",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-18T23:17:21.000Z",
+        "contentSnippet": "Mareforma is a local verification layer for AI-assisted research. From 0.3.0 until 0.3.8, restore logic in mareforma/db/restore.py derives transparency_logged from the unsigned rekor.uuid field inside signature_bundle without requiring a verified claim-bound rekor_inclusions entr",
+        "cveScore": 6.9,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-71533 - Mareforma: search_claims skips verify-on-read, serving forged rows",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71533",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-18T23:17:21.000Z",
+        "contentSnippet": "Mareforma is a local verification layer for AI-assisted research. From 0.3.7 until 0.3.8, search_claims in mareforma/db/core.py does not call _row_verified_on_read and therefore does not provide the same high-trust verification projection as query_claims. A forged or tampered REP",
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-71500 - Mareforma: invalidated claims still promote to REPLICATED",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-71500",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-18T23:17:21.000Z",
+        "contentSnippet": "Mareforma is a local verification layer for AI-assisted research. From 0.3.0 until 0.3.8, _maybe_update_replicated_unlocked in mareforma/db/core.py does not check t_invalid in its new-claim gate, peer-selection query, or final update, so a claim marked invalid by a signed contrad",
+        "cveScore": 6.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-132280 - elunez eladmin Quartz exec CheckBean input validation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-132280",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-18T23:17:20.000Z",
+        "contentSnippet": "A vulnerability has been found in elunez eladmin up to 2.7. Affected by this issue is the function CheckBean of the file /api/jobs/exec of the component Quartz Handler. The manipulation of the argument methodName leads to improper input validation. It is possible to initiate the ",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-132279 - elunez eladmin JDBC URL Sanitization SqlUtils.sanitizeJdcUrl input validation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-132279",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-18T23:17:20.000Z",
+        "contentSnippet": "A flaw has been found in elunez eladmin up to 2.7. Affected by this vulnerability is the function SqlUtils.sanitizeJdcUrl of the component JDBC URL Sanitization. Executing a manipulation can lead to improper input validation. The attack may be performed from remote. The exploit h",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-129992 - Dokploy: Failed builds and backups send every application secret in plain text to notifications",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129992",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-18T23:17:19.000Z",
+        "contentSnippet": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.31.0, failed Railpack builds and database backups propagate an execution error containing the full command, exposing application environment variables, database passwords, and S3 access keys embedded in tho",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-129991 - Dokploy: Authenticated Command Injection via unescaped backup.prefix in database/service backup commands leads to RCE as root",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129991",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-18T23:17:19.000Z",
+        "contentSnippet": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.31.1, the backup prefix field is only checked for a nonempty value, and normalizeS3Path preserves shell metacharacters before the prefix is interpolated into rclone upload and retention-cleanup command stri",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-129990 - Dokploy: Missing authorization on all network.* endpoints (Member -> create/delete docker networks on org servers, cross-org access via serverId)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129990",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-18T23:17:18.000Z",
+        "contentSnippet": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.31.1, every network.* procedure is only authentication-protected and does not require the Docker permission, allowing a standard member to list, inspect, create, import, recreate, resynchronize, and delete ",
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-129989 - Dokploy: OS Command Injection via unsanitized publishDirectory in Nixpacks build pipeline",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129989",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-18T23:17:18.000Z",
+        "contentSnippet": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.31.1, the Nixpacks publishDirectory build setting accepts shell metacharacters and is interpolated into a docker cp command executed through child_process.exec. An authenticated user with access to an appli",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-129986 - Dokploy: OS Command Injection via filePath in mount.deleteFileMount → HOST RCE",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129986",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-18T23:17:18.000Z",
+        "contentSnippet": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.31.1, mount.deleteFileMount passes a path containing the user-controlled filePath to the local removeFileOrDirectory helper, which interpolates it unquoted into rm -rf, while the remote branch is quoted. An",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-129985 - Dokploy: RCE via Command Injection in Schedule appName",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129985",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-18T23:17:18.000Z",
+        "contentSnippet": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.31.1, a user-controlled schedule appName is joined into the schedule directory path and interpolated without shell quoting into commands that create the directory and write the schedule script. An authentic",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-129316 - Dokploy: serviceId lets a member reach any container (Member -> Root) over the docker WebSocket handlers",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129316",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-18T23:17:18.000Z",
+        "contentSnippet": "Dokploy is a free, self-hostable Platform as a Service (PaaS). From 0.29.13 until 0.31.0, the Docker terminal, container-log, and monitoring WebSocket handlers accept a caller-controlled serviceId as authorization but do not consistently bind the requested containerId or appName ",
+        "cveScore": 9.9,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-129315 - Dokploy: Local privilege escalation to root: install.sh makes /etc/dokploy world-writable (0777)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129315",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-18T23:17:18.000Z",
+        "contentSnippet": "Dokploy is a free, self-hostable Platform as a Service (PaaS). In 0.31.0 and earlier, the hosted installer and manual installation instructions set /etc/dokploy to mode 0777, allowing a local non-root user on a shared host to replace root-owned schedule or Traefik configuration d",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-125353 - Insecure Permissions on Database Backup File in TP-Link Omada SDN Controller",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-125353",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-18T23:17:17.000Z",
+        "contentSnippet": "An incorrect permission assignment vulnerability in Omada SDN Controller prior to 6.2.20 may cause a database backup generated during the uninstall workflow to remain readable by other local users on the host. Successful exploitation requires local, low-privileged access to the a",
+        "cveScore": 5.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-132281 - elunez eladmin Database Maintenance upload SqlUtils.batchExecute sql injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-132281",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-18T23:15:16.000Z",
+        "contentSnippet": "A vulnerability was found in elunez eladmin up to 2.7. This affects the function SqlUtils.batchExecute of the file /api/database/upload of the component Database Maintenance Module. The manipulation results in sql injection. It is possible to launch the attack remotely. The explo",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-132745 - Vtiger CRM through 8.4.0 Blind SQL Injection via search_params k Comparator",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-132745",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-18T23:13:08.000Z",
+        "contentSnippet": "Vtiger CRM through 8.4.0 contains a blind SQL injection vulnerability that allows authenticated non-administrative users to inject SQL through the k (does not contain) comparator in list view search_params. Attackers can send crafted search_params to the ListAjax getRecordsCount ",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-132746 - Vtiger CRM through 8.4.0 Blind SQL Injection via WSAPP wsapp_map",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-132746",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-18T23:13:08.000Z",
+        "contentSnippet": "Vtiger CRM through 8.4.0 contains a blind SQL injection vulnerability that allows authenticated low-privileged users to inject SQL via unescaped clientid values in the wsapp_map webservice operation. Attackers can register a sync application with wsapp_register, then send delete-",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-132747 - Vtiger CRM through 8.4.0 SQL Injection via selected_ids in ExportData",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-132747",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-18T23:13:07.000Z",
+        "contentSnippet": "Vtiger CRM through 8.4.0 contains an SQL injection vulnerability that allows authenticated users with export access to inject SQL through unvalidated selected_ids values in ExportData.php. Attackers can send a UNION SELECT payload in selected_ids[] to the ExportSelectedRecords mo",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-132748 - Vtiger CRM through 8.4.0 PHP Code Injection via Configuration Editor",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-132748",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-18T23:13:06.000Z",
+        "contentSnippet": "Vtiger CRM through 8.4.0 contains a PHP code injection vulnerability that allows authenticated administrators to inject code via the updatedFields parameter into config.inc.php. Attackers can supply a crafted HELPDESK_SUPPORT_EMAIL_ID value that passes email validation but closes",
+        "cveScore": 8.6,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-132749 - Vtiger CRM through 8.4.0 Blind SQL Injection via Reports advanced_filter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-132749",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-18T23:13:06.000Z",
+        "contentSnippet": "Vtiger CRM through 8.4.0 contains a blind SQL injection vulnerability in ReportRun::generateAdvFilterSql() that allows authenticated low-privileged users to inject SQL via the bw comparator. Attackers can send a crafted advanced_filter parameter containing a single quote to the R",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-132750 - Meilisearch before 1.55.1 and 1.56.x before 1.56.1 Denial of Service via filter-parser Quadratic Memory Consumption",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-132750",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-18T23:13:05.000Z",
+        "contentSnippet": "Meilisearch before 1.55.1 and 1.56.x before 1.56.1 contains a quadratic memory consumption vulnerability in filter-parser that allows attackers with a search API key to exhaust server memory. Attackers can send a roughly 100 KB filter, such as a _geoPolygon with thousands of coor",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-132751 - yt through 4.4.4 Code Injection via con_args eval() in ytdata HDF5",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-132751",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-18T23:13:04.000Z",
+        "contentSnippet": "yt through 4.4.4 contains a code injection vulnerability that allows attackers to execute Python code by supplying a crafted con_args attribute in a ytdata HDF5 file. SavedDataset._parse_parameter_file() passes con_args to eval() unrestricted, so loading a malicious .h5 file with",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-89218 - Missing authorization check in Mattermost Server exposes restricted file metadata across multiple delivery paths",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-89218",
@@ -677,234 +902,79 @@
         "contentSnippet": "Improper Output Neutralization for Logs vulnerability in the FileAppender, RollingFileAppender, UdpAppender and SmtpAppender of Apache log4net. Characters the configured encoding could not represent were converted by that encoding's best-fit fallback, which turns fullwidth charac",
         "cveScore": 5.3,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-67455 - NVIDIA Model Optimizer Insecure Deserialization Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-67455",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-17T17:18:09.000Z",
-        "contentSnippet": "NVIDIA Model Optimizer for Linux and Windows contains a vulnerability where an attacker could cause a deserialization of untrusted data. A successful exploit of this vulnerability might lead to code execution, data tampering, denial of service, and information disclosure.",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-65132 - NVIDIA Megatron-LM Insecure Deserialization Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65132",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-17T17:18:08.000Z",
-        "contentSnippet": "NVIDIA Megatron-LM contains a vulnerability in checkpoint loading where an attacker could cause deserialization of untrusted data. A successful exploit of this vulnerability might lead to code execution, information disclosure, and data tampering.",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-130804 - CVE-2026-130804",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-130804",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-17T17:18:05.000Z",
-        "contentSnippet": "The microcontroller lacks enabled debug lock bits, leaving the physical Single-Wire (SWS) debugging interface completely unrestricted. This allows an attacker with physical access to use a hardware programmer to dump the entire production firmware.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-130803 - CVE-2026-130803",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-130803",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-17T17:18:05.000Z",
-        "contentSnippet": "The firmware and flash memory store critical cryptographic secrets, such as global AES keys and network master keys, in unencrypted formats. Additionally, active session tokens (Store Pairing Tokens) are written to the flash in plaintext, exposing live network credentials.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-130802 - CVE-2026-130802",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-130802",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-17T17:18:05.000Z",
-        "contentSnippet": "The NFC authentication handshake relies on a fixed, static challenge instead of a unique, random value for every session. This allows an attacker to perform a \"replay attack,\" successfully authenticating by simply sending the same pre-recorded response.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-130801 - CVE-2026-130801",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-130801",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-17T17:18:05.000Z",
-        "contentSnippet": "The device's command parser does not require asymmetric cryptographic signatures to validate incoming APDU packets. This enables an attacker to inject forged, unauthorized commands to manipulate device features and configurations once the initial handshake is bypassed.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-129246 - LightDM Privilege Escalation Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129246",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-17T17:18:02.000Z",
-        "contentSnippet": "Due to a Debian-specific patch, the directory used to share data between the LightDM and the users logging in was writable by the lightdm user of the unprivileged greeter process. A process running under the lightdm identity could leverage write access to that directory to force ",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-126558 - AutoSys WCC Forecast command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126558",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-17T17:18:00.000Z",
-        "contentSnippet": "OS Command Injection, Incomplete List of Disallowed Inputs vulnerability in Broadcom AutoSys Workload Automation (Workload Control Center (WCC) modules) on Windows, Linux allows OS Command Injection, Command Delimiters.This issue affects AutoSys Workload Automation: from 12.1 thr",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-126557 - AutoSys AE native client memory handling vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126557",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-17T17:17:59.000Z",
-        "contentSnippet": "Out-of-bounds Write vulnerability in Broadcom AutoSys Workload Automation (AutoSys engine (AE) native clients modules) on Windows, Linux allows Overflow Buffers.This issue affects AutoSys Workload Automation: from 12.1.00.00-0305 through 24.2.00-0210.",
-        "cveScore": 4.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-126556 - AutoSys native client local password exposure",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126556",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-17T17:17:59.000Z",
-        "contentSnippet": "Invocation of Process Using Visible Sensitive Information, Insufficiently Protected Credentials vulnerability in Broadcom AutoSys Workload Automation (AutoSys engine (AE) native clients modules) on Windows, Linux allows Collect Data from Common Resource Locations.This issue affec",
-        "cveScore": 5.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-126555 - AutoSys WCC reporting broken authorization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126555",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-17T17:17:59.000Z",
-        "contentSnippet": "Missing Authorization, Hidden Functionality vulnerability in Broadcom AutoSys Workload Automation (Workload Control Center (WCC) modules) on Windows, Linux allows Accessing Functionality Not Properly Constrained by ACLs, Exploit Non-Production Interfaces.This issue affects AutoSy",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-126553 - AutoSys WCC unauthenticated deserialization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126553",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-17T17:17:59.000Z",
-        "contentSnippet": "Deserialization of Untrusted Data vulnerability in Broadcom AutoSys Workload Automation (Workload Control Center (WCC) modules) on Windows, Linux allows Object Injection.This issue affects AutoSys Workload Automation: from 12.1 through 24.0.01.",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-126552 - AutoSys WCC unauthenticated command execution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126552",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-17T17:17:59.000Z",
-        "contentSnippet": "Missing Authentication for Critical Function, OS Command Injection vulnerability in Broadcom AutoSys Workload Automation (Workload Control Center (WCC) modules) on Windows, Linux allows OS Command Injection.This issue affects AutoSys Workload Automation: from 12.1 through 24.0.01",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-126551 - AutoSys hard-coded key to agent code execution",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126551",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-17T17:17:59.000Z",
-        "contentSnippet": "Use of Hard-coded Cryptographic Key vulnerability in Broadcom AutoSys Workload Automation (Workload Control Center (WCC) modules) on Windows, Linux allows Session Credential Falsification through Forging.This issue affects AutoSys Workload Automation: from 12.1 through 24.2.00.",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-126550 - AutoSys WCC session identifiers written to log",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126550",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-17T17:17:59.000Z",
-        "contentSnippet": "Insertion of Sensitive Information into Log File, Insufficiently Protected Credentials vulnerability in Broadcom AutoSys Workload Automation (Workload Control Center (WCC) modules) on Windows, Linux allows Reusing Session IDs (Session Replay).This issue affects AutoSys Workload A",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-126549 - AutoSys WCC credentials written to log",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126549",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-17T17:17:58.000Z",
-        "contentSnippet": "Insertion of Sensitive Information into Log File vulnerability in Broadcom AutoSys Workload Automation (Workload Control Center (WCC) modules) on Windows, Linux allows Collect Data from Common Resource Locations.This issue affects AutoSys Workload Automation: from 12.1.00 through",
-        "cveScore": 5.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-126548 - AutoSys WCC export-feature SSRF",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126548",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-17T17:17:58.000Z",
-        "contentSnippet": "Server-Side Request Forgery (SSRF) vulnerability in Broadcom AutoSys Workload Automation (Workload Control Center (WCC) modules) on Windows, Linux allows Server Side Request Forgery.This issue affects AutoSys Workload Automation: from 12.1.01 Cum 03 through 12.1.01 Cum 06, from 2",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-126547 - AutoSys WCC agent-control authorization bypass",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-126547",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-17T17:17:58.000Z",
-        "contentSnippet": "Missing Authorization vulnerability in Broadcom AutoSys Workload Automation (Workload Control Center (WCC) modules) on Windows, Linux allows Accessing Functionality Not Properly Constrained by ACLs.This issue affects AutoSys Workload Automation: from 12.1 through 24.2.00.",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-120287 - Multipart `:length` limit not charged for part and header framing in Plug.Parsers.MULTIPART",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-120287",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-17T17:17:53.000Z",
-        "contentSnippet": "Allocation of Resources Without Limits or Throttling vulnerability in Plug.Parsers.MULTIPART in elixir-plug plug allows an unauthenticated remote attacker to exhaust memory via a multipart request body built from parts without headers, or from header lines without a name and a va",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-119726 - PocketBook Reader Android App - Remote Path Traversal Allows Arbitrary File Read and Credential Theft",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-119726",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-17T17:17:53.000Z",
-        "contentSnippet": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability in PocketBook / Obreey Products PocketBook Reader (Android) allows Exposure of Sensitive Information to an Unauthorized Actor. This issue affects PocketBook Reader (Android): 5.65.0.39561",
-        "cveScore": 8.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-119725 - PocketBook Reader Android App - Path Traversal to Arbitrary File Read and Credential Theft",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-119725",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-17T17:17:53.000Z",
-        "contentSnippet": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability in PocketBook / Obreey Products PocketBook Reader (Android) allows Exposure of Sensitive Information to an Unauthorized Actor. This issue affects PocketBook Reader (Android): 5.65.0.39561",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-100968 - NVIDIA Megatron-LM Insecure Deserialization Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100968",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-17T17:17:43.000Z",
-        "contentSnippet": "NVIDIA Megatron-LM contains a vulnerability in dataset loading where an attacker could cause deserialization of untrusted data. A successful exploit of this vulnerability might lead to code execution, information disclosure, and data tampering.",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-100967 - NVIDIA Megatron-LM Insecure Deserialization Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-100967",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-17T17:17:43.000Z",
-        "contentSnippet": "NVIDIA Megatron-LM contains a vulnerability where an attacker could cause deserialization of untrusted data. A successful exploit of this vulnerability might lead to code execution, information disclosure, and data tampering.",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-65167 - NVIDIA TensorRT Memory Allocation Denial of Service Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65167",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-17T16:17:52.000Z",
-        "contentSnippet": "NVIDIA TensorRT contains a vulnerability where a user could cause memory allocation with excessive size value by crafting a malicious TRT engine. A successful exploit of this vulnerability might lead to denial of service.",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-65106 - NVIDIA Transformer Engine Insecure Deserialization Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-65106",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-17T16:17:52.000Z",
-        "contentSnippet": "NVIDIA Transformer Engine for Linux contains a vulnerability where a user could cause deserialization by loading untrusted data. A successful exploit of this vulnerability might lead to code execution, information disclosure, and denial of service.",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
+      {
+        "title": "Full Fine-Tuning (FFT) on SageMaker AI Serverless Model Customization",
+        "link": "https://aws.amazon.com/blogs/machine-learning/full-fine-tuning-fft-on-sagemaker-ai-serverless-model-customization/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-19T00:15:58.000Z",
+        "contentSnippet": "Amazon SageMaker AI Serverless Model Customization now supports Full Fine-Tuning (FFT). This post explores when FFT outperforms LoRA across key benchmarks, examines the spectral properties of model weight matrices behind the quality gap, shares practical hyperparameter tuning gui"
+      },
+      {
+        "title": "Exa boosts embedding throughput by 50% to index billions of documents on AWS AI chips",
+        "link": "https://aws.amazon.com/blogs/machine-learning/exa-boosts-embedding-throughput-by-50-to-index-billions-of-documents-on-aws-ai-chips/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-18T23:58:22.000Z",
+        "contentSnippet": "Exa's neural search engine is backed by an in-house vector database, so the unit economics of embedding tens of billions of web documents drive the business. This post shares how Exa optimized embedding inference on AWS Neuron hardware (Inferentia2 and Trainium2) with custom NKI "
+      },
+      {
+        "title": "Introducing workload recovery and expanded infrastructure checks on Amazon SageMaker HyperPod",
+        "link": "https://aws.amazon.com/blogs/machine-learning/introducing-workload-recovery-and-expanded-infrastructure-checks-on-amazon-sagemaker-hyperpod/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-18T23:03:29.000Z",
+        "contentSnippet": "Large training jobs can stall or compute wrong results even when every node looks healthy. Amazon SageMaker HyperPod now adds workload recovery and expanded infrastructure checks that catch these failures sooner and raise the goodput of your training workloads."
+      },
+      {
+        "title": "Introducing the Amazon SageMaker JumpStart Model Leaderboard",
+        "link": "https://aws.amazon.com/blogs/machine-learning/introducing-the-amazon-sagemaker-jumpstart-model-leaderboard/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-18T22:31:04.000Z",
+        "contentSnippet": "The Amazon SageMaker JumpStart Model Leaderboard compares 70+ foundation models side by side on quality, speed, and cost, directly in SageMaker Studio. Learn what the leaderboard shows, how AWS benchmarks models, and how to go from a shortlist to a deployed model."
+      },
+      {
+        "title": "How Airbnb uses cost per task to operate coding agents on Amazon Bedrock",
+        "link": "https://aws.amazon.com/blogs/machine-learning/how-airbnb-uses-cost-per-task-to-operate-coding-agents-on-amazon-bedrock/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-18T21:48:19.000Z",
+        "contentSnippet": "Airbnb runs evals on real engineering tasks and uses Amazon Bedrock observability to choose models for its coding agents and control production costs. This post shows how cost per task guides model selection, why production spending can differ from eval results, and how to monito"
+      },
+      {
+        "title": "Design responsible AI controls for Amazon Aurora PostgreSQL",
+        "link": "https://aws.amazon.com/blogs/machine-learning/design-responsible-ai-controls-for-amazon-aurora-postgresql/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-18T21:38:22.000Z",
+        "contentSnippet": "Learn how to make RAG chatbot answers traceable with Amazon Aurora PostgreSQL, pgvector, and Amazon Bedrock Guardrails, logging sources, scores, and guardrail traces in SQL."
+      },
+      {
+        "title": "Private certificate authority support in Amazon Bedrock AgentCore Identity",
+        "link": "https://aws.amazon.com/blogs/machine-learning/private-certificate-authority-support-in-amazon-bedrock-agentcore-identity/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-18T20:53:41.000Z",
+        "contentSnippet": "Amazon Bedrock AgentCore Identity now supports private certificate authorities (CAs), so your agents can connect to self-hosted identity providers that use a private CA. This post shows how to issue an IdP certificate with AWS Private CA, configure a credential provider to trust "
+      },
+      {
+        "title": "How Salesforce is advancing global-scale model serving with cross-Region inference routing in Amazon SageMaker AI",
+        "link": "https://aws.amazon.com/blogs/machine-learning/how-salesforce-is-advancing-global-scale-model-serving-with-cross-region-inference-routing-in-amazon-sagemaker-ai/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-18T20:13:18.000Z",
+        "contentSnippet": "Learn how Salesforce uses the cross-Region inference router in Amazon SageMaker AI to turn fragmented Regional capacity into reliable model serving. Salesforce adds capacity securely across Regions and accounts while keeping its data residency commitments, and sees per request wh"
+      },
+      {
+        "title": "How Social Department built culture-aware video discovery",
+        "link": "https://aws.amazon.com/blogs/machine-learning/how-social-department-built-culture-aware-video-discovery/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-18T19:27:56.000Z",
+        "contentSnippet": "Social Department, an AI operating system for entertainment marketing, worked with TrackIt and AWS to build QuickSearch: single-action queries that surface shareable scenes, quotable lines, memeable frames, and trend-aligned moments across large video libraries, using TwelveLabs "
+      },
+      {
+        "title": "Connect Amazon Bedrock AgentCore Gateway to private APIs in a hub-and-spoke network with centralized inspection",
+        "link": "https://aws.amazon.com/blogs/machine-learning/connect-amazon-bedrock-agentcore-gateway-to-private-apis-in-a-hub-and-spoke-network-with-centralized-inspection/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-18T19:05:45.000Z",
+        "contentSnippet": "Many enterprises run a centralized network model: one account owns every VPC and a central firewall inspects all traffic. This post shows a tested pattern for connecting Amazon Bedrock AgentCore Gateway to private APIs and MCP servers in that model, with the VPC Lattice resource "
+      },
       {
         "title": "The Gemini app is now available on lower-memory Android devices.",
         "link": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
@@ -1534,76 +1604,6 @@
         "source": "Google AI Blog",
         "isoDate": "2026-11-11T09:00:00.000Z",
         "contentSnippet": "A new online archive of Esther Mahlangu’s life and art is now on Google Arts & Culture."
-      },
-      {
-        "title": "MBZUAI’s IFM Releases PAN 2, an Open 29B World Model for Physical AI",
-        "link": "https://www.marktechpost.com/2026/11/10/ifm-pan-2-open-world-model/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-11-11T07:38:57.000Z",
-        "contentSnippet": "The Institute of Foundation Models at MBZUAI released PAN 2, an Apache 2.0 world model that couples an LLM planner with a 29B diffusion transformer to simulate up to 20 seconds of action outcomes as video. The post MBZUAI’s IFM Releases PAN 2, an Open 29B World Model for Physical"
-      },
-      {
-        "title": "Fish Audio Releases Live 3, a Full-Duplex Voice Model That Reacts in 186 ms",
-        "link": "https://www.marktechpost.com/2026/11/10/fish-audio-live-3-full-duplex-voice-model/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-11-11T04:43:53.000Z",
-        "contentSnippet": "Fish Audio released Live 3, a full-duplex voice model for voice agents. It listens while it speaks, separates “mm-hmm” from real interruptions, and can react in as little as 186 ms. English only at launch The post Fish Audio Releases Live 3, a Full-Duplex Voice Model That Reacts "
-      },
-      {
-        "title": "Introducing Kimi K3.1 Pro on Amazon Bedrock",
-        "link": "https://aws.amazon.com/blogs/machine-learning/introducing-kimi-k3-1-pro-on-amazon-bedrock/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-11-11T01:07:19.000Z",
-        "contentSnippet": "Kimi K3.1 Pro from Moonshot AI is now available on Amazon Bedrock. Learn how to get started through the OpenAI-compatible Chat Completions, Responses, and Converse APIs, optimize inference with explicit prompt caching, and use the model as a coding assistant in OpenCode."
-      },
-      {
-        "title": "Build a daily dependency watcher with LangGraph and Amazon Bedrock AgentCore web search",
-        "link": "https://aws.amazon.com/blogs/machine-learning/build-a-daily-dependency-watcher-with-langgraph-and-amazon-bedrock-agentcore-web-search/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-11-10T23:34:05.000Z",
-        "contentSnippet": "The Web Search API in Amazon Bedrock AgentCore gives agents current, cited web results signed with the AWS credentials they already use. In this post, build a daily dependency watcher as a LangGraph graph that researches package ecosystems in parallel, keeps its rules in code, an"
-      },
-      {
-        "title": "Meta FAIR Releases e-means: An Algorithm Beating k-means in 10x Fewer Epochs",
-        "link": "https://www.marktechpost.com/2026/11/10/meta-fair-e-means-k-means-faiss/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-11-10T23:20:19.000Z",
-        "contentSnippet": "Meta FAIR’s e-means is a mini-batch k-means replacement shipped in FAISS 1.16.0. It reaches Lloyd’s 25-epoch loss in 1.4 to 2.6 epochs, with 10-45x GPU speedups and no extra hyperparameters. The post Meta FAIR Releases e-means: An Algorithm Beating k-means in 10x Fewer Epochs app"
-      },
-      {
-        "title": "The agent evaluation playbook: Built-in, DeepEval, and AutoEval on Amazon Bedrock AgentCore Evaluations",
-        "link": "https://aws.amazon.com/blogs/machine-learning/the-agent-evaluation-playbook-built-in-deepeval-and-autoeval-on-agentcore/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-11-10T22:35:03.000Z",
-        "contentSnippet": "When you deploy an agent, whether it is working is really several questions: did it finish the task, stay on topic, leak data, or skip steps? This post shows how to evaluate agents on Amazon Bedrock AgentCore with built-in, DeepEval, and AutoEval evaluators, and how to match each"
-      },
-      {
-        "title": "Gemini Intelligence: New features, on more devices",
-        "link": "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence-november-features-devices/",
-        "source": "Google AI Blog",
-        "isoDate": "2026-11-10T19:00:00.000Z",
-        "contentSnippet": "Gemini Intelligence is rolling out to more devices. See how expanded capabilities across these devices help you do more."
-      },
-      {
-        "title": "Autonomous treasury agents: How Trovata built an AI-native solution on Amazon Bedrock and AgentCore",
-        "link": "https://aws.amazon.com/blogs/machine-learning/autonomous-treasury-agents-how-trovata-built-an-ai-native-solution-on-amazon-bedrock-and-agentcore/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-11-10T18:11:08.000Z",
-        "contentSnippet": "Learn how Trovata built autonomous treasury agents on Amazon Bedrock and Amazon Bedrock AgentCore, using an RBAC-secured architecture for bank-branded AI deployment and agentic workflows that move corporate treasury from manual operations to real-time decision-making at enterpris"
-      },
-      {
-        "title": "How TCS built an agentic test orchestrator with Amazon Bedrock AgentCore",
-        "link": "https://aws.amazon.com/blogs/machine-learning/how-tcs-built-an-agentic-test-orchestrator-with-amazon-bedrock-agentcore/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-11-10T16:59:43.000Z",
-        "contentSnippet": "Tata Consultancy Services (TCS) built an agentic test orchestrator on Amazon Bedrock AgentCore that turns requirements into executable, governed tests for its Banking, Financial Services, and Insurance (BFSI) clients. Learn how specialized agents, per-tenant isolation, and worklo"
-      },
-      {
-        "title": "Amazon Bedrock tokenomics data lake",
-        "link": "https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-tokenomics-data-lake/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-11-10T16:56:36.000Z",
-        "contentSnippet": "Running Amazon Bedrock across many accounts shows you the bill but not what happened inside each call. This post builds a centralized observability data lake that aggregates Bedrock invocation logs from every linked account into one queryable table, so you can see prompts, token "
       }
     ],
     "virtualization": [
@@ -2310,6 +2310,55 @@
     ],
     "hardware": [
       {
+        "title": "AMD’s Twitter brag that it ‘loves gamers’ met with savage Community Note",
+        "link": "https://www.tomshardware.com/pc-components/amds-twitter-brag-that-it-loves-gamers-met-with-savage-community-note-post-met-with-backlash-over-the-companys-pivot-to-ai",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-18T21:00:00.000Z",
+        "contentSnippet": "Following a post on X, AMD Japan's claim that the company values gamers \"above all else\" saw those gamers point out that its own CEO believes the company is more focused on data centers."
+      },
+      {
+        "title": "Nvidia GeForce driver bug reportedly hammers SSDs with up to 30GB of writes per hour",
+        "link": "https://www.tomshardware.com/pc-components/gpu-drivers/nvidia-geforce-driver-bug-reportedly-hammers-ssds-with-up-to-30gb-of-writes-per-hour-users-trace-massive-idle-wear-to-background-service-newer-driver-reportedly-still-affected",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-18T21:00:00.000Z",
+        "contentSnippet": "Nvidia’s GeForce 621.14 and 621.24 drivers reportedly rewrite a log file nonstop, writing gigabytes to SSDs every hour."
+      },
+      {
+        "title": "Hammerspace Data System Launches With OFP, a 1U DPU Flash Tray Rated at 390GB/s and Up to 9.83PB",
+        "link": "https://www.storagereview.com/news/hammerspace-data-system-open-flash-platform-ofp-dpu-flash-xsight-e1",
+        "source": "StorageReview",
+        "isoDate": "2026-11-18T19:47:01.000Z",
+        "contentSnippet": "Hammerspace has turned its software-defined Data Platform into the Hammerspace Data System and, for the first time, will sell it as a complete system with hardware. The centerpiece is the Hammerspace Open Flash Platform (OFP), a 1U tray that holds five DPU-based flash nodes with "
+      },
+      {
+        "title": "Seagate Launches Nytro 4350 NVMe SSDs Boasting 6,800 MB/s Reads and Up to 7.68 TB",
+        "link": "https://www.storagereview.com/news/seagate-launches-nytro-4350-nvme-ssds-boasting-6800-mb-s-reads-and-up-to-7-68-tb",
+        "source": "StorageReview",
+        "isoDate": "2026-11-18T19:13:09.000Z",
+        "contentSnippet": "Seagate has announced the launch of the Nytro 4350 NVMe SSD, with capacities ranging from 1.92 TB to 7.68 TB for data center and enterprise applications. The company rates the drive for sequential read speeds up to 6,800 MB/s and write speeds up to 4,000 MB/s. The announcement do"
+      },
+      {
+        "title": "Microchip Flashtec NVMe 4016 Controller Features 16 NAND Channels and Over 14 GB/s",
+        "link": "https://www.storagereview.com/news/microchip-flashtec-nvme-4016-controller-features-16-nand-channels-and-over-14-gb-s",
+        "source": "StorageReview",
+        "isoDate": "2026-11-18T19:10:34.000Z",
+        "contentSnippet": "Microchip has announced the Flashtec NVMe 4016 SSD controller, a fourth-generation Flashtec design with a PCIe Gen 5 x4 interface and 16 programmable NAND Flash channels. The company says the controller delivers more than 14 GB/s of throughput and over 3 million IOPS. It’s now sa"
+      },
+      {
+        "title": "Nvidia promises employee pay raises, equity before December to quell unrest in wake of Jensen Huang scandal",
+        "link": "https://www.tomshardware.com/tech-industry/big-tech/nvidia-promises-employee-pay-raises-equity-before-december-to-quell-unrest-in-wake-of-jensen-huang-scandal-at-first-all-hands-meeting-since-ceos-departure-staff-offered-perks-told-were-going-to-be-fine",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-18T18:40:28.000Z",
+        "contentSnippet": "Interim CEO Collete Kress reportedly offered staffers higher wages and more equity on an advanced schedule at the company's first all-hands after Jensen Huang resigned."
+      },
+      {
+        "title": "Dell PowerMaxOS 10.5 Brings Back PowerPath With Up to 29% Higher IOPS and Adds Cyber Detect Snapshot Scans",
+        "link": "https://www.storagereview.com/news/dell-powermaxos-10-5-powerpath-cyber-detect-opentelemetry-nvme-tcp",
+        "source": "StorageReview",
+        "isoDate": "2026-11-18T18:32:24.000Z",
+        "contentSnippet": "Dell announced PowerMaxOS 10.5 today, a software update for the PowerMax 2500 and 8500 that returns PowerPath multipathing to the platform, adds Dell Cyber Detect scanning of PowerMax snapshots, and opens array telemetry through OpenTelemetry and faster bulk REST APIs. Dell’s hea"
+      },
+      {
         "title": "DDN EXAScaler 7 Adds a Software-Defined Option, Starting on the AI2200 With Third-Party Appliances to Follow",
         "link": "https://www.storagereview.com/news/ddn-exascaler-7-software-defined-lustre-ai2200-qualified-servers",
         "source": "StorageReview",
@@ -2371,6 +2420,13 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-11-18T14:10:32.000Z",
         "contentSnippet": "Jensen’s affairs dominated headlines, but the seeds of his downfall were planted in both the bedroom and the boardroom and stretched from Beijing to Washington, with Nvidia sitting right in the middle."
+      },
+      {
+        "title": "MinIO AIStor Memory Reaches GA at SC26 as Datadog Certifies AIStor for On-Premises BYOC Logs",
+        "link": "https://www.storagereview.com/news/minio-announces-aistor-memory-is-ga-and-datadog-byoc-lakehouse-certification",
+        "source": "StorageReview",
+        "isoDate": "2026-11-18T14:10:16.000Z",
+        "contentSnippet": "MinIO announced the general availability of AIStor Memory today at SC26, moving its agent memory layer out of the technology preview we covered in July. AIStor Memory keeps long-term memory, persistent workspaces, and secrets for AI agents on infrastructure the enterprise control"
       },
       {
         "title": "Global OLED monitor shipments doubled year-over-year in Q3 2026",
@@ -2952,62 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-11-14T14:00:00.000Z",
         "contentSnippet": "The Pentagon is struggling to track an astonishing 26 million F-35 warfighter parts, worth an estimated $31 billion, according to analysis published by the Government Accountability Office this week."
-      },
-      {
-        "title": "Save up to $800 on an iBuyPower gaming PC right now in this massive Black Friday sale",
-        "link": "https://www.tomshardware.com/desktops/gaming-pcs/save-up-to-usd800-on-an-ibuypower-gaming-pc-right-now-in-this-massive-black-friday-sale-coupon-code-knocks-up-to-usd200-extra-off-high-spec-pre-built-rigs-fitted-with-nvidia-and-amd-gpus",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-14T13:00:00.000Z",
-        "contentSnippet": "iBuyPower's running a whole month of Black Friday sales this November on new gaming PCs."
-      },
-      {
-        "title": "Lawyer’s eight-V100 AI server moves DeepSeek from 2-bit to near-NVFP4 precision",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/lawyer-upgrades-eight-v100-private-ai-server-to-run-80-percent-of-deepseek-v4-1-flash-at-4-bit-nvfp4-precision-adds-1tb-of-ram-an-nvidia-rtx-3090-and-fixes-crashes-caused-by-a-bad-psu",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-14T12:50:00.000Z",
-        "contentSnippet": "A lawyer’s eight-GPU Nvidia V100 server now runs DeepSeek V4.1 Flash’s most-used experts at NVFP4 precision instead of 2-bit."
-      },
-      {
-        "title": "China’s Air Force builds drone that shoots painkiller darts at wounded soldiers",
-        "link": "https://www.tomshardware.com/tech-industry/drones/chinas-air-force-builds-drone-that-shoots-painkiller-darts-at-wounded-soldiers-experimental-pla-uav-injects-emergency-meds-from-a-distance-to-keep-medics-out-of-danger-and-buys-time-during-the-golden-hour",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-14T12:30:00.000Z",
-        "contentSnippet": "The Air Force Medical University of the Chinese People's Liberation Army (PLA) built this drone so it could remotely administer pain killers to injured soldiers and make extraction easier."
-      },
-      {
-        "title": "Commemorative plaque at Denny’s booth where Nvidia was born has been removed in wake of Jensen Huang scandals",
-        "link": "https://www.tomshardware.com/tech-industry/commemorative-plaque-at-dennys-booth-where-nvidia-was-born-has-been-removed-sign-removed-in-wake-of-jensens-scandals-marked-the-booth-that-launched-a-usd1-trillion-company",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-14T12:00:00.000Z",
-        "contentSnippet": "The San Jose, California, branch of Denny's once featured a plaque commemorating the booth where Jensen Huang and his two other co-founders worked to build Nvidia."
-      },
-      {
-        "title": "Mechatronics student builds 3D printer made from 92% LEGO for less than $180",
-        "link": "https://www.tomshardware.com/3d-printing/mechatronics-student-builds-3d-printer-made-from-92-percent-lego-for-less-than-usd180-lego-leadscrews-and-print-bed-can-print-a-decent-benchy-in-1-25-hours",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-14T11:30:00.000Z",
-        "contentSnippet": "A mechatronics engineering student made an open-source 3D printer, 92% of which is LEGO, and can print a decent benchy despite the imprecise LEGO leadscrews."
-      },
-      {
-        "title": "Dell Pro Precision 9 T4 Review: 86 Xeon Cores and Two RTX PRO 6000 GPUs for Models Too Big for One Card",
-        "link": "https://www.storagereview.com/review/dell-pro-precision-9-t4-review",
-        "source": "StorageReview",
-        "isoDate": "2026-11-13T22:08:22.000Z",
-        "contentSnippet": "The Dell Pro Precision 9 T4 is the single-socket tower at the top of Dell’s Pro Precision line, and our review unit is configured for local AI at a scale most workstations can’t reach. It pairs Intel’s 86-core Xeon 698X with 256GB of DDR5-6400 ECC memory, two 300W NVIDIA RTX PRO "
-      },
-      {
-        "title": "Nvidia board reportedly approached Arm CEO Rene Haas during replacement search",
-        "link": "https://www.tomshardware.com/pc-components/gpus/nvidia-board-reportedly-approached-arm-ceo-rene-haas-during-replacement-search-jensen-huangs-transgressions-leave-nvidia-scrambling-to-fill-a-massive-void",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-13T21:00:00.000Z",
-        "contentSnippet": "Nvidia's board of directors reportedly approached Rene Haas, chief executive of Arm and a long-time Nvidia veteran, in CEO search."
-      },
-      {
-        "title": "Lenovo ThinkPad T14 Gen 7 Review: LPCAMM2 Memory, Ethernet, and a 75Wh Battery",
-        "link": "https://www.storagereview.com/review/lenovo-thinkpad-t14-gen-7-review",
-        "source": "StorageReview",
-        "isoDate": "2026-11-13T20:45:39.000Z",
-        "contentSnippet": "The Lenovo ThinkPad T14 Gen 7 is the mainstream 14-inch member of Lenovo’s business lineup, and the Intel version pairs Core Ultra Series 3 processors with replaceable LPCAMM2 memory, a Gigabit Ethernet port, two USB-A ports, and a 75Wh battery option in a chassis that starts at "
       }
     ]
   }
