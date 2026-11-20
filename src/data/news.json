@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-11-20T07:54:42.938Z",
+  "updatedAt": "2026-11-20T16:31:10.173Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-133855 - flowintel: Unauthorized Disclosure of Linked Case References in Case History",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133855",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-20T15:17:54.000Z",
+        "contentSnippet": "flowintel contains an information disclosure vulnerability in its case history feature. When a user views the history of a case they are authorized to access, the history output includes references to other cases (linked, unlinked, or forked) without verifying whether the request",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-133854 - flowintel: Information Disclosure of Classification Usage via Missing Access Control",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133854",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-20T15:17:54.000Z",
+        "contentSnippet": "flowintel contains a vulnerability in the case and task classification usage endpoints that allows authenticated users to view classification data associated with cases they do not have permission to access. The affected endpoints, which provide lists of used taxonomies, tags, ga",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-133853 - FlowIntel Chatbot Shared MCP Session Allows Cross-User API Identity Confusion",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133853",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-20T15:17:53.000Z",
+        "contentSnippet": "FlowIntel's chatbot component used a single shared MCP (Model Context Protocol) session and process-wide environment variable to pass per-user API credentials to a child process. Because the session and the ambient FLOWINTEL_API_KEY environment variable were shared across all con",
+        "cveScore": 6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-133852 - flowintel Privileged Case Task Approval Bypass via Missing User Context and Template Creation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133852",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-20T15:17:53.000Z",
+        "contentSnippet": "flowintel is a case management application that enforces an approval workflow for tasks in privileged cases. Tasks in such cases are required to start in a Requested status, meaning they must receive explicit approval before becoming active. A logic flaw in the task-creation path",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-133851 - FlowIntel Alerting: Missing Private Case Authorization Check Allows Connector Owners to Access Revoked Case Data",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133851",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-20T15:17:53.000Z",
+        "contentSnippet": "FlowIntel's alerting module contained an authorization bypass in the alert access control logic. When an alert was linked to a private case, the system relied solely on connector ownership (user or organization) to determine access, without verifying that the requesting user stil",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-133850 - flowintel: Stale Authorization Allows Notification Disclosure After Case Access Revocation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133850",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-20T15:17:53.000Z",
+        "contentSnippet": "flowintel contains an authorization flaw in its recurring reminder notification subsystem. When a user is subscribed to recurring notifications for a case, the system does not re-verify the recipient's current access rights to that case before generating or displaying the notific",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-133849 - flowintel: Insecure Direct Object Reference in Task Calendar Access Control",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133849",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-20T15:17:53.000Z",
+        "contentSnippet": "A vulnerability exists in the flowintel application's calendar functionality that allows unauthorized access to private case data. The task calendar queries failed to enforce visibility checks on the parent case associated with tasks. Specifically, tasks assigned to a user or bel",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-133848 - flowintel: Organization Admin Can Delete Platform Admin Accounts Due to Missing Privilege Hierarchy Check",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133848",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-20T15:17:52.000Z",
+        "contentSnippet": "flowintel contains an authorization flaw in its user deletion functionality. Organization-scoped administrators (org admins) are able to delete platform-level administrator accounts through both the browser-based admin interface and the REST API. The existing authorization logic ",
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-133847 - flowintel: Missing Authorization Check Allows Organization Admin to Edit Platform Admin Accounts via Browser Interface",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133847",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-20T15:17:52.000Z",
+        "contentSnippet": "flowintel contains an authorization bypass in the browser-based admin user editing interface. The edit_user view in the admin panel verified that a non-platform-admin user could only edit accounts belonging to their own organization, but it did not verify that the target account ",
+        "cveScore": 8.4,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-133846 - FlowIntel Missing Authorization Check Allows Unauthorized Revival of Completed Privileged Cases via Task Reopening",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133846",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-20T15:17:52.000Z",
+        "contentSnippet": "FlowIntel contains an authorization bypass in its task management workflow. When a user reopens a completed task (by toggling its completion state or changing its status to a non-finished value) or creates a new task within a completed privileged case, the parent case is automati",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-133844 - FlowIntel Case Serialization Exposes Unauthorized Connector Metadata to Authenticated Users",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133844",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-20T15:17:52.000Z",
+        "contentSnippet": "FlowIntel, a threat intelligence case management platform, contains an information disclosure vulnerability in its case serialization logic. When a case is rendered via the REST API or browser views, all connector instances associated with that case were included in the response ",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-133843 - flowintel: Insecure Direct Object Reference in MISP Correlation Feature",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133843",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-20T15:17:52.000Z",
+        "contentSnippet": "flowintel contains a vulnerability in the MISP correlation feature that allows unauthorized disclosure of case identifiers. The application failed to enforce proper access controls when generating correlation lists for MISP attributes. Specifically, the system did not verify whet",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-133841 - FlowIntel Information Disclosure of Linked Private Case Metadata via Unfiltered Case Serialization",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133841",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-20T15:17:51.000Z",
+        "contentSnippet": "FlowIntel contains an authorization bypass in its case serialization logic that allows an authenticated user to view metadata of private cases they do not have access to. When a case is linked to another case, the JSON representation of the source case included the ID, title, and",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-133840 - flowintel Missing Authorization Check Allows Unauthorized File-to-Note Conversion on Restricted Tasks",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133840",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-20T15:17:51.000Z",
+        "contentSnippet": "flowintel contains an authorization bypass in the file-to-note conversion feature for case tasks. When a task is in a restricted workflow state (Requested, Rejected, or Request Review) within a privileged case, the conversion endpoint did not enforce elevated role requirements. A",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-133839 - FlowIntel Missing Authorization Check Allows Unauthorized Deletion of Evidence Files from Restricted Privileged Tasks",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133839",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-20T15:17:51.000Z",
+        "contentSnippet": "FlowIntel contains a missing authorization vulnerability in its task file deletion functionality. When a privileged task is in a restricted state (Requested, Rejected, or Request Review), any authenticated user with basic case membership (e.g., editor or queuer) was able to delet",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-133838 - FlowIntel Missing Authorization on Restricted Task Modification Paths",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133838",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-20T15:17:51.000Z",
+        "contentSnippet": "FlowIntel contains an authorization bypass that allows non-approver case members to modify restricted tasks (those in Requested, Rejected, or Request Review status) through several indirect code paths that lacked the required approver permission check. Affected operations include",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-133837 - flowintel Missing Authorization Check Allows Non-Approvers to Complete Privileged Tasks",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133837",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-20T15:17:51.000Z",
+        "contentSnippet": "flowintel contains an authorization bypass in its task completion workflow for privileged cases. Users with lower-privilege roles (editor, queuer) were able to mark tasks as completed without the required approver review (Admin, Case Admin, or Queue Admin), undermining the approv",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-133629 - Sunnet CTMS External Training Application Form Feature ext-course resource injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133629",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-20T15:17:50.000Z",
+        "contentSnippet": "A vulnerability was determined in Sunnet CTMS up to 10.11. Impacted is an unknown function of the file /cltcms/api/external-training/ext-course of the component External Training Application Form Feature. This manipulation of the argument memberids causes improper control of reso",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-133621 - shader-slang slangpy EXR Image Loader tinyexr.h DecodePixelData out-of-bounds",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133621",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-20T15:17:50.000Z",
+        "contentSnippet": "A flaw has been found in shader-slang slangpy up to 0.43.1. This vulnerability affects the function tinyexr::DecodePixelData in the library external/include/tinyexr.h of the component EXR Image Loader. Executing a manipulation can lead to out-of-bounds read. The attack may be per",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-133616 - sonos tract Operand Arity Indexing gemm.rs rules out-of-bounds",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133616",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-20T15:17:49.000Z",
+        "contentSnippet": "A vulnerability was found in sonos tract up to 0.23.4. The affected element is the function InferenceRulesOp::rules of the file onnx/src/ops/math/gemm.rs of the component Operand Arity Indexing. The manipulation of the argument inputs/outputs results in out-of-bounds read. The at",
+        "cveScore": 4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-133612 - SqueezeAILab SqueezeLLM CUDA Matvec Kernel quant_cuda_kernel.cu vecquant4matmul_spmv_hybrid_nuq_perchannel out-of-bounds write",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133612",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-20T15:17:49.000Z",
+        "contentSnippet": "A weakness has been identified in SqueezeAILab SqueezeLLM up to a5fd71f353bf569feb7b55737c1c1493e78e8f31. This vulnerability affects the function vecquant4matmul_spmv_hybrid_nuq_perchannel of the file quant_cuda_kernel.cu of the component CUDA Matvec Kernel. Executing a manipulat",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-132668 - Postgres Enterprise Manager Webhook Request Forgery Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-132668",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-20T15:17:48.000Z",
+        "contentSnippet": "In Postgres Enterprise Manager (PEM), any PEM user can run the pem.send_webhook() function, which runs with elevated privileges and queues a payload for any configured webhook. The PEM agent then delivers it with that webhook's stored headers, OAuth token or client certificate, s",
+        "cveScore": 2.3,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-132665 - Postgres Enterprise Manager Improper Access Control Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-132665",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-20T15:17:48.000Z",
+        "contentSnippet": "In Postgres Enterprise Manager (PEM), the pem.deploy_job_template() function does not check that the caller can access the servers, groups and agents it deploys a job template to. When PEM teams are used to separate access, a user with the scheduled tasks role (pem_manage_schedul",
+        "cveScore": 5.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-132664 - Postgres Enterprise Manager Insecure Credential Storage Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-132664",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-20T15:17:48.000Z",
+        "contentSnippet": "In Postgres Enterprise Manager (PEM), any PEM user can read the encrypted passwords that PEM agents use to connect to monitored servers, including the PEM backend superuser password stored when the PEM server is configured. Unless a custom encryption key is configured, these pass",
+        "cveScore": 7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-132663 - Postgres Enterprise Manager Arbitrary Local File Read Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-132663",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-20T15:17:48.000Z",
+        "contentSnippet": "In Postgres Enterprise Manager (PEM), webhook URLs are not validated, and the PEM agent does not restrict the URL schemes it uses to deliver webhooks. A user with the alert configuration role (pem_config_alert) can set up a webhook with a file:// URL. When the webhook is sent, th",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-133490 - declare-lab tango Model Loading tango.py Tango.__init__ input validation",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-133490",
@@ -677,234 +902,16 @@
         "contentSnippet": "HTSlib is a library for reading and writing bioinformatics file formats. Prior to 1.21.2, 1.22.3, 1.23.2, and 1.24, the CRAM BETA decoder functions cram_beta_decode_long, cram_beta_decode_int, and cram_beta_decode_char, and the experimental CRAM v4 XPACK functions cram_xpack_deco",
         "cveScore": 6.9,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-19609 - Unblu Spark Cross-Site Scripting through Synchronized Page Attributes in Embedded Co-Browsing",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-19609",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-19T07:17:12.000Z",
-        "contentSnippet": "Cross-site scripting in the embedded co-browsing feature in Unblu inc. Unblu Spark 7.0 through 7.57.9 and 8.0 before 8.40.2, on on-premises and cloud deployments, allows an unauthenticated remote attacker in the visitor role to execute arbitrary JavaScript in the browser of an ag",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-132825 - Ruby Heap-Based Buffer Overflow in Case Conversion",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-132825",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-19T07:17:11.000Z",
-        "contentSnippet": "Ruby before 3.3.14, 3.4.13, and 4.0.10 has a heap-based buffer overflow during case conversion. One byte can be written outside a buffer for, for example, ISO-8859-1 or Windows-1252.",
-        "cveScore": 7.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-110462 - Comelit 1456B Multi-User Gateway exposes all role passwords in cleartext via Installer-accessible backup",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110462",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-19T07:17:09.000Z",
-        "contentSnippet": "The Comelit 1456B Multi-User Gateway, in firmware versions up to and including 2.10.0, allows a user authenticated to the web interface with the Installer role to export a system configuration backup. The resulting backup file contains the configured passwords for all privileged ",
-        "cveScore": 8.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-110461 - Comelit 1456B Multi-User Gateway ships with default administrative credentials",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-110461",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-19T07:17:08.000Z",
-        "contentSnippet": "The Comelit 1456B Multi-User Gateway, in firmware versions up to and including 2.10.0, is configured with static default passwords for multiple privileged roles. None of these passwords are required to be changed during initial configuration, and they remain at their default valu",
-        "cveScore": 9.3,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-129446 - WPO365 < 45.4 - Unauthenticated Authentication Bypass via SAML Signature Wrapping",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-129446",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-19T06:16:53.000Z",
-        "contentSnippet": "The WPO365 | SEAMLESS WORDPRESS + MICROSOFT INTEGRATION (WPO365 | LOGIN) WordPress plugin before 45.4 does not ensure the signature validated on a SAML response covers the element the user identity is read from, allowing unauthenticated attackers to forge a response via signature",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-121852 - AppPresser 4.4.11 - 4.5.3 - Unauthenticated Stored XSS via Debug Log",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-121852",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-19T06:16:53.000Z",
-        "contentSnippet": "The AppPresser WordPress plugin before 5.0.0 does not properly escape the contents of its debug log when displaying it in the admin dashboard, and decodes escape sequences after sanitising input, allowing unauthenticated users to perform Stored XSS attacks against administrators ",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-117678 - idna: punycode labels are decoded before the 63-octet length check, so a long xn-- label causes super-linear CPU use",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-117678",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-19T06:16:53.000Z",
-        "contentSnippet": "Inefficient Algorithmic Complexity vulnerability in benoitc idna allows an attacker who controls a hostname passed to the library to exhaust CPU via an over-long xn-- label. idna:ulabel/1 in src/idna.erl hands every ASCII label that starts with xn-- to punycode:decode/1 without a",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-109555 - WP STAGING <= 4.17.0 and WP STAGING Pro <= 6.17.0 - Authenticated (Subscriber+) PHP Object Injection to Remote Code Execution via Database Restore and Staging Reset",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-109555",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-19T06:16:52.000Z",
-        "contentSnippet": "The WP STAGING and WP STAGING Pro plugins for WordPress are vulnerable to PHP Object Injection in all versions up to, and including, 4.17.0 and 6.17.0, respectively, via deserialization of untrusted input during database restore and staging reset. This is due to the database impo",
-        "cveScore": 8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-108687 - SAML SSO Login - Single Sign On <= 1.5.2 - Unauthenticated Authentication Bypass to Administrator via SAML Signature Wrapping",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-108687",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-19T06:16:51.000Z",
-        "contentSnippet": "The SAML SSO Login WordPress plugin through 1.5.2 does not verify that the SAML assertion whose signature it validates is the same assertion it reads the user identity from, allowing unauthenticated attackers who hold a validly signed assertion for any identity to authenticate as",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-84998 - NextScripts: Social Networks Auto-Poster <= 4.4.8 - Unauthenticated Stored Cross-Site Scripting via 'comment_author' and 'comment_agent' Comment Fields",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-84998",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-19T05:18:40.000Z",
-        "contentSnippet": "The NextScripts: Social Networks Auto-Poster plugin for WordPress is vulnerable to Stored Cross-Site Scripting via 'comment_author' and 'comment_agent' Comment Fields in all versions up to, and including, 4.4.8 due to insufficient input sanitization and output escaping. This make",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-132808 - UniFi Access Application Incorrect Authorization Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-132808",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-19T05:18:39.000Z",
-        "contentSnippet": "A malicious actor with access to the network and low privileges could exploit an Incorrect Authorization vulnerability found in UniFi Access Application to execute arbitrary commands on certain adopted UniFi Access devices.",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-132807 - UniFi Access Application Improper Certificate Validation Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-132807",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-19T05:18:39.000Z",
-        "contentSnippet": "A malicious actor with access to the network and under certain conditions could exploit an Improper Certificate Validation vulnerability found in UniFi Access Application to obtain sensitive information from and make unauthorized changes to an adopted UniFi Access device.",
-        "cveScore": 9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-132806 - UniFi Access Application SQL Injection Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-132806",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-19T05:18:39.000Z",
-        "contentSnippet": "A malicious actor with access to the network and low privileges could exploit an authenticated SQL Injection vulnerability found in UniFi Access Application to obtain sensitive information and make unauthorized changes within the UniFi Access Application.",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-132805 - UniFi Access Application Server-Side Request Forgery",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-132805",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-19T05:18:39.000Z",
-        "contentSnippet": "A malicious actor with access to the network could exploit a Server-Side Request Forgery (SSRF) vulnerability found in UniFi Access Application to obtain information and make unauthorized changes on the host device.",
-        "cveScore": 8.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-132804 - UniFi Access Application Server-Side Request Forgery Privilege Escalation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-132804",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-19T05:18:38.000Z",
-        "contentSnippet": "A malicious actor with access to the network and low privileges could exploit a Server-Side Request Forgery (SSRF) vulnerability found in UniFi Access Application to escalate privileges within UniFi OS.",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-132803 - UniFi Access Application SQL Injection Privilege Escalation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-132803",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-19T05:18:38.000Z",
-        "contentSnippet": "A malicious actor with access to the network and low privileges could exploit a series of authenticated SQL Injection vulnerabilities found in UniFi Access Application to escalate privileges on the host device.",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-132802 - UniFi Access Application Improper Link Resolution Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-132802",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-19T05:18:38.000Z",
-        "contentSnippet": "A malicious actor with access to the network and low privileges could exploit an Improper Link Resolution Before File Access vulnerability found in UniFi Access Application to execute arbitrary code with root privileges on the host device.",
-        "cveScore": 9.9,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-132627 - SourceCodester E-Commerce Shopping Cart Web Application action.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-132627",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-19T05:18:38.000Z",
-        "contentSnippet": "A security flaw has been discovered in SourceCodester E-Commerce Shopping Cart Web Application 1.0. Affected by this issue is some unknown functionality of the file action.php. The manipulation of the argument keyword results in sql injection. It is possible to launch the attack ",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-132626 - SourceCodester Modern Ticket Reservation System validate.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-132626",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-19T05:18:38.000Z",
-        "contentSnippet": "A vulnerability was identified in SourceCodester Modern Ticket Reservation System 1.0. Affected by this vulnerability is an unknown functionality of the file /booking/validate.php. The manipulation of the argument ticket leads to sql injection. It is possible to initiate the atta",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-132625 - SourceCodester Student Project Allocation and Management System Login login.php sql injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-132625",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-19T05:18:37.000Z",
-        "contentSnippet": "A vulnerability was determined in SourceCodester Student Project Allocation and Management System 1.0. Affected is an unknown function of the file /login.php of the component Login Handler. Executing a manipulation of the argument username/password can lead to sql injection. The ",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-130888 - nbdkit: qcow2dec ZSTD heap over-read via incorrect input buffer size",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-130888",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-19T05:18:33.000Z",
-        "contentSnippet": "A flaw was found in nbdkit. The qcow2dec filter's zstd_compressed_cluster() function incorrectly sets the ZSTD input buffer size to the uncompressed cluster size instead of the compressed buffer size. A crafted QCOW2 image with ZSTD-compressed clusters can trigger a heap over-rea",
-        "cveScore": 6.1,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-104357 - Libtirpc: libtirpc: sunrpc udp datagram-boundary violation (stale buffer bytes decoded as current request)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-104357",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-19T05:18:24.000Z",
-        "contentSnippet": "A flaw was found in libtirpc. The SunRPC UDP/datagram server transport reuses a single receive buffer across requests and resets the XDR decode position without rebinding the decode length to the size of the datagram actually received. As a result, when a short UDP RPC request is",
-        "cveScore": 4.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-132798 - Path traversal in Temenos Application Framework Java",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-132798",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-19T04:17:27.000Z",
-        "contentSnippet": "Improper Limitation of a Pathname to a Restricted Directory in the Como log viewer in Temenos Application Framework Java (TAFJ) R18.SP76.0 allows remote authenticated attackers to read arbitrary files via path traversal",
-        "cveScore": 8.2,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-132622 - GearUP Hyperev WLAN Site Survey utils.lua get_wlan_sitesurvey os command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-132622",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-19T04:17:27.000Z",
-        "contentSnippet": "A vulnerability was found in GearUP Hyperev up to 20261020. This impacts the function get_wlan_sitesurvey of the file ld/utils.lua of the component WLAN Site Survey. Performing a manipulation of the argument line results in os command injection. The attack is possible to be carri",
-        "cveScore": 9.4,
-        "cveSeverity": "CRITICAL"
-      },
-      {
-        "title": "CVE-2026-132621 - GearUP Hyperev on-chip debug and test interface with improper access control",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-132621",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-19T04:17:27.000Z",
-        "contentSnippet": "A vulnerability has been found in GearUP Hyperev up to 20261020. This affects an unknown function. Such manipulation leads to on-chip debug and test interface with improper access control. The attack can be executed directly on the physical device. The vendor was contacted early ",
-        "cveScore": 7.2,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
+      {
+        "title": "NVIDIA AI Releases Nemotron-Labs-Sigma, a Continuous Diffusion Language Model with 14 checkpoints at 3B/8B",
+        "link": "https://www.marktechpost.com/2026/11/20/nvidia-nemotron-labs-sigma-continuous-diffusion-language-model/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-11-20T14:44:52.000Z",
+        "contentSnippet": "NVIDIA released Nemotron-Labs-Sigma, 14 open 3B and 8B continuous diffusion language model checkpoints. Sigma denoises text in a learned 16-D embedding space, distills to few-step samplers, and decodes up to 4.20x faster than autoregressive decoding. The post NVIDIA AI Releases N"
+      },
       {
         "title": "Amazon SageMaker Inference: 2026 launches in review, part 2",
         "link": "https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-inference-2026-launches-in-review-part-2/",
@@ -1597,16 +1604,23 @@
         "source": "MarkTechPost",
         "isoDate": "2026-11-12T17:26:08.000Z",
         "contentSnippet": "AWS released AWS Emulator, a free, CC0-licensed local emulator of AWS APIs built from 438 API models. Autonomous agents wrote all of its code. It passes 56.6% of 42,857 published fidelity tests at launch. The post AWS Releases AWS Emulator: A Local Copy of 200+ AWS Services Built"
-      },
-      {
-        "title": "Migrate to Amazon Bedrock Managed Knowledge Base with your coding agent",
-        "link": "https://aws.amazon.com/blogs/machine-learning/migrate-to-amazon-bedrock-managed-knowledge-base-with-your-coding-agent/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-11-12T16:16:45.000Z",
-        "contentSnippet": "The migration guide in the amazon-bedrock skill helps you migrate a customer-managed Amazon Bedrock knowledge base to a Managed Knowledge Base. Your coding agent plans the move with read-only discovery, creates the new knowledge base or an infrastructure-as-code template alongsid"
       }
     ],
     "virtualization": [
+      {
+        "title": "5 Home Lab Projects to Try This Weekend: November 20, 2026",
+        "link": "https://www.virtualizationhowto.com/2026/11/5-home-lab-projects-to-try-this-weekend-november-20-2026/",
+        "source": "Virtualization HowTo",
+        "isoDate": "2026-11-20T12:45:00.000Z",
+        "contentSnippet": "Another VERY cool week of projects in the home lab. Lots of Proxmox related items this week including brand new off the press news that Proxmox is going with Kernel.org… The post 5 Home Lab Projects to Try This Weekend: November 20, 2026 appeared first on Virtualization Howto."
+      },
+      {
+        "title": "Migration from VMware to ZSvirt Open Source – A Practical Guide for Homelabbers and Beyond",
+        "link": "https://www.vladan.fr/migration-from-vmware-to-zsvirt-open-source-a-practical-guide-for-homelabbers-and-beyond/",
+        "source": "Vladan.fr",
+        "isoDate": "2026-11-20T08:28:13.000Z",
+        "contentSnippet": "Hey folks, Vladan here. If you’ve been following my blog for a while (yes, we’re talking back to the early ESXi days), you already know the landscape has changed a lot since Broadcom took over VMware. Licensing costs went up, features got reshuffled, and a lot of us started looki"
+      },
       {
         "title": "Proxmox Is Moving Away From Ubuntu for Its New Kernel. Here’s Why.",
         "link": "https://www.virtualizationhowto.com/2026/11/proxmox-is-moving-away-from-ubuntu-for-its-new-kernel-heres-why/",
@@ -2292,23 +2306,93 @@
         "source": "Virtualization HowTo",
         "isoDate": "2026-09-11T12:53:06.000Z",
         "contentSnippet": "Let’s face it, our time in the home lab among other things we have going on in our lives and families may be hard to come by and there are… The post If I Had 2 Hours for My Home Lab This Weekend, I’d Do These 7 Things appeared first on Virtualization Howto."
-      },
-      {
-        "title": "Data Services Manager version 9.1.1 Network Security",
-        "link": "https://cormachogan.com/2026/09/10/data-services-manager-version-9-1-1-network-security/",
-        "source": "Cormac Hogan",
-        "isoDate": "2026-09-10T13:00:55.000Z",
-        "contentSnippet": "One of the interesting new features of VMware Data Services Manager when it is integrated with VCF automation is the Network Security feature. In a nutshell, what this feature does is implement both distributed firewall rules and gateway firewall rules for each DSM database deplo"
-      },
-      {
-        "title": "I Turned My Proxmox Server Into a NAS Without Installing TrueNAS",
-        "link": "https://www.virtualizationhowto.com/2026/09/i-turned-my-proxmox-server-into-a-nas-without-installing-truenas/",
-        "source": "Virtualization HowTo",
-        "isoDate": "2026-09-10T12:46:18.000Z",
-        "contentSnippet": "Proxmox is really good with all types of storage and I have used it as a dedicated NAS appliance many times. I have used dedicated NAS devices. I have also… The post I Turned My Proxmox Server Into a NAS Without Installing TrueNAS appeared first on Virtualization Howto."
       }
     ],
     "hardware": [
+      {
+        "title": "HighPoint Rocket 9500A Series Enters Enterprise Networking With Intel E810 NICs: Dual-Port 100GbE for $379",
+        "link": "https://www.storagereview.com/news/highpoint-rocket-9500a-intel-e810-100gbe-25gbe-nics",
+        "source": "StorageReview",
+        "isoDate": "2026-11-20T16:19:49.000Z",
+        "contentSnippet": "HighPoint Technologies, best known for its NVMe RAID and switch adapters, has moved into Ethernet with the Rocket 9500A Series, three 25GbE and 100GbE network interface cards built on Intel E810 controllers. The cards are sold as standalone adapters for enterprise servers and mul"
+      },
+      {
+        "title": "AMD ROCm 10.2 Brings hipFile to PyTorch, LVM, and mdraid Volumes, and Adds 18 Ryzen Processors",
+        "link": "https://www.storagereview.com/news/amd-rocm-10-2-hipfile-pytorch-lvm-mdraid-aiter-ryzen",
+        "source": "StorageReview",
+        "isoDate": "2026-11-20T16:18:56.000Z",
+        "contentSnippet": "AMD has released ROCm 10.2.0, a stability-focused update to its open GPU software stack that refreshes the serving frameworks, libraries, and tools developers already run on Instinct, Radeon, and Ryzen hardware. For storage teams, hipFile and AMD Infinity Storage now plug into Py"
+      },
+      {
+        "title": "VAST says petabyte SSDs will outgrow today’s parallel file system RAID",
+        "link": "https://www.tomshardware.com/pc-components/ssds/vast-data-says-petabyte-ssds-will-outgrow-raid-in-todays-parallel-file-systems-simulation-of-a-900-pb-system-puts-data-loss-odds-at-1-in-11-over-10-years",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-20T15:00:00.000Z",
+        "contentSnippet": "VAST Data’s Glenn Lockwood told SC26 that petabyte SSDs need global declustering plus extra parity to avoid data loss."
+      },
+      {
+        "title": "Get 32GB of DDR5 RAM for $111 in this premium AM5 gaming bundle from Newegg",
+        "link": "https://www.tomshardware.com/pc-components/get-32gb-of-ddr5-ram-for-usd111-in-this-premium-am5-gaming-bundle-from-newegg-4-item-combo-includes-9950x3d-32gb-v-color-ddr5-ram-asus-rog-strix-x870e-e-gaming-motherboard-and-2tb-samsung-990-pro-ssd-for-only-usd1-549",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-20T14:30:06.000Z",
+        "contentSnippet": "Newegg’s freshest Black Friday combo deal takes $369 off four premium PC components, including the Ryzen 9 9950X3D, 32GB DDR5-6000 RAM, Asus ROG Strix X870E-E motherboard, 2TB Samsung SSD, and a free MSI AIO for just $1,549."
+      },
+      {
+        "title": "Phison details SSD with a built-in NPU and 64GB of memory that supports AI frameworks on the drive",
+        "link": "https://www.tomshardware.com/pc-components/ssds/phison-details-ssd-with-a-built-in-npu-and-64gb-of-memory-that-supports-pytorch-and-llama-cpp-running-on-the-drive-second-design-merges-fast-pslc-cache-and-qlc-capacity-behind-one-controller",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-20T14:00:00.000Z",
+        "contentSnippet": "Phison showed a computational-storage SSD with an NPU and 64GB of memory, plus Mixed Media pSLC and QLC drives, at SC26."
+      },
+      {
+        "title": "Thousands of vulnerable fridges patched against cyberattacks in secret operation",
+        "link": "https://www.tomshardware.com/tech-industry/cyber-security/thousands-of-vulnerable-fridges-patched-against-cyberattacks-in-secret-operation-uk-takes-action-following-hacks-that-destroyed-food-supplies-with-50-degree-defrosting-hijack",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-20T13:30:00.000Z",
+        "contentSnippet": "Following devastating hacks that caused European fridges to reach 50 degrees Celsius, destroying food stocks, the U.K. has implemented nationwide patching to ensure similar attacks won't affect its fridges."
+      },
+      {
+        "title": "Jensen Huang question gets reporter ejected from Trump-Xi-Putin summit",
+        "link": "https://www.tomshardware.com/tech-industry/policy/jensen-huang-question-gets-reporter-ejected-from-trump-xi-putin-summit-journalist-asked-us-president-if-former-nvidia-ceo-had-been-disloyal-to-the-united-states",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-20T13:00:00.000Z",
+        "contentSnippet": "Annmarie Hordern, Bloomberg's chief political correspondent and co-host of its leading program, was barred from the historic trilateral meeting between the leaders of Russia, China, and the U.S. after she asked the controversial question."
+      },
+      {
+        "title": "Lawyer’s $9,450 private AI server with 12 used Nvidia V100s now runs every DeepSeek V4.1 Flash expert",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/lawyers-usd9-450-private-ai-server-of-12-used-nvidia-v100s-now-runs-every-deepseek-v4-1-flash-expert-at-4-bit-nvfp4-up-to-184-tokens-per-second-on-code-and-long-documents-start-answering-in-about-half-the-time",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-20T12:30:00.000Z",
+        "contentSnippet": "A lawyer’s private AI server now runs DeepSeek V4.1 Flash on 12 used Nvidia V100 GPUs, with every expert at 4-bit NVFP4."
+      },
+      {
+        "title": "MSI EdgeMesa N AI+ review — RTX Spark power comes to Windows on Arm desktops, but there are trade-offs",
+        "link": "https://www.tomshardware.com/desktops/mini-pcs/msi-edgemesa-n-ai-plus-review",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-20T12:00:00.000Z",
+        "contentSnippet": "MSI's EdgeMesa N AI+ brings Nvidia RTX Spark N1X power to a Windows-on-Arm mini PC with 128GB of unified memory, strong local AI performance, and the ability to game on the side. But its high $7,499 price isn't that much cheaper than more versatile DGX Spark systems."
+      },
+      {
+        "title": "Amazon lists the Asus ROG Strix G16 at a new all-time low price of $1,179",
+        "link": "https://www.tomshardware.com/laptops/gaming-laptops/amazon-lists-the-asus-rog-strix-g16-at-a-new-all-time-low-price-of-usd1-179-rtx-5060-powered-gaming-laptop-comes-with-16gb-of-ddr5-ram-and-a-1tb-ssd",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-20T11:45:00.000Z",
+        "contentSnippet": "Pick up a new gaming laptop for less with $575 off the Asus ROG G16 at Amazon."
+      },
+      {
+        "title": "Power and cooling limits force AI clusters with 100,000+ accelerators to use multiple data centers",
+        "link": "https://www.tomshardware.com/tech-industry/supercomputers/power-and-cooling-limits-push-100-000-accelerator-ai-clusters-past-single-data-centers-google-cisco-and-marvell-target-scale-across-networking-across-regions",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-20T11:30:00.000Z",
+        "contentSnippet": "Faster GPUs are no longer enough as power constraints, network congestion, and communication overhead force the industry to rethink how massive AI systems are built."
+      },
+      {
+        "title": "Score a huge 49% saving on a 2TB Samsung 9100 Pro SSD while you can",
+        "link": "https://www.tomshardware.com/pc-components/ssds/score-a-huge-49-percent-saving-on-a-2tb-samsung-9100-pro-ssd-while-you-can-now-17-5-cents-per-gb-ultra-fast-gen-5-drive-is-the-perfect-pc-storage-upgrade-down-to-usd349-99",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-20T11:04:48.000Z",
+        "contentSnippet": "A huge discount on Amazon has brought the Gen 5 2TB Samsung 9100 Pro down to $349.99, an almost half-price saving compared to its list price."
+      },
       {
         "title": "Get an RTX 5070 for just $839.99, a rare savings in the GPU wasteland",
         "link": "https://www.tomshardware.com/pc-components/get-an-rtx-5070-for-just-usd839-99-a-rare-savings-in-the-gpu-wasteland-msi-geforce-rtx-5070-ventus-2x-oc-12-gb-is-currently-on-sale-at-newegg",
@@ -2924,90 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-11-15T17:56:15.000Z",
         "contentSnippet": "Dai's post shows how much Nvidia employees looked up to the former CEO."
-      },
-      {
-        "title": "Dell Pro 7 13 2-in-1 Review: 16 Cores and 64GB in a 3-Pound Convertible",
-        "link": "https://www.storagereview.com/review/dell-pro-7-13-2-in-1-review",
-        "source": "StorageReview",
-        "isoDate": "2026-11-15T17:36:48.000Z",
-        "contentSnippet": "The Dell Pro 7 13 2-in-1 is a 13.3-inch business convertible that starts at 1.38kg (3.04lb) and folds through laptop, tent, stand, and tablet modes on a 360-degree hinge. Our review unit, model P703260, is configured near the top of the range, with the 16-core Core Ultra 7 366H, "
-      },
-      {
-        "title": "Cockpit-Simulator 737X CDU (v2) Review: An Essential Component for Flight Sim Enthusiasts",
-        "link": "https://www.tomshardware.com/peripherals/controllers-gamepads/cockpit-simulator-737x-cdu-v2-review-an-essential-component-for-flight-sim-enthusiasts",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-15T17:30:00.000Z",
-        "contentSnippet": "The CS 737X CDU (v2) by Cockpit-Simulator is a plug-and-play, 1:1 replica of a Boeing 737 Control Display Unit for home cockpit builds."
-      },
-      {
-        "title": "Nvidia RTX 5090 stock returns to Newegg with 21 models",
-        "link": "https://www.tomshardware.com/pc-components/gpus/nvidia-rtx-5090-stock-returns-to-newegg-with-21-models-but-scarcity-pricing-keeps-the-cheapest-air-cooled-cards-at-least-three-times-msrp",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-15T17:00:00.000Z",
-        "contentSnippet": "After rumors of Nvidia GeForce RTX 5090 graphics cards being withdrawn from the consumer retail channel it is pleasing to see major U.S. eTailers like Newegg stuffed with cheaper stock today."
-      },
-      {
-        "title": "FBI disrupts North Korean FaceStealer campaign behind $5 billion Binance hack",
-        "link": "https://www.tomshardware.com/tech-industry/cyber-security/fbi-disrupts-north-korean-facestealer-campaign-behind-usd5-billion-binance-hack-doj-seizes-facestealer-cloud-infrastructure-containing-900-videos-of-tech-workers-hackers-used-ai-deepfakes-to-steal-usd400-million-and-compromise-open-source-software",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-15T16:30:00.000Z",
-        "contentSnippet": "US DoJ partially disrupts FaceStealer campaign that's taken $400m from victims and threatens open-source software — gov techs disrupt cloud infrastructure and find 900 videos of targeted tech workers"
-      },
-      {
-        "title": "357 detailed CPU die shots spanning 1971 to 2024 crammed into a new gallery",
-        "link": "https://www.tomshardware.com/pc-components/cpus/357-detailed-cpu-die-shots-spanning-1971-to-2024-crammed-into-a-new-gallery-motorola-68000-intel-486dx2-amd-athlon-xp-apple-m1-and-many-more-in-beautiful-detail",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-15T16:00:00.000Z",
-        "contentSnippet": "A CPU enthusiast has put together an eye-popping visual database containing crystal clear detailed die shots of 357 legendary, and some lesser-known, processors."
-      },
-      {
-        "title": "Microsoft 365 outage leads to chlorine gas poisoning of 15 hotel guests",
-        "link": "https://www.tomshardware.com/tech-industry/data-centers/microsoft-365-outage-leads-to-chlorine-gas-poisoning-of-15-hotel-guests-email-warning-system-fails-40-first-responders-deployed-for-triage-four-hospitalized",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-15T15:41:13.000Z",
-        "contentSnippet": "The 'maintenance safety system' relied on Microsoft Outlook to send warning messages to the operator."
-      },
-      {
-        "title": "Judge denies motion to dismiss DRAM price-fixing lawsuit against Micron, Samsung, and SK hynix, finds evidence of DRAM collusion plausible after 500% price surge",
-        "link": "https://www.tomshardware.com/tech-industry/big-tech/judge-denies-motion-to-dismiss-dram-price-fixing-lawsuit-against-micron-samsung-and-sk-hynix-says-chipmakers-acted-like-hawks-flying-in-formation-finds-evidence-of-dram-collusion-plausible-after-500-percent-price-surge",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-15T15:09:50.000Z",
-        "contentSnippet": "The judge characterized the three companies as \"hawks flying in formation\" when it came to their business decisions."
-      },
-      {
-        "title": "3D printing dev’s free tool unlocks curved printing along all three axes",
-        "link": "https://www.tomshardware.com/3d-printing/3d-printing-developer-creates-self-hostable-non-planar-printing-slicer-pancakeslicer-makes-non-planar-3d-printing-accessible-potentially-leading-to-rapid-community-development",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-15T15:00:00.000Z",
-        "contentSnippet": "PancakeSlicer is a self-hostable non-planar 3D printing slicer that might finally make non-planar slicing more accessible to the masses."
-      },
-      {
-        "title": "Enthusiast builds a working 486 DX2 retro PC on a breadboard in just 16 days, immediately runs Doom",
-        "link": "https://www.tomshardware.com/video-games/retro-gaming/enthusiast-builds-a-working-486-dx2-retro-pc-on-a-breadboard-in-just-16-days-immediately-runs-doom-build-includes-a-66-mhz-intel-chip-and-custom-five-inch-3d-printed-display",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-15T14:30:00.000Z",
-        "contentSnippet": "An app engineer has showcased his homemade breadboard 486DX2 PC running Doom, put together in just over two weeks."
-      },
-      {
-        "title": "Pentagon tests pack hunting with autonomous war robots",
-        "link": "https://www.tomshardware.com/tech-industry/drones/pentagon-tests-pack-hunting-with-autonomous-war-robots-darpa-experimented-with-four-drone-ground-vehicles-that-detected-tracked-and-engaged-simulated-threats",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-15T14:19:24.000Z",
-        "contentSnippet": "The Pentagon has been testing packs of autonomous ground vehicles in simulated combat situations."
-      },
-      {
-        "title": "Nvidia board director cashed out $1 billion in stock before Jensen Huang scandal",
-        "link": "https://www.tomshardware.com/tech-industry/nvidia-board-director-cashed-out-usd1-billion-in-stock-before-jensen-huang-scandal-mark-stevens-sold-4-2-million-shares-without-a-trading-plan",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-15T14:00:00.000Z",
-        "contentSnippet": "Nvidia Board Director sold around 4.2 million shares beginning August 31 and ending September 18, with the sale making him somewhere around $947 million."
-      },
-      {
-        "title": "Two HPE Juniper network routers grounded all the US flights on Friday",
-        "link": "https://www.tomshardware.com/networking/two-hpe-juniper-network-routers-grounded-all-the-us-flights-on-friday-faas-decades-old-copper-network-buckled-under-a-feature-hpe-says-worked-as-intended-creaking-air-traffic-communication-system-became-overloaded-by-very-high-rate-pinging",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-15T13:42:51.000Z",
-        "contentSnippet": "The FAA determined that a rogue feature in two newly installed routers are to blame for the communications glitches that caused the nationwide ground stop."
       }
     ]
   }
