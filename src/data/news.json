@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-11-19T17:50:50.197Z",
+  "updatedAt": "2026-11-20T00:03:49.341Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-133435 - Org.keycloak:keycloak-model-jpa: case-variant realm urls bypass proxy restrictions",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133435",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-19T23:19:29.000Z",
+        "contentSnippet": "A flaw was found in Keycloak. When configured with a database that uses case-insensitive collation, Keycloak resolves realm URLs regardless of letter casing. A remote attacker can exploit this behavior by sending requests with alternate letter casing to bypass upstream reverse pr",
+        "cveScore": 3.7,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-133327 - Dolibarr ERP CRM Document Upload files.lib.php dol_convert_file code injection",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133327",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-19T23:19:29.000Z",
+        "contentSnippet": "A vulnerability was identified in Dolibarr ERP CRM up to 23.0.4. This affects the function dol_convert_file in the library htdocs/core/lib/files.lib.php of the component Document Upload. Such manipulation leads to code injection. The attack can be launched remotely. The exploit i",
+        "cveScore": 6.5,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-122676 - WordPress PublishPress Authors plugin <= 4.18.0 - SQL Injection vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-122676",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-19T23:19:24.000Z",
+        "contentSnippet": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in PublishPress PublishPress Authors publishpress-authors allows Blind SQL Injection.This issue affects PublishPress Authors: from n/a through 4.18.0.",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-95517 - Apache Tomcat: Multiple vulnerabilities in EncryptInterceptor",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95517",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-19T22:19:56.000Z",
+        "contentSnippet": "Reliance on obfuscation or encryption of Security-Relevant inputs without integrity checking, Improper validation of integrity check value, Cleartext transmission of sensitive information vulnerability in the EncryptInterceptor of Apache Tomcat. This issue affects Apache Tomcat: ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-77316 - Flyto2 Core: SSRF guard bypass via DNS rebinding (validate_url_ssrf resolves-then-connects without pinning)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77316",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-19T22:18:44.000Z",
+        "contentSnippet": "Flyto2 Core is an execution kernel for automation and AI-agent workflows. Prior to 2.26.8, validate_url_ssrf() in src/core/utils.py validates one DNS answer and then returns the hostname, while guarded_aiohttp_request(), enforce_outbound_url(), and validate_url_with_env_config() ",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-77315 - Flyto2 Core: http.paginate follows server-supplied next-page URLs (Link header / cursor) without SSRF revalidation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77315",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-19T22:18:44.000Z",
+        "contentSnippet": "Flyto2 Core is an execution kernel for automation and AI-agent workflows. Prior to 2.26.8, http.paginate in src/core/modules/atomic/http/paginate.py validates only the initial base_url, and _paginate_link_header then follows a server-supplied Link: rel=\"next\" URL without calling ",
+        "cveScore": 8.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-77314 - Flyto2 Core: Path traversal in MCP `run_recipe` allows execution of workflows outside bundled recipe directory",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77314",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-19T22:18:44.000Z",
+        "contentSnippet": "Flyto2 Core is an execution kernel for automation and AI-agent workflows. Prior to 2.26.8, the MCP run_recipe tool in src/core/mcp_handler.py accepts a caller-controlled recipe_name that load_recipe() in src/cli/recipe.py appends to the src/recipes path without resolved-path cont",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-77313 - Flyto2 Core: SSRF guard validates the resolved IP but connects by hostname, allowing DNS-rebinding TOCTOU",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77313",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-19T22:18:44.000Z",
+        "contentSnippet": "Flyto2 Core is an execution kernel for automation and AI-agent workflows. Prior to 2.26.8, validate_url_ssrf in src/core/utils.py resolves and checks a hostname but returns the hostname URL rather than the validated address, and session.get in http.get performs an independent DNS",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-77312 - Flyto2 Core: Arbitrary file write via unguarded data.*/file.* modules (incomplete fix of CVE-2026-67429)",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-77312",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-19T22:18:44.000Z",
+        "contentSnippet": "Flyto2 Core is an execution kernel for automation and AI-agent workflows. Prior to 2.26.8, the earlier CVE-2026-67429 remediation applied validate_path_with_env_config() to only a hand-picked set of file-writing modules, leaving data.csv.write in src/core/modules/atomic/data/csv_",
+        "cveScore": 10,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-69133 - netty-incubator-codec-ohttp: OHTTP codecs retain consumed outer cumulation buffers after completed exchanges",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-69133",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-19T22:18:08.000Z",
+        "contentSnippet": "netty-incubator-codec-ohttp implements Oblivious HTTP (OHTTP) gateway and client functionality using Netty. From 0.0.20.Final until 0.0.27.Final, OHttpClientCodec in codec-ohttp/src/main/java/io/netty/incubator/codec/ohttp/OHttpClientCodec.java and OHttpServerCodec in codec-ohttp",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-63202 - netty-incubator-codec-ohttp BinaryHttpParser: Unauthenticated CPU-exhaustion DoS via infinite loop in field-section decoding",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63202",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-19T22:18:07.000Z",
+        "contentSnippet": "netty-incubator-codec-ohttp implements Oblivious HTTP (OHTTP) gateway and client functionality using Netty. Prior to 0.0.23.Final, BinaryHttpParser.readFieldSection in codec-bhttp/src/main/java/io/netty/incubator/codec/bhttp/BinaryHttpParser.java loops while fieldSectionLength is",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-63124 - netty-incubator-codec-ohttp: Binary HTTP parser infinite loop on known-length field section boundary",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-63124",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-19T22:18:07.000Z",
+        "contentSnippet": "netty-incubator-codec-ohttp implements Oblivious HTTP (OHTTP) gateway and client functionality using Netty. Prior to 0.0.23.Final, BinaryHttpParser.readFieldLine in codec-bhttp/src/main/java/io/netty/incubator/codec/bhttp/BinaryHttpParser.java treats a complete field line that en",
+        "cveScore": 7.5,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-61827 - netty-incubator-codec-ohttp: BinaryHttpParser should enforce limits for variable lengths fields",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61827",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-19T22:18:06.000Z",
+        "contentSnippet": "netty-incubator-codec-ohttp implements Oblivious HTTP (OHTTP) gateway and client functionality using Netty. Prior to 0.0.23.Final, BinaryHttpParser does not enforce limits on encoded variable-length fields controlled by a remote peer. A remote peer can cause the decoder to buffer",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-61799 - netty-incubator-codec-ohttp: Binary HTTP parser unchecked varint length overflow causes decoder crash",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61799",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-19T22:18:06.000Z",
+        "contentSnippet": "netty-incubator-codec-ohttp implements Oblivious HTTP (OHTTP) gateway and client functionality using Netty. Prior to 0.0.23.Final, BinaryHttpParser in codec-bhttp/src/main/java/io/netty/incubator/codec/bhttp/BinaryHttpParser.java accumulates attacker-controlled Binary HTTP variab",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-61798 - netty-incubator-codec-ohttp: BoringSSL HPKE private key bytes exposed through toString() and exception messages",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-61798",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-19T22:18:06.000Z",
+        "contentSnippet": "netty-incubator-codec-ohttp implements Oblivious HTTP (OHTTP) gateway and client functionality using Netty. Prior to 0.0.23.Final, BoringSSLAsymmetricCipherKeyPair.toString in codec-ohttp-hpke-classes-boringssl/src/main/java/io/netty/incubator/codec/hpke/boringssl/BoringSSLAsymme",
+        "cveScore": 8.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-133494 - Greenbone gvmd Improper Authorization Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133494",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-19T22:18:04.000Z",
+        "contentSnippet": "Greenbone gvmd before 26.43.0 does not restrict certificate creation. Even the Observer role, documented to be read-only, can execute create_tls_certificate.",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-133481 - Dolibarr API Information Disclosure Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133481",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-19T22:18:04.000Z",
+        "contentSnippet": "In Dolibarr before 24.0.3, /api/index.php/eventattendees discloses attendee and project data regardless of the caller's permissions. Only 22.0.0 and later (where api_eventattendees.class.php exists) are affected. A remote authenticated user can obtain column values one character ",
+        "cveScore": 4.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-133476 - Dolibarr SQL Injection Vulnerability",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133476",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-19T22:18:04.000Z",
+        "contentSnippet": "In Dolibarr before 24.0.3, dolForgeSQLCriteriaCallback() in htdocs/core/lib/functions.lib.php allows account takeover because it strips only a single table-name prefix from a Universal Search Filter (sqlfilters) operand before checking it against the forbidden-field denylist (pas",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-133430 - Keycloak: org.keycloak:keycloak-saml-adapter-core: org.keycloak:keycloak-saml-core: saml logoutrequest signature validation accepts a signed assertion nested in extensions in place o",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133430",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-19T22:18:04.000Z",
+        "contentSnippet": "A flaw was found in Keycloak. This vulnerability allows an authenticated remote attacker to cause a denial of service by terminating active sessions of arbitrary users. When processing Security Assertion Markup Language (SAML) documents that lack a root signature, Keycloak accept",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-133325 - Apache Tomcat: Cluster TLS-PSK configured to use TLS 1.3 does not validate peer",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133325",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-19T22:18:04.000Z",
+        "contentSnippet": "Key exchange without entity authentication vulnerability in Apache Tomcat allowed an unauthenticated node to join a cluster when the cluster was secured with TLS 1.3 and TLS-PSK. This issue affects Apache Tomcat: 11.0.29, 10.1.62, 9.0.124. Users are recommended to switch to TLS 1",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-133217 - OSGeo shapelib dbfopen.c DBFCloneEmpty null pointer dereference",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133217",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-19T22:18:03.000Z",
+        "contentSnippet": "A weakness has been identified in OSGeo shapelib up to 1.6.3. This vulnerability affects the function DBFCloneEmpty of the file dbfopen.c. This manipulation causes null pointer dereference. It is possible to launch the attack on the local host. Patch name: f79050a900d2a05529501b2",
+        "cveScore": 4.8,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-121649 - Apache Tomcat: ExpiresFilter removes existing Cache-Control: private header",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-121649",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-19T22:17:59.000Z",
+        "contentSnippet": "Use of cache containing sensitive information vulnerability in Apache Tomcat's ExpiresFilter caused by the filter removing cache-control header fields set by the authentication layer. This issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.27, from 10.1.0-M1 through 10.1.61",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-118436 - Apache Tomcat: CGIServlet drops chunked POST body and can hang worker thread",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-118436",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-19T22:17:59.000Z",
+        "contentSnippet": "Allocation of resources without limits or throttling vulnerability in Apache Tomcat in the CGI Servlet when handling POST bodies can result in a DoS for some inputs. This issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.27, from 10.1.0-M1 through 10.1.61, from 9.0.0.M1 th",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-118233 - Apache Tomcat: Memory leak on HTTP upgrade leads to DoS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-118233",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-19T22:17:59.000Z",
+        "contentSnippet": "Allocation of resources without limits or throttling vulnerability in Apache Tomcat during HTTP upgrade in some circumstances lead to possible DoS. This issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.27, from 10.1.0-M1 through 10.1.61, from 9.0.41 through 9.0.123. The f",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-118028 - Apache Tomcat: RewriteValve [F]/[G]/[R] rule matches do not stop processing",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-118028",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-19T22:17:58.000Z",
+        "contentSnippet": "Execution After Redirect (EAR) vulnerability in Apache Tomcat in RedirectValve affecting flags [F], [G] and [R]. This issue affects Apache Tomcat: from 11.0.0-M18 through 11.0.27, from 10.1.20 through 10.1.61, from 9.0.87 through 9.0.123. The following versions were EOL at the ti",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
       {
         "title": "CVE-2026-105802 - Git LFS may execute arbitrary commands via crafted Git configurations",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-105802",
@@ -677,234 +902,107 @@
         "contentSnippet": "yt through 4.4.4 contains a code injection vulnerability that allows attackers to execute Python code by supplying a crafted con_args attribute in a ytdata HDF5 file. SavedDataset._parse_parameter_file() passes con_args to eval() unrestricted, so loading a malicious .h5 file with",
         "cveScore": 8.5,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-89218 - Missing authorization check in Mattermost Server exposes restricted file metadata across multiple delivery paths",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-89218",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-18T17:17:51.000Z",
-        "contentSnippet": "Mattermost versions 11.11.x",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-88902 - Uncontrolled CPU consumption via EXIF metadata in image orientation handling",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-88902",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-18T17:17:51.000Z",
-        "contentSnippet": "Mattermost versions 11.7.x",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-86403 - Missing authorization check in Mattermost OAuth application registration",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-86403",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-18T17:17:51.000Z",
-        "contentSnippet": "Mattermost versions 11.11.x",
-        "cveScore": 6.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-76516 - ClamAV XAR GZIP Parser Denial of Service Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76516",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-18T17:17:51.000Z",
-        "contentSnippet": "A vulnerability in the eXtensible ARchive (XAR) GZIP file parser for ClamAV could allow an unauthenticated, remote attacker to exceed the configured MaxFileSize and cause a DoS condition on an affected device. This vulnerability is due to inefficiencies when parsing specifically ",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-76515 - ClamAV OLE2 Parser Denial of Service Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76515",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-18T17:17:51.000Z",
-        "contentSnippet": "A vulnerability in the Object Linking and Embedding, 2nd Generation (OLE2) file parser for ClamAV could allow an unauthenticated, remote attacker to exceed the configured MaxScanTime and cause a DoS condition on an affected device. This vulnerability is due to inefficiencies when",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-76430 - ClamAV UPX Unpacker Out-of-Bounds Read Denial of Service",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76430",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-18T17:17:50.000Z",
-        "contentSnippet": "A vulnerability in the Ultimate Packer for eXecutables (UPX) unpacker of ClamAV could allow an unauthenticated, remote attacker to cause a DoS condition on an affected device. This vulnerability is due to improper length checks, when unpacking the UPX files, which may result in a",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-76422 - ClamAV Debug Logging Denial of Service Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76422",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-18T17:17:50.000Z",
-        "contentSnippet": "A vulnerability in the debug logging functionality of ClamAV could allow an unauthenticated, remote attacker to cause a DoS condition on an affected device. This vulnerability is due to improper handling of logging values. An attacker could exploit this vulnerability by submittin",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-76421 - ClamAV LZX Data Algorithm Buffer Overflow Denial of Service Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76421",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-18T17:17:50.000Z",
-        "contentSnippet": "A vulnerability in the LZX data algorithm for Microsoft Compiled HTML Help (CHM) file scanning in ClamAV could allow an unauthenticated, remote attacker to cause a DoS condition on an affected device. This vulnerability is due to improper boundary checks when applying the LZX dat",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-76417 - ClamAV OLE2 Parser Denial of Service Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76417",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-18T17:17:50.000Z",
-        "contentSnippet": "A vulnerability in Object Linking and Embedding, 2nd Generation (OLE2) file parser for ClamAV could allow an unauthenticated, remote attacker to cause a DoS condition on an affected device. This vulnerability is due to logic error when parsing specifically formatted files with th",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-76416 - ClamAV InstallShield Parser Denial of Service Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76416",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-18T17:17:50.000Z",
-        "contentSnippet": "A vulnerability in the InstallShield file parser of ClamAV could allow an unauthenticated, remote attacker to cause a DoS condition on an affected device. This vulnerability is due to incomplete error checking when the InstallShield File Parser is performing a scan. An attacker c",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-76415 - ClamAV Yoda's Crypter Denial of Service Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76415",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-18T17:17:49.000Z",
-        "contentSnippet": "A vulnerability in the Yoda'a Crytper (yC) Portable Executable (PE) unpacker of ClamAV could allow an unauthenticated, remote attacker to cause a DoS condition on an affected device. . This vulnerability is due to lack of proper error checking for negative values when processing ",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-76414 - ClamAV Compiled HTML Help Logic Error Denial of Service",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76414",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-18T17:17:49.000Z",
-        "contentSnippet": "A vulnerability in Microsoft Compiled HTML Help (CHM) file scanning of ClamAV could allow an unauthenticated, remote attacker to cause a DoS condition on an affected device. This vulnerability is due to a logic error when scanning the CHM file and following the internal file poin",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-76411 - ClamAV phishcheck Denial of Service Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-76411",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-18T17:17:49.000Z",
-        "contentSnippet": "A vulnerability in the phishcheck functionality of ClamAV could allow an unauthenticated, remote attacker to cause a DoS condition on an affected device. This vulnerability is due to improper allocation of memory during processing of URLs. An attacker could exploit this vulnerabi",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-59159 - Linux Mint Update Manager: Local Privilege Escalation in mint-refresh-cache",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-59159",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-18T17:17:49.000Z",
-        "contentSnippet": "Linux Mint Update Manager manages software updates on Linux Mint systems. From 5.4.8 until 5.5.4.3, 5.5.9.1, 5.8.8.1, 5.9.8.1, 6.0.9.1, and 6.1.5.1, mint-refresh-cache passes a user-controlled --parent-window-id value directly to the privileged Synaptic process without validating",
-        "cveScore": 8.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-18643 - Improper access control in Mattermost user listing API exposes team membership",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18643",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-18T17:17:48.000Z",
-        "contentSnippet": "Mattermost versions 11.7.x",
-        "cveScore": 3.1,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-18553 - Incomplete Fix for Terminal Escape Sequence Injection in {{mmctl logs}}",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18553",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-18T17:17:48.000Z",
-        "contentSnippet": "Mattermost versions 11.11.x",
-        "cveScore": 4.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-18476 - Mattermost incoming webhooks allow cross-team direct messages under team restriction",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18476",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-18T17:17:48.000Z",
-        "contentSnippet": "Mattermost versions 11.7.x",
-        "cveScore": 2.2,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-18399 - Improper Namespace Access Restriction in Mattermost GitLab Plugin (Permalink Preview and MCP get_projects)",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18399",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-18T17:17:48.000Z",
-        "contentSnippet": "Mattermost versions 11.7.x",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-18396 - Missing authorization check on playbook creation allows unauthorized assignment of the playbook_admin role in Mattermost Playbooks",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18396",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-18T17:17:48.000Z",
-        "contentSnippet": "Mattermost versions 11.7.x",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-18079 - Sessions not revoked on account conversion or auth rebinding via bulk import",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18079",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-18T17:17:48.000Z",
-        "contentSnippet": "Mattermost versions 11.11.x",
-        "cveScore": 5.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-18075 - Revoked OAuth app retains access to real-time events via already-open WebSocket connection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18075",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-18T17:17:47.000Z",
-        "contentSnippet": "Mattermost versions 11.11.x",
-        "cveScore": 4.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-18045 - MFA enforcement bypass on user profile update and delete endpoints",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-18045",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-18T17:17:47.000Z",
-        "contentSnippet": "Mattermost versions 11.11.x",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-17575 - Missing type validation on card property fields in Boards allows persistent denial of service",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-17575",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-18T17:17:47.000Z",
-        "contentSnippet": "Mattermost versions 11.8.x",
-        "cveScore": 4.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-17537 - Access Control Policy Bypass via Drafts, Scheduled Posts, and Post Edit History Exposes Restricted File Attachments",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-17537",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-18T17:17:47.000Z",
-        "contentSnippet": "Mattermost versions 11.11.x",
-        "cveScore": 4.6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-16050 - Private channel name disclosure via unsanitized channel mentions in Mattermost permalinked posts",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-16050",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-18T17:17:47.000Z",
-        "contentSnippet": "Mattermost versions 11.7.x",
-        "cveScore": 3.1,
-        "cveSeverity": "LOW"
       }
     ],
     "ai": [
+      {
+        "title": "Enable AI agents to pay for AWS Marketplace x402 products with Amazon Bedrock AgentCore payments",
+        "link": "https://aws.amazon.com/blogs/machine-learning/enable-ai-agents-to-pay-for-aws-marketplace-x402-products-with-amazon-bedrock-agentcore-payments/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-19T23:02:16.000Z",
+        "contentSnippet": "Amazon Bedrock AgentCore payments now supports AWS Marketplace, so agents can discover and buy x402-enabled products, APIs, data, and content and pay in USD on the developer's AWS bill, with no stablecoin wallets or API keys. This post walks through a research agent that finds a "
+      },
+      {
+        "title": "How the BMW Group governs hundreds of agents across thousands of developers",
+        "link": "https://aws.amazon.com/blogs/machine-learning/how-the-bmw-group-governs-hundreds-of-agents-across-thousands-of-developers/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-19T22:20:23.000Z",
+        "contentSnippet": "When hundreds of agents serve thousands of developers, governance cannot be an afterthought. The BMW Group shares the practices and patterns its R&D teams use to build, govern, and operate AI agents at enterprise scale without sacrificing speed, quality, or compliance."
+      },
+      {
+        "title": "Run your whole selling business in AWS Quick",
+        "link": "https://aws.amazon.com/blogs/machine-learning/run-your-whole-selling-business-in-aws-quick/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-19T22:16:22.000Z",
+        "contentSnippet": "Most sellers do not need another AI product to learn. They need the tools and information they already use brought together, so they can see what is happening in their business and act on it."
+      },
+      {
+        "title": "Meta FAIR Self-Improving Memory Hits 56.0 on Continual Learning Bench",
+        "link": "https://www.marktechpost.com/2026/11/19/meta-fair-self-improving-memory-harness-distillation/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-11-19T21:46:22.000Z",
+        "contentSnippet": "Meta FAIR’s Self-Improving Memory lets Kimi-K2.6 write its own LOAD and OFFLOAD memory prompts, then distills them into its weights. Optimized prompts score 56.0 versus 44.6 for the best hand-written harness on Continual Learning Bench. The post Meta FAIR Self-Improving Memory Hi"
+      },
+      {
+        "title": "Amazon SageMaker AI now detects latency drift, idle GPUs, and missed optimizations on your inference endpoints",
+        "link": "https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-ai-now-detects-latency-drift-idle-gpus-and-missed-optimizations-on-your-inference-endpoints/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-19T21:28:18.000Z",
+        "contentSnippet": "Amazon SageMaker AI now monitors your generative AI inference endpoints by default and tells you when a change could improve performance or lower cost. It tracks latency, GPU utilization, and serving configuration, then sends a finding through AWS Health with a one-click path to "
+      },
+      {
+        "title": "Inside Amazon Connect Talent: The science of structured AI interviews",
+        "link": "https://aws.amazon.com/blogs/machine-learning/inside-amazon-connect-talent-the-science-of-structured-ai-interviews/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-19T21:23:20.000Z",
+        "contentSnippet": "For organizations hiring hundreds or thousands of people, every interview presents the same challenge: How do you give candidates a consistent opportunity to demonstrate their skills while gathering the evidence needed to make informed hiring decisions? Structured behavioral inte"
+      },
+      {
+        "title": "Amazon Bedrock AgentCore harness adds Strands harness defaults, built-in tools, and lifecycle hooks",
+        "link": "https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-agentcore-harness-adds-strands-harness-defaults-built-in-tools-and-lifecycle-hooks/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-19T20:01:06.000Z",
+        "contentSnippet": "Amazon Bedrock AgentCore harness now runs on the open-source Strands harness, bringing a recommended model, task-oriented defaults, automatic prompt caching, proactive context management, and new built-in tools. It also adds lifecycle hooks so you can run deterministic allow or d"
+      },
+      {
+        "title": "Amazon Polly launches voice cloning: A unique voice for your brand",
+        "link": "https://aws.amazon.com/blogs/machine-learning/amazon-polly-launches-voice-cloning-a-unique-voice-for-your-brand/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-19T19:53:32.000Z",
+        "contentSnippet": "Voice cloning in Amazon Polly is now generally available. Give Amazon Polly a few minutes of recordings from a consenting speaker, and it builds a custom voice that reads new text in that speaker's voice. Cloned voices run on the Amazon Polly generative engine and support seven l"
+      },
+      {
+        "title": "Optimize AI economics on Amazon Bedrock with Accenture’s sequenced approach",
+        "link": "https://aws.amazon.com/blogs/machine-learning/optimize-ai-economics-on-amazon-bedrock-with-accentures-sequenced-approach/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-19T18:48:55.000Z",
+        "contentSnippet": "As enterprises scale AI on Amazon Bedrock, token spend can grow even as per-token prices fall. This post walks through six composable optimization levers, shows how Accenture applied them across four client engagements, and recommends a sequence for cutting AI token spend on your"
+      },
+      {
+        "title": "From learning to leaderboard: How Cisco upskilled 1,200 engineers in agentic AI with AWS AI League",
+        "link": "https://aws.amazon.com/blogs/machine-learning/from-learning-to-leaderboard-how-cisco-upskilled-1200-engineers-in-agentic-ai-with-aws-ai-league/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-19T18:26:22.000Z",
+        "contentSnippet": "Cisco and AWS used Cisco Transformation Fest and AWS AI League to turn hands-on AI learning into a culture of building. A Cisco engineer won the 2025 AWS AI League global title and 1,200 engineers competed in 2026. This post shares Cisco's journey, lessons from the 2026 winning a"
+      },
+      {
+        "title": "Keep inference running through regional capacity shortfalls with cross-Region inference routing in Amazon SageMaker AI",
+        "link": "https://aws.amazon.com/blogs/machine-learning/keep-inference-running-through-regional-capacity-shortfalls-with-cross-region-inference-routing-in-amazon-sagemaker-ai/",
+        "source": "AWS Machine Learning Blog",
+        "isoDate": "2026-11-19T18:20:54.000Z",
+        "contentSnippet": "Cross-Region inference routing in Amazon SageMaker AI gives your application one invocation path across the endpoints and inference components you already run, in one or more AWS Regions and AWS accounts. The router prefers its own Region and shifts new requests to another destin"
+      },
+      {
+        "title": "13 Best Agent Gateways in 2026 for MCP, A2A and LLM Traffic: Kong, Bifrost, AgentCore, Arcade",
+        "link": "https://www.marktechpost.com/2026/11/19/best-agent-gateways-2026/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-11-19T18:13:21.000Z",
+        "contentSnippet": "We ranked the 13 best agent gateways of 2026 by how they govern model, MCP tool and agent-to-agent traffic, with verified pricing, deployment options and the trade-offs each vendor's marketing leaves out. The post 13 Best Agent Gateways in 2026 for MCP, A2A and LLM Traffic: Kong,"
+      },
+      {
+        "title": "Introducing Tool Retrieval in the Gemini API",
+        "link": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
+        "source": "Google AI Blog",
+        "isoDate": "2026-11-19T18:00:00.000Z",
+        "contentSnippet": "Give your agents access to hundreds of tools while using fewer tokens with Tool Retrieval, now in preview in the Gemini API."
+      },
+      {
+        "title": "Perplexity Launches Orchestrator API for Failover and Model Routing",
+        "link": "https://www.marktechpost.com/2026/11/19/perplexity-orchestrator-api-failover-model-routing/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-11-19T17:47:00.000Z",
+        "contentSnippet": "Perplexity’s Orchestrator API serves OpenAI, Anthropic, Google, xAI and open-weight models through 1 endpoint, with same-model provider failover, unified billing and a preview perplexity/auto router that sends each request to a described route. The post Perplexity Launches Orches"
+      },
       {
         "title": "PolyAI Dialog-RSN-1 is now on Amazon SageMaker JumpStart",
         "link": "https://aws.amazon.com/blogs/machine-learning/polyai-dialog-rsn-1-is-now-on-amazon-sagemaker-jumpstart/",
@@ -1506,104 +1604,6 @@
         "source": "AWS Machine Learning Blog",
         "isoDate": "2026-11-12T15:40:24.000Z",
         "contentSnippet": "Learn how to expose an Amazon Bedrock Managed Knowledge Base to AI agents as MCP tools through Amazon Bedrock AgentCore Gateway while keeping per-user access control. A request interceptor injects verified identity, Policy in AgentCore validates it independently, and a resource-b"
-      },
-      {
-        "title": "From prototype to production: Engineering agents with Agent DLC",
-        "link": "https://aws.amazon.com/blogs/machine-learning/from-prototype-to-production-engineering-agents-with-agent-dlc/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-11-12T15:38:47.000Z",
-        "contentSnippet": "Agents stall between demo and release when teams lack a repeatable way to measure how good an agent is and whether the last change helped. This post covers three agent properties that break traditional CI/CD, a measured case where an aggregate metric hides a coverage gap, and Age"
-      },
-      {
-        "title": "IBM Announces IBM Quantum Nighthawk r3: A New Processor to Support 10k Quantum Operations on 520 Programmable Qubits",
-        "link": "https://www.marktechpost.com/2026/11/12/ibm-quantum-nighthawk-r3-520-qubits-1040-qubit-system-2027/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-11-12T08:42:21.000Z",
-        "contentSnippet": "IBM announced Quantum Nighthawk r3, a 520-qubit processor designed for 10,000 quantum operations. 2 r3 chips will link into a 1,040-qubit system in 2027, while Nighthawk r2 already posts up to 19x speedups over Heron. The post IBM Announces IBM Quantum Nighthawk r3: A New Process"
-      },
-      {
-        "title": "Build autonomous AI agents with Amazon Bedrock and Spring AI",
-        "link": "https://aws.amazon.com/blogs/machine-learning/build-autonomous-ai-agents-with-amazon-bedrock-and-spring-ai/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-11-12T01:18:23.000Z",
-        "contentSnippet": "Learn how Java developers can build production-ready autonomous AI agents using Amazon Bedrock and Spring AI. This post walks through tool calling, conversation memory, resilience patterns, and multi-agent orchestration, then deploys the agent to AWS with Amazon Bedrock AgentCore"
-      },
-      {
-        "title": "OpenAI Codex on Amazon Bedrock",
-        "link": "https://aws.amazon.com/blogs/machine-learning/openai-codex-on-amazon-bedrock/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-11-11T23:35:47.000Z",
-        "contentSnippet": "A practical guide for enterprises rolling out OpenAI Codex to developers on AWS, with Amazon Bedrock as the model backend, covering the access, governance, and cost decisions that platform, security, and finance teams need to align on."
-      },
-      {
-        "title": "Semantic diffing of formal policies with anti-unification",
-        "link": "https://aws.amazon.com/blogs/machine-learning/semantic-diffing-of-formal-policies-with-anti-unification/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-11-11T23:33:03.000Z",
-        "contentSnippet": "A textual diff of two formal policies flags every cosmetic change and hides the one that alters behavior. This post shows how to compute a symbolic, deterministic semantic diff with an open-source anti-unification engine, so reviewers see only the genuine disagreements between tw"
-      },
-      {
-        "title": "Detecting and recovering from silent data corruption on Amazon SageMaker HyperPod",
-        "link": "https://aws.amazon.com/blogs/machine-learning/detecting-and-recovering-from-silent-data-corruption-on-amazon-sagemaker-hyperpod/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-11-11T23:30:03.000Z",
-        "contentSnippet": "Silent data corruption is a GPU fault that returns wrong but plausible numbers with no error, quietly poisoning distributed training. This post adds three checks to a PyTorch DDP loop to detect it, localize the faulty node on Amazon SageMaker HyperPod, and hand the node to automa"
-      },
-      {
-        "title": "Introducing the Web Search API on Amazon Bedrock AgentCore",
-        "link": "https://aws.amazon.com/blogs/machine-learning/introducing-the-web-search-api-on-amazon-bedrock-agentcore/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-11-11T23:13:16.000Z",
-        "contentSnippet": "Today we're announcing the Web Search API on Amazon Bedrock AgentCore: your own code can search the web with a single signed API call, with no gateway and no resources to create. Call it from the AWS SDKs or the AWS CLI and use it in applications, agent loops, and data pipelines."
-      },
-      {
-        "title": "ICYMI: What landed for AI builders in October 2026",
-        "link": "https://aws.amazon.com/blogs/machine-learning/icymi-what-landed-for-ai-builders-in-october-2026/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-11-11T22:26:40.000Z",
-        "contentSnippet": "A recap of the major Amazon Bedrock, Amazon Bedrock AgentCore, and Strands updates from October 2026: new models to match each task, updates that keep agents available and grounded, and clearer cost reporting for AI builders."
-      },
-      {
-        "title": "Google Launches Gemini Decisions API With Gemini Decision 1 at $0.10/M Tokens",
-        "link": "https://www.marktechpost.com/2026/11/11/google-gemini-decisions-api-gemini-decision-1/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-11-11T21:21:42.000Z",
-        "contentSnippet": "Google launched the Gemini Decisions API, powered by Gemini Decision 1. It returns calibrated probabilities for up to 1,000 yes/no, choice and rubric questions over text, images, audio, video and PDFs, at $0.10 per 1M input tokens. The post Google Launches Gemini Decisions API Wi"
-      },
-      {
-        "title": "The attendee’s guide to the AWS re:Invent 2026 AI/ML track",
-        "link": "https://aws.amazon.com/blogs/machine-learning/the-attendees-guide-to-the-aws-reinvent-2026-ai-ml-track/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-11-11T21:05:59.000Z",
-        "contentSnippet": "AWS re:Invent 2026 includes more than 140 AI/ML track sessions. This attendee's guide helps you find the breakouts, chalk talks, workshops, and builders' sessions that fit your role and goals, spanning AI chips, models and inference, agents, agent trust, and sustainability, so yo"
-      },
-      {
-        "title": "Automating AWS Agent Registry updates with push-based architecture",
-        "link": "https://aws.amazon.com/blogs/machine-learning/automating-aws-agent-registry-updates-with-push-based-architecture/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-11-11T20:52:48.000Z",
-        "contentSnippet": "This post shows how to keep the AWS Agent Registry current automatically. Using AWS CloudTrail, Amazon EventBridge, AWS Lambda, and AgentCore Identity, an event-driven pipeline detects MCP server changes and pushes updated tool metadata to the registry with no stored secrets, acr"
-      },
-      {
-        "title": "Google DeepMind Releases AlphaGenome 2 for Cell-Type-Specific Variant Effects",
-        "link": "https://www.marktechpost.com/2026/11/11/google-deepmind-alphagenome-2-cell-type-variant-effects/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-11-11T20:51:56.000Z",
-        "contentSnippet": "Google DeepMind released AlphaGenome 2, a conditional DNA sequence model that predicts regulatory activity and variant effects per cell type. It is available via the AlphaGenome API for non-commercial research. The post Google DeepMind Releases AlphaGenome 2 for Cell-Type-Specifi"
-      },
-      {
-        "title": "How DXC Technology built a multi-model AI substrate on Amazon Bedrock",
-        "link": "https://aws.amazon.com/blogs/machine-learning/how-dxc-technology-built-a-multi-model-ai-substrate-on-amazon-bedrock/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-11-11T20:45:45.000Z",
-        "contentSnippet": "DXC Technology runs mission-critical managed IT services for regulated organizations across 70 countries. Learn how DXC built DCX OASIS, its Human+AI operating model, on a governed multi-model substrate in Amazon Bedrock, separating a resilient model substrate from a trusted harn"
-      },
-      {
-        "title": "Accelerating generative AI delivery with reusable assets",
-        "link": "https://aws.amazon.com/blogs/machine-learning/accelerating-generative-ai-delivery-with-reusable-assets/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-11-11T19:19:21.000Z",
-        "contentSnippet": "Every generative AI team keeps rebuilding the same components: RAG pipelines, document processors, and agent scaffolding. This post shows how to access a curated catalog of 23 production-ready, open source reusable assets from the AWS Generative AI Innovation Center, with real de"
       }
     ],
     "virtualization": [
@@ -2310,11 +2310,39 @@
     ],
     "hardware": [
       {
-        "title": "November 2026 Top500: The Slowest List Yet for New Systems",
+        "title": "SC26 Roundup: Record-Low TOP500 Turnover, Supermicro Ships PCIe Gen6 Flash, and VAST Adds Job-Level QoS",
+        "link": "https://www.storagereview.com/news/sc26-roundup-top500-aic-msi-marvell-compal",
+        "source": "StorageReview",
+        "isoDate": "2026-11-19T23:45:51.000Z",
+        "contentSnippet": "SC26 is under way at McCormick Place in Chicago, and behind the headline launches we have already covered, a second tier of announcements fills in the storage, server, and networking picture. The TOP500 turned over fewer systems than in any prior edition, Aurora took the IO500 pr"
+      },
+      {
+        "title": "Score TP-Link Archer with full Wi-Fi 7 support and 10 Gbps wired networking for incredible 55% off its regular price",
+        "link": "https://www.tomshardware.com/networking/routers/score-tp-link-archer-with-full-wi-fi-7-support-and-10-gbps-wired-networking-for-incredible-55-percent-off-its-regular-price-be9500-router-is-now-just-usd89-99-a-steep-discount-from-the-regular-usd199-99-price",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-19T23:20:25.000Z",
+        "contentSnippet": "Get TP-Link Archer BE9500 with full Wi-Fi 7 support and 10 Gbps WAN for just $89.99, or 55% off its regular $199.99 price"
+      },
+      {
+        "title": "New Windows 11 lock screen zero-day unlocks BitLocker-protected PCs with just a few keystrokes",
+        "link": "https://www.tomshardware.com/tech-industry/cyber-security/new-windows-11-lock-screen-zero-day-unlocks-bitlocker-protected-pcs-with-just-a-few-keystrokes-win-u-keyboard-trick-lets-physical-attackers-run-usb-payloads-or-create-new-admin-accounts",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-19T21:30:00.000Z",
+        "contentSnippet": "Windows 0-day lets attackers run software by partially bypass the lock screen with just some keystrokes — even BitLocker-protected machines are seemingly vulnerable"
+      },
+      {
+        "title": "AI data center power demand will double by 2030 thanks to $4 trillion in spending, adding an entire Great Britain to energy strain",
+        "link": "https://www.tomshardware.com/tech-industry/data-centers/ai-data-center-power-demand-will-double-by-2030-thanks-to-usd4-trillion-in-spending-adding-an-entire-great-britain-to-energy-strain-93-large-ai-factories-with-projected-capacity-of-around-50-gigawatts",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-19T21:00:00.000Z",
+        "contentSnippet": "IEA's report says that power production and distribution is barely keeping up with the rapid growth of AI data centers."
+      },
+      {
+        "title": "November 2026 Top500 New Systems Are Few and Far Between",
         "link": "https://www.servethehome.com/november-2026-top500-new-systems-analysis/",
         "source": "ServeTheHome",
         "isoDate": "2026-11-19T17:48:48.000Z",
-        "contentSnippet": "The November 2026 TOP500 list has only 28 new systems, the lowest count in our tracking series going back to June 2018. This dramatic slowdown from previous editions marks a significant shift in how often the list turns over with fresh hardware. New System Counts Hit a Series Low"
+        "contentSnippet": "We check out the new systems in the November 2026 Top500 list and see some of the major trends shaking out The post November 2026 Top500 New Systems Are Few and Far Between appeared first on ServeTheHome."
       },
       {
         "title": "Intel continues layoffs with cuts to its IT department, hundreds of employees reportedly affected",
@@ -2980,34 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-11-15T13:30:00.000Z",
         "contentSnippet": "AMD continues to gain server CPU market share amid skyrocketing shipments of data center processors as sales of client CPUs drop in the third quarter, says Mercury Research."
-      },
-      {
-        "title": "Modified Ender 3 becomes a $450 bioprinter for 3D printing engineered living materials",
-        "link": "https://www.tomshardware.com/3d-printing/university-of-rochester-researchers-made-a-3d-bioprinter-from-a-modified-ender-3-usd450-bioprinter-makes-engineered-living-material-research-accessible",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-15T13:00:00.000Z",
-        "contentSnippet": "Microbiologists at the University of Rochester have modified an Ender 3 FDM printer into a 3D bioprinter for $450 and outperforming 3D bioprinters costing more than $100,000."
-      },
-      {
-        "title": "Dev hacks Coway air purifier to cut it off from the cloud",
-        "link": "https://www.tomshardware.com/tech-industry/cyber-security/dev-hacks-coway-air-purifier-to-cut-it-off-from-the-cloud-now-runs-locally-in-home-assistant-fan-downloads-the-certificate-over-plain-http-letting-a-home-server-stand-in-for-coways",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-15T12:30:00.000Z",
-        "contentSnippet": "A developer reverse-engineered his Coway Airmega IconS air purifier to run it locally in Home Assistant, without Coway’s cloud."
-      },
-      {
-        "title": "Elon Musk signs petition to reinstate Jensen Huang as Nvidia CEO",
-        "link": "https://www.tomshardware.com/tech-industry/elon-musk-signs-petition-to-reinstate-jensen-huang-as-nvidia-ceo-over-130-000-sign-online-petition-but-not-all-nvidians-support-jensens-return",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-15T12:00:00.000Z",
-        "contentSnippet": "An online petition with over 91,000 signatures is calling for the reinstatement of Nvidia's disgraced former CEO."
-      },
-      {
-        "title": "Dr. Lisa Su graces the opening of Micro Center's new Austin store",
-        "link": "https://www.tomshardware.com/desktops/pc-building/dr-lisa-su-graces-the-opening-of-micro-centers-new-austin-store-amd-ceo-meets-with-gamers-autographs-a-9070-xt-gpu-and-hands-out-300-swag-bags",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-15T11:30:00.000Z",
-        "contentSnippet": "AMD gave away 300 swag bags to lucky shoppers, plus raffled off AMD gear, including a Radeon RX 9070 XT that Dr. Lisa Su autographed."
       }
     ]
   }
