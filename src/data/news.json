@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-11-21T11:55:14.050Z",
+  "updatedAt": "2026-11-21T18:29:54.496Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-134242 - Parse Server 2.5.0 before 8.6.121 and 9.0.0 before 9.11.1-alpha.1 Denial of Service via beforeSave Trigger",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-134242",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-21T16:36:04.000Z",
+        "contentSnippet": "Parse Server 2.5.0 before 8.6.121 and 9.0.0 before 9.11.1-alpha.1 does not handle a failure to serialize an object after a beforeSave trigger, leaving the request unsettled and terminating the server process. A remote attacker able to update an object in a class with a beforeSave",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-134243 - Parse Server before 8.6.122 and 9.0.0 before 9.11.1-alpha.2 beforeSave Protection Bypass via Dot Notation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-134243",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-21T16:36:03.000Z",
+        "contentSnippet": "Parse Server before 8.6.122 and 9.0.0 before 9.11.1-alpha.2 does not prevent dot notation keys from changing a field that a beforeSave trigger keeps constant or reverts, affecting Object, Array, GeoPoint, Polygon, Bytes (on MongoDB), and ACL fields on create and update. A client ",
+        "cveScore": 3.1,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-134244 - SiYuan 3.8.0 before 3.8.10 LAN Sync Metadata Disclosure Before Peer Authentication",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-134244",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-21T16:36:02.000Z",
+        "contentSnippet": "SiYuan 3.8.0 before 3.8.10 contains an information disclosure vulnerability in LAN sync that allows adjacent unauthenticated attackers to obtain device metadata by advertising a counterfeit peer with a replayed discovery tag. The client sends the sync scope ID, device name, OS, a",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-134245 - SiYuan 3.8.0 before 3.8.10 Incorrect Authorization via /assets Cross-document Asset Collision",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-134245",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-21T16:36:01.000Z",
+        "contentSnippet": "SiYuan 3.8.0 before 3.8.10 contains an incorrect authorization vulnerability in the serveAssets route that allows unauthenticated attackers to read password-protected document assets via name collisions. Attackers can request GET /assets/ when a visible document references the sa",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-134246 - SiYuan 3.6.0 before 3.6.2 and 3.7.3 before 3.8.10 Missing Authorization in getDOMText Exposes Cached OCR Text",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-134246",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-21T16:36:00.000Z",
+        "contentSnippet": "SiYuan 3.6.0 before 3.6.2 and 3.7.3 before 3.8.10 contains a missing authorization vulnerability in the /api/block/getDOMText endpoint, which renders caller-supplied DOM without checking publish access for referenced image paths. When publish authentication is disabled, anonymous",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-134247 - SiYuan 3.8.0 before 3.8.10 Incorrect Authorization Exposes Asset Text via getAssetContentByPath",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-134247",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-21T16:35:59.000Z",
+        "contentSnippet": "SiYuan 3.8.0 before 3.8.10 contains an incorrect authorization vulnerability that allows anonymous attackers to read indexed asset text referenced only by publish-disabled attribute-view rows. Attackers can request /api/asset/getDocAssets on a public host document to obtain the l",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-134248 - SiYuan 3.6.0 before 3.8.10 Information Disclosure via copyStdMarkdown Block References",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-134248",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-21T16:35:58.000Z",
+        "contentSnippet": "SiYuan 3.6.0 before 3.8.10 contains an information disclosure vulnerability that allows authenticated Readers to read protected documents through block-reference footnote resolution in Markdown export. Attackers can request copyStdMarkdown for a public document referencing a hidd",
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-134249 - SiYuan before 3.8.10 Authentication Bypass via X-Forwarded-For on History Route",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-134249",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-21T16:35:56.000Z",
+        "contentSnippet": "SiYuan before 3.8.10 contains an authentication bypass vulnerability that allows unauthenticated attackers to gain Administrator role by spoofing X-Forwarded-For through a loopback-trusted reverse proxy. Attackers can send requests with Host set to localhost and X-Forwarded-For s",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-134250 - Grav Form Plugin 1.1.0 before 9.1.40 Stored XSS via Unsanitized File Uploads",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-134250",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-21T16:35:55.000Z",
+        "contentSnippet": "Grav Form plugin 1.1.0 before 9.1.40 contains a stored cross-site scripting vulnerability in Form::uploadFiles(), which sanitizes SVG only when a file's last extension is .svg and accepts markup under unrecognized extensions. Anonymous attackers can upload files like drawing.svg.",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-134251 - Grav API Plugin 1.0.16 before 1.1.11 Scoped API Key Authorization Bypass",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-134251",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-21T16:35:54.000Z",
+        "contentSnippet": "Grav API plugin from 1.0.16 before 1.1.11 contains an authorization bypass vulnerability that allows scoped API key holders to override page permission rules because checks read the owning account's authority instead of the key's scopes. Attackers can use keys minted on super-adm",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-134253 - Grav API Plugin 1.0.0 before 1.1.4 RCE via blueprint-upload Theme Template Write",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-134253",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-21T16:35:53.000Z",
+        "contentSnippet": "Grav API plugin from 1.0.0 before 1.1.4 contains a remote code execution vulnerability that allows publishers with media and page write rights to write theme template files through the blueprint-upload endpoint. Attackers can upload a file into a theme's Twig templates folder and",
+        "cveScore": 8.8,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-134254 - Admidio 5.0.0 before 5.0.18 Path Traversal via Documents & Files Rename",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-134254",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-21T16:35:52.000Z",
+        "contentSnippet": "Admidio from 5.0.0 before 5.0.18 contains a path traversal vulnerability in DocumentsService::renameFile() that allows authenticated users to move files outside adm_my_files by supplying an unvalidated adm_new_name value. Attackers with folder upload permission can submit ../ seq",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-134255 - Admidio 5.0.17 Stored XSS via Street Field in Role Member Assignment",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-134255",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-21T16:35:51.000Z",
+        "contentSnippet": "Admidio from 5.0.17 before 5.0.18 contains a stored cross-site scripting vulnerability that allows authenticated users to inject JavaScript by saving a crafted value in their STREET profile field. Attackers can break out of the unencoded title attribute in members_assignment_data",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-134256 - Admidio 5.0.17 Missing Authorization in ckeditor_upload_handler.php Image Upload",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-134256",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-21T16:35:50.000Z",
+        "contentSnippet": "Admidio from 5.0.17 before 5.0.18 contains a missing authorization vulnerability that allows authenticated regular users to upload images into the announcements module by abusing the CKEditor upload handler. Attackers can send id=ann_description to ckeditor_upload_handler.php to ",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-134257 - Admidio before 5.0.18 Insufficient Session Expiration After Password Reset",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-134257",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-21T16:35:49.000Z",
+        "contentSnippet": "Admidio before 5.0.18 contains an insufficient session expiration vulnerability that allows attackers to keep account access after a forgot-password reset because User::setPassword() deletes sessions using the visitor ID instead of the reset user's usr_id. Attackers already holdi",
+        "cveScore": 5.1,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-134258 - Admidio 5.0.0 before 5.0.18 Path Traversal to Stored XSS via File Rename",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-134258",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-21T16:35:48.000Z",
+        "contentSnippet": "Admidio 5.0.0 before 5.0.18 contains a path traversal vulnerability in the Documents & Files renameFile() action that allows authenticated users with folder upload rights to move files outside adm_my_files by supplying ../ sequences in adm_new_name. Attackers can relocate an uplo",
+        "cveScore": 9.3,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-134259 - Admidio 5.0.16 before 5.0.18 Stored XSS via SVG Upload in Documents & Files",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-134259",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-21T16:35:47.000Z",
+        "contentSnippet": "Admidio from 5.0.16 before 5.0.18 contains a stored cross-site scripting vulnerability that allows users with folder upload rights to store JavaScript by uploading SVG files served inline. Attackers can upload a script-bearing SVG that downloadFile() serves as image/svg+xml inlin",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-134260 - Admidio 5.0.0 before 5.0.18 Authorization Bypass via Bulk Profile Edit in profile_new.php",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-134260",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-21T16:35:46.000Z",
+        "contentSnippet": "Admidio 5.0.0 before 5.0.18 contains an improper authorization vulnerability in modules/profile/profile_new.php that allows authenticated Group Leaders to bypass field-level profile restrictions. Attackers can request mode=html_selection to read restricted field values and submit",
+        "cveScore": 5.4,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-134261 - Admidio 5.0.17 IDOR in mylist.php Exposes Private List Configurations",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-134261",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-21T16:35:44.000Z",
+        "contentSnippet": "Admidio before 5.0.18 contains an insecure direct object reference vulnerability in mylist.php that loads list configurations by the list_uuid parameter while checking only the organization, not the owner or private flag. Authenticated users with Lists module access who know a vi",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-134262 - Admidio 5.0.0 before 5.0.18 Stored XSS via Role Name in Profile View",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-134262",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-21T16:35:43.000Z",
+        "contentSnippet": "Admidio 5.0.0 before 5.0.18 contains a stored cross-site scripting vulnerability that allows role administrators to inject JavaScript by placing quote-breaking payloads in role names rendered unencoded in the data-message attribute in modules/profile/roles_functions.php. Attacker",
+        "cveScore": 9.2,
+        "cveSeverity": "CRITICAL"
+      },
+      {
+        "title": "CVE-2026-134264 - Admidio 5.0.2 before 5.0.17 Arbitrary File Read via eCard Message img src",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-134264",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-21T16:35:42.000Z",
+        "contentSnippet": "Admidio from 5.0.2 before 5.0.17 contains an arbitrary file read vulnerability that allows any logged-in member to read server files by placing local paths in img src attributes of eCard messages. Attackers can send an eCard to their own account so sendEcard() embeds files like a",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-134265 - Vikunja 2.4.0 before 2.8.0 Denial of Service via Unbounded Table Rowspan/Colspan",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-134265",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-21T16:35:41.000Z",
+        "contentSnippet": "Vikunja from 2.4.0 before 2.8.0 contains a denial of service vulnerability in the richtext converter that allows authenticated project writers to exhaust server memory and CPU by storing tables with unbounded rowspan and colspan values. Any project reader or CalDAV client can tri",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-134266 - Vikunja 0.19.0 before 2.8.0 Denial of Service via Datemath Business-Day Filter",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-134266",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-21T16:35:40.000Z",
+        "contentSnippet": "Vikunja from 0.19.0 before 2.8.0 contains a denial of service vulnerability that allows authenticated users to exhaust CPU by supplying unbounded business-day operands in datemath filters. Attackers can send task or time-tracking filters like due_date > now+999999999999b, trigger",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-134267 - Vikunja 0.21.0 before 2.8.0 Denial of Service via CalDAV VALARM Rendering",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-134267",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-21T16:35:39.000Z",
+        "contentSnippet": "Vikunja from 0.21.0 before 2.8.0 contains a denial of service vulnerability that allows authenticated users to exhaust memory and CPU by creating tasks with many reminders and long titles. Attackers can store a task whose ParseAlarms rendering in pkg/caldav/caldav.go uses quadrat",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-134268 - Vikunja 0.21.0 before 2.8.0 Denial of Service via Project Position Recalculation",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-134268",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-21T16:35:38.000Z",
+        "contentSnippet": "Vikunja from 0.21.0 before 2.8.0 contains a resource exhaustion vulnerability that allows authenticated users to trigger instance-wide database writes by setting a project position below 0.1. Attackers can repeatedly send PUT requests to /api/v2/projects/{id} so recalculateProjec",
+        "cveScore": 7.1,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-131609 - Germanized for WooCommerce <= 4.1.8 - Unauthenticated Stored Cross-Site Scripting via Billing First Name via WC Store API / Guest Withdrawal Request",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-131609",
@@ -677,234 +902,23 @@
         "contentSnippet": "Open Robotics RViz RGBF32PCTransformer PointField Out-Of-Bounds Read Denial-of-Service Vulnerability. This vulnerability allows network-adjacent attackers to create a denial-of-service condition on affected installations of Open Robotics RViz. Authentication is not required to ex",
         "cveScore": 6.5,
         "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-133855 - flowintel: Unauthorized Disclosure of Linked Case References in Case History",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133855",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-20T15:17:54.000Z",
-        "contentSnippet": "flowintel contains an information disclosure vulnerability in its case history feature. When a user views the history of a case they are authorized to access, the history output includes references to other cases (linked, unlinked, or forked) without verifying whether the request",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-133854 - flowintel: Information Disclosure of Classification Usage via Missing Access Control",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133854",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-20T15:17:54.000Z",
-        "contentSnippet": "flowintel contains a vulnerability in the case and task classification usage endpoints that allows authenticated users to view classification data associated with cases they do not have permission to access. The affected endpoints, which provide lists of used taxonomies, tags, ga",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-133853 - FlowIntel Chatbot Shared MCP Session Allows Cross-User API Identity Confusion",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133853",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-20T15:17:53.000Z",
-        "contentSnippet": "FlowIntel's chatbot component used a single shared MCP (Model Context Protocol) session and process-wide environment variable to pass per-user API credentials to a child process. Because the session and the ambient FLOWINTEL_API_KEY environment variable were shared across all con",
-        "cveScore": 6,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-133852 - flowintel Privileged Case Task Approval Bypass via Missing User Context and Template Creation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133852",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-20T15:17:53.000Z",
-        "contentSnippet": "flowintel is a case management application that enforces an approval workflow for tasks in privileged cases. Tasks in such cases are required to start in a Requested status, meaning they must receive explicit approval before becoming active. A logic flaw in the task-creation path",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-133851 - FlowIntel Alerting: Missing Private Case Authorization Check Allows Connector Owners to Access Revoked Case Data",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133851",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-20T15:17:53.000Z",
-        "contentSnippet": "FlowIntel's alerting module contained an authorization bypass in the alert access control logic. When an alert was linked to a private case, the system relied solely on connector ownership (user or organization) to determine access, without verifying that the requesting user stil",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-133850 - flowintel: Stale Authorization Allows Notification Disclosure After Case Access Revocation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133850",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-20T15:17:53.000Z",
-        "contentSnippet": "flowintel contains an authorization flaw in its recurring reminder notification subsystem. When a user is subscribed to recurring notifications for a case, the system does not re-verify the recipient's current access rights to that case before generating or displaying the notific",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-133849 - flowintel: Insecure Direct Object Reference in Task Calendar Access Control",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133849",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-20T15:17:53.000Z",
-        "contentSnippet": "A vulnerability exists in the flowintel application's calendar functionality that allows unauthorized access to private case data. The task calendar queries failed to enforce visibility checks on the parent case associated with tasks. Specifically, tasks assigned to a user or bel",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-133848 - flowintel: Organization Admin Can Delete Platform Admin Accounts Due to Missing Privilege Hierarchy Check",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133848",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-20T15:17:52.000Z",
-        "contentSnippet": "flowintel contains an authorization flaw in its user deletion functionality. Organization-scoped administrators (org admins) are able to delete platform-level administrator accounts through both the browser-based admin interface and the REST API. The existing authorization logic ",
-        "cveScore": 8.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-133847 - flowintel: Missing Authorization Check Allows Organization Admin to Edit Platform Admin Accounts via Browser Interface",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133847",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-20T15:17:52.000Z",
-        "contentSnippet": "flowintel contains an authorization bypass in the browser-based admin user editing interface. The edit_user view in the admin panel verified that a non-platform-admin user could only edit accounts belonging to their own organization, but it did not verify that the target account ",
-        "cveScore": 8.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-133846 - FlowIntel Missing Authorization Check Allows Unauthorized Revival of Completed Privileged Cases via Task Reopening",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133846",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-20T15:17:52.000Z",
-        "contentSnippet": "FlowIntel contains an authorization bypass in its task management workflow. When a user reopens a completed task (by toggling its completion state or changing its status to a non-finished value) or creates a new task within a completed privileged case, the parent case is automati",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-133844 - FlowIntel Case Serialization Exposes Unauthorized Connector Metadata to Authenticated Users",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133844",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-20T15:17:52.000Z",
-        "contentSnippet": "FlowIntel, a threat intelligence case management platform, contains an information disclosure vulnerability in its case serialization logic. When a case is rendered via the REST API or browser views, all connector instances associated with that case were included in the response ",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-133843 - flowintel: Insecure Direct Object Reference in MISP Correlation Feature",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133843",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-20T15:17:52.000Z",
-        "contentSnippet": "flowintel contains a vulnerability in the MISP correlation feature that allows unauthorized disclosure of case identifiers. The application failed to enforce proper access controls when generating correlation lists for MISP attributes. Specifically, the system did not verify whet",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-133841 - FlowIntel Information Disclosure of Linked Private Case Metadata via Unfiltered Case Serialization",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133841",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-20T15:17:51.000Z",
-        "contentSnippet": "FlowIntel contains an authorization bypass in its case serialization logic that allows an authenticated user to view metadata of private cases they do not have access to. When a case is linked to another case, the JSON representation of the source case included the ID, title, and",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-133840 - flowintel Missing Authorization Check Allows Unauthorized File-to-Note Conversion on Restricted Tasks",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133840",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-20T15:17:51.000Z",
-        "contentSnippet": "flowintel contains an authorization bypass in the file-to-note conversion feature for case tasks. When a task is in a restricted workflow state (Requested, Rejected, or Request Review) within a privileged case, the conversion endpoint did not enforce elevated role requirements. A",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-133839 - FlowIntel Missing Authorization Check Allows Unauthorized Deletion of Evidence Files from Restricted Privileged Tasks",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133839",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-20T15:17:51.000Z",
-        "contentSnippet": "FlowIntel contains a missing authorization vulnerability in its task file deletion functionality. When a privileged task is in a restricted state (Requested, Rejected, or Request Review), any authenticated user with basic case membership (e.g., editor or queuer) was able to delet",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-133838 - FlowIntel Missing Authorization on Restricted Task Modification Paths",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133838",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-20T15:17:51.000Z",
-        "contentSnippet": "FlowIntel contains an authorization bypass that allows non-approver case members to modify restricted tasks (those in Requested, Rejected, or Request Review status) through several indirect code paths that lacked the required approver permission check. Affected operations include",
-        "cveScore": 5.3,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-133837 - flowintel Missing Authorization Check Allows Non-Approvers to Complete Privileged Tasks",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133837",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-20T15:17:51.000Z",
-        "contentSnippet": "flowintel contains an authorization bypass in its task completion workflow for privileged cases. Users with lower-privilege roles (editor, queuer) were able to mark tasks as completed without the required approver review (Admin, Case Admin, or Queue Admin), undermining the approv",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-133629 - Sunnet CTMS External Training Application Form Feature ext-course resource injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133629",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-20T15:17:50.000Z",
-        "contentSnippet": "A vulnerability was determined in Sunnet CTMS up to 10.11. Impacted is an unknown function of the file /cltcms/api/external-training/ext-course of the component External Training Application Form Feature. This manipulation of the argument memberids causes improper control of reso",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-133621 - shader-slang slangpy EXR Image Loader tinyexr.h DecodePixelData out-of-bounds",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133621",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-20T15:17:50.000Z",
-        "contentSnippet": "A flaw has been found in shader-slang slangpy up to 0.43.1. This vulnerability affects the function tinyexr::DecodePixelData in the library external/include/tinyexr.h of the component EXR Image Loader. Executing a manipulation can lead to out-of-bounds read. The attack may be per",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-133616 - sonos tract Operand Arity Indexing gemm.rs rules out-of-bounds",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133616",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-20T15:17:49.000Z",
-        "contentSnippet": "A vulnerability was found in sonos tract up to 0.23.4. The affected element is the function InferenceRulesOp::rules of the file onnx/src/ops/math/gemm.rs of the component Operand Arity Indexing. The manipulation of the argument inputs/outputs results in out-of-bounds read. The at",
-        "cveScore": 4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-133612 - SqueezeAILab SqueezeLLM CUDA Matvec Kernel quant_cuda_kernel.cu vecquant4matmul_spmv_hybrid_nuq_perchannel out-of-bounds write",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133612",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-20T15:17:49.000Z",
-        "contentSnippet": "A weakness has been identified in SqueezeAILab SqueezeLLM up to a5fd71f353bf569feb7b55737c1c1493e78e8f31. This vulnerability affects the function vecquant4matmul_spmv_hybrid_nuq_perchannel of the file quant_cuda_kernel.cu of the component CUDA Matvec Kernel. Executing a manipulat",
-        "cveScore": 6.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-132668 - Postgres Enterprise Manager Webhook Request Forgery Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-132668",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-20T15:17:48.000Z",
-        "contentSnippet": "In Postgres Enterprise Manager (PEM), any PEM user can run the pem.send_webhook() function, which runs with elevated privileges and queues a payload for any configured webhook. The PEM agent then delivers it with that webhook's stored headers, OAuth token or client certificate, s",
-        "cveScore": 2.3,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-132665 - Postgres Enterprise Manager Improper Access Control Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-132665",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-20T15:17:48.000Z",
-        "contentSnippet": "In Postgres Enterprise Manager (PEM), the pem.deploy_job_template() function does not check that the caller can access the servers, groups and agents it deploys a job template to. When PEM teams are used to separate access, a user with the scheduled tasks role (pem_manage_schedul",
-        "cveScore": 5.8,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-132664 - Postgres Enterprise Manager Insecure Credential Storage Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-132664",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-20T15:17:48.000Z",
-        "contentSnippet": "In Postgres Enterprise Manager (PEM), any PEM user can read the encrypted passwords that PEM agents use to connect to monitored servers, including the PEM backend superuser password stored when the PEM server is configured. Unless a custom encryption key is configured, these pass",
-        "cveScore": 7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-132663 - Postgres Enterprise Manager Arbitrary Local File Read Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-132663",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-20T15:17:48.000Z",
-        "contentSnippet": "In Postgres Enterprise Manager (PEM), webhook URLs are not validated, and the PEM agent does not restrict the URL schemes it uses to deliver webhooks. A user with the alert configuration role (pem_config_alert) can set up a webhook with a file:// URL. When the webhook is sent, th",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
       }
     ],
     "ai": [
+      {
+        "title": "Meet Thinking Machines Inkling 2 Mini: 26B Looped MoE Runs on a 32GB Mac",
+        "link": "https://www.marktechpost.com/2026/11/21/thinking-machines-inkling-2-mini-looped-transformer/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-11-21T12:13:50.000Z",
+        "contentSnippet": "Thinking Machines released Inkling 2 Mini, a 26.4B-parameter looped MoE transformer with 3.4B active parameters. It runs on a 32GB Mac or one DGX Spark and scores 79.2% on SWE-bench Verified. The post Meet Thinking Machines Inkling 2 Mini: 26B Looped MoE Runs on a 32GB Mac appear"
+      },
+      {
+        "title": "OpenAI Ships GPT-Live-1.1 for Voice Agents, Cuts Idle Cost to $0.02/Min",
+        "link": "https://www.marktechpost.com/2026/11/21/openai-gpt-live-1-1-api-standby-mode/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-11-21T11:46:17.000Z",
+        "contentSnippet": "OpenAI has released GPT-Live-1.1 in the API. The full-duplex voice model improves multilingual accents and transcription, and a new standby mode bills idle WebRTC time at $0.02 per minute instead of $0.05. The post OpenAI Ships GPT-Live-1.1 for Voice Agents, Cuts Idle Cost to $0."
+      },
       {
         "title": "Baseten Releases Bison-1 and Groundhog-1, Topping Decision Model Index",
         "link": "https://www.marktechpost.com/2026/11/20/baseten-bison-1-groundhog-1-gemma-4-decision-models/",
@@ -1590,23 +1604,16 @@
         "source": "MarkTechPost",
         "isoDate": "2026-11-12T22:43:26.000Z",
         "contentSnippet": "Liquid AI released LiquidCodec, a ~74M-parameter streaming audio codec that powers LFM3-Audio-2B and LFM3-Omni-2B. It runs at 12.5 Hz with 12 codebooks and encodes about 361x faster than real time on a single CPU thread. The post Liquid AI Releases LiquidCodec, a 74M-Parameter St"
-      },
-      {
-        "title": "Deploy frontier AI models on AWS Trainium with SGLang-Neuron",
-        "link": "https://aws.amazon.com/blogs/machine-learning/deploy-frontier-ai-models-on-aws-trainium-with-sglang-neuron/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-11-12T22:03:34.000Z",
-        "contentSnippet": "SGLang-Neuron is now publicly available through an AWS Deep Learning Container. With SGLang-Neuron, you can serve models and generate reinforcement learning rollouts with SGLang on AWS Trainium using the same SGLang interface you already know, all running on native PyTorch."
-      },
-      {
-        "title": "How Natera designed an agentic AI system for lab ops with Amazon Bedrock AgentCore",
-        "link": "https://aws.amazon.com/blogs/machine-learning/how-natera-designed-an-agentic-ai-system-for-lab-ops-with-amazon-bedrock-agentcore/",
-        "source": "AWS Machine Learning Blog",
-        "isoDate": "2026-11-12T21:47:07.000Z",
-        "contentSnippet": "Natera built SWARM, an agentic AI system on Amazon Bedrock AgentCore that captures institutional lab-operations knowledge and deploys it at scale. This post walks through the full architecture, from knowledge base construction to deployment and evaluation, delivering about 130x f"
       }
     ],
     "virtualization": [
+      {
+        "title": "Linux Is Taking Aim at VMware’s NVMe Memory Tiering",
+        "link": "https://www.virtualizationhowto.com/2026/11/linux-is-taking-aim-at-vmwares-nvme-memory-tiering/",
+        "source": "Virtualization HowTo",
+        "isoDate": "2026-11-21T12:50:00.000Z",
+        "contentSnippet": "If there is one feature that VMware by Broadcom has touted as the reason why buying into VCF and the pricing jumps for licensing, it is the NVMe memory tiering… The post Linux Is Taking Aim at VMware’s NVMe Memory Tiering appeared first on Virtualization Howto."
+      },
       {
         "title": "5 Home Lab Projects to Try This Weekend: November 20, 2026",
         "link": "https://www.virtualizationhowto.com/2026/11/5-home-lab-projects-to-try-this-weekend-november-20-2026/",
@@ -2299,16 +2306,79 @@
         "source": "Virtualization HowTo",
         "isoDate": "2026-09-12T12:32:29.000Z",
         "contentSnippet": "There are SO many tools out there that allow you to keep your containers updated and I have used just about all of them, including Watchtower, Dockcheck, and others. Running… The post I Stopped Manually Updating My Docker Container Stacks. I Use This Instead appeared first on Vir"
-      },
-      {
-        "title": "If I Had 2 Hours for My Home Lab This Weekend, I’d Do These 7 Things",
-        "link": "https://www.virtualizationhowto.com/2026/09/if-i-had-2-hours-for-my-home-lab-this-weekend-id-do-these-7-things/",
-        "source": "Virtualization HowTo",
-        "isoDate": "2026-09-11T12:53:06.000Z",
-        "contentSnippet": "Let’s face it, our time in the home lab among other things we have going on in our lives and families may be hard to come by and there are… The post If I Had 2 Hours for My Home Lab This Weekend, I’d Do These 7 Things appeared first on Virtualization Howto."
       }
     ],
     "hardware": [
+      {
+        "title": "Best Black Friday gaming chair deals 2026",
+        "link": "https://www.tomshardware.com/peripherals/gaming-chairs/best-gaming-chair-deals-secretlab-razer-and-more",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-21T16:38:40.000Z",
+        "contentSnippet": "The best Black Friday deals on gaming chairs for every budget, style, and comfort level. Upgrade your gaming chair with something high-quality."
+      },
+      {
+        "title": "Trump wants to ban US companies from building overseas data centers as bans slow development",
+        "link": "https://www.tomshardware.com/tech-industry/data-centers/trump-wants-to-ban-us-companies-from-building-overseas-data-centers-as-bans-slow-development-also-considers-putting-a-tremendous-tax-in-lieu-of-prohibition",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-21T16:29:39.000Z",
+        "contentSnippet": "The president wants U.S. data center companies to stay within U.S. borders or pay a hefty fee if they want to build in foreign countries."
+      },
+      {
+        "title": "This week on Tom's Hardware Premium: 21 November 2026",
+        "link": "https://www.tomshardware.com/tech-industry/supercomputers/this-week-on-toms-hardware-premium-21-november-2026-amd-nvidia-and-more-show-off-the-future-of-high-performance-computing-at-sc26",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-21T16:00:00.000Z",
+        "contentSnippet": "We go through an exhaustive list of everything we covered at SC26, which includes brand-new devices and developments from AMD, Nvidia, Intel and many more."
+      },
+      {
+        "title": "Modder cools gaming laptop with a bounce house blower for a 35-degree drop",
+        "link": "https://www.tomshardware.com/pc-components/air-cooling/laptop-cooled-by-bounce-house-blower-gets-35-degree-drop-in-temperatures-modder-compares-laptop-cooler-with-increasingly-powerful-fan-setups",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-21T15:31:48.000Z",
+        "contentSnippet": "A PC cooling enthusiast attached a bounce house blower to the bottom of his laptop, bringing temperatures below 50 degrees Celsius."
+      },
+      {
+        "title": "Rapidus reportedly struggles to produce working SRAM on its 2nm node, putting 2027 mass production at risk",
+        "link": "https://www.tomshardware.com/tech-industry/semiconductors/rapidus-reportedly-struggles-to-produce-working-sram-on-its-2nm-node-putting-2027-mass-production-at-risk-company-faces-significant-challenges-using-euv-to-develop-gaa-transistors",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-21T15:30:00.000Z",
+        "contentSnippet": "Japan's semiconductor startup has demonstrated functioning GAA transistors, but integrating them into working memory cells appears to be a considerably greater challenge."
+      },
+      {
+        "title": "35-year-old SNES runs ChatGPT, accelerated with a Super FX 2 chip — 21 MHz of RISC muscle speeds 2.2M parameter chatbot replies",
+        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/35-year-old-snes-runs-chatgpt-accelerated-with-a-super-fx-2-chip-21-mhz-of-risc-muscle-speeds-2-2m-parameter-chatbot-replies",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-21T15:02:17.000Z",
+        "contentSnippet": "Nintendo’s classic SNES console now has its own ChatGPT client, and it's accelerated by the Super FX 2 chip."
+      },
+      {
+        "title": "Gigabyte MO27Q2A 27-inch QHD 280 Hz QD-OLED gaming monitor review: Another price buster from Gigabyte",
+        "link": "https://www.tomshardware.com/monitors/gaming-monitors/gigabyte-mo27q2a-27-inch-qhd-280-hz-qd-oled-gaming-monitor-review",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-21T14:30:00.000Z",
+        "contentSnippet": "Gigabyte brings excellent value while delivering premium performance and build quality with its MO27Q2A. This QD-OLED panel sports QHD resolution, 280 Hz, Adaptive-Sync, DisplayHDR 400, and wide-gamut color in a stylish and full-featured package."
+      },
+      {
+        "title": "New semi-autonomous 911 drones will reach nearly all of Knoxville in 90 seconds or less",
+        "link": "https://www.tomshardware.com/tech-industry/drones/knoxvilles-police-department-will-send-semi-autonomous-drones-on-911-calls-eyes-in-the-sky-to-aid-situational-awareness-for-officers",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-21T14:00:00.000Z",
+        "contentSnippet": "The Knoxville Police Department has launched its Drone as First Responder program, with drones being dispatched to the scene following a 911 call to increase real-time situational awareness."
+      },
+      {
+        "title": "Defense firm’s EMP ‘Dragon’ weapon fries 51 jam-proof drones simultaneously",
+        "link": "https://www.tomshardware.com/tech-industry/drones/defense-firms-emp-dragon-weapon-fries-51-jam-proof-drones-simultaneously-high-power-electromagnetic-system-relies-on-120-year-old-vacuum-tube-tech-to-defeat-fiber-optic-uavs",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-21T13:54:41.000Z",
+        "contentSnippet": "Aselsan developed the Ejderha, which translates to 'Dragon' in English, as a defensive weapon designed to combat drone swarms."
+      },
+      {
+        "title": "MSI Crosshair A16 HX RTX 5070, Ryzen 9-equipped gaming laptop gets $400 discount at Amazon",
+        "link": "https://www.tomshardware.com/laptops/gaming-laptops/msi-crosshair-a16-hx-rtx-5070-ryzen-9-equipped-gaming-laptop-gets-usd400-discount-at-amazon-system-comes-with-a-free-game-in-early-black-friday-offer",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-21T13:09:06.000Z",
+        "contentSnippet": "Save over $400 on this AMD Ryzen 9-equipped gaming laptop from MSI as a part of their early Black Friday deals, which also comes with a free copy of Onimusha: The Way of the Sword."
+      },
       {
         "title": "Get 38% off this 20TB WD Elements external HDD in Amazon Black Friday offer — pay just 2.75 cents per GB as drive drops to $549",
         "link": "https://www.tomshardware.com/pc-components/external-hdds/get-38-percent-off-this-20tb-wd-elements-external-hdd-in-amazon-black-friday-offer-pay-just-2-75-cents-per-gb-as-drive-drops-to-usd549",
@@ -2938,76 +3008,6 @@
         "source": "StorageReview",
         "isoDate": "2026-11-16T19:00:00.000Z",
         "contentSnippet": "HPE today announced that Lux, the AI cluster it built with AMD for Oak Ridge National Laboratory (ORNL), has debuted at No. 14 on the TOP500 list with 220.79 petaflops of measured HPL performance. HPE says the system, which was designed for AI training and inference, placed ahead"
-      },
-      {
-        "title": "Hearing Aids on Windows 11: ReSound Enzo IA Streams From the Dell Pro 7 13 2-in-1 Over Bluetooth LE Audio",
-        "link": "https://www.storagereview.com/review/hearing-aids-on-windows-11-le-audio-with-the-dell-pro-7",
-        "source": "StorageReview",
-        "isoDate": "2026-11-16T18:30:13.000Z",
-        "contentSnippet": "ReSound Enzo IA hearing aids paired with a Dell Pro 7 13 2-in-1 on the first attempt and streamed Windows 11 audio directly, with no streamer box or USB adapter in between. We ran the test on a system Dell provided for this project, and the result depends on Bluetooth LE Audio, a"
-      },
-      {
-        "title": "Trump calls for Jensen Huang reinstatement as Nvidia CEO",
-        "link": "https://www.tomshardware.com/tech-industry/trump-calls-for-jensen-huang-reinstatement-as-nvidia-ceo-nvidia-board-reportedly-refuses-to-reinstate-disgraced-ceo-due-to-ongoing-national-security-investigation-into-jensen",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-16T18:24:40.000Z",
-        "contentSnippet": "President Trump has called for Jensen Huang to return as Nvidia CEO, but a new report says the board is not considering the move."
-      },
-      {
-        "title": "Top tech gift ideas for frequent travelers — from USB wall chargers to power banks, here are the best options",
-        "link": "https://www.tomshardware.com/gift-guides-seasonal-sales/top-tech-gift-ideas-for-frequent-travelers-from-usb-wall-chargers-to-power-banks-here-are-the-best-options",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-16T18:10:29.000Z",
-        "contentSnippet": "Our list of useful accessories for folks who spend countless days and nights traversing hotels and airports"
-      },
-      {
-        "title": "NVIDIA SC26: Rubin HPC GPU With 50,000 CUDA Cores Due in 2028, 192-CPU Vera Racks in Early 2027, and a 13,000x Quantum Decoder",
-        "link": "https://www.storagereview.com/news/nvidia-sc26-rubin-hpc-gpu-vera-cpu-hpc-rack-nemotron-for-science-quantum",
-        "source": "StorageReview",
-        "isoDate": "2026-11-16T16:49:16.000Z",
-        "contentSnippet": "NVIDIA has announced a new GPU for scientific computing at SC26. Rubin HPC is a member of the Vera Rubin platform that puts more than 50,000 CUDA cores on a single GPU, and NVIDIA expects it to be available in 2028. The rest of the company’s SC26 slate covers a 192-CPU Vera rack "
-      },
-      {
-        "title": "Intel bets on Classiq acquisition to turn Quantum efforts into commercially viable business",
-        "link": "https://www.tomshardware.com/tech-industry/quantum-computing/intel-bets-on-classiq-acquisition-to-turn-quantum-efforts-into-commercially-viable-business-deal-positions-company-as-leading-vendor-of-qubit-chips-acquisition-to-close-by-the-first-half-of-2027",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-16T16:30:00.000Z",
-        "contentSnippet": "Intel aims to turn its quantum computing research effort into a commercial business by combining its silicon spin-qubit technology and manufacturing capabilities with Classiq’s established software platform and customer base."
-      },
-      {
-        "title": "Cornelis CN6000 Doubles Omni-Path to 800G With a PCIe 6.0 SuperNIC and 48-Port Switch",
-        "link": "https://www.storagereview.com/news/cornelis-cn6000-800g-omni-path-supernic-switch",
-        "source": "StorageReview",
-        "isoDate": "2026-11-16T15:43:20.000Z",
-        "contentSnippet": "Cornelis has announced the CN6000 family, an 800G networking platform for AI and high-performance computing (HPC) clusters that doubles the bandwidth of the company’s CN5000 generation. The family has three parts: an Omni-Path SuperNIC, a 48-port Omni-Path switch, and an Ethernet"
-      },
-      {
-        "title": "AMD Unveils Versal TR Devices With 229,000 DMIPS and Backside Attack Protection",
-        "link": "https://www.storagereview.com/news/amd-unveils-versal-tr-devices-with-229000-dmips-and-backside-attack-protection",
-        "source": "StorageReview",
-        "isoDate": "2026-11-16T15:43:01.000Z",
-        "contentSnippet": "AMD has announced Versal tamper-resistant (TR) devices that combine physical attack protection with the heterogeneous compute architecture of the AMD Versal AI Edge Series Gen 2. The portfolio delivers up to 229,000 DMIPS of scalar compute, 369 INT8 TOPS, and 543,000 LUTs, accord"
-      },
-      {
-        "title": "Altera Agilex 9 Direct RF FPGA Anchors a QPU-to-GPU Quantum Controller Design With OQC and NVIDIA NVQLink",
-        "link": "https://www.storagereview.com/news/altera-agilex-9-direct-rf-fpga-quantum-controller-oqc-nvidia-nvqlink",
-        "source": "StorageReview",
-        "isoDate": "2026-11-16T15:42:40.000Z",
-        "contentSnippet": "Altera today announced an FPGA-based quantum system controller reference design developed with Oxford Quantum Circuits (OQC) and NVIDIA. An Altera Agilex 9 Direct RF FPGA runs real-time control of a new-generation OQC quantum processing unit (QPU) through RF conditioning electron"
-      },
-      {
-        "title": "Dell Exascale Adds 32-Drive Liquid-Cooled Storage for AI Racks, and a 512-Core Air-Cooled PowerEdge M8825",
-        "link": "https://www.storagereview.com/news/dell-exascale-liquid-cooled-storage-poweredge-m8825-openmanage-rack-scale-sc26",
-        "source": "StorageReview",
-        "isoDate": "2026-11-16T15:40:37.000Z",
-        "contentSnippet": "Dell Technologies has announced a round of Dell AI Factory updates at SC26, led by two new hardware options for Dell Exascale, its software-defined storage for AI racks: a 2-OU direct-liquid-cooled platform with up to 32 NVMe drives and a 1U air-cooled platform with up to 20. The"
-      },
-      {
-        "title": "Intel Diamond Rapids Xeon Gets Up to 1.6TB/s of Memory Bandwidth and 1.28GB of Cache Across 256 P-Cores",
-        "link": "https://www.storagereview.com/news/intel-diamond-rapids-1-6tb-s-memory-bandwidth-1-28gb-cache-gpu-d270-sc26",
-        "source": "StorageReview",
-        "isoDate": "2026-11-16T15:39:46.000Z",
-        "contentSnippet": "Intel laid out its high-performance computing plans for SC26, with Diamond Rapids, its next-generation Xeon server architecture, at the center. Intel says the platform will scale to 256 performance cores with up to 1.6TB/s of memory bandwidth and up to 1.28GB of last-level cache."
       }
     ]
   }
