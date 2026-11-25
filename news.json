@@ -1,8 +1,233 @@
 {
-  "updatedAt": "2026-11-25T02:51:53.864Z",
+  "updatedAt": "2026-11-25T11:54:48.359Z",
   "generator": "rss",
   "feeds": {
     "cve": [
+      {
+        "title": "CVE-2026-122121 - Apache JSPWIKI: Reflected XSS in Group.jsp via legacy 210 skin",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-122121",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-25T10:01:45.000Z",
+        "contentSnippet": "Cross Site Scripting (XSS) in 2.10 Legacy Theming in Apache JSPWIKI version 2.10.0 through 3.0.0 on all platforms allows specially crafted filenames of uploaded attachments to potentially render unescaped html or javascript to the browser. Users are recommended to upgrade to vers",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-78110 - Apache JSPWIKI: Stored CSS injection ImagePlugin",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-78110",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-25T10:00:46.000Z",
+        "contentSnippet": "Cascading Style Sheet injection in Image plugin in Apache JSPWIKI versions 2.1.4 through 3.0.0 on all platforms allows an authenticated attacker to edit an page and fool users into clickjacking/phishing attacks. Users are recommended to upgrade to version 3.0.1, which fixes this ",
+        "cveScore": 0,
+        "cveSeverity": "NA"
+      },
+      {
+        "title": "CVE-2026-134792 - HttpClient Lets the Proxy Header of a Request Choose the Proxy of Outgoing Requests in HTTP Workers That Run Under the CLI SAPI",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-134792",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-25T10:00:23.000Z",
+        "contentSnippet": "When the proxy option isn't set, HttpClient takes the proxy from environment variables like http_proxy or HTTP_PROXY. On web servers, it ignores HTTP_PROXY, because PHP puts the Proxy request header there (the httpoxy issue). On the CLI SAPI, it read HTTP_PROXY from $_SERVER, whe",
+        "cveScore": 8.3,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-134791 - Unclosed Comments Make the Lexer of ExpressionLanguage Quadratic, Letting Untrusted Expressions Hold a Process",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-134791",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-25T10:00:22.000Z",
+        "contentSnippet": "Since Symfony 7.2, expressions can contain comments. The lexer used a regular expression to find the end of a comment. When a /* was never closed, this regular expression scanned the rest of the expression, and the lexer then went on with the next character. So each /* scanned th",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-134790 - Login Redirects Can Still Reach Another Host When the Session Cookie Domain Is Set: Incomplete Fix for CVE-2017-16652",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-134790",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-25T10:00:21.000Z",
+        "contentSnippet": "The fix for CVE-2017-16652 restricts the redirects of HttpUtils::createRedirectResponse() to the host of the request. When framework.session.cookie_domain is set, it also allows the subdomains of that domain. To check a target, it read the host of the URL up to the first \"/\". But",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-133762 - Without APP_RUNTIME_MODE, HTTP Workers Running Under the CLI SAPI Return Full Exception Dumps in Production",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133762",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-25T10:00:20.000Z",
+        "contentSnippet": "Since Symfony 7.4.0, FrameworkBundle chooses the error renderer from the runtime mode of the application, which comes from the APP_RUNTIME_MODE env var. When this variable isn't set, the cli, phpdbg and embed SAPIs default to the CLI mode, and errors are rendered with CliErrorRen",
+        "cveScore": 6,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-133761 - CsvEncoder Nests Rows Once per Key Separator of a Header, Letting a Small CSV Payload Crash PHP",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133761",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-25T10:00:20.000Z",
+        "contentSnippet": "CsvEncoder::decode() splits each header cell on the key separator, . by default, and nests the decoded rows one level per separator, with no limit. PHP frees nested arrays recursively, so freeing data that is nested deeply enough overflows the C stack and crashes the process. Wit",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-133760 - Nested Short Ternaries Make the Nesting Check of the Expression Parser Exponential, Letting Untrusted Expressions Hang It",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133760",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-25T10:00:19.000Z",
+        "contentSnippet": "The fix for CVE-2026-109449 made the expression parser check the nesting level of long expressions. This check exists since Symfony 5.4.54, 6.4.48, 7.4.21 and 8.1.9. The parser builds a ?: b with the node of a used twice, and the check walked every path to every node. With nested",
+        "cveScore": 8.7,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-133759 - Doctrine Remember-Me Token Provider Accepts Outdated Tokens Under the Series of Their Copy, Also After Logout",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133759",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-25T10:00:18.000Z",
+        "contentSnippet": "DoctrineTokenProvider keeps a copy of the previous token of a remember-me cookie. This way, concurrent requests sent with that token are still accepted for 60 seconds. The copy is stored in another row, under a series derived from the series of the cookie. Since Symfony 6.4.45, 7",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-133758 - NoPrivateNetworkHttpClient Makes the Client It Decorates Ignore Its Own Default Options, Like Certificate Pinning",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133758",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-25T10:00:17.000Z",
+        "contentSnippet": "Since Symfony 5.4.48, 6.4.16, 7.1.9 and 7.2.0, NoPrivateNetworkHttpClient prepares each request with the default options of the library. The decorator then passes all these options to the decorated client. Every option is then already set, so that client ignores its own default o",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-133757 - NoPrivateNetworkHttpClient Sends the Default Credentials of the Client It Decorates to Other Origins on Redirects",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133757",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-25T10:00:16.000Z",
+        "contentSnippet": "Since Symfony 5.4.48, 6.4.16, 7.1.9 and 7.2.0, NoPrivateNetworkHttpClient follows redirects itself, and sends each hop as a new request through the client it decorates. Before a redirect to another origin, it removes the Authorization and Cookie headers it knows about. But the de",
+        "cveScore": 8.2,
+        "cveSeverity": "HIGH"
+      },
+      {
+        "title": "CVE-2026-133756 - HtmlSanitizer Doesn't Check Meta Refresh URLs Whose Time Follows a Vertical Tab or a Unicode Space: Incomplete Fix for CVE-2026-121373",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133756",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-25T10:00:15.000Z",
+        "contentSnippet": "MetaRefreshAttributeSanitizer checks the URL of a directive only when its content starts with a refresh time. Since the fix for CVE-2026-121373, only the ASCII whitespace of the HTML specification could come before that time. Chromium-based browsers also skip a vertical tab and t",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-133755 - Mailer Trusts Replies That a Man in the Middle Injects Right After STARTTLS",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133755",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-25T10:00:14.000Z",
+        "contentSnippet": "Since Symfony 7.3, the require_tls option of EsmtpTransport refuses to send a message over a connection that isn't encrypted. It prevents a network attacker from stripping STARTTLS. But after the server's 220 reply to STARTTLS, the transport started the TLS handshake without chec",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-133754 - UrlGenerator Lets Host Placeholder Values Send Generated URLs to Another Host",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133754",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-25T10:00:13.000Z",
+        "contentSnippet": "UrlGenerator puts the values of host placeholders into the generated URL without encoding them. Their default requirement, [^.]++, accepts /, @, #, ?, \\, % and :. With the host {tenant}.example.com, the value evil%2Ecom# gives https://evil%2Ecom#.example.com/dashboard, which brow",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-133753 - The Unanimous Strategy Grants access_control Rules When Only One of Their Roles Matches: Regression of CVE-2020-5275",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133753",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-25T10:00:13.000Z",
+        "contentSnippet": "With the unanimous access decision strategy, an access_control rule that lists several roles requires all of them. That's the behavior restored by the fix for CVE-2020-5275. Since Symfony 5.4, the access decision manager asked each voter once about all the attributes of a rule. R",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-133752 - The Serializer Doesn't Enforce #[Ignore] on the Class Picked by a Discriminator Map or object_to_populate",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133752",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-25T10:00:12.000Z",
+        "contentSnippet": "When it denormalizes data into a class, the Serializer computes which attributes it may write from the #[Ignore] and #[Groups] metadata. It did that for the requested class, but wrote into another class in two cases. The first case is the class that a discriminator map picks from",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-133751 - Mailer's require_tls Can Be Bypassed by a Man in the Middle",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133751",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-25T10:00:11.000Z",
+        "contentSnippet": "Since Symfony 7.3, the require_tls option of EsmtpTransport refuses to send a message over a connection that isn't encrypted. It prevents a network attacker from stripping STARTTLS. But when the server rejected the EHLO command, the transport fell back to HELO and skipped that ch",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-133750 - CachingHttpClient Shares Responses Between Users When Credentials Are Set With withOptions()",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133750",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-25T10:00:10.000Z",
+        "contentSnippet": "Since Symfony 7.4, CachingHttpClient can cache the responses of HTTP clients, for example when caching is enabled in framework.http_client. Its withOptions() method passes the options to the decorated client only. So credentials set with withOptions(), like auth_bearer, auth_basi",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-133749 - Programmatic Logins With Guard Skip the checkPostAuth() Method of User Checkers",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133749",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-25T10:00:09.000Z",
+        "contentSnippet": "GuardAuthenticatorHandler::authenticateUserAndHandleSuccess() logs a user in programmatically with a Guard authenticator, for example in the registration controllers that MakerBundle generated. This method creates the token and stores it, but it calls neither checkPreAuth() nor c",
+        "cveScore": 2.3,
+        "cveSeverity": "LOW"
+      },
+      {
+        "title": "CVE-2026-133748 - NoPrivateNetworkHttpClient With Custom Subnets Lets IPv4-Mapped Addresses Through",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133748",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-25T10:00:08.000Z",
+        "contentSnippet": "NoPrivateNetworkHttpClient accepts a list of subnets to block instead of its default one. When that list contains an IPv6 entry, the client lets IpUtils::checkIp() decide for every address. Before Symfony 6.4.50, 7.4.23 and 8.1.11, checkIp() didn't match an IPv4-mapped address li",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-133747 - Scoped HTTP Clients With Caching Enabled Send Their Credentials to Any Origin",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133747",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-25T10:00:07.000Z",
+        "contentSnippet": "Since Symfony 7.4, framework.http_client.scoped_clients can enable caching on a scoped client. FrameworkBundle then puts a CachingHttpClient inside the ScopingHttpClient, with the options of the scope as default options. CachingHttpClient merges them into every request. So the cr",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-133746 - UrlGenerator Can Still Generate URLs to Another Host: Incomplete Fix for CVE-2026-45065",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133746",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-25T10:00:06.000Z",
+        "contentSnippet": "The fix for CVE-2026-45065 (GHSA-72xp-p242-47p9) anchored the requirements that UrlGenerator checks parameter values against. That check doesn't run when framework.router.strict_requirements is null, which the routing recipe sets in the prod environment. There, a first placeholde",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-133745 - Trailing-Slash and Scheme Redirects Send Paths Starting With // to Another Host",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133745",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-25T10:00:05.000Z",
+        "contentSnippet": "The router redirects a request to the same URL with or without its trailing slash, or with the scheme that a route requires. To do so, the matcher returns RedirectController::urlRedirectAction() with the path info of the request as path. Since Symfony 5.4.44, 6.4.12 and 7.1.5, ur",
+        "cveScore": 5.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-133744 - JsonPath Queries Can Still Hold a Process Through Duplicated Nodes and Repeated Work: Incomplete Fix for CVE-2026-135804",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133744",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-25T10:00:04.000Z",
+        "contentSnippet": "The fixes for CVE-2026-135804 (GHSA-cpww-5vpx-72x7) bound the regex work of a JsonCrawler::find() call, and evaluate filters and absolute queries once per call. Chained recursive descent isn't bounded. Each ..* segment takes the descendants of every node selected so far. A node n",
+        "cveScore": 6.3,
+        "cveSeverity": "MEDIUM"
+      },
+      {
+        "title": "CVE-2026-133743 - Inline Fragments Let Untrusted Forwarded Headers Change the URLs of asset() and absolute_url(): Incomplete Fix for CVE-2026-123339",
+        "link": "https://cvefeed.io/vuln/detail/CVE-2026-133743",
+        "source": "cvefeed.io",
+        "isoDate": "2026-11-25T09:59:54.000Z",
+        "contentSnippet": "The fix for CVE-2026-123339 (GHSA-wg5q-m2ww-f3c9) restores the router context of the main request after an inline fragment, but the cause of that issue is still there. A page can render an inline fragment with render() in Twig, or with an ESI tag when no gateway cache is used. Wh",
+        "cveScore": 7,
+        "cveSeverity": "HIGH"
+      },
       {
         "title": "CVE-2026-136444 - JaguarJack catch-admin User Management UserController.php Update dynamically-determined object attributes",
         "link": "https://cvefeed.io/vuln/detail/CVE-2026-136444",
@@ -677,234 +902,16 @@
         "contentSnippet": "FFmpeg before 9.1 contains a double free vulnerability in the fill_marker() function of libavformat/imf_cpl.c that frees a Marker label without clearing the pointer when default scope allocation fails. Attackers can supply a crafted Composition Playlist with a Marker Label lackin",
         "cveScore": 7.3,
         "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-135617 - Lookyloo Inconsistent Authorization Enforcement for Private Captures Allows Unauthorized Data Access",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-135617",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-23T20:34:44.000Z",
-        "contentSnippet": "Lookyloo is a web-based URL capture and analysis platform. Prior to the fix, the authorization mechanism for private captures (seed-based access control) was not consistently enforced at the data access layer. The capture_cache method and numerous internal methods (get_info, get_",
-        "cveScore": 6.9,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-135472 - open62541 1.5.0-1.5.10 Use-After-Free via RelativePath Parsing",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-135472",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-23T20:20:50.000Z",
-        "contentSnippet": "open62541 1.5.0 through 1.5.10 contains a use-after-free and double free vulnerability in the lookupRefType() function in src/util/ua_util.c that allows attackers to corrupt the heap of the server process by supplying a RelativePath string resolved through UA_RelativePath_parseWi",
-        "cveScore": 6.2,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-130164 - Hermes Agent: Missing key validation for Bot Desktop screen environment file in non-local terminal backends",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-130164",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-23T20:18:45.000Z",
-        "contentSnippet": "Hermes Agent is an open-source autonomous AI agent built by Nous Research for running tool-using workflows across CLI, desktop, and messaging interfaces. From 0.21.6 to 0.23.1, when Bot Desktop is hosted inside a non-local terminal backend, the agent process reads a backend-writa",
-        "cveScore": 7.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-95793 - HPE Morpheus Manager Remote Code Execution Vulnerability",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-95793",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-23T20:18:05.000Z",
-        "contentSnippet": "An arbitrary remote code execution vulnerability exists in HPE Morpheus Manager.",
-        "cveScore": 8.8,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-135471 - Dynamic Product Gallery for WooCommerce before 3.6.2 Stored XSS via Shortcode",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-135471",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-23T20:18:04.000Z",
-        "contentSnippet": "Dynamic Product Gallery for WooCommerce before 3.6.2 contains a stored cross-site scripting vulnerability that allows authenticated attackers with Contributor-level access or above to inject arbitrary JavaScript via the product_id attribute of the [wc_product_dgallery] and [wc_pr",
-        "cveScore": 5.4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-135470 - WPC Product Options for WooCommerce before 4.0.9 Price Manipulation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-135470",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-23T20:18:04.000Z",
-        "contentSnippet": "WPC Product Options for WooCommerce before 4.0.9 contains a price manipulation vulnerability that allows unauthenticated attackers to purchase products at an arbitrary price by submitting crafted wpcpo-* option data with a negative price in an add-to-cart request. Attackers can e",
-        "cveScore": 8.7,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-135127 - FredrikNoren ungit API Server server.js writeUserConfig missing authentication",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-135127",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-23T20:18:03.000Z",
-        "contentSnippet": "A security vulnerability has been detected in FredrikNoren ungit 1.5.30. This affects the function writeUserConfig of the file source/server.js of the component API Server. The manipulation of the argument launchCommand leads to missing authentication. The attack can be initiated",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-135126 - FredrikNoren ungit Remote Git API git-api.js credentialsOption os command injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-135126",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-23T20:18:03.000Z",
-        "contentSnippet": "A weakness has been identified in FredrikNoren ungit 1.5.30. Affected by this issue is the function credentialsOption of the file source/git-api.js of the component Remote Git API. Executing a manipulation of the argument Remote can lead to os command injection. It is possible to",
-        "cveScore": 7.5,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-135120 - RainyGao DocSys DocController.java downloadDocRS path traversal",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-135120",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-23T20:18:03.000Z",
-        "contentSnippet": "A security flaw has been discovered in RainyGao DocSys up to 2.02.91. Affected by this vulnerability is the function downloadDocRS of the file src/com/DocSystem/controller/DocController.java. Performing a manipulation of the argument path results in path traversal. It is possible",
-        "cveScore": 5.5,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-134056 - Out-of-bounds write in padded block cipher decryption in AWS-LC",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-134056",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-23T20:17:59.000Z",
-        "contentSnippet": "An out-of-bounds write issue exists in padded block cipher decryption in AWS-LC. It affects applications that decrypt CBC or ECB ciphertext with PKCS7 padding over multiple calls into the minimum documented output buffer. A remote user who supplies crafted ciphertext might crash ",
-        "cveScore": 8.3,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-12422 - Rejected reason: This issue was not considered a s",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-12422",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-23T20:17:59.000Z",
-        "contentSnippet": "Rejected reason: This issue was not considered a security vulnerability.",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-135128 - FredrikNoren ungit /api/clone git-api.js argument injection",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-135128",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-23T20:15:23.000Z",
-        "contentSnippet": "A vulnerability was detected in FredrikNoren ungit 1.5.30. This vulnerability affects unknown code of the file source/git-api.js of the component /api/clone. The manipulation of the argument url results in argument injection. The attack can be launched remotely. The exploit is no",
-        "cveScore": 0,
-        "cveSeverity": "NA"
-      },
-      {
-        "title": "CVE-2026-49965 - DreameHome Cloud API IDOR via bindDevice Endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49965",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-23T19:17:38.000Z",
-        "contentSnippet": "DreameHome cloud API before 2026-11-19 contained an insecure direct object reference vulnerability in the POST /smart-app/meari-cloud/bindDevice endpoint that allows authenticated attackers to reassign another user's camera to their own Dreame account. The endpoint accepted bindi",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-49964 - DreameHome Cloud API IDOR via token/rtc2 Endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49964",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-23T19:17:38.000Z",
-        "contentSnippet": "DreameHome cloud API before 2026-10-14 contained an insecure direct object reference vulnerability in the POST /dreame-user-iot/token/rtc2 endpoint that allows authenticated attackers to obtain an Agora RTC token for another user's device by supplying its device DID and owner UID",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-49963 - DreameHome before 2.6.4.0 Code Integrity Bypass via RnPluginDownloadManager",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49963",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-23T19:17:38.000Z",
-        "contentSnippet": "DreameHome for Android (com.dreame.smartlife) before 2.6.4.0 contains a download of code without integrity check vulnerability in RnPluginDownloadManager.java that allows network-positioned attackers to execute arbitrary JavaScript within the application by replacing React Native",
-        "cveScore": 7.6,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-49962 - DreameHome MQTT Broker Improper Authorization After Share Revocation",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49962",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-23T19:17:38.000Z",
-        "contentSnippet": "DreameHome device sharing and MQTT broker before 2026-10-26 contained an incorrect authorization vulnerability that allows former share recipients to keep receiving a device's MQTT status messages after the owner revokes sharing. Revocation removed application access and the devi",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-49961 - DreameHome MQTT Broker Incorrect Authorization via Status Topic Subscription",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49961",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-23T19:17:38.000Z",
-        "contentSnippet": "DreameHome MQTT broker before 2026-10-26 contained an incorrect authorization vulnerability that allows authenticated attackers to subscribe to another device's status topic /status/{DID}/{UID}/{model}/# without owning or having access to the device. Attackers who know the device",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-49960 - DreameHome Cloud API IDOR via redirectAndLogin Endpoint",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-49960",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-23T19:17:37.000Z",
-        "contentSnippet": "DreameHome cloud API before 2026-10-14 contained an insecure direct object reference vulnerability in the POST /smart-app/meari-cloud/redirectAndLogin endpoint that allows authenticated attackers to obtain another user's Meari camera-platform identity and session credentials by s",
-        "cveScore": 7.1,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-135452 - HP Hotkey UWP Service – Escalation of Privilege",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-135452",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-23T19:17:36.000Z",
-        "contentSnippet": "A potential security vulnerability has been identified in the HP Hotkey UWP Service, which might allow escalation of privilege. HP is releasing mitigation for the potential vulnerability. Customers using HP Programmable Key are recommended to update HP Hotkey Support.",
-        "cveScore": 8.4,
-        "cveSeverity": "HIGH"
-      },
-      {
-        "title": "CVE-2026-135091 - humhub rest Bearer Token Administration bearer-auth.php cross site scripting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-135091",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-23T19:17:35.000Z",
-        "contentSnippet": "A security flaw has been discovered in humhub rest up to 0.12.6. This affects an unknown part of the file views/admin/bearer-auth.php of the component Bearer Token Administration Page. The manipulation results in cross site scripting. It is possible to launch the attack remotely.",
-        "cveScore": 3.3,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-135090 - humhub lets-meet Notification Rendering NewInviteNotification.php html cross site scripting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-135090",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-23T19:17:35.000Z",
-        "contentSnippet": "A vulnerability was determined in humhub lets-meet up to 1.2.1. Affected by this vulnerability is the function NewInviteNotification::html of the file notifications/NewInviteNotification.php of the component Notification Rendering. Executing a manipulation can lead to cross site ",
-        "cveScore": 4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-135089 - humhub questions QA Module answer.php cross site scripting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-135089",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-23T19:17:35.000Z",
-        "contentSnippet": "A vulnerability was found in humhub questions up to 1.1.5. Affected is an unknown function of the file widgets/views/answer.php of the component QA Module. Performing a manipulation of the argument displayName results in cross site scripting. The attack is possible to be carried ",
-        "cveScore": 4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-135088 - ONLYOFFICE onlyoffice-humhub Mention Notification Mention.php html cross site scripting",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-135088",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-23T19:17:34.000Z",
-        "contentSnippet": "A vulnerability has been found in ONLYOFFICE onlyoffice-humhub up to 4.0.0. This impacts the function html of the file notifications/Mention.php of the component Mention Notification Handler. Such manipulation of the argument Comment leads to cross site scripting. The attack can ",
-        "cveScore": 4,
-        "cveSeverity": "MEDIUM"
-      },
-      {
-        "title": "CVE-2026-102956 - Ethernet L2 net_pkt reference-count error on ARP request send failure can free an unrelated packet",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-102956",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-23T19:17:28.000Z",
-        "contentSnippet": "ethernet_send() in subsys/net/l2/ethernet/ethernet.c dropped the caller's reference on an IPv4 packet whenever net_arp_prepare() returned NET_ARP_PKT_REPLACED. That return value is also used when ARP could not queue the packet because every ARP cache entry is already pending. In ",
-        "cveScore": 3.1,
-        "cveSeverity": "LOW"
-      },
-      {
-        "title": "CVE-2026-102955 - OpenThread RCP transmits MAC-secured 802.15.4 frames without applying the MAC key when using the PSA crypto backend",
-        "link": "https://cvefeed.io/vuln/detail/CVE-2026-102955",
-        "source": "cvefeed.io",
-        "isoDate": "2026-11-23T19:17:28.000Z",
-        "contentSnippet": "The OpenThread PSA crypto platform backend in modules/openthread/platform/crypto_psa.c only supported PSA key references. otPlatCryptoAesSetKey() copied aKey->mKeyRef into the AES context unconditionally. On an OpenThread Radio Co-Processor (RCP) build, CONFIG_OPENTHREAD_CRYPTO_P",
-        "cveScore": 3.1,
-        "cveSeverity": "LOW"
       }
     ],
     "ai": [
+      {
+        "title": "ByteDance Researchers Open-Sources Laminar, an Async Reinforcement Learning RL Post-Training Framework",
+        "link": "https://www.marktechpost.com/2026/11/24/bytedance-seed-laminar-async-rl-post-training-framework/",
+        "source": "MarkTechPost",
+        "isoDate": "2026-11-25T05:42:05.000Z",
+        "contentSnippet": "Laminar is an open-source asynchronous RL post-training framework from HKU and ByteDance Seed researchers. It decouples rollout, training and weight sync, and lifted Qwen3-Coder-30B-A3B to 52.2% on SWE-bench Verified. The post ByteDance Researchers Open-Sources Laminar, an Async "
+      },
       {
         "title": "Meet Facebook’s Your Algorithm: How Meta Turns Plain-Language Preferences Into Ranking",
         "link": "https://www.marktechpost.com/2026/11/24/meta-facebook-your-algorithm-llm-recommendations/",
@@ -1597,16 +1604,16 @@
         "source": "MarkTechPost",
         "isoDate": "2026-11-16T10:39:41.000Z",
         "contentSnippet": "Meta has moved Catching JiTTests into production. The LLM system writes tests designed to fail on risky diffs, and caught 74 privacy SEVs before landing in H1 2026, with a 60% engineer-reported true-positive rate. The post Meet Meta’s JiTTests: LLM-Generated Tests Designed to Fai"
-      },
-      {
-        "title": "Alibaba Releases Qwen4-Max: 2.4T MoE, 71B Active, 1M Context",
-        "link": "https://www.marktechpost.com/2026/11/16/alibaba-qwen4-max-release/",
-        "source": "MarkTechPost",
-        "isoDate": "2026-11-16T09:44:17.000Z",
-        "contentSnippet": "Alibaba released Qwen4-Max, a proprietary 2.4T-parameter MoE model with 71B active parameters, native vision and a 1M-token context. It costs $1.5/M input tokens and cuts Work360 cost per task by 62%. The post Alibaba Releases Qwen4-Max: 2.4T MoE, 71B Active, 1M Context appeared "
       }
     ],
     "virtualization": [
+      {
+        "title": "AltaStor: Free, Open-Source VMware Backup, Replication and Migration – A Practical Option for SMBs and MSPs",
+        "link": "https://www.vladan.fr/altastor-free-open-source-vmware-backup-replication-and-migration-a-practical-option-for-smbs-and-msps/",
+        "source": "Vladan.fr",
+        "isoDate": "2026-11-25T09:28:34.000Z",
+        "contentSnippet": "What if I told you that there is a backup software which costs ZERO? Yes, it is absolutely true. AltaStor (https://altastor.com/) takes a different approach: the core Backup & Replication product is free and open-source. No license keys, no registration forms, no trial expiration"
+      },
       {
         "title": "What I’d Actually Buy for My Home Lab This Black Friday 2026",
         "link": "https://www.virtualizationhowto.com/2026/11/what-id-actually-buy-for-my-home-lab-this-black-friday-2026/",
@@ -2299,16 +2306,72 @@
         "source": "Virtualization HowTo",
         "isoDate": "2026-09-15T12:38:26.000Z",
         "contentSnippet": "There are so many cool projects now that we have access to in the the realm of home lab, especially when it comes to automation and AI Ops for our… The post I Gave AI Control of My Docker Home Lab With Komodo MCP appeared first on Virtualization Howto."
-      },
-      {
-        "title": "Veeam Agent for Microsoft Windows 13.1.1.700 (Free Edition) – Technical Overview and What You Can Achieve",
-        "link": "https://www.vladan.fr/veeam-agent-for-microsoft-windows-13-1-1-700-free-edition-technical-overview-and-what-you-can-achieve/",
-        "source": "Vladan.fr",
-        "isoDate": "2026-09-14T15:12:17.000Z",
-        "contentSnippet": "The latest standalone Veeam Agent for Microsoft Windows is version 13.1.1.700 (released around mid-August 2026, included with Veeam Backup & Replication 13.1.1). It continues the solid line of free endpoint protection that started years ago as Veeam Endpoint Backup. For home user"
       }
     ],
     "hardware": [
+      {
+        "title": "AMD's Radeon RX 9060 XT sets new GPU frequency world record of 4.837 GHz",
+        "link": "https://www.tomshardware.com/pc-components/gpus/radeon-rx-9060-xt-sets-new-gpu-frequency-world-record-of-4-837-ghz-amd-overclocking-team-pushes-mid-range-rdna-4-gpu-to-the-max-under-liquid-nitrogen",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-25T11:30:00.000Z",
+        "contentSnippet": "AMD's Radeon RX 9060 XT has reached a new GPU frequency world record of 4,837 MHz. AMD VP Jack Huynh and veteran overclocker Bill Alverson used liquid nitrogen cooling to help the smaller RDNA 4 GPU open a 48MHz gap over the previous world record run."
+      },
+      {
+        "title": "This Acer Nitro V laptop with Nvidia RTX 5060 GPU is $1,049 at Best Buy",
+        "link": "https://www.tomshardware.com/laptops/gaming-laptops/this-acer-nitro-v-laptop-with-nvidia-rtx-5060-gpu-is-usd1-049-at-best-buy-16-inch-boasts-16gb-ddr5-ram-and-a-512gb-ssd",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-25T11:22:34.000Z",
+        "contentSnippet": "This 15.6-inch Acer Nitro gaming laptop features an RTX 5060 GPU, a 10-core Intel CPU, and a 512GB SSD for $1,049"
+      },
+      {
+        "title": "PS5 modder rips out logic board, turns his console into liquid-cooled Phanteks PC",
+        "link": "https://www.tomshardware.com/video-games/playstation/ps5-modder-rips-out-logic-board-to-turn-his-console-into-liquid-cooled-phanteks-pc-custom-playstation-5-pro-build-took-120-hours-has-its-own-psu-aio-and-3d-printed-parts",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-25T11:00:00.000Z",
+        "contentSnippet": "An intrepid YouTube tech enthusiast was dissatisfied with his PlayStation 5 Pro's cooling, so he ripped out the logic board and built an entire custom PC around it, complete with 3D-printed parts and liquid cooling."
+      },
+      {
+        "title": "Save $1,200 on an RTX 5090 gaming PC with a 9950X3D right now",
+        "link": "https://www.tomshardware.com/desktops/gaming-pcs/save-usd1-200-on-an-rtx-5090-gaming-pc-with-a-9950x3d-right-now-liquid-cooled-ibuypower-rig-ships-with-32gb-ddr5-and-a-huge-4tb-ssd",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-25T10:48:49.000Z",
+        "contentSnippet": "Few rigs can rival the performance of this iBuyPower RDY Y50 R04 gaming PC. It's on sale with a huge $1200 discount right now, shipping with an RTX 5090, AMD Ryzen 9 9950X3D, 32GB of RAM, and a 4TB SSD for $8,799.99"
+      },
+      {
+        "title": "Jensen Huang denies special government treatment at first Nvidia all-hands since return",
+        "link": "https://www.tomshardware.com/tech-industry/big-tech/jensen-huang-denies-special-government-treatment-at-first-nvidia-all-hands-since-return-there-are-rumors-on-the-internet-that-apparently-im-a-tech-bro-and-therefore-im-back",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-25T10:30:00.000Z",
+        "contentSnippet": "Jensen Huang says he didn't get special treatment from the government at first Nvidia all-hands meeting since his return — \"there are rumors on the internet that apparently I’m a tech bro, and therefore I’m back\""
+      },
+      {
+        "title": "These four portable monitors are on sale for Black Friday",
+        "link": "https://www.tomshardware.com/monitors/portable-monitors/these-four-portable-monitors-are-on-sale-for-black-friday-get-a-second-screen-for-your-pc-or-console-for-less",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-25T10:00:00.000Z",
+        "contentSnippet": "These four portable monitors are available at low prices for Black Friday. Get a second screen for your PC or console, starting under $55"
+      },
+      {
+        "title": "New CPU benchmark tool promises 40 years of compatibility, with support as far back as i386, Windows 95",
+        "link": "https://www.tomshardware.com/pc-components/cpus/new-cpu-benchmark-tool-promises-40-years-of-compatibility-with-support-as-far-back-as-i386-windows-95-crystalmark-cpuix-tested-on-nec-pc-98-21bs-pentium-100-and-more",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-25T10:00:00.000Z",
+        "contentSnippet": "There's a new CPU benchmark on the way designed to span 40 years of personal computer chipmaking from the i386 to the present day."
+      },
+      {
+        "title": "Black Friday 2026 gaming monitor deals live",
+        "link": "https://www.tomshardware.com/live/news/black-friday-2026-monitors",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-25T09:21:02.000Z",
+        "contentSnippet": "The best Black Friday monitor sales, live round-the-clock coverage of all the best deals."
+      },
+      {
+        "title": "Best Black Friday 2026 tech deals",
+        "link": "https://www.tomshardware.com/live/news/black-friday-2026",
+        "source": "Tom's Hardware",
+        "isoDate": "2026-11-25T07:12:35.000Z",
+        "contentSnippet": "All the best Black Friday deals for tech and PC hardware."
+      },
       {
         "title": "US DOJ touts \"largest-ever\" crackdown on scammers across the globe as it seizes 14,000 devices and $17 billion in illicit funds",
         "link": "https://www.tomshardware.com/tech-industry/cyber-security/us-doj-touts-largest-ever-crackdown-on-scammers-across-the-globe-as-it-seizes-14-000-devices-and-usd17-billion-in-illicit-funds-operation-results-in-800-defendants-and-frees-2-200-forced-laborers",
@@ -2945,69 +3008,6 @@
         "source": "Tom's Hardware",
         "isoDate": "2026-11-20T14:00:00.000Z",
         "contentSnippet": "Phison showed a computational-storage SSD with an NPU and 64GB of memory, plus Mixed Media pSLC and QLC drives, at SC26."
-      },
-      {
-        "title": "Thousands of vulnerable fridges patched against cyberattacks in secret operation",
-        "link": "https://www.tomshardware.com/tech-industry/cyber-security/thousands-of-vulnerable-fridges-patched-against-cyberattacks-in-secret-operation-uk-takes-action-following-hacks-that-destroyed-food-supplies-with-50-degree-defrosting-hijack",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-20T13:30:00.000Z",
-        "contentSnippet": "Following devastating hacks that caused European fridges to reach 50 degrees Celsius, destroying food stocks, the U.K. has implemented nationwide patching to ensure similar attacks won't affect its fridges."
-      },
-      {
-        "title": "Jensen Huang question gets reporter ejected from Trump-Xi-Putin summit",
-        "link": "https://www.tomshardware.com/tech-industry/policy/jensen-huang-question-gets-reporter-ejected-from-trump-xi-putin-summit-journalist-asked-us-president-if-former-nvidia-ceo-had-been-disloyal-to-the-united-states",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-20T13:00:00.000Z",
-        "contentSnippet": "Annmarie Hordern, Bloomberg's chief political correspondent and co-host of its leading program, was barred from the historic trilateral meeting between the leaders of Russia, China, and the U.S. after she asked the controversial question."
-      },
-      {
-        "title": "Lawyer’s $9,450 private AI server with 12 used Nvidia V100s now runs every DeepSeek V4.1 Flash expert",
-        "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/lawyers-usd9-450-private-ai-server-of-12-used-nvidia-v100s-now-runs-every-deepseek-v4-1-flash-expert-at-4-bit-nvfp4-up-to-184-tokens-per-second-on-code-and-long-documents-start-answering-in-about-half-the-time",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-20T12:30:00.000Z",
-        "contentSnippet": "A lawyer’s private AI server now runs DeepSeek V4.1 Flash on 12 used Nvidia V100 GPUs, with every expert at 4-bit NVFP4."
-      },
-      {
-        "title": "MSI EdgeMesa N AI+ review: RTX Spark power comes to Windows on Arm desktops, but there are trade-offs",
-        "link": "https://www.tomshardware.com/desktops/mini-pcs/msi-edgemesa-n-ai-plus-review",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-20T12:00:00.000Z",
-        "contentSnippet": "MSI's EdgeMesa N AI+ brings Nvidia RTX Spark N1X power to a Windows-on-Arm mini PC with 128GB of unified memory, strong local AI performance, and the ability to game on the side. But its high $7,499 price isn't that much cheaper than more versatile DGX Spark systems."
-      },
-      {
-        "title": "Amazon lists the Asus ROG Strix G16 at a new all-time low price of $1,179",
-        "link": "https://www.tomshardware.com/laptops/gaming-laptops/amazon-lists-the-asus-rog-strix-g16-at-a-new-all-time-low-price-of-usd1-179-rtx-5060-powered-gaming-laptop-comes-with-16gb-of-ddr5-ram-and-a-1tb-ssd",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-20T11:45:00.000Z",
-        "contentSnippet": "Pick up a new gaming laptop for less with $575 off the Asus ROG G16 at Amazon."
-      },
-      {
-        "title": "Power and cooling limits force AI clusters with 100,000+ accelerators to use multiple data centers",
-        "link": "https://www.tomshardware.com/tech-industry/supercomputers/power-and-cooling-limits-push-100-000-accelerator-ai-clusters-past-single-data-centers-google-cisco-and-marvell-target-scale-across-networking-across-regions",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-20T11:30:00.000Z",
-        "contentSnippet": "Faster GPUs are no longer enough as power constraints, network congestion, and communication overhead force the industry to rethink how massive AI systems are built."
-      },
-      {
-        "title": "Score a huge 49% saving on a 2TB Samsung 9100 Pro SSD while you can",
-        "link": "https://www.tomshardware.com/pc-components/ssds/score-a-huge-49-percent-saving-on-a-2tb-samsung-9100-pro-ssd-while-you-can-now-17-5-cents-per-gb-ultra-fast-gen-5-drive-is-the-perfect-pc-storage-upgrade-down-to-usd349-99",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-20T11:04:48.000Z",
-        "contentSnippet": "A huge discount on Amazon has brought the Gen 5 2TB Samsung 9100 Pro down to $349.99, an almost half-price saving compared to its list price."
-      },
-      {
-        "title": "Get an RTX 5070 for just $839.99, a rare savings in the GPU wasteland",
-        "link": "https://www.tomshardware.com/pc-components/get-an-rtx-5070-for-just-usd839-99-a-rare-savings-in-the-gpu-wasteland-msi-geforce-rtx-5070-ventus-2x-oc-12-gb-is-currently-on-sale-at-newegg",
-        "source": "Tom's Hardware",
-        "isoDate": "2026-11-20T00:59:02.000Z",
-        "contentSnippet": "Get an RTX 5070 for just $839.99 — MSI GeForce RTX 5070 Ventus 2X OC 12 GB is currently on sale at Newegg"
-      },
-      {
-        "title": "SC26 Roundup: Record-Low TOP500 Turnover, Supermicro Ships PCIe Gen6 Flash, and VAST Adds Job-Level QoS",
-        "link": "https://www.storagereview.com/news/sc26-roundup-top500-aic-msi-marvell-compal",
-        "source": "StorageReview",
-        "isoDate": "2026-11-19T23:45:51.000Z",
-        "contentSnippet": "SC26 is under way at McCormick Place in Chicago, and behind the headline launches we have already covered, a second tier of announcements fills in the storage, server, and networking picture. The TOP500 turned over fewer systems than in any prior edition, Aurora took the IO500 pr"
       }
     ]
   }
